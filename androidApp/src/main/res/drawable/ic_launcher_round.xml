@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M54,0A54,54 0 1,1 0,54A54,54 0 1,1 54,0z" />
+    <!-- Símbolo Birrete / Académico RASTRO -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M54,28L20,44L54,60L88,44ZM28,52.5v16c0,7 11.6,13.5 26,13.5s26,-6.5 26,-13.5v-16L54,64.5Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M88,46v20h-4v-18z" />
+</vector>

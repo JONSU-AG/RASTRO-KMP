@@ -1,0 +1,89 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Fondo circular suave -->
+    <path
+        android:fillColor="#FFFBEB"
+        android:pathData="M60,60m-58,0a58,58 0,1 1,116 0a58,58 0,1 1,-116 0"/>
+    <path
+        android:strokeColor="#F59E0B"
+        android:strokeWidth="2"
+        android:pathData="M60,60m-58,0a58,58 0,1 1,116 0a58,58 0,1 1,-116 0"/>
+
+    <!-- Orejas Maneki Neko -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M34,44 L44,18 L58,36 Z"/>
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M38,40 L45,24 L54,36 Z"/>
+
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M86,44 L76,18 L62,36 Z"/>
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M82,40 L75,24 L66,36 Z"/>
+
+    <!-- Cabeza y Cuerpo dorado -->
+    <path
+        android:fillColor="#FCD34D"
+        android:pathData="M60,32 C42,32 30,46 30,64 C30,86 42,98 60,98 C78,98 90,86 90,64 C90,46 78,32 60,32 Z"/>
+
+    <!-- Ojos felices cerrados (sonrisa japonesa ^^) -->
+    <path
+        android:strokeColor="#78350F"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M44,56 Q49,50 54,56"/>
+    <path
+        android:strokeColor="#78350F"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M66,56 Q71,50 76,56"/>
+
+    <!-- Nariz y boquita -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M60,61 L58,58 L62,58 Z"/>
+    <path
+        android:strokeColor="#78350F"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M60,61 L60,65 M60,65 Q56,69 52,66 M60,65 Q64,69 68,66"/>
+
+    <!-- Bigotes -->
+    <path
+        android:strokeColor="#92400E"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:pathData="M36,60 L24,58 M36,64 L24,66 M84,60 L96,58 M84,64 L96,66"/>
+
+    <!-- Pata levantada saludando (la de la suerte) -->
+    <path
+        android:fillColor="#FDE68A"
+        android:strokeColor="#F59E0B"
+        android:strokeWidth="2"
+        android:pathData="M84,62 C88,52 82,42 74,46 C70,48 72,58 76,64 Z"/>
+
+    <!-- Moño / Collar rojo con cascabel dorado -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M40,78 Q60,88 80,78 Q60,84 40,78 Z"/>
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M60,86m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0"/>
+    <path
+        android:strokeColor="#78350F"
+        android:strokeWidth="1"
+        android:pathData="M57,86 L63,86"/>
+
+    <!-- Moneda Koban dorada en el vientre -->
+    <path
+        android:fillColor="#F59E0B"
+        android:strokeColor="#D97706"
+        android:strokeWidth="1.5"
+        android:pathData="M52,90 Q60,88 68,90 Q60,98 52,90 Z"/>
+</vector>

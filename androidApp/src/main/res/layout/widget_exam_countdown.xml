@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_countdown_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_card_background"
+    android:gravity="center"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/widget_countdown_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎯 EXAMEN ADMISIÓN UNSA"
+        android:textColor="#2563EB"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/widget_countdown_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="42"
+        android:textColor="#0F172A"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/widget_countdown_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DÍAS RESTANTES"
+        android:textColor="#10B981"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/widget_countdown_career"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="¡Asegura tu vacante!"
+        android:textColor="#64748B"
+        android:textSize="9sp" />
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_racha_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_card_background"
+    android:gravity="center"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/widget_racha_fire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔥"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/widget_racha_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textColor="#0F172A"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/widget_racha_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DÍAS DE RACHA"
+        android:textColor="#F97316"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/widget_racha_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="RASTRO Preu"
+        android:textColor="#64748B"
+        android:textSize="9sp" />
+
+</LinearLayout>

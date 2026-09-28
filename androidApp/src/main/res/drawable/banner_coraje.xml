@@ -1,0 +1,87 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="200dp"
+    android:viewportWidth="400"
+    android:viewportHeight="200">
+    <!-- Fondo Rosa Coraje -->
+    <path
+        android:fillColor="#F48FB1"
+        android:pathData="M0,0h400v200h-400z"/>
+
+    <!-- Brillo sutil de fondo -->
+    <path
+        android:fillColor="#F8BBD0"
+        android:pathData="M200,100m-90,0a90,90 0,1 1,180 0a90,90 0,1 1,-180 0"/>
+
+    <!-- Oreja Izquierda Larga y Caída -->
+    <path
+        android:fillColor="#1E1B18"
+        android:pathData="M172,62 C150,50 140,78 152,86 C164,94 176,80 172,62 Z"/>
+
+    <!-- Oreja Derecha Larga y Caída -->
+    <path
+        android:fillColor="#1E1B18"
+        android:pathData="M228,62 C250,50 260,78 248,86 C236,94 224,80 228,62 Z"/>
+
+    <!-- Cuerpo y Cabeza de Coraje (Rosa Claro Violeta) -->
+    <path
+        android:fillColor="#F48FB1"
+        android:strokeColor="#1E1B18"
+        android:strokeWidth="2.5"
+        android:pathData="M184,80 C170,80 162,110 168,140 C172,160 178,168 200,168 C222,168 228,160 232,140 C238,110 230,80 216,80 C208,60 192,60 184,80 Z"/>
+
+    <!-- Patas Traseras y Delanteras -->
+    <path
+        android:strokeColor="#1E1B18"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M182,168 L180,185 M192,168 L192,185 M208,168 L208,185 M218,168 L220,185"/>
+
+    <!-- Ojos Grandes Saltones -->
+    <!-- Ojo Izquierdo -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#1E1B18"
+        android:strokeWidth="2"
+        android:pathData="M188,88m-11,0a11,11 0,1 1,22 0a11,11 0,1 1,-22 0"/>
+    <path
+        android:fillColor="#1E1B18"
+        android:pathData="M188,88m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+
+    <!-- Ojo Derecho -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#1E1B18"
+        android:strokeWidth="2"
+        android:pathData="M212,88m-11,0a11,11 0,1 1,22 0a11,11 0,1 1,-22 0"/>
+    <path
+        android:fillColor="#1E1B18"
+        android:pathData="M212,88m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+
+    <!-- Nariz Redonda Negra Prominente de Coraje -->
+    <path
+        android:fillColor="#1E1B18"
+        android:pathData="M200,102m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0"/>
+
+    <!-- Diente picado / Sonrisa tímida -->
+    <path
+        android:strokeColor="#1E1B18"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M192,118 Q200,126 208,118"/>
+
+    <!-- Manchas en la espalda -->
+    <path
+        android:fillColor="#1E1B18"
+        android:pathData="M218,132 C224,130 226,138 220,140 Z"/>
+    <path
+        android:fillColor="#1E1B18"
+        android:pathData="M222,146 C226,144 228,150 224,152 Z"/>
+
+    <!-- Colita delgada -->
+    <path
+        android:strokeColor="#1E1B18"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M232,154 Q244,150 248,142"/>
+</vector>

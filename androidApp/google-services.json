@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "432336496806",
+    "project_id": "rumbo-jonsu",
+    "storage_bucket": "rumbo-jonsu.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432336496806:android:25f3db33c2b14983abac67",
+        "android_client_info": {
+          "package_name": "com.jonsuapps.rastro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432336496806-bnjmescb8uuh50a54l6h6ejh9c3korjs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jonsuapps.rastro",
+            "certificate_hash": "cf0d45560fad609e6a6fdfd7157ed34d61f46bdf"
+          }
+        },
+        {
+          "client_id": "432336496806-e8gsr946v0uqaamht6gr2j44bqk9kn8e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jonsuapps.rastro",
+            "certificate_hash": "29c5e891443c1019a3c2c085a1adbd240dab27d9"
+          }
+        },
+        {
+          "client_id": "432336496806-fuqrq112korn5aljbso0f9oj8uae8rnm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jonsuapps.rastro",
+            "certificate_hash": "287e63b9a05f83a3550d73a137c22a28de107380"
+          }
+        },
+        {
+          "client_id": "432336496806-vncaimge98trl4jvag0vmjar9ffnqbua.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jonsuapps.rastro",
+            "certificate_hash": "284498d3d5baf3ace5b919fc6fca38bab82725b4"
+          }
+        },
+        {
+          "client_id": "432336496806-7ctjor26otm03pcrm3tbg6qv0kve5ina.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfLBJgMfco32kRYHJj43v50cViRAEqpCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432336496806-7ctjor26otm03pcrm3tbg6qv0kve5ina.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

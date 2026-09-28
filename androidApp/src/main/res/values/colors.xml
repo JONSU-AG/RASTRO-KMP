@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#0F172A</color>
+    <color name="rastro_accent">#3B82F6</color>
+
+    <!-- 9 Temas de Color Predefinidos de RASTRO -->
+    <color name="theme_light_bg">#F2F2F7</color>
+    <color name="theme_light_warm_bg">#F6F3EC</color>
+    <color name="theme_dark_bg">#000000</color>
+    <color name="theme_guinda_bg">#2D060D</color>
+    <color name="theme_guinda_light_bg">#FDF2F4</color>
+    <color name="theme_coraje_bg">#F4EBE1</color>
+    <color name="theme_coraje_dark_bg">#120919</color>
+    <color name="theme_beige_carmesi_bg">#E8DFD8</color>
+    <color name="theme_google_vibrant_bg">#F0F4F9</color>
+
+    <!-- Mascotas Oficiales RASTRO (Estilo Duolingo & Knowunity) -->
+    <color name="mascot_orstty_purple">#8B5CF6</color>
+    <color name="mascot_orstty_belly">#A78BFA</color>
+    <color name="mascot_orstty_bowtie">#F59E0B</color>
+    <color name="mascot_artyon_green">#10B981</color>
+    <color name="mascot_artyon_belly">#A7F3D0</color>
+    <color name="mascot_artyon_antennae">#38BDF8</color>
+</resources>
