@@ -410,11 +410,14 @@ private fun LessonStartCard(
             border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
         ) {
             Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(13.dp)) {
-                Text("${lesson.theory.asignatura.uppercase()} • SEMANA ${lesson.semana}", color = theme.accent, fontSize = 11.sp, fontWeight = FontWeight.Black)
+                val subtemaTag = if (lesson.subtema.isNotBlank()) " • SUBTEMA ${lesson.subtema}" else ""
+                Text("${lesson.theory.asignatura.uppercase()} • SEMANA ${lesson.semana}$subtemaTag", color = theme.accent, fontSize = 11.sp, fontWeight = FontWeight.Black)
                 Text(lesson.theory.titulo, color = theme.textPrimary, fontSize = 23.sp, lineHeight = 28.sp, fontWeight = FontWeight.Bold)
-                Text("Temario oficial • ${lesson.title}", color = theme.accent, fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                val topicLabel = if (lesson.subtema.isNotBlank()) "Subtema ${lesson.subtema} • ${lesson.title}" else "Temario oficial • ${lesson.title}"
+                Text(topicLabel, color = theme.accent, fontSize = 12.sp, fontWeight = FontWeight.Bold)
                 Surface(shape = RastroShapes.Squircle, color = theme.surfaceAccent) {
-                    Text("◎  ${lesson.challenges.size} retos interactivos", modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp), color = theme.textPrimary, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
+                    val retosLabel = if (lesson.subtema.isNotBlank()) "◎  Subtema ${lesson.subtema} (${lesson.challenges.size} retos interactivos)" else "◎  ${lesson.challenges.size} retos interactivos"
+                    Text(retosLabel, modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp), color = theme.textPrimary, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
                 }
                 Text(
                     "Domina este tema del prospecto y practica con preguntas oficiales.",

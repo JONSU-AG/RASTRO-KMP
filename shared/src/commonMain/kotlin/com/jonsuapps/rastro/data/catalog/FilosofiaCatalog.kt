@@ -377,6 +377,63 @@ internal object FilosofiaCatalog {
             )
         ),
 
+        LessonNode(
+            id = "fil_t03_s02",
+            subjectId = "filosofia",
+            semana = 3,
+            subtema = "3.2 Gnosticismo, Agnosticismo, Monismo y Dualismo",
+            title = "¿Es cognoscible el mundo? Gnosticismo y Agnosticismo. Monismo vs. Dualismo",
+            theory = LessonTheory(
+                id = "th_fil_t03_s02",
+                asignatura = "Filosofía",
+                semana = 3,
+                titulo = "Cognoscibilidad del Mundo y Pluralidad Ontológica",
+                resumen = "• Segunda Faceta del Problema Fundamental (Cognoscibilidad):\n  1. Gnosticismo (del griego gnosis = conocimiento):\n     - Afirma que el mundo es cognoscible por la mente humana; podemos alcanzar verdades objetivas universales sobre la realidad.\n     - Posición adoptada por el materialismo dialéctico, el racionalismo (Descartes) y el realismo científico.\n  2. Agnosticismo (Inmanuel Kant, Hume):\n     - El mundo en sí mismo (la 'cosa en sí' o noúmeno kantiano) es incognoscible para el entendimiento humano; solo podemos conocer el fenómeno (apariencia estructurada por nuestras categorías mentales).\n     - David Hume negó la posibilidad de conocer las causas y sustancias profundas de las cosas.\n  3. Escepticismo (Pirrón de Elis):\n     - Suspende todo juicio de certeza (epoché) porque ningún conocimiento puede alcanzar la verdad definitiva; propone la ataraxia como consecuencia práctica de la duda universal.\n\n• Pluralidad Ontológica:\n  - Monismo: Toda la realidad tiene un único principio sustancial (Spinoza: todo es Dios-Naturaleza; Materialismo dialéctico: solo existe la materia).\n  - Dualismo: La realidad se compone de dos sustancias irreducibles (Descartes: res cogitans — alma pensante — y res extensa — cuerpo extenso material).\n  - Pluralismo (Leibniz): La realidad se compone de infinitas sustancias simples e indivisibles llamadas mónadas.",
+                conceptosClave = listOf(
+                    "Gnosticismo: El mundo es cognoscible por la razón y los sentidos",
+                    "Agnosticismo: La 'cosa en sí' (noúmeno) es incognoscible; solo conocemos el fenómeno",
+                    "Escepticismo pirrónico: Epoché (suspensión del juicio) y ataraxia resultante",
+                    "Monismo (Spinoza), Dualismo (Descartes: res cogitans/res extensa), Pluralismo (Leibniz: mónadas)"
+                ),
+                formulas = listOf(
+                    "\\text{Kant}: \\; \\text{Fenómeno (cognoscible)} \\neq \\text{Noúmeno (incognoscible)} = \\text{Cosa en Sí}"
+                ),
+                formulaName = "Frontera Epistémica Kantiana Fundamental",
+                formulaLatex = "\\text{Gnosticismo} \\iff \\text{Mundo Cognoscible} \\quad \\text{vs} \\quad \\text{Agnosticismo} \\iff \\text{Noúmeno Inalcanzable}",
+                formulaDescription = "Limitación del conocimiento humano formulada por Kant frente al optimismo gnoseológico racionalista.",
+                admissionTip = "El dualismo cartesiano distingue dos sustancias: la res cogitans (alma inmaterial) y la res extensa (cuerpo material extenso).",
+                admissionExplanation = "• Spinoza fue monista panteísta porque identificó a Dios con la Naturaleza (Deus sive Natura) como única sustancia infinita de la que todo es modo o atributo."
+            ),
+            challenges = listOf(
+                Challenge(
+                    id = "q_fil_t03_s02_1",
+                    type = ChallengeType.MULTIPLE_CHOICE,
+                    statement = "Para Immanuel Kant, la 'cosa en sí' o noúmeno representa:",
+                    options = listOf(
+                        "La realidad tal como la percibimos empíricamente con nuestros sentidos",
+                        "La realidad tal como es en sí misma, incognoscible para el entendimiento humano",
+                        "Las categorías a priori del entendimiento puro",
+                        "El mundo ideal de las Ideas platónicas",
+                        "La sustancia extensa cartesiana"
+                    ),
+                    correctIndex = 1,
+                    explanation = "El noúmeno kantiano es la realidad trascendente en sí misma (la 'cosa en sí') que permanece inalcanzable al entendimiento humano, el cual solo accede al fenómeno estructurado.",
+                    subject = "Filosofía",
+                    semana = 3
+                ),
+                Challenge(
+                    id = "q_fil_t03_s02_2",
+                    type = ChallengeType.MULTIPLE_CHOICE,
+                    statement = "René Descartes propuso un sistema dualista que distingue dos tipos de sustancias irreducibles: la res cogitans (mente pensante) y la res extensa (cuerpo material). Esta doctrina se denomina:",
+                    options = listOf("Monismo espinosista", "Pluralismo de mónadas", "Dualismo cartesiano", "Materialismo dialéctico", "Idealismo absoluto"),
+                    correctIndex = 2,
+                    explanation = "El dualismo cartesiano postula que el alma (res cogitans) y el cuerpo (res extensa) son sustancias radicalmente distintas e independientes que interactúan misteriosamente.",
+                    subject = "Filosofía",
+                    semana = 3
+                )
+            )
+        ),
+
         // =========================================================================
         // TEMA 04: LÓGICA Y TEORÍA DE LA ARGUMENTACIÓN (SEMANA 4)
         // =========================================================================
@@ -433,6 +490,57 @@ internal object FilosofiaCatalog {
             )
         ),
 
+        LessonNode(
+            id = "fil_t04_s02",
+            subjectId = "filosofia",
+            semana = 4,
+            subtema = "4.2 Falacias de Ambigüedad y Estructura del Silogismo Aristotélico",
+            title = "Falacias de Ambigüedad y el Silogismo Categórico Aristotélico",
+            theory = LessonTheory(
+                id = "th_fil_t04_s02",
+                asignatura = "Filosofía",
+                semana = 4,
+                titulo = "Falacias de Ambigüedad y Lógica Formal",
+                resumen = "• Falacias No Formales de Ambigüedad (el argumento engaña por el uso ambiguo del lenguaje):\n\n  1. Falacia de Equívoco:\n     - Una misma palabra se utiliza con dos o más significados distintos dentro del mismo argumento (*'Las leyes de la naturaleza no pueden romperse; la ley de gravedad es una ley de la naturaleza; por tanto, no puede romperse'* — 'ley' es equívoca).\n  2. Falacia de Anfibología:\n     - Frases con construcción gramatical ambigua que generan dos lecturas posibles (*'Vi al hombre con el telescopio'*).\n  3. Falacia de Acento:\n     - Un argumento cambia de sentido al modificar el acento o énfasis prosódico en una palabra.\n  4. Falacia de Composición:\n     - Lo que es verdad de las partes se aplica erróneamente al todo (*'Cada átomo del universo es invisible; por tanto, el universo es invisible'*).\n  5. Falacia de División:\n     - Lo que es verdad del todo se aplica erróneamente a sus partes.\n\n• El Silogismo Aristotélico (Lógica Formal):\n  - Definición: Argumento deductivo válido compuesto por dos premisas (Mayor y Menor) y una Conclusión.\n  - Estructura estándar:\n    * Premisa Mayor (afirmación universal): Todo M es P.\n    * Premisa Menor (afirmación particular): S es M.\n    * Conclusión (deducida necesariamente): Por tanto, S es P.\n  - Ejemplo clásico: 'Todo hombre es mortal (Mayor); Sócrates es hombre (Menor); Por tanto, Sócrates es mortal (Conclusión)'.\n  - Términos del silogismo: Término Mayor (P), Término Menor (S) y Término Medio (M) que conecta las dos premisas.",
+                conceptosClave = listOf(
+                    "Falacia de equívoco: Palabra usada con doble sentido en el mismo argumento",
+                    "Falacia de anfibología: Gramática ambigua que genera dos interpretaciones",
+                    "Falacia de composición/división: Atribuir al todo/parte lo que solo es verdad de la parte/todo",
+                    "Silogismo: Premisa Mayor + Premisa Menor → Conclusión necesaria (Deducción formal)"
+                ),
+                formulas = listOf(
+                    "\\text{Silogismo}: \\; \\forall M \\to P, \\quad S \\to M \\quad \\therefore \\quad S \\to P"
+                ),
+                formulaName = "Estructura del Silogismo Categórico Aristotélico",
+                formulaLatex = "\\text{Premisa Mayor} + \\text{Premisa Menor} \\implies \\text{Conclusión Válida}",
+                formulaDescription = "Fundamento de la lógica deductiva formal: inferencia necesaria a partir de premisas universales.",
+                admissionTip = "Identificar el término medio (M) del silogismo: es el que aparece en ambas premisas pero NO en la conclusión.",
+                admissionExplanation = "• La falacia de composición clásica: 'Cada músico de la orquesta es excelente, por tanto la orquesta es excelente'— el todo puede ser mediocre aunque cada parte sea brillante."
+            ),
+            challenges = listOf(
+                Challenge(
+                    id = "q_fil_t04_s02_1",
+                    type = ChallengeType.MULTIPLE_CHOICE,
+                    statement = "En el silogismo categórico clásico 'Todo estudiante universitario estudia mucho; Pedro es estudiante universitario; por tanto, Pedro estudia mucho', el término medio es:",
+                    options = listOf("Pedro", "Estudia mucho", "Estudiante universitario", "Todo", "Por tanto"),
+                    correctIndex = 2,
+                    explanation = "El término medio ('estudiante universitario') aparece en ambas premisas pero no en la conclusión; es el nexo que une el sujeto y el predicado de la conclusión.",
+                    subject = "Filosofía",
+                    semana = 4
+                ),
+                Challenge(
+                    id = "q_fil_t04_s02_2",
+                    type = ChallengeType.MULTIPLE_CHOICE,
+                    statement = "El argumento 'Cada ladrillo de este edificio es ligero, por tanto, el edificio es ligero' comete la falacia de:",
+                    options = listOf("Equívoco", "Ad hominem", "Causa falsa", "Composición", "División"),
+                    correctIndex = 3,
+                    explanation = "La falacia de composición consiste en atribuir al conjunto (edificio) una propiedad que solo tienen las partes individuales (cada ladrillo por separado).",
+                    subject = "Filosofía",
+                    semana = 4
+                )
+            )
+        ),
+
         // =========================================================================
         // TEMA 05: CONOCIMIENTO, CIENCIA Y VERDAD (SEMANA 5)
         // =========================================================================
@@ -482,6 +590,63 @@ internal object FilosofiaCatalog {
                     options = listOf("Dogmatismo radical", "Criticismo o apriorismo", "Escepticismo pirrónico", "Relativismo sofístico", "Pragmatismo utilitario"),
                     correctIndex = 1,
                     explanation = "El criticismo kantiano armonizó la experiencia sensible como inicio del conocer con las formas y categorías a priori de la mente humana.",
+                    subject = "Filosofía",
+                    semana = 5
+                )
+            )
+        ),
+
+        LessonNode(
+            id = "fil_t05_s02",
+            subjectId = "filosofia",
+            semana = 5,
+            subtema = "5.2 Teorías de la Verdad: Correspondencia, Coherencia, Pragmatismo y Tipos de Conocimiento",
+            title = "Teorías de la Verdad y Tipos de Conocimiento: Vulgar, Científico y Filosófico",
+            theory = LessonTheory(
+                id = "th_fil_t05_s02",
+                asignatura = "Filosofía",
+                semana = 5,
+                titulo = "La Verdad y los Tipos de Conocimiento Humano",
+                resumen = "• Teorías de la Verdad:\n  1. Teoría de la Correspondencia (Aristóteles, Tomás de Aquino):\n     - La verdad es la adecuación (adaequatio) entre el pensamiento o enunciado y la realidad externa (res et intellectus).\n     - Es verdadero el juicio que se corresponde fielmente con los hechos.\n  2. Teoría de la Coherencia (Leibniz, Hegel):\n     - Un enunciado es verdadero si es coherente y no contradictorio con el sistema lógico global de proposiciones que conforman el conocimiento.\n  3. Teoría Pragmatista (William James, John Dewey):\n     - La verdad es lo que funciona en la práctica; una idea es verdadera en la medida en que resulta útil, eficaz y satisfactoria para resolver problemas.\n\n• Tipos de Conocimiento Humano:\n  1. Conocimiento Vulgar o Empírico-Cotidiano:\n     - Basado en la experiencia directa, el sentido común y las creencias tradicionales. No sistemático, superficial y acrítico.\n  2. Conocimiento Científico:\n     - Sistemático, metódico, verificable, crítico, preciso y universal. Busca leyes causales y teorías explicativas.\n  3. Conocimiento Filosófico:\n     - Radical (busca los principios más profundos), totalizador, crítico y no experimental. Reflexiona sobre los fundamentos del ser, del conocer y del valor.\n  4. Conocimiento Mítico-Religioso:\n     - Basado en la fe revelada y la tradición sagrada.",
+                conceptosClave = listOf(
+                    "Teoría de la Correspondencia: Verdad = Adecuación del pensamiento a la realidad",
+                    "Teoría de la Coherencia: Verdad = No contradicción en el sistema lógico global",
+                    "Pragmatismo (James, Dewey): Verdad = Lo que funciona y produce resultados útiles",
+                    "Tipos de conocimiento: Vulgar (empírico) vs. Científico (sistemático) vs. Filosófico (radical)"
+                ),
+                formulas = listOf(
+                    "\\text{Adaequatio}: \\; \\text{Intellectus} \\equiv \\text{Res} \\implies \\text{Verdad por Correspondencia}"
+                ),
+                formulaName = "Criterios de Verdad en Epistemología",
+                formulaLatex = "\\text{Correspondencia (Facto)} \\; \\mid \\; \\text{Coherencia (Lógica)} \\; \\mid \\; \\text{Pragmatismo (Utilidad)}",
+                formulaDescription = "Tres modelos fundamentales para determinar la verdad de un enunciado o proposición.",
+                admissionTip = "Si la pregunta dice 'verdad es lo que resulta útil o práctico', marca PRAGMATISMO (William James). Si dice 'verdad es la adecuación del juicio con la realidad', marca teoría de la CORRESPONDENCIA.",
+                admissionExplanation = "• El conocimiento científico se diferencia del vulgar porque es sistemático, metódico y universalmente válido, no por ser 'más difícil'."
+            ),
+            challenges = listOf(
+                Challenge(
+                    id = "q_fil_t05_s02_1",
+                    type = ChallengeType.MULTIPLE_CHOICE,
+                    statement = "La teoría de la verdad que afirma que un juicio es verdadero cuando se adecúa o corresponde con los hechos de la realidad objetiva fue formulada clásicamente por:",
+                    options = listOf("William James", "Hegel", "Aristóteles y Santo Tomás", "David Hume", "Augusto Comte"),
+                    correctIndex = 2,
+                    explanation = "La teoría de la correspondencia (adaequatio rei et intellectus) sostiene que la verdad consiste en la concordancia entre el enunciado y la realidad que describe.",
+                    subject = "Filosofía",
+                    semana = 5
+                ),
+                Challenge(
+                    id = "q_fil_t05_s02_2",
+                    type = ChallengeType.MULTIPLE_CHOICE,
+                    statement = "¿Cuál de los siguientes es el rasgo que mejor distingue al conocimiento científico del conocimiento vulgar o sentido común?",
+                    options = listOf(
+                        "El conocimiento científico es más difícil de entender",
+                        "El conocimiento científico es sistemático, metódico, verificable y universalmente válido",
+                        "El conocimiento vulgar no puede coexistir con el científico",
+                        "El conocimiento científico excluye la observación empírica",
+                        "El conocimiento vulgar es exclusivo de personas sin educación formal"
+                    ),
+                    correctIndex = 1,
+                    explanation = "El conocimiento científico se define por su carácter sistemático, su método riguroso de investigación y su validez universal y verificable.",
                     subject = "Filosofía",
                     semana = 5
                 )
@@ -792,6 +957,57 @@ internal object FilosofiaCatalog {
             )
         ),
 
+        LessonNode(
+            id = "fil_t08_s02",
+            subjectId = "filosofia",
+            semana = 8,
+            subtema = "8.2 Fenomenología, Hermenéutica y Filosofía Analítica",
+            title = "Husserl y la Fenomenología, Gadamer-Ricoeur en Hermenéutica y el Giro Lingüístico",
+            theory = LessonTheory(
+                id = "th_fil_t08_s02",
+                asignatura = "Filosofía",
+                semana = 8,
+                titulo = "Corrientes Filosóficas del Siglo XX",
+                resumen = "1. La Fenomenología (Edmund Husserl, 1913):\n   - Método: La reducción fenomenológica (epoché) consiste en 'poner entre paréntesis' todos los presupuestos sobre el mundo real para centrarse exclusivamente en el análisis puro de los fenómenos tal como aparecen a la conciencia (intencionalidad).\n   - Principio de intencionalidad: Toda conciencia es 'conciencia de algo'; nunca existe una mente vacía sin objeto intencional.\n   - Herederos: Martin Heidegger (ser-en-el-mundo, Dasein), Maurice Merleau-Ponty (cuerpo vivido).\n\n2. La Hermenéutica (Wilhelm Dilthey, Hans-Georg Gadamer, Paul Ricoeur):\n   - Disciplina de la comprensión e interpretación de textos, símbolos, acciones y culturas.\n   - Gadamer (*Verdad y Método*, 1960): El intérprete siempre parte de una pre-comprensión histórica (prejuicios productivos) en un diálogo dialéctico con el texto: el 'círculo hermenéutico'.\n   - Ricoeur: La narrativa es el tiempo humano objetivado; comprender una vida es comprender su relato temporal.\n\n3. Filosofía Analítica (Bertrand Russell, Ludwig Wittgenstein, Neopositivismo del Círculo de Viena):\n   - El lenguaje ordinario encubre confusiones lógicas que la filosofía debe clarificar con el análisis lógico del lenguaje.\n   - Wittgenstein (Tractatus): Solo los enunciados que describen hechos del mundo tienen sentido; las proposiciones filosóficas metafísicas son sinsentidos.\n   - Wittgenstein tardío (Investigaciones filosóficas): El significado de las palabras es su uso en los juegos del lenguaje concretos de cada comunidad.",
+                conceptosClave = listOf(
+                    "Husserl: Fenomenología, reducción (epoché) e intencionalidad de la conciencia",
+                    "Gadamer: Círculo hermenéutico; comprensión dialógica entre horizonte del lector y del texto",
+                    "Wittgenstein temprano: Solo los hechos son significativos (Tractatus); Wittgenstein tardío: el significado es el uso",
+                    "Círculo de Viena: Verificacionismo y Criterio de significatividad empírica"
+                ),
+                formulas = listOf(
+                    "\\text{Husserl}: \\; \\text{Toda Conciencia} = \\text{Conciencia DE algo (Intencionalidad)}"
+                ),
+                formulaName = "Tríada del Pensamiento Filosófico del XX",
+                formulaLatex = "\\text{Fenomenología (Ser)} \\; \\mid \\; \\text{Hermenéutica (Sentido)} \\; \\mid \\; \\text{Analítica (Lenguaje)}",
+                formulaDescription = "Tres grandes proyectos filosóficos que dominaron el siglo XX europeo y anglosajón.",
+                admissionTip = "El 'círculo hermenéutico' de Gadamer: para comprender las partes del texto, necesitas entender el todo; pero para entender el todo, debes comprender las partes.",
+                admissionExplanation = "• La epoché de Husserl no es escepticismo: no niega el mundo externo, sino que suspende temporalmente su asunción para describir con pureza los actos de la conciencia."
+            ),
+            challenges = listOf(
+                Challenge(
+                    id = "q_fil_t08_s02_1",
+                    type = ChallengeType.MULTIPLE_CHOICE,
+                    statement = "El principio fundamental de la fenomenología de Edmund Husserl que sostiene que toda conciencia está siempre dirigida hacia un objeto se denomina:",
+                    options = listOf("Catarsis", "Epojé", "Intencionalidad", "Hermenéutica", "Dialéctica"),
+                    correctIndex = 2,
+                    explanation = "La intencionalidad es la propiedad estructural esencial de la conciencia: siempre es 'conciencia de algo', nunca un estado mental vacío o sin objeto.",
+                    subject = "Filosofía",
+                    semana = 8
+                ),
+                Challenge(
+                    id = "q_fil_t08_s02_2",
+                    type = ChallengeType.MULTIPLE_CHOICE,
+                    statement = "Hans-Georg Gadamer en 'Verdad y Método' sostiene que la comprensión de un texto nunca parte de cero porque el intérprete siempre carga con una estructura de pre-comprensión histórica. A este fenómeno interpretativo se le denomina:",
+                    options = listOf("Reducción eidética", "Analogía del ser", "El círculo hermenéutico", "La voluntad de poder", "El imperativo hipotético"),
+                    correctIndex = 2,
+                    explanation = "El círculo hermenéutico describe la relación dialéctica entre la comprensión del todo y la comprensión de las partes, mediada siempre por el horizonte histórico del intérprete.",
+                    subject = "Filosofía",
+                    semana = 8
+                )
+            )
+        ),
+
         // =========================================================================
         // TEMA 09: ESTÉTICA Y FILOSOFÍA DEL ARTE (SEMANA 9)
         // =========================================================================
@@ -958,6 +1174,63 @@ internal object FilosofiaCatalog {
                     options = listOf("Imperativo hipotético instrumental", "Eudemonismo intelectual", "Imperativo categórico", "Pragmatismo utilitario", "Hedonismo espiritual"),
                     correctIndex = 2,
                     explanation = "Es la segunda formulación del Imperativo Categórico de Kant, que consagra la dignidad inalienable de toda persona humana como fin supremo.",
+                    subject = "Filosofía",
+                    semana = 10
+                )
+            )
+        ),
+
+        LessonNode(
+            id = "fil_t10_s02",
+            subjectId = "filosofia",
+            semana = 10,
+            subtema = "10.2 Teorías Éticas Contemporáneas: Emotivismo, Utilitarismo de Preferencias y Ética del Discurso",
+            title = "Ética Discursiva de Habermas, Peter Singer y el Relativismo Moral",
+            theory = LessonTheory(
+                id = "th_fil_t10_s02",
+                asignatura = "Filosofía",
+                semana = 10,
+                titulo = "Doctrinas Éticas Contemporáneas",
+                resumen = "1. La Ética del Discurso o Ética Comunicativa (Jürgen Habermas y Karl-Otto Apel):\n   - Supera el subjetivismo moral formulando principios éticos válidos para todos a través del diálogo racional y libre de coacciones.\n   - Principio de Universalización: Una norma moral es válida solo si todos los afectados pueden aceptarla racionalmente en una situación ideal de discurso (argumentación libre).\n   - Principio Ético-Discursivo: Solo son válidas las normas que conseguirían la aprobación de todos los participantes en un discurso práctico racional ideal.\n\n2. Utilitarismo de Preferencias (Peter Singer):\n   - Extensión del utilitarismo a todos los seres sintientes (animales incluidos).\n   - Criterio de moralidad: Maximizar la satisfacción de las preferencias de todos los seres capaces de tener intereses.\n   - Consecuencias: Crítica al especismo (discriminar seres por especie) y defensa de los derechos de los animales.\n\n3. Relativismo Moral (Protágoras, sofistas modernos):\n   - Los valores y normas morales son relativos a cada cultura, época o individuo y no existe ningún estándar moral absoluto y universal.\n   - Se opone al absolutismo moral (Kant, religiones) que afirma la existencia de normas universales.\n\n4. Liberalismo Político y Ética de la Virtud:\n   - Ética de la Virtud (Alasdair MacIntyre): Recupera el eudemonismo aristotélico enfrentando el vacío moral del liberalismo individualista moderno.",
+                conceptosClave = listOf(
+                    "Ética del Discurso (Habermas): Validez moral por consenso racional libre de todos los afectados",
+                    "Utilitarismo de Preferencias (Singer): Maximizar intereses de todos los seres sintientes",
+                    "Especismo: Discriminación moral basada en la especie biológica",
+                    "Relativismo moral: Las normas éticas varían según cultura, época o individuo"
+                ),
+                formulas = listOf(
+                    "\\text{Habermas}: \\; \\text{Norma Válida} \\iff \\text{Consenso Racional de Todos los Afectados}"
+                ),
+                formulaName = "Principio de Universalización Discursiva",
+                formulaLatex = "\\text{Ética del Discurso} = \\text{Argumentación Libre} + \\text{Universalización} + \\text{Consenso}",
+                formulaDescription = "Fundamento comunicativo y deliberativo de la validez normativa en la ética contemporánea.",
+                admissionTip = "Si la pregunta plantea que las normas morales se validan a través del diálogo racional libre entre todos los afectados, marca HABERMAS (Ética del Discurso).",
+                admissionExplanation = "• Peter Singer extiende el principio de igual consideración de intereses más allá de los humanos hacia todos los seres capaces de sentir placer y dolor."
+            ),
+            challenges = listOf(
+                Challenge(
+                    id = "q_fil_t10_s02_1",
+                    type = ChallengeType.MULTIPLE_CHOICE,
+                    statement = "En la ética del discurso de Jürgen Habermas, una norma moral es considerada universalmente válida cuando:",
+                    options = listOf(
+                        "La dictan los líderes políticos con mayor autoridad",
+                        "Coincide con las costumbres de la mayoría de las culturas",
+                        "Puede ser aceptada libremente por todos los afectados en un discurso racional sin coacciones",
+                        "Se basa en el mandato de la ley natural divina revelada",
+                        "Maximiza la felicidad del mayor número de individuos posible"
+                    ),
+                    correctIndex = 2,
+                    explanation = "Habermas fundamenta la validez moral en el consenso racional alcanzado en condiciones ideales de comunicación sin presiones ni asimetrías de poder.",
+                    subject = "Filosofía",
+                    semana = 10
+                ),
+                Challenge(
+                    id = "q_fil_t10_s02_2",
+                    type = ChallengeType.MULTIPLE_CHOICE,
+                    statement = "La postura ética que afirma que no existen principios morales universales válidos para todos y que las normas de conducta varían según la cultura, el tiempo histórico o el individuo se denomina:",
+                    options = listOf("Absolutismo moral", "Relativismo moral", "Deontologismo kantiano", "Eudemonismo", "Utilitarismo clásico"),
+                    correctIndex = 1,
+                    explanation = "El relativismo moral sostiene que los juicios éticos son relativos a los contextos culturales e históricos y niega la existencia de un código moral universal absoluto.",
                     subject = "Filosofía",
                     semana = 10
                 )
@@ -1259,6 +1532,62 @@ internal object FilosofiaCatalog {
                     ),
                     correctIndex = 1,
                     explanation = "Para Marx, el ser humano se distingue de los animales cuando comienza a producir sus propios medios de subsistencia mediante el trabajo social transformador.",
+                    subject = "Filosofía",
+                    semana = 13
+                )
+            )
+        ),
+        LessonNode(
+            id = "fil_t13_s02",
+            subjectId = "filosofia",
+            semana = 13,
+            subtema = "13.2 Cuerpo y Alma: El Problema Mente-Cuerpo y la Persona en la Filosofía Contemporánea",
+            title = "Dualismo Cartesiano, Monismo Materialista y Filosofía de la Mente",
+            theory = LessonTheory(
+                id = "th_fil_t13_s02",
+                asignatura = "Filosofía",
+                semana = 13,
+                titulo = "El Problema Mente-Cuerpo y el Concepto de Persona",
+                resumen = "• El Problema Mente-Cuerpo (o Problema de la Conciencia):\n  Es uno de los grandes problemas no resueltos de la filosofía y las neurociencias: ¿Cuál es la relación entre los estados mentales (conciencia, emociones, voluntad) y los estados físicos del cerebro?\n\n• Posiciones Filosóficas Clásicas:\n  1. Dualismo de Substancias (Descartes):\n     - Mente (res cogitans) y cuerpo (res extensa) son sustancias radicalmente distintas. El problema del interaccionismo: ¿cómo interactúan dos sustancias tan diferentes?\n  2. Monismo Materialista Reduccionista:\n     - Los estados mentales son idénticos a estados cerebrales (Teoría de la Identidad Mental — Place, Smart). La mente es un producto de la materia organizada.\n  3. Funcionalismo (Hilary Putnam):\n     - Los estados mentales se definen por sus funciones causales (inputs, outputs), no por el sustrato material; pueden realizarse en distintos sustratos (humanos, robots).\n  4. Emergentismo:\n     - La conciencia es una propiedad emergente del sistema nervioso complejo que no es reducible a sus partes físicas.\n\n• El Concepto de Persona:\n  - Boecio: 'Persona es una sustancia individual de naturaleza racional'.\n  - Kant: La persona es un fin en sí misma y nunca un medio (Imperativo Categórico); posee dignidad inalienable.\n  - Sartre: La persona no tiene una esencia fija dada; se autoconstruye con sus actos libres.\n  - Filosofía de la Liberación (Dussel): La dignidad de la persona oprimida exige una ética de la alteridad y la responsabilidad.",
+                conceptosClave = listOf(
+                    "Problema mente-cuerpo: Relación entre estados mentales y estados físicos del cerebro",
+                    "Dualismo cartesiano (mente/cuerpo) vs. Monismo materialista (la mente es el cerebro)",
+                    "Funcionalismo: Los estados mentales son funciones, no sustratos físicos específicos",
+                    "Kant: La persona tiene dignidad inalienable (fin en sí misma, nunca solo un medio)"
+                ),
+                formulas = listOf(
+                    "\\text{Kant}: \\; \\text{Persona} = \\text{Fin en Sí Misma} \\neq \\text{Medio Instrumental}"
+                ),
+                formulaName = "Dignidad de la Persona como Fin Absoluto",
+                formulaLatex = "\\text{Mente} \\leftrightarrow \\text{Cerebro}: \\; \\text{Dualismo} \\; \\mid \\; \\text{Identidad} \\; \\mid \\; \\text{Funcionalismo} \\; \\mid \\; \\text{Emergencia}",
+                formulaDescription = "Espectro de respuestas al problema de la relación entre conciencia y substrato neuronal.",
+                admissionTip = "Si la pregunta dice 'la mente no es el cerebro, sino que es una sustancia diferente', es DUALISMO. Si dice 'la mente es simplemente el cerebro en funcionamiento', es MONISMO MATERIALISTA.",
+                admissionExplanation = "• El funcionalismo permite la Inteligencia Artificial: si la mente es una función y no un sustrato, podría realizarse en silicio."
+            ),
+            challenges = listOf(
+                Challenge(
+                    id = "q_fil_t13_s02_1",
+                    type = ChallengeType.MULTIPLE_CHOICE,
+                    statement = "La posición filosófica que sostiene que los estados mentales (como el dolor o la alegría) son idénticos a estados neurales específicos del cerebro se denomina:",
+                    options = listOf("Dualismo cartesiano", "Teoría de la identidad mental (monismo materialista)", "Funcionalismo múltiple", "Emergentismo radical", "Fenomenología transcendental"),
+                    correctIndex = 1,
+                    explanation = "La teoría de la identidad mental (tipo-identidad) postula que cada estado mental corresponde a un estado físico neural específico y reducible.",
+                    subject = "Filosofía",
+                    semana = 13
+                ),
+                Challenge(
+                    id = "q_fil_t13_s02_2",
+                    type = ChallengeType.MULTIPLE_CHOICE,
+                    statement = "Según Immanuel Kant, la dignidad de la persona radica en que debe ser tratada siempre como:",
+                    options = listOf(
+                        "Un medio para maximizar la utilidad social colectiva",
+                        "Un fin en sí misma, nunca solamente como un medio instrumental",
+                        "Un reflejo condicionado de su herencia biológica evolutiva",
+                        "Una entidad cuyo valor depende de su utilidad económica productiva",
+                        "Una creación divina cuyo valor lo fija la autoridad religiosa"
+                    ),
+                    correctIndex = 1,
+                    explanation = "El imperativo categórico de Kant en su formulación de la humanidad prohíbe instrumentalizar a las personas y exige reconocer su dignidad incondicionada como fines en sí mismas.",
                     subject = "Filosofía",
                     semana = 13
                 )

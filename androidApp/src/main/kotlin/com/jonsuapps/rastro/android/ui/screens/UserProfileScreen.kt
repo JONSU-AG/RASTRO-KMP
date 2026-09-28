@@ -58,6 +58,10 @@ import com.jonsuapps.rastro.android.ui.components.SkeletonBox
 import com.jonsuapps.rastro.android.ui.components.Sticker3dButton
 import com.jonsuapps.rastro.android.ui.components.Sticker3dCard
 import com.jonsuapps.rastro.android.ui.components.Sticker3dPill
+import com.jonsuapps.rastro.android.ui.components.Sticker3dReactionPill
+import com.jonsuapps.rastro.android.ui.components.LucideSettingsIcon
+import com.jonsuapps.rastro.android.ui.components.LucideShareIcon
+import androidx.compose.material.icons.automirrored.rounded.ArrowForward
 import com.jonsuapps.rastro.android.ui.components.CartoonAvatar
 import com.jonsuapps.rastro.android.ui.components.CachedRemoteImage
 import com.jonsuapps.rastro.android.data.ErrorBankRepository
@@ -232,40 +236,34 @@ fun UserProfileScreen(
                         horizontalArrangement = Arrangement.End,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Surface(
-                            shape = RoundedCornerShape(14.dp),
-                            color = Color.Black.copy(alpha = 0.55f),
-                            contentColor = Color.White,
+                        LucideSettingsIcon(
+                            onClick = { onOpenSettings() },
+                            tint = Color.White,
+                            size = 19.dp,
                             modifier = Modifier
-                                .size(38.dp)
-                                .clickable { onOpenSettings() }
-                        ) {
-                            Box(contentAlignment = Alignment.Center) {
-                                Icon(Icons.Rounded.Settings, contentDescription = "Ajustes", modifier = Modifier.size(18.dp))
-                            }
-                        }
+                                .clip(RoundedCornerShape(14.dp))
+                                .background(Color.Black.copy(alpha = 0.55f))
+                                .padding(9.dp)
+                        )
 
                         Spacer(modifier = Modifier.width(8.dp))
 
-                        Surface(
-                            shape = RoundedCornerShape(14.dp),
-                            color = Color.Black.copy(alpha = 0.55f),
-                            contentColor = Color.White,
-                            modifier = Modifier
-                                .size(38.dp)
-                                .clickable {
-                                    val profileUrl = "https://rumbo-jonsu.web.app/#/usuario/${currentUser.uid}"
-                                    val shareIntent = Intent(Intent.ACTION_SEND).apply {
-                                        type = "text/plain"
-                                        putExtra(Intent.EXTRA_TEXT, "Mira el perfil de ${currentUser.displayName}: $profileUrl")
-                                    }
-                                    context.startActivity(Intent.createChooser(shareIntent, "Compartir perfil"))
+                        LucideShareIcon(
+                            onClick = {
+                                val profileUrl = "https://rumbo-jonsu.web.app/#/usuario/${currentUser.uid}"
+                                val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                                    type = "text/plain"
+                                    putExtra(Intent.EXTRA_TEXT, "Mira el perfil de ${currentUser.displayName}: $profileUrl")
                                 }
-                        ) {
-                            Box(contentAlignment = Alignment.Center) {
-                                Icon(Icons.Rounded.Share, contentDescription = "Compartir", modifier = Modifier.size(18.dp))
-                            }
-                        }
+                                context.startActivity(Intent.createChooser(shareIntent, "Compartir perfil"))
+                            },
+                            tint = Color.White,
+                            size = 19.dp,
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(14.dp))
+                                .background(Color.Black.copy(alpha = 0.55f))
+                                .padding(9.dp)
+                        )
                     }
                 }
             }
@@ -748,6 +746,7 @@ fun UserProfileScreen(
                         // Muros y aportes
                         Sticker3dPill(
                             text = "Muros y aportes (${userUploads.size})",
+                            icon = Icons.Rounded.FolderShared,
                             isSelected = selectedTab == 0,
                             selectedBgColor = theme.accent,
                             selectedContentColor = Color.White,
@@ -761,6 +760,7 @@ fun UserProfileScreen(
                         // Guardados
                         Sticker3dPill(
                             text = "Guardados",
+                            icon = Icons.Rounded.Bookmark,
                             isSelected = selectedTab == 1,
                             selectedBgColor = theme.accent,
                             selectedContentColor = Color.White,
@@ -840,7 +840,10 @@ fun UserProfileScreen(
                             Icon(Icons.Rounded.Link, contentDescription = null, tint = theme.accent)
                             Spacer(Modifier.width(10.dp))
                             Text("Comparte un enlace o material con la comunidad", color = theme.textSecondary, modifier = Modifier.weight(1f), fontSize = 12.sp)
-                            Text("Publicar", color = theme.accent, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                                Text("Publicar", color = theme.accent, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                                Icon(Icons.AutoMirrored.Rounded.ArrowForward, contentDescription = null, tint = theme.accent, modifier = Modifier.size(14.dp))
+                            }
                         }
                     }
 
@@ -1813,8 +1816,6 @@ fun MuroPostCard(
     var commentText by remember { mutableStateOf("") }
     var localPostReactions by remember(post.reactions) { mutableStateOf(post.reactions) }
 
-    val reactionEmojis = listOf("❤️", "🔥", "⭐", "👍")
-
     Surface(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(18.dp),
@@ -1921,48 +1922,37 @@ fun MuroPostCard(
 
             Spacer(modifier = Modifier.height(14.dp))
 
-            // ─── REACCIONES MULTI-EMOJI FUNCIONALES ───
+            // ─── REACCIONES MULTI-EMOJI FUNCIONALES VECTORIALES SVG ───
+            val reactionMeta = listOf(
+                Triple("👍", null, Color(0xFF0284C7)),
+                Triple("❤️", R.drawable.ic_reaction_heart, Color(0xFFEF4444)),
+                Triple("🔥", R.drawable.ic_reaction_fire, Color(0xFFF97316))
+            )
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                    reactionEmojis.forEach { emoji ->
-                        val users = localPostReactions[emoji].orEmpty()
+                    reactionMeta.forEach { (emojiKey, iconRes, activeColor) ->
+                        val users = localPostReactions[emojiKey].orEmpty()
                         val count = users.size
                         val hasReacted = currentUserUid in users
 
-                        Surface(
-                            shape = RoundedCornerShape(12.dp),
-                            color = if (hasReacted) theme.accent.copy(alpha = 0.15f) else theme.surfaceAccent,
-                            border = androidx.compose.foundation.BorderStroke(
-                                1.dp,
-                                if (hasReacted) theme.accent else Color.Transparent
-                            ),
-                            modifier = Modifier.clickable {
+                        Sticker3dReactionPill(
+                            count = count,
+                            isReacted = hasReacted,
+                            activeColor = activeColor,
+                            theme = theme,
+                            iconResId = iconRes,
+                            imageVector = if (iconRes == null) Icons.Rounded.ThumbUp else null,
+                            onClick = {
                                 val updated = if (hasReacted) users - currentUserUid else users + currentUserUid
-                                localPostReactions = localPostReactions + (emoji to updated)
+                                localPostReactions = localPostReactions + (emojiKey to updated)
                                 DuolingoHaptics.playOptionSelected(context)
-                                CommunityManager.togglePostReaction(post.id, emoji, currentUserUid)
+                                CommunityManager.togglePostReaction(post.id, emojiKey, currentUserUid)
                             }
-                        ) {
-                            Row(
-                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Text(emoji, fontSize = 13.sp)
-                                if (count > 0) {
-                                    Spacer(modifier = Modifier.width(4.dp))
-                                    Text(
-                                        "$count",
-                                        fontSize = 11.sp,
-                                        fontWeight = FontWeight.Bold,
-                                        color = if (hasReacted) theme.accent else theme.textSecondary
-                                    )
-                                }
-                            }
-                        }
+                        )
                     }
                 }
 
@@ -2040,27 +2030,49 @@ fun MuroPostCard(
                                 ) {
                                     val commentLikes = comment.reactions["👍"]?.size ?: 0
                                     val hasLiked = comment.hasUserReacted("👍", currentUserUid)
-                                    Text(
-                                        text = if (hasLiked) "Te gusta ($commentLikes)" else if (commentLikes > 0) "👍 $commentLikes" else "Me gusta",
-                                        fontSize = 10.sp,
-                                        fontWeight = FontWeight.SemiBold,
-                                        color = if (hasLiked) theme.accent else theme.textSecondary,
+                                    Row(
+                                        verticalAlignment = Alignment.CenterVertically,
                                         modifier = Modifier.clickable {
                                             CommunityManager.toggleCommentReaction(post.id, comment.id, "👍", currentUserUid)
                                         }
-                                    )
+                                    ) {
+                                        Icon(
+                                            imageVector = if (hasLiked) Icons.Rounded.ThumbUp else Icons.Rounded.ThumbUpOffAlt,
+                                            contentDescription = "Me gusta",
+                                            tint = if (hasLiked) theme.accent else theme.textSecondary,
+                                            modifier = Modifier.size(12.dp)
+                                        )
+                                        Spacer(modifier = Modifier.width(4.dp))
+                                        Text(
+                                            text = if (hasLiked) "Te gusta ($commentLikes)" else if (commentLikes > 0) "$commentLikes" else "Me gusta",
+                                            fontSize = 10.sp,
+                                            fontWeight = FontWeight.SemiBold,
+                                            color = if (hasLiked) theme.accent else theme.textSecondary
+                                        )
+                                    }
 
                                     if (comment.authorUid == currentUserUid) {
                                         Spacer(modifier = Modifier.width(10.dp))
-                                        Text(
-                                            text = "Eliminar",
-                                            fontSize = 10.sp,
-                                            color = Color(0xFFEF4444),
-                                            fontWeight = FontWeight.Medium,
+                                        Row(
+                                            verticalAlignment = Alignment.CenterVertically,
                                             modifier = Modifier.clickable {
                                                 CommunityManager.deleteComment(post.id, comment.id, currentUserUid)
                                             }
-                                        )
+                                        ) {
+                                            Icon(
+                                                imageVector = Icons.Rounded.DeleteOutline,
+                                                contentDescription = "Eliminar",
+                                                tint = Color(0xFFEF4444),
+                                                modifier = Modifier.size(12.dp)
+                                            )
+                                            Spacer(modifier = Modifier.width(2.dp))
+                                            Text(
+                                                text = "Eliminar",
+                                                fontSize = 10.sp,
+                                                color = Color(0xFFEF4444),
+                                                fontWeight = FontWeight.Medium
+                                            )
+                                        }
                                     }
                                 }
                             }

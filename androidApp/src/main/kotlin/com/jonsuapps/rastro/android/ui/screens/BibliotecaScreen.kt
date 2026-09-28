@@ -62,6 +62,7 @@ import com.jonsuapps.rastro.android.ui.components.Sticker3dButton
 import com.jonsuapps.rastro.android.ui.components.Sticker3dCard
 import com.jonsuapps.rastro.android.ui.components.Sticker3dPill
 import com.jonsuapps.rastro.android.ui.components.CartoonAvatar
+import com.jonsuapps.rastro.android.ui.components.Sticker3dReactionPill
 import com.jonsuapps.rastro.android.ui.components.DuolingoHaptics
 import com.jonsuapps.rastro.android.ui.components.EditUploadDialog
 import com.jonsuapps.rastro.android.ui.components.LucideBookmarkIcon
@@ -861,12 +862,11 @@ fun CommunityUploadCard(
                 }
             }
 
-            // 6. Reacciones Cartoon Vector SVG (Corazón, Fuego, Estrella)
-            // 6. Reacciones Cartoon Vector SVG (Corazón, Fuego, Estrella) - 0ms Respuesta Instantánea Optimista
+            // 6. Reacciones Cartoon Vector SVG (Like 👍, Corazón ❤️, Fuego 🔥) - 0ms Respuesta Instantánea Optimista
             val reactionMeta = listOf(
+                Triple("👍", null, Color(0xFF0284C7)),
                 Triple("❤️", R.drawable.ic_reaction_heart, Color(0xFFEF4444)),
-                Triple("🔥", R.drawable.ic_reaction_fire, Color(0xFFF97316)),
-                Triple("⭐", R.drawable.ic_reaction_star, Color(0xFFF59E0B))
+                Triple("🔥", R.drawable.ic_reaction_fire, Color(0xFFF97316))
             )
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 reactionMeta.forEach { (emojiKey, iconRes, activeColor) ->
@@ -875,6 +875,7 @@ fun CommunityUploadCard(
                     val count = currentUsers.size
                     Sticker3dReactionPill(
                         iconResId = iconRes,
+                        imageVector = if (iconRes == null) Icons.Rounded.ThumbUp else null,
                         count = count,
                         isReacted = reacted,
                         activeColor = activeColor,
@@ -926,6 +927,8 @@ fun CommunityUploadCard(
                                     strokeColor = theme.strokeBorder,
                                     contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
                                 ) {
+                                    Icon(Icons.Rounded.Check, contentDescription = null, tint = Color.White, modifier = Modifier.size(13.dp))
+                                    Spacer(Modifier.width(4.dp))
                                     Text("Guardar", color = Color.White, fontSize = 11.sp, fontWeight = FontWeight.Bold)
                                 }
                                 Sticker3dButton(
@@ -935,6 +938,8 @@ fun CommunityUploadCard(
                                     strokeColor = theme.strokeBorder,
                                     contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
                                 ) {
+                                    Icon(Icons.Rounded.Close, contentDescription = null, tint = theme.textSecondary, modifier = Modifier.size(13.dp))
+                                    Spacer(Modifier.width(4.dp))
                                     Text("Cancelar", color = theme.textSecondary, fontSize = 11.sp)
                                 }
                             }
@@ -999,6 +1004,8 @@ fun CommunityUploadCard(
                         shape = RastroShapes.Pill,
                         contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp)
                     ) {
+                        Icon(Icons.Rounded.Send, contentDescription = null, tint = commentBtnColor, modifier = Modifier.size(13.dp))
+                        Spacer(Modifier.width(5.dp))
                         Text(
                             "Publicar",
                             color = commentBtnColor,
@@ -1098,60 +1105,7 @@ private fun Sticker3dActionPill(
     }
 }
 
-@Composable
-private fun Sticker3dReactionPill(
-    iconResId: Int,
-    count: Int,
-    isReacted: Boolean,
-    activeColor: Color,
-    theme: com.jonsuapps.rastro.theme.RastroPalette,
-    enabled: Boolean = true,
-    onClick: () -> Unit
-) {
-    val shape = RoundedCornerShape(12.dp)
-    Box(
-        modifier = Modifier
-            .height(32.dp)
-            .bouncyClick(scaleDown = 0.90f, enabled = enabled, onClick = onClick)
-    ) {
-        // Bisel 3D inferior
-        Box(
-            modifier = Modifier
-                .matchParentSize()
-                .offset(y = 2.dp)
-                .clip(shape)
-                .background(if (isReacted) activeColor.copy(alpha = 0.45f) else theme.cardBevel)
-        )
-        // Cara frontal
-        Box(
-            modifier = Modifier
-                .fillMaxHeight()
-                .clip(shape)
-                .background(if (isReacted) activeColor.copy(alpha = 0.15f) else theme.surface)
-                .border(1.5.dp, if (isReacted) activeColor else theme.strokeBorder, shape)
-                .padding(horizontal = 10.dp),
-            contentAlignment = Alignment.Center
-        ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(6.dp)
-            ) {
-                Icon(
-                    painter = painterResource(id = iconResId),
-                    contentDescription = null,
-                    tint = Color.Unspecified, // Mantiene los colores vivos del SVG cartoon
-                    modifier = Modifier.size(16.dp)
-                )
-                Text(
-                    text = count.toString(),
-                    fontSize = 11.5.sp,
-                    fontWeight = if (isReacted) FontWeight.Black else FontWeight.Bold,
-                    color = if (isReacted) activeColor else theme.textPrimary
-                )
-            }
-        }
-    }
-}
+
 
 @Composable
 fun ObraLiterariaCard(

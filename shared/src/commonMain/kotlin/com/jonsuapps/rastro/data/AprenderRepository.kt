@@ -6,6 +6,19 @@ import com.jonsuapps.rastro.model.LessonNode
 import com.jonsuapps.rastro.model.LessonTheory
 import com.jonsuapps.rastro.model.SubjectConfig
 
+/**
+ * Calcula el número de subtema en formato "N.X" (ej. "1.1", "2.3") en runtime.
+ * Agrupa por semana y asigna índice relativo dentro del grupo.
+ * De esta forma NO hay que editar los catálogos — el subtema se genera automáticamente.
+ */
+fun List<LessonNode>.withSubtemaIndex(): List<LessonNode> {
+    val grouped = this.groupBy { it.semana }
+    return this.map { lesson ->
+        val posicion = (grouped[lesson.semana]?.indexOf(lesson) ?: 0) + 1
+        lesson.copy(subtema = "${lesson.semana}.$posicion")
+    }
+}
+
 object AprenderRepository {
 
     val subjects = listOf(
@@ -199,6 +212,8 @@ object AprenderRepository {
 
     fun getSampleLessonsForSubject(subjectId: String): List<LessonNode> =
         LearningPathCatalog.forSubject(normalizeSubjectId(subjectId))
+            .sortedWith(compareBy({ it.semana }, { it.id }))
+            .withSubtemaIndex()
 
     fun getLessonsForSubject(subjectId: String): List<LessonNode> = getSampleLessonsForSubject(subjectId)
 

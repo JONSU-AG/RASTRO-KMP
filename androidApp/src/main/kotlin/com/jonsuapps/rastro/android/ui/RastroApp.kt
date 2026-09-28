@@ -295,8 +295,7 @@ fun RastroApp(
                 // Barra superior limpia con micro-botones (36px) del §3.16 del mapa
                 TopHeaderActions(
                     colors = theme,
-                    onOpenOrstty = { navController.navigate(RastroScreen.Orstty.route) },
-                    onOpenChats = { navController.navigate(RastroScreen.Chats.route) },
+                    onOpenPizarra = { navController.navigate(RastroScreen.Pizarra.route) },
                     onOpenNotifications = { showNotifications = true },
                     unreadNotifications = notifications.count { !it.read },
                     onOpenPomodoro = {
@@ -423,16 +422,10 @@ fun RastroApp(
                     SimuladorScreen()
                 }
 
-                // 7. ORSTTY Asistente IA
-                composable(RastroScreen.Orstty.route) {
-                    OrsttyScreen()
-                }
-
-                // 8. Chats (Exige cuenta)
-                composable(RastroScreen.Chats.route) {
-                    ChatsScreen(
-                        isAuthenticated = currentUser.isAuthenticated && !currentUser.isAnonymous,
-                        onNavigateToAuth = { navController.navigate(RastroScreen.Auth.route) }
+                // 7. Pizarra de Dibujo / Relajo (Doodle Canvas)
+                composable(RastroScreen.Pizarra.route) {
+                    PizarraScreen(
+                        onBack = { navController.popBackStack() }
                     )
                 }
 
@@ -738,7 +731,10 @@ fun RastroApp(
             onSelect = { item ->
                 showNotifications = false
                 when {
-                    item.type in setOf("chat", "mensaje", "direct_message") -> navController.navigate(RastroScreen.Chats.route)
+                    item.type in setOf("chat", "mensaje", "direct_message") -> {
+                        val targetUid = item.targetUid.ifBlank { FirebaseAuth.getInstance().currentUser?.uid.orEmpty() }
+                        if (targetUid.isNotBlank()) navController.navigate(RastroScreen.UsuarioDetail.createRoute(targetUid))
+                    }
                     item.type in setOf("material", "nuevo_material") -> navController.navigate(RastroScreen.Biblioteca.route)
                     item.type in setOf("comment", "reaction", "wall_post", "post") && !item.id.isBlank() -> {
                         val targetUid = item.targetUid.ifBlank { FirebaseAuth.getInstance().currentUser?.uid.orEmpty() }

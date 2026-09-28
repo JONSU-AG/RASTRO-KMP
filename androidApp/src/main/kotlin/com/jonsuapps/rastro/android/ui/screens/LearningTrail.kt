@@ -84,13 +84,29 @@ internal fun CourseProgressBar(progress: Float, modifier: Modifier = Modifier, o
 }
 
 @Composable
-internal fun TopicFilter(label: String, selected: Boolean, onClick: () -> Unit) {
+internal fun TopicFilter(
+    label: String,
+    selected: Boolean,
+    selectedColor: Color = Color(0xFF0284C7),
+    selectedBevel: Color = Color(0xFF0369A1),
+    onClick: () -> Unit
+) {
     val theme = ThemeManager.currentTheme
-    Sticker3dPill(selected = selected, onClick = onClick,
-        selectedColor = Color(0xFFEA580C), selectedBevel = Color(0xFF9A3412),
-        unselectedColor = theme.surface, unselectedBevel = theme.cardBevel, strokeColor = theme.strokeBorder) {
-        Text(label, fontSize = 12.sp, fontWeight = FontWeight.Bold,
-            color = if (selected) Color.White else theme.textPrimary)
+    Sticker3dPill(
+        selected = selected,
+        onClick = onClick,
+        selectedColor = selectedColor,
+        selectedBevel = selectedBevel,
+        unselectedColor = theme.surface,
+        unselectedBevel = theme.cardBevel,
+        strokeColor = theme.strokeBorder
+    ) {
+        Text(
+            label,
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Bold,
+            color = if (selected) Color.White else theme.textPrimary
+        )
     }
 }
 
@@ -103,7 +119,9 @@ internal fun TopicHeading(number: Int, lessons: List<LessonNode>) {
         Row(Modifier.padding(horizontal = 10.dp, vertical = 8.dp),
             verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(9.dp)) {
             Text("Tema $number", fontSize = 11.sp, color = theme.accent, fontWeight = FontWeight.Black)
-            Text(lessons.first().title.replace(Regex("^\\d+(?:\\.\\d+)*\\s*"), ""),
+            val topicTitle = lessons.firstOrNull()?.theory?.titulo?.ifBlank { null }
+                ?: lessons.first().title.replace(Regex("^\\d+(?:\\.\\d+)*\\s*"), "")
+            Text(topicTitle,
                 modifier = Modifier.weight(1f), fontSize = 12.sp, maxLines = 2,
                 overflow = TextOverflow.Ellipsis, fontWeight = FontWeight.ExtraBold, color = theme.textPrimary)
             Column(Modifier.width(48.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -270,6 +288,13 @@ private fun TrailLessonLabel(lesson: LessonNode, status: String, detail: String,
         bevelColor = theme.cardBevel, strokeColor = if (active) Color(0xFFF59E0B) else tint.copy(alpha = 0.45f),
         shape = RoundedCornerShape(15.dp), onClick = if (lesson.challenges.isEmpty()) null else onClick) {
         Column(Modifier.padding(8.dp), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+            // Número de subtema: "1.1", "1.2", etc.
+            Text(
+                text = if (lesson.subtema.isNotBlank()) "Subtema ${lesson.subtema}" else "Lección",
+                fontSize = 9.sp,
+                fontWeight = FontWeight.Black,
+                color = tint.copy(alpha = 0.80f)
+            )
             Text(lesson.title, color = theme.textPrimary, fontSize = 11.sp,
                 lineHeight = 15.sp, fontWeight = FontWeight.ExtraBold)
             Text(status, color = if (active) Color(0xFF965005) else tint,

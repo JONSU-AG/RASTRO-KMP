@@ -32,10 +32,11 @@ sealed class RastroScreen(val route: String) {
     // 6. Simulador (Cronómetro y Ranking)
     data object Simulador : RastroScreen("simulador")
 
-    // 7. ORSTTY Tutor IA
-    data object Orstty : RastroScreen("orstty")
+    // 7. Pizarra de Dibujo / Relajo (Doodle Canvas)
+    data object Pizarra : RastroScreen("pizarra")
 
-    // 8. Chats (Exige cuenta)
+    // Rutas heredadas / archivadas
+    data object Orstty : RastroScreen("orstty")
     data object Chats : RastroScreen("chats")
 
     // 9. Perfil Propio (Exige cuenta) y Perfil Público

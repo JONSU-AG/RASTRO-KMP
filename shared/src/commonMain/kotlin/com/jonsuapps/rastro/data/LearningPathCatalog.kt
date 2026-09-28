@@ -5,7 +5,7 @@ import com.jonsuapps.rastro.model.LessonNode
 
 internal object LearningPathCatalog {
     val lessons: List<LessonNode> by lazy {
-        buildList {
+        val raw = buildList {
             addAll(RazMatematicoCatalog.lessons)
             addAll(RazLogicoCatalog.lessons)
             addAll(RazVerbalCatalog.lessons)
@@ -27,6 +27,10 @@ internal object LearningPathCatalog {
             addAll(LiteraturaCatalog.lessons)
             addAll(InglesCatalog.lessons)
         }
+        raw.groupBy { it.subjectId.lowercase() }
+            .flatMap { (_, subjectLessons) ->
+                subjectLessons.sortedWith(compareBy({ it.semana }, { it.id })).withSubtemaIndex()
+            }
     }
 
     fun forSubject(subjectId: String): List<LessonNode> =

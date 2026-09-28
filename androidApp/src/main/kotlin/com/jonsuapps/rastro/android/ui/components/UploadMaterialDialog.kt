@@ -315,6 +315,8 @@ fun UploadMaterialDialog(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         TextButton(onClick = onClose) {
+                            Icon(Icons.Rounded.Close, contentDescription = null, tint = theme.textSecondary, modifier = Modifier.size(15.dp))
+                            Spacer(Modifier.width(4.dp))
                             Text("Cancelar", color = theme.textSecondary, fontWeight = FontWeight.SemiBold)
                         }
 

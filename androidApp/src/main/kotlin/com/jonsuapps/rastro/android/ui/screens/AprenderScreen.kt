@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.jonsuapps.rastro.android.ui.components.DualMascotDuo
 import com.jonsuapps.rastro.data.AprenderRepository
+import com.jonsuapps.rastro.data.withSubtemaIndex
 import com.jonsuapps.rastro.gamification.GamificationManager
 import com.jonsuapps.rastro.theme.RastroShapes
 import com.jonsuapps.rastro.theme.ThemeManager
@@ -40,6 +41,102 @@ import com.jonsuapps.rastro.android.ui.components.Sticker3dPill
 import com.jonsuapps.rastro.android.ui.components.Sticker3dCircleButton
 import androidx.compose.material.icons.rounded.Bolt
 import androidx.compose.material.icons.rounded.RocketLaunch
+
+data class SubjectColorTheme(
+    val primary: Color,
+    val gradientTop: Color,
+    val gradientBottom: Color,
+    val bevel: Color
+)
+
+fun getSubjectColorTheme(subjectId: String): SubjectColorTheme {
+    return when (subjectId) {
+        "biologia" -> SubjectColorTheme(
+            primary = Color(0xFF059669),
+            gradientTop = Color(0xFF10B981),
+            gradientBottom = Color(0xFF047857),
+            bevel = Color(0xFF065F46)
+        )
+        "fisica" -> SubjectColorTheme(
+            primary = Color(0xFF2563EB),
+            gradientTop = Color(0xFF3B82F6),
+            gradientBottom = Color(0xFF1D4ED8),
+            bevel = Color(0xFF1E40AF)
+        )
+        "quimica" -> SubjectColorTheme(
+            primary = Color(0xFF7C3AED),
+            gradientTop = Color(0xFF8B5CF6),
+            gradientBottom = Color(0xFF6D28D9),
+            bevel = Color(0xFF5B21B6)
+        )
+        "filosofia" -> SubjectColorTheme(
+            primary = Color(0xFF0D9488),
+            gradientTop = Color(0xFF14B8A6),
+            gradientBottom = Color(0xFF0F766E),
+            bevel = Color(0xFF115E59)
+        )
+        "psicologia" -> SubjectColorTheme(
+            primary = Color(0xFFE11D48),
+            gradientTop = Color(0xFFF43F5E),
+            gradientBottom = Color(0xFFBE123C),
+            bevel = Color(0xFF9F1239)
+        )
+        "geografia" -> SubjectColorTheme(
+            primary = Color(0xFF16A34A),
+            gradientTop = Color(0xFF22C55E),
+            gradientBottom = Color(0xFF15803D),
+            bevel = Color(0xFF166534)
+        )
+        "historia", "historia_universal", "historia_peru" -> SubjectColorTheme(
+            primary = Color(0xFFD97706),
+            gradientTop = Color(0xFFF59E0B),
+            gradientBottom = Color(0xFFB45309),
+            bevel = Color(0xFF92400E)
+        )
+        "lenguaje" -> SubjectColorTheme(
+            primary = Color(0xFF4F46E5),
+            gradientTop = Color(0xFF6366F1),
+            gradientBottom = Color(0xFF4338CA),
+            bevel = Color(0xFF3730A3)
+        )
+        "literatura" -> SubjectColorTheme(
+            primary = Color(0xFF9333EA),
+            gradientTop = Color(0xFFA855F7),
+            gradientBottom = Color(0xFF7E22CE),
+            bevel = Color(0xFF6B21A8)
+        )
+        "civica" -> SubjectColorTheme(
+            primary = Color(0xFF0284C7),
+            gradientTop = Color(0xFF0EA5E9),
+            gradientBottom = Color(0xFF0369A1),
+            bevel = Color(0xFF075985)
+        )
+        "raz_matematico", "matematica", "aritmetica", "algebra", "geometria", "trigonometria" -> SubjectColorTheme(
+            primary = Color(0xFF0284C7),
+            gradientTop = Color(0xFF38BDF8),
+            gradientBottom = Color(0xFF0284C7),
+            bevel = Color(0xFF0369A1)
+        )
+        "raz_logico" -> SubjectColorTheme(
+            primary = Color(0xFF0EA5E9),
+            gradientTop = Color(0xFF38BDF8),
+            gradientBottom = Color(0xFF0284C7),
+            bevel = Color(0xFF0369A1)
+        )
+        "raz_verbal", "comprension_lectora" -> SubjectColorTheme(
+            primary = Color(0xFFC026D3),
+            gradientTop = Color(0xFFD946EF),
+            gradientBottom = Color(0xFFA21CAF),
+            bevel = Color(0xFF86198F)
+        )
+        else -> SubjectColorTheme(
+            primary = Color(0xFF2563EB),
+            gradientTop = Color(0xFF60A5FA),
+            gradientBottom = Color(0xFF1D4ED8),
+            bevel = Color(0xFF1E40AF)
+        )
+    }
+}
 
 /**
  * Ruta de aprendizaje por temas con progreso real y recursos originales de Rastro.
@@ -66,7 +163,7 @@ fun AprenderScreen(
         AprenderRepository.getSubjectById(selectedSubjectId) ?: subjects.first()
     }
     val currentLessons = remember(progression, selectedSubjectId) {
-        progression.learningPath(selectedSubjectId)
+        progression.learningPath(selectedSubjectId).withSubtemaIndex()
     }
     val trailListState = rememberLazyListState()
     val journeyFrom by GamificationManager.journeyFrom.collectAsState()
@@ -264,12 +361,13 @@ fun AprenderScreen(
                     ) {
                         items(subjects) { subject ->
                             val isSelected = subject.id == selectedSubjectId
+                            val subTheme = getSubjectColorTheme(subject.id)
                             Sticker3dPill(
                                 selected = isSelected,
                                 onClick = { selectedSubjectId = subject.id },
-                                selectedColor = Color(0xFFEA580C),
+                                selectedColor = subTheme.primary,
                                 unselectedColor = theme.surface,
-                                selectedBevel = Color(0xFF9A3412),
+                                selectedBevel = subTheme.bevel,
                                 unselectedBevel = theme.cardBevel,
                                 strokeColor = theme.strokeBorder
                             ) {
@@ -315,13 +413,14 @@ fun AprenderScreen(
                 }
             }
 
-            // 3. Subject Hero Banner (Naranja con Orstty & Artyon, Título y 3 píldoras)
+            // 3. Subject Hero Banner Dinámico según Materia (Sin naranja genérico/oscuro)
             item {
+                val currentTheme = getSubjectColorTheme(currentSubject.id)
                 Sticker3dCard(
                     modifier = Modifier.fillMaxWidth(),
-                    containerColor = Color(0xFFEA580C),
+                    containerColor = currentTheme.primary,
                     strokeColor = theme.strokeBorder,
-                    bevelColor = Color(0xFF9A3412),
+                    bevelColor = currentTheme.bevel,
                     bevelHeight = 5.dp,
                     shape = RoundedCornerShape(26.dp)
                 ) {
@@ -329,7 +428,7 @@ fun AprenderScreen(
                         modifier = Modifier
                             .background(
                                 Brush.verticalGradient(
-                                    listOf(Color(0xFFC2410C), Color(0xFFEA580C))
+                                    listOf(currentTheme.gradientTop, currentTheme.gradientBottom)
                                 )
                             )
                             .padding(horizontal = 12.dp, vertical = 9.dp)
@@ -397,12 +496,23 @@ fun AprenderScreen(
             }
 
             item {
+                val activeSubjectTheme = getSubjectColorTheme(selectedSubjectId)
                 LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     item {
-                        TopicFilter("Todo", selectedTopic == null) { selectedTopic = null }
+                        TopicFilter(
+                            label = "Todo",
+                            selected = selectedTopic == null,
+                            selectedColor = activeSubjectTheme.primary,
+                            selectedBevel = activeSubjectTheme.bevel
+                        ) { selectedTopic = null }
                     }
                     items(topicGroups.size) { index ->
-                        TopicFilter("Tema ${index + 1}", selectedTopic == topicGroups[index].key) {
+                        TopicFilter(
+                            label = "Tema ${index + 1}",
+                            selected = selectedTopic == topicGroups[index].key,
+                            selectedColor = activeSubjectTheme.primary,
+                            selectedBevel = activeSubjectTheme.bevel
+                        ) {
                             selectedTopic = topicGroups[index].key
                         }
                     }

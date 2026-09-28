@@ -258,12 +258,27 @@ fun LessonRoadmapNode(
             Spacer(modifier = Modifier.width(14.dp))
 
             Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = if (lesson.isLocked) "Continuar desde aquí" else "${lesson.challenges.size} retos",
-                    style = MaterialTheme.typography.labelSmall,
-                    color = if (isAvailable) accentColor else theme.textSecondary,
-                    fontWeight = FontWeight.SemiBold
-                )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    if (lesson.subtema.isNotBlank()) {
+                        Text(
+                            text = "Subtema ${lesson.subtema}",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = accentColor,
+                            fontWeight = FontWeight.Black
+                        )
+                        Text(
+                            text = " • ",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = theme.textSecondary
+                        )
+                    }
+                    Text(
+                        text = if (lesson.isLocked) "Continuar desde aquí" else "${lesson.challenges.size} retos",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = if (isAvailable) accentColor else theme.textSecondary,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                }
                 Text(
                     text = lesson.title,
                     style = MaterialTheme.typography.titleSmall,

@@ -626,6 +626,7 @@ fun Sticker3dPill(
     isSelected: Boolean,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    icon: androidx.compose.ui.graphics.vector.ImageVector? = null,
     selectedBgColor: Color = Color(0xFF10B981),
     selectedContentColor: Color = Color.White,
     unselectedBgColor: Color = Color.White,
@@ -648,14 +649,109 @@ fun Sticker3dPill(
         strokeWidth = strokeWidth,
         bevelHeight = bevelHeight
     ) {
+        val contentColor = if (isSelected) selectedContentColor else unselectedContentColor
+        if (icon != null) {
+            androidx.compose.material3.Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = contentColor,
+                modifier = Modifier.size(14.dp)
+            )
+            androidx.compose.foundation.layout.Spacer(Modifier.width(5.dp))
+        }
         androidx.compose.material3.Text(
             text = text,
             fontSize = 12.sp,
             fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
-            color = if (isSelected) selectedContentColor else unselectedContentColor,
+            color = contentColor,
             maxLines = 1,
             textAlign = androidx.compose.ui.text.style.TextAlign.Center
         )
+    }
+}
+
+/**
+ * Píldora de Reacción 3D Cartoon / SVG Vectorial reutilizable
+ */
+@Composable
+fun Sticker3dReactionPill(
+    count: Int,
+    isReacted: Boolean,
+    activeColor: Color,
+    theme: com.jonsuapps.rastro.theme.RastroPalette,
+    modifier: Modifier = Modifier,
+    iconResId: Int? = null,
+    imageVector: androidx.compose.ui.graphics.vector.ImageVector? = null,
+    enabled: Boolean = true,
+    onClick: () -> Unit
+) {
+    val shape = RoundedCornerShape(12.dp)
+    Box(
+        modifier = modifier
+            .height(32.dp)
+            .bouncyClick(scaleDown = 0.90f, enabled = enabled, onClick = onClick)
+    ) {
+        // Bisel 3D inferior
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .offset(y = 2.dp)
+                .clip(shape)
+                .background(if (isReacted) activeColor.copy(alpha = 0.45f) else theme.cardBevel)
+        )
+        // Cara frontal
+        Box(
+            modifier = Modifier
+                .fillMaxHeight()
+                .clip(shape)
+                .background(if (isReacted) activeColor.copy(alpha = 0.15f) else theme.surface)
+                .border(1.5.dp, if (isReacted) activeColor else theme.strokeBorder, shape)
+                .padding(horizontal = 10.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(6.dp)
+            ) {
+                when {
+                    iconResId == com.jonsuapps.rastro.R.drawable.ic_reaction_heart -> {
+                        AnimatedHeartIcon(
+                            isReacted = isReacted,
+                            activeColor = activeColor,
+                            modifier = Modifier.size(16.dp)
+                        )
+                    }
+                    iconResId == com.jonsuapps.rastro.R.drawable.ic_reaction_fire -> {
+                        AnimatedFlameIcon(
+                            isReacted = isReacted,
+                            modifier = Modifier.size(16.dp)
+                        )
+                    }
+                    imageVector != null -> {
+                        AnimatedThumbUpIcon(
+                            isReacted = isReacted,
+                            activeColor = activeColor,
+                            inactiveColor = theme.textSecondary,
+                            modifier = Modifier.size(16.dp)
+                        )
+                    }
+                    iconResId != null -> {
+                        androidx.compose.material3.Icon(
+                            painter = androidx.compose.ui.res.painterResource(id = iconResId),
+                            contentDescription = null,
+                            tint = Color.Unspecified,
+                            modifier = Modifier.size(16.dp)
+                        )
+                    }
+                }
+                androidx.compose.material3.Text(
+                    text = count.toString(),
+                    fontSize = 11.5.sp,
+                    fontWeight = if (isReacted) androidx.compose.ui.text.font.FontWeight.Black else androidx.compose.ui.text.font.FontWeight.Bold,
+                    color = if (isReacted) activeColor else theme.textPrimary
+                )
+            }
+        }
     }
 }
 

@@ -40,8 +40,7 @@ import com.jonsuapps.rastro.theme.RastroShapes
 @Composable
 fun TopHeaderActions(
     colors: RastroColors,
-    onOpenOrstty: () -> Unit,
-    onOpenChats: () -> Unit,
+    onOpenPizarra: () -> Unit,
     onOpenNotifications: () -> Unit,
     unreadNotifications: Int = 0,
     onOpenPomodoro: () -> Unit,
@@ -72,30 +71,23 @@ fun TopHeaderActions(
                 horizontalArrangement = Arrangement.spacedBy(4.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // 1. Orstty Asistente IA (Avatar real con fondo lavanda)
+                // 1. Pizarra Doodle / Relajo (Reemplaza definitivamente a Chats y Orstty)
                 Box(
                     modifier = Modifier
                         .size(30.dp)
                         .clip(RoundedCornerShape(10.dp))
-                        .background(Color(0xFFEDE9FE))
-                        .border(1.5.dp, colors.strokeBorder, RoundedCornerShape(10.dp))
-                        .bouncyClick(scaleDown = 0.88f, onClick = onOpenOrstty)
+                        .background(Color(0xFFE0F2FE))
+                        .border(1.5.dp, Color(0xFF0284C7), RoundedCornerShape(10.dp))
+                        .bouncyClick(scaleDown = 0.88f, onClick = onOpenPizarra)
                         .padding(4.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
-                        painter = painterResource(id = R.drawable.orstty_feliz),
-                        contentDescription = "Orstty IA",
+                        painter = painterResource(id = R.drawable.ic_pizarra),
+                        contentDescription = "Pizarra Doodle",
                         modifier = Modifier.fillMaxSize()
                     )
                 }
-
-                // 2. Chats
-                SquareHeaderButton(
-                    icon = Icons.Outlined.ChatBubbleOutline,
-                    colors = colors,
-                    onClick = onOpenChats
-                )
 
                 // 3. Notificaciones con Badge Rojo "3"
                 Box(modifier = Modifier.size(34.dp), contentAlignment = Alignment.Center) {

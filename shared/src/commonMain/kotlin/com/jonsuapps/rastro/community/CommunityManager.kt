@@ -19,7 +19,7 @@ object CommunityManager {
             reactions = mapOf(
                 "❤️" to listOf("u1", "u2", "u3", "u4", "u5", "u6", "u7"),
                 "🔥" to listOf("u8", "u9", "u10", "u11"),
-                "⭐" to listOf("u12", "u13", "u14", "local_student_1")
+                "👍" to listOf("u12", "u13", "u14", "local_student_1")
             ),
             comments = listOf(
                 PostComment(
@@ -82,7 +82,7 @@ object CommunityManager {
             content = "Cuadro comparativo entre Ernesto, el Viejo y el colegio de Abancay. Muy preguntado en la matriz de evaluación del área de Sociales.",
             fileUrl = "https://drive.google.com/file/rios_profundos_resumen.pdf",
             reactions = mapOf(
-                "⭐" to listOf("u1", "u2", "u3", "u4", "u5", "u6", "local_student_1"),
+                "👍" to listOf("u1", "u2", "u3", "u4", "u5", "u6", "local_student_1"),
                 "❤️" to listOf("u7", "u8", "u9")
             ),
             comments = emptyList(),
