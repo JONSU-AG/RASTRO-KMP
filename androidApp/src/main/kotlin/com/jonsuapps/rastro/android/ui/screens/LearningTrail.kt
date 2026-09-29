@@ -142,6 +142,26 @@ internal fun LearningTrail(lessons: List<LessonNode>, onNavigate: (String) -> Un
     val journeyFrom by GamificationManager.journeyFrom.collectAsState()
     val activeIndex = lessons.indexOfFirst { it.isCurrent }
     var jumpTarget by remember { mutableStateOf<LessonNode?>(null) }
+    var previewTarget by remember { mutableStateOf<LessonNode?>(null) }
+    previewTarget?.let { target ->
+        com.jonsuapps.rastro.android.ui.components.LessonPresentationPopup(
+            lesson = target,
+            onDismiss = { previewTarget = null },
+            onStartLesson = {
+                if (!target.isCompleted && !target.isCurrent) {
+                    GamificationManager.jumpToLesson(target.id)
+                    val user = UserManager.currentUser.value
+                    GamificationRepository.saveLocal(user.uid, GamificationManager.state.value)
+                    if (user.isAuthenticated && !user.isAnonymous) {
+                        GamificationRepository.save(user.uid, GamificationManager.state.value)
+                    }
+                }
+                val lessonId = target.id
+                previewTarget = null
+                onNavigate(lessonId)
+            }
+        )
+    }
     jumpTarget?.let { target ->
         JumpToLessonDialog(target, onDismiss = { jumpTarget = null }, onContinue = {
             jumpTarget = null
@@ -175,8 +195,7 @@ internal fun LearningTrail(lessons: List<LessonNode>, onNavigate: (String) -> Un
         Column {
             lessons.forEachIndexed { index, lesson ->
                 LearningTrailRow(lesson, index, Modifier.onSizeChanged { heights[index] = it.height }) {
-                    if (!lesson.isCompleted && !lesson.isCurrent) jumpTarget = lesson
-                    else onNavigate(lesson.id)
+                    previewTarget = lesson
                 }
             }
         }

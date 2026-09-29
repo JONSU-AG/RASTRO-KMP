@@ -26,6 +26,7 @@ import androidx.compose.ui.window.Dialog
 import com.jonsuapps.rastro.android.ui.components.Sticker3dButton
 import com.jonsuapps.rastro.android.ui.components.Sticker3dCard
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.Error
@@ -52,6 +53,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -70,6 +72,7 @@ import com.jonsuapps.rastro.android.ui.components.ArtyonMascot
 import com.jonsuapps.rastro.android.ui.components.DualMascotDuo
 import com.jonsuapps.rastro.android.ui.components.MascotMood
 import com.jonsuapps.rastro.android.ui.components.OrsttyMascot
+import com.jonsuapps.rastro.auth.AdminConfig
 import com.jonsuapps.rastro.data.AprenderRepository
 import com.jonsuapps.rastro.android.data.GamificationRepository
 import com.jonsuapps.rastro.auth.UserManager
@@ -91,6 +94,8 @@ fun LessonEngineScreen(
     val context = LocalContext.current
     val hearts by GamificationManager.hearts.collectAsState()
     val currentUser by UserManager.currentUser.collectAsState()
+    val isAdmin = remember(currentUser.email) { AdminConfig.isAdmin(currentUser.email) }
+    var isAutoModeEnabled by remember(lessonId) { mutableStateOf(false) }
 
     // Cargar lección
     val lesson = remember(lessonId) {
@@ -99,19 +104,19 @@ fun LessonEngineScreen(
     }
 
     // Las preguntas falladas vuelven una vez en la fase Fénix, después del bloque original.
-    val missedChallenges = remember { mutableStateListOf<Challenge>() }
+    val missedChallenges = remember(lessonId) { mutableStateListOf<Challenge>() }
 
-    var currentStep by remember { mutableIntStateOf(-1) } // -1: Inicio, 0: Teoría, 1..N: Retos
-    var selectedOptionIndex by remember { mutableStateOf<Int?>(null) }
-    var selectedBlankAnswer by remember { mutableStateOf<String?>(null) }
-    var selectedLeftIndex by remember { mutableStateOf<Int?>(null) }
-    var selectedRightIndex by remember { mutableStateOf<Int?>(null) }
-    var matchedPairIndices by remember { mutableStateOf<Map<Int, Int>>(emptyMap()) }
-    var isAnswerChecked by remember { mutableStateOf(false) }
-    var isCorrectAnswer by remember { mutableStateOf(false) }
-    var correctAnswers by remember { mutableIntStateOf(0) }
-    var showExitConfirmDialog by remember { mutableStateOf(false) }
-    var firstPassCorrect by remember { mutableIntStateOf(0) }
+    var currentStep by remember(lessonId) { mutableIntStateOf(0) } // 0: Teoría, 1..N: Retos
+    var selectedOptionIndex by remember(lessonId) { mutableStateOf<Int?>(null) }
+    var selectedBlankAnswer by remember(lessonId) { mutableStateOf<String?>(null) }
+    var selectedLeftIndex by remember(lessonId) { mutableStateOf<Int?>(null) }
+    var selectedRightIndex by remember(lessonId) { mutableStateOf<Int?>(null) }
+    var matchedPairIndices by remember(lessonId) { mutableStateOf<Map<Int, Int>>(emptyMap()) }
+    var isAnswerChecked by remember(lessonId) { mutableStateOf(false) }
+    var isCorrectAnswer by remember(lessonId) { mutableStateOf(false) }
+    var correctAnswers by remember(lessonId) { mutableIntStateOf(0) }
+    var showExitConfirmDialog by remember(lessonId) { mutableStateOf(false) }
+    var firstPassCorrect by remember(lessonId) { mutableIntStateOf(0) }
     val previouslyCompleted = remember(lessonId) {
         GamificationManager.state.value.completedLessons[lessonId]?.skipped == false
     }
@@ -121,9 +126,9 @@ fun LessonEngineScreen(
         else -> 1
     }
     val earnedXp = if (previouslyCompleted) 0 else 25 + correctAnswers * 5
-    var isLessonCompleted by remember { mutableStateOf(false) }
-    var isRedemptionPhase by remember { mutableStateOf(false) }
-    var showRedemptionModal by remember { mutableStateOf(false) }
+    var isLessonCompleted by remember(lessonId) { mutableStateOf(false) }
+    var isRedemptionPhase by remember(lessonId) { mutableStateOf(false) }
+    var showRedemptionModal by remember(lessonId) { mutableStateOf(false) }
 
     val currentChallenge = if (currentStep > 0) {
         if (isRedemptionPhase) {
@@ -132,6 +137,32 @@ fun LessonEngineScreen(
             lesson.challenges.getOrNull(currentStep - 1)
         }
     } else null
+
+    // Auto-selección rápida exclusiva para ADMIN en modo prueba (sin auto-avance ni alteración de flujo)
+    LaunchedEffect(currentStep, isRedemptionPhase, isAutoModeEnabled) {
+        if (isAdmin && isAutoModeEnabled && currentChallenge != null && !isAnswerChecked) {
+            when (currentChallenge.type) {
+                ChallengeType.MULTIPLE_CHOICE -> {
+                    selectedOptionIndex = currentChallenge.correctIndex
+                }
+                ChallengeType.FILL_BLANK -> {
+                    selectedBlankAnswer = currentChallenge.correctText
+                }
+                ChallengeType.MATCH_PAIRS -> {
+                    val autoMatches = mutableMapOf<Int, Int>()
+                    currentChallenge.pairs.forEachIndexed { leftIdx, pair ->
+                        val rightIdx = currentChallenge.rightOptions.indexOfFirst { it.id == pair.id }
+                        if (rightIdx >= 0) {
+                            autoMatches[leftIdx] = rightIdx
+                        }
+                    }
+                    if (autoMatches.isNotEmpty()) {
+                        matchedPairIndices = autoMatches
+                    }
+                }
+            }
+        }
+    }
 
     val totalSteps = lesson.challenges.size + missedChallenges.size + 2
     val progress = ((currentStep + 1).coerceAtLeast(0).toFloat() / totalSteps.coerceAtLeast(1)).coerceIn(0f, 1f)
@@ -187,16 +218,22 @@ fun LessonEngineScreen(
             verticalAlignment = Alignment.CenterVertically
         ) {
             IconButton(
-                onClick = { showExitConfirmDialog = true },
+                onClick = {
+                    if (currentStep <= 0) {
+                        onFinishLesson()
+                    } else {
+                        showExitConfirmDialog = true
+                    }
+                },
                 modifier = Modifier
                     .size(36.dp)
                     .clip(RastroShapes.Pill)
                     .background(theme.surface)
             ) {
                 Icon(
-                    imageVector = Icons.Rounded.Close,
-                    contentDescription = "Salir de la lección",
-                    tint = theme.textSecondary,
+                    imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
+                    contentDescription = "Volver",
+                    tint = theme.textPrimary,
                     modifier = Modifier.size(20.dp)
                 )
             }
@@ -212,6 +249,15 @@ fun LessonEngineScreen(
                 color = theme.accent,
                 trackColor = theme.surfaceAccent
             )
+
+            // Chip exclusivo para ADMIN: Auto-seleccionar respuesta correcta
+            if (isAdmin) {
+                Spacer(modifier = Modifier.width(10.dp))
+                AdminAutoTestChip(
+                    isAuto = isAutoModeEnabled,
+                    onToggle = { isAutoModeEnabled = !isAutoModeEnabled }
+                )
+            }
 
             Spacer(modifier = Modifier.width(12.dp))
 
@@ -261,18 +307,10 @@ fun LessonEngineScreen(
                     )
                 }
 
-                // Paso 0: Teoría explicativa previa obligatoria
-                currentStep == -1 -> {
-                    LessonStartCard(
+                // Paso 0: Teoría explicativa previa (Capturas 2 y 3)
+                currentStep <= 0 -> {
+                    LessonTheoryScreen(
                         lesson = lesson,
-                        theme = theme,
-                        onStart = { currentStep = 0 }
-                    )
-                }
-
-                currentStep == 0 -> {
-                    GoodNotesTheoryCard(
-                        theory = lesson.theory,
                         theme = theme,
                         onStartChallenges = {
                             currentStep = 1
@@ -394,64 +432,8 @@ fun LessonEngineScreen(
 }
 
 @Composable
-private fun LessonStartCard(
+fun LessonTheoryScreen(
     lesson: LessonNode,
-    theme: com.jonsuapps.rastro.theme.RastroPalette,
-    onStart: () -> Unit
-) {
-    Column(
-        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(18.dp),
-        verticalArrangement = Arrangement.Center
-    ) {
-        Card(
-            modifier = Modifier.fillMaxWidth(),
-            shape = RastroShapes.Squircle,
-            colors = CardDefaults.cardColors(containerColor = theme.surface),
-            border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
-        ) {
-            Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(13.dp)) {
-                val subtemaTag = if (lesson.subtema.isNotBlank()) " • SUBTEMA ${lesson.subtema}" else ""
-                Text("${lesson.theory.asignatura.uppercase()} • SEMANA ${lesson.semana}$subtemaTag", color = theme.accent, fontSize = 11.sp, fontWeight = FontWeight.Black)
-                Text(lesson.theory.titulo, color = theme.textPrimary, fontSize = 23.sp, lineHeight = 28.sp, fontWeight = FontWeight.Bold)
-                val topicLabel = if (lesson.subtema.isNotBlank()) "Subtema ${lesson.subtema} • ${lesson.title}" else "Temario oficial • ${lesson.title}"
-                Text(topicLabel, color = theme.accent, fontSize = 12.sp, fontWeight = FontWeight.Bold)
-                Surface(shape = RastroShapes.Squircle, color = theme.surfaceAccent) {
-                    val retosLabel = if (lesson.subtema.isNotBlank()) "◎  Subtema ${lesson.subtema} (${lesson.challenges.size} retos interactivos)" else "◎  ${lesson.challenges.size} retos interactivos"
-                    Text(retosLabel, modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp), color = theme.textPrimary, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
-                }
-                Text(
-                    "Domina este tema del prospecto y practica con preguntas oficiales.",
-                    color = theme.textSecondary,
-                    fontSize = 13.sp,
-                    lineHeight = 19.sp
-                )
-                Surface(shape = RastroShapes.Squircle, color = theme.surfaceAccent) {
-                    Row(modifier = Modifier.fillMaxWidth().padding(12.dp), horizontalArrangement = Arrangement.SpaceBetween) {
-                        Text("Recompensa de expedición", color = theme.textSecondary, fontSize = 12.sp)
-                        Text("+25 XP ⚡", color = theme.accent, fontWeight = FontWeight.Bold, fontSize = 13.sp)
-                    }
-                }
-                Sticker3dButton(
-                    onClick = onStart,
-                    modifier = Modifier.fillMaxWidth().height(52.dp),
-                    containerColor = theme.accent,
-                    bottomBevelColor = theme.cardBevel,
-                    strokeColor = theme.strokeBorder,
-                    shape = RastroShapes.Pill,
-                    contentPadding = PaddingValues(vertical = 12.dp)
-                ) {
-                    Icon(Icons.Rounded.PlayArrow, contentDescription = null, tint = Color.White)
-                    Spacer(Modifier.width(6.dp))
-                    Text("COMENZAR LECCIÓN (+25 XP)", fontWeight = FontWeight.Black, color = Color.White)
-                }
-            }
-        }
-    }
-}
-
-@Composable
-fun GoodNotesTheoryCard(
-    theory: LessonTheory,
     theme: com.jonsuapps.rastro.theme.RastroPalette,
     onStartChallenges: () -> Unit
 ) {
@@ -459,194 +441,65 @@ fun GoodNotesTheoryCard(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+            .padding(horizontal = 18.dp, vertical = 14.dp),
+        verticalArrangement = Arrangement.spacedBy(14.dp)
     ) {
-        // Título de Teoría
+        // Badge Subheader: 📘 Paso 0 · Teoría Esencial
         Row(verticalAlignment = Alignment.CenterVertically) {
             Icon(
                 imageVector = Icons.Rounded.MenuBook,
                 contentDescription = null,
-                tint = theme.accent,
-                modifier = Modifier.size(24.dp)
+                tint = Color(0xFF0284C7),
+                modifier = Modifier.size(20.dp)
             )
             Spacer(modifier = Modifier.width(8.dp))
             Text(
-                text = "Paso 0: Teoría Esencial",
-                style = MaterialTheme.typography.titleMedium,
+                text = "Paso 0 · Teoría Esencial",
+                style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.Bold,
-                color = theme.accent
+                color = Color(0xFF0284C7)
             )
         }
 
-        Card(
-            modifier = Modifier.fillMaxWidth(),
-            shape = RastroShapes.Squircle,
-            colors = CardDefaults.cardColors(containerColor = theme.surface),
-            border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
-        ) {
-            Column(modifier = Modifier.padding(16.dp)) {
-                Text(
-                    text = theory.titulo,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = theme.textPrimary
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = theory.resumen,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = theme.textSecondary,
-                    lineHeight = 20.sp
-                )
+        // Título del tema en navy grande
+        Text(
+            text = lesson.theory.titulo.ifBlank { lesson.title },
+            style = MaterialTheme.typography.headlineMedium,
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFF0F172A),
+            lineHeight = 30.sp
+        )
 
-                theory.formulaLatex?.takeIf(String::isNotBlank)?.let { formulaLatex ->
-                    Spacer(modifier = Modifier.height(14.dp))
-                    Text(theory.formulaName ?: "Fórmula fundamental", style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold, color = theme.accent)
-                    Box(
-                        modifier = Modifier.fillMaxWidth().clip(RastroShapes.Squircle).background(theme.surfaceAccent).padding(12.dp)
-                    ) {
-                        Text(readableLessonFormula(formulaLatex), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold, color = theme.accent, lineHeight = 22.sp)
-                    }
-                    theory.formulaDescription?.takeIf(String::isNotBlank)?.let { formulaDescription ->
-                        Text(formulaDescription, style = MaterialTheme.typography.bodySmall, color = theme.textSecondary, lineHeight = 17.sp)
-                    }
-                }
+        // Contenido estructurado enriquecido (sin markdown crudo)
+        com.jonsuapps.rastro.android.ui.components.LessonContentRenderer(
+            lesson = lesson,
+            theme = theme
+        )
 
-                if (theory.conceptosClave.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(14.dp))
-                    Text(
-                        text = "Conceptos Clave de Admisión",
-                        style = MaterialTheme.typography.labelLarge,
-                        fontWeight = FontWeight.Bold,
-                        color = theme.textPrimary
-                    )
-                    Spacer(modifier = Modifier.height(6.dp))
-                    theory.conceptosClave.forEach { concepto ->
-                        Row(
-                            modifier = Modifier.padding(vertical = 3.dp),
-                            verticalAlignment = Alignment.Top
-                        ) {
-                            Text(
-                                text = "• ",
-                                color = theme.accent,
-                                fontWeight = FontWeight.Bold
-                            )
-                            Text(
-                                text = concepto,
-                                style = MaterialTheme.typography.bodySmall,
-                                color = theme.textPrimary,
-                                lineHeight = 16.sp
-                            )
-                        }
-                    }
-                }
+        Spacer(modifier = Modifier.height(10.dp))
 
-                if (theory.formulas.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(14.dp))
-                    Text(
-                        text = "Fórmulas Fundamentales",
-                        style = MaterialTheme.typography.labelLarge,
-                        fontWeight = FontWeight.Bold,
-                        color = theme.textPrimary
-                    )
-                    Spacer(modifier = Modifier.height(6.dp))
-                    theory.formulas.forEach { formula ->
-                        Box(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(vertical = 4.dp)
-                                .clip(RastroShapes.Squircle)
-                                .background(theme.surfaceAccent)
-                                .padding(10.dp)
-                        ) {
-                            Text(
-                                text = readableLessonFormula(formula),
-                                style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = FontWeight.SemiBold,
-                                color = theme.accent
-                            )
-                        }
-                    }
-                }
-
-                if (!theory.admissionTip.isNullOrBlank()) {
-                    Spacer(modifier = Modifier.height(12.dp))
-                    Column(
-                        modifier = Modifier.fillMaxWidth().clip(RastroShapes.Squircle).background(Color(0xFFFFE4E6)).padding(12.dp),
-                        verticalArrangement = Arrangement.spacedBy(5.dp)
-                    ) {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(4.dp)
-                        ) {
-                            Icon(
-                                imageVector = Icons.Rounded.LocalFireDepartment,
-                                contentDescription = null,
-                                tint = Color(0xFFBE123C),
-                                modifier = Modifier.size(13.dp)
-                            )
-                            Text("CLAVE FIJA DE ADMISIÓN", color = Color(0xFFBE123C), fontSize = 10.sp, fontWeight = FontWeight.ExtraBold)
-                        }
-                        Text(theory.admissionTip!!, color = Color(0xFF991B1B), fontSize = 12.sp, lineHeight = 17.sp)
-                        theory.admissionExplanation?.takeIf(String::isNotBlank)?.let {
-                            Text(it, color = Color(0xFF7F1D1D), fontSize = 11.sp, lineHeight = 16.sp)
-                        }
-                    }
-                }
-
-                if (theory.advertenciasErroresComunes.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(14.dp))
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(RastroShapes.Squircle)
-                            .background(Color(0xFFFEF3C7))
-                            .padding(12.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Icon(
-                            imageVector = Icons.Rounded.Warning,
-                            contentDescription = "Advertencia",
-                            tint = Color(0xFFD97706),
-                            modifier = Modifier.size(20.dp)
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Column {
-                            theory.advertenciasErroresComunes.forEach { adv ->
-                                Text(
-                                    text = adv,
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = Color(0xFF78350F),
-                                    lineHeight = 16.sp
-                                )
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        Spacer(modifier = Modifier.weight(1f, fill = false))
-
+        // Botón azul RASTRO con bisel 3D: [ 📖 Entendido, ¡a practicar! → ]
         Sticker3dButton(
             onClick = onStartChallenges,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(52.dp),
-            containerColor = theme.accent,
-            bottomBevelColor = theme.cardBevel,
-            strokeColor = theme.strokeBorder,
+                .height(54.dp),
+            containerColor = Color(0xFF1D84FE),
+            bottomBevelColor = Color(0xFF145CB5),
+            strokeColor = Color(0xFF145CB5).copy(alpha = 0.5f),
             shape = RastroShapes.Pill,
             contentPadding = PaddingValues(vertical = 12.dp)
         ) {
             Text(
-                text = "ENTENDIDO, ¡PONER A PRUEBA!  →",
-                fontSize = 14.sp,
+                text = "Entendido, ¡a practicar! →",
+                fontSize = 15.sp,
                 fontWeight = FontWeight.Black,
-                color = Color.White
+                color = Color.White,
+                letterSpacing = 0.4.sp
             )
         }
+
+        Spacer(modifier = Modifier.height(28.dp))
     }
 }
 
@@ -1327,6 +1180,43 @@ private fun RedemptionPhoenixDialog(
                     )
                 }
             }
+        }
+    }
+}
+
+/**
+ * Chip de prueba rápida exclusivo para Administrador.
+ * Permite conmutar la auto-selección de respuestas correctas para validar lecciones con alta densidad de preguntas.
+ */
+@Composable
+private fun AdminAutoTestChip(
+    isAuto: Boolean,
+    onToggle: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val backgroundColor = if (isAuto) Color(0xFF0284C7) else Color(0xFFF1F5F9)
+    val contentColor = if (isAuto) Color.White else Color(0xFF64748B)
+    val borderColor = if (isAuto) Color(0xFF0369A1) else Color(0xFFCBD5E1)
+
+    Surface(
+        modifier = modifier
+            .height(28.dp)
+            .bouncyClick(onClick = onToggle),
+        shape = RastroShapes.Pill,
+        color = backgroundColor,
+        border = androidx.compose.foundation.BorderStroke(1.dp, borderColor)
+    ) {
+        Row(
+            modifier = Modifier.padding(horizontal = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Text(
+                text = if (isAuto) "⚡ Auto: ON" else "⚡ Auto: OFF",
+                fontSize = 11.sp,
+                fontWeight = FontWeight.Bold,
+                color = contentColor
+            )
         }
     }
 }

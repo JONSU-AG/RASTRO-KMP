@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -506,7 +507,7 @@ fun DirectChatThreadDialog(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     IconButton(onClick = onDismiss, modifier = Modifier.size(34.dp)) {
-                        Icon(Icons.Rounded.ArrowBack, contentDescription = "Volver", tint = theme.textPrimary)
+                        Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "Volver", tint = theme.textPrimary)
                     }
 
                     Spacer(modifier = Modifier.width(6.dp))

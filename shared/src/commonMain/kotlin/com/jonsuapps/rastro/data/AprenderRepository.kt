@@ -7,15 +7,24 @@ import com.jonsuapps.rastro.model.LessonTheory
 import com.jonsuapps.rastro.model.SubjectConfig
 
 /**
- * Calcula el número de subtema en formato "N.X" (ej. "1.1", "2.3") en runtime.
- * Agrupa por semana y asigna índice relativo dentro del grupo.
- * De esta forma NO hay que editar los catálogos — el subtema se genera automáticamente.
+ * Asigna el número de subtema en formato "N.X" (ej. "1.1", "2.3") en runtime
+ * ÚNICAMENTE si la lección no posee ya una numeración jerárquica explícita (ej. "1.1.1", "1.1.2", "1.1").
+ * Preserva intacta cualquier numeración personalizada definida en los catálogos.
  */
 fun List<LessonNode>.withSubtemaIndex(): List<LessonNode> {
     val grouped = this.groupBy { it.semana }
     return this.map { lesson ->
-        val posicion = (grouped[lesson.semana]?.indexOf(lesson) ?: 0) + 1
-        lesson.copy(subtema = "${lesson.semana}.$posicion")
+        val raw = lesson.subtema.trim()
+        val hasExplicitSubtema = raw.isNotBlank() &&
+            !raw.startsWith("Semana", ignoreCase = true) &&
+            raw.contains(Regex("""\d+\.\d+"""))
+
+        if (hasExplicitSubtema) {
+            lesson
+        } else {
+            val posicion = (grouped[lesson.semana]?.indexOf(lesson) ?: 0) + 1
+            lesson.copy(subtema = "${lesson.semana}.$posicion")
+        }
     }
 }
 

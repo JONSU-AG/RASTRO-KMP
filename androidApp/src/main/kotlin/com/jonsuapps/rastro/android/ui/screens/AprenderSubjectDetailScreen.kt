@@ -18,7 +18,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.ArrowBack
+import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material.icons.rounded.Lock
 import androidx.compose.material.icons.rounded.PlayArrow
@@ -43,6 +43,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.jonsuapps.rastro.android.data.GamificationRepository
+import com.jonsuapps.rastro.auth.UserManager
 import com.jonsuapps.rastro.data.AprenderRepository
 import com.jonsuapps.rastro.gamification.GamificationManager
 import com.jonsuapps.rastro.model.LessonNode
@@ -63,6 +65,26 @@ fun AprenderSubjectDetailScreen(
     }
     val lessons = remember(progression, subjectId) { progression.learningPath(subjectId) }
     var jumpTarget by remember { mutableStateOf<LessonNode?>(null) }
+    var previewTarget by remember { mutableStateOf<LessonNode?>(null) }
+    previewTarget?.let { target ->
+        com.jonsuapps.rastro.android.ui.components.LessonPresentationPopup(
+            lesson = target,
+            onDismiss = { previewTarget = null },
+            onStartLesson = {
+                if (!target.isCompleted && !target.isCurrent) {
+                    GamificationManager.jumpToLesson(target.id)
+                    val user = UserManager.currentUser.value
+                    GamificationRepository.saveLocal(user.uid, GamificationManager.state.value)
+                    if (user.isAuthenticated && !user.isAnonymous) {
+                        GamificationRepository.save(user.uid, GamificationManager.state.value)
+                    }
+                }
+                val lessonId = target.id
+                previewTarget = null
+                onNavigateToLesson(lessonId)
+            }
+        )
+    }
     jumpTarget?.let { target ->
         JumpToLessonDialog(target, onDismiss = { jumpTarget = null }, onContinue = {
             jumpTarget = null
@@ -100,7 +122,7 @@ fun AprenderSubjectDetailScreen(
                         .border(1.dp, theme.borderSubtle, RastroShapes.Pill)
                 ) {
                     Icon(
-                        imageVector = Icons.Rounded.ArrowBack,
+                        imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
                         contentDescription = "Volver a Aprender",
                         tint = theme.textPrimary
                     )
@@ -188,8 +210,7 @@ fun AprenderSubjectDetailScreen(
                     accentColor = subjectColor,
                     theme = theme,
                     onClick = {
-                        if (!lesson.isCompleted && !lesson.isCurrent) jumpTarget = lesson
-                        else onNavigateToLesson(lesson.id)
+                        previewTarget = lesson
                     }
                 )
             }

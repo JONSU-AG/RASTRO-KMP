@@ -12,6 +12,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.automirrored.rounded.ArrowForward
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.rounded.*
 import androidx.compose.material3.*
@@ -387,7 +388,7 @@ fun VocationalTestDialog(
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Text("Iniciar Evaluación Psicométrica", fontWeight = FontWeight.Black, color = Color.White, fontSize = 13.5.sp)
                             Spacer(Modifier.width(6.dp))
-                            Icon(Icons.Rounded.ArrowForward, contentDescription = null, tint = Color.White, modifier = Modifier.size(18.dp))
+                            Icon(Icons.AutoMirrored.Rounded.ArrowForward, contentDescription = null, tint = Color.White, modifier = Modifier.size(18.dp))
                         }
                     }
                 }

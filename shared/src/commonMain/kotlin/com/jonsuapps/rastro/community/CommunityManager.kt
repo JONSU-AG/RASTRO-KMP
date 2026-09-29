@@ -3,6 +3,7 @@ package com.jonsuapps.rastro.community
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.datetime.Clock
 
 object CommunityManager {
 
@@ -103,7 +104,7 @@ object CommunityManager {
         authorName: String
     ): MuroPost {
         val newPost = MuroPost(
-            id = "post_${System.currentTimeMillis()}",
+            id = "post_${Clock.System.now().toEpochMilliseconds()}",
             authorUid = authorUid,
             authorName = authorName,
             timeAgo = "Hace un momento",
@@ -148,7 +149,7 @@ object CommunityManager {
         userName: String
     ): PostComment {
         val newComment = PostComment(
-            id = "comm_${System.currentTimeMillis()}",
+            id = "comm_${Clock.System.now().toEpochMilliseconds()}",
             postId = postId,
             authorUid = userUid,
             authorName = userName,

@@ -14,10 +14,13 @@ object AcademicSanitizer {
         if (name.isNullOrBlank()) return "general"
         val n = name.lowercase().trim()
         return when {
-            n.contains("matem") || n.contains("algeb") || n.contains("fisic") ||
-                    n.contains("quimic") || n.contains("aritmet") || n.contains("geom") ||
-                    n.contains("trigo") || n.contains("calcul") -> "stem"
-            n.contains("biolog") || n.contains("anatomi") -> "biomedicas"
+            n.contains("matem") || n.contains("algeb") || n.contains("álgeb") ||
+                    n.contains("fisic") || n.contains("físic") ||
+                    n.contains("quimic") || n.contains("químic") ||
+                    n.contains("aritmet") || n.contains("aritmét") ||
+                    n.contains("geom") || n.contains("trigo") ||
+                    n.contains("calcul") || n.contains("cálcul") -> "stem"
+            n.contains("biolog") || n.contains("biológ") || n.contains("anatomi") || n.contains("anatomí") -> "biomedicas"
             else -> "humanidades"
         }
     }
@@ -47,7 +50,8 @@ object AcademicSanitizer {
     fun hasUnrelatedStemContamination(subject: String, questionText: String): Boolean {
         if (!isHumanitiesSubject(subject)) return false
         val lower = questionText.lowercase()
-        return lower.contains("unidades en el s.i") ||
+        return lower.contains("unidad en el s.i") ||
+                lower.contains("unidades en el s.i") ||
                 lower.contains("sistema internacional de unidades") ||
                 lower.contains("coherencia dimensional") ||
                 lower.contains("m/s²") ||

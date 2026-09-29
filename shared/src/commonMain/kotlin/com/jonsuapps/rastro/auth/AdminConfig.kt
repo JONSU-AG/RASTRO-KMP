@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 object AdminConfig {
     val ADMIN_EMAILS: List<String> = listOf(
         "aguilar.jonsu@gmail.com",
+        "jonsu.aguilar@gmail.com",
         "rumbo.jonsu@gmail.com",
         "jhojan.aguilar.13.10@gmail.com",
         "rulua617@gmail.com",
