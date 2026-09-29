@@ -1,0 +1,287 @@
+[
+  {
+    "id": "bio_t08_s01_c1",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "A un paciente gastrectomizado se le extirpa el cuerpo y fondo del estómago. Para evitar el desarrollo de anemia perniciosa por déficit de absorción de vitamina B12 en el íleon, se le debe administrar de por vida la vitamina inyectable. ¿Qué secreción de las células parietales gástricas se ha perdido?",
+    "options": [
+      "Pepsinógeno activado",
+      "Factor intrínseco de Castle",
+      "Gastrina estimulante",
+      "Secretina duodenal",
+      "Amilasa pancreática"
+    ],
+    "correctIndex": 1,
+    "explanation": "Las células parietales u oxínticas del estómago producen ácido clorhídrico y el factor intrínseco de Castle, glicoproteína imprescindible para que la vitamina B₁₂ se absorba en el íleon terminal.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c2",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Qué enzima salival inicia la digestión de los carbohidratos hidrolizando el almidón a maltosa en pH ligeramente ácido (≈6.8)?",
+    "options": [
+      "Pepsina",
+      "Ptialina (amilasa salival)",
+      "Tripsina",
+      "Lipasa lingual",
+      "Quimotripsina"
+    ],
+    "correctIndex": 1,
+    "explanation": "La ptialina o amilasa salival es secretada por las glándulas salivales e inicia la digestión del almidón en la boca, actuando en pH óptimo cercano a 6.8.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c3",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el estómago, la activación del pepsinógeno a pepsina es catalizada directamente por:",
+    "options": [
+      "Bicarbonato pancreático",
+      "Ácido clorhídrico (HCl)",
+      "Bilis hepática",
+      "Gastrina",
+      "Factor intrínseco de Castle"
+    ],
+    "correctIndex": 1,
+    "explanation": "El HCl secretado por las células parietales acidifica el medio gástrico (pH 1.5-3.5), lo que provoca el cambio conformacional del pepsinógeno a pepsina activa.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c4",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Qué célula gástrica secreta el pepsinógeno, proenzima inactiva que se convierte en pepsina bajo la acción del HCl?",
+    "options": [
+      "Célula parietal u oxíntica",
+      "Célula principal o cimógena",
+      "Célula G",
+      "Célula mucosa",
+      "Célula enterocromafín"
+    ],
+    "correctIndex": 1,
+    "explanation": "Las células principales (cimógenas) secretan pepsinógeno, que es activado a pepsina por el HCl secretado por las células parietales.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c5",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes secreciones gástricas es responsable de la absorción de la vitamina B₁₂ en el íleon terminal?",
+    "options": [
+      "Pepsina",
+      "Ácido clorhídrico",
+      "Factor intrínseco de Castle",
+      "Gastrina",
+      "Moco gástrico"
+    ],
+    "correctIndex": 2,
+    "explanation": "El factor intrínseco de Castle, secretado por las células parietales, se une a la vitamina B₁₂ y permite su absorción específica en el íleon terminal. Sin él, se produce anemia perniciosa.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c6",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el duodeno, la emulsión de las grasas para facilitar la acción de la lipasa pancreática es realizada por:",
+    "options": [
+      "Amilasa pancreática",
+      "Tripsina",
+      "Sales biliares",
+      "Bicarbonato pancreático",
+      "Pepsina residual"
+    ],
+    "correctIndex": 2,
+    "explanation": "La bilis (producida en el hígado, almacenada en la vesícula biliar) contiene sales biliares que emulsionan las grasas, aumentando la superficie de contacto para la lipasa pancreática. La bilis no contiene enzimas.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c7",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es la enzima pancreática PRINCIPAL responsable de la digestión de los triglicéridos (grasas)?",
+    "options": [
+      "Amilasa pancreática",
+      "Tripsina",
+      "Quimotripsina",
+      "Lipasa pancreática",
+      "Carboxipeptidasa"
+    ],
+    "correctIndex": 3,
+    "explanation": "La lipasa pancreática es la enzima clave que hidroliza triglicéridos a ácidos grasos y monoglicéridos. Requiere la emulsión previa por sales biliares para actuar eficientemente.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c8",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La absorción de los aminoácidos y glúcidos en el intestino delgado ocurre principalmente hacia:",
+    "options": [
+      "Vaso quilífero central (linfático)",
+      "Vena porta hepática",
+      "Sistema linfático general",
+      "Circulación portal renal",
+      "Circulación sistémica directa"
+    ],
+    "correctIndex": 1,
+    "explanation": "Los aminoácidos y monosacáridos son absorbidos por los enterocitos y pasan a los capilares sanguíneos de las vellosidades, convergiendo en la vena porta hepática hacia el hígado.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c9",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Los ácidos grasos de cadena larga y monoglicéridos, tras ser absorbidos por los enterocitos, son reesterificados y empaquetados en quilomicrones que entran a la circulación a través de:",
+    "options": [
+      "Vena porta hepática",
+      "Capilares sanguíneos de las vellosidades",
+      "Vaso quilífero central (linfático)",
+      "Arteria mesentérica superior",
+      "Conducto torácico directamente al corazón"
+    ],
+    "correctIndex": 2,
+    "explanation": "Los lípidos de cadena larga forman quilomicrones en el retículo endoplasmático liso del enterocito y entran a los lacteos (capilares linfáticos de las vellosidades) → vaso quilífero → conducto torácico → circulación sistémica. NO pasan por la vena porta.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Qué célula gástrica secreta gastrina, hormona que estimula la secreción de HCl por las células parietales?",
+    "options": [
+      "Célula parietal",
+      "Célula principal",
+      "Célula G",
+      "Célula mucosa",
+      "Célula enterocromafín"
+    ],
+    "correctIndex": 2,
+    "explanation": "Las células G del antro gástrico secretan gastrina en respuesta a la distensión gástrica y péptidos, estimulando a las células parietales para secretar HCl.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c11",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el intestino grueso, la microbiota bacteriana comensal (principalmente Escherichia coli) sintetiza vitaminas que son absorbidas. ¿Qué vitaminas se sintetizan principalmente?",
+    "options": [
+      "Vitaminas A y D",
+      "Vitaminas K y B₁₂",
+      "Vitaminas C y E",
+      "Vitaminas B₁ y B₆",
+      "Ácido fólico y biotina únicamente"
+    ],
+    "correctIndex": 1,
+    "explanation": "La microbiota del colon sintetiza vitamina K (importante para coagulación) y vitamina B₁₂, que son absorbidas en el colon.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c12",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Un paciente presenta anemia megaloblástica tras gastrectomía total. El tratamiento de elección de por vida es:",
+    "options": [
+      "Hierro oral de por vida",
+      "Vitamina B₁₂ inyectable de por vida",
+      "Ácido fólico oral de por vida",
+      "Trasplante de estómago",
+      "Dieta rica en hígado y carnes rojas"
+    ],
+    "correctIndex": 1,
+    "explanation": "La gastrectomía elimina las células parietales productoras del factor intrínseco, indispensable para la absorción de B₁₂ en el íleon. Sin él, la B₁₂ oral no se absorbe; requiere administración parenteral de por vida.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c13",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La función principal del bicarbonato (HCO₃⁻) secretado en el jugo pancreático es:",
+    "options": [
+      "Digestion de proteínas",
+      "Neutralizar el quimo ácido proveniente del estómago",
+      "Emulsionar grasas",
+      "Activar tripsinógeno",
+      "Absorber agua en el duodeno"
+    ],
+    "correctIndex": 1,
+    "explanation": "El jugo pancreático es rico en bicarbonato (HCO₃⁻) que neutraliza la acidez del quimo gástrico (pH 1.5-3.5) elevando el pH duodenal a ~7-8, pH óptimo para las enzimas pancreáticas.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c14",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿En qué segmento del intestino delgado ocurre la mayor parte de la absorción de nutrientes?",
+    "options": [
+      "Duodeno",
+      "Yeyuno",
+      "Íleon terminal",
+      "Ciego",
+      "Colon ascendente"
+    ],
+    "correctIndex": 1,
+    "explanation": "El yeyuno es el segmento principal de absorción de nutrientes (glúcidos, aminoácidos, vitaminas, minerales) debido a su gran superficie de vellosidades y microvellosidades. El íleon absorbe principalmente B₁₂, sales biliares y agua.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t08_s01_c15",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Qué enzima inicia la digestión de las proteínas en el estómago?",
+    "options": [
+      "Tripsina",
+      "Pepsina",
+      "Quimotripsina",
+      "Carboxipeptidasa",
+      "Enteroquinasa"
+    ],
+    "correctIndex": 1,
+    "explanation": "La pepsina (activada desde pepsinógeno por HCl) es la única enzima proteolítica activa en el estómago (pH 1.5-3.5). Las demás enzimas proteolíticas (tripsina, quimotripsina, carboxipeptidasa) actúan en el duodeno a pH alcalino.",
+    "subject": "biologia",
+    "semana": 8,
+    "concept": "8.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

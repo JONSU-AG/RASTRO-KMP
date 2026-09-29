@@ -4,7 +4,7 @@
 > ESTE MD es el paso 1 para conocer el proyecto. Nada aquí se borró: lo sin uso está en `basura/` (§8).
 
 ## 0. Estado al escribir esto
-- Último commit subido: `7ca09cc` ("feat: actualizacion completa RASTRO KMP…", 255 archivos).
+- Último commit subido: `1d01b6b` ("chore: sync", 18 archivos: 3 componentes lección + validación catálogos + test piloto).
 - Cambios SIN subir (otra IA trabajando Aprender): `AprenderScreen.kt`, `AprenderSubjectDetailScreen.kt`,
   `LearningTrail.kt`, `LessonEngineScreen.kt`, `AprenderRepository.kt`, `LearningPathCatalog.kt`,
   `Filosofia/Geografia/PsicologiaCatalog.kt` → no tocarlos sin coordinar.
@@ -36,14 +36,15 @@
 | `pomodoro/` | `PomodoroState` (modos, sonidos, `ViewState`, `DockSide`) | Temporizador |
 | `theme/` | 9 temas + `RastroPalette`, `RastroShapes` (Squircle/Pill), `ThemeManager` | Colores, temas, radios |
 | `utils/` | `AcademicSanitizer` (áreas/anti-contaminación), `VideoValidation` (solo YouTube público) | Validaciones |
-| `commonTest/` | `RastroCoreTest`, `LearningRewardsTest` | Tests shared |
+| `validation/` | **Nuevo** `CatalogValidator.kt` (reglas pedagógicas: aprendizaje previo, explicaciones, opciones plausibles, sin huerfanos); `CatalogPilotValidationTest.kt` (test piloto contra catálogos reales) | Validación catálogos |
+| `commonTest/` | `RastroCoreTest`, `LearningRewardsTest`, **nuevo** `CatalogPilotValidationTest` | Tests shared |
 
 ## 3. `androidApp/` — Android nativo
 | Carpeta | Qué hace | Qué tocar cuando… |
 |---|---|---|
 | `data/` (12 repos `object`) | Firestore/SharedPrefs: Chat, ExamQuestion (lee `assets/bancoPreguntasCepreunsa.json` 6.5MB), Flashcard, Favorites (local: `getByType/BySubject/ByArea/Mix`), Formulas (423 lín.), Gamification (local+nube), Notification, OfficialMaterial, UserPlaylists, UserProfile (follows, rachas duales), UserUpload (muro/biblioteca, 529 lín.), ErrorBank | Cualquier dato con red o guardado |
 | `ui/screens/` (27) | Pantallas §1: `Home`, `Aprender*`, `LessonEngineScreen` (1266 lín., teoría+quiz+victoria), `LearningTrail`+`LearningRewards`+`LessonEmblems`, `Cursos` (WebView YouTube), `Biblioteca` (1695 lín., la mayor: muro+literatura), `Formulario`, `CourseFlashcardsDialog`, `Simulador` (1935 lín., UNSA 80 + ponderado), diálogos crear/reportar pregunta, `Chats`, `Orstty` (mock), `Pizarra` (canvas), `UserProfile` (2204 lín., el mayor: perfil+muro+errores), `Auth` (CredentialManager+haptics), `Admin` (1049 lín.), `Legal`, `PeriodicTableDialog`+`PeriodicElementCatalog`, `BookEditorDialog`, `CommunityWallComposer`, `UserUploadPreview` | UI de cada sección |
-| `ui/components/` (22) | `LiquidNavbar`+header, `Mascots` (ORSTTY/ARTYON por `MascotMood`), `CartoonAvatar`+`CachedRemoteImage`, `AnimationModifiers` (motion/sticker 3D, 858 lín.), `BannersAndModals` (temas, vocacional, stickers), `LucideAnimatedIcons`, `MathFormulaRenderer`, `GoodNotesTheoryView`, `DuolingoHaptics`, `PomodoroModal`+`PomodoroFloatingPill`, `NotificationsDialog`, `MoreActionsDialog` (`MoreAction`: FORMULAS/POMODORO/WIDGETS/…/LOKI_LAB), `ProfileSettingsDialog`, `UploadMaterialDialog`+`EditUploadDialog`, `ReportPostDialog`, `TermsAndPrivacyDialog`, `EntryAnnouncementDialog`, `ExitStreakPromptDialog`, `WelcomeOnboardingDialog` (permiso POST_NOTIFICATIONS), `WidgetsAndShortcutsDialog` | Piezas reusables |
+| `ui/components/` (25) | `LiquidNavbar`+header, `Mascots` (ORSTTY/ARTYON por `MascotMood`), `CartoonAvatar`+`CachedRemoteImage`, `AnimationModifiers` (motion/sticker 3D, 858 lín.), `BannersAndModals` (temas, vocacional, stickers), `LucideAnimatedIcons`, `MathFormulaRenderer`, `GoodNotesTheoryView`, `DuolingoHaptics`, `PomodoroModal`+`PomodoroFloatingPill`, `NotificationsDialog`, `MoreActionsDialog` (`MoreAction`: FORMULAS/POMODORO/WIDGETS/…/LOKI_LAB), `ProfileSettingsDialog`, `UploadMaterialDialog`+`EditUploadDialog`, `ReportPostDialog`, `TermsAndPrivacyDialog`, `EntryAnnouncementDialog`, `ExitStreakPromptDialog`, `WelcomeOnboardingDialog` (permiso POST_NOTIFICATIONS), `WidgetsAndShortcutsDialog`, **nuevos**: `AcademicIllustration` (ilustraciones curso), `LessonContentRenderer` (render teoría/quiz), `LessonPresentationPopup` (modal teoría) | Piezas reusables |
 | `ui/previews/` | `RastroGalleryPreviews` (13 `@Preview`) — solo diseño, cero runtime | Previsualizar |
 | `ui/mascots/loki/` (20 kt + README/RETOMAR) | **Loki Lab**: editor de personajes vectoriales + recompensas. Solo admin (`MoreAction.LOKI_LAB`, `AdminConfig.isAdmin`). Experimento, no flujo principal | Solo si se trabaja Loki |
 | `widgets/` | `RastroWidgetManager` + 4 providers (racha, semanal, examen, motivación) + layouts `res/layout/widget_*` | Widgets launcher |

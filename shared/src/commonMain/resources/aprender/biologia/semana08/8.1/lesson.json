@@ -1,0 +1,35 @@
+{
+  "id": "bio_t08_s01",
+  "subjectId": "biologia",
+  "semana": 8,
+  "subtema": "8.1",
+  "title": "Sistema Digestivo Humano",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md §3.4.2 + BiologiaPart2.kt líneas 28–74",
+  "learningObjectives": [
+    "Identificar células parietales y su relación con anemia perniciosa",
+    "Describir digestión enzimática: ptialina, pepsina, tripsina, lipasa pancreática",
+    "Explicar absorción: vellosidades, vena porta, vaso quilífero",
+    "Diferenciar digestión mecánica vs química en cada segmento",
+    "Relacionar células gástricas con sus secreciones y patologías"
+  ],
+  "theory": {
+    "id": "th_bio_t08_s01",
+    "asignatura": "Biología",
+    "semana": 8,
+    "titulo": "Sistema Digestivo Humano",
+    "resumen": "",
+    "conceptosClave": [
+      "Células parietales: Secretan HCl y Factor Intrínseco de Castle (absorción de B₁₂)",
+      "Ptialina: Amilasa salival (hidroliza almidón a maltosa en pH ≈ 6.8)",
+      "Pepsina: Inicia digestión de proteínas (pepsinógeno + HCl)",
+      "Tripsina/Quimotripsina/Carboxipeptidasa: Digestión proteica en duodeno",
+      "Lipasa pancreática: Principal enzima digestiva de lípidos",
+      "Bilis: Emulsiona grasas (no tiene enzimas)",
+      "Absorción: Vellosidades → vena porta (glúcidos/aminoácidos) y vaso quilífero (lípidos)",
+      "Anemia perniciosa: Falta factor intrínseco → no absorción B₁₂ en íleon terminal"
+    ],
+    "admissionTip": "Si te preguntan qué célula gástrica causa anemia perniciosa cuando es destruida por autoinmunidad: CÉLULA PARIETAL U OXÍNTICA (por falta de factor intrínseco de Castle).",
+    "admissionExplanation": "Sin el factor intrínseco, la cobalamina (vitamina B12) no puede ser captada por los enterocitos del íleon terminal."
+  }
+}
