@@ -1,0 +1,30 @@
+{
+  "id": "bio_t10_s03",
+  "subjectId": "biologia",
+  "semana": 10,
+  "subtema": "10.3",
+  "title": "Meiosis y Recombinación Genética",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_09 + SOLUCIONARIOS S8",
+  "learningObjectives": [
+    "Diferenciar meiosis I reductiva de meiosis II ecuacional",
+    "Ubicar el crossing-over en paquinema",
+    "Explicar quiasmas y dictioteno ovárico",
+    "Relacionar recombinación con variabilidad"
+  ],
+  "theory": {
+    "id": "th_bio_t10_s03",
+    "asignatura": "Biología",
+    "semana": 10,
+    "titulo": "Meiosis y Recombinación Genética",
+    "resumen": "",
+    "conceptosClave": [
+      "Meiosis I reduce 2n→n (homólogos); II separa hermanas (como mitosis)",
+      "Crossing-over en paquinema: fuente de variabilidad",
+      "Quiasmas en diplonema; ovocitos detenidos en dictioteno",
+      "4 gametos n diversos por meiosis"
+    ],
+    "admissionTip": "Crossing-over = PAQUINEMA. Ovocito detenido = DIPLONEMA (dictioteno).",
+    "admissionExplanation": "Fundamento de variación en reproducción sexual."
+  }
+}

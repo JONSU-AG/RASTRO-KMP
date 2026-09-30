@@ -707,7 +707,12 @@ private data class QuadColors(
  * SIN ninguna palabra fija ni ataduras a una materia particular.
  */
 fun parseAcademicContent(theory: LessonTheory): AcademicContent {
-    val rawLines = theory.resumen.lines().map { it.trim() }.filter { it.isNotBlank() }
+    val rawLines = expandMarkdownTables(
+        theory.resumen.lines().map { it.trim() }
+            .filter { it.isNotBlank() }
+            // Separadores temáticos Markdown (---, ***, ___) no se renderizan.
+            .filterNot { it.matches(Regex("^(-{3,}|\\*{3,}|_{3,})$")) }
+    )
     if (rawLines.isEmpty()) {
         return AcademicContent(intro = "", sections = emptyList())
     }
@@ -768,6 +773,49 @@ fun parseAcademicContent(theory: LessonTheory): AcademicContent {
         detectedKeyIdea = "",
         summaryBullets = summaryBullets
     )
+}
+
+/**
+ * Convierte bloques de tabla Markdown en viñetas destacadas (- **...:** ...),
+ * que el renderer ya dibuja como tarjetas. Genérico: sin ataduras a materia.
+ * Filas con igual nº de columnas que el encabezado usan sus nombres;
+ * la primera columna va en negrita como nombre de tarjeta.
+ */
+private fun expandMarkdownTables(lines: List<String>): List<String> {
+    val out = mutableListOf<String>()
+    var i = 0
+    while (i < lines.size) {
+        val line = lines[i]
+        if (line.startsWith("|") && line.endsWith("|") && i + 1 < lines.size &&
+            lines[i + 1].matches(Regex("^\\|[\\s:|-]+\\|$"))
+        ) {
+            val headers = splitTableRow(line)
+            i += 2 // salta encabezado + separador
+            while (i < lines.size && lines[i].startsWith("|")) {
+                val cells = splitTableRow(lines[i])
+                out.add(formatTableRowAsBullet(headers, cells))
+                i++
+            }
+        } else {
+            out.add(line)
+            i++
+        }
+    }
+    return out
+}
+
+private fun splitTableRow(line: String): List<String> =
+    line.trim().removePrefix("|").removeSuffix("|").split("|").map { it.trim() }
+
+private fun formatTableRowAsBullet(headers: List<String>, cells: List<String>): String {
+    if (cells.isEmpty()) return ""
+    val name = cells[0].ifBlank { "Dato" }
+    if (cells.size == 1 || headers.isEmpty()) return "- **$name**"
+    val rest = cells.drop(1).mapIndexed { idx, cell ->
+        val h = headers.getOrNull(idx + 1)?.ifBlank { null }
+        if (h != null) "$h: $cell" else cell
+    }.filter { it.isNotBlank() }.joinToString(" · ")
+    return if (rest.isBlank()) "- **$name**" else "- **$name:** $rest"
 }
 
 /**

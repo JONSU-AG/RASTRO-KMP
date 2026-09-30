@@ -21,7 +21,7 @@ class LearningRewardsTest {
     }
 
     @Test fun chestRequiresRealCompletionsAndSurvivesRestore() = isolated {
-        val lessons = AprenderRepository.getLessonsForSubject("biologia")
+        val lessons = AprenderRepository.getLessonsForSubjectSync("biologia")
             .filter { it.semana == 1 && it.challenges.isNotEmpty() }
         assertEquals(0, GamificationManager.claimTopicReward("biologia", 1))
         GamificationManager.restore(GamificationState(xp = 0, completedLessons = lessons.associate {
@@ -56,7 +56,7 @@ class LearningRewardsTest {
     }
 
     @Test fun jumpingOnlySelectsStartingPointAndThenAdvancesNormally() = isolated {
-        val lessons = AprenderRepository.getLessonsForSubject("biologia").filter { it.challenges.isNotEmpty() }
+        val lessons = AprenderRepository.getLessonsForSubjectSync("biologia").filter { it.challenges.isNotEmpty() }
         val target = lessons[20]
         kotlin.test.assertTrue(GamificationManager.jumpToLesson(target.id))
         var state = GamificationManager.state.value
@@ -75,7 +75,7 @@ class LearningRewardsTest {
     }
 
     @Test fun legacySkippedLevelsRemainAccessibleButNotCompleted() = isolated {
-        val lessons = AprenderRepository.getLessonsForSubject("fisica").filter { it.challenges.isNotEmpty() }
+        val lessons = AprenderRepository.getLessonsForSubjectSync("fisica").filter { it.challenges.isNotEmpty() }
         GamificationManager.restore(GamificationState(xp = 75, completedLessons = mapOf(
             lessons[0].id to LessonCompletion(3, 1L),
             lessons[1].id to LessonCompletion(0, 1L, skipped = true),
@@ -92,7 +92,7 @@ class LearningRewardsTest {
     }
 
     @Test fun completedLevelsAndChestUseTheSameEvidence() = isolated {
-        val lessons = AprenderRepository.getLessonsForSubject("fisica")
+        val lessons = AprenderRepository.getLessonsForSubjectSync("fisica")
             .filter { it.semana == 1 && it.challenges.isNotEmpty() }
         GamificationManager.restore(GamificationState(completedLessons = lessons.associate {
             it.id to LessonCompletion(3, 1L)

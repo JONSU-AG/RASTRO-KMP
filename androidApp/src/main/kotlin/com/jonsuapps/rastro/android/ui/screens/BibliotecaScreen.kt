@@ -92,7 +92,7 @@ fun BibliotecaScreen(
     var showAllPreviews by remember { mutableStateOf(true) }
     var searchQuery by remember { mutableStateOf("") }
     var selectedCategoryFilter by remember { mutableStateOf("Todas") }
-    val categories = listOf("Todas", "Literatura Peruana", "Literatura Universal")
+    val categories = listOf("Todas", "Literatura Universal", "Literatura Española", "Literatura Hispanoamericana", "Literatura Peruana", "Literatura Regional")
 
     var selectedObraForModal by remember { mutableStateOf<ObraLiteraria?>(null) }
     val savedObraIds by UserManager.savedObraIds.collectAsState()

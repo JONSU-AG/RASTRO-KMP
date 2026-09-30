@@ -1,0 +1,30 @@
+{
+  "id": "bio_t11_s02",
+  "subjectId": "biologia",
+  "semana": 11,
+  "subtema": "11.2",
+  "title": "Herencia No Mendeliana y Grupos Sanguíneos",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_10 + SOLUCIONARIOS S9",
+  "learningObjectives": [
+    "Diferenciar dominancia incompleta y codominancia",
+    "Resolver cruces ABO con IA, IB, i",
+    "Explicar eritroblastosis fetal Rh",
+    "Aplicar proporciones 1:2:1 y 25% por grupo"
+  ],
+  "theory": {
+    "id": "th_bio_t11_s02",
+    "asignatura": "Biología",
+    "semana": 11,
+    "titulo": "Herencia No Mendeliana y Grupos Sanguíneos",
+    "resumen": "",
+    "conceptosClave": [
+      "Incompleta: heterocigoto intermedio (rosa 1:2:1)",
+      "Codominancia: ambos se expresan (AB, roano)",
+      "ABO: IA, IB codominantes; i recesivo; Aglutinógenos/antininas",
+      "Rh- madre + Rh+ hijo (2° embarazo) = eritroblastosis"
+    ],
+    "admissionTip": "Madre Rh- con hijo Rh+ = riesgo. Madre Rh+ = nunca hay incompatibilidad.",
+    "admissionExplanation": "IgG anti-Rh materna cruza placenta y destruye eritrocitos fetales."
+  }
+}

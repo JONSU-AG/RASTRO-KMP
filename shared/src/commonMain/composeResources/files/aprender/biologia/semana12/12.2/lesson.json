@@ -1,0 +1,30 @@
+{
+  "id": "bio_t12_s02",
+  "subjectId": "biologia",
+  "semana": 12,
+  "subtema": "12.2",
+  "title": "Teorías de la Evolución Biológica",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_11 + BANCO.md",
+  "learningObjectives": [
+    "Contrastar Lamarck, Darwin y neodarwinismo",
+    "Explicar selección natural y fitness",
+    "Identificar el vacío darwiniano y su solución",
+    "Aplicar a resistencia bacteriana"
+  ],
+  "theory": {
+    "id": "th_bio_t12_s02",
+    "asignatura": "Biología",
+    "semana": 12,
+    "titulo": "Teorías de la Evolución Biológica",
+    "resumen": "",
+    "conceptosClave": [
+      "Lamarck 1809: uso/desuso + herencia adquirida (erróneo)",
+      "Darwin-Wallace 1859: variabilidad + lucha + selección del más apto",
+      "Neodarwinismo: población, mutación/recombinación, frecuencias alélicas",
+      "Vacío de Darwin: ignoraba Mendel"
+    ],
+    "admissionTip": "Lamarck modifica; Darwin selecciona lo ya variado.",
+    "admissionExplanation": "La variación precede a la selección."
+  }
+}

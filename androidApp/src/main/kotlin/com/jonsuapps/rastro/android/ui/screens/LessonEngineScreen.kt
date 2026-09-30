@@ -99,8 +99,8 @@ fun LessonEngineScreen(
 
     // Cargar lección
     val lesson = remember(lessonId) {
-        AprenderRepository.getLessonById(lessonId)
-            ?: AprenderRepository.getSampleLessonsForSubject("biologia").first()
+        AprenderRepository.getLessonByIdSync(lessonId)
+            ?: AprenderRepository.getLessonsForSubjectSync("biologia").first()
     }
 
     // Las preguntas falladas vuelven una vez en la fase Fénix, después del bloque original.

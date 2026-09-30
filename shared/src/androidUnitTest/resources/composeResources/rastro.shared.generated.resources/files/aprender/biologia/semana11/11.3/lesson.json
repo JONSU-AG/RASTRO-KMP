@@ -1,0 +1,30 @@
+{
+  "id": "bio_t11_s03",
+  "subjectId": "biologia",
+  "semana": 11,
+  "subtema": "11.3",
+  "title": "Herencia Ligada al Sexo",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_10 + SOLUCIONARIOS S9",
+  "learningObjectives": [
+    "Describir gonosomas XX/XY y Barr",
+    "Explicar daltonismo y hemofilia ligados a X",
+    "Aplicar transmisión en zigzag",
+    "Diferenciar herencia holandrica Y"
+  ],
+  "theory": {
+    "id": "th_bio_t11_s03",
+    "asignatura": "Biología",
+    "semana": 11,
+    "titulo": "Herencia Ligada al Sexo",
+    "resumen": "",
+    "conceptosClave": [
+      "Mujer XX homogamética con Barr; varón XY heterogamético hemicigoto X",
+      "Daltonismo y hemofilia A/B recesivos ligados a X",
+      "Padre afectado nunca transmite a hijos varones; hijas portadoras obligadas",
+      "Holándrica Y: padre a todos los hijos varones (SRY)"
+    ],
+    "admissionTip": "Padre hemofílico → hijas portadoras, hijos sanos. Zigzag abuelo-hija-nieto.",
+    "admissionExplanation": "El varón recibe Y del padre y X de la madre: la X paterna va a las hijas."
+  }
+}

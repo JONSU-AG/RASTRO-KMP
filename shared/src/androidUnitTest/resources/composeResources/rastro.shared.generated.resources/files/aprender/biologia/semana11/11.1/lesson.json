@@ -1,0 +1,30 @@
+{
+  "id": "bio_t11_s01",
+  "subjectId": "biologia",
+  "semana": 11,
+  "subtema": "11.1",
+  "title": "Leyes de Mendel y Monohibridismo",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_10 + SOLUCIONARIOS S9",
+  "learningObjectives": [
+    "Definir gen, alelo, genotipo y fenotipo",
+    "Aplicar proporciones 3:1 y 1:2:1 del monohíbrido",
+    "Aplicar 9:3:3:1 del dihíbrido",
+    "Resolver cruces con cuadro de Punnett"
+  ],
+  "theory": {
+    "id": "th_bio_t11_s01",
+    "asignatura": "Biología",
+    "semana": 11,
+    "titulo": "Leyes de Mendel y Monohibridismo",
+    "resumen": "",
+    "conceptosClave": [
+      "Gen/alelo/locus; genotipo AA/Aa/aa; fenotipo = genotipo + ambiente",
+      "Monohíbrido Aa×Aa: F2 3:1 fenotípica, 1:2:1 genotípica",
+      "Dihíbrido AaBb×AaBb: 9:3:3:1 (genes no ligados)",
+      "Mendel en Pisum sativum"
+    ],
+    "admissionTip": "Monohíbrido 3:1, dihíbrido 9:3:3:1. Memoriza y ahorra el cuadro de 16.",
+    "admissionExplanation": "Proporciones canónicas resuelven cruces sin dibujar."
+  }
+}

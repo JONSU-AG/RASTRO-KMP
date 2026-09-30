@@ -1,0 +1,30 @@
+{
+  "id": "bio_t12_s03",
+  "subjectId": "biologia",
+  "semana": 12,
+  "subtema": "12.3",
+  "title": "Pruebas de la Evolución",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_11 + BANCO.md",
+  "learningObjectives": [
+    "Diferenciar homólogos, análogos y vestigiales",
+    "Explicar divergencia vs convergencia",
+    "Describir pruebas fósiles y moleculares",
+    "Aplicar nemotecnia H-D y A-C"
+  ],
+  "theory": {
+    "id": "th_bio_t12_s03",
+    "asignatura": "Biología",
+    "semana": 12,
+    "titulo": "Pruebas de la Evolución",
+    "resumen": "",
+    "conceptosClave": [
+      "Homólogos: mismo origen, distinta función = divergente (ancestro común)",
+      "Análogos: distinto origen, misma función = convergente",
+      "Vestigiales: apéndice, cóccix, muelas del juicio",
+      "Archaeopteryx y Eohippus-Equus; código universal y citocromo c"
+    ],
+    "admissionTip": "H-D (homólogo-divergente) y A-C (análogo-convergente).",
+    "admissionExplanation": "Cruce que resuelve anatomía comparada."
+  }
+}

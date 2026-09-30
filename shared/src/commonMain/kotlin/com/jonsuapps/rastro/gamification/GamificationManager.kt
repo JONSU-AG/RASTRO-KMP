@@ -74,7 +74,7 @@ object GamificationManager {
     /** Fixed reward, derived from the catalog and granted once per completed topic. */
     fun claimTopicReward(subjectId: String, topic: Int): Int {
         val key = "$subjectId:$topic"
-        val lessons = com.jonsuapps.rastro.data.AprenderRepository.getLessonsForSubject(subjectId)
+        val lessons = com.jonsuapps.rastro.data.AprenderRepository.getLessonsForSubjectSync(subjectId)
             .filter { it.semana == topic && it.challenges.isNotEmpty() }
         if (key in _state.value.claimedTopicRewards || lessons.isEmpty() || lessons.any {
             _state.value.completedLessons[it.id]?.skipped != false
@@ -132,8 +132,8 @@ object GamificationManager {
     }
 
     private fun nextLessonPointer(lessonId: String, completed: Map<String, LessonCompletion>): Map<String, String> {
-        val lesson = com.jonsuapps.rastro.data.AprenderRepository.getLessonById(lessonId) ?: return _state.value.activeLessonBySubject
-        val catalog = com.jonsuapps.rastro.data.AprenderRepository.getLessonsForSubject(lesson.subjectId)
+        val lesson = com.jonsuapps.rastro.data.AprenderRepository.getLessonByIdSync(lessonId) ?: return _state.value.activeLessonBySubject
+        val catalog = com.jonsuapps.rastro.data.AprenderRepository.getLessonsForSubjectSync(lesson.subjectId)
             .filter { it.challenges.isNotEmpty() }
         val next = catalog.drop(catalog.indexOfFirst { it.id == lessonId } + 1)
             .firstOrNull { completed[it.id]?.skipped != false }
@@ -144,7 +144,7 @@ object GamificationManager {
 
     /** Selects a starting point without modifying completions, stars or XP. */
     fun jumpToLesson(lessonId: String): Boolean {
-        val lesson = com.jonsuapps.rastro.data.AprenderRepository.getLessonById(lessonId) ?: return false
+        val lesson = com.jonsuapps.rastro.data.AprenderRepository.getLessonByIdSync(lessonId) ?: return false
         if (lesson.challenges.isEmpty()) return false
         _state.value = _state.value.copy(
             unlockedNodes = (_state.value.unlockedNodes + lessonId).distinct(),
@@ -158,9 +158,9 @@ object GamificationManager {
         // but remove the false completion so counters and chest eligibility agree.
         val skippedIds = state.completedLessons.filterValues { it.skipped }.keys
         val migratedTargets = skippedIds.mapNotNull {
-            com.jonsuapps.rastro.data.AprenderRepository.getLessonById(it)
+            com.jonsuapps.rastro.data.AprenderRepository.getLessonByIdSync(it)
         }.groupBy { it.subjectId }.mapValues { (subject, skipped) ->
-            val catalog = com.jonsuapps.rastro.data.AprenderRepository.getLessonsForSubject(subject)
+            val catalog = com.jonsuapps.rastro.data.AprenderRepository.getLessonsForSubjectSync(subject)
                 .filter { it.challenges.isNotEmpty() }
             val last = catalog.indexOfLast { node -> skipped.any { it.id == node.id } }
             catalog.getOrNull(last + 1)?.id ?: catalog.getOrNull(last)?.id.orEmpty()

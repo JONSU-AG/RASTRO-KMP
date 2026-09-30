@@ -1,0 +1,30 @@
+{
+  "id": "bio_t10_s01",
+  "subjectId": "biologia",
+  "semana": 10,
+  "subtema": "10.1",
+  "title": "Ciclo Celular y Puntos de Control",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_09 + SOLUCIONARIOS S8",
+  "learningObjectives": [
+    "Describir interfase G1/S/G2 y G0",
+    "Explicar checkpoints y rol de p53",
+    "Diferenciar duplicación (S) de repartición (M)",
+    "Relacionar p53 con cáncer y apoptosis"
+  ],
+  "theory": {
+    "id": "th_bio_t10_s01",
+    "asignatura": "Biología",
+    "semana": 10,
+    "titulo": "Ciclo Celular y Puntos de Control",
+    "resumen": "",
+    "conceptosClave": [
+      "Interfase 90-95%: G1 crece, S duplica ADN 2c→4c, G2 prepara mitosis; G0 quiescencia",
+      "p53 guardián del genoma: repara o induce apoptosis; mutado en >50% cánceres",
+      "Checkpoints G1/S, G2/M y M por ciclinas-CDKs",
+      "ADN se duplica en S, se reparte en M"
+    ],
+    "admissionTip": "¿Cuándo se duplica el ADN? En fase S de interfase, NO en mitosis.",
+    "admissionExplanation": "Confundir duplicación (S) con repartición (M) es el error más castigado."
+  }
+}

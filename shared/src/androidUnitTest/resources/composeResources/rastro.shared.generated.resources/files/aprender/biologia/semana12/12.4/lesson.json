@@ -1,0 +1,30 @@
+{
+  "id": "bio_t12_s04",
+  "subjectId": "biologia",
+  "semana": 12,
+  "subtema": "12.4",
+  "title": "Taxonomía y Dominios Biológicos",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_12 + BANCO.md",
+  "learningObjectives": [
+    "Ordenar categorías desde especie a dominio",
+    "Aplicar nomenclatura binomial",
+    "Diferenciar 5 reinos de Whittaker",
+    "Explicar 3 dominios de Woese por ARNr"
+  ],
+  "theory": {
+    "id": "th_bio_t12_s04",
+    "asignatura": "Biología",
+    "semana": 12,
+    "titulo": "Taxonomía y Dominios Biológicos",
+    "resumen": "",
+    "conceptosClave": [
+      "Especie→género→familia→orden→clase→filo→reino→dominio",
+      "Género mayúscula + epíteto minúscula, cursiva (Homo sapiens)",
+      "Fungi: quitina y glucógeno (no plantas); Monera procariota",
+      "Woese por ARNr 16S/18S: Archaea, Bacteria, Eukarya"
+    ],
+    "admissionTip": "Hongos NO son plantas: quitina + glucógeno + heterótrofos por absorción.",
+    "admissionExplanation": "Contraste clásico de clasificación."
+  }
+}

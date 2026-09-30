@@ -1,0 +1,30 @@
+{
+  "id": "bio_t10_s04",
+  "subjectId": "biologia",
+  "semana": 10,
+  "subtema": "10.4",
+  "title": "Gametogénesis y Ciclo Menstrual Humano",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_09 + SOLUCIONARIOS S8",
+  "learningObjectives": [
+    "Contrastar espermatogénesis (4) con ovogénesis (1 + polocitos)",
+    "Describir fases del ciclo menstrual y rol de LH",
+    "Ubicar la fecundación en la ampolla tubárica",
+    "Explicar Sertoli/Leydig y folículo/cuerpo lúteo"
+  ],
+  "theory": {
+    "id": "th_bio_t10_s04",
+    "asignatura": "Biología",
+    "semana": 10,
+    "titulo": "Gametogénesis y Ciclo Menstrual Humano",
+    "resumen": "",
+    "conceptosClave": [
+      "Espermatogénesis: 4 espermatozoides; Sertoli nutre, Leydig testosterona",
+      "Ovogénesis: 1 óvulo + 3 polocitos; ovocito II detenido en metafase II",
+      "LH pico día 14 = ovulación; progesterona lútea prepara endometrio",
+      "Fecundación en ampolla tubárica con reacción acrosómica y cortical"
+    ],
+    "admissionTip": "Pico de LH día 14 = ovulación. Ovocito ovulado está en metafase II.",
+    "admissionExplanation": "Eje del ciclo: FSH-folicular, LH-ovulación, progesterona-lútea."
+  }
+}

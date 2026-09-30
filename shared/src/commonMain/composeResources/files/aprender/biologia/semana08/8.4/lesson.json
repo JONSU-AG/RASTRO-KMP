@@ -1,0 +1,32 @@
+{
+  "id": "bio_t08_s04",
+  "subjectId": "biologia",
+  "semana": 8,
+  "subtema": "8.4",
+  "title": "Sangre, Elementos Figurados e Inmunidad",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_07 + SOLUCIONARIOS S6/S8",
+  "learningObjectives": [
+    "Describir plasma y elementos figurados",
+    "Explicar cascada de coagulación y rol de vitamina K",
+    "Diferenciar inmunidad innata y adaptativa",
+    "Relacionar grupos celulares con su función defensiva"
+  ],
+  "theory": {
+    "id": "th_bio_t08_s04",
+    "asignatura": "Biología",
+    "semana": 8,
+    "titulo": "Sangre, Elementos Figurados e Inmunidad",
+    "resumen": "",
+    "conceptosClave": [
+      "Plasma 55%: albúmina, globulinas, fibrinógeno",
+      "Eritrocitos anucleados 5M/mm3, 120 días; CO2 como bicarbonato",
+      "Neutrófilos fagocitan bacterias; eosinófilos parásitos/alergias",
+      "Linfocitos B (anticuerpos) y T (celular); monocitos→macrófagos",
+      "Plaquetas de megacariocitos; fibrinógeno→fibrina por trombina; vit K II/VII/IX/X",
+      "Innata: NK, macrófagos, complemento; adaptativa: T CD4/CD8, B e Igs"
+    ],
+    "admissionTip": "CO2 viaja como bicarbonato (70%); B12 con factor intrínseco; K para coagulación.",
+    "admissionExplanation": "Aciertos seguros de fisiología sanguínea e inmunidad."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "week": 9,
+  "title": "Fisiología Humana II: Excretor, Nervioso y Endocrino",
+  "lessons": [
+    { "subtopic": "9.1", "lessonId": "bio_t09_s01", "title": "Sistema Excretor y Fisiología Renal", "path": "9.1/lesson.json" },
+    { "subtopic": "9.2", "lessonId": "bio_t09_s02", "title": "Sistema Nervioso Central y Arco Reflejo", "path": "9.2/lesson.json" },
+    { "subtopic": "9.3", "lessonId": "bio_t09_s03", "title": "Sistema Nervioso Autónomo", "path": "9.3/lesson.json" },
+    { "subtopic": "9.4", "lessonId": "bio_t09_s04", "title": "Sistema Endocrino Humano", "path": "9.4/lesson.json" }
+  ]
+}

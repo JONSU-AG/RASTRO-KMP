@@ -1,0 +1,30 @@
+{
+  "id": "bio_t09_s04",
+  "subjectId": "biologia",
+  "semana": 9,
+  "subtema": "9.4",
+  "title": "Sistema Endocrino Humano",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_07 §2.5 + SOLUCIONARIOS S6",
+  "learningObjectives": [
+    "Describir eje hipotálamo-hipófisis",
+    "Diferenciar tiroides/paratiroides y páncreas endocrino",
+    "Explicar insulina vs glucagón",
+    "Aplicar prolactina vs oxitocina"
+  ],
+  "theory": {
+    "id": "th_bio_t09_s04",
+    "asignatura": "Biología",
+    "semana": 9,
+    "titulo": "Sistema Endocrino Humano",
+    "resumen": "",
+    "conceptosClave": [
+      "Adenohipófisis: STH, TSH, ACTH, FSH/LH, PRL; neurohipófisis guarda oxitocina y ADH",
+      "Calcitonina hipocalcemiante vs PTH hipercalcemiante",
+      "Beta-insulina hipoglucemiante vs alfa-glucagón hiperglucemiante",
+      "Prolactina sintetiza leche; oxitocina la eyecta y contrae útero"
+    ],
+    "admissionTip": "Prolactina produce leche; oxitocina la expulsa y contrae útero en el parto.",
+    "admissionExplanation": "Diferenciar producción vs expulsión láctea es reactivo clásico."
+  }
+}

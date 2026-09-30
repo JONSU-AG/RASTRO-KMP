@@ -5,7 +5,7 @@ import com.jonsuapps.rastro.model.LessonNode
 import com.jonsuapps.rastro.model.LessonTheory
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertThrows
+import kotlin.test.assertFailsWith
 import kotlin.test.assertTrue
 
 class ContentIdentityValidatorTest {
@@ -39,7 +39,7 @@ class ContentIdentityValidatorTest {
             challenges = emptyList()
         )
         
-        val exception = assertThrows<IllegalStateException> {
+        val exception = assertFailsWith<IllegalStateException> {
             ContentIdentityValidator.validate(lesson, "biologia", 8, "8.1")
         }
         assertTrue(exception.message!!.contains("subjectId mismatch"))
@@ -57,7 +57,7 @@ class ContentIdentityValidatorTest {
             challenges = emptyList()
         )
         
-        val exception = assertThrows<IllegalStateException> {
+        val exception = assertFailsWith<IllegalStateException> {
             ContentIdentityValidator.validate(lesson, "biologia", 8, "8.1")
         }
         assertTrue(exception.message!!.contains("semana mismatch"))
@@ -75,7 +75,7 @@ class ContentIdentityValidatorTest {
             challenges = emptyList()
         )
         
-        val exception = assertThrows<IllegalStateException> {
+        val exception = assertFailsWith<IllegalStateException> {
             ContentIdentityValidator.validate(lesson, "biologia", 8, "8.1")
         }
         assertTrue(exception.message!!.contains("subtema mismatch"))
@@ -93,7 +93,7 @@ class ContentIdentityValidatorTest {
             challenges = emptyList()
         )
         
-        val exception = assertThrows<IllegalStateException> {
+        val exception = assertFailsWith<IllegalStateException> {
             ContentIdentityValidator.validate(lesson, "biologia", 8, "8.1")
         }
         assertTrue(exception.message!!.contains("lesson.id"))

@@ -1,0 +1,31 @@
+{
+  "id": "bio_t08_s03",
+  "subjectId": "biologia",
+  "semana": 8,
+  "subtema": "8.3",
+  "title": "Sistema Cardiovascular: Corazón y Vasos Sanguíneos",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_07 §2.3 + SOLUCIONARIOS S6",
+  "learningObjectives": [
+    "Describir cavidades, válvulas y sistema de conducción",
+    "Explicar fases del ciclo cardíaco y ruidos R1/R2",
+    "Calcular gasto cardíaco (GC = FC × VS)",
+    "Diferenciar circulación comparada entre vertebrados"
+  ],
+  "theory": {
+    "id": "th_bio_t08_s03",
+    "asignatura": "Biología",
+    "semana": 8,
+    "titulo": "Sistema Cardiovascular: Corazón y Vasos Sanguíneos",
+    "resumen": "",
+    "conceptosClave": [
+      "4 cavidades; AV: tricúspide/mitral; sigmoideas: aórtica/pulmonar",
+      "SA (Keith-Flack) marcapasos 60-100; AV (Aschoff-Tawara) retrasa 0.1 s",
+      "R1 = cierre AV (sístole); R2 = cierre sigmoideo (diástole)",
+      "GC = FC × VS ≈ 5.25 L/min",
+      "Aves/mamíferos: doble completa; cocodrilos: Panizza"
+    ],
+    "admissionTip": "R1 = cierre AV inicio sístole; R2 = cierre sigmoideo inicio diástole.",
+    "admissionExplanation": "Base de auscultación y preguntas de fisiología cardiovascular."
+  }
+}

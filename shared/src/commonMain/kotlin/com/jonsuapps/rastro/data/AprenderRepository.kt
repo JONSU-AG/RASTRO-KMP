@@ -5,6 +5,10 @@ import com.jonsuapps.rastro.model.ChallengeType
 import com.jonsuapps.rastro.model.LessonNode
 import com.jonsuapps.rastro.model.LessonTheory
 import com.jonsuapps.rastro.model.SubjectConfig
+import com.jonsuapps.rastro.data.content.JsonContentLoader
+import com.jonsuapps.rastro.data.content.ContentLoader
+import kotlinx.coroutines.runBlocking
+import kotlinx.serialization.json.Json
 
 /**
  * Asigna el número de subtema en formato "N.X" (ej. "1.1", "2.3") en runtime
@@ -29,6 +33,16 @@ fun List<LessonNode>.withSubtemaIndex(): List<LessonNode> {
 }
 
 object AprenderRepository {
+
+    // Loader para contenido nuevo (JSON + Markdown en resources).
+    private val defaultLoader: ContentLoader = JsonContentLoader(
+        json = Json { ignoreUnknownKeys = true; isLenient = true }
+    )
+
+    /** Solo tests: permite inyectar un loader con otra fuente de bytes. */
+    internal var testLoaderOverride: ContentLoader? = null
+
+    private val contentLoader: ContentLoader get() = testLoaderOverride ?: defaultLoader
 
     val subjects = listOf(
         SubjectConfig(
@@ -213,24 +227,6 @@ object AprenderRepository {
         )
     )
 
-    fun getSubjectById(id: String): SubjectConfig? {
-        val normalized = normalizeSubjectId(id)
-        return subjects.firstOrNull { it.id.equals(normalized, ignoreCase = true) }
-            ?: subjects.firstOrNull { it.id.equals(id, ignoreCase = true) }
-    }
-
-    fun getSampleLessonsForSubject(subjectId: String): List<LessonNode> =
-        LearningPathCatalog.forSubject(normalizeSubjectId(subjectId))
-            .sortedWith(compareBy({ it.semana }, { it.id }))
-            .withSubtemaIndex()
-
-    fun getLessonsForSubject(subjectId: String): List<LessonNode> = getSampleLessonsForSubject(subjectId)
-
-    val totalLessonsCount: Int get() = LearningPathCatalog.lessons.size
-    val totalChallengesCount: Int get() = LearningPathCatalog.lessons.sumOf { it.challenges.size }
-
-    fun getLessonById(lessonId: String): LessonNode? = LearningPathCatalog.byId(lessonId)
-
     fun normalizeSubjectId(subjectId: String): String = when (subjectId.lowercase().trim()) {
         "civica", "cívica", "ed. cívica y ciudadanía", "ed. cívica" -> "civica"
         "raz. lógico", "raz_logico", "razonamiento lógico" -> "raz_logico"
@@ -247,5 +243,56 @@ object AprenderRepository {
         "matematica", "matemática" -> "algebra" // Alias por compatibilidad
         "inglés", "ingles" -> "ingles"
         else -> subjectId.lowercase().trim().replace(" ", "_")
+    }
+
+    val totalLessonsCount: Int get() = LearningPathCatalog.lessons.size
+    val totalChallengesCount: Int get() = LearningPathCatalog.lessons.sumOf { it.challenges.size }
+
+    fun getSubjectById(id: String): SubjectConfig? {
+        val normalized = normalizeSubjectId(id)
+        return subjects.firstOrNull { it.id.equals(normalized, ignoreCase = true) }
+            ?: subjects.firstOrNull { it.id.equals(id, ignoreCase = true) }
+    }
+
+    suspend fun getSampleLessonsForSubject(subjectId: String): List<LessonNode> {
+        if (subjectId == "biologia") {
+            // Para Biología: contenido nuevo (semana 8+) + legacy (semanas 1-7)
+            val legacy = LearningPathCatalog.forSubject(normalizeSubjectId(subjectId))
+                .filter { it.semana <= 7 }
+            val nuevo = contentLoader.loadSubjectLessons(subjectId)
+                .filter { it.semana >= 8 }
+            return (legacy + nuevo).sortedWith(compareBy({ it.semana }, { it.id })).withSubtemaIndex()
+        } else {
+            return LearningPathCatalog.forSubject(normalizeSubjectId(subjectId))
+                .sortedWith(compareBy({ it.semana }, { it.id }))
+                .withSubtemaIndex()
+        }
+    }
+
+    fun getLessonsForSubjectSync(subjectId: String): List<LessonNode> = runBlocking {
+        getSampleLessonsForSubject(subjectId)
+    }
+
+    suspend fun getLessonsForSubject(subjectId: String): List<LessonNode> = getSampleLessonsForSubject(subjectId)
+
+    suspend fun getLessonById(lessonId: String): LessonNode? {
+        // Contenido nuevo primero para Biología semana 8+ (reemplaza al legacy 8.x);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        Regex("""bio_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            if (week >= 8) {
+                val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+                try {
+                    return contentLoader.loadLesson("biologia", week, subtopic).lesson
+                } catch (_: Exception) {
+                    // cae a legacy abajo
+                }
+            }
+        }
+        return LearningPathCatalog.byId(lessonId)
+    }
+
+    fun getLessonByIdSync(lessonId: String): LessonNode? = runBlocking {
+        getLessonById(lessonId)
     }
 }

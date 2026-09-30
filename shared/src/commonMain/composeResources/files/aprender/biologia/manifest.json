@@ -1,0 +1,24 @@
+{
+  "subjectId": "biologia",
+  "name": "Biología",
+  "area": "Ciencia y Tecnología",
+  "colorHex": "#10B981",
+  "description": "Bioquímica, citología celular, metabolismo (fotosíntesis/respiración), histología, anatomía humana, genética y ecología.",
+  "weeks": 13,
+  "source": "TEMARIO_OFICIAL_UNSA.md §3.4.2",
+  "weekManifests": [
+    { "week": 1, "title": "La Biología y el Método Científico", "path": "semana01/manifest.json" },
+    { "week": 2, "title": "Seres Vivos, Características y Niveles de Organización", "path": "semana02/manifest.json" },
+    { "week": 3, "title": "Base Química de la Vida: Bioelementos y Biomoléculas Inorgánicas", "path": "semana03/manifest.json" },
+    { "week": 4, "title": "Biomoléculas Orgánicas: Glúcidos, Lípidos, Proteínas y Ácidos Nucleicos", "path": "semana04/manifest.json" },
+    { "week": 5, "title": "Citología: Célula Procariota y Célula Eucariota", "path": "semana05/manifest.json" },
+    { "week": 6, "title": "Fisiología Celular: Fotosíntesis y Respiración Celular", "path": "semana06/manifest.json" },
+    { "week": 7, "title": "Histología Vegetal y Animal", "path": "semana07/manifest.json" },
+    { "week": 8, "title": "Fisiología Humana I: Digestivo, Respiratorio y Circulatorio", "path": "semana08/manifest.json" },
+    { "week": 9, "title": "Fisiología Humana II: Excretor, Nervioso y Endocrino", "path": "semana09/manifest.json" },
+    { "week": 10, "title": "Reproducción Celular y Gametogénesis", "path": "semana10/manifest.json" },
+    { "week": 11, "title": "Genética Mendeliana, Ligamiento y Mutaciones", "path": "semana11/manifest.json" },
+    { "week": 12, "title": "Origen de la Vida, Evolución y Taxonomía", "path": "semana12/manifest.json" },
+    { "week": 13, "title": "Ecología, Ecosistemas y Contaminación Ambiental", "path": "semana13/manifest.json" }
+  ]
+}

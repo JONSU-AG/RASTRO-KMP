@@ -1,0 +1,29 @@
+{
+  "id": "bio_t13_s04",
+  "subjectId": "biologia",
+  "semana": 13,
+  "subtema": "13.4",
+  "title": "Contaminación y Áreas Protegidas del Perú",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_13 + SOLUCIONARIOS S10",
+  "learningObjectives": [
+    "Describir invernadero, ozono, lluvia ácida y eutrofización",
+    "Diferenciar áreas tangibles e intangibles SINANPE",
+    "Ubicar Salinas-Aguada Blanca y Lagunas de Mejía",
+    "Aplicar categorías a casos"
+  ],
+  "theory": {
+    "id": "th_bio_t13_s04",
+    "asignatura": "Biología",
+    "semana": 13,
+    "titulo": "Contaminación y Áreas Protegidas del Perú",
+    "resumen": "",
+    "conceptosClave": [
+      "GEI: CO2, CH4, vapor, N2O; ozono: CFC→UV-B; lluvia: SO2/NOx; eutrofización: nitratos/fosfatos",
+      "Tangible: reservas nacionales/comunales, bosques, cotos; Intangible: parques, santuarios",
+      "Salinas-Aguada Blanca (vicuña, tangible); Mejía (aves, intangible); Machu Picchu histórico"
+    ],
+    "admissionTip": "Arequipa: Salinas tangible-vicuña; Mejía intangible-aves.",
+    "admissionExplanation": "Intangibilidad y objeto de conservación arequipeños obligatorios."
+  }
+}

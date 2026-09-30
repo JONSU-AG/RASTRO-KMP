@@ -1,0 +1,10 @@
+{
+  "week": 13,
+  "title": "Ecología, Ecosistemas y Contaminación Ambiental",
+  "lessons": [
+    { "subtopic": "13.1", "lessonId": "bio_t13_s01", "title": "Ecosistema, Hábitat y Redes Tróficas", "path": "13.1/lesson.json" },
+    { "subtopic": "13.2", "lessonId": "bio_t13_s02", "title": "Ciclos Biogeoquímicos", "path": "13.2/lesson.json" },
+    { "subtopic": "13.3", "lessonId": "bio_t13_s03", "title": "Relaciones Biológicas Interespecíficas", "path": "13.3/lesson.json" },
+    { "subtopic": "13.4", "lessonId": "bio_t13_s04", "title": "Contaminación y Áreas Protegidas del Perú", "path": "13.4/lesson.json" }
+  ]
+}

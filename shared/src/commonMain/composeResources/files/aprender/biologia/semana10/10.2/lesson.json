@@ -1,0 +1,30 @@
+{
+  "id": "bio_t10_s02",
+  "subjectId": "biologia",
+  "semana": 10,
+  "subtema": "10.2",
+  "title": "Mitosis y División Celular",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_09 + SOLUCIONARIOS S8",
+  "learningObjectives": [
+    "Describir profase, metafase, anafase y telofase",
+    "Diferenciar citocinesis animal y vegetal",
+    "Relacionar metafase con cariotipo",
+    "Explicar la importancia de la disyunción"
+  ],
+  "theory": {
+    "id": "th_bio_t10_s02",
+    "asignatura": "Biología",
+    "semana": 10,
+    "titulo": "Mitosis y División Celular",
+    "resumen": "",
+    "conceptosClave": [
+      "Metafase: máxima condensación, placa ecuatorial, cariotipo",
+      "Anafase: disyunción de cromátidas hermanas",
+      "Animal centrípeta (actina-miosina); vegetal centrífuga (fragmoplasto Golgi)",
+      "Mitosis 2n→2n idénticas"
+    ],
+    "admissionTip": "Animal CENTRÍPETA (estrangula); vegetal CENTRÍFUGA (fragmoplasto desde el centro).",
+    "admissionExplanation": "La pared vegetal impide estrangular: se construye pared nueva desde adentro."
+  }
+}

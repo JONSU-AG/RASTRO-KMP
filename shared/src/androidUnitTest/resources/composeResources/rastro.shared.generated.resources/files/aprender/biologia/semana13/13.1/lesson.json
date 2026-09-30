@@ -1,0 +1,29 @@
+{
+  "id": "bio_t13_s01",
+  "subjectId": "biologia",
+  "semana": 13,
+  "subtema": "13.1",
+  "title": "Ecosistema, Hábitat y Redes Tróficas",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_13 + SOLUCIONARIOS S10",
+  "learningObjectives": [
+    "Definir ecosistema, hábitat y nicho",
+    "Describir niveles tróficos y descomponedores",
+    "Aplicar la ley del diezmo ecológico",
+    "Diferenciar materia cíclica de energía unidireccional"
+  ],
+  "theory": {
+    "id": "th_bio_t13_s01",
+    "asignatura": "Biología",
+    "semana": 13,
+    "titulo": "Ecosistema, Hábitat y Redes Tróficas",
+    "resumen": "",
+    "conceptosClave": [
+      "Ecosistema = biotopo + biocenosis; hábitat = dirección, nicho = profesión",
+      "Productores → primarios → secundarios → terciarios → descomponedores",
+      "Diezmo: 10% por nivel; energía unidireccional, materia cíclica"
+    ],
+    "admissionTip": "10000 kcal pasto → 1000 conejo → 100 zorro → 10 cóndor. Divide entre 10.",
+    "admissionExplanation": "Cálculo fijo de ecología en admisión."
+  }
+}

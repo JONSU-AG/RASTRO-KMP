@@ -1,0 +1,29 @@
+{
+  "id": "bio_t13_s03",
+  "subjectId": "biologia",
+  "semana": 13,
+  "subtema": "13.3",
+  "title": "Relaciones Biológicas Interespecíficas",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_13 + SOLUCIONARIOS S10",
+  "learningObjectives": [
+    "Diferenciar mutualismo, protocooperación y comensalismo",
+    "Diferenciar parasitismo, depredación, competencia y amensalismo",
+    "Aplicar signos +/-/0",
+    "Identificar líquenes y epifitismo"
+  ],
+  "theory": {
+    "id": "th_bio_t13_s03",
+    "asignatura": "Biología",
+    "semana": 13,
+    "titulo": "Relaciones Biológicas Interespecíficas",
+    "resumen": "",
+    "conceptosClave": [
+      "Mutualismo +/+ obligado (líquenes); protocooperación facultativa",
+      "Comensalismo +/0 (rémora, orquídeas); parasitismo +/-; depredación +/-",
+      "Competencia -/- (Gause); amensalismo -/0 (Penicillium, alelopatía)"
+    ],
+    "admissionTip": "Líquenes = mutualismo obligado hongo+alga. Orquídeas en ramas = comensalismo.",
+    "admissionExplanation": "Simbiosis encabezan prospectos peruanos."
+  }
+}

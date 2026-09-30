@@ -50,27 +50,29 @@
 
 ## Semana 8: Fisiología Humana I (PILOTO 8.1)
 
-### 8.1 — Sistema Digestivo Humano ← **EN CURSO**
+### 8.1 — Sistema Digestivo Humano ← **COMPLETA (30-09)**
+> Incidencia de auditoría corregida: el renderer leía `theory.resumen` pero el loader dejaba el del JSON (vacío); ahora `resumen` = `theory.md` (genérico, sirve a 8.x y futuras).
 | Ítem | Estado | Evidencia / Nota |
 |------|--------|------------------|
-| **Identidad verificada** | ✅ | `subjectId=biologia`, `week=8`, `subtopic=8.1`, `lessonId=bio_t08_s01` |
+| **Identidad verificada** | ✅ | `subjectId=biologia`, `week=8`, `subtopic=8.1`, `lessonId=bio_t08_s01`, `depth=NORMAL` (lesson.json) |
 | **Fuente académica localizada** | ✅ | `BiologiaPart2.kt` líneas 28–74 + `TEMARIO_OFICIAL_UNSA.md` §3.4.2 |
-| **Teoría completa** | ✅ | Digestión mecánica/química, estómago, intestino delgado/grueso, bioseguridad |
-| **Preguntas** | ⚠️ **1/15** | Solo 1 challenge (`bio_t08_s01_c1`). Objetivo NORMAL ~15. **Faltan ~14** |
-| **Identidad en preguntas** | ⚠️ | Subtema actual "Semana 8" → debe ser "8.1" en lesson.subtema y challenge.semana=8 |
-| **IDs deterministas** | ✅ | `bio_t08_s01_c1` (prefijo correcto) |
-| **Validación estructural** | ⏳ | Pendiente ejecutar CatalogValidator sobre 8.1 aislada |
-| **Validación académica** | ⚠️ | AcademicSanitizer OK (biología no contaminada), pero faltan preguntas |
-| **LessonDepth** | ⚠️ | Depth no explícito en código actual → debe ser `NORMAL` (objetivo 15) |
-| **Subtema correcto** | ❌ | Código actual tiene `subtema = "Semana 8"` → debe ser `"8.1"` |
+| **Teoría completa** | ✅ | `theory.md` (3.9 KB): mecánica/química, estómago, delgado/grueso, claves |
+| **Preguntas** | ✅ | **15/15** (`bio_t08_s01_c1`–`c15` en questions.json) |
+| **IDs deterministas** | ✅ | Prefijo `bio_t08_s01_cN`, `subject=biologia`, `semana=8` |
+| **Conectado al flujo real** | ✅ | `getLessonById(bio_t08_s01)` → loader nuevo primero (semana≥8); `getLessonsForSubject(biologia)` → legacy≤7 + nuevo≥8 |
+| **Compilación ámbito propio** | ✅ | Cero errores fuera de `data/obras/` (ajeno, en curso por otro agente) |
+| **Mapa muestra 8.1** | ✅ | Causa raíz: `loadSubjectLessons` iteraba semanas declaradas sin archivos y lanzaba; se omite solo recurso ausente (lo corrupto relanza). Ruta: resources→loader→`getLessonsForSubject`→`learningPath`→mapa agrupa por `semana`→`LessonEngine` vía `getLessonByIdSync` |
+| **Validación ejecutada** | ✅ | 25/25 shared + app OK + ambos assembles OK (30-09). Test regresión del mapa en `androidUnitTest` |
+| **Verificación visual** | ⏳ | Pendiente del usuario en la app instalada |
 
 #### Acciones requeridas para 8.1
-- [ ] Crear estructura de archivos nuevo loader (`aprender/biologia/semana08/8.1/`)
-- [ ] Corregir `subtema` a `"8.1"` en lesson.json
-- [ ] Generar ~14 preguntas adicionales basadas en teoría existente
-- [ ] Asignar `depth: NORMAL` explícito
-- [ ] Ejecutar `CatalogValidator` + `AcademicSanitizer` sobre 8.1 aislada
-- [ ] Marcar `[x]` aquí cuando todo pase
+- [x] Crear estructura de archivos nuevo loader (`aprender/biologia/semana08/8.1/`)
+- [x] Corregir `subtema` a `"8.1"` en lesson.json
+- [x] Generar ~14 preguntas adicionales (15 total NORMAL)
+- [x] Asignar `depth: NORMAL` explícito
+- [x] Conectar loader al flujo real (auditoría: nuevo primero en semana≥8, fallback legacy)
+- [ ] Ejecutar `CatalogValidator` + tests (tras cierre de `data/obras/` ajeno)
+- [ ] Revisión visual del usuario
 
 ### 8.2 — Sistema Respiratorio
 | Ítem | Estado |
@@ -138,3 +140,34 @@
 7. [ ] Replicar para 8.2, 8.3, 8.4
 8. [ ] Validar semanas 5–7 (legacy)
 9. [ ] Validar semanas 9–13
+### 8.2 � Sistema Respiratorio Humano ? **COMPLETA (30-09)**
+| �tem | Estado |
+|------|--------|
+| Identidad | ? `bio_t08_s02`, semana 8, subtema 8.2, NORMAL |
+| Teor�a | ? theory.md (v�as, alv�olo, hematosis, transporte) |
+| Preguntas | ? 13/13 con explicaci�n, IDs `bio_t08_s02_c01�c13` |
+
+### 8.3 � Sistema Cardiovascular ? **COMPLETA (30-09)**
+| Identidad | ? `bio_t08_s03`, semana 8, subtema 8.3, NORMAL |
+| Teor�a | ? theory.md (cavidades, conducci�n, ciclo, comparada) |
+| Preguntas | ? 14/14 con explicaci�n, IDs `bio_t08_s03_c01�c14` |
+
+### 8.4 � Sangre e Inmunidad ? **COMPLETA (30-09)**
+| Identidad | ? `bio_t08_s04`, semana 8, subtema 8.4, NORMAL |
+| Teor�a | ? theory.md (plasma, formes, coagulaci�n, inmunidad) |
+| Preguntas | ? 12/12 con explicaci�n, IDs `bio_t08_s04_c01�c12` |
+
+> Fuentes 8.2�8.4: `BiologiaPart2.kt` (s02�s04), `TEMA_07` ��2.2B/2.3B, `SOLUCIONARIOS.md` S5/S6/S8, `TEMARIO_OFICIAL_UNSA.md`. Sin internet, sin inventos.
+
+## Semanas 9-13 (sistema nuevo) � COMPLETAS 30-09
+
+| Semana | Lecciones | Preguntas | Estado |
+|--------|-----------|-----------|--------|
+| 9 Excretor/Nervioso/Endocrino | 9.1(12) 9.2(12) 9.3(12) 9.4(12) | 48 | ? |
+| 10 Reproducci�n | 10.1(12) 10.2(12) 10.3(12) 10.4(12) | 48 | ? |
+| 11 Gen�tica | 11.1(12) 11.2(12) 11.3(12) 11.4(12) | 48 | ? |
+| 12 Origen/Evoluci�n/Taxonom�a | 12.1(12) 12.2(12) 12.3(12) 12.4(12) | 48 | ? |
+| 13 Ecolog�a | 13.1(12) 13.2(12) 13.3(12) 13.4(12) | 48 | ? |
+
+Total nuevo: 20 lecciones, 240 preguntas. Total Biolog�a: 52 (28 legacy + 24 nuevas).
+Renderer general: tablas?tarjetas, `---` filtrados, negritas/listas/jerarqu�a OK (gen�rico, sin l�gica por tema).

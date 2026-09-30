@@ -65,7 +65,7 @@ fun CourseFlashcardsDialog(
 ) {
     val theme = ThemeManager.currentTheme
     val context = LocalContext.current
-    val lessons = remember(subject.id) { AprenderRepository.getLessonsForSubject(subject.id) }
+    val lessons = remember(subject.id) { AprenderRepository.getLessonsForSubjectSync(subject.id) }
     var communityCards by remember(subject.id) { mutableStateOf(emptyList<FlashcardItem>()) }
     var selectedWeek by remember(subject.id) { mutableStateOf<Int?>(null) }
     var selectedTopicId by remember(subject.id) { mutableStateOf<String?>(null) }

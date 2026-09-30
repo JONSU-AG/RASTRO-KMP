@@ -1,0 +1,30 @@
+{
+  "id": "bio_t09_s02",
+  "subjectId": "biologia",
+  "semana": 9,
+  "subtema": "9.2",
+  "title": "Sistema Nervioso Central y Arco Reflejo",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_08 + SOLUCIONARIOS S7",
+  "learningObjectives": [
+    "Describir encéfalo: cerebro, diencéfalo, cerebelo y tronco",
+    "Explicar el arco reflejo y sus 5 componentes",
+    "Diferenciar funciones del tálamo e hipotálamo",
+    "Relacionar lesiones con ataxia y déficits"
+  ],
+  "theory": {
+    "id": "th_bio_t09_s02",
+    "asignatura": "Biología",
+    "semana": 9,
+    "titulo": "Sistema Nervioso Central y Arco Reflejo",
+    "resumen": "",
+    "conceptosClave": [
+      "Tálamo releva todo excepto olfato; hipotálamo regula homeostasis",
+      "Cerebelo: equilibrio y motricidad fina; lesión = ataxia",
+      "Bulbo: centros vitales cardio-respiratorios",
+      "Arco reflejo: receptor-aferente-centro-eferente-efector"
+    ],
+    "admissionTip": "Único sentido sin relevo talámico: EL OLFATO (directo a corteza piriforme).",
+    "admissionExplanation": "Clásico de anatomía en CEPRUNSA."
+  }
+}

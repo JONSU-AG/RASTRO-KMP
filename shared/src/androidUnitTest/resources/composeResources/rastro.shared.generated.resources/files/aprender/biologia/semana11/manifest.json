@@ -1,0 +1,10 @@
+{
+  "week": 11,
+  "title": "Genética Mendeliana, Ligamiento y Mutaciones",
+  "lessons": [
+    { "subtopic": "11.1", "lessonId": "bio_t11_s01", "title": "Leyes de Mendel y Monohibridismo", "path": "11.1/lesson.json" },
+    { "subtopic": "11.2", "lessonId": "bio_t11_s02", "title": "Herencia No Mendeliana y Grupos Sanguíneos", "path": "11.2/lesson.json" },
+    { "subtopic": "11.3", "lessonId": "bio_t11_s03", "title": "Herencia Ligada al Sexo", "path": "11.3/lesson.json" },
+    { "subtopic": "11.4", "lessonId": "bio_t11_s04", "title": "Mutaciones y Anomalías Cromosómicas", "path": "11.4/lesson.json" }
+  ]
+}

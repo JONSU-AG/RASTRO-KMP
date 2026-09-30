@@ -1,0 +1,10 @@
+{
+  "week": 12,
+  "title": "Origen de la Vida, Evolución y Taxonomía",
+  "lessons": [
+    { "subtopic": "12.1", "lessonId": "bio_t12_s01", "title": "Teorías del Origen de la Vida", "path": "12.1/lesson.json" },
+    { "subtopic": "12.2", "lessonId": "bio_t12_s02", "title": "Teorías de la Evolución Biológica", "path": "12.2/lesson.json" },
+    { "subtopic": "12.3", "lessonId": "bio_t12_s03", "title": "Pruebas de la Evolución", "path": "12.3/lesson.json" },
+    { "subtopic": "12.4", "lessonId": "bio_t12_s04", "title": "Taxonomía y Dominios Biológicos", "path": "12.4/lesson.json" }
+  ]
+}

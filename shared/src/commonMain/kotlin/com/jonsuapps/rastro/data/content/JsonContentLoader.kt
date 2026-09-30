@@ -1,37 +1,47 @@
 package com.jonsuapps.rastro.data.content
 
+import com.jonsuapps.rastro.data.validation.CatalogValidator
 import com.jonsuapps.rastro.data.withSubtemaIndex
 import com.jonsuapps.rastro.model.Challenge
+import com.jonsuapps.rastro.model.ChallengeMatchOption
+import com.jonsuapps.rastro.model.ChallengePair
 import com.jonsuapps.rastro.model.ChallengeType
-import com.jonsuapps.rastro.model.LessonDepth
 import com.jonsuapps.rastro.model.LessonNode
 import com.jonsuapps.rastro.model.LessonTheory
 import com.jonsuapps.rastro.utils.AcademicSanitizer
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.tasks.await
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import kotlinx.coroutines.Dispatchers
-import java.io.InputStreamReader
-import kotlinx.coroutines.flow.map
+import org.jetbrains.compose.resources.ExperimentalResourceApi
+import rastro.shared.generated.resources.Res
 
 /**
  * Implementación de [ContentLoader] que carga contenido desde
- * `commonMain/resources/aprender/{materia}/` (JSON + Markdown).
+ * `commonMain/composeResources/files/aprender/{materia}/` (JSON + Markdown)
+ * vía `Res.readBytes`: único mecanismo empaquetado en el APK en runtime.
  */
 class JsonContentLoader(
     private val json: Json = Json { ignoreUnknownKeys = true; isLenient = true },
-    private val classLoader: ClassLoader = JsonContentLoader::class.java.classLoader!!
+    /**
+     * Fuente de bytes opcional (solo tests). En producción es null y se usa
+     * `Res.readBytes`, único mecanismo empaquetado en el APK en runtime
+     * (en unit tests JVM no hay Context Android y `Res` no resuelve).
+     */
+    private val readBytesOverride: (suspend (String) -> ByteArray)? = null
 ) : ContentLoader {
 
     private val BASE_PATH = "aprender"
     private val _subjectCache = MutableStateFlow<Map<String, SubjectManifest>>(emptyMap())
 
-    override fun observeSubjectLessons(subjectId: String): kotlinx.coroutines.flow.Flow<List<com.jonsuapps.rastro.model.LessonNode>> {
-        return kotlinx.coroutines.flow.flow {
+    private fun formatWeek(week: Int): String = if (week < 10) "0$week" else "$week"
+
+    override fun observeSubjectLessons(subjectId: String): Flow<List<LessonNode>> {
+        return flow {
             val cache = _subjectCache.value
             val manifest = cache[subjectId]
             if (manifest != null) {
@@ -48,7 +58,7 @@ class JsonContentLoader(
     override suspend fun loadSubjectManifest(subjectId: String): SubjectManifest {
         val cached = _subjectCache.value[subjectId]
         if (cached != null) return cached
-        return withContext(Dispatchers.IO) {
+        return withContext(Dispatchers.Default) {
             val manifest = loadJsonFromResources<SubjectManifest>("$BASE_PATH/$subjectId/manifest.json")
             _subjectCache.value = _subjectCache.value + (subjectId to manifest)
             manifest
@@ -56,8 +66,8 @@ class JsonContentLoader(
     }
 
     override suspend fun loadWeekManifest(subjectId: String, week: Int): WeekManifest {
-        val path = "$BASE_PATH/$subjectId/semana${"%02d".format(week)}/manifest.json"
-        return withContext(Dispatchers.IO) {
+        val path = "$BASE_PATH/$subjectId/semana${formatWeek(week)}/manifest.json"
+        return withContext(Dispatchers.Default) {
             loadJsonFromResources<WeekManifest>(path)
         }
     }
@@ -67,8 +77,8 @@ class JsonContentLoader(
         week: Int,
         subtopic: String
     ): LessonContent {
-        return withContext(Dispatchers.IO) {
-            val lessonPath = "$BASE_PATH/$subjectId/semana${"%02d".format(week)}/$subtopic"
+        return withContext(Dispatchers.Default) {
+            val lessonPath = "$BASE_PATH/$subjectId/semana${formatWeek(week)}/$subtopic"
 
             // 1. Cargar lesson.json (identidad + metadatos)
             val lessonNode = loadJsonFromResources<LessonNode>("$lessonPath/lesson.json")
@@ -76,14 +86,14 @@ class JsonContentLoader(
             // 2. VALIDACIÓN DE IDENTIDAD (FAIL LOCAL)
             ContentIdentityValidator.validate(lessonNode, subjectId, week, subtopic)
 
-            // 2. Cargar theory.md
+            // 3. Cargar theory.md
             val theoryMarkdown = loadTextFromResources("$lessonPath/theory.md")
 
-            // 3. Cargar questions.json
+            // 4. Cargar questions.json
             val questionsJson = loadTextFromResources("$lessonPath/questions.json")
             val questions = json.decodeFromString<List<QuestionJson>>(questionsJson)
 
-            // 4. VALIDACIÓN ACADÉMICA (FAIL LOCAL)
+            // 5. VALIDACIÓN ACADÉMICA (FAIL LOCAL)
             ContentAcademicValidator.validate(lessonNode, questions)
 
             // Convertir questions a Challenge existente
@@ -102,15 +112,18 @@ class JsonContentLoader(
                     sentenceBefore = q.sentenceBefore,
                     sentenceAfter = q.sentenceAfter,
                     chips = q.chips,
-                    pairs = q.pairs.map { com.jonsuapps.rastro.model.ChallengePair(it.id, it.left, it.right) },
-                    rightOptions = q.rightOptions.map { com.jonsuapps.rastro.model.ChallengeMatchOption(it.id, it.text) },
+                    pairs = q.pairs.map { ChallengePair(it.id, it.left, it.right) },
+                    rightOptions = q.rightOptions.map { ChallengeMatchOption(it.id, it.text) },
                     instruction = q.instruction,
                     pedagogicalTier = q.pedagogicalTier,
                     fuente = q.fuente
                 )
             }
 
-            // 5. Construir LessonNode con teoría completa y challenges
+            // Construir LessonNode con teoría completa y challenges.
+            // La teoría íntegra viaja en theory.resumen (es lo que renderiza
+            // LessonContentRenderer); theory.md es la fuente canónica.
+            val fullResumen = theoryMarkdown.ifBlank { lessonNode.theory.resumen }
             val lessonNodeFull = LessonNode(
                 id = lessonNode.id,
                 subjectId = lessonNode.subjectId,
@@ -122,7 +135,7 @@ class JsonContentLoader(
                     asignatura = lessonNode.theory.asignatura,
                     semana = lessonNode.theory.semana,
                     titulo = lessonNode.theory.titulo,
-                    resumen = lessonNode.theory.resumen,
+                    resumen = fullResumen,
                     conceptosClave = lessonNode.theory.conceptosClave,
                     fechasYPersonajes = lessonNode.theory.fechasYPersonajes,
                     hechosRelevantes = lessonNode.theory.hechosRelevantes,
@@ -144,8 +157,8 @@ class JsonContentLoader(
                 isCurrent = lessonNode.isCurrent
             )
 
-            // 5. VALIDACIÓN ESTRUCTURAL FINAL (CatalogValidator)
-            com.jonsuapps.rastro.data.validation.CatalogValidator.validateLesson(lessonNode)
+            // VALIDACIÓN ESTRUCTURAL FINAL (CatalogValidator)
+            CatalogValidator.validateLesson(lessonNode)
 
             LessonContent(
                 lesson = lessonNodeFull,
@@ -156,15 +169,29 @@ class JsonContentLoader(
     }
 
     override suspend fun loadSubjectLessons(subjectId: String): List<LessonNode> {
-        return withContext(Dispatchers.IO) {
-            val manifest = loadSubjectManifest(subjectId)
+        return withContext(Dispatchers.Default) {
+            val manifest = try {
+                loadSubjectManifest(subjectId)
+            } catch (e: Exception) {
+                if (!isMissingResource(e)) throw e
+                return@withContext emptyList()
+            }
             val allLessons = mutableListOf<LessonNode>()
 
             for (weekRef in manifest.weekManifests) {
-                val weekManifest = loadWeekManifest(subjectId, weekRef.week)
-                for (lessonRef in weekManifest.lessons) {
-                    val content = loadLesson(subjectId, weekRef.week, lessonRef.subtopic)
-                    allLessons.add(content.lesson)
+                try {
+                    val weekManifest = loadWeekManifest(subjectId, weekRef.week)
+                    for (lessonRef in weekManifest.lessons) {
+                        try {
+                            val content = loadLesson(subjectId, weekRef.week, lessonRef.subtopic)
+                            allLessons.add(content.lesson)
+                        } catch (e: Exception) {
+                            // Solo se omite lo AUSENTE; lo corrupto falla visible (fail-local).
+                            if (!isMissingResource(e)) throw e
+                        }
+                    }
+                } catch (e: Exception) {
+                    if (!isMissingResource(e)) throw e
                 }
             }
 
@@ -172,44 +199,40 @@ class JsonContentLoader(
         }
     }
 
+    /** Recurso ausente ≠ contenido corrupto: solo lo ausente se omite en el listado. */
+    private fun isMissingResource(e: Exception): Boolean =
+        e is IllegalStateException && (e.message ?: "").startsWith("Recurso no encontrado")
+
     // ==================== HELPERS PRIVADOS ====================
 
     private inline suspend fun <reified T> loadJsonFromResources(path: String): T {
-        return withContext(Dispatchers.IO) {
-            val resource = classLoader.getResourceAsStream(path)
-                ?: throw IllegalStateException("Recurso no encontrado: $path")
-            val reader = InputStreamReader(resource, "UTF-8")
-            try {
-                val jsonStr = reader.readText()
-                json.decodeFromString<T>(jsonStr)
-            } finally {
-                reader.close()
-            }
-        }
+        val jsonStr = loadTextFromResources(path)
+        return json.decodeFromString<T>(jsonStr)
     }
 
+    @OptIn(ExperimentalResourceApi::class)
     private suspend fun loadTextFromResources(path: String): String {
-        return withContext(Dispatchers.IO) {
-            val resource = classLoader.getResourceAsStream(path)
-                ?: throw IllegalStateException("Recurso no encontrado: $path")
-            val reader = InputStreamReader(resource, "UTF-8")
+        return withContext(Dispatchers.Default) {
+            // Falla de lectura = recurso ausente (lo corrupto falla después, en decode/validación).
             try {
-                reader.readText()
-            } finally {
-                reader.close()
+                val bytes = readBytesOverride?.invoke(path)
+                    ?: Res.readBytes("files/$path")
+                bytes.decodeToString()
+            } catch (e: Exception) {
+                if (e is IllegalStateException && (e.message ?: "").startsWith("Recurso no encontrado")) throw e
+                throw IllegalStateException("Recurso no encontrado: $path")
             }
         }
     }
 
     private fun loadSubjectLessonsSync(subjectId: String): List<LessonNode> {
-        // Synchronous version for cache - simplified, assumes cached manifest
         return runBlocking {
             loadSubjectLessons(subjectId)
         }
     }
 
     companion object {
-        val json = kotlinx.serialization.json.Json {
+        val json = Json {
             ignoreUnknownKeys = true
             isLenient = true
             prettyPrint = true
@@ -224,7 +247,7 @@ class JsonContentLoader(
  * FAIL LOCAL si hay discrepancia.
  */
 object ContentIdentityValidator {
-    fun validate(lesson: com.jonsuapps.rastro.model.LessonNode, expectedSubjectId: String, expectedWeek: Int, expectedSubtopic: String) {
+    fun validate(lesson: LessonNode, expectedSubjectId: String, expectedWeek: Int, expectedSubtopic: String) {
         val errors = mutableListOf<String>()
 
         if (!lesson.subjectId.equals(expectedSubjectId, ignoreCase = true)) {
@@ -239,8 +262,19 @@ object ContentIdentityValidator {
         if (lesson.id.isBlank()) {
             errors.add("lesson.id está vacío")
         }
-        if (!lesson.id.contains(expectedSubtopic.replace(".", "_"), ignoreCase = true)) {
-            errors.add("lesson.id '\${lesson.id}' no contiene subtema esperado '\${expectedSubtopic}'")
+        val subParts = expectedSubtopic.split(".")
+        val formattedSub = if (subParts.size == 2) {
+            val subPadded = if ((subParts[1].toIntOrNull() ?: 0) < 10) "0${subParts[1]}" else subParts[1]
+            "s${subPadded}"
+        } else {
+            expectedSubtopic.replace(".", "_")
+        }
+
+        val matchFound = lesson.id.contains(expectedSubtopic.replace(".", "_"), ignoreCase = true) ||
+                lesson.id.contains(formattedSub, ignoreCase = true)
+
+        if (!matchFound) {
+            errors.add("lesson.id '${lesson.id}' no contiene subtema esperado '$expectedSubtopic'")
         }
 
         if (errors.isNotEmpty()) {
@@ -253,7 +287,7 @@ object ContentIdentityValidator {
  * Extiende AcademicSanitizer para validaciones académicas específicas del contenido nuevo.
  */
 object ContentAcademicValidator {
-    fun validate(lesson: com.jonsuapps.rastro.model.LessonNode, questions: List<QuestionJson>) {
+    fun validate(lesson: LessonNode, questions: List<QuestionJson>) {
         val errors = mutableListOf<String>()
         val warnings = mutableListOf<String>()
 
@@ -273,15 +307,15 @@ object ContentAcademicValidator {
             }
         }
 
-        // 3. subjectId explícito en cada pregunta
+        // 3. subjectId y semana explícitos en cada pregunta (contra la lección, no hardcodeados).
         for (q in questions) {
             if (q.subject.isBlank()) {
-                errors.add("Pregunta ${q.id}: subjectId vacío (debe ser 'biologia')")
-            } else if (!q.subject.equals("biologia", ignoreCase = true)) {
-                errors.add("Pregunta ${q.id}: subject='${q.subject}' no coincide con materia 'biologia'")
+                errors.add("Pregunta ${q.id}: subjectId vacío (debe ser '${lesson.subjectId}')")
+            } else if (!q.subject.equals(lesson.subjectId, ignoreCase = true)) {
+                errors.add("Pregunta ${q.id}: subject='${q.subject}' no coincide con materia '${lesson.subjectId}'")
             }
-            if (q.semana != 8) {
-                errors.add("Pregunta ${q.id}: semana=${q.semana} no coincide con semana 8")
+            if (q.semana != lesson.semana) {
+                errors.add("Pregunta ${q.id}: semana=${q.semana} no coincide con semana ${lesson.semana}")
             }
         }
 

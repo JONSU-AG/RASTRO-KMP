@@ -1,0 +1,31 @@
+{
+  "id": "bio_t09_s01",
+  "subjectId": "biologia",
+  "semana": 9,
+  "subtema": "9.1",
+  "title": "Sistema Excretor y Fisiología Renal",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_07 §2.4B + SOLUCIONARIOS S5",
+  "learningObjectives": [
+    "Describir la nefrona y sus segmentos",
+    "Explicar filtración, reabsorción y secreción",
+    "Diferenciar ADH y aldosterona",
+    "Relacionar glucosuria con umbral renal"
+  ],
+  "theory": {
+    "id": "th_bio_t09_s01",
+    "asignatura": "Biología",
+    "semana": 9,
+    "titulo": "Sistema Excretor y Fisiología Renal",
+    "resumen": "",
+    "conceptosClave": [
+      "Nefrona: glomérulo + Bowman + TCP + Henle + TCD + colector",
+      "Filtración 125 mL/min; ultrafiltrado sin proteínas ni células",
+      "TCP reabsorbe 100% glucosa y aminoácidos",
+      "ADH inserta acuaporinas (diabetes insípida sin ADH)",
+      "Aldosterona: reabsorbe Na+, excreta K+ y H+"
+    ],
+    "admissionTip": "Glucosuria = glucemia superó umbral renal del TCP (~180 mg/dL, SGLT saturados): signo de diabetes mellitus.",
+    "admissionExplanation": "La saturación del transporte tubular proximal es fundamental en medicina."
+  }
+}

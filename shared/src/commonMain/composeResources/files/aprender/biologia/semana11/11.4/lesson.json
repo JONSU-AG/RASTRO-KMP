@@ -1,0 +1,30 @@
+{
+  "id": "bio_t11_s04",
+  "subjectId": "biologia",
+  "semana": 11,
+  "subtema": "11.4",
+  "title": "Mutaciones y Anomalías Cromosómicas",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_10 + SOLUCIONARIOS S9",
+  "learningObjectives": [
+    "Diferenciar mutación génica, estructural y numérica",
+    "Describir Down, Edwards, Patau, Turner y Klinefelter",
+    "Explicar no disyunción meiótica",
+    "Relacionar anemia falciforme con sustitución puntual"
+  ],
+  "theory": {
+    "id": "th_bio_t11_s04",
+    "asignatura": "Biología",
+    "semana": 11,
+    "titulo": "Mutaciones y Anomalías Cromosómicas",
+    "resumen": "",
+    "conceptosClave": [
+      "Falciforme: GAG→GTG, glutámico→valina en β-globina",
+      "Cri du chat: deleción 5p-",
+      "Down 47+21, Edwards 47+18, Patau 47+13 por no disyunción",
+      "Turner 45X0 (única monosomía viable); Klinefelter 47XXY"
+    ],
+    "admissionTip": "Patau 13, Edwards 18, Down 21. Turner 45X0 única monosomía viable.",
+    "admissionExplanation": "Fórmula + clínica distintiva responden sin dudar."
+  }
+}

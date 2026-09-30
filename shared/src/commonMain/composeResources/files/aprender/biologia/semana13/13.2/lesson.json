@@ -1,0 +1,29 @@
+{
+  "id": "bio_t13_s02",
+  "subjectId": "biologia",
+  "semana": 13,
+  "subtema": "13.2",
+  "title": "Ciclos Biogeoquímicos",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_13 + SOLUCIONARIOS S10",
+  "learningObjectives": [
+    "Describir ciclo del carbono con fotosíntesis y respiración",
+    "Explicar fijación, nitrificación y desnitrificación con bacterias",
+    "Diferenciar ciclo sedimentario del fósforo",
+    "Aplicar Rhizobium y nitratos asimilables"
+  ],
+  "theory": {
+    "id": "th_bio_t13_s02",
+    "asignatura": "Biología",
+    "semana": 13,
+    "titulo": "Ciclos Biogeoquímicos",
+    "resumen": "",
+    "conceptosClave": [
+      "Carbono: fotosíntesis fija, respiración/descomposición/combustión devuelven CO2",
+      "N2 78% inerte; Rhizobium fija; Nitrosomonas/Nitrobacter nitrifican a NO3- asimilable",
+      "Pseudomonas desnitrifica a N2; fósforo sedimentario sin fase gaseosa (guano)"
+    ],
+    "admissionTip": "Rhizobium en leguminosas fija N2. Nitratos (NO3-) = forma asimilable.",
+    "admissionExplanation": "Simbiosis nodular modelo de fijación biológica."
+  }
+}

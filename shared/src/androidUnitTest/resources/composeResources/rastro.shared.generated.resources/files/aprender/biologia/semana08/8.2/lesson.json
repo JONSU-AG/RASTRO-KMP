@@ -1,0 +1,31 @@
+{
+  "id": "bio_t08_s02",
+  "subjectId": "biologia",
+  "semana": 8,
+  "subtema": "8.2",
+  "title": "Sistema Respiratorio Humano",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_07 §2.2 + SOLUCIONARIOS S6",
+  "learningObjectives": [
+    "Describir vías respiratorias y unidad alveolar",
+    "Explicar hematosis y mecánica ventilatoria",
+    "Diferenciar transporte de O2 y CO2",
+    "Relacionar surfactante con atelectasia"
+  ],
+  "theory": {
+    "id": "th_bio_t08_s02",
+    "asignatura": "Biología",
+    "semana": 8,
+    "titulo": "Sistema Respiratorio Humano",
+    "resumen": "",
+    "conceptosClave": [
+      "Hematosis = difusión simple alvéolo-capilar",
+      "Neumocito I: hematosis; II: surfactante anti-atelectasia",
+      "O2 98.5% en Hb; CO2 70% como bicarbonato",
+      "Efecto Bohr: menor afinidad Hb-O2 con acidez y calor",
+      "Inspiración activa, espiración pasiva en reposo"
+    ],
+    "admissionTip": "Prematuro con membrana hialina: neumocitos II inmaduros sin surfactante.",
+    "admissionExplanation": "Aplicación clínica directa de histología alveolar."
+  }
+}

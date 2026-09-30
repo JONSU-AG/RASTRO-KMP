@@ -1,0 +1,10 @@
+{
+  "week": 10,
+  "title": "Reproducción Celular y Gametogénesis",
+  "lessons": [
+    { "subtopic": "10.1", "lessonId": "bio_t10_s01", "title": "Ciclo Celular y Puntos de Control", "path": "10.1/lesson.json" },
+    { "subtopic": "10.2", "lessonId": "bio_t10_s02", "title": "Mitosis y División Celular", "path": "10.2/lesson.json" },
+    { "subtopic": "10.3", "lessonId": "bio_t10_s03", "title": "Meiosis y Recombinación Genética", "path": "10.3/lesson.json" },
+    { "subtopic": "10.4", "lessonId": "bio_t10_s04", "title": "Gametogénesis y Ciclo Menstrual Humano", "path": "10.4/lesson.json" }
+  ]
+}

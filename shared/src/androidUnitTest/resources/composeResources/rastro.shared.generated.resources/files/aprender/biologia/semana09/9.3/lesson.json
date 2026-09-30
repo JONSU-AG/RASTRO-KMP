@@ -1,0 +1,29 @@
+{
+  "id": "bio_t09_s03",
+  "subjectId": "biologia",
+  "semana": 9,
+  "subtema": "9.3",
+  "title": "Sistema Nervioso Autónomo",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_08 + SOLUCIONARIOS S7",
+  "learningObjectives": [
+    "Diferenciar simpático y parasimpático",
+    "Asociar neurotransmisores y efectos viscerales",
+    "Explicar midriasis/miosis y taqui/bradicardia",
+    "Aplicar a situaciones de estrés y reposo"
+  ],
+  "theory": {
+    "id": "th_bio_t09_s03",
+    "asignatura": "Biología",
+    "semana": 9,
+    "titulo": "Sistema Nervioso Autónomo",
+    "resumen": "",
+    "conceptosClave": [
+      "Simpático toracolumbar: lucha/huida, noradrenalina, midriasis, taquicardia, broncodilatación",
+      "Parasimpático craneosacro: reposo/digestión, acetilcolina (vago X), miosis, bradicardia",
+      "Dos neuronas en serie con ganglio autónomo"
+    ],
+    "admissionTip": "Miosis corta = parasimpático; midriasis larga = simpático.",
+    "admissionExplanation": "Asociar supervivencia con midriasis aclara el simpático."
+  }
+}

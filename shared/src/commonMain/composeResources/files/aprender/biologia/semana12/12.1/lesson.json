@@ -1,0 +1,30 @@
+{
+  "id": "bio_t12_s01",
+  "subjectId": "biologia",
+  "semana": 12,
+  "subtema": "12.1",
+  "title": "Teorías del Origen de la Vida",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md + BiologiaPart2.kt + TEMA_11 + BANCO.md",
+  "learningObjectives": [
+    "Contrastar abiogénesis y biogénesis con sus experimentos",
+    "Describir atmósfera primitiva y coacervados",
+    "Explicar Miller-Urey 1953",
+    "Relacionar O2 ausente con síntesis prebiótica"
+  ],
+  "theory": {
+    "id": "th_bio_t12_s01",
+    "asignatura": "Biología",
+    "semana": 12,
+    "titulo": "Teorías del Origen de la Vida",
+    "resumen": "",
+    "conceptosClave": [
+      "Redi, Spallanzani y Pasteur (cuello de cisne) sepultan abiogénesis",
+      "Oparin-Haldane: reductora CH4/NH3/H2O/H2 sin O2 libre",
+      "Miller-Urey 1953: aminoácidos desde atmósfera + descargas",
+      "Coacervados como protocélulas"
+    ],
+    "admissionTip": "Gas ausente en atmósfera primitiva: OXÍGENO libre. Matraz clave: cuello de cisne de Pasteur.",
+    "admissionExplanation": "O2 oxidaría la síntesis prebiótica; apareció con cianobacterias."
+  }
+}

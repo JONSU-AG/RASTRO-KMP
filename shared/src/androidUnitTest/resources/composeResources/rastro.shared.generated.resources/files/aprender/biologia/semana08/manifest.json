@@ -1,0 +1,30 @@
+{
+  "week": 8,
+  "title": "Fisiología Humana I: Digestivo, Respiratorio y Circulatorio",
+  "lessons": [
+    {
+      "subtopic": "8.1",
+      "lessonId": "bio_t08_s01",
+      "title": "Sistema Digestivo Humano",
+      "path": "8.1/lesson.json"
+    },
+    {
+      "subtopic": "8.2",
+      "lessonId": "bio_t08_s02",
+      "title": "Sistema Respiratorio y Hematosis",
+      "path": "8.2/lesson.json"
+    },
+    {
+      "subtopic": "8.3",
+      "lessonId": "bio_t08_s03",
+      "title": "Sistema Cardiovascular y Ciclo Cardíaco",
+      "path": "8.3/lesson.json"
+    },
+    {
+      "subtopic": "8.4",
+      "lessonId": "bio_t08_s04",
+      "title": "Sangre, Elementos Figurados e Inmunidad",
+      "path": "8.4/lesson.json"
+    }
+  ]
+}

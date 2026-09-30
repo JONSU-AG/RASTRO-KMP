@@ -1,5 +1,6 @@
 package com.jonsuapps.rastro.gamification
 
+import com.jonsuapps.rastro.model.LessonNode
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -27,7 +28,7 @@ data class GamificationState(
     val activeStudySeconds: Int = 0
 ) {
     fun learningPath(subjectId: String): List<com.jonsuapps.rastro.model.LessonNode> {
-        val catalog = com.jonsuapps.rastro.data.AprenderRepository.getLessonsForSubject(subjectId)
+        val catalog = com.jonsuapps.rastro.data.AprenderRepository.getLessonsForSubjectSync(subjectId)
             .filterNot { it.challenges.isEmpty() && (it.title.startsWith("Cofre") || it.title.startsWith("Trofeo")) }
         fun completed(id: String) = completedLessons[id]?.skipped == false
         val playable = catalog.filter { it.challenges.isNotEmpty() }
