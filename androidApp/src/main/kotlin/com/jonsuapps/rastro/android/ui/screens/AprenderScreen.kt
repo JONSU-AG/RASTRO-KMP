@@ -189,6 +189,15 @@ fun AprenderScreen(
     }
     var showGuide by remember { mutableStateOf(false) }
     var showCourseFlashcards by remember { mutableStateOf(false) }
+    var showNoLivesDialog by remember { mutableStateOf(false) }
+
+    val handleLessonClick: (String) -> Unit = { lessonId ->
+        if (dailyHearts <= 0) {
+            showNoLivesDialog = true
+        } else {
+            onNavigateToLesson(lessonId)
+        }
+    }
 
     Box(
         modifier = modifier
@@ -524,7 +533,7 @@ fun AprenderScreen(
                         TopicHeading(topicIndex + 1, group.value)
                     }
                     item(key = "${selectedSubjectId}_trail_${group.key}") {
-                        LearningTrail(group.value, onNavigateToLesson)
+                        LearningTrail(group.value, handleLessonClick)
                     }
                     item(key = "${selectedSubjectId}_review_${group.key}") {
                         TopicReview(group.value)
@@ -532,6 +541,18 @@ fun AprenderScreen(
                 }
             }
         }
+    }
+
+    if (showNoLivesDialog) {
+        com.jonsuapps.rastro.android.ui.components.RastroStickerDialog(
+            onDismissRequest = { showNoLivesDialog = false },
+            title = "Te quedaste sin vidas",
+            message = "Has usado todas tus vidas disponibles.",
+            confirmText = "Entendido",
+            icon = Icons.Rounded.FavoriteBorder,
+            theme = theme,
+            onConfirm = { showNoLivesDialog = false }
+        )
     }
 
     if (showGuide) {

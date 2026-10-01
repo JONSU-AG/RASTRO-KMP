@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "2.2.1",
+    "correctIndex": 0,
+    "explanation": "La visión es la imagen meta motivadora del futuro deseado: la visualización clara del profesional, ciudadano y ser humano que se aspira a consolidar en 5 o 10 años.",
+    "fuente": "temario",
+    "id": "psi_t02_s02_c01",
+    "options": [
+      "¿Hacia dónde quiero llegar y cómo me veo proyectado en el futuro a largo plazo?",
+      "¿Quién fui en mi infancia remota?",
+      "¿Cuánto dinero tengo en el bolsillo el día de hoy?",
+      "¿Qué opinión tienen mis vecinos sobre mis pasatiempos?"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "En la planeación estratégica personal, la 'Visión' responde conceptualmente a la pregunta:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.2",
+    "correctIndex": 1,
+    "explanation": "La misión es la brújula operativa diaria: describe el compromiso presente, los valores en acción y el trabajo concreto que la persona realiza para materializar su visión.",
+    "fuente": "temario",
+    "id": "psi_t02_s02_c02",
+    "options": [
+      "La lista de viajes turísticos soñados para la jubilación.",
+      "El propósito fundamental del presente: qué hago hoy, cuáles son mis principios de acción cotidiana y para qué me estoy esforzando en el día a día.",
+      "La opinión subjetiva e intuitiva de amigos de la infancia.",
+      "Los errores irreparables cometidos por los antepasados."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Por otro lado, la 'Misión' personal define rigurosamente:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.1",
+    "correctIndex": 3,
+    "explanation": "Describe la aspiración inspiradora a largo plazo que orienta la carrera profesional y marca el rumbo del proyecto vocacional.",
+    "fuente": "temario",
+    "id": "psi_t02_s02_c03",
+    "options": [
+      "Misión actual inmediata",
+      "Debilidad metodológica",
+      "Amenaza coyuntural",
+      "Visión personal de futuro"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "Un estudiante redacta: 'Ser en diez años un neurocirujano ético y reconocido que lidere investigaciones biomédicas en el Perú'. Esta afirmación constituye formalmente su:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.3",
+    "correctIndex": 2,
+    "explanation": "Valores como la honestidad, perseverancia, empatía, justicia y responsabilidad delimitan las fronteras éticas de lo que es aceptable o inaceptable para alcanzar las metas.",
+    "fuente": "temario",
+    "id": "psi_t02_s02_c04",
+    "options": [
+      "Sustituir el esfuerzo de estudio por la fe ciega.",
+      "Obligar al sujeto a competir deslealmente contra sus compañeros.",
+      "Actuar como principios rectores éticos que orientan las conductas, decisiones y prioridades morales del individuo en sociedad.",
+      "Establecer el precio monetario de las horas de asesoría académica."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Los 'Valores' en la estructura del proyecto de vida cumplen la función psicosocial de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.4",
+    "correctIndex": 3,
+    "explanation": "La congruencia psicológica exige que los hábitos cotidianos (misión) sean el puente real y disciplinado que construye el futuro deseado (visión).",
+    "fuente": "temario",
+    "id": "psi_t02_s02_c05",
+    "options": [
+      "Estudia seis horas diarias de manera concentrada y sistemática.",
+      "Consulta dudas con sus profesores de academia.",
+      "Elabora resúmenes y cuadros sinópticos de las lecciones.",
+      "Sueña con ingresar a una carrera de alta exigencia médica pero en el presente procrastina todo el día en redes sociales y no repasa los cursos."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "La coherencia entre la Misión y la Visión personal se quiebra gravemente cuando un postulante:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.5",
+    "correctIndex": 2,
+    "explanation": "La secuencialidad temporal permite que el éxito en metas de corto plazo (p. ej. dominar trigonometría) alimente el mediano plazo (ingresar) y el largo plazo (titularse).",
+    "fuente": "temario",
+    "id": "psi_t02_s02_c06",
+    "options": [
+      "Públicas, secretas e ilegales.",
+      "Infantiles, seniles y póstumas.",
+      "Corto plazo (días/meses), Mediano plazo (uno a tres años) y Largo plazo (cinco a diez años o más).",
+      "Eternas, imposibles e imaginarias."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Las metas de un proyecto de vida se clasifican según su horizonte temporal en:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.6",
+    "correctIndex": 1,
+    "explanation": "Tener locus de control interno fomenta la proactividad y la autorregulación: el sujeto se sabe arquitecto de su destino y asume el compromiso de superación.",
+    "fuente": "temario",
+    "id": "psi_t02_s02_c07",
+    "options": [
+      "Espera pasivamente que sus padres resuelvan todos sus problemas.",
+      "Atribuye sus logros y tropiezos a su propio esfuerzo, decisiones y conductas personales asumidas con responsabilidad.",
+      "Culpa siempre a los exámenes de admisión por ser injustos.",
+      "Cree que sus éxitos y fracasos dependen de la buena o mala suerte, el destino o la voluntad de terceros."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "El concepto de 'Locus de Control Interno' formulado por Julian Rotter es vital en la madurez vocacional porque describe a la persona que:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.6",
+    "correctIndex": 1,
+    "explanation": "Una alta autoeficacia predice mayor esfuerzo y persistencia ante las dificultades, siendo un motor decisivo para vencer los desafíos preuniversitarios.",
+    "fuente": "temario",
+    "id": "psi_t02_s02_c08",
+    "options": [
+      "Se es superior moral e intelectualmente a todas las demás personas.",
+      "Uno posee las capacidades y habilidades necesarias para organizar y ejecutar con éxito las acciones requeridas para alcanzar una meta.",
+      "Nunca se cometerá ningún error en la vida académica.",
+      "El azar resolverá los problemas difíciles sin intervención propia."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "La 'Autoeficacia', concepto acuñado por el psicólogo Albert Bandura, alude a la convicción personal de que:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.7",
+    "correctIndex": 3,
+    "explanation": "El proyecto de vida no es una camisa de fuerza rígida, sino una guía viva y flexible que madura junto con el autoconocimiento y la experiencia de vida del sujeto.",
+    "fuente": "temario",
+    "id": "psi_t02_s02_c09",
+    "options": [
+      "Demuestra que el proyecto original era completamente inútil.",
+      "Hace que la persona cambie de carrera cada semana sin compromiso.",
+      "Permite postergar indefinidamente el momento de tomar decisiones adultas.",
+      "El ser humano y la realidad son dinámicos, exigiendo flexibilidad para adaptar las metas ante imprevistos o descubrimientos de nuevas vocaciones."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "La evaluación periódica y reajuste del proyecto de vida es una práctica saludable porque:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.7",
+    "correctIndex": 3,
+    "explanation": "Una decisión vocacional informada y reflexiva minimiza la deserción universitaria y maximiza la satisfacción personal y profesional a lo largo de la vida.",
+    "fuente": "temario",
+    "id": "psi_t02_s02_c10",
+    "options": [
+      "Lanzar una moneda al aire para elegir entre dos carreras.",
+      "Aceptar ciegamente la imposición de los padres para no generar conflictos familiares.",
+      "Elegir la carrera más corta y que prometa el enriquecimiento inmediato sin vocación.",
+      "Identificar el problema, buscar información objetiva de carreras, evaluar ventajas y desventajas, elegir responsablemente y asumir las consecuencias."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "El rol de la 'Toma de Decisiones Vocacionales' madura exige un proceso secuencial de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

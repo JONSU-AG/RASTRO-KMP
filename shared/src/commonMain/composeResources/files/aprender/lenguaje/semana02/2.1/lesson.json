@@ -1,0 +1,34 @@
+{
+  "id": "leng_t02_s01",
+  "subjectId": "lenguaje",
+  "semana": 2,
+  "subtema": "2.1",
+  "title": "Las Variaciones de la Lengua: Dialecto, Sociolecto e Idiolecto",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana02.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_02_Lengua_Habla_y_Realidad_Linguistica.md",
+  "learningObjectives": [
+    "Definir dialecto, sociolecto e idiolecto con sus factores condicionantes geográficos, sociales e individuales",
+    "Clasificar manifestaciones dialectales en los cinco niveles: fonético, léxico, semántico, morfológico y sintáctico",
+    "Distinguir los niveles superestándar, estándar y subestándar con sus marcas cultas, coloquiales, populares y de replana",
+    "Reconocer el tecnolecto profesional y los registros por edad como variación diafásica individual",
+    "Aplicar la clave DIA-TOPO, SOCIO-ESTRATO, IDIO-FASE para resolver casos de admisión sin ambigüedad"
+  ],
+  "theory": {
+    "id": "th_leng_t02_s01",
+    "asignatura": "Lenguaje",
+    "semana": 2,
+    "titulo": "Las Variaciones de la Lengua: Dialecto, Sociolecto e Idiolecto",
+    "resumen": "",
+    "conceptosClave": [
+      "Dialecto = variación diatópica geográfica que opera en cinco niveles lingüísticos",
+      "Sociolecto = variación diastrática social en niveles superestándar, estándar y subestándar",
+      "Idiolecto = variación diafásica individual según edad, profesión y registro situacional",
+      "Nivel léxico con chibolo y pibe, nivel semántico con guagua, nivel morfológico con aquicito",
+      "Nivel sintáctico amazónico y andino con anteposición del genitivo De la María su hijo",
+      "Tecnolecto médico y jurídico frente a replana marginal con luca, paco y tira",
+      "Superestándar de máxima elaboración frente a popular con haiga, nadies y fuistes"
+    ],
+    "admissionTip": "Si el caso menciona lugar o región, marca dialecto diatópico; si menciona clase, instrucción o replana, marca sociolecto; si menciona edad o profesión, marca idiolecto o tecnolecto.",
+    "admissionExplanation": "El factor condicionante del enunciado decide la variación: dónde se habla define el dialecto, quién habla según su estrato define el sociolecto y la edad o profesión del hablante define el idiolecto."
+  }
+}

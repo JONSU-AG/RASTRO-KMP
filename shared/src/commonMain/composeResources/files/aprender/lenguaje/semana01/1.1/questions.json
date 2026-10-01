@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t01_s01_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿En qué fase de la comunicación ocurre la selección y articulación mental de los signos que estructuran el mensaje?",
+    "options": [
+      "Fase psíquica del emisor",
+      "Fase física del canal",
+      "Fase motora del emisor",
+      "Fase fisiológica del receptor"
+    ],
+    "correctIndex": 0,
+    "explanation": "La encodificación es un proceso mental que ocurre en la fase psíquica del emisor, donde se seleccionan y combinan los signos del código antes de emitirlos.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s01_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Si un estudiante lee una obra de Mario Vargas Llosa en su habitación, el canal físico de dicho acto comunicativo es:",
+    "options": [
+      "El idioma castellano estándar",
+      "La novela como obra de arte",
+      "La memoria visual del estudiante",
+      "El papel impreso del libro"
+    ],
+    "correctIndex": 3,
+    "explanation": "El canal es el soporte material físico que porta el mensaje. En la lectura de un libro impreso, el canal es el papel impreso (el castellano es el código).",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s01_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Durante una clase universitaria, el zumbido constante de un proyector defectuoso impide oír con claridad al profesor. Este obstáculo constituye un claro ejemplo de:",
+    "options": [
+      "Ruido",
+      "Redundancia física",
+      "Contexto asincrónico",
+      "Retroalimentación diferida"
+    ],
+    "correctIndex": 0,
+    "explanation": "El ruido es cualquier interferencia o perturbación física, técnica o ambiental que entorpece la recepción correcta del mensaje a través del canal.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.1.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s01_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El elemento del circuito comunicativo que alude a la realidad concreta o abstracta, objeto o tema del que trata el mensaje se denomina:",
+    "options": [
+      "Contexto",
+      "Referente",
+      "Código",
+      "Canal"
+    ],
+    "correctIndex": 1,
+    "explanation": "El referente es la realidad objetiva o conceptual exterior aludida por el mensaje (el tema, hecho o entidad del que se habla).",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s01_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es la función pedagógica principal de la redundancia en el acto comunicativo?",
+    "options": [
+      "Reemplazar al referente cuando este es abstracto",
+      "Neutralizar y combatir los efectos distorsionadores del ruido",
+      "Eliminar la necesidad de compartir un mismo código lingüístico",
+      "Acelerar la fase fisiológica del receptor"
+    ],
+    "correctIndex": 1,
+    "explanation": "La redundancia consiste en reiterar o reforzar elementos del mensaje para asegurar su correcta decodificación y contrarrestar las pérdidas causadas por el ruido.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s01_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El proceso inverso mediante el cual el receptor descifra los signos acústicos o gráficos y los asocia a sus respectivos conceptos se denomina:",
+    "options": [
+      "Transmisión física",
+      "Articulación motora",
+      "Encodificación",
+      "Decodificación"
+    ],
+    "correctIndex": 3,
+    "explanation": "La decodificación es el proceso psíquico realizado por el receptor, consistente en descifrar e interpretar los signos del mensaje.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s01_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la expresión '¡Fuego!', su interpretación exacta varía si se pronuncia en un polígono de tiro militar o en un auditorio cerrado. Esta variación depende directamente del:",
+    "options": [
+      "Contexto o circunstancia",
+      "Canal",
+      "Emisor encodificador",
+      "Código"
+    ],
+    "correctIndex": 0,
+    "explanation": "El contexto o circunstancia es el espacio, tiempo y situación socioambiental que condiciona y determina el sentido exacto del mensaje emitido.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s01_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La respuesta o reacción observable del receptor que permite al emisor comprobar si su mensaje fue comprendido y reajustarlo se denomina:",
+    "options": [
+      "Decodificación pasiva",
+      "Redundancia contextual",
+      "Retroalimentación o feedback",
+      "Ruido semántico"
+    ],
+    "correctIndex": 2,
+    "explanation": "El feedback o retroalimentación es la respuesta emitida por el receptor que permite al emisor evaluar el éxito de la comunicación.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s01_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Si dos personas intentan dialogar, pero una habla exclusivamente quechua y la otra exclusivamente japonés, la comunicación fracasa primordialmente debido a la falta de concordancia en el:",
+    "options": [
+      "Canal natural",
+      "Contexto físico",
+      "Código",
+      "Referente"
+    ],
+    "correctIndex": 2,
+    "explanation": "El código es el sistema convencional de signos que obligatoriamente deben compartir emisor y receptor para que haya comprensión mutua.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.1.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En un mensaje oral emitido cara a cara entre dos amigos en un parque, el canal de comunicación es:",
+    "options": [
+      "El idioma español coloquial",
+      "El tímpano del oyente",
+      "La voz humana articulada",
+      "El aire y las ondas sonoras"
+    ],
+    "correctIndex": 3,
+    "explanation": "El canal natural en la comunicación oral directa es el aire a través del cual se desplazan las ondas sonoras que transmiten la señal acústica.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  }
+]

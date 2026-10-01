@@ -1,0 +1,34 @@
+{
+  "id": "leng_t02_s02",
+  "subjectId": "lenguaje",
+  "semana": 2,
+  "subtema": "2.2",
+  "title": "Realidad Lingüística del Perú: Multilingüismo, Lenguas Amerindias y Castellano",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana02.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_02_Lengua_Habla_y_Realidad_Linguistica.md",
+  "learningObjectives": [
+    "Describir el multilingüismo peruano con 48 lenguas originarias en 19 familias lingüísticas",
+    "Ubicar las familias andinas Quechua y Aru con sus ramas, lenguas y zonas geográficas",
+    "Ordenar las lenguas amazónicas Arawak, Pano y Jíbaro por número de hablantes",
+    "Caracterizar los castellanos ribereño, andino y amazónico con el motoseo y sus marcas",
+    "Diferenciar bilingüismo de diglosia y explicar la Educación Intercultural Bilingüe"
+  ],
+  "theory": {
+    "id": "th_leng_t02_s02",
+    "asignatura": "Lenguaje",
+    "semana": 2,
+    "titulo": "Realidad Lingüística del Perú: Multilingüismo, Lenguas Amerindias y Castellano",
+    "resumen": "",
+    "conceptosClave": [
+      "Quechua con 3.5 millones de hablantes como lengua originaria más hablada del país",
+      "Quechua I central y arcaico frente a Quechua II sureño con Chanca y Collao",
+      "Familia Aru con aimara en Puno y jacaru en Yauyos dentro de Lima",
+      "Amazonía como zona de mayor diversidad con ASH-SHI-AWA en Arawak, Pano y Jíbaro",
+      "Motoseo andino por transferencia del sistema trivocálico quechua a, i, u",
+      "Castellano amazónico con velarización de f en x y anteposición del genitivo",
+      "Diglosia como asimetría de poder frente a bilingüismo armónico y EIB estatal"
+    ],
+    "admissionTip": "Jacaru se habla en Lima en Yauyos, no en Puno; asháninka es la amazónica número uno; el motoseo nace del trivocalismo quechua.",
+    "admissionExplanation": "Admisión pregunta zonas y jerarquías: Torero ubica el protoquechua en el centro, la Amazonía concentra las familias y la diglosia explica la marginación del quechua frente al castellano."
+  }
+}

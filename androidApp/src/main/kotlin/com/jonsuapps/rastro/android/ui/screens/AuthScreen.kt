@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
@@ -32,6 +33,7 @@ import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import kotlinx.coroutines.launch
 import com.jonsuapps.rastro.android.ui.components.TermsAndPrivacyDialog
 import com.jonsuapps.rastro.android.ui.components.DuolingoHaptics
+import com.jonsuapps.rastro.android.util.LegalLinks
 import com.jonsuapps.rastro.auth.UserManager
 import com.jonsuapps.rastro.theme.RastroShapes
 import com.jonsuapps.rastro.theme.ThemeManager
@@ -52,6 +54,7 @@ fun AuthScreen(
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var isPasswordVisible by remember { mutableStateOf(false) }
+    var termsAccepted by remember { mutableStateOf(false) }
 
     var isLoading by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
@@ -247,7 +250,69 @@ fun AuthScreen(
             )
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(14.dp))
+
+        // Aceptación de Términos y Política de Privacidad (Exigido en Registro)
+        if (selectedAuthTab == 1) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Checkbox(
+                    checked = termsAccepted,
+                    onCheckedChange = { termsAccepted = it },
+                    colors = CheckboxDefaults.colors(
+                        checkedColor = Color(0xFFF97316),
+                        uncheckedColor = theme.textSecondary
+                    )
+                )
+                Spacer(modifier = Modifier.width(4.dp))
+                Column(modifier = Modifier.weight(1f)) {
+                    val textStyle = MaterialTheme.typography.bodySmall.copy(
+                        fontSize = 12.sp,
+                        color = theme.textSecondary,
+                        lineHeight = 16.sp
+                    )
+                    val linkStyle = androidx.compose.ui.text.SpanStyle(
+                        color = Color(0xFFF97316),
+                        fontWeight = FontWeight.Bold,
+                        textDecoration = androidx.compose.ui.text.style.TextDecoration.Underline
+                    )
+                    val annotatedText = androidx.compose.ui.text.buildAnnotatedString {
+                        append("He leído y acepto los ")
+                        pushStringAnnotation(tag = "URL", annotation = LegalLinks.URL_TERMINOS)
+                        withStyle(style = linkStyle) {
+                            append("Términos y Condiciones")
+                        }
+                        pop()
+                        append(" y la ")
+                        pushStringAnnotation(tag = "URL", annotation = LegalLinks.URL_PRIVACIDAD)
+                        withStyle(style = linkStyle) {
+                            append("Política de Privacidad")
+                        }
+                        pop()
+                        append(".")
+                    }
+
+                    @Suppress("DEPRECATION")
+                    androidx.compose.foundation.text.ClickableText(
+                        text = annotatedText,
+                        style = textStyle,
+                        onClick = { offset ->
+                            annotatedText.getStringAnnotations(tag = "URL", start = offset, end = offset)
+                                .firstOrNull()?.let { annotation ->
+                                    LegalLinks.openUrl(context, annotation.item)
+                                } ?: run {
+                                    termsAccepted = !termsAccepted
+                                }
+                        }
+                    )
+                }
+            }
+            Spacer(modifier = Modifier.height(12.dp))
+        }
 
         // Botón Principal (Firebase Auth)
         Button(
@@ -258,6 +323,10 @@ fun AuthScreen(
                 }
                 if (password.length < 6) {
                     errorMessage = "La contraseña debe tener al menos 6 caracteres."
+                    return@Button
+                }
+                if (selectedAuthTab == 1 && !termsAccepted) {
+                    errorMessage = "Debes aceptar los Términos y Condiciones y la Política de Privacidad para crear una cuenta."
                     return@Button
                 }
 

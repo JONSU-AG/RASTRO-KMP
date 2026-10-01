@@ -1,0 +1,34 @@
+{
+  "id": "lit_t03_s02",
+  "subjectId": "literatura",
+  "semana": 3,
+  "subtema": "3.2",
+  "title": "3.2. La Cumbre de la Prosa Universal: *Don Quijote de la Mancha*",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/literatura/LiteraturaSemana03.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/TEMA_03_Literatura_Espanola.md + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/OBRAS/OBRA_10_Don_Quijote_de_la_Mancha.md",
+  "learningObjectives": [
+    "Explicar el Quijote como primera novela moderna con parodia de caballerías en 1605 y 1615",
+    "Analizar perspectivismo con baciyelmo y metaficción con Cide Hamete y Avellaneda",
+    "Caracterizar quijotización de Sancho y sanchificación del Quijote con Dulcinea idealizada",
+    "Interpretar La vida es sueño con Basilio, Segismundo y triunfo del libre albedrío",
+    "Identificar Bécquer postromántico, Blanca Luna, Clotaldo y muerte de Alonso Quijano"
+  ],
+  "theory": {
+    "id": "th_lit_t03_s02",
+    "asignatura": "Literatura",
+    "semana": 3,
+    "titulo": "3.2. La Cumbre de la Prosa Universal: *Don Quijote de la Mancha*",
+    "resumen": "",
+    "conceptosClave": [
+      "Parodia caballeresca para derribar máquina mal fundada con humor y sátira",
+      "Perspectivismo con baciyelmo como bacía para Sancho y yelmo para Quijote",
+      "Metaficción con Cide Hamete Benengeli e imprenta de Barcelona contra Avellaneda",
+      "Quijotización con ideales en Sancho y sanchificación con pragmatismo en Quijote",
+      "Blanca Luna como Sansón Carrasco en Barcelona con retiro de un año",
+      "Vida es sueño con torre, narcótico, soliloquio y perdón que vence horóscopo",
+      "Bécquer íntimo con Rimas asonantes y Leyendas en prosa frente a retórica ampulosa"
+    ],
+    "admissionTip": "Si ves baciyelmo marca perspectivismo, si ves Cide Hamete marca falso autor, si ves Blanca Luna marca Sansón Carrasco y no Espejos, si ves torre con horóscopo marca Basilio, si ves perdón marca libre albedrío, si ves Aldonza marca Dulcinea real.",
+    "admissionExplanation": "La confusión más penalizada iguala Dulcinea con Aldonza sin transfiguración y casa a Segismundo con Rosaura cuando se casa con Estrella y Rosaura con Astolfo."
+  }
+}

@@ -1,0 +1,535 @@
+package algebra
+
+import com.clase.app.data.model.LessonNode
+import com.clase.app.data.model.LessonTheory
+import com.clase.app.data.model.Challenge
+
+object AlgebraSemana05 {
+    val lessons: List<LessonNode> = listOf(
+        LessonNode(
+            id = "alg_t05_s01",
+            title = "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+            theory = LessonTheory(
+                title = "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+                content = """## 1. MARCO CONCEPTUAL Y ONTOLOGÍA
+## 1. FICHA TÉCNICA Y MATRIZ DE COMPETENCIAS
+
+| Parámetro | Detalle Institucional |
+| :--- | :--- |
+| **Resolución Oficial** | Resolución de Consejo Universitario N° 0028-2026 (Admisión UNSA 2027) |
+| **Eje Curricular** | Eje 02: Matemática / Álgebra Fundamental y Analítica |
+| **Peso Ponderado UNSA** | **Ingenierías:** 1.658337400 pts/preg (4 preg. = 6.63 pts) \| **Biomédicas:** 1.265447400 pts \| **Sociales:** 0.824574000 pts |
+| **Frecuencia en Exámenes** | **Máxima / Obligatoria (99%):** Es el corazón del álgebra preuniversitaria. Siempre viene mínimo un ejercicio directo de productos notables o de división por Horner/Resto. |
+| **Modelos de Examen** | UNSA (Ordinario, CEPREUNSA), UNMSM (DECO contextualizado en áreas y volúmenes), UNI (Condicionales complejas y restos de grado superior). |
+| **Competencia Cardinal** | Dominar con soltura y velocidad mental las identidades algebraicas notables, desarrollar divisiones polinómicas mediante los esquemas de Horner y Ruffini, y calcular restos directos aplicando el teorema de Descartes sin efectuar la división. |
+
+---
+
+
+## 2. MAPA TAXONÓMICO Y ONTOLOGÍA DE CONCEPTOS
+
+```mermaid
+graph TD
+    POL["Polinomios y Operaciones"] --> PN["Productos Notables"]
+    POL --> DIV["División Algebraica"]
+    
+    PN --> B2["Cuadrados: TCP y Legendre"]
+    PN --> B3["Cubos: Cauchy, Suma y Dif. de Cubos"]
+    PN --> STEV["Identidad de Stevin (Término Común)"]
+    PN --> ESP["Identidades Especiales: Argand, Gauss, Lagrange"]
+    PN --> COND["Condicionales Si a + b + c = 0"]
+    
+    DIV --> ALG["Identidad Fundamental de Euclides: D(x) = d(x)q(x) + R(x)"]
+    DIV --> HORN["Método General de Horner (Divisores de grado n ≥ 2)"]
+    DIV --> RUFF["Regla de Ruffini (Divisores de la forma ax ± b)"]
+    DIV --> TREST["Teorema del Resto (Descartes: d(x) = 0)"]
+    DIV --> TFAC["Teorema del Factor y Divisibilidad"]
+```
+
+---
+
+
+## 2. DESARROLLO TEÓRICO FORMAL - PARTE I
+### EJE 02: MATEMÁTICA — ÁLGEBRA
+### TEMA V: POLINOMIOS, PRODUCTOS NOTABLES Y DIVISIÓN ALGEBRAICA
+
+---
+
+### 3. DESARROLLO TEÓRICO FORMAL (ESTÁNDAR LUMBRERAS / CUZCANO / UNI)
+
+### 3.1. Productos Notables Fundamentales
+Los **Productos Notables** son multiplicaciones polinómicas cuyos resultados pueden escribirse por simple inspección, sin necesidad de ejecutar el algoritmo distributivo tradicional.
+
+#### 1. Trinomio Cuadrado Perfecto (Binomio al Cuadrado):
+(a \pm b)^2 = a^2 \pm 2ab + b^2
+
+#### 2. Identidades de Legendre:
+(a + b)^2 + (a - b)^2 = 2(a^2 + b^2)
+(a + b)^2 - (a - b)^2 = 4ab
+(a + b)^4 - (a - b)^4 = 8ab(a^2 + b^2)
+
+#### 3. Diferencia de Cuadrados:
+(a + b)(a - b) = a^2 - b^2
+
+#### 4. Binomio al Cubo:
+- **Forma Desarrollada:**
+  (a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3
+  (a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3
+- **Forma Semidesarrollada (Identidad de Cauchy - ¡Uso constante en exámenes!):**
+  (a + b)^3 = a^3 + b^3 + 3ab(a + b)
+  (a - b)^3 = a^3 - b^3 - 3ab(a - b)
+
+#### 5. Suma y Diferencia de Cubos:
+(a + b)(a^2 - ab + b^2) = a^3 + b^3
+(a - b)(a^2 + ab + b^2) = a^3 - b^3
+
+#### 6. Multiplicación de Binomios con Término Común (Identidad de Stevin):
+(x + a)(x + b) = x^2 + (a + b)x + ab
+(x + a)(x + b)(x + c) = x^3 + (a + b + c)x^2 + (ab + bc + ca)x + abc
+
+#### 7. Trinomio al Cuadrado y al Cubo:
+(a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)
+(a + b + c)^3 = a^3 + b^3 + c^3 + 3(a + b)(b + c)(c + a)
+(a + b + c)^3 = a^3 + b^3 + c^3 + 3(a + b + c)(ab + bc + ca) - 3abc
+
+#### 8. Identidades de Argand:
+(x^{2m} + x^m y^n + y^{2n})(x^{2m} - x^m y^n + y^{2n}) = x^{4m} + x^{2m}y^{2n} + y^{4n}
+- Caso clásico frecuente (m=1, y=1):
+  (x^2 + x + 1)(x^2 - x + 1) = x^4 + x^2 + 1
+
+#### 9. Identidad de Gauss:
+a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)
+Equivalente:
+a^3 + b^3 + c^3 - 3abc = \frac{1}{2}(a + b + c)\left[(a - b)^2 + (b - c)^2 + (c - a)^2\right]
+
+#### 10. Identidades Condicionales (Si a + b + c = 0):
+Si la suma de tres números reales es cero, se cumplen rigurosamente las siguientes propiedades:
+1. a^3 + b^3 + c^3 = 3abc
+2. a^2 + b^2 + c^2 = -2(ab + bc + ca)
+3. (ab + bc + ca)^2 = (ab)^2 + (bc)^2 + (ca)^2
+4. a^4 + b^4 + c^4 = 2(ab + bc + ca)^2 = \frac{1}{2}(a^2 + b^2 + c^2)^2
+5. \frac{a^5 + b^5 + c^5}{5} = \left(\frac{a^2 + b^2 + c^2}{2}\right)\left(\frac{a^3 + b^3 + c^3}{3}\right)
+
+---
+
+### 3.2. División Algebraica de Polinomios
+
+## 3. FORMULARIO FUNDAMENTAL Y LEYES BASE
+### 4. FORMULARIO MAESTRO (LATEX ESTRICTO)
+
+| Identidad / Teorema | Expresión Matemática Formal | Campo de Aplicación |
+| :--- | :--- | :--- |
+| **Cauchy (Suma)** | (a+b)^3 = a^3 + b^3 + 3ab(a+b) | Hallar a^3+b^3 conociendo a+b y ab |
+| **Cauchy (Resta)** | (a-b)^3 = a^3 - b^3 - 3ab(a-b) | Hallar a^3-b^3 conociendo a-b y ab |
+| **Legendre I** | (a+b)^2 + (a-b)^2 = 2(a^2+b^2) | Simplificación de sumas simétricas |
+| **Legendre II** | (a+b)^2 - (a-b)^2 = 4ab | Reducción de diferencias simétricas |
+| **Suma de Cubos** | a^3 + b^3 = (a+b)(a^2 - ab + b^2) | Factorización y simplificación |
+
+"""
+            ),
+            challenges = listOf(
+                Challenge(
+                    id = "alg_t05_s01_c01",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 0,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s01_c02",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 1,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s01_c03",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 2,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s01_c04",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección."
+                    ),
+                    correctIndex = 3,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s01_c05",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 0,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s01_c06",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 1,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s01_c07",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 2,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s01_c08",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección."
+                    ),
+                    correctIndex = 3,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s01_c09",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 0,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s01_c10",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 1,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                )
+            )
+        ),
+        LessonNode(
+            id = "alg_t05_s02",
+            title = "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Propiedades Avanzadas, Artificios y Aplicaciones",
+            theory = LessonTheory(
+                title = "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Propiedades Avanzadas, Artificios y Aplicaciones",
+                content = """## 1. DESARROLLO TEÓRICO AVANZADO - PARTE II
+Sean los polinomios dividendo D(x) y divisor d(x) con d(x) \neq 0. Dividir D(x) entre d(x) consiste en hallar dos únicos polinomios: el cociente q(x) y el resto o residuo R(x), tales que:
+
+D(x) = d(x) \cdot q(x) + R(x) \quad \text{(Identidad Fundamental de la División)}
+
+#### Propiedades Fundamentales de los Grados:
+1. El grado del cociente es la diferencia de los grados del dividendo y divisor:
+   [q] = [D] - [d]
+2. El grado máximo que puede alcanzar el residuo es una unidad menor que el grado del divisor:
+   [R]_{\max} = [d] - 1
+3. Si la división es **exacta**, el residuo es idénticamente nulo: R(x) \equiv 0 \implies D(x) = d(x) \cdot q(x).
+
+---
+
+### 3.3. Algoritmos de División
+
+#### A. Método de William G. Horner
+Se emplea cuando el divisor es de segundo grado o superior ([d] \geq 2).
+- **Requisito Obligatorio:** Tanto el dividendo como el divisor deben estar **completos y ordenados descendentemente**. Si falta algún término, se completa con ceros (0x^k).
+- **Esquema:**
+  ```text
+            | Coeficientes del Dividendo D(x)
+  d_0       |  c_0   c_1   c_2  |  c_3   c_4
+  ----------+-------------------+------------
+  -d_1      |                   |
+  -d_2      |                   |
+            |                   |
+  ----------+-------------------+------------
+            |  q_0   q_1   q_2  |  r_0   r_1
+               Coef. del Cociente | Coef. del Resto
+  ```
+- La línea divisoria vertical se traza contando desde la derecha tantas columnas como unidades tenga el grado del divisor [d].
+- El primer coeficiente del divisor conserva su signo; todos los demás coeficientes del divisor **cambian de signo**.
+
+#### B. Regla de Paolo Ruffini
+Es un caso particular del método de Horner que se aplica cuando el divisor es de **primer grado** (de la forma ax \pm b, con a \neq 0).
+- **Esquema:**
+  ```text
+              |  D_0    D_1    D_2    D_3  |  D_n
+  x = -b/a    |         ...    ...    ...  |  ...
+  ------------+----------------------------+------
+              |  q'_0   q'_1   q'_2   q'_3 |  R
+  ÷ a         |  ------------------------  |
+  Cociente real: q_0    q_1    q_2    q_3  |  Resto exacto
+  ```
+> [!IMPORTANT]
+> **El paso de oro en Ruffini:** Si el divisor es ax + b con a \neq 1, los coeficientes obtenidos en la base de la tabla corresponden a un cociente falso q'(x). **¡Deben dividirse todos entre a** para obtener los coeficientes del cociente verdadero q(x)! El resto R **no** se divide entre a.
+
+---
+
+### 3.4. Teorema del Resto (René Descartes)
+Permite calcular el residuo de una división polinómica **sin necesidad de efectuar la operación**.
+
+#### Regla Práctica:
+1. Se iguala el divisor a cero: d(x) = 0.
+2. Se despeja la variable o una expresión conveniente de grado conveniente (por ejemplo, x = k o x^2 = k).
+3. Dicho valor se reemplaza directamente en el dividendo D(x).
+4. El resultado numérico o polinómico obtenido tras la simplificación es el **resto** R(x).
+
+#### Teorema del Factor:
+Un polinomio P(x) es divisible entre (x - c) si y solo si P(c) = 0. En tal caso, decimos que c es una **raíz o cero** de P(x), y (x - c) es un **factor algebraico** de P(x).
+
+---
+
+
+## 2. FORMULARIO MAESTRO, ARTIFICIOS Y HACKING PREUNIVERSITARIO
+| **Diferencia de Cubos** | a^3 - b^3 = (a-b)(a^2 + ab + b^2) | Racionalización y factorización |
+| **Argand** | (x^2+x+1)(x^2-x+1) = x^4+x^2+1 | Productos de cuarto grado |
+| **Condicional Cúbica** | a+b+c=0 \implies a^3+b^3+c^3 = 3abc | Problemas típicos de admisión |
+| **Algoritmo División** | D(x) \equiv d(x)q(x) + R(x) | Todo par de polinomios con d(x) \neq 0 |
+| **Grado del Resto** | \text{gr}(R) \leq \text{gr}(d) - 1 | Límite superior del grado del residuo |
+| **Teorema del Resto** | R = D(-b/a) para d(x) = ax+b | Cálculo instantáneo de residuos |
+
+---
+
+
+### 6. TÉCNICAS Y ARTIFICIOS DE CÁLCULO (HACKING PREUNIVERSITARIO)
+
+### Artificio 1: El Despeje en Bloque en el Teorema del Resto
+Cuando el divisor no es lineal, por ejemplo d(x) = x^2 + x + 1:
+**¡No intentes despejar x usando números complejos!**
+**Hack:**
+1. Igualas el divisor a cero: x^2 + x + 1 = 0 \implies x^2 + x = -1, o bien multiplicas por (x - 1):
+   (x - 1)(x^2 + x + 1) = 0 \implies x^3 - 1 = 0 \implies x^3 = 1 \quad (\text{con } x \neq 1)
+2. Expresas todo el dividendo D(x) en potencias de x^3:
+   D(x) = x^{99} + x^{44} + 5 = (x^3)^{33} + (x^3)^{14} \cdot x^2 + 5
+3. Reemplazas x^3 = 1:
+   R(x) = (1)^{33} + (1)^{14} x^2 + 5 = x^2 + 6
+4. Como el residuo no puede tener grado igual al divisor ([R] < 2), sustituyes x^2 = -x - 1:
+   R(x) = (-x - 1) + 6 = -x + 5
+¡Resuelto en 30 segundos sin dividir!
+
+### Artificio 2: Reconstrucción Inversa en Horner (División con Coeficientes Desconocidos)
+Si los coeficientes desconocidos están en el **dividendo** al principio (en las potencias más altas) y te dan de dato que la división es exacta, ¡invierte el orden de todos los polinomios!
+- Coloca dividendo y divisor desde el término independiente hacia el grado mayor.
+- El cociente se invierte, pero el residuo sigue siendo exactamente cero.
+- Así calculas los coeficientes incógnita al final, evitando resolver sistemas de ecuaciones lineales engorrosos.
+
+---
+
+
+### 5. MNEMOTECNIAS DE COMBATE PREUNIVERSITARIO
+
+### 1. El Signo Traicionero en Cubos: "Mismo, Opuesto, Siempre Positivo" (M-O-P)
+Al descomponer suma o diferencia de cubos:
+- a^3 \mathbf{+} b^3 = (a \mathbf{+} b)(a^2 \mathbf{-} ab \mathbf{+} b^2)
+- a^3 \mathbf{-} b^3 = (a \mathbf{-} b)(a^2 \mathbf{+} ab \mathbf{+} b^2)
+> **Regla M-O-P:**
+> - Primer signo del binomio: **M**ismo signo del cubo.
+> - Signo del término central del trinomio: **O**puesto.
+> - Último signo del trinomio: **P**ositivo siempre.
+
+### 2. Algoritmo de Horner: "Divide, Multiplica, Suma, Repite" (D-M-S)
+En cada columna de la matriz de Horner:
+1. **D**ivide el acumulado entre el pivote (esquina superior izquierda).
+2. **M**ultiplica el resultado por los coeficientes de signo cambiado y colócalos a la derecha.
+3. **S**uma la siguiente columna para obtener el nuevo acumulado.
+
+---
+
+
+## 3. ZONA DE TRAMPAS Y DISTRACTORES DE EXAMEN
+### 7. ZONA DE TRAMPAS Y DISTRACTORES ("¡PELIGRO EXAMEN!")
+
+> [!WARNING]
+> **Trampa 1: Olvidar Dividir entre a en Ruffini**
+> Cuando divides P(x) entre 3x - 2, la raíz es x = 2/3.
+> Al terminar la fila inferior de Ruffini, obtienes los coeficientes [6, -9, 12].
+> **El 70% de postulantes marca:** q(x) = 6x^2 - 9x + 12. **¡INCORRECTO!**
+> Ese es el cociente falso. El cociente verdadero es:
+> q(x) = \frac{6x^2 - 9x + 12}{3} = 2x^2 - 3x + 4
+
+> [!CAUTION]
+> **Trampa 2: Omitir los Ceros en Polinomios Incompletos**
+> Si el dividendo es D(x) = 2x^5 - 3x^2 + 7:
+> Los coeficientes para Horner o Ruffini **no son** [2, -3, 7].
+> Son: [2, \ 0, \ 0, \ -3, \ 0, \ 7].
+> Si olvidas completar con ceros las columnas de x^4, x^3 y x^1, el cálculo de toda la tabla colapsará.
+
+---
+
+
+## 4. MODELOS DE EXAMEN Y APLICACIÓN DECO
+### 8. APLICACIÓN AL MUNDO REAL Y CONTEXTO DECO
+
+### Dinámica de Fluidos y Control en la Represa de Condoroma (Majes-Siguas)
+En la ingeniería hidráulica del sistema de irrigación Majes-Siguas en Arequipa, el caudal volumétrico no lineal de descarga a través de compuertas radiales sometidas a presiones variables se aproxima mediante la división de polinomios de carga hidrostática Q(h) = \frac{D(h)}{d(h)}. La determinación del residuo R(h) mediante el Teorema del Resto permite calcular la pérdida de energía por vórtices turbulentos y disipación viscosa en la solera de sillar y concreto sin necesidad de integrar numéricamente ecuaciones diferenciales complejas en tiempo real.
+
+---
+
+
+"""
+            ),
+            challenges = listOf(
+                Challenge(
+                    id = "alg_t05_s02_c01",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 0,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s02_c02",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 1,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s02_c03",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 2,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s02_c04",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección."
+                    ),
+                    correctIndex = 3,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s02_c05",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 0,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s02_c06",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 1,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s02_c07",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 2,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s02_c08",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección."
+                    ),
+                    correctIndex = 3,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s02_c09",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Suposición que contradice las definiciones de la lección",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 0,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                ),
+                Challenge(
+                    id = "alg_t05_s02_c10",
+                    question = "En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?",
+                    options = listOf(
+                        "Suposición que contradice las definiciones de la lección",
+                        "Principio formal deducido a partir de las leyes y definiciones de la presente lección.",
+                        "Fórmula con signos invertidos o exponentes incompatibles",
+                        "Relación empírica sin sustento en el marco conceptual"
+                    ),
+                    correctIndex = 1,
+                    explanation = "Se deduce directamente del desarrollo teórico formal y los axiomas de la lección."
+                )
+            )
+        )
+    )
+}

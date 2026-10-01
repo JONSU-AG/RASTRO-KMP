@@ -45,12 +45,18 @@ object GamificationRepository {
                         skipped = fields["skipped"] as? Boolean ?: false
                     )
                 }.toMap()
+                @Suppress("UNCHECKED_CAST")
+                val activityDatesList = document.get("activityDates") as? List<String>
+                val streakVal = (document.getLong("streak") ?: 1L).toInt()
+                val bestStreakVal = (document.getLong("bestStreak") ?: streakVal.toLong()).toInt()
+
                 val state = GamificationState(
                     xp = (document.getLong("xp") ?: 50L).toInt(),
-                    streak = (document.getLong("streak") ?: 1L).toInt(),
+                    streak = streakVal,
+                    bestStreak = maxOf(bestStreakVal, streakVal),
                     lastStudyDate = document.getString("lastActiveDate").orEmpty(),
                     streakFreeze = (document.getLong("streakFreeze") ?: 1L).toInt(),
-                    hearts = (document.getLong("hearts") ?: 200L).toInt(),
+                    hearts = (document.getLong("hearts") ?: 5L).toInt(),
                     completedLessons = lessons,
                     unlockedNodes = document.get("unlockedNodes") as? List<String> ?: listOf("node_0"),
                     achievements = document.get("achievements") as? List<String> ?: emptyList(),
@@ -58,7 +64,12 @@ object GamificationRepository {
                     activeLessonBySubject = (document.get("activeLessonBySubject") as? Map<*, *>)?.entries
                         ?.mapNotNull { (k, v) -> if (k is String && v is String) k to v else null }?.toMap() ?: emptyMap(),
                     activeStudyDate = document.getString("activeStudyDate").orEmpty(),
-                    activeStudySeconds = (document.getLong("activeStudySeconds") ?: 0L).toInt()
+                    activeStudySeconds = (document.getLong("activeStudySeconds") ?: 0L).toInt(),
+                    activityDates = activityDatesList?.toSet() ?: emptySet(),
+                    maxHearts = (document.getLong("maxHearts") ?: 5L).toInt(),
+                    lastHeartLostTimestamp = document.getLong("lastHeartLostTimestamp") ?: 0L,
+                    lifeRecoveryAmount = document.getLong("lifeRecoveryAmount") ?: 3L,
+                    lifeRecoveryUnit = document.getString("lifeRecoveryUnit") ?: "MINUTOS"
                 )
                 onComplete(Result.success(state))
             }
@@ -76,17 +87,23 @@ object GamificationRepository {
         }
         val payload = mapOf(
             "streak" to state.streak,
+            "bestStreak" to state.bestStreak,
             "lastActiveDate" to state.lastStudyDate,
             "streakFreeze" to state.streakFreeze,
             "xp" to state.xp,
             "hearts" to state.hearts,
+            "maxHearts" to state.maxHearts,
+            "lastHeartLostTimestamp" to state.lastHeartLostTimestamp,
+            "lifeRecoveryAmount" to state.lifeRecoveryAmount,
+            "lifeRecoveryUnit" to state.lifeRecoveryUnit,
             "completedLessons" to lessonData,
             "unlockedNodes" to state.unlockedNodes,
             "achievements" to state.achievements,
             "claimedTopicRewards" to state.claimedTopicRewards,
             "activeLessonBySubject" to state.activeLessonBySubject,
             "activeStudyDate" to state.activeStudyDate,
-            "activeStudySeconds" to state.activeStudySeconds
+            "activeStudySeconds" to state.activeStudySeconds,
+            "activityDates" to state.activityDates.toList()
         )
         FirebaseFirestore.getInstance()
             .collection("usuarios").document(uid)

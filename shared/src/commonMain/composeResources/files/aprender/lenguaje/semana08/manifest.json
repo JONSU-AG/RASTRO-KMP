@@ -1,0 +1,18 @@
+{
+  "week": 8,
+  "title": "Semántica y Lexicología: Signo y Relaciones Léxicas",
+  "lessons": [
+    {
+      "subtopic": "8.1",
+      "lessonId": "leng_t08_s01",
+      "title": "El Signo Lingüístico y la Distinción Denotación vs. Connotación",
+      "path": "8.1/lesson.json"
+    },
+    {
+      "subtopic": "8.2",
+      "lessonId": "leng_t08_s02",
+      "title": "Relaciones Léxico-Semánticas: Polisemia, Homonimia, Antonimia e Inclusión",
+      "path": "8.2/lesson.json"
+    }
+  ]
+}

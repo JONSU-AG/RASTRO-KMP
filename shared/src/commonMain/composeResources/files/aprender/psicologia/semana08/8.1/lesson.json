@@ -1,0 +1,34 @@
+{
+  "id": "psi_t08_s01",
+  "subjectId": "psicologia",
+  "semana": 8,
+  "subtema": "8.1",
+  "title": "3.1. Definición y Características de la Personalidad",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana08.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_08_Personalidad_Temperamento_Caracter.md",
+  "learningObjectives": [
+    "Definir personalidad como organizacion dinamica de sistemas psicofisicos con patrones unicos de pensar sentir y actuar segun Allport",
+    "Diferenciar temperamento innato neuroendocrino inmodificable frente a caracter adquirido socio moral educable con ejemplos Matias",
+    "Explicar rasgos estructurada dinamica individual constante y social con estabilidad coherente y singularidad irrepetible",
+    "Reconocer familia y crianza como matriz primera y bondad de ajuste como modelado del temperamento dificil",
+    "Distinguir pruebas proyectivas ambiguas Rorschach y TAT frente a objetivas para completar retos de evaluacion"
+  ],
+  "theory": {
+    "id": "th_psi_t08_s01",
+    "asignatura": "Psicología",
+    "semana": 8,
+    "titulo": "3.1. Definición y Características de la Personalidad",
+    "resumen": "",
+    "conceptosClave": [
+      "Persona como mascara teatral y personalidad como organizacion dinamica integrada que determina ajustes unicos al ambiente",
+      "Temperamento biologico genetico innato con energia velocidad reaccion y umbral emocional sin juicio moral",
+      "Caracter social cultural adquirido con habitos eticos disciplina y voluntad altamente modificable",
+      "Estabilidad con coherencia temporal y singularidad irrepetible incluso en gemelos monocigoticos",
+      "Sistema dinamico allportiano en adaptacion activa frente a entorno cambiante",
+      "Familia como agente primero de lenguaje afecto normas y limites con estilos de crianza y apego",
+      "Bondad de ajuste entre temperamento reactivo y crianza calida que amortigua predisposicion biologica"
+    ],
+    "admissionTip": "Si ves mascara marca persona, si ves dinamica y Allport marca definicion, si ves innato hormonal e irritabilidad marca temperamento, si ves puntual honesto y solidario marca caracter, si ves coherente tras decadas marca estabilidad, si ves irrepetible marca singularidad, si ves familia marca primer agente, si ves ambiguo y Rorschach marca proyectiva.",
+    "admissionExplanation": "La trampa mas castigada es invertir temperamento con caracter, llamar estatico a lo dinamico, creer que temperamento dificil condena sin ajuste, y confundir prueba proyectiva ambigua con objetiva de verdadero o falso."
+  }
+}

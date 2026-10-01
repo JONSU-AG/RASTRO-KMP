@@ -70,6 +70,16 @@ object UserUploadRepository {
                 }.mapNotNull(::toUserUpload).sortedWith(compareByDescending<UserUpload> { it.isPinned }.thenByDescending { it.createdAtMillis }))
             }
 
+    /** Flujo en tiempo real solo de publicaciones marcadas como destacadas (destacado == true). */
+    fun observeFeatured(onUploads: (List<UserUpload>) -> Unit): ListenerRegistration =
+        FirebaseFirestore.getInstance().collection("uploads")
+            .whereEqualTo("destacado", true)
+            .limit(20)
+            .addSnapshotListener { snapshot, error ->
+                if (error != null || snapshot == null) return@addSnapshotListener
+                onUploads(snapshot.documents.mapNotNull(::toUserUpload).sortedByDescending { it.createdAtMillis })
+            }
+
     /** Same live collection used by React's Biblioteca community tab. */
     fun observeCommunity(onUploads: (List<UserUpload>) -> Unit): ListenerRegistration =
         FirebaseFirestore.getInstance().collection("uploads")
@@ -352,14 +362,16 @@ object UserUploadRepository {
         val db = FirebaseFirestore.getInstance()
         val uploadRef = db.collection("uploads").document()
         val userRef = db.collection("usuarios").document(user.uid)
+        val isPdf = url.substringBefore('?').endsWith(".pdf", ignoreCase = true)
         val upload = mapOf(
             "title" to title.trim(),
             "author" to author.trim(),
             "category" to category,
             "categoriaLabel" to category,
-            "type" to "link",
-            "sourceMode" to "link",
+            "type" to if (isPdf) "pdf" else "link",
+            "sourceMode" to if (url.contains("firebasestorage", ignoreCase = true)) "file" else "link",
             "url" to url.trim(),
+            "fileUrl" to url.trim(),
             "driveUrl" to url.trim(),
             "driveLinks" to listOf(url.trim()),
             "desc" to description.trim(),
@@ -508,6 +520,100 @@ object UserUploadRepository {
             }
         }.addOnSuccessListener { onComplete(Result.success(Unit)) }
          .addOnFailureListener { onComplete(Result.failure(it)) }
+    }
+
+    fun reportComment(
+        commentId: String,
+        commentText: String,
+        authorUid: String,
+        authorName: String,
+        postId: String,
+        postTitle: String,
+        reporterUid: String,
+        reporterName: String,
+        reason: String,
+        details: String,
+        onComplete: (Result<Unit>) -> Unit
+    ) {
+        if (commentId.isBlank() || reporterUid.isBlank()) {
+            onComplete(Result.failure(IllegalArgumentException("Datos incompletos para reportar comentario")))
+            return
+        }
+        val db = FirebaseFirestore.getInstance()
+        val reportRef = db.collection("reportes_ugc").document()
+        val reportData = mapOf(
+            "id" to reportRef.id,
+            "type" to "comment",
+            "commentId" to commentId,
+            "commentText" to commentText,
+            "postId" to postId,
+            "postTitle" to postTitle,
+            "authorUid" to authorUid,
+            "authorName" to authorName,
+            "reporterUid" to reporterUid,
+            "reporterName" to reporterName,
+            "reason" to reason,
+            "details" to details,
+            "timestamp" to System.currentTimeMillis(),
+            "resolved" to false
+        )
+        reportRef.set(reportData)
+            .addOnSuccessListener { onComplete(Result.success(Unit)) }
+            .addOnFailureListener { onComplete(Result.failure(it)) }
+    }
+
+    fun reportComment(
+        comment: UploadComment,
+        upload: UserUpload,
+        reporter: UserData,
+        reason: String,
+        details: String,
+        onComplete: (Result<Unit>) -> Unit
+    ) {
+        reportComment(
+            commentId = comment.id,
+            commentText = comment.text,
+            authorUid = comment.authorUid,
+            authorName = comment.authorName,
+            postId = upload.id,
+            postTitle = upload.title,
+            reporterUid = reporter.uid,
+            reporterName = reporter.displayName,
+            reason = reason,
+            details = details,
+            onComplete = onComplete
+        )
+    }
+
+    fun reportUser(
+        targetUid: String,
+        targetName: String,
+        reporter: UserData,
+        reason: String,
+        details: String,
+        onComplete: (Result<Unit>) -> Unit
+    ) {
+        if (targetUid.isBlank() || reporter.uid.isBlank()) {
+            onComplete(Result.failure(IllegalArgumentException("Datos incompletos para reportar usuario")))
+            return
+        }
+        val db = FirebaseFirestore.getInstance()
+        val reportRef = db.collection("reportes_ugc").document()
+        val reportData = mapOf(
+            "id" to reportRef.id,
+            "type" to "user",
+            "targetUid" to targetUid,
+            "targetName" to targetName,
+            "reporterUid" to reporter.uid,
+            "reporterName" to reporter.displayName,
+            "reason" to reason,
+            "details" to details,
+            "timestamp" to System.currentTimeMillis(),
+            "resolved" to false
+        )
+        reportRef.set(reportData)
+            .addOnSuccessListener { onComplete(Result.success(Unit)) }
+            .addOnFailureListener { onComplete(Result.failure(it)) }
     }
 
     /** Observa en tiempo real los reportes de contenido pendientes para el Panel Admin */

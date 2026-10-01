@@ -1,0 +1,218 @@
+[
+  {
+    "id": "leng_t01_s03_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La función del lenguaje en la cual el emisor busca influir en el comportamiento del receptor para que realice una acción se denomina:",
+    "options": [
+      "Expresiva",
+      "Fática",
+      "Apelativa o conativa",
+      "Metalingüística"
+    ],
+    "correctIndex": 2,
+    "explanation": "La función apelativa o conativa está centrada en el receptor y tiene como objetivo ordenar, pedir o modificar su conducta.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.3.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s03_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la frase 'El punto de ebullición del agua a nivel del mar es 100 grados Celsius', la función del lenguaje predominante es:",
+    "options": [
+      "Poética o estética",
+      "Emotiva",
+      "Representativa o referencial",
+      "Fática de contacto"
+    ],
+    "correctIndex": 2,
+    "explanation": "El enunciado informa de manera objetiva, científica y verificable sobre un hecho de la realidad sin emociones del emisor, cumpliendo función referencial.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.3.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s03_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿A qué elemento focal del circuito comunicativo corresponde la función metalingüística del lenguaje?",
+    "options": [
+      "Al canal",
+      "Al referente",
+      "Al emisor",
+      "Al código"
+    ],
+    "correctIndex": 3,
+    "explanation": "La función metalingüística se centra en el código, pues utiliza la lengua para explicar las reglas y conceptos del propio idioma.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.3.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s03_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Cuando en una llamada decimos '¿Aló? ¿Me escuchas? Sí, ajá...', la función lingüística que se activa primordialmente es:",
+    "options": [
+      "Representativa",
+      "Conativa",
+      "Fática o de contacto",
+      "Estética"
+    ],
+    "correctIndex": 2,
+    "explanation": "La función fática verifica, abre o mantiene el canal físico de comunicación para comprobar que la señal fluye adecuadamente.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.3.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s03_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el verso 'Hay golpes en la vida tan fuertes... ¡Yo no sé!' de César Vallejo, el lenguaje cumple predominantemente la función:",
+    "options": [
+      "Metalingüística",
+      "Referencial pura",
+      "Poética o estética",
+      "Fática"
+    ],
+    "correctIndex": 2,
+    "explanation": "La función poética o estética se enfoca en el mensaje mismo, empleando recursos estilísticos, cadencia y belleza literaria.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.3.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s03_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La afirmación 'Los verbos transitivos exigen obligatoriamente la presencia de un objeto directo' cumple una función:",
+    "options": [
+      "Apelativa",
+      "Metalingüística",
+      "Expresiva",
+      "Poética"
+    ],
+    "correctIndex": 1,
+    "explanation": "El mensaje aborda y explica una regla gramatical del idioma español; cuando el lenguaje habla del lenguaje, la función es metalingüística.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.3.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s03_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Según Ferdinand de Saussure, la lengua se diferencia esencialmente del habla por ser:",
+    "options": [
+      "Social, psíquica y un código abstracto compartido",
+      "Un acto puramente motor",
+      "Individual y momentánea",
+      "Psicofísica y efímera"
+    ],
+    "correctIndex": 0,
+    "explanation": "La lengua es el sistema social, virtual y psíquico compartido por la comunidad, mientras que el habla es su realización individual y concreta.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.3.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s03_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La expresión '¡Qué alegría tan inmensa siento por tu ingreso a Medicina!' cumple preponderantemente la función:",
+    "options": [
+      "Referencial",
+      "Expresiva o emotiva",
+      "Apelativa",
+      "Fática"
+    ],
+    "correctIndex": 1,
+    "explanation": "La función expresiva o emotiva se centra en el emisor para manifestar sus emociones, sentimientos o estados de ánimo subjetivos.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.3.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s03_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Quién formuló el principio de la doble articulación del lenguaje humano (morfemas y fonemas)?",
+    "options": [
+      "Karl Bühler",
+      "Roman Jakobson",
+      "André Martinet",
+      "Noam Chomsky"
+    ],
+    "correctIndex": 2,
+    "explanation": "André Martinet postuló que el lenguaje humano se articula en dos niveles: primera articulación en monemas (significado) y segunda articulación en fonemas (distintivos).",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.3.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s03_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La orden 'Postulantes, guarden sus mochilas y muestren su carné de inscripción' cumple la función del lenguaje centrada en el:",
+    "options": [
+      "Receptor",
+      "Mensaje",
+      "Emisor",
+      "Canal"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cumple la función apelativa o conativa, la cual está centrada en el receptor para guiar o mandar sobre su conducta.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.3.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s03_c11",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El carácter innato del lenguaje, como facultad biológica heredada e inscrita genéticamente en el cerebro humano, fue sostenido fundamentalmente por:",
+    "options": [
+      "Ferdinand de Saussure",
+      "Noam Chomsky",
+      "Roman Jakobson",
+      "Karl Bühler"
+    ],
+    "correctIndex": 1,
+    "explanation": "Noam Chomsky desarrolló la teoría generativa que postula el carácter innato y universal de la facultad del lenguaje humano.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.3.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s03_c12",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la frase 'La palabra árbol es grave y se tilda porque termina en consonante l', la función predominante es:",
+    "options": [
+      "Apelativa",
+      "Representativa",
+      "Metalingüística",
+      "Fática"
+    ],
+    "correctIndex": 2,
+    "explanation": "Explica la regla de acentuación de una palabra del idioma; por tanto, el código habla de sí mismo en función metalingüística.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.3.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  }
+]

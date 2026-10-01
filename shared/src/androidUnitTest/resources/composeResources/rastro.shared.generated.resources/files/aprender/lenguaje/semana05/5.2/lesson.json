@@ -1,0 +1,34 @@
+{
+  "id": "leng_t05_s02",
+  "subjectId": "lenguaje",
+  "semana": 5,
+  "subtema": "5.2",
+  "title": "Estructura de la Frase Nominal (FN), Frase Verbal (FV) y sus Complementos",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_05_Sintaxis_Categorias_y_Frases.md",
+  "learningObjectives": [
+    "Describir la frase nominal con núcleo, modificadores directos, indirectos y aposición",
+    "Distinguir aposición explicativa entre comas de especificativa sin comas",
+    "Diferenciar objeto directo, indirecto, atributo, predicativo, agente y circunstancial por pruebas de sustitución",
+    "Aplicar la doble prueba del objeto directo con clíticos acusativos y voz pasiva",
+    "Analizar oraciones con OD, OI duplicado, atributo y predicativo subjetivo y objetivo"
+  ],
+  "theory": {
+    "id": "th_leng_t05_s02",
+    "asignatura": "Lenguaje",
+    "semana": 5,
+    "titulo": "Estructura de la Frase Nominal (FN), Frase Verbal (FV) y sus Complementos",
+    "resumen": "",
+    "conceptosClave": [
+      "FN = modificador directo más núcleo más modificador directo más modificador indirecto más aposición",
+      "MD sin preposición como el y fascinante; MI con preposición como de gramática; aposición como Misti o la Ciudad Blanca",
+      "OD conmuta por lo la los las y pasa a sujeto paciente en pasiva; OI conmuta por le les y nunca pasa a sujeto",
+      "Atributo solo con copulativo ser estar parecer y conmuta por lo; predicativo con verbo pleno y concuerda sin conmutar por lo",
+      "Agente con por en pasiva pasa a sujeto agente en activa; circunstancial expresa tiempo lugar modo y es prescindible",
+      "El jurado declaró ganadora a la delegación es predicativo objetivo; son competentes es atributo",
+      "Les duplica al OI como les otorgó a los ingresantes; contentos con caminaban es predicativo subjetivo"
+    ],
+    "admissionTip": "Para OD usa lo la los las más pasiva, para OI usa le les, para atributo usa lo neutro con ser estar parecer, para predicativo verifica adjetivo variable que concuerda pero no admite lo.",
+    "admissionExplanation": "El error clásico es marcar como circunstancial de modo lo que es predicativo: si la palabra es adjetivo variable que concuerda con el sujeto o el OD es predicativo, si es adverbio invariable es circunstancial."
+  }
+}

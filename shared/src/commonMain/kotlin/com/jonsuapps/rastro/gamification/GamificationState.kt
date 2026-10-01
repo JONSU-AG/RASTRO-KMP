@@ -16,6 +16,7 @@ data class LessonCompletion(
 data class GamificationState(
     val xp: Int = 50,
     val streak: Int = 1,
+    val bestStreak: Int = 1,
     val lastStudyDate: String = "",
     val streakFreeze: Int = 1,
     val hearts: Int = 200,
@@ -25,7 +26,12 @@ data class GamificationState(
     val claimedTopicRewards: List<String> = emptyList(),
     val activeLessonBySubject: Map<String, String> = emptyMap(),
     val activeStudyDate: String = "",
-    val activeStudySeconds: Int = 0
+    val activeStudySeconds: Int = 0,
+    val activityDates: Set<String> = emptySet(),
+    val maxHearts: Int = 5,
+    val lastHeartLostTimestamp: Long = 0L,
+    val lifeRecoveryAmount: Long = 3L,
+    val lifeRecoveryUnit: String = "MINUTOS"
 ) {
     fun learningPath(subjectId: String): List<com.jonsuapps.rastro.model.LessonNode> {
         val catalog = com.jonsuapps.rastro.data.AprenderRepository.getLessonsForSubjectSync(subjectId)

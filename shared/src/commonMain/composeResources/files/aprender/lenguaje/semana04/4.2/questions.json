@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t04_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La palabra 'blanquirrojo' se ha formado mediante el proceso de:",
+    "options": [
+      "Composición por yuxtaposición",
+      "Composición propiamente dicha",
+      "Parasíntesis",
+      "Derivación prefijal"
+    ],
+    "correctIndex": 1,
+    "explanation": "En 'blanquirrojo' se unen dos raíces (blanco + rojo) con modificación fonética de la primera (la 'o' muta a 'i'), configurando una composición propiamente dicha.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.2.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes palabras ha sido creada mediante el mecanismo de composición por yuxtaposición?",
+    "options": [
+      "Maniobra",
+      "Agridulce",
+      "Desalmado",
+      "Sacapuntas"
+    ],
+    "correctIndex": 3,
+    "explanation": "En 'sacapuntas' se unen dos palabras completas (saca + puntas) sin alteración ortográfica ni fonética en sus bases.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.2.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La palabra 'quinceañero' es un ejemplo clásico de parasíntesis porque:",
+    "options": [
+      "Solo posee prefijos y sufijos",
+      "Proviene de un acortamiento léxico",
+      "Une dos lexemas y un sufijo de forma simultánea sin que existan formas aisladas intermedias",
+      "Se forma por imitación de un sonido natural"
+    ],
+    "correctIndex": 2,
+    "explanation": "En 'quinceañero' concurren dos raíces (quince + año) y un sufijo (-ero) sin que existan independientemente '*quinceaño' ni '*añero'.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.2.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La palabra 'desalmado' se considera parasintética por circunfijación debido a que:",
+    "options": [
+      "Se le puede quitar el prefijo y la palabra sigue existiendo",
+      "Proviene de la fusión de dos raíces griegas",
+      "El prefijo y el sufijo se añadieron de forma simultánea a la raíz (no existe '*desalma' ni '*almado')",
+      "Es una sigla lexicalizada"
+    ],
+    "correctIndex": 2,
+    "explanation": "En 'des-alm-ado', el prefijo 'des-' y el sufijo '-ado' se aplican simultáneamente a la raíz; al retirar cualquiera de ellos no queda una palabra con existencia léxica.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.2.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La palabra 'Sedapal' (Servicio de Agua Potable y Alcantarillado de Lima) constituye un claro ejemplo de:",
+    "options": [
+      "Sigla",
+      "Onomatopeya",
+      "Acrónimo",
+      "Acortamiento"
+    ],
+    "correctIndex": 2,
+    "explanation": "Un acrónimo se forma uniendo fragmentos o sílabas iniciales y finales de varias palabras formando un vocablo pronunciable de forma natural.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.2.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La reducción de palabras como 'fotografía' a 'foto' y 'bicicleta' a 'bici' corresponde al proceso de:",
+    "options": [
+      "Parasíntesis",
+      "Composición propia",
+      "Derivación regresiva",
+      "Acortamiento o truncamiento"
+    ],
+    "correctIndex": 3,
+    "explanation": "El acortamiento consiste en eliminar sílabas iniciales o finales de una palabra para hacerla más breve y económica sin cambiar su significado.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.2.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Palabras como 'tictac', 'quiquiriquí' y 'chasquido' se han formado mediante:",
+    "options": [
+      "Onomatopeya",
+      "Composición",
+      "Acronimia",
+      "Yuxtaposición"
+    ],
+    "correctIndex": 0,
+    "explanation": "La onomatopeya es la creación de palabras mediante la reproducción fonética aproximada de ruidos, golpes o sonidos de animales.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes palabras se ha formado estrictamente por derivación mediante sufijación?",
+    "options": [
+      "Ropavejero",
+      "Bocacalle",
+      "Cocinero",
+      "Ciempiés"
+    ],
+    "correctIndex": 2,
+    "explanation": "'Cocinero' se forma a partir de la raíz 'cocin-' más el sufijo derivativo de oficio '-ero' (proceso de sufijación pura).",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el vocablo 'ciempiés', la unión de 'cien' y 'pies' presenta una mutación ortográfica por la regla que exige escribir 'm' antes de 'p'. Esto constituye una:",
+    "options": [
+      "Composición por yuxtaposición",
+      "Composición propiamente dicha",
+      "Parasíntesis circunfija",
+      "Sigla derivada"
+    ],
+    "correctIndex": 1,
+    "explanation": "Al experimentar una alteración formal en su base (cien hacia ciem), la unión de raíces constituye una composición propiamente dicha.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.2.2",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Las siglas como 'DNI', 'ONU' o 'FMI' se caracterizan fundamentalmente porque:",
+    "options": [
+      "Se leen como una palabra corrida mediante acronimia",
+      "Se componen de las letras iniciales de los términos y se deletrean habitualmente",
+      "Se crean exclusivamente mediante prefijos latinos",
+      "Son préstamos del quechua"
+    ],
+    "correctIndex": 1,
+    "explanation": "Las siglas se forman reuniendo las letras iniciales de los vocablos que componen un nombre institucional y suelen pronunciarse deletreándolas.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

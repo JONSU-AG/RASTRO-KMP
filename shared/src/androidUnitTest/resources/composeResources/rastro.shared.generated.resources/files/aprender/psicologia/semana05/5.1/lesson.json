@@ -1,0 +1,34 @@
+{
+  "id": "psi_t05_s01",
+  "subjectId": "psicologia",
+  "semana": 5,
+  "subtema": "5.1",
+  "title": "3.1. Identidad Personal y Social",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana05.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_05_Busqueda_de_Identidad_Autoestima.md",
+  "learningObjectives": [
+    "Explicar identidad personal como mismidad con valores metas e historia y social de Tajfel con pertenencia grupal y crisis Erikson identidad vs confusion en adolescencia",
+    "Diferenciar autoconcepto cognitivo descriptivo frente a autoestima afectiva valorativa y autoeficacia de Bandura como creencia de capacidad de logro",
+    "Clasificar estados de Marcia con crisis y compromiso en difusion sin crisis ni compromiso exclusion con compromiso sin crisis moratoria con crisis sin compromiso y logro con ambas",
+    "Aplicar escalera de Rodriguez con autoconocimiento base autoevaluacion autoaceptacion autorespeto y autoestima cuspide con niveles alta baja e inflada narcisista",
+    "Practicar comunicacion asertiva equilibrada frente a pasividad y agresividad con tecnica disco rayado de repeticion serena para cubrir retos con respaldo de TEMA_07"
+  ],
+  "theory": {
+    "id": "th_psi_t05_s01",
+    "asignatura": "Psicología",
+    "semana": 5,
+    "titulo": "3.1. Identidad Personal y Social",
+    "resumen": "",
+    "conceptosClave": [
+      "Identidad personal como mismidad continuidad y coherencia con valores metas historia y roles frente a social de pertenencia grupal con valor emocional segun Tajfel",
+      "Crisis Erikson identidad vs confusion de roles en adolescencia de 12 a 20 años con fidelidad o dispersion e identificacion negativa",
+      "Autoconcepto cognitivo descriptivo de imagen mental frente a autoestima afectiva valorativa de aprecio y autoeficacia de Bandura como creencia de capacidad",
+      "Marcia con crisis exploracion y compromiso en difusion sin crisis ni compromiso exclusion con compromiso sin crisis moratoria con crisis sin compromiso y logro con crisis y compromiso",
+      "Escalera Rodriguez con autoconocimiento base autoevaluacion autoaceptacion incondicional autorespeto con limites y autoestima cuspide de dignidad",
+      "Autoestima alta saludable con asertividad y resiliencia frente a baja con inseguridad y necesidad de aprobacion e inflada narcisista con arrogancia y fragilidad",
+      "Comunicacion asertiva con defensa clara y respetuosa de derechos y tecnica disco rayado con repeticion tranquila de negativa sin agresividad"
+    ],
+    "admissionTip": "Si ves quien soy marca identidad personal, si ves grupo y pertenencia marca social Tajfel, si ves adolescencia marca Erikson identidad vs confusion, si ves pienso de mi marca autoconcepto, si ves siento por mi marca autoestima, si ves creo que puedo lograr marca autoeficacia Bandura, si ves sin crisis ni compromiso marca difusion, si ves compromiso sin crisis marca exclusion hipotecada, si ves crisis sin compromiso marca moratoria, si ves crisis con compromiso marca logro, si ves base marca autoconocimiento, si ves arrogancia y desprecio marca inflada no alta, si ves defiende sin agredir marca asertiva, si ves repite sereno marca disco rayado.",
+    "admissionExplanation": "La trampa mas castigada es confundir autoconcepto descriptivo con autoestima valorativa, exclusion obediente sin exploracion con logro maduro tras crisis, y autoestima alta saludable con inflada narcisista compensatoria; ademas asertividad equilibra pasividad que renuncia y agresividad que atropella, y disco rayado repite sin alterarse."
+  }
+}

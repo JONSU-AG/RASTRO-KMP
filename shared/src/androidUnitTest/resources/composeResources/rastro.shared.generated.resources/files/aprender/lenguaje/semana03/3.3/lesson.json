@@ -1,0 +1,34 @@
+{
+  "id": "leng_t03_s03",
+  "subjectId": "lenguaje",
+  "semana": 3,
+  "subtema": "3.3",
+  "title": "Normativa de Acentuación General, Diacrítica y Enfática",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana03.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_03_Fonologia_y_Ortografia.md",
+  "learningObjectives": [
+    "Aplicar las reglas de agudas, graves, esdrújulas y sobresdrújulas con bíceps y exámenes",
+    "Dominar los ocho monosílabos diacríticos con él, tú, mí, sí, té, dé, sé y más",
+    "Diferenciar aún con tilde de aun sin tilde y mas sin tilde de más adverbio",
+    "Usar la tilde enfática en interrogación y exclamación directa e indirecta",
+    "Tildar compuestas con guion, fusionadas y adverbios en mente según el adjetivo base"
+  ],
+  "theory": {
+    "id": "th_leng_t03_s03",
+    "asignatura": "Lenguaje",
+    "semana": 3,
+    "titulo": "Normativa de Acentuación General, Diacrítica y Enfática",
+    "resumen": "",
+    "conceptosClave": [
+      "Agudas con n, s o vocal y graves al revés con esdrújulas siempre tildadas",
+      "Graves con doble consonante como bíceps y plural esdrújula como exámenes",
+      "Ocho diacríticos con él, tú, mí, sí, té, dé, sé y más frente a sus gemelos átonos",
+      "Ti, fue, dio, vio, fe y fui que jamás llevan tilde por carecer de gemelo",
+      "Aún como todavía con tilde frente a aun como incluso sin tilde",
+      "Enfática en qué, quién y dónde con sentido inquisitivo frente a relativo sin tilde",
+      "Adverbios en mente que conservan la tilde del adjetivo base como fácilmente"
+    ],
+    "admissionTip": "Ti, fue, dio, vio y fe jamás se tildan; solo y demostrativos van sin tilde desde 2010; velozmente no lleva tilde porque veloz termina en z.",
+    "admissionExplanation": "La diacrítica solo distingue gemelos con distinta función; sin gemelo átono no hay tilde posible y la enfática solo aparece con fuerza interrogativa o exclamativa."
+  }
+}

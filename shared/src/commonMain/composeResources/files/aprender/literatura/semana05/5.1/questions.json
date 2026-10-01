@@ -1,0 +1,182 @@
+[
+  {
+    "id": "lit_t05_s01_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En los Comentarios Reales de los Incas (Primera Parte, Lisboa, 1609), el Inca Garcilaso de la Vega asume un proyecto historiográfico y literario que se caracteriza por:",
+    "options": [
+      "Reivindicar y armonizar su doble herencia biológica y cultural (incaica y española), corrigiendo los errores de los cronistas hispanos mediante sus memorias y dominio del quechua.",
+      "Negar cualquier valor civilizatorio a los gobernantes del Tahuantinsuyo.",
+      "Justificar la destrucción absoluta de las costumbres andinas en nombre de la Inquisición.",
+      "Fomentar una sublevación armada independentista inmediata de los caciques del Cusco."
+    ],
+    "correctIndex": 0,
+    "explanation": "El Inca Garcilaso, primer mestizo biológico y espiritual de América, se proclama orgullosamente «indio, quechua y mestizo», utilizando los testimonios orales de sus parientes maternos de la realeza incaica para brindar una visión idealizada y grandiosa del imperio incaico.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s01_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La comedia costumbrista Ña Catita (1856) de Manuel Ascencio Segura censura y satiriza principalmente:",
+    "options": [
+      "La explotación laboral de las comunidades indígenas andinas.",
+      "La tiranía militarista de las montoneras revolucionarias.",
+      "El romanticismo melancólico de los poetas de salón limeños.",
+      "La alcahuetería, el chisme hipócrita y los matrimonios de conveniencia económica impuestos por los padres."
+    ],
+    "correctIndex": 3,
+    "explanation": "La vieja Ña Catita encarna el arquetipo de la alcahueta chismosa e intrigante (al estilo de la Celestina) que manipula a doña Rufina para que case a su virtuosa hija Juliana con el pretencioso don Alejo por mero interés pecuniario.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s01_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el célebre Discurso en el Politeama (1888), pronunciado tras la desastrosa Guerra del Pacífico, Manuel González Prada sentenció una frase lapidaria que clamaba por la renovación moral del Perú:",
+    "options": [
+      "«¡Los viejos a la tumba, los jóvenes a la obra!».",
+      "«El Perú es un mendigo sentado en un banco de oro».",
+      "«Libertad, igualdad, fraternidad o muerte».",
+      "«En el Perú, donde se pone el dedo, salta la pus»."
+    ],
+    "correctIndex": 0,
+    "explanation": "González Prada fustigó a la dirigencia política y militar corrupta causante de la derrota bélica («la mano que empuñó el fusil debió manejar la pluma de la ciencia») y llamó a la juventud a reconstruir la patria sobre la base de la ciencia y el trabajo.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s01_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La polémica costumbrista en el Perú republicano decimonónico enfrentó dos vertientes literarias e ideológicas representadas respectivamente por:",
+    "options": [
+      "José María Arguedas (socialismo) vs. Ciro Alegría (aprismo).",
+      "César Vallejo (vanguardismo) vs. José Santos Chocano (modernismo).",
+      "Garcilaso de la Vega (indigenista) vs. Guamán Poma (hispanista).",
+      "Manuel Ascencio Segura (criollismo popular y democrático) vs. Felipe Pardo y Aliaga (anticriollismo conservador y aristocrático)."
+    ],
+    "correctIndex": 3,
+    "explanation": "Segura representó el criollismo nacionalista, popular, con lenguaje coloquial limeño y simpatía por las clases medias; mientras Pardo y Aliaga (autor de «Un viaje») defendió el clasicismo aristocrático, criticando con ironía mordaz el desorden republicano.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s01_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes obras líricas es la más representativa del poeta romántico piurano Carlos Augusto Salaverry, inspirada en su amor ausente por Ismena Torres?",
+    "options": [
+      "Cartas a un ángel (que contiene el poema «¡Acuérdate de mí!»)",
+      "Diamantes y perlas",
+      "Misterios de la tumba",
+      "Albores y destellos"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cartas a un ángel (1871) consagra a Salaverry como la máxima voz del romanticismo lírico peruano, destacando la célebre elegía amorosa «¡Acuérdate de mí!» con un tono de suave melancolía becqueriana.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s01_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la Segunda Parte de los Comentarios Reales, publicada póstumamente en Córdoba en 1617 bajo el título Historia General del Perú, Garcilaso de la Vega relata:",
+    "options": [
+      "El origen mítico de Manco Cápac y Mama Ocllo en el lago Titicaca.",
+      "La biografía heroica de Túpac Amaru II.",
+      "El descubrimiento y conquista del Perú por Pizarro, y las sangrientas guerras civiles entre los conquistadores españoles.",
+      "La descripción botánica de las plantas medicinales andinas."
+    ],
+    "correctIndex": 2,
+    "explanation": "La Primera Parte (1609) trata sobre el imperio incaico, su religión, leyes y gobierno; la Segunda Parte (1617) narra la invasión y conquista hispana, la prisión de Atahualpa y las disputas fratricidas entre pizarristas y almagristas.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s01_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La novela precursora del indigenismo peruano Aves sin nido (1889), que denuncia la explotación feudal del indio por la trilogía opresora (gobernador, cura y juez) en el pueblo andino de Kíllac, fue escrita por:",
+    "options": [
+      "Mercedes Cabello de Carbonera",
+      "Flora Tristán",
+      "Clorinda Matto de Turner",
+      "María Nieves y Bustamante"
+    ],
+    "correctIndex": 2,
+    "explanation": "Clorinda Matto de Turner expone en Aves sin nido el desamparo de la masa indígena oprimida por los gamonales y autoridades corruptas, convirtiéndose en el hito fundacional de la novela indigenista peruana.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s01_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la comedia Ña Catita, ¿quién desenmascara finalmente a don Alejo al revelar que era un hombre casado y sin fortuna en el Cusco?",
+    "options": [
+      "Don Jesús",
+      "Don Manuel",
+      "Doña Rufina",
+      "Don Juan"
+    ],
+    "correctIndex": 3,
+    "explanation": "Don Juan, un viejo amigo de la familia que llega de viaje, reconoce a don Alejo y entrega una carta que demuestra que este es un impostor con esposa en otra ciudad, arruinando los planes de doña Rufina y despidiendo a Ña Catita.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s01_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Manuel González Prada, además de su oratoria incendiaria, impulsó una reforma ortográfica fonética en sus libros (escribiendo 'pájinas', 'ortojrafía') porque consideraba que:",
+    "options": [
+      "El idioma castellano debía ser sustituido por el quechua colonial en todos los colegios.",
+      "Había que acercar la escritura a la pronunciación real y emancipar la cultura peruana del servilismo a la Real Academia Española.",
+      "Las imprentas limeñas carecían de los tipos móviles tradicionales.",
+      "Era una clave secreta para comunicarse con los obreros anarquistas."
+    ],
+    "correctIndex": 1,
+    "explanation": "González Prada preconizó la simplificación ortográfica como un acto de rebeldía emancipadora frente a la tradición colonial de la metrópoli española.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El relato satírico costumbrista «Un viaje» de Felipe Pardo y Aliaga describe jocosamente las indecisiones y temores de la aristocracia limeña a través del personaje de:",
+    "options": [
+      "Ña Catita",
+      "El niño Goyito",
+      "El sargento Canuto",
+      "El marqués de Torre Tagle"
+    ],
+    "correctIndex": 1,
+    "explanation": "«El niño Goyito» (don Gregorio), un maduro caballero de cincuenta y dos años mimado e incompetente, tarda tres años en preparar un viaje a Chile debido a la consulta interminable a parientes, monjas y médicos.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

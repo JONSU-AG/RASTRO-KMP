@@ -1,0 +1,34 @@
+{
+  "id": "psi_t08_s02",
+  "subjectId": "psicologia",
+  "semana": 8,
+  "subtema": "8.2",
+  "title": "4.1. Tipologías Clásicas de la Personalidad",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana08.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_08_Personalidad_Temperamento_Caracter.md",
+  "learningObjectives": [
+    "Clasificar humores hipocraticos sanguineo colerico melancolico y flematico con fluido y rasgo asociado",
+    "Asociar biotipos Kretschmer picnico ciclotimico astenico esquizotimico atletico viscoso y Sheldon endo meso ectomorfo",
+    "Contrastar orientacion Jung introversion interior frente a extraversion exterior con recarga de energia",
+    "Jerarquizar rasgos Allport cardinal total central cotidiano y secundario situacional con ejemplos Maquiavelo y frio",
+    "Operar Big Five OCEAN y aparato freudiano Ello placer Yo realidad Superyo deber con defensas sublimacion proyeccion y racionalizacion"
+  ],
+  "theory": {
+    "id": "th_psi_t08_s02",
+    "asignatura": "Psicología",
+    "semana": 8,
+    "titulo": "4.1. Tipologías Clásicas de la Personalidad",
+    "resumen": "",
+    "conceptosClave": [
+      "Humores sangre sanguineo alegre bilis amarilla colerico irritable bilis negra melancolico triste flema flematico sereno",
+      "Kretschmer picnico bajo redondo ciclotimico bipolar astenico alto delgado esquizotimico esquizofrenia atletico musculoso viscoso epilepsia",
+      "Sheldon endomorfo sociable viscerotonico mesomorfo energico somatotonico ectomorfo timido cerebrotonico",
+      "Jung con introversion hacia mundo interior y extraversion hacia mundo externo social",
+      "Allport C C S con cardinal raro total central de 5 a 10 cotidiano y secundario situacional de frio y corbatas",
+      "Big Five O apertura C responsabilidad E extraversion A amabilidad N neuroticismo como estandar psicometrico",
+      "Freud con primera topica consciente preconsciente inconsciente y segunda Ello Yo Superyo con principios placer realidad y deber"
+    ],
+    "admissionTip": "Si ves sangre marca sanguineo, si ves bilis amarilla marca colerico, si ves bilis negra marca melancolico, si ves flema marca flematico, si ves picnico marca ciclotimico, si ves cardinal marca total raro, si ves OCEAN marca Big Five, si ves placer marca Ello, si ves realidad marca Yo, si ves culpa marca Superyo, si ves arte y deporte marca sublimacion.",
+    "admissionExplanation": "La trampa es confundir picnico con esquizotimico, cardinal raro con central comun, Ello con Yo, sublimacion madura con formacion reactiva rigida, y primera topica de niveles con segunda de instancias."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "psi_t01_s02",
+  "subjectId": "psicologia",
+  "semana": 1,
+  "subtema": "1.2",
+  "title": "3.2. Objeto de Estudio de la Psicología",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana01.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_01_La_Psicologia_como_Ciencia.md",
+  "learningObjectives": [
+    "Definir el objeto doble con conducta observable y procesos mentales internos en interacción socioambiental",
+    "Clasificar procesos cognitivos, afectivos y conativos volitivos con ejemplos de admisión",
+    "Diferenciar conducta medible de proceso inferido y afectividad valorativa de cognición informativa",
+    "Identificar ramas aplicadas de desarrollo, clínica, organizacional, educativa y social por su campo",
+    "Aplicar metas describir, explicar, predecir y modificar y la regla correlación no implica causalidad"
+  ],
+  "theory": {
+    "id": "th_psi_t01_s02",
+    "asignatura": "Psicología",
+    "semana": 1,
+    "titulo": "3.2. Objeto de Estudio de la Psicología",
+    "resumen": "",
+    "conceptosClave": [
+      "Objeto doble con conducta externa observable y procesos internos inferidos en contexto social y biológico",
+      "Conducta como respuesta motora, verbal y fisiológica medible como hablar, correr, llorar y tasa cardíaca",
+      "Procesos cognitivos que conocen como sensación, percepción, memoria, pensamiento, lenguaje e imaginación",
+      "Procesos afectivos que valoran con emociones, sentimientos, pasiones y estados de ánimo",
+      "Procesos conativos volitivos que orientan con motivación, voluntad y decisión hacia metas",
+      "Ramas aplicadas de desarrollo, clínica, organizacional, educativa y social por objeto y campo",
+      "Metas D E P M y método experimental con VI y VD frente a correlación sin causalidad"
+    ],
+    "admissionTip": "Si ves observable y medible marca conducta, si ves memoria o pensamiento marca cognitivo, si ves agrado o desagrado marca afectivo, si ves ciclo vital marca desarrollo, si ves empresa marca organizacional, si ves escuela marca educativa, si ves grupo marca social.",
+    "admissionExplanation": "La trampa clásica es llamar cognitivo a lo afectivo y conducta a lo interno; conducta se registra directo, proceso se infiere, afecto valora, cognición conoce, conación dirige."
+  }
+}

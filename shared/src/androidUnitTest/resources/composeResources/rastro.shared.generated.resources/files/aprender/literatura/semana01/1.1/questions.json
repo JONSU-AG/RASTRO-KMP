@@ -1,0 +1,182 @@
+[
+  {
+    "id": "lit_t01_s01_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la teoría literaria moderna formulada por Roman Jakobson, la función poética del lenguaje se caracteriza principalmente por:",
+    "options": [
+      "Centrar la atención en el propio mensaje por su configuración estética y estilística.",
+      "Transmitir información fáctica y verificable acerca del entorno extralingüístico.",
+      "Persuadir al receptor para que adopte una conducta o creencia determinada.",
+      "Verificar que el canal de comunicación permanezca abierto y operativo."
+    ],
+    "correctIndex": 0,
+    "explanation": "La función poética o estética orienta el acto comunicativo hacia el mensaje mismo, seleccionando y combinando signos para generar belleza, extrañamiento y valor artístico formal.",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s01_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes composiciones líricas se caracteriza específicamente por ser un canto de lamento fúnebre ante la muerte de un ser querido o una pérdida irreparable?",
+    "options": [
+      "La elegía",
+      "La oda laudatoria",
+      "La égloga pastoril",
+      "El madrigal amoroso"
+    ],
+    "correctIndex": 0,
+    "explanation": "La elegía es una especie lírica de tono melancólico que expresa dolor, pesadumbre y duelo ante la muerte o una desgracia honda (ej. Coplas a la muerte de su padre de Jorge Manrique).",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s01_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la preceptiva aristotélica expuesta en la Poética, la finalidad suprema de la tragedia clásica es la catarsis, entendida como:",
+    "options": [
+      "La purificación o purga espiritual de las pasiones en el espectador a través del terror y la compasión.",
+      "El desenlace funesto inevitable determinado por el capricho de los dioses olímpicos.",
+      "La resolución cómica de enredos mediante la intervención de un bufón o gracioso.",
+      "La ruptura de la cuarta pared para aleccionar moralmente a los ciudadanos atenienses."
+    ],
+    "correctIndex": 0,
+    "explanation": "Aristóteles definió la catarsis (kátharsis) como la purificación espiritual de las emociones del público provocada al suscitar terror (phobos) y compasión (éleos) ante la catástrofe del héroe.",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s01_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La especie del género épico que relata en verso las hazañas heroicas y bélicas de los caballeros medievales en defensa de su fe y su pueblo se denomina:",
+    "options": [
+      "Epopeya clásica",
+      "Cantar de gesta",
+      "Poema épico renacentista",
+      "Romance fronterizo"
+    ],
+    "correctIndex": 1,
+    "explanation": "Los cantares de gesta son poemas épicos medievales anónimos transmitidos por juglares que celebran a caballeros virtuosos e históricos (como el Cantar de Mio Cid o el Cantar de Roldán).",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s01_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Lea con atención los siguientes versos de Gustavo Adolfo Bécquer:\n«Volverán las oscuras golondrinas / en tu balcón sus nidos a colgar...»\nPor su contenido subjetivo e íntimo, donde se expresan emociones personales del yo poético, este texto pertenece al género:",
+    "options": [
+      "Épico",
+      "Dramático",
+      "Lírico",
+      "Narrativo"
+    ],
+    "correctIndex": 2,
+    "explanation": "El género lírico se distingue por la primacía de la interioridad subjetiva, la manifestación de vivencias afectivas y el predominio de la voz de un hablante lírico personal.",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s01_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es el subgénero dramático nacido en la modernidad que combina elementos trágicos y cómicos con el fin de representar la vida humana de forma más fiel a la realidad?",
+    "options": [
+      "Drama (o tragicomedia)",
+      "Auto sacramental",
+      "Entremés",
+      "Sainete"
+    ],
+    "correctIndex": 0,
+    "explanation": "El drama o tragicomedia surge al romper la rígida separación clásica entre tragedia y comedia, mezclando pasiones solemnes con situaciones cotidianas o ligeras.",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s01_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La composición lírica bucólica en la que pastores idealizados dialogan en medio de una naturaleza amena e incontaminada (locus amoenus) corresponde a:",
+    "options": [
+      "El epigrama",
+      "La epístola",
+      "La égloga",
+      "El soneto heroico"
+    ],
+    "correctIndex": 2,
+    "explanation": "La égloga es un subgénero poético de corte pastoril cultivado por Teócrito, Virgilio y magistralmente en España por Garcilaso de la Vega (Égloga I: Salicio y Nemoroso).",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s01_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En una obra teatral, las notas explicativas que el autor intercala entre paréntesis o cursivas para indicar los movimientos, entradas, salidas y tonos de los actores se denominan:",
+    "options": [
+      "Soliloquios",
+      "Apartes",
+      "Parlamentos",
+      "Acotaciones (o didascalias)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Las acotaciones o didascalias son instrucciones del dramaturgo destinadas al director y actores para guiar la puesta en escena, gestualidad y escenografía.",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s01_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La novela, el cuento y la fábula son especies literarias que pertenecen formalmente al género:",
+    "options": [
+      "Expositivo",
+      "Lírico",
+      "Narrativo",
+      "Dramático"
+    ],
+    "correctIndex": 2,
+    "explanation": "El género narrativo (evolución moderna de la épica en prosa) se estructura en torno a un narrador que relata acontecimientos ficticios protagonizados por personajes en un espacio y tiempo definidos.",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El subgénero lírico que consiste en una composición poética breve, ingeniosa y habitualmente festiva o satírica con un remate mordaz se denomina:",
+    "options": [
+      "Himno",
+      "Epigrama",
+      "Oda",
+      "Madrigal"
+    ],
+    "correctIndex": 1,
+    "explanation": "El epigrama es un poema condensado y punzante que expresa con agudeza una burla, sátira moral o juicio ingenioso.",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

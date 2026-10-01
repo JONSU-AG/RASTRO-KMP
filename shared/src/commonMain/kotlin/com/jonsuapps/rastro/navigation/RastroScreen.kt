@@ -6,6 +6,7 @@ package com.jonsuapps.rastro.navigation
 sealed class RastroScreen(val route: String) {
     // 1. Inicio Libre
     data object Home : RastroScreen("home")
+    data object DiasDeRacha : RastroScreen("dias_de_racha")
 
     // 2. Aprender (15 mundos por niveles) y Motor de Lecciones
     data object Aprender : RastroScreen("aprender")
@@ -24,6 +25,8 @@ sealed class RastroScreen(val route: String) {
 
     // 4. Biblioteca (Obras y Compendios)
     data object Biblioteca : RastroScreen("biblioteca")
+    data object BibliotecaAportes : RastroScreen("biblioteca/aportes")
+    data object BibliotecaObras : RastroScreen("biblioteca/obras")
 
     // 5. Formulario & Mnemotecnias (Cara A y B)
     data object Formulario : RastroScreen("formulario")
@@ -41,8 +44,9 @@ sealed class RastroScreen(val route: String) {
 
     // 9. Perfil Propio (Exige cuenta) y Perfil Público
     data object Perfil : RastroScreen("perfil")
-    data object UsuarioDetail : RastroScreen("usuario/{uid}") {
-        fun createRoute(uid: String) = "usuario/$uid"
+    data object UsuarioDetail : RastroScreen("usuario/{uid}?pubId={pubId}") {
+        fun createRoute(uid: String, publicationId: String? = null) =
+            if (publicationId.isNullOrBlank()) "usuario/$uid" else "usuario/$uid?pubId=$publicationId"
     }
 
     // 10. Autenticación (Google, Email, Invitado)

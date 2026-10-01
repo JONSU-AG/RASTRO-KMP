@@ -1,6 +1,8 @@
 package com.jonsuapps.rastro.android.ui.screens
 
+import android.app.DatePickerDialog
 import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
@@ -32,14 +34,28 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.jonsuapps.rastro.android.MainActivity
 import com.jonsuapps.rastro.android.data.ExamQuestionRepository
+import com.jonsuapps.rastro.android.data.OfficialMaterialRepository
 import com.jonsuapps.rastro.android.data.UgcReport
 import com.jonsuapps.rastro.android.data.UserUpload
 import com.jonsuapps.rastro.android.data.UserUploadRepository
 import com.jonsuapps.rastro.android.notifications.LimaStudyReminderWorker
 import com.jonsuapps.rastro.data.AprenderRepository
+import com.jonsuapps.rastro.gamification.GamificationManager
+import com.jonsuapps.rastro.gamification.LifeRecoveryUnit
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
+import com.jonsuapps.rastro.android.data.DailyActivityItem
+import com.jonsuapps.rastro.android.data.TesterActivityRepository
+import com.jonsuapps.rastro.android.data.TesterSummary
 import com.jonsuapps.rastro.model.ExamQuestion
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlinx.datetime.LocalDate
+import kotlinx.datetime.DateTimeUnit
+import kotlinx.datetime.minus
 import com.jonsuapps.rastro.android.ui.components.CartoonAvatar
 import com.jonsuapps.rastro.android.ui.components.DuolingoHaptics
 import com.jonsuapps.rastro.android.ui.components.RastroStickerDialog
@@ -50,6 +66,7 @@ import com.jonsuapps.rastro.auth.AdminConfig
 import com.jonsuapps.rastro.model.UserData
 import com.jonsuapps.rastro.theme.RastroPalette
 import com.jonsuapps.rastro.theme.ThemeManager
+import java.util.Calendar
 
 /**
  * Panel de Administración Maestro RASTRO:
@@ -61,6 +78,24 @@ import com.jonsuapps.rastro.theme.ThemeManager
  * - Envío de Notificaciones Push / Difusión a todos los postulantes
  * - Métricas del Banco de Preguntas
  */
+fun launchDatePicker(context: Context, initialDate: String, onSelected: (String) -> Unit) {
+    val cal = Calendar.getInstance()
+    runCatching {
+        val parsed = LocalDate.parse(initialDate)
+        cal.set(parsed.year, parsed.monthNumber - 1, parsed.dayOfMonth)
+    }
+    DatePickerDialog(
+        context,
+        { _, year, month, dayOfMonth ->
+            val formatted = "${year}-${(month + 1).toString().padStart(2, '0')}-${dayOfMonth.toString().padStart(2, '0')}"
+            onSelected(formatted)
+        },
+        cal.get(Calendar.YEAR),
+        cal.get(Calendar.MONTH),
+        cal.get(Calendar.DAY_OF_MONTH)
+    ).show()
+}
+
 @Composable
 fun AdminScreen(
     currentUserEmail: String?,
@@ -149,9 +184,82 @@ fun AdminScreen(
         return
     }
 
+    val coroutineScope = rememberCoroutineScope()
+
     // Estado de pestañas administrativas
-    var selectedTab by remember { mutableIntStateOf(0) } // 0: Ajustes Sitio, 1: Usuarios, 2: Contenido UGC, 3: Notificaciones, 4: Banco
-    val tabs = listOf("Ajustes Sitio", "Usuarios", "Contenido UGC", "Notificaciones", "Banco")
+    var selectedTab by remember { mutableIntStateOf(0) } // 0: Ajustes Sitio, 1: Actividad Testers, 2: Usuarios, 3: Contenido UGC, 4: Notificaciones, 5: Banco
+    val tabs = listOf("Ajustes Sitio", "Actividad Testers", "Usuarios", "Contenido UGC", "Notificaciones", "Banco")
+
+    // ── 0. ACTIVIDAD DE TESTERS / PRUEBA CERRADA ─────────────────────────────
+    var testerPeriodStart by remember { mutableStateOf("2026-09-24") }
+    var testerPeriodEnd by remember { mutableStateOf("2026-10-08") }
+    var testerPeriodStartInput by remember { mutableStateOf("2026-09-24") }
+    var testerPeriodEndInput by remember { mutableStateOf("2026-10-08") }
+    var isSavingPeriod by remember { mutableStateOf(false) }
+
+    var testersList by remember { mutableStateOf(emptyList<TesterSummary>()) }
+    var isLoadingTesters by remember { mutableStateOf(false) }
+    var testerSearchQuery by remember { mutableStateOf("") }
+    var selectedTesterForDetail by remember { mutableStateOf<TesterSummary?>(null) }
+    var detailFilter by remember { mutableStateOf("TODOS") } // "TODOS", "ACTIVOS", "SIN_ACTIVIDAD"
+    var isLoadingDetail by remember { mutableStateOf(false) }
+
+    var activityRangePreset by remember { mutableStateOf("ESTA_SEMANA") } // "HOY", "ESTA_SEMANA", "ULTIMOS_7_DIAS", "ESTE_MES", "PERIODO_CERRADO", "PERSONALIZADO"
+    var activityStatusFilter by remember { mutableStateOf("TODOS") } // "TODOS", "ACTIVOS", "SIN_ACTIVIDAD"
+    var customStartDateInput by remember { mutableStateOf(GamificationManager.getLocalDayString()) }
+    var customEndDateInput by remember { mutableStateOf(GamificationManager.getLocalDayString()) }
+
+    val todayStr = remember { GamificationManager.getLocalDayString() }
+    val (queryStart, queryEnd) = remember(activityRangePreset, customStartDateInput, customEndDateInput, testerPeriodStart, testerPeriodEnd, todayStr) {
+        when (activityRangePreset) {
+            "HOY" -> todayStr to todayStr
+            "ULTIMOS_7_DIAS" -> {
+                val start7 = runCatching { LocalDate.parse(todayStr).minus(6, DateTimeUnit.DAY).toString() }.getOrDefault(todayStr)
+                start7 to todayStr
+            }
+            "ESTA_SEMANA" -> {
+                val date = runCatching { LocalDate.parse(todayStr) }.getOrNull()
+                if (date != null) {
+                    val dayOfWeekNum = date.dayOfWeek.ordinal
+                    val monday = date.minus(dayOfWeekNum, DateTimeUnit.DAY).toString()
+                    monday to todayStr
+                } else {
+                    todayStr to todayStr
+                }
+            }
+            "ESTE_MES" -> {
+                val date = runCatching { LocalDate.parse(todayStr) }.getOrNull()
+                if (date != null) {
+                    val firstOfMonth = "${date.year}-${date.monthNumber.toString().padStart(2, '0')}-01"
+                    firstOfMonth to todayStr
+                } else {
+                    todayStr to todayStr
+                }
+            }
+            "PERSONALIZADO" -> customStartDateInput to customEndDateInput
+            else -> testerPeriodStart to testerPeriodEnd
+        }
+    }
+
+    DisposableEffect(Unit) {
+        val listener = TesterActivityRepository.observeTesterPeriod { start, end ->
+            testerPeriodStart = start
+            testerPeriodEnd = end
+            testerPeriodStartInput = start
+            testerPeriodEndInput = end
+        }
+        onDispose { listener.remove() }
+    }
+
+    LaunchedEffect(selectedTab, queryStart, queryEnd) {
+        if (selectedTab == 1) {
+            isLoadingTesters = true
+            TesterActivityRepository.loadAllTestersActivity(queryStart, queryEnd) { list ->
+                testersList = list
+                isLoadingTesters = false
+            }
+        }
+    }
 
     // ── 1. DATOS REALES DE FIRESTORE ─────────────────────────────────────────
     // Ajustes de Sitio desde Firestore
@@ -160,6 +268,11 @@ fun AdminScreen(
     var globalBannerText by remember { mutableStateOf("¡Simulacro General UNSA este domingo 8:00 AM!") }
     var youtubeIsolationActive by remember { mutableStateOf(true) }
     var communityWallEnabled by remember { mutableStateOf(true) }
+    var maxLives by remember { mutableIntStateOf(5) }
+    var lifeRecoveryAmount by remember { mutableLongStateOf(3L) }
+    var lifeRecoveryUnit by remember { mutableStateOf("MINUTOS") }
+    var hideAllOfficialMaterials by remember { mutableStateOf(false) }
+    var hiddenOfficialMaterialIds by remember { mutableStateOf(listOf<String>()) }
 
     DisposableEffect(Unit) {
         val listener = FirebaseFirestore.getInstance().collection("site_settings").document("global")
@@ -170,6 +283,12 @@ fun AdminScreen(
                     globalBannerText = snapshot.getString("globalBannerText") ?: globalBannerText
                     youtubeIsolationActive = snapshot.getBoolean("youtubeIsolationActive") ?: true
                     communityWallEnabled = snapshot.getBoolean("communityWallEnabled") ?: true
+                    maxLives = snapshot.getLong("maxLives")?.toInt() ?: 5
+                    lifeRecoveryAmount = snapshot.getLong("lifeRecoveryAmount") ?: 3L
+                    lifeRecoveryUnit = snapshot.getString("lifeRecoveryUnit") ?: "MINUTOS"
+                    hideAllOfficialMaterials = snapshot.getBoolean("hideAllOfficialMaterials") ?: false
+                    val hidden = snapshot.get("hiddenOfficialMaterialIds") as? List<*>
+                    hiddenOfficialMaterialIds = hidden?.filterIsInstance<String>() ?: emptyList()
                 }
             }
         onDispose { listener.remove() }
@@ -352,17 +471,18 @@ fun AdminScreen(
                     .clip(RoundedCornerShape(14.dp))
                     .background(theme.surfaceAccent)
                     .border(1.2.dp, theme.strokeBorder.copy(alpha = 0.35f), RoundedCornerShape(14.dp))
-                    .padding(3.dp),
+                    .padding(3.dp)
+                    .horizontalScroll(rememberScrollState()),
                 horizontalArrangement = Arrangement.spacedBy(4.dp)
             ) {
                 tabs.forEachIndexed { index, label ->
                     val isSelected = selectedTab == index
                     Box(
                         modifier = Modifier
-                            .weight(1f)
                             .height(38.dp)
                             .clip(RoundedCornerShape(10.dp))
                             .background(if (isSelected) theme.accent else Color.Transparent)
+                            .padding(horizontal = 12.dp)
                             .bouncyClick(scaleDown = 0.94f) {
                                 DuolingoHaptics.playOptionSelected(context)
                                 selectedTab = index
@@ -371,7 +491,7 @@ fun AdminScreen(
                     ) {
                         Text(
                             text = label,
-                            fontSize = 10.sp,
+                            fontSize = 11.sp,
                             fontWeight = if (isSelected) FontWeight.Black else FontWeight.Bold,
                             color = if (isSelected) Color.White else theme.textSecondary,
                             maxLines = 1
@@ -458,9 +578,1069 @@ fun AdminScreen(
                         }
                     }
                 }
+
+                // 1.1 CONFIGURACIÓN DE VIDAS (CONTROL TOTAL DESDE PANEL ADMIN)
+                item {
+                    var customLivesText by remember(maxLives) { mutableStateOf(maxLives.toString()) }
+                    var recoveryAmountText by remember(lifeRecoveryAmount) { mutableStateOf(lifeRecoveryAmount.toString()) }
+                    var selectedUnit by remember(lifeRecoveryUnit) { mutableStateOf(LifeRecoveryUnit.fromString(lifeRecoveryUnit)) }
+                    var unitDropdownExpanded by remember { mutableStateOf(false) }
+
+                    AdminSectionCard(title = "Sistema de Vidas — Control Total", theme = theme) {
+                        Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                            // ── SECCIÓN 1: MÁXIMO DE VIDAS ──────────────────────────────
+                            Text(
+                                text = "1. MÁXIMO DE VIDAS",
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.Black,
+                                color = theme.textPrimary
+                            )
+                            Text(
+                                text = "El administrador puede escribir cualquier entero positivo (ej: 1, 3, 10, 50, 600, 1000000). Al aumentar el máximo, la diferencia se suma a los estudiantes. Límite actual: $maxLives vidas.",
+                                fontSize = 12.sp,
+                                color = theme.textSecondary,
+                                lineHeight = 16.sp
+                            )
+
+                            // Campo de texto numérico libre para Máximo de Vidas
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                OutlinedTextField(
+                                    value = customLivesText,
+                                    onValueChange = { input ->
+                                        customLivesText = input.filter { it.isDigit() }.take(8)
+                                    },
+                                    placeholder = { Text("Ej: 10, 600, 1000000", fontSize = 13.sp) },
+                                    leadingIcon = {
+                                        Icon(
+                                            Icons.Rounded.Favorite,
+                                            contentDescription = null,
+                                            tint = Color(0xFFE11D48),
+                                            modifier = Modifier.size(20.dp)
+                                        )
+                                    },
+                                    modifier = Modifier.weight(1f),
+                                    shape = RoundedCornerShape(12.dp),
+                                    singleLine = true,
+                                    colors = OutlinedTextFieldDefaults.colors(
+                                        focusedBorderColor = Color(0xFFE11D48),
+                                        unfocusedBorderColor = theme.borderSubtle
+                                    )
+                                )
+
+                                Sticker3dButton(
+                                    onClick = {
+                                        val parsed = customLivesText.toIntOrNull()
+                                        if (parsed == null || parsed < 1) {
+                                            DuolingoHaptics.playAnswerIncorrect(context)
+                                            Toast.makeText(context, "Ingresa un número entero válido mayor o igual a 1", Toast.LENGTH_SHORT).show()
+                                        } else {
+                                            DuolingoHaptics.playAnswerCorrect(context)
+                                            maxLives = parsed
+                                            FirebaseFirestore.getInstance().collection("site_settings").document("global")
+                                                .set(mapOf("maxLives" to parsed), SetOptions.merge())
+                                            GamificationManager.setMaxHearts(parsed)
+                                            Toast.makeText(context, "Vidas máximas configuradas a $parsed", Toast.LENGTH_SHORT).show()
+                                        }
+                                    },
+                                    containerColor = Color(0xFFE11D48),
+                                    bottomBevelColor = Color(0xFFBE123C),
+                                    strokeColor = theme.strokeBorder,
+                                    shape = RoundedCornerShape(12.dp),
+                                    modifier = Modifier.height(50.dp),
+                                    contentPadding = PaddingValues(horizontal = 14.dp)
+                                ) {
+                                    Text("Guardar Máximo", color = Color.White, fontWeight = FontWeight.Black, fontSize = 12.sp)
+                                }
+                            }
+
+                            // Atajos rápidos para máximo de vidas
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.spacedBy(6.dp)
+                            ) {
+                                listOf(1, 3, 10, 50, 600, 1000000).forEach { preset ->
+                                    val isSelected = maxLives == preset
+                                    val label = if (preset >= 1000000) "1M" else "$preset"
+                                    Box(
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .height(32.dp)
+                                            .clip(RoundedCornerShape(8.dp))
+                                            .background(if (isSelected) Color(0xFFE11D48) else theme.surfaceAccent)
+                                            .border(
+                                                1.dp,
+                                                if (isSelected) Color(0xFFBE123C) else theme.strokeBorder.copy(alpha = 0.35f),
+                                                RoundedCornerShape(8.dp)
+                                            )
+                                            .bouncyClick(scaleDown = 0.92f) {
+                                                DuolingoHaptics.playOptionSelected(context)
+                                                customLivesText = preset.toString()
+                                                maxLives = preset
+                                                FirebaseFirestore.getInstance().collection("site_settings").document("global")
+                                                    .set(mapOf("maxLives" to preset), SetOptions.merge())
+                                                GamificationManager.setMaxHearts(preset)
+                                                Toast.makeText(context, "Vidas máximas: $preset", Toast.LENGTH_SHORT).show()
+                                            },
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Text(
+                                            text = label,
+                                            fontWeight = FontWeight.Black,
+                                            fontSize = 11.sp,
+                                            color = if (isSelected) Color.White else theme.textPrimary
+                                        )
+                                    }
+                                }
+                            }
+
+                            HorizontalDivider(color = theme.borderSubtle.copy(alpha = 0.5f), thickness = 1.dp)
+
+                            // ── SECCIÓN 2: TIEMPO DE RECUPERACIÓN DE UNA VIDA ───────────
+                            Text(
+                                text = "2. RECUPERAR 1 VIDA CADA:",
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.Black,
+                                color = theme.textPrimary
+                            )
+                            Text(
+                                text = "Entrada numérica libre + Selector de unidad temporal (Segundos, Minutos, Horas, Días, Años). El cálculo temporal es puramente matemático sin timers permanentes ni desbordamiento.",
+                                fontSize = 12.sp,
+                                color = theme.textSecondary,
+                                lineHeight = 16.sp
+                            )
+
+                            // [ CANTIDAD ] [ UNIDAD ▼ ] + [ Guardar ]
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                // Cantidad libre
+                                OutlinedTextField(
+                                    value = recoveryAmountText,
+                                    onValueChange = { input ->
+                                        recoveryAmountText = input.filter { it.isDigit() }.take(8)
+                                    },
+                                    placeholder = { Text("Ej: 3", fontSize = 13.sp) },
+                                    leadingIcon = {
+                                        Icon(
+                                            Icons.Rounded.Timer,
+                                            contentDescription = null,
+                                            tint = Color(0xFF3B82F6),
+                                            modifier = Modifier.size(20.dp)
+                                        )
+                                    },
+                                    modifier = Modifier.weight(1.2f),
+                                    shape = RoundedCornerShape(12.dp),
+                                    singleLine = true,
+                                    colors = OutlinedTextFieldDefaults.colors(
+                                        focusedBorderColor = Color(0xFF3B82F6),
+                                        unfocusedBorderColor = theme.borderSubtle
+                                    )
+                                )
+
+                                // Selector de unidad desplegable
+                                Box(modifier = Modifier.weight(1.4f)) {
+                                    Surface(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .height(50.dp)
+                                            .clip(RoundedCornerShape(12.dp))
+                                            .border(1.5.dp, theme.borderSubtle, RoundedCornerShape(12.dp))
+                                            .clickable { unitDropdownExpanded = true },
+                                        color = theme.surfaceAccent,
+                                        shape = RoundedCornerShape(12.dp)
+                                    ) {
+                                        Row(
+                                            modifier = Modifier.fillMaxSize().padding(horizontal = 10.dp),
+                                            verticalAlignment = Alignment.CenterVertically,
+                                            horizontalArrangement = Arrangement.SpaceBetween
+                                        ) {
+                                            Text(
+                                                text = selectedUnit.title,
+                                                fontWeight = FontWeight.Bold,
+                                                fontSize = 12.sp,
+                                                color = theme.textPrimary
+                                            )
+                                            Icon(
+                                                Icons.Rounded.ArrowDropDown,
+                                                contentDescription = "Desplegar",
+                                                tint = theme.textSecondary
+                                            )
+                                        }
+                                    }
+
+                                    DropdownMenu(
+                                        expanded = unitDropdownExpanded,
+                                        onDismissRequest = { unitDropdownExpanded = false }
+                                    ) {
+                                        LifeRecoveryUnit.entries.forEach { unit ->
+                                            DropdownMenuItem(
+                                                text = {
+                                                    Text(
+                                                        unit.title,
+                                                        fontWeight = if (unit == selectedUnit) FontWeight.Black else FontWeight.Normal,
+                                                        color = if (unit == selectedUnit) Color(0xFF3B82F6) else theme.textPrimary
+                                                    )
+                                                },
+                                                onClick = {
+                                                    selectedUnit = unit
+                                                    unitDropdownExpanded = false
+                                                }
+                                            )
+                                        }
+                                    }
+                                }
+
+                                // Botón guardar recuperación
+                                Sticker3dButton(
+                                    onClick = {
+                                        val parsedAmount = recoveryAmountText.toLongOrNull()
+                                        if (parsedAmount == null || parsedAmount < 1L) {
+                                            DuolingoHaptics.playAnswerIncorrect(context)
+                                            Toast.makeText(context, "Ingresa una cantidad mayor o igual a 1", Toast.LENGTH_SHORT).show()
+                                        } else {
+                                            DuolingoHaptics.playAnswerCorrect(context)
+                                            lifeRecoveryAmount = parsedAmount
+                                            lifeRecoveryUnit = selectedUnit.name
+                                            FirebaseFirestore.getInstance().collection("site_settings").document("global")
+                                                .set(
+                                                    mapOf(
+                                                        "lifeRecoveryAmount" to parsedAmount,
+                                                        "lifeRecoveryUnit" to selectedUnit.name
+                                                    ),
+                                                    SetOptions.merge()
+                                                )
+                                            GamificationManager.setRecoveryConfig(parsedAmount, selectedUnit)
+                                            Toast.makeText(
+                                                context,
+                                                "Recuperación: 1 vida cada $parsedAmount ${selectedUnit.title.lowercase()}",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                        }
+                                    },
+                                    containerColor = Color(0xFF2563EB),
+                                    bottomBevelColor = Color(0xFF1D4ED8),
+                                    strokeColor = theme.strokeBorder,
+                                    shape = RoundedCornerShape(12.dp),
+                                    modifier = Modifier.height(50.dp),
+                                    contentPadding = PaddingValues(horizontal = 12.dp)
+                                ) {
+                                    Text("Guardar Tiempo", color = Color.White, fontWeight = FontWeight.Black, fontSize = 11.sp)
+                                }
+                            }
+
+                            // Atajos rápidos para tiempos representativos
+                            Text(
+                                text = "Atajos de tiempo representativos:",
+                                fontSize = 11.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = theme.textSecondary
+                            )
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.spacedBy(4.dp)
+                            ) {
+                                val timePresets = listOf(
+                                    Triple("1s", 1L, LifeRecoveryUnit.SEGUNDOS),
+                                    Triple("30s", 30L, LifeRecoveryUnit.SEGUNDOS),
+                                    Triple("3m", 3L, LifeRecoveryUnit.MINUTOS),
+                                    Triple("2h", 2L, LifeRecoveryUnit.HORAS),
+                                    Triple("7d", 7L, LifeRecoveryUnit.DIAS),
+                                    Triple("1a", 1L, LifeRecoveryUnit.ANIOS),
+                                    Triple("30a", 30L, LifeRecoveryUnit.ANIOS)
+                                )
+                                timePresets.forEach { (label, amount, unit) ->
+                                    val isSelected = lifeRecoveryAmount == amount && lifeRecoveryUnit == unit.name
+                                    Box(
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .height(30.dp)
+                                            .clip(RoundedCornerShape(8.dp))
+                                            .background(if (isSelected) Color(0xFF2563EB) else theme.surfaceAccent)
+                                            .border(
+                                                1.dp,
+                                                if (isSelected) Color(0xFF1D4ED8) else theme.strokeBorder.copy(alpha = 0.35f),
+                                                RoundedCornerShape(8.dp)
+                                            )
+                                            .bouncyClick(scaleDown = 0.92f) {
+                                                DuolingoHaptics.playOptionSelected(context)
+                                                recoveryAmountText = amount.toString()
+                                                selectedUnit = unit
+                                                lifeRecoveryAmount = amount
+                                                lifeRecoveryUnit = unit.name
+                                                FirebaseFirestore.getInstance().collection("site_settings").document("global")
+                                                    .set(
+                                                        mapOf(
+                                                            "lifeRecoveryAmount" to amount,
+                                                            "lifeRecoveryUnit" to unit.name
+                                                        ),
+                                                        SetOptions.merge()
+                                                    )
+                                                GamificationManager.setRecoveryConfig(amount, unit)
+                                                Toast.makeText(context, "Tiempo fijado: $amount ${unit.title.lowercase()}", Toast.LENGTH_SHORT).show()
+                                            },
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Text(
+                                            text = label,
+                                            fontWeight = FontWeight.Black,
+                                            fontSize = 10.sp,
+                                            color = if (isSelected) Color.White else theme.textPrimary
+                                        )
+                                    }
+                                }
+                            }
+
+                            // Tarjeta de estado de configuración activa
+                            Surface(
+                                shape = RoundedCornerShape(12.dp),
+                                color = Color(0xFF10B981).copy(alpha = 0.1f),
+                                border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF10B981).copy(alpha = 0.35f)),
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Row(
+                                    modifier = Modifier.padding(10.dp),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                ) {
+                                    Icon(
+                                        Icons.Rounded.CheckCircle,
+                                        contentDescription = null,
+                                        tint = Color(0xFF059669),
+                                        modifier = Modifier.size(18.dp)
+                                    )
+                                    Column {
+                                        Text(
+                                            text = "Configuración activa en tiempo real:",
+                                            fontSize = 11.sp,
+                                            fontWeight = FontWeight.Black,
+                                            color = Color(0xFF059669)
+                                        )
+                                        Text(
+                                            text = "Máximo $maxLives vidas • Recupera 1 vida cada $lifeRecoveryAmount ${LifeRecoveryUnit.fromString(lifeRecoveryUnit).title.lowercase()}",
+                                            fontSize = 11.sp,
+                                            color = theme.textPrimary
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // 1.2 CONTROL DE MATERIAL OFICIAL (FASE 10)
+                item {
+                    val defaultOfficialMaterials = remember { OfficialMaterialRepository.getDefaults() }
+                    AdminSectionCard(title = "Control de Material Oficial (Biblioteca)", theme = theme) {
+                        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                            Text(
+                                text = "Oculta temporalmente recursos oficiales sin borrarlos ni afectar las publicaciones de los estudiantes.",
+                                fontSize = 12.sp,
+                                color = theme.textSecondary,
+                                lineHeight = 16.sp
+                            )
+
+                            AdminSwitchRow(
+                                title = "Ocultar TODO el Material Oficial",
+                                subtitle = "Desactiva todos los tomos y prácticas oficiales en Biblioteca",
+                                checked = hideAllOfficialMaterials,
+                                onCheckedChange = { active ->
+                                    DuolingoHaptics.playOptionSelected(context)
+                                    hideAllOfficialMaterials = active
+                                    FirebaseFirestore.getInstance().collection("site_settings").document("global")
+                                        .set(mapOf("hideAllOfficialMaterials" to active), SetOptions.merge())
+                                },
+                                theme = theme
+                            )
+
+                            if (!hideAllOfficialMaterials) {
+                                HorizontalDivider(color = theme.strokeBorder.copy(alpha = 0.3f), thickness = 1.dp)
+                                Text(
+                                    text = "Visibilidad por recurso oficial:",
+                                    fontSize = 11.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = theme.accent
+                                )
+
+                                defaultOfficialMaterials.forEach { item ->
+                                    val isHidden = hiddenOfficialMaterialIds.contains(item.id)
+                                    AdminSwitchRow(
+                                        title = item.title,
+                                        subtitle = if (isHidden) "Oculto para los postulantes" else "Visible para todos",
+                                        checked = !isHidden,
+                                        onCheckedChange = { visible ->
+                                            DuolingoHaptics.playOptionSelected(context)
+                                            val updated = if (visible) {
+                                                hiddenOfficialMaterialIds - item.id
+                                            } else {
+                                                hiddenOfficialMaterialIds + item.id
+                                            }
+                                            hiddenOfficialMaterialIds = updated
+                                            FirebaseFirestore.getInstance().collection("site_settings").document("global")
+                                                .set(mapOf("hiddenOfficialMaterialIds" to updated), SetOptions.merge())
+                                        },
+                                        theme = theme
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             1 -> {
+                // 1. ACTIVIDAD DE TESTERS / PRUEBA CERRADA
+                item {
+                    AdminSectionCard(title = "Período de Prueba Cerrada", theme = theme) {
+                        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                            Text(
+                                text = "Define la vigencia oficial de la prueba. Los días futuros no se marcan sin actividad. Finalizar la prueba no borra los datos.",
+                                fontSize = 11.5.sp,
+                                color = theme.textSecondary,
+                                lineHeight = 16.sp
+                            )
+
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .clickable {
+                                            launchDatePicker(context, testerPeriodStartInput) { testerPeriodStartInput = it }
+                                        }
+                                ) {
+                                    OutlinedTextField(
+                                        value = testerPeriodStartInput,
+                                        onValueChange = {},
+                                        readOnly = true,
+                                        enabled = false,
+                                        label = { Text("Fecha Inicio", fontSize = 11.sp) },
+                                        trailingIcon = { Icon(Icons.Rounded.CalendarToday, null, tint = theme.accent, modifier = Modifier.size(16.dp)) },
+                                        modifier = Modifier.fillMaxWidth(),
+                                        shape = RoundedCornerShape(12.dp),
+                                        colors = OutlinedTextFieldDefaults.colors(
+                                            disabledTextColor = theme.textPrimary,
+                                            disabledBorderColor = theme.strokeBorder,
+                                            disabledLabelColor = theme.textSecondary
+                                        ),
+                                        singleLine = true
+                                    )
+                                }
+
+                                Box(
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .clickable {
+                                            launchDatePicker(context, testerPeriodEndInput) { testerPeriodEndInput = it }
+                                        }
+                                ) {
+                                    OutlinedTextField(
+                                        value = testerPeriodEndInput,
+                                        onValueChange = {},
+                                        readOnly = true,
+                                        enabled = false,
+                                        label = { Text("Fecha Fin", fontSize = 11.sp) },
+                                        trailingIcon = { Icon(Icons.Rounded.CalendarToday, null, tint = theme.accent, modifier = Modifier.size(16.dp)) },
+                                        modifier = Modifier.fillMaxWidth(),
+                                        shape = RoundedCornerShape(12.dp),
+                                        colors = OutlinedTextFieldDefaults.colors(
+                                            disabledTextColor = theme.textPrimary,
+                                            disabledBorderColor = theme.strokeBorder,
+                                            disabledLabelColor = theme.textSecondary
+                                        ),
+                                        singleLine = true
+                                    )
+                                }
+                            }
+
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                val isOngoing = todayStr <= testerPeriodEnd
+                                val statusText = if (isOngoing) "Prueba en curso" else "Prueba culminada"
+                                val statusColor = if (isOngoing) Color(0xFF10B981) else Color(0xFF3B82F6)
+
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Box(
+                                        modifier = Modifier
+                                            .size(8.dp)
+                                            .clip(CircleShape)
+                                            .background(statusColor)
+                                    )
+                                    Spacer(modifier = Modifier.width(6.dp))
+                                    Text(
+                                        text = statusText,
+                                        fontSize = 11.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = statusColor
+                                    )
+                                }
+
+                                Sticker3dButton(
+                                    onClick = {
+                                        DuolingoHaptics.playOptionSelected(context)
+                                        isSavingPeriod = true
+                                        TesterActivityRepository.saveTesterPeriod(
+                                            testerPeriodStartInput.trim(),
+                                            testerPeriodEndInput.trim()
+                                        ) { res ->
+                                            isSavingPeriod = false
+                                            if (res.isSuccess) {
+                                                testerPeriodStart = testerPeriodStartInput.trim()
+                                                testerPeriodEnd = testerPeriodEndInput.trim()
+                                                DuolingoHaptics.playCelebration(context)
+                                                Toast.makeText(context, "Período de prueba guardado", Toast.LENGTH_SHORT).show()
+                                            } else {
+                                                Toast.makeText(context, "Error guardando período", Toast.LENGTH_SHORT).show()
+                                            }
+                                        }
+                                    },
+                                    containerColor = theme.accent,
+                                    bottomBevelColor = theme.accentBevel,
+                                    strokeColor = theme.strokeBorder,
+                                    shape = RoundedCornerShape(12.dp),
+                                    modifier = Modifier.height(40.dp),
+                                    contentPadding = PaddingValues(horizontal = 14.dp),
+                                    enabled = !isSavingPeriod
+                                ) {
+                                    if (isSavingPeriod) {
+                                        CircularProgressIndicator(color = Color.White, modifier = Modifier.size(16.dp), strokeWidth = 2.dp)
+                                    } else {
+                                        Text("Guardar", color = Color.White, fontWeight = FontWeight.Black, fontSize = 11.5.sp)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Selector de Rango de Consulta de Actividad
+                item {
+                    Sticker3dCard(
+                        containerColor = theme.surface,
+                        bottomBevelColor = theme.cardBevel,
+                        strokeColor = theme.strokeBorder,
+                        bevelHeight = 3.dp,
+                        shape = RoundedCornerShape(18.dp)
+                    ) {
+                        Column(modifier = Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                            Text(
+                                text = "Consultar Actividad por Rango",
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.Black,
+                                color = theme.textPrimary
+                            )
+
+                            // Fila de Presets de Rango (Scrollable)
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .horizontalScroll(rememberScrollState()),
+                                horizontalArrangement = Arrangement.spacedBy(6.dp)
+                            ) {
+                                listOf(
+                                    "HOY" to "Hoy",
+                                    "ESTA_SEMANA" to "Esta semana",
+                                    "ULTIMOS_7_DIAS" to "Últimos 7 días",
+                                    "ESTE_MES" to "Este mes",
+                                    "PERIODO_CERRADO" to "Prueba cerrada",
+                                    "PERSONALIZADO" to "Personalizado"
+                                ).forEach { (presetKey, presetLabel) ->
+                                    val isSelected = activityRangePreset == presetKey
+                                    Box(
+                                        modifier = Modifier
+                                            .clip(RoundedCornerShape(10.dp))
+                                            .background(if (isSelected) theme.accent else theme.surfaceAccent)
+                                            .border(1.dp, if (isSelected) theme.accent else theme.strokeBorder.copy(alpha = 0.3f), RoundedCornerShape(10.dp))
+                                            .bouncyClick(scaleDown = 0.95f) {
+                                                DuolingoHaptics.playOptionSelected(context)
+                                                activityRangePreset = presetKey
+                                            }
+                                            .padding(horizontal = 10.dp, vertical = 6.dp),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Text(
+                                            text = presetLabel,
+                                            fontSize = 11.sp,
+                                            fontWeight = if (isSelected) FontWeight.Black else FontWeight.Bold,
+                                            color = if (isSelected) Color.White else theme.textPrimary
+                                        )
+                                    }
+                                }
+                            }
+
+                            // Rango Personalizado: Desde / Hasta con DatePicker
+                            if (activityRangePreset == "PERSONALIZADO") {
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Box(
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .clickable {
+                                                launchDatePicker(context, customStartDateInput) { customStartDateInput = it }
+                                            }
+                                    ) {
+                                        OutlinedTextField(
+                                            value = customStartDateInput,
+                                            onValueChange = {},
+                                            readOnly = true,
+                                            enabled = false,
+                                            label = { Text("Desde", fontSize = 11.sp) },
+                                            trailingIcon = { Icon(Icons.Rounded.CalendarToday, null, tint = theme.accent, modifier = Modifier.size(16.dp)) },
+                                            modifier = Modifier.fillMaxWidth(),
+                                            shape = RoundedCornerShape(12.dp),
+                                            colors = OutlinedTextFieldDefaults.colors(
+                                                disabledTextColor = theme.textPrimary,
+                                                disabledBorderColor = theme.strokeBorder,
+                                                disabledLabelColor = theme.textSecondary
+                                            ),
+                                            singleLine = true
+                                        )
+                                    }
+
+                                    Box(
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .clickable {
+                                                launchDatePicker(context, customEndDateInput) { customEndDateInput = it }
+                                            }
+                                    ) {
+                                        OutlinedTextField(
+                                            value = customEndDateInput,
+                                            onValueChange = {},
+                                            readOnly = true,
+                                            enabled = false,
+                                            label = { Text("Hasta", fontSize = 11.sp) },
+                                            trailingIcon = { Icon(Icons.Rounded.CalendarToday, null, tint = theme.accent, modifier = Modifier.size(16.dp)) },
+                                            modifier = Modifier.fillMaxWidth(),
+                                            shape = RoundedCornerShape(12.dp),
+                                            colors = OutlinedTextFieldDefaults.colors(
+                                                disabledTextColor = theme.textPrimary,
+                                                disabledBorderColor = theme.strokeBorder,
+                                                disabledLabelColor = theme.textSecondary
+                                            ),
+                                            singleLine = true
+                                        )
+                                    }
+                                }
+                            }
+
+                            Text(
+                                text = "Rango consultado: ${TesterActivityRepository.formatDateShort(queryStart)} → ${TesterActivityRepository.formatDateShort(queryEnd)}",
+                                fontSize = 10.5.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = theme.accent
+                            )
+
+                            Divider(color = theme.strokeBorder.copy(alpha = 0.2f), thickness = 0.8.dp)
+
+                            // Sub-filtro de Participación: TODOS | ACTIVOS | SIN ACTIVIDAD
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clip(RoundedCornerShape(12.dp))
+                                    .background(theme.surfaceAccent)
+                                    .padding(3.dp),
+                                horizontalArrangement = Arrangement.spacedBy(4.dp)
+                            ) {
+                                listOf(
+                                    "TODOS" to "TODOS",
+                                    "ACTIVOS" to "ACTIVOS",
+                                    "SIN_ACTIVIDAD" to "SIN ACTIVIDAD"
+                                ).forEach { (key, label) ->
+                                    val isSelected = activityStatusFilter == key
+                                    Box(
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .height(34.dp)
+                                            .clip(RoundedCornerShape(8.dp))
+                                            .background(if (isSelected) theme.accent else Color.Transparent)
+                                            .bouncyClick(scaleDown = 0.94f) {
+                                                DuolingoHaptics.playOptionSelected(context)
+                                                activityStatusFilter = key
+                                            },
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Text(
+                                            text = label,
+                                            fontSize = 10.sp,
+                                            fontWeight = if (isSelected) FontWeight.Black else FontWeight.Bold,
+                                            color = if (isSelected) Color.White else theme.textSecondary
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Resumen Global de Participación (Recalculado según Rango)
+                item {
+                    val searchFiltered = testersList.filter {
+                        it.email.contains(testerSearchQuery, ignoreCase = true) ||
+                        it.displayName.contains(testerSearchQuery, ignoreCase = true) ||
+                        it.uid.contains(testerSearchQuery, ignoreCase = true)
+                    }
+
+                    val totalTesters = searchFiltered.size
+                    val activeTestersCount = searchFiltered.count { it.activeDaysCount > 0 }
+                    val totalSecs = searchFiltered.sumOf { it.totalSeconds }
+                    val totalTimeFormatted = TesterActivityRepository.formatDuration(totalSecs)
+                    val globalAvgSecs = if (activeTestersCount > 0) totalSecs / activeTestersCount else 0L
+                    val globalAvgFormatted = TesterActivityRepository.formatAverageMinutesAndSeconds(globalAvgSecs)
+
+                    Sticker3dCard(
+                        containerColor = theme.surface,
+                        bottomBevelColor = theme.cardBevel,
+                        strokeColor = theme.strokeBorder,
+                        bevelHeight = 3.dp,
+                        shape = RoundedCornerShape(18.dp)
+                    ) {
+                        Column(modifier = Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                            Text(
+                                text = "Métricas del Rango Seleccionado",
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.Black,
+                                color = theme.textPrimary
+                            )
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .clip(RoundedCornerShape(12.dp))
+                                        .background(theme.surfaceAccent)
+                                        .padding(10.dp)
+                                ) {
+                                    Column {
+                                        Text("Testers con Uso", fontSize = 10.sp, color = theme.textSecondary)
+                                        Text("$activeTestersCount / $totalTesters", fontSize = 15.sp, fontWeight = FontWeight.Black, color = Color(0xFF10B981))
+                                    }
+                                }
+                                Box(
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .clip(RoundedCornerShape(12.dp))
+                                        .background(theme.surfaceAccent)
+                                        .padding(10.dp)
+                                ) {
+                                    Column {
+                                        Text("Tiempo Total", fontSize = 10.sp, color = theme.textSecondary)
+                                        Text(totalTimeFormatted, fontSize = 15.sp, fontWeight = FontWeight.Black, color = Color(0xFF2563EB))
+                                    }
+                                }
+                                Box(
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .clip(RoundedCornerShape(12.dp))
+                                        .background(theme.surfaceAccent)
+                                        .padding(10.dp)
+                                ) {
+                                    Column {
+                                        Text("Promedio / Activo", fontSize = 10.sp, color = theme.textSecondary)
+                                        Text(globalAvgFormatted, fontSize = 13.5.sp, fontWeight = FontWeight.Black, color = Color(0xFFF59E0B))
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Buscador y Botón Recargar
+                item {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        OutlinedTextField(
+                            value = testerSearchQuery,
+                            onValueChange = { testerSearchQuery = it },
+                            placeholder = { Text("Buscar tester por correo o nombre...", fontSize = 12.sp) },
+                            leadingIcon = { Icon(Icons.Rounded.Search, null, tint = theme.textSecondary) },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(14.dp),
+                            singleLine = true
+                        )
+
+                        Sticker3dButton(
+                            onClick = {
+                                DuolingoHaptics.playOptionSelected(context)
+                                isLoadingTesters = true
+                                TesterActivityRepository.loadAllTestersActivity(queryStart, queryEnd) { list ->
+                                    testersList = list
+                                    isLoadingTesters = false
+                                }
+                            },
+                            containerColor = theme.surface,
+                            bottomBevelColor = theme.cardBevel,
+                            strokeColor = theme.strokeBorder,
+                            shape = RoundedCornerShape(12.dp),
+                            modifier = Modifier.height(52.dp),
+                            contentPadding = PaddingValues(horizontal = 12.dp)
+                        ) {
+                            Icon(Icons.Rounded.Refresh, contentDescription = "Recargar", tint = theme.textPrimary, modifier = Modifier.size(20.dp))
+                        }
+                    }
+                }
+
+                if (isLoadingTesters) {
+                    item {
+                        Box(Modifier.fillMaxWidth().padding(32.dp), contentAlignment = Alignment.Center) {
+                            CircularProgressIndicator(color = theme.accent)
+                        }
+                    }
+                } else {
+                    val searchFiltered = testersList.filter {
+                        it.email.contains(testerSearchQuery, ignoreCase = true) ||
+                        it.displayName.contains(testerSearchQuery, ignoreCase = true) ||
+                        it.uid.contains(testerSearchQuery, ignoreCase = true)
+                    }
+
+                    val finalFilteredTesters = when (activityStatusFilter) {
+                        "ACTIVOS" -> searchFiltered.filter { it.activeDaysCount > 0 }
+                        "SIN_ACTIVIDAD" -> searchFiltered.filter { it.activeDaysCount == 0 }
+                        else -> searchFiltered
+                    }
+
+                    if (finalFilteredTesters.isEmpty()) {
+                        item {
+                            Box(Modifier.fillMaxWidth().padding(32.dp), contentAlignment = Alignment.Center) {
+                                Text(
+                                    text = if (activityStatusFilter == "ACTIVOS") "No hay testers con actividad en este rango."
+                                    else if (activityStatusFilter == "SIN_ACTIVIDAD") "No hay testers sin actividad en este rango."
+                                    else "No se encontraron testers registrados.",
+                                    color = theme.textSecondary,
+                                    fontSize = 12.sp
+                                )
+                            }
+                        }
+                    } else {
+                        items(finalFilteredTesters, key = { it.uid }) { tester ->
+                            Sticker3dCard(
+                                containerColor = theme.surface,
+                                bottomBevelColor = theme.cardBevel,
+                                strokeColor = theme.strokeBorder,
+                                bevelHeight = 3.dp,
+                                shape = RoundedCornerShape(16.dp),
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .bouncyClick(scaleDown = 0.98f) {
+                                        DuolingoHaptics.playOptionSelected(context)
+                                        isLoadingDetail = true
+                                        selectedTesterForDetail = tester
+                                        detailFilter = "TODOS"
+                                        TesterActivityRepository.loadTesterDetail(
+                                            uid = tester.uid,
+                                            email = tester.email,
+                                            displayName = tester.displayName,
+                                            photoUrl = tester.photoUrl,
+                                            startDate = queryStart,
+                                            endDate = queryEnd
+                                        ) { detailed ->
+                                            selectedTesterForDetail = detailed
+                                            isLoadingDetail = false
+                                        }
+                                    }
+                            ) {
+                                Column(
+                                    modifier = Modifier.padding(14.dp),
+                                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                                ) {
+                                    // Cabecera: Avatar + Nombre + Correo
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        verticalAlignment = Alignment.CenterVertically,
+                                        horizontalArrangement = Arrangement.SpaceBetween
+                                    ) {
+                                        Row(
+                                            verticalAlignment = Alignment.CenterVertically,
+                                            modifier = Modifier.weight(1f)
+                                        ) {
+                                            CartoonAvatar(tester.photoUrl, size = 38.dp, strokeWidth = 1.8.dp, bevelOffset = 2.dp)
+                                            Spacer(modifier = Modifier.width(10.dp))
+                                            Column {
+                                                Text(
+                                                    text = tester.displayName,
+                                                    fontWeight = FontWeight.Bold,
+                                                    fontSize = 13.5.sp,
+                                                    color = theme.textPrimary
+                                                )
+                                                Text(
+                                                    text = tester.email,
+                                                    fontSize = 11.5.sp,
+                                                    fontWeight = FontWeight.Medium,
+                                                    color = theme.accent
+                                                )
+                                            }
+                                        }
+
+                                        val isActiveUser = tester.activeDaysCount > 0
+                                        Box(
+                                            modifier = Modifier
+                                                .clip(RoundedCornerShape(8.dp))
+                                                .background(
+                                                    if (isActiveUser) Color(0xFF10B981).copy(alpha = 0.15f)
+                                                    else Color(0xFF6B7280).copy(alpha = 0.15f)
+                                                )
+                                                .padding(horizontal = 8.dp, vertical = 3.dp)
+                                        ) {
+                                            Text(
+                                                text = if (isActiveUser) "Participante" else "Sin actividad",
+                                                fontSize = 10.sp,
+                                                fontWeight = FontWeight.Black,
+                                                color = if (isActiveUser) Color(0xFF10B981) else Color(0xFF6B7280)
+                                            )
+                                        }
+                                    }
+
+                                    Divider(color = theme.strokeBorder.copy(alpha = 0.2f), thickness = 0.8.dp)
+
+                                    // Grid 2x2 para métricas del tester (adaptado a móvil)
+                                    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                                        Row(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            horizontalArrangement = Arrangement.SpaceBetween
+                                        ) {
+                                            Column(modifier = Modifier.weight(1f)) {
+                                                Text("Días activos", fontSize = 10.sp, color = theme.textSecondary)
+                                                Text(
+                                                    text = "${tester.activeDaysCount}",
+                                                    fontSize = 13.sp,
+                                                    fontWeight = FontWeight.Black,
+                                                    color = if (tester.activeDaysCount > 0) Color(0xFF10B981) else theme.textSecondary
+                                                )
+                                            }
+
+                                            Column(modifier = Modifier.weight(1f)) {
+                                                Text("Días sin actividad", fontSize = 10.sp, color = theme.textSecondary)
+                                                Text(
+                                                    text = "${tester.inactiveDaysCount}",
+                                                    fontSize = 13.sp,
+                                                    fontWeight = FontWeight.Black,
+                                                    color = theme.textSecondary
+                                                )
+                                            }
+                                        }
+
+                                        Row(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            horizontalArrangement = Arrangement.SpaceBetween
+                                        ) {
+                                            Column(modifier = Modifier.weight(1f)) {
+                                                Text("Tiempo total", fontSize = 10.sp, color = theme.textSecondary)
+                                                Text(
+                                                    text = tester.formattedTotalTime,
+                                                    fontSize = 13.sp,
+                                                    fontWeight = FontWeight.Black,
+                                                    color = theme.textPrimary
+                                                )
+                                            }
+
+                                            Column(modifier = Modifier.weight(1f)) {
+                                                Text("Promedio/día activo", fontSize = 10.sp, color = theme.textSecondary)
+                                                Text(
+                                                    text = tester.formattedAverage,
+                                                    fontSize = 13.sp,
+                                                    fontWeight = FontWeight.Black,
+                                                    color = Color(0xFF2563EB)
+                                                )
+                                            }
+                                        }
+                                    }
+
+                                    // Fila de Última Actividad
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Row(verticalAlignment = Alignment.CenterVertically) {
+                                            Icon(
+                                                Icons.Rounded.Schedule,
+                                                contentDescription = null,
+                                                tint = theme.textSecondary,
+                                                modifier = Modifier.size(14.dp)
+                                            )
+                                            Spacer(modifier = Modifier.width(4.dp))
+                                            Text(
+                                                text = "Última actividad: ${tester.formattedLastActive}",
+                                                fontSize = 10.5.sp,
+                                                color = theme.textSecondary,
+                                                fontWeight = FontWeight.Medium
+                                            )
+                                        }
+
+                                        Text(
+                                            text = "Tocar para ver detalle →",
+                                            fontSize = 10.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = theme.accent
+                                        )
+                                    }
+
+                                        Column {
+                                            Text("Promedio/día activo", fontSize = 10.sp, color = theme.textSecondary)
+                                            Text(
+                                                text = tester.formattedAverage,
+                                                fontSize = 13.sp,
+                                                fontWeight = FontWeight.Black,
+                                                color = Color(0xFF2563EB)
+                                            )
+                                        }
+                                    }
+
+                                    // Fila de Última Actividad
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Row(verticalAlignment = Alignment.CenterVertically) {
+                                            Icon(
+                                                Icons.Rounded.Schedule,
+                                                contentDescription = null,
+                                                tint = theme.textSecondary,
+                                                modifier = Modifier.size(14.dp)
+                                            )
+                                            Spacer(modifier = Modifier.width(4.dp))
+                                            Text(
+                                                text = "Última actividad: ${tester.formattedLastActive}",
+                                                fontSize = 10.5.sp,
+                                                color = theme.textSecondary,
+                                                fontWeight = FontWeight.Medium
+                                            )
+                                        }
+
+                                        Text(
+                                            text = "Tocar para ver detalle →",
+                                            fontSize = 10.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = theme.accent
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            2 -> {
                 // 2. GESTIÓN Y MODERACIÓN DE USUARIOS REALES (FIRESTORE)
                 item {
                     OutlinedTextField(
@@ -603,7 +1783,7 @@ fun AdminScreen(
                 }
             }
 
-            2 -> {
+            3 -> {
                 // 3. CONTENIDO UGC: REPORTES Y TODAS LAS PUBLICACIONES
                 // Sub-sección 1: Reportes Pendientes
                 item {
@@ -812,7 +1992,7 @@ fun AdminScreen(
                 }
             }
 
-            3 -> {
+            4 -> {
                 // 4. NOTIFICACIONES PUSH & DIFUSIÓN
                 item {
                     AdminSectionCard(title = "Envío de Notificación Masiva (Difusión a Postulantes)", theme = theme) {
@@ -890,7 +2070,7 @@ fun AdminScreen(
                 }
             }
 
-            4 -> {
+            5 -> {
                 // 5. BANCO DE PREGUNTAS Y ESTADÍSTICAS REALES
                 val officialTotal = officialQuestions.size
                 val biomedicasIngCount = officialQuestions.count { q ->
@@ -972,6 +2152,269 @@ fun AdminScreen(
                                     Text("Reindexar y Verificar Integridad", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 13.sp)
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Diálogo Detallado de Actividad por Tester
+    val detail = selectedTesterForDetail
+    if (detail != null) {
+        Dialog(
+            onDismissRequest = { selectedTesterForDetail = null },
+            properties = DialogProperties(usePlatformDefaultWidth = false)
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(Color.Black.copy(alpha = 0.55f))
+                    .padding(16.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Sticker3dCard(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .fillMaxHeight(0.85f),
+                    containerColor = theme.surface,
+                    bottomBevelColor = theme.cardBevel,
+                    strokeColor = theme.strokeBorder,
+                    bevelHeight = 4.dp,
+                    shape = RoundedCornerShape(22.dp)
+                ) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(16.dp)
+                    ) {
+                        // Cabecera del diálogo
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.weight(1f)) {
+                                CartoonAvatar(detail.photoUrl, size = 36.dp, strokeWidth = 1.8.dp, bevelOffset = 2.dp)
+                                Spacer(modifier = Modifier.width(10.dp))
+                                Column {
+                                    Text(
+                                        text = detail.displayName,
+                                        fontWeight = FontWeight.Black,
+                                        fontSize = 14.sp,
+                                        color = theme.textPrimary
+                                    )
+                                    Text(
+                                        text = detail.email,
+                                        fontSize = 11.sp,
+                                        color = theme.accent,
+                                        fontWeight = FontWeight.Medium
+                                    )
+                                }
+                            }
+                            IconButton(onClick = { selectedTesterForDetail = null }) {
+                                Icon(Icons.Rounded.Close, contentDescription = "Cerrar", tint = theme.textSecondary)
+                            }
+                        }
+
+                        Spacer(modifier = Modifier.height(10.dp))
+
+                        // Tarjeta de Resumen del Período
+                        Sticker3dCard(
+                            containerColor = theme.surfaceAccent,
+                            bottomBevelColor = theme.cardBevel,
+                            strokeColor = theme.strokeBorder.copy(alpha = 0.4f),
+                            bevelHeight = 2.dp,
+                            shape = RoundedCornerShape(14.dp)
+                        ) {
+                            Column(
+                                modifier = Modifier.padding(12.dp),
+                                verticalArrangement = Arrangement.spacedBy(6.dp)
+                            ) {
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Text("Período observado:", fontSize = 11.sp, color = theme.textSecondary)
+                                    Text("$testerPeriodStart → $testerPeriodEnd", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
+                                }
+                                Divider(color = theme.strokeBorder.copy(alpha = 0.2f), thickness = 0.8.dp)
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Text("Días activos:", fontSize = 11.sp, color = theme.textSecondary)
+                                    Text("${detail.activeDaysCount} días", fontSize = 11.sp, fontWeight = FontWeight.Black, color = Color(0xFF10B981))
+                                }
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Text("Días sin actividad:", fontSize = 11.sp, color = theme.textSecondary)
+                                    Text("${detail.inactiveDaysCount} días", fontSize = 11.sp, fontWeight = FontWeight.Black, color = theme.textSecondary)
+                                }
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Text("Tiempo total:", fontSize = 11.sp, color = theme.textSecondary)
+                                    Text(detail.formattedTotalTime, fontSize = 11.sp, fontWeight = FontWeight.Black, color = theme.textPrimary)
+                                }
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Text("Promedio por día activo:", fontSize = 11.sp, color = theme.textSecondary)
+                                    Text(detail.formattedAverage, fontSize = 11.sp, fontWeight = FontWeight.Black, color = Color(0xFF2563EB))
+                                }
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Text("Última actividad:", fontSize = 11.sp, color = theme.textSecondary)
+                                    Text(detail.formattedLastActive, fontSize = 11.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
+                                }
+
+                                if (detail.historicalRecoveredDates.isNotEmpty()) {
+                                    Box(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .clip(RoundedCornerShape(8.dp))
+                                            .background(Color(0xFF3B82F6).copy(alpha = 0.12f))
+                                            .padding(6.dp),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Text(
+                                            text = "Histórico previo de gamificación vinculado (${detail.historicalRecoveredDates.size} días)",
+                                            fontSize = 9.5.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = Color(0xFF2563EB)
+                                        )
+                                    }
+                                }
+                            }
+                        }
+
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        // Filtros Segmentados: TODOS | ACTIVOS | SIN ACTIVIDAD
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clip(RoundedCornerShape(12.dp))
+                                .background(theme.surfaceAccent)
+                                .border(1.dp, theme.strokeBorder.copy(alpha = 0.35f), RoundedCornerShape(12.dp))
+                                .padding(3.dp),
+                            horizontalArrangement = Arrangement.spacedBy(4.dp)
+                        ) {
+                            listOf(
+                                Triple("TODOS", "TODOS (${detail.dailyItems.size})", "TODOS"),
+                                Triple("ACTIVOS", "ACTIVOS (${detail.activeDaysCount})", "ACTIVOS"),
+                                Triple("SIN_ACTIVIDAD", "SIN ACTIVIDAD (${detail.inactiveDaysCount})", "SIN_ACTIVIDAD")
+                            ).forEach { (key, label, _) ->
+                                val isSelected = detailFilter == key
+                                Box(
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .height(34.dp)
+                                        .clip(RoundedCornerShape(8.dp))
+                                        .background(if (isSelected) theme.accent else Color.Transparent)
+                                        .bouncyClick(scaleDown = 0.94f) {
+                                            DuolingoHaptics.playOptionSelected(context)
+                                            detailFilter = key
+                                        },
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        text = label,
+                                        fontSize = 10.sp,
+                                        fontWeight = if (isSelected) FontWeight.Black else FontWeight.Bold,
+                                        color = if (isSelected) Color.White else theme.textSecondary
+                                    )
+                                }
+                            }
+                        }
+
+                        Spacer(modifier = Modifier.height(10.dp))
+
+                        // Lista Filtrada de Días
+                        val filteredDays = when (detailFilter) {
+                            "ACTIVOS" -> detail.dailyItems.filter { it.isActive }
+                            "SIN_ACTIVIDAD" -> detail.dailyItems.filter { !it.isActive }
+                            else -> detail.dailyItems
+                        }
+
+                        if (isLoadingDetail) {
+                            Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
+                                CircularProgressIndicator(color = theme.accent)
+                            }
+                        } else if (filteredDays.isEmpty()) {
+                            Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
+                                Text(
+                                    text = if (detailFilter == "ACTIVOS") "No hay días con actividad en el período." else "No hay días sin actividad registrados.",
+                                    fontSize = 12.sp,
+                                    color = theme.textSecondary
+                                )
+                            }
+                        } else {
+                            LazyColumn(
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .fillMaxWidth(),
+                                verticalArrangement = Arrangement.spacedBy(6.dp)
+                            ) {
+                                items(filteredDays, key = { it.date }) { dayItem ->
+                                    Row(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .clip(RoundedCornerShape(10.dp))
+                                            .background(theme.surfaceAccent)
+                                            .border(1.dp, theme.strokeBorder.copy(alpha = 0.2f), RoundedCornerShape(10.dp))
+                                            .padding(horizontal = 12.dp, vertical = 10.dp),
+                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Row(verticalAlignment = Alignment.CenterVertically) {
+                                            Box(
+                                                modifier = Modifier
+                                                    .size(8.dp)
+                                                    .clip(CircleShape)
+                                                    .background(if (dayItem.isActive) Color(0xFF10B981) else Color(0xFF9CA3AF))
+                                            )
+                                            Spacer(modifier = Modifier.width(8.dp))
+                                            Text(
+                                                text = dayItem.formattedDate,
+                                                fontSize = 12.5.sp,
+                                                fontWeight = FontWeight.Bold,
+                                                color = theme.textPrimary
+                                            )
+                                        }
+
+                                        Text(
+                                            text = dayItem.formattedTime,
+                                            fontSize = 12.sp,
+                                            fontWeight = if (dayItem.isActive) FontWeight.Black else FontWeight.Normal,
+                                            color = if (dayItem.isActive) Color(0xFF10B981) else theme.textSecondary
+                                        )
+                                    }
+                                }
+                            }
+                        }
+
+                        Spacer(modifier = Modifier.height(10.dp))
+
+                        Sticker3dButton(
+                            onClick = {
+                                DuolingoHaptics.playOptionSelected(context)
+                                selectedTesterForDetail = null
+                            },
+                            modifier = Modifier.fillMaxWidth().height(44.dp),
+                            containerColor = theme.accent,
+                            bottomBevelColor = theme.accentBevel,
+                            strokeColor = theme.strokeBorder,
+                            shape = RoundedCornerShape(12.dp)
+                        ) {
+                            Text("Cerrar Detalle", color = Color.White, fontWeight = FontWeight.Black, fontSize = 13.sp)
                         }
                     }
                 }

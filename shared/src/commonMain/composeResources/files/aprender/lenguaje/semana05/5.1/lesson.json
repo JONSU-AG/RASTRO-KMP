@@ -1,0 +1,34 @@
+{
+  "id": "leng_t05_s01",
+  "subjectId": "lenguaje",
+  "semana": 5,
+  "subtema": "5.1",
+  "title": "La Sintaxis y las Categorías Gramaticales: Variables e Invariables",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_05_Sintaxis_Categorias_y_Frases.md",
+  "learningObjectives": [
+    "Definir la sintaxis como el estudio de la combinación jerárquica de sintagmas y oraciones",
+    "Distinguir categorías variables de invariables por la presencia de flexión de género, número, tiempo y persona",
+    "Diferenciar determinante que acompaña al sustantivo de pronombre que lo sustituye como núcleo",
+    "Reconocer verboides y perífrasis verbales frente a verbos plenos con subordinada sustantiva",
+    "Aplicar concordancia nominal y verbal culta en casos de proximidad y colectivos"
+  ],
+  "theory": {
+    "id": "th_leng_t05_s01",
+    "asignatura": "Lenguaje",
+    "semana": 5,
+    "titulo": "La Sintaxis y las Categorías Gramaticales: Variables e Invariables",
+    "resumen": "",
+    "conceptosClave": [
+      "Sintaxis ordena palabras en sintagmas, proposiciones y oraciones con funciones como sujeto y predicado",
+      "Variables: sustantivo, adjetivo, determinante, pronombre y verbo; invariables: adverbio, preposición y conjunción",
+      "Adverbio modifica a verbo, a adjetivo y a otro adverbio; nunca tiene género ni número",
+      "Determinante más nombre frente a pronombre igual a núcleo: esos jóvenes frente a aquellos",
+      "Perífrasis = auxiliar más nexo más verboide; suele repasar es perífrasis, desea eso no lo es",
+      "Concordancia antepuesta por proximidad como extraordinaria rapidez y valor; pospuesta en masculino plural",
+      "Colectivo singular exige verbo singular: la jauría huyó, no huyeron"
+    ],
+    "admissionTip": "Para perífrasis prueba con eso: si puedes decir desea eso o necesita eso es verbo pleno con OD, si no puedes decir suele eso es perífrasis; para adverbio verifica que modifica a verbo, adjetivo u otro adverbio.",
+    "admissionExplanation": "La confusión determinante frente a pronombre y verbo pleno frente a perífrasis decide la mitad de las preguntas: el determinante acompaña, el pronombre sustituye, y la perífrasis funciona como un solo núcleo del predicado."
+  }
+}

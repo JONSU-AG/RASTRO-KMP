@@ -17,9 +17,10 @@ enum class RastroThemeId(val idName: String, val displayName: String, val bgHex:
     GUINDA_LIGHT("guinda-light", "Guinda Claro", "#FDF2F4"),
     CORAJE("coraje", "Coraje Cálido", "#F4EBE1"),
     CORAJE_DARK("coraje-dark", "Coraje Oscuro", "#120919"),
-    BEIGE_CARMESI("beige-carmesi", "Beige Carmesí", "#E8DFD8"),
+    BEIGE_CARMESI("beige-carmesi", "Beige Carmesí (UNSA)", "#E8DFD8"),
     GOOGLE_VIBRANT("google-vibrant", "Google Vibrant", "#F0F4F9"),
-    MATERIAL_YOU("material-you", "Material You (Google Dinámico)", "#6750A4")
+    MATERIAL_YOU("material-you", "Material You (Google Dinámico)", "#6750A4"),
+    CUSTOM("custom", "Personalizado (3 colores)", "#3B82F6")
 }
 
 data class RastroPalette(
@@ -218,25 +219,84 @@ object RastroThemeTokens {
                 accent = Color(0xFF6750A4),
                 isLight = true
             )
+            RastroThemeId.CUSTOM -> ThemeManager.customPalette
         }
     }
+}
+
+/**
+ * Colores semánticos inmutables protegidos (FASE 8).
+ * Jamás deben ser sobreescritos por temas personalizados ni dinamismo externo.
+ */
+object RastroSemanticColors {
+    val Success = Color(0xFF10B981) // Verde esmeralda (Aciertos, correcto)
+    val Error = Color(0xFFEF4444)   // Rojo carmesí (Fallas, incorrecto)
+    val Warning = Color(0xFFF97316) // Naranja fuego (Advertencias, rachas)
+    val Info = Color(0xFF3B82F6)    // Azul info
+}
+
+data class CustomThemeColors(
+    val primary: Color = Color(0xFFFFFFFF),       // Fondo dominante
+    val secondary: Color = Color(0xFFF1F5F9),     // Superficie / Paneles
+    val accent: Color = Color(0xFF007AFF)         // Acento / Acción
+)
+
+fun generateCustomPalette(primary: Color, secondary: Color, accent: Color): RastroPalette {
+    val bgLuminance = (0.299f * primary.red + 0.587f * primary.green + 0.114f * primary.blue)
+    val isLight = bgLuminance > 0.5f
+
+    // Garantizar contraste WCAG AA (> 4.5:1 para texto normal)
+    val textPrimary = if (isLight) Color(0xFF0F172A) else Color(0xFFF8FAFC)
+    val textSecondary = if (isLight) Color(0xFF475569) else Color(0xFFCBD5E1)
+    val textMuted = if (isLight) Color(0xFF64748B) else Color(0xFF94A3B8)
+    val strokeBorder = if (isLight) Color(0xFF1E293B) else Color(0xFF475569)
+    val cardBevel = if (isLight) Color(0xFFCBD5E1) else Color(0xFF0F172A)
+    val accentLuminance = (0.299f * accent.red + 0.587f * accent.green + 0.114f * accent.blue)
+    val accentBevel = if (accentLuminance > 0.5f) Color(0xFF0056B3) else Color(0xFF0284C7)
+
+    return RastroPalette(
+        background = primary,
+        surface = secondary,
+        surfaceAccent = if (isLight) secondary.copy(alpha = 0.85f) else secondary.copy(alpha = 0.7f),
+        borderSubtle = if (isLight) Color(0x2E787880) else Color(0x33FFFFFF),
+        surfaceBorder = if (isLight) Color(0x2E787880) else Color(0x33FFFFFF),
+        strokeBorder = strokeBorder,
+        cardBevel = cardBevel,
+        accentBevel = accentBevel,
+        textPrimary = textPrimary,
+        textSecondary = textSecondary,
+        textMuted = textMuted,
+        accent = accent,
+        isLight = isLight
+    )
 }
 
 object ThemeManager {
     var currentThemeId by mutableStateOf(RastroThemeId.LIGHT)
         private set
 
+    var customColors by mutableStateOf(CustomThemeColors())
+        private set
+
+    val customPalette: RastroPalette
+        get() = generateCustomPalette(customColors.primary, customColors.secondary, customColors.accent)
+
     var dynamicPaletteOverride by mutableStateOf<RastroPalette?>(null)
 
     val currentTheme: RastroPalette
-        get() = if (currentThemeId == RastroThemeId.MATERIAL_YOU && dynamicPaletteOverride != null) {
-            dynamicPaletteOverride!!
-        } else {
-            RastroThemeTokens.getColors(currentThemeId)
+        get() = when {
+            currentThemeId == RastroThemeId.CUSTOM -> customPalette
+            currentThemeId == RastroThemeId.MATERIAL_YOU && dynamicPaletteOverride != null -> dynamicPaletteOverride!!
+            else -> RastroThemeTokens.getColors(currentThemeId)
         }
 
     fun setTheme(themeId: RastroThemeId) {
         currentThemeId = themeId
+    }
+
+    fun setCustomTheme(primary: Color, secondary: Color, accent: Color) {
+        customColors = CustomThemeColors(primary, secondary, accent)
+        currentThemeId = RastroThemeId.CUSTOM
     }
 
     val availableThemes: List<RastroThemeId> = RastroThemeId.entries

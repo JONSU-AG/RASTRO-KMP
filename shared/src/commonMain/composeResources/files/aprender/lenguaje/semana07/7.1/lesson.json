@@ -1,0 +1,33 @@
+{
+  "id": "leng_t07_s01",
+  "subjectId": "lenguaje",
+  "semana": 7,
+  "subtema": "7.1",
+  "title": "El Discurso Escrito: Adecuación, Coherencia y Mecanismos de Cohesión",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana07.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_07_Discurso_Escrito_y_Normativa.md",
+  "learningObjectives": [
+    "Distinguir adecuación, coherencia y cohesión como propiedades constitutivas del texto",
+    "Identificar anáfora, catáfora, elipsis y sustitución léxica en fragmentos discursivos",
+    "Explicar la progresión temática tema-rema y el principio de no contradicción",
+    "Aplicar los mecanismos de cohesión para resolver casos de admisión UNSA"
+  ],
+  "theory": {
+    "id": "th_leng_t07_s01",
+    "asignatura": "Lenguaje",
+    "semana": 7,
+    "titulo": "El Discurso Escrito: Adecuación, Coherencia y Mecanismos de Cohesión",
+    "resumen": "",
+    "conceptosClave": [
+      "Adecuación = registro pertinente al destinatario, canal y género discursivo",
+      "Coherencia = unidad temática, no contradicción y progresión tema-rema",
+      "Anáfora mira atrás al antecedente; catáfora anticipa al consecuente",
+      "Elipsis suprime lo recuperable; sustitución léxica evita repetición",
+      "Sustitución por sinónimo, hiperónimo o perífrasis como el ilustre vate liberteño",
+      "Progresión temática articula información conocida con información nueva",
+      "Cohesión = red explícita que liga oraciones y párrafos"
+    ],
+    "admissionTip": "Si ves esto, lo mismo o dos cosas antes de dos puntos, marca catáfora; si el pronombre o posesivo retoma algo ya dicho como su, ella o este, marca anáfora.",
+    "admissionExplanation": "La dirección de la referencia lo decide todo: hacia atrás es anáfora, hacia adelante es catáfora; la elipsis es ausencia recuperable y la sustitución es reemplazo con sinónimo o perífrasis."
+  }
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "3.1.1",
+    "correctIndex": 2,
+    "explanation": "La aptitud es la facilidad y capacidad de rendimiento en un área determinada (razonamiento numérico, espacial, verbal, motriz o artístico).",
+    "fuente": "temario",
+    "id": "psi_t03_s01_c01",
+    "options": [
+      "El gusto o preferencia afectiva por una determinada actividad recreativa.",
+      "El título profesional otorgado por una universidad licenciada.",
+      "La disposición o potencial innato y desarrollado para aprender o desempeñar con facilidad y destreza una tarea o actividad específica.",
+      "El salario monetario que se percibe por un servicio laboral."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "En la psicología de la orientación vocacional, la 'Aptitud' se define rigurosamente como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.2",
+    "correctIndex": 3,
+    "explanation": "El interés es 'lo que me gusta y atrae hacer', mientras que la aptitud es 'lo que puedo y tengo talento para hacer bien'.",
+    "fuente": "temario",
+    "id": "psi_t03_s01_c02",
+    "options": [
+      "La cantidad de años que dura un plan de estudios universitario.",
+      "La nota cuantitativa obtenida en un examen de conocimientos.",
+      "La capacidad física para levantar pesos pesados.",
+      "La inclinación emocional, preferencia afectiva y curiosidad que una persona manifiesta hacia ciertos campos de conocimiento, personas o actividades."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Por el contrario, el 'Interés' vocacional se diferencia de la aptitud porque expresa:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.3",
+    "correctIndex": 3,
+    "explanation": "La orientación vocacional busca la máxima convergencia armónica entre lo que al sujeto le gusta (intereses), lo que sabe hacer bien (aptitudes) y el mercado ocupacional.",
+    "fuente": "temario",
+    "id": "psi_t03_s01_c03",
+    "options": [
+      "Abandonar todo tipo de estudios superiores y aislarse.",
+      "Comprar un software que dibuje automáticamente sin aprender la base.",
+      "Echarle la culpa a los docentes de secundaria.",
+      "Evaluar la posibilidad de entrenar y nivelar las destrezas deficientes o buscar profesiones afines donde sus aptitudes reales armonicen mejor con sus motivaciones."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 3,
+    "statement": "Un conflicto vocacional clásico ocurre cuando un postulante tiene un gran 'interés' por el diseño arquitectónico pero una escasa 'aptitud' en visión espacial y cálculo trigonométrico. La recomendación psicológica es:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.4",
+    "correctIndex": 2,
+    "explanation": "La vocación no es estática ni innata en su totalidad; se va construyendo y descubriendo a través de la exploración vivencial y el autoconocimiento maduro.",
+    "fuente": "temario",
+    "id": "psi_t03_s01_c04",
+    "options": [
+      "La búsqueda obsesiva del estatus social y del poder económico.",
+      "La imposición arbitraria de tradiciones familiares sin vocación.",
+      "Un llamado interior integrador que conjuga aptitudes, intereses, valores y sentido de vida en una actividad a la que se desea dedicar la existencia.",
+      "Una imposición autoritaria de los progenitores."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "La 'Vocación' (del latín 'vocatio' = llamado interior) es una síntesis madura y profunda de la personalidad que se caracteriza por:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.5",
+    "correctIndex": 0,
+    "explanation": "La profesión involucra un cuerpo doctrinal científico especializado, formación acreditada y responsabilidad social regulada por colegios profesionales.",
+    "fuente": "temario",
+    "id": "psi_t03_s01_c05",
+    "options": [
+      "Una formación académica superior especializada y sistemática (universitaria o técnica formal), certificada por un título y orientada por un código deontológico.",
+      "Haber nacido en una familia aristocrática.",
+      "Menor tiempo de dedicación que un oficio manual.",
+      "La renuncia voluntaria al cobro de honorarios económicos."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "La distinción entre 'Profesión' y 'Ocupación' radica en que la Profesión requiere:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.6",
+    "correctIndex": 0,
+    "explanation": "La elección por mandato parental genera frustración, bajo rendimiento y posterior deserción universitaria por carecer de motivación intrínseca genuina.",
+    "fuente": "temario",
+    "id": "psi_t03_s01_c06",
+    "options": [
+      "Elección vocacional alienada o pseudoidentidad vocacional (identidad prestada)",
+      "Autonomía moral superior",
+      "Vocación auténtica consolidada",
+      "Alta autoeficacia personal"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 3,
+    "statement": "Cuando un joven elige una carrera universitaria exclusivamente por presión de sus padres ('En esta casa todos somos abogados'), se presenta un fenómeno de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.7",
+    "correctIndex": 0,
+    "explanation": "Un proyecto vocacional realista investiga las oportunidades objetivas de empleo para evitar el desencanto de estudiar carreras hiper-saturadas sin demanda laboral.",
+    "fuente": "temario",
+    "id": "psi_t03_s01_c07",
+    "options": [
+      "La demanda real de egresados, niveles de saturación profesional, ingresos promedio y campos de inserción productiva en el país.",
+      "El clima meteorológico de las ciudades industriales.",
+      "El costo del pasaje urbano en autobús.",
+      "Los nombres de los rectores universitarios de hace un siglo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "El 'Mercado Ocupacional' o laboral es un factor externo de la orientación que debe ser analizado críticamente para conocer:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.7",
+    "correctIndex": 2,
+    "explanation": "Kuder evalúa intereses en áreas como cálculo, persuasión, artística, literaria, musical, servicio social, aire libre, científica y mecánica.",
+    "fuente": "temario",
+    "id": "psi_t03_s01_c08",
+    "options": [
+      "Predecir con exactitud el futuro financiero de una persona.",
+      "Medir la agudeza auditiva y visual.",
+      "Mapear las preferencias y orden jerárquico de intereses ocupacionales del sujeto en diversas áreas del conocimiento.",
+      "Diagnosticar demencia o esquizofrenia profunda."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Los inventarios de intereses vocacionales (como el Test de Kuder o el CASM83) son pruebas psicométricas diseñadas para:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.7",
+    "correctIndex": 1,
+    "explanation": "La madurez vocacional refleja el paso de fantasías infantiles ('ser astronauta') a una elección consciente fundada en el autoconocimiento y la exploración contextual.",
+    "fuente": "temario",
+    "id": "psi_t03_s01_c09",
+    "options": [
+      "Trabajar 16 horas diarias en cualquier oficio sin descanso.",
+      "Tomar una decisión vocacional reflexiva, autónoma y realista, integrando sus capacidades personales con el conocimiento de las opciones académicas.",
+      "Rechazar todo consejo de los profesionales experimentados.",
+      "Obtener siempre el primer puesto en todos los exámenes."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "La 'Madurez Vocacional' es la etapa evolutiva en la cual el adolescente o joven es capaz de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.3",
+    "correctIndex": 1,
+    "explanation": "Disfrutar de escuchar música o jugar videojuegos no significa necesariamente tener la vocación y aptitud para la composición teórica o la ingeniería de software.",
+    "fuente": "temario",
+    "id": "psi_t03_s01_c10",
+    "options": [
+      "Un juego colectivo con amigos.",
+      "Una profesión que exige compromiso formativo riguroso, tolerancia al estrés laboral y dedicación cotidiana a tiempo completo.",
+      "Un descanso mental necesario.",
+      "Una diversión de fin de semana."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Uno de los principales errores en la elección vocacional consiste en confundir un 'hobby' o pasatiempo recreativo con:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

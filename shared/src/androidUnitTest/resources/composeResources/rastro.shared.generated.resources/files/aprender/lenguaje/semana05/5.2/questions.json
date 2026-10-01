@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t05_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'El jurado calificador declaró ganadora a la delegación arequipeña', el término 'ganadora' cumple la función sintáctica de:",
+    "options": [
+      "Objeto directo",
+      "Modificador indirecto",
+      "Atributo",
+      "Complemento predicativo objetivo"
+    ],
+    "correctIndex": 3,
+    "explanation": "'Ganadora' califica al Objeto Directo ('a la delegación arequipeña') a través del verbo transitivo 'declaró', actuando como complemento predicativo objetivo.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.2.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Para comprobar con rigor sintáctico si un sintagma desempeña la función de Objeto Directo (OD), se aplica la doble prueba de:",
+    "options": [
+      "Conmutación por un adverbio de modo",
+      "Sustitución por 'lo, la, los, las' y conversión a sujeto en voz pasiva",
+      "Sustitución por 'le/les' y eliminación del verbo",
+      "Sustitución obligatoria por 'se' impersonal"
+    ],
+    "correctIndex": 1,
+    "explanation": "El OD se sustituye unívocamente por los clíticos acusativos 'lo, la, los, las' y se transforma en Sujeto Paciente al pasar a la voz pasiva.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En 'César Vallejo, el poeta del dolor humano, nació en Santiago de Chuco', el elemento entre comas funciona sintácticamente como:",
+    "options": [
+      "Aposición explicativa",
+      "Modificador indirecto preposicional",
+      "Complemento predicativo subjetivo",
+      "Atributo copulativo"
+    ],
+    "correctIndex": 0,
+    "explanation": "La frase 'el poeta del dolor humano' va entre comas aclarando y equivaliendo al núcleo 'César Vallejo', constituyendo una aposición explicativa.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'Aquellos médicos cirujanos son sumamente competentes', el sintagma 'sumamente competentes' funciona como:",
+    "options": [
+      "Complemento predicativo",
+      "Objeto directo",
+      "Complemento circunstancial de modo",
+      "Atributo"
+    ],
+    "correctIndex": 3,
+    "explanation": "Al acompañar al verbo copulativo 'son' y calificar al sujeto ('Aquellos médicos cirujanos lo son'), funciona como Atributo.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En 'El arqueólogo entregó las piezas cerámicas al director del museo', el sintagma 'al director del museo' cumple la función de:",
+    "options": [
+      "Objeto Directo",
+      "Complemento Agente",
+      "Objeto Indirecto",
+      "Circunstancial de lugar"
+    ],
+    "correctIndex": 2,
+    "explanation": "'Al director del museo' es el destinatario de la acción de entrega y se sustituye por 'le' ('El arqueólogo le entregó las piezas'), siendo Objeto Indirecto.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.2.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración en voz pasiva 'El tratado de paz fue suscrito por los cancilleres', el sintagma 'por los cancilleres' cumple la función de:",
+    "options": [
+      "Objeto Indirecto",
+      "Complemento Circunstancial de causa",
+      "Atributo pasivo",
+      "Complemento Agente"
+    ],
+    "correctIndex": 3,
+    "explanation": "En la voz pasiva, el elemento introducido por la preposición 'por' que realiza la acción verbal es el Complemento Agente.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.2.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la frase nominal 'El reloj de oro de mi abuelo', los elementos 'de oro' y 'de mi abuelo' funcionan respectivamente como:",
+    "options": [
+      "Aposiciones especificativas",
+      "Objetos directos del sustantivo",
+      "Modificadores indirectos preposicionales",
+      "Modificadores directos"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ambos sintagmas están encabezados por la preposición subordinante 'de' y modifican de forma mediata al núcleo 'reloj', siendo modificadores indirectos.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'Los niños caminaban contentos hacia la escuela', la palabra 'contentos' se clasifica sintácticamente como:",
+    "options": [
+      "Circunstancial de modo adverbial",
+      "Modificador directo del predicado",
+      "Atributo",
+      "Complemento Predicativo Subjetivo"
+    ],
+    "correctIndex": 3,
+    "explanation": "'Contentos' es un adjetivo que califica al sujeto 'los niños' concertando con él, pero acompaña a un verbo predicativo no copulativo ('caminaban').",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.2.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En 'El río Chili baña el fértil valle arequipeño', la estructura interna del Sujeto ('El río Chili') está compuesta por:",
+    "options": [
+      "MD (El) + Núcleo (río) + Aposición especificativa (Chili)",
+      "Núcleo (El río) + Modificador indirecto (Chili)",
+      "MD (El) + MD (río) + Núcleo (Chili)",
+      "Sujeto tácito compuesto"
+    ],
+    "correctIndex": 0,
+    "explanation": "'El' es determinante artículo (MD), 'río' es sustantivo común (Núcleo) y 'Chili' es nombre propio que especifica sin comas al río (Aposición especificativa).",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.2.1",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'El vicerrector les otorgó diplomas de honor a los mejores ingresantes', el pronombre 'les' cumple la función de:",
+    "options": [
+      "Objeto directo enclítico",
+      "Objeto indirecto reiterativo (coordinado con 'a los mejores ingresantes')",
+      "Modificador directo del verbo",
+      "Complemento agente"
+    ],
+    "correctIndex": 1,
+    "explanation": "El pronombre átono 'les' reduplica y reitera al Objeto Indirecto 'a los mejores ingresantes', fenómeno común de concordancia en el español.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.2.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  }
+]

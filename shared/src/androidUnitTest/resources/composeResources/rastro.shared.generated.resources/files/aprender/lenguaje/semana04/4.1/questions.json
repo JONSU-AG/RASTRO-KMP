@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t04_s01_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La unidad mínima del análisis morfológico que posee significado conceptual o gramatical se denomina:",
+    "options": [
+      "Sintagma",
+      "Fonema",
+      "Grafema",
+      "Morfema"
+    ],
+    "correctIndex": 3,
+    "explanation": "El morfema es la unidad mínima con significado de la lengua, a diferencia del fonema que carece de significado propio.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s01_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Las variantes formales que adopta un mismo morfema según el contexto (como in-, im- e i- para la negación) se conocen como:",
+    "options": [
+      "Monemas libres",
+      "Alomorfos",
+      "Infijos flexivos",
+      "Alófonos"
+    ],
+    "correctIndex": 1,
+    "explanation": "Los alomorfos son las distintas manifestaciones formales de un mismo morfema en virtud del entorno fonético.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s01_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la forma verbal conjugada 'escrib-í', la desinencia final '-í' es un morfema clasificado como:",
+    "options": [
+      "Flexivo amalgama",
+      "Derivativo prefijal",
+      "Flexivo simple de número",
+      "Infijo eufónico"
+    ],
+    "correctIndex": 0,
+    "explanation": "En los verbos, el morfema amalgama expresa simultáneamente y en una sola terminación el tiempo, modo, aspecto, persona y número.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s01_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la palabra 'panaderías', el morfema lexical o raíz que porta el significado básico es:",
+    "options": [
+      "pan-",
+      "-ería",
+      "-s",
+      "panad-"
+    ],
+    "correctIndex": 0,
+    "explanation": "El lexema base es 'pan-', de donde derivan términos de la misma familia como panadero, panadería, panecillo.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s01_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El elemento morfológico que se inserta entre la raíz y el sufijo únicamente para facilitar la pronunciación eufónica, sin aportar significado, es el:",
+    "options": [
+      "Flexivo simple",
+      "Infijo o interfijo",
+      "Morfema libre",
+      "Prefijo"
+    ],
+    "correctIndex": 1,
+    "explanation": "El infijo o interfijo (como '-ec-' en 'pan-ec-ito') es un elemento de unión carente de significado propio que enlaza la raíz con el sufijo.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s01_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes palabras está constituida exclusivamente por un morfema libre o independiente?",
+    "options": [
+      "Perrito",
+      "Desleal",
+      "Mares",
+      "Sol"
+    ],
+    "correctIndex": 3,
+    "explanation": "La palabra 'sol' es un morfema libre porque tiene significado y autonomía léxica plena sin necesidad de sufijos ni prefijos ligados.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.1.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s01_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Los morfemas que se adhieren a la raíz para generar una nueva palabra derivada o cambiar su categoría sintáctica son los:",
+    "options": [
+      "Morfemas flexivos",
+      "Morfemas libres",
+      "Alomorfos amalgama",
+      "Morfemas derivativos (afijos)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Los morfemas derivativos (prefijos, sufijos) permiten crear palabras nuevas en el léxico modificando el significado de la base.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s01_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el vocablo 'alumnas', los morfemas '-a' y '-s' cumplen respectivamente la función de indicar:",
+    "options": [
+      "Género femenino y número plural (flexivos simples)",
+      "Derivación apreciativa y aumentativa",
+      "Tiempo presente y aspecto imperfectivo",
+      "Morfemas trabados derivativos"
+    ],
+    "correctIndex": 0,
+    "explanation": "Los morfemas '-a' y '-s' son flexivos simples que aportan únicamente los accidentes de género femenino y número plural.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s01_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes opciones contiene un prefijo derivativo con significado de oposición o privación?",
+    "options": [
+      "Rehacer",
+      "Subdirector",
+      "Desarmar",
+      "Anteponer"
+    ],
+    "correctIndex": 2,
+    "explanation": "El prefijo derivativo 'des-' aporta la idea de privación, reversión o acción contraria en 'desarmar'.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t04_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La disciplina gramatical encargada de estudiar la estructura interna y los componentes significativos de las palabras es la:",
+    "options": [
+      "Morfología",
+      "Fonología",
+      "Sintaxis",
+      "Semiótica pura"
+    ],
+    "correctIndex": 0,
+    "explanation": "La morfología es la rama lingüística dedicada a la estructura interna, composición y variaciones formales de las palabras.",
+    "subject": "lenguaje",
+    "semana": 4,
+    "concept": "4.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

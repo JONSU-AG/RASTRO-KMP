@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t07_s03_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Según la Ortografía de la Real Academia Española (2010), los cargos públicos e institucionales (como presidente, ministro, papa o rey) se escriben:",
+    "options": [
+      "Siempre con mayúscula inicial por respeto institucional",
+      "Siempre con minúscula inicial, acompañen o no al nombre propio",
+      "Con mayúscula solo si no aparece el nombre de la persona",
+      "Con mayúscula si pertenecen al poder ejecutivo"
+    ],
+    "correctIndex": 1,
+    "explanation": "La RAE determinó en su reforma del 2010 que todos los cargos (presidente, papa, rey, ministro, decano) son nombres comunes y van siempre en minúscula.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.3.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s03_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes oraciones presenta un uso totalmente correcto de mayúsculas y minúsculas?",
+    "options": [
+      "El presidente de la república visitará Arequipa el próximo lunes.",
+      "El Presidente de la república visitará Arequipa el próximo lunes.",
+      "El presidente de la República visitará Arequipa el próximo Lunes.",
+      "El Presidente de la República visitará Arequipa el próximo Lunes."
+    ],
+    "correctIndex": 0,
+    "explanation": "'presidente' va en minúscula por ser cargo; 'república' en este contexto referencial genérico va en minúscula y los días de la semana ('lunes') van siempre en minúscula.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.3.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s03_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Al escribir nombres de accidentes geográficos como 'el río Chili' o 'el lago Titicaca', el sustantivo genérico (río, lago, volcán) debe escribirse con:",
+    "options": [
+      "Mayúscula obligatoria",
+      "Mayúscula solo en mapas",
+      "Minúscula obligatoria",
+      "Cursiva sin mayúscula"
+    ],
+    "correctIndex": 2,
+    "explanation": "Los sustantivos genéricos (río, lago, cordillera, volcán, océano) son nombres comunes y se escriben en minúscula; solo el nombre propio (Chili, Titicaca) lleva mayúscula.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.3.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s03_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es la norma de mayúsculas para los títulos de obras de creación literaria como novelas o ensayos?",
+    "options": [
+      "Todas las palabras del título deben llevar mayúscula inicial",
+      "No llevan mayúscula bajo ninguna circunstancia",
+      "Llevan mayúscula los sustantivos y adjetivos pero no los verbos",
+      "Solo lleva mayúscula la primera palabra del título y los nombres propios contenidos en él"
+    ],
+    "correctIndex": 3,
+    "explanation": "En los títulos de libros en español solo lleva mayúscula la palabra inicial y los nombres propios ('Cien años de soledad', 'La ciudad y los perros').",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.3.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s03_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En nombres de publicaciones periódicas como periódicos o revistas consagradas, la regla académica señala que:",
+    "options": [
+      "Se escriben con mayúscula inicial todas las palabras significativas (sustantivos, adjetivos, verbos)",
+      "Solo se escribe con mayúscula la primera palabra",
+      "Van totalmente en minúsculas",
+      "Depende del país de edición"
+    ],
+    "correctIndex": 0,
+    "explanation": "En diarios y revistas llevan mayúscula inicial todas las palabras sustantivas y adjetivas constitutivas: 'El Comercio', 'La República', 'El País'.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.3.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s03_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes opciones presenta una mayúscula incorrecta según la normativa RAE?",
+    "options": [
+      "Estudia Derecho Constitucional en la universidad.",
+      "Los vientos provienen del Norte de la provincia.",
+      "El Renacimiento transformó el arte europeo.",
+      "El Ministerio de Salud emitió una alerta sanitaria."
+    ],
+    "correctIndex": 1,
+    "explanation": "Los puntos cardinales (norte, sur, este, oeste) cuando designan orientaciones geográficas van obligatoriamente con minúscula ('del norte de la provincia').",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.3.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s03_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Los nombres de los meses del año y de las estaciones climáticas se escriben con minúscula, salvo cuando:",
+    "options": [
+      "Se refieren a meses de verano",
+      "Aparecen en documentos notariales",
+      "Forman parte de fechas históricas o festividades oficiales (ej. el 28 de Julio)",
+      "Aparecen al final de una oración"
+    ],
+    "correctIndex": 2,
+    "explanation": "Los meses van en minúscula salvo en conmemoraciones cívicas o festividades nacionales consolidadas como 'el 28 de Julio' o 'el Primero de Mayo'.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.3.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s03_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la expresión 'el papa Francisco celebró una misa en Roma', la palabra 'papa' se escribe con minúscula porque:",
+    "options": [
+      "No es una autoridad política",
+      "Es un nombre común de dignidad eclesiástica según la RAE 2010",
+      "Acompaña a un topónimo",
+      "Debe escribirse en latín"
+    ],
+    "correctIndex": 1,
+    "explanation": "Los títulos de dignidades civiles, nobiliarias o religiosas (papa, rey, obispo) son sustantivos comunes y se escriben en minúscula.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.3.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s03_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de los siguientes acontecimientos históricos está correctamente escrito con mayúsculas institucionales?",
+    "options": [
+      "La guerra del pacífico",
+      "La Guerra Del Pacífico",
+      "la guerra Del pacífico",
+      "La Guerra del Pacífico"
+    ],
+    "correctIndex": 3,
+    "explanation": "Los grandes acontecimientos y guerras históricas llevan mayúscula en los sustantivos y adjetivos que los integran: 'la Guerra del Pacífico'.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.3.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s03_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El nombre oficial de asignaturas o cursos académicos dentro de planes curriculares oficiales se escribe con:",
+    "options": [
+      "Minúscula obligatoria",
+      "Mayúscula solo en la primera letra del año",
+      "Mayúscula inicial en los sustantivos y adjetivos que las componen (ej. Álgebra Lineal)",
+      "Cursiva sin mayúsculas"
+    ],
+    "correctIndex": 2,
+    "explanation": "En contextos formales y académicos, los nombres de asignaturas y carreras llevan mayúscula inicial ('Química General', 'Ingeniería Civil').",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.3.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

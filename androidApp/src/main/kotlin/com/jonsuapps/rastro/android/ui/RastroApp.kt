@@ -18,9 +18,11 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.*
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.jonsuapps.rastro.android.data.GamificationRepository
 import com.jonsuapps.rastro.android.data.NotificationRepository
 import com.jonsuapps.rastro.android.data.RastroNotification
+import com.jonsuapps.rastro.android.data.UserProfileRepository
 import com.jonsuapps.rastro.gamification.GamificationManager
 import kotlinx.coroutines.delay
 import androidx.compose.animation.EnterTransition
@@ -91,9 +93,53 @@ fun RastroApp(
         }
     }
 
+    DisposableEffect(Unit) {
+        val settingsListener = FirebaseFirestore.getInstance().collection("site_settings").document("global")
+            .addSnapshotListener { snapshot, _ ->
+                if (snapshot != null && snapshot.exists()) {
+                    val maxLives = snapshot.getLong("maxLives")?.toInt() ?: GamificationManager.DEFAULT_MAX_HEARTS
+                    GamificationManager.setMaxHearts(maxLives)
+                    val recAmount = snapshot.getLong("lifeRecoveryAmount") ?: 3L
+                    val recUnitStr = snapshot.getString("lifeRecoveryUnit") ?: "MINUTOS"
+                    val recUnit = com.jonsuapps.rastro.gamification.LifeRecoveryUnit.fromString(recUnitStr)
+                    GamificationManager.setRecoveryConfig(recAmount, recUnit)
+                }
+            }
+        onDispose { settingsListener.remove() }
+    }
+
+    // Ticker ligero de regeneración periódica mientras la app está abierta
+    LaunchedEffect(Unit) {
+        while (true) {
+            GamificationManager.updateHeartRegeneration()
+            kotlinx.coroutines.delay(1000L)
+        }
+    }
+
     DisposableEffect(currentUser.uid) {
         val listeners = NotificationRepository.observe(currentUser.uid, context) { notifications = it }
-        onDispose { listeners.forEach { it.remove() } }
+        val profileListener = if (currentUser.uid.isNotBlank()) {
+            UserProfileRepository.observe(currentUser.uid) { data ->
+                @Suppress("UNCHECKED_CAST")
+                val blocked = data["blockedUsers"] as? List<String>
+                UserManager.applyProfileFields(
+                    displayName = data["displayName"] as? String,
+                    photoURL = data["photoURL"] as? String,
+                    bio = data["bio"] as? String,
+                    coverUrl = data["coverUrl"] as? String,
+                    coverGradient = data["coverGradient"] as? String,
+                    whatsappChannel = data["whatsappChannel"] as? String,
+                    tiktokUrl = data["tiktokUrl"] as? String,
+                    instagramUrl = data["instagramUrl"] as? String,
+                    uploadCount = (data["uploadCount"] as? Number)?.toInt(),
+                    blockedUsers = blocked
+                )
+            }
+        } else null
+        onDispose {
+            listeners.forEach { it.remove() }
+            profileListener?.remove()
+        }
     }
 
     LaunchedEffect(Unit) {
@@ -292,48 +338,59 @@ fun RastroApp(
         Scaffold(
             containerColor = theme.background,
             topBar = {
-                // Barra superior limpia con micro-botones (36px) del §3.16 del mapa
-                TopHeaderActions(
-                    colors = theme,
-                    onOpenPizarra = { navController.navigate(RastroScreen.Pizarra.route) },
-                    onOpenNotifications = { showNotifications = true },
-                    unreadNotifications = notifications.count { !it.read },
-                    onOpenPomodoro = {
-                        pomodoroState = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL)
-                    },
-                    onOpenFormulas = { navController.navigate(RastroScreen.Formulario.route) },
-                    onOpenThemeSelector = { isThemeDialogVisible = true }
-                )
+                if (currentRoute != RastroScreen.DiasDeRacha.route) {
+                    // Barra superior limpia con micro-botones (36px) del §3.16 del mapa
+                    TopHeaderActions(
+                        colors = theme,
+                        userPhotoUrl = currentUser.photoURL,
+                        onOpenProfile = {
+                            if (currentUser.isAuthenticated && !currentUser.isAnonymous) {
+                                navController.navigate(RastroScreen.Perfil.route)
+                            } else {
+                                navController.navigate(RastroScreen.Auth.route)
+                            }
+                        },
+                        onOpenNotifications = { showNotifications = true },
+                        unreadNotifications = notifications.count { !it.read },
+                        onOpenPomodoro = {
+                            pomodoroState = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL)
+                        },
+                        onOpenFormulas = { navController.navigate(RastroScreen.Formulario.route) },
+                        onOpenThemeSelector = { isThemeDialogVisible = true }
+                    )
+                }
             },
             bottomBar = {
-                // LiquidNavbar inferior compacto
-                LiquidNavbar(
-                    currentRoute = if (showMoreActions) RastroScreen.Legal.route else currentRoute,
-                    colors = theme,
-                    onNavigate = { screen ->
-                        showMoreActions = false
-                        if (screen == RastroScreen.Home) {
-                            // Al tocar Inicio, siempre desapilar de regreso al Home raíz de forma instantánea
-                            navController.popBackStack(navController.graph.findStartDestination().id, inclusive = false)
-                            if (navController.currentDestination?.route != RastroScreen.Home.route) {
-                                navController.navigate(RastroScreen.Home.route) {
+                if (currentRoute != RastroScreen.DiasDeRacha.route) {
+                    // LiquidNavbar inferior compacto
+                    LiquidNavbar(
+                        currentRoute = if (showMoreActions) RastroScreen.Legal.route else currentRoute,
+                        colors = theme,
+                        onNavigate = { screen ->
+                            showMoreActions = false
+                            if (screen == RastroScreen.Home) {
+                                // Al tocar Inicio, siempre desapilar de regreso al Home raíz de forma instantánea
+                                navController.popBackStack(navController.graph.findStartDestination().id, inclusive = false)
+                                if (navController.currentDestination?.route != RastroScreen.Home.route) {
+                                    navController.navigate(RastroScreen.Home.route) {
+                                        popUpTo(navController.graph.findStartDestination().id) {
+                                            inclusive = false
+                                        }
+                                        launchSingleTop = true
+                                    }
+                                }
+                            } else {
+                                navController.navigate(screen.route) {
                                     popUpTo(navController.graph.findStartDestination().id) {
                                         inclusive = false
                                     }
                                     launchSingleTop = true
                                 }
                             }
-                        } else {
-                            navController.navigate(screen.route) {
-                                popUpTo(navController.graph.findStartDestination().id) {
-                                    inclusive = false
-                                }
-                                launchSingleTop = true
-                            }
-                        }
-                    },
-                    onMoreClick = { showMoreActions = true }
-                )
+                        },
+                        onMoreClick = { showMoreActions = true }
+                    )
+                }
             }
         ) { paddingValues ->
             NavHost(
@@ -352,7 +409,20 @@ fun RastroApp(
                     HomeScreen(
                         colors = theme,
                         onNavigate = { route -> navController.navigate(route) },
-                        onOpenVocationalTest = { isVocationalDialogVisible = true }
+                        onOpenVocationalTest = { isVocationalDialogVisible = true },
+                        onNavigateToProfile = { uid -> navController.navigate(RastroScreen.UsuarioDetail.createRoute(uid)) },
+                        onNavigateToPublication = { uid, pubId -> navController.navigate(RastroScreen.UsuarioDetail.createRoute(uid, pubId)) }
+                    )
+                }
+                // 1b. Días de Racha Oficial
+                composable(RastroScreen.DiasDeRacha.route) {
+                    DiasDeRachaScreen(
+                        onBack = { navController.popBackStack() },
+                        onNavigateToAprender = {
+                            navController.navigate(RastroScreen.Aprender.route) {
+                                popUpTo(RastroScreen.Home.route) { inclusive = false }
+                            }
+                        }
                     )
                 }
 
@@ -406,7 +476,26 @@ fun RastroApp(
 
                 // 4. Biblioteca
                 composable(RastroScreen.Biblioteca.route) {
-                    BibliotecaScreen(onNavigateToAuth = { navController.navigate(RastroScreen.Auth.route) })
+                    BibliotecaScreen(
+                        onNavigateToAuth = { navController.navigate(RastroScreen.Auth.route) },
+                        onNavigateToProfile = { uid -> navController.navigate(RastroScreen.UsuarioDetail.createRoute(uid)) }
+                    )
+                }
+                // 4b. Biblioteca → pestaña Aportes directamente (desde carrusel Destacados)
+                composable(RastroScreen.BibliotecaAportes.route) {
+                    BibliotecaScreen(
+                        onNavigateToAuth = { navController.navigate(RastroScreen.Auth.route) },
+                        onNavigateToProfile = { uid -> navController.navigate(RastroScreen.UsuarioDetail.createRoute(uid)) },
+                        initialTab = 1
+                    )
+                }
+                // 4c. Biblioteca → pestaña Obras Literarias directamente
+                composable(RastroScreen.BibliotecaObras.route) {
+                    BibliotecaScreen(
+                        onNavigateToAuth = { navController.navigate(RastroScreen.Auth.route) },
+                        onNavigateToProfile = { uid -> navController.navigate(RastroScreen.UsuarioDetail.createRoute(uid)) },
+                        initialTab = 2
+                    )
                 }
 
                 // 5. Formulario
@@ -437,8 +526,12 @@ fun RastroApp(
                         onOpenPomodoro = { pomodoroState = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL) }
                     )
                 }
-                composable(RastroScreen.UsuarioDetail.route) {
+                composable(RastroScreen.UsuarioDetail.route) { backStackEntry ->
+                    val targetUid = backStackEntry.arguments?.getString("uid")
+                    val targetPubId = backStackEntry.arguments?.getString("pubId")
                     UserProfileScreen(
+                        targetUid = targetUid,
+                        targetPublicationId = targetPubId,
                         onOpenSettings = { isProfileSettingsVisible = true },
                         onNavigate = { route -> navController.navigate(route) },
                         onOpenPomodoro = { pomodoroState = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL) }
@@ -462,11 +555,11 @@ fun RastroApp(
                 }
 
                 // 12. Páginas Legales
-                composable(RastroScreen.Legal.route) { LegalScreen(title = "Más & Políticas", colors = theme) }
-                composable(RastroScreen.Politicas.route) { LegalScreen(title = "Políticas", colors = theme) }
-                composable(RastroScreen.Privacidad.route) { LegalScreen(title = "Privacidad", colors = theme) }
-                composable(RastroScreen.Terminos.route) { LegalScreen(title = "Términos de Servicio", colors = theme) }
-                composable(RastroScreen.EliminarCuenta.route) { LegalScreen(title = "Eliminar Cuenta", colors = theme) }
+                composable(RastroScreen.Legal.route) { LegalScreen(onNavigateBack = { navController.popBackStack() }, colors = theme) }
+                composable(RastroScreen.Politicas.route) { LegalScreen(title = "Políticas", onNavigateBack = { navController.popBackStack() }, colors = theme) }
+                composable(RastroScreen.Privacidad.route) { LegalScreen(title = "Privacidad", onNavigateBack = { navController.popBackStack() }, colors = theme) }
+                composable(RastroScreen.Terminos.route) { LegalScreen(title = "Términos de Servicio", onNavigateBack = { navController.popBackStack() }, colors = theme) }
+                composable(RastroScreen.EliminarCuenta.route) { LegalScreen(title = "Eliminar Cuenta", onNavigateBack = { navController.popBackStack() }, colors = theme) }
             }
         }
 
@@ -579,6 +672,9 @@ fun RastroApp(
                 onLogout = {
                     isProfileSettingsVisible = false
                     UserManager.clearUser()
+                    try {
+                        com.google.firebase.analytics.FirebaseAnalytics.getInstance(context).setUserId(null)
+                    } catch (_: Exception) {}
                     FirebaseAuth.getInstance().signOut()
                     navController.navigate(RastroScreen.Home.route)
                 },
@@ -588,6 +684,10 @@ fun RastroApp(
                 },
                 onOpenThemeSelector = {
                     isThemeDialogVisible = true
+                },
+                onOpenLegal = {
+                    isProfileSettingsVisible = false
+                    navController.navigate(RastroScreen.Legal.route)
                 }
             )
         }
@@ -628,20 +728,26 @@ fun RastroApp(
                 onDismiss = { showMoreActions = false },
                 onAction = { action ->
                     when (action) {
-                        MoreAction.FORMULAS -> navController.navigate(RastroScreen.Formulario.route)
-                        MoreAction.POMODORO -> pomodoroState = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL)
-                        MoreAction.WIDGETS -> showWidgetsHub = true
                         MoreAction.SETTINGS -> isProfileSettingsVisible = true
-                        MoreAction.POLICIES -> termsDialogInitialTab = 0
+                        MoreAction.WIDGETS -> showWidgetsHub = true
+                        MoreAction.PIZARRA -> navController.navigate(RastroScreen.Pizarra.route)
+                        MoreAction.LOGIN -> navController.navigate(RastroScreen.Auth.route)
+                        MoreAction.LOGOUT -> {
+                            isProfileSettingsVisible = false
+                            showMoreActions = false
+                            UserManager.clearUser()
+                            try {
+                                com.google.firebase.analytics.FirebaseAnalytics.getInstance(context).setUserId(null)
+                            } catch (_: Exception) {}
+                            FirebaseAuth.getInstance().signOut()
+                            AdminConfig.isUserViewModeEnabled = false
+                            navController.navigate(RastroScreen.Home.route)
+                        }
                         MoreAction.ADMIN -> navController.navigate(RastroScreen.Admin.route)
                         MoreAction.LOKI_LAB -> if (canOpenLokiLab) { showLokiLab = true }
                         MoreAction.TOGGLE_ADMIN_VIEW -> {
                             AdminConfig.isUserViewModeEnabled = !AdminConfig.isUserViewModeEnabled
                         }
-                        MoreAction.ACCOUNT -> navController.navigate(
-                            if (currentUser.isAuthenticated && !currentUser.isAnonymous)
-                                RastroScreen.Perfil.route else RastroScreen.Auth.route
-                        )
                     }
                 }
             )

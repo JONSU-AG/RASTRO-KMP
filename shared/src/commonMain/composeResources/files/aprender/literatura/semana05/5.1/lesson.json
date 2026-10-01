@@ -1,0 +1,35 @@
+{
+  "id": "lit_t05_s01",
+  "subjectId": "literatura",
+  "semana": 5,
+  "subtema": "5.1",
+  "title": "3.1. Literatura de la Conquista y Virreinato: El Inca Garcilaso de la Vega",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/literatura/LiteraturaSemana05.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/TEMA_05_Literatura_Peruana.md",
+  "learningObjectives": [
+    "Explicar al Inca Garcilaso como primer mestizo biológico y espiritual que corrige cronistas con quechua y Blas Valera",
+    "Distinguir Primera Parte 1609 sobre incas frente a Segunda Parte 1617 Historia General sobre conquista y guerras civiles",
+    "Contrastar costumbrismo criollista de Segura con Ña Catita frente a anticriollismo de Pardo con Un viaje y niño Goyito",
+    "Analizar el Discurso en el Politeama con Los viejos a la tumba y la reforma ortográfica de Pájinas libres",
+    "Reconocer Cartas a un ángel con Acuérdate de mí y Aves sin nido de Matto con trilogía de Kíllac"
+  ],
+  "theory": {
+    "id": "th_lit_t05_s01",
+    "asignatura": "Literatura",
+    "semana": 5,
+    "titulo": "3.1. Literatura de la Conquista y Virreinato: El Inca Garcilaso de la Vega",
+    "resumen": "",
+    "conceptosClave": [
+      "Inca Garcilaso Gómez Suárez 1539 con Isabel Chimpu Ocllo y primer mestizo de América",
+      "Comentarios Reales con utopía providencial análoga a Roma y fuentes orales cusqueñas",
+      "Primera Parte 1609 con Manco Cápac y leyes frente a Segunda 1617 con pizarristas y almagristas",
+      "Ña Catita 1856 con Juliana y don Alejo frente a niño Goyito con viaje a Chile",
+      "Don Juan con carta de Cusco que desenmascara a don Alejo casado y sin fortuna",
+      "Politeama 1888 con Los viejos a la tumba y nación de muchedumbres de indios",
+      "Salaverry con Acuérdate de mí y Matto con Aves sin nido en Kíllac",
+      "Reforma ortográfica con pájinas y ortojrafía como emancipación de la Academia"
+    ],
+    "admissionTip": "Si ves 1609 marca incas, si ves 1617 marca conquista, si ves Juliana con don Alejo marca Ña Catita, si ves Goyito 52 años marca Un viaje, si ves Los viejos a la tumba marca Politeama, si ves Kíllac marca Aves sin nido.",
+    "admissionExplanation": "La trampa clásica confunde Primera con Segunda Parte y cree que don Santos o el Jaguar tuvieron condena judicial, cuando el archivo militar y la caída al chiquero deciden el final sin juicio."
+  }
+}

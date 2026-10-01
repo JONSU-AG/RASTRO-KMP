@@ -1,0 +1,19 @@
+{
+  "subjectId": "lenguaje",
+  "name": "Lenguaje",
+  "area": "Comunicación",
+  "colorHex": "#F43F5E",
+  "description": "Teoría de la comunicación, funciones del lenguaje, gramática, ortografía, sintaxis y semántica para admisión UNSA.",
+  "weeks": 8,
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE",
+  "weekManifests": [
+    { "week": 1, "title": "Comunicación y Lenguaje", "path": "semana01/manifest.json" },
+    { "week": 2, "title": "Variaciones de la Lengua y Realidad Lingüística del Perú", "path": "semana02/manifest.json" },
+    { "week": 3, "title": "Fonología, Secuencias Vocálicas y Acentuación", "path": "semana03/manifest.json" },
+    { "week": 4, "title": "Morfología y Formación de Palabras", "path": "semana04/manifest.json" },
+    { "week": 5, "title": "Sintaxis: Categorías Gramaticales y Frases", "path": "semana05/manifest.json" },
+    { "week": 6, "title": "La Oración Gramatical: Simples y Compuestas", "path": "semana06/manifest.json" },
+    { "week": 7, "title": "Discurso Escrito, Puntuación y Ortografía", "path": "semana07/manifest.json" },
+    { "week": 8, "title": "Semántica y Lexicología: Signo y Relaciones Léxicas", "path": "semana08/manifest.json" }
+  ]
+}

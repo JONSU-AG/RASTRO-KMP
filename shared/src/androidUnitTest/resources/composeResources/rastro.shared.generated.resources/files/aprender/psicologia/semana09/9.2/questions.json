@@ -1,0 +1,182 @@
+[
+  {
+    "id": "psi_t09_s02_c01",
+    "statement": "Edward Thorndike formuló la 'Ley del Efecto' a partir de sus experimentos con gatos en 'cajas problema', principio fundacional que establece que:",
+    "options": [
+      "Los animales aprenden por telepatía instantánea.",
+      "El cerebro se expande cuando un gato come pescado.",
+      "Toda conducta es el producto exclusivo de la imitación social.",
+      "Las conductas seguidas de consecuencias satisfactorias o placenteras tienden a fortalecerse y repetirse, mientras que aquellas seguidas de consecuencias aversivas o displacenteras tienden a debilitarse y desaparecer."
+    ],
+    "correctIndex": 3,
+    "explanation": "La Ley del Efecto demostró que las consecuencias de un acto seleccionan mecánicamente las conexiones estímulo-respuesta exitosas por ensayo y error.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s02_c02",
+    "statement": "B. F. Skinner desarrolló el 'Condicionamiento Operante o Instrumental', cuyo postulado central sostiene que la conducta voluntaria se modifica y mantiene en función de:",
+    "options": [
+      "Los estímulos precedentes incondicionados exclusivamente.",
+      "La interpretación consciente del inconsciente reprimido.",
+      "El peso del encéfalo en gramos.",
+      "Las consecuencias ambientales que produce en el entorno (contingencias de reforzamiento o castigo)."
+    ],
+    "correctIndex": 3,
+    "explanation": "En el condicionamiento operante, el sujeto 'opera' sobre el medio ambiente; la conducta es modelada por los reforzadores o castigos que siguen a su emisión.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s02_c03",
+    "statement": "En el condicionamiento operante, el 'Reforzamiento Positivo' se define rigurosamente como aquel procedimiento que:",
+    "options": [
+      "Ignora la conducta del alumno hasta que se canse.",
+      "Retira el teléfono celular por una semana al adolescente rebelde.",
+      "Aplica una descarga eléctrica para suprimir un comportamiento inadecuado.",
+      "Aumenta la probabilidad de emisión de una conducta mediante la entrega o adición de un estímulo placentero o deseado tras la ejecución de la conducta."
+    ],
+    "correctIndex": 3,
+    "explanation": "Refuerzo positivo = dar algo agradable (felicitación, dinero, comida, elogio) inmediatamente después de la conducta para que esta se incremente en el futuro.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s02_c04",
+    "statement": "El 'Reforzamiento Negativo' se distingue conceptualmente del castigo porque el reforzamiento negativo:",
+    "options": [
+      "Aumenta y fortalece la conducta futura al eliminar, retirar o evitar un estímulo aversivo o desagradable cuando el sujeto emite la conducta (conductas de escape y evitación).",
+      "Presenta un estímulo reforzador apetitivo inmediatamente después de la respuesta.",
+      "Disminuye y extingue una conducta indeseable mediante un insulto verbal.",
+      "Es un procedimiento pedagógico prohibido por la ley."
+    ],
+    "correctIndex": 0,
+    "explanation": "Reforzar SIEMPRE significa aumentar la conducta. Es 'negativo' porque la conducta elimina algo molesto (tomar aspirina elimina el dolor de cabeza, por eso volveremos a tomarla).",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s02_c05",
+    "statement": "El 'Castigo Positivo' (por aplicación) tiene como finalidad pedagógica y conductual:",
+    "options": [
+      "Incrementar las notas escolares premiando con dinero en efectivo.",
+      "Retirar los privilegios de juego al niño.",
+      "Disminuir o extinguir la frecuencia de una conducta indeseada mediante la presentación o aplicación de un estímulo aversivo y desagradable (ej. una reprimenda, llamada de atención o multa de tránsito).",
+      "Aprender a tocar violín escuchando música clásica."
+    ],
+    "correctIndex": 2,
+    "explanation": "Castigo SIEMPRE busca disminuir o extinguir una conducta. Es positivo porque se añade o aplica un estímulo aversivo tras la conducta infractora.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s02_c06",
+    "statement": "El 'Castigo Negativo' (costo de respuesta o tiempo fuera) consiste en la disminución de una conducta mediante:",
+    "options": [
+      "La administración de choques eléctricos dolorosos.",
+      "El aplauso efusivo de los compañeros de clase.",
+      "La asignación de una beca de honor.",
+      "La retirada, pérdida o privación de un estímulo apetitivo o privilegio que la persona ya poseía (ej. quitarle el automóvil por llegar tarde, suspender el recreo)."
+    ],
+    "correctIndex": 3,
+    "explanation": "Castigo negativo = quitar algo agradable como consecuencia de una mala conducta para suprimir su recurrencia futura.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s02_c07",
+    "statement": "La Teoría del Aprendizaje Social o Vicario (Observacional), formulada por Albert Bandura con el famoso experimento del 'Muñeco Bobo', demostró que los seres humanos pueden aprender:",
+    "options": [
+      "Únicamente si son sometidos a condicionamiento fisiológico directo con electrochoques.",
+      "Por observación e imitación de la conducta de modelos significativos y de las consecuencias (premios o castigos vicarios) que estos reciben, sin necesidad de práctica directa inmediata.",
+      "Solo durante los primeros seis meses de vida biológica.",
+      "Por transmisión genética directa de los padres."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bandura demostró que los niños expuestos a modelos adultos que golpeaban al muñeco Bobo imitaron con agresividad idénticas pautas motoras, formulando las fases de atención, retención, reproducción y motivación.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s02_c08",
+    "statement": "En la psicología cognitiva, David Ausubel postuló la teoría del 'Aprendizaje Significativo', la cual sostiene que el verdadero aprendizaje ocurre cuando:",
+    "options": [
+      "Se memoriza mecánicamente un conjunto de datos aislados por simple repetición asociativa sin conexión conceptual.",
+      "La nueva información se relaciona y conecta de manera sustantiva y no arbitraria con los conocimientos y esquemas previos que ya posee el estudiante en su estructura cognitiva.",
+      "Se aplican programas de reforzamiento continuo mediante fichas canjeables de conducta.",
+      "El estudiante reproduce miméticamente las pautas conductuales observadas en un modelo vicario."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ausubel contrastó el aprendizaje memorístico mecánico con el significativo: los saberes previos anclan y dotan de sentido a los nuevos conceptos (inclusión cognitiva).",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s02_c09",
+    "statement": "Jerome Bruner propuso la teoría del 'Aprendizaje por Descubrimiento', en la cual el rol central del docente consiste en:",
+    "options": [
+      "Resolver todos los ejercicios en la pizarra sin permitir preguntas.",
+      "Dictar clases magistrales pasivas de cinco horas continuas.",
+      "Actuar como facilitador y guía que proporciona retos y andamiajes para que sea el propio estudiante quien indague, descubra y construya inductivamente los principios y conceptos fundamentales.",
+      "Castigar severamente cualquier equivocación cometida en clase."
+    ],
+    "correctIndex": 2,
+    "explanation": "Bruner defendió que el descubrimiento guiado despierta la curiosidad intrínseca y la metacognición, transformando al alumno en un investigador activo.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.2.5",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s02_c10",
+    "statement": "Wolfgang Köhler estudió el aprendizaje en chimpancés (el célebre mono Sultán) y descubrió el fenómeno cognitivo de 'Insight' (comprensión súbita o 'discernimiento'), el cual ocurre cuando el animal:",
+    "options": [
+      "Reorganiza súbitamente los elementos del campo perceptual y mental, comprendiendo de golpe la solución a un problema (experiencia '¡Ajá!').",
+      "Aprende tras dos mil ensayos ciegos por condicionamiento operante estricto.",
+      "Se rinde y abandona toda actividad motora.",
+      "Aprende mediante ensayo y error ciego por reforzamiento gradual."
+    ],
+    "correctIndex": 0,
+    "explanation": "Köhler probó que el aprendizaje no es solo ensayo-error ciego, sino reorganización perceptual inteligente de la situación para alcanzar una banana uniendo palos o apilando cajas.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.2.5",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

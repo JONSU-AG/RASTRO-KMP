@@ -54,6 +54,7 @@ import com.jonsuapps.rastro.model.ObraLiteraria
 import com.jonsuapps.rastro.theme.RastroShapes
 import com.jonsuapps.rastro.theme.ThemeManager
 import com.jonsuapps.rastro.android.ui.components.UploadMaterialDialog
+import com.jonsuapps.rastro.android.ui.components.AddObraDialog
 import com.jonsuapps.rastro.android.ui.components.appleGlass
 import com.jonsuapps.rastro.android.ui.components.bouncyClick
 import com.jonsuapps.rastro.android.ui.components.SkeletonCourseCard
@@ -69,8 +70,11 @@ import com.jonsuapps.rastro.android.ui.components.LucideBookmarkIcon
 import com.jonsuapps.rastro.android.ui.components.LucideChatIcon
 import com.jonsuapps.rastro.android.ui.components.LucideShareIcon
 import com.jonsuapps.rastro.android.ui.components.LucideStarIcon
+import com.jonsuapps.rastro.android.ui.components.LucideBookmarkIcon
 import com.jonsuapps.rastro.android.ui.components.LucideTrashIcon
 import com.jonsuapps.rastro.android.ui.components.ReportPostDialog
+import com.jonsuapps.rastro.android.ui.components.BlockUserDialog
+import com.jonsuapps.rastro.android.ui.components.ReportCommentDialog
 import com.jonsuapps.rastro.android.ui.components.RastroStickerDialog
 import com.jonsuapps.rastro.android.data.UserProfileRepository
 import com.jonsuapps.rastro.android.data.FavoritesRepository
@@ -82,12 +86,13 @@ import com.jonsuapps.rastro.auth.AdminConfig
 fun BibliotecaScreen(
     modifier: Modifier = Modifier,
     onNavigateToAuth: () -> Unit = {},
-    onNavigateToProfile: (String) -> Unit = {}
+    onNavigateToProfile: (String) -> Unit = {},
+    initialTab: Int = 0
 ) {
     val theme = ThemeManager.currentTheme
     val uriHandler = LocalUriHandler.current
     var communityUploads by remember { mutableStateOf(emptyList<UserUpload>()) }
-    var selectedTab by remember { mutableIntStateOf(0) }
+    var selectedTab by remember { mutableIntStateOf(initialTab) }
     var isUploadDialogOpen by remember { mutableStateOf(false) }
     var showAllPreviews by remember { mutableStateOf(true) }
     var searchQuery by remember { mutableStateOf("") }
@@ -110,23 +115,105 @@ fun BibliotecaScreen(
             .addSnapshotListener { snap, _ -> if (snap != null) bookEdits = snap.documents.associate { it.id to it.data.orEmpty() } }
         onDispose { listener.remove() }
     }
+    var isAddObraDialogOpen by remember { mutableStateOf(false) }
+    val canonicalObras = remember { LiteraturaRepository.obras }
+    val canonicalIds = remember { canonicalObras.map { it.id }.toSet() }
+
     val displayedObras = remember(selectedCategoryFilter, searchQuery, bookEdits) {
-        LiteraturaRepository.getByCategoria(selectedCategoryFilter).map { original ->
+        val mergedCanonical = canonicalObras.map { original ->
             val edit = bookEdits[original.id].orEmpty()
-            original.copy(titulo = edit["titulo"] as? String ?: original.titulo,
+            val editBannerUrl = edit["bannerUrl"] as? String ?: original.bannerUrl
+            val editCharacters = (edit["personajes"] as? List<*>)?.mapNotNull { item ->
+                val map = item as? Map<*, *> ?: return@mapNotNull null
+                val nombre = map["nombre"] as? String ?: ""
+                val rol = map["rol"] as? String ?: ""
+                val desc = map["descripcion"] as? String ?: ""
+                val img = map["imageUrl"] as? String ?: ""
+                if (nombre.isNotBlank()) com.jonsuapps.rastro.model.PersonajeLiterario(nombre, rol, desc, img) else null
+            }
+            val mergedPersonajes = if (!editCharacters.isNullOrEmpty()) {
+                original.personajes.map { origChar ->
+                    val matched = editCharacters.firstOrNull { it.nombre.equals(origChar.nombre, ignoreCase = true) }
+                    if (matched != null && matched.imageUrl.isNotBlank()) {
+                        origChar.copy(imageUrl = matched.imageUrl)
+                    } else origChar
+                }
+            } else {
+                original.personajes
+            }
+
+            original.copy(
+                titulo = edit["titulo"] as? String ?: original.titulo,
                 autor = edit["autor"] as? String ?: original.autor,
                 sinopsis = edit["sinopsis"] as? String ?: original.sinopsis,
                 contextoHistorico = edit["contextoHistorico"] as? String ?: original.contextoHistorico,
-                coverUrl = edit["coverUrl"] as? String ?: original.coverUrl)
-        }.filter { obra ->
-            searchQuery.isBlank() || listOf(obra.titulo, obra.autor, obra.categoria, obra.corriente)
+                coverUrl = edit["coverUrl"] as? String ?: original.coverUrl,
+                bannerUrl = editBannerUrl,
+                personajes = mergedPersonajes
+            )
+        }
+
+        val additionalObras = bookEdits.filterKeys { it !in canonicalIds }.mapNotNull { (id, edit) ->
+            val titulo = edit["titulo"] as? String ?: return@mapNotNull null
+            val autor = edit["autor"] as? String ?: return@mapNotNull null
+            val cat = edit["categoria"] as? String ?: "Literatura Peruana"
+            val gen = edit["genero"] as? String ?: "Narrativo"
+            val esp = edit["especie"] as? String ?: "Novela"
+            val corr = edit["corriente"] as? String ?: "Contemporánea"
+            val anio = edit["anio"] as? String ?: edit["ano"] as? String ?: "S/F"
+            val sin = edit["sinopsis"] as? String ?: ""
+            val ctx = edit["contextoHistorico"] as? String ?: ""
+            val cov = edit["coverUrl"] as? String ?: ""
+            val ban = edit["bannerUrl"] as? String ?: ""
+            val color = edit["colorHex"] as? String ?: "#047857"
+
+            val editChars = (edit["personajes"] as? List<*>)?.mapNotNull { item ->
+                val map = item as? Map<*, *> ?: return@mapNotNull null
+                val nombre = map["nombre"] as? String ?: ""
+                val rol = map["rol"] as? String ?: ""
+                val desc = map["descripcion"] as? String ?: ""
+                val img = map["imageUrl"] as? String ?: ""
+                if (nombre.isNotBlank()) com.jonsuapps.rastro.model.PersonajeLiterario(nombre, rol, desc, img) else null
+            } ?: emptyList()
+
+            com.jonsuapps.rastro.model.ObraLiteraria(
+                id = id,
+                titulo = titulo,
+                autor = autor,
+                anio = anio,
+                pais = edit["pais"] as? String ?: "Perú",
+                genero = gen,
+                especie = esp,
+                corriente = corr,
+                temaPrincipal = edit["temaPrincipal"] as? String ?: "General",
+                colorHex = color,
+                categoria = cat,
+                sinopsis = sin,
+                contextoHistorico = ctx,
+                personajes = editChars,
+                coverUrl = cov,
+                bannerUrl = ban
+            )
+        }
+
+        val allObras = mergedCanonical + additionalObras
+        val categoryFiltered = if (selectedCategoryFilter == "Todas") {
+            allObras
+        } else {
+            allObras.filter { it.categoria.equals(selectedCategoryFilter, ignoreCase = true) }
+        }
+
+        categoryFiltered.filter { obra ->
+            searchQuery.isBlank() || listOf(obra.titulo, obra.autor, obra.categoria, obra.corriente, obra.temaPrincipal)
                 .any { it.contains(searchQuery.trim(), ignoreCase = true) }
         }
     }
-    val displayedUploads = remember(communityUploads, searchQuery) {
+    val currentUser by UserManager.currentUser.collectAsState()
+    val displayedUploads = remember(communityUploads, searchQuery, currentUser.blockedUsers) {
         communityUploads.filter { upload ->
-            searchQuery.isBlank() || listOf(upload.title, upload.author, upload.category, upload.description)
-                .any { it.contains(searchQuery.trim(), ignoreCase = true) }
+            upload.ownerUid !in currentUser.blockedUsers &&
+            (searchQuery.isBlank() || listOf(upload.title, upload.author, upload.category, upload.description)
+                .any { it.contains(searchQuery.trim(), ignoreCase = true) })
         }
     }
 
@@ -160,6 +247,10 @@ fun BibliotecaScreen(
         isOpen = isUploadDialogOpen,
         onClose = { isUploadDialogOpen = false },
         onRequestSignIn = onNavigateToAuth
+    )
+    AddObraDialog(
+        isOpen = isAddObraDialogOpen,
+        onDismiss = { isAddObraDialogOpen = false }
     )
 
     Box(
@@ -362,12 +453,44 @@ fun BibliotecaScreen(
             }
         }
 
-        // Filtro por Categoría
+        // Cabecera y Filtro por Categoría de Obras
         if (selectedTab == 2) item {
-            LazyRow(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                modifier = Modifier.fillMaxWidth()
-            ) {
+            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Column {
+                        Text(
+                            text = "Catálogo de Obras Literarias",
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = theme.textPrimary
+                        )
+                        Text(
+                            text = "${displayedObras.size} obras disponibles",
+                            fontSize = 11.5.sp,
+                            color = theme.textSecondary
+                        )
+                    }
+                    Sticker3dButton(
+                        onClick = { isAddObraDialogOpen = true },
+                        containerColor = Color(0xFF047857),
+                        bottomBevelColor = Color(0xFF065F46),
+                        strokeColor = theme.strokeBorder,
+                        shape = RastroShapes.Pill,
+                        contentPadding = PaddingValues(horizontal = 14.dp, vertical = 7.dp)
+                    ) {
+                        Icon(Icons.Rounded.Add, contentDescription = null, tint = Color.White, modifier = Modifier.size(16.dp))
+                        Spacer(Modifier.width(6.dp))
+                        Text("Añadir Obra", fontWeight = FontWeight.Bold, color = Color.White, fontSize = 12.sp)
+                    }
+                }
+                LazyRow(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
                 items(categories) { cat ->
                     val isSelected = cat == selectedCategoryFilter
                     FilterChip(
@@ -391,6 +514,7 @@ fun BibliotecaScreen(
                 }
             }
         }
+    }
 
         // Listado de Obras
         if (selectedTab == 2) items(displayedObras, key = { it.id }) { obra ->
@@ -454,8 +578,8 @@ private fun OfficialMaterialCard(item: OfficialMaterialResource, theme: com.jons
                 val allFavorites by FavoritesRepository.favoritesFlow.collectAsState()
                 val isFav = allFavorites.any { it.itemId == item.id && it.type == FavoriteType.MATERIAL }
 
-                LucideStarIcon(
-                    isStarred = isFav,
+                LucideBookmarkIcon(
+                    isBookmarked = isFav,
                     onClick = {
                         DuolingoHaptics.playOptionSelected(context)
                         FavoritesRepository.toggle(
@@ -468,7 +592,7 @@ private fun OfficialMaterialCard(item: OfficialMaterialResource, theme: com.jons
                             extra = item.url
                         )
                     },
-                    activeColor = Color(0xFFD97706),
+                    activeColor = Color(0xFF6366F1),
                     inactiveColor = theme.textSecondary,
                     size = 20.dp
                 )
@@ -514,6 +638,7 @@ fun CommunityUploadCard(
     upload: UserUpload,
     theme: com.jonsuapps.rastro.theme.RastroPalette,
     defaultPreviewOpen: Boolean = true,
+    isHighlighted: Boolean = false,
     onNavigateToProfile: ((String) -> Unit)? = null,
     onRequestSignIn: () -> Unit = {}
 ) {
@@ -522,11 +647,17 @@ fun CommunityUploadCard(
     val uriHandler = LocalUriHandler.current
     var showComments by remember(upload.id) { mutableStateOf(false) }
     var comments by remember(upload.id) { mutableStateOf(emptyList<com.jonsuapps.rastro.android.data.UploadComment>()) }
+    val visibleComments = remember(comments, user.blockedUsers) {
+        comments.filter { it.authorUid !in user.blockedUsers }
+    }
     var commentText by remember(upload.id) { mutableStateOf("") }
     var localReactions by remember(upload.reactions) { mutableStateOf(upload.reactions) }
     var editingCommentId by remember(upload.id) { mutableStateOf<String?>(null) }
     var editingCommentText by remember(upload.id) { mutableStateOf("") }
     var confirmReport by remember(upload.id) { mutableStateOf(false) }
+    var showBlockAuthorConfirm by remember(upload.id) { mutableStateOf(false) }
+    var reportingComment by remember(upload.id) { mutableStateOf<com.jonsuapps.rastro.android.data.UploadComment?>(null) }
+    var blockingCommentAuthor by remember(upload.id) { mutableStateOf<com.jonsuapps.rastro.android.data.UploadComment?>(null) }
     var showEditDialog by remember(upload.id) { mutableStateOf(false) }
     var showDeleteConfirm by remember(upload.id) { mutableStateOf(false) }
     var isFollowingAuthor by remember(upload.ownerUid, user.uid) { mutableStateOf(false) }
@@ -557,13 +688,26 @@ fun CommunityUploadCard(
 
     Sticker3dCard(
         modifier = Modifier.fillMaxWidth(),
-        containerColor = theme.surface,
-        strokeColor = theme.strokeBorder,
-        bevelColor = theme.cardBevel,
-        bevelHeight = 4.dp,
+        containerColor = if (isHighlighted) Color(0xFFFFFBEB) else theme.surface,
+        strokeColor = if (isHighlighted) Color(0xFFF59E0B) else theme.strokeBorder,
+        bevelColor = if (isHighlighted) Color(0xFFD97706) else theme.cardBevel,
+        bevelHeight = if (isHighlighted) 5.dp else 4.dp,
         shape = RoundedCornerShape(20.dp)
     ) {
         Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            if (isHighlighted) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(Color(0xFFFEF3C7))
+                        .padding(horizontal = 8.dp, vertical = 3.dp)
+                ) {
+                    Icon(Icons.Rounded.Star, contentDescription = null, tint = Color(0xFFD97706), modifier = Modifier.size(13.dp))
+                    Text("Publicación destacada", fontSize = 10.5.sp, fontWeight = FontWeight.Black, color = Color(0xFFB45309))
+                }
+            }
             // 1. Cabecera: Foto y Nombre clickeables para ir al perfil + Botón Seguir
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -638,21 +782,41 @@ fun CommunityUploadCard(
                         Spacer(Modifier.width(4.dp))
                     }
 
-                    // Estrella / Pin Interactivo Animado (Lucide Star)
+                    // Estrella Destacado (solo admin) — El pin de propietario aparece inline abajo
+                    // BUG FIX: antes era isFeatured || isPinned lo que encendía la estrella al fijar
                     LucideStarIcon(
-                        isStarred = upload.isFeatured || upload.isPinned,
+                        isStarred = upload.isFeatured,
                         onClick = {
                             DuolingoHaptics.playOptionSelected(context)
-                            if (canManageUpload) {
-                                UserUploadRepository.togglePinned(upload.id, !upload.isPinned)
-                            } else if (AdminConfig.isEffectiveAdmin(user.email)) {
+                            if (AdminConfig.isEffectiveAdmin(user.email)) {
+                                // Solo el admin puede destacar/quitar destacado desde este botón
                                 UserUploadRepository.toggleFeatured(upload.id, !upload.isFeatured, user.uid)
                             }
+                            // El propietario usa el botón PushPin inline para isPinned
                         },
                         activeColor = Color(0xFFF59E0B),
                         inactiveColor = theme.textSecondary,
                         size = 20.dp
                     )
+
+                    // Botón PIN inline — solo visible para el propietario del contenido
+                    if (isOwnUpload) {
+                        val haptic = androidx.compose.ui.platform.LocalHapticFeedback.current
+                        IconButton(
+                            onClick = {
+                                haptic.performHapticFeedback(androidx.compose.ui.hapticfeedback.HapticFeedbackType.LongPress)
+                                UserUploadRepository.togglePinned(upload.id, !upload.isPinned)
+                            },
+                            modifier = Modifier.size(32.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Rounded.PushPin,
+                                contentDescription = if (upload.isPinned) "Desfijar" else "Fijar en perfil",
+                                tint = if (upload.isPinned) theme.accent else theme.textSecondary,
+                                modifier = Modifier.size(18.dp)
+                            )
+                        }
+                    }
                     Spacer(Modifier.width(4.dp))
 
                     // Menú desplegable de 3 Puntos (⋮) con opciones según rol (Imagen 2)
@@ -734,6 +898,17 @@ fun CommunityUploadCard(
                                         confirmReport = true
                                     }
                                 )
+                                if (!isOwnUpload) {
+                                    DropdownMenuItem(
+                                        text = { Text("Bloquear usuario", color = Color(0xFFEF4444), fontWeight = FontWeight.Bold) },
+                                        leadingIcon = { Icon(Icons.Rounded.Block, contentDescription = null, tint = Color(0xFFEF4444)) },
+                                        enabled = canInteract,
+                                        onClick = {
+                                            showThreeDotsMenu = false
+                                            showBlockAuthorConfirm = true
+                                        }
+                                    )
+                                }
                                 DropdownMenuItem(
                                     text = { Text("Eliminar", color = Color(0xFFEF4444), fontWeight = FontWeight.Bold) },
                                     leadingIcon = { Icon(Icons.Rounded.Delete, contentDescription = null, tint = Color(0xFFEF4444)) },
@@ -752,6 +927,17 @@ fun CommunityUploadCard(
                                         confirmReport = true
                                     }
                                 )
+                                if (!isOwnUpload) {
+                                    DropdownMenuItem(
+                                        text = { Text("Bloquear usuario", color = Color(0xFFEF4444), fontWeight = FontWeight.Bold) },
+                                        leadingIcon = { Icon(Icons.Rounded.Block, contentDescription = null, tint = Color(0xFFEF4444)) },
+                                        enabled = canInteract,
+                                        onClick = {
+                                            showThreeDotsMenu = false
+                                            showBlockAuthorConfirm = true
+                                        }
+                                    )
+                                }
                             }
                         }
                     }
@@ -812,7 +998,7 @@ fun CommunityUploadCard(
                 ) {
                     Sticker3dActionPill(
                         icon = Icons.Rounded.ChatBubbleOutline,
-                        label = "Comentarios (${comments.size})",
+                        label = "Comentarios (${visibleComments.size})",
                         isSelected = showComments,
                         theme = theme,
                         onClick = { showComments = !showComments }
@@ -894,7 +1080,7 @@ fun CommunityUploadCard(
             // Comentarios (Editar, Eliminar y Notificar al dueño)
             if (showComments) {
                 HorizontalDivider(color = theme.borderSubtle)
-                comments.forEach { comment ->
+                visibleComments.forEach { comment ->
                     val isMyComment = comment.authorUid == user.uid || (comment.authorUid.isBlank() && comment.authorName == user.displayName)
                     val canManageComment = isMyComment || canManageUpload
                     if (editingCommentId == comment.id) {
@@ -977,6 +1163,39 @@ fun CommunityUploadCard(
                                         Icon(Icons.Rounded.DeleteOutline, contentDescription = "Eliminar", tint = Color(0xFFEF4444), modifier = Modifier.size(15.dp))
                                     }
                                 }
+                            } else {
+                                var commentMenuExpanded by remember(comment.id) { mutableStateOf(false) }
+                                Box {
+                                    IconButton(
+                                        onClick = { commentMenuExpanded = true },
+                                        modifier = Modifier.size(26.dp)
+                                    ) {
+                                        Icon(Icons.Rounded.MoreVert, contentDescription = "Opciones", tint = theme.textSecondary, modifier = Modifier.size(16.dp))
+                                    }
+                                    DropdownMenu(
+                                        expanded = commentMenuExpanded,
+                                        onDismissRequest = { commentMenuExpanded = false }
+                                    ) {
+                                        DropdownMenuItem(
+                                            text = { Text("Reportar comentario", fontWeight = FontWeight.Bold) },
+                                            leadingIcon = { Icon(Icons.Rounded.Flag, contentDescription = null) },
+                                            onClick = {
+                                                commentMenuExpanded = false
+                                                reportingComment = comment
+                                            }
+                                        )
+                                        if (comment.authorUid.isNotBlank() && comment.authorUid != user.uid) {
+                                            DropdownMenuItem(
+                                                text = { Text("Bloquear a ${comment.authorName}", color = Color(0xFFEF4444), fontWeight = FontWeight.Bold) },
+                                                leadingIcon = { Icon(Icons.Rounded.Block, contentDescription = null, tint = Color(0xFFEF4444)) },
+                                                onClick = {
+                                                    commentMenuExpanded = false
+                                                    blockingCommentAuthor = comment
+                                                }
+                                            )
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -1021,6 +1240,33 @@ fun CommunityUploadCard(
                     upload = upload,
                     currentUser = user,
                     onDismiss = { confirmReport = false }
+                )
+            }
+
+            if (showBlockAuthorConfirm) {
+                BlockUserDialog(
+                    targetUid = upload.ownerUid,
+                    targetName = upload.author,
+                    currentUid = user.uid,
+                    onDismiss = { showBlockAuthorConfirm = false }
+                )
+            }
+
+            blockingCommentAuthor?.let { commentItem ->
+                BlockUserDialog(
+                    targetUid = commentItem.authorUid,
+                    targetName = commentItem.authorName,
+                    currentUid = user.uid,
+                    onDismiss = { blockingCommentAuthor = null }
+                )
+            }
+
+            reportingComment?.let { commentItem ->
+                ReportCommentDialog(
+                    comment = commentItem,
+                    upload = upload,
+                    currentUser = user,
+                    onDismiss = { reportingComment = null }
                 )
             }
 
@@ -1138,25 +1384,12 @@ fun ObraLiterariaCard(
                 .padding(14.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Portada Estilizada
-            Box(
-                modifier = Modifier
-                    .size(width = 54.dp, height = 72.dp)
-                    .clip(RastroShapes.Squircle)
-                    .background(coverColor)
-                    .border(1.5.dp, theme.strokeBorder.copy(alpha = 0.5f), RastroShapes.Squircle),
-                contentAlignment = Alignment.Center
-            ) {
-                if (obra.coverUrl.isNotBlank()) com.jonsuapps.rastro.android.ui.components.CachedRemoteImage(
-                    url = obra.coverUrl, contentDescription = "Portada de ${obra.titulo}",
-                    modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Crop)
-                else Icon(
-                    imageVector = Icons.Rounded.MenuBook,
-                    contentDescription = null,
-                    tint = Color.White.copy(alpha = 0.9f),
-                    modifier = Modifier.size(28.dp)
-                )
-            }
+            // Portada Cartoon con Proporción y Fallback SVG RASTRO
+            com.jonsuapps.rastro.android.ui.screens.literatura.ObraCoverGraphic(
+                obra = obra,
+                width = 54.dp,
+                height = 74.dp
+            )
 
             Spacer(modifier = Modifier.width(14.dp))
 
@@ -1186,13 +1419,13 @@ fun ObraLiterariaCard(
                 )
             }
 
-            IconButton(onClick = onToggleFavorito) {
-                Icon(
-                    imageVector = if (isFavorito) Icons.Rounded.Star else Icons.Rounded.StarOutline,
-                    contentDescription = "Favorito",
-                    tint = if (isFavorito) Color(0xFFF59E0B) else theme.textSecondary
-                )
-            }
+            LucideBookmarkIcon(
+                isBookmarked = isFavorito,
+                onClick = onToggleFavorito,
+                activeColor = Color(0xFF6366F1),
+                inactiveColor = theme.textSecondary,
+                size = 22.dp
+            )
         }
     }
 }
@@ -1203,560 +1436,14 @@ fun LiteraturaViewerDialog(
     theme: com.jonsuapps.rastro.theme.RastroPalette,
     onDismiss: () -> Unit
 ) {
-    var showBookEditor by remember { mutableStateOf(false) }
-    val editorUser by UserManager.currentUser.collectAsState()
-    if (showBookEditor) BookEditorDialog(obra) { showBookEditor = false }
-    var activeTab by remember { mutableIntStateOf(0) } // 0: Resumen Detallado, 1: Apunte de Repaso
-    val savedObraIds by UserManager.savedObraIds.collectAsState()
-    val isSaved = obra.id in savedObraIds
-    val context = LocalContext.current
-    var fontScaleState by remember { mutableIntStateOf(1) } // 0: Compact, 1: Normal, 2: Large
-    val bodyFontSize = when (fontScaleState) {
-        0 -> 13.sp
-        1 -> 15.sp
-        else -> 17.sp
-    }
-    val lineHeight = when (fontScaleState) {
-        0 -> 18.sp
-        1 -> 22.sp
-        else -> 26.sp
-    }
-
     Dialog(
         onDismissRequest = onDismiss,
         properties = DialogProperties(usePlatformDefaultWidth = false)
     ) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color.Black.copy(alpha = 0.65f))
-                .padding(horizontal = 10.dp, vertical = 12.dp),
-            contentAlignment = Alignment.Center
-        ) {
-            com.jonsuapps.rastro.android.ui.components.Sticker3dCard(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .widthIn(max = 680.dp)
-                    .fillMaxHeight(0.96f)
-                    .clickable(enabled = false) {}, // Evita que se cierre al hacer clic adentro
-                shape = RoundedCornerShape(26.dp),
-                containerColor = theme.background,
-                bottomBevelColor = theme.cardBevel,
-                strokeColor = theme.strokeBorder,
-                bevelHeight = 5.dp
-            ) {
-                Column(modifier = Modifier.fillMaxSize()) {
-                    // ──────────────── 1. CABECERA CON PORTADA Y ACCIONES ────────────────
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .background(
-                                Brush.verticalGradient(
-                                    listOf(
-                                        Color(0xFF065F46),
-                                        Color(0xFF047857)
-                                    )
-                                )
-                            )
-                            .padding(16.dp)
-                    ) {
-                        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                            // Fila superior de controles
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Row(
-                                    horizontalArrangement = Arrangement.spacedBy(6.dp),
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    Surface(
-                                        shape = RoundedCornerShape(8.dp),
-                                        color = Color.White.copy(alpha = 0.18f),
-                                        border = androidx.compose.foundation.BorderStroke(1.dp, Color.White.copy(alpha = 0.25f))
-                                    ) {
-                                        Text(
-                                            text = obra.categoria.uppercase(),
-                                            fontSize = 10.sp,
-                                            fontWeight = FontWeight.Black,
-                                            color = Color.White,
-                                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                                            letterSpacing = 0.5.sp
-                                        )
-                                    }
-
-                                    Surface(
-                                        shape = RoundedCornerShape(8.dp),
-                                        color = Color.Black.copy(alpha = 0.28f),
-                                        border = androidx.compose.foundation.BorderStroke(1.dp, Color.White.copy(alpha = 0.15f))
-                                    ) {
-                                        Text(
-                                            text = obra.anio,
-                                            fontSize = 11.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = Color.White,
-                                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
-                                        )
-                                    }
-                                }
-
-                                Row(
-                                    horizontalArrangement = Arrangement.spacedBy(6.dp),
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    // Editar obra
-                                    Surface(
-                                        shape = RoundedCornerShape(10.dp),
-                                        color = Color.White.copy(alpha = 0.18f),
-                                        border = BorderStroke(1.dp, Color.White.copy(alpha = 0.25f)),
-                                        modifier = Modifier
-                                            .size(34.dp)
-                                            .clickable { showBookEditor = true }
-                                    ) {
-                                        Box(contentAlignment = Alignment.Center) {
-                                            Icon(Icons.Rounded.Edit, contentDescription = "Editar obra", tint = Color.White, modifier = Modifier.size(16.dp))
-                                        }
-                                    }
-
-                                    // Botón T (Ajustar fuente)
-                                    Surface(
-                                        shape = RoundedCornerShape(10.dp),
-                                        color = Color.White.copy(alpha = 0.15f),
-                                        border = androidx.compose.foundation.BorderStroke(1.dp, Color.White.copy(alpha = 0.25f)),
-                                        modifier = Modifier
-                                            .size(34.dp)
-                                            .clickable { fontScaleState = (fontScaleState + 1) % 3 }
-                                    ) {
-                                        Box(contentAlignment = Alignment.Center) {
-                                            Text("T", fontSize = 14.sp, fontWeight = FontWeight.Bold, color = Color.White)
-                                        }
-                                    }
-
-                                    // Botón Compartir
-                                    Surface(
-                                        shape = RoundedCornerShape(10.dp),
-                                        color = Color.White.copy(alpha = 0.15f),
-                                        border = androidx.compose.foundation.BorderStroke(1.dp, Color.White.copy(alpha = 0.25f)),
-                                        modifier = Modifier
-                                            .size(34.dp)
-                                            .clickable {
-                                                val share = android.content.Intent(android.content.Intent.ACTION_SEND).apply {
-                                                    type = "text/plain"
-                                                    putExtra(android.content.Intent.EXTRA_TEXT, "${obra.titulo} — ${obra.autor}\nResumen y apuntes en RASTRO")
-                                                }
-                                                context.startActivity(android.content.Intent.createChooser(share, "Compartir obra"))
-                                            }
-                                    ) {
-                                        Box(contentAlignment = Alignment.Center) {
-                                            Icon(Icons.Rounded.Share, contentDescription = "Compartir", tint = Color.White, modifier = Modifier.size(16.dp))
-                                        }
-                                    }
-
-                                    // Botón Marcador Guardado (Amarillo)
-                                    Surface(
-                                        shape = RoundedCornerShape(10.dp),
-                                        color = Color(0xFFF59E0B),
-                                        modifier = Modifier
-                                            .size(34.dp)
-                                            .clickable { UserManager.toggleSaveObra(obra.id) }
-                                    ) {
-                                        Box(contentAlignment = Alignment.Center) {
-                                            Icon(
-                                                imageVector = if (isSaved) Icons.Rounded.Bookmark else Icons.Rounded.BookmarkBorder,
-                                                contentDescription = if (isSaved) "Quitar de guardados" else "Guardar",
-                                                tint = Color.White,
-                                                modifier = Modifier.size(17.dp)
-                                            )
-                                        }
-                                    }
-
-                                    // Botón Cerrar (X)
-                                    Surface(
-                                        shape = RoundedCornerShape(10.dp),
-                                        color = Color.White.copy(alpha = 0.15f),
-                                        border = androidx.compose.foundation.BorderStroke(1.dp, Color.White.copy(alpha = 0.25f)),
-                                        modifier = Modifier
-                                            .size(34.dp)
-                                            .clickable { onDismiss() }
-                                    ) {
-                                        Box(contentAlignment = Alignment.Center) {
-                                            Icon(Icons.Rounded.Close, contentDescription = "Cerrar", tint = Color.White, modifier = Modifier.size(17.dp))
-                                        }
-                                    }
-                                }
-                            }
-
-                            // Fila de Portada de Libro + Info
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.spacedBy(14.dp),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                // Portada
-                                Box(
-                                    modifier = Modifier
-                                        .size(width = 80.dp, height = 110.dp)
-                                        .clip(RoundedCornerShape(14.dp))
-                                        .background(Color.White.copy(alpha = 0.15f))
-                                        .border(2.dp, Color.White.copy(alpha = 0.4f), RoundedCornerShape(14.dp)),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    if (obra.coverUrl.isNotBlank()) {
-                                        CachedRemoteImage(
-                                            url = obra.coverUrl,
-                                            contentDescription = "Portada de ${obra.titulo}",
-                                            modifier = Modifier.fillMaxSize(),
-                                            contentScale = ContentScale.Crop
-                                        )
-                                    } else {
-                                        Icon(Icons.Rounded.MenuBook, contentDescription = null, tint = Color.White, modifier = Modifier.size(36.dp))
-                                    }
-                                }
-
-                                Column(
-                                    modifier = Modifier.weight(1f),
-                                    verticalArrangement = Arrangement.spacedBy(4.dp)
-                                ) {
-                                    Text(
-                                        text = obra.titulo,
-                                        fontSize = 20.sp,
-                                        fontWeight = FontWeight.Black,
-                                        color = Color.White,
-                                        lineHeight = 25.sp
-                                    )
-                                    Text(
-                                        text = "${obra.autor} (${obra.anio})",
-                                        fontSize = 13.sp,
-                                        fontWeight = FontWeight.Bold,
-                                        color = Color.White.copy(alpha = 0.95f)
-                                    )
-                                    Text(
-                                        text = "${obra.genero} • ${obra.especie}",
-                                        fontSize = 11.5.sp,
-                                        color = Color.White.copy(alpha = 0.85f)
-                                    )
-                                    if (obra.corriente.isNotBlank()) {
-                                        Text(
-                                            text = obra.corriente,
-                                            fontSize = 11.sp,
-                                            fontWeight = FontWeight.SemiBold,
-                                            color = Color(0xFFFDE68A)
-                                        )
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    // ──────────────── 2. DOS PESTAÑAS (RESUMEN DETALLADO / APUNTE DE REPASO) ────────────────
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .background(theme.surface)
-                            .padding(horizontal = 16.dp, vertical = 10.dp),
-                        horizontalArrangement = Arrangement.spacedBy(10.dp)
-                    ) {
-                        // Pestaña 0: Resumen Detallado
-                        Surface(
-                            modifier = Modifier
-                                .weight(1f)
-                                .clickable { activeTab = 0 },
-                            shape = RoundedCornerShape(14.dp),
-                            color = if (activeTab == 0) Color(0xFFFFF1F2) else Color.Transparent,
-                            border = androidx.compose.foundation.BorderStroke(
-                                1.5.dp,
-                                if (activeTab == 0) Color(0xFFBE123C) else Color.Transparent
-                            )
-                        ) {
-                            Row(
-                                modifier = Modifier.padding(vertical = 10.dp, horizontal = 12.dp),
-                                horizontalArrangement = Arrangement.Center,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Icon(
-                                    Icons.Rounded.MenuBook,
-                                    contentDescription = null,
-                                    tint = if (activeTab == 0) Color(0xFFBE123C) else theme.textSecondary,
-                                    modifier = Modifier.size(17.dp)
-                                )
-                                Spacer(modifier = Modifier.width(6.dp))
-                                Text(
-                                    text = "Resumen\nDetallado",
-                                    fontSize = 12.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = if (activeTab == 0) Color(0xFFBE123C) else theme.textSecondary,
-                                    textAlign = TextAlign.Center,
-                                    lineHeight = 14.sp
-                                )
-                            }
-                        }
-
-                        // Pestaña 1: Apunte de Repaso
-                        Surface(
-                            modifier = Modifier
-                                .weight(1f)
-                                .clickable { activeTab = 1 },
-                            shape = RoundedCornerShape(14.dp),
-                            color = if (activeTab == 1) Color(0xFFFFF1F2) else Color.Transparent,
-                            border = androidx.compose.foundation.BorderStroke(
-                                1.5.dp,
-                                if (activeTab == 1) Color(0xFFBE123C) else Color.Transparent
-                            )
-                        ) {
-                            Row(
-                                modifier = Modifier.padding(vertical = 10.dp, horizontal = 12.dp),
-                                horizontalArrangement = Arrangement.Center,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Icon(
-                                    Icons.Rounded.Description,
-                                    contentDescription = null,
-                                    tint = if (activeTab == 1) Color(0xFFBE123C) else theme.textSecondary,
-                                    modifier = Modifier.size(17.dp)
-                                )
-                                Spacer(modifier = Modifier.width(6.dp))
-                                Text(
-                                    text = "Apunte de Repaso",
-                                    fontSize = 12.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = if (activeTab == 1) Color(0xFFBE123C) else theme.textSecondary,
-                                    textAlign = TextAlign.Center
-                                )
-                            }
-                        }
-                    }
-
-                    // ──────────────── 3. CUERPO DESPLAZABLE CON CARDS ESTRUCTURADAS (Foto 4) ────────────────
-                    Column(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .verticalScroll(rememberScrollState())
-                            .padding(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(14.dp)
-                    ) {
-                        if (activeTab == 0) {
-                            // ─── CARD 1: ARGUMENTO Y SINOPSIS REAL DE LA OBRA ───
-                            com.jonsuapps.rastro.android.ui.components.Sticker3dCard(
-                                modifier = Modifier.fillMaxWidth(),
-                                shape = RoundedCornerShape(20.dp),
-                                containerColor = theme.surface,
-                                strokeColor = theme.strokeBorder,
-                                bottomBevelColor = theme.cardBevel,
-                                bevelHeight = 3.dp
-                            ) {
-                                Column(modifier = Modifier.padding(18.dp)) {
-                                    Row(verticalAlignment = Alignment.CenterVertically) {
-                                        Icon(
-                                            Icons.Rounded.AutoAwesome,
-                                            contentDescription = null,
-                                            tint = Color(0xFF007AFF),
-                                            modifier = Modifier.size(18.dp)
-                                        )
-                                        Spacer(modifier = Modifier.width(8.dp))
-                                        Text(
-                                            text = "ARGUMENTO COMPLETO DE LA OBRA",
-                                            fontSize = 13.sp,
-                                            fontWeight = FontWeight.Black,
-                                            color = Color(0xFF831843),
-                                            letterSpacing = 0.5.sp
-                                        )
-                                    }
-
-                                    Spacer(modifier = Modifier.height(12.dp))
-
-                                    Text(
-                                        text = obra.sinopsis.ifBlank { obra.temaPrincipal },
-                                        fontSize = bodyFontSize,
-                                        lineHeight = lineHeight,
-                                        color = theme.textPrimary,
-                                        fontWeight = FontWeight.Normal
-                                    )
-                                }
-                            }
-
-                            // ─── CARD 2: CONTEXTO HISTÓRICO Y CORRIENTE ───
-                            com.jonsuapps.rastro.android.ui.components.Sticker3dCard(
-                                modifier = Modifier.fillMaxWidth(),
-                                shape = RoundedCornerShape(20.dp),
-                                containerColor = theme.surface,
-                                strokeColor = theme.strokeBorder,
-                                bottomBevelColor = theme.cardBevel,
-                                bevelHeight = 3.dp
-                            ) {
-                                Column(modifier = Modifier.padding(18.dp)) {
-                                    Text(
-                                        text = "CONTEXTO HISTÓRICO Y MOVIMIENTO",
-                                        fontSize = 12.sp,
-                                        fontWeight = FontWeight.Black,
-                                        color = Color(0xFF047857),
-                                        letterSpacing = 0.5.sp
-                                    )
-                                    Spacer(modifier = Modifier.height(8.dp))
-                                    Text(
-                                        text = obra.contextoHistorico.ifBlank { "Obra representativa del ${obra.corriente} publicada en ${obra.anio} (${obra.pais})." },
-                                        fontSize = bodyFontSize,
-                                        lineHeight = lineHeight,
-                                        color = theme.textSecondary
-                                    )
-                                    Spacer(modifier = Modifier.height(8.dp))
-                                    Text(
-                                        text = "Género: ${obra.genero} • Especie: ${obra.especie} • Corriente: ${obra.corriente}",
-                                        fontSize = 12.sp,
-                                        fontWeight = FontWeight.Bold,
-                                        color = Color(0xFF047857)
-                                    )
-                                }
-                            }
-
-                            // ─── CARD 3: PERSONAJES (SI EXISTEN) ───
-                            if (obra.personajes.isNotEmpty()) {
-                                com.jonsuapps.rastro.android.ui.components.Sticker3dCard(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    shape = RoundedCornerShape(20.dp),
-                                    containerColor = theme.surface,
-                                    strokeColor = theme.strokeBorder,
-                                    bottomBevelColor = theme.cardBevel,
-                                    bevelHeight = 3.dp
-                                ) {
-                                    Column(modifier = Modifier.padding(18.dp)) {
-                                        Text(
-                                            text = "PERSONAJES CLAVE",
-                                            fontSize = 12.sp,
-                                            fontWeight = FontWeight.Black,
-                                            color = Color(0xFF8B5CF6),
-                                            letterSpacing = 0.5.sp
-                                        )
-                                        Spacer(modifier = Modifier.height(10.dp))
-                                        obra.personajes.forEach { p ->
-                                            Column(Modifier.padding(vertical = 4.dp)) {
-                                                Text("${p.nombre} (${p.rol})", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = theme.textPrimary)
-                                                if (p.descripcion.isNotBlank()) {
-                                                    Text(p.descripcion, fontSize = 12.sp, color = theme.textSecondary)
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            // ─── CARD 4: TRAMA POR ACTOS / EPISODIOS ───
-                            obra.analisisTrama.forEach { escena ->
-                                com.jonsuapps.rastro.android.ui.components.Sticker3dCard(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    shape = RoundedCornerShape(18.dp),
-                                    containerColor = theme.surface,
-                                    strokeColor = theme.strokeBorder,
-                                    bottomBevelColor = theme.cardBevel,
-                                    bevelHeight = 3.dp
-                                ) {
-                                    Column(modifier = Modifier.padding(16.dp)) {
-                                        Text(
-                                            text = escena.titulo,
-                                            fontSize = 14.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = theme.textPrimary
-                                        )
-                                        Spacer(modifier = Modifier.height(6.dp))
-                                        Text(
-                                            text = escena.detalle,
-                                            fontSize = bodyFontSize,
-                                            lineHeight = lineHeight,
-                                            color = theme.textSecondary
-                                        )
-                                    }
-                                }
-                            }
-                        } else {
-                            // ─── PESTAÑA: APUNTE DE REPASO CEPREUNSA ───
-                            com.jonsuapps.rastro.android.ui.components.Sticker3dCard(
-                                modifier = Modifier.fillMaxWidth(),
-                                shape = RoundedCornerShape(20.dp),
-                                containerColor = Color(0xFFF0FDF4),
-                                strokeColor = theme.strokeBorder,
-                                bottomBevelColor = Color(0xFF86EFAC),
-                                bevelHeight = 3.dp
-                            ) {
-                                Column(modifier = Modifier.padding(18.dp)) {
-                                    Text(
-                                        text = "SÍNTESIS EXPRESS PARA EL EXAMEN",
-                                        fontSize = 12.sp,
-                                        fontWeight = FontWeight.Black,
-                                        color = Color(0xFF166534),
-                                        letterSpacing = 0.5.sp
-                                    )
-                                    Spacer(modifier = Modifier.height(8.dp))
-                                    Text(
-                                        text = "${obra.titulo} (${obra.autor}, ${obra.anio}): ${obra.temaPrincipal}",
-                                        fontSize = bodyFontSize,
-                                        lineHeight = lineHeight,
-                                        fontWeight = FontWeight.SemiBold,
-                                        color = Color(0xFF14532D)
-                                    )
-                                }
-                            }
-
-                            // Símbolos clave
-                            if (obra.simbolosClave.isNotEmpty()) {
-                                com.jonsuapps.rastro.android.ui.components.Sticker3dCard(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    shape = RoundedCornerShape(20.dp),
-                                    containerColor = theme.surface,
-                                    strokeColor = theme.strokeBorder,
-                                    bottomBevelColor = theme.cardBevel,
-                                    bevelHeight = 3.dp
-                                ) {
-                                    Column(modifier = Modifier.padding(18.dp)) {
-                                        Text(
-                                            text = "SÍMBOLOS RECURRENTES EN EXÁMENES UNSA",
-                                            fontSize = 12.sp,
-                                            fontWeight = FontWeight.Black,
-                                            color = Color(0xFFD97706),
-                                            letterSpacing = 0.5.sp
-                                        )
-                                        Spacer(modifier = Modifier.height(10.dp))
-                                        obra.simbolosClave.forEach { simbolo ->
-                                            Row(modifier = Modifier.padding(vertical = 4.dp)) {
-                                                Text("✦", color = Color(0xFFD97706), fontWeight = FontWeight.Bold)
-                                                Spacer(modifier = Modifier.width(8.dp))
-                                                Text(simbolo, fontSize = bodyFontSize, color = theme.textPrimary)
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            // Preguntas Clave
-                            obra.preguntasClave.forEach { pregunta ->
-                                com.jonsuapps.rastro.android.ui.components.Sticker3dCard(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    shape = RoundedCornerShape(18.dp),
-                                    containerColor = theme.surface,
-                                    strokeColor = theme.strokeBorder,
-                                    bottomBevelColor = theme.cardBevel,
-                                    bevelHeight = 3.dp
-                                ) {
-                                    Column(modifier = Modifier.padding(16.dp)) {
-                                        Text(
-                                            text = pregunta.pregunta,
-                                            fontSize = 13.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = theme.textPrimary
-                                        )
-                                        Spacer(modifier = Modifier.height(6.dp))
-                                        Text(
-                                            text = pregunta.respuesta,
-                                            fontSize = bodyFontSize,
-                                            lineHeight = lineHeight,
-                                            color = theme.textSecondary
-                                        )
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        com.jonsuapps.rastro.android.ui.screens.literatura.ObraDetailView(
+            obra = obra,
+            theme = theme,
+            onDismiss = onDismiss
+        )
     }
 }

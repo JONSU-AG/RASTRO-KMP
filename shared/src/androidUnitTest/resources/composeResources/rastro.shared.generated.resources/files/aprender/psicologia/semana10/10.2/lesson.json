@@ -1,0 +1,34 @@
+{
+  "id": "psi_t10_s02",
+  "subjectId": "psicologia",
+  "semana": 10,
+  "subtema": "10.2",
+  "title": "4.1. Atención y Memoria",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana10.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_10_Procesos_Psicologicos_Basicos.md",
+  "learningObjectives": [
+    "Definir atencion como filtro selectivo con tipos involuntaria refleja voluntaria selectiva sostenida y dividida",
+    "Trazar memoria en codificacion almacenamiento y recuperacion con multialmacen sensorial corto y largo de Atkinson Shiffrin",
+    "Caracterizar sensorial ilimitada milisegundos iconica ecoica corto 7 mas menos 2 chunks 15 a 30 segundos y largo ilimitado",
+    "Distinguir largo declarativa episodica biografica y semantica enciclopedica frente a implicita procedimental con Tulving",
+    "Explicar hipocampo consolidador interferencia proactiva antigua estorba y retroactiva nueva borra con amnesias y Baddeley"
+  ],
+  "theory": {
+    "id": "th_psi_t10_s02",
+    "asignatura": "Psicología",
+    "semana": 10,
+    "titulo": "4.1. Atención y Memoria",
+    "resumen": "",
+    "conceptosClave": [
+      "Atencion filtro que selecciona ignora distractores con refleja subita voluntaria esforzada selectiva focal dividida doble y sostenida prolongada",
+      "Memoria con codificar consolidar y recuperar y flujo estimulo hacia sensorial con atencion hacia corto con repaso hacia largo",
+      "Sensorial iconica visual ecoica auditiva ilimitada fugaz corto operativo con ejecutivo central bucle fonologico y agenda visoespacial",
+      "Miller magico 7 mas menos 2 chunks con retencion telefonica y visualizacion de mapa como prueba",
+      "Tulving E S P con episodica primer dia semantica Paris capital y procedimental bicicleta nadar teclado",
+      "Hipocampo temporal medial que consolida sin ser reservorio con caso H M y Memento",
+      "Olvido por proactiva manual frente a automatico y retroactiva ingles que borra frances con amnesia antero nueva y retro antigua"
+    ],
+    "admissionTip": "Si ves filtro marca atencion, si ves subita marca involuntaria, si ves codifica guarda y evoca marca fases, si ves iconica y ecoica marca sensorial, si ves 7 mas menos 2 marca corto, si ves vivencia marca episodica, si ves concepto marca semantica, si ves bicicleta marca procedimental, si ves hipocampo marca consolidacion, si ves antiguo estorba marca proactiva, si ves nuevo borra marca retroactiva.",
+    "admissionExplanation": "La trampa es llamar sensorial a corto, episodica a semantica, proactiva a retroactiva, antero que no fija nuevo frente a retro que olvida antiguo, y bucle verbal frente a agenda visual; E S P y PRO antigua RETRO nueva resuelven."
+  }
+}

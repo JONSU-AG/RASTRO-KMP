@@ -1,0 +1,24 @@
+{
+  "week": 7,
+  "title": "Discurso Escrito, Puntuación y Ortografía",
+  "lessons": [
+    {
+      "subtopic": "7.1",
+      "lessonId": "leng_t07_s01",
+      "title": "El Discurso Escrito: Adecuación, Coherencia y Mecanismos de Cohesión",
+      "path": "7.1/lesson.json"
+    },
+    {
+      "subtopic": "7.2",
+      "lessonId": "leng_t07_s02",
+      "title": "Normativa de Signos de Puntuación: La Coma, el Punto y Coma y los Dos Puntos",
+      "path": "7.2/lesson.json"
+    },
+    {
+      "subtopic": "7.3",
+      "lessonId": "leng_t07_s03",
+      "title": "Normativa del Uso de Mayúsculas y Minúsculas (Ortografía RAE)",
+      "path": "7.3/lesson.json"
+    }
+  ]
+}

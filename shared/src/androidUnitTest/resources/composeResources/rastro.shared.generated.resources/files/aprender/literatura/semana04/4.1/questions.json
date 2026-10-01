@@ -1,0 +1,182 @@
+[
+  {
+    "id": "lit_t04_s01_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La publicación en Valparaíso (Chile) del libro Azul... (1888) del poeta nicaragüense Rubén Darío marca formalmente:",
+    "options": [
+      "El inicio triunfal del Modernismo como primer movimiento literario originario de Hispanoamérica.",
+      "El nacimiento del Romanticismo social hispanoamericano.",
+      "La consolidación de la novela indigenista de la tierra.",
+      "La ruptura vanguardista con las formas métricas clásicas."
+    ],
+    "correctIndex": 0,
+    "explanation": "Azul... amalgama cuentos líricos y poemas donde confluyen el parnasianismo (perfección formal plástica) y el simbolismo (musicalidad y misterio), dando inicio al Modernismo hispanoamericano.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s01_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es el animal emblemático que simboliza la elegancia aristocrática, la belleza pura y la búsqueda de perfección plástica en la lírica modernista de Rubén Darío?",
+    "options": [
+      "El águila bicéfala",
+      "El jaguar",
+      "El cóndor andino",
+      "El cisne"
+    ],
+    "correctIndex": 3,
+    "explanation": "El cisne blancor y grácil se convirtió en el tótem estético de los poetas modernistas, encarnando la gracia alada, la aristocracia del espíritu y el misterio poético consagrado por Darío en Cantos de vida y esperanza.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s01_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la evolución de Rubén Darío, la obra que trasciende el esteticismo cosmopolita y princesas de Versalles para asumir una voz reflexiva y defensora de la identidad de la América española frente al imperialismo anglosajón es:",
+    "options": [
+      "Prosas profanas",
+      "Cantos de vida y esperanza (1905)",
+      "Primeras notas",
+      "Canto errante"
+    ],
+    "correctIndex": 1,
+    "explanation": "En Cantos de vida y esperanza (con poemas cumbres como «A Roosevelt» y «Lo fatal»), Darío alcanza una madurez sombría, cívica y humanista, defendiendo a la América hispana que «todavía reza a Jesucristo y habla en español».",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s01_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el poemario Veinte poemas de amor y una canción desesperada (1924) de Pablo Neruda, el motivo temático dominante que atraviesa los versos amorosos juveniles es:",
+    "options": [
+      "La exaltación bélica de las vanguardias futuristas.",
+      "El erotismo juvenil fusionado con la melancolía del desamor, la soledad y la naturaleza austral.",
+      "La sátira contra la hipocresía social de la burguesía santiaguina.",
+      "La celebración cívica de la independencia chilena."
+    ],
+    "correctIndex": 1,
+    "explanation": "El poemario juvenil de Neruda canta al cuerpo de la mujer amada comparándolo con el paisaje natural de su infancia (el mar, los pinos, el viento) en medio del abandono y la nostalgia melancólica («Es tan corto el amor, y es tan largo el olvido»).",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s01_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La monumental obra lírica de Pablo Neruda que constituye un canto épico e histórico al continente americano y a sus pueblos oprimidos, e incluye el célebre poema «Alturas de Macchu Picchu», se titula:",
+    "options": [
+      "Canto General (1950)",
+      "Odas elementales",
+      "Memorial de Isla Negra",
+      "Residencia en la tierra"
+    ],
+    "correctIndex": 0,
+    "explanation": "Canto General es el magno friso histórico-político de Neruda, donde desfilan la geografía primigenia, los libertadores, los tiranos, los trabajadores del cobre y el sobrecogedor ascenso a la ciudadela incaica para dar voz a los muertos olvidados.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s01_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes poetisas hispanoamericanas fue la primera escritora de América Latina en ser galardonada con el Premio Nobel de Literatura (1945)?",
+    "options": [
+      "Alfonsina Storni",
+      "Juana de Ibarbourou",
+      "Delmira Agustini",
+      "Gabriela Mistral"
+    ],
+    "correctIndex": 3,
+    "explanation": "La pedagoga y poetisa chilena Lucila Godoy Alcayaga (Gabriela Mistral), autora de Desolación, Ternura y Tala, recibió el Nobel en 1945 por su lírica inspirada en poderosas emociones que convirtieron su nombre en un símbolo de las aspiraciones del mundo latinoamericano.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s01_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El rasgo estilístico modernista consistente en asociar sensaciones provenientes de distintos sentidos corporales («un silencio dorado», «aromas azules») se denomina:",
+    "options": [
+      "Anadiplosis",
+      "Sinestesia",
+      "Paranomasia",
+      "Silepsis"
+    ],
+    "correctIndex": 1,
+    "explanation": "La sinestesia es un procedimiento sensorial emblemático del Modernismo que entrecruza sensaciones ópticas, acústicas, táctiles u olfativas para suscitar una experiencia estética hipersensible.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s01_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La búsqueda de ambientaciones lejanas en el tiempo y el espacio (jardines versallescos, la Grecia clásica, pagodas orientales) en la poesía modernista responde a la actitud conocida como:",
+    "options": [
+      "Compromiso partidario",
+      "Costumbrismo regional",
+      "Exotismo y cosmopolitismo",
+      "Nativismo telúrico"
+    ],
+    "correctIndex": 2,
+    "explanation": "El exotismo modernista fue una manifestación del rechazo al prosaísmo mercantil de la vida burguesa contemporánea, refugiándose en universos de refinamiento histórico o mitológico suntuoso.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s01_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la lírica de Alfonsina Storni, poemas célebres como «Tú me quieres blanca» destacan tempranamente por:",
+    "options": [
+      "La defensa sumisa de los roles domésticos tradicionales.",
+      "La exaltación bucólica de la pampa ganadera argentina.",
+      "La denuncia enérgica del doble rasero moral masculino que exige pureza a la mujer mientras el varón vive en libertinaje.",
+      "La imitación estricta de los romances medievales castellanos."
+    ],
+    "correctIndex": 2,
+    "explanation": "Alfonsina Storni cuestiona con valentía la hipocresía patriarcal en «Tú me quieres blanca», increpando al hombre que exige castidad virginal («blanca, nívea, casta») habiendo vivido disolutamente.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.1.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El poemario de Pablo Neruda marcado por la angustia existencial, el desmoronamiento cósmico y el empleo de técnicas surrealistas durante su estancia diplomática en Oriente es:",
+    "options": [
+      "Veinte poemas de amor y una canción desesperada",
+      "Crepusculario",
+      "Residencia en la tierra",
+      "Los versos del Capitán"
+    ],
+    "correctIndex": 2,
+    "explanation": "Residencia en la tierra (1935) es la obra cumbre del periodo hermético y expresionista de Neruda, donde poetiza la decadencia, la descomposición biológica y la angustia cósmica del ser humano solitario.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

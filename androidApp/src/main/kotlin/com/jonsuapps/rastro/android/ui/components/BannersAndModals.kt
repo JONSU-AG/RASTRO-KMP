@@ -21,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -81,50 +82,154 @@ fun ThemeSelectorDialog(
                 ) {
                     items(RastroThemeId.entries.toTypedArray()) { themeItem ->
                         val isSelected = themeItem == currentThemeId
-                        Surface(
-                            shape = RastroShapes.ButtonSquircle,
-                            color = if (isSelected) theme.accent.copy(alpha = 0.15f) else theme.surfaceAccent,
-                            border = if (isSelected) androidx.compose.foundation.BorderStroke(2.dp, theme.accent) else androidx.compose.foundation.BorderStroke(1.dp, theme.strokeBorder.copy(alpha = 0.35f)),
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable {
-                                    DuolingoHaptics.playOptionSelected(context)
-                                    onSelectTheme(themeItem)
-                                }
-                        ) {
-                            Row(
+                        Column {
+                            Surface(
+                                shape = RastroShapes.ButtonSquircle,
+                                color = if (isSelected) theme.accent.copy(alpha = 0.15f) else theme.surfaceAccent,
+                                border = if (isSelected) androidx.compose.foundation.BorderStroke(2.dp, theme.accent) else androidx.compose.foundation.BorderStroke(1.dp, theme.strokeBorder.copy(alpha = 0.35f)),
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .padding(horizontal = 16.dp, vertical = 12.dp),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
+                                    .clickable {
+                                        DuolingoHaptics.playOptionSelected(context)
+                                        if (themeItem == RastroThemeId.CUSTOM) {
+                                            val prim = Color(0xFFFFFFFF)
+                                            val sec = Color(0xFFF8FAFC)
+                                            val acc = Color(0xFF2563EB)
+                                            com.jonsuapps.rastro.theme.ThemeManager.setCustomTheme(prim, sec, acc)
+                                            val prefs = context.getSharedPreferences("rastro_preferences", android.content.Context.MODE_PRIVATE)
+                                            prefs.edit()
+                                                .putString("selected_theme", RastroThemeId.CUSTOM.idName)
+                                                .putInt("custom_primary", prim.toArgb())
+                                                .putInt("custom_secondary", sec.toArgb())
+                                                .putInt("custom_accent", acc.toArgb())
+                                                .apply()
+                                        }
+                                        onSelectTheme(themeItem)
+                                    }
                             ) {
                                 Row(
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.spacedBy(12.dp)
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                                    horizontalArrangement = Arrangement.SpaceBetween,
+                                    verticalAlignment = Alignment.CenterVertically
                                 ) {
-                                    // Muestra de color de fondo
-                                    Box(
-                                        modifier = Modifier
-                                            .size(24.dp)
-                                            .clip(CircleShape)
-                                            .background(Color(android.graphics.Color.parseColor(themeItem.bgHex)))
-                                            .border(1.5.dp, theme.strokeBorder, CircleShape)
-                                    )
-                                    Text(
-                                        text = themeItem.displayName,
-                                        fontSize = 14.sp,
-                                        fontWeight = if (isSelected) androidx.compose.ui.text.font.FontWeight.Bold else androidx.compose.ui.text.font.FontWeight.Medium,
-                                        color = if (isSelected) theme.accent else theme.textPrimary
-                                    )
-                                }
+                                    Row(
+                                        verticalAlignment = Alignment.CenterVertically,
+                                        horizontalArrangement = Arrangement.spacedBy(12.dp)
+                                    ) {
+                                        if (themeItem == RastroThemeId.CUSTOM) {
+                                            // Muestra de los 3 colores
+                                            Row(horizontalArrangement = Arrangement.spacedBy((-6).dp)) {
+                                                Box(
+                                                    modifier = Modifier
+                                                        .size(18.dp)
+                                                        .clip(CircleShape)
+                                                        .background(com.jonsuapps.rastro.theme.ThemeManager.customColors.primary)
+                                                        .border(1.2.dp, theme.strokeBorder, CircleShape)
+                                                )
+                                                Box(
+                                                    modifier = Modifier
+                                                        .size(18.dp)
+                                                        .clip(CircleShape)
+                                                        .background(com.jonsuapps.rastro.theme.ThemeManager.customColors.secondary)
+                                                        .border(1.2.dp, theme.strokeBorder, CircleShape)
+                                                )
+                                                Box(
+                                                    modifier = Modifier
+                                                        .size(18.dp)
+                                                        .clip(CircleShape)
+                                                        .background(com.jonsuapps.rastro.theme.ThemeManager.customColors.accent)
+                                                        .border(1.2.dp, theme.strokeBorder, CircleShape)
+                                                )
+                                            }
+                                        } else {
+                                            // Muestra de color de fondo
+                                            Box(
+                                                modifier = Modifier
+                                                    .size(24.dp)
+                                                    .clip(CircleShape)
+                                                    .background(Color(android.graphics.Color.parseColor(themeItem.bgHex)))
+                                                    .border(1.5.dp, theme.strokeBorder, CircleShape)
+                                            )
+                                        }
+                                        Text(
+                                            text = themeItem.displayName,
+                                            fontSize = 14.sp,
+                                            fontWeight = if (isSelected) androidx.compose.ui.text.font.FontWeight.Bold else androidx.compose.ui.text.font.FontWeight.Medium,
+                                            color = if (isSelected) theme.accent else theme.textPrimary
+                                        )
+                                    }
 
-                                if (isSelected) {
-                                    Icon(
-                                        imageVector = Icons.Default.Check,
-                                        contentDescription = null,
-                                        tint = theme.accent
+                                    if (isSelected) {
+                                        Icon(
+                                            imageVector = Icons.Default.Check,
+                                            contentDescription = null,
+                                            tint = theme.accent
+                                        )
+                                    }
+                                }
+                            }
+
+                            if (themeItem == RastroThemeId.CUSTOM && isSelected) {
+                                Spacer(modifier = Modifier.height(6.dp))
+                                Column(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(start = 12.dp, end = 4.dp, bottom = 6.dp),
+                                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                                ) {
+                                    Text(
+                                        text = "Combinaciones de 3 colores (Fondo / Superficie / Acento):",
+                                        fontSize = 11.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = theme.textSecondary
                                     )
+                                    val customPresets = listOf(
+                                        Triple("Minimalista", Triple(Color(0xFFFFFFFF), Color(0xFFF8FAFC), Color(0xFF2563EB)), "Luz pura"),
+                                        Triple("OLED Esmeralda", Triple(Color(0xFF000000), Color(0xFF18181B), Color(0xFF10B981)), "Negro noche"),
+                                        Triple("Crema Carmesí", Triple(Color(0xFFFFFBEB), Color(0xFFFEF3C7), Color(0xFFDC2626)), "UNSA cálido"),
+                                        Triple("Cyber Púrpura", Triple(Color(0xFF09090B), Color(0xFF1E293B), Color(0xFFA855F7)), "Modo gamer"),
+                                        Triple("Zafiro Noche", Triple(Color(0xFF020617), Color(0xFF0F172A), Color(0xFF38BDF8)), "Azul profundo")
+                                    )
+                                    customPresets.forEach { (name, colorsTriple, desc) ->
+                                        val (p, s, a) = colorsTriple
+                                        Surface(
+                                            shape = RoundedCornerShape(8.dp),
+                                            color = theme.surface,
+                                            border = androidx.compose.foundation.BorderStroke(1.dp, theme.strokeBorder.copy(alpha = 0.2f)),
+                                            modifier = Modifier
+                                                .fillMaxWidth()
+                                                .clickable {
+                                                    DuolingoHaptics.playOptionSelected(context)
+                                                    com.jonsuapps.rastro.theme.ThemeManager.setCustomTheme(p, s, a)
+                                                    val prefs = context.getSharedPreferences("rastro_preferences", android.content.Context.MODE_PRIVATE)
+                                                    prefs.edit()
+                                                        .putString("selected_theme", RastroThemeId.CUSTOM.idName)
+                                                        .putInt("custom_primary", p.toArgb())
+                                                        .putInt("custom_secondary", s.toArgb())
+                                                        .putInt("custom_accent", a.toArgb())
+                                                        .apply()
+                                                    onSelectTheme(RastroThemeId.CUSTOM)
+                                                }
+                                        ) {
+                                            Row(
+                                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+                                                verticalAlignment = Alignment.CenterVertically,
+                                                horizontalArrangement = Arrangement.SpaceBetween
+                                            ) {
+                                                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                                    Row(horizontalArrangement = Arrangement.spacedBy((-4).dp)) {
+                                                        Box(Modifier.size(14.dp).clip(CircleShape).background(p).border(1.dp, theme.strokeBorder, CircleShape))
+                                                        Box(Modifier.size(14.dp).clip(CircleShape).background(s).border(1.dp, theme.strokeBorder, CircleShape))
+                                                        Box(Modifier.size(14.dp).clip(CircleShape).background(a).border(1.dp, theme.strokeBorder, CircleShape))
+                                                    }
+                                                    Text(name, fontSize = 12.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
+                                                }
+                                                Text(desc, fontSize = 10.sp, color = theme.textSecondary)
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -135,183 +240,25 @@ fun ThemeSelectorDialog(
     }
 }
 
-/**
- * Diálogo del Test Vocacional Psicométrico (§2.1, §4.8 y §3.21 del mapa).
- */
-private data class VocationalQuestionItem(
-    val id: Int,
-    val text: String,
-    val areaPrimary: String, // "INGENIERIAS", "BIOMEDICAS", "SOCIALES"
-    val areaSecondary: String? = null,
-    val riasecName: String
-)
-
-private val vocationalQuestionsList = listOf(
-    VocationalQuestionItem(
-        id = 1,
-        text = "¿Te apasiona desarmar, diseñar o entender cómo funcionan máquinas, circuitos electrónicos o estructuras mecánicas?",
-        areaPrimary = "INGENIERIAS",
-        riasecName = "Realista (R)"
-    ),
-    VocationalQuestionItem(
-        id = 2,
-        text = "¿Sientes una profunda vocación por investigar el cuerpo humano, entender enfermedades y salvar vidas en un entorno de salud?",
-        areaPrimary = "BIOMEDICAS",
-        riasecName = "Investigador (I)"
-    ),
-    VocationalQuestionItem(
-        id = 3,
-        text = "¿Disfrutas argumentar, participar en debates, defender causas justas y analizar leyes o estructuras del Estado?",
-        areaPrimary = "SOCIALES",
-        riasecName = "Emprendedor / Líder (E)"
-    ),
-    VocationalQuestionItem(
-        id = 4,
-        text = "¿Te entusiasma programar algoritmos, resolver problemas lógico-matemáticos y diseñar soluciones computacionales?",
-        areaPrimary = "INGENIERIAS",
-        riasecName = "Investigador (I)"
-    ),
-    VocationalQuestionItem(
-        id = 5,
-        text = "¿Te interesa investigar la biología celular, la genética, los microorganismos y cómo interactúan los fármacos?",
-        areaPrimary = "BIOMEDICAS",
-        riasecName = "Investigador (I)"
-    ),
-    VocationalQuestionItem(
-        id = 6,
-        text = "¿Te atrae liderar organizaciones, crear modelos de negocio, administrar presupuestos y tomar decisiones de inversión?",
-        areaPrimary = "SOCIALES",
-        riasecName = "Emprendedor (E)"
-    ),
-    VocationalQuestionItem(
-        id = 7,
-        text = "¿Te motiva el diseño y supervisión de infraestructuras, construcciones civiles, minería o procesos industriales?",
-        areaPrimary = "INGENIERIAS",
-        riasecName = "Realista (R)"
-    ),
-    VocationalQuestionItem(
-        id = 8,
-        text = "¿Tienes vocación de servicio para escuchar, comprender y orientar a las personas en su salud mental y bienestar emocional?",
-        areaPrimary = "SOCIALES",
-        areaSecondary = "BIOMEDICAS",
-        riasecName = "Social (S)"
-    ),
-    VocationalQuestionItem(
-        id = 9,
-        text = "¿Te apasiona el trabajo clínico de odontología, farmacia, enfermería o el cuidado directo de pacientes en hospitales?",
-        areaPrimary = "BIOMEDICAS",
-        riasecName = "Social (S)"
-    ),
-    VocationalQuestionItem(
-        id = 10,
-        text = "¿Prefieres analizar la historia, la comunicación social, los fenómenos culturales, la sociología o la docencia formativa?",
-        areaPrimary = "SOCIALES",
-        riasecName = "Artístico / Humanista (A)"
-    ),
-    VocationalQuestionItem(
-        id = 11,
-        text = "¿Te resulta estimulante calcular balances financieros, auditar registros numéricos, estadísticas y optimizar sistemas organizados?",
-        areaPrimary = "SOCIALES",
-        areaSecondary = "INGENIERIAS",
-        riasecName = "Convencional (C)"
-    ),
-    VocationalQuestionItem(
-        id = 12,
-        text = "¿Te interesa aplicar física y matemáticas avanzadas para innovar en energías renovables, automatización robótica o aeroespacial?",
-        areaPrimary = "INGENIERIAS",
-        riasecName = "Investigador (I)"
-    )
-)
 
 /**
- * Test Psicométrico Vocacional Real e Interactivo basado en el modelo RIASEC de John Holland,
- * adaptado específicamente a las 3 Áreas de Admisión Universitaria (Ingenierías, Biomédicas y Sociales).
+ * Test Vocacional Profesional RIASEC basado en la metodología O*NET® Interest Profiler™.
+ * Reemplaza la antigua implementación de 12 preguntas por la arquitectura profesional de 60 actividades
+ * respetando el modelo RIASEC de John Holland, sin diagnósticos psicológicos y con neutralidad educativa.
  */
 @Composable
 fun VocationalTestDialog(
     colors: RastroColors,
     onDismiss: () -> Unit,
-    onCompleteRuta: (String) -> Unit
+    onCompleteRuta: ((String) -> Unit)? = null
 ) {
-    val theme = com.jonsuapps.rastro.theme.ThemeManager.currentTheme
-    val context = androidx.compose.ui.platform.LocalContext.current
-    var currentStep by remember { mutableIntStateOf(0) } // 0: Intro, 1..12: Preguntas, 13: Resultados
-    val answers = remember { mutableStateMapOf<Int, Int>() }
+    com.jonsuapps.rastro.android.ui.screens.VocationalTestScreen(
+        onDismiss = onDismiss
+    )
+}
 
-    Dialog(
-        onDismissRequest = onDismiss,
-        properties = androidx.compose.ui.window.DialogProperties(usePlatformDefaultWidth = false)
-    ) {
-        Sticker3dCard(
-            shape = RoundedCornerShape(26.dp),
-            containerColor = colors.surface,
-            bottomBevelColor = colors.cardBevel,
-            strokeColor = colors.strokeBorder,
-            bevelHeight = 5.dp,
-            modifier = Modifier
-                .fillMaxWidth(0.95f)
-                .fillMaxHeight(0.90f)
-                .widthIn(max = 500.dp)
-                .padding(vertical = 12.dp)
-        ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(18.dp)
-                    .verticalScroll(rememberScrollState()),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.SpaceBetween
-            ) {
-                // Cabecera superior
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Box(
-                            modifier = Modifier
-                                .size(36.dp)
-                                .clip(RoundedCornerShape(11.dp))
-                                .background(Color(0xFF0D9488).copy(alpha = 0.15f))
-                                .border(1.2.dp, Color(0xFF0D9488).copy(alpha = 0.4f), RoundedCornerShape(11.dp)),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Icon(
-                                imageVector = Icons.Rounded.Psychology,
-                                contentDescription = null,
-                                tint = Color(0xFF0D9488),
-                                modifier = Modifier.size(22.dp)
-                            )
-                        }
-                        Spacer(Modifier.width(10.dp))
-                        Column {
-                            Text(
-                                text = "TEST PSICOMÉTRICO RIASEC",
-                                fontSize = 9.sp,
-                                letterSpacing = 0.8.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = Color(0xFF0D9488)
-                            )
-                            Text(
-                                text = when (currentStep) {
-                                    0 -> "Orientación Vocacional"
-                                    in 1..12 -> "Pregunta $currentStep de 12"
-                                    else -> "Diagnóstico de Afinidad"
-                                },
-                                fontSize = 15.sp,
-                                fontWeight = FontWeight.Black,
-                                color = colors.textPrimary
-                            )
-                        }
-                    }
+/* DEPRECATED_VOCATIONAL_DIALOG_REMOVED
 
-                    IconButton(onClick = onDismiss, modifier = Modifier.size(32.dp)) {
-                        Icon(imageVector = Icons.Default.Close, contentDescription = "Cerrar", tint = colors.textSecondary, modifier = Modifier.size(20.dp))
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(10.dp))
 
                 // ── ETAPA 0: INTRODUCCIÓN ────────────────────────────────────
                 if (currentStep == 0) {
@@ -723,6 +670,7 @@ fun VocationalTestDialog(
         }
     }
 }
+*/
 
 /**
  * Diálogo de confirmación o acción estilo Sticker / Cartoon 3D:

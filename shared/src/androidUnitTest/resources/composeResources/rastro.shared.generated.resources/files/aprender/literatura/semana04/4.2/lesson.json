@@ -1,0 +1,34 @@
+{
+  "id": "lit_t04_s02",
+  "subjectId": "literatura",
+  "semana": 4,
+  "subtema": "4.2",
+  "title": "3.3. Hitos de la Nueva Narrativa: Carpentier y Borges",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/literatura/LiteraturaSemana04.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/TEMA_04_Literatura_Hispanoamericana.md",
+  "learningObjectives": [
+    "Explicar lo real maravilloso de Carpentier en El reino de este mundo frente al surrealismo artificial europeo",
+    "Identificar los topoi borgianos de laberintos, espejos, bibliotecas y tiempo circular en Ficciones y El Aleph",
+    "Analizar Macondo y los Buendía con tiempo cíclico, pergaminos de Melquíades y masacre bananera",
+    "Diferenciar realismo mágico con naturalidad cotidiana frente a fantástico con asombro y terror",
+    "Reconocer Pedro Páramo con Comala purgatorio y Rayuela con tablero lúdico de lectura abierta"
+  ],
+  "theory": {
+    "id": "th_lit_t04_s02",
+    "asignatura": "Literatura",
+    "semana": 4,
+    "titulo": "3.3. Hitos de la Nueva Narrativa: Carpentier y Borges",
+    "resumen": "",
+    "conceptosClave": [
+      "Lo real maravilloso como prodigio natural de historia y sincretismo americano",
+      "Reino de este mundo 1949 con Mackandal vudú y Henri Christophe en La Ferrière",
+      "Borges con Ficciones 1944 y El Aleph 1949 y motivos de laberinto y espejo",
+      "El Aleph como punto que contiene todo el universo simultáneo en sótano de Garay",
+      "Realismo mágico con Macondo, Buendía, cola de cerdo y ciclón bíblico",
+      "Melquíades con pergaminos en sánscrito y masacre bananera con José Arcadio Segundo",
+      "Pedro Páramo con Comala de murmullos y Rayuela con tablero de Cortázar"
+    ],
+    "admissionTip": "Si ves prólogo 1949 con fe viva marca real maravilloso, si ves laberinto o espejo marca Borges, si ves pergaminos o cola de cerdo marca García Márquez, si ves Comala marca Rulfo, si ves tablero marca Rayuela.",
+    "admissionExplanation": "La trampa capital es creer que Aureliano Buendía muere fusilado cuando muere de viejo junto al castaño, y confundir realismo mágico natural con fantástico que asombra, además de confundir artificio surrealista con fe americana."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "leng_t01_s02",
+  "subjectId": "lenguaje",
+  "semana": 1,
+  "subtema": "1.2",
+  "title": "Tipología de la Comunicación: Clasificación y Criterios",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana01.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_01_Comunicacion_y_Lenguaje.md",
+  "learningObjectives": [
+    "Clasificar la comunicación según el código: verbal, no verbal y no humana",
+    "Distinguir comunicación intrapersonal de interpersonal con ejemplos",
+    "Diferenciar comunicación directa de indirecta por espacio y tiempo",
+    "Clasificar actos según direccionalidad: unidireccional vs. bidireccional",
+    "Distinguir comunicación privada de pública o de masas en casos UNSA"
+  ],
+  "theory": {
+    "id": "th_leng_t01_s02",
+    "asignatura": "Lenguaje",
+    "semana": 1,
+    "titulo": "Tipología de la Comunicación: Clasificación y Criterios",
+    "resumen": "",
+    "conceptosClave": [
+      "Verbal = palabra oral o escrita; no verbal = sirena, semáforo, guiño, braille, distancia",
+      "No humana = señales instintivas animales como danza de abejas y feromonas",
+      "Intrapersonal = monólogo interior; interpersonal = dos o más personas",
+      "Directa = mismo espacio-tiempo; indirecta = distancia espacial o temporal",
+      "Unidireccional = sin retorno inmediato; bidireccional = intercambio de roles",
+      "Privada = destinatario selecto; pública = colectividad anónima",
+      "Un acto se clasifica a la vez por los cinco criterios"
+    ],
+    "admissionTip": "Cartel, radio, periódico y libro de Homero son unidireccionales e indirectos; debate, diálogo y llamada con respuesta son bidireccionales; carta personal es privada e indirecta.",
+    "admissionExplanation": "Admisión combina criterios en un solo caso: primero ubica código, luego relación, espacio, direccionalidad y alcance del destinatario."
+  }
+}

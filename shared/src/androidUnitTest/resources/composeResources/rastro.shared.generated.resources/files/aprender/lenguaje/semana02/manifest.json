@@ -1,0 +1,18 @@
+{
+  "week": 2,
+  "title": "Variaciones de la Lengua y Realidad Lingüística del Perú",
+  "lessons": [
+    {
+      "subtopic": "2.1",
+      "lessonId": "leng_t02_s01",
+      "title": "Las Variaciones de la Lengua: Dialecto, Sociolecto e Idiolecto",
+      "path": "2.1/lesson.json"
+    },
+    {
+      "subtopic": "2.2",
+      "lessonId": "leng_t02_s02",
+      "title": "Realidad Lingüística del Perú: Multilingüismo, Lenguas Amerindias y Castellano",
+      "path": "2.2/lesson.json"
+    }
+  ]
+}

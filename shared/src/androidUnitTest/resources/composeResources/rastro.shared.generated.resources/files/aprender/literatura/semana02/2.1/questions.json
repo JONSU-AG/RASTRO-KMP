@@ -1,0 +1,182 @@
+[
+  {
+    "id": "lit_t02_s01_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es el tema central que articula el argumento y la estructura épica de la Ilíada de Homero?",
+    "options": [
+      "La cólera de Aquiles y sus funestas consecuencias para el ejército aqueo.",
+      "El largo viaje de regreso de Odiseo a su patria Ítaca.",
+      "El juicio de Paris y el rapto de Helena de Esparta.",
+      "La construcción del caballo de madera ideado por Odiseo."
+    ],
+    "correctIndex": 0,
+    "explanation": "La Ilíada inicia con la invocación a la musa para cantar la cólera funesta de Aquiles («Canta, oh diosa, la cólera del Pelida Aquiles...»), desencadenada por el ultraje de Agamenón al despojarlo de Briseida.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s01_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la tragedia Edipo Rey de Sófocles, ¿cuál es la revelación trágica fundamental que consuma el destino inexorable del protagonista?",
+    "options": [
+      "Que Yocasta había huido a Corinto tras conspirar contra el oráculo.",
+      "Que el adivino Tiresias era un espía enviado por Creonte para derrocarlo.",
+      "Que él mismo dio muerte a su padre Layo y contrajo matrimonio con su propia madre Yocasta.",
+      "Que los ciudadanos tebanos tramaban su muerte mediante una epidemia fabricada."
+    ],
+    "correctIndex": 2,
+    "explanation": "El núcleo trágico de Edipo Rey reside en la anagnórisis donde Edipo descubre con horror que, intentando eludir la profecía délfica, asesinó involuntariamente a Layo en una encrucijada y se desposó con su madre biológica Yocasta.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s01_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Qué héroe troyano es el principal defensor de su patria en la Ilíada y muere en combate singular a manos de Aquiles?",
+    "options": [
+      "Eneas",
+      "Héctor",
+      "Paris",
+      "Príamo"
+    ],
+    "correctIndex": 1,
+    "explanation": "Héctor, el de tremolante casco, primogénito de Príamo y símbolo del héroe patriótico y familiar, combate valientemente y es vencido por Aquiles para vengar la muerte de Patroclo.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.1.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s01_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la Odisea, la virtud primordial que define al héroe Odiseo frente a los múltiples peligros y monstruos marinos es:",
+    "options": [
+      "La astucia, prudencia y el ingenio (metis)",
+      "La fuerza bruta invencible",
+      "El fervor religioso sumiso",
+      "La destreza letal en el combate a caballo"
+    ],
+    "correctIndex": 0,
+    "explanation": "Odiseo encarna al héroe de la inteligencia práctica y la astucia (polymétis), capaz de vencer al cíclope Polifemo, eludir el canto de las sirenas y recuperar su hogar mediante el engaño meditado.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s01_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Las fórmulas fijas como «el de los pies ligeros» (para Aquiles) o «Atenea, la de ojos de lechuza» corresponden al recurso estilístico homérico denominado:",
+    "options": [
+      "Hipérbaton épico",
+      "Epíteto homérico",
+      "Metáfora heroica",
+      "Sinécdoque formular"
+    ],
+    "correctIndex": 1,
+    "explanation": "El epíteto homérico es un adjetivo o frase adjetival recurrente que fija un rasgo distintivo del personaje o dios y facilitaba la memorización rítmica a los aedos.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.1.5",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s01_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de los siguientes dramaturgos griegos es considerado el «padre de la tragedia» al incorporar al segundo actor (deuteragonista) y escribir la célebre Orestíada?",
+    "options": [
+      "Aristófanes",
+      "Sófocles",
+      "Esquilo",
+      "Eurípides"
+    ],
+    "correctIndex": 2,
+    "explanation": "Esquilo transformó el ditirambo litúrgico en verdadero teatro dialogado introduciendo el segundo actor y componiendo tragedias de grandiosa tensión teológica como la trilogía de la Orestíada.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s01_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la poética clásica griega, la hybris que precipita la ruina de los héroes trágicos consiste formalmente en:",
+    "options": [
+      "El apego desmedido a las riquezas materiales y al comercio.",
+      "La ignorancia absoluta de las leyes de la polis.",
+      "La cobardía demostrada en el campo de batalla frente al enemigo.",
+      "La soberbia desmedida o desafío insolente al orden de los dioses y al destino."
+    ],
+    "correctIndex": 3,
+    "explanation": "La hybris es el orgullo o desmesura con la que el ser humano transgrede sus propios límites mortales, desafiando a los dioses, lo que desata la venganza o castigo cósmico (némesis).",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s01_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Qué rey de Troya acude de noche a la tienda de Aquiles para suplicarle compasión y el rescate del cadáver mutilado de su hijo Héctor?",
+    "options": [
+      "Príamo",
+      "Néstor",
+      "Menelao",
+      "Peleo"
+    ],
+    "correctIndex": 0,
+    "explanation": "En uno de los momentos más conmovedores de la Ilíada (Canto XXIV), el anciano rey Príamo besa las manos homicidas de Aquiles implorando el cuerpo de su hijo para darle digna sepultura.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.1.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s01_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En Edipo Rey, el personaje ciego que encarna la clarividencia espiritual y revela que el asesino de Layo es el propio rey de Tebas es:",
+    "options": [
+      "Corifeo",
+      "Tiresias",
+      "Creonte",
+      "Polifemo"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tiresias, el adivino invidente consagrado a Apolo, opone su ceguera física a la ceguera moral de Edipo, develando la verdad que el monarca se niega a aceptar.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La fidelidad conyugal inquebrantable en la Odisea está encarnada emblemáticamente por el personaje de:",
+    "options": [
+      "Circe",
+      "Nausícaa",
+      "Calipso",
+      "Penélope"
+    ],
+    "correctIndex": 3,
+    "explanation": "Penélope teje y desteje su manto fúnebre durante veinte años para retrasar a los pretendientes y esperar el retorno de su legítimo esposo Odiseo.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.1.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  }
+]

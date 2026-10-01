@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t06_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración compuesta 'El expositor presentó su investigación; el auditorio escuchó en silencio', las proposiciones se hallan coordinadas por:",
+    "options": [
+      "Subordinación adjetiva",
+      "Yuxtaposición",
+      "Subordinación sustantiva",
+      "Conjunción adversativa"
+    ],
+    "correctIndex": 1,
+    "explanation": "La coordinación yuxtapuesta enlaza proposiciones equivalentes e independientes mediante signos de puntuación (en este caso, punto y coma).",
+    "subject": "lenguaje",
+    "semana": 6,
+    "concept": "6.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t06_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'Quienes alcancen el puntaje requerido obtendrán la vacante', la proposición subordinada cumple la función de:",
+    "options": [
+      "Objeto Directo",
+      "Objeto Indirecto",
+      "Sujeto de la proposición principal",
+      "Complemento circunstancial"
+    ],
+    "correctIndex": 2,
+    "explanation": "La proposición 'Quienes alcancen el puntaje requerido' equivale al sintagma 'Ellos' y concuerda con el verbo 'obtendrán', cumpliendo función de Sujeto.",
+    "subject": "lenguaje",
+    "semana": 6,
+    "concept": "6.2.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t06_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En 'El decano afirmó que publicarán los resultados a medianoche', la proposición subordinada 'que publicarán los resultados a medianoche' funciona como:",
+    "options": [
+      "Sujeto",
+      "Atributo copulativo",
+      "Objeto Directo (OD)",
+      "Circunstancial de tiempo"
+    ],
+    "correctIndex": 2,
+    "explanation": "La proposición subordinada sustantiva se puede sustituir por el pronombre 'lo' ('El decano lo afirmó'), funcionando como Objeto Directo.",
+    "subject": "lenguaje",
+    "semana": 6,
+    "concept": "6.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t06_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Qué clase de oración compuesta coordinada conjuntiva se presenta en 'El examen era riguroso, pero no imposible'?",
+    "options": [
+      "Disyuntiva",
+      "Distributiva",
+      "Copulativa",
+      "Adversativa"
+    ],
+    "correctIndex": 3,
+    "explanation": "La conjunción 'pero' introduce una proposición coordinada adversativa que expresa objeción o restricción frente a la anterior.",
+    "subject": "lenguaje",
+    "semana": 6,
+    "concept": "6.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t06_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'Los postulantes que se inscribieron a tiempo rindieron el examen', la proposición subordinada 'que se inscribieron a tiempo' es:",
+    "options": [
+      "Subordinada adverbial de modo",
+      "Subordinada adjetiva explicativa",
+      "Subordinada sustantiva de sujeto",
+      "Subordinada adjetiva especificativa"
+    ],
+    "correctIndex": 3,
+    "explanation": "Es una proposición subordinada adjetiva encabezada por el relativo 'que' que delimita a su antecedente 'los postulantes' sin comas (especificativa).",
+    "subject": "lenguaje",
+    "semana": 6,
+    "concept": "6.2.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t06_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En 'Iré a la biblioteca aunque llueva torrencialmente', el conector 'aunque' introduce una proposición subordinada adverbial:",
+    "options": [
+      "Concesiva",
+      "Causal",
+      "Condicional",
+      "Final"
+    ],
+    "correctIndex": 0,
+    "explanation": "Las subordinadas concesivas expresan una dificultad, objeción o traba que a pesar de todo no impide la realización de la acción principal.",
+    "subject": "lenguaje",
+    "semana": 6,
+    "concept": "6.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t06_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En 'Pienso, luego existo', la conjunción 'luego' encabeza una proposición coordinada de tipo:",
+    "options": [
+      "Adversativa",
+      "Ilativa",
+      "Copulativa",
+      "Subordinada condicional"
+    ],
+    "correctIndex": 1,
+    "explanation": "'Luego' funciona aquí como conjunción ilativa que introduce una deducción o consecuencia lógica natural de lo previamente afirmado.",
+    "subject": "lenguaje",
+    "semana": 6,
+    "concept": "6.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t06_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'La casa donde crecí queda en Yanahuara', la proposición 'donde crecí' modifica al antecedente sustantivo 'la casa'; por tanto, es una subordinada:",
+    "options": [
+      "Adverbial de lugar propia",
+      "Sustantiva de sujeto",
+      "Adjetiva (con antecedente sustantivo expreso)",
+      "Coordinada explicativa"
+    ],
+    "correctIndex": 2,
+    "explanation": "Aunque 'donde' es un adverbio relativo, al poseer un antecedente sustantivo expreso ('la casa'), la proposición funciona como subordinada adjetiva.",
+    "subject": "lenguaje",
+    "semana": 6,
+    "concept": "6.2.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t06_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes oraciones presenta una proposición subordinada sustantiva en función de Atributo?",
+    "options": [
+      "Mi meta es alcanzar una vacante en la universidad.",
+      "Dijo que vendría temprano.",
+      "Quien busca encuentra.",
+      "Compró el libro para que repases."
+    ],
+    "correctIndex": 0,
+    "explanation": "La proposición 'alcanzar una vacante en la universidad' complementa al sujeto 'mi meta' a través del verbo copulativo 'es' ('Mi meta lo es').",
+    "subject": "lenguaje",
+    "semana": 6,
+    "concept": "6.2.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t06_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En 'Bien estudian en la biblioteca, bien practican en sus casas', el tipo de coordinación presente es:",
+    "options": [
+      "Yuxtapuesta causal",
+      "Distributiva",
+      "Adversativa restrictiva",
+      "Subordinada ilativa"
+    ],
+    "correctIndex": 1,
+    "explanation": "Los nexos correlativos 'bien... bien...' introducen proposiciones coordinadas distributivas que expresan alternancia no excluyente.",
+    "subject": "lenguaje",
+    "semana": 6,
+    "concept": "6.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

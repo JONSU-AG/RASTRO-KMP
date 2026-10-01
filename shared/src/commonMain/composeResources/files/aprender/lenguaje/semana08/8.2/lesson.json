@@ -1,0 +1,33 @@
+{
+  "id": "leng_t08_s02",
+  "subjectId": "lenguaje",
+  "semana": 8,
+  "subtema": "8.2",
+  "title": "Relaciones Léxico-Semánticas: Polisemia, Homonimia, Antonimia e Inclusión",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana08.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_08_Semantica_y_Lexicologia.md",
+  "learningObjectives": [
+    "Diferenciar polisemia de misma raíz de homonimia homógrafa y homófona",
+    "Clasificar antonimia gramatical, propia gradual, complementaria y recíproca",
+    "Distinguir paronimia de semejanza fónica de homofonía de igualdad fónica",
+    "Aplicar hiperonimia, hiponimia, cohiponimia, holonimia y meronimia sin confundirlas"
+  ],
+  "theory": {
+    "id": "th_leng_t08_s02",
+    "asignatura": "Lenguaje",
+    "semana": 8,
+    "titulo": "Relaciones Léxico-Semánticas: Polisemia, Homonimia, Antonimia e Inclusión",
+    "resumen": "",
+    "conceptosClave": [
+      "Polisemia un lexema misma etimología con sema común como pico y pecho",
+      "Homógrafas misma escritura distinto origen como lima; homófonas mismo sonido como tubo-tuvo",
+      "Complementaria excluyente vivo-muerto; propia gradual frío-caliente; recíproca comprador-vendedor",
+      "Gramatical por prefijo leal-desleal; parónimos aptitud-actitud e inicuo-inocuo",
+      "Hiperónimo flor engloba; hipónimo orquídea subordina; cohipónimos clavel-jazmín",
+      "Holónimo guitarra todo; merónimo cuerda parte con prueba forma parte de",
+      "Raíz es merónimo de árbol, no hipónimo; dedo es merónimo de mano"
+    ],
+    "admissionTip": "Prueba ES UN para taxonomía y FORMA PARTE DE para parte-todo; si admite tibio es propia, si no admite medio es complementaria, si uno exige al otro es recíproca.",
+    "admissionExplanation": "Hipónimo es especie del género mientras merónimo es pieza del todo; polisemia comparte origen y sema mientras homonimia es coincidencia accidental sin parentesco."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "week": 4,
+  "title": "Modernismo Hispanoamericano y Nueva Narrativa: Carpentier y Borges",
+  "lessons": [
+    {
+      "subtopic": "4.1",
+      "lessonId": "lit_t04_s01",
+      "title": "3.1. El Modernismo Hispanoamericano",
+      "path": "4.1/lesson.json"
+    },
+    {
+      "subtopic": "4.2",
+      "lessonId": "lit_t04_s02",
+      "title": "3.3. Hitos de la Nueva Narrativa: Carpentier y Borges",
+      "path": "4.2/lesson.json"
+    }
+  ]
+}

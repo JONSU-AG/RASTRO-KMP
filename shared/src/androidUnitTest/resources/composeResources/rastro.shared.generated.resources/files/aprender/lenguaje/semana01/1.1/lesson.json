@@ -1,0 +1,34 @@
+{
+  "id": "leng_t01_s01",
+  "subjectId": "lenguaje",
+  "semana": 1,
+  "subtema": "1.1",
+  "title": "El Circuito Comunicativo: Fases, Elementos y Fenómenos Interferentes",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana01.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_01_Comunicacion_y_Lenguaje.md",
+  "learningObjectives": [
+    "Describir las tres fases de la comunicación: psíquica, fisiológica y física",
+    "Identificar los ocho elementos del circuito: emisor, receptor, mensaje, código, canal, referente, contexto y fenómenos interferentes",
+    "Diferenciar canal físico de código abstracto en casos de admisión",
+    "Explicar ruido, redundancia y retroalimentación en actos comunicativos reales",
+    "Analizar el circuito completo en ejemplos cotidianos y literarios"
+  ],
+  "theory": {
+    "id": "th_leng_t01_s01",
+    "asignatura": "Lenguaje",
+    "semana": 1,
+    "titulo": "El Circuito Comunicativo: Fases, Elementos y Fenómenos Interferentes",
+    "resumen": "",
+    "conceptosClave": [
+      "Encodificación psíquica en emisor, decodificación psíquica en receptor",
+      "Canal = soporte físico; código = sistema abstracto compartido",
+      "Referente = realidad aludida; contexto = situación que fija el sentido",
+      "Ruido distorsiona, redundancia refuerza, feedback verifica",
+      "Fase fisiológica activa fonadores y receptores; fase física desplaza ondas",
+      "Sin código común no hay comprensión aunque haya canal perfecto",
+      "Contexto decide el sentido: ¡Fuego! en tiro vs. en cine"
+    ],
+    "admissionTip": "Si preguntan canal en libro, llamada o conversación cara a cara: libro = papel impreso, llamada = cable y ondas electromagnéticas, cara a cara = aire y ondas sonoras; nunca marques el idioma como canal.",
+    "admissionExplanation": "La trampa canal vs. código es la más castigada: el idioma es siempre código abstracto y el medio material es siempre canal."
+  }
+}

@@ -11,10 +11,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Calculate
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.Login
+import androidx.compose.material.icons.rounded.Logout
+import androidx.compose.material.icons.rounded.Visibility
 import androidx.compose.material.icons.rounded.AutoAwesome
 import androidx.compose.material.icons.rounded.Policy
 import androidx.compose.material.icons.rounded.Settings
 import androidx.compose.material.icons.rounded.Timer
+import androidx.compose.material.icons.rounded.Gesture
 import androidx.compose.material.icons.rounded.AdminPanelSettings
 import androidx.compose.material.icons.rounded.Widgets
 import androidx.compose.material3.Icon
@@ -33,7 +36,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.jonsuapps.rastro.theme.RastroPalette
 
-enum class MoreAction { FORMULAS, POMODORO, WIDGETS, SETTINGS, POLICIES, ACCOUNT, ADMIN, LOKI_LAB, TOGGLE_ADMIN_VIEW }
+enum class MoreAction { SETTINGS, WIDGETS, PIZARRA, LOGIN, LOGOUT, ADMIN, LOKI_LAB, TOGGLE_ADMIN_VIEW }
 
 @Composable
 fun MoreActionsDialog(
@@ -44,22 +47,30 @@ fun MoreActionsDialog(
     onDismiss: () -> Unit,
     onAction: (MoreAction) -> Unit
 ) {
-    val actions = mutableListOf(
-        Triple(MoreAction.FORMULAS, Icons.Rounded.Calculate, "Fórmulas y Truquitos Pre-U"),
-        Triple(MoreAction.POMODORO, Icons.Rounded.Timer, "Temporizador Pomodoro"),
-        Triple(MoreAction.WIDGETS, Icons.Rounded.Widgets, "Widgets y Atajos de Inicio"),
-        Triple(MoreAction.SETTINGS, Icons.Rounded.Settings, "Configuración"),
-        Triple(MoreAction.POLICIES, Icons.Rounded.Policy, "Políticas y Privacidad"),
-        Triple(MoreAction.ACCOUNT, Icons.Rounded.Login, if (signedIn) "Mi perfil" else "Iniciar sesión")
-    ).apply {
-        if (isAdmin && signedIn) {
-            add(Triple(MoreAction.ADMIN, Icons.Rounded.AdminPanelSettings, "Panel de Administrador"))
-            add(Triple(MoreAction.LOKI_LAB, Icons.Rounded.AutoAwesome, "Laboratorio de Loki"))
-            add(Triple(
-                MoreAction.TOGGLE_ADMIN_VIEW,
-                Icons.Rounded.AdminPanelSettings,
-                if (isAdminViewMode) "Cambiar a Modo Usuario" else "Cambiar a Modo Admin"
-            ))
+    // Menú adaptativo según estado del usuario y tema unificado
+    val actions = mutableListOf<Triple<MoreAction, ImageVector, String>>()
+
+    // Común para todos: Configuración, Widgets y Pizarra
+    actions.add(Triple(MoreAction.SETTINGS, Icons.Rounded.Settings, "Configuración"))
+    actions.add(Triple(MoreAction.WIDGETS, Icons.Rounded.Widgets, "Widgets"))
+    actions.add(Triple(MoreAction.PIZARRA, Icons.Rounded.Gesture, "Pizarra"))
+
+    if (!signedIn) {
+        // INVITADO: Iniciar sesión
+        actions.add(Triple(MoreAction.LOGIN, Icons.Rounded.Login, "Iniciar sesión"))
+    } else if (!isAdmin) {
+        // USUARIO AUTENTICADO NORMAL: Cerrar sesión
+        actions.add(Triple(MoreAction.LOGOUT, Icons.Rounded.Logout, "Cerrar sesión"))
+    } else {
+        // ADMINISTRADOR REAL
+        if (isAdminViewMode) {
+            actions.add(Triple(MoreAction.ADMIN, Icons.Rounded.AdminPanelSettings, "Panel Admin"))
+            actions.add(Triple(MoreAction.LOKI_LAB, Icons.Rounded.AutoAwesome, "Laboratorio Loki"))
+            actions.add(Triple(MoreAction.TOGGLE_ADMIN_VIEW, Icons.Rounded.Visibility, "Modo usuario"))
+            actions.add(Triple(MoreAction.LOGOUT, Icons.Rounded.Logout, "Cerrar sesión"))
+        } else {
+            actions.add(Triple(MoreAction.TOGGLE_ADMIN_VIEW, Icons.Rounded.AdminPanelSettings, "Modo admin"))
+            actions.add(Triple(MoreAction.LOGOUT, Icons.Rounded.Logout, "Cerrar sesión"))
         }
     }
     Dialog(
@@ -105,15 +116,10 @@ fun MoreActionsDialog(
                 }
                 actions.forEachIndexed { index, (action, icon, label) ->
                     val accent = when (action) {
-                        MoreAction.FORMULAS -> Color(0xFF8B5CF6)
-                        MoreAction.POMODORO -> Color(0xFFEF4444)
-                        MoreAction.WIDGETS -> Color(0xFFF59E0B)
-                        MoreAction.SETTINGS -> Color(0xFF0EA5E9)
-                        MoreAction.POLICIES -> Color(0xFF64748B)
-                        MoreAction.ADMIN -> Color(0xFFE11D48)
-                        MoreAction.LOKI_LAB -> colors.textPrimary
-                        MoreAction.TOGGLE_ADMIN_VIEW -> Color(0xFF10B981)
-                        MoreAction.ACCOUNT -> colors.accent
+                        MoreAction.LOGOUT -> Color(0xFFEF4444) // Color semántico protegido de advertencia
+                        MoreAction.ADMIN -> Color(0xFFE11D48)  // Color semántico protegido de admin
+                        MoreAction.TOGGLE_ADMIN_VIEW -> Color(0xFF10B981) // Color semántico de alternancia
+                        else -> colors.accent
                     }
                     MoreActionRow(label, icon, accent, colors, action == MoreAction.ADMIN || action == MoreAction.TOGGLE_ADMIN_VIEW || index == actions.lastIndex) {
                         onDismiss()
@@ -141,21 +147,21 @@ private fun MoreActionRow(
             .height(44.dp)
             .bouncyClick(scaleDown = 0.94f, onClick = onClick)
     ) {
-        // Bisel 3D inferior
+        // Bisel 3D inferior dependiente de la paleta del tema
         Box(
             modifier = Modifier
                 .matchParentSize()
                 .offset(y = 2.5.dp)
                 .clip(shape)
-                .background(accent.copy(alpha = 0.35f))
+                .background(colors.cardBevel)
         )
-        // Cara frontal táctil
+        // Cara frontal táctil con colores del tema activo
         Box(
             modifier = Modifier
                 .fillMaxSize()
                 .clip(shape)
-                .background(accent.copy(alpha = 0.10f))
-                .border(1.5.dp, accent.copy(alpha = 0.55f), shape)
+                .background(colors.surfaceAccent)
+                .border(1.5.dp, colors.strokeBorder, shape)
                 .padding(horizontal = 12.dp),
             contentAlignment = Alignment.CenterStart
         ) {

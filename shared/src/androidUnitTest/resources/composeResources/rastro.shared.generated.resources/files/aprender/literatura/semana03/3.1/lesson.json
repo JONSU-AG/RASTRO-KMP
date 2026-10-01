@@ -1,0 +1,34 @@
+{
+  "id": "lit_t03_s01",
+  "subjectId": "literatura",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "3.1. La Épica Medieval Española: El *Cantar de Mio Cid*",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/literatura/LiteraturaSemana03.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/TEMA_03_Literatura_Espanola.md + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/OBRAS/OBRA_09_Cantar_de_Mio_Cid.md",
+  "learningObjectives": [
+    "Explicar el Mio Cid como cantar de gesta de juglaría con honor doble y realismo histórico",
+    "Caracterizar métrica irregular con tiradas asonantes, hemistiquios y cesura central",
+    "Narrar destierro por parias de Sevilla, Valencia y bodas con infantes de Carrión",
+    "Analizar afrenta de Corpes con león y Búcar y justicia en Cortes de Toledo con duelo",
+    "Identificar Minaya, Colada y Tizona, Per Abbat y mesura frente a desmesura"
+  ],
+  "theory": {
+    "id": "th_lit_t03_s01",
+    "asignatura": "Literatura",
+    "semana": 3,
+    "titulo": "3.1. La Épica Medieval Española: El *Cantar de Mio Cid*",
+    "resumen": "",
+    "conceptosClave": [
+      "Mester de juglaría oral y popular con anisosilabismo de 14 a 16 sílabas y rima asonante",
+      "Doble pérdida y recuperación del honor político con Valencia y familiar con Toledo",
+      "Destierro por calumnias de García Ordóñez sobre parias de Sevilla con nueve días",
+      "Afrenta de Corpes en robledal con azotes y abandono frente a venganza legal",
+      "Cortes de Toledo con Colada y Tizona, dote y riepto con Pedro Bermúdez y Antolínez",
+      "Mesura como prudencia y lealtad frente a hybris desmesurada de Aquiles y Roldán",
+      "Per Abbat copista de 1207 y Minaya diestro brazo con realismo topográfico"
+    ],
+    "admissionTip": "Si ves tiradas irregulares marca juglaría, si ves cuaderna vía marca clerecía, si ves Corpes marca infantes, si ves Toledo marca duelo y no venganza privada, si ves Colada marca Berenguer y si ves Tizona marca Búcar.",
+    "admissionExplanation": "La trampa clásica dice que el Cid mata con sus manos a los infantes y que Per Abbat es autor, cuando acude a ley con campeones y Per Abbat es solo copista del manuscrito único."
+  }
+}

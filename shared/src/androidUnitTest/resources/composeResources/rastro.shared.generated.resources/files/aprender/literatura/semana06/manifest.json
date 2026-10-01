@@ -1,0 +1,18 @@
+{
+  "week": 6,
+  "title": "Mariano Melgar y Vanguardia Arequipeña: Del Aquelarre a la Modernidad",
+  "lessons": [
+    {
+      "subtopic": "6.1",
+      "lessonId": "lit_t06_s01",
+      "title": "3.1. Mariano Melgar y Valdivieso (Arequipa, 1790 - Umachiri, 1815)",
+      "path": "6.1/lesson.json"
+    },
+    {
+      "subtopic": "6.2",
+      "lessonId": "lit_t06_s02",
+      "title": "3.2. De la Bohemia del Aquelarre a la Vanguardia Arequipeña",
+      "path": "6.2/lesson.json"
+    }
+  ]
+}

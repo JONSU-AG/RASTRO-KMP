@@ -1,0 +1,34 @@
+{
+  "id": "psi_t07_s01",
+  "subjectId": "psicologia",
+  "semana": 7,
+  "subtema": "7.1",
+  "title": "3.1. Origen y Definición de la Inteligencia Emocional (IE)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_07_Inteligencia_Emocional.md",
+  "learningObjectives": [
+    "Definir afectividad como resonancia de agrado y desagrado y emocion subita intensa breve con activacion vegetativa frente a sentimiento estable cultural",
+    "Reconocer pasiones absorbentes prolongadas superiores o inferiores y estados de animo de fondo difusos de baja intensidad como melancolia o euforia",
+    "Identificar emociones basicas de Ekman con alegria tristeza miedo ira asco y sorpresa y amigdala como centro de miedo y amenaza en sistema limbico",
+    "Explicar origen de IE con Thorndike social Gardner intrapersonal e interpersonal Salovey y Mayer 1990 y Goleman 1995 con definicion formal",
+    "Describir secuestro amigdalino con via corta rapida y via larga prefrontal moduladora para completar retos de afectividad con respaldo de TEMA_06"
+  ],
+  "theory": {
+    "id": "th_psi_t07_s01",
+    "asignatura": "Psicología",
+    "semana": 7,
+    "titulo": "3.1. Origen y Definición de la Inteligencia Emocional (IE)",
+    "resumen": "",
+    "conceptosClave": [
+      "Afectividad que tine existencia con agrado desagrado bueno malo atrayente repulsivo y moviliza conducta humana",
+      "Emocion aguda subita intensa breve con taquicardia sudoracion y midriasis frente a sentimiento estable moderado duradero y cultural como amor y patriotismo",
+      "Pasion intensa prolongada que monopoliza conciencia superior creadora o inferior ludopatica frente a estado de animo basal difuso de dias",
+      "Ekman con seis basicas universales de alegria tristeza miedo ira asco y sorpresa con sustrato innato y expresion facial transcultural",
+      "Amigdala subcortical limbica de miedo y agresion con via corta talamo amigdala y sistema simpatico de lucha o huida",
+      "IE con Thorndike 1920 social Gardner 1983 personal Salovey y Mayer 1990 supervision y Goleman 1995 reconocimiento regulacion y relaciones",
+      "Secuestro amigdalino con explosion desproporcionada que anula prefrontal y luego arrepentimiento cuando frontal retoma mando"
+    ],
+    "admissionTip": "Si ves agrado y desagrado marca afectividad, si ves subita intensa y breve con taquicardia marca emocion, si ves estable y cultural marca sentimiento, si ves absorbe por anos marca pasion, si ves fondo de dias marca estado de animo, si ves seis universales marca Ekman, si ves almendra marca amigdala, si ves 1990 marca Salovey y Mayer, si ves 1995 marca Goleman, si ves pierde estribos marca secuestro.",
+    "admissionExplanation": "La trampa es llamar sentimiento a emocion subita, llamar humana exclusiva a emocion que comparte con mamiferos, y confundir creador 1990 con divulgador 1995; emocion es biologica breve e intensa, sentimiento es cultural estable, pasion monopoliza, animo tine de fondo."
+  }
+}

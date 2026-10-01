@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "7.1.1",
+    "correctIndex": 2,
+    "explanation": "La afectividad tiñe la existencia humana: califica el mundo en agradable/desagradable, bueno/malo, atrayente/repulsivo, movilizando la conducta.",
+    "fuente": "temario",
+    "id": "psi_t07_s01_c01",
+    "options": [
+      "El funcionamiento del cerebelo en la marcha erguida.",
+      "El número de palabras leídas por minuto en un texto técnico.",
+      "La relación de agrado o desagrado, atracción o rechazo y resonancia subjetiva que el sujeto experimenta frente a su entorno y frente a sí mismo.",
+      "La memorización de las capitales del mundo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "La 'Afectividad' en psicología se conceptualiza como el conjunto de procesos psíquicos que expresan:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.2",
+    "correctIndex": 1,
+    "explanation": "La emoción es una respuesta adaptativa aguda ante un estímulo disparador inmediato (miedo, ira, sorpresa), con fuerte activación del sistema nervioso autónomo.",
+    "fuente": "temario",
+    "id": "psi_t07_s01_c02",
+    "options": [
+      "Extremadamente largos que duran décadas sin manifestaciones fisiológicas.",
+      "Súbitos, intensos, de corta duración temporal y acompañados de notorias alteraciones psicofisiológicas vegetativas (taquicardia, sudoración, midriasis).",
+      "Exclusivos de la especie humana sin presencia en mamíferos.",
+      "Adquiridos exclusivamente en la educación superior."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Las 'Emociones' se diferencian de los 'Sentimientos' en que las emociones son procesos afectivos:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.2",
+    "correctIndex": 3,
+    "explanation": "Los sentimientos son el resultado de la elaboración cognitiva y social de las emociones: son menos viscerales fisiológicamente pero mucho más permanentes en la personalidad.",
+    "fuente": "temario",
+    "id": "psi_t07_s01_c03",
+    "options": [
+      "Reacciones violentas de dos segundos de duración.",
+      "Innatos e idénticos en recién nacidos de todo el reino animal.",
+      "Imposibles de comunicar mediante el lenguaje verbal.",
+      "Procesos afectivos más estables, profundos, duraderos en el tiempo, de intensidad moderada y construidos cultural y conscientemente."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Por contraste, los 'Sentimientos' (como el amor filial, la amistad, el patriotismo o el rencor) se caracterizan por ser:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.3",
+    "correctIndex": 3,
+    "explanation": "Ekman investigó tribus aisladas en Papúa Nueva Guinea y probó que las seis emociones básicas poseen sustrato neurobiológico innato y patrones motores faciales universales.",
+    "fuente": "temario",
+    "id": "psi_t07_s01_c04",
+    "options": [
+      "Hambre, sed, sueño, frío, calor y cansancio.",
+      "Ansiedad, depresión, esquizofrenia, histeria, manía y fobia.",
+      "Amor, odio, envidia, celos, rencor y orgullo.",
+      "Alegría, Tristeza, Miedo, Ira, Asco (desagrado) y Sorpresa."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Paul Ekman demostró transculturalmente la existencia de seis 'Emociones Básicas o Primarias' universales con expresiones faciales innatas idénticas en todas las culturas:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.4",
+    "correctIndex": 1,
+    "explanation": "Joseph LeDoux descubrió el 'camino corto' tálamo-amígdala que desata la respuesta de lucha o huida en milisegundos, antes de que la corteza prefrontal procese conscientemente el peligro.",
+    "fuente": "temario",
+    "id": "psi_t07_s01_c05",
+    "options": [
+      "Glándula tiroides",
+      "Amígdala cerebral",
+      "Corteza motora primaria",
+      "Médula espinal lumbar"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "La estructura cerebral subcortical del sistema límbico que actúa como el centro neurálgico de procesamiento y respuesta rápida ante el miedo y la amenaza es la:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.2",
+    "correctIndex": 3,
+    "explanation": "La pasión absorbe la voluntad del sujeto; pueden ser superiores (pasión creadora por la ciencia, el arte o la justicia) o inferiores (pasión destructiva por el juego/ludopatía o el poder desmedido).",
+    "fuente": "temario",
+    "id": "psi_t07_s01_c06",
+    "options": [
+      "Aparecer solo durante el sueño no-REM.",
+      "No tener ninguna influencia en la conducta diaria.",
+      "Ser efímeras y desaparecer a los tres segundos.",
+      "Poseer una intensidad extraordinaria, gran duración temporal y monopolizar la conciencia y energía vital del individuo hacia un único objeto o actividad."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Las 'Pasiones' en la clasificación de los procesos afectivos se definen como vivencias afectivas caracterizadas por:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.2",
+    "correctIndex": 0,
+    "explanation": "El estado de ánimo es la tonalidad afectiva basal que acompaña la vida diaria, influyendo en la receptividad y disposición ante los sucesos.",
+    "fuente": "temario",
+    "id": "psi_t07_s01_c07",
+    "options": [
+      "De fondo, difusa, prolongada y de baja intensidad que tiñe globalmente la percepción del mundo (ej. estar melancólico, eufórico o irritable durante días).",
+      "Que dura únicamente medio segundo durante una pesadilla.",
+      "Producida solo por la ingestión de azúcar refinada.",
+      "Que depende exclusivamente de la altura geográfica sobre el nivel del mar."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "El 'Estado de Ánimo' o humor se distingue por ser una condición afectiva:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.5",
+    "correctIndex": 2,
+    "explanation": "Daniel Goleman publicó 'Inteligencia Emocional', demostrando que el éxito vital y el bienestar dependen más del coeficiente emocional (EQ) que del mero cociente intelectual (CI).",
+    "fuente": "temario",
+    "id": "psi_t07_s01_c08",
+    "options": [
+      "Sigmund Freud",
+      "Jean Piaget",
+      "Daniel Goleman",
+      "B. F. Skinner"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "El concepto de 'Inteligencia Emocional' fue formulado científicamente por John Mayer y Peter Salovey en 1990 y popularizado mundialmente en 1995 por el psicólogo y periodista:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.5",
+    "correctIndex": 3,
+    "explanation": "La IE implica autoconciencia, gestión emocional, automotivación, empatía y destrezas de vinculación social efectiva.",
+    "fuente": "temario",
+    "id": "psi_t07_s01_c09",
+    "options": [
+      "Resolver exclusivamente problemas lógico-formales y de cálculo matemático abstracto.",
+      "Reprimir e inhibir por completo toda manifestación afectiva ante cualquier estímulo ambiental.",
+      "Demostrar una capacidad excepcional de memoria mecánica para datos no contextualizados.",
+      "Reconocer los propios sentimientos y los ajenos, motivarnos a nosotros mismos y manejar adecuadamente las relaciones interpersonales y la autorregulación emocional."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "La Inteligencia Emocional se define formalmente como la capacidad de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.6",
+    "correctIndex": 1,
+    "explanation": "En el secuestro amigdalino, la persona 'pierde los estribos' y actúa con ira o pánico incontrolado, arrepintiéndose minutos después cuando el lóbulo frontal retoma el mando.",
+    "fuente": "temario",
+    "id": "psi_t07_s01_c10",
+    "options": [
+      "Un virus ataca físicamente el tejido cerebral.",
+      "La amígdala cerebral reacciona con una respuesta emocional explosiva y desproporcionada ante una amenaza percibida, anulando momentáneamente el control racional de la corteza prefrontal.",
+      "La persona pierde el habla por un golpe en la mandíbula.",
+      "Se aprende un nuevo idioma en menos de una hora."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "El fenómeno del 'Secuestro Amigdalino' (Amygdala Hijack) descrito por Goleman ocurre cuando:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "id": "lit_t04_s01",
+  "subjectId": "literatura",
+  "semana": 4,
+  "subtema": "4.1",
+  "title": "3.1. El Modernismo Hispanoamericano",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/literatura/LiteraturaSemana04.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/TEMA_04_Literatura_Hispanoamericana.md",
+  "learningObjectives": [
+    "Explicar el Modernismo como primer movimiento originario de Hispanoamérica con fuentes parnasianas y simbolistas y rasgos de exotismo y sinestesia",
+    "Distinguir la trilogía de Rubén Darío con Azul 1888, Prosas profanas 1896 y Cantos de vida y esperanza 1905 por tema y estilo",
+    "Clasificar las cuatro etapas poéticas de Pablo Neruda desde Veinte poemas hasta Odas elementales con sus obras cumbre",
+    "Reconocer a Gabriela Mistral como primer Nobel latinoamericano y a Alfonsina Storni como voz de denuncia del doble rasero",
+    "Aplicar los criterios de sinestesia, exotismo y cosmopolitismo para resolver trampas de examen sobre métrica y símbolos"
+  ],
+  "theory": {
+    "id": "th_lit_t04_s01",
+    "asignatura": "Literatura",
+    "semana": 4,
+    "titulo": "3.1. El Modernismo Hispanoamericano",
+    "resumen": "",
+    "conceptosClave": [
+      "Modernismo como primer movimiento americano con inversión de magisterio hacia España",
+      "Parnasianismo con arte por el arte y simbolismo con musicalidad y sinestesia como fuentes",
+      "Trilogía de Darío con Azul inicio, Prosas profanas apogeo y Cantos madurez cívica",
+      "Símbolos aristocráticos con cisne, torre de marfil y renovación del alejandrino",
+      "Cuatro etapas de Neruda con Veinte poemas, Residencia, Canto General y Odas",
+      "Alturas de Macchu Picchu como compromiso épico con constructores anónimos",
+      "Gabriela Mistral Nobel 1945 y Storni con denuncia del doble rasero moral"
+    ],
+    "admissionTip": "Si ves Azul 1888 marca inicio, si ves cisne marca modernismo, si ves Oda a Roosevelt o Lo fatal marca Cantos madurez, si ves Puedo escribir los versos marca Veinte poemas, si ves Sube a nacer conmigo marca Canto General, si ves Residencia marca angustia oriental.",
+    "admissionExplanation": "La trampa más castigada es creer que el Modernismo nació en España y confundir Prosas profanas sensual con Cantos cívico, además de confundir Residencia angustiosa con Canto épico y con Odas sencilla."
+  }
+}

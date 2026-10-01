@@ -1,0 +1,34 @@
+{
+  "id": "psi_t14_s02",
+  "subjectId": "psicologia",
+  "semana": 14,
+  "subtema": "14.2",
+  "title": "4.1. Teoría del Desarrollo Psicosexual de Sigmund Freud",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana14.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_14_Salud_Sexual_y_Reproductiva.md",
+  "learningObjectives": [
+    "Definir libido como energía pulsional de vida que se desplaza por zonas erógenas con secuencia O A F L G",
+    "Diferenciar etapa oral de succión y etapa anal de control de esfínteres con fijaciones retentiva y expulsiva",
+    "Explicar etapa fálica con Edipo, Electra, angustia de castración e identificación que origina el Superyó",
+    "Contrastar latencia sublimada escolar frente a genital madura con amar y trabajar como salud plena",
+    "Aplicar fijación por exceso o frustración más doble protección y vacuna VPH como prevención respaldada"
+  ],
+  "theory": {
+    "id": "th_psi_t14_s02",
+    "asignatura": "Psicología",
+    "semana": 14,
+    "titulo": "4.1. Teoría del Desarrollo Psicosexual de Sigmund Freud",
+    "resumen": "",
+    "conceptosClave": [
+      "Libido como Eros que busca placer por zonas bucal, anal, genital infantil, escolar y genital madura",
+      "Secuencia O A F L G con oral 0 a 1 y medio, anal 1 y medio a 3, fálica 3 a 6, latencia 6 a 12 y genital pubertad",
+      "Oral con destete y dependencia frente a anal con retención y expulsión y orden o desorden",
+      "Edipo hacia madre con rivalidad paterna frente a Electra hacia padre con identificación del mismo sexo",
+      "Latencia que sublima en escuela y deporte frente a genital que integra erotismo, afecto e intimidad",
+      "Fijación por gratificación excesiva o trauma que ancla energía y regresión adulta",
+      "Amar y trabajar como doble pilar de madurez más preservativo doble escudo y VPH prevenible"
+    ],
+    "admissionTip": "Si ves boca marca oral, si ves esfínteres marca anal, si ves 4 años con mamá marca fálica y Edipo, si ves 6 a 12 escuela marca latencia, si ves amar y trabajar marca genital madura, si ves O A F L G marca secuencia.",
+    "admissionExplanation": "La trampa clásica cambia latencia por genital, confunde fijación oral con anal, cree que Edipo se resuelve sin identificación, y olvida que la genital integra amor y trabajo y no es solo placer solitario."
+  }
+}

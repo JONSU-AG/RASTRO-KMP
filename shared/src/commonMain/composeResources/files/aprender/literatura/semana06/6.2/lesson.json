@@ -1,0 +1,35 @@
+{
+  "id": "lit_t06_s02",
+  "subjectId": "literatura",
+  "semana": 6,
+  "subtema": "6.2",
+  "title": "3.2. De la Bohemia del Aquelarre a la Vanguardia Arequipeña",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/literatura/LiteraturaSemana06.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/TEMA_06_Literatura_Regional_Sur_Andino_y_Arequipa.md + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/OBRAS/Percy_Gibson_poesia_modernista.md + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/OBRAS/Kilku_Waraka.md",
+  "learningObjectives": [
+    "Caracterizar el grupo El Aquelarre de 1916 con Gibson y César Atahualpa Rodríguez y su nativismo del Misti y la campiña",
+    "Explicar el Simplismo de Hidalgo con verso libre y el Pueblo del sol de Aguirre con desmitificación del Incanato",
+    "Analizar Los inocentes como Lima en rock con collera y jerga lírica y En octubre no hay milagros con procesión coral",
+    "Comprender el Grupo Orkopata con Boletín Titikaka y El pez de oro con castellano andinizado y Khori-Challwa",
+    "Identificar a Kilku Waraka con Taki parwa en quechua culto y la poética de apus y servidumbre campesina"
+  ],
+  "theory": {
+    "id": "th_lit_t06_s02",
+    "asignatura": "Literatura",
+    "semana": 6,
+    "titulo": "3.2. De la Bohemia del Aquelarre a la Vanguardia Arequipeña",
+    "resumen": "",
+    "conceptosClave": [
+      "Grupo El Aquelarre de 1916 con Gibson Calle Rodríguez y Morales como bohemia nativista del Misti",
+      "Percy Gibson con Jornada heroica y sonetos de la campiña y símbolos de gallo sillar y volcán",
+      "Simplismo de Hidalgo con supresión retórica y verso libre y metáfora matemática iconoclasta",
+      "El pueblo del sol de Aguirre Morales de 1924 como novela histórica trágica de Huayna Cápac antiidílica",
+      "Los inocentes de Reynoso de 1961 como collera marginal con jerga y prosa lírica y En octubre sin milagros",
+      "Grupo Orkopata con Boletín Titikaka de 1926 a 1930 como vanguardia e indigenismo continental",
+      "El pez de oro de Churata de 1957 con Khori-Challwa y castellano andinizado como resistencia cultural",
+      "Kilku Waraka como Andrés Alencastre con Taki parwa de 1952 y Yawar para en quechua culto telúrico"
+    ],
+    "admissionTip": "Si ves Aquelarre marca Gibson y César Atahualpa Rodríguez en 1916, si ves Simplismo marca Hidalgo, si ves pueblo del sol marca Aguirre 1924 con Huayna Cápac trágico, si ves collera con jerga lírica marca Reynoso Los inocentes, si ves Titikaka y pez de oro marca Churata Orkopata, si ves taki parwa en quechua marca Kilku Waraka.",
+    "admissionExplanation": "La trampa clásica es confundir Boletín Titikaka indigenista de vanguardia con purismo hispánico y confundir Pueblo del sol trágico con utopía garcilasista; Titikaka es trinchera andina antiacademicista y Aguirre desmitifica el edén incaico con teocracia despótica."
+  }
+}

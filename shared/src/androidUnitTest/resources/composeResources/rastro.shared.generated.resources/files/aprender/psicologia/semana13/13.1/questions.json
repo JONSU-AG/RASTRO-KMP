@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "13.1.1",
+    "correctIndex": 3,
+    "explanation": "Un factor de riesgo es cualquier condición o variable biopsicosocial que eleva la probabilidad estadística de que una persona o colectivo sufra un daño, trastorno o conducta desadaptativa.",
+    "fuente": "temario",
+    "id": "psi_t13_s01_c01",
+    "options": [
+      "Una técnica psicoterapéutica empleada exclusivamente en el tratamiento hospitalario de urgencia.",
+      "Una manifestación biológica inmutable que predetermina genéticamente el destino social de un sujeto.",
+      "El conjunto de normas jurídicas que tipifican los delitos cometidos por menores infractores.",
+      "Toda variable personal o ambiental cuya presencia incrementa estadísticamente la probabilidad de daño físico o psicológico."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "En la psicología de la salud y prevención comunitaria, un 'Factor de Riesgo Psicosocial' se define formalmente como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.1.1",
+    "correctIndex": 1,
+    "explanation": "La vulnerabilidad refiere a predisposiciones o fragilidades individuales internas (impulsividad, baja autoestima), mientras los factores de riesgo son agentes o contingencias del entorno que facilitan el daño.",
+    "fuente": "temario",
+    "id": "psi_t13_s01_c02",
+    "options": [
+      "La vulnerabilidad atañe únicamente a factores económicos externos y el riesgo a rasgos somáticos hereditarios.",
+      "La vulnerabilidad es la susceptibilidad intrínseca del sujeto, mientras que el factor de riesgo es la condición precipitante del entorno.",
+      "Ambos términos constituyen sinónimos exactos e intercambiables en todos los modelos epidemiológicos.",
+      "El factor de riesgo depende de la voluntad consciente y la vulnerabilidad de leyes orgánicas estatales."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "La distinción conceptual entre 'Vulnerabilidad' y 'Factor de Riesgo' radica en que:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.1.2",
+    "correctIndex": 2,
+    "explanation": "La violencia económica o patrimonial implica el menoscabo, control abusivo o privación intencionada de recursos económicos, bienes o documentos personales para someter a la víctima.",
+    "fuente": "temario",
+    "id": "psi_t13_s01_c03",
+    "options": [
+      "Física contingente.",
+      "Psicológica verbal.",
+      "Económica o patrimonial.",
+      "Institucional procesal."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 13,
+    "statement": "Cuando un agresor retiene los documentos de identidad, despoja de sus ingresos laborales o impide deliberadamente el acceso al sustento material de su pareja, incurre en violencia:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.1.3",
+    "correctIndex": 3,
+    "explanation": "La fase de 'luna de miel' o reconciliación genera una ilusión de cambio en la víctima, fortaleciendo la dependencia afectiva antes de reiniciar la acumulación de tensiones.",
+    "fuente": "temario",
+    "id": "psi_t13_s01_c04",
+    "options": [
+      "Fase de acumulación de tensión.",
+      "Fase de catarsis reactiva.",
+      "Fase de explosión agresiva.",
+      "Fase de luna de miel o reconciliación."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "En el 'Ciclo de la Violencia' intrafamiliar formulado por Leonor Walker, la fase en que el agresor manifiesta arrepentimiento aparente, entrega obsequios y promete solemnemente no volver a agredir se denomina:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.1.3",
+    "correctIndex": 0,
+    "explanation": "En la acumulación de tensión aumentan las microagresiones y fricciones cotidianas; la víctima suele intentar apaciguar al cónyuge asumiendo erróneamente la culpa del malestar.",
+    "fuente": "temario",
+    "id": "psi_t13_s01_c05",
+    "options": [
+      "Incremento progresivo de hostilidad, descalificaciones, reproches y actitud apaciguadora y culpable en la víctima.",
+      "Estallido súbito de golpes y lesiones corporales de máxima gravedad hospitalaria.",
+      "Acuerdos democráticos pacíficos mediante mediación judicial profesional extrajudicial.",
+      "Aislamiento absoluto en que ambas partes conviven de manera armoniosa y desinteresada."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "Durante la 'Fase de Acumulación de Tensión' del ciclo de Leonor Walker, la dinámica cotidiana de la pareja se caracteriza por:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.1.4",
+    "correctIndex": 3,
+    "explanation": "El bullying se define por el daño deliberado, la persistencia temporal sistemática y una marcada asimetría de poder que impide a la víctima defenderse por sí misma.",
+    "fuente": "temario",
+    "id": "psi_t13_s01_c06",
+    "options": [
+      "Violencia accidental, igualdad de fuerzas físicas e intervención docente inmediata.",
+      "Carácter recreativo, aprobación unánime de los padres y ambiente lúdico supervisado.",
+      "Uso de armas punzocortantes, denuncia penal formal y deserción escolar consumada.",
+      "Intencionalidad de dañar, reiteración a lo largo del tiempo y desequilibrio de poder entre agresor y víctima."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "Para que un acto de agresión entre estudiantes sea tipificado rigurosamente como Acoso Escolar (*Bullying*), deben concurrir de forma obligatoria tres criterios:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.1.4",
+    "correctIndex": 3,
+    "explanation": "Los espectadores sostienen la dinámica del acoso: al callar, reír o no intervenir, validan implícitamente el poder del hostigador y perpetúan el aislamiento de la víctima.",
+    "fuente": "temario",
+    "id": "psi_t13_s01_c07",
+    "options": [
+      "Son los encargados de redactar el acta de conciliación y aplicar las sanciones punitivas escolares.",
+      "Carecen de toda repercusión emocional o moral frente al sufrimiento presenciado en las aulas.",
+      "Asumen la tutela económica y pedagógica obligatoria de la víctima ante la dirección escolar.",
+      "Su silencio, risas o indiferencia pasiva otorgan legitimidad social y refuerzo continuo al comportamiento del agresor."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "Dentro de la tríada o triángulo del bullying, el papel que cumplen los 'Espectadores' (*bystanders*) resulta decisivo debido a que:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.1.4",
+    "correctIndex": 0,
+    "explanation": "El ciberacoso trasciende los muros escolares (24/7), viraliza contenidos difamatorios que perduran en la red y cobija al agresor tras el anonimato virtual.",
+    "fuente": "temario",
+    "id": "psi_t13_s01_c08",
+    "options": [
+      "El alcance potencialmente masivo, la permanencia de la huella digital y la sensación de impunidad bajo el anonimato virtual.",
+      "La restricción estricta de la agresión al horario diurno dentro de los recintos escolares.",
+      "La inmediata reparación física espontánea del daño psicológico producido a la víctima.",
+      "La imposibilidad técnica de emplear textos, fotografías o videos grabados por dispositivos móviles."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "Una característica distintiva primordial del *Cyberbullying* o acoso cibernético en comparación con el bullying presencial es:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.1.5",
+    "correctIndex": 2,
+    "explanation": "Crecer en hogares violentos o con negligencia parental severa socializa al menor en patrones de coerción y hostilidad, multiplicando el riesgo de replicar la violencia en sus relaciones sociales.",
+    "fuente": "temario",
+    "id": "psi_t13_s01_c09",
+    "options": [
+      "El fomento sistemático del pensamiento crítico, la autonomía y la tolerancia hacia las diferencias.",
+      "La comunicación empática y la resolución reflexiva y dialógica de los desacuerdos hogareños.",
+      "La exposición habitual a castigos físicos severos, maltrato verbal continuo o estilos de crianza negligentes.",
+      "El establecimiento de límites claros, afectuosos y coherentes en la convivencia doméstica."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 13,
+    "statement": "¿Cuál de las siguientes conductas parentales o familiares constituye un factor de riesgo psicosocial primario para el desarrollo de conductas violentas en los hijos?",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.1.2",
+    "correctIndex": 2,
+    "explanation": "La violencia psicológica busca anular la autoestima, autodeterminación y seguridad emocional del individuo mediante manipulación, control celoso y descalificación continua.",
+    "fuente": "temario",
+    "id": "psi_t13_s01_c10",
+    "options": [
+      "Biológica adaptativa.",
+      "Económica indirecta.",
+      "Psicológica o emocional.",
+      "Accidental no dolosa."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 13,
+    "statement": "En las relaciones interpersonales, la conducta caracterizada por denigrar, aislar de amistades y familiares, someter a humillaciones sistemáticas y celotipia obsesiva constituye violencia:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

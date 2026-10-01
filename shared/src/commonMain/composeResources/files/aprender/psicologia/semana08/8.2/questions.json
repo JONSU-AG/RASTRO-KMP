@@ -1,0 +1,182 @@
+[
+  {
+    "id": "psi_t08_s02_c01",
+    "statement": "La más antigua tipología humoral de los temperamentos, formulada por Hipócrates y desarrollada por Galeno en la Antigüedad médica, clasificaba a las personas según el predominio de cuatro fluidos en:",
+    "options": [
+      "Ácidos, bases, sales y minerales.",
+      "Rápido, lento, furioso y pacífico puramente conductuales.",
+      "Sanguíneo (sangre), Colérico (bilis amarilla), Melancólico (bilis negra) y Flemático (flema o linfa).",
+      "Boreal, austral, oriental y occidental."
+    ],
+    "correctIndex": 2,
+    "explanation": "Hipócrates asoció el equilibrio de humores corporales al temperamento: el sanguíneo es entusiasta, el colérico irritable, el melancólico triste y el flemático imperturbable.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s02_c02",
+    "statement": "En la tipología biotipológica del psiquiatra alemán Ernst Kretschmer, el tipo 'Pícnico' (estructura corporal redondeada, baja estatura y tendencia a la obesidad) se asociaba al temperamento:",
+    "options": [
+      "Ciclotímico (sociable, afectuoso, bonachón, con oscilaciones entre alegría y tristeza)",
+      "Viscoso o Enequético (tenaz, tranquilo, rígido)",
+      "Esquizotímico (frío, reservado, retraído)",
+      "Histriónico superficial"
+    ],
+    "correctIndex": 0,
+    "explanation": "Kretschmer relacionó la morfología corporal con predisposiciones psiquiátricas: pícnico-ciclotímico (maníaco-depresivo), leptosómico-esquizotímico (esquizofrenia) y atlético-viscoso (epilepsia).",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s02_c03",
+    "statement": "Carl Gustav Jung propuso dos grandes orientaciones o actitudes psicológicas fundamentales de la personalidad conocidas universalmente como:",
+    "options": [
+      "Consciencia y Letargo",
+      "Agresión y Pacifismo",
+      "Racionalismo y Superstición",
+      "Introversión (energía psíquica orientada hacia el mundo interior y subjetivo) y Extraversión (energía volcada hacia el mundo externo y social)."
+    ],
+    "correctIndex": 3,
+    "explanation": "Para Jung, el introvertido recarga energía en la soledad y la introspección, mientras que el extravertido se vitaliza en el contacto social, la acción y los estímulos externos.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s02_c04",
+    "statement": "Gordon Allport formuló la teoría de los rasgos distinguiendo tres niveles jerárquicos; el 'Rasgo Cardinal' es aquel que:",
+    "options": [
+      "Describe características generales que permiten identificar a una persona en la mayoría de situaciones cotidianas (rasgo central).",
+      "Es tan dominante y absorbente que impregna y rige prácticamente toda la conducta de la persona a lo largo de su vida (ej. la ambición maquiavélica, la entrega de la Madre Teresa).",
+      "Representa una pulsión inconsciente reprimida ligada a la fijación psicosexual en la infancia.",
+      "Constituye una disposición actitudinal secundaria que se activa solo ante estímulos o contextos muy específicos (rasgo secundario)."
+    ],
+    "correctIndex": 1,
+    "explanation": "Pocas personas poseen un rasgo cardinal; cuando existe, el individuo es identificado históricamente por él (quijotesco, maquiavélico, sádico).",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s02_c05",
+    "statement": "En el modelo de los 'Cinco Grandes' factores de la personalidad (Big Five de McCrae y Costa), ampliamente validado en psicometría moderna, los factores son:",
+    "options": [
+      "Fuerza, Belleza, Riqueza, Sabiduría y Salud.",
+      "Id, Ego, Superego, Libido y Tanatos.",
+      "Apertura a la experiencia (O), Conciencia o Responsabilidad (C), Extraversión (E), Amabilidad o Afabilidad (A) y Neuroticismo o Inestabilidad emocional (N) [OCEAN].",
+      "Realista, Investigador, Artístico, Social y Emprendedor."
+    ],
+    "correctIndex": 2,
+    "explanation": "El modelo OCEAN es el estándar contemporáneo en psicología de la personalidad para describir la variabilidad individual mediante cinco dimensiones universales.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s02_c06",
+    "statement": "En la primera tópica del aparato psíquico formulada por Sigmund Freud (1900), la mente se estratifica en tres niveles de conciencia denominados:",
+    "options": [
+      "Consciente, Preconsciente (fácilmente evocable a la memoria) e Inconsciente (reprimido y censurado).",
+      "Ello, Yo y Superyó.",
+      "Oral, Anal y Genital.",
+      "Sensorial, Motor y Cerebral."
+    ],
+    "correctIndex": 0,
+    "explanation": "La metáfora del iceberg describe que la punta visible es el consciente, la zona inmediatamente sumergida es el preconsciente y la gigantesca masa profunda oculta es el inconsciente.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s02_c07",
+    "statement": "En la segunda tópica freudiana (1923), la instancia psíquica totalmente inconsciente, biológica y gobernada ciegamente por el 'Principio del Placer' que exige satisfacción inmediata de las pulsiones es el:",
+    "options": [
+      "Yo o Ego",
+      "Superyó o Superego",
+      "Ideal del Yo",
+      "Ello o Id"
+    ],
+    "correctIndex": 3,
+    "explanation": "El Ello es la caldera de energía pulsional (Eros y Tánatos); no conoce de moral, tiempo ni lógica, exigiendo la descarga instantánea de la tensión libidinosa.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s02_c08",
+    "statement": "La instancia psíquica que representa la moral internalizada, los ideales sociales, las normas éticas, la conciencia moral y los sentimientos de culpa heredados de las figuras parentales es el:",
+    "options": [
+      "Ello o Id",
+      "Inconsciente biológico arcaico",
+      "Yo ejecutor pragmático",
+      "Superyó o Superego"
+    ],
+    "correctIndex": 3,
+    "explanation": "El Superyó se estructura como heredero del complejo de Edipo: censura los impulsos del Ello e impone estándares morales ideales generando culpa cuando se transgrede la norma.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s02_c09",
+    "statement": "El 'Yo' (Ego) opera bajo el 'Principio de Realidad' y cumple la dificilísima función adaptativa de:",
+    "options": [
+      "Satisfacer todos los caprichos del Ello de manera inmediata sin importar la ley penal.",
+      "Anular por completo toda percepción sensorial del cuerpo.",
+      "Castigar a los amigos con sentimientos de desprecio.",
+      "Actuar como mediador consciente y racional entre los impulsos primarios del Ello, las severas exigencias morales del Superyó y las demandas de la realidad exterior."
+    ],
+    "correctIndex": 3,
+    "explanation": "El Yo evalúa el contexto real antes de permitir la satisfacción pulsional, procurando mantener la supervivencia y la integridad psicológica del individuo.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.2.5",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s02_c10",
+    "statement": "En la teoría psicoanalítica, el mecanismo de defensa inconsciente por el cual una persona canaliza y sublima pulsiones sexuales o agresivas inaceptables hacia actividades socialmente valoradas y constructivas (como el arte, la ciencia o el deporte competitivo) se denomina:",
+    "options": [
+      "Sublimación",
+      "Represión",
+      "Proyección",
+      "Regresión"
+    ],
+    "correctIndex": 0,
+    "explanation": "La sublimación es el único mecanismo de defensa maduro y plenamente adaptativo según Freud: transforma energía destructiva o instintiva en creaciones culturales sublimes.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.2.5",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

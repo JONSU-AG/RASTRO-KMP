@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.pdf.PdfRenderer
 import android.os.ParcelFileDescriptor
+import android.util.LruCache
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -51,6 +52,31 @@ private sealed class PreviewResult {
     data object Loading : PreviewResult()
     data class Ready(val bitmap: ImageBitmap) : PreviewResult()
     data object Failed : PreviewResult()
+}
+
+/**
+ * Caché en memoria para miniaturas y portadas de recursos.
+ * Evita descargas redundantes, ahorra datos del usuario y proporciona renderizado instantáneo al regresar a las pantallas.
+ */
+internal object ImagePreviewCache {
+    private val maxMemory = (Runtime.getRuntime().maxMemory() / 1024).toInt()
+    private val cacheSize = (maxMemory / 8).coerceAtLeast(1024 * 10) // 1/8 de memoria libre, mín 10MB en KB
+
+    private val memoryCache = object : LruCache<String, ImageBitmap>(cacheSize) {
+        override fun sizeOf(key: String, value: ImageBitmap): Int {
+            return ((value.width * value.height * 2) / 1024).coerceAtLeast(1)
+        }
+    }
+
+    fun get(url: String): ImageBitmap? = synchronized(memoryCache) {
+        if (url.isBlank()) null else memoryCache.get(url)
+    }
+
+    fun put(url: String, bitmap: ImageBitmap) = synchronized(memoryCache) {
+        if (url.isNotBlank()) {
+            memoryCache.put(url, bitmap)
+        }
+    }
 }
 
 @Composable
@@ -105,56 +131,72 @@ fun UserUploadPreview(
                 }.distinct()
             }
 
-            if (candidateUrls.isNotEmpty()) {
-                RemoteUploadImageWithFallback(
-                    candidateUrls = candidateUrls,
-                    theme = theme,
-                    modifier = modifier.fillMaxWidth().heightIn(min = 190.dp, max = 340.dp),
-                    onImageClick = { bmp -> selectedImage = bmp }
-                )
-            } else if (upload.isPdf) {
-                // PDF directo sin Google Drive: renderizado de primera página
-                val result by produceState<PreviewResult>(PreviewResult.Loading, upload.url) {
-                    value = withContext(Dispatchers.IO) {
-                        renderPdfCover(context, upload.url)?.let(PreviewResult::Ready) ?: PreviewResult.Failed
-                    }
+            // BUG FIX: Si la URL llega vacía (snapshot de Firestore antes de que el servidor
+            // complete la escritura), mostramos Loading en lugar de saltar al placeholder.
+            // Así evitamos el parpadeo de 2s donde aparece solo el nombre sin vista previa.
+            val urlStillLoading = upload.url.isBlank() && upload.previewUrls.isEmpty()
+
+            when {
+                urlStillLoading -> PreviewLoading(theme, modifier)
+                candidateUrls.isNotEmpty() -> {
+                    RemoteUploadImageWithFallback(
+                        candidateUrls = candidateUrls,
+                        theme = theme,
+                        modifier = modifier.fillMaxWidth().heightIn(min = 190.dp, max = 340.dp),
+                        onImageClick = { bmp -> selectedImage = bmp }
+                    )
                 }
-                when (result) {
-                    PreviewResult.Loading -> PreviewLoading(theme, modifier)
-                    is PreviewResult.Ready -> {
-                        val bmp = (result as PreviewResult.Ready).bitmap
-                        Box(
-                            modifier = modifier
-                                .fillMaxWidth()
-                                .heightIn(min = 190.dp, max = 340.dp)
-                                .clip(RoundedCornerShape(16.dp))
-                                .background(if (theme.isLight) Color(0xFFF8FAFC) else Color(0xFF0F172A))
-                                .border(1.8.dp, theme.strokeBorder, RoundedCornerShape(16.dp))
-                                .clickable { selectedImage = bmp },
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Image(
-                                bitmap = bmp,
-                                contentDescription = "Portada de ${upload.title}",
-                                modifier = Modifier.fillMaxWidth().heightIn(min = 190.dp, max = 340.dp),
-                                contentScale = ContentScale.Fit
-                            )
+                upload.isPdf -> {
+                    // PDF directo sin Google Drive: renderizado de primera página
+                    val cachedPdf = remember(upload.url) { ImagePreviewCache.get(upload.url) }
+                    val initialPdfResult = remember(cachedPdf) {
+                        if (cachedPdf != null) PreviewResult.Ready(cachedPdf) else PreviewResult.Loading
+                    }
+                    val result by produceState<PreviewResult>(initialPdfResult, upload.url) {
+                        if (value !is PreviewResult.Ready) {
+                            value = withContext(Dispatchers.IO) {
+                                renderPdfCover(context, upload.url)?.let(PreviewResult::Ready) ?: PreviewResult.Failed
+                            }
                         }
                     }
-                    PreviewResult.Failed -> PreviewPlaceholder(
-                        title = "Portada de PDF no disponible",
-                        detail = "Abre el recurso para consultar el documento completo.",
+                    when (result) {
+                        PreviewResult.Loading -> PreviewLoading(theme, modifier)
+                        is PreviewResult.Ready -> {
+                            val bmp = (result as PreviewResult.Ready).bitmap
+                            Box(
+                                modifier = modifier
+                                    .fillMaxWidth()
+                                    .heightIn(min = 190.dp, max = 340.dp)
+                                    .clip(RoundedCornerShape(16.dp))
+                                    .background(if (theme.isLight) Color(0xFFF8FAFC) else Color(0xFF0F172A))
+                                    .border(1.8.dp, theme.strokeBorder, RoundedCornerShape(16.dp))
+                                    .clickable { selectedImage = bmp },
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Image(
+                                    bitmap = bmp,
+                                    contentDescription = "Portada de ${upload.title}",
+                                    modifier = Modifier.fillMaxWidth().heightIn(min = 190.dp, max = 340.dp),
+                                    contentScale = ContentScale.Fit
+                                )
+                            }
+                        }
+                        PreviewResult.Failed -> PreviewPlaceholder(
+                            title = "Portada de PDF no disponible",
+                            detail = "Abre el recurso para consultar el documento completo.",
+                            theme = theme,
+                            modifier = modifier
+                        )
+                    }
+                }
+                else -> {
+                    PreviewPlaceholder(
+                        title = "Sin vista previa",
+                        detail = "Este recurso no cuenta con miniatura. Abre el enlace para consultarlo.",
                         theme = theme,
                         modifier = modifier
                     )
                 }
-            } else {
-                PreviewPlaceholder(
-                    title = "Sin vista previa",
-                    detail = "Este recurso no cuenta con miniatura. Abre el enlace para consultarlo.",
-                    theme = theme,
-                    modifier = modifier
-                )
             }
         }
     }
@@ -328,17 +370,25 @@ private fun RemoteUploadImageWithFallback(
     modifier: Modifier = Modifier,
     onImageClick: (ImageBitmap) -> Unit = {}
 ) {
-    val result by produceState<PreviewResult>(PreviewResult.Loading, candidateUrls) {
-        value = withContext(Dispatchers.IO) {
-            var loadedBitmap: ImageBitmap? = null
-            for (url in candidateUrls) {
-                val bmp = fetchBitmapSafe(url)
-                if (bmp != null) {
-                    loadedBitmap = bmp
-                    break
+    val cachedBitmap = remember(candidateUrls) {
+        candidateUrls.firstNotNullOfOrNull { ImagePreviewCache.get(it) }
+    }
+    val initialResult = remember(cachedBitmap) {
+        if (cachedBitmap != null) PreviewResult.Ready(cachedBitmap) else PreviewResult.Loading
+    }
+    val result by produceState<PreviewResult>(initialResult, candidateUrls) {
+        if (value !is PreviewResult.Ready) {
+            value = withContext(Dispatchers.IO) {
+                var loadedBitmap: ImageBitmap? = null
+                for (url in candidateUrls) {
+                    val bmp = fetchBitmapSafe(url)
+                    if (bmp != null) {
+                        loadedBitmap = bmp
+                        break
+                    }
                 }
+                loadedBitmap?.let(PreviewResult::Ready) ?: PreviewResult.Failed
             }
-            loadedBitmap?.let(PreviewResult::Ready) ?: PreviewResult.Failed
         }
     }
 
@@ -421,57 +471,69 @@ private fun PreviewPlaceholder(
 /**
  * Descargador seguro con seguimiento de redirecciones y sampleSize para imágenes verticales de alta resolución
  */
-private fun fetchBitmapSafe(urlString: String): ImageBitmap? = runCatching {
-    var currentUrl = urlString
-    var redirectCount = 0
-    var connection: HttpURLConnection? = null
-    var stream: InputStream? = null
+internal fun fetchBitmapSafe(urlString: String): ImageBitmap? {
+    if (urlString.isBlank()) return null
+    ImagePreviewCache.get(urlString)?.let { return it }
 
-    while (redirectCount < 4) {
-        val conn = (URL(currentUrl).openConnection() as HttpURLConnection).apply {
-            connectTimeout = 12_000
-            readTimeout = 15_000
-            setRequestProperty("User-Agent", "Mozilla/5.0 (Android; Mobile; rv:109.0)")
-            instanceFollowRedirects = true
+    return runCatching {
+        var currentUrl = urlString
+        var redirectCount = 0
+        var connection: HttpURLConnection? = null
+        var stream: InputStream? = null
+
+        while (redirectCount < 4) {
+            val conn = (URL(currentUrl).openConnection() as HttpURLConnection).apply {
+                connectTimeout = 12_000
+                readTimeout = 15_000
+                setRequestProperty("User-Agent", "Mozilla/5.0 (Android; Mobile; rv:109.0)")
+                instanceFollowRedirects = true
+            }
+            val responseCode = conn.responseCode
+            if (responseCode in 300..399) {
+                val location = conn.getHeaderField("Location") ?: break
+                currentUrl = location
+                redirectCount++
+                conn.disconnect()
+            } else if (responseCode == HttpURLConnection.HTTP_OK) {
+                connection = conn
+                stream = conn.inputStream
+                break
+            } else {
+                conn.disconnect()
+                return null
+            }
         }
-        val responseCode = conn.responseCode
-        if (responseCode in 300..399) {
-            val location = conn.getHeaderField("Location") ?: break
-            currentUrl = location
-            redirectCount++
-            conn.disconnect()
-        } else if (responseCode == HttpURLConnection.HTTP_OK) {
-            connection = conn
-            stream = conn.inputStream
-            break
-        } else {
-            conn.disconnect()
-            return null
+
+        val bytes = stream?.use { it.readBytes() } ?: return null
+        connection?.disconnect()
+
+        if (bytes.isEmpty()) return null
+
+        // Leer dimensiones primero para calcular inSampleSize
+        val boundsOptions = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+        BitmapFactory.decodeByteArray(bytes, 0, bytes.size, boundsOptions)
+
+        var sampleSize = 1
+        val maxDimension = maxOf(boundsOptions.outWidth, boundsOptions.outHeight)
+        while (maxDimension / sampleSize > 1400) {
+            sampleSize *= 2
         }
-    }
 
-    val bytes = stream?.use { it.readBytes() } ?: return null
-    connection?.disconnect()
+        val decodeOptions = BitmapFactory.Options().apply {
+            inSampleSize = sampleSize
+            inPreferredConfig = Bitmap.Config.RGB_565 // Optimizado para memoria
+        }
 
-    if (bytes.isEmpty()) return null
-
-    // Leer dimensiones primero para calcular inSampleSize
-    val boundsOptions = BitmapFactory.Options().apply { inJustDecodeBounds = true }
-    BitmapFactory.decodeByteArray(bytes, 0, bytes.size, boundsOptions)
-
-    var sampleSize = 1
-    val maxDimension = maxOf(boundsOptions.outWidth, boundsOptions.outHeight)
-    while (maxDimension / sampleSize > 1400) {
-        sampleSize *= 2
-    }
-
-    val decodeOptions = BitmapFactory.Options().apply {
-        inSampleSize = sampleSize
-        inPreferredConfig = Bitmap.Config.RGB_565 // Optimizado para memoria
-    }
-
-    BitmapFactory.decodeByteArray(bytes, 0, bytes.size, decodeOptions)?.asImageBitmap()
-}.getOrNull()
+        val imageBitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size, decodeOptions)?.asImageBitmap()
+        if (imageBitmap != null) {
+            ImagePreviewCache.put(urlString, imageBitmap)
+            if (currentUrl != urlString) {
+                ImagePreviewCache.put(currentUrl, imageBitmap)
+            }
+        }
+        imageBitmap
+    }.getOrNull()
+}
 
 fun driveFileId(rawUrl: String): String? =
     Regex("/file/d/([A-Za-z0-9_-]+)").find(rawUrl)?.groupValues?.getOrNull(1)
@@ -479,41 +541,48 @@ fun driveFileId(rawUrl: String): String? =
         ?: Regex("[?&]id=([A-Za-z0-9_-]+)").find(rawUrl)?.groupValues?.getOrNull(1)
         ?: Regex("open\\?id=([A-Za-z0-9_-]+)").find(rawUrl)?.groupValues?.getOrNull(1)
 
-private fun renderPdfCover(context: Context, url: String): ImageBitmap? = runCatching {
-    val connection = URL(url).openConnection().apply {
-        connectTimeout = 12_000
-        readTimeout = 20_000
-    }
-    val file = File.createTempFile("rastro-cover-", ".pdf", context.cacheDir)
-    try {
-        connection.getInputStream().use { input ->
-            file.outputStream().use { output ->
-                val buffer = ByteArray(16 * 1024)
-                var total = 0
-                while (true) {
-                    val count = input.read(buffer)
-                    if (count < 0) break
-                    total += count
-                    if (total > 24 * 1024 * 1024) error("PDF demasiado grande para mostrar su portada")
-                    output.write(buffer, 0, count)
+private fun renderPdfCover(context: Context, url: String): ImageBitmap? {
+    if (url.isBlank()) return null
+    ImagePreviewCache.get(url)?.let { return it }
+
+    return runCatching {
+        val connection = URL(url).openConnection().apply {
+            connectTimeout = 12_000
+            readTimeout = 20_000
+        }
+        val file = File.createTempFile("rastro-cover-", ".pdf", context.cacheDir)
+        try {
+            connection.getInputStream().use { input ->
+                file.outputStream().use { output ->
+                    val buffer = ByteArray(16 * 1024)
+                    var total = 0
+                    while (true) {
+                        val count = input.read(buffer)
+                        if (count < 0) break
+                        total += count
+                        if (total > 24 * 1024 * 1024) error("PDF demasiado grande para mostrar su portada")
+                        output.write(buffer, 0, count)
+                    }
                 }
             }
-        }
-        val descriptor = ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY)
-        PdfRenderer(descriptor).use { renderer ->
-            if (renderer.pageCount == 0) return null
-            renderer.openPage(0).use { page ->
-                val scale = minOf(1400f / page.width, 1800f / page.height, 1.5f)
-                val bitmap = Bitmap.createBitmap(
-                    (page.width * scale).toInt().coerceAtLeast(1),
-                    (page.height * scale).toInt().coerceAtLeast(1),
-                    Bitmap.Config.ARGB_8888
-                )
-                page.render(bitmap, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
-                bitmap.asImageBitmap()
+            val descriptor = ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY)
+            PdfRenderer(descriptor).use { renderer ->
+                if (renderer.pageCount == 0) return null
+                renderer.openPage(0).use { page ->
+                    val scale = minOf(1400f / page.width, 1800f / page.height, 1.5f)
+                    val bitmap = Bitmap.createBitmap(
+                        (page.width * scale).toInt().coerceAtLeast(1),
+                        (page.height * scale).toInt().coerceAtLeast(1),
+                        Bitmap.Config.ARGB_8888
+                    )
+                    page.render(bitmap, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
+                    val imgBmp = bitmap.asImageBitmap()
+                    ImagePreviewCache.put(url, imgBmp)
+                    imgBmp
+                }
             }
+        } finally {
+            file.delete()
         }
-    } finally {
-        file.delete()
-    }
-}.getOrNull()
+    }.getOrNull()
+}

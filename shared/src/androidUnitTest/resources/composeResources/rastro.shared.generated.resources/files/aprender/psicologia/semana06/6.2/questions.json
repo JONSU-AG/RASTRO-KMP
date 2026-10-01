@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "6.2.1",
+    "correctIndex": 0,
+    "explanation": "La motivación intrínseca nace del interior del sujeto: estudiar física porque fascina comprender el universo o tocar piano por el goce estético de la música.",
+    "fuente": "temario",
+    "id": "psi_t06_s02_c01",
+    "options": [
+      "Por el puro placer, curiosidad, interés y satisfacción inherente que la propia actividad le genera, sin depender de recompensas externas contingentes.",
+      "Para complacer la vanidad de sus progenitores.",
+      "Bajo amenaza de despido laboral inmediato.",
+      "Exclusivamente para ganar una suma de dinero o evitar un castigo severo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "La 'Motivación Intrínseca' se produce cuando una persona realiza una actividad:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.1",
+    "correctIndex": 0,
+    "explanation": "En la motivación extrínseca la tarea es solo un medio instrumental para alcanzar una gratificación externa o evitar un perjuicio.",
+    "fuente": "temario",
+    "id": "psi_t06_s02_c02",
+    "options": [
+      "Factores externos al individuo o consecuencias ajenas a la tarea (premios materiales, dinero, diplomas, reconocimiento social, aprobación o elusión de castigos).",
+      "El amor desinteresado por la ciencia pura.",
+      "La satisfacción del deber moral cumplido.",
+      "La autocrítica reflexiva personal."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "Por el contrario, la 'Motivación Extrínseca' guía la conducta cuando el incentivo determinante proviene de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.2",
+    "correctIndex": 0,
+    "explanation": "Maslow propuso que las necesidades deficitarias básicas (fisiología y seguridad) deben ser razonablemente satisfechas antes de que emerjan las necesidades superiores de crecimiento y autorrealización.",
+    "fuente": "temario",
+    "id": "psi_t06_s02_c03",
+    "options": [
+      "Fisiológicas → Seguridad → Afiliación/Amor → Estima/Reconocimiento → Autorrealización.",
+      "Autorrealización → Reconocimiento → Afiliación → Seguridad → Fisiológicas.",
+      "Dinero → Poder → Fama → Descanso → Inmortalidad.",
+      "Cognitivas → Estéticas → Espirituales → Materiales → Sintéticas."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "En la famosa Jerarquía de Necesidades formulada por el psicólogo humanista Abraham Maslow, las necesidades se estructuran piramidalmente desde la base hacia la cúspide en el siguiente orden:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.2",
+    "correctIndex": 0,
+    "explanation": "Las necesidades de seguridad protegen al individuo de la incertidumbre, el caos, el miedo al futuro y la violencia del medio ambiente.",
+    "fuente": "temario",
+    "id": "psi_t06_s02_c04",
+    "options": [
+      "La estabilidad física, la protección ante peligros o agresiones, la seguridad en el empleo, la vivienda digna y la salud personal.",
+      "La obtención de premios Nobel y reconocimientos mundiales.",
+      "El consumo de agua y comida.",
+      "El despertar de la creatividad artística poética."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "En la pirámide de Maslow, las 'Necesidades de Seguridad' abarcan:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.2",
+    "correctIndex": 1,
+    "explanation": "La autorrealización (metanecesidad) es la cúspide de la salud mental según Maslow: vivir de acuerdo con la verdad, la belleza, la autonomía y la vocación plena.",
+    "fuente": "temario",
+    "id": "psi_t06_s02_c05",
+    "options": [
+      "Ser el hombre más rico del cementerio.",
+      "Desarrollar al máximo el propio potencial humano, talentos, capacidades y creatividad para llegar a ser todo lo que uno es capaz de ser.",
+      "Someter la voluntad de las masas políticas.",
+      "Consumir productos de lujo exclusivos."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "La 'Autorrealización' se ubica en el vértice superior de la pirámide de Maslow y representa el anhelo humano de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.3",
+    "correctIndex": 0,
+    "explanation": "Si se paga a un niño por dibujar cuando ya le encantaba hacerlo, al retirar el pago dejará de dibujar: el premio externo corrompió la motivación autónoma originaria.",
+    "fuente": "temario",
+    "id": "psi_t06_s02_c06",
+    "options": [
+      "Su interés y motivación intrínseca inicial por la tarea tienden a disminuir drásticamente, pues el sujeto pasa a atribuir su conducta al premio externo.",
+      "Su motivación intrínseca aumenta al triple de forma permanente.",
+      "Se convierte automáticamente en un genio de las matemáticas.",
+      "Olvida cómo realizar la tarea."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "El 'Efecto de Sobrejustificación' (Deci y Ryan) en la psicología motivacional demuestra experimentalmente que cuando a una persona se le otorga una recompensa extrínseca desmedida por realizar una tarea que antes disfrutaba intrínsecamente:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.3",
+    "correctIndex": 2,
+    "explanation": "Cuando los estudiantes experimentan autonomía en sus métodos, sienten que dominan los desafíos (competencia) y se sienten apoyados por sus pares y maestros (relación), su motivación florece.",
+    "fuente": "temario",
+    "id": "psi_t06_s02_c07",
+    "options": [
+      "Inmovilidad, silencio y memorización.",
+      "Castigo, obediencia y sumisión.",
+      "Autonomía (sentirse libre y en control), Competencia (sentirse eficaz y capaz) y Relación/Conexión social (sentirse aceptado y valorado).",
+      "Dinero, poder y fama."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "La Teoría de la Autodeterminación (Deci y Ryan) postula que para cultivar una sólida motivación intrínseca en el aprendizaje se deben satisfacer tres necesidades psicológicas básicas innatas:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.1",
+    "correctIndex": 1,
+    "explanation": "La conducta de estudiar está subordinada al incentivo material externo; si se elimina la promesa del celular, la conducta de estudio decae.",
+    "fuente": "temario",
+    "id": "psi_t06_s02_c08",
+    "options": [
+      "Intrínseca pura",
+      "Extrínseca",
+      "Trascendente espiritual",
+      "Homeostática primaria"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 6,
+    "statement": "Un postulante que estudia exclusivamente porque sus padres le prometieron regalarle un teléfono de última generación si aprueba el examen de admisión, actúa bajo una motivación:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.2",
+    "correctIndex": 2,
+    "explanation": "Las necesidades D se activan por privación y buscan reducir la tensión; las necesidades B no se agotan al satisfacerse, sino que se expanden hacia la plenitud y la verdad.",
+    "fuente": "temario",
+    "id": "psi_t06_s02_c09",
+    "options": [
+      "Necesidades urbanas y rurales.",
+      "Necesidades infantiles y seniles.",
+      "Necesidades de Deficiencia o Carencia (D-needs: de la base a la estima) y Necesidades de Ser o Crecimiento (B-needs: autorrealización).",
+      "Necesidades computacionales y mecánicas."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "En la tipología de Maslow, las necesidades se agrupan en dos grandes categorías cualitativas:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.4",
+    "correctIndex": 3,
+    "explanation": "En el estado de flujo, la concentración es máxima y placentera; resolver un problema desafiante absorbe toda la energía psíquica en una experiencia cumbre.",
+    "fuente": "temario",
+    "id": "psi_t06_s02_c10",
+    "options": [
+      "La tarea es excesivamente fácil y provoca aburrimiento.",
+      "El sujeto está medio dormido sin ninguna actividad cerebral.",
+      "El desafío es imposible y desata un ataque de pánico paralizante.",
+      "La persona se encuentra totalmente inmersa y absorta en una actividad que representa un equilibrio perfecto entre un alto desafío y sus altas habilidades, perdiendo la noción del tiempo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "El concepto de 'Flujo' (Flow) descrito por Mihaly Csikszentmihalyi es un estado de motivación intrínseca óptima que ocurre cuando:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

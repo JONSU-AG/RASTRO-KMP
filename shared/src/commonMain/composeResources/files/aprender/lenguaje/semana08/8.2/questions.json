@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t08_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La diferencia conceptual crucial entre la polisemia y la homonimia radica en que las palabras polisémicas:",
+    "options": [
+      "Se escriben de forma idéntica pero significan siempre lo opuesto",
+      "Son préstamos léxicos de lenguas amerindias",
+      "Poseen diferente etimología y no comparten ningún sema",
+      "Tienen la misma raíz etimológica y comparten un rasgo sémico común"
+    ],
+    "correctIndex": 3,
+    "explanation": "La polisemia se origina en una misma palabra (misma etimología) cuyas acepciones comparten un rasgo sémico común (ej. pico de ave y pico de montaña).",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Los vocablos 'tubo' (pieza hueca) y 'tuvo' (del verbo tener) constituyen un ejemplo preciso de:",
+    "options": [
+      "Palabras polisémicas",
+      "Homónimas homófonas",
+      "Antónimos recíprocos",
+      "Homónimas homógrafas"
+    ],
+    "correctIndex": 1,
+    "explanation": "Las palabras homófonas tienen idéntica pronunciación pero se diferencian en su escritura y provienen de orígenes etimológicos distintos.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La oposición entre los términos 'vivo' y 'muerto' se clasifica rigurosamente como antonimia:",
+    "options": [
+      "Complementaria",
+      "Gradual o propia",
+      "Recíproca o inversa",
+      "Morfológica prefijal"
+    ],
+    "correctIndex": 0,
+    "explanation": "Es una antonimia complementaria porque la afirmación de uno implica obligatoriamente la exclusión del otro, sin grados intermedios.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Los términos 'comprador' y 'vendedor' ilustran un tipo de antonimia léxica:",
+    "options": [
+      "Recíproca o inversa",
+      "Complementaria binaria",
+      "Gradual con término medio",
+      "Gramatical por prefijación"
+    ],
+    "correctIndex": 0,
+    "explanation": "Los antónimos recíprocos o inversos implican que la existencia de uno exige necesariamente la existencia del otro en la relación comercial.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la relación semántica entre 'flor' y 'orquídea', el vocablo 'flor' funciona como:",
+    "options": [
+      "Hiperónimo",
+      "Hipónimo",
+      "Merónimo",
+      "Cohipónimo"
+    ],
+    "correctIndex": 0,
+    "explanation": "El hiperónimo es el término genérico de mayor amplitud semántica que engloba a especies subordinadas como la orquídea.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Las palabras 'guitarra' y 'cuerda' guardan una relación semántica estricta de:",
+    "options": [
+      "Hiperónimo e hipónimo",
+      "Holónimo y merónimo (todo - parte)",
+      "Polisemia funcional",
+      "Antonimia inversa"
+    ],
+    "correctIndex": 1,
+    "explanation": "'Guitarra' es el todo integrado (holónimo) y 'cuerda' es una parte o elemento constitutivo indispensable (merónimo).",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.2.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Los términos 'aptitud' (capacidad intelectiva) y 'actitud' (disposición de ánimo) constituyen un par de vocablos:",
+    "options": [
+      "Homófonos",
+      "Parónimos",
+      "Homógrafos",
+      "Antónimos graduales"
+    ],
+    "correctIndex": 1,
+    "explanation": "Los parónimos son palabras que presentan semejanzas fonéticas y gráficas muy cercanas, pero significados totalmente distintos.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.2.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Las palabras 'lima' (fruta), 'lima' (herramienta) y 'Lima' (capital) son ejemplos indiscutibles de:",
+    "options": [
+      "Homonimia homógrafa",
+      "Polisemia léxica",
+      "Sinonimia relativa",
+      "Paronimia contextual"
+    ],
+    "correctIndex": 0,
+    "explanation": "Tienen exactamente la misma grafía y sonido pero orígenes etimológicos totalmente independientes y sin ningún sema común (homografía).",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Los vocablos 'clavel' y 'jazmín' respecto del término 'flor' mantienen entre sí una relación de:",
+    "options": [
+      "Hiperonimia",
+      "Cohiponimia",
+      "Meronimia",
+      "Antonimia propia"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dos hipónimos que pertenecen a la misma categoría o género común (hiperónimo) son cohipónimos entre sí.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.2.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La oposición semántica entre 'leal' y 'desleal' o entre 'posible' e 'imposible' corresponde al tipo de:",
+    "options": [
+      "Antonimia léxica gradual",
+      "Antonimia gramatical o morfológica",
+      "Antonimia recíproca",
+      "Homonimia fónica"
+    ],
+    "correctIndex": 1,
+    "explanation": "La antonimia gramatical o morfológica se forma añadiendo prefijos de oposición o privación (des-, in-, im-, i-, a-) a la misma raíz.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

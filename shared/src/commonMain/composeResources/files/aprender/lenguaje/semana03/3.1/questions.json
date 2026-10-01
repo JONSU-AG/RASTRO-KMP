@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t03_s01_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La unidad mínima abstracta, mental y con función distintiva estudiada por la fonología se denomina:",
+    "options": [
+      "Morfema",
+      "Alófono",
+      "Grafema",
+      "Fonema"
+    ],
+    "correctIndex": 3,
+    "explanation": "El fonema es la unidad abstracta y mínima de la fonología capaz de distinguir significados entre pares de palabras.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s01_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El sistema fonológico del idioma castellano estándar está compuesto en total por:",
+    "options": [
+      "24 fonemas (5 vocálicos y 19 consonánticos)",
+      "27 fonemas y 5 dígrafos",
+      "29 fonemas segmentales",
+      "22 fonemas orales y 2 nasales"
+    ],
+    "correctIndex": 0,
+    "explanation": "El español cuenta con exactamente 24 fonemas segmentales: 5 vocálicos (/a, e, i, o, u/) y 19 consonánticos.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s01_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Por el modo de articulación (abertura de la cavidad bucal), las vocales /i/ y /u/ se clasifican como:",
+    "options": [
+      "Abiertas o bajas",
+      "Semiabiertas o medias",
+      "Cerradas o altas",
+      "Anteriores y planas"
+    ],
+    "correctIndex": 2,
+    "explanation": "Las vocales /i/ y /u/ exigen una mínima abertura de la cavidad bucal y elevación máxima de la lengua; por eso son vocales cerradas o altas.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s01_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la palabra 'trans-porte', la primera sílaba 'trans' se clasifica estructuralmente como sílaba:",
+    "options": [
+      "Trabada o cerrada",
+      "Libre o abierta",
+      "Átona sin núcleo",
+      "Monofonemática"
+    ],
+    "correctIndex": 0,
+    "explanation": "La sílaba 'trans' termina en consonantes que ocupan la coda silábica (-ns); por terminar en consonante es una sílaba trabada o cerrada.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s01_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El hecho de que el fonema /k/ pueda representarse en la escritura mediante las letras 'c', 'k' y 'qu' es un fenómeno de:",
+    "options": [
+      "Poligrafía",
+      "Diftongación",
+      "Polifonía",
+      "Alomorfia"
+    ],
+    "correctIndex": 0,
+    "explanation": "La poligrafía ocurre cuando un único fonema se escribe con diferentes grafemas o letras según el contexto ortográfico.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s01_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la estructura interna de una sílaba, el elemento obligatorio e imprescindible que constituye el núcleo es:",
+    "options": [
+      "El ataque complejo",
+      "La vocal de la cima",
+      "La cabeza compuesta",
+      "La coda consonántica"
+    ],
+    "correctIndex": 1,
+    "explanation": "En el idioma español, toda sílaba requiere obligatoriamente una vocal que ejerce el papel de núcleo en la cima silábica.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s01_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes letras del alfabeto español carece por completo de correlato fonológico (es muda) en palabras como 'hoja' o 'humo'?",
+    "options": [
+      "La letra x",
+      "La letra h",
+      "La letra y",
+      "La letra z"
+    ],
+    "correctIndex": 1,
+    "explanation": "La grafía 'h' no representa ningún fonema segmental en la pronunciación del castellano contemporáneo.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s01_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Las vocales clasificadas como posteriores por la posición de la lengua en el tracto vocal son:",
+    "options": [
+      "/e/ y /i/",
+      "/a/ y /e/",
+      "/o/ y /u/",
+      "/i/ y /a/"
+    ],
+    "correctIndex": 2,
+    "explanation": "Las vocales /o/ y /u/ se articulan retrayendo el dorso de la lengua hacia la región posterior o velar de la cavidad bucal.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s01_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la palabra 'pan', la consonante inicial 'p' y la consonante final 'n' cumplen respectivamente las funciones de:",
+    "options": [
+      "Cima y núcleo",
+      "Coda y ataque",
+      "Núcleo y margen",
+      "Ataque (cabeza) y coda"
+    ],
+    "correctIndex": 3,
+    "explanation": "La consonante prenuclear 'p' es el ataque o cabeza silábica, mientras que la consonante posnuclear 'n' actúa como coda.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La oposición de significado entre las palabras 'masa' y 'mesa' gracias al cambio de /a/ por /e/ demuestra que los fonemas poseen:",
+    "options": [
+      "Independencia sintáctica",
+      "Significado léxico intrínseco",
+      "Naturaleza fónica acústica",
+      "Función distintiva"
+    ],
+    "correctIndex": 3,
+    "explanation": "Los fonemas no tienen significado por sí mismos, pero cumplen función distintiva al permitir diferenciar significados en pares mínimos.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.1.1",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  }
+]

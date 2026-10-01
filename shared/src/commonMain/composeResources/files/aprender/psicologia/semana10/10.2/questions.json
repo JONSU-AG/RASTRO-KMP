@@ -1,0 +1,182 @@
+[
+  {
+    "id": "psi_t10_s02_c01",
+    "statement": "La 'Atención' se define en la psicología cognitiva como el proceso selectivo y focalizador que cumple la función esencial de:",
+    "options": [
+      "Dormir plácidamente durante las horas de clase matutinas.",
+      "Filtrar y seleccionar estímulos relevantes del entorno, concentrando los recursos cognitivos en ellos mientras se inhiben las distracciones irrelevantes.",
+      "Memorizar el diccionario de la lengua castellana en una noche.",
+      "Mover involuntariamente las extremidades durante una pesadilla."
+    ],
+    "correctIndex": 1,
+    "explanation": "La atención actúa como un foco reflector o cuello de botella: selecciona información prioritaria para la conciencia frente a la infinita marea de estímulos sensoriales.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s02_c02",
+    "statement": "La 'Atención Involuntaria o Espontánea' se produce automáticamente cuando:",
+    "options": [
+      "El estudiante decide por pura fuerza de voluntad estudiar cálculo tres horas.",
+      "Se lee un libro aburrido en una biblioteca silenciosa.",
+      "Un estímulo súbito, novedoso, intenso o amenazante (como una explosión o un relámpago) irrumpe en el campo sensorial provocando el reflejo de orientación.",
+      "Se medita en silencio cerrando los ojos."
+    ],
+    "correctIndex": 2,
+    "explanation": "El reflejo de orientación innato gira la cabeza y los ojos hacia el estímulo repentino para evaluar si representa un peligro inminente.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s02_c03",
+    "statement": "La 'Memoria' como proceso cognitivo integral abarca tres etapas o fases funcionales secuenciales e interdependientes denominadas:",
+    "options": [
+      "Inspiración, respiración y expiración.",
+      "Lectura, deletreo y olvido inmediato.",
+      "Codificación (adquisición/registro), Almacenamiento (retención/consolidación) y Recuperación (evocación/recuerdo).",
+      "Emoción, pasión y sentimiento."
+    ],
+    "correctIndex": 2,
+    "explanation": "Para recordar algo primero debe registrarse y codificarse, luego almacenarse en redes neuronales y finalmente recuperarse activamente cuando se necesita.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s02_c04",
+    "statement": "El modelo multialmacén de memoria formulado por Richard Atkinson y Richard Shiffrin (1968) propone que la información transita a través de tres almacenes:",
+    "options": [
+      "Memoria procedimental, memoria semántica y memoria episódica según el modelo de Tulving.",
+      "Memoria Sensorial (MS), Memoria a Corto Plazo (MCP / de trabajo) y Memoria a Largo Plazo (MLP).",
+      "Memoria fotográfica, memoria verbal y memoria afectiva involuntaria.",
+      "Memoria declarativa explícita, memoria implícita no asociativa y memoria refleja."
+    ],
+    "correctIndex": 1,
+    "explanation": "El modelo clásico de procesamiento serial describe el paso desde la memoria sensorial de milisegundos hacia la memoria de trabajo y la consolidación permanente en la MLP.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s02_c05",
+    "statement": "La 'Memoria Sensorial' icónica (visual) y ecoica (auditiva) se caracteriza por tener:",
+    "options": [
+      "Un acceso voluntario y consciente reflexivo.",
+      "Cero neuronas dedicadas en la corteza cerebral.",
+      "Una capacidad de almacenamiento ilimitada pero una duración temporal extremadamente efímera (de fracciones de segundo a pocos segundos).",
+      "Capacidad de almacenar información durante cincuenta años sin alterarse."
+    ],
+    "correctIndex": 2,
+    "explanation": "La memoria sensorial retiene una copia exacta del estímulo durante milisegundos para permitir su procesamiento atencional inicial.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s02_c06",
+    "statement": "George Miller demostró en su célebre artículo 'El mágico número siete, más o menos dos' que la capacidad de retención de la Memoria a Corto Plazo oscila entre:",
+    "options": [
+      "Uno o dos datos como máximo.",
+      "5 a 9 unidades de información (chunks o trozos con significado).",
+      "Cincuenta conceptos filosóficos simultáneos.",
+      "Mil palabras completas por segundo."
+    ],
+    "correctIndex": 1,
+    "explanation": "La capacidad de la memoria operativa humana es limitada: 7 ± 2 elementos; mediante el agrupamiento o 'chunking' se optimiza esta capacidad operativa.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s02_c07",
+    "statement": "La Memoria a Largo Plazo se subdivide en dos grandes vertientes; la 'Memoria Declarativa o Explícita' se diferencia de la Procedimental en que la Declarativa:",
+    "options": [
+      "Se pierde completamente al cumplir diez años de edad.",
+      "Opera sin ninguna participación de la corteza cerebral.",
+      "Contiene destrezas motoras automatizadas como montar bicicleta o nadar.",
+      "Almacena recuerdos conscientes y verbalizables sobre hechos, conceptos y experiencias biográficas (saber 'qué')."
+    ],
+    "correctIndex": 3,
+    "explanation": "La memoria declarativa requiere recuperación intencional consciente y se subdivide a su vez en episódica (vivencias) y semántica (conceptos).",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s02_c08",
+    "statement": "Endel Tulving distinguió dentro de la memoria declarativa la 'Memoria Episódica' de la 'Memoria Semántica', caracterizándose la Episódica por almacenar:",
+    "options": [
+      "Eventos y experiencias biográficas personales situadas en un marco temporal y espacial específico ('lo que me ocurrió a mí en mi fiesta de 15 años').",
+      "Fórmulas matemáticas abstractas y reglas gramaticales sin contexto temporal.",
+      "Los hábitos motores de cómo tocar la guitarra acústica.",
+      "Los reflejos pupilares ante la luz brillante."
+    ],
+    "correctIndex": 0,
+    "explanation": "La memoria episódica es el diario íntimo temporal del individuo; la memoria semántica es la enciclopedia descontextualizada de conocimientos sobre el mundo.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s02_c09",
+    "statement": "La estructura cerebral profunda indispensable para la consolidación y transferencia de los recuerdos desde la memoria a corto plazo hacia la corteza cerebral a largo plazo es el:",
+    "options": [
+      "Bulbo raquídeo",
+      "Hipocampo",
+      "Oído medio",
+      "Lóbulo occipital"
+    ],
+    "correctIndex": 1,
+    "explanation": "El caso del célebre paciente H.M. demostró que la extirpación bilateral del hipocampo impide consolidar nuevos recuerdos declarativos (amnesia anterógrada severa).",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.2.5",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s02_c10",
+    "statement": "En las teorías del olvido, la 'Interferencia Retroactiva' ocurre cuando:",
+    "options": [
+      "El nuevo aprendizaje recién adquirido interfiere, obstaculiza y dificulta el recuerdo del material antiguo aprendido previamente.",
+      "Se produce un traumatismo craneano que borra la identidad.",
+      "La persona pierde los dientes de leche al crecer.",
+      "El aprendizaje antiguo interfiere con el recuerdo del material recién aprendido."
+    ],
+    "correctIndex": 0,
+    "explanation": "Interferencia retroactiva: lo nuevo aprendido (ej. nuevo número telefónico) borra o dificulta recordar el número telefónico anterior.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.2.5",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

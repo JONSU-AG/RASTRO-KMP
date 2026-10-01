@@ -1,0 +1,34 @@
+{
+  "id": "psi_t11_s01",
+  "subjectId": "psicologia",
+  "semana": 11,
+  "subtema": "11.1",
+  "title": "3.1. Definición y Evolución Histórica del Concepto",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana11.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_11_Inteligencia_y_Teorias_Multiples.md",
+  "learningObjectives": [
+    "Explicar la etimología intelligentia como inter más legere y la definición contemporánea de Wechsler y APA con sus cinco operaciones",
+    "Contrastar herencia con heredabilidad de 50 a 70 por ciento en gemelos frente a ambiente con nutrición, estimulación y educación dentro del rango de reacción",
+    "Ubicar Binet-Simon 1905 en Francia con la edad mental y Stern 1912 con la fórmula CI igual EM sobre EC por 100 perfeccionada por Terman",
+    "Operar Wechsler con WAIS, WISC y WPPSI más Gauss con media 100 y desviación 15 y la clasificación desde superdotación hasta discapacidad",
+    "Diferenciar CI de razón válido solo en niñez frente a CI de desviación por grupo de edad con la trampa de invertir EM con EC"
+  ],
+  "theory": {
+    "id": "th_psi_t11_s01",
+    "asignatura": "Psicología",
+    "semana": 11,
+    "titulo": "3.1. Definición y Evolución Histórica del Concepto",
+    "resumen": "",
+    "conceptosClave": [
+      "Etimología intelligentia como inter entre más legere escoger con saber elegir la mejor alternativa",
+      "Definición global multivariable con asimilar, razonar abstracto, resolver, aprender y adaptarse según Wechsler y APA",
+      "Heredabilidad de 50 a 70 por ciento en gemelos idénticos frente a rango de reacción modulado por ambiente",
+      "Edad mental EM frente a edad cronológica EC con Binet-Simon 1905 y Stern 1912 con Terman en Stanford",
+      "Fórmula CI igual EM sobre EC por 100 con ejemplo 10 sobre 8 igual 125 superior",
+      "Wechsler con WAIS, WISC y WPPSI más Gauss con media 100 y desviación estándar 15",
+      "Clasificación con 130 muy superior, 120 a 129 superior, 90 a 109 promedio y menor a 70 discapacidad intelectual"
+    ],
+    "admissionTip": "Si ves inter más legere marca etimología, si ves 1905 Francia marca Binet, si ves EM sobre EC marca Stern, si ves 100 y 15 marca Wechsler, si ves 130 marca superdotación, si ves 90 a 109 marca promedio.",
+    "admissionExplanation": "La trampa más castigada es invertir la fórmula como EC sobre EM, confundir el CI de razón útil solo en niñez con el CI de desviación por grupo etario, y atribuir a Wechsler lo que es de Stern o Binet."
+  }
+}

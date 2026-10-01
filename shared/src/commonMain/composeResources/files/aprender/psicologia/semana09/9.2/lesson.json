@@ -1,0 +1,34 @@
+{
+  "id": "psi_t09_s02",
+  "subjectId": "psicologia",
+  "semana": 9,
+  "subtema": "9.2",
+  "title": "4.2. Condicionamiento Operante o Instrumental (Thorndike y Skinner)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana09.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_09_Aprendizaje_Teorias_y_Estilos.md",
+  "learningObjectives": [
+    "Formular ley del efecto Thorndike con caja problema donde satisfactorio repite y displacentero extingue",
+    "Operar triple contingencia Skinner ED hacia R hacia EC con matriz dar quitar por agradable aversivo",
+    "Distinguir refuerzo positivo que da premio y negativo que quita dolor que aumentan frente a castigos que disminuyen",
+    "Explicar Bandura vicario con Bobo A RE MO Ausubel significativo con subsumidores Bruner descubrimiento y Kohler insight",
+    "Aplicar programas RF RV IF IV con Vygotsky ZDP andamiaje y estilos VAK Kolb para casos fabrica casino y cinematica"
+  ],
+  "theory": {
+    "id": "th_psi_t09_s02",
+    "asignatura": "Psicología",
+    "semana": 9,
+    "titulo": "4.2. Condicionamiento Operante o Instrumental (Thorndike y Skinner)",
+    "resumen": "",
+    "conceptosClave": [
+      "Thorndike con ensayo y error en gatos y ley del efecto como base instrumental",
+      "Skinner con conducta en funcion de consecuencias y contingencia discriminativo respuesta y consecuente",
+      "Matriz R mas que da agradable aumenta R menos que quita aversivo aumenta C mas que da aversivo disminuye C menos que quita agradable disminuye",
+      "Programas RF fijo por numero RV variable mas resistente IF fijo por tiempo IV variable sorpresa con ejemplos 20 pantalones y tragamonedas",
+      "Bandura con atencion retencion reproduccion y motivacion sin refuerzo directo en Bobo",
+      "Ausubel con saberes previos y organizadores frente a memoristico Piaget asimilacion acomodacion Vygotsky ZDR ZDP y andamiaje Bruner",
+      "Kohler con Sultan e insight por reestructuracion y VAK visual auditivo kinestesico con Kolb convergente divergente asimilador acomodador"
+    ],
+    "admissionTip": "Si ves satisfactorio repite marca Thorndike, si ves consecuencias marca Skinner, si ves dar premio y sube marca R mas, si ves quitar dolor y sube marca R menos, si ves dar dolor y baja marca C mas, si ves quitar juguete y baja marca C menos, si ves observar sin hacer marca Bandura, si ves saberes previos marca Ausubel, si ves Eureka marca insight.",
+    "admissionExplanation": "La trampa numero uno es llamar castigo al refuerzo negativo; refuerzo siempre suma conducta y castigo siempre resta, positivo es dar y negativo es quitar, RV tragamonedas es mas resistente, ZDP es con ayuda y andamiaje se retira."
+  }
+}

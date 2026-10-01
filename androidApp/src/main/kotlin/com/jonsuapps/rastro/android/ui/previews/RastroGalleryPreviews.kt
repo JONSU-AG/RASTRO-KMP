@@ -267,3 +267,14 @@ fun PreviewDirectChatThreadDialog() {
         )
     }
 }
+
+// ── 13. CENTRO LEGAL Y PRIVACIDAD ──────────────────────────────────────────
+@Preview(name = "14. Legal y Privacidad", showBackground = true)
+@Composable
+fun PreviewLegalScreen() {
+    val theme = RastroThemeTokens.getColors(RastroThemeId.LIGHT)
+    com.jonsuapps.rastro.android.ui.screens.LegalScreen(
+        colors = theme
+    )
+}
+

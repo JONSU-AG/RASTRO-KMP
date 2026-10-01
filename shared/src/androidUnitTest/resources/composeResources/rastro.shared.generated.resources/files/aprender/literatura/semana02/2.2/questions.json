@@ -1,0 +1,182 @@
+[
+  {
+    "id": "lit_t02_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La novela epistolar Las cuitas del joven Werther (1774) de Johann Wolfgang von Goethe es considerada la obra cumbre de la corriente prerromántica alemana denominada:",
+    "options": [
+      "Parnasianismo",
+      "Siglo de las Luces",
+      "Sturm und Drang (Tormenta e Ímpetu)",
+      "Simbolismo estético"
+    ],
+    "correctIndex": 2,
+    "explanation": "El movimiento Sturm und Drang exaltó la pasión indómita, la libertad espiritual del genio creador y el individualismo frente a la rigidez racionalista de la Ilustración.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es el desenlace trágico del protagonista en Las cuitas del joven Werther motivado por su amor imposible hacia Lotte?",
+    "options": [
+      "Se suicida disparándose con una pistola facilitada por el prometido de Carlota.",
+      "Reta a duelo de honor a Albert y perece en el enfrentamiento.",
+      "Huye al extranjero para alistarse en el ejército prusiano.",
+      "Restaura su equilibrio emocional refugiándose en la vida campestre."
+    ],
+    "correctIndex": 0,
+    "explanation": "Werther, incapaz de tolerar el abismo entre sus ideales pasionales absolutos y la realidad burguesa donde Lotte está casada con Albert, se quita la vida con la pistola de este.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la novela Crimen y castigo de Fiódor Dostoievski, la teoría personal que elabora Rodión Raskólnikov para justificar el homicidio de la usurera sostiene que:",
+    "options": [
+      "El Estado zarista debe ser destruido mediante actos terroristas sistemáticos.",
+      "Existen hombres extraordinarios que tienen el derecho moral de violar las leyes ordinarias en pro del progreso humano.",
+      "Todas las personas nacen con una predestinación demoníaca innata.",
+      "El robo es la única forma legítima de redistribuir la riqueza entre el proletariado."
+    ],
+    "correctIndex": 1,
+    "explanation": "Raskólnikov expone en un artículo que la humanidad se divide en hombres ordinarios (obedientes) y hombres extraordinarios (como Napoleón), legitimados para transgredir la moral corriente en beneficio de un fin superior.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En Crimen y castigo, el personaje femenino que encarna el amor redentor, la fe cristiana y la regeneración espiritual de Raskólnikov es:",
+    "options": [
+      "Katerina Ivánovna",
+      "Aliona Ivánovna",
+      "Sonia Marmeládova",
+      "Dunia Raskólnikova"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sonia Marmeládova, quien ejerce la prostitución para alimentar a su paupérrima familia, convence a Rodión de entregarse a la justicia terrenal y lo acompaña a Siberia en su purificación moral.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La célebre novela corta La metamorfosis (1915) de Franz Kafka se inicia de forma impactante cuando el protagonista Gregorio Samsa:",
+    "options": [
+      "Es arrestado arbitrariamente por dos guardias sin conocer la acusación en su contra.",
+      "Descubre que su jefe ha desfalco la empresa textil donde labora.",
+      "Pierde la memoria y deambula por los suburbios industriales de Praga.",
+      "Despierta una mañana convertido en un monstruoso insecto."
+    ],
+    "correctIndex": 3,
+    "explanation": "Kafka arranca in media res: «Al despertar Gregorio Samsa una mañana tras un sueño intranquilo, se encontró en su cama convertido en un monstruoso insecto», metáfora suprema de la alienación humana moderna.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es la temática sociopsicológica central que aborda Franz Kafka a través del proceso de aislamiento y muerte de Gregorio Samsa en La metamorfosis?",
+    "options": [
+      "La lucha de clases heroica y el triunfo sindical de los empleados de comercio.",
+      "La alienación del individuo, la deshumanización burocrática y el rechazo familiar ante la pérdida de utilidad económica.",
+      "El misticismo religioso y el valor salvífico del perdón divino.",
+      "La exaltación idílica del progreso técnico y el capitalismo industrial."
+    ],
+    "correctIndex": 1,
+    "explanation": "La novela desnuda la deshumanización del trabajador moderno, reducido a engranaje económico; al quedar incapacitado para producir, Gregorio se vuelve una carga repugnante y es abandonado a la muerte por su propia familia.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El rasgo literario definitorio del Romanticismo universal que lo contrapone frontalmente a las normas de la Ilustración es:",
+    "options": [
+      "El respeto incondicional por las tres unidades aristotélicas de tiempo, lugar y acción.",
+      "El uso exclusivo del latín y temas de la mitología grecolatina.",
+      "La descripción positivista y científica de las leyes sociales.",
+      "La primacía de la subjetividad, la libertad formal y el desbordamiento pasional."
+    ],
+    "correctIndex": 3,
+    "explanation": "El Romanticismo postula la primacía del sentimiento sobre la razón, el ansia de libertad individual irrestricta y el culto a la imaginación creadora.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En Fausto de Goethe, ¿qué pacto trascendental realiza el sabio protagonista con el demonio Mefistófeles?",
+    "options": [
+      "Vende su alma a cambio de disfrutar del conocimiento ilimitado, la juventud y los placeres terrenales.",
+      "Exige que Mefistófeles cure la peste negra que asola a su pueblo.",
+      "Pide riquezas infinitas para repartirlas entre los siervos de la gleba.",
+      "Solicita la inmortalidad para gobernar el Sacro Imperio Romano Germánico."
+    ],
+    "correctIndex": 0,
+    "explanation": "Fausto, insatisfecho con la ciencia terrenal finita, entrega su alma al diablo a condición de que este le otorgue un instante tan pleno de dicha que le haga exclamar: «¡Deténte, momento, eres tan bello!»",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.2.5",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El Realismo literario del siglo XIX, al que pertenece Fiódor Dostoievski, se caracteriza formalmente por:",
+    "options": [
+      "La evasión hacia mundos exóticos y épocas pretéritas de fantasía medieval.",
+      "La invención de realidades mágicas donde no rige el principio de causalidad.",
+      "La brevedad lírica y el hermetismo experimental de la vanguardia.",
+      "La observación minuciosa de la sociedad contemporánea y el análisis psicológico de los personajes."
+    ],
+    "correctIndex": 3,
+    "explanation": "El Realismo se fundamenta en la observación fidedigna de las relaciones humanas, los ambientes urbanos y los conflictos morales de la sociedad de su tiempo.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t02_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cómo reacciona el padre de Gregorio Samsa ante la transformación de su hijo en La metamorfosis?",
+    "options": [
+      "Llama a eminentes médicos para intentar sanar su extraña enfermedad.",
+      "Acepta con resignación cristiana la condición monstruosa de Gregorio.",
+      "Lo agrede con violencia lanzándole manzanas, una de las cuales queda incrustada en su caparazón infectándose.",
+      "Lo entrega inmediatamente a un circo para exhibirlo como fenómeno biológico."
+    ],
+    "correctIndex": 2,
+    "explanation": "El padre muestra una hostilidad despiadada y lo ataca a pedradas con manzanas, hiriéndolo de gravedad y simbolizando el castigo del poder patriarcal despiadado.",
+    "subject": "literatura",
+    "semana": 2,
+    "concept": "2.2.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  }
+]

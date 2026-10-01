@@ -1,0 +1,182 @@
+[
+  {
+    "id": "lit_t06_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El grupo literario de vanguardia puneño de la década de 1920 fundado en torno a la revista Boletín Titikaka y liderado por Gamaliel Churata fue:",
+    "options": [
+      "El Grupo Orkopata",
+      "El Grupo Colónida",
+      "El Grupo Norte",
+      "La Generación del 50"
+    ],
+    "correctIndex": 0,
+    "explanation": "El Grupo Orkopata revolucionó la literatura andina aunando el vanguardismo formal internacional con el indigenismo telúrico de la cuenca del Titicaca.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La obra maestra de Gamaliel Churata, monumental texto híbrido donde confluyen mito andino, filosofía quechua-aymara, ensayo y experimentación lingüística radical, se titula:",
+    "options": [
+      "El pez de oro (1957)",
+      "Chukiwanka",
+      "Tempestad en los Andes",
+      "Ande"
+    ],
+    "correctIndex": 0,
+    "explanation": "El pez de oro es una de las cumbres del pensamiento y la vanguardia surandina; en él Churata indaga en la cosmogonía andina y concibe un lenguaje donde el castellano es permeado por la sintaxis quechua y aymara.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En Arequipa de inicios del siglo XX, la tertulia literaria e intelectual conocida como 'La Bohemia del Aquelarre' reunió a destacados poetas que abrieron el camino a la modernidad lírica regional, entre los cuales destacaron:",
+    "options": [
+      "Abraham Valdelomar y José Carlos Mariátegui",
+      "Percy Gibson y César Atahualpa Rodríguez",
+      "César Vallejo y Alcides Spelucín",
+      "José Santos Chocano y Clemente Palma"
+    ],
+    "correctIndex": 1,
+    "explanation": "La Bohemia del Aquelarre nucleó a figuras como Percy Gibson y César Atahualpa Rodríguez, combinando el refinamiento posmodernista con el orgullo cívico y el paisaje del Misti.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La novela inaugural de Mario Vargas Llosa, La ciudad y los perros (Premio Biblioteca Breve 1962), ambientada en el Colegio Militar Leoncio Prado de Lima, aborda medularmente:",
+    "options": [
+      "La violencia institucional, el autoritarismo militar, la falsedad del código del honor y la fractura social y racial del Perú.",
+      "La idílica relación de los cadetes con sus profesores civiles.",
+      "El enfrentamiento diplomático entre Perú y Ecuador en la Amazonía.",
+      "La apología de la disciplina cuartelaria como modelo pedagógico supremo."
+    ],
+    "correctIndex": 0,
+    "explanation": "La ciudad y los perros desnuda el machismo, la crueldad y la hipocresía de una educación castrense donde conviven jóvenes de todas las clases sociales y regiones peruanas, condensando las contradicciones de todo el país.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.2.4",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Quién es el personaje del círculo de cadetes en La ciudad y los perros que encarna el liderazgo brutal, la ley de la fuerza despiadada y funda el 'Círculo'?",
+    "options": [
+      "El Jaguar",
+      "Alberto Fernández «el Poeta»",
+      "Ricardo Arana «el Esclavo»",
+      "El Boa"
+    ],
+    "correctIndex": 0,
+    "explanation": "El Jaguar impone el respeto a través de la violencia física inmutable en la cuadra militar, concibiendo el mundo como una selva donde solo los fuertes sobreviven frente a los débiles.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.2.5",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En La ciudad y los perros, el cadete tímido y marginado apodado «el Esclavo» es asesinado durante unas maniobras militares debido a que:",
+    "options": [
+      "Había intentado fugarse del cuartel con un fusil ametralladora.",
+      "Había golpeado al teniente Gamboa en el comedor de cadetes.",
+      "Había delatado al cadete Cava como autor del robo del examen de Química para obtener un permiso de salida.",
+      "Pertenecía a una célula política clandestina en el colegio."
+    ],
+    "correctIndex": 2,
+    "explanation": "Ricardo Arana («el Esclavo»), desesperado por salir a ver a Teresa, confiesa quién robó el examen, desatando la cólera del 'Círculo' y siendo víctima de un disparo mortal en la nuca durante las maniobras en Chorrillos.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.2.6",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Entre las técnicas narrativas de vanguardia magistralmente utilizadas por Mario Vargas Llosa en La ciudad y los perros, destaca la técnica de 'los vasos comunicantes', que consiste formalmente en:",
+    "options": [
+      "Intercalar poemas rimados dentro de cada capítulo en prosa.",
+      "Obligar al lector a utilizar un diccionario quechua para descifrar la trama.",
+      "Escribir toda la novela exclusivamente en diálogos teatrales sin narrador.",
+      "Fundir y alternar en un mismo párrafo o secuencia dos o más escenas que ocurren en tiempos o espacios diferentes para que se iluminen y potencien mutuamente."
+    ],
+    "correctIndex": 3,
+    "explanation": "Los vasos comunicantes enlazan dos acontecimientos o conversaciones ocurridas en distintos lugares o épocas entrelazando sus líneas, creando una rica tensión dramática y una perspectiva totalizadora.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.2.7",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El poemario Ande (1926) del puneño Alejandro Peralta, ilustrado con grabados de Diego Kunurana y tipografía experimental, es emblemático por:",
+    "options": [
+      "Estar redactado en coplas de pie quebrado medievales.",
+      "Celebrar las victorias militares del general Bolívar en Junín.",
+      "Imitar los sonetos renacentistas de Garcilaso de la Vega.",
+      "Ser el primer poemario vanguardista indigenista del Perú que canta al campesino y a la meseta del Collao con versos libres de impacto visual."
+    ],
+    "correctIndex": 3,
+    "explanation": "Ande fusiona el ultraísmo y vanguardismo cosmopolita (disposición gráfica, metáforas dinámicas) con la vivencia telúrica del indio altiplánico, inaugurando el vanguardismo indigenista peruano.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.2.8",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En La ciudad y los perros, el oficial recto y disciplinado que cree en la justicia militar e insiste en investigar a fondo el homicidio del Esclavo a pesar de la complicidad de sus superiores es:",
+    "options": [
+      "El capitán Garrido",
+      "El teniente Remigio Gamboa",
+      "El coronel director",
+      "El teniente Huarina"
+    ],
+    "correctIndex": 1,
+    "explanation": "El teniente Gamboa representa la estricta rectitud profesional y moral; por negarse a encubrir el asesinato para proteger el «prestigio» de la institución, es castigado con el traslado a un remoto puesto en la puna andina.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.2.9",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El célebre poema cívico que proclama Arequipa, la tierra de libres, cuna de Mariano Melgar, tiene como autor insigne de la lírica mistiana a:",
+    "options": [
+      "Percy Gibson",
+      "Gamaliel Churata",
+      "César Atahualpa Rodríguez",
+      "Guillermo Mercado"
+    ],
+    "correctIndex": 2,
+    "explanation": "César Atahualpa Rodríguez, patriarca de la poesía arequipeña contemporánea y miembro de Aquelarre, plasmó en sus versos la bravura, la independencia cívica y la devoción hacia la tierra del volcán Misti.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.2.10",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

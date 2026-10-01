@@ -1,0 +1,18 @@
+{
+  "week": 13,
+  "title": "3.1. Enfoque de Riesgo, Tipologías de Violencia, Ciclo de Walker y Acoso Escolar / 4.1. Conductas Delictivas Juveniles, Sustancias Psicoactivas y Farmacodependencia",
+  "lessons": [
+    {
+      "subtopic": "13.1",
+      "lessonId": "psi_t13_s01",
+      "title": "3.1. Enfoque de Riesgo, Tipologías de Violencia, Ciclo de Walker y Acoso Escolar",
+      "path": "13.1/lesson.json"
+    },
+    {
+      "subtopic": "13.2",
+      "lessonId": "psi_t13_s02",
+      "title": "4.1. Conductas Delictivas Juveniles, Sustancias Psicoactivas y Farmacodependencia",
+      "path": "13.2/lesson.json"
+    }
+  ]
+}

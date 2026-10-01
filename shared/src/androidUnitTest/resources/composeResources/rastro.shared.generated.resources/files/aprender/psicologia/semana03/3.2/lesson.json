@@ -1,0 +1,35 @@
+{
+  "id": "psi_t03_s02",
+  "subjectId": "psicologia",
+  "semana": 3,
+  "subtema": "3.2",
+  "title": "4.1. Tipología Ocupacional RIASEC de John Holland",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana03.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_03_Orientacion_Vocacional.md",
+  "learningObjectives": [
+    "Atribuir la tipología hexagonal RIASEC a John Holland con seis tipos y congruencia como ajuste entre persona y ambiente",
+    "Decodificar siglas de Realista Investigador Artístico Social Emprendedor Convencional con rasgos y profesiones típicas",
+    "Caracterizar Realista práctico con herramientas y aire libre frente a Investigador analítico con laboratorio e hipótesis",
+    "Contrastar Artístico creativo no rutinario frente a Social empático de ayuda y Emprendedor líder persuasivo frente a Convencional ordenado con datos",
+    "Aplicar geometría hexagonal con adyacentes compatibles y opuestos de mínima afinidad como Realista Social Investigador Emprendedor Artístico Convencional"
+  ],
+  "theory": {
+    "id": "th_psi_t03_s02",
+    "asignatura": "Psicología",
+    "semana": 3,
+    "titulo": "4.1. Tipología Ocupacional RIASEC de John Holland",
+    "resumen": "",
+    "conceptosClave": [
+      "Holland como marco psicométrico validado que agrupa personas y ambientes en seis personalidades ocupacionales hexagonales",
+      "Siglas RIASEC con Realista Investigador Artístico Social Emprendedor Convencional como dimensiones fundamentales",
+      "Realista con manejo de herramientas máquinas animales y aire libre como ingenierías agronomía y veterinaria",
+      "Investigador con curiosidad análisis lógico y resolución teórica como física biología química y matemática",
+      "Artístico con creatividad expresividad originalidad y rechazo a rutina como artes literatura música y diseño",
+      "Social con empatía ayuda curar y educar como psicología medicina enfermería docencia y trabajo social",
+      "Emprendedor con liderazgo persuasión riesgo y metas como administración derecho marketing y política frente a Convencional con orden datos y contabilidad",
+      "Opuestos con mínima consistencia y congruencia donde encaje produce satisfacción estabilidad y rendimiento profesional"
+    ],
+    "admissionTip": "Si ves herramientas y aire libre marca Realista, si ves laboratorio e hipótesis marca Investigador, si ves creatividad y no rutina marca Artístico, si ves ayudar y educar marca Social, si ves liderar y persuadir marca Emprendedor, si ves orden y datos marca Convencional, si ves opuestos marca mínima afinidad, si ves encaje marca congruencia.",
+    "admissionExplanation": "La trampa es marcar adyacente como opuesto y confundir Social que ayuda con Emprendedor que lidera, e Investigador que teoriza con Convencional que registra y ordena."
+  }
+}

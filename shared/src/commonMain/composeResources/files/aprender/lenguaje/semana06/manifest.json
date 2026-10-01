@@ -1,0 +1,18 @@
+{
+  "week": 6,
+  "title": "La Oración Gramatical: Simples y Compuestas",
+  "lessons": [
+    {
+      "subtopic": "6.1",
+      "lessonId": "leng_t06_s01",
+      "title": "La Oración Gramatical: Bimembre vs. Unimembre y Actitud del Hablante",
+      "path": "6.1/lesson.json"
+    },
+    {
+      "subtopic": "6.2",
+      "lessonId": "leng_t06_s02",
+      "title": "Oraciones Compuestas: Coordinadas y Subordinadas",
+      "path": "6.2/lesson.json"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "week": 1,
+  "title": "Comunicación y Lenguaje",
+  "lessons": [
+    {
+      "subtopic": "1.1",
+      "lessonId": "leng_t01_s01",
+      "title": "El Circuito Comunicativo: Fases, Elementos y Fenómenos Interferentes",
+      "path": "1.1/lesson.json"
+    },
+    {
+      "subtopic": "1.2",
+      "lessonId": "leng_t01_s02",
+      "title": "Tipología de la Comunicación: Clasificación y Criterios",
+      "path": "1.2/lesson.json"
+    },
+    {
+      "subtopic": "1.3",
+      "lessonId": "leng_t01_s03",
+      "title": "Planos del Lenguaje y las Seis Funciones del Lenguaje (Bühler y Jakobson)",
+      "path": "1.3/lesson.json"
+    }
+  ]
+}

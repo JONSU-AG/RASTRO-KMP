@@ -1,0 +1,34 @@
+{
+  "id": "psi_t13_s01",
+  "subjectId": "psicologia",
+  "semana": 13,
+  "subtema": "13.1",
+  "title": "3.1. Enfoque de Riesgo, Tipologías de Violencia, Ciclo de Walker y Acoso Escolar",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_13_Factores_de_Riesgo.md",
+  "learningObjectives": [
+    "Definir factor de riesgo como variable que incrementa probabilidad de daño frente a vulnerabilidad como susceptibilidad intrínseca",
+    "Clasificar cuatro violencias con física, psicológica, sexual y económica con retención de documentos e ingresos",
+    "Secuenciar Walker con acumulación de tensión, explosión y luna de miel que reinicia el ciclo con más letalidad",
+    "Tipificar bullying con intencionalidad, reiteración y desequilibrio más triángulo con agresor, víctima y espectadores",
+    "Diferenciar cyberbullying con alcance masivo, huella digital y anonimato frente a presencial limitado al colegio"
+  ],
+  "theory": {
+    "id": "th_psi_t13_s01",
+    "asignatura": "Psicología",
+    "semana": 13,
+    "titulo": "3.1. Enfoque de Riesgo, Tipologías de Violencia, Ciclo de Walker y Acoso Escolar",
+    "resumen": "",
+    "conceptosClave": [
+      "Factor de riesgo precipitante del entorno frente a vulnerabilidad intrínseca con impulsividad y baja autoestima",
+      "Violencia física con golpes, psicológica con denigrar y celotipia, sexual sin consentimiento y económica patrimonial",
+      "Walker T-E-L con tensión que culpa a la víctima, explosión grave y luna de miel con regalos que no cierra el ciclo",
+      "Bullying con daño deliberado, persistencia y asimetría que impide defenderse",
+      "Espectadores que con silencio y risas legitiman al agresor según la trampa DECO fija",
+      "Cyberbullying 24-7 con viralización, permanencia digital y anonimato virtual",
+      "Crianza negligente o violenta como riesgo primario que socializa coerción y hostilidad"
+    ],
+    "admissionTip": "Si ves documentos o ingresos marca económica, si ves denigrar y aislar marca psicológica, si ves regalos y perdón marca luna de miel, si ves tensión creciente marca acumulación, si ves risas que legitiman marca espectadores, si ves anonimato y red marca cyber.",
+    "admissionExplanation": "La trampa fija confunde violencia económica con psicológica, cree que la luna de miel cierra el ciclo cuando lo reinicia, y olvida que sin los tres criterios de intencionalidad, reiteración y desequilibrio no hay bullying."
+  }
+}

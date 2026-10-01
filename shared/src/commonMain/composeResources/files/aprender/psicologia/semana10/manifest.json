@@ -1,0 +1,18 @@
+{
+  "week": 10,
+  "title": "Procesos Psicológicos Básicos y Superiores",
+  "lessons": [
+    {
+      "subtopic": "10.1",
+      "lessonId": "psi_t10_s01",
+      "title": "3.1. Sensación y Umbrales Sensoriales",
+      "path": "10.1/lesson.json"
+    },
+    {
+      "subtopic": "10.2",
+      "lessonId": "psi_t10_s02",
+      "title": "4.1. Atención y Memoria",
+      "path": "10.2/lesson.json"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "week": 1,
+  "title": "La Psicología como Ciencia",
+  "lessons": [
+    {
+      "subtopic": "1.1",
+      "lessonId": "psi_t01_s01",
+      "title": "3.1. Definición, Etimología y Evolución Epistemológica",
+      "path": "1.1/lesson.json"
+    },
+    {
+      "subtopic": "1.2",
+      "lessonId": "psi_t01_s02",
+      "title": "3.2. Objeto de Estudio de la Psicología",
+      "path": "1.2/lesson.json"
+    }
+  ]
+}

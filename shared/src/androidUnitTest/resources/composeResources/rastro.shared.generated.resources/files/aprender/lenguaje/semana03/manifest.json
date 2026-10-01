@@ -1,0 +1,24 @@
+{
+  "week": 3,
+  "title": "Fonología, Secuencias Vocálicas y Acentuación",
+  "lessons": [
+    {
+      "subtopic": "3.1",
+      "lessonId": "leng_t03_s01",
+      "title": "Fonología, Fonética, Sistema Fonológico y Estructura Silábica",
+      "path": "3.1/lesson.json"
+    },
+    {
+      "subtopic": "3.2",
+      "lessonId": "leng_t03_s02",
+      "title": "Secuencias Vocálicas: Diptongo, Triptongo y Hiato (Acentual y Simple)",
+      "path": "3.2/lesson.json"
+    },
+    {
+      "subtopic": "3.3",
+      "lessonId": "leng_t03_s03",
+      "title": "Normativa de Acentuación General, Diacrítica y Enfática",
+      "path": "3.3/lesson.json"
+    }
+  ]
+}

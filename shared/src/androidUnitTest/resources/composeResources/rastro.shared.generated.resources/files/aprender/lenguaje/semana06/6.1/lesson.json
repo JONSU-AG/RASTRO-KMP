@@ -1,0 +1,34 @@
+{
+  "id": "leng_t06_s01",
+  "subjectId": "lenguaje",
+  "semana": 6,
+  "subtema": "6.1",
+  "title": "La Oración Gramatical: Bimembre vs. Unimembre y Actitud del Hablante",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana06.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_06_Oracion_Gramatical_Simples_y_Compuestas.md",
+  "learningObjectives": [
+    "Diferenciar oraciones bimembres con sujeto expreso o tácito de unimembres verbales y no verbales",
+    "Identificar oraciones unimembres impersonales con haber, fenómenos climáticos, hacer, ser y se impersonal",
+    "Clasificar oraciones por la actitud del hablante en enunciativas, interrogativas, exclamativas, exhortativas, desiderativas y dubitativas",
+    "Distinguir interrogativas directas de indirectas y totales de parciales en casos de admisión",
+    "Explicar la norma del verbo haber existencial en singular y la función de objeto directo del sintagma que lo acompaña"
+  ],
+  "theory": {
+    "id": "th_leng_t06_s01",
+    "asignatura": "Lenguaje",
+    "semana": 6,
+    "titulo": "La Oración Gramatical: Bimembre vs. Unimembre y Actitud del Hablante",
+    "resumen": "",
+    "conceptosClave": [
+      "Bimembre con sujeto expreso o tácito recuperable por la desinencia verbal",
+      "Unimembre verbal impersonal sin sujeto con haber en singular, fenómenos climáticos y se impersonal",
+      "Unimembre no verbal con interjecciones y frases nominales como Auxilio y Buenos días",
+      "Haber existencial siempre en singular con objeto directo comprobable por Las hubo y Lo había",
+      "Interrogativa indirecta sin signos subordinada a verbos de dicción o entendimiento",
+      "Desiderativa con ojalá expresa deseo y dubitativa con tal vez expresa duda",
+      "Exhortativa expresa mandato o prohibición con función apelativa"
+    ],
+    "admissionTip": "Si ves Hubo, Había, Nevó, Hace frío, Es tarde o Se vive sin sujeto posible, marca unimembre. Si ves Hubieron en plural para existencia, marca error. Si ves Ojalá marca desiderativa y si ves Tal vez o Quizá marca dubitativa.",
+    "admissionExplanation": "La trampa más castigada es presentar el objeto directo de haber como falso sujeto y confundir la interrogativa indirecta sin signos con una enunciativa simple."
+  }
+}

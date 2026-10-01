@@ -1,0 +1,34 @@
+{
+  "id": "psi_t03_s01",
+  "subjectId": "psicologia",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "3.1. Diferenciación Conceptual Fundamental",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana03.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_03_Orientacion_Vocacional.md",
+  "learningObjectives": [
+    "Definir aptitud como potencial para aprender y desempeñarse con facilidad frente a interés como inclinación afectiva por gustar",
+    "Diagnosticar conflicto cuando hay interés por arquitectura pero escasa aptitud espacial y recomendar nivelar o buscar profesión afín",
+    "Sintetizar vocación como llamado interior que integra aptitudes intereses valores y sentido construido por exploración vivencial",
+    "Distinguir profesión con formación superior titulada y deontología frente a ocupación como puesto concreto y oficio manual técnico",
+    "Detectar elección alienada por presión parental mercado saturado hobby confundido e inventarios Kuder con madurez reflexiva autónoma"
+  ],
+  "theory": {
+    "id": "th_psi_t03_s01",
+    "asignatura": "Psicología",
+    "semana": 3,
+    "titulo": "3.1. Diferenciación Conceptual Fundamental",
+    "resumen": "",
+    "conceptosClave": [
+      "Aptitud como disposición innata y desarrollada para rendimiento con facilidad en áreas numérica verbal espacial motriz y artística",
+      "Interés como preferencia emocional y curiosidad por campos personas o actividades independiente de recompensa inmediata",
+      "Conflicto vocacional por divergencia entre gustar y poder hacer que exige convergencia armónica con mercado ocupacional",
+      "Vocación vocatio como síntesis madura integradora no totalmente innata que se descubre y construye por autoconocimiento",
+      "Profesión con cuerpo científico formación acreditada título y colegio frente a ocupación puesto remunerado y oficio técnico manual",
+      "Elección alienada por mandato todos somos abogados que genera frustración y deserción por falta de motivación intrínseca",
+      "Mercado ocupacional con demanda saturación ingresos e inserción más inventarios que mapean jerarquía y madurez que integra capacidades con opciones"
+    ],
+    "admissionTip": "Si ves puedo hacerlo con facilidad marca aptitud, si ves me gusta y me atrae marca interés, si ves llamado interior marca vocación, si ves título universitario marca profesión, si ves puesto concreto marca ocupación, si ves todos somos abogados marca alienada, si ves demanda y saturación marca mercado.",
+    "admissionExplanation": "La trampa fija es confundir gustar con poder hacer, hobby de consumo con profesión que exige formación rigurosa, y mandato parental con vocación auténtica consolidada."
+  }
+}

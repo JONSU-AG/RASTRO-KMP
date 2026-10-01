@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t05_s01_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La categoría gramatical que tiene como rasgo exclusivo modificar a un verbo, a un adjetivo o a otro adverbio es el:",
+    "options": [
+      "Adverbio",
+      "Determinante",
+      "Pronombre relativo",
+      "Participio activo"
+    ],
+    "correctIndex": 0,
+    "explanation": "El adverbio es la categoría invariable modificadora por excelencia capaz de calificar o graduar a un verbo, a un adjetivo o a otro adverbio.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s01_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la frase 'Esos jóvenes ingresaron a la universidad, pero aquellos aún esperan sus resultados', las palabras 'esos' y 'aquellos' funcionan respectivamente como:",
+    "options": [
+      "Pronombre y determinante",
+      "Determinante demostrativo y pronombre demostrativo",
+      "Adjetivos calificativos ambos",
+      "Adverbios de lugar"
+    ],
+    "correctIndex": 1,
+    "explanation": "'Esos' acompaña directamente al sustantivo 'jóvenes' (determinante); 'aquellos' reemplaza al sustantivo y asume el rol de núcleo (pronombre).",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.1.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s01_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes formas verbales contiene una auténtica perífrasis verbal?",
+    "options": [
+      "Vio a los niños jugar en el parque",
+      "Prometió estudiar para el examen",
+      "Desea comer una fruta fresca",
+      "Tiene que entregar el informe hoy"
+    ],
+    "correctIndex": 3,
+    "explanation": "En 'tiene que entregar', el verbo auxiliar 'tiene' se fusiona con el nexo 'que' y el infinitivo 'entregar' formando una sola unidad predicativa perifrástica.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s01_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Los verboides infinitivo, gerundio y participio se caracterizan formalmente en el plano morfológico porque:",
+    "options": [
+      "Funcionan siempre como núcleos exclusivos de predicado sin auxiliar",
+      "Son invariables como las preposiciones",
+      "Carecen de desinencias flexivas de persona, número y tiempo (formas no personales)",
+      "Expresan modo subjuntivo y persona gramatical"
+    ],
+    "correctIndex": 2,
+    "explanation": "Los verboides son formas no personales del verbo porque no poseen morfemas amalgama de persona, número, tiempo ni modo.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s01_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de los siguientes grupos está compuesto únicamente por categorías gramaticales invariables?",
+    "options": [
+      "Pronombre, determinante, adverbio",
+      "Verbo, adverbio, preposición",
+      "Adverbio, preposición, conjunción",
+      "Sustantivo, adjetivo, verbo"
+    ],
+    "correctIndex": 2,
+    "explanation": "El adverbio, la preposición y la conjunción no admiten morfemas flexivos de género ni número; son categorías totalmente invariables.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s01_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la expresión 'Con extraordinaria rapidez y valor resolvió el enigma', la concordancia del adjetivo 'extraordinaria' antepuesto a dos sustantivos es correcta porque:",
+    "options": [
+      "Concierta por proximidad con el primer sustantivo femenino singular",
+      "Debe ir obligatoriamente en masculino plural",
+      "El adjetivo antepuesto es neutro",
+      "No se aplica concordancia a sustantivos abstractos"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cuando un adjetivo califica a varios sustantivos coordinados y se antepone a ellos, la norma culta prescribe concordar en género y número con el más próximo.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.1.4",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s01_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'La jauría huyó despavorida por el valle', la concordancia entre el sujeto colectivo 'la jauría' y el verbo 'huyó' es correcta porque:",
+    "options": [
+      "Los colectivos no concuerdan en persona",
+      "Depende del número de animales de la jauría",
+      "El verbo debe estar en singular concertando con la forma gramatical del núcleo singular",
+      "Debe escribirse obligatoriamente en plural: 'huyeron'"
+    ],
+    "correctIndex": 2,
+    "explanation": "Los sustantivos colectivos en número singular exigen la concordancia del verbo en tercera persona del singular según la norma estándar.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.1.4",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s01_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuántas preposiciones contiene la oración 'Bajo la sombra del árbol conversó con sus amigos sobre el examen hasta el anochecer'?",
+    "options": [
+      "5",
+      "3",
+      "4",
+      "6"
+    ],
+    "correctIndex": 0,
+    "explanation": "Las preposiciones son 5: 'bajo', 'de' (en la contracción del = de + el), 'con', 'sobre' y 'hasta'.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.1.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s01_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En 'Llegaron muy temprano a la ceremonia', la palabra 'muy' funciona morfosintácticamente como:",
+    "options": [
+      "Adjetivo determinativo cuantitativo",
+      "Adverbio de cantidad que intensifica a otro adverbio ('temprano')",
+      "Conjunción subordinante",
+      "Pronombre enfático"
+    ],
+    "correctIndex": 1,
+    "explanation": "'Muy' es un adverbio de cantidad e intensidad que modifica directamente a otro adverbio ('temprano').",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.1.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t05_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La conjunción 'pero' en 'Estudió con gran empeño, pero no alcanzó el puntaje' se clasifica sintácticamente como:",
+    "options": [
+      "Nexo subordinante concesivo",
+      "Conjunción coordinante adversativa",
+      "Conjunción subordinante causal",
+      "Preposición ilativa"
+    ],
+    "correctIndex": 1,
+    "explanation": "'Pero' es una conjunción coordinante adversativa que expresa oposición, objeción o restricción entre dos proposiciones.",
+    "subject": "lenguaje",
+    "semana": 5,
+    "concept": "5.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "week": 14,
+  "title": "3.1. Dimensiones y Conceptos Clave de la Sexualidad Humana / 4.1. Teoría del Desarrollo Psicosexual de Sigmund Freud",
+  "lessons": [
+    {
+      "subtopic": "14.1",
+      "lessonId": "psi_t14_s01",
+      "title": "3.1. Dimensiones y Conceptos Clave de la Sexualidad Humana",
+      "path": "14.1/lesson.json"
+    },
+    {
+      "subtopic": "14.2",
+      "lessonId": "psi_t14_s02",
+      "title": "4.1. Teoría del Desarrollo Psicosexual de Sigmund Freud",
+      "path": "14.2/lesson.json"
+    }
+  ]
+}

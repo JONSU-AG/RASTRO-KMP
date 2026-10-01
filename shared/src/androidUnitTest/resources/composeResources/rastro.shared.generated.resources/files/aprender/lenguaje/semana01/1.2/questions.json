@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t01_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El sonido estridente de la sirena de una ambulancia que solicita paso en una avenida principal constituye una comunicación:",
+    "options": [
+      "No humana sensorial",
+      "Verbal visuográfica",
+      "Lingüística acústica",
+      "Humana no verbal acústica"
+    ],
+    "correctIndex": 3,
+    "explanation": "La sirena de ambulancia es una señal sonora artificial no verbal producida por el ser humano para transmitir un mensaje de emergencia.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Cuando un postulante reflexiona en silencio sobre las alternativas antes de marcar su tarjeta de respuestas, se manifiesta una comunicación:",
+    "options": [
+      "Intrapersonal",
+      "Interpersonal indirecta",
+      "Unidireccional de masas",
+      "Bilateral pública"
+    ],
+    "correctIndex": 0,
+    "explanation": "La comunicación intrapersonal es aquella donde emisor y receptor coinciden en el mismo individuo mediante el pensamiento o monólogo interior.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.2.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Qué tipo de comunicación se produce durante un encarnizado debate electoral televisado entre dos candidatos presidenciales?",
+    "options": [
+      "Unidireccional e intrapersonal",
+      "No lingüística y unidireccional",
+      "Privada y no verbal",
+      "Bidireccional, interpersonal y directa"
+    ],
+    "correctIndex": 3,
+    "explanation": "En un debate presencial, los interlocutores comparten espacio y alternan roles de emisor y receptor en diálogo recíproco (bidireccional, interpersonal y directa).",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.2.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La lectura de un cartel publicitario colocado en la carretera Panamericana Sur corresponde a una comunicación:",
+    "options": [
+      "Directa y no lingüística",
+      "Unidireccional, pública e indirecta",
+      "Intrapersonal y acústica",
+      "Bidireccional y privada"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un cartel publicitario no permite réplica inmediata (unidireccional), se dirige a una masa indeterminada (pública) y el emisor no está presente físicamente ante el conductor (indirecta).",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.2.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El sistema de lectura y escritura táctil para invidentes ideado por Louis Braille se clasifica como comunicación:",
+    "options": [
+      "Humana no lingüística táctil",
+      "Proxémica espacial",
+      "No humana biológica",
+      "Exclusivamente oral acústica"
+    ],
+    "correctIndex": 0,
+    "explanation": "El sistema Braille utiliza puntos en relieve percibidos mediante el sentido del tacto (comunicación no lingüística / no verbal táctil).",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La danza en forma de ocho que realiza una abeja exploradora para informar a la colmena la ubicación y distancia del néctar es un ejemplo de:",
+    "options": [
+      "Comunicación no humana",
+      "Comunicación intrapersonal",
+      "Comunicación verbal no idiomática",
+      "Comunicación indirecta visuográfica"
+    ],
+    "correctIndex": 0,
+    "explanation": "Las señales instintivas y biológicas transmitidas entre animales forman parte de los sistemas de comunicación no humana.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Si un joven envía una carta manuscrita a su abuelo que reside en otra provincia, por el espacio temporal y geográfico la comunicación es:",
+    "options": [
+      "Directa o próxima",
+      "Indirecta o a distancia",
+      "Intrapersonal acústica",
+      "Pública o de masas"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cuando el emisor y el receptor se hallan separados por la distancia física o el tiempo, la comunicación es indirecta o a distancia.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.2.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes situaciones ejemplifica una comunicación humana no verbal gestual o mímica?",
+    "options": [
+      "Un mensaje de correo electrónico con acuse de recibo",
+      "El silbato del réferi al cobrar penal",
+      "La lectura de las noticias del periódico matutino",
+      "Un guiño de complicidad entre dos compañeros en el aula"
+    ],
+    "correctIndex": 3,
+    "explanation": "El guiño es un movimiento ocular intencional que transmite un mensaje mediante la expresión facial (comunicación no verbal gestual).",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La luz roja de un semáforo que ordena detenerse a los conductores en una intersección es un signo comunicativo de tipo:",
+    "options": [
+      "Verbal articulado",
+      "Visual o cromático",
+      "Acústico",
+      "Proxémico"
+    ],
+    "correctIndex": 1,
+    "explanation": "Las luces del semáforo emplean el color como código visual convencional para regular el tránsito vehicular (comunicación no verbal visual/cromática).",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t01_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Cuando escuchamos la transmisión de un programa informativo por la radio sin participar como locutores, la comunicación es clasificada como:",
+    "options": [
+      "Bidireccional",
+      "Intrapersonal",
+      "Directa y recíproca",
+      "Unidireccional"
+    ],
+    "correctIndex": 3,
+    "explanation": "Es unidireccional porque el oyente actúa como receptor pasivo sin intercambiar roles comunicativos de inmediato con el emisor radial.",
+    "subject": "lenguaje",
+    "semana": 1,
+    "concept": "1.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

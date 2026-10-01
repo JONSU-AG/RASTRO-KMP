@@ -1,0 +1,34 @@
+{
+  "id": "psi_t02_s01",
+  "subjectId": "psicologia",
+  "semana": 2,
+  "subtema": "2.1",
+  "title": "3.1. Concepto e Importancia Psicológica del Proyecto de Vida",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana02.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_02_Proyecto_de_Vida.md",
+  "learningObjectives": [
+    "Explicar el proyecto de vida como plan estructurado consciente y realista a corto mediano y largo plazo en dimensiones académica profesional afectiva familiar comunitaria y trascendente",
+    "Diferenciar factores internos controlables de fortalezas y debilidades frente a externos de oportunidades y amenazas con ejemplos de PRONABEC y competencia",
+    "Aplicar la matriz FODA con estrategias cruzadas FO DO FA DA para convertir el diagnóstico en plan de acción y contingencia",
+    "Formular metas SMART específicas medibles alcanzables relevantes y temporalizadas frente a formulaciones vagas sin métrica ni plazo",
+    "Fundamentar la importancia psicológica con logoterapia de Frankl voluntad de sentido resiliencia y locus interno frente a vacío existencial y conductas de riesgo"
+  ],
+  "theory": {
+    "id": "th_psi_t02_s01",
+    "asignatura": "Psicología",
+    "semana": 2,
+    "titulo": "3.1. Concepto e Importancia Psicológica del Proyecto de Vida",
+    "resumen": "",
+    "conceptosClave": [
+      "Proyecto de vida como esquema reflexivo deliberado que articula autoconocimiento presente con metas futuras y sentido existencial",
+      "Autoconocimiento de fortalezas debilidades intereses talentos emociones y valores como base para evitar elecciones impuestas",
+      "Matriz FODA con internos de fortalezas y debilidades bajo control y externos de oportunidades y amenazas del entorno",
+      "Fortaleza como oratoria y disciplina frente a debilidad como baja tolerancia a la frustración y procrastinación modificable",
+      "Oportunidad como beca PRONABEC y apoyo familiar frente a amenaza como inestabilidad sociopolítica y alta competencia",
+      "Metas SMART con especificidad métrica viabilidad relevancia y fecha límite frente a vaguedad sin indicador ni plazo",
+      "Logoterapia de Frankl con voluntad de sentido y resiliencia que se sobrepone saliendo fortalecida con locus de control interno"
+    ],
+    "admissionTip": "Si ves interno y controlable marca fortaleza o debilidad, si ves entorno no controlable marca oportunidad o amenaza, si ves vaga sin número ni fecha marca no SMART, si ves porqué para vivir marca Frankl, si ves beca PRONABEC marca oportunidad, si ves inestabilidad marca amenaza.",
+    "admissionExplanation": "La trampa más castigada es confundir debilidad interna con amenaza externa y oportunidad externa con fortaleza interna, y llamar SMART a un deseo vago sin métrica ni plazo temporal."
+  }
+}

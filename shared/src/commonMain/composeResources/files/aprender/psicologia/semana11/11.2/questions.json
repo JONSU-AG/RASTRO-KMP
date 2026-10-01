@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "11.2.1",
+    "correctIndex": 3,
+    "explanation": "Spearman descubrió que quienes destacan en una prueba intelectual tienden a puntuar bien en las demás, deduciendo la existencia del factor 'g' general.",
+    "fuente": "temario",
+    "id": "psi_t11_s02_c01",
+    "options": [
+      "Ocho inteligencias totalmente independientes entre sí.",
+      "La memoria a corto plazo y la memoria a largo plazo.",
+      "El tamaño del cráneo y la velocidad de digestión.",
+      "Un Factor General ('g') de energía mental subyacente a toda actividad cognitiva y Factores Específicos ('s') propios de cada tarea particular."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 11,
+    "statement": "La 'Teoría Bifactorial de la Inteligencia' formulada en 1904 por el psicólogo británico Charles Spearman postula que el rendimiento intelectual se sustenta en:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.3",
+    "correctIndex": 0,
+    "explanation": "La inteligencia fluida alcanza su punto máximo en la juventud temprana y decae con el envejecimiento cerebral biológico.",
+    "fuente": "temario",
+    "id": "psi_t11_s02_c02",
+    "options": [
+      "La capacidad innata, biológica y no verbal de razonar con rapidez, resolver problemas abstractos novedosos y adaptarse sin depender de aprendizajes culturales previos.",
+      "El cúmulo de conocimientos culturales y vocabulario adquirido a través de la educación formal a lo largo de los años.",
+      "La facilidad para nadar en piscinas olímpicas.",
+      "El recuerdo de fechas de efemérides patrióticas."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 11,
+    "statement": "Raymond Cattell reformuló el factor 'g' dividiendo la inteligencia en dos vertientes; la 'Inteligencia Fluida' (Gf) se caracteriza por ser:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.3",
+    "correctIndex": 0,
+    "explanation": "La inteligencia cristalizada se enriquece continuamente con los años mediante la lectura, el trabajo profesional y la madurez cultural acumulada.",
+    "fuente": "temario",
+    "id": "psi_t11_s02_c03",
+    "options": [
+      "La amplitud y profundidad de los conocimientos acumulados, habilidades verbales y sabiduría práctica adquirida por la educación y la experiencia social, pudiendo incrementarse durante la adultez.",
+      "La velocidad pura de conducción nerviosa sinapsis a sinapsis.",
+      "La rigidez mental patológica que rechaza nuevas ideas.",
+      "La agudeza visual para leer letras pequeñas."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 11,
+    "statement": "Por el contrario, la 'Inteligencia Cristalizada' (Gc) en el modelo de Cattell representa:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.4",
+    "correctIndex": 1,
+    "explanation": "Gardner demostró que un músico virtuoso, un atleta olímpico o un líder empático poseen inteligencias brillantes aunque no destaquen en tests de lógica escrita.",
+    "fuente": "temario",
+    "id": "psi_t11_s02_c04",
+    "options": [
+      "Todos los seres humanos poseen exactamente el mismo talento intelectual.",
+      "Existen múltiples inteligencias autónomas y modulares (al menos ocho), cada una con sus propios sistemas neurobiológicos y formas de expresión cultural.",
+      "La inteligencia es una sustancia química presente en el cerebelo.",
+      "Solo la inteligencia lógico-matemática merece llamarse inteligencia."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 11,
+    "statement": "La revolucionaria 'Teoría de las Inteligencias Múltiples' propuesta en 1983 por Howard Gardner en la Universidad de Harvard rechazó el CI único tradicional al postular que:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.4",
+    "correctIndex": 3,
+    "explanation": "La inteligencia lingüística implica maestría y sensibilidad hacia la semántica, sintaxis, fonética y pragmática del lenguaje escrito y oral.",
+    "fuente": "temario",
+    "id": "psi_t11_s02_c05",
+    "options": [
+      "Inteligencia Cinético-Corporal",
+      "Inteligencia Espacial",
+      "Inteligencia Naturalista",
+      "Inteligencia Lingüístico-Verbal"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "En la tipología de Gardner, un gran novelista como Mario Vargas Llosa o un poeta como César Vallejo destacan primordialmente en la:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.4",
+    "correctIndex": 1,
+    "explanation": "La inteligencia espacial es la habilidad para recrear, rotar y manipular mentalmente objetos e imágenes en el espacio bidimensional y tridimensional.",
+    "fuente": "temario",
+    "id": "psi_t11_s02_c06",
+    "options": [
+      "Inteligencia Musical",
+      "Inteligencia Espacial o Viso-espacial",
+      "Inteligencia Interpersonal",
+      "Inteligencia Intrapersonal"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "Un campeón de ajedrez, un cirujano plástico o un arquitecto que diseña planos tridimensionales manifiestan un alto desarrollo de la:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.4",
+    "correctIndex": 2,
+    "explanation": "La inteligencia intrapersonal es el autoconocimiento reflexivo profundo, base de la autorregulación y madurez existencial de la persona.",
+    "fuente": "temario",
+    "id": "psi_t11_s02_c07",
+    "options": [
+      "Seducir a multitudes para ganar elecciones presidenciales.",
+      "Tocar el violonchelo en una orquesta sinfónica.",
+      "Construir un modelo mental lúcido, preciso y verídico de uno mismo, conociendo las propias emociones, fortalezas, límites y orientando la propia conducta.",
+      "Clasificar especies de mariposas en la selva."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 11,
+    "statement": "Gardner divide la esfera personal en dos inteligencias íntimas; la 'Inteligencia Intrapersonal' se define como la capacidad de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.4",
+    "correctIndex": 1,
+    "explanation": "Grandes terapeutas, maestros, diplomáticos y líderes sociales exhiben una sobresaliente inteligencia interpersonal para conectar con las almas ajenas.",
+    "fuente": "temario",
+    "id": "psi_t11_s02_c08",
+    "options": [
+      "Escribir poemas en dialectos antiguos.",
+      "Entender, percibir y discriminar los estados de ánimo, intenciones, motivaciones y sentimientos de otras personas, actuando como líder o mediador empático.",
+      "Realizar cálculos integrales y diferenciales sin calculadora.",
+      "Trepar árboles y sobrevivir en el desierto."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 11,
+    "statement": "La 'Inteligencia Interpersonal' en el modelo de Gardner se expresa a través de la habilidad para:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.5",
+    "correctIndex": 0,
+    "explanation": "Sternberg señala que el éxito en la vida requiere no solo sacar buenas notas (analítica), sino generar ideas nuevas (creativa) y saber resolver problemas prácticos callejeros (práctica).",
+    "fuente": "temario",
+    "id": "psi_t11_s02_c09",
+    "options": [
+      "Analítica (académica), Creativa (sintética) y Práctica (contextual o de la vida diaria).",
+      "Oral, anal y genital.",
+      "Física, química y biológica.",
+      "Consciente, preconsciente e inconsciente."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 11,
+    "statement": "Robert Sternberg formuló la 'Teoría Triárquica de la Inteligencia', la cual sostiene que la inteligencia humana abarca tres dimensiones complementarias denominadas:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.5",
+    "correctIndex": 0,
+    "explanation": "La inteligencia práctica es la pericia contextual pragmática: saber cómo desenvolverse en un empleo, negociar con un vecino o resolver emergencias domésticas.",
+    "fuente": "temario",
+    "id": "psi_t11_s02_c10",
+    "options": [
+      "Adaptarse con éxito a las demandas cotidianas de su entorno real, seleccionando ambientes favorables y moldeando el contexto para resolver problemas del día a día.",
+      "Analizar y descomponer problemas abstractos para evaluar hipótesis lógicas formales (inteligencia analítica).",
+      "Generar ideas novedosas y sintetizar soluciones originales frente a situaciones desconocidas (inteligencia creativa).",
+      "Memorizar extensas listas léxicas sin procesar el significado contextual de las palabras."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "La 'Inteligencia Práctica' o 'sentido común de la calle' (street smarts) en la teoría triárquica de Sternberg permite al individuo:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

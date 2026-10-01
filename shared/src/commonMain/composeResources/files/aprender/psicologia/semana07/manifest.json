@@ -1,0 +1,18 @@
+{
+  "week": 7,
+  "title": "Inteligencia Emocional",
+  "lessons": [
+    {
+      "subtopic": "7.1",
+      "lessonId": "psi_t07_s01",
+      "title": "3.1. Origen y Definición de la Inteligencia Emocional (IE)",
+      "path": "7.1/lesson.json"
+    },
+    {
+      "subtopic": "7.2",
+      "lessonId": "psi_t07_s02",
+      "title": "4.1. Las Cinco Dimensiones de Daniel Goleman",
+      "path": "7.2/lesson.json"
+    }
+  ]
+}

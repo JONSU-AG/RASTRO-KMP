@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t02_s01_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La variación de una misma lengua condicionada por la ubicación geográfica de los hablantes se denomina formalmente:",
+    "options": [
+      "Sociolecto",
+      "Idiolecto",
+      "Tecnolecto",
+      "Dialecto o variación diatópica"
+    ],
+    "correctIndex": 3,
+    "explanation": "El dialecto o variación diatópica es la forma particular que adquiere una lengua en una región geográfica específica.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s01_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el Perú se dice 'niño o chibolo', en Argentina 'pibe' y en España 'chaval'. Esta diferencia léxica entre regiones ilustra una variación:",
+    "options": [
+      "Diatópica o dialectal",
+      "Diastrática o sociolectal",
+      "Diafásica o idiolectal",
+      "Superestándar"
+    ],
+    "correctIndex": 0,
+    "explanation": "La variación en el vocabulario según el país o región geográfica es una manifestación del dialecto en el nivel léxico.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.1.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s01_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La palabra 'guagua' significa 'bebé o infante' en el área andina, mientras que en las Islas Canarias alude a un 'autobús'. Esta discrepancia ocurre en el nivel:",
+    "options": [
+      "Semántico",
+      "Sintáctico",
+      "Fonético",
+      "Morfológico"
+    ],
+    "correctIndex": 0,
+    "explanation": "El nivel semántico del dialecto se manifiesta cuando un mismo significante o término adquiere significados distintos en diferentes zonas geográficas.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.1.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s01_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El nivel de la lengua que transgrede las normas gramaticales con expresiones como 'haiga', 'nadies' o 'fuistes' pertenece al nivel:",
+    "options": [
+      "Estándar coloquial",
+      "Superestándar literario",
+      "Subestándar popular",
+      "Estándar culto"
+    ],
+    "correctIndex": 2,
+    "explanation": "El nivel subestándar popular se caracteriza por incorrecciones morfosintácticas y vulgarismos cometidos por hablantes con escasa instrucción gramatical.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s01_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La construcción sintáctica característica del castellano amazónico 'De don Pedro su chacra se inundó' constituye una variación dialectal en el nivel:",
+    "options": [
+      "Fonético",
+      "Léxico",
+      "Sintáctico",
+      "Semántico"
+    ],
+    "correctIndex": 2,
+    "explanation": "La alteración en el orden de las palabras y la anteposición del genitivo ('De... su...') representa una variación dialectal en el nivel sintáctico.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.1.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s01_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El vocabulario técnico y especializado que utilizan los médicos ('isquemia', 'patología') o los abogados ('jurisprudencia', 'usucapión') se clasifica como:",
+    "options": [
+      "Argot delictivo o replana",
+      "Tecnolecto (variación diafásica)",
+      "Dialecto diatópico",
+      "Nivel subestándar"
+    ],
+    "correctIndex": 1,
+    "explanation": "El tecnolecto es el registro lingüístico profesional o especializado propio de una disciplina u oficio (parte de la variación diafásica).",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s01_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cómo se denomina la variación de la lengua determinada por el estrato sociocultural y nivel educativo del hablante?",
+    "options": [
+      "Dialecto diatópico",
+      "Idiolecto diafásico",
+      "Sociolecto o variación diastrática",
+      "Lengua madre"
+    ],
+    "correctIndex": 2,
+    "explanation": "El sociolecto (variación diastrática) se debe a factores sociales, económicos, culturales o académicos del emisor.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s01_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El nivel de la lengua de máxima elaboración estética, empleado en la literatura culta y la investigación filosófica, se denomina:",
+    "options": [
+      "Subestándar popular",
+      "Superestándar",
+      "Estándar coloquial",
+      "Replana"
+    ],
+    "correctIndex": 1,
+    "explanation": "El nivel superestándar reúne las formas más depuradas, poéticas y filosóficas del idioma, caracterizado por su riqueza léxica.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s01_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El uso de la replana ('luca' por sol, 'fercho' por chofer, 'tira' por policía) se ubica estrictamente dentro del nivel:",
+    "options": [
+      "Subestándar vulgar",
+      "Superestándar",
+      "Estándar familiar",
+      "Estándar formal"
+    ],
+    "correctIndex": 0,
+    "explanation": "La replana es el argot marginal o jerga vulgar carcelaria que forma parte del estrato subestándar de la lengua.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.1.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La preferencia en ciertas zonas andinas peruanas de formas como 'aquicito' y 'cerquita' frente al 'ahoritica' caribeño corresponde a una variación dialectal en el plano:",
+    "options": [
+      "Fonético",
+      "Semántico",
+      "Morfológico",
+      "Sintáctico"
+    ],
+    "correctIndex": 2,
+    "explanation": "La selección y estructura de los sufijos diminutivos (-ito frente a -ico) es un fenómeno de variación morfológica regional.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.1.1",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "id": "psi_t01_s01",
+  "subjectId": "psicologia",
+  "semana": 1,
+  "subtema": "1.1",
+  "title": "3.1. Definición, Etimología y Evolución Epistemológica",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana01.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_01_La_Psicologia_como_Ciencia.md",
+  "learningObjectives": [
+    "Explicar la etimología psyché más logos y la definición científica contemporánea con sus cuatro metas",
+    "Ubicar la transición precientífica con Platón, Aristóteles y Descartes y el hito de Wundt en 1879 en Leipzig",
+    "Diferenciar estructuralismo con introspección analítica frente a funcionalismo adaptativo de James",
+    "Contrastar conductismo E menos R, Gestalt holística, psicoanálisis del inconsciente, humanismo y cognitivismo E menos O menos R",
+    "Seleccionar el método experimental con VI, VD y control frente al correlacional que no prueba causalidad"
+  ],
+  "theory": {
+    "id": "th_psi_t01_s01",
+    "asignatura": "Psicología",
+    "semana": 1,
+    "titulo": "3.1. Definición, Etimología y Evolución Epistemológica",
+    "resumen": "",
+    "conceptosClave": [
+      "Etimología psyché como alma y logos como tratado con definición fáctica que describe, explica, predice y modifica",
+      "Hito de 1879 con Wundt y el primer laboratorio de Leipzig con emancipación de la filosofía",
+      "Estructuralismo de sensaciones, imágenes y afectos frente a funcionalismo de la adaptación",
+      "Conductismo E hacia R de Watson frente a cognitivismo E hacia O hacia R con mediación interna",
+      "Gestalt del todo mayor que las partes con insight y ley de cierre",
+      "Psicoanálisis del inconsciente dinámico frente a humanismo de autorrealización y tercera fuerza",
+      "Método experimental con causalidad y VI y VD frente a correlación que no implica causalidad"
+    ],
+    "admissionTip": "Si ves alma marca etimología, si ves 1879 Leipzig marca Wundt científico, si ves Aristóteles marca antiguo, si ves E menos R marca Watson, si ves E menos O menos R marca cognitivismo, si ves S I A marca Titchener, si ves r marca correlación sin causalidad.",
+    "admissionExplanation": "La trampa más castigada es confundir fundador antiguo con fundador científico, estructuralismo estático del qué con funcionalismo adaptativo del para qué, y correlación alta con prueba de causa."
+  }
+}

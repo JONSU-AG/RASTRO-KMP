@@ -1,0 +1,34 @@
+{
+  "id": "leng_t04_s02",
+  "subjectId": "lenguaje",
+  "semana": 4,
+  "subtema": "4.2",
+  "title": "Procesos Formativos de Palabras en el Español",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana04.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_04_Morfologia_y_Formacion_de_Palabras.md",
+  "learningObjectives": [
+    "Explicar la derivación por prefijación y sufijación como el proceso más productivo del español",
+    "Diferenciar composición por yuxtaposición sin cambio fónico de composición propiamente dicha con mutación",
+    "Reconocer la parasíntesis por composición más derivación simultánea y por circunfijación",
+    "Distinguir acronimia, siglación, acortamiento y onomatopeya en la creación léxica",
+    "Aplicar la prueba de supresión para separar parasíntesis verdadera de derivación doble"
+  ],
+  "theory": {
+    "id": "th_leng_t04_s02",
+    "asignatura": "Lenguaje",
+    "semana": 4,
+    "titulo": "Procesos Formativos de Palabras en el Español",
+    "resumen": "",
+    "conceptosClave": [
+      "Derivación = lexema más afijo; composición = lexema más lexema",
+      "Yuxtapuesta no altera bases como cortauñas; propia muta la primera como blanquirrojo y ciempiés",
+      "Parasíntesis exige inexistencia de formas intermedias como quinceañero y desalmado",
+      "Acrónimo une sílabas y se lee corrido como Sedapal; sigla une iniciales y se deletrea como DNI",
+      "Acortamiento recorta como foto y bici; onomatopeya imita sonidos como tictac",
+      "Inalcanzable y deslealtad son derivadas porque alcanzable y lealtad sí existen",
+      "Fórmula de verificación: si quitas un lado y no existe, es parasíntesis"
+    ],
+    "admissionTip": "Para parasíntesis pregunta si existe la forma sin prefijo o sin sufijo: quinceañero no tiene quinceaño ni añero, desalmado no tiene desalma ni almado; si la base intermedia existe, es derivada.",
+    "admissionExplanation": "Yuxtaposición frente a propia se decide por el cambio fónico, y parasíntesis frente a derivada se decide por la existencia o inexistencia de la palabra intermedia en la lengua."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "week": 1,
+  "title": "Conceptos Fundamentales: Función Estética, Géneros y Figuras",
+  "lessons": [
+    {
+      "subtopic": "1.1",
+      "lessonId": "lit_t01_s01",
+      "title": "3.1. La Literatura y la Función Poética",
+      "path": "1.1/lesson.json"
+    },
+    {
+      "subtopic": "1.2",
+      "lessonId": "lit_t01_s02",
+      "title": "3.3. Figuras Literarias (Figuras Retóricas)",
+      "path": "1.2/lesson.json"
+    }
+  ]
+}

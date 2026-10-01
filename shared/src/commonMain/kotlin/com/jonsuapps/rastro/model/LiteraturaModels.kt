@@ -12,7 +12,8 @@ data class EscenaTrama(
 data class PersonajeLiterario(
     val nombre: String,
     val rol: String,
-    val descripcion: String
+    val descripcion: String,
+    val imageUrl: String = ""
 )
 
 @Serializable
@@ -41,7 +42,8 @@ data class ObraLiteraria(
     val simbolosClave: List<String> = emptyList(),
     val preguntasClave: List<PreguntaClaveObra> = emptyList(),
     val isFavorito: Boolean = false,
-    val coverUrl: String = ""
+    val coverUrl: String = "",
+    val bannerUrl: String = ""
 ) {
     val ano: String get() = anio
 }

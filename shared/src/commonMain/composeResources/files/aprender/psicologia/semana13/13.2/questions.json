@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "13.2.1",
+    "correctIndex": 0,
+    "explanation": "Las sustancias psicoactivas o drogas son aquellas que atraviesan la barrera hematoencefálica y perturban las funciones neurocognitivas y afectivas del Sistema Nervioso Central.",
+    "fuente": "temario",
+    "id": "psi_t13_s02_c01",
+    "options": [
+      "Altera el funcionamiento del Sistema Nervioso Central modificando la percepción, el ánimo, la cognición y la conducta.",
+      "Incrementa de forma permanente la capacidad de regeneración celular de los músculos esqueléticos.",
+      "Cura definitivamente cualquier predisposición genética a enfermedades cardiovasculares crónicas.",
+      "Inmuniza de por vida el sistema linfático contra bacterias patógenas de transmisión respiratoria."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "Una sustancia química natural o sintética se define formalmente como 'Psicoactiva' cuando al ingresar al organismo:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.2.1",
+    "correctIndex": 1,
+    "explanation": "Las sustancias depresoras atenúan la actividad del SNC, reduciendo el ritmo cardíaco, la coordinación motriz y la vigilia (ej. alcohol etílico, benzodiacepinas, opiáceos).",
+    "fuente": "temario",
+    "id": "psi_t13_s02_c02",
+    "options": [
+      "Estimulantes psicomotores.",
+      "Depresoras del SNC.",
+      "Anestésicas locales puras.",
+      "Alucinógenas o perturbadoras."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "Las drogas que disminuyen la actividad neurofisiológica del encéfalo, induciendo sedación, relajación muscular y lentitud de reflejos, se clasifican como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.2.1",
+    "correctIndex": 2,
+    "explanation": "El alcohol es un depresor: desinhibe al principio porque deprime las áreas corticales encargadas del autocontrol y la censura moral, deprimiendo luego centros motores y vitales.",
+    "fuente": "temario",
+    "id": "psi_t13_s02_c03",
+    "options": [
+      "Estimulante primaria del sistema dopaminérgico motor estriatal.",
+      "Antipsicótica de acción prolongada sin potencial adictivo alguno.",
+      "Depresora del Sistema Nervioso Central, cuya aparente euforia inicial deriva de la inhibición de la corteza prefrontal.",
+      "Alucinógena de alta potencia que suprime el pensamiento abstracto y visual."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "Científicamente, el alcohol etílico es catalogado farmacológicamente como una sustancia:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.2.1",
+    "correctIndex": 2,
+    "explanation": "Los estimulantes aceleran el funcionamiento neuronal, provocando hiperalerta, taquicardia, dilatación pupilar y supresión del cansancio y del apetito.",
+    "fuente": "temario",
+    "id": "psi_t13_s02_c04",
+    "options": [
+      "Depresoras de acción lenta.",
+      "Sedantes hipnóticos no narcóticos.",
+      "Estimulantes del SNC.",
+      "Alucinógenos disociativos mayores."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "Sustancias como la cocaína, las anfetaminas y la nicotina pertenecen a la categoría de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.2.2",
+    "correctIndex": 0,
+    "explanation": "La tolerancia es la adaptación fisiológica por la cual el organismo desensibiliza receptores, requiriendo cantidades crecientes para alcanzar la misma intensidad de efecto.",
+    "fuente": "temario",
+    "id": "psi_t13_s02_c05",
+    "options": [
+      "El individuo necesita dosis progresivamente mayores de la droga para conseguir los efectos psicoactivos iniciales.",
+      "El consumidor experimenta asco inmediato ante cualquier contacto visual con la sustancia psicoactiva.",
+      "La persona logra suspender voluntariamente el consumo sin experimentar ningún tipo de malestar somático.",
+      "El cuerpo metaboliza la droga destruyéndola al instante sin permitir su absorción plasmática."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 13,
+    "statement": "En el estudio de las drogodependencias, el fenómeno neuroadaptativo de la 'Tolerancia' se constata cuando:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.2.2",
+    "correctIndex": 1,
+    "explanation": "La abstinencia manifiesta el sufrimiento del organismo que se acostumbró a la presencia de la sustancia (dependencia física), provocando taquicardia, temblores, ansiedad o convulsiones.",
+    "fuente": "temario",
+    "id": "psi_t13_s02_c06",
+    "options": [
+      "La habilidad adquirida para rechazar ofertas sociales de consumo de alcohol en reuniones festivas.",
+      "El conjunto agudo de manifestaciones fisiológicas y psicológicas angustiantes desatadas al interrumpir o reducir el consumo brusco de la droga.",
+      "El estado de bienestar y relajación absoluta alcanzado al consumir una dosis letal de sedantes.",
+      "La creencia delirante de que todas las leyes prohibitivas del país han quedado derogadas."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "El 'Síndrome de Abstinencia' en un individuo farmacodependiente consiste en:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.2.2",
+    "correctIndex": 3,
+    "explanation": "La adicción es un continuum que transita de la experimentación curiosa al uso social, derivando en el abuso habitual y desembocando en la dependencia psicofísica compulsiva.",
+    "fuente": "temario",
+    "id": "psi_t13_s02_c07",
+    "options": [
+      "Dependencia -> Abstinencia -> Fase Experimental -> Uso Recreativo.",
+      "Abuso -> Dependencia -> Tolerancia Inversa -> Fase Social.",
+      "Uso Habitual -> Síndrome Agudo -> Fase Experimental -> Abstinencia.",
+      "Fase Experimental -> Uso Social/Recreativo -> Uso Habitual/Abuso -> Dependencia."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "¿Cuál es la secuencia correlativa de las fases del proceso adictivo?",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.2.3",
+    "correctIndex": 1,
+    "explanation": "Ante la fractura familiar y la exclusión, la pandilla cubre necesidades de pertenencia e identidad, exigiendo en contrapartida fidelidad ciega y conductas delictivas.",
+    "fuente": "temario",
+    "id": "psi_t13_s02_c08",
+    "options": [
+      "Una entidad oficial tutelar que fiscaliza el rendimiento escolar y premia los méritos cívicos.",
+      "Una familia sustituta distorsionada que provee falso sentido de pertenencia, lealtad y protección a cambio de la comisión de ilícitos.",
+      "Una cooperativa de ahorro comunal orientada a la capacitación técnica de jóvenes talentos.",
+      "Un grupo de estudio formal que prepara a los estudiantes para los exámenes de admisión universitaria."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "En la psicología de la delincuencia juvenil, la pandilla transgresora suele operar en la vida del adolescente como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.2.2",
+    "correctIndex": 1,
+    "explanation": "La dependencia psicológica reside en el anhelo psíquico obsesivo (*craving*), donde el individuo siente que no puede funcionar o estar tranquilo sin la sustancia.",
+    "fuente": "temario",
+    "id": "psi_t13_s02_c09",
+    "options": [
+      "Un reflejo condicionado motor puramente espinal inmune a la voluntad de la corteza cerebral.",
+      "Deseo compulsivo obsesivo (*craving*) y necesidad subjetiva irrefrenable de consumir para sentir bienestar o evitar el displacer.",
+      "Espasmos musculares involuntarios y sudoración profusa provocados por daño periférico.",
+      "Una inflamación hepática diagnosticable mediante análisis de sangre y ecografía abdominal."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "La 'Dependencia Psicológica' hacia una sustancia psicoactiva se distingue de la física porque la primera se manifiesta principalmente como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "13.2.3",
+    "correctIndex": 0,
+    "explanation": "El abandono de los estudios, la carencia de metas de futuro y la presión coercitiva del grupo de pares marginales confluyen como factores criminógenos de primer orden.",
+    "fuente": "temario",
+    "id": "psi_t13_s02_c10",
+    "options": [
+      "La deserción escolar temprana, el vacío en el proyecto de vida y la presión de pares en entornos de vulnerabilidad.",
+      "El aprendizaje temprano de idiomas extranjeros y la afición a la lectura de clásicos universales.",
+      "La práctica habitual de deportes colectivos bajo el auspicio de ligas infantiles acreditadas.",
+      "La posesión de altas habilidades metacognitivas y empatía comunitaria madura."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 13,
+    "statement": "¿Cuál de los siguientes factores constituye un determinante psicosocial estrechamente asociado a las conductas delictivas juveniles?",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "id": "psi_t09_s01",
+  "subjectId": "psicologia",
+  "semana": 9,
+  "subtema": "9.1",
+  "title": "3.1. Definición y Características del Aprendizaje",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana09.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_09_Aprendizaje_Teorias_y_Estilos.md",
+  "learningObjectives": [
+    "Definir aprendizaje como cambio relativamente permanente por experiencia que excluye maduracion reflejos fatiga y drogas",
+    "Diagramar condicionamiento clasico con EI comida RI salivacion EN campana EC campana y RC salivacion por contiguidad",
+    "Explicar Watson y Albert con rata blanca y ruido metalico como prueba de emocion condicionada y generalizacion",
+    "Aplicar extincion por EC sin EI generalizacion a tonos semejantes discriminacion al especifico y recuperacion espontanea",
+    "Diferenciar clasico involuntario autonomo E hacia E frente a operante voluntario esqueletico R hacia C"
+  ],
+  "theory": {
+    "id": "th_psi_t09_s01",
+    "asignatura": "Psicología",
+    "semana": 9,
+    "titulo": "3.1. Definición y Características del Aprendizaje",
+    "resumen": "",
+    "conceptosClave": [
+      "Aprendizaje como cambio permanente conductual o cognitivo por practica que excluye mielinizacion y reflejo rotuliano",
+      "Maduracion como despliegue genetico que da sustrato y reflejo innato como circuito preprogramado defensivo",
+      "Pavlov con secreciones psiquicas en perros y formula antes durante y despues del condicionamiento",
+      "EI biologico innato RI refleja innata EN neutro sin salivacion EC adquirido por emparejamiento y RC aprendida por EC",
+      "Albert con miedo fobico condicionado a rata blanca y generalizado a peludos por emparejamiento con estruendo",
+      "Extincion por EC solo sin EI con debilitamiento y generalizacion por semejanza frente a discriminacion especifica",
+      "Clasico E hacia E involuntario frente a operante R hacia C voluntario como regla de oro de admision"
+    ],
+    "admissionTip": "Si ves permanente por experiencia marca aprendizaje, si ves caminar por mielina marca maduracion, si ves retirar mano marca reflejo, si ves comida marca EI, si ves campana antes marca EN y despues marca EC, si ves salivar a campana marca RC, si ves rata y ruido marca Albert, si ves EC sin EI marca extincion, si ves tonos semejantes marca generalizacion.",
+    "admissionExplanation": "La trampa es llamar aprendizaje a maduracion o a fatiga, confundir EI con EC y RI con RC, y creer que generalizacion es discriminacion; clasico es reflejo involuntario, operante es voluntario."
+  }
+}

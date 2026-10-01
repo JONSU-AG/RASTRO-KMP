@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "7.2.1",
+    "correctIndex": 2,
+    "explanation": "El autoconocimiento emocional es la piedra angular: si no reconocemos nuestras emociones en el momento en que brotan, quedamos a merced de su influjo ciego.",
+    "fuente": "temario",
+    "id": "psi_t07_s02_c01",
+    "options": [
+      "Habilidad motriz y de coordinación visoespacial",
+      "Capacidad de razonamiento lógico inductivo y abstracto",
+      "Autoconocimiento emocional o Conciencia de uno mismo (identificar qué siento y por qué)",
+      "Velocidad perceptiva en tareas numéricas simples"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Daniel Goleman estructura el modelo de la Inteligencia Emocional en cinco dimensiones clave divididas en aptitudes personales y aptitudes sociales; la primera dimensión es el:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.1",
+    "correctIndex": 3,
+    "explanation": "La autorregulación no es anestesia emocional, sino canalización madura: postergar la respuesta impulsiva y modular la intensidad emocional mediante la corteza prefrontal.",
+    "fuente": "temario",
+    "id": "psi_t07_s02_c02",
+    "options": [
+      "Tomar decisiones impulsivas dejándose llevar por la rabia.",
+      "Contratar guardaespaldas privados para evitar discusiones.",
+      "Reprimir violentamente todo llanto o alegría hasta desensibilizarse.",
+      "Manejar y modular las emociones perturbadoras e impulsos nocivos de manera adaptativa, calmando la ansiedad y controlando los estallidos de ira."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "La segunda dimensión de Goleman, la 'Autorregulación o Autocontrol Emocional', consiste en:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.1",
+    "correctIndex": 2,
+    "explanation": "Las personas automotivadas postergan la gratificación inmediata (resistencia a la tentación) para cosechar triunfos de largo plazo con perseverancia.",
+    "fuente": "temario",
+    "id": "psi_t07_s02_c03",
+    "options": [
+      "Esperar que los familiares aplaudan cada tarea realizada.",
+      "Dormir doce horas antes de cada evaluación académica.",
+      "Dirigir las emociones hacia metas u objetivos constructivos, manteniendo el entusiasmo, el optimismo, la perseverancia y la tenacidad frente a las adversidades.",
+      "Comprar billetes de lotería todos los días."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "La tercera dimensión, la 'Automotivación', se define en la teoría de Goleman como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.2",
+    "correctIndex": 0,
+    "explanation": "La capacidad de postergación de la gratificación es uno de los mejores predictores psicológicos de resiliencia, rendimiento preuniversitario y autorregulación vital.",
+    "fuente": "temario",
+    "id": "psi_t07_s02_c04",
+    "options": [
+      "Mostraron en su vida adulta mayor éxito académico (mejores puntajes SAT), mayor competencia socioemocional, menor índice de adicciones y mejor tolerancia a la frustración.",
+      "Fracasaron social y económicamente en la adultez.",
+      "Desarrollaron diabetes infantil de inmediato.",
+      "Olvidaron cómo socializar con otros niños."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 7,
+    "statement": "El célebre 'Experimento del Malvavisco' (Walter Mischel en Stanford) demostró que los niños de 4 años capaces de postergar la gratificación (no comer el dulce inmediatamente para recibir dos después):",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.3",
+    "correctIndex": 0,
+    "explanation": "La empatía trasciende el contagio emocional: es la comprensión cognitiva y afectiva del estado interno del otro ('ponerse en los zapatos del otro'), base del altruismo.",
+    "fuente": "temario",
+    "id": "psi_t07_s02_c05",
+    "options": [
+      "Comprender, captar e sintonizar con los sentimientos, necesidades y perspectivas del otro, ponerse en el lugar del semejante y responder afectivamente con compasión.",
+      "Copiar las respuestas del compañero de carpeta en los exámenes.",
+      "Obligar al prójimo a pensar exactamente igual que uno.",
+      "Sentir lástima despectiva por los errores ajenos."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "La cuarta dimensión de Goleman, la 'Empatía', representa la aptitud social cardinal que consiste en:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.3",
+    "correctIndex": 0,
+    "explanation": "Las destrezas interpersonales eficaces permiten forjar alianzas, negociar pacíficamente disputas e inspirar cooperación colectiva hacia objetivos comunes.",
+    "fuente": "temario",
+    "id": "psi_t07_s02_c06",
+    "options": [
+      "El arte de interactuar eficazmente con los demás, resolver conflictos constructivamente mediante el diálogo, liderar equipos humanos y comunicarse con asertividad.",
+      "La manipulación maquiavélica para estafar a clientes incautos.",
+      "La timidez patológica que rehúye el contacto visual.",
+      "El monopolio de la palabra en todas las conversaciones."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "La quinta dimensión de Goleman comprende las 'Habilidades Sociales', definidas como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.4",
+    "correctIndex": 1,
+    "explanation": "El simpático gasta energía preparando el cuerpo para la acción combativa o el escape; el parasimpático restablece el reposo y la conservación energética.",
+    "fuente": "temario",
+    "id": "psi_t07_s02_c07",
+    "options": [
+      "Disminuyendo los latidos cardíacos y favoreciendo la digestión estomacal tranquila.",
+      "Activando el organismo ante situaciones de estrés o peligro (aumenta frecuencia cardíaca, dilata bronquios y pupilas, libera adrenalina para la lucha o huida).",
+      "Desconectando la comunicación entre neuronas motoras.",
+      "Regulando la formación de cálculos renales."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "En las bases psicofisiológicas de la afectividad, el Sistema Nervioso Autónomo Simpático actúa:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.5",
+    "correctIndex": 2,
+    "explanation": "William James y Carl Lange postularon que el estímulo provoca cambios viscerales somáticos inmediatos y la conciencia de esos cambios es lo que denominamos emoción.",
+    "fuente": "temario",
+    "id": "psi_t07_s02_c08",
+    "options": [
+      "Primero pensamos y luego sentimos.",
+      "Las emociones residen exclusivamente en los genes del hígado.",
+      "La vivencia emocional es la consecuencia de la percepción de nuestras reacciones fisiológicas corporales ('no lloro porque estoy triste, sino que estoy triste porque lloro').",
+      "El cerebro no participa en las reacciones emocionales."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "La teoría de la emoción de James-Lange postulaba históricamente la polémica tesis de que:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.5",
+    "correctIndex": 1,
+    "explanation": "Cannon y Bard demostraron que las vísceras responden con demasiada lentitud para ser la causa de la emoción; por tanto, la activación corporal y el sentimiento subjetivo ocurren en paralelo.",
+    "fuente": "temario",
+    "id": "psi_t07_s02_c09",
+    "options": [
+      "El lóbulo occipital y la uña del dedo pulgar.",
+      "El tálamo, el cual envía mensajes simultáneos a la corteza cerebral (experiencia consciente de la emoción) y al sistema nervioso autónomo (activación fisiológica).",
+      "La médula ósea y los glóbulos rojos.",
+      "Solo los músculos del pie derecho."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "En contraposición, la teoría de Cannon-Bard argumentó que el estímulo emocional activa simultáneamente:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.5",
+    "correctIndex": 0,
+    "explanation": "Schachter y Singer demostraron que ante una activación fisiológica ambigua, el cerebro busca pistas en el entorno social para rotular cognitivamente si siente euforia o cólera.",
+    "fuente": "temario",
+    "id": "psi_t07_s02_c10",
+    "options": [
+      "Activación fisiológica generalizada (arousal) y una interpretación o etiquetado cognitivo de esa activación en función del contexto ambiental.",
+      "Un dolor físico de cabeza y un estornudo continuo.",
+      "Un número par de horas de sueño y ayuno prolongado.",
+      "La lectura de un libro de ficción y música folclórica."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "La Teoría Bifactorial de la Emoción de Schachter y Singer concluyó que una experiencia emocional completa requiere de dos componentes inseparables:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

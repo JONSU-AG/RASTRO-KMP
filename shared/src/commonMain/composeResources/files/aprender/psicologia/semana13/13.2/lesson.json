@@ -1,0 +1,34 @@
+{
+  "id": "psi_t13_s02",
+  "subjectId": "psicologia",
+  "semana": 13,
+  "subtema": "13.2",
+  "title": "4.1. Conductas Delictivas Juveniles, Sustancias Psicoactivas y Farmacodependencia",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_13_Factores_de_Riesgo.md",
+  "learningObjectives": [
+    "Definir psicoactiva como sustancia que altera SNC en percepción, ánimo, cognición y conducta",
+    "Clasificar D-E-A con depresoras que bajan, estimulantes que suben y alucinógenas que distorsionan con ejemplos",
+    "Fijar alcohol como depresor que desinhibe al deprimir la corteza prefrontal frente al mito de estimulante",
+    "Secuenciar experimental, social, habitual y dependencia con tolerancia de más dosis y abstinencia de dolor",
+    "Explicar pandilla como familia sustituta con deserción, vacío de proyecto y presión de pares como determinantes"
+  ],
+  "theory": {
+    "id": "th_psi_t13_s02",
+    "asignatura": "Psicología",
+    "semana": 13,
+    "titulo": "4.1. Conductas Delictivas Juveniles, Sustancias Psicoactivas y Farmacodependencia",
+    "resumen": "",
+    "conceptosClave": [
+      "Psicoactiva que cruza al SNC y modifica percepción, ánimo, cognición y conducta",
+      "Depresoras con alcohol, benzodiacepinas y opiáceos frente a estimulantes con cocaína, anfetaminas y nicotina",
+      "Alcohol depresor con euforia aparente por inhibición prefrontal y luego depresión motora y vital",
+      "Alucinógenas con LSD, psilocibina, mezcalina, marihuana en dosis altas y éxtasis",
+      "Secuencia experimental, social recreativo, habitual abuso y dependencia compulsiva",
+      "Tolerancia con más dosis para lo mismo frente a abstinencia con temblor y pánico sin dosis",
+      "Dependencia física corporal frente a psicológica con craving obsesivo y pandilla como familia sustituta"
+    ],
+    "admissionTip": "Si ves alcohol marca depresora, si ves cocaína anfetamina o nicotina marca estimulantes, si ves más dosis marca tolerancia, si ves temblor sin dosis marca abstinencia, si ves experimental social habitual dependencia marca secuencia, si ves pertenencia a cambio de delitos marca pandilla.",
+    "admissionExplanation": "La trampa clásica presenta al alcohol como estimulante por su euforia inicial, confunde tolerancia con abstinencia, y mezcla dependencia física corporal con psicológica de craving."
+  }
+}

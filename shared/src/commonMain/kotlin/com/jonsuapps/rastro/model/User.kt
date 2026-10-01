@@ -43,5 +43,6 @@ data class UserData(
     val avatarFrame: String = "none",
     val whatsappChannel: String = "",
     val tiktokUrl: String = "",
-    val createdAt: String = ""
+    val createdAt: String = "",
+    val blockedUsers: List<String> = emptyList()
 )

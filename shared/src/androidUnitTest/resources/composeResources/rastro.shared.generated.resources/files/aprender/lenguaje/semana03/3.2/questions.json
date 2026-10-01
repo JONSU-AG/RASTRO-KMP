@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t03_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La separación silábica de dos vocales contiguas en sílabas distintas se denomina formalmente:",
+    "options": [
+      "Hiato",
+      "Diptongo",
+      "Triptongo",
+      "Sinalefa"
+    ],
+    "correctIndex": 0,
+    "explanation": "El hiato es el fenómeno heterosilábico por el cual dos vocales consecutivas se pronuncian en sílabas diferentes.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la palabra 'bú-ho', la presencia de la 'h' intercalada produce:",
+    "options": [
+      "La ruptura de la sílaba en hiato acentual",
+      "Un diptongo decreciente",
+      "Un triptongo irregular",
+      "Una sílaba trabada"
+    ],
+    "correctIndex": 0,
+    "explanation": "La 'h' no impide el hiato; al recaer la mayor fuerza de voz en la vocal cerrada 'ú', se produce hiato acentual con tilde robúrica.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes palabras presenta exclusivamente un diptongo creciente?",
+    "options": [
+      "Pai-sa-je",
+      "Ciu-dad",
+      "Via-je",
+      "Pei-ne"
+    ],
+    "correctIndex": 2,
+    "explanation": "En 'via-je', la sílaba 'via' une una vocal cerrada átona (/i/) con una vocal abierta (/a/), formando un diptongo creciente.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La regla que exige colocar tilde sobre la vocal cerrada tónica cuando está junto a una vocal abierta recibe el nombre de:",
+    "options": [
+      "Tilde diacrítica",
+      "Tilde enfática",
+      "Tilde robúrica o disolvente",
+      "Tilde paroxítona"
+    ],
+    "correctIndex": 2,
+    "explanation": "La tilde robúrica o disolvente se coloca de manera obligatoria sobre la vocal cerrada que destruye el diptongo para formar hiato acentual.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La palabra 'Paraguay' contiene un triptongo porque cumple la estructura vocálica:",
+    "options": [
+      "VC átona + VA tónica + VC átona (representada por 'y')",
+      "VA + VC + VA",
+      "VC + VC + VA",
+      "Tres vocales abiertas en la misma sílaba"
+    ],
+    "correctIndex": 0,
+    "explanation": "En 'Pa-ra-guay', la sílaba final 'guay' une /u/ (VC) + /a/ (VA tónica) + /i/ (VC representada por la grafía 'y').",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.2.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes palabras presenta un hiato simple por concurrencia de dos vocales abiertas?",
+    "options": [
+      "Tí-o",
+      "Rui-do",
+      "Fue-go",
+      "Ca-os"
+    ],
+    "correctIndex": 3,
+    "explanation": "En 'ca-os', las vocales /a/ y /o/ son abiertas; dos vocales abiertas contiguas se separan siempre en hiato simple.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la palabra 'cui-da-do', la secuencia vocálica 'ui' forma un:",
+    "options": [
+      "Hiato simple",
+      "Diptongo homogéneo",
+      "Hiato acentual",
+      "Diptongo decreciente"
+    ],
+    "correctIndex": 1,
+    "explanation": "La combinación de dos vocales cerradas distintas (/i/ y /u/) constituye un diptongo homogéneo.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la palabra 'ahijado' (ahi-ja-do), la concurrencia vocálica corresponde a un:",
+    "options": [
+      "Hiato acentual con tilde",
+      "Diptongo decreciente",
+      "Triptongo",
+      "Hiato simple de vocales abiertas"
+    ],
+    "correctIndex": 1,
+    "explanation": "En 'ahi-ja-do', la vocal abierta 'a' y la vocal cerrada átona 'i' forman un diptongo decreciente a pesar de la 'h' intermedia.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuántos hiatos acentuales contiene la oración 'Raúl tenía un baúl de recuerdos en su habitación'?",
+    "options": [
+      "4",
+      "3",
+      "1",
+      "2"
+    ],
+    "correctIndex": 1,
+    "explanation": "Los hiatos acentuales son tres: Ra-úl, te-ní-a y ba-úl. ('habitación' tiene diptongo creciente ión).",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.2.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La separación de dos vocales cerradas idénticas en palabras como 'chi-i-ta' o 'o-dri-is-ta' constituye un:",
+    "options": [
+      "Diptongo homogéneo",
+      "Hiato acentual obligatorio",
+      "Hiato simple",
+      "Triptongo duplicado"
+    ],
+    "correctIndex": 2,
+    "explanation": "Dos vocales cerradas exactamente idénticas contiguas (ii, uu) se pronuncian en sílabas distintas formando un hiato simple.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

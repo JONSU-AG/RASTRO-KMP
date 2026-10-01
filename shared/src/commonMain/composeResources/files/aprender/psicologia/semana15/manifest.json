@@ -1,0 +1,18 @@
+{
+  "week": 15,
+  "title": "3.1. Concepto y Principios del Desarrollo Humano / 4.1. Estadios del Desarrollo Cognitivo de Jean Piaget",
+  "lessons": [
+    {
+      "subtopic": "15.1",
+      "lessonId": "psi_t15_s01",
+      "title": "3.1. Concepto y Principios del Desarrollo Humano",
+      "path": "15.1/lesson.json"
+    },
+    {
+      "subtopic": "15.2",
+      "lessonId": "psi_t15_s02",
+      "title": "4.1. Estadios del Desarrollo Cognitivo de Jean Piaget",
+      "path": "15.2/lesson.json"
+    }
+  ]
+}

@@ -17,6 +17,7 @@ import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
@@ -40,7 +41,8 @@ import com.jonsuapps.rastro.theme.RastroShapes
 @Composable
 fun TopHeaderActions(
     colors: RastroColors,
-    onOpenPizarra: () -> Unit,
+    userPhotoUrl: String? = null,
+    onOpenProfile: () -> Unit,
     onOpenNotifications: () -> Unit,
     unreadNotifications: Int = 0,
     onOpenPomodoro: () -> Unit,
@@ -53,6 +55,7 @@ fun TopHeaderActions(
             .fillMaxWidth()
             .statusBarsPadding()
     ) {
+        val logoDrawableRes by com.jonsuapps.rastro.android.logo.RastroLogoManager.currentDrawableRes.collectAsState()
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -61,7 +64,7 @@ fun TopHeaderActions(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
-                painter = painterResource(id = R.drawable.astro_logo),
+                painter = painterResource(id = logoDrawableRes),
                 contentDescription = "RASTRO",
                 modifier = Modifier.weight(1f).height(30.dp),
                 contentScale = androidx.compose.ui.layout.ContentScale.Fit,
@@ -71,25 +74,7 @@ fun TopHeaderActions(
                 horizontalArrangement = Arrangement.spacedBy(4.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // 1. Pizarra Doodle / Relajo (Reemplaza definitivamente a Chats y Orstty)
-                Box(
-                    modifier = Modifier
-                        .size(30.dp)
-                        .clip(RoundedCornerShape(10.dp))
-                        .background(Color(0xFFE0F2FE))
-                        .border(1.5.dp, Color(0xFF0284C7), RoundedCornerShape(10.dp))
-                        .bouncyClick(scaleDown = 0.88f, onClick = onOpenPizarra)
-                        .padding(4.dp),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Image(
-                        painter = painterResource(id = R.drawable.ic_pizarra),
-                        contentDescription = "Pizarra Doodle",
-                        modifier = Modifier.fillMaxSize()
-                    )
-                }
-
-                // 3. Notificaciones con Badge Rojo "3"
+                // 1. Notificaciones con Badge Rojo
                 Box(modifier = Modifier.size(34.dp), contentAlignment = Alignment.Center) {
                     Box(
                         modifier = Modifier
@@ -134,26 +119,44 @@ fun TopHeaderActions(
                     }
                 }
 
-                // 4. Pomodoro Clock
+                // 2. Pomodoro Clock
                 SquareHeaderButton(
                     icon = Icons.Outlined.Schedule,
                     colors = colors,
                     onClick = onOpenPomodoro
                 )
 
-                // 5. Calculadora / Fórmulas
+                // 3. Calculadora / Fórmulas
                 SquareHeaderButton(
                     icon = Icons.Outlined.Calculate,
                     colors = colors,
                     onClick = onOpenFormulas
                 )
 
-                // 6. Selector de Temas
+                // 4. Selector de Temas
                 SquareHeaderButton(
                     icon = Icons.Outlined.Palette,
                     colors = colors,
                     onClick = onOpenThemeSelector
                 )
+
+                // 5. Foto / Avatar del usuario AL EXTREMO DERECHO
+                Box(
+                    modifier = Modifier
+                        .size(32.dp)
+                        .bouncyClick(scaleDown = 0.88f, onClick = onOpenProfile),
+                    contentAlignment = Alignment.Center
+                ) {
+                    CartoonAvatar(
+                        photoUrl = userPhotoUrl,
+                        size = 30.dp,
+                        strokeColor = colors.strokeBorder,
+                        strokeWidth = 1.5.dp,
+                        bevelColor = colors.cardBevel,
+                        bevelOffset = 1.5.dp,
+                        contentDescription = "Mi Perfil"
+                    )
+                }
             }
         }
     }

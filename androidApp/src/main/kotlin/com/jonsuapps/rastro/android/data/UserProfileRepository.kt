@@ -87,14 +87,23 @@ object UserProfileRepository {
             .addOnFailureListener { onComplete(Result.failure(it)) }
     }
 
-    fun uploadCover(uid: String, image: Uri, onComplete: (Result<String>) -> Unit) {
+    fun uploadCover(uid: String, image: Uri, context: android.content.Context? = null, onComplete: (Result<String>) -> Unit) {
         val fileName = "${uid}_cover_${System.currentTimeMillis()}.jpg"
         val reference = FirebaseStorage.getInstance().reference.child("avatars/$fileName")
         val metadata = com.google.firebase.storage.StorageMetadata.Builder()
             .setContentType("image/jpeg")
             .build()
-        reference.putFile(image, metadata)
-            .continueWithTask { task ->
+        val bytes = try {
+            context?.contentResolver?.openInputStream(image)?.use { it.readBytes() }
+        } catch (_: Exception) { null }
+
+        val uploadTask = if (bytes != null && bytes.isNotEmpty()) {
+            reference.putBytes(bytes, metadata)
+        } else {
+            reference.putFile(image, metadata)
+        }
+
+        uploadTask.continueWithTask { task ->
                 if (!task.isSuccessful) throw task.exception ?: IllegalStateException("Falló la subida de portada")
                 reference.downloadUrl
             }
@@ -108,14 +117,23 @@ object UserProfileRepository {
             .addOnFailureListener { onComplete(Result.failure(it)) }
     }
 
-    fun uploadAvatar(uid: String, image: Uri, onComplete: (Result<String>) -> Unit) {
+    fun uploadAvatar(uid: String, image: Uri, context: android.content.Context? = null, onComplete: (Result<String>) -> Unit) {
         val fileName = "${uid}_profile_${System.currentTimeMillis()}.jpg"
         val reference = FirebaseStorage.getInstance().reference.child("avatars/$fileName")
         val metadata = com.google.firebase.storage.StorageMetadata.Builder()
             .setContentType("image/jpeg")
             .build()
-        reference.putFile(image, metadata)
-            .continueWithTask { task ->
+        val bytes = try {
+            context?.contentResolver?.openInputStream(image)?.use { it.readBytes() }
+        } catch (_: Exception) { null }
+
+        val uploadTask = if (bytes != null && bytes.isNotEmpty()) {
+            reference.putBytes(bytes, metadata)
+        } else {
+            reference.putFile(image, metadata)
+        }
+
+        uploadTask.continueWithTask { task ->
                 if (!task.isSuccessful) throw task.exception ?: IllegalStateException("Falló la subida de la foto")
                 reference.downloadUrl
             }
@@ -169,6 +187,23 @@ object UserProfileRepository {
         return db.collection("siguiendo").document(docId).addSnapshotListener { snapshot, error ->
             onResult(error == null && snapshot?.exists() == true)
         }
+    }
+
+    fun blockUser(currentUid: String, targetUid: String, block: Boolean, onComplete: (Boolean) -> Unit = {}) {
+        if (currentUid.isBlank() || targetUid.isBlank() || currentUid == targetUid) {
+            onComplete(false)
+            return
+        }
+        val db = FirebaseFirestore.getInstance()
+        val value = if (block) com.google.firebase.firestore.FieldValue.arrayUnion(targetUid)
+                    else com.google.firebase.firestore.FieldValue.arrayRemove(targetUid)
+        if (block) {
+            toggleFollow(currentUid, targetUid, follow = false)
+        }
+        db.collection("usuarios").document(currentUid)
+            .set(mapOf("blockedUsers" to value), SetOptions.merge())
+            .addOnSuccessListener { onComplete(true) }
+            .addOnFailureListener { onComplete(false) }
     }
 
     // ──────────────── RACHA DUAL & AMIGOS ────────────────

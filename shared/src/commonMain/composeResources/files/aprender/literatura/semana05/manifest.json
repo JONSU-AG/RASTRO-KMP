@@ -1,0 +1,18 @@
+{
+  "week": 5,
+  "title": "Conquista y Virreinato: Inca Garcilaso y Vanguardismo de Vallejo",
+  "lessons": [
+    {
+      "subtopic": "5.1",
+      "lessonId": "lit_t05_s01",
+      "title": "3.1. Literatura de la Conquista y Virreinato: El Inca Garcilaso de la Vega",
+      "path": "5.1/lesson.json"
+    },
+    {
+      "subtopic": "5.2",
+      "lessonId": "lit_t05_s02",
+      "title": "3.3. Vanguardismo Universal: César Vallejo (1892-1938)",
+      "path": "5.2/lesson.json"
+    }
+  ]
+}

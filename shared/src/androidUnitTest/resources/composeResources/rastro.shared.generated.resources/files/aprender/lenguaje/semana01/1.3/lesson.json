@@ -1,0 +1,34 @@
+{
+  "id": "leng_t01_s03",
+  "subjectId": "lenguaje",
+  "semana": 1,
+  "subtema": "1.3",
+  "title": "Planos del Lenguaje y las Seis Funciones del Lenguaje (Bühler y Jakobson)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana01.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_01_Comunicacion_y_Lenguaje.md",
+  "learningObjectives": [
+    "Diferenciar lenguaje, lengua y habla según Saussure con sus rasgos",
+    "Correlacionar cada elemento del circuito con su función del lenguaje",
+    "Identificar las tres funciones de Bühler: referencial, expresiva y apelativa",
+    "Identificar las tres funciones de Jakobson: fática, poética y metalingüística",
+    "Resolver trampas: canal vs. código, poética vs. expresiva y metalingüística encubierta"
+  ],
+  "theory": {
+    "id": "th_leng_t01_s03",
+    "asignatura": "Lenguaje",
+    "semana": 1,
+    "titulo": "Planos del Lenguaje y las Seis Funciones del Lenguaje (Bühler y Jakobson)",
+    "resumen": "",
+    "conceptosClave": [
+      "Lenguaje = facultad universal innata; lengua = código social; habla = uso individual",
+      "Referente → referencial, emisor → expresiva, receptor → apelativa",
+      "Canal → fática, mensaje → poética, código → metalingüística",
+      "Expresiva = emoción cruda; poética = belleza con figuras y ritmo",
+      "Toda regla gramatical o definición es metalingüística aunque parezca informar",
+      "Martinet = doble articulación; Chomsky = innatismo; Saussure = lengua social psíquica",
+      "Mnemotecnia RE-RE, EMI-EX, RECEP-APE, CA-FA, MEN-POE, CÓD-META"
+    ],
+    "admissionTip": "¿Aló? ¿Me oyes? es fática; orden o ruego es apelativa; dato objetivo es referencial; emoción con ¡...! es expresiva; verso o refrán es poética; hablar de tildes o verbos es metalingüística.",
+    "admissionExplanation": "Cada función enfoca un elemento: ubica primero el propósito dominante y luego confirma con marcas lingüísticas como imperativo, interjección, saludo fático o término gramatical."
+  }
+}

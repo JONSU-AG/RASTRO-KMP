@@ -1,0 +1,182 @@
+[
+  {
+    "id": "lit_t03_s01_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál fue el motivo histórico-social por el cual el rey Alfonso VI desterró a Rodrigo Díaz de Vivar en el Cantar de Mio Cid?",
+    "options": [
+      "Haber forzado al rey a jurar en Santa Gadea que no tuvo participación en el asesinato de su hermano Sancho II.",
+      "El matrimonio no consentido del Cid con doña Jimena sin venia de la corte toledana.",
+      "Las falsas acusaciones e intrigas de nobles envidiosos sobre la apropiación indebida de las parias de Sevilla.",
+      "La negativa del Cid a combatir contra las tropas del conde García Ordóñez en Cabra."
+    ],
+    "correctIndex": 2,
+    "explanation": "El Cantar arranca in media res con el destierro del Cid a causa de «mestureros» (nobles intrigantes de la corte como García Ordóñez) que lo acusaron falsamente de retener parte de los tributos (parias) cobrados al rey moro de Sevilla.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s01_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es el tema primordial que articula de principio a fin el argumento del Cantar de Mio Cid?",
+    "options": [
+      "La pérdida y doble recuperación del honor social y familiar del héroe.",
+      "La instauración de una monarquía absolutista en el reino de Castilla.",
+      "El amor cortés platónico hacia doña Jimena.",
+      "La venganza sangrienta contra los moros invasores de la península ibérica."
+    ],
+    "correctIndex": 0,
+    "explanation": "El Cid sufre una doble pérdida del honor: primero en el plano militar y político al ser desterrado (lo recupera conquistando Valencia y enviando ricos presentes al rey), y luego en el plano familiar por la afrenta de Corpes (lo recupera por la vía jurídica en las Cortes de Toledo).",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s01_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La virtud moral y conductual que distingue a Rodrigo Díaz de Vivar en el Cantar de Mio Cid, caracterizada por la serenidad, prudencia y autocontrol incluso ante la injusticia real, se denomina:",
+    "options": [
+      "Desmesura",
+      "Mesura",
+      "Hybris",
+      "Beatus ille"
+    ],
+    "correctIndex": 1,
+    "explanation": "La mesura es el rasgo definitorio del Cid castellano: jamás se rebela contra su soberano natural Alfonso VI, actúa con calculada prudencia y perdona con clemencia a sus vencidos.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s01_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el tercer cantar del poema épico castellano, el cobarde ultraje perpetrado por los infantes de Carrión contra doña Elvira y doña Sol tiene lugar en:",
+    "options": [
+      "Las orillas del río Arlanzón",
+      "Las murallas de Alcocer",
+      "El alcázar de Valencia",
+      "El robledal de Corpes"
+    ],
+    "correctIndex": 3,
+    "explanation": "En el robledal de Corpes, los infantes de Carrión azotan brutalmente y dejan por muertas a sus esposas para vengarse de las burlas sufridas por su cobardía ante el león en Valencia.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.1.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s01_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿De qué manera obtiene el Cid justicia y desagravio final por el ultraje de Corpes?",
+    "options": [
+      "Asesina a traición a los infantes de Carrión mientras dormían en su feudo.",
+      "Rechaza todo contacto con la corte castellana y funda un reino independiente en Valencia.",
+      "Exige que la Iglesia excomulgue a los nobles leoneses.",
+      "Convoca a las Cortes de Toledo presididas por el rey, donde sus vasallos vencen a los infantes en duelo de honor y se anuncian nuevas bodas con infantes reales de Navarra y Aragón."
+    ],
+    "correctIndex": 3,
+    "explanation": "El Cid no opta por la venganza privada ni sangrienta desmedida; apela a las leyes y al rey en las Cortes de Toledo, donde recupera sus espadas Colada y Tizona y casa a sus hijas con futuros reyes.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s01_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La forma métrica predominante en el Cantar de Mio Cid se caracteriza formalmente por:",
+    "options": [
+      "Tiradas monorrimas de versos anisosilábicos (de medida irregular, entre 14 y 16 sílabas) divididos por una cesura con rima asonante.",
+      "Versos alejandrinos de catorce sílabas agrupados en cuaderna vía.",
+      "Octosílabos en estrofas de redondilla popular.",
+      "Sonetos endecasílabos con rima consonante perfecta."
+    ],
+    "correctIndex": 0,
+    "explanation": "Propio del mester de juglaría, el Cantar presenta tiradas de extensión variable con rima asonante monorrima y versos de metro irregular (anisosilabismo) partidos en dos hemistiquios por una cesura central.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s01_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Quién es el fiel lugarteniente del Cid, llamado «el diestro brazo» o «fardido lidiador», que custodia a doña Jimena y a sus hijas?",
+    "options": [
+      "Martín Antolínez",
+      "Pedro Bermúdez",
+      "Félez Muñoz",
+      "Minaya Álvar Fáñez"
+    ],
+    "correctIndex": 3,
+    "explanation": "Álvar Fáñez de Minaya es el brazo derecho de Rodrigo, principal estratega militar y emisario encargado de llevar las embajadas y tributos al rey Alfonso VI.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.1.5",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s01_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Las dos famosas espadas ganadas en combate por el Cid y recuperadas en las Cortes de Toledo son:",
+    "options": [
+      "Excalibur y Balmung",
+      "Lobera y Curtana",
+      "Colada y Tizona",
+      "Joyeuse y Durandal"
+    ],
+    "correctIndex": 2,
+    "explanation": "El Cid gana la espada Colada tras vencer al conde de Barcelona don Ramón Berenguer, y la espada Tizona al derrotar al rey moro Búcar de Marruecos.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.1.5",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s01_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El copista que firmó en 1207 el manuscrito único conservado del Cantar de Mio Cid fue:",
+    "options": [
+      "Per Abbat (Pedro Abad)",
+      "Gonzalo de Berceo",
+      "Juan Ruiz, Arcipreste de Hita",
+      "Alfonso X el Sabio"
+    ],
+    "correctIndex": 0,
+    "explanation": "Al final del códice medieval se lee el célebre colofón: «Quien escribió este libro déle Dios paraíso, amén. Per Abbat le escribió en el mes de mayo en era de mil e CC e XLV años (1207)». Fue el copista que fijó el texto.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.1.5",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "A diferencia de las epopeyas de la Antigüedad, el Cantar de Mio Cid destaca en la épica universal por su marcado carácter:",
+    "options": [
+      "Mitológico y presencia de monstruos marinos fantásticos.",
+      "Realista, verosímil y sobriedad histórica y geográfica.",
+      "Alegórico y empleo de visiones oníricas idealizadas.",
+      "Teológico alegórico y viajes al infierno."
+    ],
+    "correctIndex": 1,
+    "explanation": "El Cantar prescinde casi en absoluto de elementos sobrenaturales o mágicos (salvo la visión en sueños del arcángel San Gabriel); sus batallas, ciudades (Burgos, Toledo, Valencia) y personajes son históricos y geográficamente precisos.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

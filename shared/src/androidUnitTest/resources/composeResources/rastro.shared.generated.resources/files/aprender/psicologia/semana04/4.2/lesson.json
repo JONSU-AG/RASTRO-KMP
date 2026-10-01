@@ -1,0 +1,35 @@
+{
+  "id": "psi_t04_s02",
+  "subjectId": "psicologia",
+  "semana": 4,
+  "subtema": "4.2",
+  "title": "3.2. Gestión Estratégica del Tiempo",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana04.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_04_Habitos_de_Estudio.md",
+  "learningObjectives": [
+    "Clasificar con Eisenhower cruzando urgencia inmediata frente a importancia de valor a metas para decidir hacer agendar delegar y eliminar",
+    "Priorizar cuadrante dos de Importante no Urgente como planificación estudio anticipado y salud que evita vivir en crisis del uno",
+    "Operar Pomodoro con bloques de veinticinco minutos de foco más cinco de pausa y cuatro ciclos más prolongado para refrescar neurotransmisores",
+    "Definir procrastinación como postergación irracional por falla emocional y regla de cinco minutos con efecto Zeigarnik para romper fricción",
+    "Enunciar Parkinson de expansión hasta llenar tiempo y Pareto de veinte que produce ochenta más ladrones horario con sueño y REM que consolida"
+  ],
+  "theory": {
+    "id": "th_psi_t04_s02",
+    "asignatura": "Psicología",
+    "semana": 4,
+    "titulo": "3.2. Gestión Estratégica del Tiempo",
+    "resumen": "",
+    "conceptosClave": [
+      "Eisenhower con urgencia de presión temporal e importancia de impacto a largo plazo como matriz de decisiones operativas",
+      "Cuadrante uno urgente importante hacer ya frente a dos importante no urgente agendar frente a tres urgente no importante delegar frente a cuatro ni urgente ni importante eliminar",
+      "Cuadrante dos como eficacia y calidad con estudio metódico preventivo descanso y ejercicio que previene crisis continuas",
+      "Pomodoro de Cirillo con hiperfoco de veinticinco más pausa de cinco y tras cuatro prolongado de quince a treinta que previene fatiga",
+      "Procrastinación como falla de autorregulación emocional por miedo aburrimiento y perfeccionismo que sustituye por placentero pese a consecuencias",
+      "Parkinson que expande tarea a plazo dado y Pareto que concentra resultados en temas recurrentes de alta frecuencia para admisión",
+      "Ladrones como notificaciones scroll visitas e incapacidad de decir no más horario con fijas repasos y siete a ocho horas de sueño",
+      "Sueño profundo Delta y MOR REM donde hipocampo transfiere a neocorteza y sistema glinfático limpia con menos de seis horas colapsa atención"
+    ],
+    "admissionTip": "Si ves Urgencia e Importancia marca Eisenhower, si ves Importante no Urgente programa marca cuadrante dos, si ves veinticinco más cinco marca Pomodoro, si ves posterga pese a consecuencias marca procrastinación, si ves se expande hasta llenar marca Parkinson, si ves veinte produce ochenta marca Pareto, si ves notificaciones marca ladrón, si ves cinco minutos para empezar marca regla cinco, si ves consolida en noche marca sueño.",
+    "admissionExplanation": "La trampa es mandar cuadrante dos a delegar o eliminar, confundir Parkinson que expande con Pareto que concentra, y creer que amanecida con café fija memoria cuando impide consolidar y bloquea con cortisol."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "week": 9,
+  "title": "Aprendizaje: Teorías y Condicionamientos",
+  "lessons": [
+    {
+      "subtopic": "9.1",
+      "lessonId": "psi_t09_s01",
+      "title": "3.1. Definición y Características del Aprendizaje",
+      "path": "9.1/lesson.json"
+    },
+    {
+      "subtopic": "9.2",
+      "lessonId": "psi_t09_s02",
+      "title": "4.2. Condicionamiento Operante o Instrumental (Thorndike y Skinner)",
+      "path": "9.2/lesson.json"
+    }
+  ]
+}

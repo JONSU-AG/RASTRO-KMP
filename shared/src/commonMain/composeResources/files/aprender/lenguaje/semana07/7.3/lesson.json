@@ -1,0 +1,33 @@
+{
+  "id": "leng_t07_s03",
+  "subjectId": "lenguaje",
+  "semana": 7,
+  "subtema": "7.3",
+  "title": "Normativa del Uso de Mayúsculas y Minúsculas (Ortografía RAE)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana07.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_07_Discurso_Escrito_y_Normativa.md",
+  "learningObjectives": [
+    "Aplicar la minúscula obligatoria en cargos, gentilicios, días, meses y estaciones",
+    "Diferenciar sustantivo genérico en minúscula de nombre propio en mayúscula",
+    "Escribir títulos de libros con solo primera palabra en mayúscula y periódicos con significativas",
+    "Usar mayúscula en topónimos, instituciones, épocas históricas y asignaturas formales"
+  ],
+  "theory": {
+    "id": "th_leng_t07_s03",
+    "asignatura": "Lenguaje",
+    "semana": 7,
+    "titulo": "Normativa del Uso de Mayúsculas y Minúsculas (Ortografía RAE)",
+    "resumen": "",
+    "conceptosClave": [
+      "Cargos presidente, papa, rey, ministro y decano van siempre en minúscula",
+      "Días, meses, estaciones, gentilicios e idiomas van en minúscula",
+      "Río, lago, volcán y océano en minúscula; Chili, Titicaca, Misti en mayúscula",
+      "Libros solo primera palabra en mayúscula; periódicos todas las significativas",
+      "Puntos cardinales de dirección en minúscula; América del Norte en mayúscula",
+      "28 de Julio y Primero de Mayo en mayúscula por festividad oficial",
+      "Renacimiento, Guerra del Pacífico e Ingeniería Civil en mayúscula"
+    ],
+    "admissionTip": "Nadie es más que la minúscula: presidente, papa y rey siempre en minúscula; río y norte de dirección también; solo el nombre propio y la festividad patria suben a mayúscula.",
+    "admissionExplanation": "La RAE 2010 convirtió cargos y tiempo cronológico en nombres comunes con minúscula, y reservó la mayúscula para nombre propio, institución formal, época histórica y festividad consagrada."
+  }
+}

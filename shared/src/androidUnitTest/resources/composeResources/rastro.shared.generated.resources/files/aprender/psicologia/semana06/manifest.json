@@ -1,0 +1,18 @@
+{
+  "week": 6,
+  "title": "Motivación y Afectividad Humana",
+  "lessons": [
+    {
+      "subtopic": "6.1",
+      "lessonId": "psi_t06_s01",
+      "title": "3.1. Naturaleza y Ciclo de la Motivación",
+      "path": "6.1/lesson.json"
+    },
+    {
+      "subtopic": "6.2",
+      "lessonId": "psi_t06_s02",
+      "title": "3.2. Tipos de Motivación",
+      "path": "6.2/lesson.json"
+    }
+  ]
+}

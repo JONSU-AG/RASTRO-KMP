@@ -98,7 +98,8 @@ object UserManager {
         whatsappChannel: String? = null,
         tiktokUrl: String? = null,
         instagramUrl: String? = null,
-        uploadCount: Int? = null
+        uploadCount: Int? = null,
+        blockedUsers: List<String>? = null
     ) {
         _currentUser.value = _currentUser.value.copy(
             displayName = displayName?.takeIf(String::isNotBlank) ?: _currentUser.value.displayName,
@@ -109,9 +110,29 @@ object UserManager {
             whatsappChannel = whatsappChannel ?: _currentUser.value.whatsappChannel,
             tiktokUrl = tiktokUrl ?: _currentUser.value.tiktokUrl,
             instagramUrl = instagramUrl ?: _currentUser.value.instagramUrl,
-            uploadCount = uploadCount ?: _currentUser.value.uploadCount
+            uploadCount = uploadCount ?: _currentUser.value.uploadCount,
+            blockedUsers = blockedUsers ?: _currentUser.value.blockedUsers
         )
     }
+
+    fun blockUser(targetUid: String) {
+        if (targetUid.isBlank() || targetUid == _currentUser.value.uid) return
+        val current = _currentUser.value.blockedUsers.toMutableList()
+        if (!current.contains(targetUid)) {
+            current.add(targetUid)
+            _currentUser.value = _currentUser.value.copy(blockedUsers = current)
+        }
+    }
+
+    fun unblockUser(targetUid: String) {
+        if (targetUid.isBlank()) return
+        val current = _currentUser.value.blockedUsers.toMutableList()
+        if (current.remove(targetUid)) {
+            _currentUser.value = _currentUser.value.copy(blockedUsers = current)
+        }
+    }
+
+    fun isUserBlocked(targetUid: String): Boolean = _currentUser.value.blockedUsers.contains(targetUid)
 
     fun logout() {
         _currentUser.value = UserData(

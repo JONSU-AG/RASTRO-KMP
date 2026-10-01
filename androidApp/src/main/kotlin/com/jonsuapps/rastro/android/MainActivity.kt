@@ -1,5 +1,6 @@
 package com.jonsuapps.rastro.android
 
+import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -21,6 +22,21 @@ class MainActivity : ComponentActivity() {
 
         // Habilita insets limpios de borde a borde para que no colapse con la barra de notificaciones
         WindowCompat.setDecorFitsSystemWindows(window, false)
+
+        // Inicializar gestor centralizado del logo dinámico de RASTRO
+        com.jonsuapps.rastro.android.logo.RastroLogoManager.initialize(applicationContext)
+
+        val prefs = getSharedPreferences("rastro_preferences", Context.MODE_PRIVATE)
+        val savedThemeId = prefs.getString("selected_theme", RastroThemeId.LIGHT.idName)
+        val initialTheme = RastroThemeId.entries.firstOrNull { it.idName == savedThemeId } ?: RastroThemeId.LIGHT
+        if (initialTheme == RastroThemeId.CUSTOM) {
+            val prim = prefs.getInt("custom_primary", -1)
+            val sec = prefs.getInt("custom_secondary", -986896)
+            val acc = prefs.getInt("custom_accent", -16744193)
+            ThemeManager.setCustomTheme(Color(prim), Color(sec), Color(acc))
+        } else {
+            ThemeManager.setTheme(initialTheme)
+        }
 
         setContent {
             val systemDark = isSystemInDarkTheme()
@@ -96,10 +112,17 @@ class MainActivity : ComponentActivity() {
                         currentThemeId = currentThemeId,
                         onThemeChange = { newTheme ->
                             ThemeManager.setTheme(newTheme)
+                            prefs.edit().putString("selected_theme", newTheme.idName).apply()
                         }
                     )
                 }
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Al regresar a la app, actualiza estado de actividad del usuario (regreso a BASE si no hay racha perdida)
+        com.jonsuapps.rastro.android.logo.RastroLogoManager.recordUserActive()
     }
 }

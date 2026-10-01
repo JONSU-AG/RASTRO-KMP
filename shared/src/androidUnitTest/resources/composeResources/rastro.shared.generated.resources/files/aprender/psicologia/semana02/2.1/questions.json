@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "2.1.1",
+    "correctIndex": 2,
+    "explanation": "El proyecto de vida brinda sentido y dirección existencial (Viktor Frankl), alineando la identidad del sujeto con sus objetivos académicos, laborales y personales.",
+    "fuente": "temario",
+    "id": "psi_t02_s01_c01",
+    "options": [
+      "Una lista inmutable de deseos infantiles sin planificación.",
+      "El destino genéticamente predeterminado que no se puede cambiar.",
+      "Un plan estructurado, consciente y realista que diseña una persona a corto, mediano y largo plazo articulando sus aspiraciones vocacionales, valores y metas.",
+      "Un documento notarial de herencia familiar económica."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "En psicología personal y vocacional, el 'Proyecto de Vida' se conceptualiza como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.1",
+    "correctIndex": 0,
+    "explanation": "El conocimiento reflexivo de sí mismo ('Conócete a ti mismo') evita elecciones vocacionales erróneas impuestas por presiones externas o modas sociales pasajeras.",
+    "fuente": "temario",
+    "id": "psi_t02_s01_c02",
+    "options": [
+      "Identificar con lucidez y honestidad sus propias fortalezas, debilidades, intereses, talentos, emociones y valores éticos.",
+      "Imitar fielmente los gustos y decisiones de su grupo de amigos.",
+      "Evitar cualquier tipo de autocrítica reflexiva.",
+      "Ocultar sus defectos para proyectar una imagen pública ficticia."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "El 'Autoconocimiento' es el pilar fundacional del proyecto de vida porque permite al individuo:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.2",
+    "correctIndex": 0,
+    "explanation": "Las fortalezas (capacidades y virtudes) y debilidades (limitaciones y carencias) son factores intrínsecos de la persona, mientras que las oportunidades y amenazas provienen del entorno externo.",
+    "fuente": "temario",
+    "id": "psi_t02_s01_c03",
+    "options": [
+      "Fortalezas y Debilidades",
+      "Oportunidades y Fortalezas",
+      "Amenazas y Oportunidades",
+      "Debilidades y Amenazas"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "En la matriz de diagnóstico estratégico FODA aplicada al desarrollo personal, las variables internas bajo control directo del sujeto son:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.2",
+    "correctIndex": 0,
+    "explanation": "La oratoria y la disciplina son fortalezas internas del estudiante; la baja tolerancia a la frustración es una debilidad interna susceptible de mejora psicológica.",
+    "fuente": "temario",
+    "id": "psi_t02_s01_c04",
+    "options": [
+      "Una Fortaleza y una Debilidad respectivamente.",
+      "Una Oportunidad y una Amenaza respectivamente.",
+      "Dos Oportunidades académicas.",
+      "Dos Amenazas externas inevitables."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "Un postulante reconoce: 'Tengo gran facilidad para la oratoria y disciplina para levantarme temprano, pero me desmotivo rápidamente ante la frustración de un simulacro reprobado'. En el análisis FODA, esto representa:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.2",
+    "correctIndex": 1,
+    "explanation": "Las oportunidades son factores positivos y favorables del contexto socioeconómico o institucional que la persona puede aprovechar estratégicamente para alcanzar sus metas.",
+    "fuente": "temario",
+    "id": "psi_t02_s01_c05",
+    "options": [
+      "Fortaleza interna",
+      "Oportunidad externa",
+      "Debilidad intrínseca",
+      "Amenaza incontrolable"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "La beca de estudios en el extranjero otorgada por PRONABEC o una nueva ley de gratuidad universitaria clasifican en el FODA personal como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.3",
+    "correctIndex": 2,
+    "explanation": "La resiliencia implica resistencia al estrés y plasticidad adaptativa: ante caídas o frustraciones, el individuo resiliente persevera reajustando sus estrategias.",
+    "fuente": "temario",
+    "id": "psi_t02_s01_c06",
+    "options": [
+      "La insensibilidad emocional absoluta frente a la pérdida de un ser querido.",
+      "La rigidez inflexible para negarse a modificar un horario de estudio.",
+      "La capacidad de sobreponerse a situaciones traumáticas o adversas, saliendo fortalecido y aprendiendo constructivamente de los fracasos.",
+      "La dependencia afectiva hacia personas autoritarias."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "La 'Resiliencia' es una capacidad psicológica clave para sostener un proyecto de vida, definida como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.4",
+    "correctIndex": 2,
+    "explanation": "Las metas SMART permiten transformar anhelos vagos en planes de acción precisos: p. ej. 'resolver 50 ejercicios de álgebra diarios de 4 a 6 pm durante 3 meses'.",
+    "fuente": "temario",
+    "id": "psi_t02_s01_c07",
+    "options": [
+      "Simples, Misteriosas, Aleatorias, Rápidas y Teóricas.",
+      "Subjetivas, Modestas, Abstractas, Raras y Tardías.",
+      "Específicas (S), Medibles (M), Alcanzables (A), Relevantes (R) y con Tiempo delimitado (T).",
+      "Subjetivas, Motivacionales, Abstractas, Racionales y Teóricas."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "En la metodología de establecimiento de objetivos SMART, el acrónimo prescribe que las metas deben ser:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.4",
+    "correctIndex": 0,
+    "explanation": "Para ser SMART debe especificar qué temas se estudiarán, cuántas horas, con qué calificación mínima aprobatoria y en qué fecha límite exacta.",
+    "fuente": "temario",
+    "id": "psi_t02_s01_c08",
+    "options": [
+      "Es vaga, carece de indicadores medibles cuantitativamente y no fija un plazo temporal específico de cumplimiento.",
+      "Es demasiado ambiciosa y peligrosa.",
+      "Menciona la palabra estudiar.",
+      "Fue escrita en tiempo futuro simple."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "La formulación 'Voy a estudiar más para ser exitoso en la vida' NO cumple con el criterio SMART porque:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.1",
+    "correctIndex": 1,
+    "explanation": "La Logoterapia de Frankl sostiene que la voluntad de sentido es la motivación primaria humana: 'quien tiene un porqué para vivir, puede soportar casi cualquier cómo'.",
+    "fuente": "temario",
+    "id": "psi_t02_s01_c09",
+    "options": [
+      "Fuerza física muscular superior.",
+      "Un propósito o sentido de vida que trasciende las circunstancias inmediatas.",
+      "Riqueza material acumulada previamente.",
+      "Indiferencia total ante la realidad exterior."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "El psiquiatra Viktor Frankl demostró en su obra 'El hombre en busca de sentido' que en situaciones extremas de sufrimiento humano sobrevive quien posee:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.2",
+    "correctIndex": 3,
+    "explanation": "Las amenazas son riesgos del entorno social que pueden entorpecer el avance vocacional si no se desarrollan planes de contingencia y resiliencia.",
+    "fuente": "temario",
+    "id": "psi_t02_s01_c10",
+    "options": [
+      "El hábito de lectura analítica diaria.",
+      "El aumento de bibliotecas públicas gratuitas.",
+      "La buena salud psicológica individual.",
+      "La inestabilidad sociopolítica, la precariedad laboral informal y la carencia de recursos económicos familiares imprevistos."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "Una amenaza externa frecuente para los proyectos de vida de los jóvenes preuniversitarios en el Perú es:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

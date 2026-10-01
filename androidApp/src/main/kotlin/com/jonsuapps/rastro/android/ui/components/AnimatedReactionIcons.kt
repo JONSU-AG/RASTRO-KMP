@@ -79,52 +79,54 @@ fun AnimatedHeartIcon(
 }
 
 /**
- * Fuego SVG animado con llamas vivas que oscilan y fluctúan en escala vertical
- * simulando el comportamiento físico de una fogata activa.
+ * Fuego SVG animado: se anima UN SOLO INSTANTE al tocar (pop de ignición + 3 oscilaciones rápidas).
+ * En reposo el icono está completamente estático — no hay animación continua.
  */
 @Composable
 fun AnimatedFlameIcon(
     isReacted: Boolean,
     modifier: Modifier = Modifier.size(17.dp)
 ) {
-    // Oscilación lateral continua del fuego
-    val infiniteTransition = rememberInfiniteTransition(label = "flameDance")
-    val flameRotation by infiniteTransition.animateFloat(
-        initialValue = -7f,
-        targetValue = 7f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(450, easing = LinearEasing),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "flameRot"
-    )
-    val flameScaleY by infiniteTransition.animateFloat(
-        initialValue = 0.95f,
-        targetValue = 1.15f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(380, easing = FastOutSlowInEasing),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "flameScaleY"
-    )
+    // Un solo Animatable controla la rotación lateral one-shot
+    val flameRotation = remember { Animatable(0f) }
+    // Un solo Animatable controla el pop de escala al encender
+    val flameScale = remember { Animatable(1f) }
 
-    // Pop de ignición al encender
-    val ignitionScale = remember { Animatable(1f) }
+    // Se dispara solo cuando isReacted cambia a true → animación one-shot y regresa a reposo
     LaunchedEffect(isReacted) {
         if (isReacted) {
-            ignitionScale.animateTo(1.35f, spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessHigh))
-            ignitionScale.animateTo(1.0f, spring(dampingRatio = Spring.DampingRatioLowBouncy, stiffness = Spring.StiffnessMedium))
+            // Pop de ignición: escala hacia arriba y regresa
+            launch {
+                flameScale.animateTo(
+                    1.38f,
+                    spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessHigh)
+                )
+                flameScale.animateTo(
+                    1.0f,
+                    spring(dampingRatio = Spring.DampingRatioLowBouncy, stiffness = Spring.StiffnessMedium)
+                )
+            }
+            // 3 oscilaciones rápidas de lado a lado y para
+            launch {
+                repeat(3) {
+                    flameRotation.animateTo(8f, tween(70))
+                    flameRotation.animateTo(-8f, tween(70))
+                }
+                flameRotation.animateTo(0f, tween(80))
+            }
         } else {
-            ignitionScale.snapTo(1f)
+            // Al quitar la reacción: regresa inmediatamente al estado estático
+            flameScale.snapTo(1f)
+            flameRotation.snapTo(0f)
         }
     }
 
     Box(
         modifier = modifier
             .graphicsLayer {
-                rotationZ = if (isReacted) flameRotation else 0f
-                scaleY = ignitionScale.value * (if (isReacted) flameScaleY else 1f)
-                scaleX = ignitionScale.value
+                rotationZ = flameRotation.value
+                scaleX = flameScale.value
+                scaleY = flameScale.value
                 transformOrigin = TransformOrigin(0.5f, 0.9f)
             },
         contentAlignment = Alignment.Center

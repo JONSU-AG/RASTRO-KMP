@@ -1,0 +1,34 @@
+{
+  "id": "psi_t07_s02",
+  "subjectId": "psicologia",
+  "semana": 7,
+  "subtema": "7.2",
+  "title": "4.1. Las Cinco Dimensiones de Daniel Goleman",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_07_Inteligencia_Emocional.md",
+  "learningObjectives": [
+    "Ordenar cinco dimensiones de Goleman con autoconocimiento autorregulacion automotivacion empatia y habilidades sociales en intra e interpersonal",
+    "Explicar automotivacion con postergacion de gratificacion y malvavisco de Mischel como predictor de exito academico y salud mental",
+    "Diferenciar empatia como comprension del estado interno ajeno frente a simpatia o contagio y habilidades sociales como liderazgo y asertividad",
+    "Contrastar teorias de emocion con James Lange de fisiologia primero Cannon Bard simultanea y Schachter Singer con arousal mas etiqueta cognitiva",
+    "Ubicar simpatico que activa lucha o huida con taquicardia y corteza prefrontal que frena amigdala con respaldo cruzado de TEMA_06 para afectividad"
+  ],
+  "theory": {
+    "id": "th_psi_t07_s02",
+    "asignatura": "Psicología",
+    "semana": 7,
+    "titulo": "4.1. Las Cinco Dimensiones de Daniel Goleman",
+    "resumen": "",
+    "conceptosClave": [
+      "Autoconocimiento piedra angular que reconoce emocion en el momento frente a autorregulacion que modula ira panico y ansiedad sin anestesia",
+      "Automotivacion que canaliza emocion a meta largo plazo con optimismo y postergacion frente a gratificacion inmediata del malvavisco",
+      "Malvavisco de Mischel con dos dulces tras 15 minutos que predice SAT salud mental IMC y menor adiccion y divorcio",
+      "Empatia como ponerse en zapatos del otro con comprension cognitiva y afectiva frente a habilidades sociales de persuasion liderazgo y conflicto pacifico",
+      "Simpatico que gasta energia con cardiaca bronquios pupilas y adrenalina frente a parasimpatico que restablece reposo y conservacion",
+      "James Lange con estoy triste porque lloro de visceras primero frente a Cannon Bard en paralelo por talamo y Schachter Singer con arousal mas contexto",
+      "Asertividad con disco rayado banco de niebla asercion negativa y mensaje yo frente a pasivo sumiso y agresivo avasallador"
+    ],
+    "admissionTip": "Si ves que siento y por que marca autoconocimiento, si ves maneja ira marca autorregulacion, si ves meta largo plazo marca automotivacion, si ves espera dulce marca malvavisco Mischel, si ves zapatos del otro marca empatia, si ves lidera y negocia marca habilidades sociales, si ves acelera corazon marca simpatico, si ves primero cuerpo luego mente marca James Lange, si ves a la vez marca Cannon Bard, si ves arousal mas etiqueta marca Schachter Singer.",
+    "admissionExplanation": "La trampa es llamar autorregulacion a reprimir hasta desensibilizar, confundir empatia comprensiva con simpatia que llora junto o con estar de acuerdo, y creer que visceras lentas causan emocion cuando Cannon demostro paralelismo y Schachter exige etiqueta cognitiva del contexto."
+  }
+}

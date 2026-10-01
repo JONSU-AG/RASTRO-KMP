@@ -23,7 +23,6 @@
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
             <!-- App Links: abre enlaces de rumbo-jonsu.web.app directo en la app nativa -->
@@ -34,6 +33,63 @@
                 <data android:scheme="https" android:host="rumbo-jonsu.web.app" />
             </intent-filter>
         </activity>
+
+        <!-- Dynamic Launcher Aliases -->
+        <activity-alias
+            android:name=".android.MainActivityBase"
+            android:targetActivity=".android.MainActivity"
+            android:icon="@drawable/rastro_logo_base"
+            android:roundIcon="@drawable/rastro_logo_base"
+            android:label="RASTRO"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".android.MainActivityEnojo"
+            android:targetActivity=".android.MainActivity"
+            android:icon="@drawable/rastro_logo_enojo"
+            android:roundIcon="@drawable/rastro_logo_enojo"
+            android:label="RASTRO"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".android.MainActivityFuria"
+            android:targetActivity=".android.MainActivity"
+            android:icon="@drawable/rastro_logo_furia"
+            android:roundIcon="@drawable/rastro_logo_furia"
+            android:label="RASTRO"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".android.MainActivityTriste"
+            android:targetActivity=".android.MainActivity"
+            android:icon="@drawable/rastro_logo_triste"
+            android:roundIcon="@drawable/rastro_logo_triste"
+            android:label="RASTRO"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
 
         <!-- Widgets de RASTRO -->
         <receiver

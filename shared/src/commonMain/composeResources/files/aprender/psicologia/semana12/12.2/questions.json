@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "12.2.1",
+    "correctIndex": 0,
+    "explanation": "La familia nuclear (biparental) es la estructura conyugal básica compuesta por ambos progenitores y su prole compartiendo vivienda.",
+    "fuente": "temario",
+    "id": "psi_t12_s02_c01",
+    "options": [
+      "El padre, la madre y los hijos (biológicos o adoptivos) que conviven bajo el mismo techo.",
+      "Los abuelos, tíos, primos y sobrinos conviviendo en una sola casa.",
+      "Un solo progenitor con sus hijos a cargo.",
+      "Un grupo de amigos universitarios que comparten un departamento de alquiler."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 12,
+    "statement": "En la sociología y psicología familiar contemporánea, la 'Familia Nuclear' se compone estructuralmente de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.1",
+    "correctIndex": 1,
+    "explanation": "Originada por divorcio, viudez, separación o maternidad/paternidad soltera, la familia monoparental (mayoritariamente jefaturada por madres) requiere sólidas redes de apoyo social.",
+    "fuente": "temario",
+    "id": "psi_t12_s02_c02",
+    "options": [
+      "Dos parejas de esposos comparten la misma habitación.",
+      "Uno solo de los progenitores (la madre o el padre) asume en solitario la crianza, tutela y sostenimiento económico de sus hijos.",
+      "Viven juntos catorce hermanos sin ningún adulto a cargo.",
+      "Los padres viven en dos continentes distintos con tres hijos."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 12,
+    "statement": "La 'Familia Monoparental' se define como aquella estructura familiar en la cual:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.1",
+    "correctIndex": 2,
+    "explanation": "Muy común en el Perú y Latinoamérica, la familia extendida brinda soporte solidario multigeneracional para el cuidado de los niños y ahorro en vivienda.",
+    "fuente": "temario",
+    "id": "psi_t12_s02_c03",
+    "options": [
+      "Personas que no tienen ningún parentesco biológico ni legal.",
+      "Una pareja de recién casados sin hijos.",
+      "Padres, hijos y otros parientes consanguíneos de varias generaciones (abuelos, tíos, primos, nueras o yernos).",
+      "Dos compañeros de trabajo que comparten vehículo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 12,
+    "statement": "La 'Familia Extendida o Ampliada' se caracteriza por la convivencia en el mismo hogar de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.1",
+    "correctIndex": 1,
+    "explanation": "Las familias reconstituidas enfrentan el desafío de negociar nuevos roles familiares (padrastros, madrastras, hermanastros) con madurez afectiva.",
+    "fuente": "temario",
+    "id": "psi_t12_s02_c04",
+    "options": [
+      "Una familia se traslada a vivir a otro país.",
+      "Uno o ambos miembros de la nueva pareja tienen hijos de una unión o matrimonio anterior, integrando a los hijos previos con o sin hijos en común ('los míos, los tuyos y los nuestros').",
+      "Se adoptan tres mascotas domésticas en el hogar.",
+      "Los abuelos asumen la tutela legal de un huérfano."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 12,
+    "statement": "La 'Familia Reconstituida, Ensamblada o Compuesta' se forma cuando:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.2",
+    "correctIndex": 3,
+    "explanation": "El cruce entre calidez afectiva (alta/baja) y exigencia de normas (alta/baja) define los cuatro estilos fundamentales de paternidad.",
+    "fuente": "temario",
+    "id": "psi_t12_s02_c05",
+    "options": [
+      "Edad de los padres y número de hijos",
+      "Riqueza y Pobreza",
+      "Altura física y color de piel",
+      "Afecto/Sensibilidad (comunicación y calidez) y Control/Exigencia (límites y supervisión)"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 12,
+    "statement": "Diana Baumrind identificó cuatro estilos de crianza parental cruzando dos dimensiones básicas denominadas:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.3",
+    "correctIndex": 1,
+    "explanation": "El estilo democrático es el más saludable: genera hijos con alta autoestima, autocontrol, rendimiento académico superior, habilidades sociales y asertividad.",
+    "fuente": "temario",
+    "id": "psi_t12_s02_c06",
+    "options": [
+      "Imponen castigos brutales sin escuchar las razones del niño.",
+      "Establecen normas claras y coherentes, explican los motivos de las reglas con diálogo respetuoso, son afectuosos, receptivos y fomentan la autonomía y responsabilidad.",
+      "Son indiferentes y no les importa la vida de sus hijos.",
+      "No ponen ningún límite y dejan que el niño haga lo que quiera."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 12,
+    "statement": "El 'Estilo Democrático o Autoritativo' (alto afecto y alto control) se caracteriza porque los padres:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.3",
+    "correctIndex": 0,
+    "explanation": "Los hijos de padres autoritarios suelen ser temerosos, sumisos, inseguros, con baja autoestima o con brotes de rebeldía agresiva acumulada.",
+    "fuente": "temario",
+    "id": "psi_t12_s02_c07",
+    "options": [
+      "Exigen obediencia ciega e incondicional ('porque lo digo yo'), imponen castigos severos punitivos, son poco afectuosos y no toleran el cuestionamiento de su autoridad.",
+      "Piden opiniones democráticas a sus hijos antes de fijar normas.",
+      "Permiten que sus hijos no asistan a la escuela.",
+      "Regalan premios caros ante cualquier rabieta."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 12,
+    "statement": "El 'Estilo Autoritario' (bajo afecto y alto control) se manifiesta en padres que:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.3",
+    "correctIndex": 2,
+    "explanation": "Los hijos criados bajo permisividad suelen volverse egocéntricos, inmaduros, con baja tolerancia a la frustración y dificultades severas para someterse a normas sociales.",
+    "fuente": "temario",
+    "id": "psi_t12_s02_c08",
+    "options": [
+      "Viven en una casa de campo sin comunicación.",
+      "Supervisan militarmente cada minuto del día de sus hijos.",
+      "Son muy afectuosos y complacientes, pero casi no establecen normas ni límites, no exigen disciplina y ceden ante cualquier capricho o rabieta de los hijos.",
+      "Son fríos, crueles y violentos físicamente."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 12,
+    "statement": "El 'Estilo Permisivo o Indulgente' (alto afecto y bajo control) describe a padres que:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.3",
+    "correctIndex": 2,
+    "explanation": "La negligencia produce las peores consecuencias evolutivas: desajuste escolar, severos vacíos emocionales, proclividad a adicciones y conductas antisociales.",
+    "fuente": "temario",
+    "id": "psi_t12_s02_c09",
+    "options": [
+      "Establecen demasiados horarios de estudio rigurosos.",
+      "Premian con libros las buenas calificaciones.",
+      "Están emocionalmente ausentes, muestran desinterés absoluto, no brindan afecto ni establecen límites, abandonando a los hijos a su suerte física y psicológica.",
+      "Pasan todo el día jugando con los niños en el parque."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 12,
+    "statement": "El 'Estilo Negligente, Indiferente o Desapegado' (bajo afecto y bajo control) es considerado el más destructivo para el menor porque los padres:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.2",
+    "correctIndex": 0,
+    "explanation": "El doble vínculo atrapa al niño en una paradoja donde cualquier respuesta suya resulta castigada, provocando angustia existencial y desorganización cognitiva.",
+    "fuente": "temario",
+    "id": "psi_t12_s02_c10",
+    "options": [
+      "Emiten dos mensajes mutuamente contradictorios e incompatibles simultáneamente (ej. la madre exige verbalmente 'acércate y abrázame' pero su cuerpo se pone tenso y rechaza con disgusto el contacto físico).",
+      "Repiten con paciencia la misma instrucción tres veces con ternura.",
+      "Escriben notas de amor en el almuerzo escolar.",
+      "Fomentan el hábito de la lectura compartida los domingos."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 12,
+    "statement": "En la dinámica de comunicación familiar, la 'Pauta de Doble Vínculo' (Gregory Bateson) genera desorientación patológica en el hijo cuando los padres:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

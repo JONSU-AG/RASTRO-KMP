@@ -1,0 +1,34 @@
+{
+  "id": "leng_t06_s02",
+  "subjectId": "lenguaje",
+  "semana": 6,
+  "subtema": "6.2",
+  "title": "Oraciones Compuestas: Coordinadas y Subordinadas",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana06.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_06_Oracion_Gramatical_Simples_y_Compuestas.md",
+  "learningObjectives": [
+    "Diferenciar oración simple de un solo verbo de oración compuesta de dos o más proposiciones",
+    "Clasificar coordinadas yuxtapuestas por puntuación y conjuntivas en copulativas, disyuntivas, adversativas, distributivas, explicativas e ilativas",
+    "Reconocer subordinadas sustantivas en función de sujeto, objeto directo, objeto indirecto, atributo y término con el test eso",
+    "Distinguir subordinadas adjetivas especificativas sin comas de explicativas entre comas con antecedente expreso",
+    "Identificar subordinadas adverbiales propias de lugar, tiempo y modo e impropias causales, concesivas, condicionales, finales y comparativas"
+  ],
+  "theory": {
+    "id": "th_leng_t06_s02",
+    "asignatura": "Lenguaje",
+    "semana": 6,
+    "titulo": "Oraciones Compuestas: Coordinadas y Subordinadas",
+    "resumen": "",
+    "conceptosClave": [
+      "Yuxtaposición une proposiciones equivalentes solo con coma, punto y coma o dos puntos",
+      "Test eso convierte toda sustantiva en eso y test lo la confirma como objeto directo",
+      "Adjetiva especificativa restringe sin comas y explicativa agrega detalle entre comas",
+      "Adversativa con pero, mas sin tilde y sino, y distributiva con bien bien y ora ora",
+      "Ilativa con luego y por lo tanto sin intensificador y consecutiva con tan tanto tal más que",
+      "Concesiva con aunque expresa obstáculo que no impide la acción principal",
+      "Donde con antecedente sustantivo expreso funciona como adjetiva"
+    ],
+    "admissionTip": "Aplica eso para sustantiva, busca antecedente con que para adjetiva y busca aunque, porque, si y para que para adverbial. Luego como por lo tanto es ilativa y luego como después es adverbio temporal.",
+    "admissionExplanation": "Admisión castiga confundir adjetiva con sustantiva de objeto directo y confundir ilativa coordinada con consecutiva subordinada. El intensificador tan, tanto, tal es la marca obligatoria de consecutiva."
+  }
+}

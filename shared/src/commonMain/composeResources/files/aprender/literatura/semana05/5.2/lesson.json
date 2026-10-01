@@ -1,0 +1,35 @@
+{
+  "id": "lit_t05_s02",
+  "subjectId": "literatura",
+  "semana": 5,
+  "subtema": "5.2",
+  "title": "3.3. Vanguardismo Universal: César Vallejo (1892-1938)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/literatura/LiteraturaSemana05.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/TEMA_05_Literatura_Peruana.md",
+  "learningObjectives": [
+    "Explicar Trilce 1922 como ruptura de sintaxis y ortografía desde cárcel de Trujillo y luto materno",
+    "Distinguir las cuatro cumbres L T P E con Heraldos 1918, Trilce 1922, Poemas humanos y España aparta 1939",
+    "Analizar Poemas humanos con dolor de cuerpo obrero y Masa con resurrección por abrazo colectivo",
+    "Contrastar indigenismo épico de Alegría con Rumi y Rosendo Maqui frente a íntimo de Arguedas con Ernesto",
+    "Reconocer zumbayllu, chicheras de Felipa con sal y peste de tifus con procesión a Abancay"
+  ],
+  "theory": {
+    "id": "th_lit_t05_s02",
+    "asignatura": "Literatura",
+    "semana": 5,
+    "titulo": "3.3. Vanguardismo Universal: César Vallejo (1892-1938)",
+    "resumen": "",
+    "conceptosClave": [
+      "Trilce 1922 como destrucción de sintaxis con neologismos y cárcel de Trujillo",
+      "Los heraldos negros 1918 con Hay golpes en la vida y A mi hermano Miguel",
+      "Poemas humanos 1939 con Piedra negra y Nueve monstruos sobre cuerpo sufriente",
+      "España aparta 1939 con Masa y resurrección por amor solidario universal",
+      "Rumi con Rosendo Maqui pacífico y Benito Castro armado masacrado con Mauser",
+      "Ríos profundos 1958 con Ernesto, zumbayllu y río Pachachaca purificador",
+      "Chicheras de Felipa con sal y tifus con marcha desarmada a Abancay",
+      "Arguedas con quechua materno de Viseca frente a Alegría con mirada épica externa"
+    ],
+    "admissionTip": "Si ves Tiempo Tiempo o Era Era marca Trilce, si ves Hay golpes marca Heraldos, si ves Me moriré en París marca Piedra negra, si ves rodearon y echóse a andar marca Masa, si ves zumbayllu marca Arguedas, si ves Yanañahui marca Alegría.",
+    "admissionExplanation": "La trampa mayor cree que Rosendo Maqui lidera fusiles cuando es pacífico legalista y Benito Castro lidera armas, y cree que Trilce es soneto clásico cuando es ruptura total."
+  }
+}

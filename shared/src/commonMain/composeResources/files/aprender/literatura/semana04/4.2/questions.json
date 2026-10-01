@@ -1,0 +1,182 @@
+[
+  {
+    "id": "lit_t04_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el prólogo de su novela El reino de este mundo (1949), Alejo Carpentier postula la categoría estética de «lo real maravilloso», fundamentándola en:",
+    "options": [
+      "La invención artificial de trucos mágicos y fantasías desvinculadas de la historia.",
+      "La presencia natural, cotidiana e histórica de lo prodigioso en la geografía, mitos y sincretismo cultural de América Latina y el Caribe.",
+      "La adopción pasiva de las modas automáticas del surrealismo parisino.",
+      "La influencia exclusiva de los cuentos de hadas nórdicos en el Caribe."
+    ],
+    "correctIndex": 1,
+    "explanation": "Carpentier sostiene que lo insólito y desmesurado en América no es un artificio literario calculado, sino una cualidad inherente a su historia convulsa, su naturaleza exuberante y la fe sincrética de sus pueblos (como la rebelión de Mackandal en Haití).",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la arquitectura narrativa de Cien años de soledad de Gabriel García Márquez, ¿cuál es el destino final trágico que sella la desaparición de la estirpe de los Buendía?",
+    "options": [
+      "El último descendiente nace con cola de cerdo y es devorado por las hormigas rojas mientras un ciclón bíblico borra a Macondo de la faz de la tierra.",
+      "Mueren en la huelga bananera masacrados por los soldados en la estación del tren.",
+      "La peste del insomnio provoca la pérdida irreversible de la memoria y la dispersión por el mundo.",
+      "El coronel Aureliano Buendía gana sus treinta y dos guerras civiles e instaura una tiranía militar."
+    ],
+    "correctIndex": 0,
+    "explanation": "Tal como rezaban los pergaminos de Melquíades que descifra Aureliano Babilonia: «El primero de la estirpe está amarrado en un árbol y al último se lo están comiendo las hormigas», culminando con el cataclismo profético que arrasa Macondo.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la narrativa fantástica y filosófica de Jorge Luis Borges (Ficciones, El Aleph), los motivos recurrentes que simbolizan la infinitud inabarcable, la perplejidad metafísica y la pérdida del yo son:",
+    "options": [
+      "El arado, el ferrocarril y la fábrica textil.",
+      "Los campos de batalla sangrientos y las banderas patrias.",
+      "Los laberintos, los espejos, los libros infinitos y el tiempo circular.",
+      "Las haciendas feudales y las descripciones botánicas."
+    ],
+    "correctIndex": 2,
+    "explanation": "Borges construye una literatura de rigurosa arquitectura conceptual donde el laberinto refleja la confusión de la mente humana ante el cosmos, los espejos duplican aterradoramente la apariencia, y el tiempo se desdobla en senderos que se bifurcan.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la novela Pedro Páramo (1955) del mexicano Juan Rulfo, el protagonista Juan Preciado llega al pueblo desértico de Comala con la promesa de buscar a su padre, descubriendo progresivamente que:",
+    "options": [
+      "Su padre se había consagrado como sacerdote para redimir a la comunidad.",
+      "El cacique Pedro Páramo había repartido todas sus tierras a los campesinos.",
+      "El pueblo prospera gracias al descubrimiento de ricas minas de plata.",
+      "Todos los habitantes con los que dialoga y él mismo están muertos, atrapados en un limbo de culpas y susurros fantasmales."
+    ],
+    "correctIndex": 3,
+    "explanation": "Rulfo rompe magistralmente las fronteras entre vivos y difuntos: Comala es un purgatorio calcinado donde las ánimas en pena susurran sus recuerdos y agonías bajo el yugo caciquil de Pedro Páramo.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.2.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes características técnicas distingue de manera revolucionaria a la Nueva Narrativa del «Boom latinoamericano» de las novelas regionalistas tradicionales?",
+    "options": [
+      "La experimentación temporal (saltos temporales, analepsis, prolepsis), la multiplicidad de perspectivas, el monólogo interior y la disolución de la frontera entre realidad y mito.",
+      "La narración estrictamente lineal en orden cronológico inalterable con un único narrador omnisciente.",
+      "El rechazo frontal a cualquier influencia de la vanguardia europea y norteamericana.",
+      "La renuncia total a la ficción para redactar actas policiales literales."
+    ],
+    "correctIndex": 0,
+    "explanation": "Los narradores del Boom (García Márquez, Cortázar, Vargas Llosa, Fuentes) transformaron la novela incorporando innovaciones técnicas universales (Joyce, Faulkner) aplicadas a la compleja realidad sociopolítica y mítica latinoamericana.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el cuento «El Aleph» de Jorge Luis Borges, el objeto maravilloso que el narrador contempla en el sótano de la calle Garay es:",
+    "options": [
+      "Un reloj que detiene el paso del tiempo en el universo.",
+      "Un punto del espacio que contiene, sin superponerse, todos los puntos y acontecimientos del universo desde todos los ángulos simultáneos.",
+      "Un diario íntimo que revela la hipocresía de la élite provinciana.",
+      "Un códice sagrado escrito en la lengua primordial de Adán."
+    ],
+    "correctIndex": 1,
+    "explanation": "El Aleph borgeano es la condensación absoluta del infinito: una pequeña esfera tornasolada donde convergen todos los lugares del cosmos vistos simultáneamente sin confusión.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Quién es el gitano trashumante que llega periódicamente a Macondo trayendo los inventos del mundo (el imán, el telescopio, el hielo) y redacta los pergaminos premonitorios en Cien años de soledad?",
+    "options": [
+      "Pietro Crespi",
+      "José Raquel Moncada",
+      "Apolinar Moscote",
+      "Melquíades"
+    ],
+    "correctIndex": 3,
+    "explanation": "Melquíades es el sabio y alquimista inmortal que introduce a José Arcadio Buendía en el ansia de conocimiento y fija en sánscrito la historia completa de la estirpe cien años antes de que ocurra.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La novela Rayuela (1963) del escritor argentino Julio Cortázar es célebre en la literatura universal porque:",
+    "options": [
+      "Consta de un solo párrafo continuo sin ningún signo de puntuación.",
+      "Está redactada íntegramente en lunfardo carcelario bonaerense.",
+      "Fue escrita durante un viaje en globo aerostático sobre París.",
+      "Propone una estructura lúdica y abierta («tablero de dirección») que permite múltiples itinerarios de lectura invitando a la participación activa del lector cómplice."
+    ],
+    "correctIndex": 3,
+    "explanation": "Rayuela dinamita la novela lineal decimonónica ofreciendo al lector la posibilidad de leer de corrido hasta el capítulo 56 o seguir el tablero secuencial propuesto por Cortázar, explorando la vida de Horacio Oliveira y la Maga.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En Pedro Páramo, la única mujer a la que el déspota cacique de la Media Luna amó verdaderamente a lo largo de su vida fue:",
+    "options": [
+      "Susana San Juan",
+      "Dolores Preciado",
+      "Eduviges Dyada",
+      "Dorotea la Cuarraca"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pedro Páramo somete, despoja y ultraja a toda la comarca, pero vive atormentado por su amor obsesivo e inalcanzable hacia la trastornada Susana San Juan; tras la muerte de esta, el cacique cruza los brazos y deja morir a Comala.",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t04_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El episodio de la masacre de los trabajadores de la compañía bananera en Cien años de soledad alude históricamente a un hecho real acontecido en Colombia en 1928, donde en la ficción el único sobreviviente que recuerda la verdad es:",
+    "options": [
+      "Gerineldo Márquez",
+      "Mauricio Babilonia",
+      "José Arcadio Segundo",
+      "Aureliano Segundo"
+    ],
+    "correctIndex": 2,
+    "explanation": "José Arcadio Segundo sobrevive al ametrallamiento en la plaza de la estación y despierta en un tren repleto de cadáveres arrojados al mar; al regresar a Macondo, descubre con horror que la historia oficial ha decretado que allí «no pasó nada».",
+    "subject": "literatura",
+    "semana": 4,
+    "concept": "4.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  }
+]

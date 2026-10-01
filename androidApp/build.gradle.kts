@@ -70,6 +70,15 @@ if (mascotSrcDir.exists() && resDrawableDir.exists()) {
     val pubSrcDir = file("../copia rastro react/public")
     File(pubSrcDir, "applogo.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "app_logo.png"), overwrite = true) }
     File(pubSrcDir, "astrologo.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "astro_logo.png"), overwrite = true) }
+    
+    // Logos emocionales dinámicos desde la carpeta LOGO
+    val logoSrcDir = file("../LOGO")
+    if (logoSrcDir.exists()) {
+        File(logoSrcDir, "LOGOBASE.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "rastro_logo_base.png"), overwrite = true) }
+        File(logoSrcDir, "LOGO-ENOJO.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "rastro_logo_enojo.png"), overwrite = true) }
+        File(logoSrcDir, "LOGO-FURIA.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "rastro_logo_furia.png"), overwrite = true) }
+        File(logoSrcDir, "LOGOTRISTE.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "rastro_logo_triste.png"), overwrite = true) }
+    }
 }
 
 val copyMascotAssets by tasks.registering(Copy::class) {
@@ -96,6 +105,22 @@ val copyMascotAssets by tasks.registering(Copy::class) {
         include("astrologo.png")
         rename { "astro_logo.png" }
     }
+    from(file("../LOGO")) {
+        include("LOGOBASE.png")
+        rename { "rastro_logo_base.png" }
+    }
+    from(file("../LOGO")) {
+        include("LOGO-ENOJO.png")
+        rename { "rastro_logo_enojo.png" }
+    }
+    from(file("../LOGO")) {
+        include("LOGO-FURIA.png")
+        rename { "rastro_logo_furia.png" }
+    }
+    from(file("../LOGO")) {
+        include("LOGOTRISTE.png")
+        rename { "rastro_logo_triste.png" }
+    }
     into(file("src/main/res/drawable"))
 }
 
@@ -120,6 +145,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     debugImplementation(libs.androidx.compose.ui.tooling)
     implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.kotlinx.datetime)
     
     // Credential Manager para Google Sign-In Nativo
     implementation(libs.androidx.credentials)
@@ -135,4 +161,5 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.storage)
+    implementation(libs.firebase.analytics)
 }

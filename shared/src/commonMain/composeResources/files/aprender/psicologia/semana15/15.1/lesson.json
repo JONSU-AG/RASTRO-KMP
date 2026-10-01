@@ -1,0 +1,34 @@
+{
+  "id": "psi_t15_s01",
+  "subjectId": "psicologia",
+  "semana": 15,
+  "subtema": "15.1",
+  "title": "3.1. Concepto y Principios del Desarrollo Humano",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana15.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_15_Desarrollo_Humano_y_Etapas.md",
+  "learningObjectives": [
+    "Definir desarrollo humano continuo y multidimensional con herencia, maduración, ambiente y aprendizaje",
+    "Aplicar leyes céfalo-caudal de cabeza a pies y próximo-distal de tronco a dedos con marcha y pinza fina",
+    "Secuenciar prenatal germinal, embrionario y fetal más primera infancia con reflejos y eclosión de marcha y lenguaje",
+    "Explicar pubertad con menarquia y espermarquia más audiencia imaginaria y fábula personal de Elkind",
+    "Contrastar adultez temprana plena, intermedia con climaterio y senectud con integridad frente a desesperanza"
+  ],
+  "theory": {
+    "id": "th_psi_t15_s01",
+    "asignatura": "Psicología",
+    "semana": 15,
+    "titulo": "3.1. Concepto y Principios del Desarrollo Humano",
+    "resumen": "",
+    "conceptosClave": [
+      "Desarrollo continuo desde concepción hasta muerte con biología, cognición, emoción y moral",
+      "Herencia que fija potencial frente a maduración programada y ambiente que nutre y aprendizaje que practica",
+      "Ley céfalo-caudal con cabeza luego tronco luego piernas para caminar",
+      "Ley próximo-distal con hombros y brazos antes que muñecas y dedos para pinza fina",
+      "Prenatal germinal 0 a 2 semanas, embrionario 3 a 8 con organogénesis y fetal 9 hasta parto",
+      "Pubertad con eje hormonal, menarquia 11 a 13 y espermarquia 12 a 14 más estirón y caracteres secundarios",
+      "Elkind con audiencia que se cree observado y fábula que se cree invulnerable más Erikson con intimidad, generatividad e integridad"
+    ],
+    "admissionTip": "Si ves cabeza a pies marca céfalo-caudal, si ves tronco a dedos marca próximo-distal, si ves 0 a 2 más 3 a 8 más 9 hasta parto marca prenatal, si ves todos me miran marca audiencia, si ves a mí no me pasa nada marca fábula, si ves 65 más balance sereno marca integridad.",
+    "admissionExplanation": "La trampa fija invierte las leyes motoras, confunde germinal con fetal, mezcla audiencia que se siente observada con fábula que se siente invulnerable, y cambia generatividad de 40 a 65 por integridad de 65 más."
+  }
+}

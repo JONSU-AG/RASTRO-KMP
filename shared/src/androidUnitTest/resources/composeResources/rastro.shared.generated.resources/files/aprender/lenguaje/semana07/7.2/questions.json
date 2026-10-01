@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t07_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'Estimados postulantes, presten atención a las indicaciones del docente', la coma empleada es de tipo:",
+    "options": [
+      "Coma elíptica",
+      "Coma vocativa",
+      "Coma enumerativa",
+      "Coma hiperbática"
+    ],
+    "correctIndex": 1,
+    "explanation": "'Estimados postulantes' es el vocativo al que se dirige el emisor; la coma que lo aísla se denomina coma vocativa.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la frase 'Juan postuló a Ingeniería de Sistemas; Luis, a Ingeniería Electrónica', la coma colocada tras 'Luis' es:",
+    "options": [
+      "Coma elíptica",
+      "Coma explicativa",
+      "Coma hiperbática",
+      "Coma criminal"
+    ],
+    "correctIndex": 0,
+    "explanation": "La coma elíptica reemplaza al verbo 'postuló' para evitar su reiteración innecesaria en la segunda proposición.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes oraciones incurre en el grave error ortográfico conocido como 'coma criminal' o censurada?",
+    "options": [
+      "Arequipa, la Ciudad Blanca, celebra su aniversario.",
+      "Por las mañanas, ellos estudian con ahínco.",
+      "Amigos míos, luchemos con valor.",
+      "Los jóvenes más disciplinados de la academia, obtuvieron altos puntajes."
+    ],
+    "correctIndex": 3,
+    "explanation": "La RAE prohíbe taxativamente colocar coma entre el sujeto ('Los jóvenes más disciplinados de la academia') y el verbo principal ('obtuvieron').",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.2.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'Desde las primeras horas de la madrugada, los ciudadanos acudieron a sufragar', la coma utilizada es:",
+    "options": [
+      "Coma vocativa",
+      "Coma elíptica",
+      "Coma hiperbática",
+      "Coma conjuntiva"
+    ],
+    "correctIndex": 2,
+    "explanation": "Es coma hiperbática porque señala la alteración del orden sintáctico habitual al anteponerse un Complemento Circunstancial de tiempo.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El signo de puntuación adecuado para separar proposiciones yuxtapuestas que ya contienen comas en su interior es:",
+    "options": [
+      "Los puntos suspensivos",
+      "El punto y coma",
+      "El guion largo",
+      "La coma simple"
+    ],
+    "correctIndex": 1,
+    "explanation": "El punto y coma se emplea por norma para separar proposiciones complejas que ya presentan comas internas.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'Estudió con dedicación durante todo el ciclo; sin embargo, los nervios le jugaron una mala pasada', el punto y coma se justifica porque:",
+    "options": [
+      "Reemplaza a un vocativo inicial",
+      "Encierra una aposición especificativa",
+      "Es una cita textual directa",
+      "Antecede a una locución conectiva adversativa extensa en una oración de cierta longitud"
+    ],
+    "correctIndex": 3,
+    "explanation": "Se escribe punto y coma antes de conectores como 'sin embargo', 'por consiguiente' o 'no obstante' cuando la proposición previa tiene cierta extensión.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿En cuál de los siguientes casos es preceptivo el uso de los dos puntos (:)?",
+    "options": [
+      "Para separar elementos de una enumeración simple sin anunciador",
+      "Precediendo a la reproducción de una cita textual literal",
+      "Tras un sujeto extenso antes del verbo",
+      "Entre el verbo copulativo y su atributo"
+    ],
+    "correctIndex": 1,
+    "explanation": "Los dos puntos se escriben preceptivamente antes de citas textuales encomilladas ('Sócrates sentenció: «Solo sé que nada sé»').",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En 'César, el profesor de física, explicó el problema', las comas que encierran a 'el profesor de física' son:",
+    "options": [
+      "Comas vocativas dobles",
+      "Comas explicativas o apositivas",
+      "Comas hiperbáticas",
+      "Comas elípticas"
+    ],
+    "correctIndex": 1,
+    "explanation": "Encierran una aposición explicativa que aclara quién es César y que puede suprimirse sin romper la estructura de la oración.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.2.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La oración 'Compró: lápices, borradores y reglas' contiene un uso incorrecto de los dos puntos porque:",
+    "options": [
+      "La enumeración tiene menos de diez elementos",
+      "Debió utilizarse punto y coma",
+      "Los sustantivos son concretos",
+      "No deben usarse antes de una enumeración si no hay un elemento anticipador o anunciador expreso"
+    ],
+    "correctIndex": 3,
+    "explanation": "La RAE indica que los dos puntos no deben intercalarse entre el verbo y su complemento directo en una enumeración no anunciada.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En 'No logró el puntaje mínimo requerido: tendrá que postular nuevamente en la siguiente convocatoria', los dos puntos expresan una relación de:",
+    "options": [
+      "Cita de autoridad",
+      "Vocativo implícito",
+      "Causa - efecto o deducción consecuente",
+      "Duda o vacilación"
+    ],
+    "correctIndex": 2,
+    "explanation": "Los dos puntos conectan dos proposiciones en relación de causa a efecto o conclusión sin necesidad de conector explícito.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.2.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  }
+]

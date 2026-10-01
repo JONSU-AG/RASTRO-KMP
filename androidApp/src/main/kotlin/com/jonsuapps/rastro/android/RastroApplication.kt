@@ -40,10 +40,14 @@ class RastroApplication : Application() {
             override fun onActivityResumed(activity: Activity) {
                 visibleActivities++
                 com.jonsuapps.rastro.android.gamification.StudyPresenceTracker.start()
+                com.jonsuapps.rastro.android.data.TesterActivityRepository.onForegroundStarted()
             }
             override fun onActivityPaused(activity: Activity) {
                 visibleActivities = (visibleActivities - 1).coerceAtLeast(0)
-                if (visibleActivities == 0) com.jonsuapps.rastro.android.gamification.StudyPresenceTracker.stop()
+                if (visibleActivities == 0) {
+                    com.jonsuapps.rastro.android.gamification.StudyPresenceTracker.stop()
+                    com.jonsuapps.rastro.android.data.TesterActivityRepository.onForegroundStopped()
+                }
             }
             override fun onActivityCreated(activity: Activity, state: Bundle?) = Unit
             override fun onActivityStarted(activity: Activity) = Unit

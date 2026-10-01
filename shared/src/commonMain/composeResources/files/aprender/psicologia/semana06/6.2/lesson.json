@@ -1,0 +1,34 @@
+{
+  "id": "psi_t06_s02",
+  "subjectId": "psicologia",
+  "semana": 6,
+  "subtema": "6.2",
+  "title": "3.2. Tipos de Motivación",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana06.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_06_Motivacion_y_Afectividad_Humana.md",
+  "learningObjectives": [
+    "Diferenciar motivacion intrinseca por placer curiosidad y satisfaccion inherente frente a extrinseca por premio material diploma reconocimiento o evitacion de castigo",
+    "Ordenar piramide de Maslow con fisiologicas seguridad afiliacion reconocimiento y autorrealizacion con base deficitaria antes de crecimiento",
+    "Ubicar seguridad con proteccion empleo vivienda y salud y autorrealizacion como despliegue maximo del potencial con moralidad y creatividad",
+    "Distinguir necesidades D de deficiencia por privacion frente a B de ser o crecimiento que se expanden con plenitud en tipologia de Maslow",
+    "Reportar como no respaldados sobrejustificacion de Deci y Ryan autodeterminacion con autonomia competencia y relacion y flujo de Csikszentmihalyi sin inventar"
+  ],
+  "theory": {
+    "id": "th_psi_t06_s02",
+    "asignatura": "Psicología",
+    "semana": 6,
+    "titulo": "3.2. Tipos de Motivación",
+    "resumen": "",
+    "conceptosClave": [
+      "Motivacion intrinseca interna autonoma por goce estetico y curiosidad como estudiar fisica por fascinacion frente a extrinseca instrumental por celular o dinero",
+      "Maslow piramidal con fisiologicas de respirar comer dormir seguridad de proteccion empleo afiliacion de amistad reconocimiento de estima y autorrealizacion de potencial",
+      "Seguridad como estabilidad fisica proteccion ante peligro empleo vivienda y salud frente a autorrealizacion como moralidad creatividad y vocacion plena",
+      "Necesidades D de carencia de base a estima por privacion y tension frente a B de ser de autorrealizacion que no se agotan y buscan verdad y belleza",
+      "Caso Rocio intrinseca por reto integral frente a Manuel extrinseco por departamento y caso huaico que exige base fisiologica antes de estetica",
+      "Caso celular como extrinseca subordinada a incentivo externo que decae sin premio y pasion como estado absorbente superior o inferior",
+      "Advertencia de no respaldo para sobrejustificacion autodeterminacion y flujo que estan solo en retos sin teoria ni TEMA y se reportan como CHALLENGE_NO_RESPALDADO"
+    ],
+    "admissionTip": "Si ves por placer y curiosidad marca intrinseca, si ves por premio dinero o evitar castigo marca extrinseca, si ves base a cima marca fisiologicas seguridad afiliacion reconocimiento autorrealizacion, si ves proteccion y vivienda marca seguridad, si ves maximo potencial marca autorrealizacion, si ves D frente a B marca carencia frente a crecimiento, si ves sobrejustificacion autodeterminacion o flujo marca no respaldado en fuentes.",
+    "admissionExplanation": "La trampa es invertir Maslow buscando cima sin base, llamar intrinseca a estudiar por celular, y asumir que sobrejustificacion autodeterminacion y flujo estan desarrollados en teoria cuando solo aparecen en retos sin respaldo en Kotlin ni en TEMA_06 y por eso se reportan sin inventar."
+  }
+}

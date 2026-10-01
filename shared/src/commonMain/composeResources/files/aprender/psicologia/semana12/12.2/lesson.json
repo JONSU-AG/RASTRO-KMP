@@ -1,0 +1,34 @@
+{
+  "id": "psi_t12_s02",
+  "subjectId": "psicologia",
+  "semana": 12,
+  "subtema": "12.2",
+  "title": "3.2. Tipología Familiar Contemporánea",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana12.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_12_Factores_de_Proteccion.md",
+  "learningObjectives": [
+    "Clasificar cinco tipologías con nuclear, extendida, monoparental, reconstituida y homoparental por quién convive",
+    "Cruzar las dos dimensiones de Baumrind con afecto y comunicación frente a exigencia y control",
+    "Caracterizar democrático alto-alto óptimo frente a autoritario alto-bajo dictatorial con sus hijos típicos",
+    "Caracterizar permisivo bajo-alto complaciente frente a negligente bajo-bajo ausente como el más destructivo",
+    "Diferenciar monoparental con un solo progenitor frente a reconstituida con los míos, los tuyos y los nuestros"
+  ],
+  "theory": {
+    "id": "th_psi_t12_s02",
+    "asignatura": "Psicología",
+    "semana": 12,
+    "titulo": "3.2. Tipología Familiar Contemporánea",
+    "resumen": "",
+    "conceptosClave": [
+      "Nuclear con padre madre e hijos bajo el mismo techo frente a extendida multigeneracional",
+      "Monoparental con un solo progenitor por divorcio, viudez o soltería frente a reconstituida ensamblada",
+      "Dimensiones con afecto y apoyo frente a exigencia y control según Baumrind con Maccoby y Martin",
+      "Autoritativo democrático alto-alto con diálogo y límites como estilo óptimo y saludable",
+      "Autoritario bajo en afecto con porque lo digo yo y castigo severo que genera sumisión o rebeldía",
+      "Permisivo con amor sin límites que crea tiranos frente a negligente ausente que produce adicción y delito",
+      "Mnemotecnia D-A-P-N con democrático ideal, autoritario sargento, permisivo complaciente y negligente ausente"
+    ],
+    "admissionTip": "Si ves diálogo con límites marca democrático, si ves porque lo digo yo marca autoritario, si ves cede a caprichos marca permisivo, si ves abandono marca negligente, si ves viudo solo con hijos marca monoparental, si ves nueva pareja con hijos previos marca reconstituida.",
+    "admissionExplanation": "La trampa gemela es autoritario frente a autoritativo que suenan igual y son opuestos, y permisivo que ama sin limitar frente a negligente que ni ama ni limita."
+  }
+}

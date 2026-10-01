@@ -1,0 +1,182 @@
+[
+  {
+    "id": "lit_t05_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El poemario Trilce (1922) de César Vallejo es considerado una cumbre revolucionaria de la poesía de vanguardia universal porque:",
+    "options": [
+      "Sigue con rigidez la métrica clásica del soneto alejandrino hispánico.",
+      "Destruye y reinventa la sintaxis, crea neologismos audaces, subvierte la ortografía y transmite el desamparo existencial y carcelario del ser humano.",
+      "Está compuesto exclusivamente en verso quechua prehispánico.",
+      "Fue escrito para ensalzar los discursos políticos de la revolución soviética."
+    ],
+    "correctIndex": 1,
+    "explanation": "En Trilce, Vallejo rompe con el molde modernista y las convenciones gramaticales impuestas: fractura la lengua («quedéme calentico», «calumbos»), expresa la vivencia atroz de su injusto encierro en Trujillo y funda una nueva expresividad estética.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la novela Los ríos profundos (1958) de José María Arguedas, ¿cuál es el juguete mágico y sonoro que une a los escolares del internado de Abancay y simboliza la armonía cósmica andina?",
+    "options": [
+      "El charango de caparazón de armadillo",
+      "La quena de hueso",
+      "El pututo ceremonial",
+      "El zumbayllu (peonza o trompo)"
+    ],
+    "correctIndex": 3,
+    "explanation": "El zumbayllu, trompo musical cuyo giro y zumbido hipnótico cautiva a los alumnos del colegio religioso, opera como un mediador mágico que pacifica la hostilidad del internado y conecta al protagonista Ernesto con las fuerzas de la naturaleza andina.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En El mundo es ancho y ajeno (1941) de Ciro Alegría, el venerable alcalde comunal que encarna la sabiduría ancestral, la dignidad colectiva y el apego sagrado a la tierra es:",
+    "options": [
+      "El Fiero Vásquez",
+      "Álvaro Amenábar",
+      "Benito Castro",
+      "Rosendo Maqui"
+    ],
+    "correctIndex": 3,
+    "explanation": "El anciano Rosendo Maqui lidera la comunidad campesina de Rumi con serenidad, justicia y apego moral inquebrantable a sus tierras ancestrales frente a las artimañas del codicioso terrateniente Amenábar.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el poemario póstumo Poemas humanos (París, 1939) de César Vallejo, el núcleo temático fundamental gira en torno a:",
+    "options": [
+      "El dolor biológico, el cuerpo sufriente del hombre trabajador, la orfandad cósmica y la solidaridad fraternal universal.",
+      "El canto idílico a los paisajes bucólicos de su natal Santiago de Chuco.",
+      "La recreación mitológica de los dioses del Olimpo grecolatino.",
+      "El optimismo ingenuo ante el progreso de las máquinas industriales."
+    ],
+    "correctIndex": 0,
+    "explanation": "Poemas humanos es la conmovedora elegía a la condición física y material del hombre («¡Y desgraciadamente, el dolor crece en el mundo a cada rato!»), donde el cuerpo, el hambre, el trabajo proletario y el anhelo de fraternidad se funden en verso desgarrador.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En Los ríos profundos de Arguedas, el levantamiento popular que desborda el orden colonial en Abancay y genera la solidaridad de Ernesto es encabezado por:",
+    "options": [
+      "Los sacerdotes del colegio encabezados por el padre Linares",
+      "Las chicheras mestizas lideradas por doña Felipa exigiendo el reparto justo de la sal",
+      "Los hacendados latifundistas de la cuenca del Pachachaca",
+      "Los soldados del regimiento militar"
+    ],
+    "correctIndex": 1,
+    "explanation": "El motín de las chicheras en protesta por el acaparamiento y escasez de la sal para los campesinos desata una rebelión popular que conmueve a Ernesto, quien admira el valor de doña Felipa y las mujeres quechuas.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.2.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es el desenlace de la comunidad de Rumi en El mundo es ancho y ajeno tras la muerte de Rosendo Maqui y el retorno de Benito Castro?",
+    "options": [
+      "El hacendado Amenábar les devuelve sus fértiles valles reconociendo su error moral.",
+      "La comunidad gana pacíficamente el juicio de linderos en el Tribunal Supremo de Lima.",
+      "Benito Castro organiza la resistencia armada de los comuneros en Yanañahui, pero son masacrados por la policía y el ejército armados con fusiles Mauser.",
+      "Los comuneros deciden emigrar a la selva y abandonar la agricultura."
+    ],
+    "correctIndex": 2,
+    "explanation": "La novela concluye en tragedia: Benito Castro empuña las armas para defender Yanañahui proclamando «¡Comuneros, a defender Rumi!», pero las tropas enviadas por el Estado y el latifundio exterminan a los comuneros, dejando la tierra ajena a sus legítimos dueños.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El primer verso del poema inicial de Los heraldos negros (1918) de César Vallejo es uno de los comienzos más famosos de la literatura hispanoamericana:",
+    "options": [
+      "«Me moriré en París con aguacero...»",
+      "«Hay golpes en la vida, tan fuertes... ¡Yo no sé!»",
+      "«Canta, oh diosa, la cólera del Pelida Aquiles...»",
+      "«Puedo escribir los versos más tristes esta noche...»"
+    ],
+    "correctIndex": 1,
+    "explanation": "«Hay golpes en la vida, tan fuertes... ¡Yo no sé! / Golpes como del odio de Dios...» abre el primer poemario de Vallejo, obra aún de influencia modernista formal pero ya cargada de una desgarradora originalidad existencial andina.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Qué temática singular caracteriza la narrativa indigenista de José María Arguedas frente a la de Ciro Alegría?",
+    "options": [
+      "Arguedas vivenció desde niño el mundo quechua como su lengua y universo afectivo materno, logrando una representación lírica, mágica y bicultural desde el interior de la psique andina.",
+      "Arguedas descalificó el folclore musical y las tradiciones quechuas.",
+      "Arguedas describe al indígena desde una perspectiva puramente externa y sociológica.",
+      "Arguedas escribió novelas policíacas ambientadas en la selva amazónica."
+    ],
+    "correctIndex": 0,
+    "explanation": "Criado entre la servidumbre indígena en la hacienda Viseca tras el maltrato de su madrastra, Arguedas asumió el quechua como lengua nutricia, lo que le permitió plasmar la cosmovisión mítica, la ternura y el desgarrador drama identitario del mestizo peruano.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.2.5",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El poemario de César Vallejo inspirado en su compromiso solidario con la causa republicana durante la contienda fratricida española de 1936 es:",
+    "options": [
+      "Trilce",
+      "Fabla salvaje",
+      "España, aparta de mí este cáliz",
+      "Tungsteno"
+    ],
+    "correctIndex": 2,
+    "explanation": "España, aparta de mí este cáliz (1939) incluye poemas de vibrante fraternidad y fe laica como «Masa», donde el combatiente muerto resucita cuando todos los hombres de la tierra se unen en un abrazo de amor fraternal.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t05_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En Los ríos profundos, la peste del tifus negro que azota a los colonos indios de las haciendas del valle del Pachachaca provoca que estos:",
+    "options": [
+      "Huyan hacia Lima para asaltar el palacio de gobierno.",
+      "Quemen el internado religioso y fusilen a los estudiantes.",
+      "Invadan en masa la ciudad de Abancay desarmados para exigir a los sacerdotes una misa que expulse al demonio de la peste.",
+      "Se rindan ante el ejército para ser hospitalizados."
+    ],
+    "correctIndex": 2,
+    "explanation": "Los colonos enfermos marchan en una sobrecogedora procesión fúnebre sobre Abancay; su fe no busca medicinas químicas, sino la misa y la bendición del padre Linares para salvar sus almas del castigo cósmico.",
+    "subject": "literatura",
+    "semana": 5,
+    "concept": "5.2.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  }
+]

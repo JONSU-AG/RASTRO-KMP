@@ -262,6 +262,17 @@ object AprenderRepository {
             val nuevo = contentLoader.loadSubjectLessons(subjectId)
                 .filter { it.semana >= 8 }
             return (legacy + nuevo).sortedWith(compareBy({ it.semana }, { it.id })).withSubtemaIndex()
+        } else if (subjectId == "lenguaje" || subjectId == "literatura" || subjectId == "psicologia") {
+            // Google (mismo sistema genérico que Biología): legacy solo en las semanas
+            // aún no cubiertas por el contenido nuevo; al completar todas las semanas
+            // el legacy queda excluido sin duplicar. Sin cross-subject fallback.
+            // NOTA §15: se mantiene lista explícita por materia (sin refactor genérico
+            // global) para no alterar el comportamiento de las 17 materias legacy.
+            val nuevo = contentLoader.loadSubjectLessons(subjectId)
+            val nuevoWeeks = nuevo.map { it.semana }.toSet()
+            val legacy = LearningPathCatalog.forSubject(normalizeSubjectId(subjectId))
+                .filter { it.semana !in nuevoWeeks }
+            return (legacy + nuevo).sortedWith(compareBy({ it.semana }, { it.id })).withSubtemaIndex()
         } else {
             return LearningPathCatalog.forSubject(normalizeSubjectId(subjectId))
                 .sortedWith(compareBy({ it.semana }, { it.id }))
@@ -287,6 +298,43 @@ object AprenderRepository {
                 } catch (_: Exception) {
                     // cae a legacy abajo
                 }
+            }
+        }
+        // Contenido nuevo primero para Lenguaje (IDs leng_tWW_sNN del piloto Google);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Los IDs legacy (len_tWW_sSS) no coinciden con este regex: sin colisión.
+        Regex("""leng_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("lenguaje", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo primero para Literatura Google (IDs lit_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy comparte prefijo lit_: lit_t01_s01/s02 resuelven al nuevo (reemplazo
+        // intencional, igual que bio 8.1); lit_t01_s03/s04 caen a legacy (sin 1.3/1.4 nuevo).
+        Regex("""lit_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("literatura", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo primero para Psicología Google (IDs psi_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy comparte prefijo psi_: reemplazo intencional igual que bio 8.1/lit_.
+        Regex("""psi_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("psicologia", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
             }
         }
         return LearningPathCatalog.byId(lessonId)

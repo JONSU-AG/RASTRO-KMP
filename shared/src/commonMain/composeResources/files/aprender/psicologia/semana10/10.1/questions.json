@@ -1,0 +1,182 @@
+[
+  {
+    "id": "psi_t10_s01_c01",
+    "statement": "En la psicología sensorial, la 'Sensación' se define como el proceso neurofisiológico primario mediante el cual:",
+    "options": [
+      "El cerebro interpreta y da significado histórico a una obra de arte.",
+      "Se formula una hipótesis científica comprobable.",
+      "Se almacena la memoria procedimental en los ganglios basales.",
+      "Los órganos receptores sensoriales captan y transforman los estímulos físicos o químicos del entorno en impulsos nerviosos bioeléctricos (transducción)."
+    ],
+    "correctIndex": 3,
+    "explanation": "La sensación es la puerta de entrada sensorial: recepción biofísica y transducción periférica de ondas luminosas, sonoras o moléculas químicas en potenciales de acción.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s01_c02",
+    "statement": "El 'Umbral Absoluto' (o umbral mínimo) se define psicofísicamente como:",
+    "options": [
+      "La máxima cantidad de dolor físico que puede soportar una persona sin desmayarse.",
+      "La diferencia de peso que se percibe entre dos maletas cargadas.",
+      "El número de neuronas del lóbulo parietal.",
+      "La intensidad mínima de energía física que debe poseer un estímulo para que pueda ser detectado por los receptores sensoriales al menos el 50% de las veces."
+    ],
+    "correctIndex": 3,
+    "explanation": "El umbral absoluto marca el límite de la sensibilidad humana: p. ej., percibir la llama de una vela a 48 km en una noche oscura y despejada.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s01_c03",
+    "statement": "El 'Umbral Diferencial' (Diferencia Apenas Perceptible - DAP) o Ley de Weber establece que:",
+    "options": [
+      "Todos los estímulos sensoriales son percibidos con idéntica claridad.",
+      "El incremento mínimo de intensidad requerido para notar una diferencia entre dos estímulos es una fracción constante de la intensidad del estímulo original.",
+      "Los sonidos agudos no se pueden distinguir de los graves.",
+      "El umbral absoluto se duplica cada diez años de vida."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ernst Weber descubrió que para notar que algo pesa más, el peso añadido debe ser proporcional al peso base (k = ΔI / I).",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s01_c04",
+    "statement": "La 'Percepción' se diferencia de la sensación en que la percepción es un proceso cognitivo superior de carácter activo que consiste en:",
+    "options": [
+      "La simple conducción de electricidad por el nervio óptico.",
+      "Un reflejo involuntario medular sin participación de la corteza cerebral.",
+      "La organización, interpretación, integración y asignación de significado consciente a los datos sensoriales en base a la experiencia previa y el contexto.",
+      "La secreción de saliva ante la visión de un limón."
+    ],
+    "correctIndex": 2,
+    "explanation": "La sensación capta 'luces y sombras'; la percepción reconoce: 'es el rostro sonriente de mi madre'. La percepción dota de sentido a la información sensorial.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s01_c05",
+    "statement": "El principio perceptivo rector de la Gestalt denominado 'Ley de Figura y Fondo' establece que el cerebro organiza el campo visual:",
+    "options": [
+      "Separando el objeto de interés principal nítido y delimitado (figura) del espacio circundante más difuso que le sirve de soporte o contexto (fondo).",
+      "Multiplicando el tamaño de los objetos lejanos al doble.",
+      "Viendo todos los elementos como una masa confusa y borrosa sin relieve.",
+      "Invirtiendo los colores claros en oscuros permanentemente."
+    ],
+    "correctIndex": 0,
+    "explanation": "La figura tiene contornos definidos, parece más cercana y se recuerda mejor; el fondo es continuo, pasa desapercibido y parece extenderse por detrás.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s01_c06",
+    "statement": "La Ley Gestáltica de 'Cierre o Clausura' se manifiesta cuando la percepción humana:",
+    "options": [
+      "Ignora los objetos que tienen líneas rectas.",
+      "Rechaza las formas circulares en movimiento.",
+      "Olvida los nombres de los objetos que mira fijamente.",
+      "Tiende a completar, rellenar e integrar automáticamente figuras o patrones discontinuos o incompletos para percibirlos como una forma cerrada y perfecta."
+    ],
+    "correctIndex": 3,
+    "explanation": "Si vemos un círculo trazado con líneas discontinuas, nuestra mente rellena los espacios vacíos y percibe el objeto como un círculo íntegro.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s01_c07",
+    "statement": "La Ley de 'Proximidad' de la Gestalt postula que los estímulos que se encuentran espacial o temporalmente cercanos entre sí tienden a ser percibidos como:",
+    "options": [
+      "Pertenecientes a una misma unidad, grupo o configuración integrada.",
+      "Objetos hostiles en combate.",
+      "Figuras de colores complementarios opuestos.",
+      "Manchas invisibles desprovistas de significado."
+    ],
+    "correctIndex": 0,
+    "explanation": "Varios puntos próximos se agrupan perceptivamente en columnas o filas según su cercanía espacial relativa.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s01_c08",
+    "statement": "En las alteraciones perceptivas, la 'Ilusión' se define como una percepción errónea o distorsionada de la realidad que se caracteriza por:",
+    "options": [
+      "Percibir algo sin que exista ningún objeto o estímulo físico real presente en el medio.",
+      "La pérdida completa de la memoria autobiográfica.",
+      "La imposibilidad física de abrir los párpados.",
+      "La existencia real de un estímulo u objeto externo físico presente, el cual es deformado o malinterpretado por factores objetivos (físicos) o subjetivos (miedo, expectativas)."
+    ],
+    "correctIndex": 3,
+    "explanation": "En la ilusión SÍ hay objeto presente (ver un ladrón donde hay un perchero con abrigo por miedo); en la alucinación NO hay objeto real presente.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s01_c09",
+    "statement": "Por el contrario, la 'Alucinación' (falsa percepción o percepción sin objeto) se distingue de la ilusión porque en la alucinación:",
+    "options": [
+      "El sujeto percibe con absoluta claridad y convicción sensorial un estímulo (voces, sombras, olores) cuando no existe ningún objeto físico real en el medio externo.",
+      "Se trata de un truco de magia con espejos ópticos en un teatro.",
+      "El objeto está presente pero se ve borroso por falta de lentes.",
+      "Solo ocurre cuando la persona está completamente sana y despierta."
+    ],
+    "correctIndex": 0,
+    "explanation": "Las alucinaciones son anomalías psicopatológicas típicas de la psicosis (esquizofrenia), delirium tremens o intoxicaciones por drogas, donde el cerebro proyecta sensaciones sin estímulo externo.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.1.5",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t10_s01_c10",
+    "statement": "La 'Constancia Perceptual' (de tamaño, forma y color) es la asombrosa capacidad cognitiva mediante la cual percibimos los objetos como:",
+    "options": [
+      "Mucho más grandes que una montaña lejana.",
+      "Completamente transparentes e invisibles bajo la luz solar.",
+      "Invariables, estables y constantes en sus propiedades reales a pesar de las drásticas variaciones que sufren las imágenes proyectadas en la retina (ej. un plato circular visto de lado proyecta una elipse pero lo percibimos redondo).",
+      "Cambiantes y deformes cada vez que nos movemos o cambia la luz."
+    ],
+    "correctIndex": 2,
+    "explanation": "Sin constancia perceptual el mundo sería un caos alucinatorio: un automóvil que se aleja proyecta una imagen retiniana minúscula, pero nuestro cerebro sabe que sigue midiendo cuatro metros.",
+    "subject": "psicologia",
+    "semana": 10,
+    "concept": "10.1.5",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

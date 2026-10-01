@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t08_s01_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La concepción del signo lingüístico como una entidad biplánica indisoluble formulada por Ferdinand de Saussure postula la unión de:",
+    "options": [
+      "Referente y canal",
+      "Fonema y alófono",
+      "Significado (concepto) y Significante (imagen acústica)",
+      "Emisor y receptor"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ferdinand de Saussure definió el signo lingüístico como una entidad psíquica de dos caras inseparables: el significado y el significante.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s01_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El hecho de que para el concepto de 'perro' el español use /p-e-r-r-o/, el inglés /d-o-g/ y el quechua /a-l-q-o/ demuestra el principio de:",
+    "options": [
+      "Arbitrariedad del signo",
+      "Mutabilidad sincrónica",
+      "Doble articulación",
+      "Linealidad del significante"
+    ],
+    "correctIndex": 0,
+    "explanation": "La arbitrariedad establece que no existe una relación natural ni necesaria entre el concepto y su imagen acústica, dependiendo de la convención de cada lengua.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.1.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s01_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El principio según el cual los fonemas de un significante se encadenan temporalmente uno detrás de otro de forma unidimensional se denomina:",
+    "options": [
+      "Inmutabilidad",
+      "Arbitrariedad fonológica",
+      "Linealidad del significante",
+      "Doble articulación"
+    ],
+    "correctIndex": 2,
+    "explanation": "La linealidad del significante implica que los elementos acústicos se extienden sucesivamente en el tiempo sin poder emitirse al unísono.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s01_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La evolución lingüística que transformó la palabra latina 'aurum' en el vocablo castellano 'oro' a lo largo de los siglos ilustra el principio de:",
+    "options": [
+      "Inmutabilidad sincrónica",
+      "Linealidad fonética",
+      "Polisemia arbitraria",
+      "Mutabilidad diacrónica"
+    ],
+    "correctIndex": 3,
+    "explanation": "La mutabilidad diacrónica señala que a través del tiempo histórico los signos de la lengua se transforman en sus planos material o semántico.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s01_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'Ese político fue calificado como una rata por los manifestantes', la palabra 'rata' posee un significado:",
+    "options": [
+      "Denotativo primario",
+      "Gramatical flexivo",
+      "Literal zoológico",
+      "Connotativo o figurado"
+    ],
+    "correctIndex": 3,
+    "explanation": "'Rata' no alude al roedor en sentido zoológico literal, sino a un significado connotativo y despectivo de traición o corrupción.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.1.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s01_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes oraciones presenta exclusivamente un significado denotativo objetivo?",
+    "options": [
+      "Mi hermano menor tiene ojos de lince para los negocios.",
+      "Aquel profesor le echó una mano al estudiante en su proyecto.",
+      "El calor del verano derritió el hielo en la cumbre del nevado.",
+      "Tus palabras fueron puñales en mi corazón."
+    ],
+    "correctIndex": 2,
+    "explanation": "En la opción sobre el hielo, todas las palabras se emplean con su significado literal, empírico y objetivo del diccionario (denotación).",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.1.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s01_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El principio que postula que ningún hablante particular puede cambiar a su antojo las palabras de su idioma en un momento histórico dado es la:",
+    "options": [
+      "Mutabilidad diacrónica",
+      "Arbitrariedad absoluta",
+      "Inmutabilidad sincrónica",
+      "Linealidad acústica"
+    ],
+    "correctIndex": 2,
+    "explanation": "La inmutabilidad sincrónica asegura la estabilidad social del código, impidiendo que un individuo altere caprichosamente la lengua.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s01_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La primera articulación del lenguaje humano postulada por André Martinet tiene como unidades mínimas con significado a los:",
+    "options": [
+      "Alófonos",
+      "Grafemas",
+      "Fonemas",
+      "Morfemas"
+    ],
+    "correctIndex": 3,
+    "explanation": "La primera articulación está formada por unidades significativas (morfemas o monemas), mientras que la segunda está compuesta por fonemas distintivos.",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s01_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la expresión 'El león africano es un mamífero carnívoro de la familia de los félidos', el vocablo 'león' se emplea en sentido:",
+    "options": [
+      "Connotativo literario",
+      "Polisémico metafórico",
+      "Antopomórfico",
+      "Denotativo o referencial"
+    ],
+    "correctIndex": 3,
+    "explanation": "El vocablo 'león' transmite su significado objetivo, científico y primario registrado en el léxico académico (denotación).",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.1.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t08_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El plano del signo lingüístico que corresponde a la huella psíquica o imagen acústica en la mente del hablante es el:",
+    "options": [
+      "Alomorfo",
+      "Significado",
+      "Significante",
+      "Referente"
+    ],
+    "correctIndex": 2,
+    "explanation": "El significante es la imagen acústica mental de los sonidos que componen la palabra (plano de la expresión).",
+    "subject": "lenguaje",
+    "semana": 8,
+    "concept": "8.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

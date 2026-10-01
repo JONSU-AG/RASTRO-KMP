@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t03_s03_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿En cuál de las siguientes opciones el monosílabo 'si' debe llevar tilde diacrítica?",
+    "options": [
+      "Si vienes temprano, almorzaremos juntos.",
+      "Él dio el si definitivo ante el altar.",
+      "La sonata está compuesta en si menor.",
+      "Pregúntale si vendrá a la reunión de estudio."
+    ],
+    "correctIndex": 1,
+    "explanation": "En 'Él dio el sí definitivo', la palabra 'sí' funciona como sustantivo de afirmación o consentimiento; por tanto, lleva tilde diacrítica obligatoria.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.3.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s03_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La palabra 'bíceps' es grave pero lleva tilde gráfica obligatoria porque:",
+    "options": [
+      "Es una excepción RAE para palabras graves terminadas en grupo consonántico",
+      "Termina en vocal acentuada",
+      "Posee hiato acentual disolvente",
+      "Es un monosílabo con tilde diacrítica"
+    ],
+    "correctIndex": 0,
+    "explanation": "Las palabras graves terminadas en doble consonante se tildan por norma RAE, aunque la última letra sea 's' (bíceps, fórceps, cómics).",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.3.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s03_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El monosílabo 'de' lleva tilde diacrítica cuando funciona gramaticalmente como:",
+    "options": [
+      "Preposición que indica posesión",
+      "Conjunción adversativa subordinada",
+      "Forma conjugada del verbo dar",
+      "Pronombre personal átono"
+    ],
+    "correctIndex": 2,
+    "explanation": "El monosílabo 'dé' lleva tilde diacrítica cuando corresponde a una forma conjugada del verbo dar ('Ojalá me dé permiso').",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.3.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s03_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de las siguientes palabras jamás debe tildarse bajo ninguna circunstancia según la RAE?",
+    "options": [
+      "Té",
+      "Dé",
+      "Sé",
+      "Ti"
+    ],
+    "correctIndex": 3,
+    "explanation": "El pronombre 'ti' es siempre tónico y nunca se confunde con otra categoría gramatical; la RAE prohíbe tildarlo en cualquier caso.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.3.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s03_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'Estudió con gran dedicación, mas no logró la vacante', la palabra 'mas' no lleva tilde porque:",
+    "options": [
+      "Es un adverbio de cantidad",
+      "Es una preposición de enlace",
+      "Funciona como pronombre relativo",
+      "Es una conjunción adversativa equivalente a 'pero'"
+    ],
+    "correctIndex": 3,
+    "explanation": "El monosílabo 'mas' se escribe sin tilde cuando funciona como conjunción adversativa equivalente a 'pero'.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.3.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s03_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La palabra 'aún' debe tildarse obligatoriamente cuando puede sustituirse por el adverbio:",
+    "options": [
+      "Todavía",
+      "Incluso",
+      "Hasta",
+      "Siquiera"
+    ],
+    "correctIndex": 0,
+    "explanation": "'Aún' lleva tilde cuando es palabra bisílaba tónica equivalente al adverbio 'todavía' ('Aún no ha llegado el docente').",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.3.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s03_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es la regla ortográfica que rige a las palabras esdrújulas y sobresdrújulas en el idioma español?",
+    "options": [
+      "Solo se tildan cuando terminan en N, S o vocal",
+      "Nunca llevan tilde gráfica",
+      "Se tildan todas obligatoriamente sin excepción alguna",
+      "Solo se tildan si no contienen hiato"
+    ],
+    "correctIndex": 2,
+    "explanation": "Todas las palabras esdrújulas y sobresdrújulas se tildan obligatoriamente en el idioma castellano sin ninguna excepción.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.3.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s03_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la frase interrogativa indirecta 'Dime con quién andas y te diré quién eres', los vocablos 'quién' se tildan por:",
+    "options": [
+      "Tildación diacrítica",
+      "Tildación enfática",
+      "Tildación robúrica",
+      "Regla general de palabras agudas"
+    ],
+    "correctIndex": 1,
+    "explanation": "La tilde enfática se coloca sobre pronombres interrogativos en oraciones interrogativas indirectas para preservar su fuerza expresiva.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.3.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s03_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál de los siguientes grupos de monosílabos carece por completo de tilde según la normativa vigente de la RAE?",
+    "options": [
+      "Él, tú, mí, sí",
+      "Té, dé, sé, más",
+      "Qué, cuál, quién, cómo",
+      "Fe, fue, dio, vio"
+    ],
+    "correctIndex": 3,
+    "explanation": "Los monosílabos 'fe', 'fue', 'dio', 'vio', 'fui' no tienen pareja átona formalmente ambigua y jamás llevan tilde.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.3.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t03_s03_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La palabra 'examen' no lleva tilde por ser grave terminada en n, pero su plural 'exámenes' sí se tilda porque:",
+    "options": [
+      "Lleva tilde diacrítica obligatoria",
+      "Se convierte en palabra esdrújula",
+      "Se convierte en palabra aguda",
+      "Sufre hiato acentual"
+    ],
+    "correctIndex": 1,
+    "explanation": "Al pluralizarse, el acento se mantiene en la misma sílaba y la palabra pasa a ser esdrújula (exá-me-nes), tildándose sin excepción.",
+    "subject": "lenguaje",
+    "semana": 3,
+    "concept": "3.3.1",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  }
+]

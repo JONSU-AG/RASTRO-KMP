@@ -1,0 +1,17 @@
+{
+  "subjectId": "literatura",
+  "name": "Literatura",
+  "area": "Comunicación",
+  "colorHex": "#9333EA",
+  "description": "Teoría literaria, géneros y especies, figuras retóricas y literatura universal, hispanoamericana y peruana para admisión UNSA.",
+  "weeks": 6,
+  "source": "curso-prueba/SALIDA_KOTLIN/literatura + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA",
+  "weekManifests": [
+    { "week": 1, "title": "Conceptos Fundamentales: Función Estética, Géneros y Figuras", "path": "semana01/manifest.json" },
+    { "week": 2, "title": "Clasicismo Griego y Romanticismo: Goethe y Las cuitas del joven Werther", "path": "semana02/manifest.json" },
+    { "week": 3, "title": "Épica Medieval Española y Don Quijote de la Mancha", "path": "semana03/manifest.json" },
+    { "week": 4, "title": "Modernismo Hispanoamericano y Nueva Narrativa: Carpentier y Borges", "path": "semana04/manifest.json" },
+    { "week": 5, "title": "Conquista y Virreinato: Inca Garcilaso y Vanguardismo de Vallejo", "path": "semana05/manifest.json" },
+    { "week": 6, "title": "Mariano Melgar y Vanguardia Arequipeña: Del Aquelarre a la Modernidad", "path": "semana06/manifest.json" }
+  ]
+}

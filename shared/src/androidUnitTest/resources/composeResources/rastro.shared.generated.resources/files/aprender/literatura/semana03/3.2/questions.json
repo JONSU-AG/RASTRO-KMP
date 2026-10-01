@@ -1,0 +1,182 @@
+[
+  {
+    "id": "lit_t03_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En El ingenioso hidalgo don Quijote de la Mancha de Miguel de Cervantes, el proceso psicológico por el cual Don Quijote se contagia progresivamente del sentido común y realismo de su escudero, mientras Sancho absorbe los ideales caballerescos de su amo, se conoce críticamente como:",
+    "options": [
+      "Catarsis barroca",
+      "Anagnórisis picaresca",
+      "Metamorfosis caballeresca",
+      "Sanchificación del Quijote y quijotización de Sancho"
+    ],
+    "correctIndex": 3,
+    "explanation": "A lo largo de sus andanzas compartidas, Don Quijote asimila la prudencia fáctica de Sancho (sanchificación), mientras que Sancho Panza abraza la fantasía heroica, el desinterés noble y el afán de justicia de su amo (quijotización).",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es el propósito paródico explícito que declara Miguel de Cervantes en el prólogo de la primera parte del Quijote (1605)?",
+    "options": [
+      "Derribar la máquina mal fundada de los disparatados y nocivos libros de caballerías.",
+      "Satirizar a la Iglesia católica y a la Inquisición española.",
+      "Criticar la política imperialista de la dinastía de los Austrias.",
+      "Exaltar la superioridad militar de España sobre el Imperio otomano."
+    ],
+    "correctIndex": 0,
+    "explanation": "Cervantes declara expresamente que su objetivo es poner en aborrecimiento de los lectores las fábulas absurdas y desmesuradas de los libros de caballerías mediante la sátira y el humor.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la culminación de la segunda parte del Quijote (1615), ¿bajo qué disfraz el bachiller Sansón Carrasco derrota al caballero andante en las playas de Barcelona para obligarlo a regresar a su aldea?",
+    "options": [
+      "El Caballero de los Espejos",
+      "El Caballero del Verde Gabán",
+      "El Caballero del Sol Naciente",
+      "El Caballero de la Blanca Luna"
+    ],
+    "correctIndex": 3,
+    "explanation": "Sansón Carrasco vence a Don Quijote bajo la identidad del Caballero de la Blanca Luna y le impone como condición de la derrota retirarse de la caballería andante por el plazo de un año, lo que precipita su retorno a casa y su muerte.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el drama filosófico La vida es sueño de Pedro Calderón de la Barca, ¿cuál es el motivo por el cual el rey Basilio de Polonia encierra a su hijo Segismundo en una torre desde su nacimiento?",
+    "options": [
+      "Porque el príncipe nació con una deformidad física monstruosa.",
+      "Para evitar que heredara el trono un hijo concebido fuera del matrimonio real.",
+      "Por los horóscopos y vaticinios astrológicos que predecían que sería un tirano sanguinario y humillaría a su padre.",
+      "Porque la reina Clorilene murió ordenando su perpetuo cautiverio."
+    ],
+    "correctIndex": 2,
+    "explanation": "El rey Basilio, astrólogo y matemático, creyó ciegamente en los astros que presagiaban que Segismundo destrozaría el reino y pondría sus pies sobre la cabeza de su anciano padre.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es el dilema filosófico y teológico central que se resuelve victoriosamente en La vida es sueño a través de la evolución moral de Segismundo?",
+    "options": [
+      "La lucha entre el protestantismo y el catolicismo inquisitorial.",
+      "La supremacía del poder civil sobre la jerarquía eclesiástica.",
+      "El triunfo del libre albedrío y la razón sobre la predestinación fatídica de los astros.",
+      "La justificación maquiavélica del tiranicidio."
+    ],
+    "correctIndex": 2,
+    "explanation": "Calderón, en consonancia con la Contrarreforma católica, demuestra que el hombre no está determinado fatalmente por los horóscopos: Segismundo, mediante su voluntad y discernimiento, vence sus impulsos salvajes y perdona a su padre, probando la primacía del libre albedrío.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el celebérrimo soliloquio que cierra la primera jornada de La vida es sueño, Segismundo concluye meditativamente que:",
+    "options": [
+      "La ciencia astrológica es la única fuente infalible de verdad cósmica.",
+      "Toda la existencia terrenal es ilusión efímera y que las glorias del mundo son meras sombras y sueños.",
+      "La rebelión armada es el único camino legítimo hacia la libertad política.",
+      "Los reyes gobiernan por mandato biológico inalterable."
+    ],
+    "correctIndex": 1,
+    "explanation": "Segismundo reflexiona con hondo barroquismo desengañado: «¿Qué es la vida? Un frenesí. / ¿Qué es la vida? Una ilusión, / una sombra, una ficción, / y el mayor bien es pequeño: / que toda la vida es sueño, / y los sueños, sueños son».",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.2.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El autor de las célebres Rimas y Leyendas, cumbre del posromanticismo lírico español caracterizado por su tono intimista, melancólico y leve musicalidad, es:",
+    "options": [
+      "Gustavo Adolfo Bécquer",
+      "José de Espronceda",
+      "Mariano José de Larra",
+      "Fray Luis de León"
+    ],
+    "correctIndex": 0,
+    "explanation": "Gustavo Adolfo Bécquer depuró el romanticismo español de su retórica rimbombante anterior, creando una poesía condensada, transparente y hondamente emotiva sobre el amor, el desengaño y el misterio de la creación lírica.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.2.5",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cómo recupera la cordura y el juicio el protagonista del Quijote en su lecho de muerte?",
+    "options": [
+      "Tras beber el mítico bálsamo de Fierabrás preparado por el cura Pero Pérez.",
+      "Abandona la locura caballeresca, reconoce que su nombre es Alonso Quijano «el Bueno» y reniega de los perniciosos libros de caballerías.",
+      "Planifica una última expedición militar junto a Sancho para rescatar a Dulcinea de Toboso.",
+      "Es coronado emperador de Trapisonda por los pastores de Sierra Morena."
+    ],
+    "correctIndex": 1,
+    "explanation": "En el capítulo final, Alonso Quijano despierta lúcido, pide confesar sus pecados, dicta su testamento con plena sensatez y fallece cristianamente habiendo dejado atrás la quimera andante.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El personaje leal que educa a Segismundo en la torre y vela por la seguridad del secreto de Estado por orden del rey Basilio es:",
+    "options": [
+      "Astolfo",
+      "Clotaldo",
+      "Clarín",
+      "Soldado rebelde"
+    ],
+    "correctIndex": 1,
+    "explanation": "Clotaldo encarna el conflicto del deber y la lealtad al rey frente a los afectos personales y filiales; es el carcelero e instructor de Segismundo y padre secreto de Rosaura.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.2.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t03_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La dama idealizada a quien Don Quijote consagra todas sus hazañas y victorias guerreras, y cuya identidad campesina real es Aldonza Lorenzo, es:",
+    "options": [
+      "Dorotea",
+      "Maritornes",
+      "Dulcinea del Toboso",
+      "Marcela"
+    ],
+    "correctIndex": 2,
+    "explanation": "Don Quijote transforma con su imaginación idealista a la rústica labradora Aldonza Lorenzo en la sublime señora de sus pensamientos, Dulcinea del Toboso.",
+    "subject": "literatura",
+    "semana": 3,
+    "concept": "3.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  }
+]

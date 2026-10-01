@@ -1,0 +1,34 @@
+{
+  "id": "psi_t06_s01",
+  "subjectId": "psicologia",
+  "semana": 6,
+  "subtema": "6.1",
+  "title": "3.1. Naturaleza y Ciclo de la Motivación",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana06.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_06_Motivacion_y_Afectividad_Humana.md",
+  "learningObjectives": [
+    "Definir motivacion como proceso conativo volitivo que inicia activa dirige sostiene y orienta la conducta hacia meta que satisface necesidad",
+    "Ordenar ciclo motivacional con homeostasis estimulo necesidad tension conducta motivada meta satisfaccion y retorno con frustracion si hay bloqueo",
+    "Diferenciar necesidades primarias biologicas innatas homeostaticas de supervivencia frente a psicosociales secundarias adquiridas por socializacion",
+    "Contrastar necesidades de McClelland con logro de excelencia poder de influencia y afiliacion de vinculo calido en casos de admision",
+    "Identificar conflicto atraccion atraccion con dos metas deseables excluyentes frente a evitacion evitacion y atraccion evitacion de Lewin"
+  ],
+  "theory": {
+    "id": "th_psi_t06_s01",
+    "asignatura": "Psicología",
+    "semana": 6,
+    "titulo": "3.1. Naturaleza y Ciclo de la Motivación",
+    "resumen": "",
+    "conceptosClave": [
+      "Motivacion como fuerza energizadora conativa que otorga direccionalidad persistencia e intensidad hacia meta u objetivo determinado",
+      "Ciclo con homeostasis equilibrio estimulo carencia necesidad carencia tension activacion conducta motivada meta satisfaccion y restablecimiento",
+      "Frustracion por barrera insuperable con agresion resignacion ansiedad y mecanismos de defensa segun Dollard y Miller",
+      "Necesidades primarias innatas biologicas universales de hambre sed sueno regulacion termica dolor y sexo para supervivencia",
+      "Necesidades psicosociales adquiridas por cultura educacion y socializacion como logro afiliacion poder autorrealizacion y justicia",
+      "McClelland con logro de reto excelencia y responsabilidad poder de liderazgo control y prestigio y afiliacion de pertenencia y cooperacion",
+      "Lewin con atraccion atraccion de dos premios excluyentes evitacion evitacion de dos castigos y atraccion evitacion de premio con espinas"
+    ],
+    "admissionTip": "Si ves energiza y dirige marca motivacion, si ves equilibrio marca homeostasis, si ves carencia marca necesidad, si ves bloqueo marca frustracion con agresion, si ves hambre y sed marca primaria innata, si ves logro poder y afiliacion marca McClelland, si ves dos becas deseables marca atraccion atraccion, si ves dos opciones temidas marca evitacion evitacion, si ves un objeto con cara buena y mala marca atraccion evitacion.",
+    "admissionExplanation": "La trampa clasica es llamar primaria a lo psicosocial aprendido, confundir logro que busca excelencia con poder que busca dominio y con afiliacion que busca vinculo, y llamar atraccion evitacion a tener dos opciones cuando exige un solo objeto con doble cara."
+  }
+}

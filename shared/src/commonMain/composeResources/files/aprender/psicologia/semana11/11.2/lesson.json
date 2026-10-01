@@ -1,0 +1,34 @@
+{
+  "id": "psi_t11_s02",
+  "subjectId": "psicologia",
+  "semana": 11,
+  "subtema": "11.2",
+  "title": "4.2. Teorías Factoriales Clásicas",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana11.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_11_Inteligencia_y_Teorias_Multiples.md",
+  "learningObjectives": [
+    "Definir Spearman 1904 con factor g innato y factores s aprendidos a partir de correlaciones positivas entre pruebas",
+    "Enumerar Thurstone 1938 con siete aptitudes V, W, N, S, M, P y R frente al g único",
+    "Contrastar Cattell con Gf biológica que declina frente a Gc cultural que se mantiene o crece en la vejez",
+    "Mapear Gardner 1983 con ocho inteligencias autónomas y su prueba de savants y afasias focales",
+    "Aplicar Sternberg 1985 con analítica de examen, creativa de invento y práctica de calle al éxito integral"
+  ],
+  "theory": {
+    "id": "th_psi_t11_s02",
+    "asignatura": "Psicología",
+    "semana": 11,
+    "titulo": "4.2. Teorías Factoriales Clásicas",
+    "resumen": "",
+    "conceptosClave": [
+      "Factor g como energía mental innata frente a factores s específicos por tarea según Spearman 1904",
+      "Siete aptitudes de Thurstone con verbal, numérica, espacial, memoria, velocidad y razonamiento inductivo",
+      "Gf fluida biológica juvenil que declina frente a Gc cristalizada cultural que perdura según Cattell",
+      "Ocho inteligencias de Gardner con lingüística, lógico-matemática, espacial, corporal, musical, interpersonal, intrapersonal y naturalista",
+      "Prueba de autonomía con savants y afasia que daña lenguaje sin tocar música ni espacio",
+      "Triárquica A-C-P con analítica componencial, creativa experiencial y práctica contextual según Sternberg",
+      "Mnemotecnias D-A-P-N no, sino A-C-P y fluida juvenil frente a cristalizada eterna"
+    ],
+    "admissionTip": "Si ves g marca Spearman, si ves 7 factores marca Thurstone, si ves anciano veloz mal pero sabio bien marca Gc conservada, si ves músico atleta o líder marca Gardner, si ves examen marca analítica, si ves invento marca creativa, si ves calle marca práctica.",
+    "admissionExplanation": "La trampa fija opone Gf que baja con la edad frente a Gc que se conserva, confunde interpersonal con intrapersonal, y presenta al analítico brillante que fracasa en la calle por falta de inteligencia práctica y creativa."
+  }
+}

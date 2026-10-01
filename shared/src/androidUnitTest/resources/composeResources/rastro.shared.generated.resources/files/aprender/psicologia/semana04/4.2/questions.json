@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "4.2.1",
+    "correctIndex": 1,
+    "explanation": "Dwight Eisenhower formuló que las decisiones operativas deben discriminar entre lo que requiere atención inmediata (urgente) y lo que aporta valor decisivo a las metas (importante).",
+    "fuente": "temario",
+    "id": "psi_t04_s02_c01",
+    "options": [
+      "Precio y Calidad",
+      "Urgencia e Importancia",
+      "Pasado y Futuro",
+      "Dificultad y Longitud"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "En la gestión estratégica del tiempo, la conocida 'Matriz de Eisenhower' clasifica las tareas y actividades cotidianas cruzando dos dimensiones fundamentales denominadas:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.2",
+    "correctIndex": 1,
+    "explanation": "El Cuadrante II es el cuadrante de la eficacia y la calidad de vida: al planificar con anticipación se evita vivir en el estrés constante de las crisis de última hora del Cuadrante I.",
+    "fuente": "temario",
+    "id": "psi_t04_s02_c02",
+    "options": [
+      "Delegadas inmediatamente a otras personas.",
+      "Programadas y planificadas con rigor en la agenda para ejecutarse disciplinadamente.",
+      "Postergadas indefinidamente hasta que exploten como crisis.",
+      "Eliminadas por ser una pérdida de tiempo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "En la Matriz de Eisenhower, las tareas que son 'Importantes pero NO Urgentes' (Cuadrante II: planificación, estudio metódico preventivo, descanso reparador, ejercicio) deben ser:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.3",
+    "correctIndex": 3,
+    "explanation": "El Pomodoro aprovecha los picos de atención sostenida humana, intercalando pausas activas que refrescan los neurotransmisores cerebrales y combaten la procrastinación.",
+    "fuente": "temario",
+    "id": "psi_t04_s02_c03",
+    "options": [
+      "Estudiar seis horas ininterrumpidas sin levantarse de la silla.",
+      "Dormir 25 minutos y estudiar 5 minutos durante toda la madrugada.",
+      "Comer tomates frescos mientras se resuelven problemas de física.",
+      "Bloques de 25 minutos de estudio enfocado sin distracciones, seguidos de 5 minutos de descanso breve, completando 4 ciclos antes de un descanso prolongado (15-30 min)."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "La 'Técnica Pomodoro', ideada por Francesco Cirillo para potenciar la concentración y evitar la fatiga mental, se estructura operativamente en:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.4",
+    "correctIndex": 3,
+    "explanation": "La procrastinación no es pereza física sino un problema de autorregulación emocional: se evita la tarea por miedo al fracaso, ansiedad, aburrimiento o perfeccionismo paralizante.",
+    "fuente": "temario",
+    "id": "psi_t04_s02_c04",
+    "options": [
+      "La habilidad para memorizar poemas extensos en pocos minutos.",
+      "Una enfermedad genética muscular degenerativa.",
+      "El estudio simultáneo de tres idiomas extranjeros.",
+      "El hábito irracional de postergar deliberadamente el inicio o culminación de tareas académicas importantes, sustituyéndolas por actividades más placenteras o irrelevantes a pesar de saber que habrá consecuencias negativas."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "El fenómeno psicológico de la 'Procrastinación' se define formalmente como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.5",
+    "correctIndex": 2,
+    "explanation": "Cyril Northcote Parkinson comprobó que si un estudiante se da dos semanas para hacer una tarea que toma dos horas, la tarea ocupará mentalmente las dos semanas completas.",
+    "fuente": "temario",
+    "id": "psi_t04_s02_c05",
+    "options": [
+      "Las personas más inteligentes son las que menos horas duermen.",
+      "Todo lo que puede salir mal, saldrá mal en el peor momento.",
+      "El trabajo se expande hasta llenar por completo el tiempo disponible asignado para su realización.",
+      "La memoria humana disminuye al doble de la velocidad cada año bisiesto."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "La 'Ley de Parkinson' sobre la administración del tiempo y la productividad enuncia que:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.5",
+    "correctIndex": 3,
+    "explanation": "Vilfredo Pareto descubrió la distribución asimétrica del impacto: identificar y dominar el 20% de temas recurrentes de alta frecuencia garantiza la mayor parte del puntaje en una prueba.",
+    "fuente": "temario",
+    "id": "psi_t04_s02_c06",
+    "options": [
+      "Se debe estudiar 80 horas a la semana y dormir solo 20.",
+      "Solo el 20% de los libros tiene portada ilustrada.",
+      "El 80% de los estudiantes reprueba el 20% de los exámenes.",
+      "El 20% de las tareas, temas o esfuerzos prioritarios y estratégicos produce el 80% de los resultados y aprendizajes clave en un examen de admisión."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "El 'Principio de Pareto' o regla del 80/20 aplicado al rendimiento académico postula que aproximadamente:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.6",
+    "correctIndex": 2,
+    "explanation": "Los ladrones de tiempo drenan horas vitales en micro-interrupciones invisibles que sabotean el cronograma de estudio e impiden alcanzar el estado de flujo cognitivo.",
+    "fuente": "temario",
+    "id": "psi_t04_s02_c07",
+    "options": [
+      "El uso de cuadernos cuadriculados y lápices bien afilados.",
+      "El repaso sistemático de errores en simulacros.",
+      "Notificaciones constantes de redes sociales, navegación pasiva interminable, visitas no planificadas y la incapacidad asertiva para decir 'no' a distracciones.",
+      "La alimentación rica en proteínas y verduras frescas."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "Los llamados 'ladrones del tiempo' (time wasters) en la vida del estudiante preuniversitario corresponden a factores como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.6",
+    "correctIndex": 1,
+    "explanation": "Un cronograma que no incluye sueño reparador y pausas fisiológicas genera agotamiento crónico (burnout), colapsando el rendimiento cognitivo en pocas semanas.",
+    "fuente": "temario",
+    "id": "psi_t04_s02_c08",
+    "options": [
+      "Estudiar únicamente cuando el sujeto sienta 'inspiración divina'.",
+      "Horas fijas para clases, estudio personal activo, repasos espaciados, pero también tiempo inviolable para dormir (7-8 horas), alimentación, actividad física y recreación sana.",
+      "Cero horas de descanso y vigilia permanente durante 168 horas semanales.",
+      "Programar todas las materias complejas los domingos por la noche."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "Un horario de estudio semanal eficaz y realista debe contemplar obligatoriamente dentro de su estructura:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.4",
+    "correctIndex": 0,
+    "explanation": "El efecto Zeigarnik demuestra que el cerebro siente tensión por completar tareas iniciadas; superar los primeros 5 minutos rompe la resistencia psicológica a empezar.",
+    "fuente": "temario",
+    "id": "psi_t04_s02_c09",
+    "options": [
+      "Comprometerse a trabajar concentradamente en la tarea solo durante cinco minutos; una vez vencida la barrera de fricción inicial, el cerebro tiende a continuar la actividad.",
+      "Programar pausas de cinco minutos cada hora para evitar la sobrecarga cognitiva.",
+      "Dividir el tiempo de estudio en bloques rígidos de cinco minutos de memoria mecánica.",
+      "Esperar cinco minutos después de un estímulo distractor antes de retomar la lectura."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "Para vencer la resistencia inicial al iniciar una tarea aburrida o compleja y superar la inercia de la procrastinación, la 'Regla de los 5 minutos' propone:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.7",
+    "correctIndex": 3,
+    "explanation": "Dormir menos de 6 horas deteriora severamente la consolidación de la memoria en el hipocampo y la atención prefrontal al día siguiente; el sueño es parte indispensable del estudio.",
+    "fuente": "temario",
+    "id": "psi_t04_s02_c10",
+    "options": [
+      "Borra deliberadamente todos los recuerdos del día.",
+      "Multiplica las neuronas al doble de su tamaño.",
+      "Permanece completamente apagado sin ninguna actividad metabólica.",
+      "Consolida las huellas mnémicas en la corteza cerebral, limpia toxinas metabólicas (sistema glinfático) y reorganiza los aprendizajes adquiridos."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "El sueño nocturno profundo (fases de ondas lentas y sueño REM) cumple un rol biológico insustituible en el aprendizaje porque durante la noche el cerebro:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

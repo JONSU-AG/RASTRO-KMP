@@ -1,0 +1,18 @@
+{
+  "week": 5,
+  "title": "Sintaxis: Categorías Gramaticales y Frases",
+  "lessons": [
+    {
+      "subtopic": "5.1",
+      "lessonId": "leng_t05_s01",
+      "title": "La Sintaxis y las Categorías Gramaticales: Variables e Invariables",
+      "path": "5.1/lesson.json"
+    },
+    {
+      "subtopic": "5.2",
+      "lessonId": "leng_t05_s02",
+      "title": "Estructura de la Frase Nominal (FN), Frase Verbal (FV) y sus Complementos",
+      "path": "5.2/lesson.json"
+    }
+  ]
+}

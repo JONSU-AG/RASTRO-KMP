@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "4.1.1",
+    "correctIndex": 2,
+    "explanation": "Los hábitos de estudio son pautas de comportamiento automatizadas por la repetición constante bajo condiciones temporales y ambientales determinadas, reduciendo el esfuerzo volitivo.",
+    "fuente": "temario",
+    "id": "psi_t04_s01_c01",
+    "options": [
+      "Un talento innato que se transmite a través del ADN familiar.",
+      "La memorización literal de palabras sin comprender su significado.",
+      "Una conducta aprendida, estable y automatizada que el estudiante ejecuta de forma regular y eficiente para asimilar, procesar y retener información académica.",
+      "El estudio forzado la noche anterior a un examen mediante el consumo de café."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "En la psicología del aprendizaje, un 'Hábito de Estudio' se define científicamente como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.2",
+    "correctIndex": 0,
+    "explanation": "EPLERR es un método sistemático de procesamiento activo: exploración panorámica previa, formulación de preguntas indagatorias, lectura crítica, estructuración gráfica, verbalización y repaso espaciado.",
+    "fuente": "temario",
+    "id": "psi_t04_s01_c02",
+    "options": [
+      "Examinar (Explore), Preguntar, Leer, Esquematizar, Recitar/Repetir y Revisar/Repasar.",
+      "Escuchar, Platicar, Leer, Entretenerse, Responder y Relajarse.",
+      "Evaluar, Posponer, Leer, Excluir, Resolver y Renunciar.",
+      "Escribir, Preguntar, Llorar, Estudiar, Romper y Repetir."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "El célebre método de estudio EPLERR (o SQ3R de Francis Robinson) comprende las siguientes fases metodológicas secuenciales:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.3",
+    "correctIndex": 0,
+    "explanation": "La comprensión lectora profunda involucra procesos cognitivos de orden superior: decodificación semántica, metacognición y construcción de modelos mentales significativos.",
+    "fuente": "temario",
+    "id": "psi_t04_s01_c03",
+    "options": [
+      "Identificar la idea principal, contrastar argumentos, cuestionar premisas, inferir conclusiones y relacionar la nueva información con los conocimientos previos.",
+      "Leer a la máxima velocidad posible sin detenerse a pensar.",
+      "Copiar el texto palabra por palabra en un cuaderno nuevo.",
+      "Subrayar la totalidad de las páginas con resaltador fluorescente."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "La técnica de 'Lectura Crítica o Comprensiva' se diferencia del mero deletreo mecánico superficial porque exige al estudiante:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.4",
+    "correctIndex": 1,
+    "explanation": "El mapa conceptual jerarquiza conceptos desde los más generales e inclusivos hasta los más específicos, unidos por palabras de enlace que estructuran proposiciones lógicas.",
+    "fuente": "temario",
+    "id": "psi_t04_s01_c04",
+    "options": [
+      "Árbol genealógico monárquico",
+      "Mapa Conceptual (conceptos interconectados mediante palabras de enlace formando proposiciones)",
+      "Cuadro de doble entrada alfabético",
+      "Diagrama de dispersión estadística"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "El organizador visual jerárquico creado por Joseph Novak sustentado en la teoría del aprendizaje significativo de David Ausubel es el:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.4",
+    "correctIndex": 3,
+    "explanation": "Los mapas mentales imitan las redes neuronales: organización radial, imágenes mnémicas asociativas y colores estimulantes que facilitan la retención mnemotécnica.",
+    "fuente": "temario",
+    "id": "psi_t04_s01_c05",
+    "options": [
+      "Listados verticales monótonos en tinta negra exclusivamente.",
+      "Párrafos extensos de texto sin ilustraciones.",
+      "Ecuaciones algebraicas diferenciales puras.",
+      "Una imagen o palabra central de la cual se ramifican radialmente ideas clave utilizando colores, curvas, imágenes y símbolos visuales."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "Los Mapas Mentales desarrollados por Tony Buzan se caracterizan por una estructura cognitiva que estimula ambos hemisferios cerebrales mediante:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.5",
+    "correctIndex": 0,
+    "explanation": "La buena iluminación previene la fatiga ocular y la somnolencia; para diestros la luz debe entrar por la izquierda y para zurdos por la derecha.",
+    "fuente": "temario",
+    "id": "psi_t04_s01_c06",
+    "options": [
+      "Suficiente y preferentemente natural (o luz blanca difusa), que ingrese desde el lado opuesto a la mano que escribe para no proyectar sombras molestas sobre el papel.",
+      "Extremadamente tenue para inducir la relajación muscular.",
+      "Luz estroboscópica de discoteca de colores cambiantes.",
+      "Una sola vela colocada detrás de la espalda del estudiante."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "En las condiciones ambientales que optimizan el rendimiento intelectual, la iluminación del espacio de estudio debe ser preferentemente:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.6",
+    "correctIndex": 0,
+    "explanation": "La metacognición es 'aprender a aprender': ser consciente de qué se sabe, qué no se ha comprendido aún y qué estrategia correctiva aplicar para solucionar la laguna cognitiva.",
+    "fuente": "temario",
+    "id": "psi_t04_s01_c07",
+    "options": [
+      "El conocimiento, supervisión, monitoreo y autorregulación reflexiva que el propio estudiante ejerce sobre sus propios procesos y estrategias de aprendizaje.",
+      "La telepatía entre el profesor y el alumno durante un examen.",
+      "La memorización inconsciente de fórmulas matemáticas sin entenderlas.",
+      "El estado de trance hipnótico inducido por la música clásica."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "La 'Metacognición' en el proceso de estudio se define como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.6",
+    "correctIndex": 1,
+    "explanation": "El cerebro no procesa simultáneamente múltiples tareas atencionales complejas; alterna rápidamente entre ellas (coste de cambio de tarea), generando fatiga mental y errores masivos.",
+    "fuente": "temario",
+    "id": "psi_t04_s01_c08",
+    "options": [
+      "Aumenta la velocidad de sinapsis neuronales al triple.",
+      "Fragmenta la atención sostenida, satura la memoria de trabajo y disminuye drásticamente la profundidad de comprensión y fijación en la memoria a largo plazo.",
+      "Produce una relajación física que induce al sueño profundo.",
+      "Permite aprobar exámenes sin necesidad de estudiar."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "Uno de los hábitos más nocivos para el aprendizaje de calidad es el llamado 'multitasking' o multitarea continua (estudiar mientras se revisan redes sociales, se ve televisión y se escucha podcasts) porque:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.7",
+    "correctIndex": 2,
+    "explanation": "Hermann Ebbinghaus descubrió que el olvido es masivo las primeras 24 horas; los repasos espaciados reactivan la huella mnémica, haciendo permanente la consolidación sináptica.",
+    "fuente": "temario",
+    "id": "psi_t04_s01_c09",
+    "options": [
+      "El atracón garantiza que la información se recuerde con nitidez durante años.",
+      "El cerebro se desgasta irreparablemente si se repasa más de una vez.",
+      "Distribuir sesiones de estudio breves y separadas por intervalos de tiempo combate la curva del olvido de Ebbinghaus y afianza la memoria a largo plazo.",
+      "Solo sirve para aprender canciones y no temas científicos."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "La técnica de estudio de la 'Práctica Espaciada' (repaso espaciado) frente al 'atracón de estudio' (cramming) de última hora ha demostrado experimentalmente que:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.7",
+    "correctIndex": 2,
+    "explanation": "El físico Richard Feynman sostenía que quien no puede explicar un concepto en lenguaje simple y claro, en realidad no lo ha comprendido a profundidad.",
+    "fuente": "temario",
+    "id": "psi_t04_s01_c10",
+    "options": [
+      "Repetir de memoria las definiciones exactas del diccionario.",
+      "Escribir una tesis de trescientas páginas con fórmulas complejas.",
+      "Explicar el tema con palabras sencillas y cotidianas, como si se le estuviera enseñando a un niño de diez años, identificando de inmediato los vacíos de comprensión.",
+      "Contratar a un profesor particular para que resuelva los problemas."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "La 'Técnica de Feynman' para comprobar el dominio conceptual de un tema difícil exige al estudiante:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

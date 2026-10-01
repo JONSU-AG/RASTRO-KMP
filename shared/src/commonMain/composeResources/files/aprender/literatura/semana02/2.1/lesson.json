@@ -1,0 +1,34 @@
+{
+  "id": "lit_t02_s01",
+  "subjectId": "literatura",
+  "semana": 2,
+  "subtema": "2.1",
+  "title": "3.1. El Clasicismo Griego",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/literatura/LiteraturaSemana02.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/TEMA_02_Literatura_Universal.md + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/OBRAS/OBRA_01_Iliada_Homero.md + OBRA_02_Odisea_Homero.md + OBRA_03_Edipo_Rey_Sofocles.md",
+  "learningObjectives": [
+    "Explicar la Ilíada como epopeya de la cólera de Aquiles con doble cólera, muerte de Patroclo y súplica de Príamo",
+    "Caracterizar la Odisea como epopeya del retorno con astucia metis, Telemaquia y fidelidad de Penélope",
+    "Analizar Edipo Rey como tragedia del fatum con anagnórisis, Tiresias ciego vidente y autocastigo",
+    "Diferenciar Esquilo con segundo actor, hybris como desmesura y epíteto homérico como fórmula fija",
+    "Aplicar trampas de admisión como final con funerales de Héctor y no con caballo de Troya"
+  ],
+  "theory": {
+    "id": "th_lit_t02_s01",
+    "asignatura": "Literatura",
+    "semana": 2,
+    "titulo": "3.1. El Clasicismo Griego",
+    "resumen": "",
+    "conceptosClave": [
+      "Cólera de Aquiles en dos fases con Briseida y Patroclo hasta funerales de Héctor",
+      "Nostos de Odiseo con metis astuta y estructura de Telemaquia más retorno más venganza",
+      "Fatum inexorable en Edipo Rey con anagnórisis ante pastores y peste por Layo",
+      "Tiresias ciego físico y vidente moral frente a Edipo vidente físico y ciego moral",
+      "Hybris como soberbia contra dioses y hamartia como error que precipita ruina",
+      "Epíteto homérico como fórmula fija el de los pies ligeros y la de ojos de lechuza",
+      "Esquilo padre de la tragedia con segundo actor y Orestíada frente a Sófocles"
+    ],
+    "admissionTip": "Si ves cólera marca Aquiles, si ves retorno con astucia marca Odiseo, si ves rey anciano que besa manos homicidas marca Príamo, si ves esposa que teje y desteje marca Penélope, si ves ciego que ve verdad marca Tiresias, si ves Ilíada con caballo de Troya descarta porque termina con funerales de Héctor.",
+    "admissionExplanation": "La trampa más castigada es cerrar la Ilíada con caída de Troya y confundir epopeya con tragedia, además de atribuir a Edipo saber que Layo era su padre y confundir hybris con simple codicia."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "week": 3,
+  "title": "Orientación Vocacional",
+  "lessons": [
+    {
+      "subtopic": "3.1",
+      "lessonId": "psi_t03_s01",
+      "title": "3.1. Diferenciación Conceptual Fundamental",
+      "path": "3.1/lesson.json"
+    },
+    {
+      "subtopic": "3.2",
+      "lessonId": "psi_t03_s02",
+      "title": "4.1. Tipología Ocupacional RIASEC de John Holland",
+      "path": "3.2/lesson.json"
+    }
+  ]
+}

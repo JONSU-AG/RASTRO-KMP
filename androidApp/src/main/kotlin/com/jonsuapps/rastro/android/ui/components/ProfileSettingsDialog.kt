@@ -46,11 +46,13 @@ fun ProfileSettingsDialog(
     onOpenTermsAndPrivacy: (initialTab: Int) -> Unit,
     onLogout: () -> Unit,
     onAccountDeleted: () -> Unit,
-    onOpenThemeSelector: () -> Unit = {}
+    onOpenThemeSelector: () -> Unit = {},
+    onOpenLegal: () -> Unit = {}
 ) {
     val context = LocalContext.current
     val currentUser by UserManager.currentUser.collectAsState()
     var showDeleteConfirmDialog by remember { mutableStateOf(false) }
+    var showBlockedUsersDialog by remember { mutableStateOf(false) }
     var isDeleting by remember { mutableStateOf(false) }
     var deletionError by remember { mutableStateOf<String?>(null) }
 
@@ -322,34 +324,69 @@ fun ProfileSettingsDialog(
 
                     // ── 3. LEGAL Y CUMPLIMIENTO PLAY STORE ──────────────────
                     SettingsSectionCard(
-                        title = "Legal y Políticas Google Play",
-                        icon = Icons.Rounded.Gavel,
+                        title = "Legal y privacidad",
+                        icon = Icons.Rounded.Policy,
                         iconColor = Color(0xFF10B981),
                         colors = colors
                     ) {
                         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                             SettingsOptionRow(
-                                title = "Políticas de Privacidad & Protección de Datos",
+                                title = "Legal y privacidad (Centro Oficial)",
+                                subtitle = "Política, Términos, Normas y Eliminación de datos",
+                                icon = Icons.Rounded.Policy,
+                                colors = colors,
+                                onClick = {
+                                    onDismiss()
+                                    onOpenLegal()
+                                }
+                            )
+
+                            SettingsOptionRow(
+                                title = "Términos y Condiciones",
+                                subtitle = "Uso de la plataforma, normas académicas y deslinde",
+                                icon = Icons.Rounded.Description,
+                                colors = colors,
+                                onClick = {
+                                    com.jonsuapps.rastro.android.util.LegalLinks.openUrl(context, com.jonsuapps.rastro.android.util.LegalLinks.URL_TERMINOS)
+                                }
+                            )
+
+                            SettingsOptionRow(
+                                title = "Política de Privacidad",
                                 subtitle = "Cero venta de datos, retención segura y Firebase",
                                 icon = Icons.Rounded.Shield,
                                 colors = colors,
-                                onClick = { onOpenTermsAndPrivacy(0) }
+                                onClick = {
+                                    com.jonsuapps.rastro.android.util.LegalLinks.openUrl(context, com.jonsuapps.rastro.android.util.LegalLinks.URL_PRIVACIDAD)
+                                }
                             )
 
                             SettingsOptionRow(
-                                title = "Términos de Servicio y Moderación UGC",
-                                subtitle = "Normas de la comunidad y tolerancia cero",
-                                icon = Icons.Rounded.Policy,
+                                title = "Normas de la Comunidad",
+                                subtitle = "Convivencia estudiantil y tolerancia cero a conductas dañinas",
+                                icon = Icons.Rounded.Groups,
                                 colors = colors,
-                                onClick = { onOpenTermsAndPrivacy(1) }
+                                onClick = {
+                                    com.jonsuapps.rastro.android.util.LegalLinks.openUrl(context, com.jonsuapps.rastro.android.util.LegalLinks.URL_COMUNIDAD)
+                                }
                             )
 
                             SettingsOptionRow(
-                                title = "Autoría, CEPREUNSA y Deslinde",
-                                subtitle = "Material pedagógico y deslinde institucional",
-                                icon = Icons.Rounded.School,
+                                title = "Eliminación de Cuenta y Datos",
+                                subtitle = "Portal web de solicitud de borrado de datos (Google Play)",
+                                icon = Icons.Rounded.DeleteForever,
                                 colors = colors,
-                                onClick = { onOpenTermsAndPrivacy(3) }
+                                onClick = {
+                                    com.jonsuapps.rastro.android.util.LegalLinks.openUrl(context, com.jonsuapps.rastro.android.util.LegalLinks.URL_ELIMINAR_CUENTA)
+                                }
+                            )
+
+                            SettingsOptionRow(
+                                title = "Usuarios Bloqueados (${currentUser.blockedUsers.size})",
+                                subtitle = "Gestiona y desbloquea usuarios de la comunidad",
+                                icon = Icons.Rounded.Block,
+                                colors = colors,
+                                onClick = { showBlockedUsersDialog = true }
                             )
                         }
                     }
@@ -515,6 +552,13 @@ fun ProfileSettingsDialog(
                 }
             }
         }
+    }
+
+    if (showBlockedUsersDialog) {
+        BlockedUsersDialog(
+            currentUser = currentUser,
+            onDismiss = { showBlockedUsersDialog = false }
+        )
     }
 }
 

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "psi_t09_s01_c01",
+    "statement": "En psicología científica, el 'Aprendizaje' se define formalmente como:",
+    "options": [
+      "Cualquier cambio corporal transitorio provocado por la fatiga o la embriaguez alcohólica.",
+      "La maduración biológica espontánea del sistema motor (como empezar a caminar al cumplir el año).",
+      "El cambio relativamente permanente en la conducta o en las representaciones mentales y esquemas cognitivos, producido como resultado de la experiencia, práctica o entrenamiento.",
+      "El crecimiento en estatura y peso de los niños."
+    ],
+    "correctIndex": 2,
+    "explanation": "Para que un cambio sea aprendizaje debe ser duradero y derivado de la experiencia; se excluyen cambios efímeros por drogas, fatiga o la mera maduración biológica genética.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s01_c02",
+    "statement": "¿Cuál de las siguientes conductas NO constituye un aprendizaje sino un reflejo innato no aprendido?",
+    "options": [
+      "Manejar una motocicleta en una avenida transitada",
+      "Retirar instantáneamente la mano al tocar una olla hirviendo (reflejo de flexión)",
+      "Escribir un ensayo en procesador de textos",
+      "Recitar las tablas de multiplicar de memoria"
+    ],
+    "correctIndex": 1,
+    "explanation": "Los reflejos medulares innatos son circuitos preprogramados biológicamente para la defensa inmediata sin intervención de la experiencia previa.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s01_c03",
+    "statement": "El cambio de conducta que se produce únicamente por el desarrollo físico y mielinización progresiva del sistema nervioso (como el control de esfínteres a cierta edad) se debe al proceso de:",
+    "options": [
+      "Aprendizaje por descubrimiento",
+      "Maduración biológica",
+      "Condicionamiento operante",
+      "Refuerzo secundario"
+    ],
+    "correctIndex": 1,
+    "explanation": "La maduración es el despliegue del programa genético biológico; proporciona el sustrato anatómico sobre el cual luego puede intervenir el aprendizaje.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s01_c04",
+    "statement": "El Condicionamiento Clásico (o respondiente) fue descubierto accidentalmente en Rusia por el fisiólogo premio Nobel:",
+    "options": [
+      "Iván Pávlov",
+      "Lev Vygotsky",
+      "Alexander Luria",
+      "Vladimir Béjterev"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pávlov investigaba la digestión en perros y descubrió las 'secreciones psíquicas': los animales salivaban antes de ver la comida ante estímulos asociados al cuidador.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s01_c05",
+    "statement": "En el paradigma experimental del condicionamiento clásico de Pávlov, la carne molida colocada en la boca del perro actúa como un:",
+    "options": [
+      "Estímulo Incondicionado (EI)",
+      "Estímulo Condicionado (EC)",
+      "Estímulo Neutro (EN)",
+      "Respuesta Condicionada (RC)"
+    ],
+    "correctIndex": 0,
+    "explanation": "El EI es el estímulo biológico que desencadena de forma innata y automática una respuesta refleja no aprendida (la salivación incondicionada).",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s01_c06",
+    "statement": "El sonido de una campana que inicialmente no provocaba salivación en el animal (Estímulo Neutro), tras ser emparejado repetidamente justo antes de la presentación de la comida, se convierte en un:",
+    "options": [
+      "Refuerzo negativo",
+      "Estímulo Incondicionado (EI)",
+      "Estímulo Condicionado (EC)",
+      "Castigo vicario"
+    ],
+    "correctIndex": 2,
+    "explanation": "Por contigüidad temporal y asociación repetida, el estímulo previamente neutro adquiere la capacidad de evocar la salivación, denominándose Estímulo Condicionado.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s01_c07",
+    "statement": "La salivación provocada únicamente por el sonido de la campana en ausencia total de comida es técnicamente la:",
+    "options": [
+      "Conducta de escape",
+      "Respuesta Incondicionada (RI)",
+      "Respuesta Condicionada (RC)",
+      "Extinción operante"
+    ],
+    "correctIndex": 2,
+    "explanation": "La RC es la respuesta refleja aprendida evocada por el Estímulo Condicionado tras el proceso asociativo.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s01_c08",
+    "statement": "John B. Watson y Rosalie Rayner demostraron que las emociones humanas pueden condicionarse clásicamente mediante el célebre y éticamente controvertido experimento con:",
+    "options": [
+      "El mono Rhesus y la madre de felpa",
+      "La paloma de Skinner en la cámara de picoteo",
+      "El gato encerrado en la caja problema de Thorndike",
+      "El pequeño Albert (condicionamiento del miedo fóbico a una rata blanca mediante un ruido metálico aterrador)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Watson condicionó el miedo emparejando la presencia de una rata blanca inofensiva con un estruendo metálico; el niño generalizó luego el terror a objetos peludos y conejos.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s01_c09",
+    "statement": "En el condicionamiento clásico, el proceso de 'Extinción' se produce formalmente cuando:",
+    "options": [
+      "Se administra una descarga eléctrica dolorosa al organismo.",
+      "Se presenta reiteradamente el Estímulo Condicionado (campana) solo, sin asociarlo nunca más con el Estímulo Incondicionado (comida), debilitándose la respuesta hasta desaparecer.",
+      "El animal fallece por inanición.",
+      "Se cambia el color de las paredes del laboratorio."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sin el reforzamiento natural que aporta el EI, el vínculo asociativo se inhibe paulatinamente cesando la emisión de la Respuesta Condicionada.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.1.5",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t09_s01_c10",
+    "statement": "El fenómeno de 'Generalización del Estímulo' se manifiesta cuando el sujeto condicionado emite la respuesta aprendida ante:",
+    "options": [
+      "Estímulos nuevos que guardan una estrecha semejanza física o auditiva con el estímulo condicionado original (ej. salivar ante campanas de diferentes tonos).",
+      "Estímulos totalmente opuestos y de naturaleza distinta.",
+      "Cualquier palabra pronunciada en otro idioma.",
+      "La ausencia absoluta de estímulos sensoriales."
+    ],
+    "correctIndex": 0,
+    "explanation": "Cuanto más semejante sea el nuevo estímulo al EC original, mayor será la probabilidad e intensidad con que se desencadene la respuesta condicionada.",
+    "subject": "psicologia",
+    "semana": 9,
+    "concept": "9.1.5",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

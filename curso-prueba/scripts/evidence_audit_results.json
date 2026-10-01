@@ -1,0 +1,1058 @@
+{
+  "passCount": 1700,
+  "failCount": 184,
+  "subjectReport": {
+    "civica": {
+      "total": 220,
+      "pass": 220,
+      "fail": 0
+    },
+    "comprension_lectora": {
+      "total": 160,
+      "pass": 115,
+      "fail": 45
+    },
+    "filosofia": {
+      "total": 260,
+      "pass": 247,
+      "fail": 13
+    },
+    "geografia": {
+      "total": 260,
+      "pass": 258,
+      "fail": 2
+    },
+    "historia_peru": {
+      "total": 100,
+      "pass": 99,
+      "fail": 1
+    },
+    "historia_universal": {
+      "total": 120,
+      "pass": 117,
+      "fail": 3
+    },
+    "lenguaje": {
+      "total": 194,
+      "pass": 190,
+      "fail": 4
+    },
+    "literatura": {
+      "total": 120,
+      "pass": 102,
+      "fail": 18
+    },
+    "psicologia": {
+      "total": 290,
+      "pass": 251,
+      "fail": 39
+    },
+    "razonamiento_verbal": {
+      "total": 160,
+      "pass": 101,
+      "fail": 59
+    }
+  },
+  "allEvidence": [
+    {
+      "id": "civ_t01_s01_c01",
+      "lessonId": "civ_t01_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "Según el Artículo 1° de la Constitución Política del Perú de 1993, el fin supremo de la sociedad y del Estado es:",
+      "correctOption": "La defensa de la persona humana y el respeto de su dignidad",
+      "correctIndex": 3,
+      "evidenceSnippet": "- **Artículo 1°**: *\"La defensa de la persona humana y el respeto de su dignidad son el fin supremo de la sociedad y del Estado\"*.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s01_c02",
+      "lessonId": "civ_t01_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "En el ordenamiento civil peruano, el concebido es considerado formalmente como:",
+      "correctOption": "Sujeto de derecho para todo cuanto le favorece, condicionado a nacer vivo",
+      "correctIndex": 1,
+      "evidenceSnippet": "- En el Derecho Civil peruano (Código Civil de 1984, Art. 1°), *\"La persona humana es sujeto de derecho desde su nacimiento. La vida humana comienza con la conc",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s01_c03",
+      "lessonId": "civ_t01_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "El principio constitucional antropocéntrico (o principio 'pro homine') consagrado en la Constitución peruana significa que:",
+      "correctOption": "Las instituciones públicas, leyes y gobernantes existen al servicio de la persona humana",
+      "correctIndex": 0,
+      "evidenceSnippet": "- Este precepto consagra el **Principio Pro Homine** o Antropocéntrico: el Estado, las leyes, la economía y las instituciones públicas existen en función de la ",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s01_c04",
+      "lessonId": "civ_t01_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "La dignidad humana es calificada como 'inmanente e inalienable' debido a que:",
+      "correctOption": "Es consustancial a la condición humana y nadie puede ser despojado de ella ni transferirla",
+      "correctIndex": 2,
+      "evidenceSnippet": "- La persona humana es un ser bio-psico-socio-espiritual dotado de conciencia, racionalidad, voluntad libre y dignidad inmanente.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s01_c05",
+      "lessonId": "civ_t01_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "La dimensión de la persona humana vinculada con la convivencia civilizada en la polis, el ejercicio cívico y la participación social se denomina:",
+      "correctOption": "Dimensión social y cívica",
+      "correctIndex": 2,
+      "evidenceSnippet": "- *Dimensión Social y Cívica*: Convivencia comunitaria, pertenencia a la polis, ejercicio de ciudadanía y construcción de la cultura.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s01_c06",
+      "lessonId": "civ_t01_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "¿Qué estatus jurídico y moral asume el Estado peruano respecto a la dignidad humana?",
+      "correctOption": "La reconoce como preexistente y asume el deber incondicional de protegerla",
+      "correctIndex": 2,
+      "evidenceSnippet": "- La dignidad no se compra, no se enajena, no prescribe y el Estado no la otorga: el Estado **la reconoce y tiene el deber indeclinable de protegerla**.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s01_c07",
+      "lessonId": "civ_t01_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "Si un testamento designa como heredero universal a un concebido que aún no ha nacido, dicha atribución patrimonial:",
+      "correctOption": "Es legalmente válida pero queda formalmente condicionada a que nazca vivo",
+      "correctIndex": 0,
+      "evidenceSnippet": "- En el Derecho Civil peruano (Código Civil de 1984, Art. 1°), *\"La persona humana es sujeto de derecho desde su nacimiento. La vida humana comienza con la conc",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s01_c08",
+      "lessonId": "civ_t01_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "La correlación indisoluble entre derechos fundamentales y deberes cívicos postula que:",
+      "correctOption": "Al goce legítimo de un derecho le corresponde el deber ciudadano de respetar el derecho ajeno y contribuir a la paz social",
+      "correctIndex": 0,
+      "evidenceSnippet": "- A todo derecho le corresponde un **deber cívico y correlativo**: el respeto recíproco al derecho ajeno, el cumplimiento de la ley legítima y la contribución s",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s01_c09",
+      "lessonId": "civ_t01_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "La capacidad del ser humano para gobernarse a sí mismo según principios éticos racionales se vincula primordialmente con la dimensión:",
+      "correctOption": "Ética y espiritual",
+      "correctIndex": 1,
+      "evidenceSnippet": "- *Dimensión Ética y Espiritual*: Capacidad de autodeterminación moral, libre albedrío, sentido de justicia y autotrascendencia.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s01_c10",
+      "lessonId": "civ_t01_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "¿A partir de qué momento consagra el ordenamiento legal peruano el inicio ininterrumpido de la vida humana?",
+      "correctOption": "A partir de la concepción",
+      "correctIndex": 3,
+      "evidenceSnippet": "- En el Derecho Civil peruano (Código Civil de 1984, Art. 1°), *\"La persona humana es sujeto de derecho desde su nacimiento. La vida humana comienza con la conc",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s02_c01",
+      "lessonId": "civ_t01_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "La característica de las normas jurídicas consistente en la facultad del Estado para imponer su cumplimiento mediante la fuerza pública se denomina:",
+      "correctOption": "Coercibilidad",
+      "correctIndex": 2,
+      "evidenceSnippet": "- *Coercibilidad*: La **posibilidad jurídica potencial** que tiene el Estado de emplear la fuerza pública si la norma es vulnerada (propiedad permanente de la n",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s02_c02",
+      "lessonId": "civ_t01_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "¿Qué rasgo distingue esencialmente a las normas morales frente a las normas jurídicas?",
+      "correctOption": "Las normas morales son autónomas e incoercibles, mientras las jurídicas son heterónomas y coercibles",
+      "correctIndex": 1,
+      "evidenceSnippet": "| **Coercibilidad** | **Incoercible** (no hay fuerza física). | **Coercible** (fuerza pública del Estado). | **Incoercible** por la fuerza legal. | **Incoercibl",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s02_c03",
+      "lessonId": "civ_t01_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "Un ciudadano cede voluntariamente el asiento reservado a una madre con un bebé en brazos. Si no lo hiciera, la sanción que recibiría en el plano estrictamente moral sería:",
+      "correctOption": "El remordimiento de su propia conciencia y la culpa moral",
+      "correctIndex": 0,
+      "evidenceSnippet": "| **Tipo de Sanción** | Remordimiento de conciencia y culpa. | Pena de cárcel, multa, sanción legal. | Reproche, censura social, marginación. | Sentimiento de p",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s02_c04",
+      "lessonId": "civ_t01_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "Las reglas de etiqueta, protocolo y cortesía social son consideradas normas sociales o convencionales porque:",
+      "correctOption": "Surgen de la costumbre comunitaria y su infracción acarrea censura social o rechazo grupal",
+      "correctIndex": 3,
+      "evidenceSnippet": "| **Tipo de Sanción** | Remordimiento de conciencia y culpa. | Pena de cárcel, multa, sanción legal. | Reproche, censura social, marginación. | Sentimiento de p",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s02_c05",
+      "lessonId": "civ_t01_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "La bilateralidad de la norma jurídica significa formalmente que:",
+      "correctOption": "Frente al deber jurídico impuesto a un sujeto, existe la facultad de otro para exigir su cumplimiento",
+      "correctIndex": 1,
+      "evidenceSnippet": "- *Coercibilidad*: La **posibilidad jurídica potencial** que tiene el Estado de emplear la fuerza pública si la norma es vulnerada (propiedad permanente de la n",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s02_c06",
+      "lessonId": "civ_t01_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "El principio cívico y democrático que promueve la solución de desacuerdos mediante la deliberación pacífica, rechazando toda forma de violencia, se denomina:",
+      "correctOption": "Cultura de paz",
+      "correctIndex": 3,
+      "evidenceSnippet": "- **Cultura de Paz**: Conjunto de valores, actitudes y comportamientos que rechazan toda forma de violencia física o verbal, promoviendo el diálogo deliberativo",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s02_c07",
+      "lessonId": "civ_t01_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "¿Cuál de las siguientes afirmaciones describe de manera precisa el carácter exterior de las normas jurídicas?",
+      "correctOption": "Regulan los actos objetivos y conductas manifiestas, sin sancionar meros pensamientos no exteriorizados",
+      "correctIndex": 2,
+      "evidenceSnippet": "| **Interioridad / Exterioridad**| **Interior** (prioriza la intención). | **Exterior** (prioriza el acto material).| **Exterior** (trato y conducta social). | ",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s02_c08",
+      "lessonId": "civ_t01_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "El valor cívico consistente en la disposición fraternal de colaboración y ayuda desinteresada hacia los sectores más vulnerables de la comunidad se denomina:",
+      "correctOption": "Solidaridad",
+      "correctIndex": 1,
+      "evidenceSnippet": "- **Solidaridad Cívica**: Adhesión y ayuda mutua ante situaciones de vulnerabilidad, desastre natural o necesidad colectiva; orientada a la consecución del **Bi",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s02_c09",
+      "lessonId": "civ_t01_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "Las normas religiosas se diferencian de las normas jurídicas estatales fundamentalmente porque:",
+      "correctOption": "Emanan de la fe y su sanción es de orden trascendente o espiritual, careciendo de coercibilidad física estatal",
+      "correctIndex": 3,
+      "evidenceSnippet": "| **Coercibilidad** | **Incoercible** (no hay fuerza física). | **Coercible** (fuerza pública del Estado). | **Incoercible** por la fuerza legal. | **Incoercibl",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t01_s02_c10",
+      "lessonId": "civ_t01_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "question": "Cuando se afirma que una norma es 'heterónoma', se quiere significar con rigor técnico que:",
+      "correctOption": "Ha sido creada e impuesta por una autoridad exterior al destinatario",
+      "correctIndex": 0,
+      "evidenceSnippet": "| **Autonomía / Heteronomía** | **Autónoma** (uno mismo se la dicta). | **Heterónoma** (impuesta desde fuera). | **Heterónoma** (impuesta por el grupo). | **Het",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s01_c01",
+      "lessonId": "civ_t02_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "De acuerdo con el Artículo 30° de la Constitución Política del Perú, son considerados ciudadanos:",
+      "correctOption": "Los peruanos mayores de dieciocho años con inscripción electoral",
+      "correctIndex": 1,
+      "evidenceSnippet": "- *\"Son ciudadanos los peruanos mayores de dieciocho años. Para el ejercicio de la ciudadanía se requiere la inscripción electoral\"*.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s01_c02",
+      "lessonId": "civ_t02_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "¿Cuántas causales de suspensión de la ciudadanía establece de manera taxativa el Artículo 33° de la Constitución?",
+      "correctOption": "Tres causales",
+      "correctIndex": 3,
+      "evidenceSnippet": "El **Artículo 33° de la Constitución Política del Perú** establece de manera taxativa y cerrada las tres únicas causales por las cuales se suspende el ejercicio",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s01_c03",
+      "lessonId": "civ_t02_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "Un ciudadano que se encuentra cumpliendo una condena efectiva de cuatro años de prisión en un penal del país experimenta:",
+      "correctOption": "La suspensión temporal del ejercicio de su ciudadanía",
+      "correctIndex": 2,
+      "evidenceSnippet": "- *Nota Crucial*: La ciudadanía **se suspende temporalmente**, no se pierde definitivamente la nacionalidad de origen. Al extinguirse la pena o revocarse la med",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s01_c04",
+      "lessonId": "civ_t02_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "Cuando cesan los motivos que originaron una resolución judicial de interdicción y el juez dicta la rehabilitación, el ciudadano:",
+      "correctOption": "Recupera plenamente el ejercicio de sus derechos cívicos y políticos",
+      "correctIndex": 2,
+      "evidenceSnippet": "El **Artículo 33° de la Constitución Política del Perú** establece de manera taxativa y cerrada las tres únicas causales por las cuales se suspende el ejercicio",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s01_c05",
+      "lessonId": "civ_t02_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "¿Cuál de las siguientes situaciones NO constituye una causal constitucional de suspensión de la ciudadanía en el Perú?",
+      "correctOption": "Mantener deudas tributarias en la SUNAT o moras comerciales",
+      "correctIndex": 3,
+      "evidenceSnippet": "El **Artículo 33° de la Constitución Política del Perú** establece de manera taxativa y cerrada las tres únicas causales por las cuales se suspende el ejercicio",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s01_c06",
+      "lessonId": "civ_t02_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "El documento oficial emitido por el Estado peruano que acredita la identidad y la condición de ciudadano con capacidad electoral es el:",
+      "correctOption": "Documento Nacional de Identidad (DNI)",
+      "correctIndex": 1,
+      "evidenceSnippet": "3. Estar debidamente inscrito en el Registro Nacional de Identificación y Estado Civil (RENIEC) y contar con el Documento Nacional de Identidad (DNI) electrónic",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s01_c07",
+      "lessonId": "civ_t02_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "La sanción impuesta por el Congreso de la República mediante juicio político que impide a un alto funcionario ejercer función pública hasta por 10 años corresponde a:",
+      "correctOption": "Inhabilitación de los derechos políticos (Art. 100° Const.)",
+      "correctIndex": 3,
+      "evidenceSnippet": "- Sanción penal o condena impuesta por el Poder Judicial o juicio político del Congreso (Art. 100° Const.) que suspende expresamente la facultad de votar, postu",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s01_c08",
+      "lessonId": "civ_t02_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "Si un joven peruano cumple 18 años el mismo día de los comicios presidenciales, para ejercer su derecho al voto requiere indispensablemente:",
+      "correctOption": "Estar inscrito en el padrón electoral del RENIEC con DNI",
+      "correctIndex": 1,
+      "evidenceSnippet": "- *\"Son ciudadanos los peruanos mayores de dieciocho años. Para el ejercicio de la ciudadanía se requiere la inscripción electoral\"*.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s01_c09",
+      "lessonId": "civ_t02_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "La nemotecnia preuniversitaria 'IN - PE - IN' ayuda a recordar de forma infalible las causales del Art. 33° correspondientes a:",
+      "correctOption": "Interdicción, Pena privativa de libertad, Inhabilitación de derechos políticos",
+      "correctIndex": 0,
+      "evidenceSnippet": "El **Artículo 33° de la Constitución Política del Perú** establece de manera taxativa y cerrada las tres únicas causales por las cuales se suspende el ejercicio",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s01_c10",
+      "lessonId": "civ_t02_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "Un ciudadano sentenciado penalmente recupera automáticamente el ejercicio pleno de su ciudadanía cuando:",
+      "correctOption": "Cumple la totalidad de la pena impuesta o es indultado",
+      "correctIndex": 1,
+      "evidenceSnippet": "- *Nota Crucial*: La ciudadanía **se suspende temporalmente**, no se pierde definitivamente la nacionalidad de origen. Al extinguirse la pena o revocarse la med",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s02_c01",
+      "lessonId": "civ_t02_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "Según el Artículo 31° de la Constitución Política del Perú, el sufragio es obligatorio hasta los:",
+      "correctOption": "70 años de edad",
+      "correctIndex": 2,
+      "evidenceSnippet": "- El voto es obligatorio hasta los **70 años**. A los 70 años y un día, no hay sanción por no votar. Si el examen dice \"hasta los 65 años\" (edad de jubilación),",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s02_c02",
+      "lessonId": "civ_t02_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "Respecto a los miembros de las Fuerzas Armadas y Policía Nacional en situación de actividad, la Constitución determina que:",
+      "correctOption": "Tienen derecho al voto, pero no pueden postular a cargos de elección popular ni hacer proselitismo partidario",
+      "correctIndex": 2,
+      "evidenceSnippet": "- Tienen derecho al voto desde el 2005. Lo que **no pueden** es postular a elecciones mientras estén en servicio activo ni deliberar o militar en partidos polít",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s02_c03",
+      "lessonId": "civ_t02_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "De acuerdo con el Artículo 49° de la Constitución, ¿cuál de los siguientes elementos NO es un símbolo patrio oficial de la República del Perú?",
+      "correctOption": "La escarapela",
+      "correctIndex": 0,
+      "evidenceSnippet": "- *Aclaración de Examen*: La **Escarapela** es un distintivo cívico tradicional o emblema nacional de uso popular en Fiestas Patrias, pero **NO es un símbolo pa",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s02_c04",
+      "lessonId": "civ_t02_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "El principio según el cual todo voto ciudadano tiene idéntico peso y valor en el escrutinio electoral sin distinción de riqueza se denomina:",
+      "correctOption": "Voto igual",
+      "correctIndex": 0,
+      "evidenceSnippet": "### Nemotecnia de las Características del Voto:",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s02_c05",
+      "lessonId": "civ_t02_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "La ciudad que ostenta el título constitucional de 'Capital Histórica del Perú' según el Artículo 49° de la Carta Magna es:",
+      "correctOption": "Cusco",
+      "correctIndex": 1,
+      "evidenceSnippet": "- Capital de la República del Perú: La ciudad de **Lima**.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s02_c06",
+      "lessonId": "civ_t02_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "En el ordenamiento constitucional peruano, el quechua, el aimara y las lenguas amazónicas adquieren estatus de idioma oficial:",
+      "correctOption": "En las zonas y distritos donde predominen demográficamente",
+      "correctIndex": 3,
+      "evidenceSnippet": "- *\"Son idiomas oficiales el castellano y, en las zonas donde predominen, también lo son el quechua, el aimara y las demás lenguas aborígenes, según la ley\"*.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s02_c07",
+      "lessonId": "civ_t02_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "El deber ciudadano de tributar para financiar los servicios de educación, salud y seguridad pública se fundamenta constitucionalmente en:",
+      "correctOption": "El deber de honrar al Perú y sostener las cargas públicas de la nación (Art. 38°)",
+      "correctIndex": 3,
+      "evidenceSnippet": "- Capital de la República del Perú: La ciudad de **Lima**.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s02_c08",
+      "lessonId": "civ_t02_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "Si un anciano de 73 años decide libremente no acudir a votar en los comicios regionales, la sanción que le corresponde es:",
+      "correctOption": "Ninguna, debido a que para los mayores de 70 años el voto es facultativo y no sancionable",
+      "correctIndex": 0,
+      "evidenceSnippet": "- El voto es obligatorio hasta los **70 años**. A los 70 años y un día, no hay sanción por no votar. Si el examen dice \"hasta los 65 años\" (edad de jubilación),",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s02_c09",
+      "lessonId": "civ_t02_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "La característica del voto que impide que un ciudadano transfiera su derecho de sufragio a un familiar o apoderado notarial es el voto:",
+      "correctOption": "Personal",
+      "correctIndex": 2,
+      "evidenceSnippet": "| **2. Pena Privativa de la Libertad** | Juez Penal (Sentencia consentida). | Suspensión del derecho a sufragio y reclusión carcelaria efectiva. | Al cumplir la",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t02_s02_c10",
+      "lessonId": "civ_t02_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "question": "El deber de defender la patria y la integridad territorial ante amenazas bélicas exteriores o catástrofes naturales incumbe primordialmente a:",
+      "correctOption": "A todos los peruanos según manda la Constitución de la República",
+      "correctIndex": 0,
+      "evidenceSnippet": "- *Aclaración de Examen*: La **Escarapela** es un distintivo cívico tradicional o emblema nacional de uso popular en Fiestas Patrias, pero **NO es un símbolo pa",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s01_c01",
+      "lessonId": "civ_t03_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "La diferencia conceptual medular entre Estado y Nación radica en que:",
+      "correctOption": "El Estado es una entidad jurídica y políticamente organizada, mientras que la Nación es una comunidad sociocultural e histórica",
+      "correctIndex": 2,
+      "evidenceSnippet": "- Es la **sociedad jurídica y políticamente organizada bajo un gobierno común**, asentada sobre un territorio determinado y provista de un poder soberano con mo",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s01_c02",
+      "lessonId": "civ_t03_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "De acuerdo con el Artículo 54° de la Constitución, el territorio del Estado peruano se caracteriza jurídicamente por ser:",
+      "correctOption": "Inalienable e inviolable",
+      "correctIndex": 1,
+      "evidenceSnippet": "- Principio: *\"El territorio del Estado es inalienable e inviolable\"* (Art. 54°).",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s01_c03",
+      "lessonId": "civ_t03_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "El criterio jurídico de adquisición de la nacionalidad denominado 'Ius Soli' (derecho de suelo) establece que:",
+      "correctOption": "Son peruanos por nacimiento las personas nacidas en el territorio de la República",
+      "correctIndex": 1,
+      "evidenceSnippet": "- *Ius Soli* (Derecho de suelo): Son peruanos por nacimiento los nacidos en el territorio de la República.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s01_c04",
+      "lessonId": "civ_t03_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "El dominio marítimo del Perú (Mar de Grau) comprende la soberanía y jurisdicción sobre el mar adyacente a sus costas hasta una distancia de:",
+      "correctOption": "Doscientas millas marinas",
+      "correctIndex": 0,
+      "evidenceSnippet": "- **El Dominio Marítimo (Mar de Grau)**: Comprende el mar adyacente a sus costas hasta la distancia de **doscientas (200) millas marinas**, ejerciendo soberanía",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s01_c05",
+      "lessonId": "civ_t03_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "La soberanía del Estado en su dimensión interna significa fundamentalmente que:",
+      "correctOption": "Posee la potestad suprema e inapelable de dictar y aplicar leyes en todo el territorio nacional",
+      "correctIndex": 2,
+      "evidenceSnippet": "- Capacidad del Estado para autodeterminarse, emitir mandatos jurídicos obligatorios y hacerlos cumplir coactivamente dentro de su territorio (*Soberanía Intern",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s01_c06",
+      "lessonId": "civ_t03_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "Un niño nacido en España, hijo de madre peruana, que es inscrito debidamente en el consulado del Perú durante su minoría de edad, adquiere la nacionalidad por:",
+      "correctOption": "Ius Sanguinis (derecho de sangre)",
+      "correctIndex": 0,
+      "evidenceSnippet": "- *Ius Sanguinis* (Derecho de sangre): Son peruanos por nacimiento los hijos de padre o madre peruanos nacidos en el exterior, inscritos en el registro respecti",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s01_c07",
+      "lessonId": "civ_t03_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "¿Cuáles son los cuatro elementos constitutivos clásicos indispensables para la existencia de todo Estado?",
+      "correctOption": "Pueblo, territorio, poder soberano y ordenamiento jurídico",
+      "correctIndex": 2,
+      "evidenceSnippet": "### B. Los Cuatro Elementos Constitutivos del Estado",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s01_c08",
+      "lessonId": "civ_t03_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "La existencia de pueblos como la nación Kurda, que comparten idioma y cultura pero carecen de un gobierno soberano propio, demuestra que:",
+      "correctOption": "Una nación puede existir sociológicamente sin estar constituida en un Estado independiente",
+      "correctIndex": 0,
+      "evidenceSnippet": "- Una nación **puede existir sin tener un Estado propio territorialmente soberano** (ej. la nación kurda, la nación palestina durante décadas, los pueblos indíg",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s01_c09",
+      "lessonId": "civ_t03_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "El espacio físico que abarca el subsuelo y sus recursos minerales e hidrocarburíferos en el Perú pertenece según la Constitución a:",
+      "correctOption": "La Nación, administrado soberanamente por el Estado",
+      "correctIndex": 3,
+      "evidenceSnippet": "- **El Subsuelo**: Espacio físico situado bajo el suelo (los recursos mineros e hidrocarburos son patrimonio soberano del Estado; Art. 66°).",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s01_c10",
+      "lessonId": "civ_t03_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "La soberanía externa de un Estado moderno se traduce jurídicamente en:",
+      "correctOption": "Su independencia e igualdad jurídica respecto de otros Estados en el orden internacional",
+      "correctIndex": 1,
+      "evidenceSnippet": "- Capacidad del Estado para autodeterminarse, emitir mandatos jurídicos obligatorios y hacerlos cumplir coactivamente dentro de su territorio (*Soberanía Intern",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s02_c01",
+      "lessonId": "civ_t03_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "El Artículo 43° de la Constitución define la forma de gobierno de la República del Perú como:",
+      "correctOption": "Unitaria, representativa y descentralizada",
+      "correctIndex": 3,
+      "evidenceSnippet": "- El Perú **es un Estado unitario descentralizado**, NO federal. Los gobiernos regionales peruanos no tienen soberanía propia ni parlamentos con leyes federales",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s02_c02",
+      "lessonId": "civ_t03_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "De acuerdo con el Artículo 46° de la Carta Magna, ante la instauración de un gobierno usurpador fruto de un golpe de Estado, la población civil tiene derecho a:",
+      "correctOption": "El derecho de insurgencia en defensa del orden constitucional",
+      "correctIndex": 0,
+      "evidenceSnippet": "- *\"La población civil tiene el derecho de insurgencia en defensa del orden constitucional\"*.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s02_c03",
+      "lessonId": "civ_t03_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "¿Cuál de las siguientes obligaciones NO es un deber primordial del Estado peruano según el Artículo 44° de la Constitución?",
+      "correctOption": "Financiar las campañas de los partidos políticos con dinero del tesoro público",
+      "correctIndex": 2,
+      "evidenceSnippet": "### D. Deberes Primordiales del Estado Peruano (Artículo 44° de la Constitución)",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s02_c04",
+      "lessonId": "civ_t03_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "El principio según el cual ningún sector, fuerza armada o individuo puede arrogarse el poder del Estado sin mandato popular se fundamenta en que:",
+      "correctOption": "El poder emana del pueblo soberano (Artículo 45° de la Constitución)",
+      "correctIndex": 1,
+      "evidenceSnippet": "- Ninguna persona, organización, fuerza armada, policía nacional o fracción del pueblo puede atribuirse el ejercicio del poder. Hacerlo constituye **delito de r",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s02_c05",
+      "lessonId": "civ_t03_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "Que el Estado peruano sea calificado como un 'Estado Social de Derecho' significa primordialmente que:",
+      "correctOption": "El Estado tiene el deber de intervenir activamente para tutelar la justicia distributiva y los derechos sociales básicos",
+      "correctIndex": 3,
+      "evidenceSnippet": "### D. Deberes Primordiales del Estado Peruano (Artículo 44° de la Constitución)",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s02_c06",
+      "lessonId": "civ_t03_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "La cláusula constitucional que sanciona los actos de quienes usurpan funciones públicas mediante golpes de Estado declara que dichos actos son:",
+      "correctOption": "Nulos de pleno derecho",
+      "correctIndex": 3,
+      "evidenceSnippet": "- Cláusula de cierre republicano: Los actos de quienes usurpan funciones públicas son nulos de pleno derecho.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s02_c07",
+      "lessonId": "civ_t03_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "El carácter 'uno e indivisible' del Estado peruano prohíbe taxativamente en el plano jurídico-territorial:",
+      "correctOption": "Cualquier intento de secesión, fragmentación territorial o separación regional de la República",
+      "correctIndex": 3,
+      "evidenceSnippet": "- El Perú **es un Estado unitario descentralizado**, NO federal. Los gobiernos regionales peruanos no tienen soberanía propia ni parlamentos con leyes federales",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s02_c08",
+      "lessonId": "civ_t03_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "El deber primordial del Estado peruano orientado al desarrollo de las zonas limítrofes y la cooperación regional se denomina:",
+      "correctOption": "Política de fronteras y promoción de la integración (Art. 44°)",
+      "correctIndex": 2,
+      "evidenceSnippet": "5. **Establecer y ejecutar la política de fronteras** y promover la integración, particularmente latinoamericana, así como el desarrollo y la cohesión en las zo",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s02_c09",
+      "lessonId": "civ_t03_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "El principio de separación de poderes en el Estado peruano persigue como objetivo central:",
+      "correctOption": "Evitar la concentración despótica del poder garantizando el control recíproco y la libertad ciudadana",
+      "correctIndex": 1,
+      "evidenceSnippet": "- Cláusula de cierre republicano: Los actos de quienes usurpan funciones públicas son nulos de pleno derecho.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t03_s02_c10",
+      "lessonId": "civ_t03_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "question": "¿Quiénes cometen delito de rebelión o sedición según el Artículo 45° de la Constitución?",
+      "correctOption": "Quienes se arrogan indebidamente el ejercicio del poder público sin legitimidad electoral",
+      "correctIndex": 0,
+      "evidenceSnippet": "- Ninguna persona, organización, fuerza armada, policía nacional o fracción del pueblo puede atribuirse el ejercicio del poder. Hacerlo constituye **delito de r",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s01_c01",
+      "lessonId": "civ_t04_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "Según el Artículo 134° de la Constitución Política del Perú, el Presidente de la República tiene la potestad de disolver el Congreso cuando este:",
+      "correctOption": "Ha censurado o negado su confianza a dos Consejos de Ministros",
+      "correctIndex": 1,
+      "evidenceSnippet": "- *Disolución Constitucional del Congreso (Art. 134°)*: El Presidente de la República está facultado para **disolver el Congreso si este ha censurado o negado s",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s01_c02",
+      "lessonId": "civ_t04_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "¿Cuál de los siguientes órganos del Estado NO puede ser disuelto por el Presidente de la República bajo ninguna circunstancia constitucional?",
+      "correctOption": "La Comisión Permanente del Congreso",
+      "correctIndex": 2,
+      "evidenceSnippet": "- *Disolución Constitucional del Congreso (Art. 134°)*: El Presidente de la República está facultado para **disolver el Congreso si este ha censurado o negado s",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s01_c03",
+      "lessonId": "civ_t04_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "¿Qué causal de vacancia presidencial procede cuando el Jefe de Estado viaja al extranjero sin autorización del Parlamento nacional?",
+      "correctOption": "Salir del territorio nacional sin permiso del Congreso o no regresar dentro del plazo fijado",
+      "correctIndex": 0,
+      "evidenceSnippet": "4. Salir del territorio nacional sin permiso del Congreso o no regresar dentro del plazo fijado.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s01_c04",
+      "lessonId": "civ_t04_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "Para la designación de los magistrados del Tribunal Constitucional y del Defensor del Pueblo, el Congreso requiere una votación calificada de:",
+      "correctOption": "Dos tercios del número legal de sus miembros (87 votos)",
+      "correctIndex": 2,
+      "evidenceSnippet": "- *Función Especial*: Designar al Defensor del Pueblo (2/3 de votos), magistrados del Tribunal Constitucional (2/3 de votos), tres directores del BCRP, ratifica",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s01_c05",
+      "lessonId": "civ_t04_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "¿Cuál es el plazo perentorio que tiene el Presidente del Consejo de Ministros tras asumir el cargo para solicitar el voto de investidura ante el Congreso?",
+      "correctOption": "Dentro de los 30 días de haber asumido funciones",
+      "correctIndex": 2,
+      "evidenceSnippet": "- *Voto de Investidura o Confianza Obligatorio* (Art. 130°): El Premier concurre al Congreso dentro de los 30 días de haber asumido funciones para exponer la po",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s01_c06",
+      "lessonId": "civ_t04_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "Respecto a la jerarquía del Poder Judicial en el Perú, ¿cuál es el órgano jurisdiccional de máxima y definitiva instancia para recursos de casación?",
+      "correctOption": "La Corte Suprema de Justicia de la República",
+      "correctIndex": 1,
+      "evidenceSnippet": "1. **Corte Suprema de Justicia de la República**: Sede en Lima; jurisdicción en todo el territorio nacional. Conoce recursos de casación y apelaciones de última",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s01_c07",
+      "lessonId": "civ_t04_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "Constitucionalmente, los jueces de paz no letrados que administran justicia en poblados rurales se caracterizan por:",
+      "correctOption": "Ser elegidos por sufragio o elección comunal y resolver según su leal saber y entender",
+      "correctIndex": 3,
+      "evidenceSnippet": "5. **Juzgados de Paz (No letrados)**: Administran justicia en centros poblados o comunidades campesinas por elección popular según el leal saber y entender comu",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s01_c08",
+      "lessonId": "civ_t04_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "Durante su período de mandato, el Presidente de la República solo puede ser acusado formalmente según el Artículo 117° por cuatro supuestos, entre los que figura:",
+      "correctOption": "Disolver el Congreso fuera de las causales previstas en el Artículo 134°",
+      "correctIndex": 1,
+      "evidenceSnippet": "- *Disolución Constitucional del Congreso (Art. 134°)*: El Presidente de la República está facultado para **disolver el Congreso si este ha censurado o negado s",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s01_c09",
+      "lessonId": "civ_t04_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "La figura jurídica mediante la cual todos los decretos y resoluciones dictadas por el Presidente de la República carecen de valor jurídico si no están respaldados por la firma de un ministro se denomina:",
+      "correctOption": "Refrendo ministerial",
+      "correctIndex": 3,
+      "evidenceSnippet": "- Todos los ministros son solidariamente responsables por los actos delictivos o violatorios de la ley que cometa el Presidente, a menos que renuncien inmediata",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s01_c10",
+      "lessonId": "civ_t04_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "De acuerdo al principio de exclusividad de la función jurisdiccional (Art. 139°), en el Perú solo se reconocen como excepciones a la administración judicial ordinaria:",
+      "correctOption": "La jurisdicción militar y la arbitral",
+      "correctIndex": 2,
+      "evidenceSnippet": "- **Principios Jurisdiccionales (Art. 139°)**: Unidad y exclusividad de la función jurisdiccional (no existe jurisdicción independiente salvo la militar y la ar",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s02_c01",
+      "lessonId": "civ_t04_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "La función de organizar y ejecutar materialmente las elecciones, diseñar la cédula de sufragio y capacitar a los miembros de mesa corresponde a:",
+      "correctOption": "La Oficina Nacional de Procesos Electorales (ONPE)",
+      "correctIndex": 3,
+      "evidenceSnippet": "- **ONPE**: Logística, actas, cédulas y miembros de mesa.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s02_c02",
+      "lessonId": "civ_t04_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "La Junta Nacional de Justicia (JNJ) tiene entre sus competencias constitucionales exclusivas la potestad de:",
+      "correctOption": "Nombrar, evaluar, ratificar y destituir a jueces y fiscales de todos los niveles",
+      "correctIndex": 0,
+      "evidenceSnippet": "| **JNJ** | Nombrar, ratificar y destituir a jueces, fiscales, ONPE y RENIEC.| Pleno de 7 miembros (Mandato de 5 años). | Concurso público de méritos por Comisi",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s02_c03",
+      "lessonId": "civ_t04_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "El titular del ejercicio público de la acción penal en el ordenamiento procesal peruano es:",
+      "correctOption": "El Ministerio Público encabezado por la Fiscalía de la Nación",
+      "correctIndex": 2,
+      "evidenceSnippet": "- Ni la Policía Nacional ni el Poder Judicial denuncian penalmente; el único titular de la acción penal pública es el **Ministerio Público (los fiscales)**. La ",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s02_c04",
+      "lessonId": "civ_t04_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "La finalidad constitucional suprema encomendada al Banco Central de Reserva del Perú (BCRP) en el Artículo 84° es:",
+      "correctOption": "Preservar la estabilidad monetaria nacional",
+      "correctIndex": 1,
+      "evidenceSnippet": "| **BCRP** | Preservar la estabilidad monetaria y emisión de billetes. | Directorio de 7 miembros (Presidente del BCRP). | 4 Ejecutivo (ratificados) y 3 el Cong",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s02_c05",
+      "lessonId": "civ_t04_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "¿Cuál es el período constitucional de mandato del Contralor General de la República designado por el Parlamento?",
+      "correctOption": "7 años",
+      "correctIndex": 3,
+      "evidenceSnippet": "| **Contraloría General** | Fiscalizar la legalidad del gasto y presupuesto público. | Contralor General (Mandato de 7 años). | Propuesto por Ejecutivo y design",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s02_c06",
+      "lessonId": "civ_t04_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "El órgano supremo que conoce en instancia única la Acción de Inconstitucionalidad y en última instancia las resoluciones denegatorias de garantías constitucionales es:",
+      "correctOption": "El Tribunal Constitucional",
+      "correctIndex": 0,
+      "evidenceSnippet": "| **TC** | Intérprete supremo y control de la constitucionalidad. | Pleno de 7 Magistrados (Mandato de 5 años). | Elegidos por el Congreso con mínimo 87 votos. ",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s02_c07",
+      "lessonId": "civ_t04_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "La preparación y actualización del Padrón Electoral con los ciudadanos habilitados para sufragar es atribución directa de:",
+      "correctOption": "El Registro Nacional de Identificación y Estado Civil (RENIEC)",
+      "correctIndex": 1,
+      "evidenceSnippet": "| **RENIEC** | Identificación de peruanos y elaboración del padrón electoral.| Jefe del RENIEC (Mandato de 4 años). | Concurso público de la JNJ. |",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s02_c08",
+      "lessonId": "civ_t04_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "La supervisión de la adecuada prestación de los servicios públicos (agua, salud, transporte) y la defensa de los derechos ciudadanos frente al Estado corresponden a:",
+      "correctOption": "La Defensoría del Pueblo",
+      "correctIndex": 0,
+      "evidenceSnippet": "| **Defensoría del Pueblo**| Defender derechos ciudadanos y supervisar al Estado. | Defensor del Pueblo (Mandato de 5 años). | Elegido por el Congreso con 2/3 d",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s02_c09",
+      "lessonId": "civ_t04_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "¿Qué institución especializada tiene a su cargo el control del sistema privado de pensiones y la prevención del lavado de activos a través de la UIF?",
+      "correctOption": "La Superintendencia de Banca, Seguros y AFP (SBS)",
+      "correctIndex": 3,
+      "evidenceSnippet": "| **SBS** | Supervisar bancos, seguros, AFP y prevenir lavado (UIF). | Superintendente (Mandato de 5 años). | Nombrado por Ejecutivo y ratificado por Congreso. ",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t04_s02_c10",
+      "lessonId": "civ_t04_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "question": "En caso de surgir una impugnación o controversia definitiva sobre la validez de un acta electoral en un proceso comicial, la última instancia jurisdiccional es:",
+      "correctOption": "El Jurado Nacional de Elecciones (JNE)",
+      "correctIndex": 0,
+      "evidenceSnippet": "| **JNE** | Administrar justicia electoral y fiscalizar comicios. | Pleno de 5 miembros (Presidido por Corte Suprema). | Representantes de Corte Suprema, Fiscal",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s01_c01",
+      "lessonId": "civ_t05_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "Etimológicamente, la palabra democracia deriva de las voces griegas demos y kratos, cuyo significado es:",
+      "correctOption": "El poder o gobierno del pueblo",
+      "correctIndex": 3,
+      "evidenceSnippet": "- Del griego \\$\\delta\\tilde{\\eta}\\mu\\mathrm{os}\\$ (*demos*, \"pueblo\") y \\$\\kappa\\rho\\acute{\\alpha}\\tau\\mathrm{os}\\$ (*kratos*, \"poder, gobierno\"): *\"El gobierno",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s01_c02",
+      "lessonId": "civ_t05_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "¿Qué principio democrático prohíbe terminantemente la perpetuación indefinida de una autoridad en el poder mediante comicios periódicos?",
+      "correctOption": "Principio de periodicidad y alternancia en el poder",
+      "correctIndex": 3,
+      "evidenceSnippet": "- **Periodicidad y Alternancia en el Poder**: Los mandatos no son vitalicios; se renuevan mediante elecciones periódicas, libres y transparentes.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s01_c03",
+      "lessonId": "civ_t05_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "El modelo democrático en el cual los ciudadanos aprueban leyes directamente en asambleas populares sin elegir legisladores intermediarios se denomina:",
+      "correctOption": "Democracia directa",
+      "correctIndex": 1,
+      "evidenceSnippet": "- **Democracia Directa**: Los ciudadanos reunidos en asamblea deliberan y deciden directamente sobre las leyes y asuntos públicos sin intermediarios (modelo de ",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s01_c04",
+      "lessonId": "civ_t05_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "De acuerdo con la Constitución y la Ley de Organizaciones Políticas (Ley N.° 28094), los partidos políticos se definen jurídicamente como:",
+      "correctOption": "Asociaciones de ciudadanos de derecho privado que expresan el pluralismo democrático",
+      "correctIndex": 1,
+      "evidenceSnippet": "- Son asociaciones de ciudadanos de derecho privado que expresan el pluralismo democrático, concurren a la formación y manifestación de la voluntad popular y so",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s01_c05",
+      "lessonId": "civ_t05_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "El principio según el cual las resoluciones colectivas se toman por el mayor número de sufragios sin suprimir los derechos de las minorías se conoce como:",
+      "correctOption": "Gobierno de la mayoría con respeto irrestricto a las minorías",
+      "correctIndex": 2,
+      "evidenceSnippet": "- **Gobierno de la Mayoría con Respeto a las Minorías**: Las decisiones se adoptan por la mayoría aritmética de votos, pero sin conculcar los derechos inalienab",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s01_c06",
+      "lessonId": "civ_t05_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "¿Cómo se denomina el mecanismo estatal mediante el cual los partidos reciben espacios publicitarios gratuitos en televisión y radio durante comicios?",
+      "correctOption": "Franja electoral de financiamiento público indirecto",
+      "correctIndex": 0,
+      "evidenceSnippet": "- *Financiamiento Público Indirecto*: Franja electoral gratuita en radio y televisión financiada por el Estado durante las campañas electorales.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s01_c07",
+      "lessonId": "civ_t05_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "Constituye una prohibición legal absoluta para el financiamiento de los partidos políticos en el Perú recibir aportes de:",
+      "correctOption": "Fuentes anónimas o personas vinculadas a economías delictivas ilícitas",
+      "correctIndex": 1,
+      "evidenceSnippet": "- *Financiamiento Privado*: Prohibición absoluta de aportes anónimos, de empresas condenadas por corrupción, o fondos provenientes del narcotráfico, minería ile",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s01_c08",
+      "lessonId": "civ_t05_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "El sistema político peruano consagra una democracia de tipo mixto contemporáneo denominada preferentemente:",
+      "correctOption": "Democracia representativa y participativa",
+      "correctIndex": 0,
+      "evidenceSnippet": "- **Democracia Participativa**: Modelo mixto contemporáneo (adoptado por el Perú) que combina la representación política clásica con mecanismos de **participaci",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s01_c09",
+      "lessonId": "civ_t05_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "¿Qué causal motiva la cancelación irrevocable de la inscripción de un partido en el Registro de Organizaciones Políticas (ROP)?",
+      "correctOption": "No superar la valla electoral del 5% de votos válidos a nivel nacional",
+      "correctIndex": 2,
+      "evidenceSnippet": "- No alcanzar la valla electoral del 5% de votos válidos nacionales ni colocar al menos 5 congresistas en más de un distrito electoral.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s01_c10",
+      "lessonId": "civ_t05_s01",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "La función de los partidos consistente en recoger inquietudes ciudadanas y transformarlas en planes de gobierno se denomina:",
+      "correctOption": "Canalización y agregación de demandas sociales",
+      "correctIndex": 1,
+      "evidenceSnippet": "- *Canalización*: Traducen demandas sociales en proyectos de ley y políticas públicas.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s02_c01",
+      "lessonId": "civ_t05_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "Para que una fórmula presidencial resulte electa en primera vuelta en el Perú, el Artículo 111° de la Constitución exige obtener:",
+      "correctOption": "Más de la mitad de los votos válidos (50% + 1)",
+      "correctIndex": 3,
+      "evidenceSnippet": "- Para ser elegido Presidente de la República se requiere obtener **más de la mitad de los votos válidos** (es decir, el \\$50\\% + 1\\$ de los votos válidamente e",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s02_c02",
+      "lessonId": "civ_t05_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "Si ninguna candidatura alcanza la mayoría absoluta en primera vuelta presidencial, la segunda vuelta comicial debe realizarse dentro de:",
+      "correctOption": "Los 30 días siguientes a la proclamación oficial de los cómputos por el JNE",
+      "correctIndex": 3,
+      "evidenceSnippet": "- La segunda vuelta debe realizarse dentro de los **treinta (30) días siguientes a la proclamación oficial de los cómputos** de la primera vuelta.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s02_c03",
+      "lessonId": "civ_t05_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "La valla electoral legal mínima para que una agrupación política ingrese a la distribución de escaños parlamentarios equivale a:",
+      "correctOption": "El 5% de los votos válidos a nivel nacional",
+      "correctIndex": 0,
+      "evidenceSnippet": "- Para que un partido político acceda a la distribución de escaños en el Congreso de la República, debe superar una barrera legal mínima nacional:",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s02_c04",
+      "lessonId": "civ_t05_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "El algoritmo matemático de representación proporcional adoptado por la legislación electoral peruana para repartir curules parlamentarias es:",
+      "correctOption": "El método de la Cifra Repartidora (Método D'Hondt)",
+      "correctIndex": 2,
+      "evidenceSnippet": "- Es el algoritmo matemático de proporcionalidad utilizado en el Perú para asignar escaños congresales y regidurías municipales entre las listas que superaron l",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s02_c05",
+      "lessonId": "civ_t05_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "Respecto a la reelección de autoridades del Poder Ejecutivo y gobiernos subnacionales en el Perú, la Carta Magna establece:",
+      "correctOption": "Prohibición taxativa de reelección inmediata para Presidente, Gobernadores y Alcaldes",
+      "correctIndex": 2,
+      "evidenceSnippet": "- Está **prohibida la reelección inmediata** para: Presidente de la República, Gobernadores Regionales y Alcaldes Provinciales y Distritales.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s02_c06",
+      "lessonId": "civ_t05_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "En las elecciones parlamentarias peruanas, el voto preferencial faculta al ciudadano elector a elegir facultativamente hasta:",
+      "correctOption": "Dos candidatos específicos dentro de la misma lista por la que sufragó",
+      "correctIndex": 3,
+      "evidenceSnippet": "- El elector puede votar por la lista de su preferencia y, facultativamente, escribir en el casillero correspondiente hasta **dos números** para favorecer a can",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s02_c07",
+      "lessonId": "civ_t05_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "¿Cada cuántos años se llevan a cabo las Elecciones Regionales y Municipales en el territorio peruano?",
+      "correctOption": "Cada 4 años",
+      "correctIndex": 0,
+      "evidenceSnippet": "- Es el algoritmo matemático de proporcionalidad utilizado en el Perú para asignar escaños congresales y regidurías municipales entre las listas que superaron l",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s02_c08",
+      "lessonId": "civ_t05_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "Al aplicar el método de la Cifra Repartidora, los votos de las listas habilitadas se dividen sucesivamente entre:",
+      "correctOption": "La serie de números naturales (1, 2, 3, 4, ...)",
+      "correctIndex": 1,
+      "evidenceSnippet": "5. Se divide la votación total de cada lista entre la Cifra Repartidora; el resultado entero determina el número de escaños que le corresponde a cada partido.",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s02_c09",
+      "lessonId": "civ_t05_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "En una elección para Gobernador Regional, para triunfar en primera vuelta se requiere como umbral mínimo legal:",
+      "correctOption": "No menos del 30% de los votos válidos",
+      "correctIndex": 2,
+      "evidenceSnippet": "- Para ser elegido Gobernador Regional en primera vuelta se requiere un mínimo del **\\$30\\%\\$ de votos válidos**, a diferencia de la presidencia que exige más d",
+      "status": "PASS"
+    },
+    {
+      "id": "civ_t05_s02_c10",
+      "lessonId": "civ_t05_s02",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "question": "Para determinar si una candidatura presidencial alcanzó la mayoría absoluta en primera vuelta, ¿cuál de los siguientes sufragios se excluye de la fórmula matemática?",
+      "correctOption": "Los votos en blanco y los votos viciados o nulos",
+      "correctIndex": 0,
+      "evidenceSnippet": "- Para ser elegido Presidente de la República se requiere obtener **más de la mitad de los votos válidos** (es decir, el \\$50\\% + 1\\$ de los votos válidamente e",
+      "status": "PASS"
+    }
+  ]
+}

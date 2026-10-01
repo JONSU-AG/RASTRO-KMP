@@ -33,4 +33,9 @@ copy /y "copia rastro react\public\assets\ORSTYY_ARTYON2.png" "%DST%\orstty_arty
 copy /y "copia rastro react\public\applogo.png" "%DST%\app_logo.png"
 copy /y "copia rastro react\public\astrologo.png" "%DST%\astro_logo.png"
 
-echo Done copying all mascots!
+copy /y "LOGO\LOGOBASE.png" "%DST%\rastro_logo_base.png"
+copy /y "LOGO\LOGO-ENOJO.png" "%DST%\rastro_logo_enojo.png"
+copy /y "LOGO\LOGO-FURIA.png" "%DST%\rastro_logo_furia.png"
+copy /y "LOGO\LOGOTRISTE.png" "%DST%\rastro_logo_triste.png"
+
+echo Done copying all mascots and logos!

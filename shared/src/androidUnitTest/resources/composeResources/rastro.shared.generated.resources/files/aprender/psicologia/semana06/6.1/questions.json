@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "6.1.1",
+    "correctIndex": 3,
+    "explanation": "La motivación es la fuerza energizadora interna que impulsa a actuar, otorgando direccionalidad, persistencia e intensidad a la conducta humana.",
+    "fuente": "temario",
+    "id": "psi_t06_s01_c01",
+    "options": [
+      "Mide la agudeza visual estereoscópica.",
+      "Destruye los recuerdos almacenados en la memoria semántica.",
+      "Inmoviliza los músculos esqueléticos para inducir el sueño.",
+      "Inicia, activa, dirige, sostiene y orienta la conducta del organismo hacia la consecución de una meta u objetivo determinado."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "En la psicología general, la 'Motivación' se conceptualiza como el proceso psicofisiológico y conativo que:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.1.1",
+    "correctIndex": 1,
+    "explanation": "La carencia (falta de agua, afecto o logro) rompe el equilibrio homeostático, generando un impulso o tensión que moviliza al sujeto hacia la búsqueda de un satisfactor.",
+    "fuente": "temario",
+    "id": "psi_t06_s01_c02",
+    "options": [
+      "Homeostasis",
+      "Estado de Necesidad o Carencia (tensión psicofisiológica)",
+      "Saciación plena",
+      "Conducta consumatoria"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "El 'Ciclo Motivacional' se inicia a partir de una ruptura del equilibrio biológico o psicológico del organismo, estado que se denomina técnicamente:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.1.1",
+    "correctIndex": 2,
+    "explanation": "El ciclo motivacional describe el tránsito desde el equilibrio inicial hasta su restablecimiento tras alcanzar la meta que satisface la necesidad imperante.",
+    "fuente": "temario",
+    "id": "psi_t06_s01_c03",
+    "options": [
+      "Satisfacción → Tensión → Hambre → Sueño.",
+      "Castigo → Refuerzo → Extinción → Generalización.",
+      "Homeostasis (equilibrio) → Estímulo → Necesidad (tensión) → Conducta motivada → Meta/Satisfacción → Retorno a la homeostasis.",
+      "Introspección → Emoción → Sentimiento → Pasión."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "Las fases secuenciales ordenadas del ciclo de la motivación son:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.1.2",
+    "correctIndex": 2,
+    "explanation": "La frustración surge del bloqueo de una conducta dirigida a una meta; la hipótesis frustración-agresión (Dollard y Miller) postula que puede derivar en conductas hostiles o regresivas.",
+    "fuente": "temario",
+    "id": "psi_t06_s01_c04",
+    "options": [
+      "Apatía placentera",
+      "Autorrealización plena",
+      "Frustración (con respuestas frecuentes de agresión, resignación o ansiedad)",
+      "Éxtasis místico"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "Cuando un individuo experimenta un estado de necesidad pero encuentra una barrera insuperable que le impide alcanzar la meta deseada, se produce el estado emocional de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.1.2",
+    "correctIndex": 1,
+    "explanation": "Las necesidades primarias están ancladas en mecanismos homeostáticos del hipotálamo y tronco encefálico para asegurar la homeostasis vital.",
+    "fuente": "temario",
+    "id": "psi_t06_s01_c05",
+    "options": [
+      "Son aprendidas mediante imitación cultural en la escuela.",
+      "Son innatas, biológicas, universales y su satisfacción es indispensable para la supervivencia física del individuo y la especie.",
+      "Dependen de la posesión de títulos académicos superiores.",
+      "Solo aparecen después de los cincuenta años de edad."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "Las necesidades fisiológicas primarias (hambre, sed, sueño, sexo, regulación térmica) se caracterizan porque:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.1.2",
+    "correctIndex": 3,
+    "explanation": "David McClelland demostró que las necesidades de logro, afiliación y poder son moldeadas por las pautas de crianza y valores culturales de la sociedad.",
+    "fuente": "temario",
+    "id": "psi_t06_s01_c06",
+    "options": [
+      "Se heredan genéticamente a través del cromosoma Y.",
+      "Se satisfacen exclusivamente bebiendo agua purificada.",
+      "Desaparecen por completo durante la adolescencia.",
+      "Son adquiridas y moduladas a través de la interacción social, la cultura, la educación y la socialización en el entorno humano."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "A diferencia de las biológicas, las necesidades psicosociales (afiliación, poder, logro, reconocimiento) se distinguen porque:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.1.3",
+    "correctIndex": 1,
+    "explanation": "Los individuos con alta motivación de logro asumen riesgos calculados, buscan retroalimentación sobre su rendimiento y perseveran ante tareas de moderada y alta dificultad.",
+    "fuente": "temario",
+    "id": "psi_t06_s01_c07",
+    "options": [
+      "Dormir la mayor cantidad de horas posibles.",
+      "Superar retos desafiantes, alcanzar estándares de excelencia personal y mejorar continuamente su desempeño por el orgullo del trabajo bien hecho.",
+      "Buscar la aprobación sumisa de los amigos evitando cualquier competencia.",
+      "Controlar y dominar a los demás imponiendo su voluntad a la fuerza."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "La 'Necesidad de Logro' descrita por David McClelland impulsa a las personas a:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.1.3",
+    "correctIndex": 3,
+    "explanation": "La motivación de afiliación prioriza la pertenencia afectiva a grupos de pares, la cooperación, el afecto y la evitación del conflicto y rechazo interpersonal.",
+    "fuente": "temario",
+    "id": "psi_t06_s01_c08",
+    "options": [
+      "La tendencia a aislarse en montañas solitarias sin comunicación.",
+      "El deseo de acumular riquezas inmobiliarias.",
+      "El impulso de desafiar las leyes de tránsito vehicular.",
+      "El deseo de establecer, mantener y restaurar relaciones afectivas cálidas, íntimas y de aceptación mutua con otros semejantes."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "La 'Necesidad de Afiliación' en la teoría de McClelland se manifiesta predominantemente como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.1.3",
+    "correctIndex": 3,
+    "explanation": "El motivo de poder puede ser personalista (búsqueda de dominio egocéntrico) o institucionalizado (liderazgo orientado al bien común de la organización).",
+    "fuente": "temario",
+    "id": "psi_t06_s01_c09",
+    "options": [
+      "La sumisión voluntaria ante la autoridad de otros.",
+      "El estudio silencioso y anónimo de la botánica.",
+      "El rechazo a cualquier puesto de coordinación grupal.",
+      "Ejercer influencia, autoridad, control, liderazgo y persuasión sobre la conducta de los demás para obtener estatus o prestigio."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 6,
+    "statement": "La 'Necesidad de Poder' orienta la conducta del sujeto hacia:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.1.4",
+    "correctIndex": 2,
+    "explanation": "El conflicto atracción-atracción genera vacilación entre dos opciones atrayentes; suele resolverse con rapidez en comparación con los conflictos de evitación-evitación.",
+    "fuente": "temario",
+    "id": "psi_t06_s01_c10",
+    "options": [
+      "Dos situaciones igualmente desagradables y aversivas (ej. tener dolor de muela o ir al dentista).",
+      "Tres castigos físicos severos.",
+      "Dos metas u objetivos simultáneos que resultan ambos altamente deseables y positivos pero mutuamente excluyentes (ej. elegir entre dos becas completas en prestigiosas universidades).",
+      "Una meta que posee simultáneamente aspectos positivos y negativos a la vez."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 6,
+    "statement": "En la dinámica motivacional, el 'Conflicto Atracción - Atracción' (Kurt Lewin) se presenta cuando el individuo debe elegir entre:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

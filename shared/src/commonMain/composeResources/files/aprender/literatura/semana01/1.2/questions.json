@@ -1,0 +1,182 @@
+[
+  {
+    "id": "lit_t01_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En los versos de Jorge Manrique: «Nuestras vidas son los ríos / que van a dar en la mar, / que es el morir», la figura literaria predominante es:",
+    "options": [
+      "Hipérbaton",
+      "Sinestesia",
+      "Metáfora impura",
+      "Símil o comparación"
+    ],
+    "correctIndex": 2,
+    "explanation": "Se trata de una metáfora impura porque identifica de manera directa el término real A («vidas») con el término imaginario B («ríos») mediante el verbo copulativo ser (A es B).",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la expresión poética: «El Perú entero lloró la partida de su más insigne poeta», se identifica un claro ejemplo de:",
+    "options": [
+      "Paradoja",
+      "Sinécdoque",
+      "Anáfora",
+      "Pleonasmo"
+    ],
+    "correctIndex": 1,
+    "explanation": "La sinécdoque es un tropo que designa el todo por la parte o el continente por el contenido (aquí «el Perú entero» designa a todos los habitantes peruanos).",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.2.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es la figura retórica consistente en alterar el orden sintáctico habitual de las palabras en una oración (sujeto + verbo + complementos)?",
+    "options": [
+      "Polisíndeton",
+      "Asíndeton",
+      "Hipérbole",
+      "Hipérbaton"
+    ],
+    "correctIndex": 3,
+    "explanation": "El hipérbaton invierte la disposición lógica o gramatical estándar de las palabras en el verso, como en «Del salón en el ángulo oscuro» (G. A. Bécquer).",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el verso satírico de Francisco de Quevedo: «Érase un hombre a una nariz pegado», la figura retórica dominante es:",
+    "options": [
+      "Epíteto",
+      "Hipérbole",
+      "Antítesis",
+      "Elipsis"
+    ],
+    "correctIndex": 1,
+    "explanation": "La hipérbole es una exageración desmedida y magnificada de la realidad con fines expresivos o caricaturescos.",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Identifique la figura retórica presente en la siguiente frase: «Compró un auténtico Picasso en la subasta de arte»:",
+    "options": [
+      "Sinécdoque",
+      "Símil",
+      "Prosopopeya",
+      "Metonimia"
+    ],
+    "correctIndex": 3,
+    "explanation": "La metonimia sustituye un término por otro con base en una relación causal o de contigüidad material; en este caso, se nombra al autor («Picasso») en lugar de la obra producida (un cuadro de Picasso).",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.2.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En los versos: «Vivo sin vivir en mí, / y tan alta vida espero, / que muero porque no muero» de Santa Teresa de Jesús, la figura central es:",
+    "options": [
+      "El oxímoron sensorial",
+      "La paradoja",
+      "La hipérbole épica",
+      "La antítesis simple"
+    ],
+    "correctIndex": 1,
+    "explanation": "La paradoja armoniza dos ideas aparentemente incompatibles o contradictorias en un plano lógico estricto para revelar una verdad mística o vivencial profunda.",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La reiteración voluntaria de una o varias palabras al inicio de versos sucesivos o frases consecutivas se denomina:",
+    "options": [
+      "Anáfora",
+      "Concatenación",
+      "Epífora",
+      "Aliteración"
+    ],
+    "correctIndex": 0,
+    "explanation": "La anáfora es una figura de dicción que aporta ritmo y énfasis acústico repitiendo vocablos al comienzo de dos o más cláusulas o versos.",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la frase «ardiente fuego» o «blanca nieve», el empleo de un adjetivo inherente que resalta una cualidad intrínseca y prototípica del sustantivo constituye un:",
+    "options": [
+      "Tropos",
+      "Silepsis",
+      "Oxímoron",
+      "Epíteto"
+    ],
+    "correctIndex": 3,
+    "explanation": "El epíteto es un adjetivo explicativo que subraya una propiedad esencial ya consustancial al sustantivo, con fines estilísticos y estéticos.",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La supresión deliberada de conjunciones coordinantes entre elementos oracionales para dotar al texto de rapidez, dinamismo y vehemencia («Llegué, vi, vencí») es:",
+    "options": [
+      "Polisíndeton",
+      "Anacoluto",
+      "Elipsis",
+      "Asíndeton"
+    ],
+    "correctIndex": 3,
+    "explanation": "El asíndeton prescinde de los nexos copulativos (como «y»), produciendo un ritmo acelerado y enérgico en el discurso.",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t01_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La atribución de cualidades humanas, sentimientos o acciones voluntarias a seres inanimados o animales («El viento gemía en la noche fría») se denomina:",
+    "options": [
+      "Sinestesia",
+      "Hipálage",
+      "Personificación o prosopopeya",
+      "Alegoría"
+    ],
+    "correctIndex": 2,
+    "explanation": "La personificación o prosopopeya traslada atributos propios de los seres humanos (gemir, llorar, hablar) a entidades naturales, objetos abstractos o cosas inertes.",
+    "subject": "literatura",
+    "semana": 1,
+    "concept": "1.2.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

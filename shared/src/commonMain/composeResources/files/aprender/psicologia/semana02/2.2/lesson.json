@@ -1,0 +1,34 @@
+{
+  "id": "psi_t02_s02",
+  "subjectId": "psicologia",
+  "semana": 2,
+  "subtema": "2.2",
+  "title": "3.2. Visión y Misión Personal",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana02.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_02_Proyecto_de_Vida.md",
+  "learningObjectives": [
+    "Definir visión como imagen futura a largo plazo hacia dónde voy frente a misión como propósito presente qué hago hoy",
+    "Identificar el ejemplo de neurocirujano a diez años como visión y la declaración diaria disciplinada como misión operativa",
+    "Explicar valores como principios rectores de honestidad perseverancia solidaridad y justicia que delimitan medios legítimos",
+    "Contrastar coherencia entre misión y visión frente a ruptura cuando se sueña medicina pero se procrastina en redes sociales",
+    "Clasificar metas por horizonte corto mediano y largo y fundamentar locus interno de Rotter autoeficacia de Bandura reajuste flexible y toma de decisiones secuencial"
+  ],
+  "theory": {
+    "id": "th_psi_t02_s02",
+    "asignatura": "Psicología",
+    "semana": 2,
+    "titulo": "3.2. Visión y Misión Personal",
+    "resumen": "",
+    "conceptosClave": [
+      "Visión personal como proyección aspiracional a diez años inspiradora ambiciosa y orientadora del rumbo vocacional",
+      "Misión personal como brújula operativa diaria con compromiso presente valores en acción y trabajo concreto disciplinado",
+      "Valores rectores como fronteras éticas de lo aceptable con honestidad perseverancia empatía justicia y responsabilidad",
+      "Coherencia psicológica donde hábitos cotidianos construyen futuro deseado frente a incongruencia que quiebra el proyecto",
+      "Temporalidad con corto hasta seis meses mediano de uno a tres años y largo de cinco a diez años con secuencia que se alimenta",
+      "Locus interno de Rotter que atribuye a esfuerzo propio frente a externo que culpa a suerte y autoeficacia de Bandura como convicción de capacidad",
+      "Evaluación periódica como guía viva flexible y toma de decisiones con identificar buscar evaluar elegir y asumir consecuencias"
+    ],
+    "admissionTip": "Si ves en diez años seré marca visión, si ves hoy estudio con disciplina marca misión, si ves honestidad marca valores, si ves procrastina pero sueña medicina marca incoherencia, si ves depende de mi esfuerzo marca locus interno, si ves puedo hacerlo marca autoeficacia.",
+    "admissionExplanation": "La trampa clásica es llamar misión a la visión futura y visión al presente, y confundir locus interno que asume con externo que culpa, y autoeficacia que es convicción de capacidad con autoestima general."
+  }
+}

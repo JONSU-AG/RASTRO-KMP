@@ -1,0 +1,35 @@
+{
+  "id": "psi_t04_s01",
+  "subjectId": "psicologia",
+  "semana": 4,
+  "subtema": "4.1",
+  "title": "3.1. Naturaleza Psicológica del Hábito de Estudio",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana04.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_04_Habitos_de_Estudio.md",
+  "learningObjectives": [
+    "Definir hábito como conducta aprendida estable automatizada por repetición en condiciones regulares con economía volitiva y bucle de señal rutina y recompensa",
+    "Secuenciar EPLERR con Examinar Preguntar Leer Esquematizar Recitar y Revisar como procesamiento activo frente a relectura pasiva",
+    "Diferenciar lectura crítica con identificar contrastar e inferir frente a deletreo mecánico y subrayado total sin pensamiento",
+    "Contrastar mapa conceptual de Novak y Ausubel jerárquico con proposiciones frente a mapa mental de Buzan radial con colores e imágenes",
+    "Fundamentar iluminación natural lateral metacognición con evocación activa frente a multitasking y práctica espaciada frente a atracón con Feynman de explicación simple"
+  ],
+  "theory": {
+    "id": "th_psi_t04_s01",
+    "asignatura": "Psicología",
+    "semana": 4,
+    "titulo": "3.1. Naturaleza Psicológica del Hábito de Estudio",
+    "resumen": "",
+    "conceptosClave": [
+      "Hábito como pauta automatizada por repetición deliberada que reduce esfuerzo consciente y se dispara por señal contextual estable",
+      "Bucle con señal disparador rutina conducta y recompensa dopamínica más anhelo que consolida circuito en ganglios basales",
+      "EPLERR con exploración preguntas lectura esquematización verbalización y repaso como sistema SQ3R de Robinson",
+      "Lectura crítica con decodificación semántica metacognición y modelos mentales frente a velocidad sin comprensión profunda",
+      "Mapa conceptual jerárquico de generales a específicos con enlaces que forman proposiciones lógicas significativas",
+      "Mapa mental radial con centro colores curvas e imágenes que imita redes neuronales y estimula ambos hemisferios",
+      "Iluminación suficiente natural lateral sin sombras más metacognición de aprender a aprender con evocación activa que fortalece huella",
+      "Multitasking que fragmenta con costo de cambio frente a espaciada que combate Ebbinghaus y Feynman que explica simple a niño de diez años"
+    ],
+    "admissionTip": "Si ves automatizada por repetición marca hábito, si ves Examinar Preguntar Leer marca EPLERR, si ves jerarquía con enlaces marca conceptual de Novak, si ves centro radial con colores marca mental de Buzan, si ves cerrar libro y recuperar marca evocación activa, si ves explicar simple a niño marca Feynman, si ves distribuir en intervalos marca espaciada.",
+    "admissionExplanation": "La trampa es llamar comprensión a subrayar todo y a releer cinco veces, y confundir conceptual jerárquico con mental radial, y creer que multitarea rinde triple cuando fragmenta y duplica errores."
+  }
+}

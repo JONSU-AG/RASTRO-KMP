@@ -1,0 +1,18 @@
+{
+  "week": 11,
+  "title": "3.1. Definición y Evolución Histórica del Concepto / 4.2. Teorías Factoriales Clásicas",
+  "lessons": [
+    {
+      "subtopic": "11.1",
+      "lessonId": "psi_t11_s01",
+      "title": "3.1. Definición y Evolución Histórica del Concepto",
+      "path": "11.1/lesson.json"
+    },
+    {
+      "subtopic": "11.2",
+      "lessonId": "psi_t11_s02",
+      "title": "4.2. Teorías Factoriales Clásicas",
+      "path": "11.2/lesson.json"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "5.1.1",
+    "correctIndex": 1,
+    "explanation": "La identidad personal responde a la pregunta '¿Quién soy yo?': otorga sentido de unicidad y continuidad en el tiempo a pesar de los cambios físicos y circunstanciales.",
+    "fuente": "temario",
+    "id": "psi_t05_s01_c01",
+    "options": [
+      "El número de serie del Documento Nacional de Identidad (DNI).",
+      "La conciencia de mismidad, continuidad y coherencia que una persona tiene sobre quién es, construida a partir de la integración de sus valores, metas, historia y roles.",
+      "La copia idéntica de la personalidad de un personaje de película.",
+      "La herencia genética del grupo sanguíneo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 5,
+    "statement": "En la psicología del desarrollo social, la 'Identidad Personal' se conceptualiza como:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.1.1",
+    "correctIndex": 2,
+    "explanation": "En la adolescencia, el púber debe integrar sus cambios corporales, pulsiones y roles sociales para consolidar una identidad firme; si fracasa, cae en la confusión de roles.",
+    "fuente": "temario",
+    "id": "psi_t05_s01_c02",
+    "options": [
+      "Confianza básica vs. Desconfianza",
+      "Generatividad vs. Estancamiento",
+      "Identidad vs. Confusión de roles (o difusión de identidad)",
+      "Integridad del yo vs. Desesperación"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 5,
+    "statement": "El psicoanalista Erik Erikson postuló que la tarea o crisis psicosocial primordial que debe resolver el ser humano durante la etapa de la Adolescencia es:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.1.3",
+    "correctIndex": 1,
+    "explanation": "La moratoria es la crisis activa de búsqueda: el adolescente prueba, indaga, debate opciones y reflexiona intensamente antes de consagrar su compromiso vocacional.",
+    "fuente": "temario",
+    "id": "psi_t05_s01_c03",
+    "options": [
+      "Ya resolvió todas sus dudas y ejerce una carrera profesional estable.",
+      "Se encuentra en plena crisis activa de exploración y búsqueda de alternativas vocacionales e ideológicas, pero aún no ha asumido compromisos definitivos.",
+      "No explora ni le interesa asumir ningún compromiso en la vida (difusión).",
+      "Ha asumido compromisos firmes sin haber explorado ninguna alternativa (identidad hipotecada)."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 5,
+    "statement": "James Marcia profundizó la teoría de Erikson proponiendo cuatro estados de identidad en la adolescencia; el estado de 'Moratoria' se caracteriza porque el joven:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.1.1",
+    "correctIndex": 2,
+    "explanation": "Tajfel demostró que categorizarse como miembro de un grupo ('somos peruanos', 'somos universitarios') modela la autoestima social y las conductas intergrupales.",
+    "fuente": "temario",
+    "id": "psi_t05_s01_c04",
+    "options": [
+      "Su peso y estatura física.",
+      "Los reflejos rotulianos espinales.",
+      "Su conocimiento y pertenencia a determinados grupos sociales (familia, etnia, nación, club, profesión), junto con el valor y significado emocional otorgado a esa membresía.",
+      "El saldo bancario individual en cuentas de ahorro."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 5,
+    "statement": "La 'Identidad Social' (Henri Tajfel) es aquella parte del autoconcepto de un individuo que deriva de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.1.2",
+    "correctIndex": 0,
+    "explanation": "El autoconcepto es la descripción objetiva de mis atributos ('soy alto, tímido, hábil con las matemáticas'); la autoestima es cómo me siento con esos atributos (aprecio, orgullo o desprecio).",
+    "fuente": "temario",
+    "id": "psi_t05_s01_c05",
+    "options": [
+      "La dimensión valorativa y afectiva: la valoración positiva o negativa, el aprecio y cariño que una persona siente hacia sí misma.",
+      "Una medida métrica de la presión arterial.",
+      "La arrogancia despectiva hacia los demás.",
+      "La obediencia sumisa ante órdenes externas."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 5,
+    "statement": "La 'Autoestima' en psicología se distingue del 'Autoconcepto' en que este último es eminentemente cognitivo (lo que creo de mí), mientras que la Autoestima es:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.1.4",
+    "correctIndex": 0,
+    "explanation": "Nadie puede amar ni valorar lo que no conoce; el autoconocimiento honesto de las luces y sombras de uno mismo es la base previa para evaluarse y aceptarse.",
+    "fuente": "temario",
+    "id": "psi_t05_s01_c06",
+    "options": [
+      "Autoconocimiento",
+      "Autorespeto",
+      "Autoaceptación",
+      "Autoevaluación"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 5,
+    "statement": "En la llamada 'Escalera de la Autoestima', el peldaño basal indispensable sobre el cual se edifican los demás niveles es el:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.1.4",
+    "correctIndex": 3,
+    "explanation": "Autoaceptarse no es resignación mediocre: es abrazar la propia humanidad imperfecta con compasión, condición necesaria para emprender el cambio personal.",
+    "fuente": "temario",
+    "id": "psi_t05_s01_c07",
+    "options": [
+      "Creerse perfecta e incapaz de cometer cualquier equivocación.",
+      "Resignarse pasivamente a no superarse jamás.",
+      "Fingir ante los demás que todo en su vida es perfecto.",
+      "Admitir y reconocer serenamente todas las facetas de su personalidad (virtudes y defectos, limitaciones y errores pasados) sin reproches crueles ni autodestrucción."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 5,
+    "statement": "La 'Autoaceptación' incondicional implica que la persona es capaz de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.1.5",
+    "correctIndex": 3,
+    "explanation": "La autoestima hipertrofiada o narcisista es una máscara defensiva que encubre una profunda inseguridad subyacente dependiente de la adulación ajena.",
+    "fuente": "temario",
+    "id": "psi_t05_s01_c08",
+    "options": [
+      "Empatía altruista desinteresada hacia los desfavorecidos.",
+      "Aislamiento tímido en las reuniones sociales.",
+      "Humildad sincera y escucha atenta a las opiniones divergentes.",
+      "Arrogancia, necesidad constante de admiración externa, desprecio por los demás y extrema fragilidad e ira violenta ante la menor crítica."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 5,
+    "statement": "Una persona con autoestima inflada o narcisista ficticia suele manifestar conductas de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.1.6",
+    "correctIndex": 0,
+    "explanation": "La asertividad es el punto de equilibrio ético entre la pasividad (renunciar a los propios derechos) y la agresividad (atropellar los derechos ajenos).",
+    "fuente": "temario",
+    "id": "psi_t05_s01_c09",
+    "options": [
+      "Expresar los propios derechos, sentimientos, opiniones y necesidades de forma clara, directa, honesta y oportuna, respetando al mismo tiempo los derechos de los demás.",
+      "Utilizar el sarcasmo hiriente y la manipulación sutil.",
+      "Callar sumisamente y aceptar órdenes injustas para evitar el rechazo de los amigos (estilo pasivo).",
+      "Gritar e imponer los propios puntos de vista agrediendo verbalmente a los interlocutores (estilo agresivo)."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 5,
+    "statement": "La 'Comunicación Asertiva' es la habilidad social madura que consiste en:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.1.6",
+    "correctIndex": 1,
+    "explanation": "El disco rayado mantiene la negativa firme y tranquila sin entrar en discusiones circulares, desarmando la insistencia del manipulador sin agresividad.",
+    "fuente": "temario",
+    "id": "psi_t05_s01_c10",
+    "options": [
+      "Golpear un objeto ruidoso para asustar a los interlocutores.",
+      "Repetir con tranquilidad y serenidad el propio punto de vista o negativa ('No, gracias, prefiero no consumir alcohol porque debo estudiar') tantas veces como sea necesario, sin alterarse ni caer en provocaciones.",
+      "Insultar a quien hace la propuesta incitadora.",
+      "Ceder de inmediato a la primera insistencia de los amigos."
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 5,
+    "statement": "La técnica asertiva del 'Disco Rayado' se utiliza eficazmente frente a la presión de grupo manipuladora y consiste en:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

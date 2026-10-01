@@ -1,0 +1,218 @@
+[
+  {
+    "id": "leng_t02_s02_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es la lengua amerindia originaria con mayor número de hablantes en el Perú y Sudamérica?",
+    "options": [
+      "Aimara",
+      "Asháninka",
+      "Shipibo-Konibo",
+      "Quechua (Runa Simi)"
+    ],
+    "correctIndex": 3,
+    "explanation": "La familia quechua es la lengua amerindia más hablada del Perú y América del Sur, con más de 3.5 millones de quechuahablantes en el país.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.2.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s02_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La lengua nativa Jacaru, perteneciente a la familia Aru, se habla históricamente en el departamento de:",
+    "options": [
+      "Puno (Huancané)",
+      "Cusco (Canchis)",
+      "Áncash (Huaraz)",
+      "Lima (Yauyos)"
+    ],
+    "correctIndex": 3,
+    "explanation": "El jacaru y el cauqui pertenecen a la familia Aru y sobreviven en la provincia limeña de Yauyos (distrito de Tupe).",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s02_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La región biogeográfica del Perú que alberga la mayor diversidad y multiplicidad de familias lingüísticas es:",
+    "options": [
+      "La Amazonía o Selva",
+      "La Costa norte",
+      "El Altiplano andino",
+      "La Sierra central"
+    ],
+    "correctIndex": 0,
+    "explanation": "La Amazonía es la zona más fragmentada y rica en familias lingüísticas, con entre 17 y 19 familias y 44 lenguas autóctonas.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s02_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es la lengua amazónica que cuenta con el mayor número demográfico de hablantes en el Perú?",
+    "options": [
+      "Shipibo-Konibo (familia Pano)",
+      "Asháninka (familia Arawak)",
+      "Awajún (familia Jíbaro)",
+      "Ticuna (familia Ticuna)"
+    ],
+    "correctIndex": 1,
+    "explanation": "El asháninka, perteneciente a la familia lingüística Arawak, es la lengua originaria amazónica con mayor cantidad de hablantes en el Perú.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s02_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La coexistencia asimétrica de dos lenguas donde una goza de prestigio oficial e institucional mientras la otra queda relegada al plano doméstico se denomina:",
+    "options": [
+      "Bilingüismo armónico",
+      "Interlecto",
+      "Dialectización",
+      "Diglosia"
+    ],
+    "correctIndex": 3,
+    "explanation": "La diglosia es el fenómeno sociopolítico en el cual una lengua domina en el ámbito público y formal, marginando a otra u otras lenguas al ámbito privado.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s02_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El fenómeno fonético denominado 'motoseo', común en hablantes andinos bilingües, se produce primordialmente porque:",
+    "options": [
+      "El quechua carece de consonantes nasales",
+      "El quechua posee un sistema vocálico de solo tres vocales (/a, i, u/)",
+      "El aimara no distingue sílabas tónicas",
+      "El castellano no tiene diptongos homogéneos"
+    ],
+    "correctIndex": 1,
+    "explanation": "El quechua es un idioma trivocálico (/a/, /i/, /u/). Al aprender español (pentavocálico), los quechuahablantes suelen confundir /e/ con /i/ y /o/ con /u/.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.2.3",
+    "pedagogicalTier": "análisis",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s02_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El quechua Chanca (Ayacucho, Huancavelica, Apurímac) y el quechua Collao (Cusco, Puno) forman parte de la rama:",
+    "options": [
+      "Familia Aru central",
+      "Quechua II Sureño (Wampuy)",
+      "Quechua de la Selva norteña",
+      "Quechua I o Central (Waywash)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Las variedades Chanca y Collao pertenecen al Quechua II o Periférico (subrama Sureña), la cual cuenta con el mayor número de hablantes.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s02_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Las lenguas Shipibo-Konibo y Matsés pertenecen respectivamente a la familia lingüística amazónica:",
+    "options": [
+      "Arawak",
+      "Jíbaro",
+      "Tupi-Guaraní",
+      "Pano"
+    ],
+    "correctIndex": 3,
+    "explanation": "El shipibo-konibo y el matsés son lenguas originarias de la selva peruana pertenecientes a la familia Pano.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.2.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s02_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el castellano amazónico, la pronunciación 'jue' por 'fue' o 'san juan' por 'San Juan' representa un fenómeno de cambio articulatorio de:",
+    "options": [
+      "La labiodental /f/ por la velar /x/",
+      "La velar /k/ por la sibilante /s/",
+      "La oclusiva /p/ por la nasal /m/",
+      "La alveolar /l/ por la vibrante /r/"
+    ],
+    "correctIndex": 0,
+    "explanation": "En el dialecto amazónico es característica la velarización de la consonante fricativa labiodental /f/, pronunciada como la fricativa velar /x/ ('j').",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.2.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s02_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La lengua Awajún (Aguaruna) y la lengua Wampis (Huambisa) pertenecen a la familia lingüística:",
+    "options": [
+      "Jíbaro",
+      "Pano",
+      "Cahuapana",
+      "Arawak"
+    ],
+    "correctIndex": 0,
+    "explanation": "Las lenguas awajún y wampis pertenecen a la familia lingüística Jíbaro, habladas en Amazonas, Loreto y San Martín.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.2.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s02_c11",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El quechua hablado en Áncash (callejón de Huaylas) y Huánuco corresponde a la clasificación de Alfredo Torero como:",
+    "options": [
+      "Quechua II Sureño (Wampuy)",
+      "Familia Aru septentrional",
+      "Quechua I o Central (Waywash)",
+      "Quechua costeño periférico"
+    ],
+    "correctIndex": 2,
+    "explanation": "Según el lingüista Alfredo Torero, el quechua de Áncash, Huánuco, Pasco y Junín constituye la rama Quechua I o Central (Waywash).",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.2.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t02_s02_c12",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Qué política estatal garantiza que los estudiantes de comunidades originarias aprendan en su lengua materna además del castellano?",
+    "options": [
+      "Castellanización forzosa",
+      "Educación Intercultural Bilingüe (EIB)",
+      "Alfabetización monolingüe",
+      "Normalización diatópica"
+    ],
+    "correctIndex": 1,
+    "explanation": "La EIB (Educación Intercultural Bilingüe) es la política pública del Estado peruano para salvaguardar y educar en lenguas originarias maternas.",
+    "subject": "lenguaje",
+    "semana": 2,
+    "concept": "2.2.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

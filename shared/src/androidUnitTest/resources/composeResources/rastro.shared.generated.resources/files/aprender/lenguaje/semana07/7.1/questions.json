@@ -1,0 +1,182 @@
+[
+  {
+    "id": "leng_t07_s01_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La propiedad del texto que asegura la unidad temática y la ausencia de contradicciones lógicas entre sus enunciados se denomina:",
+    "options": [
+      "Coherencia",
+      "Elipsis",
+      "Cohesión",
+      "Adecuación"
+    ],
+    "correctIndex": 0,
+    "explanation": "La coherencia es la propiedad semántica que dota al texto de sentido global y lógico, asegurando que las ideas no se contradigan.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s01_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la frase 'Ella solo trajo esto: su mochila y sus libros de estudio', el pronombre 'esto' cumple una función cohesiva de:",
+    "options": [
+      "Catáfora",
+      "Hiperonimia",
+      "Anáfora",
+      "Elipsis verbal"
+    ],
+    "correctIndex": 0,
+    "explanation": "'Esto' anticipa catafóricamente los elementos que serán explicitados a continuación ('su mochila y sus libros de estudio').",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.1.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s01_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En 'César Vallejo nació en Santiago de Chuco. El ilustre vate liberteño escribió Los heraldos negros', la expresión destacada constituye un caso de:",
+    "options": [
+      "Catáfora pronominal",
+      "Elipsis nominal",
+      "Conjunción adversativa",
+      "Sustitución léxica por perífrasis sinonímica"
+    ],
+    "correctIndex": 3,
+    "explanation": "Se sustituye el nombre propio 'César Vallejo' por la frase equivalente 'el ilustre vate liberteño' para evitar la repetición léxica.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s01_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En 'Los estudiantes llegaron temprano a la academia; luego, ingresaron a sus respectivas aulas', la omisión del sujeto en la segunda proposición es un mecanismo de:",
+    "options": [
+      "Diglosia",
+      "Catáfora",
+      "Elipsis",
+      "Anáfora adverbial"
+    ],
+    "correctIndex": 2,
+    "explanation": "La elipsis consiste en suprimir un elemento oracional (en este caso el sujeto 'los estudiantes') que se sobreentiende por el contexto anterior.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.1.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s01_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En 'Visitó Arequipa en agosto. Allí disfrutó de la arquitectura de sillar', el adverbio 'allí' funciona como un mecanismo de:",
+    "options": [
+      "Elipsis verbal",
+      "Sinonimia estricta",
+      "Anáfora locativa",
+      "Catáfora temporal"
+    ],
+    "correctIndex": 2,
+    "explanation": "El adverbio 'allí' remite anafóricamente a un lugar mencionado con anterioridad en el texto ('Arequipa').",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.1.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s01_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Qué propiedad del texto exige que un médico adapte su léxico si se dirige a una junta científica o a un paciente sin formación médica?",
+    "options": [
+      "Cohesión sintáctica",
+      "Elipsis",
+      "Coherencia interna",
+      "Adecuación textual"
+    ],
+    "correctIndex": 3,
+    "explanation": "La adecuación es la propiedad pragmática que exige adaptar el registro y tono lingüístico al destinatario y a la situación comunicativa.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.1.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s01_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El balance continuo entre la información conocida o previa (tema) y la información nueva que se añade (rema) corresponde al principio de:",
+    "options": [
+      "Progresión temática (coherencia)",
+      "Elipsis gramatical",
+      "Concordancia nominal",
+      "Catáfora absoluta"
+    ],
+    "correctIndex": 0,
+    "explanation": "La progresión temática asegura que el texto avance articulando datos conocidos (tema) con aportes informativos nuevos (rema).",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s01_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la oración 'Compré flores para mi madre: ella siempre las aprecia', los términos 'ella' y 'las' son elementos:",
+    "options": [
+      "Exofóricos puros",
+      "Anafóricos",
+      "Catafóricos",
+      "Elípticos"
+    ],
+    "correctIndex": 1,
+    "explanation": "'Ella' remite anafóricamente a 'mi madre' y 'las' refiere anafóricamente a 'flores', recuperando antecedentes previos.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.1.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s01_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La contradicción explícita entre párrafos de un mismo ensayo vulnera de forma directa la propiedad de la:",
+    "options": [
+      "Coherencia",
+      "Cohesión",
+      "Puntuación",
+      "Adecuación"
+    ],
+    "correctIndex": 0,
+    "explanation": "La coherencia se rige por el principio de no contradicción lógica; sostener ideas contradictorias destruye la coherencia del texto.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "leng_t07_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la frase 'Todos esperaban lo mismo: la publicación del padrón de ingresantes', el elemento catafórico es:",
+    "options": [
+      "Lo mismo",
+      "Todos",
+      "Padrón",
+      "Ingresantes"
+    ],
+    "correctIndex": 0,
+    "explanation": "La frase pronominal 'lo mismo' anticipa catafóricamente el concepto que se precisará a continuación tras los dos puntos.",
+    "subject": "lenguaje",
+    "semana": 7,
+    "concept": "7.1.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  }
+]

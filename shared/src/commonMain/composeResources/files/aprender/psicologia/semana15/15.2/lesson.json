@@ -1,0 +1,34 @@
+{
+  "id": "psi_t15_s02",
+  "subjectId": "psicologia",
+  "semana": 15,
+  "subtema": "15.2",
+  "title": "4.1. Estadios del Desarrollo Cognitivo de Jean Piaget",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana15.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_15_Desarrollo_Humano_y_Etapas.md",
+  "learningObjectives": [
+    "Explicar constructivismo con niño científico más asimilación que incorpora y acomodación que reajusta",
+    "Diferenciar sensoriomotor 0 a 2 con permanencia frente a preoperacional 2 a 7 con símbolo y egocentrismo",
+    "Identificar centración en un rasgo más animismo, artificialismo e irreversibilidad preoperacional",
+    "Aplicar operaciones concretas 7 a 12 con conservación y reversibilidad sobre objetos tangibles",
+    "Contrastar operaciones formales 12 más con hipotético-deductivo, proposicional y combinatorio"
+  ],
+  "theory": {
+    "id": "th_psi_t15_s02",
+    "asignatura": "Psicología",
+    "semana": 15,
+    "titulo": "4.1. Estadios del Desarrollo Cognitivo de Jean Piaget",
+    "resumen": "",
+    "conceptosClave": [
+      "Niño constructor activo con esquemas que asimilan caballo como perro y acomodan nueva categoría",
+      "Equilibrio cognitivo que restaura adaptación entre esquemas previos y realidad resistente",
+      "Sensoriomotor práctico con reflejos y permanencia 8 a 12 meses frente a preoperacional simbólico",
+      "Preoperacional con juego simbólico e imitación diferida más egocentrismo, animismo y centración",
+      "Centración en altura del vaso frente a descentración concreta que considera ancho y alto",
+      "Concretas con conservación de cantidad y reversibilidad más seriación y clasificación tangible",
+      "Formales con hipótesis abstractas, deducción sistemática, proposiciones y audiencia con fábula inicial"
+    ],
+    "admissionTip": "Si ves incorpora a esquema marca asimilación, si ves modifica esquema marca acomodación, si ves busca bajo manta marca permanencia, si ves silla mala marca animismo, si ves solo altura marca centración, si ves vuelve al vaso marca reversibilidad, si ves hipótesis marca formal.",
+    "admissionExplanation": "La trampa mayor confunde permanencia de 0 a 2 con conservación de 7 a 12, egocentrismo infantil con audiencia adolescente, y cree que el concreto razona hipótesis cuando solo opera sobre lo tangible."
+  }
+}

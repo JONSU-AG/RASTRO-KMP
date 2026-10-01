@@ -1,0 +1,182 @@
+[
+  {
+    "id": "psi_t08_s01_c01",
+    "statement": "La 'Personalidad' se define en la psicología contemporánea como la estructura dinámica y organizada de:",
+    "options": [
+      "Patrones característicos, consistentes y relativamente estables de pensamientos, sentimientos y conductas que distinguen a un individuo a lo largo del tiempo y situaciones.",
+      "Los títulos nobiliarios y posesiones de tierras de una dinastía.",
+      "Los reflejos innatos de succión y prensión del recién nacido exclusivamente.",
+      "La moda y el vestuario que se utiliza en ocasiones festivas."
+    ],
+    "correctIndex": 0,
+    "explanation": "La personalidad otorga identidad, predictibilidad y estilo adaptativo peculiar a cada ser humano en su forma habitual de interactuar con el mundo.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s01_c02",
+    "statement": "La personalidad se compone de dos grandes factores constitutivos e interactuantes denominados:",
+    "options": [
+      "Ojo izquierdo y ojo derecho",
+      "Temperamento (base biológico-genética) y Carácter (dimensión aprendida socio-moral)",
+      "Memoria sensorial y memoria a corto plazo",
+      "Oxígeno y Carbono"
+    ],
+    "correctIndex": 1,
+    "explanation": "El temperamento aporta el sustrato neurobiológico innato y afectivo, mientras que el carácter se moldea con la socialización, la educación y los valores morales.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s01_c03",
+    "statement": "El 'Temperamento' se caracteriza en la personalidad por ser:",
+    "options": [
+      "Innato, de base hereditaria y neurofisiológica, difícilmente modificable y vinculado a la reactividad del sistema nervioso autónomo y endócrino.",
+      "Completamente aprendido a los cuarenta años mediante la lectura filosófica.",
+      "El código penal de una república democrática.",
+      "Una actitud política pasajera."
+    ],
+    "correctIndex": 0,
+    "explanation": "El temperamento se observa desde los primeros meses de vida en el nivel de irritabilidad, ritmicidad y actividad motora del lactante.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s01_c04",
+    "statement": "Por otro lado, el 'Carácter' en la personalidad se define formalmente como:",
+    "options": [
+      "El tipo de sangre heredado por vía materna.",
+      "La fuerza muscular de los brazos para trabajar en el campo.",
+      "El color de los ojos y la forma de la nariz.",
+      "La dimensión adquirida, educable y moldeada por las experiencias sociales, pautas culturales y valores morales, reflejada en hábitos y actitudes éticas."
+    ],
+    "correctIndex": 3,
+    "explanation": "El carácter expresa la dirección volitiva y moral del individuo: es la personalidad evaluada éticamente en su responsabilidad social y templanza.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s01_c05",
+    "statement": "Una característica esencial de la personalidad es su 'Estabilidad y Consistencia', lo cual significa que:",
+    "options": [
+      "Es un bloque de piedra inmóvil que no aprende nada nuevo.",
+      "La persona cambia totalmente de forma de ser cada diez minutos.",
+      "Aunque la personalidad evoluciona con el ciclo vital, sus rasgos fundamentales permanecen razonablemente coherentes a través de diversas épocas y contextos.",
+      "Se transmite por telepatía de padres a hijos."
+    ],
+    "correctIndex": 2,
+    "explanation": "La estabilidad permite reconocer a un amigo tras décadas de no verlo; sus rasgos medulares (ej. extroversión, lealtad) siguen definiendo su estilo de conducta.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s01_c06",
+    "statement": "La cualidad de 'Singularidad o Unicidad' de la personalidad señala formalmente que:",
+    "options": [
+      "Todas las personas nacidas en la misma ciudad son clones psicológicos exactos.",
+      "Cada ser humano es una combinación irrepetible de factores biológicos, psicológicos y socioculturales: no existen dos personalidades idénticas.",
+      "Solo existe una sola persona inteligente en el mundo.",
+      "La personalidad se disuelve al entrar a un grupo de personas."
+    ],
+    "correctIndex": 1,
+    "explanation": "Incluso en gemelos monocigóticos criados en el mismo hogar, las experiencias biográficas subjetivas forjan identidades y personalidades singulares.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s01_c07",
+    "statement": "La personalidad como sistema 'Dinámico' (Gordon Allport) implica que:",
+    "options": [
+      "Funciona mediante motores eléctricos internos.",
+      "Está en permanente organización y adaptación activa frente a los desafíos y estímulos cambiantes del entorno sociocultural.",
+      "Se desintegra cuando el sujeto duerme por las noches.",
+      "Es un catálogo estático de etiquetas psiquiátricas fijas."
+    ],
+    "correctIndex": 1,
+    "explanation": "Allport definió la personalidad como 'la organización dinámica dentro del individuo de aquellos sistemas psicofísicos que determinan sus ajustes únicos a su ambiente'.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s01_c08",
+    "statement": "¿Cuál es el factor exógeno o ambiental que ejerce la primera y más profunda influencia en la estructuración de la personalidad en los primeros años de vida?",
+    "options": [
+      "El partido político gobernante en el país.",
+      "Los tratados internacionales de libre comercio.",
+      "La familia y los estilos de crianza y apego parental.",
+      "El clima meteorológico del invierno costero."
+    ],
+    "correctIndex": 2,
+    "explanation": "La matriz familiar transmite el lenguaje, afecto, normas, límites y modelos de conducta que forman los cimientos del carácter infantil.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.1.4",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s01_c09",
+    "statement": "Un temperamento 'reactivo o difícil' en la infancia temprana (llanto frecuente, irregularidad en el sueño, rechazo a extraños) frente a un estilo de crianza cálido y paciente:",
+    "options": [
+      "Se cura exclusivamente con operaciones quirúrgicas cerebrales.",
+      "Puede modelarse constructivamente gracias a la interacción ambiental positiva ('bondad de ajuste'), amortiguando la predisposición biológica inicial.",
+      "No sufre ninguna influencia porque el carácter es 100% genético.",
+      "Condena inevitablemente al niño a ser un delincuente juvenil."
+    ],
+    "correctIndex": 1,
+    "explanation": "La 'bondad de ajuste' (goodness of fit) entre el temperamento del niño y la paciencia y sensibilidad de los cuidadores permite un desarrollo socioafectivo armonioso.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.1.5",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "psi_t08_s01_c10",
+    "statement": "En la evaluación psicológica de la personalidad, las 'Pruebas Proyectivas' (como el Test de Manchas de Rorschach o el TAT de Murray) se caracterizan por:",
+    "options": [
+      "Hacer preguntas directas de verdadero o falso con calificación matemática estandarizada.",
+      "Analizar la composición química del cabello del paciente.",
+      "Presentar estímulos ambiguos o poco estructurados para que el sujeto proyecte sobre ellos sus pulsiones, conflictos inconscientes, temores y deseos ocultos.",
+      "Medir la rapidez de pedaleo en una bicicleta ergométrica."
+    ],
+    "correctIndex": 2,
+    "explanation": "Basadas en la hipótesis proyectiva psicoanalítica, la persona organiza el material ambiguo revelando aspectos nucleares de su mundo interior inconsciente.",
+    "subject": "psicologia",
+    "semana": 8,
+    "concept": "8.1.5",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

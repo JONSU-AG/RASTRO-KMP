@@ -65,47 +65,57 @@ object ExamQuestionRepository {
             .addOnFailureListener { onComplete(Result.failure(it)) }
     }
 
-    fun loadOfficialBank(context: Context): List<ExamQuestion> = runCatching {
-        context.assets.open("bancoPreguntasCepreunsa.json").bufferedReader(Charsets.UTF_8).use { reader ->
-            val array = JSONArray(reader.readText())
-            buildList(array.length()) {
-                for (index in 0 until array.length()) {
-                    val item = array.optJSONObject(index) ?: continue
-                    val question = item.optString("q").trim()
-                    val optionsJson = item.optJSONArray("options") ?: continue
-                    val options = buildList {
-                        for (optionIndex in 0 until optionsJson.length()) {
-                            optionsJson.optString(optionIndex).takeIf(String::isNotBlank)?.let(::add)
+    private var cachedOfficialBank: List<ExamQuestion>? = null
+
+    fun loadOfficialBank(context: Context): List<ExamQuestion> {
+        cachedOfficialBank?.let { return it }
+        val loaded = runCatching {
+            context.assets.open("bancoPreguntasCepreunsa.json").bufferedReader(Charsets.UTF_8).use { reader ->
+                val array = JSONArray(reader.readText())
+                buildList(array.length()) {
+                    for (index in 0 until array.length()) {
+                        val item = array.optJSONObject(index) ?: continue
+                        val question = item.optString("q").trim()
+                        val optionsJson = item.optJSONArray("options") ?: continue
+                        val options = buildList {
+                            for (optionIndex in 0 until optionsJson.length()) {
+                                optionsJson.optString(optionIndex).takeIf(String::isNotBlank)?.let(::add)
+                            }
                         }
-                    }
-                    if (question.isBlank() || options.size < 2) continue
-                    add(
-                        ExamQuestion(
-                            id = item.optString("id", "cepre_$index"),
-                            q = question,
-                            options = options,
-                            answer = answerIndex(item.opt("answer"), options.size),
-                            asignatura = item.optString("asignatura", item.optString("subject", "General")),
-                            curso = item.optString("curso", item.optString("subject", "")),
-                            area = item.optString("area", ""),
-                            explanation = item.optString("explanation", ""),
-                            imageUrl = item.optString("imageUrl", item.optString("img", "")).takeIf(String::isNotBlank),
-                            valorPonderado = item.optDouble("valorPonderado").takeIf { !it.isNaN() && it > 0.0 },
-                            semana = item.optInt("semana").takeIf { item.has("semana") },
-                            authorName = item.optString("authorName", item.optString("fuente", "CEPREUNSA Solucionario Oficial")),
-                            subtema = item.optString("subtema", ""),
-                            destinoUso = item.optString("destinoUso", "SOLO_EXAMEN"),
-                            nivelDificultad = item.optString("nivelDificultad", "INTERMEDIO"),
-                            aptoExamenRepaso = item.optBoolean("aptoExamenRepaso", true),
-                            estadoGrafico = item.optString("estadoGrafico", "SIN_GRAFICO_TEXTUAL"),
-                            tipoFormato = item.optString("tipoFormato", "TEORICO_DIRECTO"),
-                            observacion = item.optString("observacion", "")
+                        if (question.isBlank() || options.size < 2) continue
+                        add(
+                            ExamQuestion(
+                                id = item.optString("id", "cepre_$index"),
+                                q = question,
+                                options = options,
+                                answer = answerIndex(item.opt("answer"), options.size),
+                                asignatura = item.optString("asignatura", item.optString("subject", "General")),
+                                curso = item.optString("curso", item.optString("subject", "")),
+                                area = item.optString("area", ""),
+                                explanation = item.optString("explanation", ""),
+                                imageUrl = item.optString("imageUrl", item.optString("img", "")).takeIf(String::isNotBlank),
+                                valorPonderado = item.optDouble("valorPonderado").takeIf { !it.isNaN() && it > 0.0 },
+                                semana = item.optInt("semana").takeIf { item.has("semana") },
+                                authorName = item.optString("authorName", item.optString("fuente", "CEPREUNSA Solucionario Oficial")),
+                                subtema = item.optString("subtema", ""),
+                                destinoUso = item.optString("destinoUso", "SOLO_EXAMEN"),
+                                nivelDificultad = item.optString("nivelDificultad", "INTERMEDIO"),
+                                aptoExamenRepaso = item.optBoolean("aptoExamenRepaso", true),
+                                estadoGrafico = item.optString("estadoGrafico", "SIN_GRAFICO_TEXTUAL"),
+                                tipoFormato = item.optString("tipoFormato", "TEORICO_DIRECTO"),
+                                observacion = item.optString("observacion", "")
+                            )
                         )
-                    )
+                    }
                 }
             }
+        }.getOrDefault(emptyList())
+
+        if (loaded.isNotEmpty()) {
+            cachedOfficialBank = loaded
         }
-    }.getOrDefault(emptyList())
+        return loaded
+    }
 
     /**
      * Filtra preguntas aptas para Simulacros Oficiales y Prácticas Cronometradas.

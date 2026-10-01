@@ -86,7 +86,7 @@ fun LucideBookmarkIcon(
 
     Box(
         modifier = modifier
-            .clip(CircleShape)
+            .size(size + 12.dp)
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null
@@ -152,7 +152,7 @@ fun LucideStarIcon(
 
     Box(
         modifier = modifier
-            .clip(CircleShape)
+            .size(size + 12.dp)
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null

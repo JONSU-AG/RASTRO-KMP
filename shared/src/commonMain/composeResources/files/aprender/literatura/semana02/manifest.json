@@ -1,0 +1,18 @@
+{
+  "week": 2,
+  "title": "Clasicismo Griego y Romanticismo: Goethe y Las cuitas del joven Werther",
+  "lessons": [
+    {
+      "subtopic": "2.1",
+      "lessonId": "lit_t02_s01",
+      "title": "3.1. El Clasicismo Griego",
+      "path": "2.1/lesson.json"
+    },
+    {
+      "subtopic": "2.2",
+      "lessonId": "lit_t02_s02",
+      "title": "3.3. El Romanticismo: Goethe y *Las cuitas del joven Werther*",
+      "path": "2.2/lesson.json"
+    }
+  ]
+}

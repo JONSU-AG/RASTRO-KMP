@@ -1,0 +1,5023 @@
+{
+  "issues": [
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "lessonId": "civ_t01_s01",
+      "challengeId": "civ_t01_s01_c07",
+      "question": "Si un testamento designa como heredero universal a un concebido que aú",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "lessonId": "civ_t02_s01",
+      "challengeId": "civ_t02_s01_c09",
+      "question": "La nemotecnia preuniversitaria 'IN - PE - IN' ayuda a recordar de form",
+      "overlapCurrent": "0.14",
+      "overlapOther": "0.57"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "lessonId": "civ_t05_s02",
+      "challengeId": "civ_t05_s02_c05",
+      "question": "Respecto a la reelección de autoridades del Poder Ejecutivo y gobierno",
+      "overlapCurrent": "0.12",
+      "overlapOther": "0.41"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s01",
+      "challengeId": "cl_t01_s01_c03",
+      "question": "Si un texto afirma explícitamente: 'Hacia finales del siglo XIX, la pe",
+      "overlapCurrent": "0.04"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s01",
+      "challengeId": "cl_t01_s01_c04",
+      "question": "Una pregunta de nivel literal formulada con el encabezado 'Según el te",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s01",
+      "challengeId": "cl_t01_s01_c05",
+      "question": "En la lectura de textos expositivos científicos, la identificación de ",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s01",
+      "challengeId": "cl_t01_s01_c07",
+      "question": "Si el texto asevera: 'El mercurio es el único metal líquido a temperat",
+      "overlapCurrent": "0.04"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s01",
+      "challengeId": "cl_t01_s01_c08",
+      "question": "La técnica de 'Lectura Atenta y Rastreo Localizado' (scanning) es part",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s01",
+      "challengeId": "cl_t01_s01_c09",
+      "question": "Cuando un autor introduce una definición explícita formal (por ejemplo",
+      "overlapCurrent": "0.12"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s01",
+      "challengeId": "cl_t01_s01_c10",
+      "question": "En conclusión metodológica, la comprensión literal es considerada la b",
+      "overlapCurrent": "0.09"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s02",
+      "challengeId": "cl_t01_s02_c03",
+      "question": "Si el texto afirma: 'Muchos pacientes diagnosticados con la cepa viral",
+      "overlapCurrent": "0.04"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s02",
+      "challengeId": "cl_t01_s02_c04",
+      "question": "La trampa de distractor denominada 'Extrapolación Ilegítima o Verdader",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s02",
+      "challengeId": "cl_t01_s02_c05",
+      "question": "Al enfrentarse a una pregunta que indaga por una afirmación literal de",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s02",
+      "challengeId": "cl_t01_s02_c06",
+      "question": "Si el texto señala: 'La deforestación en la Amazonía disminuyó levemen",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s02",
+      "challengeId": "cl_t01_s02_c07",
+      "question": "La presencia de adverbios restrictivos o modales como 'únicamente', 'e",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s02",
+      "challengeId": "cl_t01_s02_c09",
+      "question": "La trampa por 'Inversión de Términos' se produce cuando el distractor:",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "lessonId": "cl_t01_s02",
+      "challengeId": "cl_t01_s02_c10",
+      "question": "En una pregunta literal sobre un texto mixto (que combina párrafo cont",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "lessonId": "cl_t02_s01",
+      "challengeId": "cl_t02_s01_c02",
+      "question": "La 'Inferencia Deductiva' en la comprensión de lectura procede metodol",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "lessonId": "cl_t02_s01",
+      "challengeId": "cl_t02_s01_c03",
+      "question": "Por el contrario, la 'Inferencia Inductiva' opera en el análisis textu",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "lessonId": "cl_t02_s01",
+      "challengeId": "cl_t02_s01_c04",
+      "question": "Si un texto describe: 'El cielo se cubrió de densos nubarrones plomizo",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "lessonId": "cl_t02_s01",
+      "challengeId": "cl_t02_s01_c07",
+      "question": "Si el autor afirma: 'El empleo de antibióticos sin prescripción médica",
+      "overlapCurrent": "0.04"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "lessonId": "cl_t02_s01",
+      "challengeId": "cl_t02_s01_c08",
+      "question": "Al realizar una inferencia analítica de causa implícita, el lector deb",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "lessonId": "cl_t02_s01",
+      "challengeId": "cl_t02_s01_c10",
+      "question": "Si en un texto se afirma que 'el 95 % de los postulantes de la academi",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "lessonId": "cl_t02_s02",
+      "challengeId": "cl_t02_s02_c02",
+      "question": "La 'Sobreinterpretación' (o interpretación desmedida) en los exámenes ",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "lessonId": "cl_t02_s02",
+      "challengeId": "cl_t02_s02_c03",
+      "question": "Si un texto relata: 'El arqueólogo halló puntas de flecha de obsidiana",
+      "overlapCurrent": "0.07"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "lessonId": "cl_t02_s02",
+      "challengeId": "cl_t02_s02_c04",
+      "question": "El principio epistemológico de 'Suficiencia Textual' en las preguntas ",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "lessonId": "cl_t02_s02",
+      "challengeId": "cl_t02_s02_c06",
+      "question": "Si en un texto económico se lee: 'La inflación interanual del país se ",
+      "overlapCurrent": "0.04"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "lessonId": "cl_t02_s02",
+      "challengeId": "cl_t02_s02_c09",
+      "question": "Si un texto de divulgación biológica sostiene: 'Las abejas melíferas d",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "lessonId": "cl_t02_s02",
+      "challengeId": "cl_t02_s02_c10",
+      "question": "En las pruebas tipo DECO, una deducción no debe ser rechazada simpleme",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana03.kt",
+      "lessonId": "cl_t03_s01",
+      "challengeId": "cl_t03_s01_c05",
+      "question": "Considere un texto sobre la contaminación acústica. Si el Tema es 'La ",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana03.kt",
+      "lessonId": "cl_t03_s02",
+      "challengeId": "cl_t03_s02_c05",
+      "question": "Cuando un autor introduce estadísticas numéricas de una encuesta o med",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana03.kt",
+      "lessonId": "cl_t03_s02",
+      "challengeId": "cl_t03_s02_c07",
+      "question": "Si en un texto sobre el calentamiento global, la Idea Principal es que",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana04.kt",
+      "lessonId": "cl_t04_s01",
+      "challengeId": "cl_t04_s01_c08",
+      "question": "En un manual técnico de instalación de paneles solares fotovoltaicos, ",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana04.kt",
+      "lessonId": "cl_t04_s02",
+      "challengeId": "cl_t04_s02_c01",
+      "question": "En el análisis literario y pragmático de textos de admisión, el 'Tono ",
+      "overlapCurrent": "0.12"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana04.kt",
+      "lessonId": "cl_t04_s02",
+      "challengeId": "cl_t04_s02_c08",
+      "question": "El tono 'Condescendiente o Paternalista' se percibe cuando el emisor s",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana04.kt",
+      "lessonId": "cl_t04_s02",
+      "challengeId": "cl_t04_s02_c09",
+      "question": "Para deducir con exactitud el tono del autor en un examen de admisión,",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+      "lessonId": "cl_t05_s01",
+      "challengeId": "cl_t05_s01_c01",
+      "question": "En la evaluación de lectura crítica, una afirmación se califica como '",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+      "lessonId": "cl_t05_s01",
+      "challengeId": "cl_t05_s01_c04",
+      "question": "Si el texto expone: 'El cambio climático antropogénico representa una ",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+      "lessonId": "cl_t05_s01",
+      "challengeId": "cl_t05_s01_c08",
+      "question": "Considere el fragmento: 'La educación pública no solo transmite conoci",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+      "lessonId": "cl_t05_s02",
+      "challengeId": "cl_t05_s02_c02",
+      "question": "Identifique cuál de los siguientes enunciados constituye estrictamente",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+      "lessonId": "cl_t05_s02",
+      "challengeId": "cl_t05_s02_c03",
+      "question": "Identifique cuál de los siguientes enunciados constituye formalmente u",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+      "lessonId": "cl_t05_s02",
+      "challengeId": "cl_t05_s02_c05",
+      "question": "Si un texto argumenta: 'La inflación interanual alcanzó el 8.4% en 202",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+      "lessonId": "cl_t05_s02",
+      "challengeId": "cl_t05_s02_c06",
+      "question": "¿Qué riesgo analítico asume un postulante que no discrimina hechos de ",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+      "lessonId": "cl_t05_s02",
+      "challengeId": "cl_t05_s02_c07",
+      "question": "¿Cuál de las siguientes afirmaciones describe de manera idónea una hip",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+      "lessonId": "cl_t05_s02",
+      "challengeId": "cl_t05_s02_c09",
+      "question": "¿Qué técnica de lectura favorece la correcta individualización de las ",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+      "lessonId": "cl_t05_s02",
+      "challengeId": "cl_t05_s02_c10",
+      "question": "Si el texto refiere: 'La atmósfera de Marte está compuesta en más del ",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s01",
+      "challengeId": "cl_t06_s01_c01",
+      "question": "La 'Extrapolación Cognitiva' en la comprensión lectora evalúa la capac",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s01",
+      "challengeId": "cl_t06_s01_c02",
+      "question": "La 'Extrapolación Condicional o Contrafáctica' se estructura típicamen",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s01",
+      "challengeId": "cl_t06_s01_c03",
+      "question": "Si un texto defiende que 'la escasez de recursos hídricos en el valle ",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s01",
+      "challengeId": "cl_t06_s01_c04",
+      "question": "La 'Extrapolación por Transferencia de Dominio' consiste esencialmente",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s01",
+      "challengeId": "cl_t06_s01_c06",
+      "question": "Considere: 'Para Popper, una teoría que no puede ser sometida a falsac",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s01",
+      "challengeId": "cl_t06_s01_c07",
+      "question": "Si el autor afirma: 'El aumento del salario mínimo no genera desempleo",
+      "overlapCurrent": "0.07"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s01",
+      "challengeId": "cl_t06_s01_c08",
+      "question": "En una pregunta de extrapolación, si el texto trata sobre la decadenci",
+      "overlapCurrent": "0.09"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s01",
+      "challengeId": "cl_t06_s01_c09",
+      "question": "¿Por qué la extrapolación se ubica en el nivel superior de la taxonomí",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s01",
+      "challengeId": "cl_t06_s01_c10",
+      "question": "Si en un texto el autor asevera que 'la libertad de prensa es la mayor",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s02",
+      "challengeId": "cl_t06_s02_c01",
+      "question": "En las pruebas de admisión modernas (estándar DECO), un 'Texto Mixto' ",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s02",
+      "challengeId": "cl_t06_s02_c02",
+      "question": "Al analizar un gráfico estadístico anexo a un texto continuo, la prime",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s02",
+      "challengeId": "cl_t06_s02_c03",
+      "question": "En un texto mixto sobre desempleo juvenil, si el texto continuo afirma",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s02",
+      "challengeId": "cl_t06_s02_c04",
+      "question": "En una infografía, ¿cuál es la función de elementos no verbales como f",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s02",
+      "challengeId": "cl_t06_s02_c05",
+      "question": "Si una tabla presenta las tasas de alfabetismo por regiones: Costa (96",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s02",
+      "challengeId": "cl_t06_s02_c06",
+      "question": "En las preguntas sobre 'Síntesis Global' de un texto discontinuo o mix",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s02",
+      "challengeId": "cl_t06_s02_c07",
+      "question": "¿Qué error frecuente de decodificación ocurre al interpretar diagramas",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s02",
+      "challengeId": "cl_t06_s02_c08",
+      "question": "Si una infografía expone el ciclo biológico del mosquito transmisor de",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s02",
+      "challengeId": "cl_t06_s02_c09",
+      "question": "Al contrastar dos gráficos de barras sobre 'Inversión en I+D como porc",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "lessonId": "cl_t06_s02",
+      "challengeId": "cl_t06_s02_c10",
+      "question": "En el análisis de tablas complejas de doble entrada, ¿qué procedimient",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s01",
+      "challengeId": "cl_t07_s01_c01",
+      "question": "En las pruebas DECO, los 'Textos Dialécticos' (o de postura contrapues",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s01",
+      "challengeId": "cl_t07_s01_c02",
+      "question": "Para abordar eficazmente un texto dialéctico, el primer paso metodológ",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s01",
+      "challengeId": "cl_t07_s01_c03",
+      "question": "Si el Texto A defiende la necesidad de subsidiar la educación universi",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s01",
+      "challengeId": "cl_t07_s01_c04",
+      "question": "En un texto dialéctico, ¿qué se entiende por 'Punto de Coincidencia' e",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s01",
+      "challengeId": "cl_t07_s01_c05",
+      "question": "Si el Autor A sostiene: 'La inteligencia artificial destruirá empleos ",
+      "overlapCurrent": "0.03"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s01",
+      "challengeId": "cl_t07_s01_c06",
+      "question": "¿Cuál es la principal recomendación operativa al contestar preguntas r",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s01",
+      "challengeId": "cl_t07_s01_c07",
+      "question": "En un debate sobre eutanasia voluntaria, el Autor A fundamenta su post",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s01",
+      "challengeId": "cl_t07_s01_c08",
+      "question": "Si el Autor A califica una medida tributaria como 'progresiva y equita",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s01",
+      "challengeId": "cl_t07_s01_c09",
+      "question": "Un reactivo solicita: 'Ambos autores coincidirían necesariamente en qu",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s01",
+      "challengeId": "cl_t07_s01_c10",
+      "question": "Si el Autor A descalifica el argumento del Autor B señalando: 'Mi cont",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s02",
+      "challengeId": "cl_t07_s02_c01",
+      "question": "En el análisis DECO, el 'Tono del Autor' se define formalmente como:",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s02",
+      "challengeId": "cl_t07_s02_c02",
+      "question": "Por su parte, la 'Intención Comunicativa' (o propósito del autor) cons",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s02",
+      "challengeId": "cl_t07_s02_c03",
+      "question": "Si un autor redacta: '¿De verdad pretendemos salvar los bosques amazón",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s02",
+      "challengeId": "cl_t07_s02_c04",
+      "question": "Un texto que expone meticulosamente los datos de un informe epidemioló",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s02",
+      "challengeId": "cl_t07_s02_c05",
+      "question": "Cuando un autor recurre al 'Sarcasmo' en un artículo de opinión, su es",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s02",
+      "challengeId": "cl_t07_s02_c06",
+      "question": "Si el artículo culmina con: 'Aún estamos a tiempo de evitar la extinci",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s02",
+      "challengeId": "cl_t07_s02_c07",
+      "question": "¿Cómo se identifica formalmente un tono 'Polemista' o 'Beligerante' en",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s02",
+      "challengeId": "cl_t07_s02_c08",
+      "question": "Si un autor aborda el descubrimiento de una nueva partícula elemental ",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s02",
+      "challengeId": "cl_t07_s02_c09",
+      "question": "En las preguntas sobre 'Propósito Fundamental del Texto', los distract",
+      "overlapCurrent": "0.12"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "lessonId": "cl_t07_s02",
+      "challengeId": "cl_t07_s02_c10",
+      "question": "Cuando un autor expresa: 'Lamentablemente, asistimos al ocaso irrevers",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s01",
+      "challengeId": "cl_t08_s01_c01",
+      "question": "En la lectura crítica avanzada, el concepto de 'Premisa Oculta' o 'Ent",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s01",
+      "challengeId": "cl_t08_s01_c03",
+      "question": "En la evaluación de un texto argumentativo, una pregunta orientada a '",
+      "overlapCurrent": "0.12"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s01",
+      "challengeId": "cl_t08_s01_c05",
+      "question": "Un texto sostiene: 'Las microfinanzas rurales son la herramienta más e",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s01",
+      "challengeId": "cl_t08_s01_c06",
+      "question": "¿Cuál de los siguientes datos fortalecería de manera determinante la t",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s01",
+      "challengeId": "cl_t08_s01_c07",
+      "question": "Cuando un autor sostiene: 'Todas las civilizaciones que abandonaron el",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s01",
+      "challengeId": "cl_t08_s01_c08",
+      "question": "Identifique la premisa oculta en el enunciado: 'No deberíamos permitir",
+      "overlapCurrent": "0.04"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s01",
+      "challengeId": "cl_t08_s01_c09",
+      "question": "En la lectura crítica de textos científicos, la 'Correlación Estadísti",
+      "overlapCurrent": "0.09"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s01",
+      "challengeId": "cl_t08_s01_c10",
+      "question": "¿Cuál es el propósito central de los ejercicios de reforzamiento y deb",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s02",
+      "challengeId": "cl_t08_s02_c01",
+      "question": "En la lectura de textos filosóficos complejos en admisión, el desafío ",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s02",
+      "challengeId": "cl_t08_s02_c03",
+      "question": "Si en un texto filosófico Kant afirma que 'el espacio y el tiempo no s",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s02",
+      "challengeId": "cl_t08_s02_c04",
+      "question": "En un texto sobre astrofísica, si el autor asevera que 'el corrimiento",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s02",
+      "challengeId": "cl_t08_s02_c05",
+      "question": "Al enfrentarse a un texto literario o ensayístico rico en 'Metáforas' ",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s02",
+      "challengeId": "cl_t08_s02_c06",
+      "question": "Considere: 'Para Nietzsche, el resentimiento moral surge cuando los in",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s02",
+      "challengeId": "cl_t08_s02_c07",
+      "question": "En un texto sobre neurociencia que analiza la plasticidad cerebral, ¿q",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s02",
+      "challengeId": "cl_t08_s02_c09",
+      "question": "Si un texto epistemológico sostiene: 'La ciencia avanza no por acumula",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "lessonId": "cl_t08_s02",
+      "challengeId": "cl_t08_s02_c10",
+      "question": "En la lectura crítica integrada de nivel preuniversitario, el éxito de",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana01.kt",
+      "lessonId": "filo_t01_s01",
+      "challengeId": "filo_t01_s01_c03",
+      "question": "Cuando afirmamos que la filosofía es un saber 'totalizador' o 'univers",
+      "overlapCurrent": "0.13",
+      "overlapOther": "0.60"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana01.kt",
+      "lessonId": "filo_t01_s01",
+      "challengeId": "filo_t01_s01_c04",
+      "question": "La característica de la actitud filosófica que consiste en someter a e",
+      "overlapCurrent": "0.18",
+      "overlapOther": "0.47"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana01.kt",
+      "lessonId": "filo_t01_s01",
+      "challengeId": "filo_t01_s01_c05",
+      "question": "Para Aristóteles y Platón, la experiencia humana inicial que despierta",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana01.kt",
+      "lessonId": "filo_t01_s01",
+      "challengeId": "filo_t01_s01_c06",
+      "question": "La filosofía es un saber 'problemático' porque:",
+      "overlapCurrent": "0.18",
+      "overlapOther": "0.45"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana01.kt",
+      "lessonId": "filo_t01_s01",
+      "challengeId": "filo_t01_s01_c07",
+      "question": "Se afirma que la filosofía posee un carácter 'metódico' y 'sistemático",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana01.kt",
+      "lessonId": "filo_t01_s01",
+      "challengeId": "filo_t01_s01_c08",
+      "question": "En contraposición a la actitud religiosa basada en la fe en lo divino,",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana01.kt",
+      "lessonId": "filo_t01_s01",
+      "challengeId": "filo_t01_s01_c09",
+      "question": "¿Cuál de las siguientes interrogantes expresa paradigmáticamente una p",
+      "overlapCurrent": "0.07"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana01.kt",
+      "lessonId": "filo_t01_s01",
+      "challengeId": "filo_t01_s01_c10",
+      "question": "La característica filosófica denominada 'trascendente' hace referencia",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana02.kt",
+      "lessonId": "filo_t02_s01",
+      "challengeId": "filo_t02_s01_c04",
+      "question": "Si un filósofo formula la siguiente tesis: 'Las leyes de la física son",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana02.kt",
+      "lessonId": "filo_t02_s02",
+      "challengeId": "filo_t02_s02_c10",
+      "question": "Si analizamos los dilemas morales relativos al principio de autonomía ",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana04.kt",
+      "lessonId": "filo_t04_s01",
+      "challengeId": "filo_t04_s01_c08",
+      "question": "Considere el siguiente razonamiento: 'Todos los seres humanos son mort",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana05.kt",
+      "lessonId": "filo_t05_s01",
+      "challengeId": "filo_t05_s01_c03",
+      "question": "En la clasificación epistemológica de las ciencias, la Lógica y la Mat",
+      "overlapCurrent": "0.10",
+      "overlapOther": "0.60"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana07.kt",
+      "lessonId": "filo_t07_s02",
+      "challengeId": "filo_t07_s02_c02",
+      "question": "En el siglo XVIII, el pensamiento de la 'Ilustración' peruana cuestion",
+      "overlapCurrent": "0.19",
+      "overlapOther": "0.54"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana08.kt",
+      "lessonId": "filo_t08_s01",
+      "challengeId": "filo_t08_s01_c02",
+      "question": "La concepción materialista de la historia (materialismo histórico) de ",
+      "overlapCurrent": "0.04"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana08.kt",
+      "lessonId": "filo_t08_s01",
+      "challengeId": "filo_t08_s01_c03",
+      "question": "Friedrich Nietzsche proclamó en 'La gaya ciencia' y 'Así habló Zaratus",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana08.kt",
+      "lessonId": "filo_t08_s01",
+      "challengeId": "filo_t08_s01_c04",
+      "question": "Frente a la moral de esclavos (marcada por el resentimiento, la debili",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana08.kt",
+      "lessonId": "filo_t08_s01",
+      "challengeId": "filo_t08_s01_c05",
+      "question": "Auguste Comte, fundador del 'Positivismo', formuló la 'Ley de los Tres",
+      "overlapCurrent": "0.12"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana08.kt",
+      "lessonId": "filo_t08_s01",
+      "challengeId": "filo_t08_s01_c06",
+      "question": "Para el positivismo comtiano, el lema 'Saber para prever, prever para ",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana08.kt",
+      "lessonId": "filo_t08_s01",
+      "challengeId": "filo_t08_s01_c10",
+      "question": "Martin Heidegger, en su obra 'Ser y tiempo' (1927), caracterizó al ser",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana08.kt",
+      "lessonId": "filo_t08_s02",
+      "challengeId": "filo_t08_s02_c03",
+      "question": "El concepto foucaultiano de 'Biopolítica' y 'Biopoder' hace referencia",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana08.kt",
+      "lessonId": "filo_t08_s02",
+      "challengeId": "filo_t08_s02_c08",
+      "question": "Jacques Derrida introdujo la estrategia de la 'Deconstrucción' textual",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana10.kt",
+      "lessonId": "filo_t10_s02",
+      "challengeId": "filo_t10_s02_c04",
+      "question": "La ética del 'Estoicismo' (Séneca, Epicteto, Marco Aurelio) proclama q",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana10.kt",
+      "lessonId": "filo_t10_s02",
+      "challengeId": "filo_t10_s02_c09",
+      "question": "John Stuart Mill introdujo una corrección fundamental al utilitarismo ",
+      "overlapCurrent": "0.14",
+      "overlapOther": "0.66"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana13.kt",
+      "lessonId": "filo_t13_s02",
+      "challengeId": "filo_t13_s02_c01",
+      "question": "En el debate sobre el origen del ser humano, la teoría del 'Creacionis",
+      "overlapCurrent": "0.16",
+      "overlapOther": "0.74"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana13.kt",
+      "lessonId": "filo_t13_s02",
+      "challengeId": "filo_t13_s02_c02",
+      "question": "La teoría científica del 'Evolucionismo' biológico (inaugurada por Cha",
+      "overlapCurrent": "0.18",
+      "overlapOther": "0.71"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana01.kt",
+      "lessonId": "geo_t01_s01",
+      "challengeId": "geo_t01_s01_c03",
+      "question": "En el enfoque sistémico de la Geografía, el Geosistema se encuentra in",
+      "overlapCurrent": "0.14",
+      "overlapOther": "0.64"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana06.kt",
+      "lessonId": "geo_t06_s01",
+      "challengeId": "geo_t06_s01_c10",
+      "question": "El fenómeno de 'Aguaje' o marea roja en el litoral peruano ocurre cuan",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "TITLE_THEORY_MISMATCH",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s01",
+      "title": "3.1. Origen, Criterios y Pisos Ecológicos Occidentales (Chala a Suni)",
+      "overlap": "0.00",
+      "theoryLength": 0
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s01",
+      "challengeId": "geo_t08_s01_c01",
+      "question": "En 1940, el Dr. Javier Pulgar Vidal presentó su tesis doctoral sobre l",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s01",
+      "challengeId": "geo_t08_s01_c02",
+      "question": "Dentro de los seis criterios científicos adoptados por Javier Pulgar V",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s01",
+      "challengeId": "geo_t08_s01_c03",
+      "question": "¿Qué significado toponímico tiene el vocablo quechua 'Chala' según la ",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s01",
+      "challengeId": "geo_t08_s01_c04",
+      "question": "La región Yunga Marítima (500 a 2 300 m s.n.m.) se caracteriza climáti",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s01",
+      "challengeId": "geo_t08_s01_c05",
+      "question": "El árbol emblemático y representativo de la región Yunga es:",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s01",
+      "challengeId": "geo_t08_s01_c06",
+      "question": "La región Quechua (2 300 a 3 500 m s.n.m.) es reconocida en la geograf",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s01",
+      "challengeId": "geo_t08_s01_c07",
+      "question": "¿Cuál de las siguientes ciudades peruanas se ubica en el piso ecológic",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s01",
+      "challengeId": "geo_t08_s01_c08",
+      "question": "La región Suni o Jalca (3 500 a 4 000 m s.n.m.) se define agronómica y",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s01",
+      "challengeId": "geo_t08_s01_c09",
+      "question": "¿Cuál es la flor emblemática sagrada de los incas que crece típicament",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s01",
+      "challengeId": "geo_t08_s01_c10",
+      "question": "En el departamento de Cajamarca y el norte andino, la región Suni es c",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "TITLE_THEORY_MISMATCH",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s02",
+      "title": "3.2. Pisos de Alta Montaña y Vertiente Amazónica (Puna, Janca, Rupa Rupa y Omagua)",
+      "overlap": "0.00",
+      "theoryLength": 0
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s02",
+      "challengeId": "geo_t08_s02_c01",
+      "question": "En quechua y aymara, la palabra 'Puna' (4 000 a 4 800 m s.n.m.) hace r",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s02",
+      "challengeId": "geo_t08_s02_c02",
+      "question": "¿Qué planta gigante con inflorescencias que alcanzan hasta 8 000 flore",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s02",
+      "challengeId": "geo_t08_s02_c03",
+      "question": "La región Janca o Cordillera se extiende altitudinalmente desde los:",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s02",
+      "challengeId": "geo_t08_s02_c04",
+      "question": "¿Qué ave emblemática de los Andes domina el espacio aéreo de las regio",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s02",
+      "challengeId": "geo_t08_s02_c05",
+      "question": "Toponímicamente, el nombre 'Rupa Rupa' (400 a 1 000 m s.n.m.) signific",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s02",
+      "challengeId": "geo_t08_s02_c06",
+      "question": "En la geomorfología de la región Rupa Rupa (Selva Alta), los cañones p",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s02",
+      "challengeId": "geo_t08_s02_c07",
+      "question": "¿A qué región natural corresponden tanto el ave nacional (Gallito de l",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s02",
+      "challengeId": "geo_t08_s02_c08",
+      "question": "En la llanura de la región Omagua (Selva Baja), las terrazas no inunda",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s02",
+      "challengeId": "geo_t08_s02_c09",
+      "question": "¿Qué pez gigante de agua dulce, representativo de la fauna ictiológica",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "lessonId": "geo_t08_s02",
+      "challengeId": "geo_t08_s02_c10",
+      "question": "¿Cuál es el árbol más alto del bosque tropical amazónico peruano (regi",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana09.kt",
+      "lessonId": "geo_t09_s02",
+      "challengeId": "geo_t09_s02_c07",
+      "question": "En el suelo del bosque tropical amazónico, a pesar de la gigantesca bi",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana10.kt",
+      "lessonId": "geo_t10_s01",
+      "challengeId": "geo_t10_s01_c04",
+      "question": "El grave proceso de degradación de tierras en zonas áridas, semiáridas",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana10.kt",
+      "lessonId": "geo_t10_s01",
+      "challengeId": "geo_t10_s01_c09",
+      "question": "En la gestión integral de residuos sólidos, el principio de las '3R' p",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana10.kt",
+      "lessonId": "geo_t10_s01",
+      "challengeId": "geo_t10_s01_c10",
+      "question": "El calentamiento antropogénico de los océanos y la absorción continua ",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana11.kt",
+      "lessonId": "geo_t11_s02",
+      "challengeId": "geo_t11_s02_c09",
+      "question": "La 'Población No Económicamente Activa' (No PEA o Inactiva) comprende ",
+      "overlapCurrent": "0.14",
+      "overlapOther": "0.57"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana01.kt",
+      "lessonId": "hper_t01_s01",
+      "challengeId": "hper_t01_s01_c10",
+      "question": "La expedición científica marítima 'Kon-Tiki' realizada en 1947 por el ",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana03.kt",
+      "lessonId": "hper_t03_s02",
+      "challengeId": "hper_t03_s02_c08",
+      "question": "Los mitimaes (o mitmas) eran poblaciones enteras trasladadas voluntari",
+      "overlapCurrent": "0.19",
+      "overlapOther": "0.56"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana04.kt",
+      "lessonId": "hper_t04_s02",
+      "challengeId": "hper_t04_s02_c03",
+      "question": "El método metalúrgico introducido en el virreinato que revolucionó la ",
+      "overlapCurrent": "0.13",
+      "overlapOther": "0.57"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana05.kt",
+      "lessonId": "hper_t05_s01",
+      "challengeId": "hper_t05_s01_c02",
+      "question": "Entre las reivindicaciones sociales y económicas más revolucionarias p",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana05.kt",
+      "lessonId": "hper_t05_s02",
+      "challengeId": "hper_t05_s02_c01",
+      "question": "El periodo económico de bonanza fiscal denominado 'La Prosperidad Fala",
+      "overlapCurrent": "0.14",
+      "overlapOther": "0.46"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana05.kt",
+      "lessonId": "hper_t05_s02",
+      "challengeId": "hper_t05_s02_c04",
+      "question": "En la Campaña Marítima de la Guerra del Pacífico, el almirante Miguel ",
+      "overlapCurrent": "0.18",
+      "overlapOther": "0.46"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana01.kt",
+      "lessonId": "huni_t01_s01",
+      "challengeId": "huni_t01_s01_c10",
+      "question": "Los análisis genéticos modernos de ADN fósil han demostrado de manera ",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana01.kt",
+      "lessonId": "huni_t01_s02",
+      "challengeId": "huni_t01_s02_c01",
+      "question": "El arqueólogo australiano Vere Gordon Childe acuñó la categoría concep",
+      "overlapCurrent": "0.17",
+      "overlapOther": "0.61"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana02.kt",
+      "lessonId": "huni_t02_s02",
+      "challengeId": "huni_t02_s02_c08",
+      "question": "El descubrimiento de la tumba intacta del joven faraón Tutankamón en 1",
+      "overlapCurrent": "0.15"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana03.kt",
+      "lessonId": "huni_t03_s02",
+      "challengeId": "huni_t03_s02_c02",
+      "question": "La magistratura romana extraordinaria creada tras la retirada plebeya ",
+      "overlapCurrent": "0.17",
+      "overlapOther": "0.52"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana03.kt",
+      "lessonId": "huni_t03_s02",
+      "challengeId": "huni_t03_s02_c05",
+      "question": "En el siglo II a.C., los hermanos tribunos de la plebe Tiberio y Cayo ",
+      "overlapCurrent": "0.18",
+      "overlapOther": "0.53"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana03.kt",
+      "lessonId": "huni_t03_s02",
+      "challengeId": "huni_t03_s02_c07",
+      "question": "Julio César consolidó su poder personal supremo tras conquistar las Ga",
+      "overlapCurrent": "0.12",
+      "overlapOther": "0.48"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana01.kt",
+      "lessonId": "leng_t01_s02",
+      "challengeId": "leng_t01_s02_c01",
+      "question": "El sonido estridente de la sirena de una ambulancia que solicita paso ",
+      "overlapCurrent": "0.15",
+      "overlapOther": "0.46"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana01.kt",
+      "lessonId": "leng_t01_s02",
+      "challengeId": "leng_t01_s02_c03",
+      "question": "¿Qué tipo de comunicación se produce durante un encarnizado debate ele",
+      "overlapCurrent": "0.15",
+      "overlapOther": "0.54"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana01.kt",
+      "lessonId": "leng_t01_s02",
+      "challengeId": "leng_t01_s02_c04",
+      "question": "La lectura de un cartel publicitario colocado en la carretera Panameri",
+      "overlapCurrent": "0.18",
+      "overlapOther": "0.64"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana01.kt",
+      "lessonId": "leng_t01_s02",
+      "challengeId": "leng_t01_s02_c07",
+      "question": "Si un joven envía una carta manuscrita a su abuelo que reside en otra ",
+      "overlapCurrent": "0.08",
+      "overlapOther": "0.46"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana01.kt",
+      "lessonId": "leng_t01_s02",
+      "challengeId": "leng_t01_s02_c08",
+      "question": "¿Cuál de las siguientes situaciones ejemplifica una comunicación human",
+      "overlapCurrent": "0.17",
+      "overlapOther": "0.42"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana02.kt",
+      "lessonId": "leng_t02_s02",
+      "challengeId": "leng_t02_s02_c05",
+      "question": "La coexistencia asimétrica de dos lenguas donde una goza de prestigio ",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana04.kt",
+      "lessonId": "leng_t04_s02",
+      "challengeId": "leng_t04_s02_c07",
+      "question": "Palabras como 'tictac', 'quiquiriquí' y 'chasquido' se han formado med",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana04.kt",
+      "lessonId": "leng_t04_s02",
+      "challengeId": "leng_t04_s02_c10",
+      "question": "Las siglas como 'DNI', 'ONU' o 'FMI' se caracterizan fundamentalmente ",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "TITLE_THEORY_MISMATCH",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt",
+      "lessonId": "leng_t05_s01",
+      "title": "La Sintaxis y las Categorías Gramaticales: Variables e Invariables",
+      "overlap": "0.20",
+      "theoryLength": 413
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt",
+      "lessonId": "leng_t05_s01",
+      "challengeId": "leng_t05_s01_c01",
+      "question": "La categoría gramatical que tiene como rasgo exclusivo modificar a un ",
+      "overlapCurrent": "0.00",
+      "overlapOther": "0.67"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt",
+      "lessonId": "leng_t05_s01",
+      "challengeId": "leng_t05_s01_c02",
+      "question": "En la frase 'Esos jóvenes ingresaron a la universidad, pero aquellos a",
+      "overlapCurrent": "0.08",
+      "overlapOther": "0.46"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt",
+      "lessonId": "leng_t05_s01",
+      "challengeId": "leng_t05_s01_c03",
+      "question": "¿Cuál de las siguientes formas verbales contiene una auténtica perífra",
+      "overlapCurrent": "0.00",
+      "overlapOther": "0.44"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt",
+      "lessonId": "leng_t05_s01",
+      "challengeId": "leng_t05_s01_c04",
+      "question": "Los verboides infinitivo, gerundio y participio se caracterizan formal",
+      "overlapCurrent": "0.00",
+      "overlapOther": "0.63"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt",
+      "lessonId": "leng_t05_s01",
+      "challengeId": "leng_t05_s01_c05",
+      "question": "¿Cuál de los siguientes grupos está compuesto únicamente por categoría",
+      "overlapCurrent": "0.00",
+      "overlapOther": "0.70"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt",
+      "lessonId": "leng_t05_s01",
+      "challengeId": "leng_t05_s01_c06",
+      "question": "En la expresión 'Con extraordinaria rapidez y valor resolvió el enigma",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt",
+      "lessonId": "leng_t05_s01",
+      "challengeId": "leng_t05_s01_c07",
+      "question": "En la oración 'La jauría huyó despavorida por el valle', la concordanc",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt",
+      "lessonId": "leng_t05_s01",
+      "challengeId": "leng_t05_s01_c08",
+      "question": "¿Cuántas preposiciones contiene la oración 'Bajo la sombra del árbol c",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt",
+      "lessonId": "leng_t05_s01",
+      "challengeId": "leng_t05_s01_c09",
+      "question": "En 'Llegaron muy temprano a la ceremonia', la palabra 'muy' funciona m",
+      "overlapCurrent": "0.00",
+      "overlapOther": "0.55"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt",
+      "lessonId": "leng_t05_s01",
+      "challengeId": "leng_t05_s01_c10",
+      "question": "La conjunción 'pero' en 'Estudió con gran empeño, pero no alcanzó el p",
+      "overlapCurrent": "0.00",
+      "overlapOther": "0.55"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana07.kt",
+      "lessonId": "leng_t07_s01",
+      "challengeId": "leng_t07_s01_c04",
+      "question": "En 'Los estudiantes llegaron temprano a la academia; luego, ingresaron",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana07.kt",
+      "lessonId": "leng_t07_s01",
+      "challengeId": "leng_t07_s01_c08",
+      "question": "En la oración 'Compré flores para mi madre: ella siempre las aprecia',",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana08.kt",
+      "lessonId": "leng_t08_s01",
+      "challengeId": "leng_t08_s01_c09",
+      "question": "En la expresión 'El león africano es un mamífero carnívoro de la famil",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana01.kt",
+      "lessonId": "lit_t01_s01",
+      "challengeId": "lit_t01_s01_c05",
+      "question": "Lea con atención los siguientes versos de Gustavo Adolfo Bécquer:\n«Vol",
+      "overlapCurrent": "0.14",
+      "overlapOther": "0.76"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana02.kt",
+      "lessonId": "lit_t02_s01",
+      "challengeId": "lit_t02_s01_c04",
+      "question": "En la Odisea, la virtud primordial que define al héroe Odiseo frente a",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana02.kt",
+      "lessonId": "lit_t02_s01",
+      "challengeId": "lit_t02_s01_c06",
+      "question": "¿Cuál de los siguientes dramaturgos griegos es considerado el «padre d",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana02.kt",
+      "lessonId": "lit_t02_s02",
+      "challengeId": "lit_t02_s02_c08",
+      "question": "En Fausto de Goethe, ¿qué pacto trascendental realiza el sabio protago",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana04.kt",
+      "lessonId": "lit_t04_s01",
+      "challengeId": "lit_t04_s01_c07",
+      "question": "El rasgo estilístico modernista consistente en asociar sensaciones pro",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana04.kt",
+      "lessonId": "lit_t04_s01",
+      "challengeId": "lit_t04_s01_c09",
+      "question": "En la lírica de Alfonsina Storni, poemas célebres como «Tú me quieres ",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana04.kt",
+      "lessonId": "lit_t04_s02",
+      "challengeId": "lit_t04_s02_c04",
+      "question": "En la novela Pedro Páramo (1955) del mexicano Juan Rulfo, el protagoni",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana04.kt",
+      "lessonId": "lit_t04_s02",
+      "challengeId": "lit_t04_s02_c09",
+      "question": "En Pedro Páramo, la única mujer a la que el déspota cacique de la Medi",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana06.kt",
+      "lessonId": "lit_t06_s02",
+      "challengeId": "lit_t06_s02_c05",
+      "question": "¿Quién es el personaje del círculo de cadetes en La ciudad y los perro",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana06.kt",
+      "lessonId": "lit_t06_s02",
+      "challengeId": "lit_t06_s02_c06",
+      "question": "En La ciudad y los perros, el cadete tímido y marginado apodado «el Es",
+      "overlapCurrent": "0.09"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana06.kt",
+      "lessonId": "lit_t06_s02",
+      "challengeId": "lit_t06_s02_c07",
+      "question": "Entre las técnicas narrativas de vanguardia magistralmente utilizadas ",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana06.kt",
+      "lessonId": "lit_t06_s02",
+      "challengeId": "lit_t06_s02_c09",
+      "question": "En La ciudad y los perros, el oficial recto y disciplinado que cree en",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana01.kt",
+      "lessonId": "psi_t01_s01",
+      "challengeId": "psi_t01_s01_c03",
+      "question": "La escuela psicológica del Estructuralismo, liderada por Edward Titche",
+      "overlapCurrent": "0.17",
+      "overlapOther": "0.70"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana01.kt",
+      "lessonId": "psi_t01_s01",
+      "challengeId": "psi_t01_s01_c04",
+      "question": "El Funcionalismo, corriente fundada por William James e influida decis",
+      "overlapCurrent": "0.08",
+      "overlapOther": "0.50"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana01.kt",
+      "lessonId": "psi_t01_s01",
+      "challengeId": "psi_t01_s01_c05",
+      "question": "En 1913, John B. Watson publicó el manifiesto conductista 'La psicolog",
+      "overlapCurrent": "0.17",
+      "overlapOther": "0.54"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana01.kt",
+      "lessonId": "psi_t01_s01",
+      "challengeId": "psi_t01_s01_c06",
+      "question": "La escuela de la Gestalt (Wertheimer, Köhler, Koffka) surgió en Aleman",
+      "overlapCurrent": "0.14",
+      "overlapOther": "0.45"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana01.kt",
+      "lessonId": "psi_t01_s01",
+      "challengeId": "psi_t01_s01_c07",
+      "question": "El Psicoanálisis, creado por Sigmund Freud en Viena a fines del siglo ",
+      "overlapCurrent": "0.12",
+      "overlapOther": "0.42"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana01.kt",
+      "lessonId": "psi_t01_s01",
+      "challengeId": "psi_t01_s01_c08",
+      "question": "La Psicología Humanista (llamada la 'Tercera Fuerza', con Maslow y Car",
+      "overlapCurrent": "0.08",
+      "overlapOther": "0.48"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana01.kt",
+      "lessonId": "psi_t01_s01",
+      "challengeId": "psi_t01_s01_c09",
+      "question": "El enfoque Cognitivo contemporáneo (Piaget, Neisser, Ausubel) asume la",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana01.kt",
+      "lessonId": "psi_t01_s01",
+      "challengeId": "psi_t01_s01_c10",
+      "question": "En la investigación psicológica, el método que permite establecer con ",
+      "overlapCurrent": "0.19",
+      "overlapOther": "0.81"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana02.kt",
+      "lessonId": "psi_t02_s01",
+      "challengeId": "psi_t02_s01_c02",
+      "question": "El 'Autoconocimiento' es el pilar fundacional del proyecto de vida por",
+      "overlapCurrent": "0.17",
+      "overlapOther": "0.44"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana02.kt",
+      "lessonId": "psi_t02_s01",
+      "challengeId": "psi_t02_s01_c03",
+      "question": "En la matriz de diagnóstico estratégico FODA aplicada al desarrollo pe",
+      "overlapCurrent": "0.13",
+      "overlapOther": "0.73"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana02.kt",
+      "lessonId": "psi_t02_s01",
+      "challengeId": "psi_t02_s01_c04",
+      "question": "Un postulante reconoce: 'Tengo gran facilidad para la oratoria y disci",
+      "overlapCurrent": "0.00",
+      "overlapOther": "0.40"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana02.kt",
+      "lessonId": "psi_t02_s01",
+      "challengeId": "psi_t02_s01_c05",
+      "question": "La beca de estudios en el extranjero otorgada por PRONABEC o una nueva",
+      "overlapCurrent": "0.00",
+      "overlapOther": "0.62"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana02.kt",
+      "lessonId": "psi_t02_s01",
+      "challengeId": "psi_t02_s01_c07",
+      "question": "En la metodología de establecimiento de objetivos SMART, el acrónimo p",
+      "overlapCurrent": "0.07"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana02.kt",
+      "lessonId": "psi_t02_s01",
+      "challengeId": "psi_t02_s01_c08",
+      "question": "La formulación 'Voy a estudiar más para ser exitoso en la vida' NO cum",
+      "overlapCurrent": "0.06",
+      "overlapOther": "0.59"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana02.kt",
+      "lessonId": "psi_t02_s01",
+      "challengeId": "psi_t02_s01_c10",
+      "question": "Una amenaza externa frecuente para los proyectos de vida de los jóvene",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana02.kt",
+      "lessonId": "psi_t02_s02",
+      "challengeId": "psi_t02_s02_c10",
+      "question": "El rol de la 'Toma de Decisiones Vocacionales' madura exige un proceso",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana04.kt",
+      "lessonId": "psi_t04_s01",
+      "challengeId": "psi_t04_s01_c02",
+      "question": "El célebre método de estudio EPLERR (o SQ3R de Francis Robinson) compr",
+      "overlapCurrent": "0.10",
+      "overlapOther": "0.40"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana04.kt",
+      "lessonId": "psi_t04_s01",
+      "challengeId": "psi_t04_s01_c03",
+      "question": "La técnica de 'Lectura Crítica o Comprensiva' se diferencia del mero d",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana04.kt",
+      "lessonId": "psi_t04_s01",
+      "challengeId": "psi_t04_s01_c04",
+      "question": "El organizador visual jerárquico creado por Joseph Novak sustentado en",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana04.kt",
+      "lessonId": "psi_t04_s01",
+      "challengeId": "psi_t04_s01_c05",
+      "question": "Los Mapas Mentales desarrollados por Tony Buzan se caracterizan por un",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana04.kt",
+      "lessonId": "psi_t04_s01",
+      "challengeId": "psi_t04_s01_c07",
+      "question": "La 'Metacognición' en el proceso de estudio se define como:",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana04.kt",
+      "lessonId": "psi_t04_s01",
+      "challengeId": "psi_t04_s01_c08",
+      "question": "Uno de los hábitos más nocivos para el aprendizaje de calidad es el ll",
+      "overlapCurrent": "0.00",
+      "overlapOther": "0.60"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana04.kt",
+      "lessonId": "psi_t04_s01",
+      "challengeId": "psi_t04_s01_c09",
+      "question": "La técnica de estudio de la 'Práctica Espaciada' (repaso espaciado) fr",
+      "overlapCurrent": "0.10",
+      "overlapOther": "0.59"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana04.kt",
+      "lessonId": "psi_t04_s01",
+      "challengeId": "psi_t04_s01_c10",
+      "question": "La 'Técnica de Feynman' para comprobar el dominio conceptual de un tem",
+      "overlapCurrent": "0.00",
+      "overlapOther": "0.43"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana04.kt",
+      "lessonId": "psi_t04_s02",
+      "challengeId": "psi_t04_s02_c04",
+      "question": "El fenómeno psicológico de la 'Procrastinación' se define formalmente ",
+      "overlapCurrent": "0.09"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana05.kt",
+      "lessonId": "psi_t05_s01",
+      "challengeId": "psi_t05_s01_c05",
+      "question": "La 'Autoestima' en psicología se distingue del 'Autoconcepto' en que e",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana05.kt",
+      "lessonId": "psi_t05_s01",
+      "challengeId": "psi_t05_s01_c06",
+      "question": "En la llamada 'Escalera de la Autoestima', el peldaño basal indispensa",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana05.kt",
+      "lessonId": "psi_t05_s01",
+      "challengeId": "psi_t05_s01_c07",
+      "question": "La 'Autoaceptación' incondicional implica que la persona es capaz de:",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana05.kt",
+      "lessonId": "psi_t05_s01",
+      "challengeId": "psi_t05_s01_c08",
+      "question": "Una persona con autoestima inflada o narcisista ficticia suele manifes",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana05.kt",
+      "lessonId": "psi_t05_s01",
+      "challengeId": "psi_t05_s01_c09",
+      "question": "La 'Comunicación Asertiva' es la habilidad social madura que consiste ",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana05.kt",
+      "lessonId": "psi_t05_s01",
+      "challengeId": "psi_t05_s01_c10",
+      "question": "La técnica asertiva del 'Disco Rayado' se utiliza eficazmente frente a",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana06.kt",
+      "lessonId": "psi_t06_s01",
+      "challengeId": "psi_t06_s01_c05",
+      "question": "Las necesidades fisiológicas primarias (hambre, sed, sueño, sexo, regu",
+      "overlapCurrent": "0.11",
+      "overlapOther": "0.78"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana06.kt",
+      "lessonId": "psi_t06_s01",
+      "challengeId": "psi_t06_s01_c06",
+      "question": "A diferencia de las biológicas, las necesidades psicosociales (afiliac",
+      "overlapCurrent": "0.05",
+      "overlapOther": "0.74"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana06.kt",
+      "lessonId": "psi_t06_s01",
+      "challengeId": "psi_t06_s01_c07",
+      "question": "La 'Necesidad de Logro' descrita por David McClelland impulsa a las pe",
+      "overlapCurrent": "0.10",
+      "overlapOther": "0.48"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana06.kt",
+      "lessonId": "psi_t06_s01",
+      "challengeId": "psi_t06_s01_c08",
+      "question": "La 'Necesidad de Afiliación' en la teoría de McClelland se manifiesta ",
+      "overlapCurrent": "0.06",
+      "overlapOther": "0.59"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana06.kt",
+      "lessonId": "psi_t06_s01",
+      "challengeId": "psi_t06_s01_c10",
+      "question": "En la dinámica motivacional, el 'Conflicto Atracción - Atracción' (Kur",
+      "overlapCurrent": "0.08",
+      "overlapOther": "0.54"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt",
+      "lessonId": "psi_t07_s01",
+      "challengeId": "psi_t07_s01_c01",
+      "question": "La 'Afectividad' en psicología se conceptualiza como el conjunto de pr",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt",
+      "lessonId": "psi_t07_s01",
+      "challengeId": "psi_t07_s01_c02",
+      "question": "Las 'Emociones' se diferencian de los 'Sentimientos' en que las emocio",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt",
+      "lessonId": "psi_t07_s01",
+      "challengeId": "psi_t07_s01_c03",
+      "question": "Por contraste, los 'Sentimientos' (como el amor filial, la amistad, el",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt",
+      "lessonId": "psi_t07_s01",
+      "challengeId": "psi_t07_s01_c04",
+      "question": "Paul Ekman demostró transculturalmente la existencia de seis 'Emocione",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt",
+      "lessonId": "psi_t07_s01",
+      "challengeId": "psi_t07_s01_c05",
+      "question": "La estructura cerebral subcortical del sistema límbico que actúa como ",
+      "overlapCurrent": "0.00",
+      "overlapOther": "0.47"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt",
+      "lessonId": "psi_t07_s01",
+      "challengeId": "psi_t07_s01_c06",
+      "question": "Las 'Pasiones' en la clasificación de los procesos afectivos se define",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt",
+      "lessonId": "psi_t07_s01",
+      "challengeId": "psi_t07_s01_c10",
+      "question": "El fenómeno del 'Secuestro Amigdalino' (Amygdala Hijack) descrito por ",
+      "overlapCurrent": "0.09",
+      "overlapOther": "0.48"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt",
+      "lessonId": "psi_t07_s02",
+      "challengeId": "psi_t07_s02_c07",
+      "question": "En las bases psicofisiológicas de la afectividad, el Sistema Nervioso ",
+      "overlapCurrent": "0.09"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt",
+      "lessonId": "psi_t07_s02",
+      "challengeId": "psi_t07_s02_c08",
+      "question": "La teoría de la emoción de James-Lange postulaba históricamente la pol",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt",
+      "lessonId": "psi_t07_s02",
+      "challengeId": "psi_t07_s02_c10",
+      "question": "La Teoría Bifactorial de la Emoción de Schachter y Singer concluyó que",
+      "overlapCurrent": "0.09"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana08.kt",
+      "lessonId": "psi_t08_s01",
+      "challengeId": "psi_t08_s01_c08",
+      "question": "¿Cuál es el factor exógeno o ambiental que ejerce la primera y más pro",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana08.kt",
+      "lessonId": "psi_t08_s01",
+      "challengeId": "psi_t08_s01_c09",
+      "question": "Un temperamento 'reactivo o difícil' en la infancia temprana (llanto f",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana08.kt",
+      "lessonId": "psi_t08_s01",
+      "challengeId": "psi_t08_s01_c10",
+      "question": "En la evaluación psicológica de la personalidad, las 'Pruebas Proyecti",
+      "overlapCurrent": "0.09"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana09.kt",
+      "lessonId": "psi_t09_s01",
+      "challengeId": "psi_t09_s01_c08",
+      "question": "John B. Watson y Rosalie Rayner demostraron que las emociones humanas ",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana11.kt",
+      "lessonId": "psi_t11_s01",
+      "challengeId": "psi_t11_s01_c05",
+      "question": "El 'Pensamiento' como proceso cognitivo superior se caracteriza por op",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana11.kt",
+      "lessonId": "psi_t11_s01",
+      "challengeId": "psi_t11_s01_c06",
+      "question": "El 'Razonamiento Deductivo' se distingue del inductivo en que el razon",
+      "overlapCurrent": "0.06",
+      "overlapOther": "0.44"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana11.kt",
+      "lessonId": "psi_t11_s01",
+      "challengeId": "psi_t11_s01_c07",
+      "question": "Por el contrario, el 'Razonamiento Inductivo' se estructura al inferir",
+      "overlapCurrent": "0.06",
+      "overlapOther": "0.41"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana11.kt",
+      "lessonId": "psi_t11_s01",
+      "challengeId": "psi_t11_s01_c08",
+      "question": "J. P. Guilford distinguió entre 'Pensamiento Convergente' y 'Pensamien",
+      "overlapCurrent": "0.09"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana11.kt",
+      "lessonId": "psi_t11_s01",
+      "challengeId": "psi_t11_s01_c09",
+      "question": "En la resolución de problemas, el procedimiento sistemático que garant",
+      "overlapCurrent": "0.07"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana11.kt",
+      "lessonId": "psi_t11_s01",
+      "challengeId": "psi_t11_s01_c10",
+      "question": "Los 'Heurísticos' (estudiados por Kahneman y Tversky) son 'atajos ment",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana12.kt",
+      "lessonId": "psi_t12_s01",
+      "challengeId": "psi_t12_s01_c05",
+      "question": "La 'Función Normativa o Reguladora' de la familia tiene por objeto:",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana12.kt",
+      "lessonId": "psi_t12_s01",
+      "challengeId": "psi_t12_s01_c10",
+      "question": "El concepto de 'Apego Seguro' formulado por Mary Ainsworth en la 'Situ",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "TITLE_THEORY_MISMATCH",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s01",
+      "title": "3.1. Enfoque de Riesgo, Tipologías de Violencia, Ciclo de Walker y Acoso Escolar",
+      "overlap": "0.00",
+      "theoryLength": 0
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s01",
+      "challengeId": "psi_t13_s01_c01",
+      "question": "En la psicología de la salud y prevención comunitaria, un 'Factor de R",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s01",
+      "challengeId": "psi_t13_s01_c02",
+      "question": "La distinción conceptual entre 'Vulnerabilidad' y 'Factor de Riesgo' r",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s01",
+      "challengeId": "psi_t13_s01_c03",
+      "question": "Cuando un agresor retiene los documentos de identidad, despoja de sus ",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s01",
+      "challengeId": "psi_t13_s01_c04",
+      "question": "En el 'Ciclo de la Violencia' intrafamiliar formulado por Leonor Walke",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s01",
+      "challengeId": "psi_t13_s01_c05",
+      "question": "Durante la 'Fase de Acumulación de Tensión' del ciclo de Leonor Walker",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s01",
+      "challengeId": "psi_t13_s01_c06",
+      "question": "Para que un acto de agresión entre estudiantes sea tipificado rigurosa",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s01",
+      "challengeId": "psi_t13_s01_c07",
+      "question": "Dentro de la tríada o triángulo del bullying, el papel que cumplen los",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s01",
+      "challengeId": "psi_t13_s01_c08",
+      "question": "Una característica distintiva primordial del *Cyberbullying* o acoso c",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s01",
+      "challengeId": "psi_t13_s01_c09",
+      "question": "¿Cuál de las siguientes conductas parentales o familiares constituye u",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s01",
+      "challengeId": "psi_t13_s01_c10",
+      "question": "En las relaciones interpersonales, la conducta caracterizada por denig",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "TITLE_THEORY_MISMATCH",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s02",
+      "title": "4.1. Conductas Delictivas Juveniles, Sustancias Psicoactivas y Farmacodependencia",
+      "overlap": "0.00",
+      "theoryLength": 0
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s02",
+      "challengeId": "psi_t13_s02_c01",
+      "question": "Una sustancia química natural o sintética se define formalmente como '",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s02",
+      "challengeId": "psi_t13_s02_c02",
+      "question": "Las drogas que disminuyen la actividad neurofisiológica del encéfalo, ",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s02",
+      "challengeId": "psi_t13_s02_c03",
+      "question": "Científicamente, el alcohol etílico es catalogado farmacológicamente c",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s02",
+      "challengeId": "psi_t13_s02_c04",
+      "question": "Sustancias como la cocaína, las anfetaminas y la nicotina pertenecen a",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s02",
+      "challengeId": "psi_t13_s02_c05",
+      "question": "En el estudio de las drogodependencias, el fenómeno neuroadaptativo de",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s02",
+      "challengeId": "psi_t13_s02_c06",
+      "question": "El 'Síndrome de Abstinencia' en un individuo farmacodependiente consis",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s02",
+      "challengeId": "psi_t13_s02_c07",
+      "question": "¿Cuál es la secuencia correlativa de las fases del proceso adictivo?",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s02",
+      "challengeId": "psi_t13_s02_c08",
+      "question": "En la psicología de la delincuencia juvenil, la pandilla transgresora ",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s02",
+      "challengeId": "psi_t13_s02_c09",
+      "question": "La 'Dependencia Psicológica' hacia una sustancia psicoactiva se distin",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "lessonId": "psi_t13_s02",
+      "challengeId": "psi_t13_s02_c10",
+      "question": "¿Cuál de los siguientes factores constituye un determinante psicosocia",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana14.kt",
+      "lessonId": "psi_t14_s01",
+      "challengeId": "psi_t14_s01_c06",
+      "question": "La fase del 'Enamoramiento' en las relaciones interpersonales se carac",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana14.kt",
+      "lessonId": "psi_t14_s01",
+      "challengeId": "psi_t14_s01_c10",
+      "question": "En una relación de pareja saludable y madura, el respeto a los límites",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana15.kt",
+      "lessonId": "psi_t15_s01",
+      "challengeId": "psi_t15_s01_c04",
+      "question": "La 'Etapa Prenatal' del desarrollo humano abarca nueve meses de gestac",
+      "overlapCurrent": "0.08",
+      "overlapOther": "0.42"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana15.kt",
+      "lessonId": "psi_t15_s01",
+      "challengeId": "psi_t15_s01_c05",
+      "question": "Durante la etapa de la 'Infancia Temprana' (0 a 3 años), el logro moto",
+      "overlapCurrent": "0.16",
+      "overlapOther": "0.58"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana15.kt",
+      "lessonId": "psi_t15_s01",
+      "challengeId": "psi_t15_s01_c07",
+      "question": "En la esfera psicosocial, un rasgo característico del 'Pensamiento Ego",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana15.kt",
+      "lessonId": "psi_t15_s01",
+      "challengeId": "psi_t15_s01_c08",
+      "question": "La 'Fábula Personal' (David Elkind) es otra distorsión del egocentrism",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana15.kt",
+      "lessonId": "psi_t15_s01",
+      "challengeId": "psi_t15_s01_c09",
+      "question": "La 'Adultez Temprana o Joven' (aprox. 20 a 40 años) se caracteriza en ",
+      "overlapCurrent": "0.04"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana15.kt",
+      "lessonId": "psi_t15_s01",
+      "challengeId": "psi_t15_s01_c10",
+      "question": "En la 'Adultez Tardía o Senectud' (tercera edad, 65 años en adelante),",
+      "overlapCurrent": "0.04",
+      "overlapOther": "0.42"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana01.kt",
+      "lessonId": "rv_t01_s01",
+      "challengeId": "rv_t01_s01_c02",
+      "question": "En el enunciado: 'El científico presentó una teoría bastante *audaz* p",
+      "overlapCurrent": "0.14",
+      "overlapOther": "0.43"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana01.kt",
+      "lessonId": "rv_t01_s01",
+      "challengeId": "rv_t01_s01_c03",
+      "question": "En la oración: 'El testimonio del testigo ocular resultó *capital* par",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana01.kt",
+      "lessonId": "rv_t01_s01",
+      "challengeId": "rv_t01_s01_c04",
+      "question": "Identifique el término que funciona como antónimo contextual de la pal",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana01.kt",
+      "lessonId": "rv_t01_s01",
+      "challengeId": "rv_t01_s01_c06",
+      "question": "En el enunciado: 'Las declaraciones del portavoz resultaron sumamente ",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana01.kt",
+      "lessonId": "rv_t01_s01",
+      "challengeId": "rv_t01_s01_c07",
+      "question": "En la expresión: 'El fiscal detectó una versión *espuria* del contrato",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana01.kt",
+      "lessonId": "rv_t01_s01",
+      "challengeId": "rv_t01_s01_c08",
+      "question": "'El director felicitó al equipo por el *fructífero* debate académico s",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana01.kt",
+      "lessonId": "rv_t01_s01",
+      "challengeId": "rv_t01_s01_c09",
+      "question": "En el enunciado: 'Su postura ante la crisis fue calificada de *pusilán",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana02.kt",
+      "lessonId": "rv_t02_s01",
+      "challengeId": "rv_t02_s01_c06",
+      "question": "Dada la premisa: 'ANTORCHA : LIBERTAD ::', ¿qué tipo de relación analó",
+      "overlapCurrent": "0.14",
+      "overlapOther": "0.43"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana02.kt",
+      "lessonId": "rv_t02_s01",
+      "challengeId": "rv_t02_s01_c09",
+      "question": "Dada la pareja 'FUEGO : CENIZA ::', la relación analógica subyacente e",
+      "overlapCurrent": "0.08",
+      "overlapOther": "0.54"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana02.kt",
+      "lessonId": "rv_t02_s02",
+      "challengeId": "rv_t02_s02_c06",
+      "question": "Dada la premisa: 'ABOGADO : DEFENSA ::', ¿cuál es el par análogo más c",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana02.kt",
+      "lessonId": "rv_t02_s02",
+      "challengeId": "rv_t02_s02_c10",
+      "question": "Resuelva la siguiente analogía de antonimia: 'EFÍMERO : PERPETUO ::'",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana03.kt",
+      "lessonId": "rv_t03_s01",
+      "challengeId": "rv_t03_s01_c05",
+      "question": "Complete la serie de cohiponimia de mamíferos marinos: 'Ballena, delfí",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana03.kt",
+      "lessonId": "rv_t03_s01",
+      "challengeId": "rv_t03_s01_c08",
+      "question": "Complete la serie de disciplinas de las ciencias formales: 'Aritmética",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana03.kt",
+      "lessonId": "rv_t03_s01",
+      "challengeId": "rv_t03_s01_c09",
+      "question": "Identifique el término que completa la serie de actitudes morales repr",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana03.kt",
+      "lessonId": "rv_t03_s02",
+      "challengeId": "rv_t03_s02_c03",
+      "question": "Identifique el TÉRMINO EXCLUIDO en el grupo de instrumentos musicales ",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana04.kt",
+      "lessonId": "rv_t04_s01",
+      "challengeId": "rv_t04_s01_c08",
+      "question": "Complete la oración: 'El proyecto minero generará cuantiosos ingresos ",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana04.kt",
+      "lessonId": "rv_t04_s01",
+      "challengeId": "rv_t04_s01_c10",
+      "question": "Elija los conectores adecuados: 'No viajaremos a la sierra central en ",
+      "overlapCurrent": "0.12"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana04.kt",
+      "lessonId": "rv_t04_s02",
+      "challengeId": "rv_t04_s02_c04",
+      "question": "Complete el enunciado: 'Aquel magistrado era célebre por su inquebrant",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana04.kt",
+      "lessonId": "rv_t04_s02",
+      "challengeId": "rv_t04_s02_c05",
+      "question": "Complete la oración: 'El arqueólogo examinó minuciosamente los vestigi",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana04.kt",
+      "lessonId": "rv_t04_s02",
+      "challengeId": "rv_t04_s02_c06",
+      "question": "Complete el texto: 'Las especies que habitan en los desiertos más árid",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana04.kt",
+      "lessonId": "rv_t04_s02",
+      "challengeId": "rv_t04_s02_c08",
+      "question": "Complete con rigor contextual: 'El fiscal señaló que las contradiccion",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana04.kt",
+      "lessonId": "rv_t04_s02",
+      "challengeId": "rv_t04_s02_c09",
+      "question": "Complete el enunciado: 'La disertación del ponente fue tan densa y ___",
+      "overlapCurrent": "0.09"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana05.kt",
+      "lessonId": "rv_t05_s01",
+      "challengeId": "rv_t05_s01_c04",
+      "question": "Lea el siguiente texto breve: 'El consumo excesivo de bebidas ultrapro",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "CROSS_LESSON_CONTAMINATION",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana05.kt",
+      "lessonId": "rv_t05_s01",
+      "challengeId": "rv_t05_s01_c07",
+      "question": "Un 'Argumento por Causa' demuestra la tesis mediante:",
+      "overlapCurrent": "0.13",
+      "overlapOther": "0.53"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana05.kt",
+      "lessonId": "rv_t05_s01",
+      "challengeId": "rv_t05_s01_c09",
+      "question": "Cuando un autor introduce en su texto la fórmula 'Muchos sostienen err",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana05.kt",
+      "lessonId": "rv_t05_s01",
+      "challengeId": "rv_t05_s01_c10",
+      "question": "La 'Premisa Implícita' o entimema en un razonamiento argumentativo es:",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana05.kt",
+      "lessonId": "rv_t05_s02",
+      "challengeId": "rv_t05_s02_c03",
+      "question": "Considere el siguiente argumento: 'La implementación de cámaras de vid",
+      "overlapCurrent": "0.06"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana05.kt",
+      "lessonId": "rv_t05_s02",
+      "challengeId": "rv_t05_s02_c04",
+      "question": "Frente a la tesis: 'El consumo regular de arándanos previene el enveje",
+      "overlapCurrent": "0.09"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana05.kt",
+      "lessonId": "rv_t05_s02",
+      "challengeId": "rv_t05_s02_c07",
+      "question": "¿Qué afirmación debilitaría de modo categórico la propuesta de un alca",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana05.kt",
+      "lessonId": "rv_t05_s02",
+      "challengeId": "rv_t05_s02_c08",
+      "question": "Al evaluar la solidez de una generalización inductiva ('todos los cisn",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana06.kt",
+      "lessonId": "rv_t06_s01",
+      "challengeId": "rv_t06_s01_c01",
+      "question": "En la pragmática y la filosofía del lenguaje, una 'Presuposición' se d",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana06.kt",
+      "lessonId": "rv_t06_s01",
+      "challengeId": "rv_t06_s01_c08",
+      "question": "Cuando un anfitrión en una reunión social mira repetidamente su reloj ",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana06.kt",
+      "lessonId": "rv_t06_s01",
+      "challengeId": "rv_t06_s01_c10",
+      "question": "El estudio de la pragmática en la comprensión de textos preuniversitar",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana06.kt",
+      "lessonId": "rv_t06_s02",
+      "challengeId": "rv_t06_s02_c08",
+      "question": "Un profesor escribe en la carta de recomendación de un alumno que post",
+      "overlapCurrent": "0.12"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana07.kt",
+      "lessonId": "rv_t07_s01",
+      "challengeId": "rv_t07_s01_c02",
+      "question": "Identifique la oración que incurre de manera flagrante en el vicio de ",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana07.kt",
+      "lessonId": "rv_t07_s01",
+      "challengeId": "rv_t07_s01_c06",
+      "question": "Identifique la oración que contiene una 'Impropiedad Léxica':",
+      "overlapCurrent": "0.09"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana07.kt",
+      "lessonId": "rv_t07_s01",
+      "challengeId": "rv_t07_s01_c08",
+      "question": "El vicio de 'Cacofonía' consiste en:",
+      "overlapCurrent": "0.07"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana07.kt",
+      "lessonId": "rv_t07_s01",
+      "challengeId": "rv_t07_s01_c09",
+      "question": "En la oración: 'El profesor le dijo a su colega que él debía corregir ",
+      "overlapCurrent": "0.05"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana08.kt",
+      "lessonId": "rv_t08_s01",
+      "challengeId": "rv_t08_s01_c04",
+      "question": "La variación de la lengua determinada por factores geográficos o terri",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana08.kt",
+      "lessonId": "rv_t08_s01",
+      "challengeId": "rv_t08_s01_c05",
+      "question": "El 'Sociolecto' (o variación diastrática) hace referencia a:",
+      "overlapCurrent": "0.00"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana08.kt",
+      "lessonId": "rv_t08_s01",
+      "challengeId": "rv_t08_s01_c06",
+      "question": "El 'Idiolecto' es formalmente:",
+      "overlapCurrent": "0.08"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana08.kt",
+      "lessonId": "rv_t08_s01",
+      "challengeId": "rv_t08_s01_c09",
+      "question": "Cuando un abogado presenta un escrito de alegatos ante la Corte Suprem",
+      "overlapCurrent": "0.10"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana08.kt",
+      "lessonId": "rv_t08_s02",
+      "challengeId": "rv_t08_s02_c03",
+      "question": "Al resolver un ejercicio de 'Eliminación de Oraciones' (o Información ",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana08.kt",
+      "lessonId": "rv_t08_s02",
+      "challengeId": "rv_t08_s02_c04",
+      "question": "En un ejercicio de 'Plan de Redacción', el principio de ordenamiento d",
+      "overlapCurrent": "0.14"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana08.kt",
+      "lessonId": "rv_t08_s02",
+      "challengeId": "rv_t08_s02_c05",
+      "question": "La 'Cohesión Textual' se logra mediante mecanismos sintácticos y léxic",
+      "overlapCurrent": "0.13"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana08.kt",
+      "lessonId": "rv_t08_s02",
+      "challengeId": "rv_t08_s02_c06",
+      "question": "Por el contrario, la 'Catáfora' es un mecanismo cohesivo que opera cua",
+      "overlapCurrent": "0.07"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana08.kt",
+      "lessonId": "rv_t08_s02",
+      "challengeId": "rv_t08_s02_c08",
+      "question": "En un texto argumentativo complejo, el 'Punto de Discrepancia' entre d",
+      "overlapCurrent": "0.11"
+    },
+    {
+      "type": "UNSUPPORTED_CHALLENGE",
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana08.kt",
+      "lessonId": "rv_t08_s02",
+      "challengeId": "rv_t08_s02_c09",
+      "question": "Al evaluar la 'Jerarquía Textual', el enunciado que sintetiza de modo ",
+      "overlapCurrent": "0.06"
+    }
+  ],
+  "auditedLessons": [
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "subject": "civica",
+      "lessonId": "civ_t01_s01",
+      "title": "La Persona Humana y la Dignidad Constitucional",
+      "challengeCount": 10,
+      "theoryLength": 2205,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+      "subject": "civica",
+      "lessonId": "civ_t01_s02",
+      "title": "El Sistema de Normas de Convivencia y Valores Cívicos Fundamentales",
+      "challengeCount": 10,
+      "theoryLength": 3080,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "subject": "civica",
+      "lessonId": "civ_t02_s01",
+      "title": "Concepto de Ciudadanía, Requisitos y Causales de Suspensión",
+      "challengeCount": 10,
+      "theoryLength": 838,
+      "titleMismatch": false,
+      "crossContaminations": 1,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana02.kt",
+      "subject": "civica",
+      "lessonId": "civ_t02_s02",
+      "title": "Derechos Políticos, Sufragio, Deberes Constitucionales y Símbolos Patrios",
+      "challengeCount": 10,
+      "theoryLength": 4642,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "subject": "civica",
+      "lessonId": "civ_t03_s01",
+      "title": "Concepto de Estado, Elementos Constitutivos y Distinción con Nación",
+      "challengeCount": 10,
+      "theoryLength": 3129,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+      "subject": "civica",
+      "lessonId": "civ_t03_s02",
+      "title": "El Estado Peruano: Características, Deberes Primordiales y Derecho de Insurgencia",
+      "challengeCount": 10,
+      "theoryLength": 2886,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "subject": "civica",
+      "lessonId": "civ_t04_s01",
+      "title": "Los Poderes del Estado Peruano: Legislativo, Ejecutivo y Judicial",
+      "challengeCount": 10,
+      "theoryLength": 4945,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+      "subject": "civica",
+      "lessonId": "civ_t04_s02",
+      "title": "Los Organismos Constitucionales Autónomos (OCAs): Electorales, Jurídicos y Económicos",
+      "challengeCount": 10,
+      "theoryLength": 4785,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "subject": "civica",
+      "lessonId": "civ_t05_s01",
+      "title": "La Democracia: Concepto, Principios, Modelos y Partidos Políticos",
+      "challengeCount": 10,
+      "theoryLength": 3965,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+      "subject": "civica",
+      "lessonId": "civ_t05_s02",
+      "title": "El Sistema Electoral Peruano: Procesos, Balotaje, Valla Electoral y Cifra Repartidora",
+      "challengeCount": 10,
+      "theoryLength": 2026,
+      "titleMismatch": false,
+      "crossContaminations": 1,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana06.kt",
+      "subject": "civica",
+      "lessonId": "civ_t06_s01",
+      "title": "Los Derechos Humanos: Concepto, Características y las Cuatro Generaciones",
+      "challengeCount": 10,
+      "theoryLength": 5507,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana06.kt",
+      "subject": "civica",
+      "lessonId": "civ_t06_s02",
+      "title": "Las Seis Garantías Constitucionales: Protección Jurisdiccional de Urgencia",
+      "challengeCount": 10,
+      "theoryLength": 2602,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana07.kt",
+      "subject": "civica",
+      "lessonId": "civ_t07_s01",
+      "title": "La Constitución: Concepto, Estructura de la Carta de 1993 y Principio de Supremacía",
+      "challengeCount": 10,
+      "theoryLength": 3012,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana07.kt",
+      "subject": "civica",
+      "lessonId": "civ_t07_s02",
+      "title": "La Jerarquía Normativa (Pirámide de Kelsen) y el Procedimiento de Reforma Constitucional",
+      "challengeCount": 10,
+      "theoryLength": 2355,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana08.kt",
+      "subject": "civica",
+      "lessonId": "civ_t08_s01",
+      "title": "Derechos de Participación Ciudadana: Iniciativas Normativas, Referéndum y Consulta Previa",
+      "challengeCount": 10,
+      "theoryLength": 2980,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana08.kt",
+      "subject": "civica",
+      "lessonId": "civ_t08_s02",
+      "title": "Derechos de Control Ciudadano: Revocatoria, Remoción y Rendición de Cuentas",
+      "challengeCount": 10,
+      "theoryLength": 2398,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana09.kt",
+      "subject": "civica",
+      "lessonId": "civ_t09_s01",
+      "title": "La Descentralización y los Gobiernos Regionales: Estructura, Atribuciones y Competencias",
+      "challengeCount": 10,
+      "theoryLength": 3764,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana09.kt",
+      "subject": "civica",
+      "lessonId": "civ_t09_s02",
+      "title": "Los Gobiernos Locales (Municipalidades), Rentas Subnacionales y Presupuesto Participativo",
+      "challengeCount": 10,
+      "theoryLength": 3951,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana10.kt",
+      "subject": "civica",
+      "lessonId": "civ_t10_s01",
+      "title": "Desarrollo Humano, IDH y el Sistema Nacional de Seguridad Ciudadana (SINASEC)",
+      "challengeCount": 10,
+      "theoryLength": 2349,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana10.kt",
+      "subject": "civica",
+      "lessonId": "civ_t10_s02",
+      "title": "Medios Alternativos de Solución de Conflictos (MASC) y Ética contra la Corrupción Pública",
+      "challengeCount": 10,
+      "theoryLength": 3938,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana11.kt",
+      "subject": "civica",
+      "lessonId": "civ_t11_s01",
+      "title": "La Universidad: Fines, Gratuidad, las Cinco Dimensiones de la Autonomía e Inviolabilidad del Recinto",
+      "challengeCount": 10,
+      "theoryLength": 3560,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/civica/CivicaSemana11.kt",
+      "subject": "civica",
+      "lessonId": "civ_t11_s02",
+      "title": "Estructura de Gobierno Universitario, Comunidad Académica (Tercio Estudiantil) y la SUNEDU",
+      "challengeCount": 10,
+      "theoryLength": 2255,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t01_s01",
+      "title": "Comprensión Literal: Fundamentos y Conceptos Clave",
+      "challengeCount": 10,
+      "theoryLength": 335,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 7,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t01_s02",
+      "title": "3.1 La Naturaleza de la Pregunta Literal en Exámenes de Admisión",
+      "challengeCount": 10,
+      "theoryLength": 1368,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 7,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t02_s01",
+      "title": "3.1 La Ecuación Epistemológica de la Inferencia",
+      "challengeCount": 10,
+      "theoryLength": 983,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 6,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t02_s02",
+      "title": "3.3 El Límite Dorado: Inferencia vs. Especulación",
+      "challengeCount": 10,
+      "theoryLength": 1553,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 6,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana03.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t03_s01",
+      "title": "3.1 La Trinidad de la Comprensión Global: Tema, Idea Principal y Título",
+      "challengeCount": 10,
+      "theoryLength": 1031,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana03.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t03_s02",
+      "title": "3.3 El Criterio de Jerarquización de Ideas Secundarias",
+      "challengeCount": 10,
+      "theoryLength": 1493,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 2,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana04.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t04_s01",
+      "title": "3.1 El Propósito Comunicativo y su Formulación Canónica",
+      "challengeCount": 10,
+      "theoryLength": 1175,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana04.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t04_s02",
+      "title": "3.2 El Tono del Autor: Glosario de Actitudes Discursivas",
+      "challengeCount": 10,
+      "theoryLength": 1535,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 3,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t05_s01",
+      "title": "3.1 La Matriz de Compatibilidad e Incompatibilidad en Admisión",
+      "challengeCount": 10,
+      "theoryLength": 1213,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 3,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t05_s02",
+      "title": "3.2 La Frontera entre Hecho y Opinión",
+      "challengeCount": 10,
+      "theoryLength": 1108,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 7,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t06_s01",
+      "title": "3.1 La Falacia del Diccionario Aislado en Comprensión Lectora",
+      "challengeCount": 10,
+      "theoryLength": 1008,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 9,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t06_s02",
+      "title": "3.2 Clasificación de los Usos Contextuales en Exámenes de Admisión",
+      "challengeCount": 10,
+      "theoryLength": 931,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 10,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t07_s01",
+      "title": "3.1 Mecanismos de Cohesión Textual en el Examen de Admisión",
+      "challengeCount": 10,
+      "theoryLength": 1265,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 10,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t07_s02",
+      "title": "3.2 Los Dos Grandes Criterios de Supresión de Oraciones",
+      "challengeCount": 10,
+      "theoryLength": 1805,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 10,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t08_s01",
+      "title": "3.1 Las Cuatro Familias Textuales Fundamentales del Prospecto UNSA",
+      "challengeCount": 10,
+      "theoryLength": 1138,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 8,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+      "subject": "comprension_lectora",
+      "lessonId": "cl_t08_s02",
+      "title": "3.2 Cuadro Comparativo de Tipologías Textuales",
+      "challengeCount": 10,
+      "theoryLength": 1778,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 8,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana01.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t01_s01",
+      "title": "3.1. Etimología y Definición de la Filosofía",
+      "challengeCount": 10,
+      "theoryLength": 1725,
+      "titleMismatch": false,
+      "crossContaminations": 3,
+      "unsupported": 5,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana01.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t01_s02",
+      "title": "3.2. El Origen Histórico: Del Mito al Logos",
+      "challengeCount": 10,
+      "theoryLength": 4929,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana02.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t02_s01",
+      "title": "A. Metafísica y Ontología",
+      "challengeCount": 10,
+      "theoryLength": 2163,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana02.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t02_s02",
+      "title": "D. Lógica",
+      "challengeCount": 10,
+      "theoryLength": 6084,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana03.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t03_s01",
+      "title": "A. El Problema del Ser (Problema Ontológico)",
+      "challengeCount": 10,
+      "theoryLength": 4298,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana03.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t03_s02",
+      "title": "C. El Problema de la Verdad",
+      "challengeCount": 10,
+      "theoryLength": 4552,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana04.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t04_s01",
+      "title": "A. Los Principios Lógicos Supremos",
+      "challengeCount": 10,
+      "theoryLength": 2337,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana04.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t04_s02",
+      "title": "C. Falacias No Formales",
+      "challengeCount": 10,
+      "theoryLength": 7135,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana05.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t05_s01",
+      "title": "A. El Conocimiento Científico: Concepto y Niveles",
+      "challengeCount": 10,
+      "theoryLength": 2806,
+      "titleMismatch": false,
+      "crossContaminations": 1,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana05.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t05_s02",
+      "title": "C. Hecho, Hipótesis, Ley y Teoría Científica",
+      "challengeCount": 10,
+      "theoryLength": 7071,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana06.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t06_s01",
+      "title": "A. Filosofía Antigua (Grecia y Roma)",
+      "challengeCount": 10,
+      "theoryLength": 6535,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana06.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t06_s02",
+      "title": "C. Filosofía Moderna (s. XVII - XVIII)",
+      "challengeCount": 10,
+      "theoryLength": 7890,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana07.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t07_s01",
+      "title": "A. El Gran Debate sobre la Filosofía Latinoamericana",
+      "challengeCount": 10,
+      "theoryLength": 7095,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana07.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t07_s02",
+      "title": "Nemotecnia del Debate Salazar vs. Zea:",
+      "challengeCount": 10,
+      "theoryLength": 5799,
+      "titleMismatch": false,
+      "crossContaminations": 1,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana08.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t08_s01",
+      "title": "A. La Crisis de la Subjetividad Moderna y la Razón Ilustrada",
+      "challengeCount": 10,
+      "theoryLength": 3231,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 6,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana08.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t08_s02",
+      "title": "D. La Condición Posmoderna: Jean-François Lyotard",
+      "challengeCount": 10,
+      "theoryLength": 5239,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 2,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana09.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t09_s01",
+      "title": "A. Naturaleza de la Estética y la Experiencia Estética",
+      "challengeCount": 10,
+      "theoryLength": 3536,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana09.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t09_s02",
+      "title": "C. Concepciones Filosóficas del Arte a lo Largo de la Historia",
+      "challengeCount": 10,
+      "theoryLength": 6012,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana10.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t10_s01",
+      "title": "A. Distinción Conceptual: Moral vs. Ética",
+      "challengeCount": 10,
+      "theoryLength": 6489,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana10.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t10_s02",
+      "title": "D. Bioética y Dilemas Morales Contemporáneos",
+      "challengeCount": 10,
+      "theoryLength": 4161,
+      "titleMismatch": false,
+      "crossContaminations": 1,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana11.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t11_s01",
+      "title": "A. Concepto de Valor y el Acto Valorativo",
+      "challengeCount": 10,
+      "theoryLength": 3180,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana11.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t11_s02",
+      "title": "C. El Gran Debate Axiológico: Subjetivismo vs. Objetivismo",
+      "challengeCount": 10,
+      "theoryLength": 5366,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana12.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t12_s01",
+      "title": "A. Naturaleza de la Filosofía Política y el Poder",
+      "challengeCount": 10,
+      "theoryLength": 5825,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana12.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t12_s02",
+      "title": "D. Teorías de la Justicia: John Rawls y el Liberalismo Igualitario",
+      "challengeCount": 10,
+      "theoryLength": 5522,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana13.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t13_s01",
+      "title": "A. La Pregunta por el Hombre: Naturaleza y Objeto de Estudio",
+      "challengeCount": 10,
+      "theoryLength": 5629,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/filosofia/FilosofiaSemana13.kt",
+      "subject": "filosofia",
+      "lessonId": "filo_t13_s02",
+      "title": "D. La Dignidad de la Persona Humana",
+      "challengeCount": 10,
+      "theoryLength": 3585,
+      "titleMismatch": false,
+      "crossContaminations": 2,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana01.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t01_s01",
+      "title": "3.1. Definición y Etimología de la Geografía",
+      "challengeCount": 10,
+      "theoryLength": 4501,
+      "titleMismatch": false,
+      "crossContaminations": 1,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana01.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t01_s02",
+      "title": "3.4. Principios Geográficos Metodológicos",
+      "challengeCount": 10,
+      "theoryLength": 7059,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana02.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t02_s01",
+      "title": "3.1. Geodesia y la Forma de la Tierra",
+      "challengeCount": 10,
+      "theoryLength": 6064,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana02.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t02_s02",
+      "title": "3.4. Documentos Cartográficos: Mapas, Cartas y Planos",
+      "challengeCount": 10,
+      "theoryLength": 7658,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana03.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t03_s01",
+      "title": "3.1. El Universo: Origen y Estructura",
+      "challengeCount": 10,
+      "theoryLength": 8639,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana03.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t03_s02",
+      "title": "3.3. Movimientos de la Tierra y sus Consecuencias Geográficas",
+      "challengeCount": 10,
+      "theoryLength": 6527,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana04.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t04_s01",
+      "title": "3.1. Estructura Interna de la Geósfera",
+      "challengeCount": 10,
+      "theoryLength": 8781,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana04.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t04_s02",
+      "title": "3.3. Geodinámica Externa (Fuerzas Exógenas)",
+      "challengeCount": 10,
+      "theoryLength": 5278,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana05.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t05_s01",
+      "title": "3.1. La Atmósfera: Origen, Composición y Retención",
+      "challengeCount": 10,
+      "theoryLength": 5023,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana05.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t05_s02",
+      "title": "3.3. Tiempo Meteorológico vs. Clima",
+      "challengeCount": 10,
+      "theoryLength": 10030,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana06.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t06_s01",
+      "title": "3.1. La Hidrósfera y el Ciclo Hidrológico",
+      "challengeCount": 10,
+      "theoryLength": 8247,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana06.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t06_s02",
+      "title": "3.4. Lagos y Glaciares del Perú",
+      "challengeCount": 10,
+      "theoryLength": 7765,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana07.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t07_s01",
+      "title": "3.1. Relieve Submarino del Mar Peruano",
+      "challengeCount": 10,
+      "theoryLength": 9059,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana07.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t07_s02",
+      "title": "3.4. Geomorfología de la Selva (Región Amazónica)",
+      "challengeCount": 10,
+      "theoryLength": 6622,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t08_s01",
+      "title": "3.1. Origen, Criterios y Pisos Ecológicos Occidentales (Chala a Suni)",
+      "challengeCount": 10,
+      "theoryLength": 0,
+      "titleMismatch": true,
+      "crossContaminations": 0,
+      "unsupported": 10,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t08_s02",
+      "title": "3.2. Pisos de Alta Montaña y Vertiente Amazónica (Puna, Janca, Rupa Rupa y Omagua)",
+      "challengeCount": 10,
+      "theoryLength": 0,
+      "titleMismatch": true,
+      "crossContaminations": 0,
+      "unsupported": 10,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana09.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t09_s01",
+      "title": "3.1. Concepto y Metodología Ecológica de Antonio Brack Egg",
+      "challengeCount": 10,
+      "theoryLength": 9334,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana09.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t09_s02",
+      "title": "Cuadro Comparativo de las 11 Ecorregiones de Antonio Brack Egg",
+      "challengeCount": 10,
+      "theoryLength": 3507,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana10.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t10_s01",
+      "title": "3.1. Los Recursos Naturales: Definición y Tipología",
+      "challengeCount": 10,
+      "theoryLength": 10923,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 3,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana10.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t10_s02",
+      "title": "3.4. Desarrollo Sostenible y la Agenda 2030",
+      "challengeCount": 10,
+      "theoryLength": 4762,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana11.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t11_s01",
+      "title": "3.1. Demografía: Definición, Fuentes y Censos",
+      "challengeCount": 10,
+      "theoryLength": 7676,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana11.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t11_s02",
+      "title": "3.4. Distribución Territorial de la Población Peruana",
+      "challengeCount": 10,
+      "theoryLength": 6677,
+      "titleMismatch": false,
+      "crossContaminations": 1,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana12.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t12_s01",
+      "title": "3.1. Sector Primario: Actividades Extractivas",
+      "challengeCount": 10,
+      "theoryLength": 8159,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana12.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t12_s02",
+      "title": "3.3. Sector Secundario: La Industria Peruana",
+      "challengeCount": 10,
+      "theoryLength": 8423,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana13.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t13_s01",
+      "title": "3.1. Fundamentos Epistemológicos de la Geopolítica",
+      "challengeCount": 10,
+      "theoryLength": 8308,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/geografia/GeografiaSemana13.kt",
+      "subject": "geografia",
+      "lessonId": "geo_t13_s02",
+      "title": "3.4. Proyección Geopolítica del Perú: Presencia en la Antártida y la Cuenca del Pacífico",
+      "challengeCount": 10,
+      "theoryLength": 8754,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana01.kt",
+      "subject": "historia_peru",
+      "lessonId": "hper_t01_s01",
+      "title": "3.1. Teorías Científicas sobre el Poblamiento Americano",
+      "challengeCount": 10,
+      "theoryLength": 6562,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana01.kt",
+      "subject": "historia_peru",
+      "lessonId": "hper_t01_s02",
+      "title": "3.3. El Periodo Arcaico Inferior o Temprano (6 000 - 3 000 a.C.)",
+      "challengeCount": 10,
+      "theoryLength": 8841,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana02.kt",
+      "subject": "historia_peru",
+      "lessonId": "hper_t02_s01",
+      "title": "3.1. Modelos Teóricos de Periodización Prehispánica",
+      "challengeCount": 10,
+      "theoryLength": 10216,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana02.kt",
+      "subject": "historia_peru",
+      "lessonId": "hper_t02_s02",
+      "title": "3.4. Horizonte Medio o Primer Imperio Andino (600 - 1000 d.C.)",
+      "challengeCount": 10,
+      "theoryLength": 9610,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana03.kt",
+      "subject": "historia_peru",
+      "lessonId": "hper_t03_s01",
+      "title": "3.1. Orígenes Míticos e Históricos del Tawantinsuyu",
+      "challengeCount": 10,
+      "theoryLength": 9197,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana03.kt",
+      "subject": "historia_peru",
+      "lessonId": "hper_t03_s02",
+      "title": "3.4. Organización Económica: Principios, Tierras y Formas de Trabajo",
+      "challengeCount": 10,
+      "theoryLength": 7757,
+      "titleMismatch": false,
+      "crossContaminations": 1,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana04.kt",
+      "subject": "historia_peru",
+      "lessonId": "hper_t04_s01",
+      "title": "3.1. Invasión, Resistencia Andina y Guerras Civiles",
+      "challengeCount": 10,
+      "theoryLength": 10038,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana04.kt",
+      "subject": "historia_peru",
+      "lessonId": "hper_t04_s02",
+      "title": "3.4. La Sociedad Colonial: Régimen Estamental de Castas",
+      "challengeCount": 10,
+      "theoryLength": 8990,
+      "titleMismatch": false,
+      "crossContaminations": 1,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana05.kt",
+      "subject": "historia_peru",
+      "lessonId": "hper_t05_s01",
+      "title": "3.1. El Proceso de la Independencia del Perú (1820 - 1824)",
+      "challengeCount": 10,
+      "theoryLength": 13045,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana05.kt",
+      "subject": "historia_peru",
+      "lessonId": "hper_t05_s02",
+      "title": "3.4. La Reconstrucción Nacional y la República Aristocrática (1883 - 1919)",
+      "challengeCount": 10,
+      "theoryLength": 10829,
+      "titleMismatch": false,
+      "crossContaminations": 2,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana01.kt",
+      "subject": "historia_universal",
+      "lessonId": "huni_t01_s01",
+      "title": "3.1. El Concepto y los Motores de la Hominización",
+      "challengeCount": 10,
+      "theoryLength": 7081,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana01.kt",
+      "subject": "historia_universal",
+      "lessonId": "huni_t01_s02",
+      "title": "3.3. Las Edades Arqueológicas de la Prehistoria: Paleolítico, Neolítico y Edad de los Metales",
+      "challengeCount": 10,
+      "theoryLength": 5018,
+      "titleMismatch": false,
+      "crossContaminations": 1,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana02.kt",
+      "subject": "historia_universal",
+      "lessonId": "huni_t02_s01",
+      "title": "3.1. Las Sociedades Fluviales e Hidráulicas de Mesopotamia",
+      "challengeCount": 10,
+      "theoryLength": 4506,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana02.kt",
+      "subject": "historia_universal",
+      "lessonId": "huni_t02_s02",
+      "title": "3.3. Egipto: El Don del Nilo y el Estado Faraónico",
+      "challengeCount": 10,
+      "theoryLength": 8162,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana03.kt",
+      "subject": "historia_universal",
+      "lessonId": "huni_t03_s01",
+      "title": "3.1. Grecia Antigua: La Matriz Democrática y Cultural de Occidente",
+      "challengeCount": 10,
+      "theoryLength": 12252,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana03.kt",
+      "subject": "historia_universal",
+      "lessonId": "huni_t03_s02",
+      "title": "3.4. La República y el Imperio Romano",
+      "challengeCount": 10,
+      "theoryLength": 5854,
+      "titleMismatch": false,
+      "crossContaminations": 3,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana04.kt",
+      "subject": "historia_universal",
+      "lessonId": "huni_t04_s01",
+      "title": "3.1. Reinos Romano-Germánicos, Imperio Carolingio y el Islam",
+      "challengeCount": 10,
+      "theoryLength": 5708,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana04.kt",
+      "subject": "historia_universal",
+      "lessonId": "huni_t04_s02",
+      "title": "3.5. El Feudalismo y las Cruzadas",
+      "challengeCount": 10,
+      "theoryLength": 9914,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana05.kt",
+      "subject": "historia_universal",
+      "lessonId": "huni_t05_s01",
+      "title": "3.1. El Humanismo y el Renacimiento Artístico",
+      "challengeCount": 10,
+      "theoryLength": 5980,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana05.kt",
+      "subject": "historia_universal",
+      "lessonId": "huni_t05_s02",
+      "title": "3.4. La Reforma Protestante, la Contrarreforma y la Ilustración",
+      "challengeCount": 10,
+      "theoryLength": 10521,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana06.kt",
+      "subject": "historia_universal",
+      "lessonId": "huni_t06_s01",
+      "title": "3.1. Las Revoluciones Burguesas y la Revolución Industrial",
+      "challengeCount": 10,
+      "theoryLength": 9080,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana06.kt",
+      "subject": "historia_universal",
+      "lessonId": "huni_t06_s02",
+      "title": "3.3. Las Guerras Mundiales y el Siglo XX",
+      "challengeCount": 10,
+      "theoryLength": 15436,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana01.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t01_s01",
+      "title": "El Circuito Comunicativo: Fases, Elementos y Fenómenos Interferentes",
+      "challengeCount": 10,
+      "theoryLength": 5128,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana01.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t01_s02",
+      "title": "Tipología de la Comunicación: Clasificación y Criterios",
+      "challengeCount": 10,
+      "theoryLength": 4382,
+      "titleMismatch": false,
+      "crossContaminations": 5,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana01.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t01_s03",
+      "title": "Planos del Lenguaje y las Seis Funciones del Lenguaje (Bühler y Jakobson)",
+      "challengeCount": 12,
+      "theoryLength": 4382,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana02.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t02_s01",
+      "title": "Las Variaciones de la Lengua: Dialecto, Sociolecto e Idiolecto",
+      "challengeCount": 10,
+      "theoryLength": 3667,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana02.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t02_s02",
+      "title": "Realidad Lingüística del Perú: Multilingüismo, Lenguas Amerindias y Castellano",
+      "challengeCount": 12,
+      "theoryLength": 4828,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana03.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t03_s01",
+      "title": "Fonología, Fonética, Sistema Fonológico y Estructura Silábica",
+      "challengeCount": 10,
+      "theoryLength": 3829,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana03.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t03_s02",
+      "title": "Secuencias Vocálicas: Diptongo, Triptongo y Hiato (Acentual y Simple)",
+      "challengeCount": 10,
+      "theoryLength": 5490,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana03.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t03_s03",
+      "title": "Normativa de Acentuación General, Diacrítica y Enfática",
+      "challengeCount": 10,
+      "theoryLength": 5490,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana04.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t04_s01",
+      "title": "Morfología: Concepto, Morfema, Alomorfos y Clasificación",
+      "challengeCount": 10,
+      "theoryLength": 3314,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana04.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t04_s02",
+      "title": "Procesos Formativos de Palabras en el Español",
+      "challengeCount": 10,
+      "theoryLength": 2599,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 2,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t05_s01",
+      "title": "La Sintaxis y las Categorías Gramaticales: Variables e Invariables",
+      "challengeCount": 10,
+      "theoryLength": 413,
+      "titleMismatch": true,
+      "crossContaminations": 7,
+      "unsupported": 3,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t05_s02",
+      "title": "Estructura de la Frase Nominal (FN), Frase Verbal (FV) y sus Complementos",
+      "challengeCount": 10,
+      "theoryLength": 5655,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana06.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t06_s01",
+      "title": "La Oración Gramatical: Bimembre vs. Unimembre y Actitud del Hablante",
+      "challengeCount": 10,
+      "theoryLength": 2561,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana06.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t06_s02",
+      "title": "Oraciones Compuestas: Coordinadas y Subordinadas",
+      "challengeCount": 10,
+      "theoryLength": 5700,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana07.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t07_s01",
+      "title": "El Discurso Escrito: Adecuación, Coherencia y Mecanismos de Cohesión",
+      "challengeCount": 10,
+      "theoryLength": 2442,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 2,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana07.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t07_s02",
+      "title": "Normativa de Signos de Puntuación: La Coma, el Punto y Coma y los Dos Puntos",
+      "challengeCount": 10,
+      "theoryLength": 4817,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana07.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t07_s03",
+      "title": "Normativa del Uso de Mayúsculas y Minúsculas (Ortografía RAE)",
+      "challengeCount": 10,
+      "theoryLength": 4817,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana08.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t08_s01",
+      "title": "El Signo Lingüístico y la Distinción Denotación vs. Connotación",
+      "challengeCount": 10,
+      "theoryLength": 2747,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/lenguaje/LenguajeSemana08.kt",
+      "subject": "lenguaje",
+      "lessonId": "leng_t08_s02",
+      "title": "Relaciones Léxico-Semánticas: Polisemia, Homonimia, Antonimia e Inclusión",
+      "challengeCount": 10,
+      "theoryLength": 4447,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana01.kt",
+      "subject": "literatura",
+      "lessonId": "lit_t01_s01",
+      "title": "3.1. La Literatura y la Función Poética",
+      "challengeCount": 10,
+      "theoryLength": 3564,
+      "titleMismatch": false,
+      "crossContaminations": 1,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana01.kt",
+      "subject": "literatura",
+      "lessonId": "lit_t01_s02",
+      "title": "3.3. Figuras Literarias (Figuras Retóricas)",
+      "challengeCount": 10,
+      "theoryLength": 5516,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana02.kt",
+      "subject": "literatura",
+      "lessonId": "lit_t02_s01",
+      "title": "3.1. El Clasicismo Griego",
+      "challengeCount": 10,
+      "theoryLength": 3798,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 2,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana02.kt",
+      "subject": "literatura",
+      "lessonId": "lit_t02_s02",
+      "title": "3.3. El Romanticismo: Goethe y *Las cuitas del joven Werther*",
+      "challengeCount": 10,
+      "theoryLength": 6331,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana03.kt",
+      "subject": "literatura",
+      "lessonId": "lit_t03_s01",
+      "title": "3.1. La Épica Medieval Española: El *Cantar de Mio Cid*",
+      "challengeCount": 10,
+      "theoryLength": 2607,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana03.kt",
+      "subject": "literatura",
+      "lessonId": "lit_t03_s02",
+      "title": "3.2. La Cumbre de la Prosa Universal: *Don Quijote de la Mancha*",
+      "challengeCount": 10,
+      "theoryLength": 6797,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana04.kt",
+      "subject": "literatura",
+      "lessonId": "lit_t04_s01",
+      "title": "3.1. El Modernismo Hispanoamericano",
+      "challengeCount": 10,
+      "theoryLength": 3235,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 2,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana04.kt",
+      "subject": "literatura",
+      "lessonId": "lit_t04_s02",
+      "title": "3.3. Hitos de la Nueva Narrativa: Carpentier y Borges",
+      "challengeCount": 10,
+      "theoryLength": 5946,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 2,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana05.kt",
+      "subject": "literatura",
+      "lessonId": "lit_t05_s01",
+      "title": "3.1. Literatura de la Conquista y Virreinato: El Inca Garcilaso de la Vega",
+      "challengeCount": 10,
+      "theoryLength": 3703,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana05.kt",
+      "subject": "literatura",
+      "lessonId": "lit_t05_s02",
+      "title": "3.3. Vanguardismo Universal: César Vallejo (1892-1938)",
+      "challengeCount": 10,
+      "theoryLength": 8195,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana06.kt",
+      "subject": "literatura",
+      "lessonId": "lit_t06_s01",
+      "title": "3.1. Mariano Melgar y Valdivieso (Arequipa, 1790 - Umachiri, 1815)",
+      "challengeCount": 10,
+      "theoryLength": 2003,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/literatura/LiteraturaSemana06.kt",
+      "subject": "literatura",
+      "lessonId": "lit_t06_s02",
+      "title": "3.2. De la Bohemia del Aquelarre a la Vanguardia Arequipeña",
+      "challengeCount": 10,
+      "theoryLength": 6593,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 4,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana01.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t01_s01",
+      "title": "3.1. Definición, Etimología y Evolución Epistemológica",
+      "challengeCount": 10,
+      "theoryLength": 1403,
+      "titleMismatch": false,
+      "crossContaminations": 7,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana01.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t01_s02",
+      "title": "3.2. Objeto de Estudio de la Psicología",
+      "challengeCount": 10,
+      "theoryLength": 5338,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana02.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t02_s01",
+      "title": "3.1. Concepto e Importancia Psicológica del Proyecto de Vida",
+      "challengeCount": 10,
+      "theoryLength": 870,
+      "titleMismatch": false,
+      "crossContaminations": 5,
+      "unsupported": 2,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana02.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t02_s02",
+      "title": "3.2. Visión y Misión Personal",
+      "challengeCount": 10,
+      "theoryLength": 5175,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana03.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t03_s01",
+      "title": "3.1. Diferenciación Conceptual Fundamental",
+      "challengeCount": 10,
+      "theoryLength": 2311,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana03.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t03_s02",
+      "title": "4.1. Tipología Ocupacional RIASEC de John Holland",
+      "challengeCount": 10,
+      "theoryLength": 5161,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana04.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t04_s01",
+      "title": "3.1. Naturaleza Psicológica del Hábito de Estudio",
+      "challengeCount": 10,
+      "theoryLength": 872,
+      "titleMismatch": false,
+      "crossContaminations": 4,
+      "unsupported": 4,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana04.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t04_s02",
+      "title": "3.2. Gestión Estratégica del Tiempo",
+      "challengeCount": 10,
+      "theoryLength": 5620,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana05.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t05_s01",
+      "title": "3.1. Identidad Personal y Social",
+      "challengeCount": 10,
+      "theoryLength": 1183,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 6,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana06.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t06_s01",
+      "title": "3.1. Naturaleza y Ciclo de la Motivación",
+      "challengeCount": 10,
+      "theoryLength": 960,
+      "titleMismatch": false,
+      "crossContaminations": 5,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana06.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t06_s02",
+      "title": "3.2. Tipos de Motivación",
+      "challengeCount": 10,
+      "theoryLength": 6956,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t07_s01",
+      "title": "3.1. Origen y Definición de la Inteligencia Emocional (IE)",
+      "challengeCount": 10,
+      "theoryLength": 1254,
+      "titleMismatch": false,
+      "crossContaminations": 2,
+      "unsupported": 5,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana07.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t07_s02",
+      "title": "4.1. Las Cinco Dimensiones de Daniel Goleman",
+      "challengeCount": 10,
+      "theoryLength": 5138,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 3,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana08.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t08_s01",
+      "title": "3.1. Definición y Características de la Personalidad",
+      "challengeCount": 10,
+      "theoryLength": 1975,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 3,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana08.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t08_s02",
+      "title": "4.1. Tipologías Clásicas de la Personalidad",
+      "challengeCount": 10,
+      "theoryLength": 6533,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana09.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t09_s01",
+      "title": "3.1. Definición y Características del Aprendizaje",
+      "challengeCount": 10,
+      "theoryLength": 2005,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana09.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t09_s02",
+      "title": "4.2. Condicionamiento Operante o Instrumental (Thorndike y Skinner)",
+      "challengeCount": 10,
+      "theoryLength": 5768,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana10.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t10_s01",
+      "title": "3.1. Sensación y Umbrales Sensoriales",
+      "challengeCount": 10,
+      "theoryLength": 3534,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana10.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t10_s02",
+      "title": "4.1. Atención y Memoria",
+      "challengeCount": 10,
+      "theoryLength": 6277,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana11.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t11_s01",
+      "title": "3.1. Definición y Evolución Histórica del Concepto",
+      "challengeCount": 10,
+      "theoryLength": 3217,
+      "titleMismatch": false,
+      "crossContaminations": 2,
+      "unsupported": 4,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana11.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t11_s02",
+      "title": "4.2. Teorías Factoriales Clásicas",
+      "challengeCount": 10,
+      "theoryLength": 5260,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana12.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t12_s01",
+      "title": "3.1. Definición y Enfoque de Factores de Protección",
+      "challengeCount": 10,
+      "theoryLength": 1370,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 2,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana12.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t12_s02",
+      "title": "3.2. Tipología Familiar Contemporánea",
+      "challengeCount": 10,
+      "theoryLength": 5531,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t13_s01",
+      "title": "3.1. Enfoque de Riesgo, Tipologías de Violencia, Ciclo de Walker y Acoso Escolar",
+      "challengeCount": 10,
+      "theoryLength": 0,
+      "titleMismatch": true,
+      "crossContaminations": 0,
+      "unsupported": 10,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana13.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t13_s02",
+      "title": "4.1. Conductas Delictivas Juveniles, Sustancias Psicoactivas y Farmacodependencia",
+      "challengeCount": 10,
+      "theoryLength": 0,
+      "titleMismatch": true,
+      "crossContaminations": 0,
+      "unsupported": 10,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana14.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t14_s01",
+      "title": "3.1. Dimensiones y Conceptos Clave de la Sexualidad Humana",
+      "challengeCount": 10,
+      "theoryLength": 1741,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 2,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana14.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t14_s02",
+      "title": "4.1. Teoría del Desarrollo Psicosexual de Sigmund Freud",
+      "challengeCount": 10,
+      "theoryLength": 6923,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana15.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t15_s01",
+      "title": "3.1. Concepto y Principios del Desarrollo Humano",
+      "challengeCount": 10,
+      "theoryLength": 1442,
+      "titleMismatch": false,
+      "crossContaminations": 3,
+      "unsupported": 3,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/psicologia/PsicologiaSemana15.kt",
+      "subject": "psicologia",
+      "lessonId": "psi_t15_s02",
+      "title": "4.1. Estadios del Desarrollo Cognitivo de Jean Piaget",
+      "challengeCount": 10,
+      "theoryLength": 7109,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana01.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t01_s01",
+      "title": "3.1 La Sinonimia Contextual (Superación del Diccionario)",
+      "challengeCount": 10,
+      "theoryLength": 1451,
+      "titleMismatch": false,
+      "crossContaminations": 1,
+      "unsupported": 6,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana01.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t01_s02",
+      "title": "3.3 Polisemia vs. Homonimia (Distinción Rigurosa)",
+      "challengeCount": 10,
+      "theoryLength": 5192,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana02.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t02_s01",
+      "title": "3.1 La Estructura y Notación Formal de la Analogía",
+      "challengeCount": 10,
+      "theoryLength": 1966,
+      "titleMismatch": false,
+      "crossContaminations": 2,
+      "unsupported": 0,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana02.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t02_s02",
+      "title": "3.3 Catálogo de Tipos Analógicos Fundamentales",
+      "challengeCount": 10,
+      "theoryLength": 3703,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 2,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana03.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t03_s01",
+      "title": "3.1 Tipología y Patrones en Series Verbales",
+      "challengeCount": 10,
+      "theoryLength": 1135,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 3,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana03.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t03_s02",
+      "title": "3.2 El Método Formal para Resolver Término Excluido",
+      "challengeCount": 10,
+      "theoryLength": 4252,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana04.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t04_s01",
+      "title": "3.1 Clasificación y Semántica de los Conectores Lógicos Textuales",
+      "challengeCount": 10,
+      "theoryLength": 1545,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 2,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana04.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t04_s02",
+      "title": "3.2 Metodología de Resolución: Oraciones Incompletas",
+      "challengeCount": 10,
+      "theoryLength": 4074,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 5,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana05.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t05_s01",
+      "title": "3.1 Anatomía de un Texto Argumentativo",
+      "challengeCount": 10,
+      "theoryLength": 843,
+      "titleMismatch": false,
+      "crossContaminations": 1,
+      "unsupported": 3,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana05.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t05_s02",
+      "title": "3.2 La Prueba del Debilitamiento y Reforzamiento (Estándar DECO)",
+      "challengeCount": 10,
+      "theoryLength": 4859,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 4,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana06.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t06_s01",
+      "title": "3.1 Presuposiciones vs. Implicaturas",
+      "challengeCount": 10,
+      "theoryLength": 1052,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 3,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana06.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t06_s02",
+      "title": "3.2 El Principio de Cooperación y las Máximas de H. P. Grice",
+      "challengeCount": 10,
+      "theoryLength": 4049,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 1,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana07.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t07_s01",
+      "title": "3.1 Los Principales Vicios de Sentido en el Examen de Admisión",
+      "challengeCount": 10,
+      "theoryLength": 2423,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 4,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana07.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t07_s02",
+      "title": "3.2 Discordancias Gramaticales que Alteran el Sentido",
+      "challengeCount": 10,
+      "theoryLength": 3421,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana08.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t08_s01",
+      "title": "3.1 El Triángulo de Adecuación Sociolingüística",
+      "challengeCount": 10,
+      "theoryLength": 1060,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 4,
+      "status": "FAIL"
+    },
+    {
+      "file": "SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana08.kt",
+      "subject": "razonamiento_verbal",
+      "lessonId": "rv_t08_s02",
+      "title": "3.2 Metodología de Resolución de Problemas de Relaciones Complejas",
+      "challengeCount": 10,
+      "theoryLength": 4012,
+      "titleMismatch": false,
+      "crossContaminations": 0,
+      "unsupported": 6,
+      "status": "FAIL"
+    }
+  ]
+}

@@ -4,9 +4,10 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.datetime.Clock
-import kotlinx.datetime.DatePeriod
+import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.TimeZone
+import kotlinx.datetime.minus
 import kotlinx.datetime.toLocalDateTime
 
 /**
@@ -18,15 +19,130 @@ object GamificationManager {
 
     data class StreakState(
         val currentStreak: Int = 1,
+        val bestStreak: Int = 1,
         val lastActiveDate: String = getLocalDayString(),
-        val streakFreezeCount: Int = 1
+        val streakFreezeCount: Int = 1,
+        val activityDates: Set<String> = emptySet()
     )
 
     private val _streakState = MutableStateFlow(StreakState())
     val streakState: StateFlow<StreakState> = _streakState.asStateFlow()
 
-    private val _hearts = MutableStateFlow(200)
+    const val DEFAULT_MAX_HEARTS = 5
+
+    private val _maxHearts = MutableStateFlow(DEFAULT_MAX_HEARTS)
+    val maxHearts: StateFlow<Int> = _maxHearts.asStateFlow()
+
+    private val _hearts = MutableStateFlow(DEFAULT_MAX_HEARTS)
     val hearts: StateFlow<Int> = _hearts.asStateFlow()
+
+    private val _recoveryAmount = MutableStateFlow(3L)
+    val recoveryAmount: StateFlow<Long> = _recoveryAmount.asStateFlow()
+
+    private val _recoveryUnit = MutableStateFlow(LifeRecoveryUnit.MINUTOS)
+    val recoveryUnit: StateFlow<LifeRecoveryUnit> = _recoveryUnit.asStateFlow()
+
+    private val _lastHeartLostTimestamp = MutableStateFlow(0L)
+    val lastHeartLostTimestamp: StateFlow<Long> = _lastHeartLostTimestamp.asStateFlow()
+
+    fun calculateIntervalMillis(amount: Long, unit: LifeRecoveryUnit): Long {
+        val safeAmount = amount.coerceAtLeast(1L)
+        val unitMillis = unit.secondsMultiplier * 1000L
+        val maxSafeAmount = Long.MAX_VALUE / unitMillis
+        val boundedAmount = safeAmount.coerceAtMost(maxSafeAmount)
+        return boundedAmount * unitMillis
+    }
+
+    fun getRecoveryIntervalMillis(): Long {
+        return calculateIntervalMillis(_recoveryAmount.value, _recoveryUnit.value)
+    }
+
+    fun setMaxHearts(newMax: Int, nowMillis: Long = Clock.System.now().toEpochMilliseconds()) {
+        val safeMax = newMax.coerceIn(1, 1_000_000)
+        val oldMax = _maxHearts.value
+        if (safeMax == oldMax) return
+
+        _maxHearts.value = safeMax
+        if (safeMax > oldMax) {
+            val diff = safeMax - oldMax
+            _hearts.value = (_hearts.value + diff).coerceIn(0, safeMax)
+        } else {
+            _hearts.value = _hearts.value.coerceIn(0, safeMax)
+        }
+
+        if (_hearts.value >= safeMax) {
+            _lastHeartLostTimestamp.value = 0L
+        } else if (_lastHeartLostTimestamp.value <= 0L) {
+            _lastHeartLostTimestamp.value = nowMillis
+        }
+        syncState()
+    }
+
+    fun setRecoveryConfig(
+        amount: Long,
+        unit: LifeRecoveryUnit,
+        nowMillis: Long? = null
+    ) {
+        val safeAmount = amount.coerceAtLeast(1L)
+        _recoveryAmount.value = safeAmount
+        _recoveryUnit.value = unit
+
+        if (nowMillis != null && _hearts.value < _maxHearts.value && _lastHeartLostTimestamp.value > 0L) {
+            updateHeartRegeneration(nowMillis)
+        }
+        syncState()
+    }
+
+    fun updateHeartRegeneration(nowMillis: Long = Clock.System.now().toEpochMilliseconds()): Int {
+        if (_hearts.value >= _maxHearts.value) {
+            if (_lastHeartLostTimestamp.value != 0L) {
+                _lastHeartLostTimestamp.value = 0L
+                syncState()
+            }
+            return 0
+        }
+
+        val timestamp = _lastHeartLostTimestamp.value
+        if (timestamp <= 0L) {
+            _lastHeartLostTimestamp.value = nowMillis
+            syncState()
+            return 0
+        }
+
+        val interval = getRecoveryIntervalMillis()
+        if (interval <= 0L) return 0
+
+        val elapsed = (nowMillis - timestamp).coerceAtLeast(0L)
+        if (elapsed < interval) {
+            return 0
+        }
+
+        val recovered = elapsed / interval
+        val missing = (_maxHearts.value - _hearts.value).toLong()
+        val toAdd = recovered.coerceAtMost(missing).toInt()
+
+        if (toAdd > 0) {
+            _hearts.value = (_hearts.value + toAdd).coerceIn(0, _maxHearts.value)
+            if (_hearts.value >= _maxHearts.value) {
+                _lastHeartLostTimestamp.value = 0L
+            } else {
+                _lastHeartLostTimestamp.value = timestamp + (recovered * interval)
+            }
+            syncState()
+        }
+        return toAdd
+    }
+
+    fun millisUntilNextHeart(nowMillis: Long = Clock.System.now().toEpochMilliseconds()): Long {
+        if (_hearts.value >= _maxHearts.value) return 0L
+        val timestamp = _lastHeartLostTimestamp.value
+        if (timestamp <= 0L) return 0L
+        val interval = getRecoveryIntervalMillis()
+        if (interval <= 0L) return 0L
+        val elapsed = (nowMillis - timestamp).coerceAtLeast(0L)
+        val remainder = elapsed % interval
+        return (interval - remainder).coerceAtLeast(0L)
+    }
 
     private val _totalXp = MutableStateFlow(50)
     val totalXp: StateFlow<Int> = _totalXp.asStateFlow()
@@ -38,7 +154,8 @@ object GamificationManager {
 
     fun recordLessonCompleted(earnedXp: Int = 25) {
         _totalXp.value += earnedXp.coerceAtLeast(0)
-        _hearts.value = MAX_HEARTS
+        _hearts.value = _maxHearts.value
+        _lastHeartLostTimestamp.value = 0L
         checkStreak()
         syncState()
     }
@@ -101,7 +218,8 @@ object GamificationManager {
             lessonId to LessonCompletion(stars = stars.coerceIn(0, 3), completedAt = Clock.System.now().toEpochMilliseconds())
         )
         _totalXp.value += safeXp
-        _hearts.value = MAX_HEARTS
+        _hearts.value = _maxHearts.value
+        _lastHeartLostTimestamp.value = 0L
         checkStreak()
         val achievements = (_state.value.achievements + buildList {
             if (completed.size >= 1) add("first_lesson")
@@ -111,12 +229,14 @@ object GamificationManager {
         _state.value = _state.value.copy(
             xp = _totalXp.value,
             streak = _streakState.value.currentStreak,
+            bestStreak = _streakState.value.bestStreak,
             lastStudyDate = _streakState.value.lastActiveDate,
             streakFreeze = _streakState.value.streakFreezeCount,
             hearts = _hearts.value,
             completedLessons = completed,
             activeLessonBySubject = nextLessonPointer(lessonId, completed),
-            achievements = achievements
+            achievements = achievements,
+            activityDates = _streakState.value.activityDates
         )
     }
 
@@ -169,11 +289,41 @@ object GamificationManager {
             unlockedNodes = (state.unlockedNodes + skippedIds + migratedTargets.values).distinct(),
             activeLessonBySubject = migratedTargets + state.activeLessonBySubject)
         _totalXp.value = state.xp.coerceAtLeast(0)
-        _hearts.value = state.hearts.coerceIn(0, MAX_HEARTS)
+        val restoredMax = state.maxHearts.coerceIn(1, 1_000_000)
+        _maxHearts.value = restoredMax
+        _hearts.value = state.hearts.coerceIn(0, restoredMax)
+        _lastHeartLostTimestamp.value = state.lastHeartLostTimestamp
+        _recoveryAmount.value = state.lifeRecoveryAmount.coerceAtLeast(1L)
+        _recoveryUnit.value = LifeRecoveryUnit.fromString(state.lifeRecoveryUnit)
+        updateHeartRegeneration()
+
+        val derivedActivity = buildSet {
+            addAll(state.activityDates)
+            state.completedLessons.values.forEach { completion ->
+                runCatching {
+                    val instant = kotlinx.datetime.Instant.fromEpochMilliseconds(completion.completedAt)
+                    val local = instant.toLocalDateTime(TimeZone.currentSystemDefault())
+                    add("${local.year}-${local.monthNumber.toString().padStart(2, '0')}-${local.dayOfMonth.toString().padStart(2, '0')}")
+                }
+            }
+            val last = state.lastStudyDate.ifBlank { getLocalDayString() }
+            val streakCount = state.streak.coerceAtLeast(1)
+            runCatching {
+                val lastDate = LocalDate.parse(last)
+                for (i in 0 until streakCount) {
+                    val d = lastDate.minus(i, DateTimeUnit.DAY)
+                    add(d.toString())
+                }
+            }
+        }
+        val initialBestStreak = maxOf(state.bestStreak, state.streak.coerceAtLeast(1))
+
         _streakState.value = StreakState(
             currentStreak = state.streak.coerceAtLeast(1),
+            bestStreak = initialBestStreak,
             lastActiveDate = state.lastStudyDate.ifBlank { getLocalDayString() },
-            streakFreezeCount = state.streakFreeze.coerceAtLeast(0)
+            streakFreezeCount = state.streakFreeze.coerceAtLeast(0),
+            activityDates = derivedActivity
         )
         checkStreakStatusOnLaunch()
     }
@@ -221,9 +371,13 @@ object GamificationManager {
         val currentLocal = runCatching { LocalDate.parse(today) }.getOrNull()
         val daysDiff = if (previous != null && currentLocal != null) (currentLocal.toEpochDays() - previous.toEpochDays()) else 1
         val newStreak = if (daysDiff <= 1) (current.currentStreak + 1).coerceAtLeast(1) else 1
+        val newBestStreak = maxOf(current.bestStreak, newStreak)
+        val newActivity = current.activityDates + today
         _streakState.value = current.copy(
             currentStreak = newStreak,
-            lastActiveDate = today
+            bestStreak = newBestStreak,
+            lastActiveDate = today,
+            activityDates = newActivity
         )
         syncState()
     }
@@ -233,15 +387,24 @@ object GamificationManager {
         markDailyStreakEarned()
     }
 
-    fun loseHeart() {
+    fun loseHeart(nowMillis: Long = Clock.System.now().toEpochMilliseconds()) {
         if (_hearts.value > 0) {
+            val wasFull = _hearts.value >= _maxHearts.value
             _hearts.value -= 1
-            syncState()
+            if (wasFull || _lastHeartLostTimestamp.value <= 0L) {
+                _lastHeartLostTimestamp.value = nowMillis
+            }
+        } else {
+            _lastHeartLostTimestamp.value = nowMillis
         }
+        syncState()
     }
 
-    fun refillHearts(amount: Int = MAX_HEARTS) {
-        _hearts.value = amount.coerceIn(0, MAX_HEARTS)
+    fun refillHearts(amount: Int = _maxHearts.value) {
+        _hearts.value = amount.coerceIn(0, _maxHearts.value)
+        if (_hearts.value >= _maxHearts.value) {
+            _lastHeartLostTimestamp.value = 0L
+        }
         syncState()
     }
 
@@ -290,15 +453,21 @@ object GamificationManager {
         }
     }
 
-    private const val MAX_HEARTS = 200
+    // Max hearts is now dynamic via _maxHearts StateFlow
 
     private fun syncState() {
         _state.value = _state.value.copy(
             xp = _totalXp.value,
             streak = _streakState.value.currentStreak,
+            bestStreak = _streakState.value.bestStreak,
             lastStudyDate = _streakState.value.lastActiveDate,
             streakFreeze = _streakState.value.streakFreezeCount,
-            hearts = _hearts.value
+            hearts = _hearts.value,
+            maxHearts = _maxHearts.value,
+            lastHeartLostTimestamp = _lastHeartLostTimestamp.value,
+            lifeRecoveryAmount = _recoveryAmount.value,
+            lifeRecoveryUnit = _recoveryUnit.value.name,
+            activityDates = _streakState.value.activityDates
         )
     }
 }

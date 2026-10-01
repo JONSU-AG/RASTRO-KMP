@@ -57,6 +57,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -152,11 +153,16 @@ fun SimuladorScreen(
             subjectMatches && weekMatches && authorMatches && searchMatches
         }
     }
-    val examQuestions = remember(activeSimulatorTab, allExamQuestions, quickFilteredQuestions, quickQuestionCount, selectedArea, selectedOrderPreference, questionShuffleSeed) {
-        when (activeSimulatorTab) {
-            0 -> SimuladorRepository.generateOfficialSimulacro80(allExamQuestions, selectedArea, selectedOrderPreference, questionShuffleSeed)
-            1 -> if (quickQuestionCount < 0) quickFilteredQuestions else quickFilteredQuestions.take(quickQuestionCount.coerceAtLeast(1))
-            else -> allExamQuestions
+    val examQuestions by produceState(
+        initialValue = emptyList<com.jonsuapps.rastro.model.ExamQuestion>(),
+        activeSimulatorTab, allExamQuestions, quickFilteredQuestions, quickQuestionCount, selectedArea, selectedOrderPreference, questionShuffleSeed
+    ) {
+        value = withContext(Dispatchers.Default) {
+            when (activeSimulatorTab) {
+                0 -> if (allExamQuestions.isNotEmpty()) SimuladorRepository.generateOfficialSimulacro80(allExamQuestions, selectedArea, selectedOrderPreference, questionShuffleSeed) else emptyList()
+                1 -> if (quickQuestionCount < 0) quickFilteredQuestions else quickFilteredQuestions.take(quickQuestionCount.coerceAtLeast(1))
+                else -> allExamQuestions
+            }
         }
     }
 
@@ -920,11 +926,24 @@ private fun ProjectedScoreCalculator(
     selectedArea: AreaAdmision,
     onSelectArea: (AreaAdmision) -> Unit
 ) {
-    val scores = remember(selectedArea) { mutableStateMapOf<String, Int>() }
-    val subjects = SimuladorRepository.getPonderaciones(selectedArea)
-    val projected = subjects.sumOf { item ->
-        (scores[item.asignatura] ?: 0).coerceIn(0, item.preguntas) * item.valor
+    // Secciones Oficiales UNSA con límites reales agregados (Aptitud: 18, Matemática: 12/15, CyT: 9/18/20, etc.)
+    val officialSections = remember(selectedArea) {
+        val rawPonderaciones = SimuladorRepository.getPonderaciones(selectedArea)
+        rawPonderaciones.groupBy { it.asignatura }.map { (asignatura, items) ->
+            val maxQ = items.sumOf { it.preguntas }
+            val totalPts = items.sumOf { it.preguntas * it.valor }
+            Triple(asignatura, maxQ, totalPts)
+        }
+    }
+
+    val sectionScores = remember(selectedArea) { mutableStateMapOf<String, Int>() }
+    val totalPreguntas = officialSections.sumOf { it.second }
+    val totalAciertos = officialSections.sumOf { (sectionScores[it.first] ?: 0).coerceIn(0, it.second) }
+    val projected = officialSections.sumOf { (name, maxQ, totalPts) ->
+        val correct = (sectionScores[name] ?: 0).coerceIn(0, maxQ)
+        correct * (totalPts / maxQ)
     }.coerceAtMost(100.0)
+
     Sticker3dCard(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(22.dp),
@@ -933,7 +952,7 @@ private fun ProjectedScoreCalculator(
         strokeColor = theme.strokeBorder,
         bevelHeight = 4.dp
     ) {
-        Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
             Text("Puntaje Oficial Proyectado", fontSize = 19.sp, fontWeight = FontWeight.Black, color = theme.textPrimary)
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 listOf(
@@ -964,6 +983,8 @@ private fun ProjectedScoreCalculator(
                     }
                 }
             }
+
+            // Marcador Oficial 3D
             Sticker3dCard(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(16.dp),
@@ -982,90 +1003,186 @@ private fun ProjectedScoreCalculator(
                     Text(
                         text = String.format("%.2f", projected),
                         color = Color(0xFF007AFF),
-                        fontSize = 36.sp,
+                        fontSize = 38.sp,
                         fontWeight = FontWeight.Black,
                         letterSpacing = (-1).sp
                     )
                     Spacer(Modifier.height(2.dp))
                     Text(
-                        text = "PUNTOS / 100.00  ·  ${scores.values.sum()} aciertos",
+                        text = "PUNTOS / 100.00  ·  $totalAciertos / $totalPreguntas aciertos reales",
                         color = theme.textSecondary,
                         fontSize = 11.sp,
                         fontWeight = FontWeight.ExtraBold
                     )
                 }
             }
-            Text("Ajusta tus aciertos por asignatura", color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 12.sp)
-            subjects.forEach { subject ->
-                val correct = (scores[subject.asignatura] ?: 0).coerceIn(0, subject.preguntas)
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clip(RoundedCornerShape(14.dp))
-                        .background(theme.surfaceAccent)
-                        .border(1.2.dp, theme.strokeBorder.copy(alpha = 0.22f), RoundedCornerShape(14.dp))
-                        .padding(horizontal = 12.dp, vertical = 8.dp),
-                    verticalAlignment = Alignment.CenterVertically
+
+            // Botones rápidos globales
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "Aciertos por sección oficial",
+                    color = theme.textPrimary,
+                    fontWeight = FontWeight.Black,
+                    fontSize = 13.sp
+                )
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    // Botón limpiar todo
+                    if (totalAciertos > 0) {
+                        Box(
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(8.dp))
+                                .background(theme.strokeBorder.copy(alpha = 0.15f))
+                                .clickable { sectionScores.clear() }
+                                .padding(horizontal = 8.dp, vertical = 4.dp)
+                        ) {
+                            Text("Limpiar", fontSize = 10.sp, fontWeight = FontWeight.Black, color = theme.textSecondary)
+                        }
+                    }
+                    // Botón examen perfecto
+                    Box(
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(8.dp))
+                            .background(Color(0xFF10B981).copy(alpha = 0.14f))
+                            .clickable {
+                                officialSections.forEach { (name, maxQ, _) ->
+                                    sectionScores[name] = maxQ
+                                }
+                            }
+                            .padding(horizontal = 8.dp, vertical = 4.dp)
+                    ) {
+                        Text("100 pts (Max)", fontSize = 10.sp, fontWeight = FontWeight.Black, color = Color(0xFF059669))
+                    }
+                }
+            }
+
+            // Lista de las 7 Secciones Oficiales con sus límites reales
+            officialSections.forEach { (name, maxQuestions, totalPoints) ->
+                val correct = (sectionScores[name] ?: 0).coerceIn(0, maxQuestions)
+                val avgWeight = totalPoints / maxQuestions
+                val currentPoints = correct * avgWeight
+
+                Sticker3dCard(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(16.dp),
+                    containerColor = theme.surface,
+                    bottomBevelColor = theme.cardBevel,
+                    strokeColor = theme.strokeBorder,
+                    strokeWidth = 1.2.dp,
+                    bevelHeight = 2.5.dp
                 ) {
-                    Column(Modifier.weight(1f)) {
-                        Text(
-                            text = subject.asignatura,
-                            fontSize = 12.sp,
-                            color = theme.textPrimary,
-                            fontWeight = FontWeight.Bold
-                        )
-                        Text(
-                            text = "$correct de ${subject.preguntas} · ${String.format("%.4f", subject.valor)} pts/acierto",
-                            fontSize = 10.sp,
-                            color = theme.textSecondary
-                        )
-                    }
-
-                    // Botón Restar (-) 3D
-                    Sticker3dCounterButton(
-                        onClick = { scores[subject.asignatura] = (correct - 1).coerceAtLeast(0) },
-                        enabled = correct > 0,
-                        size = 32.dp,
-                        containerColor = theme.surface,
-                        bottomBevelColor = theme.cardBevel,
-                        strokeColor = theme.strokeBorder,
-                        strokeWidth = 1.3.dp,
-                        bevelHeight = 2.dp
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 14.dp, vertical = 10.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        Icon(
-                            Icons.Rounded.Remove,
-                            contentDescription = "Restar acierto",
-                            tint = if (correct > 0) theme.accent else theme.textSecondary.copy(alpha = 0.35f),
-                            modifier = Modifier.size(16.dp)
-                        )
-                    }
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Column(Modifier.weight(1f)) {
+                                Text(
+                                    text = name,
+                                    fontSize = 13.sp,
+                                    color = theme.textPrimary,
+                                    fontWeight = FontWeight.Black
+                                )
+                                Text(
+                                    text = "$correct / $maxQuestions preguntas  ·  ${String.format("%.2f", currentPoints)} / ${String.format("%.2f", totalPoints)} pts",
+                                    fontSize = 10.5.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = if (correct > 0) Color(0xFF007AFF) else theme.textSecondary
+                                )
+                            }
 
-                    Text(
-                        text = correct.toString(),
-                        fontSize = 14.sp,
-                        color = theme.textPrimary,
-                        fontWeight = FontWeight.Black,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.widthIn(min = 28.dp)
-                    )
+                            // Stepper de aciertos
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(4.dp)
+                            ) {
+                                // Botón Restar (-) 3D
+                                Sticker3dCounterButton(
+                                    onClick = { sectionScores[name] = (correct - 1).coerceAtLeast(0) },
+                                    enabled = correct > 0,
+                                    size = 32.dp,
+                                    containerColor = theme.surface,
+                                    bottomBevelColor = theme.cardBevel,
+                                    strokeColor = theme.strokeBorder,
+                                    strokeWidth = 1.3.dp,
+                                    bevelHeight = 2.dp
+                                ) {
+                                    Icon(
+                                        Icons.Rounded.Remove,
+                                        contentDescription = "Restar",
+                                        tint = if (correct > 0) theme.accent else theme.textSecondary.copy(alpha = 0.35f),
+                                        modifier = Modifier.size(16.dp)
+                                    )
+                                }
 
-                    // Botón Sumar (+) 3D
-                    Sticker3dCounterButton(
-                        onClick = { scores[subject.asignatura] = (correct + 1).coerceAtMost(subject.preguntas) },
-                        enabled = correct < subject.preguntas,
-                        size = 32.dp,
-                        containerColor = theme.surface,
-                        bottomBevelColor = theme.cardBevel,
-                        strokeColor = theme.strokeBorder,
-                        strokeWidth = 1.3.dp,
-                        bevelHeight = 2.dp
-                    ) {
-                        Icon(
-                            Icons.Rounded.Add,
-                            contentDescription = "Sumar acierto",
-                            tint = if (correct < subject.preguntas) theme.accent else theme.textSecondary.copy(alpha = 0.35f),
-                            modifier = Modifier.size(16.dp)
-                        )
+                                Text(
+                                    text = correct.toString(),
+                                    fontSize = 15.sp,
+                                    color = theme.textPrimary,
+                                    fontWeight = FontWeight.Black,
+                                    textAlign = TextAlign.Center,
+                                    modifier = Modifier.widthIn(min = 32.dp)
+                                )
+
+                                // Botón Sumar (+) 3D
+                                Sticker3dCounterButton(
+                                    onClick = { sectionScores[name] = (correct + 1).coerceAtMost(maxQuestions) },
+                                    enabled = correct < maxQuestions,
+                                    size = 32.dp,
+                                    containerColor = theme.surface,
+                                    bottomBevelColor = theme.cardBevel,
+                                    strokeColor = theme.strokeBorder,
+                                    strokeWidth = 1.3.dp,
+                                    bevelHeight = 2.dp
+                                ) {
+                                    Icon(
+                                        Icons.Rounded.Add,
+                                        contentDescription = "Sumar",
+                                        tint = if (correct < maxQuestions) theme.accent else theme.textSecondary.copy(alpha = 0.35f),
+                                        modifier = Modifier.size(16.dp)
+                                    )
+                                }
+                            }
+                        }
+
+                        // Atajos rápidos para esa sección
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(6.dp)
+                        ) {
+                            listOf(
+                                "0" to 0,
+                                "+5" to (correct + 5).coerceAtMost(maxQuestions),
+                                "Mitad (${maxQuestions / 2})" to (maxQuestions / 2),
+                                "Max ($maxQuestions)" to maxQuestions
+                            ).forEach { (lbl, targetVal) ->
+                                Box(
+                                    modifier = Modifier
+                                        .clip(RoundedCornerShape(8.dp))
+                                        .background(
+                                            if (correct == targetVal && targetVal > 0) Color(0xFF007AFF).copy(alpha = 0.15f)
+                                            else theme.surfaceAccent.copy(alpha = 0.5f)
+                                        )
+                                        .clickable { sectionScores[name] = targetVal }
+                                        .padding(horizontal = 8.dp, vertical = 4.dp)
+                                ) {
+                                    Text(
+                                        text = lbl,
+                                        fontSize = 9.5.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = if (correct == targetVal && targetVal > 0) Color(0xFF007AFF) else theme.textSecondary
+                                    )
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1184,7 +1301,7 @@ private fun FlashcardsQuickDeck(
                 Sticker3dCard(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .heightIn(min = 250.dp)
+                        .heightIn(min = 180.dp)
                         .graphicsLayer {
                             rotationY = rotation
                             cameraDistance = 14f * density
@@ -1198,38 +1315,68 @@ private fun FlashcardsQuickDeck(
                 ) {
                     Box(
                         modifier = Modifier
-                            .fillMaxSize()
-                            .then(if (isBack) Modifier.graphicsLayer { rotationY = 180f } else Modifier),
+                            .fillMaxWidth()
+                            .then(if (isBack) Modifier.graphicsLayer { rotationY = 180f } else Modifier)
+                            .padding(20.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Column(
-                            Modifier.fillMaxWidth().padding(22.dp),
-                            verticalArrangement = Arrangement.Center,
+                            Modifier.fillMaxWidth(),
+                            verticalArrangement = Arrangement.spacedBy(10.dp),
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
-                            Text(
-                                text = if (isBack) "RESPUESTA" else card.subject.uppercase(),
-                                fontSize = 11.sp,
-                                color = Color(0xFF6366F1),
-                                fontWeight = FontWeight.Black
-                            )
-                            Text(card.authorName, fontSize = 10.sp, color = theme.textSecondary)
-                            Spacer(Modifier.height(16.dp))
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(5.dp)
+                            ) {
+                                Icon(
+                                    imageVector = if (isBack) Icons.Rounded.Bookmark else Icons.Rounded.Bolt,
+                                    contentDescription = null,
+                                    tint = Color(0xFF6366F1),
+                                    modifier = Modifier.size(14.dp)
+                                )
+                                Text(
+                                    text = if (isBack) "RESPUESTA" else card.subject.uppercase().ifBlank { "PREGUNTA" },
+                                    fontSize = 10.sp,
+                                    color = Color(0xFF6366F1),
+                                    fontWeight = FontWeight.Black,
+                                    letterSpacing = 0.5.sp
+                                )
+                            }
                             Text(
                                 text = if (isBack) card.a else card.q,
-                                fontSize = 18.sp,
-                                lineHeight = 26.sp,
+                                fontSize = 16.sp,
+                                lineHeight = 24.sp,
                                 color = theme.textPrimary,
                                 fontWeight = FontWeight.Bold,
-                                textAlign = TextAlign.Center
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.fillMaxWidth()
                             )
-                            Spacer(Modifier.height(18.dp))
-                            Text(
-                                text = if (isBack) "Toca para ver la pregunta 🔄" else "Toca para mostrar la respuesta 🔄",
-                                fontSize = 11.sp,
-                                fontWeight = FontWeight.SemiBold,
-                                color = theme.textSecondary
-                            )
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(4.dp)
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Rounded.PlayArrow,
+                                    contentDescription = null,
+                                    tint = theme.textSecondary.copy(alpha = 0.6f),
+                                    modifier = Modifier.size(13.dp)
+                                )
+                                Text(
+                                    text = if (isBack) "Toca para ver la pregunta" else "Toca para ver la respuesta",
+                                    fontSize = 10.sp,
+                                    fontWeight = FontWeight.Medium,
+                                    color = theme.textSecondary.copy(alpha = 0.6f)
+                                )
+                            }
+                            if (card.authorName.isNotBlank()) {
+                                Text(
+                                    text = "por ${card.authorName}",
+                                    fontSize = 9.sp,
+                                    color = theme.textSecondary.copy(alpha = 0.45f),
+                                    fontWeight = FontWeight.Medium
+                                )
+                            }
                         }
                     }
                 }

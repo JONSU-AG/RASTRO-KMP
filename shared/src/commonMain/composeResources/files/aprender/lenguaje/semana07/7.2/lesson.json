@@ -1,0 +1,33 @@
+{
+  "id": "leng_t07_s02",
+  "subjectId": "lenguaje",
+  "semana": 7,
+  "subtema": "7.2",
+  "title": "Normativa de Signos de Puntuación: La Coma, el Punto y Coma y los Dos Puntos",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana07.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_07_Discurso_Escrito_y_Normativa.md",
+  "learningObjectives": [
+    "Clasificar la coma vocativa, elíptica, hiperbática, enumerativa, explicativa y conjuntiva",
+    "Detectar y eliminar la coma criminal entre sujeto y verbo o verbo y objeto directo",
+    "Aplicar el punto y coma en yuxtapuestas complejas y ante conectores extensos",
+    "Decidir el uso preceptivo de los dos puntos en cita, enumeración anunciada y causa-efecto"
+  ],
+  "theory": {
+    "id": "th_leng_t07_s02",
+    "asignatura": "Lenguaje",
+    "semana": 7,
+    "titulo": "Normativa de Signos de Puntuación: La Coma, el Punto y Coma y los Dos Puntos",
+    "resumen": "",
+    "conceptosClave": [
+      "Coma vocativa aísla al interlocutor; elíptica reemplaza verbo omitido",
+      "Coma hiperbática marca CC antepuesto; explicativa encierra aposición",
+      "Coma criminal entre sujeto-verbo u verbo-OD está terminantemente prohibida",
+      "Punto y coma separa yuxtapuestas con comas internas y precede a sin embargo extenso",
+      "Dos puntos exigen anticipador en enumeraciones y preceden a cita literal",
+      "Dos puntos expresan causa-efecto sintético sin conector explícito",
+      "Mnemotecnia V-E-H-I: vocativa, elíptica, hiperbática, incidental"
+    ],
+    "admissionTip": "Si la enumeración no tiene palabra anunciadora como tres cosas o lo siguiente, los dos puntos son error; si ves sujeto largo seguido de coma antes del verbo, marca coma criminal.",
+    "admissionExplanation": "Los dos puntos nunca rompen verbo y OD sin anticipador, y ninguna coma puede partir el núcleo sujeto-verbo-OD por más largo que sea el sujeto."
+  }
+}

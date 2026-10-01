@@ -1,0 +1,34 @@
+{
+  "id": "lit_t01_s01",
+  "subjectId": "literatura",
+  "semana": 1,
+  "subtema": "1.1",
+  "title": "3.1. La Literatura y la Función Poética",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/literatura/LiteraturaSemana01.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/TEMA_01_Conceptos_Fundamentales_Generos_y_Figuras.md",
+  "learningObjectives": [
+    "Explicar la literatura como arte de la palabra y la función poética de Jakobson con literariedad y pacto ficcional",
+    "Clasificar los géneros épico-narrativo, lírico, dramático y didáctico por perspectiva y rasgos definitorios",
+    "Identificar especies épicas, líricas y dramáticas en ejemplos canónicos de admisión",
+    "Diferenciar tragedia con catarsis, comedia y drama o tragicomedia en casos de examen",
+    "Reconocer acotaciones, narrador, yo poético y diégesis como marcas formales de cada género"
+  ],
+  "theory": {
+    "id": "th_lit_t01_s01",
+    "asignatura": "Literatura",
+    "semana": 1,
+    "titulo": "3.1. La Literatura y la Función Poética",
+    "resumen": "",
+    "conceptosClave": [
+      "Función poética de Jakobson centrada en la forma del mensaje y desvío estético",
+      "Literariedad y extrañamiento que desautomatizan la percepción cotidiana",
+      "Pacto ficcional como suspensión de incredulidad ante el universo representado",
+      "Género épico-narrativo objetivo con narrador, cronotopo y diégesis",
+      "Género lírico subjetivo con yo poético, musicalidad y densidad connotativa",
+      "Género dramático dialógico sin narrador con diálogo, monólogo y acotaciones",
+      "Catarsis trágica como purificación por terror y compasión según Aristóteles"
+    ],
+    "admissionTip": "Si ves narrador que relata en pasado marca épico-narrativo, si ves yo que siente en verso marca lírico, si ves solo diálogo con acotaciones para escena marca dramático; Ilíada es epopeya aunque tenga diálogos.",
+    "admissionExplanation": "La trampa más castigada es confundir presencia de diálogos con género dramático y confundir tragedia fatal con drama libre; el criterio es narrador frente a representación y fatum frente a albedrío."
+  }
+}

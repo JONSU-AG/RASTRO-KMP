@@ -1,0 +1,34 @@
+{
+  "id": "psi_t12_s01",
+  "subjectId": "psicologia",
+  "semana": 12,
+  "subtema": "12.1",
+  "title": "3.1. Definición y Enfoque de Factores de Protección",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana12.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_12_Factores_de_Proteccion.md",
+  "learningObjectives": [
+    "Definir familia como célula básica y primer agente socializador con apego, identidad y soporte material",
+    "Definir factor de protección como escudo que amortigua el estrés y potencia resiliencia frente al riesgo que aumenta daño",
+    "Enumerar las seis funciones con biológica, afectiva, socializadora, protectora, económica y recreativa con su marcador verbal",
+    "Describir escuela y comunidad como escudos con clima positivo, tutoría, pertenencia, capital social y deporte",
+    "Operar Grotberg con tengo, soy y puedo más Cyrulnik con tutor de resiliencia y Bowlby con apego seguro"
+  ],
+  "theory": {
+    "id": "th_psi_t12_s01",
+    "asignatura": "Psicología",
+    "semana": 12,
+    "titulo": "3.1. Definición y Enfoque de Factores de Protección",
+    "resumen": "",
+    "conceptosClave": [
+      "Familia como célula básica y matriz vincular primaria con apego, normas y autoestima",
+      "Factor de protección que reduce y amortigua frente a factor de riesgo que incrementa probabilidad de daño",
+      "Seis funciones con afectiva la más trascendente, socializadora que transmite cultura y económica que sustenta",
+      "Clima escolar positivo con tutoría y pertenencia frente a pandilla como entorno de riesgo",
+      "Capital social con polideportivos, bibliotecas y talleres que canalizan el tiempo libre",
+      "Grotberg con tengo apoyos, soy fortalezas y puedo competencias para clasificar casos",
+      "Cyrulnik con tutor que teje nuevo apego y Bowlby con base segura para explorar"
+    ],
+    "admissionTip": "Si ves transmitir valores marca socializadora, si ves amor y contención marca afectiva, si ves sustento marca económica o protectora, si ves tengo soy puedo marca Grotberg, si ves profesor que rescata marca tutor de Cyrulnik.",
+    "admissionExplanation": "La trampa fija confunde función afectiva con socializadora, llama protector a lo que es riesgo, y mezcla tengo como apoyos externos frente a soy como identidad frente a puedo como acción."
+  }
+}

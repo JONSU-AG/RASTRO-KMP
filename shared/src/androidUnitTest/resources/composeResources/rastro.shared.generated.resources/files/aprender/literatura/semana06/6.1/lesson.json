@@ -1,0 +1,35 @@
+{
+  "id": "lit_t06_s01",
+  "subjectId": "literatura",
+  "semana": 6,
+  "subtema": "6.1",
+  "title": "3.1. Mariano Melgar y Valdivieso (Arequipa, 1790 - Umachiri, 1815)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/literatura/LiteraturaSemana06.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/TEMA_06_Literatura_Regional_Sur_Andino_y_Arequipa.md + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LITERATURA/OBRAS/OBRA_29_Yaravies_y_Fabulas_Mariano_Melgar.md",
+  "learningObjectives": [
+    "Explicar por qué Melgar es precursor del Romanticismo y creador del yaraví mestizo desde el harawi quechua con la musa Silvia",
+    "Analizar las fábulas políticas El cantero y el asno y Los gatos como alegoría de opresión colonial y división patriota",
+    "Identificar la vertiente humanística en latín con Ovidio y Virgilio más odas sonetos elegías y métrica de arte menor",
+    "Diferenciar Silvia frente a Melissa y harawi incaico frente a yaraví mestizo para evitar trampas de examen",
+    "Relacionar el cargo de auditor de guerra en la rebelión de Pumacahua y Angulo con el martirio en Umachiri en 1815"
+  ],
+  "theory": {
+    "id": "th_lit_t06_s01",
+    "asignatura": "Literatura",
+    "semana": 6,
+    "titulo": "3.1. Mariano Melgar y Valdivieso (Arequipa, 1790 - Umachiri, 1815)",
+    "resumen": "",
+    "conceptosClave": [
+      "Precursor del Romanticismo que anticipa pasión sacrificio y dolor íntimo antes de la llegada formal europea",
+      "Yaraví mestizo como fusión del harawi quechua doliente con la métrica castellana de arte menor",
+      "Silvia como María de los Santos Corrales musa imposible frente a Melissa como Manuela Paredes amor juvenil",
+      "Fábulas políticas El cantero y el asno y Los gatos como arma alegórica contra opresión y discordia",
+      "Vertiente humanística con latín Ovidio Remedia Amoris y Virgilio Geórgicas más odas A la libertad",
+      "Auditor de guerra de Pumacahua y Angulo fusilado en Umachiri en 1815 a los 24 años por Ramírez",
+      "Trampa harawi en runasimi incaico frente a yaraví mestizo en castellano formalizado por Melgar",
+      "Métrica de arte menor con pentasílabo hexasílabo y heptasílabo para cadencia melancólica de guitarra"
+    ],
+    "admissionTip": "Si ves Silvia marca María de los Santos Corrales, si ves Melissa marca Manuela Paredes, si ves harawi más castellano marca yaraví mestizo, si ves asno azotado marca denuncia de opresión del indio, si ves Umachiri marca auditor de Pumacahua fusilado a los 24 años.",
+    "admissionExplanation": "La trampa más castigada es decir que los incas cantaban yaravíes y confundir Silvia con Melissa; el harawi es quechua puro prehispánico en runasimi y el yaraví es creación mestiza en castellano de Melgar, Silvia es la musa madura y Melissa el amor adolescente previo."
+  }
+}

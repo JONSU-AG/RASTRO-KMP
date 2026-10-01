@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "3.2.1",
+    "correctIndex": 3,
+    "explanation": "John Holland postuló que las personas eligen entornos laborales que encajan con su personalidad y agrupó los perfiles en seis tipos (RIASEC).",
+    "fuente": "temario",
+    "id": "psi_t03_s02_c01",
+    "options": [
+      "Gordon Allport",
+      "B. F. Skinner",
+      "Carl Rogers",
+      "John Holland"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "La célebre tipología hexagonal de personalidades e intereses ocupacionales RIASEC fue formulada por el psicólogo norteamericano:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.1",
+    "correctIndex": 1,
+    "explanation": "El hexágono de Holland estructura las seis dimensiones vocacionales fundamentales de la personalidad ocupacional humana.",
+    "fuente": "temario",
+    "id": "psi_t03_s02_c02",
+    "options": [
+      "Racional, Intelectual, Auténtico, Sensible, Emocional, Completo.",
+      "Realista, Investigador, Artístico, Social, Emprendedor, Convencional.",
+      "Rígido, Ilusorio, Activo, Severo, Enérgico, Crítico.",
+      "Religioso, Idealista, Altruista, Solidario, Espiritual, Comunitario."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "En el modelo RIASEC de Holland, las siglas corresponden a los siguientes seis tipos de personalidad vocacional:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.2",
+    "correctIndex": 1,
+    "explanation": "Los 'realistas' son personas prácticas y orientadas a la acción material y física, prefiriendo trabajar con cosas antes que con ideas abstractas o con personas.",
+    "fuente": "temario",
+    "id": "psi_t03_s02_c03",
+    "options": [
+      "Escribir poesías y actuar en obras de teatro.",
+      "Actividades prácticas y concretas que implican el manejo de herramientas, máquinas, objetos, animales y trabajo al aire libre (ej. ingenierías mecánicas, agronomía, mecánica).",
+      "Organizar fiestas y animar reuniones infantiles.",
+      "Elaborar auditorías financieras en una oficina bancaria cerrada."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "El tipo de personalidad 'Realista' (R) en la teoría de Holland se caracteriza por la preferencia hacia:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.3",
+    "correctIndex": 2,
+    "explanation": "El tipo investigador prefiere observar, investigar, teorizar y resolver problemas intelectuales complejos de manera independiente y analítica.",
+    "fuente": "temario",
+    "id": "psi_t03_s02_c04",
+    "options": [
+      "El diseño de modas y pintura vanguardista.",
+      "Vender productos al por mayor mediante persuasión comercial.",
+      "La curiosidad intelectual, el análisis abstracto, el razonamiento lógico-matemático y la resolución de enigmas teóricos y científicos (ej. física, biología, química, matemáticas).",
+      "La ordenación de archivos alfabéticos de rutina."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "El tipo 'Investigador' o Científico (I) se distingue vocacionalmente por:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.4",
+    "correctIndex": 2,
+    "explanation": "El tipo artístico utiliza el arte, la palabra o la música para autoexpresarse libremente, buscando ambientes no convencionales y flexibles.",
+    "fuente": "temario",
+    "id": "psi_t03_s02_c05",
+    "options": [
+      "El amor por los procedimientos burocráticos estandarizados.",
+      "El combate militar cuerpo a cuerpo.",
+      "La creatividad, expresividad no estructurada, originalidad, sensibilidad estética y el rechazo a normas rígidas o ambientes rutinarios (ej. artes plásticas, literatura, música, diseño gráfico).",
+      "La gestión contable de inventarios de bodega."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "El tipo 'Artístico' (A) en el modelo de Holland presenta como rasgos cardinales:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.5",
+    "correctIndex": 0,
+    "explanation": "El tipo social posee gran empatía y habilidades interpersonales, sintiendo profunda satisfacción al colaborar en el desarrollo y bienestar de los demás.",
+    "fuente": "temario",
+    "id": "psi_t03_s02_c06",
+    "options": [
+      "Interactuar con personas, ayudar, curar, educar, orientar y prestar servicio desinteresado a la comunidad (ej. psicología, docencia, enfermería, trabajo social).",
+      "Realizar transacciones bursátiles especulativas en Wall Street.",
+      "Reparar motores diésel en solitario.",
+      "Catalogar rocas fósiles en un museo desierto."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "El tipo 'Social' (S) se orienta vocacionalmente a profesiones de servicio humanístico porque disfruta principalmente de:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.6",
+    "correctIndex": 3,
+    "explanation": "Los emprendedores son enérgicos, asertivos y ambiciosos; les gusta liderar proyectos, negociar, convencer y dirigir organizaciones humanas hacia metas de rentabilidad o poder.",
+    "fuente": "temario",
+    "id": "psi_t03_s02_c07",
+    "options": [
+      "La investigación de laboratorio con microscopios electrónicos.",
+      "La pintura en acuarela en un taller solitario.",
+      "El trabajo manual repetitivo en una cadena de ensamblaje.",
+      "El liderazgo, la persuasión verbal, la influencia sobre otros, la asunción de riesgos económicos y el logro de metas organizacionales o de negocios (ej. administración, derecho, marketing, política)."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "El tipo 'Emprendedor' (E) destaca en el hexágono de Holland por poseer destrezas notables para:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.7",
+    "correctIndex": 0,
+    "explanation": "El tipo convencional sobresale en la organización metódica, precisión numérica, seguimiento de protocolos reglamentarios y control minucioso de la información.",
+    "fuente": "temario",
+    "id": "psi_t03_s02_c08",
+    "options": [
+      "Estructurados, ordenados y sistemáticos, con manejo preciso de datos, registros, contabilidad, normas explícitas y detalles administrativos (ej. contabilidad, estadística, archivística, banca).",
+      "Zonas de catástrofe donde deba improvisar constantemente.",
+      "Bohemios, anárquicos y sin ningún horario fijo.",
+      "Teatros de danza moderna experimental."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "El tipo 'Convencional' (C) en la clasificación RIASEC se caracteriza por preferir entornos de trabajo:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.8",
+    "correctIndex": 1,
+    "explanation": "La distancia en el hexágono refleja similitud: tipos adyacentes (R-I, I-A) tienen alta consistencia y compatibilidad; tipos opuestos (R-S, I-E) son psicológicamente contrastantes.",
+    "fuente": "temario",
+    "id": "psi_t03_s02_c09",
+    "options": [
+      "Carreras que siempre deben estudiarse al mismo tiempo como doble grado.",
+      "Perfiles psicológicos con la menor consistencia y afinidad mutua, pues sus valores y preferencias son diametralmente contrarios.",
+      "Tipologías idénticas con los mismos intereses.",
+      "Tipos de inteligencia genética imposibles de educar."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "En la geometría del hexágono de Holland, los tipos que se encuentran en posiciones opuestas o enfrentadas (como Realista vs. Social, o Investigador vs. Emprendedor) representan:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.8",
+    "correctIndex": 3,
+    "explanation": "La congruencia (p. ej. una persona Social trabajando como psicóloga clínica comunitaria) produce florecimiento vocacional, menor estrés y alto rendimiento profesional.",
+    "fuente": "temario",
+    "id": "psi_t03_s02_c10",
+    "options": [
+      "Cambia de empresa cada dos meses para no aburrirse.",
+      "Trabaja en un empleo que contradice absolutamente todos sus valores personales.",
+      "Su salario es el doble que el de sus compañeros de trabajo.",
+      "Su tipo de personalidad vocacional encaja y coincide plenamente con las características del ambiente ocupacional en que trabaja."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "El concepto de 'Congruencia' en la teoría de Holland establece que una persona experimentará mayor satisfacción, rendimiento y estabilidad laboral cuando:",
+    "subject": "psicologia",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

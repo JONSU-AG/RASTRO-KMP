@@ -1,0 +1,34 @@
+{
+  "id": "leng_t03_s02",
+  "subjectId": "lenguaje",
+  "semana": 3,
+  "subtema": "3.2",
+  "title": "Secuencias Vocálicas: Diptongo, Triptongo y Hiato (Acentual y Simple)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana03.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_03_Fonologia_y_Ortografia.md",
+  "learningObjectives": [
+    "Clasificar el diptongo en creciente, decreciente y homogéneo con sus combinaciones",
+    "Reconocer el triptongo con estructura cerrada átona más abierta más cerrada átona",
+    "Distinguir el hiato simple de vocales abiertas y de cerradas idénticas",
+    "Aplicar la regla de oro de la tilde robúrica en el hiato acentual",
+    "Resolver conteos de diptongos e hiatos con la regla de la h intermedia"
+  ],
+  "theory": {
+    "id": "th_leng_t03_s02",
+    "asignatura": "Lenguaje",
+    "semana": 3,
+    "titulo": "Secuencias Vocálicas: Diptongo, Triptongo y Hiato (Acentual y Simple)",
+    "resumen": "",
+    "conceptosClave": [
+      "Diptongo homosilábico con creciente ia y ue, decreciente ai y au, homogéneo iu y ui",
+      "Triptongo con vocal cerrada átona más abierta más cerrada átona y letra y final como i",
+      "Hiato simple con dos abiertas como ca-os y dos cerradas idénticas como chi-i-ta",
+      "Hiato acentual con cerrada tónica que se tilda siempre como Ra-úl, ba-úl y tí-o",
+      "Letra h intermedia que no rompe diptongos como ahijado ni impide hiatos como bú-ho",
+      "Diptongo que sigue reglas generales frente a hiato acentual que las rompe",
+      "Conteo modelo con 2 diptongos y 3 hiatos en la oración del navío y la bahía"
+    ],
+    "admissionTip": "Cerrada tónica junto a abierta se tilda siempre; h no rompe nada; ui e iu son diptongo homogéneo que no se tilda.",
+    "admissionExplanation": "La fuerza de voz decide: si la cerrada suena más fuerte que la abierta, hay hiato acentual con tilde robúrica aunque la palabra sea grave terminada en vocal."
+  }
+}

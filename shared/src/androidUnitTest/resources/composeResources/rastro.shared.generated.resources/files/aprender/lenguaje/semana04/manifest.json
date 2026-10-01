@@ -1,0 +1,18 @@
+{
+  "week": 4,
+  "title": "Morfología y Formación de Palabras",
+  "lessons": [
+    {
+      "subtopic": "4.1",
+      "lessonId": "leng_t04_s01",
+      "title": "Morfología: Concepto, Morfema, Alomorfos y Clasificación",
+      "path": "4.1/lesson.json"
+    },
+    {
+      "subtopic": "4.2",
+      "lessonId": "leng_t04_s02",
+      "title": "Procesos Formativos de Palabras en el Español",
+      "path": "4.2/lesson.json"
+    }
+  ]
+}

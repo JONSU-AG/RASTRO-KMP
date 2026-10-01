@@ -2,171 +2,288 @@ package com.jonsuapps.rastro.android.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.widthIn
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Gavel
-import androidx.compose.material.icons.rounded.Policy
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.material.icons.rounded.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.jonsuapps.rastro.android.ui.components.Sticker3dCard
+import com.jonsuapps.rastro.android.util.LegalLinks
 import com.jonsuapps.rastro.theme.RastroPalette
-import com.jonsuapps.rastro.theme.RastroShapes
 import com.jonsuapps.rastro.theme.ThemeManager
 
 @Composable
 fun LegalScreen(
-    title: String,
+    title: String = "Legal y privacidad",
+    onNavigateBack: () -> Unit = {},
     colors: RastroPalette = ThemeManager.currentTheme,
     modifier: Modifier = Modifier
 ) {
-    val theme = colors
+    val context = LocalContext.current
 
-    val contentText = when {
-        title.contains("Políticas", ignoreCase = true) -> """
-            1. Objeto y Alcance:
-            RASTRO es una aplicación orientada a la preparación integral preuniversitaria de estudiantes para exámenes de admisión, con especial énfasis en la Universidad Nacional de San Agustín (UNSA), CEPREUNSA y el sistema universitario peruano.
-
-            2. Propiedad Intelectual:
-            El temario pedagógico, mnemotecnias, diseño de interfaz y desarrollos de software son propiedad de RASTRO y del Autor de la aplicación. Los ejercicios académicos corresponden a recopilaciones de bancos públicos oficiales con fines estrictamente educativos.
-
-            3. Costo y Gratuidad:
-            RASTRO se ofrece con acceso libre a sus herramientas medulares, simuladores y banco de preguntas, priorizando el impacto social en la juventud preuniversitaria.
-
-            4. Recursos de YouTube:
-            Los videos enlazados son contenido público alojado por YouTube y pertenecen a sus respectivos creadores. RASTRO solo organiza enlaces como referencias académicas; no aloja, modifica ni controla dichos videos. Su disponibilidad está sujeta a YouTube y a las decisiones de cada creador.
-        """.trimIndent()
-
-        title.contains("Privacidad", ignoreCase = true) -> """
-            1. Datos Recopilados:
-            Recopilamos únicamente información básica de perfil (nombre, correo electrónico proporcionado a través de Google Sign-In) para sincronizar tu progreso de estudio, racha, vidas y puntajes de simulacro.
-
-            2. Seguridad y Almacenamiento:
-            Toda la autenticación y datos de usuario se gestionan mediante Firebase Authentication y Cloud Firestore con reglas de seguridad estrictas que impiden el acceso de terceros no autorizados a tus datos privados.
-
-            3. Mensajería Directa:
-            Las conversaciones en la sección de Chats son privadas entre los participantes y están sujetas a normas de respeto y convivencia académica.
-
-            4. Videos y servicios de terceros:
-            Al abrir una clase de YouTube, el contenido se carga directamente en YouTube o en su aplicación. El tratamiento de datos, cookies o inicio de sesión que realice YouTube se rige por las políticas de Google y YouTube; RASTRO no recibe las credenciales de YouTube del usuario.
-        """.trimIndent()
-
-        title.contains("Términos", ignoreCase = true) -> """
-            1. Uso Aceptable:
-            El usuario se compromete a hacer un uso exclusivamente formativo y personal de la aplicación, absteniéndose de conductas hostiles, spam o suplantación en los foros y chats comunitarios.
-
-            2. Exclusión de Garantías de Ingreso:
-            RASTRO es una herramienta de entrenamiento y simulación académica. El puntaje obtenido en los simulacros no garantiza vacante en la universidad, la cual depende del examen oficial presencial administrado por las autoridades universitarias.
-
-            3. Recursos externos:
-            Los enlaces de YouTube se ofrecen como referencias educativas a contenido público. Los derechos, disponibilidad y normas de uso de cada video corresponden a su creador y a YouTube.
-        """.trimIndent()
-
-        title.contains("Eliminar", ignoreCase = true) -> """
-            1. Derecho de Supresión:
-            De acuerdo con las políticas de Google Play y la legislación de protección de datos personales, cualquier usuario puede solicitar la eliminación completa e irreversible de su cuenta y datos asociados.
-
-            2. Procedimiento:
-            Puedes iniciar la eliminación desde tu perfil en la sección de Configuración o enviando un correo con el asunto "Eliminación de Cuenta RASTRO" al contacto del autor. Se borrarán tus datos de perfil, historial de simulacros, racha y mensajes privados.
-        """.trimIndent()
-
-        else -> "Información legal y términos regulatorios de RASTRO Preuniversitaria."
-    }
-
-    Box(
+    Column(
         modifier = modifier
             .fillMaxSize()
-            .background(theme.background),
-        contentAlignment = Alignment.TopCenter
+            .background(colors.background)
     ) {
-        LazyColumn(
-            modifier = Modifier
-                .fillMaxSize()
-                .widthIn(max = 760.dp),
-            contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 20.dp, bottom = 120.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+        // Encabezado superior con botón de regreso
+        Surface(
+            modifier = Modifier.fillMaxWidth(),
+            color = colors.surface,
+            shadowElevation = 1.dp
         ) {
-        item {
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                shape = RastroShapes.Squircle,
-                colors = CardDefaults.cardColors(containerColor = theme.surface),
-                border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 14.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                Row(
-                    modifier = Modifier.padding(16.dp),
-                    verticalAlignment = Alignment.CenterVertically
+                IconButton(
+                    onClick = onNavigateBack,
+                    modifier = Modifier
+                        .size(40.dp)
+                        .clip(RoundedCornerShape(12.dp))
+                        .background(colors.surfaceAccent)
                 ) {
-                    Box(
-                        modifier = Modifier
-                            .size(44.dp)
-                            .clip(RastroShapes.Pill)
-                            .background(theme.accent.copy(alpha = 0.15f)),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Icon(
-                            imageVector = Icons.Rounded.Policy,
-                            contentDescription = null,
-                            tint = theme.accent,
-                            modifier = Modifier.size(24.dp)
-                        )
-                    }
-                    Spacer(modifier = Modifier.width(14.dp))
-                    Column {
-                        Text(
-                            text = title,
-                            style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.Bold,
-                            color = theme.textPrimary
-                        )
-                        Text(
-                            text = "Marco Regulatorio y Transparencia RASTRO",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = theme.textSecondary
-                        )
-                    }
+                    Icon(
+                        imageVector = Icons.Rounded.ArrowBack,
+                        contentDescription = "Regresar",
+                        tint = colors.textPrimary,
+                        modifier = Modifier.size(20.dp)
+                    )
+                }
+
+                Spacer(modifier = Modifier.width(14.dp))
+
+                Column {
+                    Text(
+                        text = "Legal y privacidad",
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.Black,
+                        color = colors.textPrimary
+                    )
+                    Text(
+                        text = "Marco legal, protección y normativas",
+                        fontSize = 12.sp,
+                        color = colors.textSecondary
+                    )
                 }
             }
         }
 
-        item {
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                shape = RastroShapes.Squircle,
-                colors = CardDefaults.cardColors(containerColor = theme.surface),
-                border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
+        // Contenido scrolleable
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 20.dp, vertical = 20.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(14.dp)
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .widthIn(max = 600.dp)
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
-                    Text(
-                        text = contentText,
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = theme.textPrimary,
-                        lineHeight = 22.sp
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    LegalOptionCard(
+                        title = "Política de Privacidad",
+                        subtitle = "Recopilación de datos, almacenamiento seguro y cero venta a terceros",
+                        icon = Icons.Rounded.Shield,
+                        iconTint = Color(0xFF10B981),
+                        colors = colors,
+                        onClick = { LegalLinks.openUrl(context, LegalLinks.URL_PRIVACIDAD) }
                     )
+
+                    LegalOptionCard(
+                        title = "Términos y Condiciones",
+                        subtitle = "Uso de la plataforma, contenido académico y deslinde de responsabilidad",
+                        icon = Icons.Rounded.Description,
+                        iconTint = Color(0xFF3B82F6),
+                        colors = colors,
+                        onClick = { LegalLinks.openUrl(context, LegalLinks.URL_TERMINOS) }
+                    )
+
+                    LegalOptionCard(
+                        title = "Normas de la Comunidad",
+                        subtitle = "Convivencia estudiantil, moderación y tolerancia cero a conductas dañinas",
+                        icon = Icons.Rounded.Groups,
+                        iconTint = Color(0xFFF59E0B),
+                        colors = colors,
+                        onClick = { LegalLinks.openUrl(context, LegalLinks.URL_COMUNIDAD) }
+                    )
+
+                    LegalOptionCard(
+                        title = "Eliminar cuenta y datos",
+                        subtitle = "Procedimiento oficial y derechos de supresión de datos (Google Play)",
+                        icon = Icons.Rounded.DeleteForever,
+                        iconTint = Color(0xFFEF4444),
+                        colors = colors,
+                        onClick = { LegalLinks.openUrl(context, LegalLinks.URL_ELIMINAR_CUENTA) }
+                    )
+
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    // Tarjeta inferior destacada: Centro Legal de RASTRO
+                    Sticker3dCard(
+                        onClick = { LegalLinks.openUrl(context, LegalLinks.URL_CENTRO_LEGAL) },
+                        modifier = Modifier.fillMaxWidth(),
+                        containerColor = colors.surface,
+                        bottomBevelColor = colors.cardBevel,
+                        strokeColor = colors.strokeBorder,
+                        bevelHeight = 3.5.dp,
+                        shape = RoundedCornerShape(18.dp)
+                    ) {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(16.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(14.dp),
+                                modifier = Modifier.weight(1f)
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .size(42.dp)
+                                        .clip(RoundedCornerShape(12.dp))
+                                        .background(colors.accent.copy(alpha = 0.12f))
+                                        .border(1.2.dp, colors.accent.copy(alpha = 0.3f), RoundedCornerShape(12.dp)),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Rounded.Language,
+                                        contentDescription = null,
+                                        tint = colors.accent,
+                                        modifier = Modifier.size(22.dp)
+                                    )
+                                }
+
+                                Column {
+                                    Text(
+                                        text = "Centro Legal de RASTRO",
+                                        fontSize = 14.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = colors.textPrimary
+                                    )
+                                    Text(
+                                        text = "Portal oficial público • rumbo-jonsu.web.app",
+                                        fontSize = 11.5.sp,
+                                        color = colors.textSecondary
+                                    )
+                                    Spacer(modifier = Modifier.height(2.dp))
+                                    Text(
+                                        text = "Última actualización: 30 septiembre 2026",
+                                        fontSize = 10.5.sp,
+                                        fontWeight = FontWeight.Medium,
+                                        color = colors.accent
+                                    )
+                                }
+                            }
+
+                            Icon(
+                                imageVector = Icons.Rounded.OpenInNew,
+                                contentDescription = "Abrir enlace web",
+                                tint = colors.accent,
+                                modifier = Modifier.size(18.dp)
+                            )
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(40.dp))
                 }
             }
         }
     }
 }
+
+@Composable
+private fun LegalOptionCard(
+    title: String,
+    subtitle: String,
+    icon: ImageVector,
+    iconTint: Color,
+    colors: RastroPalette,
+    onClick: () -> Unit
+) {
+    Sticker3dCard(
+        onClick = onClick,
+        modifier = Modifier.fillMaxWidth(),
+        containerColor = colors.surface,
+        bottomBevelColor = colors.cardBevel,
+        strokeColor = colors.strokeBorder,
+        bevelHeight = 3.dp,
+        shape = RoundedCornerShape(16.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(14.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                modifier = Modifier.weight(1f)
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(38.dp)
+                        .clip(RoundedCornerShape(12.dp))
+                        .background(iconTint.copy(alpha = 0.12f))
+                        .border(1.dp, iconTint.copy(alpha = 0.25f), RoundedCornerShape(12.dp)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Icon(
+                        imageVector = icon,
+                        contentDescription = null,
+                        tint = iconTint,
+                        modifier = Modifier.size(20.dp)
+                    )
+                }
+
+                Column {
+                    Text(
+                        text = title,
+                        fontSize = 13.5.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = colors.textPrimary
+                    )
+                    Text(
+                        text = subtitle,
+                        fontSize = 11.sp,
+                        color = colors.textSecondary,
+                        lineHeight = 15.sp
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.width(8.dp))
+
+            Icon(
+                imageVector = Icons.Rounded.ChevronRight,
+                contentDescription = null,
+                tint = colors.textSecondary,
+                modifier = Modifier.size(18.dp)
+            )
+        }
+    }
 }

@@ -53,11 +53,41 @@ object OfficialMaterialRepository {
         )
     )
 
-    fun observe(onResources: (List<OfficialMaterialResource>) -> Unit): ListenerRegistration =
-        FirebaseFirestore.getInstance().collection("oficiales")
+    fun getDefaults(): List<OfficialMaterialResource> = defaults
+
+    fun observe(onResources: (List<OfficialMaterialResource>) -> Unit): ListenerRegistration {
+        var currentOficiales: List<OfficialMaterialResource> = defaults
+        var hideAll: Boolean = false
+        var hiddenIds: Set<String> = emptySet()
+
+        fun emit() {
+            if (hideAll) {
+                onResources(emptyList())
+            } else {
+                onResources(currentOficiales.filter { it.id !in hiddenIds })
+            }
+        }
+
+        emit()
+
+        val settingsListener = FirebaseFirestore.getInstance().collection("site_settings").document("global")
+            .addSnapshotListener { snapshot, _ ->
+                if (snapshot != null && snapshot.exists()) {
+                    hideAll = snapshot.getBoolean("hideAllOfficialMaterials") ?: false
+                    val listRaw = snapshot.get("hiddenOfficialMaterialIds") as? List<*>
+                    hiddenIds = listRaw?.mapNotNull { it?.toString() }?.toSet() ?: emptySet()
+                } else {
+                    hideAll = false
+                    hiddenIds = emptySet()
+                }
+                emit()
+            }
+
+        val oficialesListener = FirebaseFirestore.getInstance().collection("oficiales")
             .addSnapshotListener { snapshot, error ->
                 if (error != null || snapshot == null) {
-                    onResources(defaults)
+                    currentOficiales = defaults
+                    emit()
                     return@addSnapshotListener
                 }
                 val custom = snapshot.documents.mapNotNull { document ->
@@ -71,6 +101,13 @@ object OfficialMaterialRepository {
                         type = document.getString("type") ?: "tomo"
                     )
                 }.sortedByDescending { it.id }
-                onResources(custom + defaults)
+                currentOficiales = custom + defaults
+                emit()
             }
+
+        return ListenerRegistration {
+            settingsListener.remove()
+            oficialesListener.remove()
+        }
+    }
 }

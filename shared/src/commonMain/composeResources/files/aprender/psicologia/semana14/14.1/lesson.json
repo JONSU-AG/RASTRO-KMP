@@ -1,0 +1,34 @@
+{
+  "id": "psi_t14_s01",
+  "subjectId": "psicologia",
+  "semana": 14,
+  "subtema": "14.1",
+  "title": "3.1. Dimensiones y Conceptos Clave de la Sexualidad Humana",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/psicologia/PsicologiaSemana14.kt + CONTENIDO_PEDAGOGICO/05_PERSONA_Y_FAMILIA/PSICOLOGIA/TEMA_14_Salud_Sexual_y_Reproductiva.md",
+  "learningObjectives": [
+    "Definir la sexualidad OMS como aspecto central presente toda la vida con sexo, género, erotismo, placer, intimidad, reproducción y orientación",
+    "Diferenciar sexo biológico cromosómico y hormonal frente a género como construcción social de roles y estereotipos",
+    "Contrastar identidad de género íntima cisgénero y transgénero frente a rol asignado y orientación hetero, homo, bi y asexual",
+    "Clasificar dimensiones biológica, psicológica afectiva y sociocultural ética con respuesta de Master y Johnson y educación integral",
+    "Aplicar prevención con preservativo como único doble escudo más VIH con tres vías e I igual a I y VPH con vacuna y Papanicolau"
+  ],
+  "theory": {
+    "id": "th_psi_t14_s01",
+    "asignatura": "Psicología",
+    "semana": 14,
+    "titulo": "3.1. Dimensiones y Conceptos Clave de la Sexualidad Humana",
+    "resumen": "",
+    "conceptosClave": [
+      "Sexualidad OMS central toda la vida con erotismo, placer, intimidad, reproducción y orientación",
+      "Sexo biológico XX o XY con estrógenos o andrógenos más anatomía y estados intersexuales",
+      "Género social histórico con roles, vestimentas, comportamientos y estereotipos de masculino y femenino",
+      "Identidad íntima cisgénero y transgénero frente a rol asignado y orientación sostenida hetero, homo, bi y asexual",
+      "Dimensión biológica genital y reproductiva frente a psicológica de autoestima, amor, apego y fantasías",
+      "Dimensión sociocultural ética con valores, normas, religión, educación integral y derechos reproductivos",
+      "Doble escudo del condón frente a hormonales y DIU más I igual a I con TARGA y vacuna VPH con Papanicolau"
+    ],
+    "admissionTip": "Si ves XX o XY marca sexo biológico, si ves roles y estereotipos marca género social, si ves vivencia íntima marca identidad, si ves atracción sostenida marca orientación, si ves único que previene embarazo e ITS marca preservativo, si ves I igual a I marca TARGA indetectable.",
+    "admissionExplanation": "La trampa fija confunde sexo anatómico con género social, identidad íntima con orientación hacia otros, y cree que hormonales o DIU previenen virus cuando solo el condón bloquea ITS y embarazo a la vez."
+  }
+}

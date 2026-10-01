@@ -1,0 +1,4514 @@
+[
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t01_s01",
+    "title": "La Persona Humana y la Dignidad Constitucional",
+    "theoryLength": 17934,
+    "lines": 253,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "civ_t01_s01_c07",
+        "q": "Si un testamento designa como heredero universal a",
+        "coverageRatio": "0.19",
+        "substantiveHits": 1
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t01_s02",
+    "title": "El Sistema de Normas de Convivencia y Valores Cívicos Fundamentales",
+    "theoryLength": 17656,
+    "lines": 235,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "civ_t01_s02_c08",
+        "q": "El valor cívico consistente en la disposición frat",
+        "coverageRatio": "0.43",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t02_s01",
+    "title": "Concepto de Ciudadanía, Requisitos y Causales de Suspensión",
+    "theoryLength": 15759,
+    "lines": 247,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "civ_t02_s01_c05",
+        "q": "¿Cuál de las siguientes situaciones NO constituye ",
+        "coverageRatio": "0.47",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t02_s02",
+    "title": "Derechos Políticos, Sufragio, Deberes Constitucionales y Símbolos Patrios",
+    "theoryLength": 16733,
+    "lines": 236,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t03_s01",
+    "title": "Concepto de Estado, Elementos Constitutivos y Distinción con Nación",
+    "theoryLength": 18219,
+    "lines": 266,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t03_s02",
+    "title": "El Estado Peruano: Características, Deberes Primordiales y Derecho de Insurgencia",
+    "theoryLength": 18169,
+    "lines": 262,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t04_s01",
+    "title": "Los Poderes del Estado Peruano: Legislativo, Ejecutivo y Judicial",
+    "theoryLength": 23193,
+    "lines": 303,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t04_s02",
+    "title": "Los Organismos Constitucionales Autónomos (OCAs): Electorales, Jurídicos y Económicos",
+    "theoryLength": 21702,
+    "lines": 271,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t05_s01",
+    "title": "La Democracia: Concepto, Principios, Modelos y Partidos Políticos",
+    "theoryLength": 18756,
+    "lines": 292,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "civ_t05_s01_c01",
+        "q": "Etimológicamente, la palabra democracia deriva de ",
+        "coverageRatio": "0.46",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t05_s02",
+    "title": "El Sistema Electoral Peruano: Procesos, Balotaje, Valla Electoral y Cifra Repartidora",
+    "theoryLength": 18306,
+    "lines": 262,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t06_s01",
+    "title": "Los Derechos Humanos: Concepto, Características y las Cuatro Generaciones",
+    "theoryLength": 21606,
+    "lines": 277,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t06_s02",
+    "title": "Las Seis Garantías Constitucionales: Protección Jurisdiccional de Urgencia",
+    "theoryLength": 22328,
+    "lines": 281,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t07_s01",
+    "title": "La Constitución: Concepto, Estructura de la Carta de 1993 y Principio de Supremacía",
+    "theoryLength": 17320,
+    "lines": 243,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t07_s02",
+    "title": "La Jerarquía Normativa (Pirámide de Kelsen) y el Procedimiento de Reforma Constitucional",
+    "theoryLength": 19142,
+    "lines": 259,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t08_s01",
+    "title": "Derechos de Participación Ciudadana: Iniciativas Normativas, Referéndum y Consulta Previa",
+    "theoryLength": 17934,
+    "lines": 274,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t08_s02",
+    "title": "Derechos de Control Ciudadano: Revocatoria, Remoción y Rendición de Cuentas",
+    "theoryLength": 17427,
+    "lines": 246,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t09_s01",
+    "title": "La Descentralización y los Gobiernos Regionales: Estructura, Atribuciones y Competencias",
+    "theoryLength": 17771,
+    "lines": 250,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t09_s02",
+    "title": "Los Gobiernos Locales (Municipalidades), Rentas Subnacionales y Presupuesto Participativo",
+    "theoryLength": 15631,
+    "lines": 213,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "civ_t09_s02_c09",
+        "q": "El tributo que grava las transferencias de propied",
+        "coverageRatio": "0.47",
+        "substantiveHits": 3
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t10_s01",
+    "title": "Desarrollo Humano, IDH y el Sistema Nacional de Seguridad Ciudadana (SINASEC)",
+    "theoryLength": 12473,
+    "lines": 190,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "civ_t10_s01_c08",
+        "q": "El cuerpo de Serenazgo municipal se define jurídic",
+        "coverageRatio": "0.47",
+        "substantiveHits": 3
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t10_s02",
+    "title": "Medios Alternativos de Solución de Conflictos (MASC) y Ética contra la Corrupción Pública",
+    "theoryLength": 16427,
+    "lines": 225,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t11_s01",
+    "title": "La Universidad: Fines, Gratuidad, las Cinco Dimensiones de la Autonomía e Inviolabilidad del Recinto",
+    "theoryLength": 21759,
+    "lines": 310,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "civica",
+    "semana": 0,
+    "lessonId": "civ_t11_s02",
+    "title": "Estructura de Gobierno Universitario, Comunidad Académica (Tercio Estudiantil) y la SUNEDU",
+    "theoryLength": 20839,
+    "lines": 292,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t01_s01",
+    "title": "Comprensión Literal: Fundamentos y Conceptos Clave",
+    "theoryLength": 20117,
+    "lines": 305,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t01_s01_c07",
+        "q": "Si el texto asevera: 'El mercurio es el único meta",
+        "coverageRatio": "0.43",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "cl_t01_s01_c09",
+        "q": "Cuando un autor introduce una definición explícita",
+        "coverageRatio": "0.38",
+        "substantiveHits": 6
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t01_s02",
+    "title": "3.1 La Naturaleza de la Pregunta Literal en Exámenes de Admisión",
+    "theoryLength": 22782,
+    "lines": 330,
+    "totalChallenges": 10,
+    "wellExplainedCount": 5,
+    "poorlyExplainedCount": 5,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t01_s02_c02",
+        "q": "Otra trampa habitual en los distractores de pregun",
+        "coverageRatio": "0.43",
+        "substantiveHits": 9
+      },
+      {
+        "chId": "cl_t01_s02_c03",
+        "q": "Si el texto afirma: 'Muchos pacientes diagnosticad",
+        "coverageRatio": "0.40",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "cl_t01_s02_c05",
+        "q": "Al enfrentarse a una pregunta que indaga por una a",
+        "coverageRatio": "0.48",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "cl_t01_s02_c06",
+        "q": "Si el texto señala: 'La deforestación en la Amazon",
+        "coverageRatio": "0.42",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "cl_t01_s02_c10",
+        "q": "En una pregunta literal sobre un texto mixto (que ",
+        "coverageRatio": "0.48",
+        "substantiveHits": 9
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t02_s01",
+    "title": "3.1 La Ecuación Epistemológica de la Inferencia",
+    "theoryLength": 23658,
+    "lines": 332,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t02_s01_c04",
+        "q": "Si un texto describe: 'El cielo se cubrió de denso",
+        "coverageRatio": "0.31",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "cl_t02_s01_c07",
+        "q": "Si el autor afirma: 'El empleo de antibióticos sin",
+        "coverageRatio": "0.31",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "cl_t02_s01_c08",
+        "q": "Al realizar una inferencia analítica de causa impl",
+        "coverageRatio": "0.45",
+        "substantiveHits": 9
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t02_s02",
+    "title": "3.3 El Límite Dorado: Inferencia vs. Especulación",
+    "theoryLength": 25458,
+    "lines": 360,
+    "totalChallenges": 10,
+    "wellExplainedCount": 6,
+    "poorlyExplainedCount": 4,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t02_s02_c03",
+        "q": "Si un texto relata: 'El arqueólogo halló puntas de",
+        "coverageRatio": "0.17",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "cl_t02_s02_c06",
+        "q": "Si en un texto económico se lee: 'La inflación int",
+        "coverageRatio": "0.44",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "cl_t02_s02_c09",
+        "q": "Si un texto de divulgación biológica sostiene: 'La",
+        "coverageRatio": "0.14",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "cl_t02_s02_c10",
+        "q": "En las pruebas tipo DECO, una deducción no debe se",
+        "coverageRatio": "0.48",
+        "substantiveHits": 8
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t03_s01",
+    "title": "3.1 La Trinidad de la Comprensión Global: Tema, Idea Principal y Título",
+    "theoryLength": 24833,
+    "lines": 358,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t03_s01_c04",
+        "q": "Un 'Título Adecuado' para un texto expositivo o ar",
+        "coverageRatio": "0.48",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t03_s02",
+    "title": "3.3 El Criterio de Jerarquización de Ideas Secundarias",
+    "theoryLength": 22786,
+    "lines": 326,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t03_s02_c05",
+        "q": "Cuando un autor introduce estadísticas numéricas d",
+        "coverageRatio": "0.48",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "cl_t03_s02_c06",
+        "q": "La relación lógica entre la Idea Principal y las I",
+        "coverageRatio": "0.43",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "cl_t03_s02_c08",
+        "q": "La 'Idea Accesoria o de Detalle' se distingue de l",
+        "coverageRatio": "0.45",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t04_s01",
+    "title": "3.1 El Propósito Comunicativo y su Formulación Canónica",
+    "theoryLength": 22158,
+    "lines": 329,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t04_s01_c04",
+        "q": "Por el contrario, si un texto despliega argumentos",
+        "coverageRatio": "0.46",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "cl_t04_s01_c08",
+        "q": "En un manual técnico de instalación de paneles sol",
+        "coverageRatio": "0.25",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t04_s02",
+    "title": "3.2 El Tono del Autor: Glosario de Actitudes Discursivas",
+    "theoryLength": 21658,
+    "lines": 300,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t04_s02_c08",
+        "q": "El tono 'Condescendiente o Paternalista' se percib",
+        "coverageRatio": "0.25",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "cl_t04_s02_c09",
+        "q": "Para deducir con exactitud el tono del autor en un",
+        "coverageRatio": "0.42",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "cl_t04_s02_c10",
+        "q": "Si un editorialista titula su artículo: '¡Qué gran",
+        "coverageRatio": "0.42",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t05_s01",
+    "title": "3.1 La Matriz de Compatibilidad e Incompatibilidad en Admisión",
+    "theoryLength": 22194,
+    "lines": 315,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t05_s01_c06",
+        "q": "Si un autor sostiene que 'ciertos fármacos experim",
+        "coverageRatio": "0.25",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "cl_t05_s01_c08",
+        "q": "Considere el fragmento: 'La educación pública no s",
+        "coverageRatio": "0.29",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t05_s02",
+    "title": "3.2 La Frontera entre Hecho y Opinión",
+    "theoryLength": 22195,
+    "lines": 304,
+    "totalChallenges": 10,
+    "wellExplainedCount": 4,
+    "poorlyExplainedCount": 6,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t05_s02_c03",
+        "q": "Identifique cuál de los siguientes enunciados cons",
+        "coverageRatio": "0.44",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "cl_t05_s02_c05",
+        "q": "Si un texto argumenta: 'La inflación interanual al",
+        "coverageRatio": "0.43",
+        "substantiveHits": 9
+      },
+      {
+        "chId": "cl_t05_s02_c06",
+        "q": "¿Qué riesgo analítico asume un postulante que no d",
+        "coverageRatio": "0.39",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "cl_t05_s02_c07",
+        "q": "¿Cuál de las siguientes afirmaciones describe de m",
+        "coverageRatio": "0.37",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "cl_t05_s02_c09",
+        "q": "¿Qué técnica de lectura favorece la correcta indiv",
+        "coverageRatio": "0.20",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "cl_t05_s02_c10",
+        "q": "Si el texto refiere: 'La atmósfera de Marte está c",
+        "coverageRatio": "0.39",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t06_s01",
+    "title": "3.1 La Falacia del Diccionario Aislado en Comprensión Lectora",
+    "theoryLength": 21265,
+    "lines": 338,
+    "totalChallenges": 10,
+    "wellExplainedCount": 4,
+    "poorlyExplainedCount": 6,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t06_s01_c01",
+        "q": "La 'Extrapolación Cognitiva' en la comprensión lec",
+        "coverageRatio": "0.47",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "cl_t06_s01_c02",
+        "q": "La 'Extrapolación Condicional o Contrafáctica' se ",
+        "coverageRatio": "0.42",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "cl_t06_s01_c03",
+        "q": "Si un texto defiende que 'la escasez de recursos h",
+        "coverageRatio": "0.23",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "cl_t06_s01_c06",
+        "q": "Considere: 'Para Popper, una teoría que no puede s",
+        "coverageRatio": "0.48",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "cl_t06_s01_c07",
+        "q": "Si el autor afirma: 'El aumento del salario mínimo",
+        "coverageRatio": "0.28",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "cl_t06_s01_c10",
+        "q": "Si en un texto el autor asevera que 'la libertad d",
+        "coverageRatio": "0.48",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t06_s02",
+    "title": "3.2 Clasificación de los Usos Contextuales en Exámenes de Admisión",
+    "theoryLength": 18401,
+    "lines": 291,
+    "totalChallenges": 10,
+    "wellExplainedCount": 2,
+    "poorlyExplainedCount": 8,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t06_s02_c01",
+        "q": "En las pruebas de admisión modernas (estándar DECO",
+        "coverageRatio": "0.40",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "cl_t06_s02_c03",
+        "q": "En un texto mixto sobre desempleo juvenil, si el t",
+        "coverageRatio": "0.32",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "cl_t06_s02_c04",
+        "q": "En una infografía, ¿cuál es la función de elemento",
+        "coverageRatio": "0.24",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "cl_t06_s02_c05",
+        "q": "Si una tabla presenta las tasas de alfabetismo por",
+        "coverageRatio": "0.14",
+        "substantiveHits": 1
+      },
+      {
+        "chId": "cl_t06_s02_c07",
+        "q": "¿Qué error frecuente de decodificación ocurre al i",
+        "coverageRatio": "0.24",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "cl_t06_s02_c08",
+        "q": "Si una infografía expone el ciclo biológico del mo",
+        "coverageRatio": "0.25",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "cl_t06_s02_c09",
+        "q": "Al contrastar dos gráficos de barras sobre 'Invers",
+        "coverageRatio": "0.33",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "cl_t06_s02_c10",
+        "q": "En el análisis de tablas complejas de doble entrad",
+        "coverageRatio": "0.43",
+        "substantiveHits": 3
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t07_s01",
+    "title": "3.1 Mecanismos de Cohesión Textual en el Examen de Admisión",
+    "theoryLength": 23257,
+    "lines": 391,
+    "totalChallenges": 10,
+    "wellExplainedCount": 0,
+    "poorlyExplainedCount": 10,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t07_s01_c01",
+        "q": "En las pruebas DECO, los 'Textos Dialécticos' (o d",
+        "coverageRatio": "0.24",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "cl_t07_s01_c02",
+        "q": "Para abordar eficazmente un texto dialéctico, el p",
+        "coverageRatio": "0.47",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "cl_t07_s01_c03",
+        "q": "Si el Texto A defiende la necesidad de subsidiar l",
+        "coverageRatio": "0.43",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "cl_t07_s01_c04",
+        "q": "En un texto dialéctico, ¿qué se entiende por 'Punt",
+        "coverageRatio": "0.41",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "cl_t07_s01_c05",
+        "q": "Si el Autor A sostiene: 'La inteligencia artificia",
+        "coverageRatio": "0.21",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "cl_t07_s01_c06",
+        "q": "¿Cuál es la principal recomendación operativa al c",
+        "coverageRatio": "0.40",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "cl_t07_s01_c07",
+        "q": "En un debate sobre eutanasia voluntaria, el Autor ",
+        "coverageRatio": "0.26",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "cl_t07_s01_c08",
+        "q": "Si el Autor A califica una medida tributaria como ",
+        "coverageRatio": "0.06",
+        "substantiveHits": 0
+      },
+      {
+        "chId": "cl_t07_s01_c09",
+        "q": "Un reactivo solicita: 'Ambos autores coincidirían ",
+        "coverageRatio": "0.17",
+        "substantiveHits": 1
+      },
+      {
+        "chId": "cl_t07_s01_c10",
+        "q": "Si el Autor A descalifica el argumento del Autor B",
+        "coverageRatio": "0.15",
+        "substantiveHits": 1
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t07_s02",
+    "title": "3.2 Los Dos Grandes Criterios de Supresión de Oraciones",
+    "theoryLength": 19870,
+    "lines": 319,
+    "totalChallenges": 10,
+    "wellExplainedCount": 3,
+    "poorlyExplainedCount": 7,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t07_s02_c03",
+        "q": "Si un autor redacta: '¿De verdad pretendemos salva",
+        "coverageRatio": "0.27",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "cl_t07_s02_c04",
+        "q": "Un texto que expone meticulosamente los datos de u",
+        "coverageRatio": "0.40",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "cl_t07_s02_c06",
+        "q": "Si el artículo culmina con: 'Aún estamos a tiempo ",
+        "coverageRatio": "0.30",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "cl_t07_s02_c07",
+        "q": "¿Cómo se identifica formalmente un tono 'Polemista",
+        "coverageRatio": "0.47",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "cl_t07_s02_c08",
+        "q": "Si un autor aborda el descubrimiento de una nueva ",
+        "coverageRatio": "0.33",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "cl_t07_s02_c09",
+        "q": "En las preguntas sobre 'Propósito Fundamental del ",
+        "coverageRatio": "0.33",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "cl_t07_s02_c10",
+        "q": "Cuando un autor expresa: 'Lamentablemente, asistim",
+        "coverageRatio": "0.35",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t08_s01",
+    "title": "3.1 Las Cuatro Familias Textuales Fundamentales del Prospecto UNSA",
+    "theoryLength": 25723,
+    "lines": 360,
+    "totalChallenges": 10,
+    "wellExplainedCount": 4,
+    "poorlyExplainedCount": 6,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t08_s01_c02",
+        "q": "Si un autor argumenta: 'Debemos restringir de inme",
+        "coverageRatio": "0.32",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "cl_t08_s01_c05",
+        "q": "Un texto sostiene: 'Las microfinanzas rurales son ",
+        "coverageRatio": "0.31",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "cl_t08_s01_c06",
+        "q": "¿Cuál de los siguientes datos fortalecería de mane",
+        "coverageRatio": "0.33",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "cl_t08_s01_c07",
+        "q": "Cuando un autor sostiene: 'Todas las civilizacione",
+        "coverageRatio": "0.33",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "cl_t08_s01_c08",
+        "q": "Identifique la premisa oculta en el enunciado: 'No",
+        "coverageRatio": "0.33",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "cl_t08_s01_c09",
+        "q": "En la lectura crítica de textos científicos, la 'C",
+        "coverageRatio": "0.43",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "comprension_lectora",
+    "semana": 0,
+    "lessonId": "cl_t08_s02",
+    "title": "3.2 Cuadro Comparativo de Tipologías Textuales",
+    "theoryLength": 28963,
+    "lines": 390,
+    "totalChallenges": 10,
+    "wellExplainedCount": 6,
+    "poorlyExplainedCount": 4,
+    "poorlyExplained": [
+      {
+        "chId": "cl_t08_s02_c03",
+        "q": "Si en un texto filosófico Kant afirma que 'el espa",
+        "coverageRatio": "0.48",
+        "substantiveHits": 10
+      },
+      {
+        "chId": "cl_t08_s02_c05",
+        "q": "Al enfrentarse a un texto literario o ensayístico ",
+        "coverageRatio": "0.33",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "cl_t08_s02_c06",
+        "q": "Considere: 'Para Nietzsche, el resentimiento moral",
+        "coverageRatio": "0.20",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "cl_t08_s02_c07",
+        "q": "En un texto sobre neurociencia que analiza la plas",
+        "coverageRatio": "0.44",
+        "substantiveHits": 8
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 1,
+    "lessonId": "filo_t01_s01",
+    "title": "3.1. Etimología y Definición de la Filosofía",
+    "theoryLength": 17515,
+    "lines": 278,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t01_s01_c05",
+        "q": "Para Aristóteles y Platón, la experiencia humana i",
+        "coverageRatio": "0.44",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "filo_t01_s01_c07",
+        "q": "Se afirma que la filosofía posee un carácter 'metó",
+        "coverageRatio": "0.44",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 1,
+    "lessonId": "filo_t01_s02",
+    "title": "3.2. El Origen Histórico: Del Mito al Logos",
+    "theoryLength": 15452,
+    "lines": 238,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t01_s02_c06",
+        "q": "El concepto de 'ocio creador' o 'tiempo libre' (en",
+        "coverageRatio": "0.48",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "filo_t01_s02_c10",
+        "q": "La consolidación de la moneda acuñada y la expansi",
+        "coverageRatio": "0.48",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 2,
+    "lessonId": "filo_t02_s01",
+    "title": "A. Metafísica y Ontología",
+    "theoryLength": 17219,
+    "lines": 270,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t02_s01_c02",
+        "q": "Frente a la interrogante '¿Es el conocimiento huma",
+        "coverageRatio": "0.44",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 2,
+    "lessonId": "filo_t02_s02",
+    "title": "D. Lógica",
+    "theoryLength": 17845,
+    "lines": 271,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t02_s02_c10",
+        "q": "Si analizamos los dilemas morales relativos al pri",
+        "coverageRatio": "0.27",
+        "substantiveHits": 2
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 3,
+    "lessonId": "filo_t03_s01",
+    "title": "A. El Problema del Ser (Problema Ontológico)",
+    "theoryLength": 17055,
+    "lines": 251,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t03_s01_c07",
+        "q": "El materialismo mecanicista concibe al universo y ",
+        "coverageRatio": "0.31",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "filo_t03_s01_c08",
+        "q": "La 'Dialéctica Materialista' (o materialismo dialé",
+        "coverageRatio": "0.45",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "filo_t03_s01_c10",
+        "q": "La tesis ontológica del 'Panteísmo' (defendida cél",
+        "coverageRatio": "0.45",
+        "substantiveHits": 6
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 3,
+    "lessonId": "filo_t03_s02",
+    "title": "C. El Problema de la Verdad",
+    "theoryLength": 17932,
+    "lines": 264,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 4,
+    "lessonId": "filo_t04_s01",
+    "title": "A. Los Principios Lógicos Supremos",
+    "theoryLength": 18096,
+    "lines": 272,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t04_s01_c03",
+        "q": "Frente al enunciado 'Un número entero es par o no ",
+        "coverageRatio": "0.47",
+        "substantiveHits": 6
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 4,
+    "lessonId": "filo_t04_s02",
+    "title": "C. Falacias No Formales",
+    "theoryLength": 18188,
+    "lines": 267,
+    "totalChallenges": 10,
+    "wellExplainedCount": 6,
+    "poorlyExplainedCount": 4,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t04_s02_c02",
+        "q": "Un empleador advierte a sus trabajadores reunidos ",
+        "coverageRatio": "0.37",
+        "substantiveHits": 9
+      },
+      {
+        "chId": "filo_t04_s02_c03",
+        "q": "Un anuncio publicitario proclama: 'Consuma la marc",
+        "coverageRatio": "0.41",
+        "substantiveHits": 10
+      },
+      {
+        "chId": "filo_t04_s02_c05",
+        "q": "Un político pronuncia ante una multitud: 'Debemos ",
+        "coverageRatio": "0.36",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "filo_t04_s02_c06",
+        "q": "Un estudiante le dice a su catedrático: 'Profesor,",
+        "coverageRatio": "0.44",
+        "substantiveHits": 9
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 5,
+    "lessonId": "filo_t05_s01",
+    "title": "A. El Conocimiento Científico: Concepto y Niveles",
+    "theoryLength": 19363,
+    "lines": 281,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t05_s01_c05",
+        "q": "La función científica que consiste en deducir rigu",
+        "coverageRatio": "0.38",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "filo_t05_s01_c08",
+        "q": "La propiedad de 'objetividad' en el conocimiento c",
+        "coverageRatio": "0.47",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 5,
+    "lessonId": "filo_t05_s02",
+    "title": "C. Hecho, Hipótesis, Ley y Teoría Científica",
+    "theoryLength": 18960,
+    "lines": 250,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t05_s02_c09",
+        "q": "Imre Lakatos formuló la 'Metodología de los Progra",
+        "coverageRatio": "0.32",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 6,
+    "lessonId": "filo_t06_s01",
+    "title": "A. Filosofía Antigua (Grecia y Roma)",
+    "theoryLength": 24004,
+    "lines": 325,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 6,
+    "lessonId": "filo_t06_s02",
+    "title": "C. Filosofía Moderna (s. XVII - XVIII)",
+    "theoryLength": 23541,
+    "lines": 296,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t06_s02_c09",
+        "q": "El Empirismo de John Locke rechazó las ideas innat",
+        "coverageRatio": "0.41",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 7,
+    "lessonId": "filo_t07_s01",
+    "title": "A. El Gran Debate sobre la Filosofía Latinoamericana",
+    "theoryLength": 23130,
+    "lines": 273,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t07_s01_c07",
+        "q": "¿Qué papel le asigna Augusto Salazar Bondy a la fi",
+        "coverageRatio": "0.46",
+        "substantiveHits": 10
+      },
+      {
+        "chId": "filo_t07_s01_c08",
+        "q": "Leopoldo Zea apeló al concepto de 'circunstancia' ",
+        "coverageRatio": "0.33",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 7,
+    "lessonId": "filo_t07_s02",
+    "title": "Nemotecnia del Debate Salazar vs. Zea:",
+    "theoryLength": 23121,
+    "lines": 273,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 8,
+    "lessonId": "filo_t08_s01",
+    "title": "A. La Crisis de la Subjetividad Moderna y la Razón Ilustrada",
+    "theoryLength": 16850,
+    "lines": 248,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t08_s01_c07",
+        "q": "La 'Fractura del Siglo XX' que derribó la fe ilust",
+        "coverageRatio": "0.42",
+        "substantiveHits": 3
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 8,
+    "lessonId": "filo_t08_s02",
+    "title": "D. La Condición Posmoderna: Jean-François Lyotard",
+    "theoryLength": 16596,
+    "lines": 230,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t08_s02_c03",
+        "q": "La mutación histórica hacia la 'Biopolítica' descr",
+        "coverageRatio": "0.48",
+        "substantiveHits": 10
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 9,
+    "lessonId": "filo_t09_s01",
+    "title": "A. Naturaleza de la Estética y la Experiencia Estética",
+    "theoryLength": 19539,
+    "lines": 271,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 9,
+    "lessonId": "filo_t09_s02",
+    "title": "C. Concepciones Filosóficas del Arte a lo Largo de la Historia",
+    "theoryLength": 19187,
+    "lines": 248,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 10,
+    "lessonId": "filo_t10_s01",
+    "title": "A. Distinción Conceptual: Moral vs. Ética",
+    "theoryLength": 19825,
+    "lines": 266,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t10_s01_c10",
+        "q": "Cuando afirmamos que la libertad es la condición d",
+        "coverageRatio": "0.38",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 10,
+    "lessonId": "filo_t10_s02",
+    "title": "D. Bioética y Dilemas Morales Contemporáneos",
+    "theoryLength": 20315,
+    "lines": 268,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t10_s02_c04",
+        "q": "La ética del 'Estoicismo' (Séneca, Epicteto, Marco",
+        "coverageRatio": "0.32",
+        "substantiveHits": 3
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 11,
+    "lessonId": "filo_t11_s01",
+    "title": "A. Concepto de Valor y el Acto Valorativo",
+    "theoryLength": 23893,
+    "lines": 350,
+    "totalChallenges": 10,
+    "wellExplainedCount": 6,
+    "poorlyExplainedCount": 4,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t11_s01_c01",
+        "q": "La disciplina filosófica que estudia el valor, el ",
+        "coverageRatio": "0.46",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "filo_t11_s01_c06",
+        "q": "Si clasificamos los valores según su ámbito, los v",
+        "coverageRatio": "0.21",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "filo_t11_s01_c07",
+        "q": "Los valores que evalúan la corrección y bondad int",
+        "coverageRatio": "0.41",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "filo_t11_s01_c09",
+        "q": "La distinción entre 'juicio de existencia' y 'juic",
+        "coverageRatio": "0.43",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 11,
+    "lessonId": "filo_t11_s02",
+    "title": "C. El Gran Debate Axiológico: Subjetivismo vs. Objetivismo",
+    "theoryLength": 17578,
+    "lines": 264,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t11_s02_c04",
+        "q": "El 'Emotivismo Axiológico' (defendido por el posit",
+        "coverageRatio": "0.36",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "filo_t11_s02_c09",
+        "q": "El argumento del 'desacuerdo moral e histórico' es",
+        "coverageRatio": "0.29",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "filo_t11_s02_c10",
+        "q": "Frente al argumento del cambio histórico, el objet",
+        "coverageRatio": "0.38",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 12,
+    "lessonId": "filo_t12_s01",
+    "title": "A. Naturaleza de la Filosofía Política y el Poder",
+    "theoryLength": 21258,
+    "lines": 265,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t12_s01_c04",
+        "q": "En la tipología de las formas de gobierno de Arist",
+        "coverageRatio": "0.41",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "filo_t12_s01_c07",
+        "q": "El célebre aforismo maquiavélico sobre el arte de ",
+        "coverageRatio": "0.39",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "filo_t12_s01_c09",
+        "q": "La 'Politeia' (o República mixta) defendida por Ar",
+        "coverageRatio": "0.43",
+        "substantiveHits": 3
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 12,
+    "lessonId": "filo_t12_s02",
+    "title": "D. Teorías de la Justicia: John Rawls y el Liberalismo Igualitario",
+    "theoryLength": 21356,
+    "lines": 257,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t12_s02_c10",
+        "q": "La 'Democracia Deliberativa' (propugnada por teóri",
+        "coverageRatio": "0.46",
+        "substantiveHits": 9
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 13,
+    "lessonId": "filo_t13_s01",
+    "title": "A. La Pregunta por el Hombre: Naturaleza y Objeto de Estudio",
+    "theoryLength": 19153,
+    "lines": 276,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t13_s01_c09",
+        "q": "La noción de 'Animal Racional' fue criticada por F",
+        "coverageRatio": "0.42",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "filosofia",
+    "semana": 13,
+    "lessonId": "filo_t13_s02",
+    "title": "D. La Dignidad de la Persona Humana",
+    "theoryLength": 19080,
+    "lines": 266,
+    "totalChallenges": 10,
+    "wellExplainedCount": 5,
+    "poorlyExplainedCount": 5,
+    "poorlyExplained": [
+      {
+        "chId": "filo_t13_s02_c04",
+        "q": "La proclamación de la 'Declaración Universal de lo",
+        "coverageRatio": "0.40",
+        "substantiveHits": 9
+      },
+      {
+        "chId": "filo_t13_s02_c05",
+        "q": "Cuando un régimen político o una empresa utiliza a",
+        "coverageRatio": "0.38",
+        "substantiveHits": 10
+      },
+      {
+        "chId": "filo_t13_s02_c07",
+        "q": "El 'Personalismo' filosófico contemporáneo (fundad",
+        "coverageRatio": "0.39",
+        "substantiveHits": 9
+      },
+      {
+        "chId": "filo_t13_s02_c08",
+        "q": "El debate contemporáneo sobre el 'Transhumanismo' ",
+        "coverageRatio": "0.29",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "filo_t13_s02_c10",
+        "q": "En conclusión antropológica, la universalidad de l",
+        "coverageRatio": "0.42",
+        "substantiveHits": 9
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "geografia",
+    "semana": 1,
+    "lessonId": "geo_t01_s01",
+    "title": "3.1. Definición y Etimología de la Geografía",
+    "theoryLength": 26280,
+    "lines": 343,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 1,
+    "lessonId": "geo_t01_s02",
+    "title": "3.4. Principios Geográficos Metodológicos",
+    "theoryLength": 28006,
+    "lines": 368,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 2,
+    "lessonId": "geo_t02_s01",
+    "title": "3.1. Geodesia y la Forma de la Tierra",
+    "theoryLength": 27115,
+    "lines": 411,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 2,
+    "lessonId": "geo_t02_s02",
+    "title": "3.4. Documentos Cartográficos: Mapas, Cartas y Planos",
+    "theoryLength": 29112,
+    "lines": 427,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 3,
+    "lessonId": "geo_t03_s01",
+    "title": "3.1. El Universo: Origen y Estructura",
+    "theoryLength": 29153,
+    "lines": 393,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 3,
+    "lessonId": "geo_t03_s02",
+    "title": "3.3. Movimientos de la Tierra y sus Consecuencias Geográficas",
+    "theoryLength": 26321,
+    "lines": 347,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 4,
+    "lessonId": "geo_t04_s01",
+    "title": "3.1. Estructura Interna de la Geósfera",
+    "theoryLength": 27054,
+    "lines": 352,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 4,
+    "lessonId": "geo_t04_s02",
+    "title": "3.3. Geodinámica Externa (Fuerzas Exógenas)",
+    "theoryLength": 27494,
+    "lines": 368,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "geo_t04_s02_c07",
+        "q": "Los relieves eólicos formados por la acumulación y",
+        "coverageRatio": "0.44",
+        "substantiveHits": 2
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 5,
+    "lessonId": "geo_t05_s01",
+    "title": "3.1. La Atmósfera: Origen, Composición y Retención",
+    "theoryLength": 29620,
+    "lines": 415,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "geo_t05_s01_c10",
+        "q": "El Protocolo de Montreal firmado en 1987 es un hit",
+        "coverageRatio": "0.18",
+        "substantiveHits": 2
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 5,
+    "lessonId": "geo_t05_s02",
+    "title": "3.3. Tiempo Meteorológico vs. Clima",
+    "theoryLength": 29300,
+    "lines": 390,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 6,
+    "lessonId": "geo_t06_s01",
+    "title": "3.1. La Hidrósfera y el Ciclo Hidrológico",
+    "theoryLength": 28922,
+    "lines": 390,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "geo_t06_s01_c10",
+        "q": "El fenómeno de 'Aguaje' o marea roja en el litoral",
+        "coverageRatio": "0.27",
+        "substantiveHits": 2
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 6,
+    "lessonId": "geo_t06_s02",
+    "title": "3.4. Lagos y Glaciares del Perú",
+    "theoryLength": 30197,
+    "lines": 417,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 7,
+    "lessonId": "geo_t07_s01",
+    "title": "3.1. Relieve Submarino del Mar Peruano",
+    "theoryLength": 29706,
+    "lines": 469,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "geo_t07_s01_c10",
+        "q": "Las estribaciones andinas que llegan hasta el mism",
+        "coverageRatio": "0.41",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 7,
+    "lessonId": "geo_t07_s02",
+    "title": "3.4. Geomorfología de la Selva (Región Amazónica)",
+    "theoryLength": 30212,
+    "lines": 475,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 0,
+    "lessonId": "geo_t08_s01",
+    "title": "3.1. Origen, Criterios y Pisos Ecológicos Occidentales (Chala a Suni)",
+    "theoryLength": 28467,
+    "lines": 407,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 0,
+    "lessonId": "geo_t08_s02",
+    "title": "3.2. Pisos de Alta Montaña y Vertiente Amazónica (Puna, Janca, Rupa Rupa y Omagua)",
+    "theoryLength": 27622,
+    "lines": 395,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 9,
+    "lessonId": "geo_t09_s01",
+    "title": "3.1. Concepto y Metodología Ecológica de Antonio Brack Egg",
+    "theoryLength": 26374,
+    "lines": 363,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 9,
+    "lessonId": "geo_t09_s02",
+    "title": "Cuadro Comparativo de las 11 Ecorregiones de Antonio Brack Egg",
+    "theoryLength": 26034,
+    "lines": 341,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "geo_t09_s02_c02",
+        "q": "En la ecorregión de la 'Puna y los Altos Andes' (p",
+        "coverageRatio": "0.39",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "geo_t09_s02_c07",
+        "q": "En el suelo del bosque tropical amazónico, a pesar",
+        "coverageRatio": "0.43",
+        "substantiveHits": 6
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 10,
+    "lessonId": "geo_t10_s01",
+    "title": "3.1. Los Recursos Naturales: Definición y Tipología",
+    "theoryLength": 45108,
+    "lines": 606,
+    "totalChallenges": 10,
+    "wellExplainedCount": 5,
+    "poorlyExplainedCount": 5,
+    "poorlyExplained": [
+      {
+        "chId": "geo_t10_s01_c04",
+        "q": "El grave proceso de degradación de tierras en zona",
+        "coverageRatio": "0.35",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "geo_t10_s01_c06",
+        "q": "El concepto de 'Capacidad de Carga' (Carrying Capa",
+        "coverageRatio": "0.44",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "geo_t10_s01_c07",
+        "q": "La 'Eutrofización' de un cuerpo de agua léntico (l",
+        "coverageRatio": "0.35",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "geo_t10_s01_c09",
+        "q": "En la gestión integral de residuos sólidos, el pri",
+        "coverageRatio": "0.17",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "geo_t10_s01_c10",
+        "q": "El calentamiento antropogénico de los océanos y la",
+        "coverageRatio": "0.16",
+        "substantiveHits": 3
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "geografia",
+    "semana": 10,
+    "lessonId": "geo_t10_s02",
+    "title": "3.4. Desarrollo Sostenible y la Agenda 2030",
+    "theoryLength": 30744,
+    "lines": 428,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 11,
+    "lessonId": "geo_t11_s01",
+    "title": "3.1. Demografía: Definición, Fuentes y Censos",
+    "theoryLength": 28218,
+    "lines": 451,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 11,
+    "lessonId": "geo_t11_s02",
+    "title": "3.4. Distribución Territorial de la Población Peruana",
+    "theoryLength": 28111,
+    "lines": 438,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "geo_t11_s02_c07",
+        "q": "Un rasgo estructural crítico y persistente del mer",
+        "coverageRatio": "0.48",
+        "substantiveHits": 8
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 12,
+    "lessonId": "geo_t12_s01",
+    "title": "3.1. Sector Primario: Actividades Extractivas",
+    "theoryLength": 31188,
+    "lines": 456,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 12,
+    "lessonId": "geo_t12_s02",
+    "title": "3.3. Sector Secundario: La Industria Peruana",
+    "theoryLength": 30143,
+    "lines": 416,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 13,
+    "lessonId": "geo_t13_s01",
+    "title": "3.1. Fundamentos Epistemológicos de la Geopolítica",
+    "theoryLength": 31206,
+    "lines": 426,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "geo_t13_s01_c07",
+        "q": "La doctrina del 'Poder Naval' formulada por el alm",
+        "coverageRatio": "0.44",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "geo_t13_s01_c08",
+        "q": "El geógrafo alemán Karl Haushofer desarrolló antes",
+        "coverageRatio": "0.46",
+        "substantiveHits": 11
+      },
+      {
+        "chId": "geo_t13_s01_c09",
+        "q": "Las 'Fronteras' en la concepción geopolítica moder",
+        "coverageRatio": "0.43",
+        "substantiveHits": 8
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "geografia",
+    "semana": 13,
+    "lessonId": "geo_t13_s02",
+    "title": "3.4. Proyección Geopolítica del Perú: Presencia en la Antártida y la Cuenca del Pacífico",
+    "theoryLength": 32618,
+    "lines": 451,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_peru",
+    "semana": 1,
+    "lessonId": "hper_t01_s01",
+    "title": "3.1. Teorías Científicas sobre el Poblamiento Americano",
+    "theoryLength": 26419,
+    "lines": 356,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "hper_t01_s01_c02",
+        "q": "¿Cuál fue el principal argumento etnográfico y geo",
+        "coverageRatio": "0.42",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "hper_t01_s01_c10",
+        "q": "La expedición científica marítima 'Kon-Tiki' reali",
+        "coverageRatio": "0.25",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_peru",
+    "semana": 1,
+    "lessonId": "hper_t01_s02",
+    "title": "3.3. El Periodo Arcaico Inferior o Temprano (6 000 - 3 000 a.C.)",
+    "theoryLength": 27684,
+    "lines": 364,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_peru",
+    "semana": 2,
+    "lessonId": "hper_t02_s01",
+    "title": "3.1. Modelos Teóricos de Periodización Prehispánica",
+    "theoryLength": 32628,
+    "lines": 426,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "hper_t02_s01_c05",
+        "q": "Las extraordinarias intervenciones quirúrgicas cra",
+        "coverageRatio": "0.48",
+        "substantiveHits": 6
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_peru",
+    "semana": 2,
+    "lessonId": "hper_t02_s02",
+    "title": "3.4. Horizonte Medio o Primer Imperio Andino (600 - 1000 d.C.)",
+    "theoryLength": 32552,
+    "lines": 405,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_peru",
+    "semana": 3,
+    "lessonId": "hper_t03_s01",
+    "title": "3.1. Orígenes Míticos e Históricos del Tawantinsuyu",
+    "theoryLength": 30239,
+    "lines": 414,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_peru",
+    "semana": 3,
+    "lessonId": "hper_t03_s02",
+    "title": "3.4. Organización Económica: Principios, Tierras y Formas de Trabajo",
+    "theoryLength": 28726,
+    "lines": 372,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_peru",
+    "semana": 4,
+    "lessonId": "hper_t04_s01",
+    "title": "3.1. Invasión, Resistencia Andina y Guerras Civiles",
+    "theoryLength": 32408,
+    "lines": 399,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "hper_t04_s01_c04",
+        "q": "Tras la toma del baluarte de Sacsayhuamán por los ",
+        "coverageRatio": "0.45",
+        "substantiveHits": 8
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_peru",
+    "semana": 4,
+    "lessonId": "hper_t04_s02",
+    "title": "3.4. La Sociedad Colonial: Régimen Estamental de Castas",
+    "theoryLength": 32403,
+    "lines": 396,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "hper_t04_s02_c08",
+        "q": "En la estratificación social del Virreinato del Pe",
+        "coverageRatio": "0.47",
+        "substantiveHits": 9
+      },
+      {
+        "chId": "hper_t04_s02_c10",
+        "q": "Los esclavos africanos que huían de las haciendas ",
+        "coverageRatio": "0.41",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_peru",
+    "semana": 5,
+    "lessonId": "hper_t05_s01",
+    "title": "3.1. El Proceso de la Independencia del Perú (1820 - 1824)",
+    "theoryLength": 37368,
+    "lines": 443,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "hper_t05_s01_c01",
+        "q": "La gran rebelión anticolonial iniciada el 4 de nov",
+        "coverageRatio": "0.29",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "hper_t05_s01_c02",
+        "q": "Entre las reivindicaciones sociales y económicas m",
+        "coverageRatio": "0.39",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "hper_t05_s01_c03",
+        "q": "¿Cuál fue una consecuencia administrativa directa ",
+        "coverageRatio": "0.44",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_peru",
+    "semana": 5,
+    "lessonId": "hper_t05_s02",
+    "title": "3.4. La Reconstrucción Nacional y la República Aristocrática (1883 - 1919)",
+    "theoryLength": 36589,
+    "lines": 416,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_universal",
+    "semana": 1,
+    "lessonId": "huni_t01_s01",
+    "title": "3.1. El Concepto y los Motores de la Hominización",
+    "theoryLength": 25867,
+    "lines": 344,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "huni_t01_s01_c02",
+        "q": "El fósil etíope de Australopithecus afarensis desc",
+        "coverageRatio": "0.43",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "huni_t01_s01_c09",
+        "q": "El esqueleto de Neandertal encontrado en 1856 en e",
+        "coverageRatio": "0.28",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_universal",
+    "semana": 1,
+    "lessonId": "huni_t01_s02",
+    "title": "3.3. Las Edades Arqueológicas de la Prehistoria: Paleolítico, Neolítico y Edad de los Metales",
+    "theoryLength": 25522,
+    "lines": 330,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "huni_t01_s02_c09",
+        "q": "El asentamiento proto-urbano neolítico de Çatalhöy",
+        "coverageRatio": "0.38",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_universal",
+    "semana": 2,
+    "lessonId": "huni_t02_s01",
+    "title": "3.1. Las Sociedades Fluviales e Hidráulicas de Mesopotamia",
+    "theoryLength": 25549,
+    "lines": 365,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "huni_t02_s01_c07",
+        "q": "El Imperio Asirio destacó en el Próximo Oriente an",
+        "coverageRatio": "0.46",
+        "substantiveHits": 6
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_universal",
+    "semana": 2,
+    "lessonId": "huni_t02_s02",
+    "title": "3.3. Egipto: El Don del Nilo y el Estado Faraónico",
+    "theoryLength": 24363,
+    "lines": 328,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "huni_t02_s02_c06",
+        "q": "El faraón guerrero de la dinastía XVIII apodado el",
+        "coverageRatio": "0.45",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "huni_t02_s02_c08",
+        "q": "El descubrimiento de la tumba intacta del joven fa",
+        "coverageRatio": "0.26",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_universal",
+    "semana": 3,
+    "lessonId": "huni_t03_s01",
+    "title": "3.1. Grecia Antigua: La Matriz Democrática y Cultural de Occidente",
+    "theoryLength": 30405,
+    "lines": 375,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "huni_t03_s01_c09",
+        "q": "El rey de Macedonia que modernizó la falange maced",
+        "coverageRatio": "0.43",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_universal",
+    "semana": 3,
+    "lessonId": "huni_t03_s02",
+    "title": "3.4. La República y el Imperio Romano",
+    "theoryLength": 30716,
+    "lines": 375,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_universal",
+    "semana": 4,
+    "lessonId": "huni_t04_s01",
+    "title": "3.1. Reinos Romano-Germánicos, Imperio Carolingio y el Islam",
+    "theoryLength": 25947,
+    "lines": 377,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "huni_t04_s01_c02",
+        "q": "El rey de los francos de la dinastía merovingia qu",
+        "coverageRatio": "0.47",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "huni_t04_s01_c08",
+        "q": "El libro sagrado del Islam que contiene las revela",
+        "coverageRatio": "0.46",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_universal",
+    "semana": 4,
+    "lessonId": "huni_t04_s02",
+    "title": "3.5. El Feudalismo y las Cruzadas",
+    "theoryLength": 26527,
+    "lines": 370,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "huni_t04_s02_c08",
+        "q": "Entre las órdenes militares religiosas fundadas en",
+        "coverageRatio": "0.47",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_universal",
+    "semana": 5,
+    "lessonId": "huni_t05_s01",
+    "title": "El Humanismo, el Renacimiento y los Grandes Descubrimientos Geográficos",
+    "theoryLength": 29214,
+    "lines": 364,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_universal",
+    "semana": 5,
+    "lessonId": "huni_t05_s02",
+    "title": "La Reforma Protestante, la Contrarreforma Católica y la Ilustración",
+    "theoryLength": 30388,
+    "lines": 373,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "huni_t05_s02_c03",
+        "q": "En la asamblea imperial de la Dieta de Worms (1521",
+        "coverageRatio": "0.48",
+        "substantiveHits": 6
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_universal",
+    "semana": 6,
+    "lessonId": "huni_t06_s01",
+    "title": "3.1. Las Revoluciones Burguesas y la Revolución Industrial",
+    "theoryLength": 38369,
+    "lines": 470,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "historia_universal",
+    "semana": 6,
+    "lessonId": "huni_t06_s02",
+    "title": "3.3. Las Guerras Mundiales y el Siglo XX",
+    "theoryLength": 37649,
+    "lines": 457,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t01_s01",
+    "title": "El Circuito Comunicativo: Fases, Elementos y Fenómenos Interferentes",
+    "theoryLength": 21785,
+    "lines": 324,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "leng_t01_s01_c07",
+        "q": "En la expresión '¡Fuego!', su interpretación exact",
+        "coverageRatio": "0.44",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "leng_t01_s01_c09",
+        "q": "Si dos personas intentan dialogar, pero una habla ",
+        "coverageRatio": "0.43",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t01_s02",
+    "title": "Tipología de la Comunicación: Clasificación y Criterios",
+    "theoryLength": 18867,
+    "lines": 258,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "leng_t01_s02_c07",
+        "q": "Si un joven envía una carta manuscrita a su abuelo",
+        "coverageRatio": "0.46",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "leng_t01_s02_c08",
+        "q": "¿Cuál de las siguientes situaciones ejemplifica un",
+        "coverageRatio": "0.46",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "leng_t01_s02_c10",
+        "q": "Cuando escuchamos la transmisión de un programa in",
+        "coverageRatio": "0.40",
+        "substantiveHits": 3
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t01_s03",
+    "title": "Planos del Lenguaje y las Seis Funciones del Lenguaje (Bühler y Jakobson)",
+    "theoryLength": 21021,
+    "lines": 302,
+    "totalChallenges": 12,
+    "wellExplainedCount": 11,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "leng_t01_s03_c10",
+        "q": "La orden 'Postulantes, guarden sus mochilas y mues",
+        "coverageRatio": "0.42",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t02_s01",
+    "title": "Las Variaciones de la Lengua: Dialecto, Sociolecto e Idiolecto",
+    "theoryLength": 18646,
+    "lines": 259,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t02_s02",
+    "title": "Realidad Lingüística del Perú: Multilingüismo, Lenguas Amerindias y Castellano",
+    "theoryLength": 20138,
+    "lines": 289,
+    "totalChallenges": 12,
+    "wellExplainedCount": 12,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t03_s01",
+    "title": "Fonología, Fonética, Sistema Fonológico y Estructura Silábica",
+    "theoryLength": 16741,
+    "lines": 272,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "leng_t03_s01_c05",
+        "q": "El hecho de que el fonema /k/ pueda representarse ",
+        "coverageRatio": "0.44",
+        "substantiveHits": 2
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t03_s02",
+    "title": "Secuencias Vocálicas: Diptongo, Triptongo y Hiato (Acentual y Simple)",
+    "theoryLength": 18677,
+    "lines": 312,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t03_s03",
+    "title": "Normativa de Acentuación General, Diacrítica y Enfática",
+    "theoryLength": 15032,
+    "lines": 254,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "leng_t03_s03_c05",
+        "q": "En la oración 'Estudió con gran dedicación, mas no",
+        "coverageRatio": "0.42",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t04_s01",
+    "title": "Morfología: Concepto, Morfema, Alomorfos y Clasificación",
+    "theoryLength": 17208,
+    "lines": 305,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t04_s02",
+    "title": "Procesos Formativos de Palabras en el Español",
+    "theoryLength": 17204,
+    "lines": 292,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "leng_t04_s02_c05",
+        "q": "La palabra 'Sedapal' (Servicio de Agua Potable y A",
+        "coverageRatio": "0.45",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "leng_t04_s02_c10",
+        "q": "Las siglas como 'DNI', 'ONU' o 'FMI' se caracteriz",
+        "coverageRatio": "0.44",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t05_s01",
+    "title": "La Sintaxis y las Categorías Gramaticales: Variables e Invariables",
+    "theoryLength": 20027,
+    "lines": 346,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "leng_t05_s01_c08",
+        "q": "¿Cuántas preposiciones contiene la oración 'Bajo l",
+        "coverageRatio": "0.27",
+        "substantiveHits": 2
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t05_s02",
+    "title": "Estructura de la Frase Nominal (FN), Frase Verbal (FV) y sus Complementos",
+    "theoryLength": 19243,
+    "lines": 300,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "leng_t05_s02_c04",
+        "q": "En la oración 'Aquellos médicos cirujanos son suma",
+        "coverageRatio": "0.44",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t06_s01",
+    "title": "La Oración Gramatical: Bimembre vs. Unimembre y Actitud del Hablante",
+    "theoryLength": 20837,
+    "lines": 339,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "leng_t06_s01_c10",
+        "q": "¿Cuál de las siguientes construcciones es gramatic",
+        "coverageRatio": "0.38",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t06_s02",
+    "title": "Oraciones Compuestas: Coordinadas y Subordinadas",
+    "theoryLength": 22590,
+    "lines": 358,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t07_s01",
+    "title": "El Discurso Escrito: Adecuación, Coherencia y Mecanismos de Cohesión",
+    "theoryLength": 23123,
+    "lines": 353,
+    "totalChallenges": 10,
+    "wellExplainedCount": 6,
+    "poorlyExplainedCount": 4,
+    "poorlyExplained": [
+      {
+        "chId": "leng_t07_s01_c03",
+        "q": "En 'César Vallejo nació en Santiago de Chuco. El i",
+        "coverageRatio": "0.42",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "leng_t07_s01_c05",
+        "q": "En 'Visitó Arequipa en agosto. Allí disfrutó de la",
+        "coverageRatio": "0.33",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "leng_t07_s01_c08",
+        "q": "En la oración 'Compré flores para mi madre: ella s",
+        "coverageRatio": "0.40",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "leng_t07_s01_c10",
+        "q": "En la frase 'Todos esperaban lo mismo: la publicac",
+        "coverageRatio": "0.29",
+        "substantiveHits": 2
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t07_s02",
+    "title": "Normativa de Signos de Puntuación: La Coma, el Punto y Coma y los Dos Puntos",
+    "theoryLength": 17344,
+    "lines": 282,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "leng_t07_s02_c02",
+        "q": "En la frase 'Juan postuló a Ingeniería de Sistemas",
+        "coverageRatio": "0.45",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "leng_t07_s02_c04",
+        "q": "En la oración 'Desde las primeras horas de la madr",
+        "coverageRatio": "0.40",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "leng_t07_s02_c10",
+        "q": "En 'No logró el puntaje mínimo requerido: tendrá q",
+        "coverageRatio": "0.38",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t07_s03",
+    "title": "Normativa del Uso de Mayúsculas y Minúsculas (Ortografía RAE)",
+    "theoryLength": 16392,
+    "lines": 267,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t08_s01",
+    "title": "El Signo Lingüístico y la Distinción Denotación vs. Connotación",
+    "theoryLength": 15497,
+    "lines": 274,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "leng_t08_s01_c09",
+        "q": "En la expresión 'El león africano es un mamífero c",
+        "coverageRatio": "0.25",
+        "substantiveHits": 1
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "lenguaje",
+    "semana": 0,
+    "lessonId": "leng_t08_s02",
+    "title": "Relaciones Léxico-Semánticas: Polisemia, Homonimia, Antonimia e Inclusión",
+    "theoryLength": 16778,
+    "lines": 294,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "literatura",
+    "semana": 1,
+    "lessonId": "lit_t01_s01",
+    "title": "3.1. La Literatura y la Función Poética",
+    "theoryLength": 18531,
+    "lines": 300,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "literatura",
+    "semana": 1,
+    "lessonId": "lit_t01_s02",
+    "title": "3.3. Figuras Literarias (Figuras Retóricas)",
+    "theoryLength": 12089,
+    "lines": 216,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "literatura",
+    "semana": 2,
+    "lessonId": "lit_t02_s01",
+    "title": "3.1. El Clasicismo Griego",
+    "theoryLength": 25465,
+    "lines": 355,
+    "totalChallenges": 10,
+    "wellExplainedCount": 6,
+    "poorlyExplainedCount": 4,
+    "poorlyExplained": [
+      {
+        "chId": "lit_t02_s01_c04",
+        "q": "En la Odisea, la virtud primordial que define al h",
+        "coverageRatio": "0.40",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "lit_t02_s01_c05",
+        "q": "Las fórmulas fijas como «el de los pies ligeros» (",
+        "coverageRatio": "0.36",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "lit_t02_s01_c06",
+        "q": "¿Cuál de los siguientes dramaturgos griegos es con",
+        "coverageRatio": "0.27",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "lit_t02_s01_c07",
+        "q": "En la poética clásica griega, la hybris que precip",
+        "coverageRatio": "0.47",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "literatura",
+    "semana": 2,
+    "lessonId": "lit_t02_s02",
+    "title": "3.3. El Romanticismo: Goethe y *Las cuitas del joven Werther*",
+    "theoryLength": 20815,
+    "lines": 306,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "lit_t02_s02_c08",
+        "q": "En Fausto de Goethe, ¿qué pacto trascendental real",
+        "coverageRatio": "0.33",
+        "substantiveHits": 2
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "literatura",
+    "semana": 3,
+    "lessonId": "lit_t03_s01",
+    "title": "3.1. La Épica Medieval Española: El *Cantar de Mio Cid*",
+    "theoryLength": 19721,
+    "lines": 299,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "literatura",
+    "semana": 3,
+    "lessonId": "lit_t03_s02",
+    "title": "3.2. La Cumbre de la Prosa Universal: *Don Quijote de la Mancha*",
+    "theoryLength": 19277,
+    "lines": 282,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "lit_t03_s02_c03",
+        "q": "En la culminación de la segunda parte del Quijote ",
+        "coverageRatio": "0.47",
+        "substantiveHits": 3
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "literatura",
+    "semana": 4,
+    "lessonId": "lit_t04_s01",
+    "title": "3.1. El Modernismo Hispanoamericano",
+    "theoryLength": 19285,
+    "lines": 280,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "lit_t04_s01_c06",
+        "q": "¿Cuál de las siguientes poetisas hispanoamericanas",
+        "coverageRatio": "0.47",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "lit_t04_s01_c07",
+        "q": "El rasgo estilístico modernista consistente en aso",
+        "coverageRatio": "0.19",
+        "substantiveHits": 1
+      },
+      {
+        "chId": "lit_t04_s01_c09",
+        "q": "En la lírica de Alfonsina Storni, poemas célebres ",
+        "coverageRatio": "0.27",
+        "substantiveHits": 3
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "literatura",
+    "semana": 4,
+    "lessonId": "lit_t04_s02",
+    "title": "3.3. Hitos de la Nueva Narrativa: Carpentier y Borges",
+    "theoryLength": 20424,
+    "lines": 279,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "lit_t04_s02_c04",
+        "q": "En la novela Pedro Páramo (1955) del mexicano Juan",
+        "coverageRatio": "0.41",
+        "substantiveHits": 9
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "literatura",
+    "semana": 5,
+    "lessonId": "lit_t05_s01",
+    "title": "3.1. Literatura de la Conquista y Virreinato: El Inca Garcilaso de la Vega",
+    "theoryLength": 21500,
+    "lines": 304,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "lit_t05_s01_c02",
+        "q": "La comedia costumbrista Ña Catita (1856) de Manuel",
+        "coverageRatio": "0.44",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "lit_t05_s01_c07",
+        "q": "La novela precursora del indigenismo peruano Aves ",
+        "coverageRatio": "0.39",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "lit_t05_s01_c09",
+        "q": "Manuel González Prada, además de su oratoria incen",
+        "coverageRatio": "0.42",
+        "substantiveHits": 9
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "literatura",
+    "semana": 5,
+    "lessonId": "lit_t05_s02",
+    "title": "3.3. Vanguardismo Universal: César Vallejo (1892-1938)",
+    "theoryLength": 22099,
+    "lines": 312,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "lit_t05_s02_c10",
+        "q": "En Los ríos profundos, la peste del tifus negro qu",
+        "coverageRatio": "0.48",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "literatura",
+    "semana": 6,
+    "lessonId": "lit_t06_s01",
+    "title": "3.1. Mariano Melgar y Valdivieso (Arequipa, 1790 - Umachiri, 1815)",
+    "theoryLength": 19001,
+    "lines": 292,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "lit_t06_s01_c06",
+        "q": "En el célebre soneto de Melgar que inicia: «La noc",
+        "coverageRatio": "0.35",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "lit_t06_s01_c07",
+        "q": "Antes de Silvia, el joven Mariano Melgar dedicó su",
+        "coverageRatio": "0.44",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "lit_t06_s01_c09",
+        "q": "La célebre Marcha Patriótica de Melgar («Ya llegó ",
+        "coverageRatio": "0.28",
+        "substantiveHits": 2
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "literatura",
+    "semana": 6,
+    "lessonId": "lit_t06_s02",
+    "title": "3.2. De la Bohemia del Aquelarre a la Vanguardia Arequipeña",
+    "theoryLength": 28221,
+    "lines": 403,
+    "totalChallenges": 10,
+    "wellExplainedCount": 4,
+    "poorlyExplainedCount": 6,
+    "poorlyExplained": [
+      {
+        "chId": "lit_t06_s02_c04",
+        "q": "La novela inaugural de Mario Vargas Llosa, La ciud",
+        "coverageRatio": "0.34",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "lit_t06_s02_c05",
+        "q": "¿Quién es el personaje del círculo de cadetes en L",
+        "coverageRatio": "0.46",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "lit_t06_s02_c06",
+        "q": "En La ciudad y los perros, el cadete tímido y marg",
+        "coverageRatio": "0.26",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "lit_t06_s02_c07",
+        "q": "Entre las técnicas narrativas de vanguardia magist",
+        "coverageRatio": "0.25",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "lit_t06_s02_c08",
+        "q": "El poemario Ande (1926) del puneño Alejandro Peral",
+        "coverageRatio": "0.40",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "lit_t06_s02_c09",
+        "q": "En La ciudad y los perros, el oficial recto y disc",
+        "coverageRatio": "0.32",
+        "substantiveHits": 1
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 1,
+    "lessonId": "psi_t01_s01",
+    "title": "3.1. Definición, Etimología y Evolución Epistemológica",
+    "theoryLength": 19427,
+    "lines": 299,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 1,
+    "lessonId": "psi_t01_s02",
+    "title": "3.2. Objeto de Estudio de la Psicología",
+    "theoryLength": 18341,
+    "lines": 269,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t01_s02_c05",
+        "q": "La rama de la Psicología que investiga los cambios",
+        "coverageRatio": "0.47",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "psi_t01_s02_c07",
+        "q": "La Psicología Organizacional o del Trabajo intervi",
+        "coverageRatio": "0.28",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "psi_t01_s02_c08",
+        "q": "La Psicología Educativa orienta primordialmente su",
+        "coverageRatio": "0.42",
+        "substantiveHits": 6
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 2,
+    "lessonId": "psi_t02_s01",
+    "title": "3.1. Concepto e Importancia Psicológica del Proyecto de Vida",
+    "theoryLength": 17891,
+    "lines": 283,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 2,
+    "lessonId": "psi_t02_s02",
+    "title": "3.2. Visión y Misión Personal",
+    "theoryLength": 15579,
+    "lines": 235,
+    "totalChallenges": 10,
+    "wellExplainedCount": 6,
+    "poorlyExplainedCount": 4,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t02_s02_c03",
+        "q": "Un estudiante redacta: 'Ser en diez años un neuroc",
+        "coverageRatio": "0.47",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "psi_t02_s02_c08",
+        "q": "La 'Autoeficacia', concepto acuñado por el psicólo",
+        "coverageRatio": "0.45",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "psi_t02_s02_c09",
+        "q": "La evaluación periódica y reajuste del proyecto de",
+        "coverageRatio": "0.33",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "psi_t02_s02_c10",
+        "q": "El rol de la 'Toma de Decisiones Vocacionales' mad",
+        "coverageRatio": "0.30",
+        "substantiveHits": 3
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 3,
+    "lessonId": "psi_t03_s01",
+    "title": "3.1. Diferenciación Conceptual Fundamental",
+    "theoryLength": 20540,
+    "lines": 289,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t03_s01_c03",
+        "q": "Un conflicto vocacional clásico ocurre cuando un p",
+        "coverageRatio": "0.48",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "psi_t03_s01_c10",
+        "q": "Uno de los principales errores en la elección voca",
+        "coverageRatio": "0.45",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 3,
+    "lessonId": "psi_t03_s02",
+    "title": "4.1. Tipología Ocupacional RIASEC de John Holland",
+    "theoryLength": 20470,
+    "lines": 279,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 4,
+    "lessonId": "psi_t04_s01",
+    "title": "3.1. Naturaleza Psicológica del Hábito de Estudio",
+    "theoryLength": 24670,
+    "lines": 351,
+    "totalChallenges": 10,
+    "wellExplainedCount": 6,
+    "poorlyExplainedCount": 4,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t04_s01_c02",
+        "q": "El célebre método de estudio EPLERR (o SQ3R de Fra",
+        "coverageRatio": "0.48",
+        "substantiveHits": 9
+      },
+      {
+        "chId": "psi_t04_s01_c03",
+        "q": "La técnica de 'Lectura Crítica o Comprensiva' se d",
+        "coverageRatio": "0.44",
+        "substantiveHits": 10
+      },
+      {
+        "chId": "psi_t04_s01_c04",
+        "q": "El organizador visual jerárquico creado por Joseph",
+        "coverageRatio": "0.43",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "psi_t04_s01_c05",
+        "q": "Los Mapas Mentales desarrollados por Tony Buzan se",
+        "coverageRatio": "0.37",
+        "substantiveHits": 9
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 4,
+    "lessonId": "psi_t04_s02",
+    "title": "3.2. Gestión Estratégica del Tiempo",
+    "theoryLength": 21859,
+    "lines": 304,
+    "totalChallenges": 10,
+    "wellExplainedCount": 6,
+    "poorlyExplainedCount": 4,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t04_s02_c04",
+        "q": "El fenómeno psicológico de la 'Procrastinación' se",
+        "coverageRatio": "0.30",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "psi_t04_s02_c05",
+        "q": "La 'Ley de Parkinson' sobre la administración del ",
+        "coverageRatio": "0.36",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "psi_t04_s02_c07",
+        "q": "Los llamados 'ladrones del tiempo' (time wasters) ",
+        "coverageRatio": "0.38",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "psi_t04_s02_c09",
+        "q": "Para vencer la resistencia inicial al iniciar una ",
+        "coverageRatio": "0.32",
+        "substantiveHits": 6
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 5,
+    "lessonId": "psi_t05_s01",
+    "title": "3.1. Identidad Personal y Social",
+    "theoryLength": 19616,
+    "lines": 292,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t05_s01_c10",
+        "q": "La técnica asertiva del 'Disco Rayado' se utiliza ",
+        "coverageRatio": "0.30",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 6,
+    "lessonId": "psi_t06_s01",
+    "title": "3.1. Naturaleza y Ciclo de la Motivación",
+    "theoryLength": 20498,
+    "lines": 299,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 6,
+    "lessonId": "psi_t06_s02",
+    "title": "3.2. Tipos de Motivación",
+    "theoryLength": 19477,
+    "lines": 286,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t06_s02_c02",
+        "q": "Por el contrario, la 'Motivación Extrínseca' guía ",
+        "coverageRatio": "0.48",
+        "substantiveHits": 9
+      },
+      {
+        "chId": "psi_t06_s02_c07",
+        "q": "La Teoría de la Autodeterminación (Deci y Ryan) po",
+        "coverageRatio": "0.48",
+        "substantiveHits": 10
+      },
+      {
+        "chId": "psi_t06_s02_c10",
+        "q": "El concepto de 'Flujo' (Flow) descrito por Mihaly ",
+        "coverageRatio": "0.35",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 7,
+    "lessonId": "psi_t07_s01",
+    "title": "3.1. Origen y Definición de la Inteligencia Emocional (IE)",
+    "theoryLength": 22776,
+    "lines": 313,
+    "totalChallenges": 10,
+    "wellExplainedCount": 4,
+    "poorlyExplainedCount": 6,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t07_s01_c01",
+        "q": "La 'Afectividad' en psicología se conceptualiza co",
+        "coverageRatio": "0.39",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "psi_t07_s01_c02",
+        "q": "Las 'Emociones' se diferencian de los 'Sentimiento",
+        "coverageRatio": "0.39",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "psi_t07_s01_c03",
+        "q": "Por contraste, los 'Sentimientos' (como el amor fi",
+        "coverageRatio": "0.22",
+        "substantiveHits": 1
+      },
+      {
+        "chId": "psi_t07_s01_c04",
+        "q": "Paul Ekman demostró transculturalmente la existenc",
+        "coverageRatio": "0.18",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "psi_t07_s01_c06",
+        "q": "Las 'Pasiones' en la clasificación de los procesos",
+        "coverageRatio": "0.35",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "psi_t07_s01_c07",
+        "q": "El 'Estado de Ánimo' o humor se distingue por ser ",
+        "coverageRatio": "0.38",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 7,
+    "lessonId": "psi_t07_s02",
+    "title": "4.1. Las Cinco Dimensiones de Daniel Goleman",
+    "theoryLength": 17358,
+    "lines": 251,
+    "totalChallenges": 10,
+    "wellExplainedCount": 5,
+    "poorlyExplainedCount": 5,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t07_s02_c03",
+        "q": "La tercera dimensión, la 'Automotivación', se defi",
+        "coverageRatio": "0.47",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "psi_t07_s02_c06",
+        "q": "La quinta dimensión de Goleman comprende las 'Habi",
+        "coverageRatio": "0.48",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "psi_t07_s02_c07",
+        "q": "En las bases psicofisiológicas de la afectividad, ",
+        "coverageRatio": "0.25",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "psi_t07_s02_c08",
+        "q": "La teoría de la emoción de James-Lange postulaba h",
+        "coverageRatio": "0.40",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "psi_t07_s02_c10",
+        "q": "La Teoría Bifactorial de la Emoción de Schachter y",
+        "coverageRatio": "0.23",
+        "substantiveHits": 2
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 8,
+    "lessonId": "psi_t08_s01",
+    "title": "3.1. Definición y Características de la Personalidad",
+    "theoryLength": 23297,
+    "lines": 315,
+    "totalChallenges": 10,
+    "wellExplainedCount": 6,
+    "poorlyExplainedCount": 4,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t08_s01_c06",
+        "q": "La cualidad de 'Singularidad o Unicidad' de la per",
+        "coverageRatio": "0.25",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "psi_t08_s01_c08",
+        "q": "¿Cuál es el factor exógeno o ambiental que ejerce ",
+        "coverageRatio": "0.41",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "psi_t08_s01_c09",
+        "q": "Un temperamento 'reactivo o difícil' en la infanci",
+        "coverageRatio": "0.43",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "psi_t08_s01_c10",
+        "q": "En la evaluación psicológica de la personalidad, l",
+        "coverageRatio": "0.33",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 8,
+    "lessonId": "psi_t08_s02",
+    "title": "4.1. Tipologías Clásicas de la Personalidad",
+    "theoryLength": 20136,
+    "lines": 293,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t08_s02_c03",
+        "q": "Carl Gustav Jung propuso dos grandes orientaciones",
+        "coverageRatio": "0.46",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 9,
+    "lessonId": "psi_t09_s01",
+    "title": "3.1. Definición y Características del Aprendizaje",
+    "theoryLength": 20406,
+    "lines": 305,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t09_s01_c08",
+        "q": "John B. Watson y Rosalie Rayner demostraron que la",
+        "coverageRatio": "0.40",
+        "substantiveHits": 5
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 9,
+    "lessonId": "psi_t09_s02",
+    "title": "4.2. Condicionamiento Operante o Instrumental (Thorndike y Skinner)",
+    "theoryLength": 20514,
+    "lines": 315,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t09_s02_c09",
+        "q": "Jerome Bruner propuso la teoría del 'Aprendizaje p",
+        "coverageRatio": "0.42",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 10,
+    "lessonId": "psi_t10_s01",
+    "title": "3.1. Sensación y Umbrales Sensoriales",
+    "theoryLength": 21413,
+    "lines": 337,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t10_s01_c06",
+        "q": "La Ley Gestáltica de 'Cierre o Clausura' se manifi",
+        "coverageRatio": "0.47",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "psi_t10_s01_c10",
+        "q": "La 'Constancia Perceptual' (de tamaño, forma y col",
+        "coverageRatio": "0.45",
+        "substantiveHits": 9
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 10,
+    "lessonId": "psi_t10_s02",
+    "title": "4.1. Atención y Memoria",
+    "theoryLength": 21391,
+    "lines": 335,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t10_s02_c03",
+        "q": "La 'Memoria' como proceso cognitivo integral abarc",
+        "coverageRatio": "0.48",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "psi_t10_s02_c06",
+        "q": "George Miller demostró en su célebre artículo 'El ",
+        "coverageRatio": "0.40",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 11,
+    "lessonId": "psi_t11_s01",
+    "title": "3.1. Definición y Evolución Histórica del Concepto",
+    "theoryLength": 28141,
+    "lines": 434,
+    "totalChallenges": 10,
+    "wellExplainedCount": 5,
+    "poorlyExplainedCount": 5,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t11_s01_c05",
+        "q": "El 'Pensamiento' como proceso cognitivo superior s",
+        "coverageRatio": "0.21",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "psi_t11_s01_c06",
+        "q": "El 'Razonamiento Deductivo' se distingue del induc",
+        "coverageRatio": "0.36",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "psi_t11_s01_c08",
+        "q": "J. P. Guilford distinguió entre 'Pensamiento Conve",
+        "coverageRatio": "0.35",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "psi_t11_s01_c09",
+        "q": "En la resolución de problemas, el procedimiento si",
+        "coverageRatio": "0.36",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "psi_t11_s01_c10",
+        "q": "Los 'Heurísticos' (estudiados por Kahneman y Tvers",
+        "coverageRatio": "0.13",
+        "substantiveHits": 3
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 11,
+    "lessonId": "psi_t11_s02",
+    "title": "4.2. Teorías Factoriales Clásicas",
+    "theoryLength": 19495,
+    "lines": 309,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t11_s02_c05",
+        "q": "En la tipología de Gardner, un gran novelista como",
+        "coverageRatio": "0.27",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "psi_t11_s02_c08",
+        "q": "La 'Inteligencia Interpersonal' en el modelo de Ga",
+        "coverageRatio": "0.48",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 12,
+    "lessonId": "psi_t12_s01",
+    "title": "3.1. Definición y Enfoque de Factores de Protección",
+    "theoryLength": 18603,
+    "lines": 300,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t12_s01_c08",
+        "q": "La 'Resiliencia Familiar' es la capacidad que tien",
+        "coverageRatio": "0.39",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "psi_t12_s01_c09",
+        "q": "La 'Disfunción Familiar' se instaura cuando en el ",
+        "coverageRatio": "0.40",
+        "substantiveHits": 6
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 12,
+    "lessonId": "psi_t12_s02",
+    "title": "3.2. Tipología Familiar Contemporánea",
+    "theoryLength": 16477,
+    "lines": 257,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t12_s02_c10",
+        "q": "En la dinámica de comunicación familiar, la 'Pauta",
+        "coverageRatio": "0.39",
+        "substantiveHits": 11
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 0,
+    "lessonId": "psi_t13_s01",
+    "title": "3.1. Enfoque de Riesgo, Tipologías de Violencia, Ciclo de Walker y Acoso Escolar",
+    "theoryLength": 19736,
+    "lines": 276,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t13_s01_c07",
+        "q": "Dentro de la tríada o triángulo del bullying, el p",
+        "coverageRatio": "0.45",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 0,
+    "lessonId": "psi_t13_s02",
+    "title": "4.1. Conductas Delictivas Juveniles, Sustancias Psicoactivas y Farmacodependencia",
+    "theoryLength": 19188,
+    "lines": 258,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 14,
+    "lessonId": "psi_t14_s01",
+    "title": "3.1. Dimensiones y Conceptos Clave de la Sexualidad Humana",
+    "theoryLength": 29165,
+    "lines": 369,
+    "totalChallenges": 10,
+    "wellExplainedCount": 5,
+    "poorlyExplainedCount": 5,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t14_s01_c06",
+        "q": "La fase del 'Enamoramiento' en las relaciones inte",
+        "coverageRatio": "0.10",
+        "substantiveHits": 1
+      },
+      {
+        "chId": "psi_t14_s01_c07",
+        "q": "La 'Teoría Triangular del Amor' del psicólogo Robe",
+        "coverageRatio": "0.37",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "psi_t14_s01_c08",
+        "q": "En la teoría de Sternberg, una relación caracteriz",
+        "coverageRatio": "0.35",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "psi_t14_s01_c09",
+        "q": "Por otro lado, el 'Amor Vacío' en la tipología de ",
+        "coverageRatio": "0.36",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "psi_t14_s01_c10",
+        "q": "En una relación de pareja saludable y madura, el r",
+        "coverageRatio": "0.33",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 14,
+    "lessonId": "psi_t14_s02",
+    "title": "4.1. Teoría del Desarrollo Psicosexual de Sigmund Freud",
+    "theoryLength": 20286,
+    "lines": 266,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t14_s02_c09",
+        "q": "El concepto psicoanalítico de 'Fijación' explica q",
+        "coverageRatio": "0.35",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 15,
+    "lessonId": "psi_t15_s01",
+    "title": "3.1. Concepto y Principios del Desarrollo Humano",
+    "theoryLength": 21661,
+    "lines": 314,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t15_s01_c04",
+        "q": "La 'Etapa Prenatal' del desarrollo humano abarca n",
+        "coverageRatio": "0.41",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "psi_t15_s01_c09",
+        "q": "La 'Adultez Temprana o Joven' (aprox. 20 a 40 años",
+        "coverageRatio": "0.35",
+        "substantiveHits": 8
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "psicologia",
+    "semana": 15,
+    "lessonId": "psi_t15_s02",
+    "title": "4.1. Estadios del Desarrollo Cognitivo de Jean Piaget",
+    "theoryLength": 21473,
+    "lines": 296,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "psi_t15_s02_c10",
+        "q": "En las Operaciones Formales, el pensamiento adquie",
+        "coverageRatio": "0.48",
+        "substantiveHits": 10
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 1,
+    "lessonId": "rv_t01_s01",
+    "title": "3.1 La Sinonimia Contextual (Superación del Diccionario)",
+    "theoryLength": 24496,
+    "lines": 390,
+    "totalChallenges": 10,
+    "wellExplainedCount": 6,
+    "poorlyExplainedCount": 4,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t01_s01_c03",
+        "q": "En la oración: 'El testimonio del testigo ocular r",
+        "coverageRatio": "0.40",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "rv_t01_s01_c06",
+        "q": "En el enunciado: 'Las declaraciones del portavoz r",
+        "coverageRatio": "0.23",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "rv_t01_s01_c07",
+        "q": "En la expresión: 'El fiscal detectó una versión *e",
+        "coverageRatio": "0.38",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "rv_t01_s01_c08",
+        "q": "'El director felicitó al equipo por el *fructífero",
+        "coverageRatio": "0.33",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 1,
+    "lessonId": "rv_t01_s02",
+    "title": "3.3 Polisemia vs. Homonimia (Distinción Rigurosa)",
+    "theoryLength": 18270,
+    "lines": 300,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t01_s02_c03",
+        "q": "Las palabras 'Baya' (fruto carnoso) y 'Valla' (cer",
+        "coverageRatio": "0.46",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "rv_t01_s02_c04",
+        "q": "Dos vocablos que coinciden exactamente tanto en su",
+        "coverageRatio": "0.48",
+        "substantiveHits": 9
+      },
+      {
+        "chId": "rv_t01_s02_c05",
+        "q": "La 'Paronimia' se define en el razonamiento verbal",
+        "coverageRatio": "0.42",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 2,
+    "lessonId": "rv_t02_s01",
+    "title": "3.1 La Estructura y Notación Formal de la Analogía",
+    "theoryLength": 18818,
+    "lines": 344,
+    "totalChallenges": 10,
+    "wellExplainedCount": 10,
+    "poorlyExplainedCount": 0,
+    "poorlyExplained": [],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 2,
+    "lessonId": "rv_t02_s02",
+    "title": "3.3 Catálogo de Tipos Analógicos Fundamentales",
+    "theoryLength": 18210,
+    "lines": 312,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t02_s02_c05",
+        "q": "Resuelva la siguiente analogía: 'LEÓN : CARNÍVORO ",
+        "coverageRatio": "0.14",
+        "substantiveHits": 1
+      },
+      {
+        "chId": "rv_t02_s02_c06",
+        "q": "Dada la premisa: 'ABOGADO : DEFENSA ::', ¿cuál es ",
+        "coverageRatio": "0.44",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "rv_t02_s02_c10",
+        "q": "Resuelva la siguiente analogía de antonimia: 'EFÍM",
+        "coverageRatio": "0.25",
+        "substantiveHits": 2
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 3,
+    "lessonId": "rv_t03_s01",
+    "title": "3.1 Tipología y Patrones en Series Verbales",
+    "theoryLength": 21417,
+    "lines": 429,
+    "totalChallenges": 10,
+    "wellExplainedCount": 6,
+    "poorlyExplainedCount": 4,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t03_s01_c03",
+        "q": "Determine el término que completa lógicamente la s",
+        "coverageRatio": "0.45",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "rv_t03_s01_c05",
+        "q": "Complete la serie de cohiponimia de mamíferos mari",
+        "coverageRatio": "0.33",
+        "substantiveHits": 1
+      },
+      {
+        "chId": "rv_t03_s01_c08",
+        "q": "Complete la serie de disciplinas de las ciencias f",
+        "coverageRatio": "0.22",
+        "substantiveHits": 1
+      },
+      {
+        "chId": "rv_t03_s01_c09",
+        "q": "Identifique el término que completa la serie de ac",
+        "coverageRatio": "0.36",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 3,
+    "lessonId": "rv_t03_s02",
+    "title": "3.2 El Método Formal para Resolver Término Excluido",
+    "theoryLength": 17161,
+    "lines": 330,
+    "totalChallenges": 10,
+    "wellExplainedCount": 9,
+    "poorlyExplainedCount": 1,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t03_s02_c06",
+        "q": "Identifique el TÉRMINO EXCLUIDO en la serie de órg",
+        "coverageRatio": "0.44",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 4,
+    "lessonId": "rv_t04_s01",
+    "title": "3.1 Clasificación y Semántica de los Conectores Lógicos Textuales",
+    "theoryLength": 23401,
+    "lines": 414,
+    "totalChallenges": 10,
+    "wellExplainedCount": 5,
+    "poorlyExplainedCount": 5,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t04_s01_c02",
+        "q": "En el enunciado: 'Estudió con dedicación y ahínco ",
+        "coverageRatio": "0.44",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "rv_t04_s01_c03",
+        "q": "Complete con los conectores lógicos apropiados: 'E",
+        "coverageRatio": "0.37",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "rv_t04_s01_c06",
+        "q": "Complete con el conector correspondiente: '_______",
+        "coverageRatio": "0.33",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "rv_t04_s01_c08",
+        "q": "Complete la oración: 'El proyecto minero generará ",
+        "coverageRatio": "0.22",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "rv_t04_s01_c10",
+        "q": "Elija los conectores adecuados: 'No viajaremos a l",
+        "coverageRatio": "0.29",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 4,
+    "lessonId": "rv_t04_s02",
+    "title": "3.2 Metodología de Resolución: Oraciones Incompletas",
+    "theoryLength": 19729,
+    "lines": 348,
+    "totalChallenges": 10,
+    "wellExplainedCount": 3,
+    "poorlyExplainedCount": 7,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t04_s02_c03",
+        "q": "Complete la oración con precisión léxica: 'La cons",
+        "coverageRatio": "0.41",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "rv_t04_s02_c04",
+        "q": "Complete el enunciado: 'Aquel magistrado era céleb",
+        "coverageRatio": "0.27",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "rv_t04_s02_c05",
+        "q": "Complete la oración: 'El arqueólogo examinó minuci",
+        "coverageRatio": "0.21",
+        "substantiveHits": 1
+      },
+      {
+        "chId": "rv_t04_s02_c06",
+        "q": "Complete el texto: 'Las especies que habitan en lo",
+        "coverageRatio": "0.29",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "rv_t04_s02_c07",
+        "q": "Complete la oración: 'A pesar del tono sereno y ap",
+        "coverageRatio": "0.31",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "rv_t04_s02_c08",
+        "q": "Complete con rigor contextual: 'El fiscal señaló q",
+        "coverageRatio": "0.47",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "rv_t04_s02_c09",
+        "q": "Complete el enunciado: 'La disertación del ponente",
+        "coverageRatio": "0.23",
+        "substantiveHits": 2
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 5,
+    "lessonId": "rv_t05_s01",
+    "title": "3.1 Anatomía de un Texto Argumentativo",
+    "theoryLength": 22352,
+    "lines": 338,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t05_s01_c04",
+        "q": "Lea el siguiente texto breve: 'El consumo excesivo",
+        "coverageRatio": "0.41",
+        "substantiveHits": 13
+      },
+      {
+        "chId": "rv_t05_s01_c06",
+        "q": "El 'Argumento de Autoridad' (cuando se emplea legí",
+        "coverageRatio": "0.30",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "rv_t05_s01_c08",
+        "q": "En un ensayo argumentativo, la 'Conclusión' o sínt",
+        "coverageRatio": "0.31",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 5,
+    "lessonId": "rv_t05_s02",
+    "title": "3.2 La Prueba del Debilitamiento y Reforzamiento (Estándar DECO)",
+    "theoryLength": 23388,
+    "lines": 341,
+    "totalChallenges": 10,
+    "wellExplainedCount": 3,
+    "poorlyExplainedCount": 7,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t05_s02_c02",
+        "q": "Por el contrario, la tarea de 'Reforzar' un argume",
+        "coverageRatio": "0.42",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "rv_t05_s02_c03",
+        "q": "Considere el siguiente argumento: 'La implementaci",
+        "coverageRatio": "0.30",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "rv_t05_s02_c04",
+        "q": "Frente a la tesis: 'El consumo regular de arándano",
+        "coverageRatio": "0.26",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "rv_t05_s02_c06",
+        "q": "Considere la afirmación: 'Todos los estudiantes qu",
+        "coverageRatio": "0.39",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "rv_t05_s02_c07",
+        "q": "¿Qué afirmación debilitaría de modo categórico la ",
+        "coverageRatio": "0.38",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "rv_t05_s02_c08",
+        "q": "Al evaluar la solidez de una generalización induct",
+        "coverageRatio": "0.30",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "rv_t05_s02_c09",
+        "q": "Frente al argumento: 'La educación virtual es supe",
+        "coverageRatio": "0.44",
+        "substantiveHits": 8
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 6,
+    "lessonId": "rv_t06_s01",
+    "title": "3.1 Presuposiciones vs. Implicaturas",
+    "theoryLength": 20824,
+    "lines": 308,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t06_s01_c08",
+        "q": "Cuando un anfitrión en una reunión social mira rep",
+        "coverageRatio": "0.27",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "rv_t06_s01_c09",
+        "q": "¿Cuál de las siguientes expresiones contiene un 'a",
+        "coverageRatio": "0.38",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "rv_t06_s01_c10",
+        "q": "El estudio de la pragmática en la comprensión de t",
+        "coverageRatio": "0.43",
+        "substantiveHits": 6
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 6,
+    "lessonId": "rv_t06_s02",
+    "title": "3.2 El Principio de Cooperación y las Máximas de H. P. Grice",
+    "theoryLength": 21870,
+    "lines": 318,
+    "totalChallenges": 10,
+    "wellExplainedCount": 6,
+    "poorlyExplainedCount": 4,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t06_s02_c01",
+        "q": "El 'Principio de Cooperación' formulado por el fil",
+        "coverageRatio": "0.48",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "rv_t06_s02_c06",
+        "q": "Si ante la pregunta de un policía: '¿Dónde vive el",
+        "coverageRatio": "0.30",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "rv_t06_s02_c07",
+        "q": "En la pragmática griceana, cuando un hablante viol",
+        "coverageRatio": "0.43",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "rv_t06_s02_c08",
+        "q": "Un profesor escribe en la carta de recomendación d",
+        "coverageRatio": "0.32",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 7,
+    "lessonId": "rv_t07_s01",
+    "title": "3.1 Los Principales Vicios de Sentido en el Examen de Admisión",
+    "theoryLength": 19374,
+    "lines": 316,
+    "totalChallenges": 10,
+    "wellExplainedCount": 8,
+    "poorlyExplainedCount": 2,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t07_s01_c06",
+        "q": "Identifique la oración que contiene una 'Impropied",
+        "coverageRatio": "0.36",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "rv_t07_s01_c08",
+        "q": "El vicio de 'Cacofonía' consiste en:",
+        "coverageRatio": "0.36",
+        "substantiveHits": 4
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 7,
+    "lessonId": "rv_t07_s02",
+    "title": "3.2 Discordancias Gramaticales que Alteran el Sentido",
+    "theoryLength": 17361,
+    "lines": 277,
+    "totalChallenges": 10,
+    "wellExplainedCount": 7,
+    "poorlyExplainedCount": 3,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t07_s02_c02",
+        "q": "Identifique la oración que presenta un error flagr",
+        "coverageRatio": "0.44",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "rv_t07_s02_c06",
+        "q": "Identifique la oración redactada con rigurosa corr",
+        "coverageRatio": "0.45",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "rv_t07_s02_c10",
+        "q": "En la oración: 'El calor y la humedad sofocante __",
+        "coverageRatio": "0.38",
+        "substantiveHits": 8
+      }
+    ],
+    "estadoInicial": "ESTUDIO_OK"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 8,
+    "lessonId": "rv_t08_s01",
+    "title": "3.1 El Triángulo de Adecuación Sociolingüística",
+    "theoryLength": 24461,
+    "lines": 389,
+    "totalChallenges": 10,
+    "wellExplainedCount": 5,
+    "poorlyExplainedCount": 5,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t08_s01_c03",
+        "q": "Identifique la oración que quebranta la adecuación",
+        "coverageRatio": "0.47",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "rv_t08_s01_c04",
+        "q": "La variación de la lengua determinada por factores",
+        "coverageRatio": "0.27",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "rv_t08_s01_c05",
+        "q": "El 'Sociolecto' (o variación diastrática) hace ref",
+        "coverageRatio": "0.36",
+        "substantiveHits": 2
+      },
+      {
+        "chId": "rv_t08_s01_c08",
+        "q": "La 'Cortesía Lingüística' en el análisis pragmátic",
+        "coverageRatio": "0.41",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "rv_t08_s01_c09",
+        "q": "Cuando un abogado presenta un escrito de alegatos ",
+        "coverageRatio": "0.48",
+        "substantiveHits": 10
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  },
+  {
+    "subj": "razonamiento_verbal",
+    "semana": 8,
+    "lessonId": "rv_t08_s02",
+    "title": "3.2 Metodología de Resolución de Problemas de Relaciones Complejas",
+    "theoryLength": 23339,
+    "lines": 348,
+    "totalChallenges": 10,
+    "wellExplainedCount": 1,
+    "poorlyExplainedCount": 9,
+    "poorlyExplained": [
+      {
+        "chId": "rv_t08_s02_c02",
+        "q": "La diferencia fundamental entre una 'Inferencia Vá",
+        "coverageRatio": "0.44",
+        "substantiveHits": 8
+      },
+      {
+        "chId": "rv_t08_s02_c03",
+        "q": "Al resolver un ejercicio de 'Eliminación de Oracio",
+        "coverageRatio": "0.36",
+        "substantiveHits": 7
+      },
+      {
+        "chId": "rv_t08_s02_c04",
+        "q": "En un ejercicio de 'Plan de Redacción', el princip",
+        "coverageRatio": "0.29",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "rv_t08_s02_c05",
+        "q": "La 'Cohesión Textual' se logra mediante mecanismos",
+        "coverageRatio": "0.35",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "rv_t08_s02_c06",
+        "q": "Por el contrario, la 'Catáfora' es un mecanismo co",
+        "coverageRatio": "0.38",
+        "substantiveHits": 4
+      },
+      {
+        "chId": "rv_t08_s02_c07",
+        "q": "El mecanismo de 'Elipsis' en la cohesión de un tex",
+        "coverageRatio": "0.29",
+        "substantiveHits": 5
+      },
+      {
+        "chId": "rv_t08_s02_c08",
+        "q": "En un texto argumentativo complejo, el 'Punto de D",
+        "coverageRatio": "0.21",
+        "substantiveHits": 3
+      },
+      {
+        "chId": "rv_t08_s02_c09",
+        "q": "Al evaluar la 'Jerarquía Textual', el enunciado qu",
+        "coverageRatio": "0.44",
+        "substantiveHits": 6
+      },
+      {
+        "chId": "rv_t08_s02_c10",
+        "q": "En la lectura crítica de enunciados de admisión, l",
+        "coverageRatio": "0.39",
+        "substantiveHits": 7
+      }
+    ],
+    "estadoInicial": "DEMASIADO_RESUMIDO"
+  }
+]

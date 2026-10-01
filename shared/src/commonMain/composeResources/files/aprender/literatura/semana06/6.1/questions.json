@@ -1,0 +1,182 @@
+[
+  {
+    "id": "lit_t06_s01_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Mariano Melgar y Valdivieso (Arequipa, 1790 - Umachiri, 1815) es unánimemente considerado en la historia de la literatura peruana como:",
+    "options": [
+      "El máximo exponente de la narrativa modernista criolla.",
+      "El fundador del costumbrismo satírico limeño.",
+      "El precursor del Romanticismo literario en América y creador del yaraví mestizo.",
+      "El principal cronista de la conquista española."
+    ],
+    "correctIndex": 2,
+    "explanation": "Melgar anticipó por sensibilidad, pasión desgarrada y sacrificio cívico el espíritu romántico antes de su arribo formal a América, fundiendo el harawi andino tradicional con la métrica y estrofismo lírico castellano.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.1.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s01_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La musa inspiradora inmortalizada en los apasionados sonetos y yaravíes de Mariano Melgar bajo el nombre poético de 'Silvia' fue:",
+    "options": [
+      "María Santos Corrales",
+      "Manuela Sáenz",
+      "Francisca Zubiaga",
+      "Perricholi"
+    ],
+    "correctIndex": 0,
+    "explanation": "María Santos Corrales, joven prima de Melgar, rechazó su amor provocando en el poeta el hondo desconsuelo y dolor que nutrió sus composiciones más sentidas y elegíacas.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.1.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s01_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál es la génesis cultural del yaraví melgariano que José Carlos Mariátegui destacó en sus 7 Ensayos de Interpretación de la Realidad Peruana?",
+    "options": [
+      "Es una copia servil de las odas de Horacio sin ningún elemento andino.",
+      "Es un subgénero teatral importado de la comedia del arte italiana.",
+      "Es un canto guerrero de las milicias realistas virreinales.",
+      "Es el primer instante de auténtica confluencia mestiza donde el harawi quechua doliente se injerta en las formas poéticas del castellano."
+    ],
+    "correctIndex": 3,
+    "explanation": "Mariátegui precisó que en Melgar el harawi quechua se reviste del traje lírico español, constituyendo el primer brote mestizo genuino de nuestra literatura nacional.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.1.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s01_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En sus Fábulas políticas, como El cantero y el asno o Los gatos, Mariano Melgar utilizó el género didáctico para:",
+    "options": [
+      "Adular al virrey Fernando de Abascal para conseguir prebendas judiciales.",
+      "Describir la fauna silvestre de la campiña arequipeña.",
+      "Enseñar latín clásico a los novicios del Seminario San Jerónimo.",
+      "Criticar con ingenio alegórico la servidumbre colonial, la opresión del indio por el poder virreinal y la discordia civil de los patriotas."
+    ],
+    "correctIndex": 3,
+    "explanation": "Melgar convirtió la fábula esópica en arma de combate cívico: en El cantero y el asno denuncia cómo el dominador acusa al indio de ignorante y flojo sin advertir que es la brutal opresión la que lo reduce a esa condición.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.1.4",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s01_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "¿Cuál fue el papel cívico y el destino final de Mariano Melgar en la gesta de la Independencia del Perú?",
+    "options": [
+      "Presidió el primer Congreso Constituyente de la República en Lima.",
+      "Se incorporó como auditor de guerra al ejército patriota de Mateo Pumacahua y los hermanos Angulo, siendo fusilado por las tropas realistas tras la batalla de Umachiri a los 24 años.",
+      "Falleció en la batalla de Ayacucho al mando de un regimiento de caballería.",
+      "Fue nombrado embajador en España y murió de anciano en Madrid."
+    ],
+    "correctIndex": 1,
+    "explanation": "Melgar se unió a la rebelión patriota de 1814; tras la derrota de Umachiri en marzo de 1815 fue capturado por el general realista Ramírez y fusilado en el mismo campo, sellando con su sangre su fervor libertario.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.1.5",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s01_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En el célebre soneto de Melgar que inicia con una noche lúgubre, callada y fría que tiende su manto tenebroso y triste, la atmósfera nocturna y fúnebre ilustra con antelación un rasgo típicamente:",
+    "options": [
+      "Neoclásico racionalista",
+      "Romántico",
+      "Modernista preciosista",
+      "Vanguardista lúdico"
+    ],
+    "correctIndex": 1,
+    "explanation": "La noche desolada, el alma apesadumbrada, la soledad espectral y la exaltación del dolor íntimo son rasgos precursores del temperamento romántico que Melgar plasmó décadas antes que los románticos hispanoamericanos.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.1.6",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s01_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Antes de Silvia, el joven Mariano Melgar dedicó sus primeras composiciones amorosas a otra dama arequipeña llamada Manuela Paredes, a quien llamó poéticamente:",
+    "options": [
+      "Amarilis",
+      "Filis",
+      "Lesbia",
+      "Melissa"
+    ],
+    "correctIndex": 3,
+    "explanation": "Bajo la convención poética pastoril de su juventud neoclásica, Melgar cantó primero a Melissa antes de su apasionada entrega al amor desdichado por Silvia.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.1.7",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s01_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Melgar dominaba con excelencia el latín clásico en el Seminario de San Jerónimo de Arequipa, lo que le permitió realizar la célebre traducción al castellano de:",
+    "options": [
+      "La Eneida de Virgilio",
+      "El Arte de olvidar (Remedia Amoris) de Ovidio",
+      "Las Metamorfosis de Apuleyo",
+      "La República de Cicerón"
+    ],
+    "correctIndex": 1,
+    "explanation": "Melgar vertió al español con singular elegancia los Remedia Amoris de Ovidio bajo el título de El arte de olvidar, procurando en vano remediar su propia obsesión afectiva.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.1.8",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s01_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La célebre Marcha Patriótica de Melgar («Ya llegó el dulce momento / en que esparza la alegría / sus aromas...») fue entonada entusiastamente por:",
+    "options": [
+      "Los virreyes en la Plaza Mayor de Lima.",
+      "Los corsarios ingleses en el puerto de Mollendo.",
+      "Las tropas patriotas que ingresaron victoriosas a Arequipa en 1814.",
+      "Los jesuitas expulsados en su viaje a Roma."
+    ],
+    "correctIndex": 2,
+    "explanation": "La Marcha Patriótica fue compuesta y cantada por Melgar para arengar a las fuerzas insurgentes patriotas cuando el ejército de Pumacahua tomó la ciudad blanca de Arequipa.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.1.9",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "lit_t06_s01_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En la estructura lírica del yaraví de Melgar, la métrica preferida que aporta ligereza y cadencia melancólica al canto es predominantemente el verso:",
+    "options": [
+      "Alejandrino de catorce sílabas",
+      "Endecasílabo heroico",
+      "Arte menor (cinco y seis sílabas o heptasílabos)",
+      "Versículo libre asonante"
+    ],
+    "correctIndex": 2,
+    "explanation": "El yaraví adopta versos cortos de arte menor, idóneos para acompañar el tañido de la vihuela o guitarra en compás triste.",
+    "subject": "literatura",
+    "semana": 6,
+    "concept": "6.1.10",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

@@ -123,4 +123,11 @@ object DuolingoHaptics {
             }
         } catch (_: Throwable) {}
     }
+
+    /**
+     * Feedback háptico al completar una lección o resolver un item
+     */
+    fun playLessonComplete(context: Context) {
+        playCelebration(context)
+    }
 }

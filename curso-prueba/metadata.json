@@ -1,0 +1,8 @@
+{
+  "name": "Academia Preuniversitaria Élite - UNSA | UNMSM | UNI",
+  "description": "Plataforma interactiva de preparación preuniversitaria con 208 temas oficiales, simulacros tipo examen de admisión, lector pedagógico y seguimiento curricular.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

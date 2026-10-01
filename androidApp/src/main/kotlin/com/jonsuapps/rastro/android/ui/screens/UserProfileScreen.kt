@@ -62,18 +62,34 @@ import com.jonsuapps.rastro.android.ui.components.Sticker3dReactionPill
 import com.jonsuapps.rastro.android.ui.components.LucideSettingsIcon
 import com.jonsuapps.rastro.android.ui.components.LucideShareIcon
 import androidx.compose.material.icons.automirrored.rounded.ArrowForward
+import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import com.jonsuapps.rastro.android.ui.components.CartoonAvatar
 import com.jonsuapps.rastro.android.ui.components.CachedRemoteImage
+import com.jonsuapps.rastro.android.ui.components.LucideBookmarkIcon
 import com.jonsuapps.rastro.android.data.ErrorBankRepository
 import com.jonsuapps.rastro.android.data.FailedQuestion
+import com.jonsuapps.rastro.android.data.ErrorBankOrigins
+import com.jonsuapps.rastro.android.data.FavoritesRepository
+import com.jonsuapps.rastro.android.data.FavoriteType
+import com.jonsuapps.rastro.android.data.FavoriteItem
+import com.jonsuapps.rastro.data.LiteraturaRepository
+import com.jonsuapps.rastro.model.ObraLiteraria
+import androidx.compose.ui.window.DialogProperties
+import com.jonsuapps.rastro.android.ui.components.BlockUserDialog
+import com.jonsuapps.rastro.android.ui.components.ReportUserDialog
+import com.jonsuapps.rastro.android.ui.components.ReportCommentDialog
 import com.jonsuapps.rastro.navigation.RastroScreen
 import com.jonsuapps.rastro.theme.RastroPalette
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import java.net.URL
 
 @Composable
 fun UserProfileScreen(
+    targetUid: String? = null,
+    targetPublicationId: String? = null,
     onOpenSettings: () -> Unit = {},
     onNavigate: (String) -> Unit = {},
     onOpenPomodoro: () -> Unit = {},
@@ -81,14 +97,49 @@ fun UserProfileScreen(
 ) {
     val theme = ThemeManager.currentTheme
     val currentUser by UserManager.currentUser.collectAsState()
+    val isOtherProfile = !targetUid.isNullOrBlank() && targetUid != currentUser.uid
+    val profileUid = if (isOtherProfile) targetUid!! else currentUser.uid
+
+    // Datos del usuario que se está viendo (si es otro usuario, se cargan de Firestore; si es propio, de currentUser)
+    var otherUserData by remember(targetUid) { mutableStateOf<Map<String, Any?>>(emptyMap()) }
+    var isFollowingOtherUser by remember(targetUid) { mutableStateOf(false) }
+    var showBlockUserDialog by remember { mutableStateOf(false) }
+    var showReportUserDialog by remember { mutableStateOf(false) }
+    var showProfileMoreMenu by remember { mutableStateOf(false) }
+
+    val displayedName = if (isOtherProfile) (otherUserData["displayName"] as? String)?.ifBlank { "Estudiante RASTRO" } ?: "Estudiante RASTRO" else currentUser.displayName.ifBlank { "Estudiante RASTRO" }
+    val displayedBio = if (isOtherProfile) (otherUserData["bio"] as? String) ?: "Estudiante preuniversitario enfocado en alcanzar la vacante en la UNSA." else currentUser.bio
+    val displayedPhoto = if (isOtherProfile) otherUserData["photoURL"] as? String else currentUser.photoURL
+    val displayedCoverUrl = if (isOtherProfile) otherUserData["coverUrl"] as? String else currentUser.coverUrl
+    val displayedCoverGradient = if (isOtherProfile) otherUserData["coverGradient"] as? String else currentUser.coverGradient
+    val displayedWhatsApp = if (isOtherProfile) (otherUserData["whatsappChannel"] as? String).orEmpty() else currentUser.whatsappChannel
+    val displayedTikTok = if (isOtherProfile) (otherUserData["tiktokUrl"] as? String).orEmpty() else currentUser.tiktokUrl
+    val displayedInstagram = if (isOtherProfile) (otherUserData["instagramUrl"] as? String).orEmpty() else currentUser.instagramUrl
+
+    val isBlockedByMe = currentUser.blockedUsers.contains(profileUid)
+
     val streakState by GamificationManager.streakState.collectAsState()
     val errorBankQuestions by ErrorBankRepository.errors.collectAsState()
     val unsolvedErrorsCount = remember(errorBankQuestions) { errorBankQuestions.count { !it.isSolved } }
     var showErrorBankModal by remember { mutableStateOf(false) }
-    var userUploads by remember(currentUser.uid) { mutableStateOf(emptyList<UserUpload>()) }
-    var savedUploads by remember(currentUser.uid) { mutableStateOf(emptyList<UserUpload>()) }
-    var followersCount by remember(currentUser.uid) { mutableIntStateOf(0) }
-    var followingCount by remember(currentUser.uid) { mutableIntStateOf(0) }
+    var errorBankInitialOrigin by remember { mutableStateOf(ErrorBankOrigins.APRENDER) }
+    var userUploads by remember(profileUid) { mutableStateOf(emptyList<UserUpload>()) }
+    var savedUploads by remember(profileUid) { mutableStateOf(emptyList<UserUpload>()) }
+    val allFavorites by FavoritesRepository.favoritesFlow.collectAsState()
+    val savedObraIds by UserManager.savedObraIds.collectAsState()
+    val savedOfficialMaterials = remember(allFavorites) {
+        allFavorites.filter { it.type == FavoriteType.MATERIAL }
+    }
+    val savedObras = remember(savedObraIds) {
+        LiteraturaRepository.obrasUNSA.filter { it.id in savedObraIds }
+    }
+    val totalSavedCount = remember(savedUploads, savedOfficialMaterials, savedObras) {
+        savedUploads.size + savedOfficialMaterials.size + savedObras.size
+    }
+    var selectedSavedFilter by remember { mutableStateOf("Todos") }
+    var selectedObraForViewer by remember { mutableStateOf<ObraLiteraria?>(null) }
+    var followersCount by remember(profileUid) { mutableIntStateOf(0) }
+    var followingCount by remember(profileUid) { mutableIntStateOf(0) }
     var showProfileEditor by remember { mutableStateOf(false) }
     var editName by remember { mutableStateOf(currentUser.displayName) }
     var editBio by remember { mutableStateOf(currentUser.bio) }
@@ -107,6 +158,10 @@ fun UserProfileScreen(
     var showStreakInfo by remember { mutableStateOf(false) }
     val uriHandler = LocalUriHandler.current
     val context = LocalContext.current
+
+    LaunchedEffect(currentUser.uid) {
+        FavoritesRepository.init(context)
+    }
     val openProfileEditor = {
         editName = currentUser.displayName
         editBio = currentUser.bio
@@ -118,46 +173,60 @@ fun UserProfileScreen(
         profileMessage = null
         showProfileEditor = true
     }
-    val bannerColors = remember(currentUser.coverGradient, theme.accent) {
-        Regex("#[0-9A-Fa-f]{6}").findAll(currentUser.coverGradient.orEmpty())
+    val bannerColors = remember(displayedCoverGradient, theme.accent) {
+        Regex("#[0-9A-Fa-f]{6}").findAll(displayedCoverGradient.orEmpty())
             .mapNotNull { match -> runCatching { Color(android.graphics.Color.parseColor(match.value)) }.getOrNull() }
             .toList().ifEmpty { listOf(theme.accent, theme.accent.copy(alpha = 0.78f)) }
     }
 
-    DisposableEffect(currentUser.uid) {
-        if (currentUser.uid.isBlank()) return@DisposableEffect onDispose { }
-        val registration = UserUploadRepository.observe(currentUser.uid) { userUploads = it }
-        val savedRegistration = UserUploadRepository.observeSaved(currentUser.uid) { savedUploads = it }
-        val profileRegistration = UserProfileRepository.observe(currentUser.uid) { data ->
-            UserManager.applyProfileFields(
-                displayName = data["displayName"] as? String,
-                photoURL = data["photoURL"] as? String,
-                bio = data["bio"] as? String,
-                coverUrl = data["coverUrl"] as? String,
-                coverGradient = data["coverGradient"] as? String,
-                whatsappChannel = data["whatsappChannel"] as? String,
-                tiktokUrl = data["tiktokUrl"] as? String,
-                instagramUrl = data["instagram"] as? String,
-                uploadCount = (data["uploadCount"] as? Number)?.toInt()
-            )
+    DisposableEffect(profileUid) {
+        if (profileUid.isBlank()) return@DisposableEffect onDispose { }
+        val registration = UserUploadRepository.observe(profileUid) { userUploads = it }
+        val savedRegistration = if (!isOtherProfile) UserUploadRepository.observeSaved(profileUid) { savedUploads = it } else null
+        val profileRegistration = UserProfileRepository.observe(profileUid) { data ->
+            if (isOtherProfile) {
+                otherUserData = data
+            } else {
+                @Suppress("UNCHECKED_CAST")
+                val blocked = data["blockedUsers"] as? List<String>
+                UserManager.applyProfileFields(
+                    displayName = data["displayName"] as? String,
+                    photoURL = data["photoURL"] as? String,
+                    bio = data["bio"] as? String,
+                    coverUrl = data["coverUrl"] as? String,
+                    coverGradient = data["coverGradient"] as? String,
+                    whatsappChannel = data["whatsappChannel"] as? String,
+                    tiktokUrl = data["tiktokUrl"] as? String,
+                    instagramUrl = data["instagramUrl"] as? String,
+                    uploadCount = (data["uploadCount"] as? Number)?.toInt(),
+                    blockedUsers = blocked
+                )
+            }
         }
-        val connectionListeners = UserProfileRepository.observeConnections(currentUser.uid) { followers, following ->
+        val connectionListeners = UserProfileRepository.observeConnections(profileUid) { followers, following ->
             followersCount = followers
             followingCount = following
         }
+        val followingObserver = if (isOtherProfile && currentUser.uid.isNotBlank()) {
+            UserProfileRepository.observeIsFollowing(currentUser.uid, profileUid) { isFollowing ->
+                isFollowingOtherUser = isFollowing
+            }
+        } else null
+
         onDispose {
             registration.remove()
-            savedRegistration.remove()
+            savedRegistration?.remove()
             profileRegistration.remove()
             connectionListeners.first.remove()
             connectionListeners.second.remove()
+            followingObserver?.remove()
         }
     }
 
     val coverPicker = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         if (uri != null && currentUser.uid.isNotBlank()) {
             uploadingCover = true
-            UserProfileRepository.uploadCover(currentUser.uid, uri) { result ->
+            UserProfileRepository.uploadCover(currentUser.uid, uri, context) { result ->
                 uploadingCover = false
                 result.onSuccess { url ->
                     UserManager.applyProfileFields(coverUrl = url)
@@ -170,7 +239,7 @@ fun UserProfileScreen(
     val avatarPicker = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         if (uri != null && currentUser.uid.isNotBlank() && currentUser.isAuthenticated && !currentUser.isAnonymous) {
             uploadingAvatar = true
-            UserProfileRepository.uploadAvatar(currentUser.uid, uri) { result ->
+            UserProfileRepository.uploadAvatar(currentUser.uid, uri, context) { result ->
                 uploadingAvatar = false
                 result.onSuccess { url ->
                     UserManager.applyProfileFields(photoURL = url)
@@ -190,12 +259,31 @@ fun UserProfileScreen(
         else onNavigate("auth")
     }
 
+    val listState = rememberLazyListState()
+    val otherVisibleUploads = remember(userUploads, currentUser.blockedUsers) {
+        userUploads.filter { it.ownerUid !in currentUser.blockedUsers }
+    }
+
+    LaunchedEffect(targetPublicationId, userUploads) {
+        if (!targetPublicationId.isNullOrBlank() && userUploads.isNotEmpty()) {
+            selectedTab = 0
+            val visibleUploads = userUploads.filter { it.ownerUid !in currentUser.blockedUsers }
+            val targetIdx = visibleUploads.indexOfFirst { it.id == targetPublicationId }
+            if (targetIdx >= 0) {
+                // Item 0: Portada, Item 1: Tarjeta Perfil, Item 2: Cabecera Aportes, Item 3+targetIdx: La publicación exacta
+                val targetItemIndex = if (isOtherProfile) 3 + targetIdx else 1
+                listState.animateScrollToItem(index = targetItemIndex, scrollOffset = -20)
+            }
+        }
+    }
+
     Box(
         modifier = modifier
             .fillMaxSize()
             .background(theme.background)
     ) {
         LazyColumn(
+            state = listState,
             modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(bottom = 120.dp)
         ) {
@@ -208,7 +296,7 @@ fun UserProfileScreen(
                         .clip(RoundedCornerShape(bottomStart = 36.dp, bottomEnd = 36.dp))
                         .background(Brush.linearGradient(bannerColors))
                 ) {
-                    currentUser.coverUrl?.takeIf(String::isNotBlank)?.let { cover ->
+                    displayedCoverUrl?.takeIf(String::isNotBlank)?.let { cover ->
                         CachedRemoteImage(cover, Modifier.fillMaxSize(), ContentScale.Crop, "Portada del perfil")
                     }
 
@@ -227,43 +315,120 @@ fun UserProfileScreen(
                             )
                     )
 
-                    // Botones rápidos sobre la portada (Configuración / Compartir)
+                    // Botones rápidos sobre la portada (Volver si es otro perfil / Configuración / Opciones UGC / Compartir)
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
                             .statusBarsPadding()
                             .padding(horizontal = 16.dp, vertical = 8.dp),
-                        horizontalArrangement = Arrangement.End,
+                        horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        LucideSettingsIcon(
-                            onClick = { onOpenSettings() },
-                            tint = Color.White,
-                            size = 19.dp,
-                            modifier = Modifier
-                                .clip(RoundedCornerShape(14.dp))
-                                .background(Color.Black.copy(alpha = 0.55f))
-                                .padding(9.dp)
-                        )
+                        if (isOtherProfile) {
+                            IconButton(
+                                onClick = { onNavigate("perfil") },
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(14.dp))
+                                    .background(Color.Black.copy(alpha = 0.55f))
+                                    .size(37.dp)
+                            ) {
+                                Icon(
+                                    imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
+                                    contentDescription = "Volver",
+                                    tint = Color.White,
+                                    modifier = Modifier.size(19.dp)
+                                )
+                            }
+                        } else {
+                            Spacer(modifier = Modifier.width(1.dp))
+                        }
 
-                        Spacer(modifier = Modifier.width(8.dp))
-
-                        LucideShareIcon(
-                            onClick = {
-                                val profileUrl = "https://rumbo-jonsu.web.app/#/usuario/${currentUser.uid}"
-                                val shareIntent = Intent(Intent.ACTION_SEND).apply {
-                                    type = "text/plain"
-                                    putExtra(Intent.EXTRA_TEXT, "Mira el perfil de ${currentUser.displayName}: $profileUrl")
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            if (!isOtherProfile) {
+                                LucideSettingsIcon(
+                                    onClick = { onOpenSettings() },
+                                    tint = Color.White,
+                                    size = 19.dp,
+                                    modifier = Modifier
+                                        .clip(RoundedCornerShape(14.dp))
+                                        .background(Color.Black.copy(alpha = 0.55f))
+                                        .padding(9.dp)
+                                )
+                            } else {
+                                Box {
+                                    IconButton(
+                                        onClick = { showProfileMoreMenu = true },
+                                        modifier = Modifier
+                                            .clip(RoundedCornerShape(14.dp))
+                                            .background(Color.Black.copy(alpha = 0.55f))
+                                            .size(37.dp)
+                                    ) {
+                                        Icon(
+                                            imageVector = Icons.Rounded.MoreVert,
+                                            contentDescription = "Opciones",
+                                            tint = Color.White,
+                                            modifier = Modifier.size(19.dp)
+                                        )
+                                    }
+                                    DropdownMenu(
+                                        expanded = showProfileMoreMenu,
+                                        onDismissRequest = { showProfileMoreMenu = false }
+                                    ) {
+                                        DropdownMenuItem(
+                                            text = { Text("Reportar usuario", color = Color(0xFFEF4444), fontWeight = FontWeight.Bold) },
+                                            leadingIcon = { Icon(Icons.Rounded.Flag, contentDescription = null, tint = Color(0xFFEF4444)) },
+                                            onClick = {
+                                                showProfileMoreMenu = false
+                                                showReportUserDialog = true
+                                            }
+                                        )
+                                        DropdownMenuItem(
+                                            text = {
+                                                Text(
+                                                    if (isBlockedByMe) "Desbloquear usuario" else "Bloquear usuario",
+                                                    color = if (isBlockedByMe) theme.accent else Color(0xFFEF4444),
+                                                    fontWeight = FontWeight.Bold
+                                                )
+                                            },
+                                            leadingIcon = {
+                                                Icon(
+                                                    Icons.Rounded.Block,
+                                                    contentDescription = null,
+                                                    tint = if (isBlockedByMe) theme.accent else Color(0xFFEF4444)
+                                                )
+                                            },
+                                            onClick = {
+                                                showProfileMoreMenu = false
+                                                if (isBlockedByMe) {
+                                                    UserProfileRepository.blockUser(currentUser.uid, profileUid, block = false) { }
+                                                } else {
+                                                    showBlockUserDialog = true
+                                                }
+                                            }
+                                        )
+                                    }
                                 }
-                                context.startActivity(Intent.createChooser(shareIntent, "Compartir perfil"))
-                            },
-                            tint = Color.White,
-                            size = 19.dp,
-                            modifier = Modifier
-                                .clip(RoundedCornerShape(14.dp))
-                                .background(Color.Black.copy(alpha = 0.55f))
-                                .padding(9.dp)
-                        )
+                            }
+
+                            Spacer(modifier = Modifier.width(8.dp))
+
+                            LucideShareIcon(
+                                onClick = {
+                                    val profileUrl = "https://rumbo-jonsu.web.app/#/usuario/$profileUid"
+                                    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                                        type = "text/plain"
+                                        putExtra(Intent.EXTRA_TEXT, "Mira el perfil de $displayedName: $profileUrl")
+                                    }
+                                    context.startActivity(Intent.createChooser(shareIntent, "Compartir perfil"))
+                                },
+                                tint = Color.White,
+                                size = 19.dp,
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(14.dp))
+                                    .background(Color.Black.copy(alpha = 0.55f))
+                                    .padding(9.dp)
+                            )
+                        }
                     }
                 }
             }
@@ -282,14 +447,16 @@ fun UserProfileScreen(
                             .align(Alignment.CenterHorizontally)
                             .size(126.dp)
                     ) {
-                        val firebaseUser = FirebaseAuth.getInstance().currentUser
-                        val googlePhoto = currentUser.photoURL?.takeIf(String::isNotBlank)
-                            ?: firebaseUser?.photoUrl?.toString()?.takeIf(String::isNotBlank)
-                            ?: firebaseUser?.providerData?.firstOrNull { it.providerId == "google.com" }
-                                ?.photoUrl?.toString()?.takeIf(String::isNotBlank)
+                        val photoToDisplay = if (isOtherProfile) displayedPhoto else {
+                            val firebaseUser = FirebaseAuth.getInstance().currentUser
+                            currentUser.photoURL?.takeIf(String::isNotBlank)
+                                ?: firebaseUser?.photoUrl?.toString()?.takeIf(String::isNotBlank)
+                                ?: firebaseUser?.providerData?.firstOrNull { it.providerId == "google.com" }
+                                    ?.photoUrl?.toString()?.takeIf(String::isNotBlank)
+                        }
 
                         CartoonAvatar(
-                            photoUrl = googlePhoto,
+                            photoUrl = photoToDisplay,
                             size = 118.dp,
                             strokeColor = theme.strokeBorder,
                             strokeWidth = 2.5.dp,
@@ -298,35 +465,37 @@ fun UserProfileScreen(
                             modifier = Modifier.align(Alignment.Center)
                         )
 
-                        // Botón naranja de cámara estilo Sticker 3D
-                        Box(
-                            modifier = Modifier
-                                .size(36.dp)
-                                .align(Alignment.BottomEnd)
-                                .bouncyClick(scaleDown = 0.88f) {
-                                    if (currentUser.isAuthenticated && !currentUser.isAnonymous) avatarPicker.launch("image/*")
-                                    else onNavigate("auth")
-                                }
-                        ) {
+                        if (!isOtherProfile) {
+                            // Botón naranja de cámara estilo Sticker 3D
                             Box(
                                 modifier = Modifier
-                                    .matchParentSize()
-                                    .offset(y = 2.dp)
-                                    .clip(CircleShape)
-                                    .background(Color(0xFF9A3412))
-                            )
-                            Box(
-                                modifier = Modifier
-                                    .matchParentSize()
-                                    .clip(CircleShape)
-                                    .background(Color(0xFFEA580C))
-                                    .border(1.8.dp, theme.strokeBorder, CircleShape),
-                                contentAlignment = Alignment.Center
+                                    .size(36.dp)
+                                    .align(Alignment.BottomEnd)
+                                    .bouncyClick(scaleDown = 0.88f) {
+                                        if (currentUser.isAuthenticated && !currentUser.isAnonymous) avatarPicker.launch("image/*")
+                                        else onNavigate("auth")
+                                    }
                             ) {
-                                if (uploadingAvatar) {
-                                    CircularProgressIndicator(Modifier.size(17.dp), color = Color.White, strokeWidth = 2.dp)
-                                } else {
-                                    Icon(Icons.Rounded.PhotoCamera, contentDescription = "Cambiar foto de perfil", tint = Color.White, modifier = Modifier.size(17.dp))
+                                Box(
+                                    modifier = Modifier
+                                        .matchParentSize()
+                                        .offset(y = 2.dp)
+                                        .clip(CircleShape)
+                                        .background(Color(0xFF9A3412))
+                                )
+                                Box(
+                                    modifier = Modifier
+                                        .matchParentSize()
+                                        .clip(CircleShape)
+                                        .background(Color(0xFFEA580C))
+                                        .border(1.8.dp, theme.strokeBorder, CircleShape),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    if (uploadingAvatar) {
+                                        CircularProgressIndicator(Modifier.size(17.dp), color = Color.White, strokeWidth = 2.dp)
+                                    } else {
+                                        Icon(Icons.Rounded.PhotoCamera, contentDescription = "Cambiar foto de perfil", tint = Color.White, modifier = Modifier.size(17.dp))
+                                    }
                                 }
                             }
                         }
@@ -336,7 +505,7 @@ fun UserProfileScreen(
 
                     // Nombre del Estudiante
                     Text(
-                        text = currentUser.displayName.ifBlank { "Estudiante RASTRO" },
+                        text = displayedName,
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Black,
                         color = theme.textPrimary,
@@ -344,48 +513,166 @@ fun UserProfileScreen(
                         letterSpacing = (-0.5).sp
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
-
-                    // Fila de Acciones Principales (UN SOLO "Editar Perfil" + "Amigos y Rachas")
-                    Row(
-                        modifier = Modifier.align(Alignment.CenterHorizontally),
-                        horizontalArrangement = Arrangement.spacedBy(10.dp)
-                    ) {
-                        Sticker3dButton(
-                            onClick = { openProfileEditor() },
-                            containerColor = theme.surface,
-                            bottomBevelColor = theme.cardBevel,
-                            strokeColor = theme.strokeBorder,
-                            bevelHeight = 3.dp,
-                            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp)
+                    if (isBlockedByMe) {
+                        Spacer(modifier = Modifier.height(10.dp))
+                        Surface(
+                            shape = RoundedCornerShape(14.dp),
+                            color = Color(0xFFEF4444).copy(alpha = 0.12f),
+                            border = BorderStroke(1.5.dp, Color(0xFFEF4444).copy(alpha = 0.4f)),
+                            modifier = Modifier.fillMaxWidth()
                         ) {
-                            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                                Icon(Icons.Rounded.Edit, contentDescription = null, tint = theme.accent, modifier = Modifier.size(15.dp))
-                                Text("Editar Perfil", fontSize = 12.5.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
+                            Row(
+                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.SpaceBetween
+                            ) {
+                                Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.weight(1f)) {
+                                    Icon(Icons.Rounded.Block, contentDescription = null, tint = Color(0xFFEF4444), modifier = Modifier.size(18.dp))
+                                    Spacer(Modifier.width(8.dp))
+                                    Text(
+                                        text = "Has bloqueado a este usuario.",
+                                        fontSize = 12.sp,
+                                        color = Color(0xFFEF4444),
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                }
+                                TextButton(
+                                    onClick = {
+                                        UserProfileRepository.blockUser(currentUser.uid, profileUid, block = false) { }
+                                    }
+                                ) {
+                                    Text("Desbloquear", color = theme.accent, fontWeight = FontWeight.Black, fontSize = 12.sp)
+                                }
                             }
                         }
+                    }
 
-                        var showFriendsAndStreaksDialog by remember { mutableStateOf(false) }
-                        if (showFriendsAndStreaksDialog) {
-                            FriendsAndStreaksDialog(
-                                currentUserUid = currentUser.uid,
-                                currentUserName = currentUser.displayName,
-                                theme = theme,
-                                onDismiss = { showFriendsAndStreaksDialog = false }
-                            )
-                        }
+                    Spacer(modifier = Modifier.height(10.dp))
 
-                        Sticker3dButton(
-                            onClick = { showFriendsAndStreaksDialog = true },
-                            containerColor = Color(0xFFF97316),
-                            bottomBevelColor = Color(0xFFC2410C),
-                            strokeColor = theme.strokeBorder,
-                            bevelHeight = 3.dp,
-                            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp)
+                    if (isOtherProfile) {
+                        // Fila de Acciones para Otros Usuarios (Seguir + Bloquear + Reportar)
+                        Row(
+                            modifier = Modifier.align(Alignment.CenterHorizontally),
+                            horizontalArrangement = Arrangement.spacedBy(10.dp)
                         ) {
-                            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                                Icon(Icons.Rounded.Group, contentDescription = null, tint = Color.White, modifier = Modifier.size(16.dp))
-                                Text("Amigos y Rachas", fontSize = 12.5.sp, fontWeight = FontWeight.Black, color = Color.White)
+                            Sticker3dButton(
+                                onClick = {
+                                    if (currentUser.isAuthenticated && !currentUser.isAnonymous) {
+                                        UserProfileRepository.toggleFollow(currentUser.uid, profileUid, isFollowingOtherUser) { success ->
+                                            if (success) isFollowingOtherUser = !isFollowingOtherUser
+                                        }
+                                    } else {
+                                        onNavigate("auth")
+                                    }
+                                },
+                                containerColor = if (isFollowingOtherUser) theme.surface else theme.accent,
+                                bottomBevelColor = if (isFollowingOtherUser) theme.cardBevel else theme.accentBevel,
+                                strokeColor = theme.strokeBorder,
+                                bevelHeight = 3.dp,
+                                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
+                            ) {
+                                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                    Icon(
+                                        imageVector = if (isFollowingOtherUser) Icons.Rounded.Check else Icons.Rounded.PersonAdd,
+                                        contentDescription = null,
+                                        tint = if (isFollowingOtherUser) theme.textPrimary else Color.White,
+                                        modifier = Modifier.size(15.dp)
+                                    )
+                                    Text(
+                                        text = if (isFollowingOtherUser) "Siguiendo" else "Seguir",
+                                        fontSize = 12.5.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = if (isFollowingOtherUser) theme.textPrimary else Color.White
+                                    )
+                                }
+                            }
+
+                            Sticker3dButton(
+                                onClick = {
+                                    if (isBlockedByMe) {
+                                        UserProfileRepository.blockUser(currentUser.uid, profileUid, block = false) { }
+                                    } else {
+                                        showBlockUserDialog = true
+                                    }
+                                },
+                                containerColor = if (isBlockedByMe) Color(0xFFEF4444) else theme.surface,
+                                bottomBevelColor = if (isBlockedByMe) Color(0xFFB91C1C) else theme.cardBevel,
+                                strokeColor = theme.strokeBorder,
+                                bevelHeight = 3.dp,
+                                contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp)
+                            ) {
+                                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                    Icon(
+                                        imageVector = Icons.Rounded.Block,
+                                        contentDescription = null,
+                                        tint = if (isBlockedByMe) Color.White else Color(0xFFEF4444),
+                                        modifier = Modifier.size(15.dp)
+                                    )
+                                    Text(
+                                        text = if (isBlockedByMe) "Bloqueado" else "Bloquear",
+                                        fontSize = 12.5.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = if (isBlockedByMe) Color.White else Color(0xFFEF4444)
+                                    )
+                                }
+                            }
+
+                            Sticker3dButton(
+                                onClick = { showReportUserDialog = true },
+                                containerColor = theme.surface,
+                                bottomBevelColor = theme.cardBevel,
+                                strokeColor = theme.strokeBorder,
+                                bevelHeight = 3.dp,
+                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp)
+                            ) {
+                                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                    Icon(Icons.Rounded.Flag, contentDescription = null, tint = theme.textSecondary, modifier = Modifier.size(15.dp))
+                                    Text("Reportar", fontSize = 12.5.sp, fontWeight = FontWeight.Bold, color = theme.textSecondary)
+                                }
+                            }
+                        }
+                    } else {
+                        // Fila de Acciones Principales (UN SOLO "Editar Perfil" + "Amigos y Rachas")
+                        Row(
+                            modifier = Modifier.align(Alignment.CenterHorizontally),
+                            horizontalArrangement = Arrangement.spacedBy(10.dp)
+                        ) {
+                            Sticker3dButton(
+                                onClick = { openProfileEditor() },
+                                containerColor = theme.surface,
+                                bottomBevelColor = theme.cardBevel,
+                                strokeColor = theme.strokeBorder,
+                                bevelHeight = 3.dp,
+                                contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp)
+                            ) {
+                                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                    Icon(Icons.Rounded.Edit, contentDescription = null, tint = theme.accent, modifier = Modifier.size(15.dp))
+                                    Text("Editar Perfil", fontSize = 12.5.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
+                                }
+                            }
+
+                            var showFriendsAndStreaksDialog by remember { mutableStateOf(false) }
+                            if (showFriendsAndStreaksDialog) {
+                                FriendsAndStreaksDialog(
+                                    currentUserUid = currentUser.uid,
+                                    currentUserName = currentUser.displayName,
+                                    theme = theme,
+                                    onDismiss = { showFriendsAndStreaksDialog = false }
+                                )
+                            }
+
+                            Sticker3dButton(
+                                onClick = { showFriendsAndStreaksDialog = true },
+                                containerColor = Color(0xFFF97316),
+                                bottomBevelColor = Color(0xFFC2410C),
+                                strokeColor = theme.strokeBorder,
+                                bevelHeight = 3.dp,
+                                contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp)
+                            ) {
+                                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                    Icon(Icons.Rounded.Group, contentDescription = null, tint = Color.White, modifier = Modifier.size(16.dp))
+                                    Text("Amigos y Rachas", fontSize = 12.5.sp, fontWeight = FontWeight.Black, color = Color.White)
+                                }
                             }
                         }
                     }
@@ -416,7 +703,7 @@ fun UserProfileScreen(
                                 connectionDialogTitle = "Seguidores"
                                 loadingConnections = true
                                 connectionUsers = emptyList()
-                                UserProfileRepository.loadConnections(currentUser.uid, followers = true) {
+                                UserProfileRepository.loadConnections(profileUid, followers = true) {
                                     connectionUsers = it
                                     loadingConnections = false
                                 }
@@ -448,7 +735,7 @@ fun UserProfileScreen(
                                 connectionDialogTitle = "Seguidos"
                                 loadingConnections = true
                                 connectionUsers = emptyList()
-                                UserProfileRepository.loadConnections(currentUser.uid, followers = false) {
+                                UserProfileRepository.loadConnections(profileUid, followers = false) {
                                     connectionUsers = it
                                     loadingConnections = false
                                 }
@@ -490,7 +777,7 @@ fun UserProfileScreen(
                             modifier = Modifier.padding(16.dp)
                         ) {
                             Text(
-                                text = currentUser.bio,
+                                text = displayedBio,
                                 fontStyle = FontStyle.Italic,
                                 fontSize = 14.sp,
                                 lineHeight = 20.sp,
@@ -498,87 +785,93 @@ fun UserProfileScreen(
                                 fontWeight = FontWeight.Medium
                             )
 
-                            Spacer(modifier = Modifier.height(14.dp))
+                            if (displayedWhatsApp.isNotBlank() || displayedTikTok.isNotBlank() || displayedInstagram.isNotBlank() || !isOtherProfile) {
+                                Spacer(modifier = Modifier.height(14.dp))
 
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.End,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                // Botón WhatsApp
-                                Surface(
-                                    shape = RoundedCornerShape(12.dp),
-                                    color = Color(0xFF25D366),
-                                    shadowElevation = 3.dp,
-                                    modifier = Modifier.clickable {
-                                        val link = currentUser.whatsappChannel
-                                        if (link.isNotBlank()) runCatching { uriHandler.openUri(link) } else openProfileEditor()
-                                    }
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.End,
+                                    verticalAlignment = Alignment.CenterVertically
                                 ) {
-                                    Row(
-                                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp),
-                                        verticalAlignment = Alignment.CenterVertically
-                                    ) {
-                                        Icon(
-                                            painter = painterResource(id = R.drawable.ic_whatsapp),
-                                            contentDescription = "WhatsApp",
-                                            tint = Color.White,
-                                            modifier = Modifier.size(15.dp)
-                                        )
-                                        Spacer(modifier = Modifier.width(6.dp))
-                                        Text(
-                                            text = "WhatsApp",
-                                            fontSize = 12.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = Color.White
-                                        )
+                                    if (displayedWhatsApp.isNotBlank() || !isOtherProfile) {
+                                        // Botón WhatsApp
+                                        Surface(
+                                            shape = RoundedCornerShape(12.dp),
+                                            color = Color(0xFF25D366),
+                                            shadowElevation = 3.dp,
+                                            modifier = Modifier.clickable {
+                                                if (displayedWhatsApp.isNotBlank()) runCatching { uriHandler.openUri(displayedWhatsApp) }
+                                                else if (!isOtherProfile) openProfileEditor()
+                                            }
+                                        ) {
+                                            Row(
+                                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp),
+                                                verticalAlignment = Alignment.CenterVertically
+                                            ) {
+                                                Icon(
+                                                    painter = painterResource(id = R.drawable.ic_whatsapp),
+                                                    contentDescription = "WhatsApp",
+                                                    tint = Color.White,
+                                                    modifier = Modifier.size(15.dp)
+                                                )
+                                                Spacer(modifier = Modifier.width(6.dp))
+                                                Text(
+                                                    text = "WhatsApp",
+                                                    fontSize = 12.sp,
+                                                    fontWeight = FontWeight.Bold,
+                                                    color = Color.White
+                                                )
+                                            }
+                                        }
                                     }
-                                }
 
-                                Spacer(modifier = Modifier.width(8.dp))
+                                    if (displayedTikTok.isNotBlank() || !isOtherProfile) {
+                                        Spacer(modifier = Modifier.width(8.dp))
 
-                                // Botón TikTok
-                                Surface(
-                                    shape = RoundedCornerShape(12.dp),
-                                    color = Color.Black,
-                                    shadowElevation = 3.dp,
-                                    modifier = Modifier.clickable {
-                                        val link = currentUser.tiktokUrl
-                                        if (link.isNotBlank()) runCatching { uriHandler.openUri(link) } else openProfileEditor()
+                                        // Botón TikTok
+                                        Surface(
+                                            shape = RoundedCornerShape(12.dp),
+                                            color = Color.Black,
+                                            shadowElevation = 3.dp,
+                                            modifier = Modifier.clickable {
+                                                if (displayedTikTok.isNotBlank()) runCatching { uriHandler.openUri(displayedTikTok) }
+                                                else if (!isOtherProfile) openProfileEditor()
+                                            }
+                                        ) {
+                                            Row(
+                                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp),
+                                                verticalAlignment = Alignment.CenterVertically
+                                            ) {
+                                                Icon(
+                                                    painter = painterResource(id = R.drawable.ic_tiktok),
+                                                    contentDescription = "TikTok",
+                                                    tint = Color.White,
+                                                    modifier = Modifier.size(15.dp)
+                                                )
+                                                Spacer(modifier = Modifier.width(6.dp))
+                                                Text(
+                                                    text = "TikTok",
+                                                    fontSize = 12.sp,
+                                                    fontWeight = FontWeight.Bold,
+                                                    color = Color.White
+                                                )
+                                            }
+                                        }
                                     }
-                                ) {
-                                    Row(
-                                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp),
-                                        verticalAlignment = Alignment.CenterVertically
-                                    ) {
-                                        Icon(
-                                            painter = painterResource(id = R.drawable.ic_tiktok),
-                                            contentDescription = "TikTok",
-                                            tint = Color.White,
-                                            modifier = Modifier.size(15.dp)
-                                        )
-                                        Spacer(modifier = Modifier.width(6.dp))
-                                        Text(
-                                            text = "TikTok",
-                                            fontSize = 12.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = Color.White
-                                        )
-                                    }
-                                }
 
-                                if (currentUser.instagramUrl.isNotBlank()) {
-                                    Spacer(modifier = Modifier.width(8.dp))
-                                    Surface(
-                                        shape = RoundedCornerShape(12.dp),
-                                        color = theme.accent,
-                                        shadowElevation = 3.dp,
-                                        modifier = Modifier.clickable { runCatching { uriHandler.openUri(currentUser.instagramUrl) } }
-                                    ) {
-                                        Row(Modifier.padding(horizontal = 10.dp, vertical = 7.dp), verticalAlignment = Alignment.CenterVertically) {
-                                            Icon(Icons.Rounded.CameraAlt, contentDescription = "Instagram", tint = Color.White, modifier = Modifier.size(15.dp))
-                                            Spacer(Modifier.width(5.dp))
-                                            Text("Instagram", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color.White)
+                                    if (displayedInstagram.isNotBlank()) {
+                                        Spacer(modifier = Modifier.width(8.dp))
+                                        Surface(
+                                            shape = RoundedCornerShape(12.dp),
+                                            color = theme.accent,
+                                            shadowElevation = 3.dp,
+                                            modifier = Modifier.clickable { runCatching { uriHandler.openUri(displayedInstagram) } }
+                                        ) {
+                                            Row(Modifier.padding(horizontal = 10.dp, vertical = 7.dp), verticalAlignment = Alignment.CenterVertically) {
+                                                Icon(Icons.Rounded.CameraAlt, contentDescription = "Instagram", tint = Color.White, modifier = Modifier.size(15.dp))
+                                                Spacer(Modifier.width(5.dp))
+                                                Text("Instagram", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color.White)
+                                            }
                                         }
                                     }
                                 }
@@ -588,451 +881,732 @@ fun UserProfileScreen(
 
                     Spacer(modifier = Modifier.height(14.dp))
 
-                    // ──────────────── 4. TARJETAS KPI (APORTES COMPACTO & MIS ERRORES) ────────────────
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(10.dp)
-                    ) {
-                        // Card 1: Aportes Muro (Compacto)
+                    if (isBlockedByMe) {
+                        Spacer(modifier = Modifier.height(24.dp))
                         Sticker3dCard(
-                            onClick = { openUploadDialog() },
+                            modifier = Modifier.fillMaxWidth(),
                             containerColor = theme.surface,
                             bottomBevelColor = theme.cardBevel,
                             strokeColor = theme.strokeBorder,
                             bevelHeight = 3.dp,
-                            modifier = Modifier.weight(1f)
+                            shape = RoundedCornerShape(18.dp)
                         ) {
-                            Row(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(horizontal = 12.dp, vertical = 9.dp),
-                                verticalAlignment = Alignment.CenterVertically
+                            Column(
+                                modifier = Modifier.padding(24.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.spacedBy(10.dp)
                             ) {
-                                Box(
-                                    modifier = Modifier
-                                        .size(28.dp)
-                                        .clip(RoundedCornerShape(8.dp))
-                                        .background(theme.accent.copy(alpha = 0.15f)),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    Icon(
-                                        imageVector = Icons.Rounded.MenuBook,
-                                        contentDescription = null,
-                                        tint = theme.accent,
-                                        modifier = Modifier.size(15.dp)
-                                    )
-                                }
-                                Spacer(modifier = Modifier.width(8.dp))
-                                Column {
-                                    Text(
-                                        text = "${userUploads.size}",
-                                        fontSize = 15.sp,
-                                        fontWeight = FontWeight.Black,
-                                        color = theme.accent,
-                                        lineHeight = 16.sp
-                                    )
-                                    Text(
-                                        text = "APORTES",
-                                        fontSize = 9.sp,
-                                        fontWeight = FontWeight.Bold,
-                                        color = theme.textSecondary,
-                                        letterSpacing = 0.4.sp
-                                    )
-                                }
-                            }
-                        }
-
-                        // Card 2: Mis Errores (Reemplaza a Reputación)
-                        Sticker3dCard(
-                            onClick = { showErrorBankModal = true },
-                            containerColor = theme.surface,
-                            bottomBevelColor = theme.cardBevel,
-                            strokeColor = theme.strokeBorder,
-                            bevelHeight = 3.dp,
-                            modifier = Modifier.weight(1f)
-                        ) {
-                            Row(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(horizontal = 12.dp, vertical = 9.dp),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Box(
-                                    modifier = Modifier
-                                        .size(28.dp)
-                                        .clip(RoundedCornerShape(8.dp))
-                                        .background(Color(0xFFEF4444).copy(alpha = 0.15f)),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    Icon(
-                                        imageVector = Icons.Rounded.Rule,
-                                        contentDescription = null,
-                                        tint = Color(0xFFEF4444),
-                                        modifier = Modifier.size(15.dp)
-                                    )
-                                }
-                                Spacer(modifier = Modifier.width(8.dp))
-                                Column {
-                                    Text(
-                                        text = "$unsolvedErrorsCount",
-                                        fontSize = 15.sp,
-                                        fontWeight = FontWeight.Black,
-                                        color = Color(0xFFEF4444),
-                                        lineHeight = 16.sp
-                                    )
-                                    Text(
-                                        text = "MIS ERRORES",
-                                        fontSize = 9.sp,
-                                        fontWeight = FontWeight.Bold,
-                                        color = theme.textSecondary,
-                                        letterSpacing = 0.4.sp
-                                    )
-                                }
-                            }
-                        }
-                    }
-
-                    Spacer(modifier = Modifier.height(14.dp))
-
-                    // ──────────────── 5. HERRAMIENTAS DE ESTUDIO (5 BOTONES RÁPIDOS) ────────────────
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(6.dp)
-                    ) {
-                        ProfileToolButton(
-                            title = "Pomodoro",
-                            icon = Icons.Rounded.Timer,
-                            badgeColor = Color(0xFFA855F7),
-                            modifier = Modifier.weight(1f),
-                            onClick = onOpenPomodoro
-                        )
-                        ProfileToolButton(
-                            title = "Fórmulas",
-                            icon = Icons.Rounded.Tune,
-                            badgeColor = theme.accent,
-                            modifier = Modifier.weight(1f),
-                            onClick = { onNavigate("formulario") }
-                        )
-                        ProfileToolButton(
-                            title = "Aportar",
-                            icon = Icons.Rounded.CloudUpload,
-                            badgeColor = theme.accent,
-                            modifier = Modifier.weight(1f),
-                            onClick = openUploadDialog
-                        )
-                        ProfileToolButton(
-                            title = "Ranking",
-                            icon = Icons.Rounded.EmojiEvents,
-                            badgeColor = Color(0xFFF59E0B),
-                            modifier = Modifier.weight(1f),
-                            onClick = { onNavigate("simulador") }
-                        )
-                        ProfileToolButton(
-                            title = "Racha",
-                            icon = Icons.Rounded.LocalFireDepartment,
-                            badgeColor = Color(0xFFEF4444),
-                            modifier = Modifier.weight(1f),
-                            onClick = { showStreakInfo = true }
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.height(18.dp))
-
-                    // ──────────────── 6. PESTAÑAS (MUROS Y APORTES / GUARDADOS) ────────────────
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        // Muros y aportes
-                        Sticker3dPill(
-                            text = "Muros y aportes (${userUploads.size})",
-                            icon = Icons.Rounded.FolderShared,
-                            isSelected = selectedTab == 0,
-                            selectedBgColor = theme.accent,
-                            selectedContentColor = Color.White,
-                            unselectedBgColor = theme.surface,
-                            unselectedContentColor = theme.textSecondary,
-                            strokeColor = theme.strokeBorder,
-                            onClick = { selectedTab = 0 },
-                            modifier = Modifier.weight(1f)
-                        )
-
-                        // Guardados
-                        Sticker3dPill(
-                            text = "Guardados",
-                            icon = Icons.Rounded.Bookmark,
-                            isSelected = selectedTab == 1,
-                            selectedBgColor = theme.accent,
-                            selectedContentColor = Color.White,
-                            unselectedBgColor = theme.surface,
-                            unselectedContentColor = theme.textSecondary,
-                            strokeColor = theme.strokeBorder,
-                            onClick = { selectedTab = 1 },
-                            modifier = Modifier.weight(1f)
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.height(18.dp))
-
-                    if (selectedTab == 0) {
-                        CommunityWallComposer(onNavigateToAuth = { onNavigate("auth") })
-                        Spacer(modifier = Modifier.height(14.dp))
-                    }
-
-                    // ──────────────── 7. ENCABEZADO DE SECCIÓN Y BOTÓN SUBIR APORTE ────────────────
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Column {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
                                 Icon(
-                                    Icons.Rounded.AutoAwesome,
+                                    imageVector = Icons.Rounded.Block,
                                     contentDescription = null,
-                                    tint = theme.accent,
-                                    modifier = Modifier.size(18.dp)
+                                    tint = Color(0xFFEF4444),
+                                    modifier = Modifier.size(42.dp)
                                 )
-                                Spacer(modifier = Modifier.width(6.dp))
                                 Text(
-                                    text = if (selectedTab == 0) "Mis aportes (${userUploads.size})" else "Materiales guardados",
-                                    style = MaterialTheme.typography.titleMedium,
+                                    text = "Usuario Bloqueado",
                                     fontWeight = FontWeight.Black,
+                                    fontSize = 16.sp,
                                     color = theme.textPrimary
                                 )
+                                Text(
+                                    text = "Has bloqueado a este usuario. Sus aportes, publicaciones y comentarios están ocultos para ti.",
+                                    textAlign = TextAlign.Center,
+                                    fontSize = 12.sp,
+                                    color = theme.textSecondary
+                                )
+                                Spacer(modifier = Modifier.height(6.dp))
+                                Sticker3dButton(
+                                    onClick = {
+                                        UserProfileRepository.blockUser(currentUser.uid, profileUid, block = false) { }
+                                    },
+                                    containerColor = theme.accent,
+                                    bottomBevelColor = theme.accentBevel,
+                                    strokeColor = theme.strokeBorder,
+                                    bevelHeight = 3.dp,
+                                    contentPadding = PaddingValues(horizontal = 20.dp, vertical = 8.dp)
+                                ) {
+                                    Text("Desbloquear usuario", fontWeight = FontWeight.Bold, color = Color.White, fontSize = 13.sp)
+                                }
                             }
+                        }
+                    }
+                }
+            }
+
+            if (isOtherProfile) {
+                item(key = "other_profile_header") {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .offset(y = (-45).dp)
+                            .padding(horizontal = 16.dp)
+                    ) {
+                        Spacer(modifier = Modifier.height(18.dp))
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(
+                                imageVector = Icons.Rounded.FolderShared,
+                                contentDescription = null,
+                                tint = theme.accent,
+                                modifier = Modifier.size(18.dp)
+                            )
+                            Spacer(modifier = Modifier.width(8.dp))
                             Text(
-                                text = "Enlaces y materiales que compartiste.",
-                                style = MaterialTheme.typography.bodySmall,
+                                text = "Aportes compartidos (${userUploads.size})",
+                                style = MaterialTheme.typography.titleMedium,
+                                fontWeight = FontWeight.Black,
+                                color = theme.textPrimary
+                            )
+                        }
+                        Spacer(modifier = Modifier.height(14.dp))
+                        if (otherVisibleUploads.isEmpty()) {
+                            Text(
+                                text = "Este usuario aún no ha compartido materiales.",
                                 color = theme.textSecondary,
-                                fontSize = 11.sp
+                                fontSize = 13.sp
+                            )
+                        }
+                    }
+                }
+
+                if (otherVisibleUploads.isNotEmpty()) {
+                    items(
+                        items = otherVisibleUploads,
+                        key = { it.id }
+                    ) { upload ->
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .offset(y = (-45).dp)
+                                .padding(horizontal = 16.dp, vertical = 6.dp)
+                        ) {
+                            CommunityUploadCard(
+                                upload = upload,
+                                theme = theme,
+                                isHighlighted = (upload.id == targetPublicationId),
+                                onNavigateToProfile = { uid -> onNavigate(RastroScreen.UsuarioDetail.createRoute(uid)) },
+                                onRequestSignIn = { onNavigate("auth") }
+                            )
+                        }
+                    }
+                }
+            } else {
+                item {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .offset(y = (-45).dp)
+                            .padding(horizontal = 16.dp)
+                    ) {
+                        // ──────────────── 4. TARJETAS KPI (APORTES COMPACTO & MIS ERRORES) ────────────────
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(10.dp)
+                        ) {
+                            // Card 1: Aportes Muro (Compacto)
+                            Sticker3dCard(
+                                onClick = { openUploadDialog() },
+                                containerColor = theme.surface,
+                                bottomBevelColor = theme.cardBevel,
+                                strokeColor = theme.strokeBorder,
+                                bevelHeight = 3.dp,
+                                modifier = Modifier.weight(1f)
+                            ) {
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(horizontal = 12.dp, vertical = 9.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Box(
+                                        modifier = Modifier
+                                            .size(28.dp)
+                                            .clip(RoundedCornerShape(8.dp))
+                                            .background(theme.accent.copy(alpha = 0.15f)),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Icon(
+                                            imageVector = Icons.Rounded.MenuBook,
+                                            contentDescription = null,
+                                            tint = theme.accent,
+                                            modifier = Modifier.size(15.dp)
+                                        )
+                                    }
+                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Column {
+                                        Text(
+                                            text = "${userUploads.size}",
+                                            fontSize = 15.sp,
+                                            fontWeight = FontWeight.Black,
+                                            color = theme.accent,
+                                            lineHeight = 16.sp
+                                        )
+                                        Text(
+                                            text = "APORTES",
+                                            fontSize = 9.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = theme.textSecondary,
+                                            letterSpacing = 0.4.sp
+                                        )
+                                    }
+                                }
+                            }
+
+                            // Card 2: Mis Errores (Reemplaza a Reputación)
+                            Sticker3dCard(
+                                onClick = { showErrorBankModal = true },
+                                containerColor = theme.surface,
+                                bottomBevelColor = theme.cardBevel,
+                                strokeColor = theme.strokeBorder,
+                                bevelHeight = 3.dp,
+                                modifier = Modifier.weight(1f)
+                            ) {
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(horizontal = 12.dp, vertical = 9.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Box(
+                                        modifier = Modifier
+                                            .size(28.dp)
+                                            .clip(RoundedCornerShape(8.dp))
+                                            .background(Color(0xFFEF4444).copy(alpha = 0.15f)),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Icon(
+                                            imageVector = Icons.Rounded.Rule,
+                                            contentDescription = null,
+                                            tint = Color(0xFFEF4444),
+                                            modifier = Modifier.size(15.dp)
+                                        )
+                                    }
+                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Column {
+                                        Text(
+                                            text = "$unsolvedErrorsCount",
+                                            fontSize = 15.sp,
+                                            fontWeight = FontWeight.Black,
+                                            color = Color(0xFFEF4444),
+                                            lineHeight = 16.sp
+                                        )
+                                        Text(
+                                            text = "MIS ERRORES",
+                                            fontSize = 9.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = theme.textSecondary,
+                                            letterSpacing = 0.4.sp
+                                        )
+                                    }
+                                }
+                            }
+                        }
+
+                        Spacer(modifier = Modifier.height(14.dp))
+
+                        // ──────────────── 5. HERRAMIENTAS DE ESTUDIO (5 BOTONES RÁPIDOS) ────────────────
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(6.dp)
+                        ) {
+                            ProfileToolButton(
+                                title = "Pomodoro",
+                                icon = Icons.Rounded.Timer,
+                                badgeColor = Color(0xFFA855F7),
+                                modifier = Modifier.weight(1f),
+                                onClick = onOpenPomodoro
+                            )
+                            ProfileToolButton(
+                                title = "Fórmulas",
+                                icon = Icons.Rounded.Tune,
+                                badgeColor = theme.accent,
+                                modifier = Modifier.weight(1f),
+                                onClick = { onNavigate("formulario") }
+                            )
+                            ProfileToolButton(
+                                title = "Aportar",
+                                icon = Icons.Rounded.CloudUpload,
+                                badgeColor = theme.accent,
+                                modifier = Modifier.weight(1f),
+                                onClick = openUploadDialog
+                            )
+                            ProfileToolButton(
+                                title = "Ranking",
+                                icon = Icons.Rounded.EmojiEvents,
+                                badgeColor = Color(0xFFF59E0B),
+                                modifier = Modifier.weight(1f),
+                                onClick = { onNavigate("simulador") }
+                            )
+                            ProfileToolButton(
+                                title = "Racha",
+                                icon = Icons.Rounded.LocalFireDepartment,
+                                badgeColor = Color(0xFFEF4444),
+                                modifier = Modifier.weight(1f),
+                                onClick = { showStreakInfo = true }
                             )
                         }
 
-                        // Botón "+ Subir Aporte"
-                        Sticker3dButton(
-                            onClick = openUploadDialog,
-                            containerColor = theme.accent,
-                            bottomBevelColor = theme.accentBevel,
-                            strokeColor = theme.strokeBorder,
-                            bevelHeight = 3.dp,
-                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
-                        ) {
-                            Icon(Icons.Rounded.Add, contentDescription = null, tint = Color.White, modifier = Modifier.size(16.dp))
-                            Spacer(modifier = Modifier.width(4.dp))
-                            Text("Aportar", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = Color.White)
-                        }
-                    }
+                        Spacer(modifier = Modifier.height(18.dp))
 
-                    Spacer(modifier = Modifier.height(14.dp))
-
-                    // Publicar enlaza el formulario con Firestore y aumenta el contador real de aportes.
-                    Sticker3dCard(
-                        onClick = openUploadDialog,
-                        modifier = Modifier.fillMaxWidth(),
-                        containerColor = theme.surface,
-                        bottomBevelColor = theme.cardBevel,
-                        strokeColor = theme.strokeBorder,
-                        bevelHeight = 3.dp,
-                        shape = RoundedCornerShape(16.dp)
-                    ) {
-                        Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-                            Icon(Icons.Rounded.Link, contentDescription = null, tint = theme.accent)
-                            Spacer(Modifier.width(10.dp))
-                            Text("Comparte un enlace o material con la comunidad", color = theme.textSecondary, modifier = Modifier.weight(1f), fontSize = 12.sp)
-                            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                                Text("Publicar", color = theme.accent, fontWeight = FontWeight.Bold, fontSize = 12.sp)
-                                Icon(Icons.AutoMirrored.Rounded.ArrowForward, contentDescription = null, tint = theme.accent, modifier = Modifier.size(14.dp))
-                            }
-                        }
-                    }
-
-                    Spacer(modifier = Modifier.height(16.dp))
-// ──────────────── 9. FEED DE APORTES REALES DEL MURO ────────────────
-                    if (selectedTab == 0) {
-                        if (userUploads.isEmpty()) {
-                            Text("Aún no compartiste materiales. Usa Aportar para publicar un enlace y verlo aquí.", color = theme.textSecondary, fontSize = 13.sp)
-                        } else {
-                            userUploads.forEach { upload ->
-                                CommunityUploadCard(
-                                    upload = upload,
-                                    theme = theme,
-                                    onNavigateToProfile = { uid -> onNavigate(RastroScreen.UsuarioDetail.createRoute(uid)) },
-                                    onRequestSignIn = { onNavigate("auth") }
-                                )
-                                Spacer(modifier = Modifier.height(12.dp))
-                            }
-                        }
-                    } else {
-                        // Sección Guardados
-                        Surface(
+                        // ──────────────── 6. PESTAÑAS (MUROS Y APORTES / GUARDADOS) ────────────────
+                        Row(
                             modifier = Modifier.fillMaxWidth(),
-                            shape = RoundedCornerShape(16.dp),
-                            color = theme.surface,
-                            border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
-                            Column(modifier = Modifier.padding(16.dp)) {
-                                Row(
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.spacedBy(6.dp)
-                                ) {
-                                    Icon(
-                                        imageVector = Icons.Rounded.Bookmark,
-                                        contentDescription = null,
-                                        tint = theme.accent,
-                                        modifier = Modifier.size(16.dp)
-                                    )
-                                    Text("Materiales guardados", fontWeight = FontWeight.Bold, color = theme.textPrimary, fontSize = 14.sp)
-                                }
-                                if (savedUploads.isEmpty()) {
-                                    Spacer(modifier = Modifier.height(8.dp))
-                                    Text("El material que guardes aparecerá aquí.", fontSize = 12.sp, color = theme.textSecondary)
-                                } else {
-                                    Spacer(modifier = Modifier.height(12.dp))
-                                    savedUploads.forEach { saved ->
-                                        CommunityUploadCard(
-                                            upload = saved,
-                                            theme = theme,
-                                            onNavigateToProfile = { uid -> onNavigate(RastroScreen.UsuarioDetail.createRoute(uid)) },
-                                            onRequestSignIn = { onNavigate("auth") }
-                                        )
-                                        Spacer(modifier = Modifier.height(10.dp))
-                                    }
-                                }
-                            }
+                            // Muros y aportes
+                            Sticker3dPill(
+                                text = "Muros y aportes (${userUploads.size})",
+                                icon = Icons.Rounded.FolderShared,
+                                isSelected = selectedTab == 0,
+                                selectedBgColor = theme.accent,
+                                selectedContentColor = Color.White,
+                                unselectedBgColor = theme.surface,
+                                unselectedContentColor = theme.textSecondary,
+                                strokeColor = theme.strokeBorder,
+                                onClick = { selectedTab = 0 },
+                                modifier = Modifier.weight(1f)
+                            )
+
+                            // Guardados
+                            Sticker3dPill(
+                                text = "Guardados ($totalSavedCount)",
+                                icon = Icons.Rounded.Bookmark,
+                                isSelected = selectedTab == 1,
+                                selectedBgColor = theme.accent,
+                                selectedContentColor = Color.White,
+                                unselectedBgColor = theme.surface,
+                                unselectedContentColor = theme.textSecondary,
+                                strokeColor = theme.strokeBorder,
+                                onClick = { selectedTab = 1 },
+                                modifier = Modifier.weight(1f)
+                            )
                         }
-                    }
 
-                    Spacer(modifier = Modifier.height(20.dp))
+                        Spacer(modifier = Modifier.height(18.dp))
 
-                    // ──────────────── 10. AJUSTES, TEMAS Y CUMPLIMIENTO GOOGLE PLAY ────────────────
-                    Column(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalArrangement = Arrangement.spacedBy(10.dp)
-                    ) {
-                        Text(
-                            text = "CONFIGURACIÓN & POLÍTICAS",
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Black,
-                            color = theme.textSecondary,
-                            letterSpacing = 0.5.sp
-                        )
+                        if (selectedTab == 0) {
+                            CommunityWallComposer(onNavigateToAuth = { onNavigate("auth") })
+                            Spacer(modifier = Modifier.height(14.dp))
 
-                        // Botón Ajustes de Perfil y Temas
-                        Sticker3dCard(
-                            onClick = onOpenSettings,
-                            modifier = Modifier.fillMaxWidth(),
-                            containerColor = theme.surface,
-                            bottomBevelColor = theme.cardBevel,
-                            strokeColor = theme.strokeBorder,
-                            bevelHeight = 3.5.dp,
-                            shape = RoundedCornerShape(18.dp)
-                        ) {
+                            // ──────────────── 7. ENCABEZADO DE SECCIÓN Y BOTÓN SUBIR APORTE ────────────────
                             Row(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(14.dp),
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.SpaceBetween
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Row(
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.spacedBy(12.dp)
-                                ) {
-                                    Box(
-                                        modifier = Modifier
-                                            .size(38.dp)
-                                            .clip(RoundedCornerShape(12.dp))
-                                            .background(theme.accent.copy(alpha = 0.12f))
-                                            .border(1.2.dp, theme.accent.copy(alpha = 0.3f), RoundedCornerShape(12.dp)),
-                                        contentAlignment = Alignment.Center
-                                    ) {
+                                Column {
+                                    Row(verticalAlignment = Alignment.CenterVertically) {
                                         Icon(
-                                            imageVector = Icons.Rounded.Settings,
+                                            Icons.Rounded.AutoAwesome,
                                             contentDescription = null,
                                             tint = theme.accent,
-                                            modifier = Modifier.size(20.dp)
+                                            modifier = Modifier.size(18.dp)
                                         )
-                                    }
-                                    Column {
+                                        Spacer(modifier = Modifier.width(6.dp))
                                         Text(
-                                            text = "Ajustes y Temas RASTRO",
-                                            fontSize = 13.sp,
-                                            fontWeight = FontWeight.Bold,
+                                            text = "Mis aportes (${userUploads.size})",
+                                            style = MaterialTheme.typography.titleMedium,
+                                            fontWeight = FontWeight.Black,
                                             color = theme.textPrimary
                                         )
-                                        Text(
-                                            text = "Tema visual, datos y opciones de cuenta",
-                                            fontSize = 11.sp,
-                                            color = theme.textSecondary
-                                        )
+                                    }
+                                    Text(
+                                        text = "Enlaces y materiales que compartiste.",
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = theme.textSecondary,
+                                        fontSize = 11.sp
+                                    )
+                                }
+
+                                // Botón "+ Subir Aporte"
+                                Sticker3dButton(
+                                    onClick = openUploadDialog,
+                                    containerColor = theme.accent,
+                                    bottomBevelColor = theme.accentBevel,
+                                    strokeColor = theme.strokeBorder,
+                                    bevelHeight = 3.dp,
+                                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
+                                ) {
+                                    Icon(Icons.Rounded.Add, contentDescription = null, tint = Color.White, modifier = Modifier.size(16.dp))
+                                    Spacer(modifier = Modifier.width(4.dp))
+                                    Text("Aportar", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = Color.White)
+                                }
+                            }
+
+                            Spacer(modifier = Modifier.height(14.dp))
+
+                            // Publicar enlaza el formulario con Firestore y aumenta el contador real de aportes.
+                            Sticker3dCard(
+                                onClick = openUploadDialog,
+                                modifier = Modifier.fillMaxWidth(),
+                                containerColor = theme.surface,
+                                bottomBevelColor = theme.cardBevel,
+                                strokeColor = theme.strokeBorder,
+                                bevelHeight = 3.dp,
+                                shape = RoundedCornerShape(16.dp)
+                            ) {
+                                Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+                                    Icon(Icons.Rounded.Link, contentDescription = null, tint = theme.accent)
+                                    Spacer(Modifier.width(10.dp))
+                                    Text("Comparte un enlace o material con la comunidad", color = theme.textSecondary, modifier = Modifier.weight(1f), fontSize = 12.sp)
+                                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                                        Text("Publicar", color = theme.accent, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                                        Icon(Icons.AutoMirrored.Rounded.ArrowForward, contentDescription = null, tint = theme.accent, modifier = Modifier.size(14.dp))
                                     }
                                 }
-                                Icon(
-                                    imageVector = Icons.Rounded.ChevronRight,
-                                    contentDescription = null,
-                                    tint = theme.textSecondary,
-                                    modifier = Modifier.size(18.dp)
-                                )
                             }
-                        }
 
-                        // Botón Políticas y Eliminación de Cuenta Google Play
-                        Sticker3dCard(
-                            onClick = onOpenSettings,
-                            modifier = Modifier.fillMaxWidth(),
-                            containerColor = theme.surface,
-                            bottomBevelColor = theme.cardBevel,
-                            strokeColor = theme.strokeBorder,
-                            bevelHeight = 3.5.dp,
-                            shape = RoundedCornerShape(18.dp)
-                        ) {
-                            Row(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(14.dp),
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.SpaceBetween
+                            Spacer(modifier = Modifier.height(16.dp))
+
+                            // ──────────────── FEED DE APORTES REALES DEL MURO ────────────────
+                            if (userUploads.isEmpty()) {
+                                Text("Aún no compartiste materiales. Usa Aportar para publicar un enlace y verlo aquí.", color = theme.textSecondary, fontSize = 13.sp)
+                            } else {
+                                userUploads.forEach { upload ->
+                                    CommunityUploadCard(
+                                        upload = upload,
+                                        theme = theme,
+                                        isHighlighted = (upload.id == targetPublicationId),
+                                        onNavigateToProfile = { uid -> onNavigate(RastroScreen.UsuarioDetail.createRoute(uid)) },
+                                        onRequestSignIn = { onNavigate("auth") }
+                                    )
+                                    Spacer(modifier = Modifier.height(12.dp))
+                                }
+                            }
+                        } else {
+                            // ──────────────── SECCIÓN MULTI-ORIGEN: GUARDADOS ────────────────
+                            Column(
+                                modifier = Modifier.fillMaxWidth(),
+                                verticalArrangement = Arrangement.spacedBy(12.dp)
                             ) {
                                 Row(
+                                    modifier = Modifier.fillMaxWidth(),
                                     verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.spacedBy(12.dp)
+                                    horizontalArrangement = Arrangement.SpaceBetween
                                 ) {
-                                    Box(
-                                        modifier = Modifier
-                                            .size(38.dp)
-                                            .clip(RoundedCornerShape(12.dp))
-                                            .background(Color(0xFF10B981).copy(alpha = 0.12f))
-                                            .border(1.2.dp, Color(0xFF10B981).copy(alpha = 0.3f), RoundedCornerShape(12.dp)),
-                                        contentAlignment = Alignment.Center
-                                    ) {
-                                        Icon(
-                                            imageVector = Icons.Rounded.Security,
-                                            contentDescription = null,
-                                            tint = Color(0xFF10B981),
-                                            modifier = Modifier.size(20.dp)
-                                        )
-                                    }
                                     Column {
+                                        Row(verticalAlignment = Alignment.CenterVertically) {
+                                            Icon(
+                                                imageVector = Icons.Rounded.Bookmark,
+                                                contentDescription = null,
+                                                tint = theme.accent,
+                                                modifier = Modifier.size(20.dp)
+                                            )
+                                            Spacer(modifier = Modifier.width(6.dp))
+                                            Text(
+                                                text = "Recursos Guardados ($totalSavedCount)",
+                                                style = MaterialTheme.typography.titleMedium,
+                                                fontWeight = FontWeight.Black,
+                                                color = theme.textPrimary
+                                            )
+                                        }
                                         Text(
-                                            text = "Políticas & Normativa Play Store",
-                                            fontSize = 13.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = theme.textPrimary
-                                        )
-                                        Text(
-                                            text = "Privacidad, Términos UGC y eliminación de datos",
-                                            fontSize = 11.sp,
-                                            color = theme.textSecondary
+                                            text = "Material oficial, obras literarias y aportes guardados.",
+                                            style = MaterialTheme.typography.bodySmall,
+                                            color = theme.textSecondary,
+                                            fontSize = 11.sp
                                         )
                                     }
                                 }
-                                Icon(
-                                    imageVector = Icons.Rounded.ChevronRight,
-                                    contentDescription = null,
-                                    tint = theme.textSecondary,
-                                    modifier = Modifier.size(18.dp)
-                                )
+
+                                // Filtros por tipo de guardado
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.spacedBy(6.dp)
+                                ) {
+                                    listOf(
+                                        "Todos" to totalSavedCount,
+                                        "Oficial" to savedOfficialMaterials.size,
+                                        "Obras" to savedObras.size,
+                                        "Aportes" to savedUploads.size
+                                    ).forEach { (filterName, count) ->
+                                        Sticker3dPill(
+                                            text = "$filterName ($count)",
+                                            isSelected = selectedSavedFilter == filterName,
+                                            selectedBgColor = theme.accent,
+                                            selectedContentColor = Color.White,
+                                            unselectedBgColor = theme.surface,
+                                            unselectedContentColor = theme.textSecondary,
+                                            strokeColor = theme.strokeBorder,
+                                            onClick = { selectedSavedFilter = filterName },
+                                            modifier = Modifier.weight(1f)
+                                        )
+                                    }
+                                }
+
+                                Spacer(modifier = Modifier.height(4.dp))
+
+                                val showOfficial = selectedSavedFilter == "Todos" || selectedSavedFilter == "Oficial"
+                                val showObras = selectedSavedFilter == "Todos" || selectedSavedFilter == "Obras"
+                                val showAportes = selectedSavedFilter == "Todos" || selectedSavedFilter == "Aportes"
+
+                                val hasAnySaved = (showOfficial && savedOfficialMaterials.isNotEmpty()) ||
+                                        (showObras && savedObras.isNotEmpty()) ||
+                                        (showAportes && savedUploads.isNotEmpty())
+
+                                if (!hasAnySaved) {
+                                    Sticker3dCard(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        containerColor = theme.surface,
+                                        strokeColor = theme.strokeBorder,
+                                        bottomBevelColor = theme.cardBevel,
+                                        bevelHeight = 3.dp,
+                                        shape = RoundedCornerShape(18.dp)
+                                    ) {
+                                        Column(
+                                            modifier = Modifier
+                                                .fillMaxWidth()
+                                                .padding(24.dp),
+                                            horizontalAlignment = Alignment.CenterHorizontally,
+                                            verticalArrangement = Arrangement.Center
+                                        ) {
+                                            Icon(
+                                                imageVector = Icons.Rounded.BookmarkBorder,
+                                                contentDescription = null,
+                                                tint = theme.textSecondary,
+                                                modifier = Modifier.size(40.dp)
+                                            )
+                                            Spacer(Modifier.height(8.dp))
+                                            Text(
+                                                text = "No tienes elementos guardados en esta sección",
+                                                fontWeight = FontWeight.Bold,
+                                                fontSize = 13.sp,
+                                                color = theme.textPrimary,
+                                                textAlign = TextAlign.Center
+                                            )
+                                            Spacer(Modifier.height(4.dp))
+                                            Text(
+                                                text = "Guarda materiales oficiales u obras en la Biblioteca tocando el ícono de marcador.",
+                                                fontSize = 11.5.sp,
+                                                color = theme.textSecondary,
+                                                textAlign = TextAlign.Center
+                                            )
+                                        }
+                                    }
+                                } else {
+                                    // 1. Obras Literarias Guardadas
+                                    if (showObras && savedObras.isNotEmpty()) {
+                                        Text(
+                                            text = "OBRAS LITERARIAS (${savedObras.size})",
+                                            fontSize = 11.sp,
+                                            fontWeight = FontWeight.Black,
+                                            color = theme.accent,
+                                            letterSpacing = 0.5.sp
+                                        )
+                                        savedObras.forEach { obra ->
+                                            Sticker3dCard(
+                                                onClick = { selectedObraForViewer = obra },
+                                                modifier = Modifier.fillMaxWidth(),
+                                                containerColor = theme.surface,
+                                                strokeColor = theme.strokeBorder,
+                                                bottomBevelColor = theme.cardBevel,
+                                                bevelHeight = 3.5.dp,
+                                                shape = RoundedCornerShape(18.dp)
+                                            ) {
+                                                Row(
+                                                    modifier = Modifier
+                                                        .fillMaxWidth()
+                                                        .padding(12.dp),
+                                                    verticalAlignment = Alignment.CenterVertically
+                                                ) {
+                                                    Box(
+                                                        modifier = Modifier
+                                                            .size(width = 46.dp, height = 62.dp)
+                                                            .clip(RastroShapes.Squircle)
+                                                            .background(Color(0xFF0D9488))
+                                                            .border(1.2.dp, theme.strokeBorder.copy(alpha = 0.4f), RastroShapes.Squircle),
+                                                        contentAlignment = Alignment.Center
+                                                    ) {
+                                                        if (obra.coverUrl.isNotBlank()) {
+                                                            CachedRemoteImage(
+                                                                url = obra.coverUrl,
+                                                                contentDescription = "Portada de ${obra.titulo}",
+                                                                modifier = Modifier.fillMaxSize(),
+                                                                contentScale = ContentScale.Crop
+                                                            )
+                                                        } else {
+                                                            Icon(
+                                                                imageVector = Icons.Rounded.MenuBook,
+                                                                contentDescription = null,
+                                                                tint = Color.White,
+                                                                modifier = Modifier.size(24.dp)
+                                                            )
+                                                        }
+                                                    }
+
+                                                    Spacer(modifier = Modifier.width(12.dp))
+
+                                                    Column(modifier = Modifier.weight(1f)) {
+                                                        Text(
+                                                            text = obra.categoria,
+                                                            style = MaterialTheme.typography.labelSmall,
+                                                            color = Color(0xFF0D9488),
+                                                            fontWeight = FontWeight.Bold
+                                                        )
+                                                        Text(
+                                                            text = obra.titulo,
+                                                            style = MaterialTheme.typography.titleSmall,
+                                                            fontWeight = FontWeight.Bold,
+                                                            color = theme.textPrimary,
+                                                            maxLines = 1,
+                                                            overflow = TextOverflow.Ellipsis
+                                                        )
+                                                        Text(
+                                                            text = "${obra.autor} (${obra.anio})",
+                                                            style = MaterialTheme.typography.bodySmall,
+                                                            color = theme.textSecondary,
+                                                            maxLines = 1
+                                                        )
+                                                    }
+
+                                                    LucideBookmarkIcon(
+                                                        isBookmarked = true,
+                                                        onClick = {
+                                                            DuolingoHaptics.playOptionSelected(context)
+                                                            UserManager.toggleSaveObra(obra.id)
+                                                        },
+                                                        activeColor = Color(0xFF6366F1),
+                                                        inactiveColor = theme.textSecondary,
+                                                        size = 22.dp
+                                                    )
+                                                }
+                                            }
+                                        }
+                                        Spacer(modifier = Modifier.height(4.dp))
+                                    }
+
+                                    // 2. Material Oficial Guardado
+                                    if (showOfficial && savedOfficialMaterials.isNotEmpty()) {
+                                        Text(
+                                            text = "MATERIAL OFICIAL CEPRE / UNSA (${savedOfficialMaterials.size})",
+                                            fontSize = 11.sp,
+                                            fontWeight = FontWeight.Black,
+                                            color = theme.accent,
+                                            letterSpacing = 0.5.sp
+                                        )
+                                        savedOfficialMaterials.forEach { material ->
+                                            Sticker3dCard(
+                                                modifier = Modifier.fillMaxWidth(),
+                                                containerColor = theme.surface,
+                                                strokeColor = theme.strokeBorder,
+                                                bottomBevelColor = theme.cardBevel,
+                                                bevelHeight = 3.5.dp,
+                                                shape = RoundedCornerShape(18.dp)
+                                            ) {
+                                                Column(
+                                                    modifier = Modifier.padding(14.dp),
+                                                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                                                ) {
+                                                    Row(verticalAlignment = Alignment.CenterVertically) {
+                                                        Box(
+                                                            modifier = Modifier
+                                                                .size(36.dp)
+                                                                .clip(RoundedCornerShape(10.dp))
+                                                                .background(theme.accent.copy(alpha = 0.15f))
+                                                                .border(1.2.dp, theme.strokeBorder.copy(alpha = 0.4f), RoundedCornerShape(10.dp)),
+                                                            contentAlignment = Alignment.Center
+                                                        ) {
+                                                            Icon(
+                                                                imageVector = if (material.extraPayload.contains("/folders/")) Icons.Rounded.FolderOpen else Icons.Rounded.Description,
+                                                                contentDescription = null,
+                                                                tint = theme.accent,
+                                                                modifier = Modifier.size(18.dp)
+                                                            )
+                                                        }
+                                                        Spacer(Modifier.width(10.dp))
+                                                        Column(Modifier.weight(1f)) {
+                                                            Text(
+                                                                text = "MATERIAL OFICIAL",
+                                                                style = MaterialTheme.typography.labelSmall,
+                                                                color = theme.accent,
+                                                                fontWeight = FontWeight.Bold
+                                                            )
+                                                            Text(
+                                                                text = material.title,
+                                                                style = MaterialTheme.typography.titleSmall,
+                                                                color = theme.textPrimary,
+                                                                fontWeight = FontWeight.Bold,
+                                                                maxLines = 1,
+                                                                overflow = TextOverflow.Ellipsis
+                                                            )
+                                                        }
+                                                        LucideBookmarkIcon(
+                                                            isBookmarked = true,
+                                                            onClick = {
+                                                                DuolingoHaptics.playOptionSelected(context)
+                                                                FavoritesRepository.toggle(
+                                                                    type = material.type,
+                                                                    itemId = material.id,
+                                                                    title = material.title,
+                                                                    subtitle = material.subtitle,
+                                                                    subject = material.category,
+                                                                    area = material.area,
+                                                                    extra = material.extraPayload
+                                                                )
+                                                            },
+                                                            activeColor = Color(0xFF6366F1),
+                                                            inactiveColor = theme.textSecondary,
+                                                            size = 20.dp
+                                                        )
+                                                    }
+                                                    if (material.subtitle.isNotBlank()) {
+                                                        Text(
+                                                            text = material.subtitle,
+                                                            style = MaterialTheme.typography.bodySmall,
+                                                            color = theme.textSecondary,
+                                                            maxLines = 2,
+                                                            overflow = TextOverflow.Ellipsis
+                                                        )
+                                                    }
+                                                    if (material.extraPayload.isNotBlank()) {
+                                                        Sticker3dButton(
+                                                            onClick = { runCatching { uriHandler.openUri(material.extraPayload) } },
+                                                            modifier = Modifier.fillMaxWidth(),
+                                                            containerColor = theme.accent,
+                                                            bottomBevelColor = theme.accentBevel,
+                                                            strokeColor = theme.strokeBorder,
+                                                            bevelHeight = 3.dp,
+                                                            shape = RoundedCornerShape(12.dp),
+                                                            contentPadding = PaddingValues(vertical = 6.dp)
+                                                        ) {
+                                                            Row(
+                                                                verticalAlignment = Alignment.CenterVertically,
+                                                                horizontalArrangement = Arrangement.Center
+                                                            ) {
+                                                                Icon(Icons.Rounded.OpenInNew, contentDescription = null, tint = Color.White, modifier = Modifier.size(14.dp))
+                                                                Spacer(Modifier.width(6.dp))
+                                                                Text("Abrir material", fontSize = 11.5.sp, fontWeight = FontWeight.Bold, color = Color.White)
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        Spacer(modifier = Modifier.height(4.dp))
+                                    }
+
+                                    // 3. Aportes de la Comunidad Guardados
+                                    if (showAportes && savedUploads.isNotEmpty()) {
+                                        Text(
+                                            text = "APORTES DE LA COMUNIDAD (${savedUploads.size})",
+                                            fontSize = 11.sp,
+                                            fontWeight = FontWeight.Black,
+                                            color = theme.accent,
+                                            letterSpacing = 0.5.sp
+                                        )
+                                        savedUploads.forEach { saved ->
+                                            CommunityUploadCard(
+                                                upload = saved,
+                                                theme = theme,
+                                                onNavigateToProfile = { uid -> onNavigate(RastroScreen.UsuarioDetail.createRoute(uid)) },
+                                                onRequestSignIn = { onNavigate("auth") }
+                                            )
+                                            Spacer(modifier = Modifier.height(10.dp))
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -1332,6 +1906,10 @@ fun UserProfileScreen(
                                             .fillMaxWidth()
                                             .clip(RoundedCornerShape(12.dp))
                                             .background(theme.surfaceAccent)
+                                            .clickable {
+                                                connectionDialogTitle = null
+                                                onNavigate(RastroScreen.UsuarioDetail.createRoute(friend.uid))
+                                            }
                                             .padding(10.dp),
                                         verticalAlignment = Alignment.CenterVertically
                                     ) {
@@ -1369,8 +1947,35 @@ fun UserProfileScreen(
             ErrorBankDialog(
                 questions = errorBankQuestions,
                 theme = theme,
+                initialOrigin = errorBankInitialOrigin,
                 onDismiss = { showErrorBankModal = false },
                 onSolve = { id -> ErrorBankRepository.markAsSolved(id) }
+            )
+        }
+
+        selectedObraForViewer?.let { obra ->
+            LiteraturaViewerDialog(
+                obra = obra,
+                theme = theme,
+                onDismiss = { selectedObraForViewer = null }
+            )
+        }
+
+        if (showBlockUserDialog) {
+            BlockUserDialog(
+                targetUid = profileUid,
+                targetName = displayedName,
+                currentUid = currentUser.uid,
+                onDismiss = { showBlockUserDialog = false }
+            )
+        }
+
+        if (showReportUserDialog) {
+            ReportUserDialog(
+                targetUid = profileUid,
+                targetName = displayedName,
+                currentUser = currentUser,
+                onDismiss = { showReportUserDialog = false }
             )
         }
     }
@@ -1809,12 +2414,19 @@ fun MuroPostCard(
     post: MuroPost,
     currentUserUid: String,
     currentUserName: String,
-    theme: com.jonsuapps.rastro.theme.RastroPalette
+    theme: com.jonsuapps.rastro.theme.RastroPalette,
+    blockedUsers: List<String> = emptyList()
 ) {
     val context = LocalContext.current
     var showComments by remember { mutableStateOf(false) }
     var commentText by remember { mutableStateOf("") }
     var localPostReactions by remember(post.reactions) { mutableStateOf(post.reactions) }
+    var reportingComment by remember { mutableStateOf<PostComment?>(null) }
+    var blockingCommentAuthor by remember { mutableStateOf<PostComment?>(null) }
+
+    val visibleComments = remember(post.comments, blockedUsers) {
+        post.comments.filter { it.authorUid !in blockedUsers }
+    }
 
     Surface(
         modifier = Modifier.fillMaxWidth(),
@@ -1969,7 +2581,7 @@ fun MuroPostCard(
                     )
                     Spacer(modifier = Modifier.width(4.dp))
                     Text(
-                        if (post.comments.isNotEmpty()) "Comentarios (${post.comments.size})" else "Comentar",
+                        if (visibleComments.isNotEmpty()) "Comentarios (${visibleComments.size})" else "Comentar",
                         fontSize = 12.sp,
                         color = if (showComments) theme.accent else theme.textSecondary,
                         fontWeight = FontWeight.SemiBold
@@ -1988,7 +2600,7 @@ fun MuroPostCard(
                     Spacer(modifier = Modifier.height(10.dp))
 
                     // Lista de Comentarios existentes
-                    post.comments.forEach { comment ->
+                    visibleComments.forEach { comment ->
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -2023,7 +2635,7 @@ fun MuroPostCard(
                                     }
                                 }
 
-                                // Reacción a comentario y borrar si es propio
+                                // Reacción a comentario, borrar si es propio, o reportar/bloquear si es ajeno
                                 Row(
                                     modifier = Modifier.padding(top = 2.dp, start = 4.dp),
                                     verticalAlignment = Alignment.CenterVertically
@@ -2072,6 +2684,45 @@ fun MuroPostCard(
                                                 color = Color(0xFFEF4444),
                                                 fontWeight = FontWeight.Medium
                                             )
+                                        }
+                                    } else {
+                                        Spacer(modifier = Modifier.width(10.dp))
+                                        var commentMenuOpen by remember(comment.id) { mutableStateOf(false) }
+                                        Box {
+                                            IconButton(
+                                                onClick = { commentMenuOpen = true },
+                                                modifier = Modifier.size(24.dp)
+                                            ) {
+                                                Icon(
+                                                    imageVector = Icons.Rounded.MoreVert,
+                                                    contentDescription = "Opciones",
+                                                    tint = theme.textSecondary,
+                                                    modifier = Modifier.size(14.dp)
+                                                )
+                                            }
+                                            DropdownMenu(
+                                                expanded = commentMenuOpen,
+                                                onDismissRequest = { commentMenuOpen = false }
+                                            ) {
+                                                DropdownMenuItem(
+                                                    text = { Text("Reportar comentario", fontWeight = FontWeight.Bold) },
+                                                    leadingIcon = { Icon(Icons.Rounded.Flag, contentDescription = null) },
+                                                    onClick = {
+                                                        commentMenuOpen = false
+                                                        reportingComment = comment
+                                                    }
+                                                )
+                                                if (comment.authorUid.isNotBlank() && comment.authorUid != currentUserUid) {
+                                                    DropdownMenuItem(
+                                                        text = { Text("Bloquear a ${comment.authorName}", color = Color(0xFFEF4444), fontWeight = FontWeight.Bold) },
+                                                        leadingIcon = { Icon(Icons.Rounded.Block, contentDescription = null, tint = Color(0xFFEF4444)) },
+                                                        onClick = {
+                                                            commentMenuOpen = false
+                                                            blockingCommentAuthor = comment
+                                                        }
+                                                    )
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -2129,6 +2780,28 @@ fun MuroPostCard(
                 }
             }
         }
+
+        if (reportingComment != null) {
+            ReportCommentDialog(
+                targetCommentId = reportingComment!!.id,
+                targetCommentAuthor = reportingComment!!.authorName,
+                targetUploadTitle = post.title.ifBlank { "Publicación de Muro" },
+                currentUid = currentUserUid,
+                currentUserName = currentUserName,
+                targetCommentText = reportingComment!!.text,
+                targetCommentAuthorUid = reportingComment!!.authorUid,
+                onDismiss = { reportingComment = null }
+            )
+        }
+
+        if (blockingCommentAuthor != null) {
+            BlockUserDialog(
+                targetUid = blockingCommentAuthor!!.authorUid,
+                targetName = blockingCommentAuthor!!.authorName,
+                currentUid = currentUserUid,
+                onDismiss = { blockingCommentAuthor = null }
+            )
+        }
     }
 }
 
@@ -2136,176 +2809,325 @@ fun MuroPostCard(
 fun ErrorBankDialog(
     questions: List<FailedQuestion>,
     theme: com.jonsuapps.rastro.theme.RastroPalette,
+    initialOrigin: String = ErrorBankOrigins.APRENDER,
     onDismiss: () -> Unit,
     onSolve: (String) -> Unit
 ) {
     val haptic = androidx.compose.ui.platform.LocalHapticFeedback.current
-    Dialog(onDismissRequest = onDismiss) {
-        Sticker3dCard(
+    val context = androidx.compose.ui.platform.LocalContext.current
+    var selectedOrigin by remember(initialOrigin) { mutableStateOf(initialOrigin) }
+
+    Dialog(
+        onDismissRequest = onDismiss,
+        properties = DialogProperties(usePlatformDefaultWidth = false)
+    ) {
+        Box(
             modifier = Modifier
-                .fillMaxWidth(0.96f)
-                .fillMaxHeight(0.88f),
-            containerColor = theme.surface,
-            bottomBevelColor = theme.cardBevel,
-            strokeColor = theme.strokeBorder,
-            bevelHeight = 5.dp,
-            shape = RoundedCornerShape(24.dp)
+                .fillMaxSize()
+                .background(Color.Black.copy(alpha = 0.65f))
+                .padding(horizontal = 12.dp, vertical = 14.dp),
+            contentAlignment = Alignment.Center
         ) {
-            Column(
+            Sticker3dCard(
                 modifier = Modifier
-                    .fillMaxSize()
-                    .padding(20.dp)
+                    .fillMaxWidth()
+                    .widthIn(max = 680.dp)
+                    .fillMaxHeight(0.92f),
+                containerColor = theme.surface,
+                bottomBevelColor = theme.cardBevel,
+                strokeColor = theme.strokeBorder,
+                bevelHeight = 5.dp,
+                shape = RoundedCornerShape(26.dp)
             ) {
-                // Header
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(18.dp)
                 ) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Box(
-                            modifier = Modifier
-                                .size(36.dp)
-                                .clip(RoundedCornerShape(10.dp))
-                                .background(Color(0xFFEF4444).copy(alpha = 0.14f)),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Icon(Icons.Rounded.Rule, contentDescription = null, tint = Color(0xFFEF4444), modifier = Modifier.size(20.dp))
-                        }
-                        Spacer(Modifier.width(10.dp))
-                        Column {
-                            Text("Mis Errores", fontWeight = FontWeight.Black, fontSize = 18.sp, color = theme.textPrimary)
-                            Text("Banco de preguntas falladas", fontSize = 11.sp, color = theme.textSecondary)
-                        }
-                    }
-                    IconButton(onClick = onDismiss, modifier = Modifier.size(32.dp)) {
-                        Icon(Icons.Rounded.Close, contentDescription = "Cerrar", tint = theme.textSecondary)
-                    }
-                }
-
-                Spacer(Modifier.height(14.dp))
-                HorizontalDivider(color = theme.borderSubtle)
-                Spacer(Modifier.height(14.dp))
-
-                val unsolved = questions.filter { !it.isSolved }
-                if (unsolved.isEmpty()) {
-                    Box(
-                        modifier = Modifier.weight(1f).fillMaxWidth(),
-                        contentAlignment = Alignment.Center
+                    // Header
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Icon(Icons.Rounded.CheckCircle, contentDescription = null, tint = Color(0xFF10B981), modifier = Modifier.size(54.dp))
-                            Spacer(Modifier.height(12.dp))
-                            Text("¡Sin errores pendientes!", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = theme.textPrimary)
-                            Spacer(Modifier.height(4.dp))
-                            Text("Has repasado y dominado todas las preguntas falladas.", fontSize = 12.sp, color = theme.textSecondary, textAlign = TextAlign.Center)
-                        }
-                    }
-                } else {
-                    LazyColumn(
-                        modifier = Modifier.weight(1f),
-                        verticalArrangement = Arrangement.spacedBy(14.dp)
-                    ) {
-                        items(unsolved.size, key = { unsolved[it].id }) { index ->
-                            val item = unsolved[index]
-                            Card(
-                                modifier = Modifier.fillMaxWidth(),
-                                shape = RoundedCornerShape(16.dp),
-                                colors = CardDefaults.cardColors(containerColor = theme.surfaceAccent.copy(alpha = 0.5f)),
-                                border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Box(
+                                modifier = Modifier
+                                    .size(38.dp)
+                                    .clip(RoundedCornerShape(12.dp))
+                                    .background(Color(0xFFEF4444).copy(alpha = 0.14f))
+                                    .border(1.2.dp, Color(0xFFEF4444).copy(alpha = 0.35f), RoundedCornerShape(12.dp)),
+                                contentAlignment = Alignment.Center
                             ) {
-                                Column(modifier = Modifier.padding(14.dp)) {
+                                Icon(Icons.Rounded.Rule, contentDescription = null, tint = Color(0xFFEF4444), modifier = Modifier.size(22.dp))
+                            }
+                            Spacer(Modifier.width(10.dp))
+                            Column {
+                                Text("Mis Errores", fontWeight = FontWeight.Black, fontSize = 18.sp, color = theme.textPrimary)
+                                Text("Repasa y supera tus fallos por modalidad", fontSize = 11.5.sp, color = theme.textSecondary)
+                            }
+                        }
+                        IconButton(onClick = onDismiss, modifier = Modifier.size(32.dp)) {
+                            Icon(Icons.Rounded.Close, contentDescription = "Cerrar", tint = theme.textSecondary)
+                        }
+                    }
+
+                    Spacer(Modifier.height(14.dp))
+
+                    // Selector de 3 Modalidades: 1. Aprender | 2. Modo Simulacro | 3. Examen Rápido
+                    val originTabs = listOf(
+                        Triple(ErrorBankOrigins.APRENDER, Icons.Rounded.School, theme.accent),
+                        Triple(ErrorBankOrigins.SIMULACRO, Icons.Rounded.Assignment, Color(0xFFA855F7)),
+                        Triple(ErrorBankOrigins.EXAMEN_RAPIDO, Icons.Rounded.Bolt, Color(0xFFF59E0B))
+                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        originTabs.forEach { (origin, icon, color) ->
+                            val isSelected = selectedOrigin == origin
+                            val pendingCount = questions.count { !it.isSolved && it.origin == origin }
+                            Sticker3dCard(
+                                onClick = {
+                                    DuolingoHaptics.playOptionSelected(context)
+                                    selectedOrigin = origin
+                                },
+                                modifier = Modifier.weight(1f),
+                                containerColor = if (isSelected) color else theme.surface,
+                                bottomBevelColor = if (isSelected) color.copy(alpha = 0.75f) else theme.cardBevel,
+                                strokeColor = if (isSelected) color else theme.strokeBorder,
+                                bevelHeight = if (isSelected) 2.dp else 3.5.dp,
+                                shape = RoundedCornerShape(14.dp)
+                            ) {
+                                Column(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(vertical = 8.dp, horizontal = 4.dp),
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.Center
+                                ) {
                                     Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.SpaceBetween,
-                                        verticalAlignment = Alignment.CenterVertically
+                                        verticalAlignment = Alignment.CenterVertically,
+                                        horizontalArrangement = Arrangement.Center
                                     ) {
-                                        Surface(
-                                            shape = RastroShapes.Pill,
-                                            color = theme.accent.copy(alpha = 0.12f)
-                                        ) {
-                                            Text(
-                                                text = "${item.subject} • ${item.subtema}",
-                                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                                                fontSize = 10.sp,
-                                                fontWeight = FontWeight.Bold,
-                                                color = theme.accent
-                                            )
-                                        }
+                                        Icon(
+                                            imageVector = icon,
+                                            contentDescription = null,
+                                            tint = if (isSelected) Color.White else color,
+                                            modifier = Modifier.size(15.dp)
+                                        )
+                                        Spacer(Modifier.width(4.dp))
                                         Text(
-                                            text = "Pendiente",
-                                            fontSize = 10.sp,
-                                            fontWeight = FontWeight.ExtraBold,
-                                            color = Color(0xFFEF4444)
+                                            text = origin,
+                                            fontSize = 11.5.sp,
+                                            fontWeight = FontWeight.Black,
+                                            color = if (isSelected) Color.White else theme.textPrimary,
+                                            maxLines = 1
                                         )
                                     }
+                                    Spacer(Modifier.height(4.dp))
+                                    Surface(
+                                        shape = CircleShape,
+                                        color = if (isSelected) Color.White.copy(alpha = 0.28f) else color.copy(alpha = 0.15f)
+                                    ) {
+                                        Text(
+                                            text = "$pendingCount pendientes",
+                                            fontSize = 9.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = if (isSelected) Color.White else color,
+                                            modifier = Modifier.padding(horizontal = 7.dp, vertical = 2.dp)
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    }
 
-                                    Spacer(Modifier.height(8.dp))
-                                    Text(item.question, fontSize = 13.sp, fontWeight = FontWeight.SemiBold, color = theme.textPrimary, lineHeight = 18.sp)
-                                    Spacer(Modifier.height(10.dp))
+                    Spacer(Modifier.height(14.dp))
+                    HorizontalDivider(color = theme.borderSubtle)
+                    Spacer(Modifier.height(14.dp))
 
-                                    // Opciones
-                                    item.options.forEachIndexed { optIndex, optText ->
-                                        val isCorrect = optIndex == item.correctAnswerIndex
+                    val filteredUnsolved = questions.filter { !it.isSolved && it.origin == selectedOrigin }
+                    if (filteredUnsolved.isEmpty()) {
+                        Box(
+                            modifier = Modifier.weight(1f).fillMaxWidth(),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                Icon(Icons.Rounded.CheckCircle, contentDescription = null, tint = Color(0xFF10B981), modifier = Modifier.size(54.dp))
+                                Spacer(Modifier.height(12.dp))
+                                Text(
+                                    text = "¡Sin errores pendientes en $selectedOrigin!",
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 15.sp,
+                                    color = theme.textPrimary,
+                                    textAlign = TextAlign.Center
+                                )
+                                Spacer(Modifier.height(4.dp))
+                                Text(
+                                    text = when (selectedOrigin) {
+                                        ErrorBankOrigins.APRENDER -> "Has dominado todas las preguntas falladas en las lecciones de Aprender."
+                                        ErrorBankOrigins.SIMULACRO -> "Excelente precisión en tus simulacros de examen tipo admisión UNSA."
+                                        else -> "Tus repasos y quizzes rápidos diarios están impecables."
+                                    },
+                                    fontSize = 12.sp,
+                                    color = theme.textSecondary,
+                                    textAlign = TextAlign.Center
+                                )
+                            }
+                        }
+                    } else {
+                        LazyColumn(
+                            modifier = Modifier.weight(1f),
+                            verticalArrangement = Arrangement.spacedBy(14.dp)
+                        ) {
+                            items(filteredUnsolved.size, key = { filteredUnsolved[it].id }) { index ->
+                                val item = filteredUnsolved[index]
+                                val originColor = when (item.origin) {
+                                    ErrorBankOrigins.SIMULACRO -> Color(0xFFA855F7)
+                                    ErrorBankOrigins.EXAMEN_RAPIDO -> Color(0xFFF59E0B)
+                                    else -> theme.accent
+                                }
+                                Sticker3dCard(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    containerColor = theme.surface,
+                                    strokeColor = theme.strokeBorder,
+                                    bottomBevelColor = theme.cardBevel,
+                                    bevelHeight = 3.5.dp,
+                                    shape = RoundedCornerShape(18.dp)
+                                ) {
+                                    Column(modifier = Modifier.padding(14.dp)) {
                                         Row(
-                                            modifier = Modifier
-                                                .fillMaxWidth()
-                                                .padding(vertical = 2.dp)
-                                                .clip(RoundedCornerShape(8.dp))
-                                                .background(if (isCorrect) Color(0xFF10B981).copy(alpha = 0.12f) else Color.Transparent)
-                                                .padding(horizontal = 8.dp, vertical = 4.dp),
+                                            modifier = Modifier.fillMaxWidth(),
+                                            horizontalArrangement = Arrangement.SpaceBetween,
                                             verticalAlignment = Alignment.CenterVertically
                                         ) {
-                                            Text(
-                                                text = ('A' + optIndex).toString(),
-                                                fontSize = 11.sp,
-                                                fontWeight = FontWeight.Bold,
-                                                color = if (isCorrect) Color(0xFF10B981) else theme.textSecondary
-                                            )
-                                            Spacer(Modifier.width(6.dp))
-                                            Text(
-                                                text = optText,
-                                                fontSize = 12.sp,
-                                                fontWeight = if (isCorrect) FontWeight.Bold else FontWeight.Normal,
-                                                color = if (isCorrect) Color(0xFF047857) else theme.textPrimary,
-                                                modifier = Modifier.weight(1f)
-                                            )
-                                            if (isCorrect) {
-                                                Icon(Icons.Rounded.CheckCircle, contentDescription = null, tint = Color(0xFF10B981), modifier = Modifier.size(16.dp))
+                                            Surface(
+                                                shape = RastroShapes.Pill,
+                                                color = originColor.copy(alpha = 0.12f),
+                                                border = BorderStroke(1.dp, originColor.copy(alpha = 0.3f))
+                                            ) {
+                                                Text(
+                                                    text = "${item.origin} • ${item.subject} • ${item.subtema}",
+                                                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                                                    fontSize = 10.sp,
+                                                    fontWeight = FontWeight.Bold,
+                                                    color = originColor
+                                                )
+                                            }
+                                            Surface(
+                                                shape = RastroShapes.Pill,
+                                                color = Color(0xFFEF4444).copy(alpha = 0.12f),
+                                                border = BorderStroke(1.dp, Color(0xFFEF4444).copy(alpha = 0.3f))
+                                            ) {
+                                                Text(
+                                                    text = "Pendiente",
+                                                    modifier = Modifier.padding(horizontal = 7.dp, vertical = 3.dp),
+                                                    fontSize = 9.5.sp,
+                                                    fontWeight = FontWeight.ExtraBold,
+                                                    color = Color(0xFFEF4444)
+                                                )
                                             }
                                         }
-                                    }
 
-                                    if (item.explanation.isNotBlank()) {
-                                        Spacer(Modifier.height(8.dp))
-                                        Box(
-                                            modifier = Modifier
-                                                .fillMaxWidth()
-                                                .clip(RoundedCornerShape(8.dp))
-                                                .background(theme.surface)
-                                                .border(1.dp, theme.borderSubtle, RoundedCornerShape(8.dp))
-                                                .padding(8.dp)
-                                        ) {
-                                            Text(item.explanation, fontSize = 11.sp, color = theme.textSecondary, lineHeight = 15.sp)
+                                        Spacer(Modifier.height(10.dp))
+                                        Text(
+                                            text = item.question,
+                                            fontSize = 13.5.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = theme.textPrimary,
+                                            lineHeight = 19.sp
+                                        )
+                                        Spacer(Modifier.height(10.dp))
+
+                                        // Opciones
+                                        item.options.forEachIndexed { optIndex, optText ->
+                                            val isCorrect = optIndex == item.correctAnswerIndex
+                                            Row(
+                                                modifier = Modifier
+                                                    .fillMaxWidth()
+                                                    .padding(vertical = 3.dp)
+                                                    .clip(RoundedCornerShape(10.dp))
+                                                    .background(if (isCorrect) Color(0xFF10B981).copy(alpha = 0.12f) else theme.surfaceAccent.copy(alpha = 0.4f))
+                                                    .border(1.dp, if (isCorrect) Color(0xFF10B981).copy(alpha = 0.5f) else theme.borderSubtle, RoundedCornerShape(10.dp))
+                                                    .padding(horizontal = 10.dp, vertical = 6.dp),
+                                                verticalAlignment = Alignment.CenterVertically
+                                            ) {
+                                                Box(
+                                                    modifier = Modifier
+                                                        .size(20.dp)
+                                                        .clip(CircleShape)
+                                                        .background(if (isCorrect) Color(0xFF10B981) else theme.surface)
+                                                        .border(1.dp, if (isCorrect) Color(0xFF10B981) else theme.strokeBorder, CircleShape),
+                                                    contentAlignment = Alignment.Center
+                                                ) {
+                                                    Text(
+                                                        text = ('A' + optIndex).toString(),
+                                                        fontSize = 10.5.sp,
+                                                        fontWeight = FontWeight.Black,
+                                                        color = if (isCorrect) Color.White else theme.textSecondary
+                                                    )
+                                                }
+                                                Spacer(Modifier.width(8.dp))
+                                                Text(
+                                                    text = optText,
+                                                    fontSize = 12.sp,
+                                                    fontWeight = if (isCorrect) FontWeight.Bold else FontWeight.Normal,
+                                                    color = if (isCorrect) Color(0xFF047857) else theme.textPrimary,
+                                                    modifier = Modifier.weight(1f)
+                                                )
+                                                if (isCorrect) {
+                                                    Icon(
+                                                        imageVector = Icons.Rounded.CheckCircle,
+                                                        contentDescription = "Correcta",
+                                                        tint = Color(0xFF10B981),
+                                                        modifier = Modifier.size(16.dp)
+                                                    )
+                                                }
+                                            }
                                         }
-                                    }
 
-                                    Spacer(Modifier.height(10.dp))
-                                    Button(
-                                        onClick = {
-                                            haptic.performHapticFeedback(androidx.compose.ui.hapticfeedback.HapticFeedbackType.LongPress)
-                                            onSolve(item.id)
-                                        },
-                                        modifier = Modifier.fillMaxWidth().height(36.dp).bouncyClick {
-                                            haptic.performHapticFeedback(androidx.compose.ui.hapticfeedback.HapticFeedbackType.LongPress)
-                                            onSolve(item.id)
-                                        },
-                                        shape = RastroShapes.Pill,
-                                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF10B981))
-                                    ) {
-                                        Icon(Icons.Rounded.Check, contentDescription = null, modifier = Modifier.size(14.dp), tint = Color.White)
-                                        Spacer(Modifier.width(6.dp))
-                                        Text("Ya lo entendí (Resolver)", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color.White)
+                                        if (item.explanation.isNotBlank()) {
+                                            Spacer(Modifier.height(8.dp))
+                                            Box(
+                                                modifier = Modifier
+                                                    .fillMaxWidth()
+                                                    .clip(RoundedCornerShape(10.dp))
+                                                    .background(theme.surfaceAccent.copy(alpha = 0.5f))
+                                                    .border(1.dp, theme.borderSubtle, RoundedCornerShape(10.dp))
+                                                .padding(9.dp)
+                                            ) {
+                                                Row(verticalAlignment = Alignment.Top) {
+                                                    Icon(Icons.Rounded.Lightbulb, contentDescription = null, tint = Color(0xFFF59E0B), modifier = Modifier.size(15.dp))
+                                                    Spacer(Modifier.width(6.dp))
+                                                    Text(item.explanation, fontSize = 11.sp, color = theme.textSecondary, lineHeight = 15.sp)
+                                                }
+                                            }
+                                        }
+
+                                        Spacer(Modifier.height(12.dp))
+                                        Sticker3dButton(
+                                            onClick = {
+                                                DuolingoHaptics.playLessonComplete(context)
+                                                onSolve(item.id)
+                                            },
+                                            modifier = Modifier.fillMaxWidth(),
+                                            containerColor = Color(0xFF10B981),
+                                            bottomBevelColor = Color(0xFF047857),
+                                            strokeColor = theme.strokeBorder,
+                                            bevelHeight = 3.dp,
+                                            shape = RastroShapes.Pill,
+                                            contentPadding = PaddingValues(vertical = 8.dp)
+                                        ) {
+                                            Row(
+                                                verticalAlignment = Alignment.CenterVertically,
+                                                horizontalArrangement = Arrangement.Center
+                                            ) {
+                                                Icon(Icons.Rounded.Check, contentDescription = null, modifier = Modifier.size(16.dp), tint = Color.White)
+                                                Spacer(Modifier.width(6.dp))
+                                                Text("Ya lo entendí (Resolver)", fontSize = 12.sp, fontWeight = FontWeight.Black, color = Color.White)
+                                            }
+                                        }
                                     }
                                 }
                             }

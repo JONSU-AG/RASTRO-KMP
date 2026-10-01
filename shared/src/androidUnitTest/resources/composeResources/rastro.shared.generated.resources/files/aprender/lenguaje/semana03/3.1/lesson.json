@@ -1,0 +1,34 @@
+{
+  "id": "leng_t03_s01",
+  "subjectId": "lenguaje",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "Fonología, Fonética, Sistema Fonológico y Estructura Silábica",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana03.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_03_Fonologia_y_Ortografia.md",
+  "learningObjectives": [
+    "Diferenciar fonema abstracto y distintivo de alófono material y de grafema escrito",
+    "Describir el sistema de 24 fonemas con la clasificación de las cinco vocales",
+    "Explicar polifonía, poligrafía y letras mudas en la asimetría fonema y grafema",
+    "Analizar la sílaba en ataque, cima con núcleo y coda con libre frente a trabada",
+    "Aplicar la función distintiva con pares mínimos como masa frente a mesa"
+  ],
+  "theory": {
+    "id": "th_leng_t03_s01",
+    "asignatura": "Lenguaje",
+    "semana": 3,
+    "titulo": "Fonología, Fonética, Sistema Fonológico y Estructura Silábica",
+    "resumen": "",
+    "conceptosClave": [
+      "Fonema abstracto entre barras con función distintiva frente a alófono entre corchetes",
+      "24 fonemas segmentales con 5 vocales y 19 consonantes frente a 27 grafías y 5 dígrafos",
+      "Vocales anteriores e y i, central a, posteriores o y u con altas i y u",
+      "Polifonía de c en casa y cena frente a poligrafía de k en cama, kilo y queso",
+      "Letra h muda y u muda en gue, gui, que y qui",
+      "Cima con núcleo vocálico obligatorio frente a ataque prenuclear y coda posnuclear",
+      "Sílaba trabada trans con coda frente a sílaba libre pa con solo vocal"
+    ],
+    "admissionTip": "24 fonemas con 5 vocales y 27 grafías; h siempre muda; trans es trabada por su coda y pan reparte ataque p y coda n.",
+    "admissionExplanation": "El par mínimo demuestra la función distintiva sin significado propio y la estructura ataque más cima más coda resuelve todo silabeo de examen."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "leng_t08_s01",
+  "subjectId": "lenguaje",
+  "semana": 8,
+  "subtema": "8.1",
+  "title": "El Signo Lingüístico y la Distinción Denotación vs. Connotación",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana08.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_08_Semantica_y_Lexicologia.md",
+  "learningObjectives": [
+    "Describir el signo biplánico de Saussure con significado y significante",
+    "Explicar arbitrariedad, linealidad, mutabilidad diacrónica e inmutabilidad sincrónica",
+    "Diferenciar primera articulación con morfemas de segunda con fonemas",
+    "Discriminar denotación literal de connotación figurada en oraciones de examen"
+  ],
+  "theory": {
+    "id": "th_leng_t08_s01",
+    "asignatura": "Lenguaje",
+    "semana": 8,
+    "titulo": "El Signo Lingüístico y la Distinción Denotación vs. Connotación",
+    "resumen": "",
+    "conceptosClave": [
+      "Significado = concepto mental; significante = imagen acústica psíquica",
+      "Arbitrariedad: perro, dog y allqo prueban convención sin lazo natural",
+      "Linealidad: fonemas en cadena temporal unidimensional sucesiva",
+      "Mutabilidad diacrónica aurum→oro; inmutabilidad sincrónica anti-cambio individual",
+      "Primera articulación morfemas con significado; segunda fonemas distintivos",
+      "Denotación de diccionario objetiva; connotación figurada contextual",
+      "Rata traidora y corazón de oro son connotación; hielo y león científico son denotación"
+    ],
+    "admissionTip": "Si la palabra nombra el cuerpo celeste, el hielo que se derrite o el león clasificado, es denotación; si nombra fama como estrella, traición como rata u ojos de lince en negocios, es connotación.",
+    "admissionExplanation": "Denotación es valor primario de diccionario compartido por todos; connotación es valor secundario afectivo que depende del contexto pragmático."
+  }
+}

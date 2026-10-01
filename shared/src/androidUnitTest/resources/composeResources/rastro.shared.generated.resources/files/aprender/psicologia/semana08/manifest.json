@@ -1,0 +1,18 @@
+{
+  "week": 8,
+  "title": "Personalidad, Temperamento y Carácter",
+  "lessons": [
+    {
+      "subtopic": "8.1",
+      "lessonId": "psi_t08_s01",
+      "title": "3.1. Definición y Características de la Personalidad",
+      "path": "8.1/lesson.json"
+    },
+    {
+      "subtopic": "8.2",
+      "lessonId": "psi_t08_s02",
+      "title": "4.1. Tipologías Clásicas de la Personalidad",
+      "path": "8.2/lesson.json"
+    }
+  ]
+}
