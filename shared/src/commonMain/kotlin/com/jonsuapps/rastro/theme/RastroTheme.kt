@@ -10,17 +10,17 @@ import androidx.compose.ui.graphics.Color
  * Soporta los 9 temas del ecosistema.
  */
 enum class RastroThemeId(val idName: String, val displayName: String, val bgHex: String) {
-    LIGHT("light", "Blanco Puro", "#F2F2F7"),
-    LIGHT_WARM("light-warm", "Cálido Suave", "#F6F3EC"),
-    DARK("dark", "Oscuro Noche", "#000000"),
-    GUINDA("guinda", "Guinda Nocturno", "#2D060D"),
+    LIGHT("light", "Blanco", "#F2F2F7"),
+    LIGHT_WARM("light-warm", "Cálido", "#F6F3EC"),
+    DARK("dark", "Oscuro", "#000000"),
+    GUINDA("guinda", "Guinda", "#2D060D"),
     GUINDA_LIGHT("guinda-light", "Guinda Claro", "#FDF2F4"),
-    CORAJE("coraje", "Coraje Cálido", "#F4EBE1"),
+    CORAJE("coraje", "Coraje", "#F4EBE1"),
     CORAJE_DARK("coraje-dark", "Coraje Oscuro", "#120919"),
-    BEIGE_CARMESI("beige-carmesi", "Beige Carmesí (UNSA)", "#E8DFD8"),
-    GOOGLE_VIBRANT("google-vibrant", "Google Vibrant", "#F0F4F9"),
-    MATERIAL_YOU("material-you", "Material You (Google Dinámico)", "#6750A4"),
-    CUSTOM("custom", "Personalizado (3 colores)", "#3B82F6")
+    BEIGE_CARMESI("beige-carmesi", "Beige", "#E8DFD8"),
+    GOOGLE_VIBRANT("google-vibrant", "Vibrante", "#F0F4F9"),
+    MATERIAL_YOU("material-you", "Tema adaptable", "#6750A4"),
+    CUSTOM("custom", "Mi tema", "#3B82F6")
 }
 
 data class RastroPalette(
@@ -238,10 +238,11 @@ object RastroSemanticColors {
 data class CustomThemeColors(
     val primary: Color = Color(0xFFFFFFFF),       // Fondo dominante
     val secondary: Color = Color(0xFFF1F5F9),     // Superficie / Paneles
-    val accent: Color = Color(0xFF007AFF)         // Acento / Acción
+    val accent: Color = Color(0xFF007AFF),         // Acento / Acción
+    val highlight: Color = Color(0xFF007AFF)      // Destacar: racha, indicadores, detalles
 )
 
-fun generateCustomPalette(primary: Color, secondary: Color, accent: Color): RastroPalette {
+fun generateCustomPalette(primary: Color, secondary: Color, accent: Color, highlight: Color = accent): RastroPalette {
     val bgLuminance = (0.299f * primary.red + 0.587f * primary.green + 0.114f * primary.blue)
     val isLight = bgLuminance > 0.5f
 
@@ -251,8 +252,6 @@ fun generateCustomPalette(primary: Color, secondary: Color, accent: Color): Rast
     val textMuted = if (isLight) Color(0xFF64748B) else Color(0xFF94A3B8)
     val strokeBorder = if (isLight) Color(0xFF1E293B) else Color(0xFF475569)
     val cardBevel = if (isLight) Color(0xFFCBD5E1) else Color(0xFF0F172A)
-    val accentLuminance = (0.299f * accent.red + 0.587f * accent.green + 0.114f * accent.blue)
-    val accentBevel = if (accentLuminance > 0.5f) Color(0xFF0056B3) else Color(0xFF0284C7)
 
     return RastroPalette(
         background = primary,
@@ -262,7 +261,7 @@ fun generateCustomPalette(primary: Color, secondary: Color, accent: Color): Rast
         surfaceBorder = if (isLight) Color(0x2E787880) else Color(0x33FFFFFF),
         strokeBorder = strokeBorder,
         cardBevel = cardBevel,
-        accentBevel = accentBevel,
+        accentBevel = highlight,
         textPrimary = textPrimary,
         textSecondary = textSecondary,
         textMuted = textMuted,
@@ -294,8 +293,8 @@ object ThemeManager {
         currentThemeId = themeId
     }
 
-    fun setCustomTheme(primary: Color, secondary: Color, accent: Color) {
-        customColors = CustomThemeColors(primary, secondary, accent)
+    fun setCustomTheme(primary: Color, secondary: Color, accent: Color, highlight: Color = accent) {
+        customColors = CustomThemeColors(primary, secondary, accent, highlight)
         currentThemeId = RastroThemeId.CUSTOM
     }
 

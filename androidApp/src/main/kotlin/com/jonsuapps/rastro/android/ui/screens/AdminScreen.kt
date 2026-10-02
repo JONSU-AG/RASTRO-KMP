@@ -1518,9 +1518,9 @@ fun AdminScreen(
                                             horizontalArrangement = Arrangement.SpaceBetween
                                         ) {
                                             Column(modifier = Modifier.weight(1f)) {
-                                                Text("Días activos", fontSize = 10.sp, color = theme.textSecondary)
+                                                Text("Asistencia", fontSize = 10.sp, color = theme.textSecondary)
                                                 Text(
-                                                    text = "${tester.activeDaysCount}",
+                                                    text = "${tester.activeDaysCount}/${tester.activeDaysCount + tester.inactiveDaysCount} días",
                                                     fontSize = 13.sp,
                                                     fontWeight = FontWeight.Black,
                                                     color = if (tester.activeDaysCount > 0) Color(0xFF10B981) else theme.textSecondary
@@ -1543,7 +1543,7 @@ fun AdminScreen(
                                             horizontalArrangement = Arrangement.SpaceBetween
                                         ) {
                                             Column(modifier = Modifier.weight(1f)) {
-                                                Text("Tiempo total", fontSize = 10.sp, color = theme.textSecondary)
+                                                Text("Total período", fontSize = 10.sp, color = theme.textSecondary)
                                                 Text(
                                                     text = tester.formattedTotalTime,
                                                     fontSize = 13.sp,
@@ -1562,6 +1562,38 @@ fun AdminScreen(
                                                 )
                                             }
                                         }
+
+                                        Row(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            horizontalArrangement = Arrangement.SpaceBetween
+                                        ) {
+                                            Column(modifier = Modifier.weight(1f)) {
+                                                Text("APK período", fontSize = 10.sp, color = theme.textSecondary)
+                                                Text(
+                                                    text = tester.formattedAppPeriodTime,
+                                                    fontSize = 13.sp,
+                                                    fontWeight = FontWeight.Black,
+                                                    color = theme.textPrimary
+                                                )
+                                            }
+
+                                            Column(modifier = Modifier.weight(1f)) {
+                                                Text("Web período", fontSize = 10.sp, color = theme.textSecondary)
+                                                Text(
+                                                    text = tester.formattedWebPeriodTime,
+                                                    fontSize = 13.sp,
+                                                    fontWeight = FontWeight.Black,
+                                                    color = theme.textPrimary
+                                                )
+                                            }
+                                        }
+
+                                        Text(
+                                            text = "Total histórico: ${tester.formattedHistoricTotalTime}",
+                                            fontSize = 10.5.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = theme.textSecondary
+                                        )
                                     }
 
                                     // Fila de Última Actividad
@@ -1579,7 +1611,7 @@ fun AdminScreen(
                                             )
                                             Spacer(modifier = Modifier.width(4.dp))
                                             Text(
-                                                text = "Última actividad: ${tester.formattedLastActive}",
+                                                text = "Última actividad: ${tester.formattedLastActiveDateTime}",
                                                 fontSize = 10.5.sp,
                                                 color = theme.textSecondary,
                                                 fontWeight = FontWeight.Medium
@@ -1620,7 +1652,7 @@ fun AdminScreen(
                                             )
                                             Spacer(modifier = Modifier.width(4.dp))
                                             Text(
-                                                text = "Última actividad: ${tester.formattedLastActive}",
+                                                text = "Última actividad: ${tester.formattedLastActiveDateTime}",
                                                 fontSize = 10.5.sp,
                                                 color = theme.textSecondary,
                                                 fontWeight = FontWeight.Medium
@@ -2257,8 +2289,29 @@ fun AdminScreen(
                                     modifier = Modifier.fillMaxWidth(),
                                     horizontalArrangement = Arrangement.SpaceBetween
                                 ) {
-                                    Text("Tiempo total:", fontSize = 11.sp, color = theme.textSecondary)
+                                    Text("APK período:", fontSize = 11.sp, color = theme.textSecondary)
+                                    Text(detail.formattedAppPeriodTime, fontSize = 11.sp, fontWeight = FontWeight.Black, color = theme.textPrimary)
+                                }
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Text("Web período:", fontSize = 11.sp, color = theme.textSecondary)
+                                    Text(detail.formattedWebPeriodTime, fontSize = 11.sp, fontWeight = FontWeight.Black, color = theme.textPrimary)
+                                }
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Text("Total período:", fontSize = 11.sp, color = theme.textSecondary)
                                     Text(detail.formattedTotalTime, fontSize = 11.sp, fontWeight = FontWeight.Black, color = theme.textPrimary)
+                                }
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Text("Total histórico:", fontSize = 11.sp, color = theme.textSecondary)
+                                    Text(detail.formattedHistoricTotalTime, fontSize = 11.sp, fontWeight = FontWeight.Black, color = theme.textPrimary)
                                 }
                                 Row(
                                     modifier = Modifier.fillMaxWidth(),
@@ -2272,7 +2325,7 @@ fun AdminScreen(
                                     horizontalArrangement = Arrangement.SpaceBetween
                                 ) {
                                     Text("Última actividad:", fontSize = 11.sp, color = theme.textSecondary)
-                                    Text(detail.formattedLastActive, fontSize = 11.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
+                                    Text(detail.formattedLastActiveDateTime, fontSize = 11.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
                                 }
 
                                 if (detail.historicalRecoveredDates.isNotEmpty()) {
@@ -2383,7 +2436,7 @@ fun AdminScreen(
                                             )
                                             Spacer(modifier = Modifier.width(8.dp))
                                             Text(
-                                                text = dayItem.formattedDate,
+                                                text = dayItem.formattedDate + if (dayItem.isActive) " ✓" else " ✗",
                                                 fontSize = 12.5.sp,
                                                 fontWeight = FontWeight.Bold,
                                                 color = theme.textPrimary

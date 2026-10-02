@@ -37,6 +37,7 @@ import com.jonsuapps.rastro.android.ui.components.Sticker3dButton
 import com.jonsuapps.rastro.android.ui.components.Sticker3dCard
 import com.jonsuapps.rastro.android.ui.components.bouncyClick
 import com.jonsuapps.rastro.gamification.GamificationManager
+import com.jonsuapps.rastro.theme.RastroPalette
 import com.jonsuapps.rastro.theme.ThemeManager
 import java.util.Calendar
 
@@ -71,7 +72,7 @@ fun DiasDeRachaScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF8FAFC))
+            .background(theme.background)
             .statusBarsPadding()
             .navigationBarsPadding()
     ) {
@@ -88,7 +89,7 @@ fun DiasDeRachaScreen(
                 modifier = Modifier
                     .size(42.dp)
                     .clip(RoundedCornerShape(14.dp))
-                    .background(Color.White)
+                    .background(theme.surface)
                     .border(1.6.dp, theme.strokeBorder, RoundedCornerShape(14.dp))
                     .bouncyClick(scaleDown = 0.88f, onClick = onBack),
                 contentAlignment = Alignment.Center
@@ -114,7 +115,7 @@ fun DiasDeRachaScreen(
                 modifier = Modifier
                     .size(42.dp)
                     .clip(RoundedCornerShape(14.dp))
-                    .background(Color.White)
+                    .background(theme.surface)
                     .border(1.6.dp, theme.strokeBorder, RoundedCornerShape(14.dp))
                     .bouncyClick(scaleDown = 0.88f) {
                         val text = "¡Llevo una racha de ${streakState.currentStreak} ${if (streakState.currentStreak == 1) "día" else "días"} estudiando en RASTRO! 🚀 Prepárate para el examen UNSA."
@@ -146,9 +147,9 @@ fun DiasDeRachaScreen(
             // ── 2. TARJETA PRINCIPAL DE RACHA (Fuego Grande + Racha + Orstty) ───
             Sticker3dCard(
                 modifier = Modifier.fillMaxWidth(),
-                containerColor = Color(0xFFFEF9C3), // Amarillo pastel cálido
+                containerColor = theme.surface,
                 strokeColor = theme.strokeBorder,
-                bevelColor = Color(0xFFFDE047),
+                bevelColor = theme.cardBevel,
                 bevelHeight = 3.5.dp,
                 shape = RoundedCornerShape(24.dp)
             ) {
@@ -215,9 +216,9 @@ fun DiasDeRachaScreen(
             // ── 3. ESTADO DE HOY (Contextual) ──────────────────────────────
             Sticker3dCard(
                 modifier = Modifier.fillMaxWidth(),
-                containerColor = Color.White,
+                containerColor = theme.surface,
                 strokeColor = theme.strokeBorder,
-                bevelColor = Color(0xFFE2E8F0),
+                bevelColor = theme.cardBevel,
                 bevelHeight = 2.5.dp,
                 shape = RoundedCornerShape(20.dp)
             ) {
@@ -324,9 +325,9 @@ fun DiasDeRachaScreen(
                 // Tarjeta Mejor racha
                 Sticker3dCard(
                     modifier = Modifier.weight(1f),
-                    containerColor = Color(0xFFF5F3FF), // Lavanda pastel
+                    containerColor = theme.surface,
                     strokeColor = theme.strokeBorder,
-                    bevelColor = Color(0xFFEDE9FE),
+                    bevelColor = theme.cardBevel,
                     bevelHeight = 2.5.dp,
                     shape = RoundedCornerShape(18.dp)
                 ) {
@@ -346,13 +347,13 @@ fun DiasDeRachaScreen(
                                 text = "Mejor racha",
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(0xFF64748B)
+                                color = theme.textSecondary
                             )
                             Text(
                                 text = "${streakState.bestStreak} ${if (streakState.bestStreak == 1) "día" else "días"}",
                                 fontSize = 15.sp,
                                 fontWeight = FontWeight.Black,
-                                color = Color(0xFF7C3AED)
+                                color = theme.accent
                             )
                         }
                     }
@@ -361,9 +362,9 @@ fun DiasDeRachaScreen(
                 // Tarjeta Racha actual
                 Sticker3dCard(
                     modifier = Modifier.weight(1f),
-                    containerColor = Color(0xFFEFF6FF), // Azul claro pastel
+                    containerColor = theme.surface,
                     strokeColor = theme.strokeBorder,
-                    bevelColor = Color(0xFFDBEAFE),
+                    bevelColor = theme.cardBevel,
                     bevelHeight = 2.5.dp,
                     shape = RoundedCornerShape(18.dp)
                 ) {
@@ -383,7 +384,7 @@ fun DiasDeRachaScreen(
                                 text = "Racha actual",
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(0xFF64748B)
+                                color = theme.textSecondary
                             )
                             Text(
                                 text = "${streakState.currentStreak} ${if (streakState.currentStreak == 1) "día" else "días"}",
@@ -404,6 +405,7 @@ fun DiasDeRachaScreen(
                 activityDates = streakState.activityDates,
                 isTodayProtected = isTodayProtected,
                 strokeColor = theme.strokeBorder,
+                theme = theme,
                 onPreviousMonth = {
                     if (viewingMonth == 1) {
                         viewingMonth = 12
@@ -425,9 +427,9 @@ fun DiasDeRachaScreen(
             // ── 6. TARJETA "CADA DÍA CUENTA" ──────────────────────────────
             Sticker3dCard(
                 modifier = Modifier.fillMaxWidth(),
-                containerColor = Color.White,
+                containerColor = theme.surface,
                 strokeColor = theme.strokeBorder,
-                bevelColor = Color(0xFFE2E8F0),
+                bevelColor = theme.cardBevel,
                 bevelHeight = 2.5.dp,
                 shape = RoundedCornerShape(20.dp)
             ) {
@@ -478,6 +480,7 @@ private fun StreakCalendarCard(
     activityDates: Set<String>,
     isTodayProtected: Boolean,
     strokeColor: Color,
+    theme: RastroPalette,
     onPreviousMonth: () -> Unit,
     onNextMonth: () -> Unit
 ) {
@@ -517,9 +520,9 @@ private fun StreakCalendarCard(
 
     Sticker3dCard(
         modifier = Modifier.fillMaxWidth(),
-        containerColor = Color.White,
+        containerColor = theme.surface,
         strokeColor = strokeColor,
-        bevelColor = Color(0xFFE2E8F0),
+        bevelColor = theme.cardBevel,
         bevelHeight = 3.dp,
         shape = RoundedCornerShape(22.dp)
     ) {
@@ -547,7 +550,7 @@ private fun StreakCalendarCard(
                         text = "Calendario de racha",
                         fontSize = 15.sp,
                         fontWeight = FontWeight.Black,
-                        color = Color(0xFF0F172A)
+                        color = theme.textPrimary
                     )
                 }
 
@@ -555,7 +558,7 @@ private fun StreakCalendarCard(
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(12.dp))
-                        .background(Color(0xFFF1F5F9))
+                        .background(theme.surfaceAccent)
                         .border(1.2.dp, strokeColor, RoundedCornerShape(12.dp))
                         .padding(horizontal = 4.dp, vertical = 2.dp)
                 ) {
@@ -572,7 +575,7 @@ private fun StreakCalendarCard(
                             Icon(
                                 imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
                                 contentDescription = "Mes anterior",
-                                tint = Color(0xFF0F172A),
+                                tint = theme.textPrimary,
                                 modifier = Modifier.size(13.dp)
                             )
                         }
@@ -581,7 +584,7 @@ private fun StreakCalendarCard(
                             text = monthTitle,
                             fontSize = 11.5.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFF0F172A)
+                            color = theme.textPrimary
                         )
 
                         Box(
@@ -593,7 +596,7 @@ private fun StreakCalendarCard(
                             Icon(
                                 imageVector = Icons.AutoMirrored.Rounded.ArrowForward,
                                 contentDescription = "Mes siguiente",
-                                tint = Color(0xFF0F172A),
+                                tint = theme.textPrimary,
                                 modifier = Modifier.size(13.dp)
                             )
                         }
@@ -617,7 +620,7 @@ private fun StreakCalendarCard(
                             text = label,
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Black,
-                            color = Color(0xFF94A3B8)
+                            color = theme.textMuted
                         )
                     }
                 }
@@ -647,7 +650,7 @@ private fun StreakCalendarCard(
                                             text = "$dayNum",
                                             fontSize = 11.5.sp,
                                             fontWeight = FontWeight.Normal,
-                                            color = Color(0xFFCBD5E1)
+                                            color = theme.textMuted
                                         )
                                     }
                                     // Días del mes actual
@@ -709,7 +712,7 @@ private fun StreakCalendarCard(
                                                     text = "$dayNum",
                                                     fontSize = 11.5.sp,
                                                     fontWeight = FontWeight.Medium,
-                                                    color = Color(0xFF94A3B8)
+                                                    color = theme.textMuted
                                                 )
                                             }
                                             else -> {
@@ -718,7 +721,7 @@ private fun StreakCalendarCard(
                                                     text = "$dayNum",
                                                     fontSize = 11.5.sp,
                                                     fontWeight = FontWeight.SemiBold,
-                                                    color = Color(0xFF475569)
+                                                    color = theme.textSecondary
                                                 )
                                             }
                                         }
@@ -730,7 +733,7 @@ private fun StreakCalendarCard(
                                             text = "$dayNum",
                                             fontSize = 11.5.sp,
                                             fontWeight = FontWeight.Normal,
-                                            color = Color(0xFFCBD5E1)
+                                            color = theme.textMuted
                                         )
                                     }
                                 }

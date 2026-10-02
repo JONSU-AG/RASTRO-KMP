@@ -6,7 +6,6 @@ import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.SetOptions
-import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.android.gms.tasks.Tasks
 import com.google.firebase.Timestamp
@@ -88,73 +87,80 @@ object UserProfileRepository {
     }
 
     fun uploadCover(uid: String, image: Uri, context: android.content.Context? = null, onComplete: (Result<String>) -> Unit) {
-        val fileName = "${uid}_cover_${System.currentTimeMillis()}.jpg"
-        val reference = FirebaseStorage.getInstance().reference.child("avatars/$fileName")
-        val metadata = com.google.firebase.storage.StorageMetadata.Builder()
-            .setContentType("image/jpeg")
-            .build()
-        val bytes = try {
-            context?.contentResolver?.openInputStream(image)?.use { it.readBytes() }
-        } catch (_: Exception) { null }
-
-        val uploadTask = if (bytes != null && bytes.isNotEmpty()) {
-            reference.putBytes(bytes, metadata)
-        } else {
-            reference.putFile(image, metadata)
+        val ctx = context
+        if (ctx == null) {
+            onComplete(Result.failure(IllegalStateException("No se pudo subir la portada.")))
+            return
         }
-
-        uploadTask.continueWithTask { task ->
-                if (!task.isSuccessful) throw task.exception ?: IllegalStateException("Falló la subida de portada")
-                reference.downloadUrl
+        val bytes = try {
+            ctx.contentResolver.openInputStream(image)?.use { it.readBytes() }
+        } catch (_: Exception) { null }
+        if (bytes == null || bytes.isEmpty()) {
+            onComplete(Result.failure(IllegalStateException("No se pudo leer la imagen seleccionada.")))
+            return
+        }
+        // La portada se sube al Drive del usuario (carpeta RASTRO), igual que Aportar.
+        DriveUploadRepository.uploadUserFile(
+            context = ctx,
+            bytes = bytes,
+            displayName = "${uid}_cover_${System.currentTimeMillis()}.jpg",
+            mimeType = "image/jpeg",
+            makePublic = true,
+            onResult = { result ->
+                result.onSuccess { file ->
+                    val url = file.directUrl
+                    FirebaseFirestore.getInstance().collection("usuarios").document(uid)
+                        .set(mapOf("coverUrl" to url), SetOptions.merge())
+                        .addOnSuccessListener { onComplete(Result.success(url)) }
+                        .addOnFailureListener { onComplete(Result.failure(it)) }
+                }.onFailure { onComplete(Result.failure(it)) }
             }
-            .addOnSuccessListener { uri ->
-                val url = uri.toString()
-                FirebaseFirestore.getInstance().collection("usuarios").document(uid)
-                    .set(mapOf("coverUrl" to url), SetOptions.merge())
-                    .addOnSuccessListener { onComplete(Result.success(url)) }
-                    .addOnFailureListener { onComplete(Result.failure(it)) }
-            }
-            .addOnFailureListener { onComplete(Result.failure(it)) }
+        )
     }
 
     fun uploadAvatar(uid: String, image: Uri, context: android.content.Context? = null, onComplete: (Result<String>) -> Unit) {
-        val fileName = "${uid}_profile_${System.currentTimeMillis()}.jpg"
-        val reference = FirebaseStorage.getInstance().reference.child("avatars/$fileName")
-        val metadata = com.google.firebase.storage.StorageMetadata.Builder()
-            .setContentType("image/jpeg")
-            .build()
-        val bytes = try {
-            context?.contentResolver?.openInputStream(image)?.use { it.readBytes() }
-        } catch (_: Exception) { null }
-
-        val uploadTask = if (bytes != null && bytes.isNotEmpty()) {
-            reference.putBytes(bytes, metadata)
-        } else {
-            reference.putFile(image, metadata)
+        val ctx = context
+        if (ctx == null) {
+            onComplete(Result.failure(IllegalStateException("No se pudo subir la foto.")))
+            return
         }
-
-        uploadTask.continueWithTask { task ->
-                if (!task.isSuccessful) throw task.exception ?: IllegalStateException("Falló la subida de la foto")
-                reference.downloadUrl
-            }
-            .addOnSuccessListener { uri ->
-                val url = uri.toString()
-                val authUser = FirebaseAuth.getInstance().currentUser
-                val updateAuthPhoto = if (authUser?.uid == uid) {
-                    authUser.updateProfile(UserProfileChangeRequest.Builder().setPhotoUri(uri).build())
-                } else null
-                FirebaseFirestore.getInstance().collection("usuarios").document(uid)
-                    .set(mapOf("photoURL" to url), SetOptions.merge())
-                    .addOnSuccessListener {
-                        if (updateAuthPhoto == null) onComplete(Result.success(url))
-                        else updateAuthPhoto.addOnCompleteListener { task ->
-                            if (task.isSuccessful) onComplete(Result.success(url))
-                            else onComplete(Result.failure(task.exception ?: IllegalStateException("No se pudo guardar la foto")))
+        val bytes = try {
+            ctx.contentResolver.openInputStream(image)?.use { it.readBytes() }
+        } catch (_: Exception) { null }
+        if (bytes == null || bytes.isEmpty()) {
+            onComplete(Result.failure(IllegalStateException("No se pudo leer la imagen seleccionada.")))
+            return
+        }
+        // La foto se sube al Drive del usuario (carpeta RASTRO), igual que Aportar.
+        DriveUploadRepository.uploadUserFile(
+            context = ctx,
+            bytes = bytes,
+            displayName = "${uid}_profile_${System.currentTimeMillis()}.jpg",
+            mimeType = "image/jpeg",
+            makePublic = true,
+            onResult = { result ->
+                result.onSuccess { file ->
+                    val url = file.directUrl
+                    val authUser = FirebaseAuth.getInstance().currentUser
+                    val updateAuthPhoto = if (authUser?.uid == uid) {
+                        authUser.updateProfile(
+                            UserProfileChangeRequest.Builder()
+                                .setPhotoUri(android.net.Uri.parse(url)).build()
+                        )
+                    } else null
+                    FirebaseFirestore.getInstance().collection("usuarios").document(uid)
+                        .set(mapOf("photoURL" to url), SetOptions.merge())
+                        .addOnSuccessListener {
+                            if (updateAuthPhoto == null) onComplete(Result.success(url))
+                            else updateAuthPhoto.addOnCompleteListener { task ->
+                                if (task.isSuccessful) onComplete(Result.success(url))
+                                else onComplete(Result.failure(task.exception ?: IllegalStateException("No se pudo guardar la foto")))
+                            }
                         }
-                    }
-                    .addOnFailureListener { onComplete(Result.failure(it)) }
+                        .addOnFailureListener { onComplete(Result.failure(it)) }
+                }.onFailure { onComplete(Result.failure(it)) }
             }
-            .addOnFailureListener { onComplete(Result.failure(it)) }
+        )
     }
 
     fun toggleFollow(followerUid: String, followedUid: String, follow: Boolean, onComplete: (Boolean) -> Unit = {}) {

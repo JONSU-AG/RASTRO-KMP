@@ -47,7 +47,15 @@ data class TesterSummary(
     val lastActiveDate: String = "",
     val formattedLastActive: String = "Sin registro",
     val dailyItems: List<DailyActivityItem> = emptyList(),
-    val historicalRecoveredDates: Set<String> = emptySet()
+    val historicalRecoveredDates: Set<String> = emptySet(),
+    // Desglose APK/Web del período + histórico acumulado (totalTesterSeconds).
+    val appPeriodSeconds: Long = 0L,
+    val formattedAppPeriodTime: String = "0 min",
+    val webPeriodSeconds: Long = 0L,
+    val formattedWebPeriodTime: String = "0 min",
+    val historicTotalSeconds: Long = 0L,
+    val formattedHistoricTotalTime: String = "0 min",
+    val formattedLastActiveDateTime: String = "Sin registro"
 )
 
 /**
@@ -320,6 +328,9 @@ object TesterActivityRepository {
                         date to sec
                     }.toMap()
 
+                    // ADMIN_ACTIVITY: diagnóstico temporal lectura Admin (NO borrar sin avisar).
+                    Log.d("ADMIN_ACTIVITY", "ADMIN_ACTIVITY uid=$uid testerDailyApp RAW=$rawAppMap testerDailySeconds RAW=$rawDailyMap testerDailyWeb RAW=$rawWebMap totalTesterSeconds RAW=${doc.getLong("totalTesterSeconds")} lastTesterActiveDate RAW=${doc.getString("lastTesterActiveDate")} lastTesterActiveTimestamp RAW=${doc.getLong("lastTesterActiveTimestamp")} queryStart=$startDate queryEnd=$endDate")
+
                     // Unificar todas las fuentes de actividad
                     val allDates = (rawDailyMap.keys + rawAppMap.keys + rawWebMap.keys).distinct()
                     val dailySeconds = allDates.associateWith { date ->
@@ -329,10 +340,12 @@ object TesterActivityRepository {
                         maxOf(dSec, aSec + wSec)
                     }
 
-                    // Extraer última fecha registrada
+                    // Extraer última fecha registrada + acumulados históricos
                     val lastActiveDate = doc.getString("lastTesterActiveDate")
                         ?: dailySeconds.keys.maxOrNull()
                         ?: ""
+                    val historicTotalSeconds = doc.getLong("totalTesterSeconds") ?: 0L
+                    val lastActiveTimestamp = doc.getLong("lastTesterActiveTimestamp") ?: 0L
 
                     buildTesterSummary(
                         uid = uid,
@@ -347,7 +360,9 @@ object TesterActivityRepository {
                         endDate = endDate,
                         today = today,
                         historicalDates = emptySet(),
-                        trackingStartDate = startDate
+                        trackingStartDate = startDate,
+                        historicTotalSeconds = historicTotalSeconds,
+                        lastActiveTimestamp = lastActiveTimestamp
                     )
                 }
 
@@ -410,6 +425,8 @@ object TesterActivityRepository {
                 }
 
                 val lastActiveDate = userDoc.getString("lastTesterActiveDate") ?: ""
+                val historicTotalSeconds = userDoc.getLong("totalTesterSeconds") ?: 0L
+                val lastActiveTimestamp = userDoc.getLong("lastTesterActiveTimestamp") ?: 0L
 
                 // 2. Intentar recuperar histórico anterior de usuarios/{uid}/gamificacion/rastro_progress
                 db.collection("usuarios").document(uid)
@@ -437,7 +454,9 @@ object TesterActivityRepository {
                             endDate = endDate,
                             today = today,
                             historicalDates = historicalDates,
-                            trackingStartDate = startDate
+                            trackingStartDate = startDate,
+                            historicTotalSeconds = historicTotalSeconds,
+                            lastActiveTimestamp = lastActiveTimestamp
                         )
                         onResult(summary)
                     }
@@ -502,13 +521,17 @@ object TesterActivityRepository {
         endDate: String,
         today: String = GamificationManager.getLocalDayString(),
         historicalDates: Set<String> = emptySet(),
-        trackingStartDate: String = "2026-09-24"
+        trackingStartDate: String = "2026-09-24",
+        historicTotalSeconds: Long = 0L,
+        lastActiveTimestamp: Long = 0L
     ): TesterSummary {
         val effectiveEnd = if (today < endDate) today else endDate
         val observedDates = getDaysBetween(startDate, effectiveEnd)
 
         var activeCount = 0
         var totalSecs = 0L
+        var appPeriodSecs = 0L
+        var webPeriodSecs = 0L
         var latestActiveDate = lastActiveDate
 
         val dailyItems = observedDates.map { date ->
@@ -523,6 +546,8 @@ object TesterActivityRepository {
             if (isActive) {
                 activeCount++
                 totalSecs += recordedSeconds
+                appPeriodSecs += appSecs
+                webPeriodSecs += webSecs
                 if (date > latestActiveDate) {
                     latestActiveDate = date
                 }
@@ -557,6 +582,9 @@ object TesterActivityRepository {
         val inactiveCount = (observedDates.size - activeCount).coerceAtLeast(0)
         val avgSecs = if (activeCount > 0) totalSecs / activeCount else 0L
 
+        // ADMIN_ACTIVITY: diagnóstico temporal cálculo Admin (NO borrar sin avisar).
+        Log.d("ADMIN_ACTIVITY", "ADMIN_ACTIVITY uid=$uid observedDates=$observedDates appPeriodSeconds=$appPeriodSecs webPeriodSeconds=$webPeriodSecs totalPeriodSeconds=$totalSecs historicSeconds=$historicTotalSeconds activeDays=$activeCount")
+
         val cleanEmail = if (email.isBlank() || email.equals("Sin correo", ignoreCase = true)) "Cuenta sin correo" else email
 
         return TesterSummary(
@@ -572,6 +600,13 @@ object TesterActivityRepository {
             formattedAverage = formatAverageMinutesAndSeconds(avgSecs),
             lastActiveDate = latestActiveDate,
             formattedLastActive = if (latestActiveDate.isNotBlank()) formatDateShort(latestActiveDate) else "Sin actividad",
+            appPeriodSeconds = appPeriodSecs,
+            formattedAppPeriodTime = formatDuration(appPeriodSecs),
+            webPeriodSeconds = webPeriodSecs,
+            formattedWebPeriodTime = formatDuration(webPeriodSecs),
+            historicTotalSeconds = historicTotalSeconds,
+            formattedHistoricTotalTime = formatDuration(historicTotalSeconds),
+            formattedLastActiveDateTime = formatLastActiveDateTime(lastActiveTimestamp, today),
             dailyItems = dailyItems,
             historicalRecoveredDates = historicalDates
         )
@@ -589,6 +624,25 @@ object TesterActivityRepository {
                 LocalDate.fromEpochDays(epochDay).toString()
             }
         }.getOrDefault(emptyList())
+    }
+
+    /**
+     * Formatea última actividad como "Hoy 14:32" si es hoy, o "24 sep. 14:32".
+     * Usa lastTesterActiveTimestamp (millis, hora local del dispositivo).
+     */
+    fun formatLastActiveDateTime(timestampMillis: Long, today: String): String {
+        if (timestampMillis <= 0L) return "Sin registro"
+        return runCatching {
+            val cal = java.util.Calendar.getInstance()
+            cal.timeInMillis = timestampMillis
+            val hh = cal.get(java.util.Calendar.HOUR_OF_DAY).toString().padStart(2, '0')
+            val mm = cal.get(java.util.Calendar.MINUTE).toString().padStart(2, '0')
+            val y = cal.get(java.util.Calendar.YEAR)
+            val mo = (cal.get(java.util.Calendar.MONTH) + 1).toString().padStart(2, '0')
+            val d = cal.get(java.util.Calendar.DAY_OF_MONTH).toString().padStart(2, '0')
+            val dateStr = "$y-$mo-$d"
+            if (dateStr == today) "Hoy $hh:$mm" else "${formatDateShort(dateStr)} $hh:$mm"
+        }.getOrDefault("Sin registro")
     }
 
     /**

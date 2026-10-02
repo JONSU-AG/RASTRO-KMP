@@ -51,6 +51,22 @@ object ImageCacheManager {
     }
 
     /**
+     * Invalida una URL concreta (memoria + disco) cuando su imagen fue REEMPLAZADA.
+     * Llamar con la URL ANTERIOR justo al confirmar la subida nueva: así la próxima
+     * lectura refetch/lee el contenido vigente en vez de reutilizar el bitmap viejo.
+     * No afecta a ninguna otra imagen en caché.
+     */
+    fun evict(url: String) {
+        if (url.isBlank()) return
+        memoryCache.remove(url)
+        runCatching {
+            val dir = cacheDir ?: return@runCatching
+            val f = File(dir, "${sha256(url)}.cache")
+            if (f.exists()) f.delete()
+        }
+    }
+
+    /**
      * Carga la imagen consultando primero la memoria, luego el disco local, y finalmente la red.
      */
     suspend fun loadImage(context: Context, url: String): ImageBitmap? {

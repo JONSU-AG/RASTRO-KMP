@@ -1,47 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Contador 2x1: PNG fijo (hoja vacía izquierda, Orstty derecha) + pastilla crema DENTRO de la hoja. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widget_countdown_root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/widget_card_background"
-    android:gravity="center"
-    android:padding="12dp">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/widget_countdown_target"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="🎯 EXAMEN ADMISIÓN UNSA"
-        android:textColor="#2563EB"
-        android:textSize="10sp"
-        android:textStyle="bold" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/widget_bg_contador"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name" />
 
-    <TextView
-        android:id="@+id/widget_countdown_days"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="42"
-        android:textColor="#0F172A"
-        android:textSize="28sp"
-        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/widget_countdown_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DÍAS RESTANTES"
-        android:textColor="#10B981"
-        android:textSize="10sp"
-        android:textStyle="bold" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8" />
 
-    <TextView
-        android:id="@+id/widget_countdown_career"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:text="¡Asegura tu vacante!"
-        android:textColor="#64748B"
-        android:textSize="9sp" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/widget_pill_background"
+            android:padding="8dp">
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/widget_countdown_target"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EXAMEN UNSA"
+                android:textColor="#0F172A"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/widget_countdown_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="44"
+                android:textColor="#0F172A"
+                android:textSize="44sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_countdown_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DÍAS RESTANTES"
+                android:textColor="#64748B"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="42" />
+    </LinearLayout>
+
+</FrameLayout>

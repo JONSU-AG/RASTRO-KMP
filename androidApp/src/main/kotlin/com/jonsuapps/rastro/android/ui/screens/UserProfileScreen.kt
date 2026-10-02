@@ -22,8 +22,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.graphics.asImageBitmap
 import android.graphics.BitmapFactory
 import android.content.Intent
+import android.net.Uri
+import androidx.compose.ui.graphics.ImageBitmap
+import com.google.firebase.auth.UserProfileChangeRequest
 import androidx.compose.foundation.BorderStroke
+import com.jonsuapps.rastro.android.data.DriveUploadRepository
 import com.jonsuapps.rastro.android.data.UserProfileRepository
+import com.jonsuapps.rastro.android.util.ImageCacheManager
 import com.jonsuapps.rastro.android.data.ProfileConnection
 import com.jonsuapps.rastro.android.data.UserUpload
 import com.jonsuapps.rastro.android.data.UserUploadRepository
@@ -151,6 +156,13 @@ fun UserProfileScreen(
     var savingProfile by remember { mutableStateOf(false) }
     var uploadingCover by remember { mutableStateOf(false) }
     var uploadingAvatar by remember { mutableStateOf(false) }
+    // Selección temporal transaccional: solo se sube a Drive al pulsar GUARDAR.
+    var pendingAvatarUri by remember { mutableStateOf<Uri?>(null) }
+    var pendingCoverUri by remember { mutableStateOf<Uri?>(null) }
+    fun discardPendingMedia() {
+        pendingAvatarUri = null
+        pendingCoverUri = null
+    }
     var profileMessage by remember { mutableStateOf<String?>(null) }
     var connectionDialogTitle by remember { mutableStateOf<String?>(null) }
     var connectionUsers by remember { mutableStateOf(emptyList<ProfileConnection>()) }
@@ -223,29 +235,19 @@ fun UserProfileScreen(
         }
     }
 
+    // Transaccional: al elegir solo se guarda el Uri pendiente + preview local.
+    // La subida a Drive ocurre únicamente en GUARDAR; CANCELAR descarta sin subir.
     val coverPicker = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         if (uri != null && currentUser.uid.isNotBlank()) {
-            uploadingCover = true
-            UserProfileRepository.uploadCover(currentUser.uid, uri, context) { result ->
-                uploadingCover = false
-                result.onSuccess { url ->
-                    UserManager.applyProfileFields(coverUrl = url)
-                    clearCoverImage = false
-                    profileMessage = "Portada actualizada."
-                }.onFailure { error -> profileMessage = error.localizedMessage ?: "No se pudo subir la portada." }
-            }
+            pendingCoverUri = uri
+            clearCoverImage = false
+            if (!showProfileEditor) openProfileEditor()
         }
     }
     val avatarPicker = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         if (uri != null && currentUser.uid.isNotBlank() && currentUser.isAuthenticated && !currentUser.isAnonymous) {
-            uploadingAvatar = true
-            UserProfileRepository.uploadAvatar(currentUser.uid, uri, context) { result ->
-                uploadingAvatar = false
-                result.onSuccess { url ->
-                    UserManager.applyProfileFields(photoURL = url)
-                    profileMessage = "Foto de perfil actualizada."
-                }.onFailure { error -> profileMessage = error.localizedMessage ?: "No se pudo subir la foto." }
-            }
+            pendingAvatarUri = uri
+            if (!showProfileEditor) openProfileEditor()
         } else if (uri != null) {
             profileMessage = "Inicia sesión para cambiar tu foto de perfil."
         }
@@ -1562,7 +1564,7 @@ fun UserProfileScreen(
                                                     }
                                                     if (material.extraPayload.isNotBlank()) {
                                                         Sticker3dButton(
-                                                            onClick = { runCatching { uriHandler.openUri(material.extraPayload) } },
+                                                            onClick = { runCatching { DriveUploadRepository.openDriveResource(context, material.extraPayload) } },
                                                             modifier = Modifier.fillMaxWidth(),
                                                             containerColor = theme.accent,
                                                             bottomBevelColor = theme.accentBevel,
@@ -1615,7 +1617,7 @@ fun UserProfileScreen(
         }
 
         if (showProfileEditor) {
-            Dialog(onDismissRequest = { if (!savingProfile && !uploadingCover) showProfileEditor = false }) {
+                            Dialog(onDismissRequest = { if (!savingProfile && !uploadingCover) { discardPendingMedia(); showProfileEditor = false } }) {
                 Sticker3dCard(
                     modifier = Modifier
                         .fillMaxWidth(0.96f)
@@ -1642,7 +1644,7 @@ fun UserProfileScreen(
                                 fontWeight = FontWeight.Black,
                                 color = theme.textPrimary
                             )
-                            IconButton(onClick = { if (!savingProfile && !uploadingCover) showProfileEditor = false }) {
+                                IconButton(onClick = { if (!savingProfile && !uploadingCover) { discardPendingMedia(); showProfileEditor = false } }) {
                                 Icon(Icons.Rounded.Close, contentDescription = "Cerrar", tint = theme.textSecondary)
                             }
                         }
@@ -1738,6 +1740,40 @@ fun UserProfileScreen(
                                 modifier = Modifier.fillMaxWidth()
                             )
 
+                            Text("Foto de perfil", fontWeight = FontWeight.Bold, color = theme.textPrimary, fontSize = 13.sp)
+                            val pendingAvatarBitmap = rememberLocalBitmap(pendingAvatarUri)
+                            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                                if (pendingAvatarBitmap != null) {
+                                    Image(
+                                        bitmap = pendingAvatarBitmap,
+                                        contentDescription = "Nueva foto (sin guardar)",
+                                        modifier = Modifier.size(56.dp).clip(CircleShape),
+                                        contentScale = ContentScale.Crop
+                                    )
+                                } else {
+                                    CartoonAvatar(
+                                        photoUrl = currentUser.photoURL,
+                                        size = 56.dp,
+                                        strokeColor = theme.strokeBorder,
+                                        strokeWidth = 1.8.dp,
+                                        bevelColor = theme.cardBevel,
+                                        bevelOffset = 2.dp
+                                    )
+                                }
+                                OutlinedButton(
+                                    onClick = { avatarPicker.launch("image/*") },
+                                    enabled = !savingProfile,
+                                    shape = RastroShapes.Pill,
+                                    border = androidx.compose.foundation.BorderStroke(1.5.dp, theme.borderSubtle),
+                                    modifier = Modifier.weight(1f)
+                                ) {
+                                    Text("Elegir foto de perfil")
+                                }
+                            }
+                            if (pendingAvatarUri != null) {
+                                Text("Vista previa local: se subirá solo al GUARDAR.", fontSize = 11.sp, color = theme.textSecondary)
+                            }
+
                             Text("Portada de Perfil", fontWeight = FontWeight.Bold, color = theme.textPrimary, fontSize = 13.sp)
                             listOf(
                                 "linear-gradient(135deg, #701A75 0%, #831843 50%, #BE123C 100%)",
@@ -1762,12 +1798,22 @@ fun UserProfileScreen(
                             }
                             OutlinedButton(
                                 onClick = { coverPicker.launch("image/*") },
-                                enabled = !uploadingCover,
+                                enabled = !savingProfile,
                                 shape = RastroShapes.Pill,
                                 border = androidx.compose.foundation.BorderStroke(1.5.dp, theme.borderSubtle),
                                 modifier = Modifier.fillMaxWidth()
                             ) {
-                                Text(if (uploadingCover) "Subiendo portada…" else "Elegir foto personalizada para portada")
+                                Text("Elegir foto personalizada para portada")
+                            }
+                            val pendingCoverBitmap = rememberLocalBitmap(pendingCoverUri)
+                            if (pendingCoverBitmap != null) {
+                                Image(
+                                    bitmap = pendingCoverBitmap,
+                                    contentDescription = "Nueva portada (sin guardar)",
+                                    modifier = Modifier.fillMaxWidth().height(110.dp).clip(RoundedCornerShape(14.dp)),
+                                    contentScale = ContentScale.Crop
+                                )
+                                Text("Vista previa local: se subirá solo al GUARDAR.", fontSize = 11.sp, color = theme.textSecondary)
                             }
                         }
 
@@ -1779,8 +1825,8 @@ fun UserProfileScreen(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             OutlinedButton(
-                                onClick = { showProfileEditor = false },
-                                enabled = !savingProfile && !uploadingCover,
+                                onClick = { discardPendingMedia(); showProfileEditor = false },
+                                enabled = !savingProfile && !uploadingCover && !uploadingAvatar,
                                 shape = RastroShapes.Pill,
                                 border = androidx.compose.foundation.BorderStroke(1.5.dp, theme.borderSubtle),
                                 modifier = Modifier.weight(1f).height(44.dp)
@@ -1793,35 +1839,121 @@ fun UserProfileScreen(
                                 onClick = {
                                     savingProfile = true
                                     profileMessage = null
-                                    val fields = mapOf(
-                                        "displayName" to editName.trim(),
-                                        "hasChosenUsername" to true,
-                                        "bio" to editBio.trim(),
-                                        "whatsappChannel" to editWhatsApp.trim(),
-                                        "tiktokUrl" to editTikTok.trim(),
-                                        "instagram" to editInstagram.trim(),
-                                        "coverGradient" to selectedBanner,
-                                        "coverUrl" to if (clearCoverImage) "" else (currentUser.coverUrl ?: "")
-                                    )
-                                    UserProfileRepository.save(currentUser.uid, fields) { result ->
+                                    val avatarUri = pendingAvatarUri
+                                    val coverUri = pendingCoverUri
+                                    val oldPhoto = currentUser.photoURL.orEmpty()
+                                    val oldCover = currentUser.coverUrl.orEmpty()
+
+                                    fun fail(msg: String) {
                                         savingProfile = false
-                                        result.onSuccess {
-                                            UserManager.applyProfileFields(
-                                                displayName = editName.trim(),
-                                                bio = editBio.trim(),
-                                                whatsappChannel = editWhatsApp.trim(),
-                                                tiktokUrl = editTikTok.trim(),
-                                                instagramUrl = editInstagram.trim(),
-                                                coverGradient = selectedBanner,
-                                                coverUrl = if (clearCoverImage) "" else currentUser.coverUrl
+                                        uploadingAvatar = false
+                                        uploadingCover = false
+                                        profileMessage = msg
+                                    }
+                                    fun readBytes(uri: Uri): ByteArray? = try {
+                                        context.contentResolver.openInputStream(uri)?.use { it.readBytes() }
+                                    } catch (_: Exception) { null }
+
+                                    // Solo se sube la selección FINAL pendiente; CANCELAR nunca llega aquí.
+                                    fun saveAll(newPhotoUrl: String?, newCoverUrl: String?) {
+                                        val finalCover = when {
+                                            newCoverUrl != null -> newCoverUrl
+                                            clearCoverImage -> ""
+                                            else -> currentUser.coverUrl ?: ""
+                                        }
+                                        val fields = mutableMapOf<String, Any>(
+                                            "displayName" to editName.trim(),
+                                            "hasChosenUsername" to true,
+                                            "bio" to editBio.trim(),
+                                            "whatsappChannel" to editWhatsApp.trim(),
+                                            "tiktokUrl" to editTikTok.trim(),
+                                            "instagram" to editInstagram.trim(),
+                                            "coverGradient" to selectedBanner,
+                                            "coverUrl" to finalCover
+                                        )
+                                        if (newPhotoUrl != null) fields["photoURL"] = newPhotoUrl
+                                        UserProfileRepository.save(currentUser.uid, fields) { result ->
+                                            result.onSuccess {
+                                                if (newPhotoUrl != null) {
+                                                    ImageCacheManager.evict(oldPhoto)
+                                                    FirebaseAuth.getInstance().currentUser
+                                                        ?.takeIf { it.uid == currentUser.uid }
+                                                        ?.updateProfile(
+                                                            UserProfileChangeRequest.Builder()
+                                                                .setPhotoUri(Uri.parse(newPhotoUrl)).build()
+                                                        )
+                                                }
+                                                if (newCoverUrl != null || clearCoverImage) {
+                                                    ImageCacheManager.evict(oldCover)
+                                                }
+                                                UserManager.applyProfileFields(
+                                                    displayName = editName.trim(),
+                                                    bio = editBio.trim(),
+                                                    whatsappChannel = editWhatsApp.trim(),
+                                                    tiktokUrl = editTikTok.trim(),
+                                                    instagramUrl = editInstagram.trim(),
+                                                    coverGradient = selectedBanner,
+                                                    photoURL = newPhotoUrl ?: currentUser.photoURL,
+                                                    coverUrl = finalCover
+                                                )
+                                                discardPendingMedia()
+                                                savingProfile = false
+                                                uploadingAvatar = false
+                                                uploadingCover = false
+                                                showProfileEditor = false
+                                            }.onFailure { error ->
+                                                fail("No se pudo guardar: ${error.localizedMessage ?: "error de conexión"}")
+                                            }
+                                        }
+                                    }
+
+                                    fun uploadCoverThenSave(newPhotoUrl: String?) {
+                                        if (coverUri == null) {
+                                            saveAll(newPhotoUrl, null)
+                                            return
+                                        }
+                                        uploadingCover = true
+                                        val bytes = readBytes(coverUri)
+                                        if (bytes == null || bytes.isEmpty()) {
+                                            fail("No se pudo leer la portada seleccionada.")
+                                            return
+                                        }
+                                        com.jonsuapps.rastro.android.data.DriveUploadRepository.uploadUserFile(
+                                            context = context,
+                                            bytes = bytes,
+                                            displayName = "${currentUser.uid}_cover_${System.currentTimeMillis()}.jpg",
+                                            mimeType = "image/jpeg",
+                                            makePublic = true,
+                                            onResult = { r ->
+                                                r.onSuccess { saveAll(newPhotoUrl, it.directUrl) }
+                                                    .onFailure { fail("No se pudo subir la portada: ${it.localizedMessage}") }
+                                            }
+                                        )
+                                    }
+
+                                    if (avatarUri == null) {
+                                        uploadCoverThenSave(null)
+                                    } else {
+                                        uploadingAvatar = true
+                                        val bytes = readBytes(avatarUri)
+                                        if (bytes == null || bytes.isEmpty()) {
+                                            fail("No se pudo leer la foto seleccionada.")
+                                        } else {
+                                            com.jonsuapps.rastro.android.data.DriveUploadRepository.uploadUserFile(
+                                                context = context,
+                                                bytes = bytes,
+                                                displayName = "${currentUser.uid}_profile_${System.currentTimeMillis()}.jpg",
+                                                mimeType = "image/jpeg",
+                                                makePublic = true,
+                                                onResult = { r ->
+                                                    r.onSuccess { uploadCoverThenSave(it.directUrl) }
+                                                        .onFailure { fail("No se pudo subir la foto: ${it.localizedMessage}") }
+                                                }
                                             )
-                                            showProfileEditor = false
-                                        }.onFailure { error ->
-                                            profileMessage = "No se pudo guardar: ${error.localizedMessage ?: "error de conexión"}"
                                         }
                                     }
                                 },
-                                enabled = !savingProfile && !uploadingCover && editName.trim().length >= 2,
+                                enabled = !savingProfile && !uploadingCover && !uploadingAvatar && editName.trim().length >= 2,
                                 containerColor = theme.accent,
                                 shape = RastroShapes.Pill,
                                 modifier = Modifier.weight(1.3f),
@@ -2392,6 +2524,26 @@ private fun ProfileUploadCard(
             }
         }
     }
+}
+
+@Composable
+private fun rememberLocalBitmap(uri: Uri?): ImageBitmap? {
+    val context = LocalContext.current
+    var bitmap by remember(uri) { mutableStateOf<ImageBitmap?>(null) }
+    LaunchedEffect(uri) {
+        bitmap = if (uri == null) {
+            null
+        } else {
+            withContext(Dispatchers.IO) {
+                runCatching {
+                    context.contentResolver.openInputStream(uri)?.use {
+                        BitmapFactory.decodeStream(it)?.asImageBitmap()
+                    }
+                }.getOrNull()
+            }
+        }
+    }
+    return bitmap
 }
 
 @Composable

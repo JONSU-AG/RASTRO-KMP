@@ -46,6 +46,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.jonsuapps.rastro.data.LiteraturaRepository
+import com.jonsuapps.rastro.android.data.DriveUploadRepository
 import com.jonsuapps.rastro.android.data.UserUpload
 import com.jonsuapps.rastro.android.data.UserUploadRepository
 import com.jonsuapps.rastro.android.data.OfficialMaterialRepository
@@ -600,8 +601,9 @@ private fun OfficialMaterialCard(item: OfficialMaterialResource, theme: com.jons
             Text(item.description, style = MaterialTheme.typography.bodySmall, color = theme.textSecondary)
             if (showPreview) UserUploadPreview(upload = uploadForPreview, theme = theme)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                val openContext = LocalContext.current
                 Sticker3dButton(
-                    onClick = { runCatching { uriHandler.openUri(item.url) } },
+                    onClick = { runCatching { DriveUploadRepository.openDriveResource(openContext, item.url) } },
                     modifier = Modifier.weight(1f),
                     containerColor = theme.accent,
                     bottomBevelColor = theme.accentBevel,
@@ -686,11 +688,17 @@ fun CommunityUploadCard(
         }
     }
 
+    // Destacado derivado del theme: crema cálido en claro, marrón/ámbar oscuro cálido en oscuro.
+    val highlightContainer = if (theme.isLight) Color(0xFFFFFBEB) else Color(0xFF2A1A12)
+    val highlightStroke = if (theme.isLight) Color(0xFFF59E0B) else Color(0xFFB45309)
+    val highlightBevel = if (theme.isLight) Color(0xFFD97706) else Color(0xFF1A0F0A)
+    val highlightBadgeBg = if (theme.isLight) Color(0xFFFEF3C7) else Color(0xFF3A2415)
+    val highlightBadgeText = if (theme.isLight) Color(0xFFB45309) else Color(0xFFFBBF24)
     Sticker3dCard(
         modifier = Modifier.fillMaxWidth(),
-        containerColor = if (isHighlighted) Color(0xFFFFFBEB) else theme.surface,
-        strokeColor = if (isHighlighted) Color(0xFFF59E0B) else theme.strokeBorder,
-        bevelColor = if (isHighlighted) Color(0xFFD97706) else theme.cardBevel,
+        containerColor = if (isHighlighted) highlightContainer else theme.surface,
+        strokeColor = if (isHighlighted) highlightStroke else theme.strokeBorder,
+        bevelColor = if (isHighlighted) highlightBevel else theme.cardBevel,
         bevelHeight = if (isHighlighted) 5.dp else 4.dp,
         shape = RoundedCornerShape(20.dp)
     ) {
@@ -701,11 +709,11 @@ fun CommunityUploadCard(
                     horizontalArrangement = Arrangement.spacedBy(4.dp),
                     modifier = Modifier
                         .clip(RoundedCornerShape(8.dp))
-                        .background(Color(0xFFFEF3C7))
+                        .background(highlightBadgeBg)
                         .padding(horizontal = 8.dp, vertical = 3.dp)
                 ) {
-                    Icon(Icons.Rounded.Star, contentDescription = null, tint = Color(0xFFD97706), modifier = Modifier.size(13.dp))
-                    Text("Publicación destacada", fontSize = 10.5.sp, fontWeight = FontWeight.Black, color = Color(0xFFB45309))
+                    Icon(Icons.Rounded.Star, contentDescription = null, tint = highlightBadgeText, modifier = Modifier.size(13.dp))
+                    Text("Publicación destacada", fontSize = 10.5.sp, fontWeight = FontWeight.Black, color = highlightBadgeText)
                 }
             }
             // 1. Cabecera: Foto y Nombre clickeables para ir al perfil + Botón Seguir
@@ -971,7 +979,7 @@ fun CommunityUploadCard(
             // 4. Botón principal: ABRIR RECURSO (manda a Google Drive / URL)
             if (upload.url.isNotBlank()) {
                 Sticker3dButton(
-                    onClick = { runCatching { uriHandler.openUri(upload.url) } },
+                    onClick = { runCatching { DriveUploadRepository.openDriveResource(context, upload.url) } },
                     modifier = Modifier.fillMaxWidth(),
                     containerColor = theme.accent,
                     bottomBevelColor = theme.accentBevel,

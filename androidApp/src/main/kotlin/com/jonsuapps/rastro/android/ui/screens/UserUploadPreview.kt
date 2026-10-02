@@ -37,6 +37,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
+import com.jonsuapps.rastro.android.data.DriveUploadRepository
 import com.jonsuapps.rastro.android.data.UserUpload
 import com.jonsuapps.rastro.android.ui.components.Sticker3dButton
 import com.jonsuapps.rastro.theme.RastroPalette
@@ -106,7 +107,7 @@ fun UserUploadPreview(
                 modifier = modifier,
                 onOpenDrive = {
                     if (upload.url.isNotBlank()) {
-                        runCatching { uriHandler.openUri(upload.url) }
+                        runCatching { DriveUploadRepository.openDriveResource(context, upload.url) }
                     }
                 }
             )

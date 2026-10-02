@@ -26,7 +26,8 @@ import androidx.compose.ui.window.DialogProperties
 import androidx.compose.ui.platform.LocalContext
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
-import com.google.firebase.storage.FirebaseStorage
+import com.jonsuapps.rastro.android.data.DriveUploadRepository
+import com.jonsuapps.rastro.android.util.ImageCacheManager
 import com.jonsuapps.rastro.android.ui.components.Sticker3dButton
 import com.jonsuapps.rastro.android.ui.components.Sticker3dCard
 import com.jonsuapps.rastro.android.ui.screens.literatura.ObraBannerGraphic
@@ -91,18 +92,23 @@ internal fun BookEditorDialog(book: ObraLiteraria, onDismiss: () -> Unit) {
                 busy = false
                 return@rememberLauncherForActivityResult
             }
-            val ref = FirebaseStorage.getInstance().reference.child("uploads/book_${book.id}_${System.currentTimeMillis()}.jpg")
-            val metadata = com.google.firebase.storage.StorageMetadata.Builder().setContentType("image/jpeg").build()
-            ref.putBytes(bytes, metadata).continueWithTask { upload ->
-                if (!upload.isSuccessful) throw upload.exception ?: IllegalStateException("No se pudo subir la portada")
-                ref.downloadUrl
-            }.addOnSuccessListener { downloadUri ->
-                cover = downloadUri.toString()
-                busy = false
-            }.addOnFailureListener {
-                error = "Error al subir portada: ${it.localizedMessage}"
-                busy = false
-            }
+            DriveUploadRepository.uploadUserFile(
+                context = context,
+                bytes = bytes,
+                displayName = "portada_${book.id}_${System.currentTimeMillis()}.jpg",
+                mimeType = "image/jpeg",
+                makePublic = true,
+                onResult = { result ->
+                    result.onSuccess { file ->
+                        ImageCacheManager.evict(cover)
+                        cover = file.directUrl
+                        busy = false
+                    }.onFailure {
+                        error = "Error al subir portada: ${it.localizedMessage}"
+                        busy = false
+                    }
+                }
+            )
         }
     }
 
@@ -122,18 +128,23 @@ internal fun BookEditorDialog(book: ObraLiteraria, onDismiss: () -> Unit) {
                 busy = false
                 return@rememberLauncherForActivityResult
             }
-            val ref = FirebaseStorage.getInstance().reference.child("uploads/banner_${book.id}_${System.currentTimeMillis()}.jpg")
-            val metadata = com.google.firebase.storage.StorageMetadata.Builder().setContentType("image/jpeg").build()
-            ref.putBytes(bytes, metadata).continueWithTask { upload ->
-                if (!upload.isSuccessful) throw upload.exception ?: IllegalStateException("No se pudo subir el banner")
-                ref.downloadUrl
-            }.addOnSuccessListener { downloadUri ->
-                banner = downloadUri.toString()
-                busy = false
-            }.addOnFailureListener {
-                error = "Error al subir banner: ${it.localizedMessage}"
-                busy = false
-            }
+            DriveUploadRepository.uploadUserFile(
+                context = context,
+                bytes = bytes,
+                displayName = "banner_${book.id}_${System.currentTimeMillis()}.jpg",
+                mimeType = "image/jpeg",
+                makePublic = true,
+                onResult = { result ->
+                    result.onSuccess { file ->
+                        ImageCacheManager.evict(banner)
+                        banner = file.directUrl
+                        busy = false
+                    }.onFailure {
+                        error = "Error al subir banner: ${it.localizedMessage}"
+                        busy = false
+                    }
+                }
+            )
         }
     }
 
@@ -155,20 +166,25 @@ internal fun BookEditorDialog(book: ObraLiteraria, onDismiss: () -> Unit) {
                 busy = false
                 return@rememberLauncherForActivityResult
             }
-            val ref = FirebaseStorage.getInstance().reference.child("uploads/char_${book.id}_${idx}_${System.currentTimeMillis()}.jpg")
-            val metadata = com.google.firebase.storage.StorageMetadata.Builder().setContentType("image/jpeg").build()
-            ref.putBytes(bytes, metadata).continueWithTask { upload ->
-                if (!upload.isSuccessful) throw upload.exception ?: IllegalStateException("No se pudo subir la foto")
-                ref.downloadUrl
-            }.addOnSuccessListener { downloadUri ->
-                val updated = charactersState.toMutableList()
-                updated[idx] = updated[idx].copy(imageUrl = downloadUri.toString())
-                charactersState = updated
-                busy = false
-            }.addOnFailureListener {
-                error = "Error al subir foto de personaje: ${it.localizedMessage}"
-                busy = false
-            }
+            DriveUploadRepository.uploadUserFile(
+                context = context,
+                bytes = bytes,
+                displayName = "personaje_${book.id}_${idx}_${System.currentTimeMillis()}.jpg",
+                mimeType = "image/jpeg",
+                makePublic = true,
+                onResult = { result ->
+                    result.onSuccess { file ->
+                        ImageCacheManager.evict(charactersState[idx].imageUrl)
+                        val updated = charactersState.toMutableList()
+                        updated[idx] = updated[idx].copy(imageUrl = file.directUrl)
+                        charactersState = updated
+                        busy = false
+                    }.onFailure {
+                        error = "Error al subir foto de personaje: ${it.localizedMessage}"
+                        busy = false
+                    }
+                }
+            )
         }
     }
 
@@ -182,9 +198,7 @@ internal fun BookEditorDialog(book: ObraLiteraria, onDismiss: () -> Unit) {
             bevelColor = theme.cardBevel
         ) {
             Column(
-                Modifier
-                    .padding(16.dp)
-                    .verticalScroll(rememberScrollState()),
+                Modifier.padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(14.dp)
             ) {
                 Text(
@@ -193,6 +207,14 @@ internal fun BookEditorDialog(book: ObraLiteraria, onDismiss: () -> Unit) {
                     color = theme.textPrimary,
                     fontWeight = FontWeight.Black
                 )
+
+                // Contenido desplazable; Guardar/Cerrar quedan fijos abajo.
+                Column(
+                    Modifier
+                        .weight(1f)
+                        .verticalScroll(rememberScrollState()),
+                    verticalArrangement = Arrangement.spacedBy(14.dp)
+                ) {
 
                 // ──────────────── 1. SECCIÓN PORTADA ────────────────
                 Card(
@@ -377,6 +399,8 @@ internal fun BookEditorDialog(book: ObraLiteraria, onDismiss: () -> Unit) {
                         }
                     }
                 }
+
+                } // Fin contenido desplazable: Guardar/Cerrar fijos abajo.
 
                 // ──────────────── 5. BOTÓN GUARDAR CON PERSISTENCIA REAL ────────────────
                 Sticker3dButton(

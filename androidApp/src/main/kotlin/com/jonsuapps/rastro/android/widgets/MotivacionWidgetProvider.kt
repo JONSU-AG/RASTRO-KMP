@@ -14,16 +14,27 @@ class MotivacionWidgetProvider : AppWidgetProvider() {
 
     companion object {
         fun updateWidgets(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
-            val (quote, author) = RastroWidgetManager.getDailyQuote()
-            val pendingIntent = RastroWidgetManager.createActivityPendingIntent(context, 104)
+            try {
+                val (quote, _) = RastroWidgetManager.getDailyQuote()
+                val pendingIntent = RastroWidgetManager.createActivityPendingIntent(context, 104)
 
-            for (appWidgetId in appWidgetIds) {
-                val views = RemoteViews(context.packageName, R.layout.widget_motivacion).apply {
-                    setTextViewText(R.id.widget_motivacion_quote, "\"$quote\"")
-                    setTextViewText(R.id.widget_motivacion_author, author)
-                    setOnClickPendingIntent(R.id.widget_motivacion_root, pendingIntent)
+                for (appWidgetId in appWidgetIds) {
+                    val views = RemoteViews(context.packageName, R.layout.widget_motivacion).apply {
+                        setTextViewText(R.id.widget_motivacion_quote, quote)
+                        setTextViewText(R.id.widget_motivacion_author, "— RASTRO")
+                        setOnClickPendingIntent(R.id.widget_motivacion_root, pendingIntent)
+                    }
+                    appWidgetManager.updateAppWidget(appWidgetId, views)
                 }
-                appWidgetManager.updateAppWidget(appWidgetId, views)
+            } catch (t: Throwable) {
+                android.util.Log.e("FraseWidget", "updateWidgets falló, usando valores por defecto", t)
+                val fallbackIntent = RastroWidgetManager.createActivityPendingIntent(context, 104)
+                for (appWidgetId in appWidgetIds) {
+                    val views = RemoteViews(context.packageName, R.layout.widget_motivacion).apply {
+                        setOnClickPendingIntent(R.id.widget_motivacion_root, fallbackIntent)
+                    }
+                    appWidgetManager.updateAppWidget(appWidgetId, views)
+                }
             }
         }
     }

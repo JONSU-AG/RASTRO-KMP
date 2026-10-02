@@ -30,6 +30,7 @@ object RastroWidgetManager {
     private const val KEY_EXAM_NAME = "widget_exam_name"
     private const val KEY_EXAM_DATE = "widget_exam_date" // YYYY-MM-DD
     private const val KEY_EXAM_CAREER = "widget_exam_career"
+    private const val KEY_WEEK_DAYS = "widget_week_active_dates" // Set<String> YYYY-MM-DD
 
     private val MOTIVATIONAL_QUOTES = listOf(
         Pair("Cada problema resuelto hoy es un punto más en tu examen de admisión.", "— Orstty (RASTRO)"),
@@ -41,11 +42,17 @@ object RastroWidgetManager {
         Pair("Los postulantes que ingresan son aquellos que estudian incluso los días difíciles.", "— Orstty (RASTRO)")
     )
 
-    fun updateStreakInWidgets(context: Context, streak: Int, lastActiveDate: String) {
+    fun updateStreakInWidgets(
+        context: Context,
+        streak: Int,
+        lastActiveDate: String,
+        activityDates: Set<String> = emptySet()
+    ) {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         prefs.edit()
             .putInt(KEY_STREAK, streak)
             .putString(KEY_LAST_DATE, lastActiveDate)
+            .putStringSet(KEY_WEEK_DAYS, activityDates.toSet())
             .apply()
         updateAllWidgets(context)
     }
@@ -107,7 +114,7 @@ object RastroWidgetManager {
 
     fun getExamDetails(context: Context): Triple<String, Int, String> {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        val examName = prefs.getString(KEY_EXAM_NAME, "🎯 EXAMEN ADMISIÓN UNSA") ?: "🎯 EXAMEN ADMISIÓN UNSA"
+        val examName = prefs.getString(KEY_EXAM_NAME, "EXAMEN UNSA") ?: "EXAMEN UNSA"
         val career = prefs.getString(KEY_EXAM_CAREER, "¡Asegura tu vacante!") ?: "¡Asegura tu vacante!"
         val examDateStr = prefs.getString(KEY_EXAM_DATE, null)
 
@@ -126,6 +133,49 @@ object RastroWidgetManager {
         }
 
         return Triple(examName, daysRemaining, career)
+    }
+
+    fun getExamDateYmd(context: Context): String {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        return prefs.getString(KEY_EXAM_DATE, "").orEmpty()
+    }
+
+    /**
+     * Estados REALES de la semana actual (lunes..domingo) según activityDates
+     * de GamificationManager (fechas locales YYYY-MM-DD con estudio registrado).
+     */
+    fun getWeeklyActiveDates(context: Context): BooleanArray {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val active = prefs.getStringSet(KEY_WEEK_DAYS, emptySet()).orEmpty()
+        if (active.isEmpty()) {
+            // Sin historial: solo hoy cuenta si la racha está viva.
+            val today = SimpleDateFormat("yyyy-MM-dd", Locale.US).format(Date())
+            return BooleanArray(7) { false }.also {
+                val cal = Calendar.getInstance()
+                val dayIndex = ((cal.get(Calendar.DAY_OF_WEEK) + 5) % 7) // Lun=0..Dom=6
+                if (getStreak(context) > 0 && active.contains(today)) it[dayIndex] = true
+            }
+        }
+        val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.US)
+        val monday = Calendar.getInstance().apply {
+            firstDayOfWeek = Calendar.MONDAY
+            set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
+            set(Calendar.HOUR_OF_DAY, 0)
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+        }
+        return BooleanArray(7) { offset ->
+            val day = (monday.clone() as Calendar).apply { add(Calendar.DAY_OF_YEAR, offset) }
+            // No marcar días futuros de la semana actual.
+            val todayStart = Calendar.getInstance().apply {
+                set(Calendar.HOUR_OF_DAY, 0)
+                set(Calendar.MINUTE, 0)
+                set(Calendar.SECOND, 0)
+                set(Calendar.MILLISECOND, 0)
+            }
+            !day.after(todayStart) && active.contains(sdf.format(day.time))
+        }
     }
 
     fun createActivityPendingIntent(context: Context, requestCode: Int): PendingIntent {

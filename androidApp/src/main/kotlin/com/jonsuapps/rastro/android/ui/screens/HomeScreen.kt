@@ -59,7 +59,6 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.jonsuapps.rastro.android.ui.components.DualMascotDuo
 import com.jonsuapps.rastro.android.ui.components.Sticker3dButton
 import com.jonsuapps.rastro.android.ui.components.CartoonAvatar
 import com.jonsuapps.rastro.android.ui.components.Sticker3dCard
@@ -99,7 +98,7 @@ fun HomeScreen(
 
     val mottoPhrases = remember {
         listOf(
-            "Tu Futuro Cachimbo",
+            "Futuro Cachimbo",
             "Tu Vacante Directa",
             "Tu Ingreso Universitario",
             "Máximo Puntaje",
@@ -127,7 +126,7 @@ fun HomeScreen(
             verticalArrangement = Arrangement.spacedBy(14.dp),
             contentPadding = PaddingValues(top = 10.dp, bottom = 100.dp)
         ) {
-            // 1. Cabecera Oficial RASTRO (Chips, Mascotas y Saludo)
+            // 1. Cabecera Oficial RASTRO (Chips y Saludo)
             item {
                 Column(
                     modifier = Modifier.fillMaxWidth(),
@@ -185,31 +184,12 @@ fun HomeScreen(
 
                     Spacer(modifier = Modifier.height(2.dp))
 
-                    // Saludo con Dúo Oficial de Mascotas (Orstty + Artyon) a la izquierda
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(14.dp)
-                    ) {
-                        DualMascotDuo(size = 56.dp)
-
-                        Column {
-                            Text(
-                                text = "Hola,",
-                                fontSize = 14.sp,
-                                fontWeight = FontWeight.Medium,
-                                color = colors.textSecondary
-                            )
-                            Text(
-                                text = currentUser.displayName.ifBlank { "TU BUEN AMIGO JONSU..." },
-                                fontSize = 22.sp,
-                                fontWeight = FontWeight.Black,
-                                color = colors.textPrimary,
-                                letterSpacing = (-0.5).sp,
-                                maxLines = 1
-                            )
-                        }
-                    }
+                    // Hero Banner oficial con saludo dinámico (nombre real del usuario)
+                    HomeHeroBanner(
+                        colors = colors,
+                        displayName = currentUser.displayName,
+                        modifier = Modifier.fillMaxWidth()
+                    )
                 }
             }
 
@@ -265,10 +245,9 @@ fun HomeScreen(
                                         .border(1.5.dp, colors.strokeBorder, CircleShape),
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    Icon(
-                                        imageVector = Icons.Filled.LocalFireDepartment,
+                                    Image(
+                                        painter = painterResource(id = R.drawable.ic_flame_cartoon),
                                         contentDescription = null,
-                                        tint = Color(0xFFF97316),
                                         modifier = Modifier
                                             .size(20.dp)
                                             .graphicsLayer {
@@ -278,7 +257,7 @@ fun HomeScreen(
                                     )
                                 }
                                 Text(
-                                    text = "${streakState.currentStreak} días activos",
+                                    text = if (streakState.currentStreak == 1) "1 día activo" else "${streakState.currentStreak} días activos",
                                     fontSize = 17.sp,
                                     fontWeight = FontWeight.Black,
                                     color = colors.accent,
@@ -1284,6 +1263,70 @@ private fun DoodleDayCheckCircle(
         } else {
             drawCircle(color = Color(0xFFE2E8F0), radius = r - 1f, center = center)
             drawCircle(color = strokeColor.copy(alpha = 0.35f), radius = r - 1f, center = center, style = Stroke(1.2f))
+        }
+    }
+}
+
+@Composable
+private fun HomeHeroBanner(
+    colors: RastroColors,
+    displayName: String,
+    modifier: Modifier = Modifier
+) {
+    // Hero con el banner oficial: saludo dinámico superpuesto a la izquierda
+    // sobre velo lateral para legibilidad; la ilustración nunca se estira.
+    val name = displayName.trim()
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(22.dp))
+            .background(colors.surfaceAccent)
+            .border(1.5.dp, colors.strokeBorder, RoundedCornerShape(22.dp))
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.banner_inicio),
+            contentDescription = "Banner de inicio RASTRO",
+            modifier = Modifier
+                .fillMaxWidth()
+                .aspectRatio(1944f / 809f)
+                .clip(RoundedCornerShape(22.dp)),
+            contentScale = ContentScale.Crop,
+            alignment = Alignment.Center
+        )
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .background(
+                    androidx.compose.ui.graphics.Brush.horizontalGradient(
+                        0.0f to colors.surface.copy(alpha = 0.82f),
+                        0.55f to colors.surface.copy(alpha = 0.35f),
+                        1.0f to colors.surface.copy(alpha = 0.0f)
+                    )
+                )
+        )
+        Column(
+            modifier = Modifier
+                .align(Alignment.CenterStart)
+                .fillMaxWidth(0.64f)
+                .padding(start = 16.dp, top = 12.dp, bottom = 12.dp, end = 4.dp),
+            verticalArrangement = Arrangement.spacedBy(1.dp)
+        ) {
+            Text(
+                text = "¡Hola,",
+                fontSize = 13.sp,
+                fontWeight = FontWeight.Medium,
+                color = colors.textSecondary,
+                maxLines = 1
+            )
+            Text(
+                text = name.ifBlank { "Estudiante Invitado" },
+                fontSize = 21.sp,
+                fontWeight = FontWeight.Black,
+                color = colors.textPrimary,
+                letterSpacing = (-0.3).sp,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis
+            )
         }
     }
 }

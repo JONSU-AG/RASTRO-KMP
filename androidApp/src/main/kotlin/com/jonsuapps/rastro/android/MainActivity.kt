@@ -33,7 +33,8 @@ class MainActivity : ComponentActivity() {
             val prim = prefs.getInt("custom_primary", -1)
             val sec = prefs.getInt("custom_secondary", -986896)
             val acc = prefs.getInt("custom_accent", -16744193)
-            ThemeManager.setCustomTheme(Color(prim), Color(sec), Color(acc))
+            val high = prefs.getInt("custom_highlight", acc)
+            ThemeManager.setCustomTheme(Color(prim), Color(sec), Color(acc), Color(high))
         } else {
             ThemeManager.setTheme(initialTheme)
         }

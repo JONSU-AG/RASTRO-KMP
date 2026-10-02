@@ -6,7 +6,6 @@ import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.SetOptions
-import com.google.firebase.storage.FirebaseStorage
 import com.jonsuapps.rastro.auth.AdminConfig
 import com.jonsuapps.rastro.model.UserData
 
@@ -344,13 +343,27 @@ object UserUploadRepository {
                 .addOnFailureListener { onComplete(Result.failure(it)) }
         }
         if (photo == null) save(null) else {
-            // Keep the object under the community upload path allowed by the existing Storage rules.
-            val objectRef = FirebaseStorage.getInstance().reference.child("uploads/${user.uid}_${ref.id}.jpg")
-            objectRef.putFile(photo).continueWithTask { task ->
-                if (!task.isSuccessful) throw task.exception ?: IllegalStateException("No se pudo subir la foto")
-                objectRef.downloadUrl
-            }.addOnSuccessListener { uri -> save(uri.toString()) }
-                .addOnFailureListener { onComplete(Result.failure(it)) }
+            // La foto del aporte se sube al Drive del usuario (carpeta RASTRO).
+            val bytes = try {
+                context.contentResolver.openInputStream(photo)?.use { it.readBytes() }
+            } catch (e: Exception) {
+                null
+            }
+            if (bytes == null || bytes.isEmpty()) {
+                onComplete(Result.failure(IllegalStateException("No se pudo leer la foto seleccionada.")))
+                return
+            }
+            DriveUploadRepository.uploadUserFile(
+                context = context,
+                bytes = bytes,
+                displayName = "muro_${user.uid}_${ref.id}.jpg",
+                mimeType = "image/jpeg",
+                makePublic = true,
+                onResult = { result ->
+                    result.onSuccess { file -> save(file.directUrl) }
+                        .onFailure { onComplete(Result.failure(it)) }
+                }
+            )
         }
     }
 

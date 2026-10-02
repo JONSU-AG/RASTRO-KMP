@@ -1,40 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Frase del día 4x1: PNG fijo de fondo (cuadro central ya existe en la imagen).
+     El texto se coloca DENTRO del cuadro con márgenes proporcionales (pesos),
+     sin agregar otra tarjeta encima. centerCrop preserva el aspect ratio. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widget_motivacion_root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/widget_card_background"
-    android:gravity="center"
-    android:padding="12dp">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="✨ MENSAJE DEL DÍA"
-        android:textColor="#D97706"
-        android:textSize="10sp"
-        android:textStyle="bold" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/widget_bg_frase"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name" />
 
-    <TextView
-        android:id="@+id/widget_motivacion_quote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:gravity="center"
-        android:text="&quot;Cada problema resuelto hoy es un punto más en tu examen de admisión.&quot;"
-        android:textColor="#0F172A"
-        android:textSize="12sp"
-        android:textStyle="italic" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/widget_motivacion_author"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="— Orstty &amp; Artyon (RASTRO)"
-        android:textColor="#64748B"
-        android:textSize="9.5sp"
-        android:textStyle="bold" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10" />
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30" />
+
+            <TextView
+                android:id="@+id/widget_motivacion_quote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:text="La disciplina vence al talento cuando el talento no se esfuerza."
+                android:textColor="#0F172A"
+                android:textSize="13sp"
+                android:textStyle="italic"
+                android:maxLines="4"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/widget_motivacion_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="— RASTRO"
+                android:textColor="#64748B"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="18" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -14,18 +14,28 @@ class ExamCountdownWidgetProvider : AppWidgetProvider() {
 
     companion object {
         fun updateWidgets(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
-            val (examName, daysRemaining, career) = RastroWidgetManager.getExamDetails(context)
-            val pendingIntent = RastroWidgetManager.createActivityPendingIntent(context, 103)
+            try {
+                val (examName, daysRemaining, _) = RastroWidgetManager.getExamDetails(context)
+                val pendingIntent = RastroWidgetManager.createActivityPendingIntent(context, 103)
 
-            for (appWidgetId in appWidgetIds) {
-                val views = RemoteViews(context.packageName, R.layout.widget_exam_countdown).apply {
-                    setTextViewText(R.id.widget_countdown_target, examName)
-                    setTextViewText(R.id.widget_countdown_days, daysRemaining.toString())
-                    setTextViewText(R.id.widget_countdown_label, if (daysRemaining == 1) "DÍA RESTANTE" else "DÍAS RESTANTES")
-                    setTextViewText(R.id.widget_countdown_career, career)
-                    setOnClickPendingIntent(R.id.widget_countdown_root, pendingIntent)
+                for (appWidgetId in appWidgetIds) {
+                    val views = RemoteViews(context.packageName, R.layout.widget_exam_countdown).apply {
+                        setTextViewText(R.id.widget_countdown_target, examName)
+                        setTextViewText(R.id.widget_countdown_days, daysRemaining.toString())
+                        setTextViewText(R.id.widget_countdown_label, if (daysRemaining == 1) "DÍA RESTANTE" else "DÍAS RESTANTES")
+                        setOnClickPendingIntent(R.id.widget_countdown_root, pendingIntent)
+                    }
+                    appWidgetManager.updateAppWidget(appWidgetId, views)
                 }
-                appWidgetManager.updateAppWidget(appWidgetId, views)
+            } catch (t: Throwable) {
+                android.util.Log.e("ExamWidget", "updateWidgets falló, usando valores por defecto", t)
+                val fallbackIntent = RastroWidgetManager.createActivityPendingIntent(context, 103)
+                for (appWidgetId in appWidgetIds) {
+                    val views = RemoteViews(context.packageName, R.layout.widget_exam_countdown).apply {
+                        setOnClickPendingIntent(R.id.widget_countdown_root, fallbackIntent)
+                    }
+                    appWidgetManager.updateAppWidget(appWidgetId, views)
+                }
             }
         }
     }

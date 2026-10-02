@@ -62,7 +62,9 @@ fun RastroApp(
     onThemeChange: (RastroThemeId) -> Unit = { ThemeManager.setTheme(it) }
 ) {
     val context = LocalContext.current
-    val theme = remember(currentThemeId) { RastroThemeTokens.getColors(currentThemeId) }
+    // Fuente única y reactiva del Theme: incluye override dinámico (Tema adaptable)
+    // y paleta personalizada (Mi tema). NO usar getColors directo (omite el override).
+    val theme = ThemeManager.currentTheme
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route ?: RastroScreen.Home.route
@@ -185,7 +187,8 @@ fun RastroApp(
                     RastroWidgetManager.updateStreakInWidgets(
                         context,
                         GamificationManager.streakState.value.currentStreak,
-                        GamificationManager.streakState.value.lastActiveDate
+                        GamificationManager.streakState.value.lastActiveDate,
+                        GamificationManager.streakState.value.activityDates
                     )
                 }
             }

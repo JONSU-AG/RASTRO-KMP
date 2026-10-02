@@ -4,10 +4,17 @@ import android.net.Uri
 import android.provider.OpenableColumns
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.layout.ContentScale
+import com.jonsuapps.rastro.android.util.ImageCacheManager
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -27,8 +34,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
-import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageMetadata
+import com.jonsuapps.rastro.android.data.DriveUploadRepository
 import com.jonsuapps.rastro.auth.UserManager
 import com.jonsuapps.rastro.theme.ThemeManager
 
@@ -86,20 +92,24 @@ fun AddObraDialog(
                 isUploadingMedia = false
                 return@rememberLauncherForActivityResult
             }
-            val ref = FirebaseStorage.getInstance().reference.child("uploads/book_cover_${System.currentTimeMillis()}.jpg")
-            val metadata = StorageMetadata.Builder().setContentType("image/jpeg").build()
-            ref.putBytes(bytes, metadata).continueWithTask { task ->
-                if (!task.isSuccessful) throw task.exception ?: IllegalStateException("Error al subir portada")
-                ref.downloadUrl
-            }.addOnSuccessListener { downloadUri ->
-                coverUrl = downloadUri.toString()
-                isUploadingMedia = false
-                DuolingoHaptics.playAnswerCorrect(context)
-            }.addOnFailureListener {
-                isUploadingMedia = false
-                errorMessage = "Error al subir portada: ${it.localizedMessage}"
-                DuolingoHaptics.playAnswerIncorrect(context)
-            }
+            DriveUploadRepository.uploadUserFile(
+                context = context,
+                bytes = bytes,
+                displayName = "portada_${System.currentTimeMillis()}.jpg",
+                mimeType = "image/jpeg",
+                makePublic = true,
+                onResult = { result ->
+                    result.onSuccess { file ->
+                        coverUrl = file.directUrl
+                        isUploadingMedia = false
+                        DuolingoHaptics.playAnswerCorrect(context)
+                    }.onFailure {
+                        isUploadingMedia = false
+                        errorMessage = "Error al subir portada: ${it.localizedMessage}"
+                        DuolingoHaptics.playAnswerIncorrect(context)
+                    }
+                }
+            )
         }
     }
 
@@ -119,20 +129,24 @@ fun AddObraDialog(
                 isUploadingMedia = false
                 return@rememberLauncherForActivityResult
             }
-            val ref = FirebaseStorage.getInstance().reference.child("uploads/book_doc_${System.currentTimeMillis()}.pdf")
-            val metadata = StorageMetadata.Builder().setContentType("application/pdf").build()
-            ref.putBytes(bytes, metadata).continueWithTask { task ->
-                if (!task.isSuccessful) throw task.exception ?: IllegalStateException("Error al subir documento")
-                ref.downloadUrl
-            }.addOnSuccessListener { downloadUri ->
-                documentUrl = downloadUri.toString()
-                isUploadingMedia = false
-                DuolingoHaptics.playAnswerCorrect(context)
-            }.addOnFailureListener {
-                isUploadingMedia = false
-                errorMessage = "Error al subir documento: ${it.localizedMessage}"
-                DuolingoHaptics.playAnswerIncorrect(context)
-            }
+            DriveUploadRepository.uploadUserFile(
+                context = context,
+                bytes = bytes,
+                displayName = "documento_${System.currentTimeMillis()}.pdf",
+                mimeType = "application/pdf",
+                makePublic = true,
+                onResult = { result ->
+                    result.onSuccess { file ->
+                        documentUrl = file.directUrl
+                        isUploadingMedia = false
+                        DuolingoHaptics.playAnswerCorrect(context)
+                    }.onFailure {
+                        isUploadingMedia = false
+                        errorMessage = "Error al subir documento: ${it.localizedMessage}"
+                        DuolingoHaptics.playAnswerIncorrect(context)
+                    }
+                }
+            )
         }
     }
 
@@ -151,7 +165,7 @@ fun AddObraDialog(
                 modifier = Modifier
                     .fillMaxWidth()
                     .widthIn(max = 520.dp)
-                    .wrapContentHeight(),
+                    .fillMaxHeight(0.92f),
                 shape = RoundedCornerShape(26.dp),
                 containerColor = theme.surface,
                 bottomBevelColor = theme.cardBevel,
@@ -159,9 +173,7 @@ fun AddObraDialog(
                 bevelHeight = 5.dp
             ) {
                 Column(
-                    modifier = Modifier
-                        .padding(20.dp)
-                        .verticalScroll(rememberScrollState())
+                    modifier = Modifier.padding(20.dp)
                 ) {
                     // Encabezado
                     Row(
@@ -236,6 +248,12 @@ fun AddObraDialog(
                         Spacer(modifier = Modifier.height(12.dp))
                     }
 
+                    // Contenido desplazable; Cancelar/Guardar quedan fijos abajo.
+                    Column(
+                        modifier = Modifier
+                            .weight(1f)
+                            .verticalScroll(rememberScrollState())
+                    ) {
                     // Título de la Obra
                     Text("Título de la Obra *", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
                     Spacer(modifier = Modifier.height(6.dp))
@@ -418,6 +436,11 @@ fun AddObraDialog(
                         }
                     }
 
+                    CoverLinkPreview(
+                        link = coverUrl,
+                        modifier = Modifier.fillMaxWidth().height(140.dp)
+                    )
+
                     Spacer(modifier = Modifier.height(12.dp))
 
                     // Archivo PDF / Documento de lectura
@@ -447,6 +470,7 @@ fun AddObraDialog(
                     }
 
                     Spacer(modifier = Modifier.height(20.dp))
+                    } // Fin contenido desplazable: Cancelar/Guardar fijos abajo.
 
                     // Botones de acción
                     Row(
@@ -529,6 +553,61 @@ fun AddObraDialog(
                     }
                 }
             }
+        }
+    }
+}
+
+/**
+ * Preview validado del link de portada (Drive fileId → thumbnail oficial;
+ * http(s) → intento único de decodificación). URL incompatible → error claro
+ * sin tocar el campo (la portada anterior se conserva).
+ */
+@Composable
+private fun CoverLinkPreview(link: String, modifier: Modifier = Modifier) {
+    val context = LocalContext.current
+    val trimmed = link.trim()
+    if (trimmed.isBlank()) return
+    val driveId = remember(trimmed) { DriveUploadRepository.extractDriveFileId(trimmed) }
+    val previewUrl = when {
+        driveId != null -> "https://drive.google.com/thumbnail?id=$driveId&sz=w400"
+        trimmed.startsWith("http://") || trimmed.startsWith("https://") -> trimmed
+        else -> null
+    }
+    if (previewUrl == null) {
+        Text(
+            "No se pudo cargar esta imagen",
+            fontSize = 11.sp,
+            color = Color(0xFFEF4444),
+            fontWeight = FontWeight.SemiBold
+        )
+        return
+    }
+    var bitmap by remember(previewUrl) { mutableStateOf<ImageBitmap?>(null) }
+    var failed by remember(previewUrl) { mutableStateOf(false) }
+    LaunchedEffect(previewUrl) {
+        bitmap = null
+        failed = false
+        val bmp = withContext(Dispatchers.IO) {
+            runCatching { ImageCacheManager.loadImage(context, previewUrl) }.getOrNull()
+        }
+        if (bmp != null) bitmap = bmp else failed = true
+    }
+    val bmp = bitmap
+    when {
+        bmp != null -> Image(
+            bitmap = bmp,
+            contentDescription = "Vista previa de portada",
+            modifier = modifier.clip(RoundedCornerShape(12.dp)),
+            contentScale = ContentScale.Fit
+        )
+        failed -> Text(
+            "No se pudo cargar esta imagen",
+            fontSize = 11.sp,
+            color = Color(0xFFEF4444),
+            fontWeight = FontWeight.SemiBold
+        )
+        else -> Box(modifier = modifier, contentAlignment = Alignment.Center) {
+            CircularProgressIndicator(modifier = Modifier.size(22.dp), color = Color(0xFF047857), strokeWidth = 2.dp)
         }
     }
 }

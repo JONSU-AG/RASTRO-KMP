@@ -55,7 +55,6 @@ fun TopHeaderActions(
             .fillMaxWidth()
             .statusBarsPadding()
     ) {
-        val logoDrawableRes by com.jonsuapps.rastro.android.logo.RastroLogoManager.currentDrawableRes.collectAsState()
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -64,7 +63,7 @@ fun TopHeaderActions(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
-                painter = painterResource(id = logoDrawableRes),
+                painter = painterResource(id = R.drawable.rastro_navbar),
                 contentDescription = "RASTRO",
                 modifier = Modifier.weight(1f).height(30.dp),
                 contentScale = androidx.compose.ui.layout.ContentScale.Fit,

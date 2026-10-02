@@ -179,7 +179,7 @@ fun ProfileSettingsDialog(
                                     verticalAlignment = Alignment.CenterVertically,
                                     horizontalArrangement = Arrangement.spacedBy(10.dp)
                                 ) {
-                                    val currentThemeTokens = RastroThemeTokens.getColors(currentThemeId)
+                                    val currentThemeTokens = ThemeManager.currentTheme
                                     Box(
                                         modifier = Modifier
                                             .size(22.dp)

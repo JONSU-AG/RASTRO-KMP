@@ -24,8 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageMetadata
+import com.jonsuapps.rastro.android.data.DriveUploadRepository
 import com.jonsuapps.rastro.auth.UserManager
 import com.jonsuapps.rastro.android.data.UserUploadRepository
 import com.jonsuapps.rastro.android.util.LegalLinks
@@ -92,27 +91,29 @@ fun UploadMaterialDialog(
             val isPdfFile = cleanName.endsWith(".pdf", ignoreCase = true)
             val mimeType = if (isPdfFile) "application/pdf" else (context.contentResolver.getType(uri) ?: "application/octet-stream")
 
-            fileUploadProgress = "Subiendo archivo a la nube..."
-            val storagePath = "uploads/material_${currentUser.uid}_${System.currentTimeMillis()}_$cleanName"
-            val ref = FirebaseStorage.getInstance().reference.child(storagePath)
-            val metadata = StorageMetadata.Builder().setContentType(mimeType).build()
-
-            ref.putBytes(bytes, metadata).continueWithTask { task ->
-                if (!task.isSuccessful) throw task.exception ?: IllegalStateException("Error al subir archivo a Storage")
-                ref.downloadUrl
-            }.addOnSuccessListener { downloadUri ->
-                fileUrl = downloadUri.toString()
-                if (title.isBlank()) {
-                    title = origName!!.substringBeforeLast('.')
+            fileUploadProgress = "Subiendo archivo a tu Google Drive..."
+            DriveUploadRepository.uploadUserFile(
+                context = context,
+                bytes = bytes,
+                displayName = cleanName,
+                mimeType = mimeType,
+                makePublic = true,
+                onResult = { result ->
+                    result.onSuccess { file ->
+                        fileUrl = file.directUrl
+                        if (title.isBlank()) {
+                            title = origName!!.substringBeforeLast('.')
+                        }
+                        uploadedFileName = origName
+                        isUploadingFile = false
+                        DuolingoHaptics.playAnswerCorrect(context)
+                    }.onFailure { e ->
+                        isUploadingFile = false
+                        errorMessage = "Error al subir archivo: ${e.localizedMessage}"
+                        DuolingoHaptics.playAnswerIncorrect(context)
+                    }
                 }
-                uploadedFileName = origName
-                isUploadingFile = false
-                DuolingoHaptics.playAnswerCorrect(context)
-            }.addOnFailureListener { e ->
-                isUploadingFile = false
-                errorMessage = "Error al subir archivo: ${e.localizedMessage}"
-                DuolingoHaptics.playAnswerIncorrect(context)
-            }
+            )
         }
     }
 
