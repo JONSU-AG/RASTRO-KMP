@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Contador 2x1: PNG fijo (hoja vacía izquierda, Orstty derecha) + pastilla crema DENTRO de la hoja. -->
+<!-- Contador 2x1 FINAL: sin layout_weight. PNG fijo (hoja vacía izquierda,
+     Orstty derecha) + pastilla crema DENTRO de la hoja, posicionada por gravedad. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widget_countdown_root"
     android:layout_width="match_parent"
@@ -13,62 +14,47 @@
         android:contentDescription="@string/app_name" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/widget_pill_background"
+        android:padding="8dp">
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="8" />
-
-        <LinearLayout
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/widget_countdown_target"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:orientation="vertical"
+            android:text="EXAMEN UNSA"
+            android:textColor="#0F172A"
+            android:textSize="11sp"
+            android:textStyle="bold"
             android:gravity="center"
-            android:background="@drawable/widget_pill_background"
-            android:padding="8dp">
+            android:maxLines="2"
+            android:ellipsize="end" />
 
-            <TextView
-                android:id="@+id/widget_countdown_target"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="EXAMEN UNSA"
-                android:textColor="#0F172A"
-                android:textSize="11sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:maxLines="2"
-                android:ellipsize="end" />
+        <TextView
+            android:id="@+id/widget_countdown_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="44"
+            android:textColor="#0F172A"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/widget_countdown_days"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="44"
-                android:textColor="#0F172A"
-                android:textSize="44sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/widget_countdown_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DÍAS RESTANTES"
+            android:textColor="#64748B"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:maxLines="1" />
 
-            <TextView
-                android:id="@+id/widget_countdown_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DÍAS RESTANTES"
-                android:textColor="#64748B"
-                android:textSize="9sp"
-                android:textStyle="bold"
-                android:gravity="center" />
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="42" />
     </LinearLayout>
 
 </FrameLayout>

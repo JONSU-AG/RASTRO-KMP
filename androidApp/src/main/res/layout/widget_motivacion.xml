@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Frase del día 4x1: PNG fijo de fondo (cuadro central ya existe en la imagen).
-     El texto se coloca DENTRO del cuadro con márgenes proporcionales (pesos),
-     sin agregar otra tarjeta encima. centerCrop preserva el aspect ratio. -->
+<!-- Frase del día 4x1 FINAL: sin layout_weight. PNG fijo (el cuadro central ya
+     existe en la imagen) + texto DENTRO del cuadro con márgenes fijos. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widget_motivacion_root"
     android:layout_width="match_parent"
@@ -17,62 +16,37 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingLeft="56dp"
+        android:paddingRight="56dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="6dp">
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="10" />
+        <TextView
+            android:id="@+id/widget_motivacion_quote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="La disciplina vence al talento cuando el talento no se esfuerza."
+            android:textColor="#0F172A"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            android:maxLines="4"
+            android:ellipsize="end" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="80"
-            android:orientation="vertical"
-            android:gravity="center">
+        <TextView
+            android:id="@+id/widget_motivacion_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="— RASTRO"
+            android:textColor="#64748B"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:maxLines="1" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="30" />
-
-            <TextView
-                android:id="@+id/widget_motivacion_quote"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:gravity="center"
-                android:text="La disciplina vence al talento cuando el talento no se esfuerza."
-                android:textColor="#0F172A"
-                android:textSize="13sp"
-                android:textStyle="italic"
-                android:maxLines="4"
-                android:ellipsize="end" />
-
-            <TextView
-                android:id="@+id/widget_motivacion_author"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:gravity="center"
-                android:text="— RASTRO"
-                android:textColor="#64748B"
-                android:textSize="10sp"
-                android:textStyle="bold"
-                android:maxLines="1"
-                android:ellipsize="end" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="18" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="10" />
     </LinearLayout>
 
 </FrameLayout>

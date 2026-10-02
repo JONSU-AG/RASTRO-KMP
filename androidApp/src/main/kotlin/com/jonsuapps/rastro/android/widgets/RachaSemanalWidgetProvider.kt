@@ -19,37 +19,19 @@ class RachaSemanalWidgetProvider : AppWidgetProvider() {
                 val weekActive = RastroWidgetManager.getWeeklyActiveDates(context)
                 val activeCount = weekActive.count { it }
                 val pendingIntent = RastroWidgetManager.createActivityPendingIntent(context, 102)
-
-                val daysMap = listOf(
-                    Pair(R.id.day_lun, "L"),
-                    Pair(R.id.day_mar, "M"),
-                    Pair(R.id.day_mie, "M"),
-                    Pair(R.id.day_jue, "J"),
-                    Pair(R.id.day_vie, "V"),
-                    Pair(R.id.day_sab, "S"),
-                    Pair(R.id.day_dom, "D")
-                )
+                val marks = weekActive.map { if (it) "✓" else "○" }.joinToString(" ")
 
                 for (appWidgetId in appWidgetIds) {
                     val views = RemoteViews(context.packageName, R.layout.widget_racha_semanal).apply {
                         setTextViewText(R.id.widget_semanal_ratio, "$activeCount/7")
+                        setTextViewText(R.id.widget_semanal_days_marks, marks)
+                        setTextViewText(R.id.widget_semanal_days_letters, "L M M J V S D")
                         setOnClickPendingIntent(R.id.widget_semanal_root, pendingIntent)
-
-                        daysMap.forEachIndexed { index, pair ->
-                            val isActive = weekActive.getOrElse(index) { false }
-                            val symbol = if (isActive) "✓" else "○"
-                            setTextViewText(pair.first, "$symbol\n${pair.second}")
-                            setTextColor(
-                                pair.first,
-                                if (isActive) android.graphics.Color.parseColor("#6D28D9")
-                                else android.graphics.Color.parseColor("#B6B0C6")
-                            )
-                        }
                     }
                     appWidgetManager.updateAppWidget(appWidgetId, views)
                 }
             } catch (t: Throwable) {
-                android.util.Log.e("SemanalWidget", "updateWidgets falló, usando valores por defecto", t)
+                android.util.Log.e("SemanalWidget", "updateWidgets", t)
                 val fallbackIntent = RastroWidgetManager.createActivityPendingIntent(context, 102)
                 for (appWidgetId in appWidgetIds) {
                     val views = RemoteViews(context.packageName, R.layout.widget_racha_semanal).apply {

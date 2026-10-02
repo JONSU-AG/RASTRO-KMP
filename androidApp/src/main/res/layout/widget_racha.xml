@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Racha diaria 2x1: PNG fijo (Loki izq/centro) + pastilla crema con datos a la DERECHA. -->
+<!-- Racha diaria 2x1 FINAL: sin layout_weight (rompía el launcher).
+     PNG fijo + pastilla crema a la derecha con gravedad y ancho fijo. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widget_racha_root"
     android:layout_width="match_parent"
@@ -13,56 +14,50 @@
         android:contentDescription="@string/app_name" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="40" />
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/widget_pill_background"
+        android:padding="6dp">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="60"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="10dp">
-
-            <TextView
-                android:id="@+id/widget_racha_fire"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🔥"
-                android:textSize="22sp" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
             <TextView
                 android:id="@+id/widget_racha_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8"
-                android:textColor="#EA580C"
-                android:textSize="40sp"
+                android:text="9"
+                android:textColor="#0F172A"
+                android:textSize="32sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/widget_racha_label"
+                android:id="@+id/widget_racha_fire"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DÍAS DE RACHA"
-                android:textColor="#0F172A"
-                android:textSize="10sp"
-                android:textStyle="bold"
-                android:gravity="center" />
-
+                android:layout_marginLeft="4dp"
+                android:text="🔥"
+                android:textSize="26sp" />
         </LinearLayout>
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="4" />
+        <TextView
+            android:id="@+id/widget_racha_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DÍAS DE RACHA"
+            android:textColor="#0F172A"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:maxLines="1" />
+
     </LinearLayout>
 
 </FrameLayout>
