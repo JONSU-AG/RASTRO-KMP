@@ -1,0 +1,18 @@
+{
+  "week": 6,
+  "title": "Semana 6",
+  "lessons": [
+    {
+      "subtopic": "6.1",
+      "lessonId": "ing_t06_s01",
+      "title": "Reading Comprehension: Estrategias (Skimming & Scanning) y Tipologías Textuales Breves - Core Rules & Foundations",
+      "path": "6.1/lesson.json"
+    },
+    {
+      "subtopic": "6.2",
+      "lessonId": "ing_t06_s02",
+      "title": "Reading Comprehension: Estrategias (Skimming & Scanning) y Tipologías Textuales Breves - Applied Skills, Hacks & Reading Practice",
+      "path": "6.2/lesson.json"
+    }
+  ]
+}

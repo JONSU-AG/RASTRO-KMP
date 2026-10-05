@@ -1,0 +1,18 @@
+{
+  "id": "geo_t04_s01",
+  "subjectId": "geografia",
+  "semana": 4,
+  "subtema": "4.1",
+  "title": "3.1. Estructura Interna de la Geósfera",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t04_s01",
+    "asignatura": "Geografía",
+    "semana": 4,
+    "titulo": "3.1. Estructura Interna de la Geósfera",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

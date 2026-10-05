@@ -1,0 +1,18 @@
+{
+  "week": 12,
+  "title": "TEMA 12: Actividades Económicas en el Perú",
+  "lessons": [
+    {
+      "subtopic": "12.1",
+      "lessonId": "geo_t12_s01",
+      "title": "3.1. Sector Primario: Actividades Extractivas",
+      "path": "12.1/lesson.json"
+    },
+    {
+      "subtopic": "12.2",
+      "lessonId": "geo_t12_s02",
+      "title": "3.3. Sector Secundario: La Industria Peruana",
+      "path": "12.2/lesson.json"
+    }
+  ]
+}

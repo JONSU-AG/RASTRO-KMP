@@ -1,0 +1,18 @@
+{
+  "week": 10,
+  "title": "Semana 10",
+  "lessons": [
+    {
+      "subtopic": "10.1",
+      "lessonId": "arit_t10_s01",
+      "title": "Sumatorias Notables y Aplicaciones Aritméticas (Interés, Descuento, Mezclas y Aleaciones) - Fundamentos y Leyes Principales",
+      "path": "10.1/lesson.json"
+    },
+    {
+      "subtopic": "10.2",
+      "lessonId": "arit_t10_s02",
+      "title": "Sumatorias Notables y Aplicaciones Aritméticas (Interés, Descuento, Mezclas y Aleaciones) - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "10.2/lesson.json"
+    }
+  ]
+}

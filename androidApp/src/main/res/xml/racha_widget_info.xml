@@ -4,8 +4,10 @@
     android:minHeight="40dp"
     android:targetCellWidth="2"
     android:targetCellHeight="1"
+    android:previewLayout="@layout/widget_racha"
     android:updatePeriodMillis="1800000"
     android:initialLayout="@layout/widget_racha"
+    android:previewImage="@drawable/widget_bg_racha_diaria"
     android:resizeMode="horizontal|vertical"
     android:widgetCategory="home_screen"
     android:description="@string/app_name" />

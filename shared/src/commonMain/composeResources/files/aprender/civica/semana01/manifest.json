@@ -1,0 +1,18 @@
+{
+  "week": 1,
+  "title": "TEMA 01: LA PERSONA Y LA VIDA EN SOCIEDAD",
+  "lessons": [
+    {
+      "subtopic": "1.1",
+      "lessonId": "civ_t01_s01",
+      "title": "La Persona Humana y la Dignidad Constitucional",
+      "path": "1.1/lesson.json"
+    },
+    {
+      "subtopic": "1.2",
+      "lessonId": "civ_t01_s02",
+      "title": "El Sistema de Normas de Convivencia y Valores Cívicos Fundamentales",
+      "path": "1.2/lesson.json"
+    }
+  ]
+}

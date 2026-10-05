@@ -1,0 +1,18 @@
+{
+  "week": 13,
+  "title": "Semana 13",
+  "lessons": [
+    {
+      "subtopic": "13.1",
+      "lessonId": "arit_t13_s01",
+      "title": "Teoría de la Probabilidad, Probabilidad Condicional y Teorema de Bayes - Fundamentos y Leyes Principales",
+      "path": "13.1/lesson.json"
+    },
+    {
+      "subtopic": "13.2",
+      "lessonId": "arit_t13_s02",
+      "title": "Teoría de la Probabilidad, Probabilidad Condicional y Teorema de Bayes - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "13.2/lesson.json"
+    }
+  ]
+}

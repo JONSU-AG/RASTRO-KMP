@@ -1,0 +1,18 @@
+{
+  "week": 8,
+  "title": "Semana 8",
+  "lessons": [
+    {
+      "subtopic": "8.1",
+      "lessonId": "geom_t08_s01",
+      "title": "PERÍMETROS, ÁREAS Y LONGITUDES - Fundamentos y Leyes Principales",
+      "path": "8.1/lesson.json"
+    },
+    {
+      "subtopic": "8.2",
+      "lessonId": "geom_t08_s02",
+      "title": "PERÍMETROS, ÁREAS Y LONGITUDES - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "8.2/lesson.json"
+    }
+  ]
+}

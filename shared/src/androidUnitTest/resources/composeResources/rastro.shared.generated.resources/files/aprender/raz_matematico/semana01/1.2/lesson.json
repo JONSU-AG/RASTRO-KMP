@@ -1,0 +1,18 @@
+{
+  "id": "rm_t01_s02",
+  "subjectId": "raz_matematico",
+  "semana": 1,
+  "subtema": "1.2",
+  "title": "RAZONAMIENTO NUMÉRICO Y REGULARIDADES - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_matematico/RazonamientoMatematicoSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rm_t01_s02",
+    "asignatura": "Raz. Matemático",
+    "semana": 1,
+    "titulo": "RAZONAMIENTO NUMÉRICO Y REGULARIDADES - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "huni_t02_s01",
+  "subjectId": "historia_universal",
+  "semana": 2,
+  "subtema": "2.1",
+  "title": "3.1. Las Sociedades Fluviales e Hidráulicas de Mesopotamia",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_huni_t02_s01",
+    "asignatura": "Historia Universal",
+    "semana": 2,
+    "titulo": "3.1. Las Sociedades Fluviales e Hidráulicas de Mesopotamia",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

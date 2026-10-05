@@ -1,0 +1,18 @@
+{
+  "id": "fis_t02_s02",
+  "subjectId": "fisica",
+  "semana": 2,
+  "subtema": "2.2",
+  "title": "CINEMÁTICA - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/fisica/FisicaSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_fis_t02_s02",
+    "asignatura": "Física",
+    "semana": 2,
+    "titulo": "CINEMÁTICA - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

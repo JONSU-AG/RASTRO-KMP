@@ -2,14 +2,14 @@ package com.jonsuapps.rastro.vocational
 
 /**
  * Motor determinista de cálculo y puntuación para el O*NET Interest Profiler / modelo RIASEC.
- * Calcula puntuaciones brutas por dimensión (10 a 50 puntos), detecta empates reales y
+ * Calcula puntuaciones brutas por dimensión (5 a 25 en Mini-IP; 10 a 50 en el banco de 60), detecta empates reales y
  * deriva el código Holland predominante.
  */
 object VocationalScoringEngine {
 
     /**
      * Calcula el [VocationalResult] a partir del catálogo de preguntas y las respuestas proporcionadas.
-     * @param questions Lista de preguntas del test (se esperan 60 preguntas, 10 por dimensión).
+     * @param questions Lista de preguntas del test (30/60 preguntas, 5/10 por dimensión).
      * @param answers Mapa de questionId a valor Likert (1..5).
      * @param timestamp Marca temporal de la resolución.
      * @throws IllegalArgumentException si falta alguna respuesta o contiene valores inválidos.
@@ -93,7 +93,8 @@ object VocationalScoringEngine {
             conventional = conventionalSum,
             hollandCode = hollandCode,
             timestamp = timestamp,
-            tiedDimensions = ties
+            tiedDimensions = ties,
+            itemsPerDimension = questions.size / 6
         )
     }
 

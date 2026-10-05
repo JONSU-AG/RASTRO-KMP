@@ -1,0 +1,18 @@
+{
+  "id": "alg_t06_s02",
+  "subjectId": "algebra",
+  "semana": 6,
+  "subtema": "6.2",
+  "title": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_alg_t06_s02",
+    "asignatura": "Álgebra",
+    "semana": 6,
+    "titulo": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

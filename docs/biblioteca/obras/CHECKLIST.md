@@ -960,3 +960,43 @@ Aislamiento de Ámbito:
 
 Misión completada con éxito.
 
+
+## Verificación UI — 03/10/2026
+
+- [x] Nombres y roles largos conservan líneas naturales (Aquiles y Odiseo).
+- [x] Trama muestra títulos y textos largos sin columna de letras.
+- [x] Lectura Cálido/Oscuro y fuente de 17 sp comprobadas en teléfono.
+- [x] Botón Seguir con icono y texto centrados, sin activar seguimiento.
+- [x] Compilación final completada.
+- [ ] Revisión individual de todas las obras y matriz completa de anchos/fuentes.
+
+## 03/10 — Vistas adaptativas
+
+- [x] Selector Lista detallada / Portadas y cuadrícula adaptativa integrados y compilados.
+- [x] Portadas abren el detalle existente; conserva favoritos.
+- [ ] Revisión visual nueva en teléfono/tablet (no se ejecutó la app).
+
+## Portadas compactas — 03/10/2026
+- [x] Grid adaptable de mínimo 120 dp, preservando selector lista/portadas y detalle existente.
+- [x] Compilación Kotlin Android comprobada; sin modificaciones de contenido académico.
+- [ ] Comprobación visual teléfono/tablet/horizontal (app no ejecutada).
+
+## 03/10 — Jerarquía pastel de lectura
+- [x] Texto completo conservado: énfasis semibold de hasta cuatro términos existentes por bloque, máximo un marcador corto (hasta 5% del texto y 48 caracteres).
+- [x] Tema principal existente presentado como nota ligera con vector local trail_lightbulb; sin generar resúmenes ni campos académicos nuevos.
+- [x] Superficies, bordes, indicadores y marcador derivados del tema activo; contraste mínimo 4.5:1 comprobado en los 11 temas actuales.
+- [x] Kotlin Android compila y cuatro pruebas ObraReadingStyleTest pasan; CatalogPilotValidationTest sin errores.
+- [ ] Revisión visual de estos cambios en dispositivo: no se ejecutó la app.
+
+## 03/10 — Simetría
+- [x] Títulos cortos/largos reservan la misma zona de tres líneas en portadas y dos en listado; metadata limitada a una línea.
+- [x] Kotlin compila; datos y detalle de Obras conservados.
+- [ ] Comparación física de tamaños y fuentes grandes (sin ejecutar app).
+
+## 04/10 — Auditoría de estabilidad y cambios solicitados
+Correcciones en curso: crash del parser de Completar comprobado por Logcat, carga IO y fallo local, caché de catálogo, restauración preparada fuera de Main, navegación/back y respuestas Ranking obsoletas. Obras tiene una única zona de scroll debajo del banner y selector de vistas con estado contrastado. Temas conserva preferencias existentes, Material You medio pasa a default y fondo académico es opcional para todos. Pizarra limita memoria/undo, conserva buffer antes de asignar y mediante ViewModel al rotar.
+Estado y evidencias vigentes: ../../../CHECKLIST_GOOGLE_PLAY.md (desde Obras), ../../CHECKLIST_GOOGLE_PLAY.md (desde módulos generales). Validación física pendiente; app no ejecutada.
+
+## 04/10 — Cierre local de auditoría
+
+Kotlin debug/release y R8 compilan; 185 pruebas shared y 100 Android pasan. No se ejecutó la app. Crash Completar identificado en Logcat y parser compartido corregido; IO/caché, navegación, Ranking y Pizarra corregidos en su ámbito. Estado físico/externo separado en CHECKLIST_GOOGLE_PLAY.md; no se equipara compilación a prueba en dispositivo. Los complementos académicos conservan incidencias **heredadas** del banco: detalle en docs/aprender/VALIDACION_CATALOGO_2027.md. No commit/push/cambio de versión.

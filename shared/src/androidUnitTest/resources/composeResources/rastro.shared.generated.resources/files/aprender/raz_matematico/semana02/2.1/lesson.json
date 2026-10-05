@@ -1,0 +1,18 @@
+{
+  "id": "rm_t02_s01",
+  "subjectId": "raz_matematico",
+  "semana": 2,
+  "subtema": "2.1",
+  "title": "MAGNITUDES Y PROPORCIONALIDAD - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_matematico/RazonamientoMatematicoSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rm_t02_s01",
+    "asignatura": "Raz. Matemático",
+    "semana": 2,
+    "titulo": "MAGNITUDES Y PROPORCIONALIDAD - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,4 +1,7 @@
 package com.jonsuapps.rastro.android.ui.screens
+import com.jonsuapps.rastro.theme.accentText
+import com.jonsuapps.rastro.theme.readableText
+import androidx.compose.ui.graphics.lerp
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -28,9 +31,13 @@ import com.google.firebase.auth.GoogleAuthProvider
 import androidx.credentials.CredentialManager
 import androidx.credentials.GetCredentialRequest
 import androidx.credentials.CustomCredential
-import com.google.android.libraries.identity.googleid.GetGoogleIdOption
+import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.TimeoutCancellationException
+import kotlinx.coroutines.withTimeout
+import com.jonsuapps.rastro.android.util.awaitResult
 import com.jonsuapps.rastro.android.ui.components.TermsAndPrivacyDialog
 import com.jonsuapps.rastro.android.ui.components.DuolingoHaptics
 import com.jonsuapps.rastro.android.util.LegalLinks
@@ -45,6 +52,10 @@ fun AuthScreen(
     modifier: Modifier = Modifier
 ) {
     val theme = ThemeManager.currentTheme
+    val errorSurface = lerp(theme.surface, Color(0xFFEF4444), .12f)
+    val errorInk = readableText(Color(0xFFEF4444), errorSurface)
+    val successSurface = lerp(theme.surface, theme.accent, .12f)
+    val successInk = readableText(theme.accent, successSurface)
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
     var selectedAuthTab by remember { mutableIntStateOf(0) } // 0: Iniciar Sesión, 1: Registrarse
@@ -57,6 +68,7 @@ fun AuthScreen(
     var termsAccepted by remember { mutableStateOf(false) }
 
     var isLoading by remember { mutableStateOf(false) }
+    var googleLoading by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
     var successMessage by remember { mutableStateOf<String?>(null) }
 
@@ -64,27 +76,18 @@ fun AuthScreen(
         modifier = modifier
             .fillMaxSize()
             .background(theme.background)
+            .wrapContentWidth(Alignment.CenterHorizontally)
+            .widthIn(max = 460.dp)
+            .imePadding()
             .verticalScroll(rememberScrollState())
-            .padding(horizontal = 24.dp, vertical = 32.dp),
+            .padding(horizontal = 20.dp, vertical = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        // Logotipo / Símbolo Académico
-        Box(
-            modifier = Modifier
-                .size(68.dp)
-                .clip(RastroShapes.Pill)
-                .background(Color(0xFFF97316)),
-            contentAlignment = Alignment.Center
-        ) {
-            Icon(
-                imageVector = Icons.Rounded.School,
-                contentDescription = "RASTRO",
-                tint = Color.White,
-                modifier = Modifier.size(38.dp)
-            )
-        }
-
+        com.jonsuapps.rastro.android.ui.components.ClassicArtwork(
+            com.jonsuapps.rastro.android.ui.components.ClassicAppearance.ACHIEVEMENT,
+            Modifier.size(128.dp),
+            character = com.jonsuapps.rastro.android.ui.components.ClassicCharacter.LOKI)
         Spacer(modifier = Modifier.height(14.dp))
 
         Text(
@@ -95,22 +98,93 @@ fun AuthScreen(
         )
 
         Text(
-            text = "Preparación Universitaria Integral • UNSA",
+            text = "Tu preparación preuniversitaria, a tu ritmo",
             style = MaterialTheme.typography.bodySmall,
             color = theme.textSecondary
         )
 
         Spacer(modifier = Modifier.height(28.dp))
 
+        // Google Sign-In real mediante Credential Manager y Firebase Auth.
+        com.jonsuapps.rastro.android.ui.components.Sticker3dButton(
+            onClick = {
+                if (isLoading) return@Sticker3dButton
+                isLoading = true
+                googleLoading = true
+                errorMessage = null
+                successMessage = null
+                scope.launch {
+                    try {
+                        val googleOption = GetSignInWithGoogleOption.Builder(context.getString(com.jonsuapps.rastro.R.string.default_web_client_id))
+                            .build()
+                        val request = GetCredentialRequest.Builder()
+                            .addCredentialOption(googleOption)
+                            .build()
+                        val credential = CredentialManager.create(context)
+                            .getCredential(context, request).credential
+                        if (credential !is CustomCredential || credential.type !in setOf(GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL, GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_SIWG_CREDENTIAL)) {
+                            errorMessage = "No se pudo obtener la cuenta de Google. Inténtalo de nuevo."
+                            isLoading = false
+                            return@launch
+                        }
+                        val googleToken = GoogleIdTokenCredential.createFrom(credential.data)
+                        val firebaseCredential = GoogleAuthProvider.getCredential(googleToken.idToken, null)
+                        val result = withTimeout(30_000) {
+                            FirebaseAuth.getInstance().signInWithCredential(firebaseCredential).awaitResult()
+                        }
+                        result.user?.let { user ->
+                            val profilePhoto = user.photoUrl?.toString()
+                                ?: user.providerData.firstOrNull { it.providerId == "google.com" }?.photoUrl?.toString()
+                            UserManager.updateUserFromFirebase(user.uid, user.displayName, user.email, profilePhoto)
+                        }
+                        onAuthSuccess()
+                    } catch (e: TimeoutCancellationException) {
+                        errorMessage = "La conexión tardó demasiado. Comprueba tu red e inténtalo de nuevo."
+                    } catch (e: CancellationException) {
+                        throw e
+                    } catch (e: Exception) {
+                        errorMessage = e.localizedMessage ?: "No se pudo iniciar sesión con Google."
+                    } finally {
+                        isLoading = false
+                        googleLoading = false
+                    }
+                }
+            },
+            enabled = !isLoading,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(50.dp),
+            shape = RastroShapes.Pill,
+            containerColor = theme.surfaceAccent, bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder
+        ) {
+            Icon(
+                Icons.Rounded.AccountCircle,
+                contentDescription = null,
+                tint = Color(0xFF4285F4),
+                modifier = Modifier.size(20.dp)
+            )
+            Spacer(modifier = Modifier.width(8.dp))
+            Text(
+                text = if (googleLoading) "Abriendo Google…" else "Continuar con Google",
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.SemiBold,
+                color = theme.textPrimary
+            )
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text("Sincroniza tu progreso con tu cuenta de Google", color = theme.textSecondary, fontSize = 12.sp)
+        Spacer(Modifier.height(22.dp))
         // Pestañas Iniciar Sesión / Registro
         TabRow(
             selectedTabIndex = selectedAuthTab,
             containerColor = theme.surface,
-            contentColor = Color(0xFFF97316),
+            contentColor = theme.accentText,
             indicator = { tabPositions ->
                 TabRowDefaults.SecondaryIndicator(
                     Modifier.tabIndicatorOffset(tabPositions[selectedAuthTab]),
-                    color = Color(0xFFF97316)
+                    color = theme.accentText
                 )
             },
             modifier = Modifier
@@ -143,8 +217,8 @@ fun AuthScreen(
         if (errorMessage != null) {
             Surface(
                 shape = RoundedCornerShape(12.dp),
-                color = Color(0xFFEF4444).copy(alpha = 0.12f),
-                border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFEF4444).copy(alpha = 0.3f)),
+                color = errorSurface,
+                border = androidx.compose.foundation.BorderStroke(1.dp, errorInk.copy(alpha = 0.3f)),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Row(
@@ -154,13 +228,13 @@ fun AuthScreen(
                     Icon(
                         Icons.Rounded.ErrorOutline,
                         contentDescription = null,
-                        tint = Color(0xFFEF4444),
+                        tint = errorInk,
                         modifier = Modifier.size(20.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         text = errorMessage ?: "",
-                        color = Color(0xFFEF4444),
+                        color = errorInk,
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Medium
                     )
@@ -173,8 +247,8 @@ fun AuthScreen(
         if (successMessage != null) {
             Surface(
                 shape = RoundedCornerShape(12.dp),
-                color = Color(0xFF10B981).copy(alpha = 0.12f),
-                border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF10B981).copy(alpha = 0.3f)),
+                color = successSurface,
+                border = androidx.compose.foundation.BorderStroke(1.dp, successInk.copy(alpha = 0.3f)),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Row(
@@ -184,13 +258,13 @@ fun AuthScreen(
                     Icon(
                         Icons.Rounded.CheckCircle,
                         contentDescription = null,
-                        tint = Color(0xFF10B981),
+                        tint = successInk,
                         modifier = Modifier.size(20.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         text = successMessage ?: "",
-                        color = Color(0xFF10B981),
+                        color = successInk,
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Medium
                     )
@@ -214,7 +288,7 @@ fun AuthScreen(
             singleLine = true,
             shape = RastroShapes.Squircle,
             colors = OutlinedTextFieldDefaults.colors(
-                focusedBorderColor = Color(0xFFF97316),
+                focusedBorderColor = theme.accentText,
                 unfocusedBorderColor = theme.borderSubtle
             )
         )
@@ -245,7 +319,7 @@ fun AuthScreen(
             singleLine = true,
             shape = RastroShapes.Squircle,
             colors = OutlinedTextFieldDefaults.colors(
-                focusedBorderColor = Color(0xFFF97316),
+                focusedBorderColor = theme.accentText,
                 unfocusedBorderColor = theme.borderSubtle
             )
         )
@@ -264,7 +338,7 @@ fun AuthScreen(
                     checked = termsAccepted,
                     onCheckedChange = { termsAccepted = it },
                     colors = CheckboxDefaults.colors(
-                        checkedColor = Color(0xFFF97316),
+                        checkedColor = theme.accentText,
                         uncheckedColor = theme.textSecondary
                     )
                 )
@@ -276,7 +350,7 @@ fun AuthScreen(
                         lineHeight = 16.sp
                     )
                     val linkStyle = androidx.compose.ui.text.SpanStyle(
-                        color = Color(0xFFF97316),
+                        color = theme.accentText,
                         fontWeight = FontWeight.Bold,
                         textDecoration = androidx.compose.ui.text.style.TextDecoration.Underline
                     )
@@ -317,6 +391,7 @@ fun AuthScreen(
         // Botón Principal (Firebase Auth)
         Button(
             onClick = {
+                if (isLoading) return@Button
                 if (email.isBlank() || !email.contains("@")) {
                     errorMessage = "Por favor ingresa un correo electrónico válido."
                     return@Button
@@ -333,72 +408,40 @@ fun AuthScreen(
                 isLoading = true
                 errorMessage = null
 
-                try {
+                scope.launch {
+                  try {
                     val auth = FirebaseAuth.getInstance()
-                    if (selectedAuthTab == 0) {
-                        // Iniciar Sesión con Firebase
-                        auth.signInWithEmailAndPassword(email.trim(), password.trim())
-                            .addOnCompleteListener { task ->
-                                isLoading = false
-                                if (task.isSuccessful) {
-                                    val user = auth.currentUser
-                                    UserManager.updateUserFromFirebase(
-                                        uid = user?.uid ?: "local_${System.currentTimeMillis()}",
-                                        displayName = user?.displayName,
-                                        email = user?.email ?: email.trim(),
-                                        photoUrl = user?.photoUrl?.toString()
-                                    )
-                                    onAuthSuccess()
-                                } else {
-                                    val exceptionMessage = task.exception?.localizedMessage ?: "Credenciales incorrectas"
-                                    errorMessage = if (exceptionMessage.contains("password", ignoreCase = true) || exceptionMessage.contains("credential", ignoreCase = true)) {
-                                        "Contraseña incorrecta o usuario no registrado."
-                                    } else {
-                                        exceptionMessage
-                                    }
-                                }
-                            }
-                    } else {
-                        // Registrarse con Firebase
-                        auth.createUserWithEmailAndPassword(email.trim(), password.trim())
-                            .addOnCompleteListener { task ->
-                                isLoading = false
-                                if (task.isSuccessful) {
-                                    val user = auth.currentUser
-                                    UserManager.updateUserFromFirebase(
-                                        uid = user?.uid ?: "local_${System.currentTimeMillis()}",
-                                        displayName = user?.displayName,
-                                        email = user?.email ?: email.trim(),
-                                        photoUrl = user?.photoUrl?.toString()
-                                    )
-                                    successMessage = "¡Cuenta creada exitosamente!"
-                                    onAuthSuccess()
-                                } else {
-                                    val exceptionMessage = task.exception?.localizedMessage ?: "Error al registrar"
-                                    errorMessage = if (exceptionMessage.contains("email-already-in-use", ignoreCase = true)) {
-                                        "Este correo ya está registrado. Prueba iniciando sesión."
-                                    } else {
-                                        exceptionMessage
-                                    }
-                                }
-                            }
+                    val result = withTimeout(30_000) {
+                        val task = if (selectedAuthTab == 0) auth.signInWithEmailAndPassword(email.trim(), password)
+                            else auth.createUserWithEmailAndPassword(email.trim(), password)
+                        task.awaitResult()
                     }
-                } catch (e: Exception) {
-                    isLoading = false
-                    errorMessage = e.localizedMessage ?: "No se pudo conectar con Firebase. Inténtalo de nuevo."
+                    val user = result.user ?: error("No se pudo recuperar la cuenta.")
+                    UserManager.updateUserFromFirebase(user.uid, user.displayName, user.email, user.photoUrl?.toString())
+                    onAuthSuccess()
+                  } catch (_: TimeoutCancellationException) {
+                    errorMessage = "La conexión tardó demasiado. Comprueba tu red e inténtalo de nuevo."
+                  } catch (cancelled: CancellationException) { throw cancelled
+                  } catch (error: Exception) {
+                    errorMessage = when ((error as? com.google.firebase.auth.FirebaseAuthException)?.errorCode) {
+                        "ERROR_EMAIL_ALREADY_IN_USE" -> "Este correo ya está registrado. Prueba iniciando sesión."
+                        "ERROR_INVALID_CREDENTIAL", "ERROR_WRONG_PASSWORD", "ERROR_USER_NOT_FOUND" -> "Revisa tu correo y contraseña."
+                        else -> "No se pudo completar el acceso. Comprueba tus datos y conexión e inténtalo de nuevo."
+                    }
+                  } finally { isLoading = false }
                 }
             },
             enabled = !isLoading,
             modifier = Modifier
                 .fillMaxWidth()
                 .height(50.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFF97316)),
+            colors = ButtonDefaults.buttonColors(containerColor = theme.surfaceAccent, contentColor = theme.textPrimary),
             shape = RastroShapes.Pill
         ) {
-            if (isLoading) {
+            if (isLoading && !googleLoading) {
                 CircularProgressIndicator(
                     modifier = Modifier.size(22.dp),
-                    color = Color.White,
+                    color = theme.textPrimary,
                     strokeWidth = 2.dp
                 )
             } else {
@@ -420,111 +463,47 @@ fun AuthScreen(
                         errorMessage = "Escribe tu correo para enviarte el enlace de recuperación."
                     } else {
                         isLoading = true
-                        FirebaseAuth.getInstance().sendPasswordResetEmail(email.trim())
-                            .addOnCompleteListener { task ->
-                                isLoading = false
-                                if (task.isSuccessful) {
-                                    successMessage = "Enviamos el enlace de recuperación a ${email.trim()}."
-                                } else {
-                                    errorMessage = task.exception?.localizedMessage ?: "No se pudo enviar el enlace."
-                                }
-                            }
+                        scope.launch {
+                            try {
+                                withTimeout(30_000) { FirebaseAuth.getInstance().sendPasswordResetEmail(email.trim()).awaitResult() }
+                                successMessage = "Si existe una cuenta con ese correo, recibirás un enlace para recuperar tu contraseña."
+                            } catch (cancelled: CancellationException) {
+                                if (cancelled is TimeoutCancellationException) errorMessage = "La conexión tardó demasiado. Inténtalo de nuevo."
+                                else throw cancelled
+                            } catch (_: Exception) { errorMessage = "No se pudo solicitar la recuperación. Comprueba el correo y tu conexión."
+                            } finally { isLoading = false }
+                        }
                     }
                 },
                 enabled = !isLoading,
                 modifier = Modifier.align(Alignment.End)
             ) {
-                Text("¿Olvidaste tu contraseña?", color = Color(0xFFF97316))
+                Text("¿Olvidaste tu contraseña?", color = theme.accentText)
             }
         }
 
-        // Google Sign-In real mediante Credential Manager y Firebase Auth.
-        OutlinedButton(
-            onClick = {
-                isLoading = true
-                scope.launch {
-                    try {
-                        val googleOption = GetGoogleIdOption.Builder()
-                            .setFilterByAuthorizedAccounts(false)
-                            .setAutoSelectEnabled(false)
-                            .setServerClientId(context.getString(com.jonsuapps.rastro.R.string.default_web_client_id))
-                            .build()
-                        val request = GetCredentialRequest.Builder()
-                            .addCredentialOption(googleOption)
-                            .build()
-                        val credential = CredentialManager.create(context)
-                            .getCredential(context, request).credential
-                        if (credential !is CustomCredential || credential.type != GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL) {
-                            errorMessage = "No se pudo obtener la cuenta de Google. Inténtalo de nuevo."
-                            isLoading = false
-                            return@launch
-                        }
-                        val googleToken = GoogleIdTokenCredential.createFrom(credential.data)
-                        val firebaseCredential = GoogleAuthProvider.getCredential(googleToken.idToken, null)
-                        FirebaseAuth.getInstance().signInWithCredential(firebaseCredential)
-                            .addOnCompleteListener { task ->
-                                isLoading = false
-                                if (task.isSuccessful) {
-                                    FirebaseAuth.getInstance().currentUser?.let { user ->
-                                        val profilePhoto = user.photoUrl?.toString()
-                                            ?: user.providerData.firstOrNull { it.providerId == "google.com" }?.photoUrl?.toString()
-                                        UserManager.updateUserFromFirebase(user.uid, user.displayName, user.email, profilePhoto)
-                                    }
-                                    onAuthSuccess()
-                                } else {
-                                    errorMessage = task.exception?.localizedMessage ?: "No se pudo iniciar sesión con Google."
-                                }
-                            }
-                    } catch (e: Exception) {
-                        isLoading = false
-                        errorMessage = e.localizedMessage ?: "No se pudo iniciar sesión con Google."
-                    }
-                }
-            },
-            enabled = !isLoading,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(50.dp),
-            shape = RastroShapes.Pill,
-            border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
-        ) {
-            Icon(
-                Icons.Rounded.AccountCircle,
-                contentDescription = null,
-                tint = Color(0xFF4285F4),
-                modifier = Modifier.size(20.dp)
-            )
-            Spacer(modifier = Modifier.width(8.dp))
-            Text(
-                text = "Continuar con Google",
-                style = MaterialTheme.typography.titleSmall,
-                fontWeight = FontWeight.SemiBold,
-                color = theme.textPrimary
-            )
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
         // Modo Invitado con sesión anónima de Firebase.
         TextButton(onClick = {
+            if (isLoading) return@TextButton
             isLoading = true
-            FirebaseAuth.getInstance().signInAnonymously().addOnCompleteListener { task ->
-                isLoading = false
-                if (task.isSuccessful) {
-                    FirebaseAuth.getInstance().currentUser?.let { user ->
-                        UserManager.updateUserFromFirebase(user.uid, "Estudiante Invitado", null, null, user.isAnonymous)
-                    }
+            scope.launch {
+                try {
+                    val result = withTimeout(30_000) { FirebaseAuth.getInstance().signInAnonymously().awaitResult() }
+                    val user = result.user ?: error("No se pudo iniciar el modo invitado.")
+                    UserManager.updateUserFromFirebase(user.uid, "Invitado", null, null, isAnonymous = true)
                     onContinueAsGuest()
-                } else {
-                    errorMessage = task.exception?.localizedMessage ?: "No se pudo iniciar el modo invitado."
-                }
+                } catch (cancelled: CancellationException) {
+                    if (cancelled is TimeoutCancellationException) errorMessage = "La conexión tardó demasiado. Inténtalo de nuevo."
+                    else throw cancelled
+                } catch (_: Exception) { errorMessage = "No se pudo iniciar el modo invitado. Comprueba tu conexión."
+                } finally { isLoading = false }
             }
         }, enabled = !isLoading) {
             Text(
                 text = "Explorar como Invitado",
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Medium,
-                color = Color(0xFFF97316)
+                color = theme.accentText
             )
         }
 
@@ -544,14 +523,14 @@ fun AuthScreen(
             Icon(
                 imageVector = Icons.Rounded.Policy,
                 contentDescription = null,
-                tint = Color(0xFFF97316),
+                tint = theme.accentText,
                 modifier = Modifier.size(15.dp)
             )
             Spacer(modifier = Modifier.width(6.dp))
             Text(
                 text = "Ver Políticas de Privacidad y Términos de Servicio",
                 style = MaterialTheme.typography.labelSmall,
-                color = Color(0xFFF97316),
+                color = theme.accentText,
                 fontWeight = FontWeight.Bold,
                 fontSize = 11.5.sp,
                 textDecoration = androidx.compose.ui.text.style.TextDecoration.Underline

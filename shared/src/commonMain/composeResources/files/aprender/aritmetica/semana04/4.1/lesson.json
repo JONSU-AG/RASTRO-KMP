@@ -1,0 +1,18 @@
+{
+  "id": "arit_t04_s01",
+  "subjectId": "aritmetica",
+  "semana": 4,
+  "subtema": "4.1",
+  "title": "Sistema de los Números Enteros (\\mathbb{Z}) y Ecuaciones Diofánticas - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/aritmetica/AritmeticaSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_arit_t04_s01",
+    "asignatura": "Aritmética",
+    "semana": 4,
+    "titulo": "Sistema de los Números Enteros (\\mathbb{Z}) y Ecuaciones Diofánticas - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

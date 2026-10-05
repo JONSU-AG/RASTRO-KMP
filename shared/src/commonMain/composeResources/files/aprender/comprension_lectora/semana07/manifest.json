@@ -1,0 +1,18 @@
+{
+  "week": 7,
+  "title": "Semana 7",
+  "lessons": [
+    {
+      "subtopic": "7.1",
+      "lessonId": "cl_t07_s01",
+      "title": "3.1 Mecanismos de Cohesión Textual en el Examen de Admisión",
+      "path": "7.1/lesson.json"
+    },
+    {
+      "subtopic": "7.2",
+      "lessonId": "cl_t07_s02",
+      "title": "3.2 Los Dos Grandes Criterios de Supresión de Oraciones",
+      "path": "7.2/lesson.json"
+    }
+  ]
+}

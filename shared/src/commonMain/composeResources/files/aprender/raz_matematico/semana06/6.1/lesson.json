@@ -1,0 +1,18 @@
+{
+  "id": "rm_t06_s01",
+  "subjectId": "raz_matematico",
+  "semana": 6,
+  "subtema": "6.1",
+  "title": "PROBABILIDAD INTUITIVA Y CONDICIONAL - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_matematico/RazonamientoMatematicoSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rm_t06_s01",
+    "asignatura": "Raz. Matemático",
+    "semana": 6,
+    "titulo": "PROBABILIDAD INTUITIVA Y CONDICIONAL - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

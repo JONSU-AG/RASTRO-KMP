@@ -1,0 +1,18 @@
+{
+  "id": "geo_t08_s02",
+  "subjectId": "geografia",
+  "semana": 8,
+  "subtema": "8.2",
+  "title": "3.2. Pisos de Alta Montaña y Vertiente Amazónica (Puna, Janca, Rupa Rupa y Omagua)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t08_s02",
+    "asignatura": "Geografía",
+    "semana": 8,
+    "titulo": "3.2. Pisos de Alta Montaña y Vertiente Amazónica (Puna, Janca, Rupa Rupa y Omagua)",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

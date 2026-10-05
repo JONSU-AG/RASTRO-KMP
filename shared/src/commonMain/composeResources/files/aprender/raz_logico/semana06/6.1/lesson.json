@@ -1,0 +1,18 @@
+{
+  "id": "rl_t06_s01",
+  "subjectId": "raz_logico",
+  "semana": 6,
+  "subtema": "6.1",
+  "title": "Consistencia y Coherencia Lógica - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_logico/RazonamientoLogicoSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rl_t06_s01",
+    "asignatura": "Raz. Lógico",
+    "semana": 6,
+    "titulo": "Consistencia y Coherencia Lógica - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "trig_t04_s01",
+  "subjectId": "trigonometria",
+  "semana": 4,
+  "subtema": "4.1",
+  "title": "ÁNGULO EN POSICIÓN NORMAL, REDUCCIÓN AL PRIMER CUADRANTE Y CIRCUNFERENCIA TRIGONOMÉTRICA - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/trigonometria/TrigonometriaSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_trig_t04_s01",
+    "asignatura": "Trigonometría",
+    "semana": 4,
+    "titulo": "ÁNGULO EN POSICIÓN NORMAL, REDUCCIÓN AL PRIMER CUADRANTE Y CIRCUNFERENCIA TRIGONOMÉTRICA - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

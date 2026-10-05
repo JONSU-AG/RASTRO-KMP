@@ -1,0 +1,36 @@
+{
+  "subjectId": "historia_peru",
+  "name": "Historia del Perú",
+  "area": "Ciencias Sociales",
+  "colorHex": "#F97316",
+  "description": "Poblamiento americano, altas culturas preíncas, Tahuantinsuyo, Conquista, Virreinato, Emancipación y República de los siglos XIX al XXI.",
+  "weeks": 5,
+  "source": "curso-prueba/SALIDA_KOTLIN/historia_peru",
+  "weekManifests": [
+    {
+      "week": 1,
+      "title": "TEMA 01: POBLAMIENTO AMERICANO, PERIODO LÍTICO Y ARCAICO",
+      "path": "semana01/manifest.json"
+    },
+    {
+      "week": 2,
+      "title": "TEMA 02: ALTAS CULTURAS PREÍNCAS (HORIZONTES E INTERMEDIOS CULTURALES)",
+      "path": "semana02/manifest.json"
+    },
+    {
+      "week": 3,
+      "title": "TEMA 03: EL TAWANTINSUYU (ORGANIZACIÓN, EXPANSIÓN, COSMOVISIÓN Y CAÍDA)",
+      "path": "semana03/manifest.json"
+    },
+    {
+      "week": 4,
+      "title": "TEMA 04: EL VIRREINATO DEL PERÚ (POLÍTICA, ECONOMÍA, SOCIEDAD Y REFORMAS BORBÓNICAS)",
+      "path": "semana04/manifest.json"
+    },
+    {
+      "week": 5,
+      "title": "TEMA 05: LA REPÚBLICA DEL PERÚ (INDEPENDENCIA, SIGLOS XIX, XX Y RETOS DEL SIGLO XXI)",
+      "path": "semana05/manifest.json"
+    }
+  ]
+}

@@ -160,3 +160,9 @@ Función poética igual a foco en el mensaje bello. Epopeya igual a Antigüedad 
 
 ## RESUMEN
 Literatura como arte verbal con función poética de Jakobson, literariedad, extrañamiento y pacto ficcional. Género épico narrativo objetivo con epopeya, cantar de gesta, novela y cuento. Género lírico subjetivo con oda, elegía, égloga, madrigal, epigrama y yaraví. Género dramático directo con tragedia y catarsis, comedia y drama. Género didáctico con ensayo y fábula. Criterios operativos con narrador frente a yo frente a escena, fatum frente a albedrío y mapa integrador con mnemotecnia E L D.
+
+## Funciones estética, social y cultural
+
+La función estética atiende a cómo la forma del texto produce sentido y experiencia: ritmo, imágenes, organización y voz participan en su valor literario. No equivale simplemente a hablar de cosas agradables. Una obra puede expresar dolor o conflicto con elaboración artística.
+
+La función social permite representar relaciones, problemas y perspectivas de una comunidad; puede cuestionarlas sin ser un informe documental. La cultural transmite, transforma o discute memorias, lenguas e imaginarios. Estas funciones pueden coexistir: no se elige necesariamente una sola para cada obra. La interpretación se sostiene con elementos del texto y su contexto, evitando reducir toda literatura a una moraleja.

@@ -1,0 +1,18 @@
+{
+  "id": "rm_t01_s01",
+  "subjectId": "raz_matematico",
+  "semana": 1,
+  "subtema": "1.1",
+  "title": "RAZONAMIENTO NUMÉRICO Y REGULARIDADES - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_matematico/RazonamientoMatematicoSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rm_t01_s01",
+    "asignatura": "Raz. Matemático",
+    "semana": 1,
+    "titulo": "RAZONAMIENTO NUMÉRICO Y REGULARIDADES - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

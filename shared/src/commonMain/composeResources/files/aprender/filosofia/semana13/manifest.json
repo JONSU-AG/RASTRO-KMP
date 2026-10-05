@@ -1,0 +1,18 @@
+{
+  "week": 13,
+  "title": "TEMA 13: ANTROPOLOGÍA FILOSÓFICA",
+  "lessons": [
+    {
+      "subtopic": "13.1",
+      "lessonId": "filo_t13_s01",
+      "title": "A. La Pregunta por el Hombre: Naturaleza y Objeto de Estudio",
+      "path": "13.1/lesson.json"
+    },
+    {
+      "subtopic": "13.2",
+      "lessonId": "filo_t13_s02",
+      "title": "D. La Dignidad de la Persona Humana",
+      "path": "13.2/lesson.json"
+    }
+  ]
+}

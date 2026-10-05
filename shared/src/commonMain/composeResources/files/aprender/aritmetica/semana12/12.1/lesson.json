@@ -1,0 +1,18 @@
+{
+  "id": "arit_t12_s01",
+  "subjectId": "aritmetica",
+  "semana": 12,
+  "subtema": "12.1",
+  "title": "Análisis Combinatorio: Principios, Permutaciones y Combinaciones - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/aritmetica/AritmeticaSemana12.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_arit_t12_s01",
+    "asignatura": "Aritmética",
+    "semana": 12,
+    "titulo": "Análisis Combinatorio: Principios, Permutaciones y Combinaciones - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

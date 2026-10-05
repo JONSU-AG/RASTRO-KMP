@@ -1,0 +1,18 @@
+{
+  "id": "geo_t05_s01",
+  "subjectId": "geografia",
+  "semana": 5,
+  "subtema": "5.1",
+  "title": "3.1. La Atmósfera: Origen, Composición y Retención",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t05_s01",
+    "asignatura": "Geografía",
+    "semana": 5,
+    "titulo": "3.1. La Atmósfera: Origen, Composición y Retención",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

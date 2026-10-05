@@ -1,0 +1,18 @@
+{
+  "week": 10,
+  "title": "TEMA 10: Recursos Naturales, Áreas Naturales Protegidas (ANP) y Desarrollo Sostenible",
+  "lessons": [
+    {
+      "subtopic": "10.1",
+      "lessonId": "geo_t10_s01",
+      "title": "3.1. Los Recursos Naturales: Definición y Tipología",
+      "path": "10.1/lesson.json"
+    },
+    {
+      "subtopic": "10.2",
+      "lessonId": "geo_t10_s02",
+      "title": "3.4. Desarrollo Sostenible y la Agenda 2030",
+      "path": "10.2/lesson.json"
+    }
+  ]
+}

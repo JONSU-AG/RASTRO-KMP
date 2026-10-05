@@ -1,0 +1,18 @@
+{
+  "id": "alg_t14_s02",
+  "subjectId": "algebra",
+  "semana": 14,
+  "subtema": "14.2",
+  "title": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana14.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_alg_t14_s02",
+    "asignatura": "Álgebra",
+    "semana": 14,
+    "titulo": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,60 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Contador 2x1 FINAL: sin layout_weight. PNG fijo (hoja vacía izquierda,
-     Orstty derecha) + pastilla crema DENTRO de la hoja, posicionada por gravedad. -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/widget_countdown_root"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/widget_bg_contador"
-        android:scaleType="centerCrop"
-        android:contentDescription="@string/app_name" />
-
-    <LinearLayout
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left|center_vertical"
-        android:layout_marginLeft="10dp"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:background="@drawable/widget_pill_background"
-        android:padding="8dp">
-
-        <TextView
-            android:id="@+id/widget_countdown_target"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="EXAMEN UNSA"
-            android:textColor="#0F172A"
-            android:textSize="11sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:maxLines="2"
-            android:ellipsize="end" />
-
-        <TextView
-            android:id="@+id/widget_countdown_days"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="44"
-            android:textColor="#0F172A"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/widget_countdown_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DÍAS RESTANTES"
-            android:textColor="#64748B"
-            android:textSize="9sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:maxLines="1" />
-
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/widget_countdown_root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/widget_bg_contador" android:scaleType="fitCenter" android:contentDescription="@string/app_name" android:id="@+id/widget_artwork" />
+    <LinearLayout android:layout_width="120dp" android:layout_height="wrap_content" android:layout_gravity="left|center_vertical" android:layout_marginLeft="10dp" android:orientation="vertical" android:gravity="center" android:background="@drawable/widget_pill_background" android:padding="8dp" android:id="@+id/widget_data_overlay">
+        <TextView android:id="@+id/widget_countdown_target" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EXAMEN UNSA" android:textColor="#0F172A" android:textSize="11sp" android:textStyle="bold" android:gravity="center" android:maxLines="2" android:ellipsize="end" />
+        <TextView android:id="@+id/widget_countdown_days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="44" android:textColor="#0F172A" android:textSize="40sp" android:textStyle="bold" />
+        <TextView android:id="@+id/widget_countdown_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DÍAS RESTANTES" android:textColor="#64748B" android:textSize="9sp" android:textStyle="bold" android:gravity="center" android:maxLines="1" />
     </LinearLayout>
-
 </FrameLayout>

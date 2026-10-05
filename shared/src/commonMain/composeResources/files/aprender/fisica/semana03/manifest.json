@@ -1,0 +1,18 @@
+{
+  "week": 3,
+  "title": "Semana 3",
+  "lessons": [
+    {
+      "subtopic": "3.1",
+      "lessonId": "fis_t03_s01",
+      "title": "DINÁMICA - Fundamentos y Leyes Principales",
+      "path": "3.1/lesson.json"
+    },
+    {
+      "subtopic": "3.2",
+      "lessonId": "fis_t03_s02",
+      "title": "DINÁMICA - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "3.2/lesson.json"
+    }
+  ]
+}

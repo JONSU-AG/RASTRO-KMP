@@ -1,0 +1,18 @@
+{
+  "id": "civ_t10_s01",
+  "subjectId": "civica",
+  "semana": 10,
+  "subtema": "10.1",
+  "title": "Desarrollo Humano, IDH y el Sistema Nacional de Seguridad Ciudadana (SINASEC)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana10.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t10_s01",
+    "asignatura": "Ed. Cívica",
+    "semana": 10,
+    "titulo": "Desarrollo Humano, IDH y el Sistema Nacional de Seguridad Ciudadana (SINASEC)",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "filo_t04_s02",
+  "subjectId": "filosofia",
+  "semana": 4,
+  "subtema": "4.2",
+  "title": "C. Falacias No Formales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t04_s02",
+    "asignatura": "Filosofía",
+    "semana": 4,
+    "titulo": "C. Falacias No Formales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,4 +1,6 @@
 package com.jonsuapps.rastro.android.ui.screens
+import com.jonsuapps.rastro.theme.accentText
+import com.jonsuapps.rastro.theme.onAccent
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -117,7 +119,7 @@ fun AcademyDetailScreen(
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(0xFFF8FAFC)), // Fondo blanco/gris muy claro
+            .background(theme.background), // Fondo blanco/gris muy claro
         contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 14.dp, bottom = 120.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
@@ -137,13 +139,13 @@ fun AcademyDetailScreen(
                         modifier = Modifier
                             .size(38.dp)
                             .clip(CircleShape)
-                            .background(Color.White)
-                            .border(1.dp, Color(0xFFE2E8F0), CircleShape)
+                            .background(theme.surface)
+                            .border(1.dp, theme.surfaceBorder, CircleShape)
                     ) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
                             contentDescription = "Volver a Cursos",
-                            tint = Color(0xFF0F172A),
+                            tint = theme.textPrimary,
                             modifier = Modifier.size(20.dp)
                         )
                     }
@@ -154,7 +156,7 @@ fun AcademyDetailScreen(
                         text = playlist.title,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF0F172A),
+                        color = theme.textPrimary,
                         maxLines = 1
                     )
                 }
@@ -163,7 +165,7 @@ fun AcademyDetailScreen(
                     text = "${currentClassIndex + 1}/${lessons.size}",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFF475569)
+                    color = theme.textSecondary
                 )
             }
         }
@@ -176,7 +178,7 @@ fun AcademyDetailScreen(
                     .height(215.dp),
                 shape = RoundedCornerShape(18.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.Black),
-                border = androidx.compose.foundation.BorderStroke(1.5.dp, Color(0xFFE2E8F0))
+                border = androidx.compose.foundation.BorderStroke(1.5.dp, theme.surfaceBorder)
             ) {
                 YouTubePlaylistWebView(playlistId = playlist.playlistId)
             }
@@ -194,13 +196,13 @@ fun AcademyDetailScreen(
                         text = currentLesson?.title ?: "Cinemática",
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF0F172A)
+                        color = theme.textPrimary
                     )
                     Spacer(modifier = Modifier.height(2.dp))
                     Text(
                         text = "${currentLesson?.semana ?: "Semana 2"} · Lección ${currentClassIndex + 1}",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(0xFF64748B),
+                        color = theme.textMuted,
                         fontWeight = FontWeight.Medium
                     )
                 }
@@ -211,13 +213,13 @@ fun AcademyDetailScreen(
                     modifier = Modifier
                         .size(40.dp)
                         .clip(CircleShape)
-                        .background(if (isBookmarked) Color(0xFFEFF6FF) else Color.White)
-                        .border(1.dp, if (isBookmarked) Color(0xFF93C5FD) else Color(0xFFE2E8F0), CircleShape)
+                        .background(if (isBookmarked) theme.surfaceAccent else theme.surface)
+                        .border(1.dp, if (isBookmarked) theme.strokeBorder else theme.surfaceBorder, CircleShape)
                 ) {
                     Icon(
                         imageVector = if (isBookmarked) Icons.Rounded.Bookmark else Icons.Rounded.BookmarkBorder,
                         contentDescription = if (isBookmarked) "Guardado" else "Guardar clase",
-                        tint = if (isBookmarked) Color(0xFF0284C7) else Color(0xFF64748B),
+                        tint = if (isBookmarked) theme.accentText else theme.textMuted,
                         modifier = Modifier.size(20.dp)
                     )
                 }
@@ -240,8 +242,8 @@ fun AcademyDetailScreen(
                                 .weight(1f)
                                 .clickable { /* Ir a preguntas del tema */ },
                             shape = RoundedCornerShape(16.dp),
-                            colors = CardDefaults.cardColors(containerColor = Color.White),
-                            border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0))
+                            colors = CardDefaults.cardColors(containerColor = theme.surface),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, theme.surfaceBorder)
                         ) {
                             Row(
                                 modifier = Modifier
@@ -263,13 +265,13 @@ fun AcademyDetailScreen(
                                             text = "Preguntas\ndel tema",
                                             style = MaterialTheme.typography.labelMedium,
                                             fontWeight = FontWeight.Bold,
-                                            color = Color(0xFF0F172A),
+                                            color = theme.textPrimary,
                                             lineHeight = 14.sp
                                         )
                                         Text(
                                             text = "Practica lo aprendido",
                                             style = MaterialTheme.typography.labelSmall,
-                                            color = Color(0xFF64748B),
+                                            color = theme.textMuted,
                                             fontSize = 9.sp
                                         )
                                     }
@@ -277,7 +279,7 @@ fun AcademyDetailScreen(
                                 Icon(
                                     imageVector = Icons.Rounded.ChevronRight,
                                     contentDescription = null,
-                                    tint = Color(0xFF94A3B8),
+                                    tint = theme.textMuted,
                                     modifier = Modifier.size(18.dp)
                                 )
                             }
@@ -290,8 +292,8 @@ fun AcademyDetailScreen(
                                 .weight(1f)
                                 .clickable { /* Abrir PDF del tema */ },
                             shape = RoundedCornerShape(16.dp),
-                            colors = CardDefaults.cardColors(containerColor = Color.White),
-                            border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0))
+                            colors = CardDefaults.cardColors(containerColor = theme.surface),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, theme.surfaceBorder)
                         ) {
                             Row(
                                 modifier = Modifier
@@ -313,12 +315,12 @@ fun AcademyDetailScreen(
                                             text = "Resumen PDF",
                                             style = MaterialTheme.typography.labelMedium,
                                             fontWeight = FontWeight.Bold,
-                                            color = Color(0xFF0F172A)
+                                            color = theme.textPrimary
                                         )
                                         Text(
                                             text = "Material de\nestudio",
                                             style = MaterialTheme.typography.labelSmall,
-                                            color = Color(0xFF64748B),
+                                            color = theme.textMuted,
                                             fontSize = 9.sp,
                                             lineHeight = 11.sp
                                         )
@@ -327,7 +329,7 @@ fun AcademyDetailScreen(
                                 Icon(
                                     imageVector = Icons.Rounded.ChevronRight,
                                     contentDescription = null,
-                                    tint = Color(0xFF94A3B8),
+                                    tint = theme.textMuted,
                                     modifier = Modifier.size(18.dp)
                                 )
                             }
@@ -343,7 +345,7 @@ fun AcademyDetailScreen(
                 text = "Lista de clases (${lessons.size})",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF0F172A)
+                color = theme.textPrimary
             )
         }
 
@@ -357,11 +359,11 @@ fun AcademyDetailScreen(
                     .clickable { currentClassIndex = index },
                 shape = RoundedCornerShape(14.dp),
                 colors = CardDefaults.cardColors(
-                    containerColor = if (isSelected) Color(0xFFEFF6FF) else Color.White
+                    containerColor = if (isSelected) theme.surfaceAccent else theme.surface
                 ),
                 border = androidx.compose.foundation.BorderStroke(
                     width = if (isSelected) 1.5.dp else 1.dp,
-                    color = if (isSelected) Color(0xFF3B82F6) else Color(0xFFE2E8F0)
+                    color = if (isSelected) theme.accentText else theme.surfaceBorder
                 )
             ) {
                 Row(
@@ -381,13 +383,13 @@ fun AcademyDetailScreen(
                                     modifier = Modifier
                                         .size(24.dp)
                                         .clip(CircleShape)
-                                        .background(Color(0xFF0284C7)),
+                                        .background(theme.accent),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Icon(
                                         imageVector = Icons.Rounded.PlayArrow,
                                         contentDescription = "Actual",
-                                        tint = Color.White,
+                                        tint = theme.onAccent,
                                         modifier = Modifier.size(15.dp)
                                     )
                                 }
@@ -404,7 +406,7 @@ fun AcademyDetailScreen(
                                 Icon(
                                     imageVector = Icons.Rounded.Lock,
                                     contentDescription = "Bloqueada",
-                                    tint = Color(0xFF94A3B8), // Candado gris
+                                    tint = theme.textMuted, // Candado gris
                                     modifier = Modifier.size(18.dp)
                                 )
                             }
@@ -412,7 +414,7 @@ fun AcademyDetailScreen(
                                 Icon(
                                     imageVector = Icons.Rounded.RadioButtonUnchecked,
                                     contentDescription = "Disponible",
-                                    tint = Color(0xFF94A3B8),
+                                    tint = theme.textMuted,
                                     modifier = Modifier.size(18.dp)
                                 )
                             }
@@ -426,7 +428,7 @@ fun AcademyDetailScreen(
                         text = "${lesson.number}",
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                        color = if (isSelected) Color(0xFF1D4ED8) else Color(0xFF64748B),
+                        color = if (isSelected) theme.accentText else theme.textMuted,
                         modifier = Modifier.width(20.dp)
                     )
 
@@ -438,13 +440,13 @@ fun AcademyDetailScreen(
                             text = lesson.title,
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.SemiBold,
-                            color = if (isSelected) Color(0xFF1D4ED8) else Color(0xFF0F172A),
+                            color = if (isSelected) theme.accentText else theme.textPrimary,
                             maxLines = 1
                         )
                         Text(
                             text = lesson.semana,
                             style = MaterialTheme.typography.labelSmall,
-                            color = Color(0xFF64748B)
+                            color = theme.textMuted
                         )
                     }
 
@@ -474,7 +476,7 @@ fun AcademyDetailScreen(
                         text = lesson.duration,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Medium,
-                        color = Color(0xFF64748B)
+                        color = theme.textMuted
                     )
                 }
             }
@@ -498,10 +500,10 @@ fun AcademyDetailScreen(
                         .height(48.dp),
                     shape = RoundedCornerShape(14.dp),
                     colors = ButtonDefaults.outlinedButtonColors(
-                        containerColor = Color.White,
-                        contentColor = Color(0xFF0F172A)
+                        containerColor = theme.surface,
+                        contentColor = theme.textPrimary
                     ),
-                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFCBD5E1))
+                    border = androidx.compose.foundation.BorderStroke(1.dp, theme.surfaceBorder)
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
@@ -524,9 +526,9 @@ fun AcademyDetailScreen(
                     modifier = Modifier
                         .weight(1f)
                         .height(48.dp),
-                    containerColor = Color(0xFF1D84FE),
-                    bottomBevelColor = Color(0xFF145CB5),
-                    strokeColor = Color(0xFF145CB5).copy(alpha = 0.5f),
+                    containerColor = theme.accent,
+                    bottomBevelColor = theme.accentBevel,
+                    strokeColor = theme.strokeBorder,
                     shape = RoundedCornerShape(14.dp),
                     contentPadding = PaddingValues(vertical = 10.dp)
                 ) {
@@ -534,13 +536,13 @@ fun AcademyDetailScreen(
                         text = "Siguiente",
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color.White
+                        color = theme.onAccent
                     )
                     Spacer(modifier = Modifier.width(6.dp))
                     Icon(
                         imageVector = Icons.AutoMirrored.Rounded.ArrowForward,
                         contentDescription = null,
-                        tint = Color.White,
+                        tint = theme.onAccent,
                         modifier = Modifier.size(16.dp)
                     )
                 }

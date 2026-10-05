@@ -1,0 +1,18 @@
+{
+  "week": 1,
+  "title": "Semana 1",
+  "lessons": [
+    {
+      "subtopic": "1.1",
+      "lessonId": "ing_t01_s01",
+      "title": "Tiempos Verbales de Presente: Present Simple vs. Present Continuous y Stative Verbs - Core Rules & Foundations",
+      "path": "1.1/lesson.json"
+    },
+    {
+      "subtopic": "1.2",
+      "lessonId": "ing_t01_s02",
+      "title": "Tiempos Verbales de Presente: Present Simple vs. Present Continuous y Stative Verbs - Applied Skills, Hacks & Reading Practice",
+      "path": "1.2/lesson.json"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "civ_t10_s02",
+  "subjectId": "civica",
+  "semana": 10,
+  "subtema": "10.2",
+  "title": "Medios Alternativos de Solución de Conflictos (MASC) y Ética contra la Corrupción Pública",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana10.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t10_s02",
+    "asignatura": "Ed. Cívica",
+    "semana": 10,
+    "titulo": "Medios Alternativos de Solución de Conflictos (MASC) y Ética contra la Corrupción Pública",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -87,3 +87,11 @@ Especie, género, familia, orden, clase, filo, reino y dominio en ascenso. Géne
 
 ## RESUMEN
 Jerarquía completa de especie a dominio con binomial latino y ejemplos, cinco reinos de Whittaker con criterios celulares y nutricionales que separan hongos de plantas por quitina y glucógeno, y tres dominios de Woese por ARN ribosomal que separan Archaea con éter de Bacteria con mureína dentro de Eukarya para todo lo eucariota.
+
+## Principales phyla y divisiones: clasificación e importancia
+
+Los grandes grupos animales se reconocen por conjuntos de características, no por un solo rasgo aislado. Poríferos poseen organización sencilla y sistema de poros; cnidarios, cnidocitos; platelmintos, cuerpo aplanado; nematodos, cuerpo cilíndrico no segmentado; anélidos, segmentación; moluscos, manto y organización corporal característica; artrópodos, apéndices articulados y exoesqueleto; equinodermos, sistema ambulacral; cordados, notocorda en alguna etapa. No todos los cordados son vertebrados.
+
+En plantas, las briófitas carecen de verdaderos tejidos vasculares; las plantas vasculares sin semillas se reproducen mediante esporas; gimnospermas poseen semillas no encerradas en frutos; angiospermas producen flores y frutos. Los sistemas modernos de clasificación pueden revisar nombres y categorías, mientras estas distinciones permiten comparar estructuras y ciclos.
+
+Los animales útiles participan en alimentación, polinización, materiales y otras actividades. Las plantas alimenticias aportan productos como cereales y legumbres; las industriales proporcionan fibras, aceites o madera; las medicinales contienen sustancias de interés. Utilidad no implica que toda preparación casera sea segura o eficaz. La identificación, el uso responsable y la conservación evitan extracción destructiva y pérdida de biodiversidad.

@@ -41,6 +41,20 @@ import com.jonsuapps.rastro.data.obras.Obra38KilkuWaraka
 import com.jonsuapps.rastro.data.obras.Obra39JoseLuisAyala
 import com.jonsuapps.rastro.data.obras.Obra40Ollantay
 import com.jonsuapps.rastro.model.ObraLiteraria
+import com.jonsuapps.rastro.data.obras.ObraRimas
+import com.jonsuapps.rastro.data.obras.ObraLeyendas
+import com.jonsuapps.rastro.data.obras.ObraFicciones
+import com.jonsuapps.rastro.data.obras.ObraElAleph
+import com.jonsuapps.rastro.data.obras.ObraTrilce
+import com.jonsuapps.rastro.data.obras.ObraPoemasHumanos
+import com.jonsuapps.rastro.data.obras.ObraLosHeraldosNegros
+import com.jonsuapps.rastro.data.obras.ObraYaravies
+import com.jonsuapps.rastro.data.obras.ObraFabulasMelgar
+import com.jonsuapps.rastro.data.obras.ObraJornadaHeroica
+import com.jonsuapps.rastro.data.obras.ObraJakeAru
+import com.jonsuapps.rastro.data.obras.ObraDiscursoPoliteama
+import com.jonsuapps.rastro.data.obras.ObraGallinazosSinPlumas
+import com.jonsuapps.rastro.data.obras.ObraEspanaCaliz
 
 object LiteraturaRepository {
 
@@ -58,24 +72,32 @@ object LiteraturaRepository {
         Obra09MioCid,
         Obra10DonQuijote,
         Obra11LaVidaEsSueno,
-        Obra12RimasYLeyendas,
+        ObraRimas,
+        ObraLeyendas,
         Obra13Azul,
         Obra14VeintePoemas,
         Obra15ElReinoDeEsteMundo,
-        Obra16BorgesFiccionesAleph,
+        ObraFicciones,
+        ObraElAleph,
         Obra17PedroParamo,
         Obra18CienAnosDeSoledad,
         Obra19ComentariosReales,
         Obra20NaCatita,
         Obra21TradicionesPeruanas,
         Obra22PajinasLibres,
-        Obra23TrilceYPoemasHumanos,
+        ObraDiscursoPoliteama,
+        ObraLosHeraldosNegros,
+        ObraTrilce,
+        ObraPoemasHumanos,
+        ObraEspanaCaliz,
         Obra24ElCaballeroCarmelo,
         Obra25ElMundoEsAnchoYAjeno,
         Obra26LosRiosProfundos,
         Obra27LaPalabraDelMudo,
+        ObraGallinazosSinPlumas,
         Obra28LaCiudadYLosPerros,
-        Obra29YaraviesYFabulas,
+        ObraYaravies,
+        ObraFabulasMelgar,
         Obra30ElPuebloDelSol,
         Obra31LosInocentes,
         Obra32ElPezDeOro,
@@ -83,9 +105,9 @@ object LiteraturaRepository {
         Obra34ConversacionEnLaCatedral,
         Obra35Simbolicas,
         Obra36CantoVillano,
-        Obra37PercyGibson,
+        ObraJornadaHeroica,
         Obra38KilkuWaraka,
-        Obra39JoseLuisAyala,
+        ObraJakeAru,
         Obra40Ollantay
     )
 

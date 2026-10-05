@@ -1,0 +1,18 @@
+{
+  "id": "geom_t05_s01",
+  "subjectId": "geometria",
+  "semana": 5,
+  "subtema": "5.1",
+  "title": "GEOMETRÍA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geometria/GeometriaSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geom_t05_s01",
+    "asignatura": "Geometría",
+    "semana": 5,
+    "titulo": "GEOMETRÍA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

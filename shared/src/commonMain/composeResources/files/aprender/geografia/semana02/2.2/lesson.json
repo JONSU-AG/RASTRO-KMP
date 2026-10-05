@@ -1,0 +1,18 @@
+{
+  "id": "geo_t02_s02",
+  "subjectId": "geografia",
+  "semana": 2,
+  "subtema": "2.2",
+  "title": "3.4. Documentos Cartográficos: Mapas, Cartas y Planos",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t02_s02",
+    "asignatura": "Geografía",
+    "semana": 2,
+    "titulo": "3.4. Documentos Cartográficos: Mapas, Cartas y Planos",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

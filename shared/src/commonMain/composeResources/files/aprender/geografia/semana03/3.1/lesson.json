@@ -1,0 +1,18 @@
+{
+  "id": "geo_t03_s01",
+  "subjectId": "geografia",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "3.1. El Universo: Origen y Estructura",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t03_s01",
+    "asignatura": "Geografía",
+    "semana": 3,
+    "titulo": "3.1. El Universo: Origen y Estructura",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

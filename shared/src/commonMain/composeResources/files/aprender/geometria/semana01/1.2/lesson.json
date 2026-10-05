@@ -1,0 +1,18 @@
+{
+  "id": "geom_t01_s02",
+  "subjectId": "geometria",
+  "semana": 1,
+  "subtema": "1.2",
+  "title": "GEOMETRÍA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geometria/GeometriaSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geom_t01_s02",
+    "asignatura": "Geometría",
+    "semana": 1,
+    "titulo": "GEOMETRÍA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

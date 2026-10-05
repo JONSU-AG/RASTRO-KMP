@@ -1,0 +1,18 @@
+{
+  "id": "rm_t04_s01",
+  "subjectId": "raz_matematico",
+  "semana": 4,
+  "subtema": "4.1",
+  "title": "RAZONAMIENTO GEOMÉTRICO, ÁREAS Y PERÍMETROS - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_matematico/RazonamientoMatematicoSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rm_t04_s01",
+    "asignatura": "Raz. Matemático",
+    "semana": 4,
+    "titulo": "RAZONAMIENTO GEOMÉTRICO, ÁREAS Y PERÍMETROS - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "quim_t16_s02",
+  "subjectId": "quimica",
+  "semana": 16,
+  "subtema": "16.2",
+  "title": "Química Ambiental II: Agua, Suelo y Potabilización",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md XV (redacción propia RASTRO)",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_quim_t16_s02",
+    "asignatura": "Química",
+    "semana": 16,
+    "titulo": "Química Ambiental II: Agua, Suelo y Potabilización",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "week": 1,
+  "title": "Semana 1",
+  "lessons": [
+    {
+      "subtopic": "1.1",
+      "lessonId": "cl_t01_s01",
+      "title": "Comprensión Literal: Fundamentos y Conceptos Clave",
+      "path": "1.1/lesson.json"
+    },
+    {
+      "subtopic": "1.2",
+      "lessonId": "cl_t01_s02",
+      "title": "3.1 La Naturaleza de la Pregunta Literal en Exámenes de Admisión",
+      "path": "1.2/lesson.json"
+    }
+  ]
+}

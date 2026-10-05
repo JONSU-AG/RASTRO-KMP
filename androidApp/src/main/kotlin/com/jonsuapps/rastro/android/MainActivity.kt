@@ -15,10 +15,14 @@ import com.jonsuapps.rastro.theme.RastroPalette
 import com.jonsuapps.rastro.theme.RastroThemeId
 import com.jonsuapps.rastro.theme.RastroThemeTokens
 import com.jonsuapps.rastro.theme.ThemeManager
+import com.jonsuapps.rastro.theme.MaterialYouIntensity
+import com.jonsuapps.rastro.theme.onAccent
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        com.jonsuapps.rastro.android.navigation.RastroAppLinks.accept(intent?.data)
+        com.jonsuapps.rastro.android.navigation.RastroAppLinks.acceptShortcut(intent?.action)
 
         // Habilita insets limpios de borde a borde para que no colapse con la barra de notificaciones
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -27,8 +31,10 @@ class MainActivity : ComponentActivity() {
         com.jonsuapps.rastro.android.logo.RastroLogoManager.initialize(applicationContext)
 
         val prefs = getSharedPreferences("rastro_preferences", Context.MODE_PRIVATE)
-        val savedThemeId = prefs.getString("selected_theme", RastroThemeId.LIGHT.idName)
-        val initialTheme = RastroThemeId.entries.firstOrNull { it.idName == savedThemeId } ?: RastroThemeId.LIGHT
+        ThemeManager.chooseMaterialYouIntensity(MaterialYouIntensity.fromId(prefs.getString("material_you_intensity", null)))
+        ThemeManager.setAcademicBackground(prefs.getBoolean("academic_background", true))
+        val savedThemeId = prefs.getString("selected_theme", RastroThemeId.MATERIAL_YOU.idName)
+        val initialTheme = RastroThemeId.entries.firstOrNull { it.idName == savedThemeId } ?: RastroThemeId.MATERIAL_YOU
         if (initialTheme == RastroThemeId.CUSTOM) {
             val prim = prefs.getInt("custom_primary", -1)
             val sec = prefs.getInt("custom_secondary", -986896)
@@ -78,8 +84,7 @@ class MainActivity : ComponentActivity() {
                 window.navigationBarColor = android.graphics.Color.TRANSPARENT
             }
 
-            val accentLuminance = (0.299 * colors.accent.red + 0.587 * colors.accent.green + 0.114 * colors.accent.blue).toFloat()
-            val highContrastOnAccent = if (accentLuminance > 0.5f) Color(0xFF0F172A) else Color.White
+            val highContrastOnAccent = colors.onAccent
 
             val colorScheme = if (colors.isLight) {
                 lightColorScheme(
@@ -91,7 +96,17 @@ class MainActivity : ComponentActivity() {
                     onSurface = colors.textPrimary,
                     surfaceVariant = colors.surfaceAccent,
                     onSurfaceVariant = colors.textSecondary,
-                    outline = colors.borderSubtle
+                    outline = colors.strokeBorder,
+                    primaryContainer = colors.surfaceAccent,
+                    onPrimaryContainer = colors.textPrimary,
+                    secondary = colors.accent,
+                    onSecondary = highContrastOnAccent,
+                    secondaryContainer = colors.surfaceAccent,
+                    onSecondaryContainer = colors.textPrimary,
+                    tertiary = colors.accent,
+                    onTertiary = highContrastOnAccent,
+                    tertiaryContainer = colors.surfaceAccent,
+                    onTertiaryContainer = colors.textPrimary
                 )
             } else {
                 darkColorScheme(
@@ -103,7 +118,17 @@ class MainActivity : ComponentActivity() {
                     onSurface = colors.textPrimary,
                     surfaceVariant = colors.surfaceAccent,
                     onSurfaceVariant = colors.textSecondary,
-                    outline = colors.borderSubtle
+                    outline = colors.strokeBorder,
+                    primaryContainer = colors.surfaceAccent,
+                    onPrimaryContainer = colors.textPrimary,
+                    secondary = colors.accent,
+                    onSecondary = highContrastOnAccent,
+                    secondaryContainer = colors.surfaceAccent,
+                    onSecondaryContainer = colors.textPrimary,
+                    tertiary = colors.accent,
+                    onTertiary = highContrastOnAccent,
+                    tertiaryContainer = colors.surfaceAccent,
+                    onTertiaryContainer = colors.textPrimary
                 )
             }
 
@@ -119,6 +144,13 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    override fun onNewIntent(intent: android.content.Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        com.jonsuapps.rastro.android.navigation.RastroAppLinks.accept(intent.data)
+        com.jonsuapps.rastro.android.navigation.RastroAppLinks.acceptShortcut(intent.action)
     }
 
     override fun onResume() {

@@ -1,0 +1,14 @@
+allprojects {
+    afterEvaluate {
+        if (plugins.hasPlugin('com.android.library')) {
+            def copiaRoot = new File(rootDir, '../../logos').canonicalFile
+            android.sourceSets.getByName('test').java.setSrcDirs([copiaRoot])
+            android.sourceSets.getByName('test').java.include('ExportarSecuenciasClassic.kt')
+            kotlin.sourceSets.getByName('test').kotlin.setSrcDirs([copiaRoot])
+            kotlin.sourceSets.getByName('test').kotlin.include('ExportarSecuenciasClassic.kt')
+            tasks.matching { it.name == 'compileDebugUnitTestKotlin' }.configureEach {
+                setSource(files(new File(copiaRoot, 'ExportarSecuenciasClassic.kt')))
+            }
+        }
+    }
+}

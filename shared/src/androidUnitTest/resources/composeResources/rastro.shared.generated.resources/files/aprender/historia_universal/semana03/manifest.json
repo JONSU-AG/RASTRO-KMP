@@ -1,0 +1,18 @@
+{
+  "week": 3,
+  "title": "Semana 3",
+  "lessons": [
+    {
+      "subtopic": "3.1",
+      "lessonId": "huni_t03_s01",
+      "title": "3.1. Grecia Antigua: La Matriz Democrática y Cultural de Occidente",
+      "path": "3.1/lesson.json"
+    },
+    {
+      "subtopic": "3.2",
+      "lessonId": "huni_t03_s02",
+      "title": "3.4. La República y el Imperio Romano",
+      "path": "3.2/lesson.json"
+    }
+  ]
+}

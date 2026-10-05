@@ -1,0 +1,18 @@
+{
+  "week": 2,
+  "title": "TEMA 02: ALTAS CULTURAS PREÍNCAS (HORIZONTES E INTERMEDIOS CULTURALES)",
+  "lessons": [
+    {
+      "subtopic": "2.1",
+      "lessonId": "hper_t02_s01",
+      "title": "3.1. Modelos Teóricos de Periodización Prehispánica",
+      "path": "2.1/lesson.json"
+    },
+    {
+      "subtopic": "2.2",
+      "lessonId": "hper_t02_s02",
+      "title": "3.4. Horizonte Medio o Primer Imperio Andino (600 - 1000 d.C.)",
+      "path": "2.2/lesson.json"
+    }
+  ]
+}

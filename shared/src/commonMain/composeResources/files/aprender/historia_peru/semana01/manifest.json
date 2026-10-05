@@ -1,0 +1,18 @@
+{
+  "week": 1,
+  "title": "TEMA 01: POBLAMIENTO AMERICANO, PERIODO LÍTICO Y ARCAICO",
+  "lessons": [
+    {
+      "subtopic": "1.1",
+      "lessonId": "hper_t01_s01",
+      "title": "3.1. Teorías Científicas sobre el Poblamiento Americano",
+      "path": "1.1/lesson.json"
+    },
+    {
+      "subtopic": "1.2",
+      "lessonId": "hper_t01_s02",
+      "title": "3.3. El Periodo Arcaico Inferior o Temprano (6 000 - 3 000 a.C.)",
+      "path": "1.2/lesson.json"
+    }
+  ]
+}

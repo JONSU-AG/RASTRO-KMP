@@ -1,0 +1,18 @@
+{
+  "id": "geo_t07_s02",
+  "subjectId": "geografia",
+  "semana": 7,
+  "subtema": "7.2",
+  "title": "3.4. Geomorfología de la Selva (Región Amazónica)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana07.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t07_s02",
+    "asignatura": "Geografía",
+    "semana": 7,
+    "titulo": "3.4. Geomorfología de la Selva (Región Amazónica)",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "alg_t10_s01",
+  "subjectId": "algebra",
+  "semana": 10,
+  "subtema": "10.1",
+  "title": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana10.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_alg_t10_s01",
+    "asignatura": "Álgebra",
+    "semana": 10,
+    "titulo": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

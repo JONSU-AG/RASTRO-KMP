@@ -1,0 +1,18 @@
+{
+  "id": "filo_t05_s01",
+  "subjectId": "filosofia",
+  "semana": 5,
+  "subtema": "5.1",
+  "title": "A. El Conocimiento Científico: Concepto y Niveles",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t05_s01",
+    "asignatura": "Filosofía",
+    "semana": 5,
+    "titulo": "A. El Conocimiento Científico: Concepto y Niveles",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "filo_t08_s02",
+  "subjectId": "filosofia",
+  "semana": 8,
+  "subtema": "8.2",
+  "title": "D. La Condición Posmoderna: Jean-François Lyotard",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana08.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t08_s02",
+    "asignatura": "Filosofía",
+    "semana": 8,
+    "titulo": "D. La Condición Posmoderna: Jean-François Lyotard",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

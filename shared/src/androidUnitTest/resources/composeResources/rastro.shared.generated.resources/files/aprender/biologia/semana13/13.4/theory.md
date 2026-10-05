@@ -77,3 +77,9 @@ Contaminar tiene química exacta con gas y efecto propios, conservar tiene categ
 Salinas es tangible con vicuña. Mejía es intangible con aves. Machu Picchu es histórico. Manú y Huascarán son parques intangibles. CFC rompe ozono. Nitratos y fosfatos eutrofizan con anoxia. GEI son carbono, metano, vapor y óxido nitroso.
 ## RESUMEN
 Cuatro problemas con gases, fuentes y efectos separados y SINANPE con tangibles de uso sostenible e intangibles sin extracción, con pares fijos arequipeños de Salinas y Mejía más Manú, Huascarán y Machu Picchu.
+
+## Restauración ecológica y desarrollo sostenible
+
+La restauración ecológica ayuda a recuperar un ecosistema degradado considerando sus especies, procesos y condiciones de referencia. No consiste simplemente en plantar muchos árboles: introducir una especie ajena puede alterar un humedal o un pastizal. Primero se identifica la causa del daño, se reduce la presión y se eligen acciones compatibles con el ambiente.
+
+El seguimiento evalúa supervivencia, diversidad, suelo, agua y relaciones ecológicas. Un resultado visual inmediato no garantiza recuperación funcional. Conservación protege; restauración recupera; uso sostenible aprovecha dentro de límites compatibles con la permanencia del sistema. El desarrollo sostenible relaciona condiciones ambientales, sociales y económicas y considera las necesidades de generaciones futuras.

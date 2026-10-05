@@ -1,0 +1,18 @@
+{
+  "id": "huni_t05_s02",
+  "subjectId": "historia_universal",
+  "semana": 5,
+  "subtema": "5.2",
+  "title": "La Reforma Protestante, la Contrarreforma Católica y la Ilustración",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_huni_t05_s02",
+    "asignatura": "Historia Universal",
+    "semana": 5,
+    "titulo": "La Reforma Protestante, la Contrarreforma Católica y la Ilustración",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,3 @@
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <cache-path name="pizarra_images" path="pizarra_exports/"/>
+</paths>

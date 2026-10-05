@@ -1,0 +1,18 @@
+{
+  "week": 1,
+  "title": "TEMA 01: HOMINIZACIÓN Y PREHISTORIA",
+  "lessons": [
+    {
+      "subtopic": "1.1",
+      "lessonId": "huni_t01_s01",
+      "title": "3.1. El Concepto y los Motores de la Hominización",
+      "path": "1.1/lesson.json"
+    },
+    {
+      "subtopic": "1.2",
+      "lessonId": "huni_t01_s02",
+      "title": "3.3. Las Edades Arqueológicas de la Prehistoria: Paleolítico, Neolítico y Edad de los Metales",
+      "path": "1.2/lesson.json"
+    }
+  ]
+}

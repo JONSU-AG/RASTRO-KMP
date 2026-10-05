@@ -1,0 +1,18 @@
+{
+  "id": "geo_t09_s01",
+  "subjectId": "geografia",
+  "semana": 9,
+  "subtema": "9.1",
+  "title": "3.1. Concepto y Metodología Ecológica de Antonio Brack Egg",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana09.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t09_s01",
+    "asignatura": "Geografía",
+    "semana": 9,
+    "titulo": "3.1. Concepto y Metodología Ecológica de Antonio Brack Egg",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

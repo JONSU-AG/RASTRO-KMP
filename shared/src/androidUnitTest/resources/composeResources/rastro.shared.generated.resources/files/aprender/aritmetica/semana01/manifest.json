@@ -1,0 +1,18 @@
+{
+  "week": 1,
+  "title": "Semana 1",
+  "lessons": [
+    {
+      "subtopic": "1.1",
+      "lessonId": "arit_t01_s01",
+      "title": "Relaciones Lógicas y Conjuntos - Fundamentos y Leyes Principales",
+      "path": "1.1/lesson.json"
+    },
+    {
+      "subtopic": "1.2",
+      "lessonId": "arit_t01_s02",
+      "title": "Relaciones Lógicas y Conjuntos - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "1.2/lesson.json"
+    }
+  ]
+}

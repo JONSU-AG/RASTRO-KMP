@@ -1,0 +1,18 @@
+{
+  "week": 1,
+  "title": "Semana 1",
+  "lessons": [
+    {
+      "subtopic": "1.1",
+      "lessonId": "rm_t01_s01",
+      "title": "RAZONAMIENTO NUMÉRICO Y REGULARIDADES - Fundamentos y Leyes Principales",
+      "path": "1.1/lesson.json"
+    },
+    {
+      "subtopic": "1.2",
+      "lessonId": "rm_t01_s02",
+      "title": "RAZONAMIENTO NUMÉRICO Y REGULARIDADES - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "1.2/lesson.json"
+    }
+  ]
+}

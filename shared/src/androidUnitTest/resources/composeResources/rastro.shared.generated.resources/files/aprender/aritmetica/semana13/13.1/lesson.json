@@ -1,0 +1,18 @@
+{
+  "id": "arit_t13_s01",
+  "subjectId": "aritmetica",
+  "semana": 13,
+  "subtema": "13.1",
+  "title": "Teoría de la Probabilidad, Probabilidad Condicional y Teorema de Bayes - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/aritmetica/AritmeticaSemana13.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_arit_t13_s01",
+    "asignatura": "Aritmética",
+    "semana": 13,
+    "titulo": "Teoría de la Probabilidad, Probabilidad Condicional y Teorema de Bayes - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

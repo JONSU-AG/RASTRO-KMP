@@ -1,0 +1,18 @@
+{
+  "week": 5,
+  "title": "Semana 5",
+  "lessons": [
+    {
+      "subtopic": "5.1",
+      "lessonId": "quim_t05_s01",
+      "title": "Enlace Químico y Fuerzas Intermoleculares - Fundamentos y Leyes Principales",
+      "path": "5.1/lesson.json"
+    },
+    {
+      "subtopic": "5.2",
+      "lessonId": "quim_t05_s02",
+      "title": "Enlace Químico y Fuerzas Intermoleculares - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "5.2/lesson.json"
+    }
+  ]
+}

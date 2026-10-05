@@ -1,0 +1,18 @@
+{
+  "id": "rv_t05_s02",
+  "subjectId": "raz_verbal",
+  "semana": 5,
+  "subtema": "5.2",
+  "title": "3.2 La Prueba del Debilitamiento y Reforzamiento (Estándar DECO)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rv_t05_s02",
+    "asignatura": "Raz. Verbal",
+    "semana": 5,
+    "titulo": "3.2 La Prueba del Debilitamiento y Reforzamiento (Estándar DECO)",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

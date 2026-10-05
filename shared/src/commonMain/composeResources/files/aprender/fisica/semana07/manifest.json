@@ -1,0 +1,18 @@
+{
+  "week": 7,
+  "title": "Semana 7",
+  "lessons": [
+    {
+      "subtopic": "7.1",
+      "lessonId": "fis_t07_s01",
+      "title": "FENÓMENOS TÉRMICOS - Fundamentos y Leyes Principales",
+      "path": "7.1/lesson.json"
+    },
+    {
+      "subtopic": "7.2",
+      "lessonId": "fis_t07_s02",
+      "title": "FENÓMENOS TÉRMICOS - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "7.2/lesson.json"
+    }
+  ]
+}

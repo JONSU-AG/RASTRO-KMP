@@ -1,0 +1,18 @@
+{
+  "id": "rv_t04_s02",
+  "subjectId": "raz_verbal",
+  "semana": 4,
+  "subtema": "4.2",
+  "title": "3.2 Metodología de Resolución: Oraciones Incompletas",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rv_t04_s02",
+    "asignatura": "Raz. Verbal",
+    "semana": 4,
+    "titulo": "3.2 Metodología de Resolución: Oraciones Incompletas",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

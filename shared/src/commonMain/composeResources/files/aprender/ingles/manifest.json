@@ -1,0 +1,46 @@
+{
+  "subjectId": "ingles",
+  "name": "Inglés",
+  "area": "Comunicación",
+  "colorHex": "#3B82F6",
+  "description": "Reading comprehension en contextos cotidianos, tiempos verbales simples y continuos, modales, preposiciones y conectores.",
+  "weeks": 7,
+  "source": "curso-prueba/SALIDA_KOTLIN/ingles",
+  "weekManifests": [
+    {
+      "week": 1,
+      "title": "Semana 1",
+      "path": "semana01/manifest.json"
+    },
+    {
+      "week": 2,
+      "title": "Semana 2",
+      "path": "semana02/manifest.json"
+    },
+    {
+      "week": 3,
+      "title": "Semana 3",
+      "path": "semana03/manifest.json"
+    },
+    {
+      "week": 4,
+      "title": "Semana 4",
+      "path": "semana04/manifest.json"
+    },
+    {
+      "week": 5,
+      "title": "Semana 5",
+      "path": "semana05/manifest.json"
+    },
+    {
+      "week": 6,
+      "title": "Semana 6",
+      "path": "semana06/manifest.json"
+    },
+    {
+      "week": 7,
+      "title": "Semana 7",
+      "path": "semana07/manifest.json"
+    }
+  ]
+}

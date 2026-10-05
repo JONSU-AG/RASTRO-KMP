@@ -1,0 +1,18 @@
+{
+  "id": "arit_t08_s02",
+  "subjectId": "aritmetica",
+  "semana": 8,
+  "subtema": "8.2",
+  "title": "Tanto por Ciento y Aplicaciones Comerciales - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/aritmetica/AritmeticaSemana08.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_arit_t08_s02",
+    "asignatura": "Aritmética",
+    "semana": 8,
+    "titulo": "Tanto por Ciento y Aplicaciones Comerciales - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

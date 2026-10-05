@@ -1,0 +1,18 @@
+{
+  "id": "rv_t08_s01",
+  "subjectId": "raz_verbal",
+  "semana": 8,
+  "subtema": "8.1",
+  "title": "3.1 El Triángulo de Adecuación Sociolingüística",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana08.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rv_t08_s01",
+    "asignatura": "Raz. Verbal",
+    "semana": 8,
+    "titulo": "3.1 El Triángulo de Adecuación Sociolingüística",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

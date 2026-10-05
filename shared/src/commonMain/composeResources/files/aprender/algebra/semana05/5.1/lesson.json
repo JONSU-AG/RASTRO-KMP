@@ -1,0 +1,18 @@
+{
+  "id": "alg_t05_s01",
+  "subjectId": "algebra",
+  "semana": 5,
+  "subtema": "5.1",
+  "title": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_alg_t05_s01",
+    "asignatura": "Álgebra",
+    "semana": 5,
+    "titulo": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "week": 8,
+  "title": "TEMA 08: Las Ocho Regiones Naturales del Perú (Javier Pulgar Vidal)",
+  "lessons": [
+    {
+      "subtopic": "8.1",
+      "lessonId": "geo_t08_s01",
+      "title": "3.1. Origen, Criterios y Pisos Ecológicos Occidentales (Chala a Suni)",
+      "path": "8.1/lesson.json"
+    },
+    {
+      "subtopic": "8.2",
+      "lessonId": "geo_t08_s02",
+      "title": "3.2. Pisos de Alta Montaña y Vertiente Amazónica (Puna, Janca, Rupa Rupa y Omagua)",
+      "path": "8.2/lesson.json"
+    }
+  ]
+}

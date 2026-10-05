@@ -1,0 +1,18 @@
+{
+  "week": 9,
+  "title": "TEMA 09: Las Once Ecorregiones del Perú (Antonio Brack Egg)",
+  "lessons": [
+    {
+      "subtopic": "9.1",
+      "lessonId": "geo_t09_s01",
+      "title": "3.1. Concepto y Metodología Ecológica de Antonio Brack Egg",
+      "path": "9.1/lesson.json"
+    },
+    {
+      "subtopic": "9.2",
+      "lessonId": "geo_t09_s02",
+      "title": "Cuadro Comparativo de las 11 Ecorregiones de Antonio Brack Egg",
+      "path": "9.2/lesson.json"
+    }
+  ]
+}

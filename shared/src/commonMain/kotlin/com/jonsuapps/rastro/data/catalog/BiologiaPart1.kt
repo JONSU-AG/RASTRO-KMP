@@ -55,7 +55,32 @@ internal object BiologiaPart1 {
                     - **Taxonomía:** Clasificación sistemática y nomenclatura científica (Linneo).
                     - **Ecología:** Interacciones entre los seres vivos y su biotopo físico (término acuñado por **Ernst Haeckel** en 1869).
                     - **Etología:** Pautas de conducta y comportamiento animal en su hábitat natural.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: El Mapa Vivo de las Ramas Biológicas
+
+### ¿Qué estudia exactamente cada rama? (tabla de deslinde)
+- **Citología vs. Histología vs. Anatomía vs. Fisiología:** la citología estudia la célula aislada; la histología, tejidos; la anatomía, la forma macroscópica; la fisiología, el funcionamiento. Trampa clásica: preguntan "¿qué rama estudia el funcionamiento del riñón?" y la respuesta es fisiología (renal), no anatomía.
+- **Zoología y sus hijas:** mastozoología (mamíferos), ornitología (aves), herpetología (reptiles y anfibios), ictiología (peces), entomología (insectos), malacología (moluscos), helmintología (gusanos), aracnología (arañas y escorpiones), carcinología (crustáceos). Mnemotecnia: **"MOHIMHEAC"** no funciona; mejor asocia cada una a su animal emblema: murciélago-masto, paloma-ornito, serpiente-herpeto, tiburón-ictio, hormiga-entomo, pulpo-malaco, lombriz-helminto, araña-aracno, cangrejo-carcino.
+- **Botánica criptogámica vs. fanerogámica:** sin semilla (musgos, helechos) frente a con semilla (gimnospermas y angiospermas). La ficología (algas) y la micología (hongos) hoy se separan del reino vegetal clásico, pero el examen las sigue evaluando junto a botánica.
+
+### Ciencias auxiliares de la biología
+- **Bioquímica:** química de la vida (proteínas, enzimas, rutas metabólicas).
+- **Biofísica:** fenómenos físicos en seres vivos (potenciales de membrana, biomecánica).
+- **Biomatemática y bioestadística:** modelos de crecimiento poblacional y diseño experimental.
+- **Biotecnología:** aplicación productiva (fermentación, ingeniería genética, vacunas).
+
+### La disputa por la palabra "Biología"
+- Lamarck (filosofía zoológica, Francia) y Treviranus (Alemania) la propusieron el mismo año, 1802, de forma independiente. El examen suele atribuirla a ambos; si solo admite uno, Lamarck es la respuesta más frecuente en bancos UNSA.
+- Haeckel (1869) acuñó "ecología" (oekologie: estudio del hogar natural) y también "filogenia" y "ontogenia": no confundir los tres términos.
+
+### Trampas fijas de examen
+1. Ficología estudia ALGAS, micología estudia HONGOS (el par se invierte a propósito en distractores).
+2. Entomología (insectos) vs. etimología (origen de palabras): parónimos cazabobos.
+3. La etología estudia CONDUCTA animal; la etiología estudia CAUSAS de enfermedad. Una letra cambia el significado.
+
+""",
                 conceptosClave = listOf(
                     "Término 'Biología' propuesto en 1802 por Lamarck y Treviranus.",
                     "Ernst Haeckel acuñó el término 'Ecología' en 1869.",
@@ -82,52 +107,52 @@ internal object BiologiaPart1 {
                     id = "bio_t01_s01_c2",
                     statement = "Un biólogo marino en la caleta de Chala (Arequipa) recolecta muestras de pulpos, choros y babosas de mar para analizar su anatomía interna. ¿Qué rama de la zoología está ejerciendo?",
                     options = listOf(
-                        "Herpetología",
                         "Malacología",
                         "Ictiología",
                         "Helmintología",
-                        "Carcinología"
+                        "Carcinología",
+                        "Herpetología",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La Malacología estudia a los moluscos (pulpos, calamares, caracoles, babosas y bivalvos como el choro). La carcinología estudia crustáceos y la ictiología a los peces."
                 ),
                 Challenge(
                     id = "bio_t01_s01_c3",
                     statement = "Respecto a las disciplinas botánicas y microbiológicas, determine la diferencia fundamental entre la Ficología y la Micología:",
                     options = listOf(
+                        "La Ficología estudia musgos y la Micología helechos con semillas",
                         "La Ficología estudia hongos y la Micología algas",
                         "La Ficología estudia algas fotoautótrofas y la Micología hongos heterótrofos",
                         "Ambas estudian exclusivamente bacterias procariotas fotosintéticas",
                         "La Ficología se ocupa de virus acelulares y la Micología de protozoarios",
-                        "La Ficología estudia musgos y la Micología helechos con semillas"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "La Ficología (o Algología) estudia las algas, que son organismos autótrofos fotosintéticos, mientras que la Micología estudia los hongos, que son eucariotas estrictamente heterótrofos con pared de quitina."
                 ),
                 Challenge(
                     id = "bio_t01_s01_c4",
                     statement = "Un médico infectólogo analiza en heces humanas la presencia de proglótidos de Taenia solium y huevos de Ascaris lumbricoides. La rama biológica que clasifica y estudia estos organismos es la:",
                     options = listOf(
+                        "Protozoología",
+                        "Mastozoología",
                         "Entomología",
                         "Helmintología",
                         "Aracnología",
-                        "Protozoología",
-                        "Mastozoología"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La Helmintología es la subdisciplina de la zoología que estudia a los gusanos planos (platelmintos como la tenia) y cilíndricos (nematelmintos como el áscaris)."
                 ),
                 Challenge(
                     id = "bio_t01_s01_c5",
                     statement = "Un cardiólogo analiza la arquitectura macroscópica de las aurículas y ventrículos, mientras que otro registra la variación del potencial de acción y gasto cardíaco en reposo. Estas investigaciones corresponden, respectivamente, a:",
                     options = listOf(
-                        "Fisiología y Citología",
-                        "Anatomía y Fisiología",
                         "Histología y Genética",
                         "Morfología y Embriología",
-                        "Ecología y Etología"
+                        "Ecología y Etología",
+                        "Fisiología y Citología",
+                        "Anatomía y Fisiología",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La Anatomía estudia la forma, estructura macroscópica y disposición espacial de los órganos, mientras que la Fisiología investiga las funciones dinámicas y los mecanismos físico-químicos que sostienen la vida."
                 ),
                 Challenge(
@@ -160,39 +185,39 @@ internal object BiologiaPart1 {
                     id = "bio_t01_s01_c8",
                     statement = "¿Qué científico acuñó formalmente en 1869 el término 'Ecología' para designar el estudio de las relaciones entre los organismos y su entorno?",
                     options = listOf(
-                        "Jean-Baptiste Lamarck",
                         "Ernst Haeckel",
                         "Alexander von Humboldt",
                         "Gregor Mendel",
-                        "Thomas Hunt Morgan"
+                        "Thomas Hunt Morgan",
+                        "Jean-Baptiste Lamarck",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El naturalista y filósofo alemán Ernst Haeckel propuso en 1869 el término Ecología (del griego oikos: casa o hábitat, y logos: tratado)."
                 ),
                 Challenge(
                     id = "bio_t01_s01_c9",
                     statement = "Un estudiante afirma que 'las arañas viudas negras y los escorpiones son insectos y por ende deben ser clasificados por la Entomología'. Dicha afirmación es errónea porque:",
                     options = listOf(
+                        "Son crustáceos acuáticos objeto de la Carcinología",
+                        "Son animales vertebrados estudiados por la Herpetología",
                         "Pertenecen a los moluscos estudiados por la Malacología",
                         "Son arácnidos quelicerados cuyo estudio corresponde a la Aracnología",
                         "Son gusanos cilíndricos investigados por la Helmintología",
-                        "Son crustáceos acuáticos objeto de la Carcinología",
-                        "Son animales vertebrados estudiados por la Herpetología"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Las arañas y escorpiones poseen 4 pares de patas marchadoras, quelíceros y carecen de antenas; son arácnidos y su disciplina de estudio es la Aracnología. La Entomología estudia exclusivamente a los insectos (3 pares de patas y antenas)."
                 ),
                 Challenge(
                     id = "bio_t01_s01_c10",
                     statement = "Al procesar una biopsia gástrica, el patólogo tiñe cortes delgados con hematoxilina-eosina para examinar la disposición del epitelio cilíndrico simple y el tejido conectivo subyacente. ¿Qué disciplina aplica directamente?",
                     options = listOf(
-                        "Citología exfoliativa",
-                        "Histología",
                         "Anatomía macroscópica",
                         "Embriología",
-                        "Ecología humana"
+                        "Ecología humana",
+                        "Citología exfoliativa",
+                        "Histología",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La Histología estudia la organización microscópica, morfología y función de los tejidos biológicos."
                 ),
                 Challenge(
@@ -225,26 +250,26 @@ internal object BiologiaPart1 {
                     id = "bio_t01_s01_c13",
                     statement = "Un agricultor en el valle de Tambo cultiva maíz y olivo, plantas vasculares que desarrollan flores, polen y frutos con semillas protegidas. Estas plantas son objeto de estudio de la:",
                     options = listOf(
-                        "Botánica criptogámica",
-                        "Briología especializada",
                         "Botánica fanerogámica",
                         "Pteridología",
-                        "Micología agrícola"
+                        "Micología agrícola",
+                        "Botánica criptogámica",
+                        "Briología especializada",
                     ),
-                    correctIndex = 2,
+                    correctIndex = 0,
                     explanation = "La Botánica Fanerogámica (o Espermatofitas) estudia las plantas que poseen flores evidentes y producen semillas (gimnospermas y angiospermas como el maíz y el olivo)."
                 ),
                 Challenge(
                     id = "bio_t01_s01_c14",
                     statement = "Relacione correctamente la rama zoológica con su respectivo objeto de estudio:\nI. Ictiología\nII. Herpetología\nIII. Mastozoología\nIV. Carcinología\n(a. Serpientes y ranas / b. Truchas y tiburones / c. Camarones y cangrejos / d. Vicuñas y ballenas)",
                     options = listOf(
-                        "I-b, II-a, III-d, IV-c",
-                        "I-a, II-b, III-c, IV-d",
                         "I-d, II-a, III-b, IV-c",
                         "I-b, II-c, III-d, IV-a",
-                        "I-c, II-d, III-a, IV-b"
+                        "I-c, II-d, III-a, IV-b",
+                        "I-b, II-a, III-d, IV-c",
+                        "I-a, II-b, III-c, IV-d",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 3,
                     explanation = "Ictiología = peces (b); Herpetología = reptiles y anfibios (a); Mastozoología = mamíferos (d); Carcinología = crustáceos (c). La combinación exacta es I-b, II-a, III-d, IV-c."
                 )
             ),
@@ -288,7 +313,32 @@ internal object BiologiaPart1 {
                     # 1.2.4 — Teoría Científica y Ley Científica
                     - **Teoría Científica:** Explicación integradora, coherente y ampliamente respaldada por múltiples evidencias empíricas que explica *el cómo y el porqué* de un conjunto de fenómenos naturales (ej. Teoría Celular, Teoría de la Evolución por Selección Natural).
                     - **Ley Científica:** Enunciado descriptivo, invariable, universal y habitualmente formulado en lenguaje matemático que expresa *qué sucede* con una relación constante en la naturaleza (ej. Leyes de Mendel, Ley de Conservación de la Masa). **Las teorías no son leyes en proceso de maduración; son conceptos epistemológicos distintos**.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Lógica del Método Científico
+
+### Observación: tipos que el examen distingue
+- **Cualitativa:** registra cualidades sin medir (color, olor, comportamiento). **Cuantitativa:** registra magnitudes con instrumentos (masa, pH, tiempo).
+- **Directa:** con los sentidos o instrumentos simples. **Indirecta:** mediante rastros, fósiles, bioindicadores o imágenes satelitales.
+- Toda observación útil es **sistemática** (planificada) y **reproducible** (otro equipo puede repetirla).
+
+### Hipótesis bien formulada
+- Debe ser **falsable** (se puede refutar con datos), **contrastable** (admite prueba empírica), **clara** (variables identificables) y **fundamentada** (coherente con el conocimiento previo).
+- Estructura típica: "Si [causa], entonces [efecto], porque [mecanismo]". Ejemplo: "Si aumenta la intensidad luminosa, entonces aumenta la tasa fotosintética, porque hay más energía para fotolisis".
+- **Hipótesis nula (H0):** niega el efecto ("la luz no influye"); se intenta rechazarla estadísticamente.
+
+### Teoría vs. ley (tabla de deslinde definitivo)
+- **Teoría:** explica el PORQUÉ mediante mecanismos verificados (teoría celular, teoría germinal, evolución por selección natural). NO es una suposición: es el grado máximo de certeza explicativa.
+- **Ley:** describe el QUÉ con una relación constante, muchas veces matemática (leyes de Mendel, conservación de la masa, Hardy-Weinberg).
+- Trampa de oro: "las teorías se convierten en leyes al confirmarse" es FALSO; son categorías distintas (explicar vs. describir).
+
+### Razonamiento científico
+- **Inducción:** de casos particulares a regla general (observar 100 guisantes lleva a la ley de segregación).
+- **Deducción:** de regla general a predicción particular (si Mendel vale, el cruce Aa × Aa dará 3:1).
+- El ciclo real es hipotético-deductivo: induce, deduce predicciones, experimenta y corrige (autocorrectivo).
+
+""",
                 conceptosClave = listOf(
                     "La hipótesis es una respuesta tentativa y falsable.",
                     "El grupo control sirve de testigo comparativo sin el tratamiento.",
@@ -302,13 +352,13 @@ internal object BiologiaPart1 {
                     id = "bio_t01_s02_c1",
                     statement = "En el método científico, la hipótesis se define formalmente como:",
                     options = listOf(
-                        "Una verdad científica universal e inmutable",
-                        "Una respuesta tentativa, racional y sujeta a contrastación empírica",
                         "El resultado estadístico definitivo de una investigación",
                         "Una simple corazonada no contrastable formulada al azar",
-                        "La descripción matemática invariable de un fenómeno físico"
+                        "La descripción matemática invariable de un fenómeno físico",
+                        "Una verdad científica universal e inmutable",
+                        "Una respuesta tentativa, racional y sujeta a contrastación empírica",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La hipótesis es una proposición explicativa provisional que busca responder al problema científico y que debe ponerse a prueba empíricamente."
                 ),
                 Challenge(
@@ -328,52 +378,52 @@ internal object BiologiaPart1 {
                     id = "bio_t01_s02_c3",
                     statement = "En un experimento biológico bien diseñado, la función primordial del grupo control o testigo es:",
                     options = listOf(
-                        "Recibir la máxima dosis posible de la variable experimental",
                         "Servir de línea base de comparación para verificar si el efecto se debe al tratamiento",
                         "Aumentar artificialmente el número de datos para publicar el artículo",
                         "Reemplazar al grupo experimental cuando los resultados salen desfavorables",
-                        "Demostrar que todos los individuos reaccionan exactamente igual"
+                        "Demostrar que todos los individuos reaccionan exactamente igual",
+                        "Recibir la máxima dosis posible de la variable experimental",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El grupo control permite aislar el efecto de la variable manipulada frente a posibles variaciones fortuitas o ambientales que ocurrirían de modo natural."
                 ),
                 Challenge(
                     id = "bio_t01_s02_c4",
                     statement = "Según el epistemólogo Karl Popper, una característica indispensable para que una hipótesis sea considerada científica es la:",
                     options = listOf(
+                        "Imposibilidad de someterse a prueba experimental",
                         "Infalibilidad absoluta",
                         "Falsabilidad o refutabilidad",
                         "Aprobación por voto popular",
                         "Complejidad lingüística incomprensible",
-                        "Imposibilidad de someterse a prueba experimental"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El criterio de demarcación popperiano establece que una hipótesis es científica solo si existe la posibilidad lógica y práctica de demostrar su eventual falsedad mediante experimentos u observaciones."
                 ),
                 Challenge(
                     id = "bio_t01_s02_c5",
                     statement = "En el siglo XVII, Francesco Redi colocó carne en frascos abiertos y en frascos sellados herméticamente con gasa. Al observar larvas únicamente en los frascos abiertos donde entraban moscas, Redi concluyó que los gusanos no surgían por generación espontánea. En este diseño, los frascos abiertos funcionaron como:",
                     options = listOf(
+                        "Conclusión no validada",
                         "Variable interviniente no controlada",
                         "Grupo experimental con gasa",
                         "Grupo testigo o control",
                         "Hipótesis irrelevante",
-                        "Conclusión no validada"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 3,
                     explanation = "Los frascos abiertos representaban la condición natural habitual (control/testigo), mientras que los cubiertos con gasa eran el grupo experimental sometido a la restricción del paso de moscas."
                 ),
                 Challenge(
                     id = "bio_t01_s02_c6",
                     statement = "¿Cuál de las siguientes formulaciones representa un planteamiento del problema redactado de forma correcta según el método científico?",
                     options = listOf(
-                        "La fertilización orgánica siempre será superior a la química",
-                        "¿En qué medida la concentración de salinidad del agua afecta la tasa de eclosión de los quistes de Artemia salina?",
                         "Es hermoso estudiar cómo crecen las flores en primavera en el valle de Chilina",
                         "Las bacterias son organismos microscópicos peligrosos para la salud humana",
-                        "Si llueve intensamente en verano, entonces habrá huaicos en la cordillera"
+                        "Si llueve intensamente en verano, entonces habrá huaicos en la cordillera",
+                        "La fertilización orgánica siempre será superior a la química",
+                        "¿En qué medida la concentración de salinidad del agua afecta la tasa de eclosión de los quistes de Artemia salina?",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El planteamiento del problema debe ser una pregunta delimitada, no ambigua, que relacione variables y admita contrastación empírica."
                 ),
                 Challenge(
@@ -393,52 +443,52 @@ internal object BiologiaPart1 {
                     id = "bio_t01_s02_c8",
                     statement = "Respecto a la diferencia entre Teoría Científica y Ley Científica en Biología, señale el enunciado académicamente correcto:",
                     options = listOf(
-                        "Una teoría es una conjetura sin pruebas que cuando se demuestra se convierte en ley",
                         "La ley describe una relación constante observable; la teoría explica el mecanismo que la origina",
                         "Las leyes son explicaciones biológicas y las teorías son fórmulas físicas",
                         "Una teoría no requiere evidencia empírica mientras que la ley sí",
-                        "En biología no existen teorías validadas debido a la variabilidad de la vida"
+                        "En biología no existen teorías validadas debido a la variabilidad de la vida",
+                        "Una teoría es una conjetura sin pruebas que cuando se demuestra se convierte en ley",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La ley científica describe relaciones constantes e invariables (el qué), mientras que la teoría científica proporciona el marco explicativo fundamentado y unificador de por qué y cómo ocurren los fenómenos."
                 ),
                 Challenge(
                     id = "bio_t01_s02_c9",
                     statement = "Un agrónomo en Majes aplica un nuevo biofungicida a 100 plantas de vid infectadas con oídio (Lote A) y a otras 100 plantas infectadas idénticas les aplica solo agua destilada (Lote B). El Lote B representa:",
                     options = listOf(
+                        "La teoría confirmada",
                         "El grupo experimental",
                         "El grupo testigo o control",
                         "La variable independiente",
                         "La hipótesis rechazada",
-                        "La teoría confirmada"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El lote B, al recibir solo el solvente inocuo (agua destilada), actúa como grupo control o testigo para comparar la eficacia del biofungicida."
                 ),
                 Challenge(
                     id = "bio_t01_s02_c10",
                     statement = "Indique la secuencia lógica y cronológica habitual de las etapas del método científico:",
                     options = listOf(
+                        "Planteamiento del Problema → Conclusión → Hipótesis → Observación",
+                        "Teoría → Experimentación → Hipótesis → Observación → Problema",
                         "Experimentación → Observación → Hipótesis → Conclusión → Problema",
                         "Observación → Planteamiento del Problema → Hipótesis → Experimentación → Conclusión",
                         "Hipótesis → Conclusión → Observación → Experimentación → Ley",
-                        "Planteamiento del Problema → Conclusión → Hipótesis → Observación",
-                        "Teoría → Experimentación → Hipótesis → Observación → Problema"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La secuencia clásica ordenada inicia con la observación rigurosa, delimitación del problema, postulación de hipótesis, contrastación experimental y análisis para la conclusión."
                 ),
                 Challenge(
                     id = "bio_t01_s02_c11",
                     statement = "El principio según el cual cualquier experimento científico debe poder ser repetido por otros investigadores en cualquier laboratorio del mundo obteniendo resultados similares se denomina:",
                     options = listOf(
-                        "Subjetividad",
-                        "Reproducibilidad o replicabilidad",
                         "Arbitrariedad experimental",
                         "Dogmatismo metodológico",
-                        "Inmutabilidad absoluta"
+                        "Inmutabilidad absoluta",
+                        "Subjetividad",
+                        "Reproducibilidad o replicabilidad",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La reproducibilidad es una de las condiciones fundamentales del método científico: un experimento que no puede ser replicado independientemente carece de validez científica."
                 ),
                 Challenge(
@@ -500,7 +550,38 @@ internal object BiologiaPart1 {
 
                     # Grupo Control o Testigo
                     Sirve de patrón de comparación basal. No recibe la manipulación de la variable independiente (o recibe un tratamiento placebo estándar), permitiendo demostrar con certeza estadística que los cambios observados en el grupo experimental obedecen exclusivamente a la variable independiente.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Variables con Ejemplos Trabajados
+
+### Ejemplo 1: fertilizante y crecimiento (botánica)
+- **Pregunta:** ¿el fertilizante nitrogenado aumenta la talla del maíz?
+- **VI:** dosis de fertilizante (0, 50, 100 kg/ha) manipulada por el investigador.
+- **VD:** altura promedio de la planta a los 60 días (se mide con cinta métrica).
+- **Controladas:** variedad de semilla, riego, luz, tipo de suelo, densidad de siembra.
+- **Grupo control:** parcelas con 0 kg/ha (testigo sin tratamiento).
+- **Conclusión válida solo si:** los grupos difieren ÚNICAMENTE en la VI.
+
+### Ejemplo 2: antibiótico y bacterias (microbiología)
+- **VI:** concentración de amoxicilina en discos de difusión.
+- **VD:** diámetro del halo de inhibición en mm.
+- **Controladas:** cepa bacteriana, medio de cultivo, temperatura de incubación (37 °C), tiempo (24 h).
+- **Grupo control:** disco sin antibiótico (solo solvente).
+
+### Tipos de variables según su naturaleza
+- **Cuantitativas discretas:** conteos enteros (número de pétalos, colonias).
+- **Cuantitativas continuas:** magnitudes medibles con decimales (masa, pH, temperatura).
+- **Cualitativas nominales:** categorías sin orden (grupo sanguíneo, color de flor).
+- **Cualitativas ordinales:** categorías con rango (estadio de desarrollo I-IV).
+
+### Trampas fijas de examen
+1. La variable dependiente es siempre la que SE MIDE (efecto); la independiente, la que SE MANIPULA (causa).
+2. Grupo control NO es lo mismo que variable controlada: el primero es un GRUPO testigo; las segundas son FACTORES constantes.
+3. Sin grupo control no hay causalidad demostrable, solo correlación.
+4. El tamaño muestral y la repetición reducen el error aleatorio; no corrigen sesgos de diseño.
+
+""",
                 conceptosClave = listOf(
                     "Variable Independiente = Causa que el científico manipula intencionalmente.",
                     "Variable Dependiente = Efecto que se mide y cuantifica al final.",
@@ -514,39 +595,39 @@ internal object BiologiaPart1 {
                     id = "bio_t01_s03_c1",
                     statement = "En un experimento científico, la Variable Independiente se define conceptualmente como:",
                     options = listOf(
-                        "El efecto que se cuantifica al culminar el experimento",
                         "El factor causal que el experimentador manipula intencionalmente",
                         "Cualquier factor secundario que cambia de forma descontrolada",
                         "El instrumento óptico empleado para tomar fotografías",
-                        "El grupo de individuos que no recibe ningún tipo de tratamiento"
+                        "El grupo de individuos que no recibe ningún tipo de tratamiento",
+                        "El efecto que se cuantifica al culminar el experimento",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La Variable Independiente es la causa manipulada deliberadamente por el investigador para evaluar sus efectos sobre el sistema biológico estudiado."
                 ),
                 Challenge(
                     id = "bio_t01_s03_c2",
                     statement = "En una investigación sobre nutrición en truchas arcoíris, se suministran dietas con 20%, 30% y 40% de harina de quinua. Al cabo de 60 días, se pesa a cada ejemplar en una balanza digital. ¿Cuál es la Variable Dependiente?",
                     options = listOf(
+                        "La especie de trucha elegida",
+                        "La marca de la balanza digital utilizada",
                         "El porcentaje de harina de quinua suministrado",
                         "El peso final alcanzado por las truchas",
                         "La temperatura del agua en las piscigranjas",
-                        "La especie de trucha elegida",
-                        "La marca de la balanza digital utilizada"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La Variable Dependiente es el efecto medido por el investigador: en este caso, la masa o peso final de las truchas. La dieta con harina de quinua es la Variable Independiente."
                 ),
                 Challenge(
                     id = "bio_t01_s03_c3",
                     statement = "Para estudiar el efecto de las heladas en la papa nativa, un agrónomo somete plántulas a -4 °C, -1 °C y 15 °C, manteniendo idéntico tipo de maceta, volumen de sustrato, humedad y fotoperíodo de 12 horas de luz. Los factores mantenidos constantes corresponden a:",
                     options = listOf(
-                        "Variables dependientes múltiples",
-                        "Variables controladas o intervinientes",
                         "Variables independientes de confusión",
                         "Grupos experimentales no válidos",
-                        "Hipótesis nulas confirmadas"
+                        "Hipótesis nulas confirmadas",
+                        "Variables dependientes múltiples",
+                        "Variables controladas o intervinientes",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Los factores que el experimentador mantiene invariables en todos los grupos para evitar que influyan sobre el resultado son las Variables Controladas o Intervinientes."
                 ),
                 Challenge(
@@ -566,39 +647,39 @@ internal object BiologiaPart1 {
                     id = "bio_t01_s03_c5",
                     statement = "Si en un experimento sobre germinación de semillas de kiwicha el investigador olvida controlar la humedad y unas macetas reciben el doble de agua que otras, dicha humedad no controlada se denomina:",
                     options = listOf(
-                        "Variable dependiente de precisión",
                         "Variable extraña o de confusión que resta validez interna",
                         "Grupo testigo perfectamente estandarizado",
                         "Constante termodinámica invariable",
-                        "Conclusión empíricamente contrastada"
+                        "Conclusión empíricamente contrastada",
+                        "Variable dependiente de precisión",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Una variable que puede alterar el resultado pero que no fue controlada por negligencia o limitación técnica se convierte en una variable extraña o de confusión, distorsionando la validez del ensayo."
                 ),
                 Challenge(
                     id = "bio_t01_s03_c6",
                     statement = "En un laboratorio de microbiología se ensaya la eficacia de un nuevo antibiótico contra Staphylococcus aureus. Se preparan 10 placas Petri con discos de diferentes concentraciones del fármaco y 1 placa Petri con un disco de papel filtro con agua estéril sin antibiótico. Esta última placa corresponde a:",
                     options = listOf(
+                        "Un residuo biocontaminado inservible",
                         "La variable independiente pura",
                         "El grupo control o testigo negativo",
                         "La variable dependiente cuantitativa",
                         "Una hipótesis sin sentido",
-                        "Un residuo biocontaminado inservible"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "La placa que recibe el disco con agua estéril (sin agente activo) es el grupo control o testigo negativo, útil para confirmar que el disco de papel por sí solo no inhibe a las bacterias."
                 ),
                 Challenge(
                     id = "bio_t01_s03_c7",
                     statement = "¿Por qué es crucial mantener constantes las variables intervinientes en todos los lotes de una investigación biológica?",
                     options = listOf(
-                        "Para asegurar que cualquier cambio en la variable dependiente se deba únicamente a la variable independiente",
-                        "Para que el experimento sea mucho más costoso y complejo",
                         "Para evitar tener que medir los resultados al final del experimento",
                         "Porque las leyes de la física prohíben que los seres vivos cambien",
-                        "Para obligar a que la hipótesis formulada se cumpla siempre sin excepción"
+                        "Para obligar a que la hipótesis formulada se cumpla siempre sin excepción",
+                        "Para asegurar que cualquier cambio en la variable dependiente se deba únicamente a la variable independiente",
+                        "Para que el experimento sea mucho más costoso y complejo",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 3,
                     explanation = "Controlar estrictamente las variables intervinientes garantiza el principio de aislamiento experimental: el efecto medido (VD) responderá exclusivamente a la causa manipulada (VI)."
                 )
             ),
@@ -660,7 +741,37 @@ internal object BiologiaPart1 {
                     - **Bolsa Amarilla (Residuos Especiales / Químicos):** Frascos con reactivos tóxicos o inflamables, disolventes orgánicos, medicamentos vencidos o residuos citotóxicos.
                     - **Bolsa Negra (Residuos Comunes):** Papel higiénico, cartón limpio, envoltorios de alimentos procedentes de áreas administrativas.
                     - **Recipiente Rígido Punzocortante (Rojo):** Agujas hipodérmicas, hojas de bisturí, lancetas y vidrios rotos contaminados. Deben desecharse directamente sin reencapuchar la aguja y sellarse al alcanzar las **tres cuartas (3/4) partes** de su capacidad.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Óptica, Contraste y Niveles de Bioseguridad
+
+### Partes del microscopio óptico compuesto (MOC) y su función
+- **Ocular:** lente superior, aumento estándar 10x; por él observa el ojo.
+- **Objetivos:** 4x (barrido), 10x (enfoque general), 40x (detalle celular), 100x (inmersión en aceite).
+- **Aumento total = ocular × objetivo:** con ocular 10x y objetivo 40x se observan 400 aumentos.
+- **Platina:** sostiene la lámina; **condensador:** concentra la luz; **diafragma:** regula su intensidad; **tornillos macrométrico y micrométrico:** enfoque grueso y fino.
+- **Límite de resolución del MOC:** 0,2 micrómetros (200 nm); más allá solo el electrónico resuelve.
+
+### MOC vs. MET vs. MEB (tabla comparativa)
+- **MOC:** muestra viva o teñida, color real, aumento hasta ~1500x, resolución 0,2 μm.
+- **MET (transmisión):** cortes ultrafinos, blanco y negro, interior en 2D (ultraestructura: crestas, tilacoides).
+- **MEB (barrido):** superficie recubierta en oro, imagen 3D (polen, insectos, microvellosidades).
+- Trampa clásica: el MET muestra el INTERIOR en 2D; el MEB, la SUPERFICIE en 3D.
+
+### Coloraciones de rutina
+- **Azul de metileno:** resalta núcleos en células animales y bacterias.
+- **Lugol:** tiñe de azul-violáceo el almidón en vegetales.
+- **Tinción Gram:** violeta (positivas, mureína gruesa) frente a rosado (negativas, LPS externo).
+
+### Niveles de bioseguridad (BSL)
+- **BSL-1:** agentes de riesgo mínimo (E. coli K-12 de laboratorio docente).
+- **BSL-2:** patógenos moderados (Staphylococcus, Salmonella); cabina de seguridad.
+- **BSL-3:** transmisión aérea grave (Mycobacterium tuberculosis); laboratorio sellado.
+- **BSL-4:** letales sin tratamiento (Ébola); traje presurizado.
+- **Regla de oro:** toda muestra biológica se asume infecciosa hasta demostrar lo contrario (universalidad).
+
+""",
                 conceptosClave = listOf(
                     "Límite de resolución MOC: 0.2 micrómetros (200 nm).",
                     "Aumento total = Aumento ocular × Aumento objetivo.",
@@ -676,13 +787,13 @@ internal object BiologiaPart1 {
                     id = "bio_t01_s04_c1",
                     statement = "El límite de resolución del microscopio óptico compuesto (MOC) convencional es de aproximadamente:",
                     options = listOf(
-                        "0.2 milímetros",
-                        "0.2 micrómetros (200 nanómetros)",
                         "0.2 nanómetros (2 ángstroms)",
                         "20 picómetros",
-                        "2 milímetros"
+                        "2 milímetros",
+                        "0.2 milímetros",
+                        "0.2 micrómetros (200 nanómetros)",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El límite de resolución del MOC está restringido por la longitud de onda de la luz visible a aproximadamente 0.2 micrómetros (200 nm)."
                 ),
                 Challenge(
@@ -702,52 +813,52 @@ internal object BiologiaPart1 {
                     id = "bio_t01_s04_c3",
                     statement = "¿Cuál es la función fisicoquímica fundamental de colocar una gota de aceite de inmersión entre la preparación y el objetivo de 100×?",
                     options = listOf(
-                        "Teñir el núcleo celular de color azul violáceo",
                         "Igualar el índice de refracción del vidrio para evitar la dispersión de los rayos de luz",
                         "Matar instantáneamente a las bacterias patógenas para bioseguridad",
                         "Evitar que la muestra se caliente por el calor del foco",
-                        "Incrementar la distancia focal del tornillo macrométrico"
+                        "Incrementar la distancia focal del tornillo macrométrico",
+                        "Teñir el núcleo celular de color azul violáceo",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El aceite de inmersión tiene un índice de refracción casi idéntico al vidrio (n ≈ 1.51), lo que impide que la luz se desvíe al salir del cubreobjetos hacia el objetivo, aumentando la apertura numérica y resolución."
                 ),
                 Challenge(
                     id = "bio_t01_s04_c4",
                     statement = "Un citólogo requiere examinar la doble membrana y la ultraestructura interna detallada de las crestas mitocondriales en cortes ultrafinos. ¿Qué instrumento microscópico debe emplear necesariamente?",
                     options = listOf(
+                        "Lupa binocular de mesa",
                         "Microscopio óptico de campo claro",
                         "Microscopio electrónico de transmisión (MET)",
                         "Microscopio estereoscópico de disección",
                         "Microscopio óptico simple de Leeuwenhoek",
-                        "Lupa binocular de mesa"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El microscopio electrónico de transmisión (MET) es el único capaz de atravesar cortes ultrafinos y mostrar la ultraestructura interna celular en 2D con resolución de hasta 0.2 nm."
                 ),
                 Challenge(
                     id = "bio_t01_s04_c5",
                     statement = "Para analizar la morfología tridimensional (3D) de la superficie externa de la concha de una diatomea o los ojos compuestos de una avispa, el equipo indicado es el:",
                     options = listOf(
-                        "Microscopio electrónico de barrido (MEB)",
-                        "Microscopio electrónico de transmisión (MET)",
                         "Microscopio óptico de inmersión",
                         "Microscopio de contraste de fases invertido",
-                        "Microtomo criostático"
+                        "Microtomo criostático",
+                        "Microscopio electrónico de barrido (MEB)",
+                        "Microscopio electrónico de transmisión (MET)",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 3,
                     explanation = "El microscopio electrónico de barrido (MEB) hace barrer un haz de electrones sobre una superficie metalizada produciendo imágenes en relieve 3D con gran profundidad de campo."
                 ),
                 Challenge(
                     id = "bio_t01_s04_c6",
                     statement = "En el microscopio óptico, el componente mecánico encargado de permitir un desplazamiento vertical lento de la platina para lograr un enfoque nítido y preciso de la preparación es el:",
                     options = listOf(
-                        "Tornillo macrométrico",
-                        "Tornillo micrométrico",
                         "Revólver portaobjetivos",
                         "Diafragma iris",
-                        "Condensador Abbe"
+                        "Condensador Abbe",
+                        "Tornillo macrométrico",
+                        "Tornillo micrométrico",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El tornillo micrométrico realiza desplazamientos casi imperceptibles para obtener el enfoque nítido final, mientras que el macrométrico efectúa el enfoque grueso inicial."
                 ),
                 Challenge(
@@ -767,52 +878,52 @@ internal object BiologiaPart1 {
                     id = "bio_t01_s04_c8",
                     statement = "El principio básico de bioseguridad que establece que todo fluido corporal o espécimen biológico debe manejarse como si fuese portador de agentes patógenos infecciosos se denomina:",
                     options = listOf(
-                        "Uso selectivo de barreras",
                         "Principio de Universalidad",
                         "Esterilización fraccionada",
                         "Contención secundaria",
-                        "Segregación cromática de residuos"
+                        "Segregación cromática de residuos",
+                        "Uso selectivo de barreras",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El Principio de Universalidad estipula que las medidas preventivas deben aplicarse con todas las personas y muestras, asumiendo su potencial infeccioso."
                 ),
                 Challenge(
                     id = "bio_t01_s04_c9",
                     statement = "Constituyen ejemplos típicos de barreras primarias de contención en el laboratorio biológico:",
                     options = listOf(
+                        "Extintores de dióxido de carbono y duchas de emergencia",
                         "Autoclaves de vapor y diseño de paredes con presión negativa",
                         "Guantes de nitrilo, mascarillas de protección y mandiles de manga larga",
                         "Filtros HEPA en el techo del edificio",
                         "Puertas con esclusas de doble acceso",
-                        "Extintores de dióxido de carbono y duchas de emergencia"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Las barreras primarias son los equipos de protección personal (EPP) que se interponen directamente entre el operador y el agente biológico peligroso."
                 ),
                 Challenge(
                     id = "bio_t01_s04_c10",
                     statement = "En un laboratorio universitario se manipula Bacillus subtilis para prácticas docentes de fermentación, bacteria no patógena que no causa daño en humanos sanos. ¿A qué Nivel de Bioseguridad (BSL) corresponde esta actividad?",
                     options = listOf(
-                        "BSL-1 (Nivel 1)",
-                        "BSL-2 (Nivel 2)",
                         "BSL-3 (Nivel 3)",
                         "BSL-4 (Nivel 4)",
-                        "BSL-0 (Sin bioseguridad)"
+                        "BSL-0 (Sin bioseguridad)",
+                        "BSL-1 (Nivel 1)",
+                        "BSL-2 (Nivel 2)",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 3,
                     explanation = "El nivel BSL-1 está destinado a microorganismos bien caracterizados que no provocan enfermedad en adultos sanos inmunocompetentes."
                 ),
                 Challenge(
                     id = "bio_t01_s04_c11",
                     statement = "El trabajo rutinario con muestras clínicas que contienen virus de la Hepatitis B o bacterias como Salmonella enterica, capaces de causar patología moderada por punción accidental o ingestión pero con riesgo de aerosol bajo, se ubica en el nivel:",
                     options = listOf(
-                        "BSL-1",
-                        "BSL-2",
                         "BSL-3",
                         "BSL-4",
-                        "BSL-5"
+                        "BSL-5",
+                        "BSL-1",
+                        "BSL-2",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El nivel BSL-2 abarca patógenos de riesgo moderado asociados a infecciones humanas mediante punción, ingestión o salpicaduras en mucosas."
                 ),
                 Challenge(
@@ -845,39 +956,39 @@ internal object BiologiaPart1 {
                     id = "bio_t01_s04_c14",
                     statement = "Tras finalizar una práctica de venopunción, las torundas de algodón empapadas con sangre fresca de los pacientes deben ser desechadas obligatoriamente en una bolsa de color:",
                     options = listOf(
-                        "Negra",
-                        "Verde",
                         "Roja",
                         "Amarilla",
-                        "Azul"
+                        "Azul",
+                        "Negra",
+                        "Verde",
                     ),
-                    correctIndex = 2,
+                    correctIndex = 0,
                     explanation = "La bolsa roja está destinada exclusivamente a los residuos biocontaminados (fluidos biológicos, sangre, tejidos, gasas infectadas)."
                 ),
                 Challenge(
                     id = "bio_t01_s04_c15",
                     statement = "Los frascos de reactivos químicos vencidos como xilol, cloroformo, formol o restos de fármacos citotóxicos deben segregarse en bolsas de color:",
                     options = listOf(
+                        "Transparente",
+                        "Blanca",
                         "Roja",
                         "Amarilla",
                         "Negra",
-                        "Transparente",
-                        "Blanca"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La bolsa amarilla identifica a los residuos especiales de naturaleza química, tóxica o farmacológica."
                 ),
                 Challenge(
                     id = "bio_t01_s04_c16",
                     statement = "Respecto al descarte de agujas hipodérmicas usadas, ¿cuál es la norma técnica de bioseguridad correcta?",
                     options = listOf(
+                        "Lavarlas con agua y lejía para reutilizarlas en el siguiente paciente",
+                        "Tirarlas al tacho común si no tienen sangre visible",
                         "Doblarlas manualmente antes de tirarlas a la bolsa negra",
                         "Colocarles nuevamente el capuchón protector con las dos manos",
                         "Desecharlas directamente en un recipiente rígido de punzocortantes sin reencapuchar",
-                        "Lavarlas con agua y lejía para reutilizarlas en el siguiente paciente",
-                        "Tirarlas al tacho común si no tienen sangre visible"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 4,
                     explanation = "Jamás debe reencapucharse una aguja usada para evitar punciones accidentales; se desechan de inmediato en contenedores rígidos de bioseguridad hasta un máximo de 3/4 de llenado."
                 ),
                 Challenge(
@@ -910,13 +1021,13 @@ internal object BiologiaPart1 {
                     id = "bio_t01_s04_c19",
                     statement = "Durante un procedimiento en el laboratorio se rompe un tubo de ensayo con un cultivo de Salmonella, derramándose sobre la mesa. ¿Cuál es el protocolo de bioseguridad inicial que debe ejecutarse?",
                     options = listOf(
+                        "Lavar la mesa directamente con agua caliente sin usar guantes",
                         "Secar de inmediato con papel secante con las manos descubiertas y tirarlo a la bolsa negra",
                         "Cubrir el derrame con toallas absorbentes, verter desinfectante (lejía/hipoclorito) de afuera hacia adentro y dejar actuar antes de recoger",
                         "Esperar a que el líquido se evapore solo durante el fin de semana",
                         "Soplar fuertemente para dispersar el líquido por la habitación",
-                        "Lavar la mesa directamente con agua caliente sin usar guantes"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El protocolo de descontaminación de derrames biológicos exige cubrir con material absorbente, aplicar desinfectante adecuado desde los bordes hacia el centro, respetar el tiempo de contacto biocida y recoger con EPP adecuado hacia bolsa roja."
                 )
             ),
@@ -963,7 +1074,28 @@ internal object BiologiaPart1 {
                     - **Libera energía química útil** (ΔG < 0, proceso exergónico que genera ATP).
                     - Provoca oxidación de los sustratos (pérdida de electrones o hidrógenos hacia transportadores como NAD+ y FAD).
                     - **Ejemplos clave:** Glucólisis (citosol), respiración celular aerobia (ciclo de Krebs y fosforilación oxidativa mitocondrial), fermentación láctica y alcohólica, beta-oxidación de ácidos grasos y digestión enzimática de alimentos.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Acoplamiento Energético y Redox
+
+### Anabolismo vs. catabolismo (tabla de deslinde)
+- **Anabolismo:** construye de simple a complejo; CONSUME energía (endergónico, delta G positivo). Ejemplos: fotosíntesis, síntesis de proteínas, gluconeogénesis.
+- **Catabolismo:** degrada de complejo a simple; LIBERA energía (exergónico, delta G negativo). Ejemplos: respiración celular, digestión, beta-oxidación.
+- **Acoplamiento:** la energía liberada por el catabolismo (ATP) impulsa el anabolismo. Sin acoplamiento, la síntesis sería termodinámicamente imposible.
+- Trampa clásica: la fotosíntesis es ANABÓLICA (consume energía lumínica) aunque produzca glucosa "energética"; la respiración es CATABÓLICA aunque produzca ATP útil.
+
+### ATP: la moneda energética
+- **Estructura:** adenosina (adenina + ribosa) + TRIFOSFATO. Los enlaces fosfoanhídrido entre fosfatos concentran energía por repulsión de cargas negativas.
+- **Ciclo ATP-ADP:** la hidrólisis ATP -> ADP + Pi libera ~7,3 kcal/mol para trabajo celular; la fosforilación (fotosintética y oxidativa) recarga ADP a ATP.
+- **Analogía de examen:** el ATP es dinero en efectivo (gasto inmediato); la glucosa y las grasas son ahorros a plazo.
+
+### Transporte de electrones: NAD+ y FAD
+- **Oxidación = perder electrones (o hidrógenos); reducción = ganarlos.** Mnemotecnia: oxida-pierde, reduce-gana.
+- **NAD+** recibe hidrógenos y se reduce a NADH (lleva electrones a la cadena respiratoria); **FAD** se reduce a FADH2.
+- Sin estos transportadores, la glucosa no podría entregar su energía de forma escalonada y segura.
+
+""",
                 conceptosClave = listOf(
                     "Propiedades emergentes: características nuevas que surgen al integrar niveles biológicos.",
                     "Anabolismo: de simple a complejo, consume energía (endergónico).",
@@ -978,26 +1110,26 @@ internal object BiologiaPart1 {
                     id = "bio_t02_s01_c1",
                     statement = "Durante el período postprandial, los hepatocitos polimerizan cientos de moléculas de glucosa para sintetizar glucógeno hepático. Este proceso bioquímico clasifica termodinámicamente como una vía:",
                     options = listOf(
+                        "De desaminación oxidativa intraluminal",
+                        "De respiración aerobia mitocondrial",
                         "Catabólica y exergónica con liberación neta de calor",
                         "Anabólica y endergónica con consumo de energía metabólica",
                         "Catabólica anaerobia de tipo fermentativo",
-                        "De desaminación oxidativa intraluminal",
-                        "De respiración aerobia mitocondrial"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La síntesis de glucógeno (glucogenogénesis) parte de monómeros simples de glucosa para formar un polímero complejo ramificado, lo cual requiere inversión de energía (ATP/UTP); por tanto, es una vía anabólica y endergónica."
                 ),
                 Challenge(
                     id = "bio_t02_s01_c2",
                     statement = "Durante una carrera de velocidad de 100 metros planos, las fibras musculares esqueléticas degradan glucosa de forma acelerada produciendo lactato y sintetizando ATP. Esta transformación corresponde a un proceso:",
                     options = listOf(
-                        "Anabólico de asimilación",
-                        "Catabólico fermentativo y exergónico",
                         "De fotosíntesis celular",
                         "Quimiosintético autótrofo",
-                        "De transcripción genética"
+                        "De transcripción genética",
+                        "Anabólico de asimilación",
+                        "Catabólico fermentativo y exergónico",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La degradación oxidativa parcial de glucosa en ácido láctico en ausencia temporal de oxígeno suficiente es la fermentación láctica, una vía catabólica exergónica que genera ATP rápido."
                 ),
                 Challenge(
@@ -1017,52 +1149,52 @@ internal object BiologiaPart1 {
                     id = "bio_t02_s01_c4",
                     statement = "En las células del parénquima clorofiliano de una hoja de molle, la fotosíntesis utiliza agua, CO₂ y fotones lumínicos para fabricar triosas fosfato y glucosa. Por su balance bioenergético, la fotosíntesis es:",
                     options = listOf(
-                        "Catabólica, oxidativa y exergónica",
                         "Anabólica, reductora y endergónica",
                         "Catabólica descarboxilativa",
                         "Una fermentación facultativa",
-                        "Una lisis hidrolítica espontánea"
+                        "Una lisis hidrolítica espontánea",
+                        "Catabólica, oxidativa y exergónica",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La fotosíntesis es el proceso anabólico por excelencia de la biosfera: construye materia orgánica compleja reduciendo el CO₂ inorgánico con aporte externo de energía luminosa (endergónico)."
                 ),
                 Challenge(
                     id = "bio_t02_s01_c5",
                     statement = "El principio según el cual un tejido biológico presenta propiedades y funciones coordinadas que no se manifiestan en sus células constituyentes cuando se encuentran aisladas se conoce como:",
                     options = listOf(
+                        "Reacción catabólica",
                         "Equilibrio osmótico pasivo",
                         "Propiedad emergente",
                         "Desnaturalización estructural",
                         "Irritabilidad inespecífica",
-                        "Reacción catabólica"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Las propiedades emergentes son atributos nuevos que se manifiestan al ascender de nivel en la jerarquía biológica, resultantes de la interacción cooperativa entre sus partes y ausentes en los componentes aislados."
                 ),
                 Challenge(
                     id = "bio_t02_s01_c6",
                     statement = "La oxidación total del piruvato en el ciclo de Krebs y la cadena de transporte de electrones mitocondrial, con producción masiva de ATP, agua y CO₂, es un ejemplo fundamental de:",
                     options = listOf(
-                        "Respiración celular aerobia catabólica",
-                        "Fotosíntesis anabólica oxigénica",
                         "Síntesis de peptidoglicano",
                         "Fijación de nitrógeno atmosférico",
-                        "Traducción de ARN mensajero"
+                        "Traducción de ARN mensajero",
+                        "Respiración celular aerobia catabólica",
+                        "Fotosíntesis anabólica oxigénica",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 3,
                     explanation = "La respiración celular aerobia es la principal ruta catabólica oxidativa de las células eucariotas: degrada completamente la glucosa hasta CO₂ y H₂O liberando gran cantidad de energía en forma de ATP."
                 ),
                 Challenge(
                     id = "bio_t02_s01_c7",
                     statement = "En períodos de ayuno intermitente o inanición, el hígado sintetiza nuevas moléculas de glucosa a partir de precursores no glucídicos como el glicerol y aminoácidos. Esta ruta metabólica se denomina:",
                     options = listOf(
-                        "Glucólisis anaerobia",
-                        "Gluconeogénesis anabólica",
                         "Glucogenólisis lisosomal",
                         "Ciclo de la urea",
-                        "Fermentación alcohólica"
+                        "Fermentación alcohólica",
+                        "Glucólisis anaerobia",
+                        "Gluconeogénesis anabólica",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La gluconeogénesis es la biosíntesis (anabolismo) de glucosa a partir de sustratos no carbohidratos, indispensable para mantener la glucemia en el ayuno a expensas de ATP."
                 ),
                 Challenge(
@@ -1082,52 +1214,52 @@ internal object BiologiaPart1 {
                     id = "bio_t02_s01_c9",
                     statement = "¿Cuál de las siguientes afirmaciones describe con exactitud la diferencia termodinámica entre anabolismo y catabolismo?",
                     options = listOf(
-                        "El anabolismo libera energía libre espontáneamente (ΔG < 0), mientras que el catabolismo la absorbe (ΔG > 0)",
                         "El anabolismo requiere aporte neto de energía libre (ΔG > 0), mientras que el catabolismo libera energía libre (ΔG < 0)",
                         "Ambos procesos tienen obligatoriamente una variación de energía libre de Gibbs igual a cero",
                         "El catabolismo solo ocurre en presencia de luz solar y el anabolismo en la oscuridad",
-                        "El anabolismo degrada macromoléculas y el catabolismo las ensambla"
+                        "El anabolismo degrada macromoléculas y el catabolismo las ensambla",
+                        "El anabolismo libera energía libre espontáneamente (ΔG < 0), mientras que el catabolismo la absorbe (ΔG > 0)",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Desde el punto de vista termodinámico, las vías anabólicas son endergónicas (ΔG > 0, no espontáneas sin aporte energético), mientras que las catabólicas son exergónicas (ΔG < 0, liberan energía al oxidar enlaces químicos)."
                 ),
                 Challenge(
                     id = "bio_t02_s01_c10",
                     statement = "En la estructura química del ATP, la energía biológicamente aprovechable para el trabajo celular se encuentra concentrada prioritariamente en:",
                     options = listOf(
+                        "Los puentes de hidrógeno intramoleculares",
                         "El enlace glucosídico entre la adenina y la ribosa",
                         "Los enlaces fosfoanhídrido entre los grupos fosfato terminales",
                         "El anillo heterocíclico de purina",
                         "Los grupos hidroxilo del carbono 2 y 3 de la pentosa",
-                        "Los puentes de hidrógeno intramoleculares"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Los dos enlaces fosfoanhídrido que unen los grupos fosfato beta y gamma contienen alta energía electrostática de repulsión; su hidrólisis rinde aproximadamente 7.3 kcal/mol en condiciones estándar."
                 ),
                 Challenge(
                     id = "bio_t02_s01_c11",
                     statement = "Durante la interfase del ciclo celular, una célula incrementa notablemente su masa mediante la síntesis activa de enzimas, tubulina y ARN. Este conjunto de eventos corresponde a:",
                     options = listOf(
+                        "Un proceso osmótico puramente físico sin enzimas",
+                        "Una fermentación anaerobia de mantenimiento",
                         "Un marcado predominio de reacciones catabólicas oxidativas",
                         "Un intenso anabolismo biosintético coordinado",
                         "Una desnaturalización proteica masiva",
-                        "Un proceso osmótico puramente físico sin enzimas",
-                        "Una fermentación anaerobia de mantenimiento"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El crecimiento celular durante las fases G1 y G2 se basa en una intensa actividad anabólica: traducción de proteínas, biosíntesis de lípidos para membranas y transcripción de ARN."
                 ),
                 Challenge(
                     id = "bio_t02_s01_c12",
                     statement = "El concepto de 'acoplamiento energético' en el metabolismo celular significa fundamentalmente que:",
                     options = listOf(
-                        "Las reacciones catabólicas ocurren exclusivamente en el núcleo y las anabólicas en la membrana",
-                        "La energía liberada por las vías catabólicas exergónicas se transfiere para impulsar las vías anabólicas endergónicas",
                         "Todas las enzimas celulares deben destruirse al final de una reacción química",
                         "La célula vegetal produce energía sin necesidad de intercambiar materia con el exterior",
-                        "El catabolismo y el anabolismo nunca pueden coexistir en un mismo ser vivo"
+                        "El catabolismo y el anabolismo nunca pueden coexistir en un mismo ser vivo",
+                        "Las reacciones catabólicas ocurren exclusivamente en el núcleo y las anabólicas en la membrana",
+                        "La energía liberada por las vías catabólicas exergónicas se transfiere para impulsar las vías anabólicas endergónicas",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El acoplamiento energético describe cómo la energía química liberada por procesos catabólicos (exergónicos) se almacena temporalmente en forma de ATP para suministrar la energía que requieren los procesos anabólicos (endergónicos)."
                 ),
                 Challenge(
@@ -1182,7 +1314,33 @@ internal object BiologiaPart1 {
                       - *Adaptación fisiológica:* Hemoglobina con mayor afinidad por el oxígeno molecular y alto hematocrito en la vicuña (*Vicugna vicugna*) para vivir en la puna andina a más de 4000 m.s.n.m.
                       - *Adaptación morfológica:* Transformación de hojas en espinas en cactáceas para evitar la transpiración en desiertos áridos.
                       - *Adaptación etológica:* Migración estacional de aves o comportamiento de hibernación en mamíferos septentrionales.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Retroalimentación y Respuestas al Estímulo
+
+### Retroalimentación negativa (homeostasis clásica)
+- **Esquema:** estímulo -> receptor -> centro integrador -> efector -> respuesta que APAGA el estímulo.
+- **Glucemia:** hiperglucemia -> páncreas libera INSULINA -> hígado y músculo captan glucosa -> glucemia baja. Hipoglucemia -> GLUCAGÓN -> hígado libera glucosa (glucogenólisis).
+- **Termorregulación:** calor -> sudor + vasodilatación (pierde calor); frío -> escalofríos + vasoconstricción + piloerección (conserva y genera calor).
+- **Balance hídrico:** deshidratación -> hipófisis libera ADH (vasopresina) -> riñón reabsorbe agua.
+
+### Retroalimentación positiva (amplifica, no estabiliza)
+- **Fiebre y parto:** las contracciones uterinas liberan oxitocina, que intensifica contracciones hasta el nacimiento; luego se apaga.
+- Trampa: la positiva NO mantiene homeostasis; la usa el cuerpo para procesos que deben COMPLETARSE rápido.
+
+### Irritabilidad: tres respuestas (tabla)
+- **Nastias:** movimientos de órganos FIJOS ante estímulo difuso, reversibles y SIN dirección del estímulo. Fotonastia (girasol abre de día), tigmonastia (mimosa se cierra al tacto), nictinastia (sueño foliar nocturno).
+- **Taxismos:** desplazamiento de TODO el organismo HACIA o CONTRA el estímulo. Fototaxis positiva (Euglena hacia la luz), quimiotaxis (espermatozoides hacia atrayentes, bacterias hacia nutrientes).
+- **Reflejos:** respuesta animal rápida e involuntaria por arco reflejo (rotuliano, corneal, de succión). Se heredan, no se aprenden.
+- Trampa: nastia es en planta FIJA y sin dirección; taxismo implica LOCOMOCIÓN con dirección.
+
+### Adaptación: tres niveles con ejemplos peruanos
+- **Fisiológica (reversible en el individuo):** aclimatación a la altura (más glóbulos rojos en semanas), bronceado.
+- **Morfológica (heredable):** espinas de cactus (hojas modificadas), pico del colibrí, pelaje de vicuña.
+- **Etológica (conductual):** migración de aves, hibernación, estivación en desierto.
+
+""",
                 conceptosClave = listOf(
                     "Homeostasis: Walter Cannon (1926); equilibrio dinámico del medio interno (glucemia, pH, temperatura).",
                     "Irritabilidad: respuesta inmediata, transitoria y reversible a un estímulo (nastias, taxismos, reflejos).",
@@ -1209,39 +1367,39 @@ internal object BiologiaPart1 {
                     id = "bio_t02_s02_c2",
                     statement = "Al entrar en contacto con una llama ardiente, una persona retira la mano de forma involuntaria en una fracción de segundo gracias a un arco reflejo. Esta respuesta inmediata y transitoria corresponde a la característica biológica de:",
                     options = listOf(
+                        "Homeostasis renal crónica",
                         "Adaptación evolutiva morfológica",
                         "Irritabilidad",
                         "Selección natural estabilizadora",
                         "Crecimiento hiperplásico",
-                        "Homeostasis renal crónica"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "La irritabilidad es la capacidad de responder de manera rápida, transitoria y coordinada ante un estímulo nocivo, térmico, mecánico o lumínico del medio ambiente."
                 ),
                 Challenge(
                     id = "bio_t02_s02_c3",
                     statement = "Cuando la temperatura corporal se eleva por encima de 37 °C durante una caminata en el cañón del Colca, el hipotálamo desencadena sudoración profusa y vasodilatación periférica para disipar calor. Este mecanismo ilustra el principio de:",
                     options = listOf(
-                        "Homeostasis termorreguladora",
-                        "Irritabilidad vegetal sismonástica",
                         "Evolución convergente",
                         "Adaptación genética individual",
-                        "Hipertrofia muscular rápida"
+                        "Hipertrofia muscular rápida",
+                        "Homeostasis termorreguladora",
+                        "Irritabilidad vegetal sismonástica",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 3,
                     explanation = "La homeostasis es la regulación activa y coordinada del medio interno para mantener parámetros fisicoquímicos constantes (como la temperatura corporal) frente a variaciones externas."
                 ),
                 Challenge(
                     id = "bio_t02_s02_c4",
                     statement = "Las hojas de la planta *Mimosa pudica* se pliegan sobre el raquis a los pocos segundos de ser rozadas mecánicamente y recuperan su posición extendida minutos después. Este fenómeno se clasifica como:",
                     options = listOf(
-                        "Geotropismo positivo irreversible",
-                        "Sismonastia (respuesta por irritabilidad)",
                         "Adaptación morfológica permanente",
                         "Fotoperiodismo endergónico",
-                        "Mutación somática repentina"
+                        "Mutación somática repentina",
+                        "Geotropismo positivo irreversible",
+                        "Sismonastia (respuesta por irritabilidad)",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El plegamiento de las hojas de *Mimosa pudica* es una sismonastia: un movimiento de turgencia reversible e inmediato ante el tacto, correspondiente a la irritabilidad en vegetales."
                 ),
                 Challenge(
@@ -1274,26 +1432,26 @@ internal object BiologiaPart1 {
                     id = "bio_t02_s02_c7",
                     statement = "¿Cuál es el criterio temporal cardinal que distingue a la irritabilidad de la adaptación biológica?",
                     options = listOf(
+                        "No existe distinción alguna; ambos términos son rigurosamente sinónimos en ecología",
                         "La irritabilidad toma millones de años en manifestarse, mientras que la adaptación ocurre en segundos",
                         "La irritabilidad es una respuesta momentánea y reversible del individuo; la adaptación es un rasgo poblacional forjado por generaciones",
                         "La irritabilidad solo ocurre en animales y la adaptación solo en bacterias",
                         "La irritabilidad requiere mitosis y la adaptación ocurre solo por gemación",
-                        "No existe distinción alguna; ambos términos son rigurosamente sinónimos en ecología"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "La irritabilidad es inmediata, puntual y reversible frente a un estímulo transitorio. La adaptación es un cambio permanente y heredable fijado por selección natural a través de las generaciones en una población."
                 ),
                 Challenge(
                     id = "bio_t02_s02_c8",
                     statement = "El fisiólogo que acuñó y popularizó en 1926 el término 'homeostasis' para designar los procesos coordinados que mantienen la estabilidad del medio interno fue:",
                     options = listOf(
+                        "Theodor Schwann",
+                        "Robert Hooke",
                         "Jean-Baptiste Lamarck",
                         "Walter Cannon",
                         "Ernst Haeckel",
-                        "Theodor Schwann",
-                        "Robert Hooke"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Walter Cannon introdujo el término 'homeostasis' basándose en los estudios previos de Claude Bernard sobre la constancia del medio interno (*milieu intérieur*)."
                 )
             )
@@ -1337,7 +1495,30 @@ internal object BiologiaPart1 {
                     # 2.3.4 — Crecimiento vs Desarrollo
                     - **Crecimiento:** Aumento cuantitativo de materia viva. En organismos unicelulares ocurre por incremento del volumen celular (**hipertrofia**); en pluricelulares ocurre por multiplicación del número de células mediante mitosis (**hiperplasia**).
                     - **Desarrollo:** Cambios cualitativos que implican diferenciación celular, especialización funcional y morfogénesis ontogenética a lo largo de la vida.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Estrategias Reproductivas Comparadas
+
+### Reproducción asexual: cinco mecanismos con ejemplo fijo
+- **Fisión binaria:** una célula se parte en dos idénticas (bacterias, amebas). La más rápida: 20 minutos por generación en E. coli.
+- **Gemación:** brote o yema que crece y se separa (hidra de agua dulce, levaduras Saccharomyces).
+- **Fragmentación:** un trozo regenera el todo (planaria, estrella de mar por autotomía).
+- **Esporulación:** esporas resistentes para dispersión masiva por viento (hongos y helechos).
+- **Partenogénesis:** óvulo no fecundado que se desarrolla (zánganos de abeja haploides; lagartijas sin machos).
+- Ventaja: UN progenitor, rápida colonización. Costo: CERO variabilidad (clones vulnerables a un solo patógeno o cambio).
+
+### Reproducción sexual: el precio de la variabilidad
+- Requiere DOS progenitores y gametos (fecundación), más lenta y costosa energéticamente.
+- **Fuentes de variabilidad:** entrecruzamiento + segregación independiente + fecundación al azar. Por eso los hermanos (salvo gemelos monocigóticos) son genéticamente distintos.
+- Ventaja evolutiva: la variabilidad es la materia prima de la selección natural; las poblaciones sexuales se adaptan más rápido.
+
+### Crecimiento vs. desarrollo (no son sinónimos)
+- **Crecimiento:** aumento CUANTITATIVO irreversible (talla, masa). En animales: hiperplasia (más células por mitosis); en músculo adulto: hipertrofia (células más grandes).
+- **Desarrollo:** cambio CUALITATIVO (diferenciación, morfogénesis, maduración). Un tumor crece sin desarrollarse; un embrión se desarrolla mientras crece.
+- Trampa: la hipertrofia es de células que YA NO se dividen (músculo esquelético, neuronas); la hiperplasia exige mitosis activa.
+
+""",
                 conceptosClave = listOf(
                     "Reproducción asexual: mitosis, monoparental, clones idénticos, sin variabilidad genética.",
                     "Partenogénesis: desarrollo de un óvulo no fecundado (ej. zánganos de abejas).",
@@ -1352,13 +1533,13 @@ internal object BiologiaPart1 {
                     id = "bio_t02_s03_c1",
                     statement = "En un vivero de Arequipa se propagan plantas de fresa mediante estolones rastreros que enraízan y forman nuevos vástagos. Respecto a este método de multiplicación, se puede afirmar con rigor biológico que:",
                     options = listOf(
-                        "Origina descendientes con amplia variabilidad por recombinación meiótica",
-                        "Produce descendientes genéticamente idénticos (clones) a la planta madre",
                         "Requiere obligatoriamente la fecundación del estigma por polen",
                         "Disminuye la velocidad de colonización del sustrato",
-                        "Reduce a la mitad el número cromosómico en las células hijas"
+                        "Reduce a la mitad el número cromosómico en las células hijas",
+                        "Origina descendientes con amplia variabilidad por recombinación meiótica",
+                        "Produce descendientes genéticamente idénticos (clones) a la planta madre",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La reproducción mediante estolones es multiplicación vegetativa asexual gobernada por mitosis; al no existir meiosis ni fecundación, los nuevos individuos son clones genéticos del progenitor."
                 ),
                 Challenge(
@@ -1378,52 +1559,52 @@ internal object BiologiaPart1 {
                     id = "bio_t02_s03_c3",
                     statement = "La principal ventaja biológica que confiere la reproducción sexual frente a la asexual para la supervivencia a largo plazo de una especie ante epidemias o cambios climáticos es:",
                     options = listOf(
-                        "La rapidez con la que se multiplica la población en pocos minutos",
                         "La generación de variabilidad genética en los descendientes",
                         "El ahorro total de energía al no requerir búsqueda de pareja",
                         "La producción exclusiva de clones resistentes",
-                        "El mantenimiento perpetuo de genomas completamente idénticos"
+                        "El mantenimiento perpetuo de genomas completamente idénticos",
+                        "La rapidez con la que se multiplica la población en pocos minutos",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La reproducción sexual genera combinaciones genéticas inéditas gracias al entrecruzamiento meiótico y la fecundación aleatoria, lo que dota a la población de diversidad adaptativa frente a contingencias ambientales."
                 ),
                 Challenge(
                     id = "bio_t02_s03_c4",
                     statement = "Las bacterias como *Escherichia coli* se reproducen dividiendo su célula madre en dos células hijas de tamaño semejante tras replicar su único cromosoma circular. Esta modalidad asexual se denomina:",
                     options = listOf(
+                        "Partenogénesis haplodiploide",
+                        "Multiplicación por rizomas",
                         "Fisión binaria o bipartición",
                         "Gemación asimétrica",
                         "Gametogénesis meiótica",
-                        "Partenogénesis haplodiploide",
-                        "Multiplicación por rizomas"
                     ),
-                    correctIndex = 0,
+                    correctIndex = 2,
                     explanation = "La fisión binaria o bipartición es la forma clásica de reproducción asexual de procariontes y protistas, dando origen a dos células hijas de idéntico genoma."
                 ),
                 Challenge(
                     id = "bio_t02_s03_c5",
                     statement = "Al observar al microscopio levaduras de panadería (*Saccharomyces cerevisiae*) en fermentación, se aprecia una protuberancia que crece sobre la célula madre hasta independizarse. Este proceso corresponde a:",
                     options = listOf(
+                        "Fecundación anisogámica",
+                        "Regeneración tisular",
                         "Esporulación",
                         "Gemación",
                         "Fragmentación",
-                        "Fecundación anisogámica",
-                        "Regeneración tisular"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La gemación es una reproducción asexual asimétrica donde se forma una yema o brote sobre el cuerpo progenitor, que tras madurar se separa o permanece formando colonias."
                 ),
                 Challenge(
                     id = "bio_t02_s03_c6",
                     statement = "El incremento de masa muscular en un atleta que entrena levantamiento de pesas ocurre fundamentalmente por el aumento de volumen y miofibrillas dentro de las fibras musculares maduras preexistentes. Este fenómeno es:",
                     options = listOf(
-                        "Hiperplasia",
-                        "Hipertrofia celular",
                         "Diferenciación meiótica",
                         "Metaplasia maligna",
-                        "Crenación citoplasmática"
+                        "Crenación citoplasmática",
+                        "Hiperplasia",
+                        "Hipertrofia celular",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La hipertrofia es el aumento en el tamaño y volumen de las células individuales sin aumento en su número, típico del músculo esquelético adulto cuyas fibras no se dividen por mitosis."
                 ),
                 Challenge(
@@ -1443,52 +1624,52 @@ internal object BiologiaPart1 {
                     id = "bio_t02_s03_c8",
                     statement = "Si una planaria dulceacuícola (*Dugesia*) se corta transversalmente en dos fragmentos, cada sección es capaz de reconstituir un organismo completo y funcional. Esta forma de reproducción asexual se clasifica como:",
                     options = listOf(
-                        "Gemación endógena",
                         "Fragmentación y regeneración",
                         "Partenogénesis telitoquica",
                         "Bipartición bacteriana",
-                        "Esporulación sincrónica"
+                        "Esporulación sincrónica",
+                        "Gemación endógena",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La fragmentación (acompañada de regeneración celular gracias a neoblastos pluripotentes) permite a platelmintos y equinodermos regenerar individuos íntegros a partir de segmentos corporales."
                 ),
                 Challenge(
                     id = "bio_t02_s03_c9",
                     statement = "Si una población de peces en una laguna aislada se reproduce exclusivamente por clonación asexual durante siglos y aparece una bacteria parásita letal ante la cual ningún pez es inmune, el desenlace más probable será:",
                     options = listOf(
+                        "La transformación de todos los individuos en clones resistentes",
                         "Una mutación espontánea sincrónica en el 100% de la población",
                         "La extinción masiva de la población por carecer de variabilidad genética",
                         "El inicio inmediato de partenogénesis protectora",
                         "La conversión instantánea de sus células a células procariotas",
-                        "La transformación de todos los individuos en clones resistentes"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Al ser clones genéticamente uniformes, si el genoma de la población no posee resistencia natural frente al patógeno, todos los individuos sucumbirán por igual al carecer de diversidad alélica."
                 ),
                 Challenge(
                     id = "bio_t02_s03_c10",
                     statement = "En el parásito de la malaria (*Plasmodium vivax*), una sola célula infecta el hepatocito y divide su núcleo en decenas de porciones antes de fragmentar su citoplasma, liberando múltiples merozoítos. Esta división se conoce como:",
                     options = listOf(
+                        "Fragmentación estolonífera",
+                        "Bipartición longitudinal",
                         "Gemación simple",
                         "Esporulación o esquizogonia múltiple",
                         "Conjugación paramecial",
-                        "Fragmentación estolonífera",
-                        "Bipartición longitudinal"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La esporulación o esquizogonia es una división múltiple característica de esporozoos como *Plasmodium*, donde el núcleo realiza múltiples mitosis antes de la citocinesis simultánea."
                 ),
                 Challenge(
                     id = "bio_t02_s03_c11",
                     statement = "La serie secuencial de transformaciones cualitativas, adquisición de especialización funcional y maduración tisular desde el cigoto hasta el estado senil de un organismo recibe el nombre de:",
                     options = listOf(
-                        "Hipertrofia neta",
-                        "Desarrollo ontogenético",
                         "Bipartición",
                         "Irritabilidad hormonal",
-                        "Homeostasis pasiva"
+                        "Homeostasis pasiva",
+                        "Hipertrofia neta",
+                        "Desarrollo ontogenético",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El desarrollo abarca todos los cambios cualitativos, morfogenéticos y de diferenciación celular que experimenta un individuo a lo largo de su ciclo de vida ontogénico."
                 ),
                 Challenge(
@@ -1542,7 +1723,30 @@ internal object BiologiaPart1 {
                     13. **Ecosistema:** Unidad funcional de la ecología constituida por la interacción dinámica entre los seres vivos (biocenosis) y el medio físico inerte abiótico (biotopo: suelo, clima, agua, radiación solar).
                     14. **Bioma:** Grandes zonas bioclimáticas de la Tierra que comparten clima característico, flora y fauna clímax (ej. tundra, taiga, puna andina, selva tropical).
                     15. **Biosfera:** Franja habitable del planeta Tierra (litósfera superficial, hidrósfera y tropósfera baja) donde prospera la vida.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: El Debate de los Virus y Fronteras de la Vida
+
+### Virus: el caso límite (tabla virus vs. célula)
+- **Virus:** acelular, sin metabolismo propio, parásito obligado, cristalizable (Wendell Stanley, virus del mosaico del tabaco), solo se replica dentro de célula huésped.
+- **Célula mínima (bacteria):** metabolismo propio, se divide sola, sensible a antibióticos.
+- **Postura de examen:** el virus NO es ser vivo (carece de organización celular y metabolismo autónomo); es complejo supramolecular en la frontera.
+- Estructura viral básica: ácido nucleico (ADN o ARN, jamás ambos) + cápside proteica; algunos con envoltura lipídica (gripe, VIH).
+
+### Priones y viroides: aún más simples
+- **Prión:** SOLO proteína mal plegada infecciosa, sin ácido nucleico (Prusiner; kuru, Creutzfeldt-Jakob, vacas locas). Resiste ebullición y radiación.
+- **Viroide:** SOLO ARN circular desnudo que infecta plantas (cadang-cadang del cocotero).
+- Trampa: si preguntan "agente infeccioso sin ácidos nucleicos", la respuesta es prión, no virus.
+
+### Población, comunidad y ecosistema (deslinde con ejemplos)
+- **Población:** misma ESPECIE, mismo TIEMPO y ESPACIO (cardumen de anchovetas frente al Callao en 2024).
+- **Comunidad o biocenosis:** TODAS las poblaciones que interactúan (anchoveta + aves guaneras + lobos marinos + fitoplancton).
+- **Ecosistema:** comunidad + BIOTOPO (agua, luz, nutrientes, corriente de Humboldt).
+- **Biosfera:** suma de todos los ecosistemas; franja entre fosa oceánica y alta atmósfera donde la vida prospera.
+- Trampa: dos cardúmenes de anchoveta en mares distintos son DOS poblaciones; anchoveta + sardina juntas son UNA comunidad.
+
+""",
                 conceptosClave = listOf(
                     "Los virus son complejos supramoleculares abióticos (ácido nucleico + cápside proteica).",
                     "Nivel celular: primera unidad con vida autónoma y metabolismo propio.",
@@ -1570,39 +1774,39 @@ internal object BiologiaPart1 {
                     id = "bio_t02_s04_c2",
                     statement = "El virus causante de la fiebre amarilla está constituido por una cápside proteica que rodea a una hebra de ARN monocatenario, careciendo de metabolismo y citoplasma. ¿En qué nivel de organización de la materia se ubica este agente infeccioso?",
                     options = listOf(
-                        "Nivel celular",
                         "Nivel supramolecular (complejo supramolecular)",
                         "Nivel molecular simple",
                         "Nivel de individuo celular",
-                        "Nivel tisular"
+                        "Nivel tisular",
+                        "Nivel celular",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Los virus no son células; son agregados complejos macromoleculares (ácido nucleico asociado a proteínas capsulares), ubicándose en el nivel supramolecular del estrato abiótico."
                 ),
                 Challenge(
                     id = "bio_t02_s04_c3",
                     statement = "Un grupo de 350 vicuñas (*Vicugna vicugna*) que pastean juntas en la planicie de Pampa Cañahuas durante el mes de junio del presente año constituye formalmente un ejemplo de:",
                     options = listOf(
+                        "Ecosistema cerrado",
+                        "Biotopo de altura",
                         "Comunidad biótica",
                         "Población",
                         "Bioma altoandino",
-                        "Ecosistema cerrado",
-                        "Biotopo de altura"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Una población se define como el conjunto de individuos pertenecientes a una misma especie biológica que comparten un espacio geográfico y un marco temporal delimitados."
                 ),
                 Challenge(
                     id = "bio_t02_s04_c4",
                     statement = "¿Cuál es el nivel jerárquico más elemental de la organización de la materia donde emerge de forma incuestionable la vida autónoma con metabolismo propio?",
                     options = listOf(
+                        "Nivel tisular",
                         "Nivel molecular",
                         "Nivel macromolecular",
                         "Nivel supramolecular",
                         "Nivel celular",
-                        "Nivel tisular"
                     ),
-                    correctIndex = 3,
+                    correctIndex = 4,
                     explanation = "La célula es la unidad morfológica, fisiológica y genética fundamental de los seres vivos; es el nivel más simple dotado de metabolismo activo, homeostasis y autorreplicación."
                 ),
                 Challenge(
@@ -1635,39 +1839,39 @@ internal object BiologiaPart1 {
                     id = "bio_t02_s04_c7",
                     statement = "Una molécula de hemoglobina con cuatro cadenas polipeptídicas y cuatro grupos hemo se ubica en el nivel de organización:",
                     options = listOf(
-                        "Atómico",
                         "Macromolecular",
                         "Supramolecular",
                         "Tisular",
-                        "Celular"
+                        "Celular",
+                        "Atómico",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Las proteínas, ácidos nucleicos y polisacáridos son polímeros de alto peso molecular que pertenecen al nivel macromolecular."
                 ),
                 Challenge(
                     id = "bio_t02_s04_c8",
                     statement = "El miocardio (tejido muscular cardíaco) y el parénquima en empalizada de una hoja vegetal pertenecen respectivamente al nivel:",
                     options = listOf(
+                        "Supramolecular",
+                        "Celular",
                         "Organológico",
                         "Tisular",
                         "Sistémico",
-                        "Supramolecular",
-                        "Celular"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Los tejidos biológicos (conjuntos de células especializadas con origen y funciones comunes) se sitúan en el nivel tisular."
                 ),
                 Challenge(
                     id = "bio_t02_s04_c9",
                     statement = "El estómago, el hígado humano o la flor de la cantuta son estructuras anatómicas complejas integradas por la concurrencia de diversos tejidos; por lo tanto, se ubican en el nivel:",
                     options = listOf(
-                        "Tisular",
-                        "Organológico",
                         "Sistémico",
                         "Poblacional",
-                        "Celular"
+                        "Celular",
+                        "Tisular",
+                        "Organológico",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Un órgano (como el estómago, pulmón o flor) está formado por la integración estructural y funcional de diferentes tejidos biológicos (epitelial, conectivo, muscular, vascular, etc.)."
                 ),
                 Challenge(
@@ -1700,39 +1904,39 @@ internal object BiologiaPart1 {
                     id = "bio_t02_s04_c12",
                     statement = "¿Cuál de los siguientes parámetros es una propiedad emergente exclusiva del nivel de población que carece de sentido cuando se aplica a un individuo aislado?",
                     options = listOf(
+                        "Presión arterial sistólica",
                         "Metabolismo catabólico",
                         "Tasa de natalidad y densidad poblacional",
                         "Irritabilidad pupilar",
                         "Respiración celular aerobia",
-                        "Presión arterial sistólica"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "La tasa de natalidad, mortalidad, densidad poblacional y distribución etaria son atributos colectivos emergentes del nivel poblacional que no pueden medirse en un individuo único."
                 ),
                 Challenge(
                     id = "bio_t02_s04_c13",
                     statement = "Un protozoario ciliado como *Paramecium aurelia*, constituido por una sola célula libre con vacuolas y macronúcleo, se clasifica simultáneamente en los niveles:",
                     options = listOf(
+                        "Supramolecular y sistémico",
+                        "Comunitario y bioma",
                         "Atómico y tisular",
                         "Celular y de individuo",
                         "Tisular y organológico",
-                        "Supramolecular y sistémico",
-                        "Comunitario y bioma"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "En los organismos unicelulares (bacterias, protozoos, levaduras), una única célula conforma el organismo biológico completo; por ello coinciden los niveles celular y de individuo."
                 ),
                 Challenge(
                     id = "bio_t02_s04_c14",
                     statement = "La franja global del planeta Tierra que integra todas las áreas donde se desarrolla la vida, abarcando la hidrósfera, litósfera superficial y tropósfera, se denomina:",
                     options = listOf(
-                        "Biocenosis planetaria",
-                        "Biosfera",
                         "Biotopo oceánico",
                         "Bioma polar",
-                        "Ecosistema continental"
+                        "Ecosistema continental",
+                        "Biocenosis planetaria",
+                        "Biosfera",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La biosfera es el mayor nivel de organización ecológica: representa la delgada capa del planeta Tierra habitada por los seres vivos y sus interacciones con los ciclos globales."
                 )
             )
@@ -1781,7 +1985,34 @@ internal object BiologiaPart1 {
                     - **Cobalto (Co):** Átomo central de la cobalamina (**vitamina B₁₂**); su ausencia causa anemia perniciosa.
                     - **Manganeso (Mn):** Participa en la fotólisis del agua en el fotosistema II durante la fotosíntesis luminosa.
                     - **Silicio (Si):** Brinda rigidez y protección en las frústulas de diatomeas y en los tallos de gramíneas y equisetos.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Los 6 Grandes y los Oligoelementos Olvidados
+
+### Primarios CHONPS (96-99% de la masa viva)
+- **C (carbono):** tetravalente, esqueletos de biomoléculas; base de la química orgánica.
+- **H (hidrógeno):** agua, puentes de H, poder reductor (NADH).
+- **O (oxígeno):** agua y respiración aerobia como aceptor final.
+- **N (nitrógeno):** proteínas (amino) y ácidos nucleicos (bases).
+- **P (fósforo):** ATP, fosfolípidos, backbone de ADN/ARN.
+- **S (azufre):** cisteína y metionina; puentes disulfuro que estabilizan proteínas.
+
+### Secundarios y oligoelementos de examen
+- **Ca (calcio):** huesos y dientes (hidroxiapatita), coagulación, segundo mensajero muscular.
+- **Mg (magnesio):** centro de la clorofila; cofactor de ATPasas y quinasas.
+- **K y Na:** potencial de membrana y impulso nervioso (bomba Na+/K+).
+- **Fe (hierro):** hemo de hemoglobina y mioglobina; su falta produce anemia ferropénica.
+- **I (yodo):** hormonas tiroideas T3/T4; su falta produce bocio endémico.
+- **F (flúor):** esmalte dental; **Zn (zinc):** anhidrasa carbónica e insulina cristalina.
+- **Mn, Cu, Co (B12), Se, Mo:** cofactores enzimáticos puntuales.
+
+### Trampas fijas de examen
+1. El elemento más abundante en la MATERIA VIVA es el oxígeno (agua); en la CORTEZA es el silicio tras el oxígeno.
+2. Mg va con CLOROFILA (vegetal) y Fe con HEMOGLOBINA (animal): el par se invierte en distractores.
+3. El azufre aparece en DOS aminoácidos (cisteína y metionina) y en puentes disulfuro de queratina (cabello).
+
+""",
                 conceptosClave = listOf(
                     "Bioelementos primarios (C, H, O, N, P, S): 96-99% de la masa corporal.",
                     "Magnesio en la clorofila; Hierro en la hemoglobina y mioglobina.",
@@ -1809,52 +2040,52 @@ internal object BiologiaPart1 {
                     id = "bio_t03_s01_c2",
                     statement = "En la bioquímica vegetal, el átomo metálico divalente que ocupa la posición central en el anillo de porfirina de la molécula de clorofila es el:",
                     options = listOf(
-                        "Hierro (Fe²⁺)",
                         "Magnesio (Mg²⁺)",
                         "Cobre (Cu²⁺)",
                         "Calcio (Ca²⁺)",
-                        "Cinc (Zn²⁺)"
+                        "Cinc (Zn²⁺)",
+                        "Hierro (Fe²⁺)",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El magnesio (Mg²⁺) es el átomo central de la clorofila, indispensable para la absorción de fotones durante la fase luminosa de la fotosíntesis."
                 ),
                 Challenge(
                     id = "bio_t03_s01_c3",
                     statement = "Durante la generación y mantenimiento del potencial eléctrico transmembrana en una neurona humana, ¿cuál es el catión más abundante en el medio intracelular y cuál en el extracelular?",
                     options = listOf(
+                        "Intracelular: Fe²⁺; Extracelular: K⁺",
                         "Intracelular: Na⁺; Extracelular: K⁺",
                         "Intracelular: K⁺; Extracelular: Na⁺",
                         "Intracelular: Ca²⁺; Extracelular: Mg²⁺",
                         "Intracelular: Cl⁻; Extracelular: Na⁺",
-                        "Intracelular: Fe²⁺; Extracelular: K⁺"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El potasio (K⁺) es el principal catión dentro de la célula (intracelular), mientras que el sodio (Na⁺) predomina en el líquido intersticial y plasma (extracelular)."
                 ),
                 Challenge(
                     id = "bio_t03_s01_c4",
                     statement = "La extraordinaria diversidad y estabilidad de las biomoléculas orgánicas que componen la materia viva se sustenta primordialmente en la capacidad del carbono de:",
                     options = listOf(
+                        "Ionizarse rápidamente perdiendo cuatro electrones libres",
+                        "Comportarse como un ácido inorgánico fuerte en disolución",
                         "Formar enlaces iónicos espontáneos con gases nobles",
                         "Presentar tetravalencia y autosaturación formando enlaces covalentes estables C-C",
                         "Actuar como un solvente polar universal a 37 °C",
-                        "Ionizarse rápidamente perdiendo cuatro electrones libres",
-                        "Comportarse como un ácido inorgánico fuerte en disolución"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El átomo de carbono posee cuatro electrones de valencia (tetravalencia) y un bajo radio atómico, lo que le permite unirse consigo mismo (autosaturación) y con otros elementos mediante enlaces covalentes estables y variados."
                 ),
                 Challenge(
                     id = "bio_t03_s01_c5",
                     statement = "En el sarcómero de una fibra muscular esquelética, la contracción mecánica se inicia cuando un bioelemento secundario se libera del retículo sarcoplásmico y se une a la troponina C. Dicho bioelemento es el:",
                     options = listOf(
-                        "Sodio",
-                        "Calcio (Ca²⁺)",
                         "Hierro",
                         "Potasio",
-                        "Fósforo"
+                        "Fósforo",
+                        "Sodio",
+                        "Calcio (Ca²⁺)",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El calcio (Ca²⁺) liberado hacia el sarcoplasma se une a la troponina C, provocando el desplazamiento de la tropomiosina para permitir la interacción entre actina y miosina."
                 ),
                 Challenge(
@@ -1874,52 +2105,52 @@ internal object BiologiaPart1 {
                     id = "bio_t03_s01_c7",
                     statement = "Un estudiante de secundaria presenta fatiga crónica, palidez mucocutánea y disnea de esfuerzo. El hemograma confirma anemia ferropénica. La alteración molecular se debe a la síntesis deficiente de:",
                     options = listOf(
-                        "Insulina pancreática",
                         "Hemoglobina debido a la falta de hierro",
                         "Albúmina plasmática por déficit de sodio",
                         "Colágeno por ausencia de calcio",
-                        "Amilasa salival por falta de cloro"
+                        "Amilasa salival por falta de cloro",
+                        "Insulina pancreática",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El hierro es el componente catalítico central del grupo hemo en la hemoglobina; su carencia impide la oxigenación tisular óptima generando anemia microcítica e hipocrómica."
                 ),
                 Challenge(
                     id = "bio_t03_s01_c8",
                     statement = "En el jugo gástrico secretado por las células parietales de la mucosa estomacal, el principal anión inorgánico responsable de la acidez estomacal (HCl) es el:",
                     options = listOf(
+                        "Nitrato",
                         "Bicarbonato",
                         "Cloruro (Cl⁻)",
                         "Fosfato",
                         "Sulfato",
-                        "Nitrato"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El ion cloruro (Cl⁻) es el anión más abundante del líquido extracelular y forma el ácido clorhídrico (HCl) gástrico necesario para activar el pepsinógeno en pepsina."
                 ),
                 Challenge(
                     id = "bio_t03_s01_c9",
                     statement = "Durante la etapa luminosa de la fotosíntesis, el agua se escinde liberando protones, electrones y oxígeno molecular gaseoso (fotólisis del agua). El oligoelemento cofactor indispensable del complejo enzimático del fotosistema II es el:",
                     options = listOf(
+                        "Cobre",
+                        "Sodio",
                         "Yodo",
                         "Manganeso (Mn)",
                         "Flúor",
-                        "Cobre",
-                        "Sodio"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El manganeso (Mn), junto con el calcio y el cloro, integra el complejo liberador de oxígeno del fotosistema II que cataliza la oxidación y fotólisis del agua."
                 ),
                 Challenge(
                     id = "bio_t03_s01_c10",
                     statement = "El oligoelemento que actúa como cofactor indispensable de la anhidrasa carbónica eritrocitaria y de las polimerasas en la síntesis de ácidos nucleicos, interviniendo además en la cicatrización e inmunidad, es el:",
                     options = listOf(
-                        "Cinc (Zn)",
                         "Cobalto",
                         "Flúor",
                         "Yodo",
-                        "Silicio"
+                        "Silicio",
+                        "Cinc (Zn)",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 4,
                     explanation = "El cinc (Zn) es un oligoelemento cofactor de más de 300 enzimas celulares, incluyendo la anhidrasa carbónica, la ARN/ADN polimerasa y las metaloproteinasas de cicatrización."
                 ),
                 Challenge(
@@ -1939,26 +2170,26 @@ internal object BiologiaPart1 {
                     id = "bio_t03_s01_c12",
                     statement = "En los artrópodos como los camarones de río y en cefalópodos marinos, el transporte de oxígeno en la hemolinfa no lo realiza la hemoglobina, sino la hemocianina, proteína respiratoria que posee:",
                     options = listOf(
-                        "Hierro férrico",
                         "Cobre (Cu)",
                         "Magnesio libre",
                         "Cobalto quelado",
-                        "Cinc divalente"
+                        "Cinc divalente",
+                        "Hierro férrico",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La hemocianina es un pigmento respiratorio azulado que contiene átomos de cobre coordinados directamente para fijar y transportar el oxígeno molecular en invertebrados."
                 ),
                 Challenge(
                     id = "bio_t03_s01_c13",
                     statement = "¿Cuál de los siguientes grupos reúne exclusivamente a bioelementos primarios u organógenos que constituyen aproximadamente el 96% al 99% de la biomasa de los organismos vivos?",
                     options = listOf(
+                        "Ca, Fe, Na, I, P",
                         "Na, K, Cl, Ca, Mg",
                         "C, H, O, N, P, S",
                         "Fe, Cu, Zn, I, F",
                         "Mn, Co, Mo, Se, Si",
-                        "Ca, Fe, Na, I, P"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Los bioelementos primarios u organógenos son Carbono, Hidrógeno, Oxígeno, Nitrógeno, Fósforo y Azufre (CHONPS), constituyentes de glúcidos, lípidos, proteínas y ácidos nucleicos."
                 )
             )
@@ -1994,7 +2225,31 @@ internal object BiologiaPart1 {
                     - **Enlace covalente intramolecular (O-H):** Une los átomos dentro de una misma molécula; es fuerte y requiere gran energía química para romperse (≈ 460 kJ/mol).
                     - **Puente de hidrógeno intermolecular:** Une moléculas vecinas de agua; individualmente es débil (≈ 20 kJ/mol), pero su multitudinaria suma colectiva otorga al agua líquida una notable cohesión interna.
                     - **Comparación con el H₂S:** El sulfuro de hidrógeno (H₂S, masa molar 34 g/mol) es un gas a 20 °C porque el azufre es menos electronegativo y no forma puentes de hidrógeno eficaces; en cambio, el H₂O (masa molar 18 g/mol) es un líquido gracias a su densa red de puentes de hidrógeno.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Geometría del Agua y la Red de Hidrógeno
+
+### Por qué el agua es angular (104,5°)
+- El oxígeno usa hibridación sp3: dos enlaces O-H y DOS pares libres que comprimen el ángulo tetraédrico ideal (109,5°) hasta 104,5°.
+- Esa asimetría crea el DIPOLO: oxígeno parcial negativo, hidrógenos parciales positivos, molécula neta neutra.
+
+### El puente de hidrógeno en detalle
+- **Naturaleza:** atracción electrostática entre H unido a átomo electronegativo (O, N, F) y un par libre vecino. Energía 5-30 kJ/mol: débil frente al covalente (~460) pero colosal en red.
+- **En agua líquida:** cada molécula forma en promedio 3-4 puentes que se rompen y reforman en picosegundos (fluidez + cohesión).
+- **En hielo:** red tetraédrica RÍGIDA de 4 puentes por molécula; la estructura abierta ocupa MÁS volumen: el hielo flota.
+
+### La anomalía frente a sus primos (tabla)
+- **H2S (34 g/mol):** gas a 20 °C; el azufre es menos electronegativo y casi no forma puentes.
+- **NH3:** forma puentes pero menos densos; hierve a -33 °C.
+- **HF:** puentes fuertes pero cadenas lineales, no red 3D.
+- **H2O (18 g/mol):** hierve a 100 °C pese a ser la más liviana: la red tridimensional manda.
+
+### Tensión superficial y capilaridad
+- **Cohesión** (agua-agua) + **adhesión** (agua-pared) explican el menisco y el ascenso xilemático.
+- Insectos como el zapatero caminan sobre el agua por tensión superficial, no por flotación.
+
+""",
                 conceptosClave = listOf(
                     "Ángulo de enlace del agua: 104.5° (geometría angular).",
                     "Dipolo eléctrico: oxígeno con δ⁻ e hidrógenos con δ⁺; carga neta neutra.",
@@ -2009,26 +2264,26 @@ internal object BiologiaPart1 {
                     id = "bio_t03_s02_c1",
                     statement = "En la molécula de agua (H₂O), los dos enlaces covalentes que unen al oxígeno central con los dos átomos de hidrógeno definen una geometría angular cuyo ángulo de enlace mide exactamente:",
                     options = listOf(
+                        "90.0°",
+                        "109.5°",
                         "180.0°",
                         "104.5°",
                         "120.0°",
-                        "90.0°",
-                        "109.5°"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Los dos pares de electrones no enlazantes del oxígeno ejercen repulsión sobre los pares enlazantes, cerrando el ángulo tetraédrico teórico hasta un ángulo angular de 104.5°."
                 ),
                 Challenge(
                     id = "bio_t03_s02_c2",
                     statement = "La molécula de agua es catalogada fisicoquímicamente como un dipolo eléctrico permanente porque:",
                     options = listOf(
-                        "Posee carga iónica positiva neta en solución acuosa",
-                        "El oxígeno es más electronegativo que el hidrógeno, generando densidades de carga parciales asimétricas",
                         "Se disocia espontáneamente en electrones y protones libres",
                         "Contiene enlaces peptídicos de alta polaridad",
-                        "Tiene cuatro núcleos atómicos de masa idéntica"
+                        "Tiene cuatro núcleos atómicos de masa idéntica",
+                        "Posee carga iónica positiva neta en solución acuosa",
+                        "El oxígeno es más electronegativo que el hidrógeno, generando densidades de carga parciales asimétricas",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La diferencia de electronegatividad entre el oxígeno (3.5) y los hidrógenos (2.1) crea una separación de carga: densidad parcial negativa (δ⁻) en el oxígeno y positiva (δ⁺) en los hidrógenos."
                 ),
                 Challenge(
@@ -2048,52 +2303,52 @@ internal object BiologiaPart1 {
                     id = "bio_t03_s02_c4",
                     statement = "En la estructura cristalina del hielo a 0 °C, cada molécula individual de agua se encuentra enlazada con otras moléculas adyacentes formando un número máximo constante de:",
                     options = listOf(
-                        "2 puentes de hidrógeno",
                         "4 puentes de hidrógeno en una red tetraédrica fija",
                         "8 enlaces covalentes apolares",
                         "1 enlace iónico con el catión hidronio",
-                        "6 enlaces peptídicos hidrofóbicos"
+                        "6 enlaces peptídicos hidrofóbicos",
+                        "2 puentes de hidrógeno",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "En el hielo, cada molécula de agua forma 4 puentes de hidrógeno estables orientados hacia los vértices de un tetraedro regular, creando una estructura hexagonal abierta y rígida."
                 ),
                 Challenge(
                     id = "bio_t03_s02_c5",
                     statement = "El puente de hidrógeno que une a las moléculas de agua adyacentes consiste fundamentalmente en una:",
                     options = listOf(
+                        "Unión covalente fuerte con transferencia neta de protones",
+                        "Atracción hidrofóbica que excluye totalmente la polaridad",
                         "Atracción electrostática entre el polo δ⁻ del oxígeno de una molécula y el polo δ⁺ del hidrógeno de otra",
                         "Compartición de cuatro electrones pi deslocalizados entre dos núcleos de oxígeno",
                         "Fuerza magnética producida por el giro de neutrones",
-                        "Unión covalente fuerte con transferencia neta de protones",
-                        "Atracción hidrofóbica que excluye totalmente la polaridad"
                     ),
-                    correctIndex = 0,
+                    correctIndex = 2,
                     explanation = "El puente de hidrógeno es una interacción electrostática dipolar entre la densidad de carga negativa del oxígeno de una molécula de agua y la densidad positiva del hidrógeno de una molécula vecina."
                 ),
                 Challenge(
                     id = "bio_t03_s02_c6",
                     statement = "¿Cuál es la diferencia química esencial entre el enlace covalente O-H y el puente de hidrógeno en el agua?",
                     options = listOf(
+                        "Ambos enlaces son estrictamente idénticos en fuerza, longitud y ubicación",
+                        "El enlace covalente solo existe en estado gaseoso y el puente de hidrógeno solo en el vacío",
                         "El enlace covalente une dos moléculas de agua distintas; el puente une los átomos dentro de una misma molécula",
                         "El enlace covalente es intramolecular y de gran energía; el puente de hidrógeno es intermolecular y de menor energía individual",
                         "El puente de hidrógeno es el enlace más fuerte que existe en la naturaleza",
-                        "Ambos enlaces son estrictamente idénticos en fuerza, longitud y ubicación",
-                        "El enlace covalente solo existe en estado gaseoso y el puente de hidrógeno solo en el vacío"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El enlace covalente O-H es intramolecular (une los átomos de una misma molécula) y requiere ≈ 460 kJ/mol para romperse; el puente de hidrógeno es intermolecular (une moléculas vecinas) y tiene ≈ 20 kJ/mol."
                 ),
                 Challenge(
                     id = "bio_t03_s02_c7",
                     statement = "En el agua en estado líquido a temperatura fisiológica (37 °C), los puentes de hidrógeno se caracterizan por:",
                     options = listOf(
-                        "Permanecer permanentemente rígidos sin romperse jamás",
-                        "Formarse y romperse continuamente a velocidades de picosegundos, confiriendo fluidez dinámica",
                         "Impedir totalmente el movimiento traslacional de las moléculas",
                         "Transformarse espontáneamente en enlaces metálicos",
-                        "Existir exclusivamente en la interfase con el aire"
+                        "Existir exclusivamente en la interfase con el aire",
+                        "Permanecer permanentemente rígidos sin romperse jamás",
+                        "Formarse y romperse continuamente a velocidades de picosegundos, confiriendo fluidez dinámica",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "En el agua líquida los puentes de hidrógeno son efímeros y dinámicos: duran fracciones mínimas de segundo antes de reorganizarse, lo que permite que el agua sea fluida pero altamente cohesionada."
                 ),
                 Challenge(
@@ -2148,7 +2403,33 @@ internal object BiologiaPart1 {
                     - A diferencia de casi todos los líquidos que se contraen y vuelven más densos al enfriarse, el agua alcanza su **densidad máxima a 4 °C (1.000 g/cm³)**.
                     - Al descender de 4 °C a 0 °C, las moléculas se ordenan en una red cristalina de hielo con espacios intersticiales vacíos, haciendo que el **hielo sólido sea menos denso que el agua líquida (≈ 0.917 g/cm³)**.
                     - **Función ecológica:** El hielo flota en la superficie de lagos y ríos andinos o polares, actuando como una **capa aislante térmica** que impide el congelamiento del fondo, manteniendo el agua profunda en estado líquido a 4 °C y preservando la vida acuática durante el invierno.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: El Agua como Termostato y Solvente
+
+### Calor específico: el amortiguador térmico (1 cal/g °C)
+- El valor más ALTO entre líquidos comunes: calentar un lago cuesta muchísima energía; por eso el clima costero es estable y el cuerpo resiste fiebres.
+- Base molecular: la energía se gasta rompiendo puentes de H antes de acelerar moléculas (temperatura).
+
+### Calor de vaporización: sudar para enfriarse (540 cal/g)
+- Evaporar 1 g de sudor roba 540 cal de la piel: el mecanismo de termólisis humana más potente.
+- Las plantas transpiran por la misma física (enfriamiento foliar).
+
+### Capilaridad y la columna de agua del xilema
+- **Teoría cohesión-tensión:** la transpiración "jala" desde arriba; la cohesión mantiene la columna continua hasta 100 m en secoyas.
+- Sin capilaridad no hay ascenso de savia bruta contra la gravedad.
+
+### Densidad anómala: el hielo flota y salva ecosistemas
+- Agua líquida máxima densidad a 4 °C; al congelar se expande (~9%).
+- En lagos andinos y polares el hielo superficial AÍSLA el fondo líquido a 4 °C: la vida acuática sobrevive al invierno bajo la capa.
+
+### Solvente universal (polar disuelve polar)
+- **Hidrofílicos:** sales, azúcares, aminoácidos (solvatación iónica).
+- **Hidrofóbicos:** grasas y aceites se agregan (base del plegamiento proteico y la bicapa).
+- El agua es el MEDIO donde ocurre casi toda la química celular.
+
+""",
                 conceptosClave = listOf(
                     "Calor específico alto: amortiguador térmico interno (1 cal/g °C).",
                     "Calor de vaporización alto (540 cal/g): disipación de calor por sudoración.",
@@ -2163,52 +2444,52 @@ internal object BiologiaPart1 {
                     id = "bio_t03_s03_c1",
                     statement = "Durante una jornada de alta intensidad física bajo el sol en la costa arequipeña, una persona transpira profusamente. La evaporación del sudor en su piel le permite enfriar el organismo eficazmente gracias a que el agua posee:",
                     options = listOf(
-                        "Bajo calor latente de condensación",
                         "Elevado calor de vaporización",
                         "Baja constante dieléctrica",
                         "Densidad máxima en estado de vapor",
-                        "Poca cohesión entre sus moléculas"
+                        "Poca cohesión entre sus moléculas",
+                        "Bajo calor latente de condensación",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El elevado calor de vaporización del agua (≈ 540 cal/g) hace que la evaporación de apenas unos mililitros de sudor extraiga una ingente cantidad de calor de la piel, refrigerando el cuerpo."
                 ),
                 Challenge(
                     id = "bio_t03_s03_c2",
                     statement = "El agua actúa como un extraordinario amortiguador térmico dentro de las células vivas, evitando que la energía liberada por las reacciones metabólicas provoque fluctuaciones drásticas de temperatura. Esta función se debe a su:",
                     options = listOf(
+                        "Capacidad de sublimación rápida",
+                        "Densidad nula a 100 °C",
                         "Elevado calor específico",
                         "Baja viscosidad dinámica",
                         "Poco peso molecular",
-                        "Capacidad de sublimación rápida",
-                        "Densidad nula a 100 °C"
                     ),
-                    correctIndex = 0,
+                    correctIndex = 2,
                     explanation = "El elevado calor específico del agua (1 cal/g °C) le permite absorber o liberar grandes cantidades de calor experimentando variaciones térmicas mínimas, estabilizando la temperatura celular."
                 ),
                 Challenge(
                     id = "bio_t03_s03_c3",
                     statement = "Pequeños insectos como los zapateros acuáticos (*Gerris lacustris*) pueden desplazarse sobre la superficie de un estanque sin hundirse. La propiedad fisicoquímica del agua que permite este soporte es la:",
                     options = listOf(
+                        "Alta constante crioscópica",
+                        "Capacidad disolvente apolar",
                         "Baja tensión superficial",
                         "Elevada tensión superficial debida a la cohesión de puentes de hidrógeno",
                         "Densidad máxima a 0 °C",
-                        "Alta constante crioscópica",
-                        "Capacidad disolvente apolar"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La gran cohesión intermolecular del agua genera una elevada tensión superficial en la interfase líquido-aire, formando una lámina elástica capaz de soportar el peso de pequeños artrópodos."
                 ),
                 Challenge(
                     id = "bio_t03_s03_c4",
                     statement = "El ascenso continuo de agua y sales minerales (savia bruta) a través de los delgados vasos leñosos del xilema desde la raíz hasta las hojas de un eucalipto de 30 metros de altura se fundamenta en:",
                     options = listOf(
-                        "Bomba de sodio y potasio del periciclo",
-                        "El fenómeno de capilaridad resultante de la cohesión y adhesión del agua",
                         "La respiración anaerobia de la corteza",
                         "La alta solubilidad de los lípidos en savia elaborada",
-                        "La contracción de células musculares vegetales"
+                        "La contracción de células musculares vegetales",
+                        "Bomba de sodio y potasio del periciclo",
+                        "El fenómeno de capilaridad resultante de la cohesión y adhesión del agua",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La capilaridad, sustentada por la cohesión entre moléculas de agua y la adhesión de estas a las paredes hidrofílicas del xilema, permite el ascenso de la savia bruta por conductos capilares estrechos."
                 ),
                 Challenge(
@@ -2228,52 +2509,52 @@ internal object BiologiaPart1 {
                     id = "bio_t03_s03_c6",
                     statement = "Al disolver cloruro de sodio (NaCl) en agua pura, los cristales salinos se desmoronan y los iones se dispersan homogéneamente porque las moléculas dipolares de agua:",
                     options = listOf(
-                        "Oxidan al cloro convirtiéndolo en gas tóxico",
                         "Forman capas o esferas de solvatación orientadas electrostáticamente alrededor de cada ion Na⁺ y Cl⁻",
                         "Polimerizan la sal formando macromoléculas de celulosa",
                         "Neutralizan por completo las masas atómicas de los núcleos",
-                        "Precipitan el sodio hacia la atmósfera"
+                        "Precipitan el sodio hacia la atmósfera",
+                        "Oxidan al cloro convirtiéndolo en gas tóxico",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Las moléculas de agua forman capas de solvatación: el oxígeno parcialmente negativo rodea a los cationes Na⁺ y los hidrógenos positivos rodean a los aniones Cl⁻, separándolos e impidiendo que se recombinen."
                 ),
                 Challenge(
                     id = "bio_t03_s03_c7",
                     statement = "La propiedad del agua de adherirse a superficies con cargas polares o con grupos hidroxilo libres, como el vidrio de una probeta o las paredes celulares vegetales, se denomina:",
                     options = listOf(
+                        "Vaporización espontánea",
+                        "Turgencia osmolar",
                         "Adhesión",
                         "Cohesión pura",
                         "Densidad crítica",
-                        "Vaporización espontánea",
-                        "Turgencia osmolar"
                     ),
-                    correctIndex = 0,
+                    correctIndex = 2,
                     explanation = "La adhesión es la fuerza de atracción atractiva electrostática intermolecular entre las moléculas de agua y una superficie sólida polar distinta."
                 ),
                 Challenge(
                     id = "bio_t03_s03_c8",
                     statement = "En animales de cuerpo blando como las lombrices de tierra (*Lumbricus terrestris*), la incompresibilidad del agua contenida en su celoma cumple la función mecánica fundamental de:",
                     options = listOf(
+                        "Esmalte protector cuticular",
+                        "Pigmento fototrópico",
                         "Aislante eléctrico de mielina",
                         "Esqueleto hidrostático de sostén y locomoción",
                         "Reserva calórica de lípidos",
-                        "Esmalte protector cuticular",
-                        "Pigmento fototrópico"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Debido a su bajísima compresibilidad, los fluidos acuosos confinados en cavidades celómicas actúan como un esqueleto hidrostático sobre el cual actúan los músculos para la locomoción."
                 ),
                 Challenge(
                     id = "bio_t03_s03_c9",
                     statement = "En una ciudad costera como Mollendo, las temperaturas durante el día y la noche presentan variaciones mucho más suaves que en el desierto interior de La Joya. Esta moderación climática es consecuencia del:",
                     options = listOf(
-                        "Bajo calor de fusión del agua marina",
-                        "Elevado calor específico del agua oceánica que actúa como regulador térmico geográfico",
                         "Bajo punto de ebullición del agua con sal",
                         "Efecto de la fotosíntesis nocturna del fitoplancton",
-                        "Nulo calor de vaporización costero"
+                        "Nulo calor de vaporización costero",
+                        "Bajo calor de fusión del agua marina",
+                        "Elevado calor específico del agua oceánica que actúa como regulador térmico geográfico",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Las grandes masas de agua oceánicas absorben calor diurno y lo ceden lentamente de noche debido a su alto calor específico, funcionando como gigantescos termorreguladores climáticos."
                 ),
                 Challenge(
@@ -2306,26 +2587,26 @@ internal object BiologiaPart1 {
                     id = "bio_t03_s03_c12",
                     statement = "La constante dieléctrica del agua es sumamente alta (≈ 80 a 20 °C). Esta propiedad fisicoquímica implica que el agua:",
                     options = listOf(
+                        "Aumenta la fuerza de atracción electrostática entre cargas",
+                        "Solidifica instantáneamente ante campos electromagnéticos",
                         "Facilita la disociación de compuestos iónicos disminuyendo la atracción entre iones opuestos",
                         "Imposibilita la disolución de sales en el citoplasma",
                         "Conduce corriente eléctrica sin necesidad de iones disueltos",
-                        "Aumenta la fuerza de atracción electrostática entre cargas",
-                        "Solidifica instantáneamente ante campos electromagnéticos"
                     ),
-                    correctIndex = 0,
+                    correctIndex = 2,
                     explanation = "Una constante dieléctrica alta atenúa la atracción electrostática entre cationes y aniones en una proporción de 1/80, facilitando su disociación y solubilidad en medio acuoso."
                 ),
                 Challenge(
                     id = "bio_t03_s03_c13",
                     statement = "¿Cuál de las siguientes afirmaciones explica con rigor por qué el calor específico del agua es notablemente superior al de sustancias como el alcohol o el mercurio?",
                     options = listOf(
+                        "Porque el agua se descompone espontáneamente en oxígeno al calentarse a 25 °C",
+                        "Porque sus enlaces covalentes se transforman en enlaces iónicos al calentarse",
                         "Porque el agua carece por completo de momentos dipolares",
                         "Porque gran parte del calor suministrado debe consumirse en debilitar y romper la red de puentes de hidrógeno antes de acelerar las moléculas",
                         "Porque las moléculas de agua tienen una masa atómica superior a la de los metales",
-                        "Porque el agua se descompone espontáneamente en oxígeno al calentarse a 25 °C",
-                        "Porque sus enlaces covalentes se transforman en enlaces iónicos al calentarse"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Al calentar agua líquida, gran proporción de la energía térmica suministrada se consume en romper la densa red de puentes de hidrógeno intermoleculares, en vez de aumentar directamente la energía cinética de las moléculas."
                 )
             )
@@ -2375,7 +2656,29 @@ internal object BiologiaPart1 {
                     - **Buffer Fosfato (H₂PO₄⁻ / HPO₄²⁻):**
                       - Principal sistema amortiguador del medio **intracelular** (citoplasma) y de los túbulos renales, operando con máxima eficacia cerca de pH 6.8 a 7.2.
                     - **Amortiguadores Proteicos:** La hemoglobina y la albúmina participan como amortiguadores anfóteros mediante sus grupos amino (-NH₂) y carboxilo (-COOH).
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Sales, Buffers y pH Fisiológico
+
+### Sales precipitadas (sostén) vs. disueltas (función)
+- **Precipitadas:** carbonato de calcio en conchas y esqueletos de coral; fosfato de calcio (hidroxiapatita) en huesos y dientes; sílice en gramíneas y frústulos de diatomeas.
+- **Disueltas:** Na+, K+, Ca++, Mg++, Cl-, fosfatos y bicarbonato: presión osmótica, excitabilidad y cofactores.
+
+### Los tres buffers fisiológicos (tabla)
+- **Bicarbonato (H2CO3/HCO3-):** sangre, pH 7,4; acoplado a respiración (soplar CO2 acidifica) y riñón.
+- **Fosfato (H2PO4-/HPO4--):** intracelular y túbulos renales; óptimo cerca de pH 6,8-7,2.
+- **Proteico:** hemoglobina y albúmina como anfóteros (grupos -NH2 y -COOH); transportan H+ sin cambiar el pH.
+
+### Lógica del amortiguador (sin memorizar fórmulas a ciegas)
+- Un buffer es un par ácido débil/base conjugada que "absorbe" H+ u OH- agregados: el pH apenas se mueve.
+- **Acidosis** (pH bajo 7,35): hiperventilación compensadora (expulsa CO2). **Alcalosis** (sobre 7,45): hipoventilación y excreción renal de bicarbonato.
+- Trampa: el buffer NO impide todo cambio de pH, lo AMORTIGUA dentro del rango fisiológico; fuera de él, falla.
+
+### Sales y examen: pares fijos
+- Calcio-hueso, hierro-sangre, magnesio-clorofila, yodo-tiroides, flúor-dientes, sodio-potasio-nervio.
+
+""",
                 conceptosClave = listOf(
                     "Sales precipitadas: hidroxiapatita (huesos), CaCO₃ (conchas), SiO₂ (diatomeas).",
                     "Hipertónico: animal = crenación; vegetal = plasmólisis.",
@@ -2390,13 +2693,13 @@ internal object BiologiaPart1 {
                     id = "bio_t03_s04_c1",
                     statement = "Si se colocan eritrocitos humanos en una cubeta que contiene una solución salina hipertónica de cloruro de sodio al 5%, se observará al microscopio que las células:",
                     options = listOf(
-                        "Aumentan su turgencia sin sufrir cambios morfológicos",
-                        "Experimentan crenación al perder agua osmóticamente hacia el medio",
                         "Sufren lisis celular inmediata con dispersión de hemoglobina",
                         "Presentan plasmólisis con separación de su pared celular",
-                        "Fagocitan activamente los cristales de sal mediante pseudópodos"
+                        "Fagocitan activamente los cristales de sal mediante pseudópodos",
+                        "Aumentan su turgencia sin sufrir cambios morfológicos",
+                        "Experimentan crenación al perder agua osmóticamente hacia el medio",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "En un medio hipertónico, el agua del interior del eritrocito sale por ósmosis hacia la solución concentrada externa; al perder volumen, la célula se arruga y colapsa (crenación)."
                 ),
                 Challenge(
@@ -2416,52 +2719,52 @@ internal object BiologiaPart1 {
                     id = "bio_t03_s04_c3",
                     statement = "Si una muestra de glóbulos rojos humanos se suspende en un tubo de ensayo con agua destilada pura, el resultado celular inmediato observado será:",
                     options = listOf(
-                        "Crenación citoplasmática",
                         "Lisis osmótica o hemólisis celular",
                         "Plasmólisis reversible",
                         "Formación de endosporas bacterianas",
-                        "Conservación íntegra de la morfología bicóncava"
+                        "Conservación íntegra de la morfología bicóncava",
+                        "Crenación citoplasmática",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "En agua destilada (medio hipotónico extremo), el agua ingresa masivamente al eritrocito por ósmosis; al carecer de pared celular rígida, la membrana plasmática no resiste la distensión y estalla (hemólisis)."
                 ),
                 Challenge(
                     id = "bio_t03_s04_c4",
                     statement = "En las células del parénquima de una planta sometida a sequía severa y salinidad extrema en el suelo, se produce la pérdida neta de agua vacuolar y el desprendimiento de la membrana plasmática respecto a la pared celular. Este fenómeno se denomina:",
                     options = listOf(
+                        "Pinocitosis",
                         "Crenación",
                         "Plasmólisis",
                         "Turgencia",
                         "Hemólisis",
-                        "Pinocitosis"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "La plasmólisis es el fenómeno exclusivo de células vegetales con pared, donde el medio hipertónico induce la pérdida de agua vacuolar y el retraimiento del protoplasto de la pared."
                 ),
                 Challenge(
                     id = "bio_t03_s04_c5",
                     statement = "El principal sistema químico amortiguador (buffer) encargado de regular el pH de la sangre humana y del líquido extracelular dentro del rango fisiológico de 7.35 a 7.45 es el:",
                     options = listOf(
+                        "Buffer acetato de amonio",
+                        "Buffer sulfato ferroso",
                         "Buffer fosfato dibásico",
                         "Buffer bicarbonato / ácido carbónico",
                         "Buffer lactato de calcio",
-                        "Buffer acetato de amonio",
-                        "Buffer sulfato ferroso"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El sistema buffer bicarbonato (H₂CO₃ / HCO₃⁻) es el amortiguador cardinal del líquido extracelular y plasma sanguíneo humano, acoplado al sistema respiratorio y renal."
                 ),
                 Challenge(
                     id = "bio_t03_s04_c6",
                     statement = "A nivel del citoplasma celular (líquido intracelular), el sistema amortiguador inorgánico que opera con mayor efectividad para regular las variaciones de pH interno es el:",
                     options = listOf(
-                        "Buffer bicarbonato",
-                        "Buffer fosfato (H₂PO₄⁻ / HPO₄²⁻)",
                         "Buffer cloruro de sodio",
                         "Buffer carbonato de calcio",
-                        "Buffer hidróxido de potasio"
+                        "Buffer hidróxido de potasio",
+                        "Buffer bicarbonato",
+                        "Buffer fosfato (H₂PO₄⁻ / HPO₄²⁻)",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El sistema buffer fosfato monoácido/diácido es el amortiguador inorgánico por excelencia dentro de las células, dado que su pKa (≈ 6.86) se aproxima al pH intracelular normal."
                 ),
                 Challenge(
@@ -2494,39 +2797,39 @@ internal object BiologiaPart1 {
                     id = "bio_t03_s04_c9",
                     statement = "Las algas microscópicas unicelulares conocidas como diatomeas poseen una cubierta externa rígida y ornamentada denominada frústula, la cual está constituida por un mineral precipitado de:",
                     options = listOf(
+                        "Hidróxido de aluminio",
                         "Carbonato de sodio",
                         "Sílice (dióxido de silicio)",
                         "Sulfato de magnesio",
                         "Fosfato tricálcico",
-                        "Hidróxido de aluminio"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Las diatomeas incorporan sílice hidratada (SiO₂) para formar sus frústulas vítreas bivalvas, altamente resistentes a la degradación biológica."
                 ),
                 Challenge(
                     id = "bio_t03_s04_c10",
                     statement = "¿Cuál es la función fisiológica primordial que define a una solución amortiguadora o buffer en un organismo vivo?",
                     options = listOf(
+                        "Provocar la coagulación irreversible del plasma sanguíneo",
+                        "Acelerar la evaporación de agua a través de la piel",
                         "Aumentar rápidamente la temperatura corporal durante el ejercicio",
                         "Resistir o minimizar los cambios bruscos de pH al agregar cantidades moderadas de ácidos o bases",
                         "Sintetizar nuevas moléculas de ATP sin consumo de oxígeno",
-                        "Provocar la coagulación irreversible del plasma sanguíneo",
-                        "Acelerar la evaporación de agua a través de la piel"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Un buffer está constituido por un par ácido débil/base conjugada que amortigua las fluctuaciones del pH captando o liberando iones H⁺ frente a perturbaciones ácido-base."
                 ),
                 Challenge(
                     id = "bio_t03_s04_c11",
                     statement = "Al transfundir una solución salina fisiológica al 0.9% de NaCl (suero fisiológico) a un paciente deshidratado, los glóbulos rojos no sufren ni crenación ni hemólisis porque la solución administrada es:",
                     options = listOf(
-                        "Marcardamente hipotónica respecto al citosol",
-                        "Isotónica respecto al medio intracelular de los eritrocitos",
                         "Altamente hipertónica y viscosa",
                         "Completamente desprovista de solvente",
-                        "Un buffer alcalino concentrado al 10%"
+                        "Un buffer alcalino concentrado al 10%",
+                        "Marcardamente hipotónica respecto al citosol",
+                        "Isotónica respecto al medio intracelular de los eritrocitos",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El suero fisiológico de NaCl al 0.9% tiene una osmolaridad de ≈ 300 mOsm/L, idéntica a la del plasma y citosol (medio isotónico); no hay flujo neto de agua a través de la membrana celular."
                 ),
                 Challenge(
@@ -2594,7 +2897,27 @@ internal object BiologiaPart1 {
                     - **Polisacáridos Estructurales:**
                       - *Celulosa:* Componente estructural primordial de la pared celular en plantas y algas. Formada por cadenas lineales no ramificadas de miles de glucosas unidas por enlaces **β-1,4**. Los humanos carecemos de la enzima celulasa, por lo que no podemos digerirla (actúa como fibra dietética insoluble).
                       - *Quitina:* Polímero lineal de **N-acetilglucosamina** unidos por enlaces **β-1,4**. Es un polisacárido nitrogenado que forma el exoesqueleto resistente de los artrópodos (insectos, arácnidos, crustáceos) y la pared celular de los hongos (reino Fungi).
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Azúcares de la Energía a la Estructura
+
+### Mono, oligo y polisacáridos (tabla)
+- **Monosacáridos (3-7 C):** glucosa, fructosa y galactosa (hexosas); ribosa y desoxirribosa (pentosas de ácidos nucleicos).
+- **Disacáridos:** sacarosa (glucosa + fructosa, caña), lactosa (glucosa + galactosa, leche), maltosa (glucosa + glucosa, malta).
+- **Polisacáridos:** almidón y glucógeno (reserva), celulosa y quitina (estructura).
+
+### Enlace glucosídico alfa vs. beta (la trampa de oro)
+- **Enlace α:** permite cadenas HELICOIDALES digeribles (almidón con α-1,4 y α-1,6; glucógeno hiperramificado).
+- **Enlace β-1,4:** forma láminas RECTAS indigeribles para humanos (celulosa); carecemos de celulasa (solo la fibra nos barre el intestino).
+- Misma glucosa, distinto enlace, destino opuesto: energía vs. fibra.
+
+### Isómeros y poder reductor
+- **Glucosa, fructosa y galactosa** comparten fórmula C6H12O6 con distinta estructura (isómeros): el examen los intercambia en distractores.
+- **Azúcares reductores** (glucosa, fructosa, maltosa, lactosa) reducen el reactivo de Benedict/Fehling en caliente (ladrillo): la sacarosa NO es reductora.
+- **Pentosas:** ribosa (ARN, con OH en 2') frente a desoxirribosa (ADN, sin ese oxígeno: más estable para archivo genético).
+
+""",
                 conceptosClave = listOf(
                     "Monómeros: glucosa, fructosa, galactosa, ribosa y desoxirribosa.",
                     "Disacáridos: maltosa (Glu+Glu), lactosa (Gal+Glu), sacarosa (Glu+Fru).",
@@ -2622,39 +2945,39 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s01_c2",
                     statement = "El almidón es la macromolécula de almacenamiento energético propia de las plantas. Bioquímicamente está integrado por dos polímeros de glucosa denominados:",
                     options = listOf(
-                        "Glucógeno y celulosa",
                         "Amilosa (lineal helicoidal) y amilopectina (ramificada)",
                         "Sacarosa y maltosa condensadas",
                         "Quitina y peptidoglucano",
-                        "Galactosa y fructosa fosforiladas"
+                        "Galactosa y fructosa fosforiladas",
+                        "Glucógeno y celulosa",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El almidón vegetal está formado por amilosa (polímero no ramificado con enlaces α-1,4) y amilopectina (polímero ramificado con enlaces α-1,4 y bifurcaciones α-1,6)."
                 ),
                 Challenge(
                     id = "bio_t04_s01_c3",
                     statement = "Durante un ayuno de 12 horas, los niveles de glucosa en sangre se mantienen estables gracias a la degradación enzimática de un polisacárido muy ramificado almacenado en los hepatocitos humanos. Este polisacárido es el:",
                     options = listOf(
+                        "Colesterol libre",
+                        "Sulfato de condroitina",
                         "Almidón hepático",
                         "Glucógeno",
                         "Ácido hialurónico",
-                        "Colesterol libre",
-                        "Sulfato de condroitina"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El glucógeno es el polisacárido de reserva animal almacenado en hígado y músculo esquelético. La glucogenólisis hepática libera glucosa a la sangre para mantener la glucemia en ayuno."
                 ),
                 Challenge(
                     id = "bio_t04_s01_c4",
                     statement = "La celulosa no puede ser aprovechada como nutriente calórico por el sistema digestivo humano debido a que nuestro tubo gastrointestinal carece de enzimas específicas capaces de hidrolizar los enlaces:",
                     options = listOf(
-                        "Alfa-1,4 glucosídicos",
-                        "Beta-1,4 glucosídicos",
                         "Alfa-1,6 ramificados",
                         "Éster intramoleculares",
-                        "Peptídicos de tipo amida"
+                        "Peptídicos de tipo amida",
+                        "Alfa-1,4 glucosídicos",
+                        "Beta-1,4 glucosídicos",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Las enzimas digestivas humanas (como la amilasa) solo reconocen e hidrolizan enlaces alfa glucosídicos. La celulosa posee enlaces beta-1,4 glucosídicos que resultan indigeribles, actuando como fibra vegetal."
                 ),
                 Challenge(
@@ -2674,52 +2997,52 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s01_c6",
                     statement = "La intolerancia a los lácteos que padecen muchos adultos se produce por la deficiencia intestinal de la enzima lactasa, la cual es responsable de hidrolizar el disacárido lactosa en:",
                     options = listOf(
-                        "Dos moléculas de fructosa",
                         "Glucosa y galactosa",
                         "Dos moléculas de glucosa",
                         "Ribosa y desoxirribosa",
-                        "Glucosa y manosa"
+                        "Glucosa y manosa",
+                        "Dos moléculas de fructosa",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La lactosa es el disacárido de la leche formado por la condensación de una molécula de beta-D-galactosa y una de alfa-D-glucosa mediante enlace β-1,4 glucosídico."
                 ),
                 Challenge(
                     id = "bio_t04_s01_c7",
                     statement = "En el líquido seminal emitido por las vesículas seminales humanas, el monosacárido de tipo cetohexosa que proporciona energía motriz directa para el batido flagelar de los espermatozoides es la:",
                     options = listOf(
+                        "Sacarosa",
                         "Galactosa",
                         "Fructosa (levulosa)",
                         "Ribosa",
                         "Glucosa pura",
-                        "Sacarosa"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "La fructosa es una cetohexosa muy abundante en el semen, donde actúa como sustrato energético prioritario para el metabolismo mitocondrial y la movilidad del espermatozoide."
                 ),
                 Challenge(
                     id = "bio_t04_s01_c8",
                     statement = "¿Cuál es la diferencia química estructural precisa que distingue a la desoxirribosa presente en el ADN respecto a la ribosa presente en el ARN?",
                     options = listOf(
+                        "La desoxirribosa contiene un átomo de azufre en el carbono 3'",
+                        "La ribosa no puede formar enlaces fosfodiéster",
                         "La desoxirribosa posee 6 átomos de carbono y la ribosa solo 5",
                         "La desoxirribosa carece de un átomo de oxígeno en el carbono 2' del anillo",
                         "La ribosa es una cetosa y la desoxirribosa una aldosa",
-                        "La desoxirribosa contiene un átomo de azufre en el carbono 3'",
-                        "La ribosa no puede formar enlaces fosfodiéster"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La beta-D-desoxirribosa (C₅H₁₀O₄) posee un grupo -H en el carbono 2' de la pentosa en lugar del grupo hidroxilo (-OH) que presenta la beta-D-ribosa (C₅H₁₀O₅)."
                 ),
                 Challenge(
                     id = "bio_t04_s01_c9",
                     statement = "En el estroma de los cloroplastos, el monosacárido de tipo cetopentosa cuya forma difosforada capta el CO₂ atmosférico para iniciar el ciclo de Calvin-Benson es la:",
                     options = listOf(
-                        "Ribulosa",
                         "Dihidroxiacetona",
                         "Gliceraldehído",
                         "Eritrosa",
-                        "Xilulosa"
+                        "Xilulosa",
+                        "Ribulosa",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 4,
                     explanation = "La ribulosa 1,5-bisfosfato (derivada de la ribulosa) es la molécula aceptora que fija el dióxido de carbono en la fotosíntesis bajo la catálisis de la enzima RuBisCO."
                 ),
                 Challenge(
@@ -2739,52 +3062,52 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s01_c11",
                     statement = "En el laboratorio escolar de biología, al verter unas gotas de reactivo de Lugol (yodo-yodurado) sobre una rebanada de papa, se aprecia una coloración azul-violácea oscura intensa. Esta tinción confirma la presencia de:",
                     options = listOf(
-                        "Proteínas globulares desnaturalizadas",
                         "Amilosa dentro de los gránulos de almidón",
                         "Lípidos triglicéridos saponificados",
                         "Monosacáridos de fructosa libre",
-                        "Ácidos nucleicos bicatenarios"
+                        "Ácidos nucleicos bicatenarios",
+                        "Proteínas globulares desnaturalizadas",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El yodo del reactivo de Lugol se introduce en el interior de la hélice de la amilosa del almidón vegetal, generando un complejo molecular que absorbe la luz dando un color azul-púrpura característico."
                 ),
                 Challenge(
                     id = "bio_t04_s01_c12",
                     statement = "En la hemolinfa de muchos artrópodos e insectos voladores, el principal glúcido circulante que actúa como reserva energética y protector contra la congelación es el disacárido:",
                     options = listOf(
+                        "Celobiosa",
                         "Sacarosa",
                         "Trehalosa",
                         "Lactosa",
                         "Fructosa",
-                        "Celobiosa"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "La trehalosa (Glucosa + Glucosa con enlace α-1,1) es el disacárido no reductor principal de la hemolinfa de los insectos, fundamental para el vuelo y la crioprotección."
                 ),
                 Challenge(
                     id = "bio_t04_s01_c13",
                     statement = "El enlace químico covalente característico mediante el cual se condensan dos monosacáridos con desprendimiento de una molécula de agua se denomina enlace:",
                     options = listOf(
+                        "Éster",
+                        "Puente disulfuro",
                         "Peptídico",
                         "Glucosídico",
                         "Fosfodiéster",
-                        "Éster",
-                        "Puente disulfuro"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El enlace glucosídico es el enlace covalente formado por reacción de condensación que une el carbono anomérico de un monosacárido con un grupo alcohol de otro glúcido liberando H₂O."
                 ),
                 Challenge(
                     id = "bio_t04_s01_c14",
                     statement = "¿Cuál de las siguientes asociaciones entre glúcido y función biológica principal es rigurosamente CORRECTA?",
                     options = listOf(
-                        "Glucosa: biocatalizador enzimático de membranas",
-                        "Celulosa: componente estructural de la pared celular vegetal",
                         "Almidón: material genético en bacterias Gram positivas",
                         "Quitina: principal reserva de energía en los mamíferos",
-                        "Glucógeno: hormona reguladora del crecimiento óseo"
+                        "Glucógeno: hormona reguladora del crecimiento óseo",
+                        "Glucosa: biocatalizador enzimático de membranas",
+                        "Celulosa: componente estructural de la pared celular vegetal",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La celulosa es el polisacárido estructural fibroso más abundante de la biosfera, conformando la pared celular rígida de plantas y algas verdes."
                 )
             )
@@ -2837,7 +3160,28 @@ internal object BiologiaPart1 {
                       - Polímeros de unidades de isopreno. Comprenden las esencias vegetales volátiles (mentol, limoneno), pigmentos fotosintéticos accesorios (**carotenoides**, como carotenos y xantofilas) y vitaminas liposolubles (**A, E y K**).
                     - **Prostaglandinas (Eicosanoides):**
                       - Derivadas del ácido araquidónico (20C); median procesos inflamatorios, fiebre, dolor y agregación plaquetaria.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Grasas que Arden, Aíslan y Regulan
+
+### Saturados vs. insaturados (tabla)
+- **Saturados:** sin dobles enlaces, cadenas rectas que se apilan: SÓLIDOS a 20 °C (manteca, sebo). Exceso asociado a LDL.
+- **Insaturados cis:** dobles enlaces que DOBLAN la cadena: LÍQUIDOS (aceites de oliva, pescado con omega-3).
+- **Trans artificiales:** hidrogenación industrial que endereza cis a trans: los más aterogénicos (margarinas duras).
+- Trampa: "aceite vegetal hidrogenado" en etiqueta equivale a grasa trans.
+
+### El fosfolípido como moneda de dos caras
+- **Cabeza polar** (fosfato + base nitrogenada: hidrofílica) y **dos colas apolares** (ácidos grasos: hidrofóbicas).
+- En agua se autoensamblan en BICAPA: cabezas afuera, colas adentro. Es la arquitectura base de toda membrana (el transporte se verá en célula).
+- **Colesterol intercalado:** modula la fluidez (rigidiza en calor, fluidiza en frío) y origina hormonas esteroideas y vitamina D.
+
+### Saponificación y energía
+- **Saponificación:** grasa + base fuerte (NaOH) produce JABÓN + glicerol. Los jabones emulsionan la grasa (una punta polar, otra apolar).
+- **Densidad energética:** 9,3 kcal/g frente a ~4 de glúcidos y proteínas: por eso el tejido adiposo es la reserva por excelencia.
+- **Vitaminas liposolubles A, D, E, K:** se almacenan en grasa e hígado; su exceso también intoxica (hipervitaminosis A).
+
+""",
                 conceptosClave = listOf(
                     "Triglicéridos: 1 glicerol + 3 ácidos grasos (reserva calórica: 9.3 kcal/g).",
                     "Fosfolípidos: anfipáticos (cabeza polar + 2 colas apolares) forman la bicapa celular.",
@@ -2878,39 +3222,39 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s02_c3",
                     statement = "Las biomoléculas estructurales de la membrana celular que poseen un extremo polar hidrofílico (cabeza) y dos cadenas apolares hidrofóbicas (colas), confiriéndoles carácter anfipático para autoensamblarse en bicapa, son los:",
                     options = listOf(
-                        "Céridos",
                         "Fosfolípidos",
                         "Triglicéridos simples",
                         "Carotenoides",
-                        "Esteroides libres"
+                        "Esteroides libres",
+                        "Céridos",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Los fosfolípidos son moléculas anfipáticas que en medio acuoso orientan sus cabezas polares hacia el agua y esconden sus colas apolares de ácidos grasos, conformando la bicapa lipídica."
                 ),
                 Challenge(
                     id = "bio_t04_s02_c4",
                     statement = "En el tejido adiposo subcutáneo de una foca o de una vicuña altoandina, las reservas energéticas que además actúan como un aislante térmico protector contra el frío extremo corresponden a moléculas de:",
                     options = listOf(
+                        "Colesterol libre",
+                        "Celulosa insoluble",
                         "Glucógeno muscular",
                         "Triglicéridos (triacilgliceroles)",
                         "Fosfatidilcolina",
-                        "Colesterol libre",
-                        "Celulosa insoluble"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Los triglicéridos son grasas neutras formadas por glicerol y tres ácidos grasos; se almacenan en los adipocitos brindando reserva calórica masiva y aislamiento térmico."
                 ),
                 Challenge(
                     id = "bio_t04_s02_c5",
                     statement = "La cutícula cerosa brillante que recubre la epidermis de las hojas de chirimoya o de molle, reduciendo la transpiración vegetal y protegiendo contra el ataque de hongos, pertenece al grupo lipídico de los:",
                     options = listOf(
-                        "Fosfoglicéridos",
-                        "Céridos (ceras)",
                         "Esteroides",
                         "Prostaglandinas",
-                        "Glucolípidos"
+                        "Glucolípidos",
+                        "Fosfoglicéridos",
+                        "Céridos (ceras)",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Las ceras o céridos (como la cutina vegetal) son ésteres de ácidos grasos con alcoholes monohidroxílicos de cadena larga con función impermeabilizante y protectora."
                 ),
                 Challenge(
@@ -2930,52 +3274,52 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s02_c7",
                     statement = "En la síntesis de un triglicérido, la unión covalente formada entre el grupo hidroxilo (-OH) del glicerol y el grupo carboxilo (-COOH) de un ácido graso con eliminación de agua se denomina enlace:",
                     options = listOf(
-                        "Glucosídico",
                         "Éster",
                         "Peptídico",
                         "Fosfodiéster",
-                        "Disulfuro"
+                        "Disulfuro",
+                        "Glucosídico",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El enlace éster se forma por esterificación entre un ácido graso y un alcohol (glicerol), liberando una molécula de H₂O por cada ácido graso enlazado."
                 ),
                 Challenge(
                     id = "bio_t04_s02_c8",
                     statement = "En la membrana plasmática de los hongos como las levaduras y mohos, el esteroide análogo funcional al colesterol animal que estabiliza su bicapa lipídica es el:",
                     options = listOf(
+                        "Limoneno",
                         "Fitosterol",
                         "Ergosterol",
                         "Colesterol animal",
                         "Ácido cólico",
-                        "Limoneno"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El ergosterol es el esteroide característico de las membranas fúngicas (blanco de fármacos antimicóticos), mientras que las plantas poseen fitosteroles y los animales colesterol."
                 ),
                 Challenge(
                     id = "bio_t04_s02_c9",
                     statement = "Los aceites vegetales como el de oliva o sacha inchi permanecen líquidos a temperatura ambiental porque sus ácidos grasos constituyentes son predominantemente:",
                     options = listOf(
+                        "Completamente solubles en agua pura",
+                        "Polímeros ramificados de glucosa",
                         "Saturados sin ningún doble enlace",
                         "Insaturados con dobles enlaces que acodan la cadena hidrocarbonada",
                         "Inorgánicos con enlaces iónicos",
-                        "Completamente solubles en agua pura",
-                        "Polímeros ramificados de glucosa"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Los ácidos grasos insaturados contienen dobles enlaces en configuración cis que introducen quiebres o acodos en la cadena, dificultando el empaquetamiento y reduciendo su punto de fusión (líquidos)."
                 ),
                 Challenge(
                     id = "bio_t04_s02_c10",
                     statement = "Las prostaglandinas son eicosanoides derivados de un ácido graso poliinsaturado de 20 carbonos denominado ácido araquidónico. Su función biológica cardinal radica en:",
                     options = listOf(
-                        "Almacenar glucosa en el retículo sarcoplásmico",
-                        "Actuar como mediadores locales de la respuesta inflamatoria, el dolor y la fiebre",
                         "Constituir el esmalte dental",
                         "Transportar oxígeno por el torrente sanguíneo",
-                        "Fotolizar el agua durante la fotosíntesis"
+                        "Fotolizar el agua durante la fotosíntesis",
+                        "Almacenar glucosa en el retículo sarcoplásmico",
+                        "Actuar como mediadores locales de la respuesta inflamatoria, el dolor y la fiebre",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Las prostaglandinas son lípidos mediadores químicos locales que intervienen decisivamente en la inflamación, la percepción del dolor, la fiebre y la contracción muscular lisa uterina."
                 ),
                 Challenge(
@@ -2995,26 +3339,26 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s02_c12",
                     statement = "La solubilidad característica de los lípidos se define fisicoquímicamente por ser:",
                     options = listOf(
-                        "Altamente solubles en solventes acuosos y polares",
                         "Insolubles en agua y solubles en disolventes orgánicos apolares como éter y cloroformo",
                         "Solubles únicamente en ácidos inorgánicos concentrados",
                         "Completamente insolubles en cualquier líquido existente",
-                        "Solubles únicamente en soluciones salinas hipertónicas"
+                        "Solubles únicamente en soluciones salinas hipertónicas",
+                        "Altamente solubles en solventes acuosos y polares",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Por su naturaleza predominantemente hidrocarbonada y apolar, los lípidos repelen el agua (hidrofobia) y se disuelven fácilmente en solventes orgánicos apolares (benceno, éter, cloroformo)."
                 ),
                 Challenge(
                     id = "bio_t04_s02_c13",
                     statement = "¿Cuál de las siguientes afirmaciones respecto al colesterol es biológicamente VERDADERA?",
                     options = listOf(
+                        "Aporta 4.1 kcal/g como combustible de respiración anaerobia",
                         "Es el lípido más abundante en la pared celular de las plantas leñosas",
                         "Está presente en membranas celulares animales y ausente en células vegetales",
                         "Es un lípido saponificable que contiene tres cadenas de ácidos grasos",
                         "Es la molécula precursora de la insulina y el glucagón pancreáticos",
-                        "Aporta 4.1 kcal/g como combustible de respiración anaerobia"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El colesterol es exclusivo de las membranas celulares del reino animal. Las plantas carecen de colesterol (contienen fitosteroles) y las bacterias procariontes tampoco lo poseen."
                 )
             )
@@ -3096,7 +3440,30 @@ internal object BiologiaPart1 {
                     - **Inhibición Enzimática:**
                       - *Inhibición Competitiva:* El inhibidor se parece estructuralmente al sustrato y compite directamente por ocupar el sitio activo. Se revierte aumentando la concentración del sustrato natural.
                       - *Inhibición No Competitiva:* El inhibidor se une a un sitio distinto al catalítico (sitio alostérico), provocando un cambio conformacional que desactiva el sitio activo sin importar la concentración de sustrato.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Arquitectura Proteica y Lógica Enzimática
+
+### Cuatro niveles estructurales (escalera obligada)
+- **Primaria:** secuencia lineal de aminoácidos unidos por enlaces peptídicos (el gen la dicta).
+- **Secundaria:** plegamientos locales por puentes de H: alfa-hélice (queratina) y beta-lámina (fibroína de seda).
+- **Terciaria:** forma 3D global por interacciones R (disulfuro, iónicos, hidrofóbicos); aquí nace la FUNCIÓN.
+- **Cuaternaria:** ensamble de varias cadenas (hemoglobina: 2 alfa + 2 beta).
+- Trampa: la función depende de la forma; la forma, de la secuencia. Cambia un aminoácido (anemia falciforme: glutamato por valina) y cambia la proteína.
+
+### Desnaturalización vs. renaturalización
+- Calor extremo, pH extremo, metales pesados y solventes rompen puentes débiles: el huevo cocido no vuelve atrás (irreversible).
+- Algunas proteínas pequeñas renaturalizan al retirar la causa (ribonucleasa clásica de Anfinsen).
+
+### Enzimas: especificidad y regulación
+- **Llave-cerradura (Fischer):** rigidez clásica. **Encaje inducido (Koshland):** el sitio activo se MOLDEA al sustrato (visión moderna).
+- **Factores:** temperatura óptima (~37 °C; más desnaturaliza), pH óptimo (pepsina ~2, tripsina ~8), concentración de sustrato (saturación) y cofactores (Mg++, vitaminas).
+- **Inhibición competitiva:** el inhibidor IMITA al sustrato y compite por el sitio activo (malonato vs. succinato); se revierte con más sustrato.
+- **Inhibición no competitiva:** se une a otro sitio y deforma la enzima (metales pesados como Hg++; cianuro en cadena respiratoria como ejemplo extremo).
+- Trampa: el inhibidor competitivo NO destruye la enzima; el no competitivo NO se vence con más sustrato.
+
+""",
                 conceptosClave = listOf(
                     "Aminoácidos unidos por enlace peptídico (covalente tipo amida).",
                     "Estructura 1ª (secuencia), 2ª (puentes H), 3ª (puentes disulfuro, activa), 4ª (varias cadenas).",
@@ -3112,26 +3479,26 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s03_c1",
                     statement = "Al someter una solución acuosa de enzima catalasa a una temperatura de 80 °C durante diez minutos, se produce la pérdida total de su actividad catalítica por desnaturalización térmica. ¿Qué nivel de organización estructural de la proteína permanece inalterado tras este tratamiento?",
                     options = listOf(
+                        "Sitio activo nativo",
                         "Estructura terciaria",
                         "Estructura secundaria",
                         "Estructura primaria",
                         "Estructura cuaternaria",
-                        "Sitio activo nativo"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 3,
                     explanation = "La desnaturalización desorganiza los puentes de hidrógeno, interacciones hidrofóbicas y puentes disulfuro (estructuras 2ª, 3ª y 4ª), pero no rompe los enlaces peptídicos covalentes; por tanto, la estructura primaria (secuencia de aminoácidos) permanece intacta."
                 ),
                 Challenge(
                     id = "bio_t04_s03_c2",
                     statement = "El enlace químico covalente que une monómeros consecutivos en una cadena polipeptídica se establece entre el grupo carboxilo de un aminoácido y el grupo amino del siguiente, conociéndose como enlace:",
                     options = listOf(
-                        "Glucosídico",
-                        "Peptídico",
                         "Fosfodiéster",
                         "Éster",
-                        "Puente de hidrógeno"
+                        "Puente de hidrógeno",
+                        "Glucosídico",
+                        "Peptídico",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El enlace peptídico es una unión covalente de tipo amida formada por reacción de condensación entre el grupo carboxilo (-COOH) y el grupo amino (-NH₂) de dos aminoácidos con pérdida de agua."
                 ),
                 Challenge(
@@ -3164,39 +3531,39 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s03_c5",
                     statement = "Las conformaciones espaciales en alfa-hélice y lámina beta-plegada corresponden al nivel de organización proteica denominado estructura secundaria, la cual se mantiene estabilizada primordialmente por:",
                     options = listOf(
-                        "Enlaces peptídicos adicionales entre cadenas laterales",
                         "Puentes de hidrógeno entre los grupos C=O y N-H del esqueleto peptídico",
                         "Enlaces iónicos con cationes calcio",
                         "Puentes disulfuro entre residuos de metionina",
-                        "Interacciones hidrofóbicas con el colesterol circundante"
+                        "Interacciones hidrofóbicas con el colesterol circundante",
+                        "Enlaces peptídicos adicionales entre cadenas laterales",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La estructura secundaria surge por la formación regular y periódica de puentes de hidrógeno entre los grupos carbonilo (C=O) y amino (N-H) de los enlaces peptídicos de la cadena."
                 ),
                 Challenge(
                     id = "bio_t04_s03_c6",
                     statement = "¿Cuál es el mecanismo bioenergético fundamental mediante el cual las enzimas aceleran la velocidad de las reacciones metabólicas en los seres vivos?",
                     options = listOf(
+                        "Consumirse en cantidades molares equivalentes al sustrato",
                         "Aumentar el calor interno de la célula hasta 60 °C",
                         "Disminuir la energía de activación necesaria para que los reactivos alcancen el estado de transición",
                         "Modificar el balance energético libre neto (ΔG) de la reacción haciéndolo espontáneo",
                         "Desplazar la constante de equilibrio químico hacia la destrucción de sustratos",
-                        "Consumirse en cantidades molares equivalentes al sustrato"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Las enzimas catalizan reacciones reduciendo la barrera de la energía de activación (Ea), permitiendo que un mayor porcentaje de moléculas sustrato alcancen el estado de transición rápidamente sin alterar el ΔG."
                 ),
                 Challenge(
                     id = "bio_t04_s03_c7",
                     statement = "El modelo biocatalítico propuesto por Daniel Koshland, el cual postula que el sitio activo de una enzima no es una cavidad preformada y rígida, sino que sufre un cambio conformacional complementario al fijar al sustrato, se denomina:",
                     options = listOf(
-                        "Modelo de la llave y cerradura de Fischer",
-                        "Modelo del ajuste inducido",
                         "Modelo de la hipótesis quimiosmótica",
                         "Modelo del mosaico fluido",
-                        "Modelo del operón bacteriano"
+                        "Modelo del operón bacteriano",
+                        "Modelo de la llave y cerradura de Fischer",
+                        "Modelo del ajuste inducido",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El modelo del ajuste inducido de Koshland demuestra que la interacción inicial del sustrato induce una modificación conformacional plástica y específica en el sitio activo de la enzima para maximizar la catálisis."
                 ),
                 Challenge(
@@ -3229,39 +3596,39 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s03_c10",
                     statement = "Un inhibidor que se une a un sitio regulador distinto del sitio activo (sitio alostérico), provocando una deformación tridimensional de la enzima que impide la formación de productos sin que importe cuánto sustrato se añada, es un inhibidor:",
                     options = listOf(
-                        "Competitivo puro",
                         "No competitivo",
                         "Sustitutivo reversible",
                         "Anfipático simple",
-                        "Holoproteico"
+                        "Holoproteico",
+                        "Competitivo puro",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "En la inhibición no competitiva, el inhibidor se fija a un sitio alostérico independiente, alterando la actividad catalítica sin que el incremento de sustrato pueda revertir el bloqueo."
                 ),
                 Challenge(
                     id = "bio_t04_s03_c11",
                     statement = "La proteína más abundante en el organismo de los mamíferos, de conformación fibrosa en triple hélice, que confiere resistencia a la tracción mecánica en tendones, cartílagos, córnea y tejido óseo es el:",
                     options = listOf(
-                        "Colágeno",
-                        "Queratina",
                         "Albúmina",
                         "Histona nuclear",
-                        "Fibrinógeno"
+                        "Fibrinógeno",
+                        "Colágeno",
+                        "Queratina",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 3,
                     explanation = "El colágeno representa cerca del 25-30% de toda la masa proteica corporal de un mamífero, formando fibras de colosal resistencia tensil en la matriz extracelular conectiva."
                 ),
                 Challenge(
                     id = "bio_t04_s03_c12",
                     statement = "La proteína estructural insoluble, rica en aminoácidos azufrados como cisteína con múltiples puentes disulfuro, que constituye el componente primario del estrato córneo epidérmico, uñas, pelos y plumas es la:",
                     options = listOf(
-                        "Elastina",
-                        "Queratina",
                         "Insulina",
                         "Caseína",
-                        "Hemocianina"
+                        "Hemocianina",
+                        "Elastina",
+                        "Queratina",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La queratina es una proteína fibrosa con abundante contenido de cisteína y puentes disulfuro, otorgando dureza e impermeabilidad a las estructuras tegumentarias de vertebrados."
                 ),
                 Challenge(
@@ -3281,52 +3648,52 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s03_c14",
                     statement = "La hormona peptídica secretada por las células beta de los islotes de Langerhans pancreáticos, cuya función es inducir la captación celular de glucosa para disminuir la glucemia, es la:",
                     options = listOf(
-                        "Glucagón",
                         "Insulina",
                         "Somatostatina",
                         "Tiroxina",
-                        "Adrenalina"
+                        "Adrenalina",
+                        "Glucagón",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La insulina es una proteína hormonal compuesta por dos cadenas polipeptídicas unidas por puentes disulfuro, con potente acción hipoglucemiante y anabólica."
                 ),
                 Challenge(
                     id = "bio_t04_s03_c15",
                     statement = "En el sarcómero de las fibras musculares esqueléticas, la contracción y acortamiento celular dependen de la interacción mecánica y deslizamiento coordinado entre dos proteínas motoras denominadas:",
                     options = listOf(
+                        "Caseína y ovoalbúmina",
                         "Queratina y colágeno",
                         "Actina y miosina",
                         "Tubulina y dineína",
                         "Histona y ribonucleasa",
-                        "Caseína y ovoalbúmina"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "La actina (filamentos delgados) y la miosina (filamentos gruesos con cabezas motoras con actividad ATPasa) interactúan cíclicamente para producir la contracción del músculo esquelético y cardíaco."
                 ),
                 Challenge(
                     id = "bio_t04_s03_c16",
                     statement = "Si se gráfica la velocidad de una reacción enzimática humana frente a la temperatura desde 0 °C hasta 80 °C, se observa una curva acampanada con una velocidad óptima cercana a los 37 °C y una caída abrupta a cero hacia los 60 °C debida a:",
                     options = listOf(
+                        "La disociación del agua en átomos de hidrógeno gaseoso",
+                        "La saturación infinita de los sitios alostéricos",
                         "La evaporación instantánea del sustrato",
                         "La desnaturalización térmica irreversible de la enzima",
                         "La conversión de la enzima en una molécula de ADN",
-                        "La disociación del agua en átomos de hidrógeno gaseoso",
-                        "La saturación infinita de los sitios alostéricos"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "A temperaturas por encima del óptimo fisiológico, el aumento de energía cinética desordena y rompe las interacciones débiles que sostienen la conformación nativa de la enzima, provocando su desnaturalización."
                 ),
                 Challenge(
                     id = "bio_t04_s03_c17",
                     statement = "La enzima proteolítica pepsina opera con máxima velocidad catalítica en el estómago a un pH sumamente ácido de 1.5 a 2.0; si el quimo pasa al duodeno donde el pH se neutraliza a 8.0, la pepsina:",
                     options = listOf(
-                        "Multiplica por diez su velocidad de degradación proteica",
-                        "Pierde su conformación activa e inactiva su catálisis por alteración de las cargas iónicas de su sitio activo",
                         "Comienza a sintetizar glucosa de forma espontánea",
                         "Se transforma en bilis hepática alcalina",
-                        "Provoca la evaporación del jugo entérico"
+                        "Provoca la evaporación del jugo entérico",
+                        "Multiplica por diez su velocidad de degradación proteica",
+                        "Pierde su conformación activa e inactiva su catálisis por alteración de las cargas iónicas de su sitio activo",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Cada enzima posee un pH óptimo específico. La pepsina requiere un medio fuertemente ácido; al pasar a un medio alcalino, los grupos ionizables del sitio activo se desprotonan, perdiendo su actividad catalítica."
                 ),
                 Challenge(
@@ -3346,13 +3713,13 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s03_c19",
                     statement = "En un ensayo cinético in vitro, al aumentar progresivamente la concentración de sustrato, se alcanza un punto en el que la velocidad de reacción no aumenta más y permanece constante. Este fenómeno cinético se explica porque:",
                     options = listOf(
-                        "La enzima se ha destruido completamente por fricción molecular",
                         "Todos los sitios activos de las enzimas presentes en la solución se encuentran saturados con sustrato (Vmax)",
                         "El sustrato se transforma en un inhibidor no competitivo irreversible",
                         "Los puentes disulfuro se convierten en enlaces peptídicos",
-                        "El agua de la solución ha alcanzado su punto de ebullición"
+                        "El agua de la solución ha alcanzado su punto de ebullición",
+                        "La enzima se ha destruido completamente por fricción molecular",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La cinética de saturación (curva hiperbólica de Michaelis-Menten) demuestra que cuando todas las moléculas de enzima tienen sus sitios activos ocupados por sustrato, se alcanza la velocidad máxima (Vmax)."
                 )
             )
@@ -3425,7 +3792,32 @@ internal object BiologiaPart1 {
                       **ADN (Replicación) → ARNm (Transcripción) → Proteína (Traducción)**.
                     - Excepciones: La **transcripción inversa o retrotranscripción** (ARN → ADN bicatenario), catalizada por la enzima transcriptasa inversa en retrovirus como el VIH.
                     - **Localización celular del ADN:** En células eucariotas se encuentra en el núcleo celular (asociado a histonas formando cromatina) y en el interior de mitocondrias y cloroplastos (ADN circular y desnudo de origen endosimbiótico).
-                """,
+
+---
+
+## PROFUNDIZACIÓN: El Alfabeto de 4 Letras y sus Reglas
+
+### Reglas de Chargaff (la aritmética del ADN)
+- **A = T y G = C** en todo ADN bicatenario (purina con pirimidina: el ancho es constante).
+- **(A+G) = (T+C):** purinas igualan pirimidinas. Si una muestra tiene 30% de A, tendrá 30% de T, 20% de G y 20% de C.
+- Trampa: las reglas valen para ADN DOBLE; en ADN simple viral o ARN no se cumplen.
+
+### Antiparalelismo y surcos
+- Las dos hebras corren en sentidos opuestos (5'→3' frente a 3'→5') unidas por puentes de H: A=T (2 puentes), G≡C (3 puentes).
+- El enrollamiento deja un **surco mayor** (donde leen las proteínas reguladoras) y un **surco menor**.
+
+### Los ARN y sus trabajos (sin adelantar mecanismos)
+- **ARNm:** copia mensajera lineal con la receta. **ARNt:** trébol que porta aminoácidos (anticodón). **ARNr:** andamio catalítico del ribosoma.
+- Diferencias ADN vs. ARN (tabla): timina vs. uracilo; desoxirribosa vs. ribosa; doble hélice estable vs. simple versátil; archivo vs. trabajo.
+
+### ADN fuera del núcleo
+- **Mitocondrial y cloroplástico:** circular, desnudo (sin histonas) y con ribosomas 70S: huella de su origen endosimbiótico bacteriano.
+- **Herencia materna:** el cigoto recibe mitocondrias casi solo del óvulo (base de estudios de linaje materno).
+
+### Desnaturalización térmica del ADN (Tm)
+- Al calentar, las hebras se separan (fusión); al enfriar lento, se reasocian (hibridación): fundamento de PCR y sondas (técnica, no mecanismo celular).
+
+""",
                 conceptosClave = listOf(
                     "Nucleótido = base nitrogenada + pentosa + grupo fosfato; unidos por enlace fosfodiéster 3'-5'.",
                     "ADN: bicatenario, antiparalelo (5'→3' y 3'→5'), complementario (A=T 2 puentes; G≡C 3 puentes).",
@@ -3440,39 +3832,39 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s04_c1",
                     statement = "En un análisis molecular de una muestra de ADN bicatenario extraído de hepatocitos de alpaca, se determina que el 28% de las bases nitrogenadas corresponde a Adenina. Aplicando las leyes de Chargaff, ¿cuál es el porcentaje esperado de Guanina en dicha muestra?",
                     options = listOf(
+                        "14%",
                         "28%",
                         "22%",
                         "44%",
                         "36%",
-                        "14%"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Por la regla de Chargaff: %A = %T = 28% (suman 56%). El 44% restante corresponde por igual al par G-C; por ende, %G = 44% / 2 = 22%."
                 ),
                 Challenge(
                     id = "bio_t04_s04_c2",
                     statement = "Dos muestras de ADN bicatenario de la misma longitud son sometidas a calor para separar sus cadenas (desnaturalización térmica). La muestra 1 posee 70% de pares G-C, mientras que la muestra 2 posee 70% de pares A-T. La muestra 1 requiere mayor temperatura de desnaturalización (Tm) porque:",
                     options = listOf(
+                        "La muestra 2 carece por completo de enlaces fosfodiéster",
+                        "La timina es más hidrofílica que la citosina",
                         "Las purinas tienen mayor peso molecular que las pirimidinas",
                         "Los pares G-C se encuentran unidos por tres puentes de hidrógeno, confiriendo mayor estabilidad que los pares A-T que tienen dos",
                         "La muestra 1 contiene enlaces peptídicos intercatenarios",
-                        "La muestra 2 carece por completo de enlaces fosfodiéster",
-                        "La timina es más hidrofílica que la citosina"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El apareamiento entre Guanina y Citosina se estabiliza mediante 3 puentes de hidrógeno intercatenarios, mientras que Adenina y Timina solo forman 2. Por ello, a mayor contenido de G-C, mayor temperatura de fusión (Tm)."
                 ),
                 Challenge(
                     id = "bio_t04_s04_c3",
                     statement = "En el modelo clásico de la doble hélice del ADN propuesto por Watson y Crick, el término 'antiparalela' significa que:",
                     options = listOf(
-                        "Una cadena es de ARN y la otra es de ADN",
-                        "Las dos cadenas polinucleotídicas corren en direcciones opuestas: una en sentido 5' → 3' y la otra en sentido 3' → 5'",
                         "Las bases nitrogenadas se ubican en el exterior y los azúcares en el centro",
                         "Ambas cadenas presentan exactamente la misma secuencia de nucleótidos",
-                        "Una cadena gira hacia la derecha y la otra hacia la izquierda"
+                        "Una cadena gira hacia la derecha y la otra hacia la izquierda",
+                        "Una cadena es de ARN y la otra es de ADN",
+                        "Las dos cadenas polinucleotídicas corren en direcciones opuestas: una en sentido 5' → 3' y la otra en sentido 3' → 5'",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El antiparalelismo define que las dos hebras de la doble hélice tienen polaridad química opuesta: el extremo 5' fosfato libre de una cadena se enfrenta al extremo 3' hidroxilo libre de la hebra complementaria."
                 ),
                 Challenge(
@@ -3492,52 +3884,52 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s04_c5",
                     statement = "A nivel de la pentosa, la desoxirribosa del ADN se diferencia fundamentalmente de la ribosa del ARN en que la desoxirribosa:",
                     options = listOf(
-                        "Tiene seis átomos de carbono en lugar de cinco",
                         "Carece de un átomo de oxígeno en el carbono 2' del anillo",
                         "Es una cetohexosa fosforilada",
                         "Posee dos grupos carboxilo en el carbono 5'",
-                        "No puede formar enlaces con bases nitrogenadas"
+                        "No puede formar enlaces con bases nitrogenadas",
+                        "Tiene seis átomos de carbono en lugar de cinco",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La desoxirribosa (C₅H₁₀O₄) carece de un átomo de oxígeno en la posición 2' (posee -H), a diferencia de la ribosa (C₅H₁₀O₅) que posee un grupo hidroxilo (-OH) en el carbono 2'."
                 ),
                 Challenge(
                     id = "bio_t04_s04_c6",
                     statement = "¿Cuál de las siguientes alternativas agrupa con exactitud a las dos bases nitrogenadas de estructura bicíclica púrica presentes en los ácidos nucleicos?",
                     options = listOf(
+                        "Timina y Uracilo",
                         "Timina y Citosina",
                         "Adenina y Guanina",
                         "Uracilo y Adenina",
                         "Citosina y Guanina",
-                        "Timina y Uracilo"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Las bases púricas (purinas) derivan del anillo doble de purina y son la Adenina (A) y la Guanina (G). La Citosina, Timina y Uracilo son pirimidinas de anillo simple."
                 ),
                 Challenge(
                     id = "bio_t04_s04_c7",
                     statement = "En la composición de los ácidos nucleicos, la base nitrogenada que se encuentra de forma EXCLUSIVA en la molécula de ADN y que está ausente en el ARN es la:",
                     options = listOf(
+                        "Guanina",
+                        "Citosina",
                         "Adenina",
                         "Timina",
                         "Uracilo",
-                        "Guanina",
-                        "Citosina"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La Timina (T) es la pirimidina exclusiva del ADN. En el ARN es reemplazada por el Uracilo (U)."
                 ),
                 Challenge(
                     id = "bio_t04_s04_c8",
                     statement = "El enlace químico covalente que encadena a los nucleótidos sucesivos para formar una hebra lineal de ácido nucleico, uniendo el carbono 3' de una pentosa con el carbono 5' de la siguiente, se denomina:",
                     options = listOf(
-                        "Enlace peptídico",
-                        "Enlace fosfodiéster",
                         "Enlace glucosídico",
                         "Puente disulfuro",
-                        "Puente de hidrógeno"
+                        "Puente de hidrógeno",
+                        "Enlace peptídico",
+                        "Enlace fosfodiéster",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El enlace fosfodiéster une el grupo hidroxilo (-OH) del carbono 3' de un azúcar con el grupo fosfato del carbono 5' del nucleótido contiguo, construyendo el esqueleto azúcar-fosfato."
                 ),
                 Challenge(
@@ -3557,52 +3949,52 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s04_c10",
                     statement = "El ARN de transferencia (ARNt) presenta una conformación espacial en hoja de trébol donde destaca un triplete de bases nitrogenadas que reconoce complementariamente al codón del ARNm denominado:",
                     options = listOf(
-                        "Cistrón",
                         "Anticodón",
                         "Promotor génico",
                         "Intrón",
-                        "TATA box"
+                        "TATA box",
+                        "Cistrón",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El anticodón es el triplete de bases ubicado en el asa central del ARNt que se aparea de forma complementaria y antiparalela con el codón del ARNm durante la síntesis proteica."
                 ),
                 Challenge(
                     id = "bio_t04_s04_c11",
                     statement = "El tipo de ARN más abundante en la célula viva (representando más del 80% del ARN celular total), que además ejerce actividad catalítica de ribozima (peptidil transferasa) uniendo aminoácidos, es el:",
                     options = listOf(
+                        "ADN plasmídico",
                         "ARN mensajero",
                         "ARN ribosómico (ARNr)",
                         "ARN de transferencia",
                         "ARN nuclear pequeño",
-                        "ADN plasmídico"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El ARN ribosómico (ARNr) es el más abundante de la célula; integra la arquitectura de los ribosomas y cataliza la formación del enlace peptídico mediante su actividad ribozima."
                 ),
                 Challenge(
                     id = "bio_t04_s04_c12",
                     statement = "En la complementariedad de bases de la molécula de ADN bicatenario, ¿cuántos puentes de hidrógeno se establecen respectivamente entre los pares Adenina-Timina y Guanina-Citosina?",
                     options = listOf(
+                        "A-T: 4 puentes; G-C: 1 puente",
+                        "Ambos pares forman exactamente 2 puentes",
                         "A-T: 3 puentes; G-C: 2 puentes",
                         "A-T: 2 puentes; G-C: 3 puentes",
                         "A-T: 1 puente; G-C: 4 puentes",
-                        "A-T: 4 puentes; G-C: 1 puente",
-                        "Ambos pares forman exactamente 2 puentes"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La Adenina se une a la Timina mediante 2 puentes de hidrógeno (A=T), mientras que la Guanina se une a la Citosina mediante 3 puentes de hidrógeno (G≡C)."
                 ),
                 Challenge(
                     id = "bio_t04_s04_c13",
                     statement = "Una molécula constituida exclusivamente por la unión de una base nitrogenada con una pentosa mediante enlace N-glucosídico, carente del grupo fosfato, se clasifica bioquímicamente como un:",
                     options = listOf(
-                        "Nucleótido",
-                        "Nucleósido",
                         "Polinucleótido",
                         "Codón",
-                        "Oligopéptido"
+                        "Oligopéptido",
+                        "Nucleótido",
+                        "Nucleósido",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Un nucleósido está formado únicamente por una base nitrogenada unida a una pentosa. Al añadir uno o más grupos fosfato se convierte en nucleótido."
                 ),
                 Challenge(
@@ -3622,52 +4014,52 @@ internal object BiologiaPart1 {
                     id = "bio_t04_s04_c15",
                     statement = "El retrovirus de la inmunodeficiencia humana (VIH) altera el dogma clásico de la biología molecular porque utiliza su genoma de ARN para sintetizar ADN bicatenario dentro del linfocito mediante la enzima:",
                     options = listOf(
-                        "ADN polimerasa III",
                         "Transcriptasa inversa (retrotranscriptasa)",
                         "ARN polimerasa II",
                         "Helicasa mitocondrial",
-                        "Topoisomerasa bacteriana"
+                        "Topoisomerasa bacteriana",
+                        "ADN polimerasa III",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La transcriptasa inversa es una enzima que cataliza la síntesis de ADN a partir de un molde de ARN monocatenario, proceso conocido como transcripción inversa o retrotranscripción."
                 ),
                 Challenge(
                     id = "bio_t04_s04_c16",
                     statement = "Si una hebra de ADN presenta la secuencia de nucleótidos 5'-A-T-G-C-C-A-3', la secuencia complementaria y antiparalela en la hebra opuesta debe ser obligatoriamente:",
                     options = listOf(
+                        "3'-A-U-G-C-C-A-5'",
                         "5'-T-A-C-G-G-T-3'",
                         "3'-T-A-C-G-G-T-5'",
                         "3'-U-A-C-G-G-U-5'",
                         "5'-A-T-G-C-C-A-3'",
-                        "3'-A-U-G-C-C-A-5'"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Por complementariedad (A con T, G con C) y antiparalelismo (5' se enfrenta a 3'), frente a 5'-ATGCCA-3' la hebra opuesta debe ser 3'-TACGGT-5'."
                 ),
                 Challenge(
                     id = "bio_t04_s04_c17",
                     statement = "Durante la transcripción de un gen, si la hebra molde de ADN leída por la ARN polimerasa es 3'-T-A-C-G-A-A-5', la secuencia de ARNm resultante será:",
                     options = listOf(
+                        "5'-U-A-C-G-A-A-3'",
+                        "3'-T-A-C-G-A-A-5'",
                         "5'-A-T-G-C-T-T-3'",
                         "5'-A-U-G-C-U-U-3'",
                         "3'-A-U-G-C-U-U-5'",
-                        "5'-U-A-C-G-A-A-3'",
-                        "3'-T-A-C-G-A-A-5'"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La ARN polimerasa sintetiza en dirección 5' → 3' complementando con ARN: frente a T coloca A, frente a A coloca U, frente a C coloca G, obteniéndose 5'-AUGCUU-3'."
                 ),
                 Challenge(
                     id = "bio_t04_s04_c18",
                     statement = "La científica británica cuyo trabajo pionero de difracción de rayos X (la célebre 'Fotografía 51') proporcionó los datos cristalográficos decisivos para elucidar la estructura en doble hélice del ADN fue:",
                     options = listOf(
-                        "Marie Curie",
-                        "Rosalind Franklin",
                         "Barbara McClintock",
                         "Lynn Margulis",
-                        "Jane Goodall"
+                        "Jane Goodall",
+                        "Marie Curie",
+                        "Rosalind Franklin",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Rosalind Franklin obtuvo la crucial 'Fotografía 51' de difracción de rayos X que evidenció la estructura helicoidal y las dimensiones espaciales de la molécula de ADN."
                 ),
                 Challenge(
@@ -3749,7 +4141,30 @@ internal object BiologiaPart1 {
                       - *Fimbrias ordinarias:* Cortas y numerosas; median la adherencia a mucosas epiteliales del hospedador.
                       - *Pili sexuales (Pili F):* Más largos y huecos; participan en la **conjugación bacteriana**, facilitando la transferencia unidireccional de plásmidos conjugativos entre bacterias donantes (F+) y receptoras (F-).
                     - **Endosporas:** Formas latentes de extrema resistencia (frente a calor, radiación UV, desecación y desinfectantes químicos) producidas en condiciones adversas por géneros como *Bacillus* y *Clostridium*. Su deshidratación y alto contenido de **dipicolinato de calcio** en el cortex estabilizan el ADN bacteriano.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Gram, Formas y Supervivencia Bacteriana
+
+### Tinción Gram paso a paso (por qué funciona)
+1. **Cristal violeta:** tiñe TODAS de morado. 2. **Lugol:** fija el colorante (mordiente). 3. **Alcohol-acetona:** las Gram NEGATIVAS pierden el color (pared delgada + LPS soluble); las positivas lo retienen. 4. **Safranina:** contratinción rosada solo visible en las negativas.
+- **Positivas:** mureína GRUESA + ácidos teicoicos → VIOLETA (Staphylococcus, Streptococcus, Bacillus).
+- **Negativas:** mureína DELGADA + membrana externa con LPS endotóxico → ROSADO (E. coli, Salmonella, Neisseria).
+- Trampa: Gram NO clasifica por forma sino por PARED; un coco puede ser positivo o negativo.
+
+### Formas bacterianas (morfología de examen)
+- **Cocos:** esféricos (diplococos, estreptococos en cadena, estafilococos en racimo).
+- **Bacilos:** bastones (E. coli, Bacillus, Clostridium).
+- **Espirilos y espiroquetas:** helicoidales rígidas o flexibles (Treponema, Vibrio coma curvado).
+
+### Plásmidos y endosporas
+- **Plásmidos:** ADN circular extracromosómico con genes extra (resistencia a antibióticos, toxinas, fertilidad F). Se replican solos y se transfieren entre bacterias.
+- **Endospora:** forma latente con dipicolinato de calcio y corteza gruesa; sobrevive ebullición y desinfectantes (Bacillus anthracis, Clostridium tetani). Germina al volver lo favorable.
+
+### Postulados de la teoría celular (origen)
+- Schleiden (plantas, 1838) y Schwann (animales, 1839): todo ser vivo está hecho de células. Virchow (1855) cierra: "toda célula proviene de otra célula" (omnis cellula e cellula), enterrando la generación espontánea.
+
+""",
                 conceptosClave = listOf(
                     "Postulado de Virchow: Omnis cellula e cellula (unidad de origen).",
                     "Gram positivas: gruesa capa de mureína y ácidos teicoicos (tinción violeta).",
@@ -3765,13 +4180,13 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s01_c1",
                     statement = "Una cepa hospitalaria de *Klebsiella pneumoniae* adquiere la capacidad de inactivar a los carbapenémicos transmitiendo un anillo de ADN extracromosómico a otra bacteria durante la conjugación bacteriana. Dicho elemento genético corresponde a:",
                     options = listOf(
-                        "El nucleoide bacteriano principal",
                         "Un plásmido",
                         "Un mesosoma lateral",
                         "Un ribosoma 70S",
-                        "Un capsómero proteico"
+                        "Un capsómero proteico",
+                        "El nucleoide bacteriano principal",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Los plásmidos son moléculas de ADN circular bicatenario extracromosómico independientes que replican de forma autónoma y con frecuencia portan genes de resistencia a antibióticos transferibles por conjugación (pili sexual)."
                 ),
                 Challenge(
@@ -3791,26 +4206,26 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s01_c3",
                     statement = "Al realizar la tinción de Gram a una muestra bacteriana de exudado faríngeo, las bacterias retienen el complejo cristal violeta-iodo y se observan de color violeta al microscopio. Esta propiedad tintorial se debe fundamentalmente a que poseen:",
                     options = listOf(
+                        "Una pared celular exclusivamente formada por celulosa y lignina",
                         "Una membrana externa rica en lipopolisacárido y porinas",
                         "Una capa gruesa de peptidoglicano asociada a ácidos teicoicos",
                         "Una cápsula mucosa compuesta de dipicolinato de calcio",
                         "Esteroles intercalados en la bicapa de su membrana plasmática",
-                        "Una pared celular exclusivamente formada por celulosa y lignina"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Las bacterias Gram positivas poseen una pared celular ancha y homogénea constituida por múltiples estratos de peptidoglicano (mureína) atravesados por ácidos teicoicos y lipoteicoicos, que retienen el colorante violeta."
                 ),
                 Challenge(
                     id = "bio_t05_s01_c4",
                     statement = "En la membrana plasmática de una bacteria quimioheterótrofa aeróbica se localizan complejos enzimáticos homólogos a los de la membrana interna mitocondrial eucariota. Esto se debe a que la bacteria realiza su cadena respiratoria y fosforilación oxidativa en:",
                     options = listOf(
-                        "La carioteca nuclear",
-                        "La membrana plasmática y sus repliegues mesosómicos",
                         "El nucleoide citoplasmático",
                         "El estroma de los cloroplastos",
-                        "La matriz del aparato de Golgi"
+                        "La matriz del aparato de Golgi",
+                        "La carioteca nuclear",
+                        "La membrana plasmática y sus repliegues mesosómicos",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Al carecer de mitocondrias, las bacterias albergan los citocromos de la cadena transportadora de electrones y la ATP sintasa directamente en su membrana plasmática y sus invaginaciones (mesosomas)."
                 ),
                 Challenge(
@@ -3830,52 +4245,52 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s01_c6",
                     statement = "Durante un proceso de autoclave hospitalario se somete el instrumental a calor húmedo a 121 °C bajo presión durante 20 minutos con el objetivo de eliminar formas biológicas de latencia hiperresistentes producidas por bacterias de los géneros *Clostridium* y *Bacillus*. Dichas estructuras se denominan:",
                     options = listOf(
-                        "Cápsulas mucilaginosas",
-                        "Plásmidos conjugativos",
                         "Endosporas bacterianas",
                         "Fimbrias de adhesión",
-                        "Mesosomas de tabique"
+                        "Mesosomas de tabique",
+                        "Cápsulas mucilaginosas",
+                        "Plásmidos conjugativos",
                     ),
-                    correctIndex = 2,
+                    correctIndex = 0,
                     explanation = "Las endosporas bacterianas son estructuras deshidratadas de máxima resistencia física y química gracias a su envoltura queratínica y al dipicolinato de calcio en su cortex, diseñadas para sobrevivir condiciones letales."
                 ),
                 Challenge(
                     id = "bio_t05_s01_c7",
                     statement = "El intercambio genético parasexual entre dos bacterias vivas a través de un puente citoplasmático constituido por un pelo o pili sexual compuesto de la proteína pilina recibe el nombre de:",
                     options = listOf(
-                        "Transformación mediada por ADN libre",
                         "Transducción mediada por bacteriófagos",
                         "Conjugación bacteriana",
                         "Fisión binaria o bipartición",
-                        "Esporulación endógena"
+                        "Esporulación endógena",
+                        "Transformación mediada por ADN libre",
                     ),
-                    correctIndex = 2,
+                    correctIndex = 1,
                     explanation = "La conjugación bacteriana es el mecanismo por el cual una bacteria donadora (F+) contacta a una receptora (F-) a través de un pili sexual para transferir una copia de un plásmido conjugativo."
                 ),
                 Challenge(
                     id = "bio_t05_s01_c8",
                     statement = "Los ribosomas de las células procariotas son estructuras ribonucleoproteicas con un coeficiente de sedimentación de 70S. Sus subunidades constituyentes y ARN ribosómico son respectivamente:",
                     options = listOf(
+                        "Subunidad 50S (ARNr 28S) y subunidad 20S (ARNr 12S)",
+                        "Subunidad 70S monomerica indivisible sin subunidades",
                         "Subunidad 60S (ARNr 28S) y subunidad 40S (ARNr 18S)",
                         "Subunidad 50S (ARNr 23S y 5S) y subunidad 30S (ARNr 16S)",
                         "Subunidad 40S (ARNr 16S) y subunidad 30S (ARNr 5S)",
-                        "Subunidad 50S (ARNr 28S) y subunidad 20S (ARNr 12S)",
-                        "Subunidad 70S monomerica indivisible sin subunidades"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El ribosoma procariota 70S se disocia en una subunidad mayor 50S (con ARNr 23S y 5S) y una subunidad menor 30S (con ARNr 16S), a diferencia del ribosoma citosólico eucariota que es 80S (60S + 40S)."
                 ),
                 Challenge(
                     id = "bio_t05_s01_c9",
                     statement = "La molécula responsable del shock endotóxico febril severo desencadenado por infecciones sistémicas causadas por bacterias Gram negativas forma parte integral de su membrana externa y corresponde al:",
                     options = listOf(
-                        "Ácido teicoico superficial",
-                        "Lípido A del lipopolisacárido (LPS)",
                         "Peptidoglicano monomérico",
                         "Fosfolípido de cardiolipina",
-                        "Ácido dipicolínico cristalizado"
+                        "Ácido dipicolínico cristalizado",
+                        "Ácido teicoico superficial",
+                        "Lípido A del lipopolisacárido (LPS)",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El lipopolisacárido (LPS) de la membrana externa de las Gram negativas actúa como endotoxina bacteriana; su porción lipídica (el lípido A) es el inductor directo de citocinas pirógenas (IL-1, TNF-alfa) que producen fiebre y shock séptico."
                 ),
                 Challenge(
@@ -3895,52 +4310,52 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s01_c11",
                     statement = "Ciertas bacterias patógenas como *Streptococcus pneumoniae* poseen una capa mucosa exterior a la pared celular que les permite evadir el englobamiento por macrófagos y neutrófilos del huésped. Esta estructura antifagocítica es:",
                     options = listOf(
-                        "El mesosoma de tabicación",
                         "La cápsula",
                         "El plásmido de virulencia",
                         "El flagelo peritrico",
-                        "La fimbria tipo IV"
+                        "La fimbria tipo IV",
+                        "El mesosoma de tabicación",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La cápsula bacteriana es una estructura gelatinosa externa que enmascara los antígenos de superficie e impide la opsonización y fagocitosis por los leucocitos, constituyendo un potente factor de virulencia."
                 ),
                 Challenge(
                     id = "bio_t05_s01_c12",
                     statement = "La afirmación botánica de 1838 que postuló que los tejidos de todas las plantas están integrados por agrupaciones organizadas de células vivas fue sustentada por:",
                     options = listOf(
+                        "Rudolf Virchow",
+                        "Marcelo Malpighi",
                         "Matthias Schleiden",
                         "Theodor Schwann",
                         "Robert Brown",
-                        "Rudolf Virchow",
-                        "Marcelo Malpighi"
                     ),
-                    correctIndex = 0,
+                    correctIndex = 2,
                     explanation = "Matthias Schleiden, botánico alemán, formuló en 1838 el primer postulado general de la teoría celular vegetal, antes de que Schwann lo ampliara a los tejidos animales al año siguiente."
                 ),
                 Challenge(
                     id = "bio_t05_s01_c13",
                     statement = "A diferencia de las bacterias Gram positivas, el espacio comprendido entre la membrana plasmática y la membrana externa en las bacterias Gram negativas, donde se aloja una delgada capa de mureína y enzimas hidrolíticas, se denomina:",
                     options = listOf(
+                        "Citoplasma cortical",
+                        "Matriz coloidal",
                         "Espacio intercristas",
                         "Espacio periplásmico",
                         "Lumen vesicular",
-                        "Citoplasma cortical",
-                        "Matriz coloidal"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El espacio periplásmico (o periplasma) es el compartimento acuoso delimitado entre la membrana interna y la externa de las bacterias Gram negativas, vital para el transporte de nutrientes y la inactivación de fármacos."
                 ),
                 Challenge(
                     id = "bio_t05_s01_c14",
                     statement = "Las cianobacterias (algas verdeazuladas) son procariontes autótrofos que realizan fotosíntesis oxigénica similar a las plantas superiores. Al no tener cloroplastos, ¿dónde ubican su clorofila a y pigmentos accesorios?",
                     options = listOf(
-                        "En vacuolas digestivas rodeadas de tonoplasto",
-                        "En invaginaciones membranosas llamadas laminillas fotosintéticas o tilacoides procariotas",
                         "En el interior de la cápsula polisacarídica externa",
                         "En el interior del nucleoide adheridos al ADN",
-                        "En dictiosomas golgianos especializados"
+                        "En dictiosomas golgianos especializados",
+                        "En vacuolas digestivas rodeadas de tonoplasto",
+                        "En invaginaciones membranosas llamadas laminillas fotosintéticas o tilacoides procariotas",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Las cianobacterias albergan sus complejos fotosintéticos en membranas tilacoidales intracitoplasmáticas o láminas fotosintéticas concéntricas derivadas de la membrana celular."
                 )
             )
@@ -4016,7 +4431,31 @@ internal object BiologiaPart1 {
                       - *Pinocitosis:* Invaginación inespecífica de pequeñas gotas de líquido extracelular con solutos disueltos en vesículas pinocíticas.
                       - *Endocitosis mediada por receptor:* Proceso selectivo mediado por vesículas cubiertas de **clatrina** que captan ligandos específicos (ej. captación de colesterol LDL por hepatocitos).
                     - **Exocitosis:** Fusión de vesículas de secreción intracelulares con la membrana plasmática para verter su contenido al medio extracelular (neurotransmisores en la hendidura sináptica, hormonas polipeptídicas como insulina o enzimas digestivas).
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Termodinámica del Transporte
+
+### Proteínas de membrana (quién hace qué)
+- **Integrales o intrínsecas:** atraviesan la bicapa (canales iónicos, carriers, receptores, ATPasas).
+- **Periféricas o extrínsecas:** adheridas a una cara (anclaje al citoesqueleto, enzimas).
+- **Glucocálix:** alfombra de glúcidos sobre proteínas y lípidos: identidad celular, ABO sanguíneo y protección.
+
+### Transporte pasivo vs. activo (tabla maestra)
+- **Difusión simple:** directo por bicapa, a favor de gradiente, sin proteína ni ATP (O2, CO2, esteroides, vitaminas liposolubles).
+- **Difusión facilitada:** CON proteína (canal o carrier), a favor de gradiente, sin ATP (glucosa por GLUT, iones por canales).
+- **Ósmosis:** difusión del AGUA por membrana semipermeable hacia donde hay MÁS soluto.
+- **Activo primario:** CONTRA gradiente CON ATP directo (bomba Na+/K+: 3 Na+ fuera, 2 K+ dentro por ATP).
+- **Activo secundario:** contra gradiente usando la ENERGÍA de otro gradiente (simporte Na+/glucosa intestinal).
+- **Endocitosis/exocitosis:** en bloque por vesículas (fagocitosis de sólidos, pinocitosis de líquidos, mediada por receptor para LDL).
+
+### Ósmosis en la célula: tres destinos
+- **Medio hipotónico:** entra agua → célula animal ESTALLA (hemólisis); vegetal se vuelve TURGENTE (ideal).
+- **Medio isotónico:** equilibrio (suero fisiológico 0,9%).
+- **Medio hipertónico:** sale agua → animal se CRENA; vegetal sufre PLASMÓLISIS (membrana se despega de la pared).
+- Trampa: la turgencia es el estado SANO vegetal; la plasmólisis prolongada mata.
+
+""",
                 conceptosClave = listOf(
                     "Mosaico fluido (Singer y Nicolson): bicapa lipídica anfipática y proteínas dinámicas.",
                     "Colesterol: regula la fluidez frente a cambios de temperatura.",
@@ -4045,52 +4484,52 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s02_c2",
                     statement = "Al sumergir un frotis de glóbulos rojos humanos en una solución acuosa de cloruro de sodio al 0.2% (solución marcadamente hipotónica respecto a la osmolaridad fisiológica del 0.9%), los eritrocitos sufrirán:",
                     options = listOf(
-                        "Crenación por deshidratación osmótica",
                         "Lisis celular o hemólisis por entrada masiva de agua",
                         "Plasmólisis con retracción de la membrana plasmática",
                         "Turgencia controlada sin cambio volumétrico",
-                        "Endocitosis masiva de iones cloruro"
+                        "Endocitosis masiva de iones cloruro",
+                        "Crenación por deshidratación osmótica",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "En un medio hipotónico, el agua ingresa masivamente al interior del glóbulo rojo por ósmosis; al carecer de pared celular protectora rígida, la membrana eritrocitaria no tolera la presión hidrostática y estalla (hemólisis)."
                 ),
                 Challenge(
                     id = "bio_t05_s02_c3",
                     statement = "En el modelo del mosaico fluido de Singer y Nicolson (1972), la fluidez de la membrana plasmática en células de mamíferos a temperaturas fisiológicas se encuentra regulada y amortiguada por la presencia de:",
                     options = listOf(
+                        "Ácidos teicoicos transmembrana",
                         "Celulosa microfibrilar",
                         "Colesterol intercalado en la bicapa",
                         "Peptidoglicano de mureína",
                         "Glucógeno citosólico",
-                        "Ácidos teicoicos transmembrana"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El colesterol se intercala entre los fosfolípidos modulando su movilidad: a temperaturas corporales amortigua el movimiento excesivo de las colas hidrocarbonadas evitando que la membrana sea demasiado fluida."
                 ),
                 Challenge(
                     id = "bio_t05_s02_c4",
                     statement = "¿Cuál de las siguientes moléculas químicas atraviesa la membrana plasmática directamente a través de los fosfolípidos de la bicapa por difusión simple sin requerir canales ni proteínas transportadoras?",
                     options = listOf(
+                        "Aminoácido alanina",
+                        "Ion sodio (Na+)",
                         "Glucosa monomérica",
                         "Oxígeno molecular (O2)",
                         "Ion calcio (Ca2+)",
-                        "Aminoácido alanina",
-                        "Ion sodio (Na+)"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El oxígeno (O₂) es una molécula no polar pequeña que se disuelve libremente a través de la región hidrofóbica de la bicapa lipídica a favor de su gradiente de presión parcial mediante difusión simple."
                 ),
                 Challenge(
                     id = "bio_t05_s02_c5",
                     statement = "Las cadenas cortas de carbohidratos (oligosacáridos) unidas covalentemente a proteínas y lípidos que sobresalen exclusivamente hacia el medio extracelular formando el glucocálix celular cumplen la función primordial de:",
                     options = listOf(
-                        "Generar ATP mediante quimiosmosis oxidativa",
-                        "Reconocimiento celular, histocompatibilidad y adhesión",
                         "Fosforilación oxidativa de azúcares libres",
                         "Polimerización de microtúbulos del huso acromático",
-                        "Digestión autofágica de organelos seniles"
+                        "Digestión autofágica de organelos seniles",
+                        "Generar ATP mediante quimiosmosis oxidativa",
+                        "Reconocimiento celular, histocompatibilidad y adhesión",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El glucocálix celular confiere una huella molecular única a cada estirpe celular en animales, interviniendo en el reconocimiento inmunológico (sistema ABO, HLA) y la adhesión celular."
                 ),
                 Challenge(
@@ -4110,13 +4549,13 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s02_c7",
                     statement = "Cuando una célula vegetal madura es colocada en un medio extracelular fuertemente hipertónico (alta concentración de sacarosa), el agua intracelular sale de la vacuola provocando el desprendimiento de la membrana plasmática respecto a la pared celular rígida. Este fenómeno se denomina:",
                     options = listOf(
-                        "Crenación",
-                        "Turgencia",
                         "Plasmólisis",
                         "Hemólisis",
-                        "Citolisis"
+                        "Citolisis",
+                        "Crenación",
+                        "Turgencia",
                     ),
-                    correctIndex = 2,
+                    correctIndex = 0,
                     explanation = "La plasmólisis ocurre en células vegetales en medio hipertónico cuando la pérdida de agua reduce el volumen citoplasmático y vacuolar, despegando la membrana plasmática de la pared celular externa."
                 ),
                 Challenge(
@@ -4136,26 +4575,26 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s02_c9",
                     statement = "Un macrófago alveolar extiende proyecciones citoplasmáticas de membrana ricas en microfilamentos de actina (pseudópodos) para rodear e internalizar una bacteria invasora dentro de una vesícula membranosa grande. Dicho proceso celular corresponde a la:",
                     options = listOf(
+                        "Ósmosis coloidosmótica",
+                        "Difusión simple transmural",
                         "Pinocitosis inespecífica",
                         "Fagocitosis",
                         "Exocitosis regulada",
-                        "Ósmosis coloidosmótica",
-                        "Difusión simple transmural"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La fagocitosis es una modalidad de endocitosis en masa mediante la cual células especializadas engloban partículas sólidas grandes o microorganismos a través de pseudópodos para formar un fagosoma."
                 ),
                 Challenge(
                     id = "bio_t05_s02_c10",
                     statement = "La internalización selectiva de partículas de lipoproteínas de baja densidad (LDL) cargadas de colesterol hacia el interior de los hepatocitos se realiza mediante fositas de membrana revestidas en su cara citosólica por una red de la proteína:",
                     options = listOf(
-                        "Tubulina alfa",
-                        "Clatrina",
                         "Queratina dura",
                         "Colágeno tipo I",
-                        "Miosina de cadena pesada"
+                        "Miosina de cadena pesada",
+                        "Tubulina alfa",
+                        "Clatrina",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La endocitosis mediada por receptor requiere el ensamblaje de una red de clatrina en la cara interna de la membrana para invaginar y estrangular la vesícula recubierta que contiene los complejos receptor-ligando."
                 ),
                 Challenge(
@@ -4175,26 +4614,26 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s02_c12",
                     statement = "La liberación de acetilcolina desde las vesículas sinápticas de una motoneurona hacia la hendidura sináptica al unirse la vesícula con la membrana presináptica es un proceso de:",
                     options = listOf(
-                        "Fagocitosis neutra",
                         "Exocitosis",
                         "Difusión facilitada por carrier",
                         "Pinocitosis adsortiva",
-                        "Transporte activo secundario"
+                        "Transporte activo secundario",
+                        "Fagocitosis neutra",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La exocitosis es el mecanismo mediante el cual las vesículas de secreción intracelulares se fusionan con la membrana plasmática para verter su contenido (neurotransmisores) al espacio extracelular."
                 ),
                 Challenge(
                     id = "bio_t05_s02_c13",
                     statement = "En la difusión facilitada a través de transportadores o permeasas (carriers), la velocidad de transporte aumenta al incrementar la concentración del soluto hasta alcanzar una velocidad máxima (Vmax). Esta cinética se explica porque:",
                     options = listOf(
+                        "El glucocálix bloquea el poro proteico",
                         "El soluto agota las reservas de ATP citoplasmático",
                         "Los sitios de unión de las proteínas transportadoras se saturan por completo",
                         "La membrana plasmática pierde su fluidez lipídica",
                         "El gradiente electroquímico se invierte bruscamente",
-                        "El glucocálix bloquea el poro proteico"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Los transportadores proteicos poseen un número finito de sitios de unión esteroespecíficos; cuando todos los carriers están ocupados por el soluto, el sistema alcanza la saturación (Vmax)."
                 )
             )
@@ -4276,7 +4715,29 @@ internal object BiologiaPart1 {
                       - *Envoltura:* Doble membrana concéntrica (externa e interna) que rodea el estroma.
                       - *Tilacoides:* Sacos membranosos aplanados organizados en pilas llamadas **granas** (unidas por lamelas estromales). En la membrana tilacoidal se encuentran los **fotosistemas (I y II)**, pigmentos (clorofila a, b, carotenoides), citocromos y ATP sintasas para la **fase luminosa**.
                       - *Estroma:* Matriz coloidal fluida que contiene la enzima **RuBisCO** para el **ciclo de Calvin-Benson (fase oscura)**, ADN cloroplástico circular (ADNcp) y ribosomas 70S.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Rutas del Tráfico Vesicular y Endosimbiosis
+
+### RER vs. REL (tabla de deslinde)
+- **RER (rugoso):** con ribosomas y riboforinas; fabrica proteínas DE SECRECIÓN y membrana + glicosilación inicial (anticuerpos, insulina, lisosomales).
+- **REL (liso):** sin ribosomas; sintetiza LÍPIDOS y esteroides, destoxifica fármacos (citocromo P450 hepático) y guarda Ca++ (retículo sarcoplásmico muscular).
+- Trampa: el REL no hace proteínas; el RER no hace lípidos.
+
+### Golgi y sus vesículas con abrigo
+- Flujo: RER → cara CIS → cisternas (modificación y etiquetado) → cara TRANS → vesículas de destino.
+- **Abrigos:** COPII (RER→Golgi), COPI (retorno Golgi→RER), clatrina (Golgi→membrana/lisosoma y endocitosis).
+- **Lisosoma primario** (solo enzimas) frente a **secundario** (enzimas + carga: autofagosoma o heterofagosoma). Enfermedad de Tay-Sachs: lisosoma sin hexosaminidasa acumula gangliósidos.
+
+### Vacuola vegetal y peroxisomas
+- **Vacuola central:** turgencia, pigmentos (antocianinas), desechos y defensa (taninos, alcaloides).
+- **Peroxisoma:** catalasa que destruye H2O2 (fotorrespiración en hoja). **Glioxisoma:** convierte lípidos en azúcares al germinar semillas oleaginosas.
+
+### Teoría endosimbiótica (Margulis): 4 evidencias de examen
+1. Doble membrana (la externa, de fagocitosis ancestral). 2. ADN circular desnudo propio. 3. Ribosomas 70S bacterianos. 4. División por fisión binaria independiente.
+
+""",
                 conceptosClave = listOf(
                     "RER: síntesis de proteínas de secreción y glicosilación inicial (riboforinas).",
                     "REL: síntesis de lípidos, destoxificación (citocromo P450) y reservorio de Ca²⁺.",
@@ -4293,26 +4754,26 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s03_c1",
                     statement = "Un individuo metaboliza un sedante tras su administración. En los hepatocitos de su tejido hepático se observa una marcada proliferación de un organelo membranoso especializado en la síntesis de esteroides y destoxificación de sustancias hidrofóbicas mediante citocromo P450. ¿De qué organelo se trata?",
                     options = listOf(
+                        "Peroxisoma apical",
                         "Retículo endoplasmático rugoso (RER)",
                         "Aparato de Golgi",
                         "Retículo endoplasmático liso (REL)",
                         "Lisosoma secundario",
-                        "Peroxisoma apical"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 3,
                     explanation = "El retículo endoplasmático liso (REL) carece de ribosomas y tiene como funciones cardinales la síntesis de lípidos (fosfolípidos y colesterol) y la destoxificación de fármacos, pesticidas y toxinas en el hígado."
                 ),
                 Challenge(
                     id = "bio_t05_s03_c2",
                     statement = "Durante períodos de privación de nutrientes o daño mitocondrial, la célula engloba sus propios organelos deteriorados dentro de una vesícula de doble membrana para fusionarla con lisosomas y reciclar sus componentes moleculares. Este proceso fisiológico de supervivencia celular se denomina:",
                     options = listOf(
+                        "Fagocitosis inmune",
+                        "Pinocitosis adsortiva",
                         "Heterofagia vesicular",
                         "Autólisis necrótica",
                         "Autofagia",
-                        "Fagocitosis inmune",
-                        "Pinocitosis adsortiva"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 4,
                     explanation = "La autofagia es la ruta catabólica lisosomal encargada de degradar organelos y proteínas celulares deterioradas para reciclar nutrientes y mantener la homeostasis energética intracelular."
                 ),
                 Challenge(
@@ -4345,39 +4806,39 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s03_c5",
                     statement = "¿Cuál de las siguientes funciones metabólicas se encuentra a cargo exclusivo del Aparato de Golgi dentro de la ruta secretora celular?",
                     options = listOf(
+                        "Fijación de dióxido de carbono mediante la enzima RuBisCO",
                         "Síntesis de ácidos grasos y fosfolípidos de bicapa",
                         "Empaquetamiento, glicosilación terminal de proteínas y formación de lisosomas primarios",
                         "Beta-oxidación de ácidos grasos de cadena muy larga",
                         "Degradación del peróxido de hidrógeno en agua y oxígeno",
-                        "Fijación de dióxido de carbono mediante la enzima RuBisCO"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El complejo de Golgi actúa como el centro de clasificación, modificación postraduccional terminal (O-glicosilación) y empaquetamiento de vesículas que originan la secreción celular y los lisosomas primarios."
                 ),
                 Challenge(
                     id = "bio_t05_s03_c6",
                     statement = "La enzima catalasa es un marcador bioquímico esencial localizado en el interior de los peroxisomas. Su función fisiológica indispensable para la supervivencia de la célula consiste en:",
                     options = listOf(
+                        "Hidrolizar lípidos en ácidos grasos mediante lipasas ácidas",
+                        "Escindir el ADN bacteriano durante la fagocitosis",
                         "Fosforilar ADP para transformarlo en ATP de alta energía",
                         "Degradar el peróxido de hidrógeno tóxico (H2O2) en agua y oxígeno molecular",
                         "Sintetizar glucógeno a partir de moléculas de glucosa libre",
-                        "Hidrolizar lípidos en ácidos grasos mediante lipasas ácidas",
-                        "Escindir el ADN bacteriano durante la fagocitosis"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La catalasa peroxisomal neutraliza el peróxido de hidrógeno (H₂O₂), una especie reactiva de oxígeno muy tóxica producida por las oxidasas, descomponiéndola en 2 H₂O y O₂."
                 ),
                 Challenge(
                     id = "bio_t05_s03_c7",
                     statement = "Durante la germinación de semillas de soya y girasol, los lípidos de reserva deben transformarse rápidamente en glúcidos solubles para sustentar el desarrollo inicial de la plántula. Esta ruta anabólica (ciclo del glioxilato) ocurre en organelos exclusivos denominados:",
                     options = listOf(
-                        "Lisosomas heterofágicos",
-                        "Glioxisomas",
                         "Peroxisomas animales",
                         "Dictiosomas golgianos",
-                        "Centríolos no membranosos"
+                        "Centríolos no membranosos",
+                        "Lisosomas heterofágicos",
+                        "Glioxisomas",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Los glioxisomas son microcuerpos especializados de las semillas vegetales oleaginosas que albergan las enzimas del ciclo del glioxilato, transformando ácidos grasos en azúcares."
                 ),
                 Challenge(
@@ -4423,26 +4884,26 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s03_c11",
                     statement = "La vacuola central de las células vegetales maduras está delimitada por una membrana selectivamente permeable de gran importancia osmótica denominada:",
                     options = listOf(
+                        "Plasmalema basal",
+                        "Cutícula",
                         "Carioteca",
                         "Tonoplasto",
                         "Fragmoplasto",
-                        "Plasmalema basal",
-                        "Cutícula"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El tonoplasto es la membrana unitaria que rodea a la gran vacuola vegetal central; regula el flujo de agua e iones para sostener la presión de turgencia celular."
                 ),
                 Challenge(
                     id = "bio_t05_s03_c12",
                     statement = "Los ribosomas 80S se unen transitoriamente a la membrana del retículo endoplasmático rugoso mediante receptores proteicos transmembrana específicos conocidos como:",
                     options = listOf(
-                        "Integrinas de adhesión",
-                        "Riboforinas",
                         "Porinas mitocondriales",
                         "Cadherinas desmosómicas",
-                        "Conexinas intercelulares"
+                        "Conexinas intercelulares",
+                        "Integrinas de adhesión",
+                        "Riboforinas",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Las riboforinas I y II son glucoproteínas transmembrana del RER que fijan la subunidad mayor (60S) del ribosoma eucariota facilitando la translocación cotraduccional de la cadena polipeptídica naciente."
                 ),
                 Challenge(
@@ -4462,52 +4923,52 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s03_c14",
                     statement = "En las crestas mitocondriales de las células del miocardio se localizan las partículas F0-F1 que acoplan el retorno de protones a la matriz con la fosforilación de ADP. Dicho complejo multiproteico corresponde a la enzima:",
                     options = listOf(
-                        "RuBisCO carboxilasa",
                         "ATP sintasa",
                         "Catalasa oxidativa",
                         "ADN polimerasa gamma",
-                        "Fosfatasa ácida"
+                        "Fosfatasa ácida",
+                        "RuBisCO carboxilasa",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La ATP sintasa (complejo V de la membrana interna mitocondrial) aprovecha la fuerza protón-motriz generada por la cadena respiratoria para catalizar la síntesis de ATP a partir de ADP y fosfato inorgánico."
                 ),
                 Challenge(
                     id = "bio_t05_s03_c15",
                     statement = "Los pigmentos hidrosolubles responsables de las coloraciones rojas, violáceas y azuladas de flores, frutos (arándanos) y de la col morada se almacenan en el interior de:",
                     options = listOf(
+                        "Los ribosomas libres",
                         "Los cloroplastos estromales",
                         "La vacuola central",
                         "Los peroxisomas foliares",
                         "Las crestas de las mitocondrias",
-                        "Los ribosomas libres"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Las antocianinas son pigmentos flavonoides solubles en agua que se acumulan en la vacuola central de las células vegetales, a diferencia de los carotenoides que son liposolubles y residen en los plastidios."
                 ),
                 Challenge(
                     id = "bio_t05_s03_c16",
                     statement = "La beta-oxidación de los ácidos grasos de cadena muy larga (más de 22 carbonos), que no pueden ser procesados directamente por la mitocondria humana, se inicia en el organelo denominado:",
                     options = listOf(
+                        "Retículo endoplasmático rugoso",
+                        "Centrosoma",
                         "Lisosoma secundario",
                         "Peroxisoma",
                         "Aparato de Golgi",
-                        "Retículo endoplasmático rugoso",
-                        "Centrosoma"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Los peroxisomas realizan la etapa inicial de acortamiento de ácidos grasos de cadena muy larga mediante beta-oxidación; los derivados más cortos son transferidos luego a la mitocondria para su combustión final."
                 ),
                 Challenge(
                     id = "bio_t05_s03_c17",
                     statement = "¿Cuál es el destino intracelular de una proteína citosólica que es sintetizada por ribosomas libres en el citosol y que carece de péptido señal de translocación al retículo endoplasmático?",
                     options = listOf(
-                        "Es secretada inmediatamente al medio extracelular",
-                        "Permanece en el citosol o se destina al núcleo, mitocondria o peroxisoma",
                         "Se incorpora a la cara luminal del aparato de Golgi",
                         "Es degradada de inmediato dentro del lisosoma primario",
-                        "Pasa a formar parte de los lípidos del retículo liso"
+                        "Pasa a formar parte de los lípidos del retículo liso",
+                        "Es secretada inmediatamente al medio extracelular",
+                        "Permanece en el citosol o se destina al núcleo, mitocondria o peroxisoma",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Las proteínas sintetizadas en polirribosomas libres del citosol permanecen en el citoplasma o se importan postraduccionalmente al núcleo, mitocondrias, cloroplastos o peroxisomas; las destinadas a secreción o lisosomas se sintetizan en el RER."
                 ),
                 Challenge(
@@ -4571,7 +5032,29 @@ internal object BiologiaPart1 {
                     | **Citocinesis** | **Centrífuga** (de adentro hacia afuera) por fragmoplasto golgiano. | **Centrípeta** (de afuera hacia adentro) por anillo de estrangulamiento de actina y miosina. |
                     | **Comunicaciones Intercelulares**| **Plasmodesmos** (canales citoplasmáticos que atraviesan la pared). | Uniones comunicantes (gap o nexus), desmosomas y uniones oclusivas. |
                     | **Glúcido de Reserva** | **Almidón** (amilosa + amilopectina). | **Glucógeno** (altamente ramificado). |
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Cromatina y Duelo Celular Animal-Vegetal
+
+### De la doble membrana al nucléolo
+- **Envoltura nuclear:** DOBLE membrana con espacio perinuclear continuo con el RER; se desarma en división y se rearma al final.
+- **Complejo de poro (CPN):** ~30 nucleoporinas; deja pasar iones y pequeños, y transporta ACTIVAMENTE histonas, ARNs y ribosomas (con señalización).
+- **Nucléolo:** fábrica de ARNr + ensamble de subunidades ribosómicas; desaparece en división y se reorganiza en regiones NOR.
+
+### Cromatina: empaquetar 2 metros en micras
+- **Nucleosoma:** octámero (2× H2A, H2B, H3, H4) + 146 pb enrolladas + histona H1 selladora ("collar de perlas" de 11 nm).
+- **Eucromatina:** laxa, clara al microscopio, TRANSCRIPCIONALMENTE ACTIVA. **Heterocromatina:** condensada, oscura, inactiva (centrómeros, telómeros).
+- Trampa: más condensación equivale a MENOS expresión génica.
+
+### Animal vs. vegetal (duelo ampliado)
+- **Pared:** celulosa vegetal (primaria elástica + secundaria lignificada) frente a matriz extracelular animal flexible.
+- **Energía y reserva:** cloroplastos + almidón frente a mitocondrias + glucógeno.
+- **Vacuola:** central gigante vegetal frente a pequeñas vesículas animales.
+- **Comunicación:** plasmodesmos (canales con desmotúbulo) frente a uniones gap, desmosomas y oclusivas.
+- **División ya conocida:** astral con centriolos y surco centrípeto (animal) frente a anastral con fragmoplasto centrífugo (vegetal).
+
+""",
                 conceptosClave = listOf(
                     "CPN (Complejo de Poro Nuclear): regula el paso de proteínas (histonas) y ARNs.",
                     "Nucléolo: síntesis de ARNr y ensamblaje de las subunidades ribosómicas mayor y menor.",
@@ -4614,26 +5097,26 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s04_c3",
                     statement = "La unidad estructural fundamental de la cromatina eucariota (el nucleosoma) está compuesta por un octámero de proteínas histonas alrededor del cual se enrolla la doble hélice de ADN. ¿Cuáles son las histonas que integran dicho octámero central?",
                     options = listOf(
+                        "H2A, H2B, H3, H4 y H5 en proporción equimolar",
+                        "Ocho moléculas exclusivas de histona espaciadora H1",
                         "H1, H2A, H3 y H4 (dos copias de cada una)",
                         "Dos copias de H2A, H2B, H3 y H4",
                         "Cuatro copias de H1 y cuatro de H2A",
-                        "H2A, H2B, H3, H4 y H5 en proporción equimolar",
-                        "Ocho moléculas exclusivas de histona espaciadora H1"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El octámero del core nucleosomal está formado por dos copias de cada una de las histonas centrales: H2A, H2B, H3 y H4. La histona H1 no forma parte del octámero, sino que se ubica en el exterior como estabilizador."
                 ),
                 Challenge(
                     id = "bio_t05_s04_c4",
                     statement = "En las células somáticas de las hembras de mamíferos (XX), uno de los dos cromosomas X se inactiva y condensa al azar durante el desarrollo embrionario temprano, haciéndose visible en el núcleo interfásico como una masa densa heterocromática conocida como:",
                     options = listOf(
-                        "Cromosoma plumoso",
-                        "Corpúsculo de Barr",
                         "Cariotipo politénico",
                         "Satélite telomérico",
-                        "Fragmoplasto nuclear"
+                        "Fragmoplasto nuclear",
+                        "Cromosoma plumoso",
+                        "Corpúsculo de Barr",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El corpúsculo de Barr es un ejemplo paradigmático de heterocromatina facultativa resultante de la inactivación transcripcional aleatoria de uno de los cromosomas X en las células somáticas de hembras (proceso de lionización)."
                 ),
                 Challenge(
@@ -4666,39 +5149,39 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s04_c7",
                     statement = "Durante la citocinesis de la célula animal, la división física del citoplasma ocurre por estrangulamiento centrípeto (de afuera hacia adentro) mediado por la contracción de un anillo formado por:",
                     options = listOf(
-                        "Microtúbulos de tubulina beta y dineína",
                         "Microfilamentos de actina y miosina",
                         "Filamentos intermedios de queratina",
                         "Pectinas y celulosa golgiana",
-                        "Histonas fosforiladas tipo H1"
+                        "Histonas fosforiladas tipo H1",
+                        "Microtúbulos de tubulina beta y dineína",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La citocinesis en células animales está mediada por un anillo contráctil submembranoso compuesto por filamentos de actina y motores de miosina II que estrangulan el citoplasma hacia el centro."
                 ),
                 Challenge(
                     id = "bio_t05_s04_c8",
                     statement = "La fracción de la cromatina nuclear que se encuentra en un estado descondensado y extendido durante la interfase, siendo plenamente accesible para que la ARN polimerasa transcriba genes activamente, se denomina:",
                     options = listOf(
+                        "Cinetocoro pericentromérico",
+                        "Lámina nuclear densa",
                         "Heterocromatina constitutiva",
                         "Eucromatina",
                         "Heterocromatina facultativa",
-                        "Cinetocoro pericentromérico",
-                        "Lámina nuclear densa"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La eucromatina es la conformación laxa y poco teñida de la cromatina que contiene los genes metabólicamente activos que están siendo expresados y transcriptos en la célula."
                 ),
                 Challenge(
                     id = "bio_t05_s04_c9",
                     statement = "La lámina nuclear es una red filamentosa adosada a la cara interna de la membrana nuclear interna que confiere soporte mecánico al núcleo. Bioquímicamente está constituida por proteínas que pertenecen a la familia de los:",
                     options = listOf(
+                        "Fosfolípidos esfingolípidos",
+                        "Glúcidos del glucocálix",
                         "Microtúbulos de tubulina",
                         "Microfilamentos de actina",
                         "Filamentos intermedios",
-                        "Fosfolípidos esfingolípidos",
-                        "Glúcidos del glucocálix"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 4,
                     explanation = "Las láminas nucleares (láminas A, B y C) son proteínas polipeptídicas que forman parte de la clase de filamentos intermedios del citoesqueleto intracelular."
                 ),
                 Challenge(
@@ -4718,39 +5201,39 @@ internal object BiologiaPart1 {
                     id = "bio_t05_s04_c11",
                     statement = "El transporte de macromoléculas de gran peso molecular como histonas y polimerasas desde el citosol hacia el interior del núcleo a través del complejo del poro nuclear requiere de secuencias de localización nuclear (NLS) y de proteínas receptoras solubles denominadas:",
                     options = listOf(
-                        "Exportinas nucleares",
                         "Importinas",
                         "Clatrinas de envoltura",
                         "Riboforinas transmembrana",
-                        "Cinesinas anterógradas"
+                        "Cinesinas anterógradas",
+                        "Exportinas nucleares",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Las importinas son receptores solubles citoplasmáticos que reconocen la secuencia NLS (Señal de Localización Nuclear) de las proteínas y las transportan a través del poro nuclear consumiendo energía de la GTPasa Ran."
                 ),
                 Challenge(
                     id = "bio_t05_s04_c12",
                     statement = "Una investigadora agrega colchicina a un cultivo de células vegetales. La colchicina despolimeriza los microtúbulos impidiendo la formación del huso acromático. Sin embargo, al observar la célula en interfase, confirma que esta carece congénitamente del centrosoma típico animal con un par de:",
                     options = listOf(
+                        "Cromoplastos",
+                        "Vacuolas de turgencia",
                         "Centríolos",
                         "Cloroplastos",
                         "Glioxisomas",
-                        "Cromoplastos",
-                        "Vacuolas de turgencia"
                     ),
-                    correctIndex = 0,
+                    correctIndex = 2,
                     explanation = "Las células de las plantas superiores (espermatofitas) carecen de centriolos; sus microtúbulos se polimerizan y nuclean a partir de regiones difusas del citoplasma conocidas como casquetes polares."
                 ),
                 Challenge(
                     id = "bio_t05_s04_c13",
                     statement = "¿Cuál de las siguientes estructuras une mecánicamente a dos células epiteliales animales adyacentes a través de filamentos intermedios de queratina para brindar una alta resistencia a la tracción mecánica?",
                     options = listOf(
+                        "Pared primaria de celulosa",
+                        "Lámina media de pectato cálcico",
                         "Plasmodesmos",
                         "Desmosomas (mácula adherens)",
                         "Uniones comunicantes de tipo gap",
-                        "Pared primaria de celulosa",
-                        "Lámina media de pectato cálcico"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Los desmosomas son complejos de adhesión intercelular en tejidos animales sometidos a fuerte estrés mecánico (como piel y miocardio) que anclan los filamentos intermedios de queratina de células vecinas."
                 )
             )
@@ -4811,7 +5294,29 @@ internal object BiologiaPart1 {
                     - Interviene **exclusivamente el Fotosistema I (PS I - P700)**.
                     - Los electrones excitados en el P700 viajan a la ferredoxina, pero en lugar de reducir al NADP⁺, retornan a través del complejo citocromo b₆f y plastocianina hacia el propio P700.
                     - *Consecuencia bioenergética:* **Solo produce ATP** mediante el bombeo de protones; **NO hay fotólisis del agua, NO se desprende O₂ y NO se genera NADPH**. Suple el déficit de ATP necesario para impulsar las altas demandas del ciclo de Calvin.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Antenas, Centros y los Dos Flujos
+
+### Fotosistemas: antena vs. centro de reacción
+- **Complejo antena:** cientos de clorofilas y carotenoides que CAPTAN fotones y canalizan la excitación (embudo energético).
+- **Centro de reacción:** solo un par especial que EJECUTA la fotoquímica: **P680** (PS II) y **P700** (PS I), nombrados por su pico de absorción en nm.
+- Trampa: la antena no hace química; el centro no capta luz difusa. Ambos cooperan.
+
+### Fotólisis del agua (reacción de Hill)
+- Ocurre en el lumen tilacoidal: 2 H2O → 4 H+ + 4 e- + O2, catalizada por el complejo de manganeso del PS II.
+- Triple ganancia: electrones de repuesto para P680+, protones para el gradiente y el O2 que respiramos (TODO el O2 atmosférico viene de aquí, no del CO2).
+
+### Flujo acíclico (vía principal) vs. cíclico (auxilio)
+- **Acíclico (PS II + PS I):** produce ATP + NADPH + O2; el camino lineal de los electrones termina reduciendo NADP+.
+- **Cíclico (solo PS I):** los electrones retornan al P700 vía citocromo b6f: SOLO ATP extra, sin O2 ni NADPH.
+- **Cuándo se usa el cíclico:** cuando el Calvin pide más ATP que NADPH (relación real mayor a 3:2) o con exceso de luz: la célula equilibra su presupuesto energético.
+
+### Fotofosforilación en una línea (sin adelantar cadena respiratoria)
+- El flujo de electrones bombea H+ al lumen; el retorno por la ATP sintasa fosforila ADP: luz convertida en ATP (fotofosforilación acíclica y cíclica).
+
+""",
                 conceptosClave = listOf(
                     "Ocurre en la membrana de los tilacoides del cloroplasto.",
                     "Fotólisis del agua (Reacción de Hill): fuente exclusiva del O₂ liberado a la atmósfera.",
@@ -4826,13 +5331,13 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s01_c1",
                     statement = "Durante la fase luminosa en las granas de los cloroplastos, la molécula de agua es hidrolizada por acción fotoquímica (Reacción de Hill). La consecuencia biológica y atmosférica directa de este evento es:",
                     options = listOf(
-                        "La fijación directa de dióxido de carbono ambiental",
-                        "La liberación de oxígeno gaseoso (O2) a la atmósfera",
                         "La síntesis directa de glucosa en el tilacoide",
                         "La oxidación completa de coenzimas FADH2",
-                        "La formación de ácido pirúvico estromal"
+                        "La formación de ácido pirúvico estromal",
+                        "La fijación directa de dióxido de carbono ambiental",
+                        "La liberación de oxígeno gaseoso (O2) a la atmósfera",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La fotólisis del agua disocia la molécula en protones, electrones (que reponen al fotosistema II) y oxígeno gaseoso (O₂), el cual se difunde hacia la atmósfera como subproducto de la fotosíntesis."
                 ),
                 Challenge(
@@ -4852,52 +5357,52 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s01_c3",
                     statement = "¿Cuál es la localización celular exacta donde se llevan a cabo los procesos de fotoexcitación, transporte electrónico tilacoidal y fotofosforilación acíclica?",
                     options = listOf(
-                        "El estroma cloroplástico",
                         "La membrana de los tilacoides",
                         "La matriz mitocondrial interna",
                         "El espacio intermembranoso del plastidio",
-                        "La membrana externa del cloroplasto"
+                        "La membrana externa del cloroplasto",
+                        "El estroma cloroplástico",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La membrana tilacoidal es la bicapa lipídica que contiene incrustados a los fotosistemas I y II, los citocromos y la ATP sintasa cloroplástica encargados de la fase fotoquímica."
                 ),
                 Challenge(
                     id = "bio_t06_s01_c4",
                     statement = "Durante la fase luminosa acíclica, los electrones que finalmente reducen al aceptor coenzimático NADP+ en el estroma para transformarlo en NADPH provienen en última instancia de la oxidación de:",
                     options = listOf(
+                        "El fosfogliceraldehído",
                         "El gas dióxido de carbono (CO2)",
                         "La molécula de agua (H2O)",
                         "La ribulosa bisfosfato",
                         "El ácido 3-fosfoglicérico",
-                        "El fosfogliceraldehído"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Los electrones son arrancados del agua durante la fotólisis en el PS II y viajan por toda la cadena transportadora hasta la NADP⁺ reductasa para reducir el NADP⁺ a NADPH."
                 ),
                 Challenge(
                     id = "bio_t06_s01_c5",
                     statement = "A diferencia del transporte acíclico, la fotofosforilación de tipo cíclico en los cloroplastos se caracteriza biológicamente por:",
                     options = listOf(
-                        "Involucrar únicamente al Fotosistema I y generar exclusivamente ATP",
-                        "Requerir la fotólisis masiva de agua en el lumen tilacoidal",
                         "Generar grandes cantidades de NADPH y liberar gas oxígeno",
                         "Depender exclusivamente del Fotosistema II P680",
-                        "Ocurrir en ausencia total de complejos de citocromo b6f"
+                        "Ocurrir en ausencia total de complejos de citocromo b6f",
+                        "Involucrar únicamente al Fotosistema I y generar exclusivamente ATP",
+                        "Requerir la fotólisis masiva de agua en el lumen tilacoidal",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 3,
                     explanation = "En la fotofosforilación cíclica los electrones retornan al P700 del PS I mediante un circuito cerrado; no se usa agua, no se libera O₂, no se genera NADPH y solo se sintetiza ATP mediante quimiosmosis."
                 ),
                 Challenge(
                     id = "bio_t06_s01_c6",
                     statement = "El ion metálico que forma parte integral del complejo enzimático del Fotosistema II responsable directo de coordinar la fotólisis u oxidación del agua en el lumen tilacoidal es el:",
                     options = listOf(
-                        "Manganeso (Mn)",
                         "Sodio (Na)",
                         "Calcio (Ca)",
                         "Cobalto (Co)",
-                        "Molibdeno (Mo)"
+                        "Molibdeno (Mo)",
+                        "Manganeso (Mn)",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 4,
                     explanation = "El complejo liberador de oxígeno (OEC) del fotosistema II contiene un clúster de cuatro átomos de manganeso (Mn) indispensable para catalizar la extracción de electrones del agua."
                 ),
                 Challenge(
@@ -4930,39 +5435,39 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s01_c9",
                     statement = "Los productos intermediarios generados durante la fase luminosa de la fotosíntesis que son indispensables para permitir la posterior asimilación de dióxido de carbono en la fase oscura son:",
                     options = listOf(
+                        "Ácido láctico y GTP",
                         "Glucosa y oxígeno gaseoso",
                         "ATP y NADPH + H+",
                         "ADP y NADP+ oxidados",
                         "Ácido pirúvico y FADH2",
-                        "Ácido láctico y GTP"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "La fase luminosa produce poder reductor (NADPH) y energía química libre (ATP), los cuales se difunden hacia el estroma para impulsar las reacciones endergónicas del ciclo de Calvin."
                 ),
                 Challenge(
                     id = "bio_t06_s01_c10",
                     statement = "La proteína fijada a la membrana tilacoidal en la cara estromática que transfiere electrones desde la ferredoxina para reducir la coenzima NADP+ es la:",
                     options = listOf(
+                        "Fosfoglicerato mutasa",
+                        "Piruvato deshidrogenasa",
                         "ATP sintasa quinasa",
                         "NADP+ reductasa (FNR)",
                         "RuBisCO oxigenasa",
-                        "Fosfoglicerato mutasa",
-                        "Piruvato deshidrogenasa"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La ferredoxina-NADP⁺ reductasa (FNR) cataliza la reducción final de NADP⁺ a NADPH utilizando dos electrones donados por dos moléculas reducidas de ferredoxina."
                 ),
                 Challenge(
                     id = "bio_t06_s01_c11",
                     statement = "En el fotosistema II (PS II), el centro de reacción que absorbe preferencialmente la luz solar a una longitud de onda de 680 nanómetros se denomina:",
                     options = listOf(
-                        "P700",
-                        "P680",
                         "Citocromo c",
                         "Complejo F0",
-                        "Carotenoide alfa"
+                        "Carotenoide alfa",
+                        "P700",
+                        "P680",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El centro de reacción del Fotosistema II se designa P680 porque su par especial de clorofila *a* presenta su pico máximo de absorción fotónica a 680 nm."
                 ),
                 Challenge(
@@ -4982,13 +5487,13 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s01_c13",
                     statement = "Los pigmentos carotenoides presentes en los tilacoides de las plantas cumplen, además de ampliar el espectro de captura lumínica, un rol fisiológico de:",
                     options = listOf(
-                        "Fijar directamente átomos de carbono atmosférico",
                         "Fotoprotección frente a la fotooxidación por radicales libres de oxígeno",
                         "Hidrolizar la pared celular durante la maduración",
                         "Transportar sacarosa hacia el floema",
-                        "Sintetizar celulosa en la vacuola"
+                        "Sintetizar celulosa en la vacuola",
+                        "Fijar directamente átomos de carbono atmosférico",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Los carotenoides disipan el exceso de energía lumínica como calor y desactivan especies reactivas de oxígeno (como el oxígeno singlete), previniendo el daño fotooxidativo a las clorofilas."
                 )
             )
@@ -5034,7 +5539,30 @@ internal object BiologiaPart1 {
                     - **Fotorrespiración:** La RuBisCO no solo actúa como carboxilasa; a altas temperaturas, baja concentración de CO₂ y alto O₂, actúa como **oxigenasa**, uniendo O₂ a la RuBP para formar 3-PGA y **2-fosfoglicolato** (compuesto tóxico que debe reciclarse con gasto energético entre cloroplasto, peroxisoma y mitocondria sin producir ATP ni azúcares).
                     - **Plantas C4 (Ruta de Hatch-Slack):** Como el maíz, la caña de azúcar y el sorgo. Separan espacialmente la fijación inicial de CO₂ (en las células del mesófilo mediante la enzima **PEP carboxilasa**, que no reacciona con O₂ y forma oxalacetato/malato de 4C) del ciclo de Calvin (en las células de la vaina vascular perivascular con anatomía de Kranz), eliminando la fotorrespiración.
                     - **Plantas CAM (Metabolismo Ácido de las Crasuláceas):** Plantas xerófitas como cactus y piñas. Separan temporalmente los procesos: abren estomas solo **de noche** para fijar CO₂ en malato acumulado en vacuolas, y **de día** cierran estomas para evitar la evaporación de agua, liberando el CO₂ interno para el ciclo de Calvin impulsado por la luz solar.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: RuBisCO, Balances y Plantas que Engañan al Calor
+
+### Las tres fases del Calvin (por vuelta didáctica)
+- **Carboxilación:** RuBisCO une CO2 a RuBP (5C) → intermediario inestable de 6C que se parte en 2 PGA (3C).
+- **Reducción:** cada PGA consume ATP + NADPH y se reduce a PGAL (el azúcar útil).
+- **Regeneración:** con más ATP, 5 de cada 6 PGAL reconstruyen 3 RuBP para seguir girando.
+
+### RuBisCO: la enzima más abundante y más lenta
+- Cataliza millones de toneladas de carbono al año, pero es TORPE: unas 3 reacciones por segundo (la anhidrasa carbónica hace un millón).
+- **Doble cara:** también oxigena (actividad OXIGENASA) iniciando la fotorrespiración que RECICLA con pérdida en peroxisoma y mitocondria.
+
+### Balance contable por glucosa (números de examen)
+- 6 vueltas fijan 6 CO2; salen 2 PGAL que rinden 1 glucosa.
+- **Costo total: 18 ATP + 12 NADPH por glucosa.** Si preguntan "¿cuántos ATP por CO2 fijado?", la respuesta es 3.
+
+### C4 vs. CAM (tabla anti-fotorrespiración)
+- **C4 (maíz, caña):** SEPARACIÓN ESPACIAL. Mesófilo con PEP carboxilasa (sin afinidad por O2) bombea CO2 a las células de la vaina (anatomía de Kranz) donde espera RuBisCO.
+- **CAM (cactus, piña):** SEPARACIÓN TEMPORAL. Estomas abiertos SOLO de noche (fijan CO2 en malato vacuolar); de día, cerrados, liberan el CO2 interno al Calvin iluminado.
+- Trampa: ambas concentran CO2 alrededor de RuBisCO; C4 lo hace con DOS tipos celulares y CAM con UN reloj.
+
+""",
                 conceptosClave = listOf(
                     "Ocurre en el estroma del cloroplasto.",
                     "Fijación de carbono: catalizada por la enzima RuBisCO sobre la RuBP.",
@@ -5050,39 +5578,39 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s02_c1",
                     statement = "En el estroma del cloroplasto, la enzima RuBisCO cataliza la incorporación de dióxido de carbono a una molécula aceptora de cinco carbonos denominada:",
                     options = listOf(
+                        "Glucosa-6-fosfato",
                         "Fosfogliceraldehído (PGAL)",
                         "Ribulosa-1,5-bisfosfato (RuBP)",
                         "Ácido pirúvico",
                         "Oxalacetato",
-                        "Glucosa-6-fosfato"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "La RuBisCO fija el CO₂ uniéndolo a la Ribulosa-1,5-bisfosfato (RuBP), originando un compuesto inestable de 6 carbonos que se escinde en dos moléculas de 3-fosfoglicerato (3-PGA)."
                 ),
                 Challenge(
                     id = "bio_t06_s02_c2",
                     statement = "El producto químico directo que abandona el ciclo de Calvin para condensarse en el estroma o citosol y posibilitar la biosíntesis de glucosa, ácidos grasos y almidón es una triosa fosfatada denominada:",
                     options = listOf(
-                        "Fosfogliceraldehído (PGAL o G3P)",
-                        "Ácido oxalacético (AOA)",
                         "Ácido fosfoenolpirúvico (PEP)",
                         "Ribulosa monofosfato",
-                        "Ácido cítrico"
+                        "Ácido cítrico",
+                        "Fosfogliceraldehído (PGAL o G3P)",
+                        "Ácido oxalacético (AOA)",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 3,
                     explanation = "El PGAL (gliceraldehído-3-fosfato) es el carbohidrato triosa intermediario clave que sale del ciclo de Calvin para la síntesis de glucosa y otros metabolitos vegetales."
                 ),
                 Challenge(
                     id = "bio_t06_s02_c3",
                     statement = "Para sintetizar netamente una molécula de glucosa (C6H12O6) en el ciclo de Calvin-Benson, ¿cuántas moléculas de CO2 deben fijarse y cuántos ATP y NADPH deben consumirse respectivamente?",
                     options = listOf(
-                        "3 CO2, 9 ATP y 6 NADPH",
-                        "6 CO2, 18 ATP y 12 NADPH",
                         "6 CO2, 36 ATP y 24 NADPH",
                         "1 CO2, 3 ATP y 2 NADPH",
-                        "12 CO2, 24 ATP y 18 NADPH"
+                        "12 CO2, 24 ATP y 18 NADPH",
+                        "3 CO2, 9 ATP y 6 NADPH",
+                        "6 CO2, 18 ATP y 12 NADPH",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La síntesis de una molécula de glucosa requiere fijar 6 moléculas de CO₂ mediante 6 vueltas del ciclo, lo cual demanda 12 ATP y 12 NADPH para la reducción, más 6 ATP para regenerar la RuBP (Total: 18 ATP y 12 NADPH)."
                 ),
                 Challenge(
@@ -5102,52 +5630,52 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s02_c5",
                     statement = "En condiciones ambientales de clima árido y cálido, cuando las hojas cierran estomas para evitar la deshidratación y la concentración de O2 supera con creces a la de CO2, la planta C3 incurre en un proceso no productivo que degrada carbohidratos sin producir ATP conocido como:",
                     options = listOf(
-                        "Fosforilación acíclica",
                         "Fotorrespiración",
                         "Glucólisis anaerobia",
                         "Fermentación alcohólica",
-                        "Ciclo del glioxilato"
+                        "Ciclo del glioxilato",
+                        "Fosforilación acíclica",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La fotorrespiración ocurre cuando la RuBisCO fija oxígeno en vez de dióxido de carbono, generando fosfoglicolato que consume energía para ser metabolizado sin rendir ATP ni glucosa."
                 ),
                 Challenge(
                     id = "bio_t06_s02_c6",
                     statement = "Plantas cultivadas como el maíz y la caña de azúcar evitan la fotorrespiración gracias a una separación anatómica espacial de las fases fotosintéticas (anatomía de Kranz). Estas plantas se clasifican fisiológicamente como:",
                     options = listOf(
+                        "Gimnospermas perennifolias",
                         "Plantas C3 típicas",
                         "Plantas C4 (vía Hatch-Slack)",
                         "Plantas parásitas heterótrofas",
                         "Briofitas poiquilohídricas",
-                        "Gimnospermas perennifolias"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Las plantas C4 fijan inicialmente CO₂ en el mesófilo mediante la PEP carboxilasa formando oxalacetato (4 carbonos) y lo transportan a las células de la vaina perivascular para nutrir a la RuBisCO en altas concentraciones."
                 ),
                 Challenge(
                     id = "bio_t06_s02_c7",
                     statement = "Los cactus y plantas suculentas de la familia Crasulácea habitan desiertos extremos y abren sus estomas exclusivamente durante la noche para evitar la pérdida de vapor de agua. Esta adaptación metabólica temporal corresponde a la fotosíntesis:",
                     options = listOf(
-                        "CAM (Metabolismo Ácido de Crasuláceas)",
-                        "C3 obligatoria",
                         "Quimiosintética nitrificante",
                         "Anoxigénica sulfurosa",
-                        "Fermentativa láctica"
+                        "Fermentativa láctica",
+                        "CAM (Metabolismo Ácido de Crasuláceas)",
+                        "C3 obligatoria",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 3,
                     explanation = "El metabolismo CAM separa temporalmente la absorción de CO₂ (nocturna, almacenado en forma de ácido málico en vacuolas) del ciclo de Calvin diurno impulsado por los fotones del sol con estomas cerrados."
                 ),
                 Challenge(
                     id = "bio_t06_s02_c8",
                     statement = "La fase del ciclo de Calvin en la cual se restituyen las moléculas aceptoras de dióxido de carbono (Ribulosa-1,5-bisfosfato) a expensas de la redistribución de triosas fosfato y consumo de ATP se denomina:",
                     options = listOf(
-                        "Fotorreducción",
-                        "Regeneración",
                         "Fotólisis",
                         "Carboxilación neta",
-                        "Descarboxilación"
+                        "Descarboxilación",
+                        "Fotorreducción",
+                        "Regeneración",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La regeneración es la etapa final del ciclo de Calvin donde 10 moléculas de PGAL se reordenan mediante el gasto de 6 ATP para volver a formar 6 moléculas de RuBP."
                 ),
                 Challenge(
@@ -5180,39 +5708,39 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s02_c11",
                     statement = "En las plantas C4, la enzima responsable de fijar el CO2 en las células del mesófilo sin mostrar afinidad por el oxígeno, previniendo eficazmente la fotorrespiración, es la:",
                     options = listOf(
+                        "Lactato deshidrogenasa",
+                        "Amilasa salival",
                         "Fosfoenolpiruvato carboxilasa (PEP carboxilasa)",
                         "RuBisCO oxigenasa",
                         "Piruvato quinasa",
-                        "Lactato deshidrogenasa",
-                        "Amilasa salival"
                     ),
-                    correctIndex = 0,
+                    correctIndex = 2,
                     explanation = "La PEP carboxilasa carece de actividad oxigenasa; fija el CO₂ a fosfoenolpiruvato con altísima afinidad incluso a concentraciones bajísimas de dióxido de carbono."
                 ),
                 Challenge(
                     id = "bio_t06_s02_c12",
                     statement = "Una vez producidas las triosas fosfatadas (PGAL) en el estroma de los cloroplastos foliares, el excedente diurno de glucosa no exportado inmediatamente se polimeriza y almacena transitoriamente en forma de:",
                     options = listOf(
+                        "Cristales de celulosa pura",
+                        "Fibras de esclerénquima",
                         "Gránulos de glucógeno",
                         "Gránulos de almidón asimilador",
                         "Cutícula de cera foliar",
-                        "Cristales de celulosa pura",
-                        "Fibras de esclerénquima"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El exceso de azúcares sintetizados durante las horas de luz en el cloroplasto se almacena localmente como gránulos insolubles de almidón estromático para ser degradado durante la noche."
                 ),
                 Challenge(
                     id = "bio_t06_s02_c13",
                     statement = "El primer intermediario estable de 3 carbonos que se detecta tras la carboxilación de la ribulosa bisfosfato en el ciclo de Calvin corresponde al:",
                     options = listOf(
-                        "3-Fosfoglicerato (3-PGA)",
                         "Ácido pirúvico",
                         "Ácido cítrico",
                         "Fosfoenolpiruvato",
-                        "Lactato cálcico"
+                        "Lactato cálcico",
+                        "3-Fosfoglicerato (3-PGA)",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 4,
                     explanation = "El intermediario de seis carbonos se escinde rápidamente en dos moléculas de 3-fosfoglicerato (3-PGA), por lo que esta vía se denomina fotosíntesis C3."
                 )
             )
@@ -5259,7 +5787,30 @@ internal object BiologiaPart1 {
                       - Consta de dos pasos:
                         1. Descarboxilación del Piruvato (3C) a **Acetaldehído (2C) + CO₂ ↑** (catalizado por la piruvato descarboxilasa).
                         2. Reducción del acetaldehído a **Etanol (2C) + NAD⁺** (catalizado por la alcohol deshidrogenasa).
-                """,
+
+---
+
+## PROFUNDIZACIÓN: La Economía del Citosol
+
+### Inversión y ganancia de la glucólisis (cuentas claras)
+- **Fase de inversión:** hexoquinasa y fosfofructoquinasa GASTAN 2 ATP para activar la glucosa (glucosa → fructosa-1,6-bisfosfato → 2 G3P).
+- **Fase de pago:** cada G3P rinde 2 ATP (×2 = 4 ATP) + 1 NADH (×2 = 2 NADH).
+- **Neto citosólico: 2 ATP + 2 NADH + 2 piruvatos.** Todo ocurre SIN oxígeno y SIN mitocondria: es la vía más antigua (anterior a la atmósfera oxidante).
+
+### Los tres destinos del piruvato (mapa de bifurcación)
+1. **Con O2 disponible:** entra a mitocondria (descarboxilación y Krebs: se verá en respiración aerobia).
+2. **Sin O2 en músculo/animal:** piruvato + NADH → LACTATO + NAD+ (lactato deshidrogenasa).
+3. **Sin O2 en levaduras:** piruvato → acetaldehído + CO2 → ETANOL + NAD+ (cerveza, vino, pan que leva por el CO2).
+
+### Para qué fermentar si da poco ATP (la idea que más preguntan)
+- La fermentación NO busca ATP extra: su objetivo es REOXIDAR NADH a NAD+ para que la glucólisis NO SE DETENGA.
+- Sin fermentación, el NAD+ se agota en segundos y la célula muere aunque haya glucosa.
+- **Láctica:** eritrocitos (sin mitocondrias), músculo en sprint, Lactobacillus del yogur. **Alcohólica:** Saccharomyces en mosto.
+
+### Trampa de oro
+- Decir "la fermentación produce 2 ATP" es impreciso: los 2 ATP netos los produce la GLUCÓLISIS; la fermentación solo recicla el NAD+.
+
+""",
                 conceptosClave = listOf(
                     "La glucólisis ocurre en el citosol sin O₂; genera 2 piruvatos, 2 NADH y 2 ATP netos (por fosforilación a nivel de sustrato).",
                     "El objetivo de la fermentación no es ganar más ATP, sino reoxidar el NADH a NAD⁺ para mantener activa la glucólisis.",
@@ -5287,52 +5838,52 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s03_c2",
                     statement = "La glucólisis es la vía metabólica ancestral que degrada una molécula de glucosa (6C) hasta dos moléculas de piruvato (3C). ¿En qué compartimento de la célula eucariota se llevan a cabo las diez reacciones enzimáticas de esta vía?",
                     options = listOf(
-                        "Matriz mitocondrial",
                         "Citosol o hialoplasma",
                         "Espacio intermembrana mitocondrial",
                         "Estroma del cloroplasto",
-                        "Lumen del retículo endoplasmático"
+                        "Lumen del retículo endoplasmático",
+                        "Matriz mitocondrial",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La glucólisis se desarrolla íntegramente en el citosol soluble (hialoplasma) de la célula, de manera independiente de las mitocondrias y del oxígeno."
                 ),
                 Challenge(
                     id = "bio_t06_s03_c3",
                     statement = "Durante la fase de inversión energética de la glucólisis, la enzima marcapasos clave que fosforila a la fructosa-6-fosfato consumiendo una molécula de ATP para convertirla en fructosa-1,6-bisfosfato es la:",
                     options = listOf(
+                        "Lactato deshidrogenasa",
                         "Hexoquinasa",
                         "Fosfofructoquinasa-1 (PFK-1)",
                         "Piruvato quinasa",
                         "Triosa fosfato isomerasa",
-                        "Lactato deshidrogenasa"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "La Fosfofructoquinasa-1 (PFK-1) es la enzima clave autorregulada alostéricamente que determina la velocidad de flujo metabólico de la glucólisis."
                 ),
                 Challenge(
                     id = "bio_t06_s03_c4",
                     statement = "En la fermentación alcohólica realizada por levaduras durante la fermentación del mosto de uva para producir pisco o vino, la liberación de gas que produce la efervescencia característica deriva de la descarboxilación del piruvato hacia:",
                     options = listOf(
+                        "Glicerol-3-fosfato",
+                        "Acetil-CoA",
                         "Lactato",
                         "Acetaldehído y dióxido de carbono (CO2)",
                         "Oxalacetato",
-                        "Glicerol-3-fosfato",
-                        "Acetil-CoA"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La piruvato descarboxilasa convierte el piruvato (3C) en acetaldehído (2C) desprendiendo una molécula de CO₂, el cual forma las burbujas gaseosas en la fermentación alcohólica."
                 ),
                 Challenge(
                     id = "bio_t06_s03_c5",
                     statement = "¿Cuál es el objetivo biológico fundamental de los procesos de fermentación (láctica o alcohólica) en condiciones de anoxia celular?",
                     options = listOf(
-                        "Sintetizar 36 moléculas adicionales de ATP en la matriz",
-                        "Reoxidar el NADH a NAD+ para que la glucólisis pueda proseguir",
                         "Oxidar completamente el piruvato hasta dióxido de carbono y agua",
                         "Fosforilar transportadores de electrones de las crestas mitocondriales",
-                        "Fijar dióxido de carbono en forma de glucosa"
+                        "Fijar dióxido de carbono en forma de glucosa",
+                        "Sintetizar 36 moléculas adicionales de ATP en la matriz",
+                        "Reoxidar el NADH a NAD+ para que la glucólisis pueda proseguir",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "La fermentación no produce ATP en sí misma; su función insustituible es reoxidar el NADH citosólico a NAD⁺, evitando que la glucólisis se detenga por agotamiento de coenzima oxidada."
                 ),
                 Challenge(
@@ -5352,52 +5903,52 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s03_c7",
                     statement = "La principal enzima reguladora alostérica y marcapasos de la glucólisis, cuya actividad es inhibida por altas concentraciones intracelulares de ATP y citrato, corresponde a la:",
                     options = listOf(
-                        "Hexoquinasa muscular",
                         "Fosfofructoquinasa-1 (PFK-1)",
                         "Lactato deshidrogenasa",
                         "Enolasa",
-                        "Glucosa-6-fosfatasa"
+                        "Glucosa-6-fosfatasa",
+                        "Hexoquinasa muscular",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La fosfofructoquinasa-1 (PFK-1) cataliza el paso limitante irreversible de la glucólisis (fructosa-6-P a fructosa-1,6-bisfosfato) y es finamente controlada por el estado energético de la célula."
                 ),
                 Challenge(
                     id = "bio_t06_s03_c8",
                     statement = "Durante la fermentación alcohólica realizada por levaduras, el piruvato experimenta una primera reacción de descarboxilación que produce dióxido de carbono y un compuesto intermedio de 2 carbonos denominado:",
                     options = listOf(
+                        "Ácido acético",
                         "Ácido láctico",
                         "Acetaldehído",
                         "Acetil-CoA",
                         "Etanol directo",
-                        "Ácido acético"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El piruvato se descarboxila por la piruvato descarboxilasa formando acetaldehído (etanal), el cual es luego reducido a etanol por la alcohol deshidrogenasa."
                 ),
                 Challenge(
                     id = "bio_t06_s03_c9",
                     statement = "El mecanismo mediante el cual se genera ATP en la glucólisis al transferirse directamente un grupo fosfato de alta energía desde un metabolito fosforilado (como fosfoenolpiruvato) hacia una molécula de ADP se denomina:",
                     options = listOf(
+                        "Fosforilación desnaturalizante",
+                        "Hidrólisis quimiosintética",
                         "Fosforilación oxidativa por quimiosmosis",
                         "Fosforilación a nivel de sustrato",
                         "Fotofosforilación acíclica",
-                        "Fosforilación desnaturalizante",
-                        "Hidrólisis quimiosintética"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La fosforilación a nivel de sustrato consiste en la síntesis directa de ATP acoplada a la desfosforilación enzimática de un sustrato de alta energía, independiente de la cadena de transporte electrónico."
                 ),
                 Challenge(
                     id = "bio_t06_s03_c10",
                     statement = "El lactato producido en el músculo esquelético durante un ejercicio exhaustivo es vertido a la sangre y captado por el hígado para ser reconvertido en glucosa a través de la gluconeogénesis. Esta interrelación metabólica músculo-hígado se denomina:",
                     options = listOf(
-                        "Ciclo de Krebs",
-                        "Ciclo de Cori",
                         "Ciclo de Calvin",
                         "Ciclo de la urea",
-                        "Ciclo del glioxilato"
+                        "Ciclo del glioxilato",
+                        "Ciclo de Krebs",
+                        "Ciclo de Cori",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El ciclo de Cori describe la circulación metabólica en la que el lactato muscular se transporta por sangre al hígado, donde se convierte en glucosa para retornar al músculo."
                 ),
                 Challenge(
@@ -5430,13 +5981,13 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s03_c13",
                     statement = "¿Cuántas moléculas de ATP neto se generan estrictamente a partir de la fase fermentativa que sigue a la glucólisis (reducción de piruvato a etanol o lactato)?",
                     options = listOf(
-                        "2 ATP adicionales",
                         "Cero ATP",
                         "4 ATP adicionales",
                         "36 ATP",
-                        "1 ATP por cada piruvato"
+                        "1 ATP por cada piruvato",
+                        "2 ATP adicionales",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Las reacciones de fermentación posteriores a la glucólisis producen cero ATP adicionales; solo cumplen la función de oxidar NADH a NAD⁺ para sostener la glucólisis."
                 )
             )
@@ -5510,7 +6061,31 @@ internal object BiologiaPart1 {
                     # 6.4.5 — Inhibidores y Desacopladores Respiratorios
                     - **Inhibidores de la cadena:** Cianuro (CN⁻), monóxido de carbono (CO) y azida sódica bloquean al Complejo IV (citocromo oxidasa), deteniendo el consumo de O₂ y la síntesis de ATP. El monóxido de carbono y rotenona bloquean el complejo I.
                     - **Desacopladores (Termogenina y 2,4-DNP):** Disipan el gradiente de protones permitiendo el flujo de H⁺ a la matriz sin pasar por la ATP sintasa; la energía se libera en forma de **calor**. La **termogenina (UCP-1)** abunda en la grasa parda de neonatos y animales hibernantes para termogénesis sin escalofríos.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Contabilidad Aerobia Completa
+
+### Del piruvato al acetil-CoA (puerta mitocondrial)
+- El piruvato cruza porinas a la matriz; el complejo piruvato deshidrogenasa lo descarboxila: piruvato (3C) → acetil-CoA (2C) + CO2 + NADH.
+- Por glucosa: 2 piruvatos rinden 2 NADH "de enlace" (citosólicos→ lanzaderas).
+
+### Krebs: dos vueltas por glucosa (tabla por vuelta)
+- Por cada acetil-CoA: 3 NADH + 1 FADH2 + 1 GTP (ATP) + 2 CO2.
+- Por glucosa (×2): 6 NADH + 2 FADH2 + 2 GTP + 4 CO2. Todo en la MATRIZ (enzimas solubles).
+- El ciclo NO usa O2 directamente: lo necesita para VACIAR los transportadores al final de la cadena.
+
+### Cadena y ATP sintasa (lógica, no catálogo)
+- Complejos I, III y IV bombean H+ al espacio intermembrana; el O2 final acepta electrones y forma AGUA (por eso sin O2 todo se atasca).
+- La ATP sintasa deja volver los H+ y fosforila ADP (quimiosmosis de Mitchell).
+- **Valores clásicos de examen:** NADH ≈ 3 ATP, FADH2 ≈ 2 ATP. **Total clásico: 38 ATP** (36 con lanzadera de glicerol-fosfato en músculo/cerebro).
+
+### Venenos y desacopladores (casos de examen)
+- **Cianuro y CO:** bloquean el complejo IV (citocromo oxidasa): la cadena se detiene aunque haya O2 (asfixia citotóxica).
+- **2,4-DNP:** desacoplador artificial: disipa el gradiente en CALOR sin ATP (adelgazante letal de los años 30).
+- **Termogenina (UCP-1):** desacoplador NATURAL de la grasa parda de neonatos e hibernantes: calor sin escalofríos.
+
+""",
                 conceptosClave = listOf(
                     "Descarboxilación del piruvato y ciclo de Krebs: ocurren en la matriz mitocondrial.",
                     "Cadena transportadora de electrones y ATP sintasa: en las crestas mitocondriales.",
@@ -5526,26 +6101,26 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s04_c1",
                     statement = "Durante la fosforilación oxidativa en las crestas de las mitocondrias de las células eucariotas, el aceptor final de los electrones procedentes de las coenzimas reducidas NADH y FADH2 es:",
                     options = listOf(
+                        "El ion magnesio del complejo ATP sintasa",
                         "El dióxido de carbono que se reduce a glucosa",
                         "El ácido pirúvico que se convierte en lactato",
                         "El oxígeno molecular que al reducirse produce agua",
                         "El citocromo c oxidasa que se disocia en grupos hemo",
-                        "El ion magnesio del complejo ATP sintasa"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 3,
                     explanation = "El oxígeno molecular (O₂) es el aceptor final de electrones e hidrogeniones al término de la cadena transportadora de electrones en las crestas mitocondriales, reduciéndose para formar agua metabólica (H₂O)."
                 ),
                 Challenge(
                     id = "bio_t06_s04_c2",
                     statement = "El ciclo del ácido cítrico o ciclo de Krebs tiene lugar en el compartimento mitocondrial conocido como:",
                     options = listOf(
-                        "Espacio intermembrana",
-                        "Matriz mitocondrial o mitosol",
                         "Membrana externa mitocondrial",
                         "Crestas tilacoidales",
-                        "Lámina basal nuclear"
+                        "Lámina basal nuclear",
+                        "Espacio intermembrana",
+                        "Matriz mitocondrial o mitosol",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Las enzimas del ciclo de Krebs son hidrosolubles y se ubican disueltas en la matriz mitocondrial, con excepción de la succinato deshidrogenasa que está incrustada en la membrana interna."
                 ),
                 Challenge(
@@ -5578,39 +6153,39 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s04_c5",
                     statement = "En las células del músculo esquelético y del tejido cerebral, los 2 NADH formados en el citoplasma durante la glucólisis transfieren sus electrones a la mitocondria a través de la lanzadera de:",
                     options = listOf(
+                        "Creatina fosfato rindiendo 40 ATP totales",
                         "Malato-aspartato rindiendo 38 ATP totales",
                         "Glicerol-3-fosfato rindiendo 36 ATP totales",
                         "Citrato-oxalacetato rindiendo 32 ATP totales",
                         "Carnitina oxidativa rindiendo 24 ATP totales",
-                        "Creatina fosfato rindiendo 40 ATP totales"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "En músculo y cerebro opera la lanzadera del glicerol-3-fosfato, la cual entrega electrones al FAD mitocondrial originando 2 ATP por cada NADH citosólico, lo que da un balance global de 36 ATP por glucosa."
                 ),
                 Challenge(
                     id = "bio_t06_s04_c6",
                     statement = "En células con máxima eficiencia bioenergética como los hepatocitos y las fibras miocárdicas del corazón, opera una lanzadera que entrega los electrones al NAD+ de la matriz mitocondrial rindiendo un balance teórico máximo de:",
                     options = listOf(
-                        "38 ATP por la lanzadera malato-aspartato",
-                        "36 ATP por la lanzadera del citrato",
                         "2 ATP por la vía láctica",
                         "42 ATP por la lanzadera de fosfato",
-                        "30 ATP por difusión pasiva"
+                        "30 ATP por difusión pasiva",
+                        "38 ATP por la lanzadera malato-aspartato",
+                        "36 ATP por la lanzadera del citrato",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 3,
                     explanation = "La lanzadera malato-aspartato transporta electrones hacia el Complejo I mitocondrial (vía NADH) en hígado, riñón y corazón, rindiendo un balance global máximo de 38 ATP por molécula de glucosa."
                 ),
                 Challenge(
                     id = "bio_t06_s04_c7",
                     statement = "La intoxicación letal por cianuro de potasio produce una asfixia histotóxica fulminante debido a que el ion cianuro se une irreversiblemente al átomo de hierro del complejo respiratorio mitocondrial denominado:",
                     options = listOf(
-                        "NADH deshidrogenasa (Complejo I)",
-                        "Citocromo c oxidasa (Complejo IV)",
                         "Succinato deshidrogenasa (Complejo II)",
                         "Coenzima Q ubiquinona",
-                        "ATP sintasa F1"
+                        "ATP sintasa F1",
+                        "NADH deshidrogenasa (Complejo I)",
+                        "Citocromo c oxidasa (Complejo IV)",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El cianuro inhibe de forma potente a la citocromo c oxidasa (Complejo IV), impidiendo la transferencia de electrones al oxígeno, colapsando el gradiente protónico y suprimiendo la síntesis celular de ATP."
                 ),
                 Challenge(
@@ -5630,52 +6205,52 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s04_c9",
                     statement = "En el tejido adiposo pardo (grasa parda) de los recién nacidos, la proteína desacopladora termogenina (UCP-1) permite que los protones del espacio intermembrana regresen a la matriz sin pasar por la ATP sintasa. La consecuencia fisiológica inmediata de este desacoplamiento es:",
                     options = listOf(
-                        "Una sobreproducción masiva de ATP para contracción",
                         "La liberación de la energía del gradiente en forma de calor corporal (termogénesis)",
                         "La parada irreversible de la glucólisis por falta de glucosa",
                         "La formación excesiva de ácido láctico en sangre",
-                        "La calcificación del tejido adiposo"
+                        "La calcificación del tejido adiposo",
+                        "Una sobreproducción masiva de ATP para contracción",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La termogenina desacopla la cadena de transporte de electrones de la fosforilación oxidativa, disipando la fuerza protón-motriz exclusivamente como energía térmica para mantener la temperatura en neonatos."
                 ),
                 Challenge(
                     id = "bio_t06_s04_c10",
                     statement = "Durante la conversión previa del piruvato (3C) en Acetil-CoA (2C) antes de ingresar al ciclo de Krebs, la enzima piruvato deshidrogenasa cataliza una reacción de:",
                     options = listOf(
+                        "Carboxilación neta dependiente de biotina",
                         "Fosforilación a nivel de sustrato y reducción de FAD",
                         "Descarboxilación oxidativa con producción de CO2 y NADH",
                         "Condensación con oxalacetato para formar citrato",
                         "Hidrólisis consumiendo dos moléculas de ATP",
-                        "Carboxilación neta dependiente de biotina"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "La acetilación del piruvato es una descarboxilación oxidativa: se remueve un átomo de carbono como CO₂ y se transfieren electrones al NAD⁺ generando NADH."
                 ),
                 Challenge(
                     id = "bio_t06_s04_c11",
                     statement = "¿Cuál de los siguientes transportadores de electrones de la membrana mitocondrial interna es un lípido quinónico móvil no proteico que recoge equivalentes de reducción de los Complejos I y II?",
                     options = listOf(
+                        "Plastocianina",
+                        "Proteína de Rieske",
                         "Citocromo c",
                         "Coenzima Q (Ubiquinona)",
                         "Ferredoxina",
-                        "Plastocianina",
-                        "Proteína de Rieske"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La ubiquinona o coenzima Q es una molécula lipófila pequeña que se difunde libremente por la bicapa hidrofóbica de la membrana interna transportando electrones hacia el Complejo III."
                 ),
                 Challenge(
                     id = "bio_t06_s04_c12",
                     statement = "En la teoría quimiosmótica formulada por Peter Mitchell, los complejos enzimáticos I, III y IV de la cadena respiratoria mitocondrial bombean iones hidrógeno (H+) desde:",
                     options = listOf(
-                        "El espacio intermembrana hacia el citoplasma celular",
-                        "La matriz mitocondrial hacia el espacio intermembrana",
                         "El interior de las crestas hacia el estroma cloroplástico",
                         "El núcleo hacia el interior de la matriz",
-                        "La vacuola hacia el retículo liso"
+                        "La vacuola hacia el retículo liso",
+                        "El espacio intermembrana hacia el citoplasma celular",
+                        "La matriz mitocondrial hacia el espacio intermembrana",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Los complejos I, III y IV actúan como bombas de protones impulsadas por electrones que translocan protones desde la matriz mitocondrial hacia el espacio intermembranoso, generando el gradiente quimiosmótico."
                 ),
                 Challenge(
@@ -5721,26 +6296,26 @@ internal object BiologiaPart1 {
                     id = "bio_t06_s04_c16",
                     statement = "Al comparar termodinámicamente la respiración celular aeróbica frente a la fermentación anaerobia de la glucosa, la degradación aerobia resulta cuantitativamente:",
                     options = listOf(
+                        "Incapaz de sintetizar agua metabólica en tejidos nobles",
+                        "Exclusiva de células procariotas carentes de membrana",
                         "Menos eficiente porque consume todo el oxígeno tisular",
                         "Mucho más eficiente, rindiendo de 18 a 19 veces más ATP por molécula de glucosa",
                         "Idéntica en rendimiento ya que ambas producen 2 ATP netos",
-                        "Incapaz de sintetizar agua metabólica en tejidos nobles",
-                        "Exclusiva de células procariotas carentes de membrana"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La fermentación produce solo 2 ATP netos por glucosa, mientras que la respiración aeróbica produce de 36 a 38 ATP netos, lo que representa una ganancia energética entre 18 y 19 veces mayor."
                 ),
                 Challenge(
                     id = "bio_t06_s04_c17",
                     statement = "En la cadena respiratoria mitocondrial, el flujo de electrones a través del Complejo IV reduce el oxígeno para dar origen al agua conocida fisiológicamente como:",
                     options = listOf(
-                        "Agua coloidal plasmática",
-                        "Agua metabólica o de combustión",
                         "Agua de cristalización ósea",
                         "Agua higroscópica superficial",
-                        "Agua libre extracelular"
+                        "Agua libre extracelular",
+                        "Agua coloidal plasmática",
+                        "Agua metabólica o de combustión",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El agua formada en el interior de la mitocondria por la unión del oxígeno con electrones y protones al final de la cadena respiratoria se denomina agua metabólica."
                 )
             )
@@ -5794,7 +6369,28 @@ internal object BiologiaPart1 {
                       - Reemplaza a la epidermis en tallos y raíces con crecimiento secundario maduro (árboles y arbustos leñosos).
                       - *Súber o Corcho:* Capas celulares externas muertas a la madurez cuyas paredes están fuertemente impregnadas de **suberina** (lípido impermeable). Es un aislante térmico y mecánico excepcional que resiste el fuego y parásitos.
                       - *Lenticelas:* Pequeñas grietas o poros visibles a simple vista en la corteza leñosa donde las células suberosas se disponen de forma laxa, dejando grandes meatos intercelulares que **permiten el intercambio gaseoso entre los tejidos leñosos internos y la atmósfera**, sustituyendo a los estomas que se pierden con la caída de la epidermis.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Ápices que Alargan y Cortezas que Protegen
+
+### Meristemo primario vs. secundario (tabla)
+- **Primario o apical:** en ápices caulinar y radical; produce crecimiento en LONGITUD (entrenudos y raíz profunda). Protegido por la cofia o caliptra en la raíz.
+- **Secundario o lateral:** anillos de cámbium vascular y felógeno; produce crecimiento en GROSOR (madera y corteza). Solo en gimnospermas y dicotiledóneas leñosas.
+- Trampa: las monocotiledóneas (pastos, palmeras) CASI no tienen crecimiento secundario: su grosor viene del meristemo primario engrosado.
+
+### Epidermis: la piel transparente
+- Células vivas, aplanadas y SIN cloroplastos (salvo oclusivas), recubiertas de CUTÍCULA cerosa anti-evaporación.
+- **Estomas:** dos células oclusivas con forma de riñón que ABREN (turgentes, día) y CIERRAN (flácidas, sequía) el ostiolo.
+- **Tricomas:** pelos que reflejan luz, retienen rocío o inyectan veneno (ortiga con histamina).
+
+### Peridermis: cuando la epidermis se rompe
+- **Súber o corcho:** células muertas con suberina impermeable (tapones de botella).
+- **Felógeno:** meristemo que la fabrica hacia afuera (y felodermis hacia adentro).
+- **Lenticelas:** poros laxos que reemplazan a los estomas en el intercambio gaseoso de tallos leñosos.
+- **Ritidoma:** corteza externa acumulada de súber viejo (la "piel" rugosa del eucalipto).
+
+""",
                 conceptosClave = listOf(
                     "Meristemo primario o apical: crecimiento en longitud (ápice caulinar y radical con cofia).",
                     "Meristemo secundario o lateral: crecimiento en grosor (cámbium vascular y felógeno).",
@@ -5823,52 +6419,52 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s01_c2",
                     statement = "El tejido meristemático primario ubicado en los ápices de los tallos y raíces cuya actividad mitótica continua posibilita el crecimiento longitudinal de la planta en altura y profundidad corresponde al:",
                     options = listOf(
-                        "Cámbium suberoso o felógeno",
                         "Meristemo apical",
                         "Colénquima angular",
                         "Cámbium vascular",
-                        "Esclerénquima pétreo"
+                        "Esclerénquima pétreo",
+                        "Cámbium suberoso o felógeno",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Los meristemos apicales o primarios se encuentran en los extremos de tallos y raíces y se encargan del crecimiento en longitud de los órganos vegetales."
                 ),
                 Challenge(
                     id = "bio_t07_s01_c3",
                     statement = "En el tallo de un árbol de eucalipto, el meristemo lateral que genera madera (xilema secundario) hacia la parte interna del tronco y corteza conductora (floema secundario) hacia la parte externa se denomina:",
                     options = listOf(
+                        "Caliptra radical",
+                        "Epidermis uniestratificada",
                         "Cámbium vascular",
                         "Cámbium suberoso o felógeno",
                         "Protodermis apical",
-                        "Caliptra radical",
-                        "Epidermis uniestratificada"
                     ),
-                    correctIndex = 0,
+                    correctIndex = 2,
                     explanation = "El cámbium vascular es el meristemo secundario cilíndrico que forma xilema secundario hacia el interior y floema secundario hacia el exterior, ensanchando el tronco año tras año."
                 ),
                 Challenge(
                     id = "bio_t07_s01_c4",
                     statement = "El extremo terminal de la raíz en crecimiento está resguardado mecánicamente contra la abrasión de las partículas del suelo por una estructura protectora en forma de dedal llamada:",
                     options = listOf(
-                        "Cofia, caliptra o pilorriza",
-                        "Tricoma radical",
                         "Zona suberificada",
                         "Lenticela apical",
-                        "Cámbium cortical"
+                        "Cámbium cortical",
+                        "Cofia, caliptra o pilorriza",
+                        "Tricoma radical",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 3,
                     explanation = "La cofia o caliptra es un capuchón celular que envuelve al meristemo apical de la raíz, protegiéndolo del roce mecánico mientras se abre paso a través de la tierra."
                 ),
                 Challenge(
                     id = "bio_t07_s01_c5",
                     statement = "Los estomas son aparatos reguladores del intercambio de gases y transpiración foliar. A diferencia de las células epidérmicas comunes adyacentes que son transparentes, las células oclusivas o de guarda se caracterizan por:",
                     options = listOf(
-                        "Estar totalmente muertas y lignificadas",
-                        "Contener cloroplastos fotosintéticos y regular su turgencia",
                         "Carecer de núcleo y de membrana plasmática",
                         "Secretar suberina en sus paredes externas",
-                        "Transformarse en pelos urticantes"
+                        "Transformarse en pelos urticantes",
+                        "Estar totalmente muertas y lignificadas",
+                        "Contener cloroplastos fotosintéticos y regular su turgencia",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Las células oclusivas poseen cloroplastos activos y paredes con engrosamientos desiguales que les permiten arquearse al cargarse de agua por ósmosis, abriendo el ostiolo estomático."
                 ),
                 Challenge(
@@ -5888,52 +6484,52 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s01_c7",
                     statement = "La capa cerosa segregada por la epidermis en hojas y tallos jóvenes para evitar la evaporación desmedida de agua en climas secos está compuesta fundamentalmente por:",
                     options = listOf(
-                        "Quitina",
                         "Cutina",
                         "Mureína",
                         "Colágeno",
-                        "Glucógeno"
+                        "Glucógeno",
+                        "Quitina",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La cutícula que recubre a la epidermis vegetal está formada por cutina y ceras, que forman una barrera lipídica contra la transpiración cuticular no deseada."
                 ),
                 Challenge(
                     id = "bio_t07_s01_c8",
                     statement = "En la planta silvestre de la ortiga, las microestructuras epidérmicas que causan ardor y prurito intenso al contacto por inyectar histamina y ácido fórmico en la piel corresponden a:",
                     options = listOf(
+                        "Meristemos secundarios",
                         "Lenticelas leñosas",
                         "Tricomas o pelos urticantes",
                         "Células oclusivas modificadas",
                         "Vasos de xilema leñoso",
-                        "Meristemos secundarios"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Los pelos urticantes de la ortiga son tricomas glandulares modificados con una punta de sílice quebradiza que actúa como aguja hipodérmica inyectando toxinas irritantes."
                 ),
                 Challenge(
                     id = "bio_t07_s01_c9",
                     statement = "El conjunto tisular protector periférico de los tallos y raíces leñosas formado por súber (corcho), felógeno (cámbium suberoso) y felodermis recibe la denominación botánica de:",
                     options = listOf(
+                        "Hipodermis colenquimatosa",
+                        "Mesófilo foliar",
                         "Epidermis glandular",
                         "Peridermis",
                         "Endodermis de Caspary",
-                        "Hipodermis colenquimatosa",
-                        "Mesófilo foliar"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La peridermis es la cubierta protectora secundaria formada por el súber (externo), el felógeno (meristemo generador intermedio) y la felodermis (tejido vivo interno)."
                 ),
                 Challenge(
                     id = "bio_t07_s01_c10",
                     statement = "Las células meristemáticas embrionarias se distinguen citológicamente de las células vegetales adultas diferenciadas por poseer:",
                     options = listOf(
-                        "Pared secundaria gruesa lignificada y gran vacuola central",
-                        "Pared primaria delgada de celulosa, núcleo grande y citoplasma denso",
                         "Ausencia total de membrana plasmática",
                         "Impregnación completa de suberina impermeable",
-                        "Cloroplastos hipertrofiados sin capacidad mitótica"
+                        "Cloroplastos hipertrofiados sin capacidad mitótica",
+                        "Pared secundaria gruesa lignificada y gran vacuola central",
+                        "Pared primaria delgada de celulosa, núcleo grande y citoplasma denso",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Las células de los meristemos son totipotentes o indiferenciadas, caracterizadas por paredes celulares primarias delgadas, núcleos grandes, citoplasma denso y rápida división mitótica."
                 ),
                 Challenge(
@@ -5953,26 +6549,26 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s01_c12",
                     statement = "Cuando las células oclusivas de un estoma acumulan activamente iones potasio (K+) en su interior, el agua ingresa a ellas por ósmosis tornándolas turgentes. La consecuencia fisiológica inmediata de este estado es:",
                     options = listOf(
-                        "El cierre hermético del ostiolo para retener agua",
                         "La apertura del ostiolo para permitir el intercambio de gases",
                         "La caída definitiva de la hoja por abscisión",
                         "La muerte por plasmólisis del estoma",
-                        "La transformación del estoma en lenticela"
+                        "La transformación del estoma en lenticela",
+                        "El cierre hermético del ostiolo para retener agua",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Al aumentar su turgencia, las células de guarda se expanden y arquean hacia el exterior gracias a la rigidez de su pared interna, provocando la apertura del ostiolo para la entrada de CO₂."
                 ),
                 Challenge(
                     id = "bio_t07_s01_c13",
                     statement = "El meristemo secundario responsable de producir felodermis (células parenquimatosas vivas) hacia el lado interno de la corteza vegetal corresponde al:",
                     options = listOf(
+                        "Protodermis foliar",
                         "Meristemo apical caulinar",
                         "Felógeno (cámbium suberoso)",
                         "Procámbium primario",
                         "Cámbium vascular",
-                        "Protodermis foliar"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El felógeno se divide periclinalmente originando súber o corcho hacia afuera y una fina capa de parénquima llamada felodermis hacia adentro."
                 )
             )
@@ -6031,7 +6627,27 @@ internal object BiologiaPart1 {
                       - *Componentes celulares:* Células **vivas** que carecen de núcleo, vacuolas y ribosomas a la madurez para no obstruir el paso:
                         - *Células o tubos cribosos:* Se alinean longitudinalmente comunicadas por **placas cribosas** cribadas por poros revestidos de calosa.
                         - *Células acompañantes o anexas:* Células parenquimatosas vivas con núcleo activo conectadas por plasmodesmos a los elementos cribosos; realizan el control metabólico y cargan activamente la sacarosa consumiendo ATP.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Relleno, Armadura y Tuberías
+
+### Parénquimas: el relleno multifuncional
+- **Clorénquima:** fotosintético (empalizada compacta arriba + lagunar aireado abajo en la hoja).
+- **Reservante:** almidón (tubérculos), agua (cactus y sábila) o aire (aerénquima de plantas acuáticas como el jacinto).
+- **De relleno:** córtex y médula de tallos jóvenes.
+
+### Sostén vivo vs. sostén muerto (tabla de oro)
+- **Colénquima:** células VIVAS con paredes engrosadas en ESQUINAS (celulosa + pectina); sostiene órganos EN CRECIMIENTO (pecíolos de apio, tallos jóvenes). Flexible.
+- **Esclerénquima:** células MUERTAS con pared LIGNIFICADA total; sostiene órganos ADULTOS. Dos formas: FIBRAS largas (cáñamo, lino textil) y ESCLEREIDAS cortas pétreas (braquiesclereidas que arenillan la pera y el membrillo).
+- Trampa: si el órgano crece, el sostén es colénquima (vivo); si ya maduró, esclerénquima (muerto).
+
+### Xilema vs. floema (las dos tuberías)
+- **Xilema o leño:** lleva savia BRUTA (agua + sales) de raíz a hoja; elementos MUERTOS lignificados: traqueidas (gimnospermas) y vasos o tráqueas (angiospermas). Sentido único ASCENDENTE.
+- **Floema o líber:** lleva savia ELABORADA (azúcares) en AMBOS sentidos; elementos VIVOS: tubos cribosos (sin núcleo) + células acompañantes (con núcleo, las dirigen).
+- **Anillos de crecimiento:** cada año, xilema primaveral claro y ancho + xilema otoñal oscuro y denso: contarlos data la edad (dendrocronología).
+
+""",
                 conceptosClave = listOf(
                     "Clorénquima: fotosíntesis (empalizada y lagunar en hojas).",
                     "Parénquimas de reserva: amiláceo (almidón en papa), acuífero (agua en cactus) y aerífero (aire en flotadoras).",
@@ -6048,26 +6664,26 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s02_c1",
                     statement = "Al masticar una pera madura se percibe una textura arenosa dura debida a grupos de células pétreas redondeadas con paredes secundarias sumamente gruesas e impregnadas de lignina que mueren al alcanzar la madurez. Dichas células corresponden al tejido:",
                     options = listOf(
+                        "Clorénquima lagunar",
                         "Colénquima angular",
                         "Parénquima amiláceo",
                         "Esclerénquima",
                         "Floema primario",
-                        "Clorénquima lagunar"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 3,
                     explanation = "Las esclereidas o células pétreas son elementos típicos del Esclerénquima, tejido mecánico de células muertas con paredes secundarias lignificadas que otorgan extrema dureza y protección."
                 ),
                 Challenge(
                     id = "bio_t07_s02_c2",
                     statement = "El tejido vegetal mecánico que brinda flexibilidad y sostén elástico a los pecíolos de las hojas y tallos jóvenes herbáceos en crecimiento, constituido por células vivas con paredes celulares engrosadas desigualmente de celulosa y pectina, es el:",
                     options = listOf(
-                        "Colénquima",
                         "Esclerénquima",
                         "Xilema secundario",
                         "Felógeno",
-                        "Aerénquima"
+                        "Aerénquima",
+                        "Colénquima",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 4,
                     explanation = "El colénquima es el tejido de sostén vivo y plástico por excelencia en plantas jóvenes, cuyas células no están lignificadas sino engrosadas con pectinas y celulosa."
                 ),
                 Challenge(
@@ -6087,52 +6703,52 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s02_c4",
                     statement = "La savia elaborada rica en sacarosa y aminoácidos fluye de forma multidireccional desde los órganos fuente hacia los sumideros a través de los tubos cribosos del floema. Dichos tubos se caracterizan celularmente por ser:",
                     options = listOf(
-                        "Células muertas deshidratadas y lignificadas",
                         "Células vivas que carecen de núcleo a la madurez y dependen de células anexas",
                         "Células embrionarias en continua división mitótica",
                         "Células pétreas con poros microscópicos areolados",
-                        "Células con cloroplastos fotosintéticos gigantes"
+                        "Células con cloroplastos fotosintéticos gigantes",
+                        "Células muertas deshidratadas y lignificadas",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "Los elementos de los tubos cribosos del floema son células vivas que pierden el núcleo durante su diferenciación para facilitar el flujo continuo de savia, manteniendo su vitalidad gracias al soporte metabólico de las células acompañantes."
                 ),
                 Challenge(
                     id = "bio_t07_s02_c5",
                     statement = "En el tallo carnoso de un cactus de las zonas desérticas de la costa peruana, el tejido fundamental hipertrofiado que retiene masivamente agua gracias a mucílagos intracelulares corresponde al:",
                     options = listOf(
+                        "Colénquima angular",
                         "Parénquima clorofiliano",
                         "Parénquima acuífero",
                         "Parénquima aerífero",
                         "Esclerénquima de fibras",
-                        "Colénquima angular"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El parénquima acuífero abunda en las plantas suculentas (cactáceas) y almacena grandes volúmenes de agua en sus vacuolas para resistir las sequías prolongadas."
                 ),
                 Challenge(
                     id = "bio_t07_s02_c6",
                     statement = "Las plantas acuáticas como la totora (*Schoenoplectus californicus*) del lago Titicaca flotan y mantienen oxigenados sus órganos sumergidos gracias a un tejido fundamental con grandes cavidades o meatos de aire llamado:",
                     options = listOf(
-                        "Aerénquima (parénquima aerífero)",
-                        "Parénquima amiláceo",
                         "Xilema primario",
                         "Colénquima lagunar",
-                        "Súber o corcho"
+                        "Súber o corcho",
+                        "Aerénquima (parénquima aerífero)",
+                        "Parénquima amiláceo",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 3,
                     explanation = "El aerénquima o parénquima aerífero presenta grandes cámaras intercelulares cargadas de aire que facilitan la flotabilidad y la ventilación interna de órganos en plantas acuáticas."
                 ),
                 Challenge(
                     id = "bio_t07_s02_c7",
                     statement = "En las hojas de las plantas dicotiledóneas, el clorénquima orientado hacia la cara superior (haz) formado por células cilíndricas densamente empaquetadas ricas en cloroplastos recibe el nombre de:",
                     options = listOf(
-                        "Parénquima lagunar o esponjoso",
-                        "Parénquima en empalizada",
                         "Parénquima de reserva amilácea",
                         "Colénquima lamelar",
-                        "Peridermis foliar"
+                        "Peridermis foliar",
+                        "Parénquima lagunar o esponjoso",
+                        "Parénquima en empalizada",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El parénquima en empalizada se localiza bajo la epidermis superior y consta de células alargadas perpendiculares a la superficie que reciben directamente la luz solar para la fotosíntesis."
                 ),
                 Challenge(
@@ -6165,39 +6781,39 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s02_c10",
                     statement = "Las fibras textiles de uso industrial extraídas del lino (*Linum usitatissimum*) y del cáñamo, sumamente resistentes a la tracción y compresión mecánica, corresponden botánicamente a:",
                     options = listOf(
+                        "Conductos de xilema primario",
+                        "Tricomas epidérmicos absorbentes",
                         "Fibras de esclerénquima lignificado",
                         "Bandas de colénquima turgente",
                         "Cordones de células meristemáticas",
-                        "Conductos de xilema primario",
-                        "Tricomas epidérmicos absorbentes"
                     ),
-                    correctIndex = 0,
+                    correctIndex = 2,
                     explanation = "Las fibras textiles comerciales de lino, cáñamo y yute son paquetes de células esclerenquimatosas muertas alargadas con paredes fuertemente lignificadas."
                 ),
                 Challenge(
                     id = "bio_t07_s02_c11",
                     statement = "Los elementos conductores más evolucionados y anchos del xilema que forman vasos continuos y abiertos característicos de las plantas con flores (angiospermas) se denominan:",
                     options = listOf(
+                        "Células anexas",
+                        "Esclereidas",
                         "Traqueidas biseladas",
                         "Elementos de los vasos o tráqueas",
                         "Tubos cribosos cerrados",
-                        "Células anexas",
-                        "Esclereidas"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Los elementos de los vasos o tráqueas son células conductoras de mayor calibre y extremos perforados exclusivas de las angiospermas, lo que les confiere un transporte hídrico más veloz que las traqueidas de gimnospermas."
                 ),
                 Challenge(
                     id = "bio_t07_s02_c12",
                     statement = "Las placas perforadas que separan transversalmente a las células contiguas de un tubo criboso en el floema y que permiten el paso ininterrumpido de savia elaborada reciben el nombre de:",
                     options = listOf(
-                        "Placas cribosas con poros",
                         "Punteaduras areoladas",
                         "Bandas de Caspary",
                         "Discos intercalares",
-                        "Ostiolos suberificados"
+                        "Ostiolos suberificados",
+                        "Placas cribosas con poros",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 4,
                     explanation = "Las placas cribosas son las paredes transversales perforadas de los elementos cribosos del floema, recubiertas del polisacárido calosa para regular el tráfico de savia elaborada."
                 ),
                 Challenge(
@@ -6292,7 +6908,30 @@ internal object BiologiaPart1 {
                         - **Osteoclastos:** Células gigantes multinucleadas móviles derivadas de monocitos; ricas en lisosomas que secretan ácido clorhídrico y colagenasas para la **resorción y remodelación ósea** bajo estímulo de la hormona paratiroidea (PTH).
                       - *Estructura microscópica:*
                         - Hueso compacto: Organizado en unidades cilíndricas llamadas **osteonas o sistemas de Havers**, con laminillas concéntricas alrededor de un **conducto de Havers** (que aloja vasos y nervios) conectados transversalmente por **conductos de Volkmann**.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Epitelios que Cubren y Conectivos que Sostienen
+
+### Clasificación de epitelios (árbol de decisión)
+1. ¿Una o varias capas? **Simple** (una) frente a **Estratificado** (varias).
+2. Si simple, ¿qué forma? **Plano** (endotelio vascular, alvéolos, mesotelio), **cúbico** (túbulos renales, glándulas) o **cilíndrico** (intestino con microvellosidades, tráquea seudoestratificada ciliada).
+3. Si estratificado: **plano queratinizado** (epidermis con queratina muerta) o **de transición/urotelio** (vejiga que se estira).
+- Trampa: la tráquea PARECE estratificada pero es SEUDOESTRATIFICADA (todas tocan la basal, no todos llegan arriba).
+
+### Glándulas: ¿a dónde vierten?
+- **Exocrinas:** con conducto al exterior o cavidad (sudoríparas, sebáceas, salivales). Por secreción: merocrinas (exocitosis intacta), apocrinas (pierden ápice: mamaria) y holocrinas (la célula ESTALLA: sebácea).
+- **Endocrinas:** SIN conducto, a sangre (tiroides, hipófisis, páncreas endocrino).
+- Trampa: el páncreas es MIXTO (exocrino digestivo + endocrino insulínico).
+
+### Conectivo: matriz manda (tabla)
+- **Laxo:** relleno dérmico, el más abundante. **Denso:** tendones y dermis profunda. **Reticular:** andamio de bazo, ganglios y médula.
+- **Adiposo:** reserva y aislante (blanco unilocular adulto).
+- **Sangre:** matriz LÍQUIDA (plasma) + eritrocitos + leucocitos + plaquetas: el conectivo más atípico.
+- **Cartílago:** AVASCULAR (se nutre por difusión desde el pericondrio): hialino (tráquea, nariz), elástico (pabellón auricular) y fibroso (meniscos, discos).
+- **Hueso:** compacto en osteonas de Havers (concéntricas, con Volkmann transversales) y esponjoso en trabéculas con médula.
+
+""",
                 conceptosClave = listOf(
                     "Epitelio: células unidas, avascular, sobre membrana basal, clasificado por estratos y forma.",
                     "Endotelio y alvéolos: plano simple; Tráquea: seudoestratificado ciliado; Epidermis: plano estratificado queratinizado.",
@@ -6322,39 +6961,39 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s03_c2",
                     statement = "El epitelio que reviste la luz de la tráquea y los bronquios principales humanos, encargado de retener y expulsar partículas extrañas hacia la faringe mediante el batido de proyecciones apicales y secreción de moco, corresponde a un epitelio:",
                     options = listOf(
-                        "Plano estratificado queratinizado",
                         "Seudoestratificado cilíndrico ciliado",
                         "Cúbico simple con microvellosidades",
                         "Polimorfo de transición urotelial",
-                        "Cilíndrico estratificado mucoso"
+                        "Cilíndrico estratificado mucoso",
+                        "Plano estratificado queratinizado",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La mucosa de las vías respiratorias superiores está tapizada por un epitelio seudoestratificado cilíndrico ciliado con células caliciformes productoras de moco."
                 ),
                 Challenge(
                     id = "bio_t07_s03_c3",
                     statement = "A diferencia de la mayoría de los tejidos conectivos que poseen abundantes vasos sanguíneos, el tejido cartilaginoso se caracteriza biológicamente por ser:",
                     options = listOf(
+                        "Incapaz de sintetizar matriz extracelular",
+                        "Altamente inervado por fibras motoras mielínicas",
                         "Hipervascularizado con sistemas de Havers",
                         "Avascular, nutriéndose por difusión desde el pericondrio",
                         "Rico en osteocitos multinucleados",
-                        "Incapaz de sintetizar matriz extracelular",
-                        "Altamente inervado por fibras motoras mielínicas"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El cartílago es un tejido conectivo especializado avascular (carece de vasos sanguíneos); sus condrocitos reciben nutrientes por difusión desde los capilares del pericondrio circundante."
                 ),
                 Challenge(
                     id = "bio_t07_s03_c4",
                     statement = "En las reacciones alérgicas y fenómenos anafilácticos, la liberación masiva de histamina que produce broncoconstricción y vasodilatación proviene de la desgranulación en el tejido conectivo de:",
                     options = listOf(
-                        "Mastocitos o células cebadas",
                         "Condrocitos hipertróficos",
                         "Osteoblastos basófilos",
                         "Adipocitos multiloculares",
-                        "Fibrocitos seniles"
+                        "Fibrocitos seniles",
+                        "Mastocitos o células cebadas",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 4,
                     explanation = "Los mastocitos o células cebadas contienen gránulos citoplasmáticos repletos de histamina, heparina y factores quimiotácticos que liberan tras el contacto con anticuerpos IgE en procesos alérgicos."
                 ),
                 Challenge(
@@ -6400,26 +7039,26 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s03_c8",
                     statement = "En el tejido óseo compacto de un fémur adulto, la unidad estructural y funcional microscópica formada por laminillas óseas concéntricas organizadas alrededor de un conducto vascular central se denomina:",
                     options = listOf(
+                        "Canalículo de Volkmann",
+                        "Trabécula esponjosa",
                         "Sarcómero",
                         "Osteona o Sistema de Havers",
                         "Condroplasto",
-                        "Canalículo de Volkmann",
-                        "Trabécula esponjosa"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La osteona o sistema de Havers es la unidad fundamental del hueso compacto maduro, consistente en un conducto de Havers con vasos sanguíneos rodeado de laminillas óseas con osteocitos."
                 ),
                 Challenge(
                     id = "bio_t07_s03_c9",
                     statement = "La mucosa de la vejiga urinaria humana tiene la capacidad de adaptarse a variaciones drásticas de volumen de orina sin romperse, cambiando de un aspecto estratificado grueso a uno aplanado delgado. Este epitelio se clasifica como:",
                     options = listOf(
-                        "Plano simple endotelial",
-                        "Polimorfo, de transición o urotelio",
                         "Seudoestratificado caliciforme",
                         "Cilíndrico glandular",
-                        "Cúbico estratificado"
+                        "Cúbico estratificado",
+                        "Plano simple endotelial",
+                        "Polimorfo, de transición o urotelio",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El urotelio o epitelio de transición reviste las vías urinarias y posee células en paraguas capaces de acomodarse y aplanarse durante la repleción de la vejiga."
                 ),
                 Challenge(
@@ -6439,52 +7078,52 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s03_c11",
                     statement = "¿Cuál es la célula progenitora del tejido conectivo encargada de sintetizar activamente las fibras colágenas, reticulares y elásticas, así como los proteoglicanos de la sustancia fundamental?",
                     options = listOf(
-                        "Condrocito maduro",
                         "Fibroblasto",
                         "Osteoclasto remodelador",
                         "Adipocito unilocular",
-                        "Célula endotelial"
+                        "Célula endotelial",
+                        "Condrocito maduro",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El fibroblasto es la célula primordial del tejido conectivo propiamente dicho, responsable de la biogénesis y mantenimiento de toda la matriz extracelular."
                 ),
                 Challenge(
                     id = "bio_t07_s03_c12",
                     statement = "Las glándulas sebáceas de la piel vierten su contenido lipídico mediante un mecanismo en el cual la célula acumula lípidos en su citoplasma, muere y se desintegra por completo para formar la secreción. Este mecanismo de secreción se califica como:",
                     options = listOf(
+                        "Endocrino",
                         "Merocrino",
                         "Holocrino",
                         "Apocrino",
                         "Paracrino",
-                        "Endocrino"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "En la secreción holocrina (característica de las glándulas sebáceas), la célula entera se convierte en el producto de secreción al sufrir lisis."
                 ),
                 Challenge(
                     id = "bio_t07_s03_c13",
                     statement = "En el tejido óseo, las células maduras que derivan de los osteoblastos y que residen aisladas en pequeñas lagunas óseas (osteoplastos) comunicándose con otras células vecinas a través de delgados canalículos calcóforos son los:",
                     options = listOf(
+                        "Mastocitos",
+                        "Fibroblastos",
                         "Condroblastos",
                         "Osteocitos",
                         "Osteoclastos",
-                        "Mastocitos",
-                        "Fibroblastos"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Los osteocitos son osteoblastos que quedaron atrapados en la matriz mineralizada; mantienen la integridad del tejido óseo comunicándose mediante prolongaciones citoplasmáticas en canalículos."
                 ),
                 Challenge(
                     id = "bio_t07_s03_c14",
                     statement = "El epitelio que recubre la pared interna de los vasos sanguíneos y linfáticos facilitando un flujo laminar sin fricción de la sangre se denomina endotelio y corresponde a un epitelio:",
                     options = listOf(
-                        "Plano simple",
                         "Cúbico simple",
                         "Estratificado plano queratinizado",
                         "Cilíndrico ciliado",
-                        "Polimorfo transicional"
+                        "Polimorfo transicional",
+                        "Plano simple",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 4,
                     explanation = "El endotelio es una monocapa de células aplanadas íntimamente unidas (epitelio plano simple) que reviste todo el aparato circulatorio."
                 ),
                 Challenge(
@@ -6504,26 +7143,26 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s03_c16",
                     statement = "La lámina basal que sustenta a todos los epitelios y los ancla al tejido conjuntivo subyacente está compuesta fundamentalmente por glucoproteínas estructurales como la laminina y una variedad de colágeno de tipo:",
                     options = listOf(
-                        "Colágeno tipo I",
                         "Colágeno tipo IV",
                         "Colágeno tipo II",
                         "Colágeno tipo X",
-                        "Colágeno fibrilar III"
+                        "Colágeno fibrilar III",
+                        "Colágeno tipo I",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "La lámina basal posee una red no fibrilar de colágeno tipo IV asociada a laminina, nidógeno y perlecano, que forma el filtro y sostén molecular de los epitelios."
                 ),
                 Challenge(
                     id = "bio_t07_s03_c17",
                     statement = "El tejido adiposo blanco o unilocular tiene como rasgo celular diagnóstico albergar en su citoplasma:",
                     options = listOf(
+                        "Matriz mineralizada de fosfato cálcico",
                         "Múltiples microgotas lipídicas ricas en termogenina",
                         "Una única gota de triglicéridos gigante que desplaza el núcleo a la periferia",
                         "Abundantes gránulos basófilos de histamina",
                         "Haces paralelos de microtúbulos contráctiles",
-                        "Matriz mineralizada de fosfato cálcico"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "El adipocito unilocular almacena lípidos en una sola gota voluminosa que comprime el citoplasma y empuja el núcleo aplanado contra la membrana celular (aspecto en anillo de sello)."
                 )
             )
@@ -6580,7 +7219,32 @@ internal object BiologiaPart1 {
                       - *Células de Schwann (Neurolemocitos):* Sintetizan la **vaina de mielina en los axones del Sistema Nervioso Periférico (SNP: nervios craneales y espinales)**. Cada célula de Schwann envuelve un solo segmento internodal de un axón. Los espacios amielínicos intermedios son los **nódulos de Ranvier**, que posibilitan la **conducción saltatoria ultra rápida del impulso nervioso**.
                       - *Microglía:* Pequeñas células espinosas con capacidad fagocítica derivadas del linaje monocito-macrófago embrionario (mesodermo). Representan el **sistema inmunitario y de defensa residente del sistema nervioso central**.
                       - *Células Ependimarias (Ependimocitos):* Células epitelioides cilíndricas o cúbicas ciliadas que revisten los ventrículos cerebrales y el conducto central de la médula espinal (epéndimo); facilitan la circulación del **líquido cefalorraquídeo (LCR)**.
-                """,
+
+---
+
+## PROFUNDIZACIÓN: Máquinas de Contraerse y Redes que Conducen
+
+### Tres músculos (tabla definitiva)
+- **Esquelético:** fibras largas, MULTINUCLEADAS periféricas, ESTRIADO, VOLUNTARIO rápido y fatigable (se inserta en hueso por tendón).
+- **Cardiaco:** fibras ramificadas UNINUCLEADAS centrales, estriado, INVOLUNTARIO rítmico, con DISCOS INTERCALARES que sincronizan al corazón.
+- **Liso:** fusiforme uninucleado, SIN estrías, involuntario lento y sostenido (vísceras, vasos, útero).
+- Trampa: el cardiaco es estriado como el esquelético pero involuntario como el liso: combina rasgos.
+
+### Sarcómero: la unidad contráctil
+- Segmento entre dos líneas Z: filamentos FINOS de actina + GRUESOS de miosina que se DESLIZAN (teoría del filamento deslizante).
+- **Bandas:** A (anisotrópica, miosina, no cambia) e I (isotrópica, actina, se acorta); al contraerse, la Z se acerca.
+- **Energía:** ATP para el golpe de miosina + fosfocreatina de reserva + mioglobina de oxígeno local.
+
+### Unión neuromuscular (placa motora)
+- El axón libera ACETILCOLINA en la hendidura; el músculo responde contrayéndose; la acetilcolinesterasa limpia para el siguiente impulso.
+- El curare y el bótox actúan justo aquí (bloqueo vs. parálisis flácida): clásico de preguntas aplicadas.
+
+### Neurona y neuroglía (reparto de roles)
+- **Neurona:** dendritas (reciben), soma (integra), axón (transmite); mielina de Schwann (periférico) u oligodendrocitos (central) con nodos de Ranvier que aceleran.
+- **Astrocitos:** barrera hematoencefálica y sostén. **Microglía:** defensa fagocítica residente. **Ependimo:** reviste ventrículos y mueve LCR. **Satélite:** sostiene ganglios.
+- Trampa: la mielina la ponen Schwann FUERA y oligodendrocitos DENTRO del SNC.
+
+""",
                 conceptosClave = listOf(
                     "Músculo esquelético: fibras multinucleadas periféricas, estriado, voluntario, sarcómeros con líneas Z.",
                     "Músculo cardíaco: células ramificadas, 1-2 núcleos centrales, discos intercalares (uniones gap), involuntario.",
@@ -6597,26 +7261,26 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s04_c1",
                     statement = "En la esclerosis múltiple se produce una desmielinización autoinmune progresiva de los axones neuronales en el encéfalo y la médula espinal. ¿Qué célula glial encargada de producir la vaina de mielina en el sistema nervioso central es la diana de esta patología?",
                     options = listOf(
+                        "Microglía fagocítica",
                         "Célula de Schwann",
                         "Astrocito protoplasmático",
                         "Oligodendrocito",
                         "Célula ependimaria",
-                        "Microglía fagocítica"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 3,
                     explanation = "Los oligodendrocitos son las neuroglías encargadas de sintetizar la vaina de mielina alrededor de múltiples axones en el Sistema Nervioso Central (encéfalo y médula). Las células de Schwann cumplen ese rol en el Sistema Nervioso Periférico."
                 ),
                 Challenge(
                     id = "bio_t07_s04_c2",
                     statement = "En el tejido muscular estriado esquelético, la unidad anatómica y funcional de contracción delimitada longitudinalmente entre dos líneas Z sucesivas recibe la denominación de:",
                     options = listOf(
-                        "Sarcómero",
                         "Túbulo T",
                         "Disco intercalar",
                         "Sarcolema",
-                        "Cuerpo denso"
+                        "Cuerpo denso",
+                        "Sarcómero",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 4,
                     explanation = "El sarcómero es la unidad microscópica contráctil repetitiva de las miofibrillas estriadas, comprendida entre dos líneas o discos Z consecutivos."
                 ),
                 Challenge(
@@ -6636,52 +7300,52 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s04_c4",
                     statement = "¿Qué tipo de tejido muscular carece por completo de estriaciones transversales y de sarcómeros, anclando sus filamentos contráctiles a cuerpos densos para impulsar movimientos involuntarios en la pared del tubo digestivo?",
                     options = listOf(
-                        "Tejido muscular estriado esquelético",
                         "Tejido muscular liso visceral",
                         "Tejido muscular miocárdico",
                         "Tejido muscular voluntario somático",
-                        "Tejido muscular fasicular"
+                        "Tejido muscular fasicular",
+                        "Tejido muscular estriado esquelético",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El músculo liso no presenta miofibrillas alineadas en sarcómeros (es inestriado o liso) y contiene cuerpos densos citoplasmáticos de alfa-actinina que fijan los filamentos de actina."
                 ),
                 Challenge(
                     id = "bio_t07_s04_c5",
                     statement = "Los astrocitos son células de la neuroglía que extienden prolongaciones llamadas pies perivasculares hacia los capilares sanguíneos continuos del tejido cerebral con el propósito fundamental de:",
                     options = listOf(
+                        "Destruir eritrocitos seniles",
                         "Sintetizar mielina periférica",
                         "Formar la barrera hematoencefálica (BHE) y brindar nutrición a las neuronas",
                         "Generar potenciales de acción motores",
                         "Secretar líquido sinovial articular",
-                        "Destruir eritrocitos seniles"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 2,
                     explanation = "Los astrocitos emiten pies vasculares que sellan los capilares cerebrales, constituyendo la barrera hematoencefálica que aísla al tejido cerebral de sustancias potencialmente nocivas de la sangre."
                 ),
                 Challenge(
                     id = "bio_t07_s04_c6",
                     statement = "Las células gliales residentes en el sistema nervioso central que derivan de precursores monocíticos del mesodermo y que cumplen una función fagocítica inmunológica eliminando restos celulares y microorganismos son las:",
                     options = listOf(
+                        "Células ependimarias",
                         "Células de Schwann",
                         "Oligodendrocitos",
                         "Microglías",
                         "Células de Purkinje",
-                        "Células ependimarias"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 3,
                     explanation = "La microglía representa el linaje macrófago y defensivo propio del SNC, activándose y fagocitando restos de tejido necrótico o agentes infecciosos durante lesiones nerviosas."
                 ),
                 Challenge(
                     id = "bio_t07_s04_c7",
                     statement = "Durante el acoplamiento excitación-contracción en la fibra muscular esquelética, los iones calcio liberados desde el retículo sarcoplásmico se unen de forma específica a la proteína:",
                     options = listOf(
-                        "Actina globular",
-                        "Troponina C",
                         "Tropomiosina fibrilar",
                         "Miosina de cadena ligera",
-                        "Titina elástica"
+                        "Titina elástica",
+                        "Actina globular",
+                        "Troponina C",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "El Ca²⁺ se une a la subunidad C de la troponina, provocando un cambio conformacional que desplaza a la tropomiosina, dejando al descubierto los sitios activos de la actina para la miosina."
                 ),
                 Challenge(
@@ -6701,52 +7365,52 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s04_c9",
                     statement = "La vaina de mielina que recubre los axones de los nervios ciático y braquial en el sistema nervioso periférico permitiendo una conducción saltatoria del potencial de acción es producida por:",
                     options = listOf(
-                        "Los oligodendrocitos",
                         "Las células de Schwann (neurolemocitos)",
                         "Los astrocitos fibrosos",
                         "Las microglías",
-                        "Los podocitos renales"
+                        "Los podocitos renales",
+                        "Los oligodendrocitos",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "En el SNP, la mielina es depositada por las células de Schwann al enrollar concéntricamente su membrana plasmática alrededor de un único segmento axonal."
                 ),
                 Challenge(
                     id = "bio_t07_s04_c10",
                     statement = "Las células epitelioides cilíndricas que revisten la superficie interna de los ventrículos cerebrales y el conducto del epéndimo, provistas de cilios para facilitar el flujo del líquido cefalorraquídeo, son los:",
                     options = listOf(
+                        "Amielinocitos periféricos",
+                        "Macrófagos alveolares",
                         "Ependimocitos (células ependimarias)",
                         "Astrocitos protoplasmáticos",
                         "Oligodendrocitos mielinizantes",
-                        "Amielinocitos periféricos",
-                        "Macrófagos alveolares"
                     ),
-                    correctIndex = 0,
+                    correctIndex = 2,
                     explanation = "Las células ependimarias tapizan las cavidades ventriculares del encéfalo y el canal medular, participando en la circulación del líquido cefalorraquídeo."
                 ),
                 Challenge(
                     id = "bio_t07_s04_c11",
                     statement = "Los espacios o interrupciones periódicas amielínicas a lo largo del axón axonal donde la membrana posee una altísima densidad de canales de sodio dependientes de voltaje se denominan:",
                     options = listOf(
+                        "Bandas H del sarcómero",
+                        "Conos axónicos",
                         "Botones sinápticos",
                         "Nódulos de Ranvier",
                         "Discos intercalares",
-                        "Bandas H del sarcómero",
-                        "Conos axónicos"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Los nódulos de Ranvier son las brechas desnudas entre dos células de Schwann consecutivas donde se regenera el potencial de acción, posibilitando la conducción saltatoria."
                 ),
                 Challenge(
                     id = "bio_t07_s04_c12",
                     statement = "En el tejido muscular liso de las arterias y el útero, al carecer de la proteína troponina, el ion calcio que ingresa al citoplasma se une a una proteína fijadora citosólica denominada:",
                     options = listOf(
-                        "Calmodulina",
                         "Mioglobina",
                         "Hemoglobina",
                         "Actinina alfa",
-                        "Colágeno tipo III"
+                        "Colágeno tipo III",
+                        "Calmodulina",
                     ),
-                    correctIndex = 0,
+                    correctIndex = 4,
                     explanation = "En el músculo liso el complejo calcio-calmodulina activa a la enzima quinasa de las cadenas ligeras de la miosina (MLCK) para fosforilar la cabeza de miosina e iniciar la contracción."
                 ),
                 Challenge(
@@ -6766,52 +7430,52 @@ internal object BiologiaPart1 {
                     id = "bio_t07_s04_c14",
                     statement = "La prolongación neuronal única que conduce el potencial de acción desde el cono axónico del soma hacia las ramificaciones del telodendrón en dirección a otra célula se denomina:",
                     options = listOf(
-                        "Dendrita aferente",
                         "Axón o cilindroeje",
                         "Espina dendrítica",
                         "Corpúsculo de Nissl",
-                        "Línea Z"
+                        "Línea Z",
+                        "Dendrita aferente",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El axón es la prolongación eferente especializada en la conducción rápida del impulso nervioso a distancia hacia la sinapsis."
                 ),
                 Challenge(
                     id = "bio_t07_s04_c15",
                     statement = "En el músculo estriado esquelético, los túbulos T (túbulos transversos) son estructuras membranarias fundamentales para la contracción que corresponden anatómicamente a:",
                     options = listOf(
+                        "Vesículas lisosomales cargadas de enzimas",
+                        "Depósitos de sales de fosfato cálcico",
                         "Invaginaciones profundas tubulares del sarcolema (membrana plasmática)",
                         "Prolongaciones del citoesqueleto de microtúbulos",
                         "Cisternas dilatadas del aparato de Golgi",
-                        "Vesículas lisosomales cargadas de enzimas",
-                        "Depósitos de sales de fosfato cálcico"
                     ),
-                    correctIndex = 0,
+                    correctIndex = 2,
                     explanation = "Los túbulos T son invaginaciones tubulares del sarcolema que penetran profundamente en la fibra muscular transmitiendo la despolarización eléctrica hacia el interior celular de forma casi instantánea."
                 ),
                 Challenge(
                     id = "bio_t07_s04_c16",
                     statement = "Los discos intercalares del tejido muscular cardíaco albergan uniones comunicantes de tipo gap (nexus) cuya función electrofisiológica vital es:",
                     options = listOf(
+                        "Anclar los filamentos de queratina de la piel",
+                        "Sintetizar la vaina de mielina alrededor de las fibras",
                         "Impedir el paso de iones para aislar cada célula miocárdica",
                         "Permitir el libre flujo de iones para propagar rápidamente el potencial de acción sincitial",
                         "Almacenar gránulos de glucógeno y triglicéridos",
-                        "Anclar los filamentos de queratina de la piel",
-                        "Sintetizar la vaina de mielina alrededor de las fibras"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "Las uniones gap de los discos intercalares comunican eléctricamente a los cardiomiocitos, permitiendo que la onda de despolarización se propague coordinadamente a todo el corazón."
                 ),
                 Challenge(
                     id = "bio_t07_s04_c17",
                     statement = "Las prolongaciones ramificadas y numerosas del cuerpo neuronal encargadas de recibir señales bioquímicas y estímulos sinápticos desde otras neuronas conduciéndolos hacia el soma se denominan:",
                     options = listOf(
-                        "Axones mielinizados",
-                        "Dendritas",
                         "Nódulos de Ranvier",
                         "Pies vasculares de astrocitos",
-                        "Botones terminales eferentes"
+                        "Botones terminales eferentes",
+                        "Axones mielinizados",
+                        "Dendritas",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Las dendritas son las estructuras receptoras aferentes de la neurona que captan los impulsos sinápticos transmitiéndolos en sentido centrípeto hacia el soma neuronal."
                 )
             )

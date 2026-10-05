@@ -165,13 +165,13 @@ internal object BiologiaPart2 {
                     id = "bio_t08_s03_c1",
                     statement = "Durante la auscultación cardíaca con estetoscopio, el médico percibe el primer ruido cardíaco (R1). Fisiológicamente, este sonido acústico es provocado de forma directa por:",
                     options = listOf(
-                        "La apertura repentina de las válvulas sigmoideas aórtica y pulmonar",
                         "El cierre de las válvulas auriculoventriculares (tricúspide y mitral)",
                         "El cierre brusco de las válvulas sigmoideas al final de la eyección",
                         "El flujo turbulento de sangre a través del foramen oval",
-                        "La contracción de los músculos papilares en la diástole"
+                        "La contracción de los músculos papilares en la diástole",
+                        "La apertura repentina de las válvulas sigmoideas aórtica y pulmonar",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 0,
                     explanation = "El primer ruido cardíaco (R1) se origina por las vibraciones generadas por el cierre de las válvulas auriculoventriculares (mitral y tricúspide) al iniciarse la contracción isovolumétrica ventricular (sístole)."
                 )
             )
@@ -216,13 +216,13 @@ internal object BiologiaPart2 {
                     id = "bio_t08_s04_c1",
                     statement = "En la etapa final de la coagulación sanguínea humana (hemostasia secundaria), una enzima proteolítica activa transforma una proteína plasmática soluble en una red insoluble que atrapa eritrocitos y estabiliza el coágulo. Dicha reacción corresponde a:",
                     options = listOf(
+                        "La hidrólisis de albúmina por la heparina",
+                        "La fosforilación de megacariocitos por la vitamina K",
                         "La conversión de protrombina en trombina por el calcio",
                         "La transformación de fibrinógeno en fibrina catalizada por la trombina",
                         "La activación de plasminógeno en plasmina",
-                        "La hidrólisis de albúmina por la heparina",
-                        "La fosforilación de megacariocitos por la vitamina K"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "La trombina es la enzima que convierte el fibrinógeno (proteína soluble del plasma sintetizada en el hígado) en fibrina, formando polímeros insolubles que consolidan el coágulo definitivo."
                 )
             )
@@ -392,13 +392,13 @@ internal object BiologiaPart2 {
                     id = "bio_t09_s03_c1",
                     statement = "Un senderista en el cañón del Colca se encuentra súbitamente con un puma andino a pocos metros. Inmediatamente se activa su sistema nervioso simpático provocando en sus órganos:",
                     options = listOf(
-                        "Miosis pupilar y bradicardia refleja",
-                        "Estimulación del peristaltismo intestinal y salivación profusa",
                         "Midriasis pupilar, taquicardia y broncodilatación",
                         "Broncoconstricción y vaciamiento de la vejiga urinaria",
-                        "Aumento de la secreción ácida gástrica y relajación vascular"
+                        "Aumento de la secreción ácida gástrica y relajación vascular",
+                        "Miosis pupilar y bradicardia refleja",
+                        "Estimulación del peristaltismo intestinal y salivación profusa",
                     ),
-                    correctIndex = 2,
+                    correctIndex = 0,
                     explanation = "La respuesta de lucha o huida mediada por el sistema simpático provoca dilatación pupilar (midriasis) para mejorar la visión periférica, aumento del gasto cardíaco (taquicardia) y broncodilatación para maximizar la captación de oxígeno."
                 )
             )
@@ -447,13 +447,13 @@ internal object BiologiaPart2 {
                     id = "bio_t09_s04_c1",
                     statement = "Tras consumir un almuerzo copioso rico en carbohidratos, los niveles de glucosa en plasma se elevan a 160 mg/dL. Para restituir la homeostasis glucémica, las células beta de los islotes pancreáticos vierten al torrente sanguíneo una hormona polipeptídica hipoglucemiante denominada:",
                     options = listOf(
+                        "Adrenalina",
                         "Glucagón",
                         "Somatostatina",
                         "Insulina",
                         "Cortisol",
-                        "Adrenalina"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 3,
                     explanation = "La insulina es la hormona hipoglucemiante producida por las células beta del páncreas endocrino que estimula la captación celular de glucosa y su almacenamiento como glucógeno en el hígado y músculo."
                 )
             )
@@ -499,13 +499,13 @@ internal object BiologiaPart2 {
                     id = "bio_t10_s01_c1",
                     statement = "Un fármaco quimioterápico bloquea la actividad de la ADN polimerasa impidiendo la incorporación de desoxirribonucleótidos trifosfato en células de adenocarcinoma gástrico. ¿En qué fase específica de la interfase del ciclo celular actúa dicho inhibidor?",
                     options = listOf(
+                        "Fase G2",
+                        "Citocinesis",
                         "Fase G1",
                         "Fase G0",
                         "Fase S",
-                        "Fase G2",
-                        "Citocinesis"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 4,
                     explanation = "La síntesis y duplicación semiconservativa del material genético (ADN) ocurre de manera exclusiva durante la Fase S (Síntesis) de la interfase celular."
                 )
             )
@@ -718,13 +718,13 @@ internal object BiologiaPart2 {
                     id = "bio_t11_s01_c1",
                     statement = "En cobayos, el pelaje negro (B) domina sobre el pelaje blanco (b). Si se cruzan dos cobayos heterocigotos de pelaje negro (Bb x Bb), ¿cuál es la probabilidad teórica de obtener descendientes con pelaje de color blanco en la camada?",
                     options = listOf(
+                        "25%",
+                        "0%",
                         "100%",
                         "75%",
                         "50%",
-                        "25%",
-                        "0%"
                     ),
-                    correctIndex = 3,
+                    correctIndex = 0,
                     explanation = "Al cruzar dos heterocigotos (Bb × Bb), la descendencia genotípica es 1/4 BB, 2/4 Bb y 1/4 bb. Como el fenotipo blanco es homocigoto recesivo (bb), su probabilidad es de 1/4 o 25%."
                 )
             )
@@ -779,13 +779,13 @@ internal object BiologiaPart2 {
                     id = "bio_t11_s02_c1",
                     statement = "Un hombre con grupo sanguíneo A heterocigoto (IAi) concibe un hijo con una mujer de grupo sanguíneo B heterocigoto (IBi). ¿Cuáles son los fenotipos sanguíneos posibles y su probabilidad en la descendencia de esta pareja?",
                     options = listOf(
+                        "75% grupo AB y 25% grupo O",
+                        "50% grupo AB y 50% grupo O",
                         "100% individuos de grupo AB únicamente",
                         "50% grupo A y 50% grupo B",
                         "25% grupo A, 25% grupo B, 25% grupo AB y 25% grupo O",
-                        "75% grupo AB y 25% grupo O",
-                        "50% grupo AB y 50% grupo O"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 4,
                     explanation = "Cruzando Iᴬi × Iᴮi: Gametos del padre: Iᴬ, i; de la madre: Iᴮ, i. Descendencia: 1/4 IᴬIᴮ (grupo AB), 1/4 Iᴬi (grupo A), 1/4 Iᴮi (grupo B) y 1/4 ii (grupo O), es decir, un 25% de probabilidad para cada uno de los cuatro grupos."
                 )
             )
@@ -891,13 +891,13 @@ internal object BiologiaPart2 {
                     id = "bio_t11_s04_c2",
                     statement = "Una paciente acude a consulta genética por talla baja, cuello alado (pterygium colli), tórax en escudo, amenorrea primaria e infertilidad. El análisis citogenético revela 45 cromosomas totales con ausencia de un cromosoma sexual. Dicho cariotipo corresponde al síndrome de:",
                     options = listOf(
-                        "Klinefelter (47, XXY)",
-                        "Down (47, XX, +21)",
                         "Turner (45, X0)",
                         "Edwards (47, XX, +18)",
-                        "Superhembra (47, XXX)"
+                        "Superhembra (47, XXX)",
+                        "Klinefelter (47, XXY)",
+                        "Down (47, XX, +21)",
                     ),
-                    correctIndex = 2,
+                    correctIndex = 0,
                     explanation = "El síndrome de Turner es una monosomía sexual con fórmula cariotípica 45, X0. Afecta a mujeres que carecen de un segundo cromosoma sexual, manifestando baja estatura, cuello alado, infantilismo sexual y esterilidad."
                 )
             )
@@ -946,13 +946,13 @@ internal object BiologiaPart2 {
                     id = "bio_t12_s01_c1",
                     statement = "En 1953, Stanley Miller y Harold Urey recrearon experimentalmente en un circuito de vidrio cerrado las condiciones postuladas por Oparin para la Tierra primitiva, logrando sintetizar aminoácidos. ¿Cuál de los siguientes gases estuvo deliberadamente AUSENTE en dicho simulador por no existir en forma libre primitiva?",
                     options = listOf(
-                        "Metano (CH4)",
                         "Amoníaco (NH3)",
                         "Oxígeno molecular (O2)",
                         "Vapor de agua (H2O)",
-                        "Hidrógeno gaseoso (H2)"
+                        "Hidrógeno gaseoso (H2)",
+                        "Metano (CH4)",
                     ),
-                    correctIndex = 2,
+                    correctIndex = 1,
                     explanation = "La atmósfera primitiva postulada por Oparin era anóxica y reductora; no contenía oxígeno molecular libre (O₂), ya que este oxidaría y degradaría las moléculas orgánicas prebióticas en formación."
                 )
             )
@@ -1001,13 +1001,13 @@ internal object BiologiaPart2 {
                     id = "bio_t12_s02_c1",
                     statement = "El uso indiscriminado de cefalosporinas en un hospital elimina a las bacterias susceptibles y permite que unas pocas bacterias que portaban previamente una mutación enzimática sobrevivan y se multipliquen masivamente. Este fenómeno es un claro ejemplo actual de:",
                     options = listOf(
+                        "Poliploidía vegetativa inducida",
                         "Herencia de caracteres adquiridos de Lamarck",
                         "Generación espontánea microbiana",
                         "Selección natural de mutaciones genéticas preexistentes",
                         "Evolución por uso y desuso de betalactamasas",
-                        "Poliploidía vegetativa inducida"
                     ),
-                    correctIndex = 2,
+                    correctIndex = 3,
                     explanation = "El antibiótico actúa como una fuerza de presión ambiental que selecciona a aquellas bacterias que, por variabilidad genética previa (mutación en el plásmido), ya poseían la resistencia, sobreviviendo y aumentando su frecuencia en la población."
                 )
             )
@@ -1053,13 +1053,13 @@ internal object BiologiaPart2 {
                     id = "bio_t12_s03_c1",
                     statement = "El ala quitinosa de una libélula y el ala ósea emplumada de un cóndor andino cumplen la misma función locomotora de vuelo, pero tienen orígenes embrionarios y arquitecturas anatómicas totalmente distintas. Dichas estructuras corresponden a:",
                     options = listOf(
-                        "Órganos homólogos por evolución divergente",
-                        "Órganos análogos por evolución convergente",
                         "Órganos vestigiales rudimentarios",
                         "Estructuras atávicas en regresión",
-                        "Pruebas de embriología recapitulatoria"
+                        "Pruebas de embriología recapitulatoria",
+                        "Órganos homólogos por evolución divergente",
+                        "Órganos análogos por evolución convergente",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Los órganos análogos son aquellos que poseen distinto origen embrionario y diferente organización anatómica interna pero realizan la misma función adaptativa producto de la evolución convergente."
                 )
             )
@@ -1225,13 +1225,13 @@ internal object BiologiaPart2 {
                     id = "bio_t13_s02_c1",
                     statement = "Los agricultores de la campiña arequipeña rotan cultivos sembrando alfalfa o habas para enriquecer naturalmente la fertilidad del suelo en nitrógeno. Esta práctica agrícola se fundamenta en la presencia de nódulos radiculares que albergan a la bacteria simbionte fijadora de nitrógeno denominada:",
                     options = listOf(
-                        "Nitrosomonas",
-                        "Nitrobacter",
                         "Rhizobium",
                         "Pseudomonas denitrificans",
-                        "Escherichia coli"
+                        "Escherichia coli",
+                        "Nitrosomonas",
+                        "Nitrobacter",
                     ),
-                    correctIndex = 2,
+                    correctIndex = 0,
                     explanation = "*Rhizobium* es el género bacteriano que forma nódulos en las raíces de plantas leguminosas, fijando el nitrógeno atmosférico gaseoso (N₂) y transformándolo en amonio disponible para la nutrición vegetal."
                 )
             )
@@ -1273,13 +1273,13 @@ internal object BiologiaPart2 {
                     id = "bio_t13_s03_c1",
                     statement = "En los troncos de los árboles de la selva alta crecen orquídeas que utilizan la corteza del árbol únicamente como soporte físico para captar mejor la luz solar, sin extraer nutrientes ni dañar el floema del árbol hospedante. ¿Qué relación interespecífica se ilustra en este caso?",
                     options = listOf(
+                        "Amensalismo alelopático",
+                        "Depredación vegetal",
                         "Parasitismo estricto",
                         "Comensalismo (epifitismo)",
                         "Mutualismo obligado",
-                        "Amensalismo alelopático",
-                        "Depredación vegetal"
                     ),
-                    correctIndex = 1,
+                    correctIndex = 3,
                     explanation = "El epifitismo de las orquídeas sobre las ramas de árboles es un caso representativo de comensalismo (+/0): la orquídea se beneficia al ganar altura lumínica, mientras que el árbol no sufre daño ni obtiene beneficio."
                 )
             )
@@ -1326,13 +1326,13 @@ internal object BiologiaPart2 {
                     id = "bio_t13_s04_c1",
                     statement = "El Santuario Nacional Lagunas de Mejía, ubicado en la provincia de Islay (Arequipa), alberga a más de 180 especies de aves playeras migratorias y residentes. De acuerdo con la legislación ambiental del SINANPE, dicha unidad de conservación clasifica legalmente como un área de:",
                     options = listOf(
-                        "Uso directo o tangible con aprovechamiento agropecuario libre",
-                        "Uso indirecto o intangible donde está prohibida la extracción de recursos naturales",
                         "Coto de caza comercial regulada",
                         "Zona reservada de explotación minera transitoria",
-                        "Reserva comunal de pastoreo intensivo"
+                        "Reserva comunal de pastoreo intensivo",
+                        "Uso directo o tangible con aprovechamiento agropecuario libre",
+                        "Uso indirecto o intangible donde está prohibida la extracción de recursos naturales",
                     ),
-                    correctIndex = 1,
+                    correctIndex = 4,
                     explanation = "Los Santuarios Nacionales, al igual que los Parques Nacionales y Santuarios Históricos, son Áreas Naturales Protegidas de uso indirecto o intangible, donde no se permite la extracción de recursos ni la modificación del hábitat, permitiéndose únicamente la investigación científica y el turismo regulado."
                 )
             )

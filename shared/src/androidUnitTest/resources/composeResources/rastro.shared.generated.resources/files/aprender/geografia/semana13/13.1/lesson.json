@@ -1,0 +1,18 @@
+{
+  "id": "geo_t13_s01",
+  "subjectId": "geografia",
+  "semana": 13,
+  "subtema": "13.1",
+  "title": "3.1. Fundamentos Epistemológicos de la Geopolítica",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana13.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t13_s01",
+    "asignatura": "Geografía",
+    "semana": 13,
+    "titulo": "3.1. Fundamentos Epistemológicos de la Geopolítica",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

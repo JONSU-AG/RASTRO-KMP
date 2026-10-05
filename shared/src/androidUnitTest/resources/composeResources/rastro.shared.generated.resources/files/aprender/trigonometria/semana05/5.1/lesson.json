@@ -1,0 +1,18 @@
+{
+  "id": "trig_t05_s01",
+  "subjectId": "trigonometria",
+  "semana": 5,
+  "subtema": "5.1",
+  "title": "IDENTIDADES TRIGONOMÉTRICAS FUNDAMENTALES Y AUXILIARES - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/trigonometria/TrigonometriaSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_trig_t05_s01",
+    "asignatura": "Trigonometría",
+    "semana": 5,
+    "titulo": "IDENTIDADES TRIGONOMÉTRICAS FUNDAMENTALES Y AUXILIARES - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

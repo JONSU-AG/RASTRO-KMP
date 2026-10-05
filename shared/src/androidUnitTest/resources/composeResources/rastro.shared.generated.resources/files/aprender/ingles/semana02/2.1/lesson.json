@@ -1,0 +1,18 @@
+{
+  "id": "ing_t02_s01",
+  "subjectId": "ingles",
+  "semana": 2,
+  "subtema": "2.1",
+  "title": "Pasado Simple (Regulares e Irregulares) y Formas de Futuro (Be going to vs. Will) - Core Rules & Foundations",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/ingles/InglesSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_ing_t02_s01",
+    "asignatura": "Inglés",
+    "semana": 2,
+    "titulo": "Pasado Simple (Regulares e Irregulares) y Formas de Futuro (Be going to vs. Will) - Core Rules & Foundations",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "week": 3,
+  "title": "Semana 3",
+  "lessons": [
+    {
+      "subtopic": "3.1",
+      "lessonId": "arit_t03_s01",
+      "title": "Divisibilidad en \\mathbb{N}, Números Primos, MCD y MCM - Fundamentos y Leyes Principales",
+      "path": "3.1/lesson.json"
+    },
+    {
+      "subtopic": "3.2",
+      "lessonId": "arit_t03_s02",
+      "title": "Divisibilidad en \\mathbb{N}, Números Primos, MCD y MCM - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "3.2/lesson.json"
+    }
+  ]
+}

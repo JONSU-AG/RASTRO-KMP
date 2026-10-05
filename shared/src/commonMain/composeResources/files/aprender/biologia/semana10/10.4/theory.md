@@ -87,3 +87,11 @@ En admisión UNSA este bloque se pregunta con números y hormonas. Cuatro contra
 
 ## RESUMEN
 Gametogénesis asimétrica con espermatogénesis continua simétrica y ovogénesis fetal discontinua con pausas en diploteno y metafase II, vías con epidídimo y trompa más anexas nutritivas y barreras de Sertoli y Doderlein. Ciclo de 28 días con folicular estrogénica, ovulación por LH y lútea progestacional que sin hCG termina en menstruación. Fecundación ampular con acrosoma y doble bloqueo eléctrico con cortical para cigoto diploide único.
+
+## COMPLEMENTO OFICIAL: Desarrollo embrionario y metamorfosis
+- **Segmentación:** mitosis rápidas sin crecimiento → mórula (mora sólida) → blástula (esfera hueca con blastocele).
+- **Gastrulación:** invaginación que forma las 3 hojas: ectodermo (piel/nervioso), mesodermo (músculo/huesos/sangre), endodermo (digestivo/respiratorio).
+- **Neurulación y organogénesis:** tubo neural (cerebro/médula) y órganos; el destino sigue mapas de destino ya fijados.
+- **Metamorfosis completa (holometábola):** huevo-larva-pupa-adulto con pupa inmóvil y reconstrucción total (mariposa, escarabajo, mosca, abeja).
+- **Metamorfosis incompleta (hemimetábola):** huevo-ninfa-adulto sin pupa, ninfa parecida al adulto (saltamontes, chinches, libélulas).
+- Trampa: la metamorfosis la dispara la ecdisona (muda) con hormona juvenil alta en larva; sin pupa NO es completa.

@@ -1,0 +1,18 @@
+{
+  "id": "quim_t09_s02",
+  "subjectId": "quimica",
+  "semana": 9,
+  "subtema": "9.2",
+  "title": "Estado Gaseoso y Mezclas de Gases - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/quimica/QuimicaSemana09.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_quim_t09_s02",
+    "asignatura": "Química",
+    "semana": 9,
+    "titulo": "Estado Gaseoso y Mezclas de Gases - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

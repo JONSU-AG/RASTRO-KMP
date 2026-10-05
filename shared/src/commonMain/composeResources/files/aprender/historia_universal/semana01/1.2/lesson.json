@@ -1,0 +1,18 @@
+{
+  "id": "huni_t01_s02",
+  "subjectId": "historia_universal",
+  "semana": 1,
+  "subtema": "1.2",
+  "title": "3.3. Las Edades Arqueológicas de la Prehistoria: Paleolítico, Neolítico y Edad de los Metales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_huni_t01_s02",
+    "asignatura": "Historia Universal",
+    "semana": 1,
+    "titulo": "3.3. Las Edades Arqueológicas de la Prehistoria: Paleolítico, Neolítico y Edad de los Metales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

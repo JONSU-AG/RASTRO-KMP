@@ -1,0 +1,18 @@
+{
+  "id": "fis_t12_s02",
+  "subjectId": "fisica",
+  "semana": 12,
+  "subtema": "12.2",
+  "title": "FÍSICA MODERNA - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/fisica/FisicaSemana12.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_fis_t12_s02",
+    "asignatura": "Física",
+    "semana": 12,
+    "titulo": "FÍSICA MODERNA - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

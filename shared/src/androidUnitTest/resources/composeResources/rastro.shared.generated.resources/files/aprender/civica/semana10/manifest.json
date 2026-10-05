@@ -1,0 +1,18 @@
+{
+  "week": 10,
+  "title": "TEMA 10: DESARROLLO, CONVIVENCIA Y CULTURA CÍVICA",
+  "lessons": [
+    {
+      "subtopic": "10.1",
+      "lessonId": "civ_t10_s01",
+      "title": "Desarrollo Humano, IDH y el Sistema Nacional de Seguridad Ciudadana (SINASEC)",
+      "path": "10.1/lesson.json"
+    },
+    {
+      "subtopic": "10.2",
+      "lessonId": "civ_t10_s02",
+      "title": "Medios Alternativos de Solución de Conflictos (MASC) y Ética contra la Corrupción Pública",
+      "path": "10.2/lesson.json"
+    }
+  ]
+}

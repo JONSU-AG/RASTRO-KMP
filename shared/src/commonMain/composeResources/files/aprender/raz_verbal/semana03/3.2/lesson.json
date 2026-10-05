@@ -1,0 +1,18 @@
+{
+  "id": "rv_t03_s02",
+  "subjectId": "raz_verbal",
+  "semana": 3,
+  "subtema": "3.2",
+  "title": "3.2 El Método Formal para Resolver Término Excluido",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_verbal/RazonamientoVerbalSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rv_t03_s02",
+    "asignatura": "Raz. Verbal",
+    "semana": 3,
+    "titulo": "3.2 El Método Formal para Resolver Término Excluido",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

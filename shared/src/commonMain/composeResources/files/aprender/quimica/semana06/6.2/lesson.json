@@ -1,0 +1,18 @@
+{
+  "id": "quim_t06_s02",
+  "subjectId": "quimica",
+  "semana": 6,
+  "subtema": "6.2",
+  "title": "Nomenclatura Química Inorgánica - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/quimica/QuimicaSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_quim_t06_s02",
+    "asignatura": "Química",
+    "semana": 6,
+    "titulo": "Nomenclatura Química Inorgánica - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

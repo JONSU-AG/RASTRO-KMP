@@ -1,0 +1,18 @@
+{
+  "id": "rm_t07_s01",
+  "subjectId": "raz_matematico",
+  "semana": 7,
+  "subtema": "7.1",
+  "title": "ESTADÍSTICA Y ANÁLISIS DE DATOS - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_matematico/RazonamientoMatematicoSemana07.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rm_t07_s01",
+    "asignatura": "Raz. Matemático",
+    "semana": 7,
+    "titulo": "ESTADÍSTICA Y ANÁLISIS DE DATOS - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

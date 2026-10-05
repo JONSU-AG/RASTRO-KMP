@@ -1,0 +1,46 @@
+package com.jonsuapps.rastro.android.ui.mascots.loki
+
+import android.graphics.Bitmap
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Canvas
+import androidx.compose.ui.graphics.drawscope.CanvasDrawScope
+import androidx.compose.ui.unit.Density
+import androidx.compose.ui.unit.LayoutDirection
+import org.junit.Test
+import org.junit.runner.RunWith
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
+import org.robolectric.annotation.GraphicsMode
+import java.io.File
+import kotlin.math.ceil
+
+/** Read-only capture of existing recipes with the real Classic renderer. */
+@RunWith(RobolectricTestRunner::class)
+@Config(sdk = [35])
+@GraphicsMode(GraphicsMode.Mode.NATIVE)
+class ExportarSecuenciasClassic {
+    @Test fun exportExistingClassicSequences() {
+        val recipes = listOf(LokiSequence.WELCOME to "bienvenida", LokiSequence.STUDY to "una_idea_nueva",
+            LokiSequence.ACHIEVEMENT to "meta_cumplida", LokiSequence.RETRY to "volver_a_intentar")
+        for (base in LokiTemplate.presets) {
+            val folder = when (base.species) { LokiSpecies.LOKI -> "Loki"; LokiSpecies.ARTYON -> "Artyon"; LokiSpecies.ORSTTY -> "Orstty" }
+            for ((recipe, slug) in recipes) {
+                val output = File("build/qa/classic-sequence-copy-frames/$folder/$slug").apply { mkdirs() }
+                val count = ceil(recipe.seconds * 10f).toInt()
+                repeat(count) { step ->
+                    val progress = step.toFloat() / (count - 1)
+                    val bitmap = Bitmap.createBitmap(240, 240, Bitmap.Config.ARGB_8888)
+                    val nativeCanvas = android.graphics.Canvas(bitmap)
+                    nativeCanvas.drawColor(0xfff8f2e6.toInt())
+                    CanvasDrawScope().draw(Density(1f), LayoutDirection.Ltr, Canvas(nativeCanvas), Size(240f, 240f)) {
+                        drawLoki(sampleLokiSequence(recipe, progress), base.copy(artStyle = LokiArtStyle.CLASSIC), effectProgress = progress)
+                    }
+                    File(output, "frame-%03d.png".format(step)).outputStream().use {
+                        bitmap.compress(Bitmap.CompressFormat.PNG, 100, it)
+                    }
+                    bitmap.recycle()
+                }
+            }
+        }
+    }
+}

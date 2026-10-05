@@ -61,14 +61,14 @@ fun LessonContentRenderer(
             Surface(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(16.dp),
-                color = Color(0xFFF0F9FF), // Celeste muy suave
-                border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFBAE6FD))
+                color = ThemeManager.currentTheme.surfaceAccent, // Celeste muy suave
+                border = androidx.compose.foundation.BorderStroke(1.dp, ThemeManager.currentTheme.borderSubtle)
             ) {
                 Text(
                     text = renderFormattedInlineText(parsedBlocks.intro),
                     modifier = Modifier.padding(16.dp),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(0xFF0369A1), // Azul acero legible
+                    color = ThemeManager.currentTheme.accent, // Azul acero legible
                     lineHeight = 22.sp
                 )
             }
@@ -105,14 +105,14 @@ fun LessonContentRenderer(
                 title = "Idea clave",
                 icon = Icons.Rounded.Lightbulb,
                 iconTint = Color(0xFFD97706),
-                containerColor = Color(0xFFFEFCE8), // Amarillo pastel muy suave
-                borderColor = Color(0xFFFEF08A),
-                titleColor = Color(0xFFB45309)
+                containerColor = ThemeManager.currentTheme.surfaceAccent, // Amarillo pastel muy suave
+                borderColor = ThemeManager.currentTheme.borderSubtle,
+                titleColor = ThemeManager.currentTheme.accent
             ) {
                 Text(
                     text = renderFormattedInlineText(ideaClaveText),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(0xFF713F12),
+                    color = ThemeManager.currentTheme.textPrimary,
                     lineHeight = 21.sp
                 )
             }
@@ -135,14 +135,14 @@ fun LessonContentRenderer(
                 title = "Clave fija de admisión",
                 icon = Icons.Rounded.LocalFireDepartment,
                 iconTint = Color(0xFFEF4444),
-                containerColor = Color(0xFFFFF1F2), // Rosa/rojo muy suave
-                borderColor = Color(0xFFFECDD3),
-                titleColor = Color(0xFFBE123C)
+                containerColor = ThemeManager.currentTheme.surfaceAccent, // Rosa/rojo muy suave
+                borderColor = ThemeManager.currentTheme.borderSubtle,
+                titleColor = ThemeManager.currentTheme.accent
             ) {
                 Text(
                     text = renderFormattedInlineText(admissionTipText),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(0xFF881337),
+                    color = ThemeManager.currentTheme.textPrimary,
                     lineHeight = 21.sp
                 )
             }
@@ -162,10 +162,10 @@ fun LessonContentRenderer(
             SemanticCard(
                 title = "Resumen",
                 icon = Icons.Rounded.Assignment,
-                iconTint = Color(0xFF475569),
-                containerColor = Color(0xFFF8FAFC), // Gris perla / pizarra suave
-                borderColor = Color(0xFFE2E8F0),
-                titleColor = Color(0xFF334155)
+                iconTint = ThemeManager.currentTheme.textSecondary,
+                containerColor = ThemeManager.currentTheme.surfaceAccent, // Gris perla / pizarra suave
+                borderColor = ThemeManager.currentTheme.borderSubtle,
+                titleColor = ThemeManager.currentTheme.textPrimary
             ) {
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     summaryItems.forEach { item ->
@@ -183,7 +183,7 @@ fun LessonContentRenderer(
                             Text(
                                 text = renderFormattedInlineText(item),
                                 style = MaterialTheme.typography.bodyMedium,
-                                color = Color(0xFF334155),
+                                color = ThemeManager.currentTheme.textPrimary,
                                 lineHeight = 20.sp
                             )
                         }
@@ -220,14 +220,14 @@ private fun AcademicSectionView(
             if (subCode != null) {
                 Surface(
                     shape = RoundedCornerShape(8.dp),
-                    color = Color(0xFFE0F2FE),
-                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFBAE6FD))
+                    color = ThemeManager.currentTheme.surfaceAccent,
+                    border = androidx.compose.foundation.BorderStroke(1.dp, ThemeManager.currentTheme.borderSubtle)
                 ) {
                     Text(
                         text = subCode,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.ExtraBold,
-                        color = Color(0xFF0369A1),
+                        color = ThemeManager.currentTheme.accent,
                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                     )
                 }
@@ -236,14 +236,14 @@ private fun AcademicSectionView(
                     modifier = Modifier
                         .size(28.dp)
                         .clip(CircleShape)
-                        .background(Color(0xFF0284C7)), // Azul intenso
+                        .background(ThemeManager.currentTheme.accent), // Azul intenso
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = section.number.toString(),
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Black,
-                        color = Color.White
+                        color = contrastingText(ThemeManager.currentTheme.accent)
                     )
                 }
             }
@@ -252,7 +252,7 @@ private fun AcademicSectionView(
                 text = titleText,
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF0F172A)
+                color = ThemeManager.currentTheme.textPrimary
             )
         }
 
@@ -261,7 +261,7 @@ private fun AcademicSectionView(
             Text(
                 text = renderFormattedInlineText(section.leadText),
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(0xFF334155),
+                color = ThemeManager.currentTheme.textPrimary,
                 lineHeight = 22.sp
             )
         }
@@ -284,12 +284,12 @@ private fun AcademicSectionView(
                                 .padding(top = 7.dp, end = 10.dp)
                                 .size(6.dp)
                                 .clip(CircleShape)
-                                .background(Color(0xFF0284C7))
+                                .background(ThemeManager.currentTheme.accent)
                         )
                         Text(
                             text = renderFormattedInlineText(def),
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(0xFF1E293B),
+                            color = ThemeManager.currentTheme.textPrimary,
                             lineHeight = 20.sp
                         )
                     }
@@ -302,7 +302,7 @@ private fun AcademicSectionView(
             Text(
                 text = renderFormattedInlineText(section.bodyText),
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(0xFF334155),
+                color = ThemeManager.currentTheme.textPrimary,
                 lineHeight = 22.sp
             )
         }
@@ -320,21 +320,21 @@ private fun AcademicSectionView(
 @Composable
 private fun AcademicBranchCard(branch: AcademicBranch) {
     val (bgColor, borderColor, dotColor, badgeColor) = when (branch.conceptTag) {
-        "zoologia" -> QuadColors(Color(0xFFFFF1F2), Color(0xFFFFE4E6), Color(0xFFF43F5E), Color(0xFFE11D48))
+        "zoologia" -> QuadColors(ThemeManager.currentTheme.surfaceAccent, Color(0xFFFFE4E6), Color(0xFFF43F5E), Color(0xFFE11D48))
         "botanica" -> QuadColors(Color(0xFFF0FDF4), Color(0xFFDCFCE7), Color(0xFF22C55E), Color(0xFF15803D))
-        "quimica" -> QuadColors(Color(0xFFFAF5FF), Color(0xFFF3E8FF), Color(0xFFA855F7), Color(0xFF7E22CE))
-        "fisica" -> QuadColors(Color(0xFFF0F9FF), Color(0xFFE0F2FE), Color(0xFF0284C7), Color(0xFF0369A1))
-        "matematica" -> QuadColors(Color(0xFFFFFBEB), Color(0xFFFEF3C7), Color(0xFFD97706), Color(0xFFB45309))
+        "quimica" -> QuadColors(ThemeManager.currentTheme.surfaceAccent, ThemeManager.currentTheme.surfaceAccent, Color(0xFFA855F7), Color(0xFF7E22CE))
+        "fisica" -> QuadColors(ThemeManager.currentTheme.surfaceAccent, ThemeManager.currentTheme.surfaceAccent, ThemeManager.currentTheme.accent, ThemeManager.currentTheme.accent)
+        "matematica" -> QuadColors(Color(0xFFFFFBEB), Color(0xFFFEF3C7), Color(0xFFD97706), ThemeManager.currentTheme.accent)
         "geografia" -> QuadColors(Color(0xFFECFDF5), Color(0xFFD1FAE5), Color(0xFF059669), Color(0xFF047857))
         "historia" -> QuadColors(Color(0xFFFFF7ED), Color(0xFFFFEDD5), Color(0xFFEA580C), Color(0xFFC2410C))
         "literatura" -> QuadColors(Color(0xFFEEF2FF), Color(0xFFE0E7FF), Color(0xFF6366F1), Color(0xFF4F46E5))
-        else -> QuadColors(Color(0xFFF8FAFC), Color(0xFFE2E8F0), Color(0xFF64748B), Color(0xFF334155))
+        else -> QuadColors(ThemeManager.currentTheme.surfaceAccent, ThemeManager.currentTheme.borderSubtle, Color(0xFF64748B), ThemeManager.currentTheme.textPrimary)
     }
 
     Surface(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(18.dp),
-        color = bgColor,
+        color = if (ThemeManager.currentTheme.isDark) ThemeManager.currentTheme.surfaceAccent else bgColor,
         border = androidx.compose.foundation.BorderStroke(1.dp, borderColor)
     ) {
         Row(
@@ -360,7 +360,7 @@ private fun AcademicBranchCard(branch: AcademicBranch) {
                             text = branch.name,
                             style = MaterialTheme.typography.titleSmall,
                             fontWeight = FontWeight.Bold,
-                            color = badgeColor
+                            color = if (ThemeManager.currentTheme.isDark) ThemeManager.currentTheme.accent else badgeColor
                         )
                     }
                 }
@@ -370,7 +370,7 @@ private fun AcademicBranchCard(branch: AcademicBranch) {
                         text = branch.subtitle,
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = FontWeight.Medium,
-                        color = Color(0xFF475569)
+                        color = ThemeManager.currentTheme.textSecondary
                     )
                 }
 
@@ -395,7 +395,7 @@ private fun AcademicBranchCard(branch: AcademicBranch) {
                                 Text(
                                     text = renderFormattedInlineText(bullet),
                                     style = MaterialTheme.typography.bodySmall,
-                                    color = Color(0xFF1E293B),
+                                    color = ThemeManager.currentTheme.textPrimary,
                                     lineHeight = 19.sp
                                 )
                             }
@@ -478,15 +478,15 @@ private fun SolvedExampleCard(
     SemanticCard(
         title = "Ejemplo resuelto",
         icon = Icons.Rounded.ListAlt,
-        iconTint = Color(0xFF0284C7),
-        containerColor = Color(0xFFF0F9FF), // Azul muy suave
-        borderColor = Color(0xFFBAE6FD),
-        titleColor = Color(0xFF0369A1)
+        iconTint = ThemeManager.currentTheme.accent,
+        containerColor = ThemeManager.currentTheme.surfaceAccent, // Azul muy suave
+        borderColor = ThemeManager.currentTheme.borderSubtle,
+        titleColor = ThemeManager.currentTheme.accent
     ) {
         Text(
             text = renderFormattedInlineText(statement),
             style = MaterialTheme.typography.bodyMedium,
-            color = Color(0xFF1E293B),
+            color = ThemeManager.currentTheme.textPrimary,
             lineHeight = 21.sp
         )
 
@@ -500,19 +500,19 @@ private fun SolvedExampleCard(
                     text = "Respuesta correcta: ",
                     style = MaterialTheme.typography.bodySmall,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(0xFF334155)
+                    color = ThemeManager.currentTheme.textPrimary
                 )
                 Box(
                     modifier = Modifier
                         .clip(RastroShapes.Pill)
-                        .background(Color(0xFFE0F2FE))
+                        .background(ThemeManager.currentTheme.surfaceAccent)
                         .padding(horizontal = 10.dp, vertical = 2.dp)
                 ) {
                     Text(
                         text = correctAnswer,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Black,
-                        color = Color(0xFF0284C7)
+                        color = ThemeManager.currentTheme.accent
                     )
                 }
             }
@@ -523,7 +523,7 @@ private fun SolvedExampleCard(
             Text(
                 text = renderFormattedInlineText(explanation),
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(0xFF475569),
+                color = ThemeManager.currentTheme.textSecondary,
                 lineHeight = 18.sp
             )
         }
@@ -543,18 +543,18 @@ private fun AcademicFormulaSection(
     SemanticCard(
         title = formulaName,
         icon = Icons.Rounded.Functions,
-        iconTint = Color(0xFF7C3AED),
-        containerColor = Color(0xFFFAF5FF),
-        borderColor = Color(0xFFE9D5FF),
-        titleColor = Color(0xFF6D28D9)
+        iconTint = ThemeManager.currentTheme.accent,
+        containerColor = ThemeManager.currentTheme.surfaceAccent,
+        borderColor = ThemeManager.currentTheme.borderSubtle,
+        titleColor = ThemeManager.currentTheme.accent
     ) {
         if (formulaLatex.isNotBlank()) {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Color.White)
-                    .border(1.dp, Color(0xFFDDD6FE), RoundedCornerShape(12.dp))
+                    .background(ThemeManager.currentTheme.surface)
+                    .border(1.dp, ThemeManager.currentTheme.borderSubtle, RoundedCornerShape(12.dp))
                     .padding(vertical = 12.dp, horizontal = 16.dp),
                 contentAlignment = Alignment.Center
             ) {
@@ -562,7 +562,7 @@ private fun AcademicFormulaSection(
                     text = formatMathSymbols(formulaLatex),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFF5B21B6)
+                    color = ThemeManager.currentTheme.accent
                 )
             }
         }
@@ -571,7 +571,7 @@ private fun AcademicFormulaSection(
             Text(
                 text = desc,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(0xFF4C1D95),
+                color = ThemeManager.currentTheme.textPrimary,
                 lineHeight = 18.sp
             )
         }
@@ -581,14 +581,14 @@ private fun AcademicFormulaSection(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(10.dp))
-                    .background(Color(0xFFF3E8FF))
+                    .background(ThemeManager.currentTheme.surfaceAccent)
                     .padding(horizontal = 12.dp, vertical = 8.dp)
             ) {
                 Text(
                     text = formatMathSymbols(extra),
                     style = MaterialTheme.typography.bodySmall,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(0xFF5B21B6)
+                    color = ThemeManager.currentTheme.accent
                 )
             }
         }

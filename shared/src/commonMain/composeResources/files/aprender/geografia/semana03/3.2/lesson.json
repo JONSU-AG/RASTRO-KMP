@@ -1,0 +1,18 @@
+{
+  "id": "geo_t03_s02",
+  "subjectId": "geografia",
+  "semana": 3,
+  "subtema": "3.2",
+  "title": "3.3. Movimientos de la Tierra y sus Consecuencias Geográficas",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t03_s02",
+    "asignatura": "Geografía",
+    "semana": 3,
+    "titulo": "3.3. Movimientos de la Tierra y sus Consecuencias Geográficas",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

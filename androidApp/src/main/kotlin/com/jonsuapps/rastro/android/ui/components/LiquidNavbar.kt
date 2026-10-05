@@ -24,6 +24,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import com.jonsuapps.rastro.theme.readableText
+import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -127,7 +129,7 @@ fun TopHeaderActions(
 
                 // 3. Calculadora / Fórmulas
                 SquareHeaderButton(
-                    icon = Icons.Outlined.Calculate,
+                    icon = Icons.Outlined.Lightbulb,
                     colors = colors,
                     onClick = onOpenFormulas
                 )
@@ -221,9 +223,9 @@ fun LiquidNavbar(
         ),
         CartoonNavItem(
             screen = RastroScreen.Simulador,
-            label = "Ranking",
-            filledResId = R.drawable.ic_nav_ranking_filled,
-            outlineResId = R.drawable.ic_nav_ranking_outline,
+            label = "Simulador",
+            filledResId = R.drawable.ic_nav_exam_filled,
+            outlineResId = R.drawable.ic_nav_exam_outline,
             activeColor = Color(0xFFF59E0B) // Oro trofeo victoria
         ),
         CartoonNavItem(
@@ -250,16 +252,12 @@ fun LiquidNavbar(
         )
     )
 
-    val dockShape = RoundedCornerShape(26.dp)
+    val dockShape = RoundedCornerShape(percent = 50)
     val context = LocalContext.current
 
-    Surface(
-        color = Color.Transparent,
-        modifier = Modifier
-            .fillMaxWidth()
-            .navigationBarsPadding()
-            .padding(horizontal = 10.dp, vertical = 5.dp)
-    ) {
+    BoxWithConstraints(Modifier.fillMaxWidth().navigationBarsPadding().padding(horizontal = 10.dp, vertical = 8.dp), contentAlignment = Alignment.Center) {
+    val wide = maxWidth >= 600.dp
+    Surface(color = Color.Transparent, shape = dockShape, modifier = Modifier.widthIn(max = 720.dp).fillMaxWidth()) {
         Box(
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -290,9 +288,13 @@ fun LiquidNavbar(
                         val isSelected = currentRoute == item.screen.route || 
                                 (item.screen == RastroScreen.Aprender && currentRoute.startsWith("aprender")) ||
                                 (item.screen == RastroScreen.Cursos && currentRoute.startsWith("cursos")) ||
+                                (item.screen == RastroScreen.Simulador && currentRoute == RastroScreen.RankingExam.route) ||
                                 (item.screen == RastroScreen.Perfil && (currentRoute == "perfil" || currentRoute.startsWith("usuario")))
 
                         val activeColor = item.activeColor ?: colors.accent
+                        val activeInk = remember(activeColor, colors.surface) {
+                            readableText(activeColor, activeColor.copy(alpha = 0.12f).compositeOver(colors.surface))
+                        }
 
                         // Color y fondo suaves sin bordes que deformen o alteren el tamaño del contenedor
                         val itemBgTint by animateColorAsState(
@@ -301,7 +303,7 @@ fun LiquidNavbar(
                             label = "navItemBgTint"
                         )
                         val itemContentColor by animateColorAsState(
-                            targetValue = if (isSelected) activeColor else colors.textSecondary,
+                            targetValue = if (isSelected) activeInk else colors.textSecondary,
                             animationSpec = androidx.compose.animation.core.tween(durationMillis = 100),
                             label = "navItemContent"
                         )
@@ -321,7 +323,7 @@ fun LiquidNavbar(
                         Box(
                             modifier = Modifier
                                 .weight(1f)
-                                .height(46.dp) // Altura estrictamente fija para cero deformaciones
+                                .height(if (wide) 64.dp else 58.dp)
                                 .clip(keycapShape)
                                 .background(itemBgTint)
                                 .clickable(
@@ -333,9 +335,8 @@ fun LiquidNavbar(
                                 },
                             contentAlignment = Alignment.Center
                         ) {
-                            Box(
-                                contentAlignment = Alignment.Center
-                            ) {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(1.dp)) {
+                            Box(contentAlignment = Alignment.Center) {
                                 Icon(
                                     painter = painterResource(id = if (isSelected) item.filledResId else item.outlineResId),
                                     contentDescription = item.label,
@@ -357,11 +358,18 @@ fun LiquidNavbar(
                                     }
                                 }
                             }
+                            Text(item.label, color = itemContentColor, fontSize = if (wide) 10.sp else 8.sp,
+                                lineHeight = if (wide) 11.sp else 9.sp,
+                                style = androidx.compose.ui.text.TextStyle(platformStyle = androidx.compose.ui.text.PlatformTextStyle(includeFontPadding = false)),
+                                fontWeight = FontWeight.Bold, maxLines = 1,
+                                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
+                            }
                         }
                     }
                 }
             }
         }
+    }
     }
 }
 
@@ -389,4 +397,3 @@ private data class CartoonNavItem(
     val activeColor: Color? = null,
     val hasRedBadge: Boolean = false
 )
-

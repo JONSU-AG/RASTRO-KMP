@@ -1,0 +1,18 @@
+{
+  "week": 10,
+  "title": "TEMA 10: ÉTICA Y MORAL",
+  "lessons": [
+    {
+      "subtopic": "10.1",
+      "lessonId": "filo_t10_s01",
+      "title": "A. Distinción Conceptual: Moral vs. Ética",
+      "path": "10.1/lesson.json"
+    },
+    {
+      "subtopic": "10.2",
+      "lessonId": "filo_t10_s02",
+      "title": "D. Bioética y Dilemas Morales Contemporáneos",
+      "path": "10.2/lesson.json"
+    }
+  ]
+}

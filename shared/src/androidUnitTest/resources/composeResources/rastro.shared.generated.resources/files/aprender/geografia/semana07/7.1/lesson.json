@@ -1,0 +1,18 @@
+{
+  "id": "geo_t07_s01",
+  "subjectId": "geografia",
+  "semana": 7,
+  "subtema": "7.1",
+  "title": "3.1. Relieve Submarino del Mar Peruano",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana07.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t07_s01",
+    "asignatura": "Geografía",
+    "semana": 7,
+    "titulo": "3.1. Relieve Submarino del Mar Peruano",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

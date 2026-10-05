@@ -1,0 +1,18 @@
+{
+  "week": 10,
+  "title": "Semana 10",
+  "lessons": [
+    {
+      "subtopic": "10.1",
+      "lessonId": "trig_t10_s01",
+      "title": "FUNCIONES TRIGONOMÉTRICAS REALES: DOMINIO, RANGO, GRÁFICAS Y TRANSFORMACIONES - Fundamentos y Leyes Principales",
+      "path": "10.1/lesson.json"
+    },
+    {
+      "subtopic": "10.2",
+      "lessonId": "trig_t10_s02",
+      "title": "FUNCIONES TRIGONOMÉTRICAS REALES: DOMINIO, RANGO, GRÁFICAS Y TRANSFORMACIONES - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "10.2/lesson.json"
+    }
+  ]
+}

@@ -1,8 +1,16 @@
 package com.jonsuapps.rastro.android.ui.screens
+import com.jonsuapps.rastro.theme.accentText
+import com.jonsuapps.rastro.theme.onAccent
+import com.jonsuapps.rastro.android.ui.components.rastroAcademicBackground
+import com.jonsuapps.rastro.android.ui.components.RastroAdaptiveViewport
+import com.jonsuapps.rastro.android.ui.components.RastroBoundedBlock
+import com.jonsuapps.rastro.android.ui.components.LocalRastroLayout
+
 
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.grid.*
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.filled.Star
@@ -114,20 +122,19 @@ fun HomeScreen(
         }
     }
 
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.TopCenter
-    ) {
-        LazyColumn(
+    RastroAdaptiveViewport(Modifier.fillMaxSize().rastroAcademicBackground(colors, paintBase = false)) { layout ->
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(layout.columns),
             modifier = Modifier
                 .fillMaxSize()
-                .widthIn(max = 760.dp)
                 .padding(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp),
             contentPadding = PaddingValues(top = 10.dp, bottom = 100.dp)
         ) {
             // 1. Cabecera Oficial RASTRO (Chips y Saludo)
-            item {
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
@@ -143,7 +150,7 @@ fun HomeScreen(
                             text = "ESPECIAL PARA UNIVERSIDADES NACIONALES",
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Black,
-                            color = colors.accent,
+                            color = colors.accentText,
                             modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
                             letterSpacing = 0.5.sp
                         )
@@ -188,13 +195,16 @@ fun HomeScreen(
                     HomeHeroBanner(
                         colors = colors,
                         displayName = currentUser.displayName,
-                        modifier = Modifier.fillMaxWidth()
+                        modifier = Modifier.align(Alignment.CenterHorizontally).widthIn(max = LocalRastroLayout.current.heroWidth.dp).fillMaxWidth()
                     )
+                }
+
                 }
             }
 
             // 1. Tarjeta Racha & Perseverancia Semanal (Compacta y visual)
-            item {
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
                 val calendar = remember { Calendar.getInstance() }
                 val dayOfWeek = remember { calendar.get(Calendar.DAY_OF_WEEK) }
                 val currentDayIndex = remember(dayOfWeek) {
@@ -236,7 +246,6 @@ fun HomeScreen(
                                 verticalAlignment = Alignment.CenterVertically,
                                 horizontalArrangement = Arrangement.spacedBy(8.dp)
                             ) {
-                                val flamePulse by rememberBreathingPulse(minScale = 0.92f, maxScale = 1.15f, durationMillis = 1100)
                                 Box(
                                     modifier = Modifier
                                         .size(34.dp)
@@ -245,22 +254,14 @@ fun HomeScreen(
                                         .border(1.5.dp, colors.strokeBorder, CircleShape),
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    Image(
-                                        painter = painterResource(id = R.drawable.ic_flame_cartoon),
-                                        contentDescription = null,
-                                        modifier = Modifier
-                                            .size(20.dp)
-                                            .graphicsLayer {
-                                                scaleX = flamePulse
-                                                scaleY = flamePulse
-                                            }
-                                    )
+                                    com.jonsuapps.rastro.android.ui.components.PreparedAnimation(
+                                        "R-MEDIO", Modifier.size(30.dp), loop = true)
                                 }
                                 Text(
                                     text = if (streakState.currentStreak == 1) "1 día activo" else "${streakState.currentStreak} días activos",
                                     fontSize = 17.sp,
                                     fontWeight = FontWeight.Black,
-                                    color = colors.accent,
+                                    color = colors.accentText,
                                     letterSpacing = (-0.3).sp
                                 )
                             }
@@ -304,12 +305,14 @@ fun HomeScreen(
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
                                     weekDayLabels.forEachIndexed { index, dayLetter ->
-                                        val isDayActive = when {
-                                            index < currentDayIndex -> streakState.currentStreak > (currentDayIndex - index)
-                                            index == currentDayIndex -> minutesRemaining == 0 || streakState.currentStreak > 0
-                                            else -> false
+                                        val date = (calendar.clone() as Calendar).apply {
+                                            add(Calendar.DAY_OF_MONTH, index - currentDayIndex)
                                         }
+                                        val dateString = "%04d-%02d-%02d".format(date.get(Calendar.YEAR),
+                                            date.get(Calendar.MONTH) + 1, date.get(Calendar.DAY_OF_MONTH))
+                                        val isDayActive = dateString in streakState.activityDates
                                         Column(
+                                            modifier = Modifier.weight(1f),
                                             horizontalAlignment = Alignment.CenterHorizontally,
                                             verticalArrangement = Arrangement.spacedBy(4.dp)
                                         ) {
@@ -317,12 +320,11 @@ fun HomeScreen(
                                                 text = dayLetter,
                                                 fontSize = 10.sp,
                                                 fontWeight = FontWeight.Black,
-                                                color = if (index == currentDayIndex) colors.accent else colors.textSecondary
+                                                color = if (index == currentDayIndex) colors.accentText else colors.textSecondary
                                             )
-                                            DoodleDayCheckCircle(
-                                                isActive = isDayActive,
-                                                strokeColor = colors.strokeBorder
-                                            )
+                                            Box(Modifier.size(36.dp), contentAlignment = Alignment.Center) {
+                                                DoodleDayCheckCircle(isDayActive, colors.strokeBorder)
+                                            }
                                         }
                                     }
                                 }
@@ -370,10 +372,12 @@ fun HomeScreen(
                         }
                     }
                 }
+                }
             }
 
             // 2. Tarjeta: Ruta de Preparación Activa
-            item {
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
                 Sticker3dCard(
                     modifier = Modifier.fillMaxWidth(),
                     containerColor = colors.surface,
@@ -508,11 +512,13 @@ fun HomeScreen(
                         }
                     }
                 }
+                }
             }
 
             // 3. Carrusel Destacados (solo visible si hay publicaciones marcadas)
             if (featuredUploads.isNotEmpty()) {
-                item {
+                item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
                     DestacadosCarousel(
                         items = featuredUploads,
                         colors = colors,
@@ -520,11 +526,14 @@ fun HomeScreen(
                         onNavigateToProfile = onNavigateToProfile,
                         onNavigateToPublication = onNavigateToPublication
                     )
+
                 }
+            }
             }
 
             // 4. Canal de WhatsApp Oficial (Franja Horizontal Compacta)
-            item {
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
                 val context = LocalContext.current
                 Sticker3dCard(
                     modifier = Modifier.fillMaxWidth(),
@@ -639,10 +648,13 @@ fun HomeScreen(
                         }
                     }
                 }
+
+                }
             }
 
             // 5. Explora RASTRO / Herramientas (Grid 2 columnas compacto)
-            item {
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
                 Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                     // Encabezado Explora RASTRO
                     Row(
@@ -792,8 +804,19 @@ fun HomeScreen(
                         }
                     }
                 }
+
+                }
             }
-        }
+
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock { com.jonsuapps.rastro.android.ui.components.AppFeedbackCard() }
+            }
+
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock { com.jonsuapps.rastro.android.ui.components.MainPageEnd()
+                }
+            }
+}
     }
 }
 
@@ -838,7 +861,7 @@ private fun DestacadosCarousel(
                 Box(
                     modifier = Modifier
                         .clip(RastroShapes.CircularPill)
-                        .background(Color.White)
+                        .background(colors.surface)
                         .border(1.5.dp, colors.strokeBorder, RastroShapes.CircularPill)
                         .padding(horizontal = 8.dp, vertical = 2.dp)
                 ) {
@@ -1140,7 +1163,7 @@ private fun HomeToolCard(
     Sticker3dCard(
         modifier = modifier
             .fillMaxWidth()
-            .defaultMinSize(minHeight = 56.dp),
+            .height((64.dp * androidx.compose.ui.platform.LocalDensity.current.fontScale.coerceAtLeast(1f))),
         containerColor = colors.surface,
         strokeColor = colors.strokeBorder,
         bevelColor = colors.cardBevel,
@@ -1267,6 +1290,11 @@ private fun DoodleDayCheckCircle(
     }
 }
 
+// Reserved for this banner; the typography in other screens stays unchanged.
+private val WelcomeBannerFont = androidx.compose.ui.text.font.FontFamily(
+    androidx.compose.ui.text.font.Font(R.font.welcome_lilita_one)
+)
+
 @Composable
 private fun HomeHeroBanner(
     colors: RastroColors,
@@ -1314,14 +1342,24 @@ private fun HomeHeroBanner(
             Text(
                 text = "¡Hola,",
                 fontSize = 13.sp,
-                fontWeight = FontWeight.Medium,
+                fontFamily = WelcomeBannerFont,
+                fontWeight = FontWeight.Normal,
                 color = colors.textSecondary,
                 maxLines = 1
             )
+            Canvas(Modifier.width(27.dp).height(2.dp)) {
+                drawLine(
+                    color = colors.textSecondary.copy(alpha = .28f),
+                    start = androidx.compose.ui.geometry.Offset(0f, size.height),
+                    end = androidx.compose.ui.geometry.Offset(size.width, 0f),
+                    strokeWidth = 1.5.dp.toPx(), cap = StrokeCap.Round
+                )
+            }
             Text(
                 text = name.ifBlank { "Estudiante Invitado" },
                 fontSize = 21.sp,
-                fontWeight = FontWeight.Black,
+                fontFamily = WelcomeBannerFont,
+                fontWeight = FontWeight.Normal,
                 color = colors.textPrimary,
                 letterSpacing = (-0.3).sp,
                 maxLines = 2,

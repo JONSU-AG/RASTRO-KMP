@@ -1,0 +1,18 @@
+{
+  "week": 4,
+  "title": "TEMA 04: LA EDAD MEDIA, EL FEUDALISMO, EL ISLAM Y LAS CRUZADAS",
+  "lessons": [
+    {
+      "subtopic": "4.1",
+      "lessonId": "huni_t04_s01",
+      "title": "3.1. Reinos Romano-Germánicos, Imperio Carolingio y el Islam",
+      "path": "4.1/lesson.json"
+    },
+    {
+      "subtopic": "4.2",
+      "lessonId": "huni_t04_s02",
+      "title": "3.5. El Feudalismo y las Cruzadas",
+      "path": "4.2/lesson.json"
+    }
+  ]
+}

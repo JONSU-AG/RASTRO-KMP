@@ -1,0 +1,226 @@
+{
+  "personaje": "Orstty",
+  "estilo": "CLASSIC",
+  "base": "normal",
+  "emociones_existentes": [
+    "Normal",
+    "Feliz",
+    "Triste",
+    "Enojado",
+    "Dormir",
+    "Enamorado",
+    "Dudoso",
+    "Noqueado",
+    "Racha",
+    "No te vayas"
+  ],
+  "imagenes_y_animaciones": [
+    {
+      "archivo": "orstty_classic_normal.png",
+      "emocion": "Normal",
+      "origen": "build\\loki-validation\\build\\qa\\loki-classic-emotions.png",
+      "recorte": [
+        0,
+        520,
+        240,
+        240
+      ]
+    },
+    {
+      "archivo": "orstty_classic_feliz.png",
+      "emocion": "Feliz",
+      "origen": "build\\loki-validation\\build\\qa\\loki-classic-emotions.png",
+      "recorte": [
+        240,
+        520,
+        240,
+        240
+      ]
+    },
+    {
+      "archivo": "orstty_classic_triste.png",
+      "emocion": "Triste",
+      "origen": "build\\loki-validation\\build\\qa\\loki-classic-emotions.png",
+      "recorte": [
+        480,
+        520,
+        240,
+        240
+      ]
+    },
+    {
+      "archivo": "orstty_classic_enojado.png",
+      "emocion": "Enojado",
+      "origen": "build\\loki-validation\\build\\qa\\loki-classic-emotions.png",
+      "recorte": [
+        720,
+        520,
+        240,
+        240
+      ]
+    },
+    {
+      "archivo": "orstty_classic_dormir.png",
+      "emocion": "Dormir",
+      "origen": "build\\loki-validation\\build\\qa\\loki-classic-emotions.png",
+      "recorte": [
+        960,
+        520,
+        240,
+        240
+      ]
+    },
+    {
+      "archivo": "orstty_classic_enamorado.png",
+      "emocion": "Enamorado",
+      "origen": "build\\loki-validation\\build\\qa\\loki-classic-emotions.png",
+      "recorte": [
+        1200,
+        520,
+        240,
+        240
+      ]
+    },
+    {
+      "archivo": "orstty_classic_dudoso.png",
+      "emocion": "Dudoso",
+      "origen": "build\\loki-validation\\build\\qa\\loki-classic-emotions.png",
+      "recorte": [
+        1440,
+        520,
+        240,
+        240
+      ]
+    },
+    {
+      "archivo": "orstty_classic_noqueado.png",
+      "emocion": "Noqueado",
+      "origen": "build\\loki-validation\\build\\qa\\loki-classic-emotions.png",
+      "recorte": [
+        1680,
+        520,
+        240,
+        240
+      ]
+    },
+    {
+      "archivo": "orstty_classic_racha.png",
+      "emocion": "Racha",
+      "origen": "build\\loki-validation\\build\\qa\\loki-classic-emotions.png",
+      "recorte": [
+        1920,
+        520,
+        240,
+        240
+      ]
+    },
+    {
+      "archivo": "orstty_classic_no_te_vayas.png",
+      "emocion": "No te vayas",
+      "origen": "build\\loki-validation\\build\\qa\\loki-classic-emotions.png",
+      "recorte": [
+        2160,
+        520,
+        240,
+        240
+      ]
+    },
+    {
+      "archivo": "orstty_classic_no_te_vayas.gif",
+      "origen": "build\\loki-validation\\build\\qa\\pleading-frames",
+      "duracion_segundos": 4.0,
+      "personaje": "Orstty",
+      "estilo": "CLASSIC"
+    },
+    {
+      "archivo": "orstty_classic_leer_lanzar_explosion.gif",
+      "origen": "build\\loki-validation\\build\\qa\\paper-gag-frames",
+      "duracion_segundos": 5.1,
+      "personaje": "Orstty",
+      "estilo": "CLASSIC",
+      "ajuste": "Se quitaron 1.7 segundos únicamente de la lectura en la copia."
+    },
+    {
+      "archivo": "orstty_classic_secuencia_bienvenida.gif",
+      "estilo": "CLASSIC",
+      "secuencia_existente": "bienvenida",
+      "duracion_segundos": 12.1
+    },
+    {
+      "archivo": "orstty_classic_secuencia_una_idea_nueva.gif",
+      "estilo": "CLASSIC",
+      "secuencia_existente": "una_idea_nueva",
+      "duracion_segundos": 12.4
+    },
+    {
+      "archivo": "orstty_classic_secuencia_meta_cumplida.gif",
+      "estilo": "CLASSIC",
+      "secuencia_existente": "meta_cumplida",
+      "duracion_segundos": 11.2
+    },
+    {
+      "archivo": "orstty_classic_secuencia_volver_a_intentar.gif",
+      "estilo": "CLASSIC",
+      "secuencia_existente": "volver_a_intentar",
+      "duracion_segundos": 12.4
+    }
+  ],
+  "copias_exactas_codigo_compartido": [
+    {
+      "archivo": "orstty_classic_modelo.kt.txt",
+      "original": "androidApp\\src\\main\\kotlin\\com\\jonsuapps\\rastro\\android\\ui\\mascots\\loki\\LokiClassic.kt",
+      "sha256_original": "f206e563ef8ac917c4a9b61bbcd8cfe2cf5b67c7ebb6bfbb81b26ed11e78dced",
+      "sha256_copia": "f206e563ef8ac917c4a9b61bbcd8cfe2cf5b67c7ebb6bfbb81b26ed11e78dced",
+      "identica_al_original": true
+    },
+    {
+      "archivo": "orstty_classic_emociones.kt.txt",
+      "original": "androidApp\\src\\main\\kotlin\\com\\jonsuapps\\rastro\\android\\ui\\mascots\\loki\\LokiClassicEmotion.kt",
+      "sha256_original": "52e6d17bd18bce3c66eeebb61e42ef5efca8ab50788da46248c06f4c97506dbe",
+      "sha256_copia": "52e6d17bd18bce3c66eeebb61e42ef5efca8ab50788da46248c06f4c97506dbe",
+      "identica_al_original": true
+    },
+    {
+      "archivo": "orstty_classic_secuencia_explosion.kt.txt",
+      "original": "androidApp\\src\\main\\kotlin\\com\\jonsuapps\\rastro\\android\\ui\\mascots\\loki\\LokiPaperGag.kt",
+      "sha256_original": "c1858773f7f5e680fb7253b5e8029db9230a2a0b5ba180221cad9680e390fd4c",
+      "sha256_copia": "e3d10df36cd92d4da29c4d00f52142adbd68cb4ed4bef4ae4658398d01b84b2a",
+      "identica_al_original": false,
+      "ajuste_solo_copia": "Lectura acortada de 3 a 1.3 segundos; total 5.1 segundos. Diseño y actuación posterior intactos."
+    }
+  ],
+  "nota_codigo": "Copias consultables .kt.txt para evitar compilacion accidental. Modelo compartido; no es un modulo independiente listo para compilar. Solo se modifico la cronologia de explosion en las copias.",
+  "sha256_archivos": {
+    "orstty_classic_dormir.png": "833d68981a2b3ee1f43ce51498eea8becbc60e2ed87022968228f4080c7b633b",
+    "orstty_classic_dudoso.png": "8a918ae55279ee1cba0dcc4bd1672fa9def8586b41e29fe3d8c5dacc7af66d3b",
+    "orstty_classic_emociones.kt.txt": "52e6d17bd18bce3c66eeebb61e42ef5efca8ab50788da46248c06f4c97506dbe",
+    "orstty_classic_enamorado.png": "464819cc1ca5df0f33eb6520e0442e455f0b1382431e0b06994a4b2eb6a33ece",
+    "orstty_classic_enojado.png": "06291a1a7d3b39697791ba2a40f2faafbb0b4d8d074f3b4b3cec74b3c56eb339",
+    "orstty_classic_feliz.png": "d186e1a10066f529b8f158198bf1a0ab7dc7b09bcdafdd91bd375b1d585d977c",
+    "orstty_classic_leer_lanzar_explosion.gif": "0b8939d3d950f073d33963846dd593910fd5e0196feaa10d68e3a071be0ea070",
+    "orstty_classic_modelo.kt.txt": "f206e563ef8ac917c4a9b61bbcd8cfe2cf5b67c7ebb6bfbb81b26ed11e78dced",
+    "orstty_classic_no_te_vayas.gif": "cdf007ea9479181ede822a2ffc9c040a87871a805a408f4ecff7b9bbdc9d639e",
+    "orstty_classic_no_te_vayas.png": "5f14f417ff9e42810129db659b13b8f472e4bebd8d5f47b60b9622f49283f1d3",
+    "orstty_classic_noqueado.png": "488170e2493ef5ddcd3ca92e0900128ba78258704bb120d5369e0bb50e1b98a3",
+    "orstty_classic_normal.png": "90c5d1501faa4952bbf0d44485935e0e34463ef69cf68492183ccdd2be54d395",
+    "orstty_classic_racha.png": "120acdc5a573d8b7d398be939d2a6b80ad79c1c70a9ac310d22a51b287f5bac6",
+    "orstty_classic_secuencia_bienvenida.gif": "1823a52b947401586165c5af26c7b01691676565d6c25ec6deac1eb952c35cd6",
+    "orstty_classic_secuencia_explosion.kt.txt": "e3d10df36cd92d4da29c4d00f52142adbd68cb4ed4bef4ae4658398d01b84b2a",
+    "orstty_classic_secuencia_meta_cumplida.gif": "04f7de52bb89b9105d0a2df4d49a3ee9ca9a51004655ff12f19edd2a9282352c",
+    "orstty_classic_secuencia_una_idea_nueva.gif": "2a22a65b0f7273a9f699f55ef0c6638e6a23a04711422f57e90a817eebd83913",
+    "orstty_classic_secuencia_volver_a_intentar.gif": "e3dd73673bf774885a210c2b29e07f737d367ed3db54b27c40ea16aadb258ab7",
+    "orstty_classic_secuencias.kt.txt": "9c4f63d8d527034a5fc3cc5b86ba0192621e7b2fddbe055f4236b875773fd854",
+    "orstty_classic_triste.png": "0127da5c3cbf47269362feb2964645dcb14d16e29b324ea3bd6677e5763e1e62"
+  },
+  "recetas_secuencias": {
+    "archivo": "orstty_classic_secuencias.kt.txt",
+    "origen": "LokiMotion.kt: extracto smooth/LokiSequence/sampleLokiSequence",
+    "capturas_classic_existentes": [
+      "bienvenida",
+      "una_idea_nueva",
+      "meta_cumplida",
+      "volver_a_intentar"
+    ],
+    "nota": "Estas cuatro recetas son compartidas por estilos; aquí se incluyen exclusivamente capturas con el renderer CLASSIC."
+  }
+}

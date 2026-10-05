@@ -1,0 +1,18 @@
+{
+  "week": 11,
+  "title": "TEMA 11: Población y Demografía del Perú y el Mundo",
+  "lessons": [
+    {
+      "subtopic": "11.1",
+      "lessonId": "geo_t11_s01",
+      "title": "3.1. Demografía: Definición, Fuentes y Censos",
+      "path": "11.1/lesson.json"
+    },
+    {
+      "subtopic": "11.2",
+      "lessonId": "geo_t11_s02",
+      "title": "3.4. Distribución Territorial de la Población Peruana",
+      "path": "11.2/lesson.json"
+    }
+  ]
+}

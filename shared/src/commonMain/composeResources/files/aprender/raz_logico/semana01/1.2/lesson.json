@@ -1,0 +1,18 @@
+{
+  "id": "rl_t01_s02",
+  "subjectId": "raz_logico",
+  "semana": 1,
+  "subtema": "1.2",
+  "title": "PROPOSICIONES Y ENUNCIADOS LÓGICOS - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_logico/RazonamientoLogicoSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rl_t01_s02",
+    "asignatura": "Raz. Lógico",
+    "semana": 1,
+    "titulo": "PROPOSICIONES Y ENUNCIADOS LÓGICOS - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

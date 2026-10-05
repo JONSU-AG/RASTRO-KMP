@@ -1,0 +1,18 @@
+{
+  "id": "civ_t05_s01",
+  "subjectId": "civica",
+  "semana": 5,
+  "subtema": "5.1",
+  "title": "La Democracia: Concepto, Principios, Modelos y Partidos Políticos",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t05_s01",
+    "asignatura": "Ed. Cívica",
+    "semana": 5,
+    "titulo": "La Democracia: Concepto, Principios, Modelos y Partidos Políticos",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,4 +1,7 @@
 package com.jonsuapps.rastro.android.ui.screens
+import com.jonsuapps.rastro.android.util.openExternalIntent
+import com.jonsuapps.rastro.theme.accentText
+import com.jonsuapps.rastro.theme.onAccent
 
 import androidx.compose.animation.*
 import androidx.compose.foundation.background
@@ -13,6 +16,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.saveable.listSaver
+import androidx.compose.runtime.snapshots.SnapshotStateMap
+import com.jonsuapps.rastro.vocational.VocationalCareerExamples
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -47,9 +54,12 @@ fun VocationalTestScreen(
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
-    var currentStep by remember { mutableStateOf(VocationalStep.INTRO) }
-    var currentQuestionIndex by remember { mutableIntStateOf(0) }
-    val answers = remember { mutableStateMapOf<Int, Int>() } // questionId -> value (1..5)
+    var currentStep by rememberSaveable { mutableStateOf(VocationalStep.INTRO) }
+    var currentQuestionIndex by rememberSaveable { mutableIntStateOf(0) }
+    val answers = rememberSaveable(saver = listSaver<SnapshotStateMap<Int, Int>, Int>(
+        save = { it.entries.flatMap { entry -> listOf(entry.key, entry.value) } },
+        restore = { values -> mutableStateMapOf<Int, Int>().apply { values.chunked(2).forEach { put(it[0], it[1]) } } }
+    )) { mutableStateMapOf<Int, Int>() } // questionId -> value (1..5)
     var testResult by remember { mutableStateOf<VocationalResult?>(VocationalRepository.currentResult.value) }
 
     var showExitConfirmDialog by remember { mutableStateOf(false) }
@@ -193,7 +203,7 @@ fun VocationalTestScreen(
                             colors = ButtonDefaults.buttonColors(containerColor = colors.accent),
                             shape = RoundedCornerShape(12.dp)
                         ) {
-                            Text("Reiniciar", fontWeight = FontWeight.Bold, color = Color.White)
+                            Text("Reiniciar", fontWeight = FontWeight.Bold, color = colors.onAccent)
                         }
                     }
                 }
@@ -205,6 +215,7 @@ fun VocationalTestScreen(
         modifier = modifier
             .fillMaxSize()
             .background(colors.background)
+            .windowInsetsPadding(WindowInsets.safeDrawing)
     ) {
         // Barra superior
         Surface(
@@ -256,7 +267,7 @@ fun VocationalTestScreen(
                         Icon(
                             imageVector = Icons.Rounded.Refresh,
                             contentDescription = null,
-                            tint = colors.accent,
+                            tint = colors.accentText,
                             modifier = Modifier.size(16.dp)
                         )
                         Spacer(modifier = Modifier.width(4.dp))
@@ -264,7 +275,7 @@ fun VocationalTestScreen(
                             text = "Repetir",
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
-                            color = colors.accent
+                            color = colors.accentText
                         )
                     }
                 }
@@ -374,8 +385,8 @@ private fun VocationalIntroContent(
     ) {
         Box(
             modifier = Modifier
-                .fillMaxWidth()
                 .widthIn(max = 620.dp)
+                .fillMaxWidth()
         ) {
             Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
                 // Título Principal
@@ -414,9 +425,9 @@ private fun VocationalIntroContent(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    MetricChip(label = "60 actividades", colors = colors, modifier = Modifier.weight(1f))
+                    MetricChip(label = "${VocationalItemBank.getQuestions().size} actividades", colors = colors, modifier = Modifier.weight(1f))
                     MetricChip(label = "6 áreas de interés", colors = colors, modifier = Modifier.weight(1f))
-                    MetricChip(label = "10–20 minutos", colors = colors, modifier = Modifier.weight(1.1f))
+                    MetricChip(label = "5–10 minutos", colors = colors, modifier = Modifier.weight(1.1f))
                 }
 
                 // Instrucciones de respuesta
@@ -436,7 +447,7 @@ private fun VocationalIntroContent(
                             Icon(
                                 imageVector = Icons.Rounded.Info,
                                 contentDescription = null,
-                                tint = colors.accent,
+                                tint = colors.accentText,
                                 modifier = Modifier.size(18.dp)
                             )
                             Spacer(modifier = Modifier.width(6.dp))
@@ -502,7 +513,7 @@ private fun VocationalIntroContent(
                                 text = "BANCO VOCACIONAL DEFINITIVO PENDIENTE",
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Black,
-                                color = colors.accent,
+                                color = colors.accentText,
                                 textAlign = TextAlign.Center
                             )
                             Spacer(modifier = Modifier.height(4.dp))
@@ -517,6 +528,16 @@ private fun VocationalIntroContent(
                 }
 
                 Spacer(modifier = Modifier.height(6.dp))
+
+                Text(
+                    "Actividades del O*NET® Mini Interest Profiler, USDOL/ETA. Texto original en español, sin cambios. Licencia CC BY-ND 4.0. RASTRO no está avalado por USDOL/ETA.",
+                    fontSize = 11.sp, lineHeight = 16.sp, color = colors.textSecondary
+                )
+                val sourceContext = LocalContext.current
+                TextButton(onClick = {
+                    sourceContext.openExternalIntent(android.content.Intent(android.content.Intent.ACTION_VIEW,
+                        android.net.Uri.parse("https://www.onetcenter.org/license_tools.html")))
+                }) { Text("Fuente y licencia O*NET", color = colors.accentText) }
 
                 // Botón comenzar
                 Sticker3dButton(
@@ -534,7 +555,7 @@ private fun VocationalIntroContent(
                         text = if (isBankAvailable) "COMENZAR TEST" else "BANCO PENDIENTE DE CARGA",
                         fontWeight = FontWeight.Black,
                         fontSize = 14.sp,
-                        color = Color.White
+                        color = colors.onAccent
                     )
                 }
 
@@ -562,7 +583,7 @@ private fun VocationalBankPendingContent(
         Icon(
             imageVector = Icons.Rounded.HourglassEmpty,
             contentDescription = null,
-            tint = colors.accent,
+            tint = colors.accentText,
             modifier = Modifier.size(54.dp)
         )
         Spacer(modifier = Modifier.height(16.dp))
@@ -617,8 +638,8 @@ private fun VocationalQuestionContent(
     ) {
         Box(
             modifier = Modifier
-                .fillMaxWidth()
                 .widthIn(max = 620.dp)
+                .fillMaxWidth()
         ) {
             Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
                 // Progreso
@@ -649,7 +670,7 @@ private fun VocationalQuestionContent(
                         .fillMaxWidth()
                         .height(6.dp)
                         .clip(RoundedCornerShape(3.dp)),
-                    color = colors.accent,
+                    color = colors.accentText,
                     trackColor = colors.surfaceAccent
                 )
 
@@ -672,7 +693,7 @@ private fun VocationalQuestionContent(
                             text = "¿Qué tanto te gustaría realizar esta actividad?",
                             fontSize = 12.sp,
                             fontWeight = FontWeight.SemiBold,
-                            color = colors.accent
+                            color = colors.accentText
                         )
 
                         Text(
@@ -753,14 +774,14 @@ private fun VocationalQuestionContent(
                         Text(
                             text = if (currentIndex == totalQuestions - 1) "Finalizar y Ver Perfil" else "Siguiente",
                             fontWeight = FontWeight.Bold,
-                            color = Color.White
+                            color = colors.onAccent
                         )
                         Spacer(modifier = Modifier.width(6.dp))
                         Icon(
                             imageVector = if (currentIndex == totalQuestions - 1) Icons.Rounded.Check else Icons.Rounded.ArrowForward,
                             contentDescription = null,
                             modifier = Modifier.size(16.dp),
-                            tint = Color.White
+                            tint = colors.onAccent
                         )
                     }
                 }
@@ -782,6 +803,7 @@ private fun LikertOptionRow(
     colors: RastroPalette,
     onClick: () -> Unit
 ) {
+    val context = androidx.compose.ui.platform.LocalContext.current
     val borderColor = if (isSelected) colors.accent else colors.borderSubtle
     val bgColor = if (isSelected) colors.accent.copy(alpha = 0.10f) else colors.surface
 
@@ -791,7 +813,7 @@ private fun LikertOptionRow(
             .clip(RoundedCornerShape(14.dp))
             .background(bgColor)
             .border(if (isSelected) 1.8.dp else 1.dp, borderColor, RoundedCornerShape(14.dp))
-            .clickable(onClick = onClick)
+            .clickable { com.jonsuapps.rastro.android.ui.components.DuolingoHaptics.playOptionSelected(context); onClick() }
             .padding(horizontal = 16.dp, vertical = 13.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
@@ -800,7 +822,7 @@ private fun LikertOptionRow(
             text = text,
             fontSize = 13.5.sp,
             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-            color = if (isSelected) colors.accent else colors.textPrimary
+            color = if (isSelected) colors.accentText else colors.textPrimary
         )
 
         Box(
@@ -816,7 +838,7 @@ private fun LikertOptionRow(
                     modifier = Modifier
                         .size(8.dp)
                         .clip(CircleShape)
-                        .background(Color.White)
+                        .background(colors.onAccent)
                 )
             }
         }
@@ -833,6 +855,7 @@ private fun VocationalResultsContent(
     onRestart: () -> Unit,
     onFinish: () -> Unit
 ) {
+    val context = LocalContext.current
     val ordered = remember(result) { result.orderedScores() }
     val hollandFormatted = remember(result) {
         result.hollandCode.map { it.toString() }.joinToString(" · ")
@@ -851,8 +874,8 @@ private fun VocationalResultsContent(
     ) {
         Box(
             modifier = Modifier
-                .fillMaxWidth()
                 .widthIn(max = 620.dp)
+                .fillMaxWidth()
         ) {
             Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
                 // Encabezado de Resultados
@@ -860,7 +883,7 @@ private fun VocationalResultsContent(
                     text = "TU PERFIL DE INTERESES",
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Black,
-                    color = colors.accent,
+                    color = colors.accentText,
                     letterSpacing = 1.sp
                 )
 
@@ -896,14 +919,14 @@ private fun VocationalResultsContent(
                             text = ordered.take(3).joinToString(" · ") { it.dimension.title },
                             fontSize = 13.sp,
                             fontWeight = FontWeight.Bold,
-                            color = colors.accent
+                            color = colors.accentText
                         )
                     }
                 }
 
                 // Desglose de las 6 Dimensiones (Sección 13: ninguna oculta)
                 Text(
-                    text = "Puntuación en las 6 Dimensiones (10 a 50)",
+                    text = "Puntuación en las 6 áreas (${result.itemsPerDimension} a ${result.itemsPerDimension * 5})",
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
                     color = colors.textPrimary
@@ -953,6 +976,14 @@ private fun VocationalResultsContent(
                     }
                 }
 
+                Text("Carreras y áreas para explorar", fontWeight = FontWeight.Bold, color = colors.textPrimary)
+                result.orderedScores().take(3).forEach { score ->
+                    Text("${score.dimension.title}: ${VocationalCareerExamples.forDimension(score.dimension).joinToString(", ")}",
+                        color = colors.textSecondary, fontSize = 12.sp)
+                }
+                Text("Son ejemplos de estudio relacionados con tus intereses; no garantizan aptitud, ingreso ni una carrera ideal.",
+                    color = colors.textSecondary, fontSize = 11.sp)
+
                 // Sección: "¿Qué significa mi resultado?" (Sección 18)
                 Sticker3dCard(
                     modifier = Modifier.fillMaxWidth(),
@@ -982,6 +1013,10 @@ private fun VocationalResultsContent(
                     }
                 }
 
+                TextButton(onClick = { context.openExternalIntent(android.content.Intent(android.content.Intent.ACTION_VIEW,
+                    android.net.Uri.parse("https://www.onetcenter.org/license_tools.html"))) }) {
+                    Text("Fuente y licencia O*NET® · USDOL/ETA", color = colors.accentText)
+                }
                 // Atribución Oficial O*NET (Sección 4)
                 Surface(
                     shape = RoundedCornerShape(12.dp),
@@ -1025,7 +1060,7 @@ private fun VocationalResultsContent(
                         colors = ButtonDefaults.buttonColors(containerColor = colors.accent),
                         shape = RoundedCornerShape(14.dp)
                     ) {
-                        Text("Cerrar", fontWeight = FontWeight.Bold, color = Color.White)
+                        Text("Cerrar", fontWeight = FontWeight.Bold, color = colors.onAccent)
                     }
                 }
 
@@ -1040,7 +1075,7 @@ private fun DimensionScoreCard(
     dimScore: com.jonsuapps.rastro.vocational.VocationalDimensionScore,
     colors: RastroPalette
 ) {
-    val progress = ((dimScore.score - 10).coerceAtLeast(0).toFloat() / 40f).coerceIn(0f, 1f)
+    val progress = ((dimScore.score - dimScore.itemsPerDimension).coerceAtLeast(0).toFloat() / (dimScore.itemsPerDimension * 4).coerceAtLeast(1)).coerceIn(0f, 1f)
 
     Sticker3dCard(
         modifier = Modifier.fillMaxWidth(),
@@ -1074,7 +1109,7 @@ private fun DimensionScoreCard(
                             text = dimScore.dimension.code.toString(),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Black,
-                            color = colors.accent
+                            color = colors.accentText
                         )
                     }
 
@@ -1087,7 +1122,7 @@ private fun DimensionScoreCard(
                 }
 
                 Text(
-                    text = "${dimScore.score} / 50",
+                    text = "${dimScore.score} / ${dimScore.itemsPerDimension * 5}",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Black,
                     color = colors.textPrimary
@@ -1100,7 +1135,7 @@ private fun DimensionScoreCard(
                     .fillMaxWidth()
                     .height(6.dp)
                     .clip(RoundedCornerShape(3.dp)),
-                color = colors.accent,
+                color = colors.accentText,
                 trackColor = colors.surfaceAccent
             )
 

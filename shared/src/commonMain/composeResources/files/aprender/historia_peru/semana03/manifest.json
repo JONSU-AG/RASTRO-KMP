@@ -1,0 +1,18 @@
+{
+  "week": 3,
+  "title": "TEMA 03: EL TAWANTINSUYU (ORGANIZACIÓN, EXPANSIÓN, COSMOVISIÓN Y CAÍDA)",
+  "lessons": [
+    {
+      "subtopic": "3.1",
+      "lessonId": "hper_t03_s01",
+      "title": "3.1. Orígenes Míticos e Históricos del Tawantinsuyu",
+      "path": "3.1/lesson.json"
+    },
+    {
+      "subtopic": "3.2",
+      "lessonId": "hper_t03_s02",
+      "title": "3.4. Organización Económica: Principios, Tierras y Formas de Trabajo",
+      "path": "3.2/lesson.json"
+    }
+  ]
+}

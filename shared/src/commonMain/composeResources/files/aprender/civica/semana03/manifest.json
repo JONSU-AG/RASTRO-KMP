@@ -1,0 +1,18 @@
+{
+  "week": 3,
+  "title": "TEMA 03: ESTADO Y NACIÓN",
+  "lessons": [
+    {
+      "subtopic": "3.1",
+      "lessonId": "civ_t03_s01",
+      "title": "Concepto de Estado, Elementos Constitutivos y Distinción con Nación",
+      "path": "3.1/lesson.json"
+    },
+    {
+      "subtopic": "3.2",
+      "lessonId": "civ_t03_s02",
+      "title": "El Estado Peruano: Características, Deberes Primordiales y Derecho de Insurgencia",
+      "path": "3.2/lesson.json"
+    }
+  ]
+}

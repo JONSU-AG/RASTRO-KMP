@@ -1,0 +1,18 @@
+{
+  "id": "geom_t06_s02",
+  "subjectId": "geometria",
+  "semana": 6,
+  "subtema": "6.2",
+  "title": "GEOMETRÍA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geometria/GeometriaSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geom_t06_s02",
+    "asignatura": "Geometría",
+    "semana": 6,
+    "titulo": "GEOMETRÍA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

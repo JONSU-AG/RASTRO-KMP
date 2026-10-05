@@ -1,0 +1,18 @@
+{
+  "id": "trig_t04_s02",
+  "subjectId": "trigonometria",
+  "semana": 4,
+  "subtema": "4.2",
+  "title": "ÁNGULO EN POSICIÓN NORMAL, REDUCCIÓN AL PRIMER CUADRANTE Y CIRCUNFERENCIA TRIGONOMÉTRICA - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/trigonometria/TrigonometriaSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_trig_t04_s02",
+    "asignatura": "Trigonometría",
+    "semana": 4,
+    "titulo": "ÁNGULO EN POSICIÓN NORMAL, REDUCCIÓN AL PRIMER CUADRANTE Y CIRCUNFERENCIA TRIGONOMÉTRICA - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

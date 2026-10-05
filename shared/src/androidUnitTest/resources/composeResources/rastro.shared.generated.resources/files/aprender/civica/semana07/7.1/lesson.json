@@ -1,0 +1,18 @@
+{
+  "id": "civ_t07_s01",
+  "subjectId": "civica",
+  "semana": 7,
+  "subtema": "7.1",
+  "title": "La Constitución: Concepto, Estructura de la Carta de 1993 y Principio de Supremacía",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana07.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t07_s01",
+    "asignatura": "Ed. Cívica",
+    "semana": 7,
+    "titulo": "La Constitución: Concepto, Estructura de la Carta de 1993 y Principio de Supremacía",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

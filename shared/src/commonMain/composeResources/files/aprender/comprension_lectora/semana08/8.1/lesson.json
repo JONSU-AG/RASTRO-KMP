@@ -1,0 +1,18 @@
+{
+  "id": "cl_t08_s01",
+  "subjectId": "comprension_lectora",
+  "semana": 8,
+  "subtema": "8.1",
+  "title": "3.1 Las Cuatro Familias Textuales Fundamentales del Prospecto UNSA",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t08_s01",
+    "asignatura": "Comp. Lectora",
+    "semana": 8,
+    "titulo": "3.1 Las Cuatro Familias Textuales Fundamentales del Prospecto UNSA",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

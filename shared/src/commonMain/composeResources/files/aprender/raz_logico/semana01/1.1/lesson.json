@@ -1,0 +1,18 @@
+{
+  "id": "rl_t01_s01",
+  "subjectId": "raz_logico",
+  "semana": 1,
+  "subtema": "1.1",
+  "title": "PROPOSICIONES Y ENUNCIADOS LÓGICOS - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_logico/RazonamientoLogicoSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rl_t01_s01",
+    "asignatura": "Raz. Lógico",
+    "semana": 1,
+    "titulo": "PROPOSICIONES Y ENUNCIADOS LÓGICOS - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

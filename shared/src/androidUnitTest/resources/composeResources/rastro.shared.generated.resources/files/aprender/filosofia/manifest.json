@@ -1,0 +1,76 @@
+{
+  "subjectId": "filosofia",
+  "name": "Filosofía",
+  "area": "Persona y Familia",
+  "colorHex": "#8B5CF6",
+  "description": "Disciplinas filosóficas, gnoseología, epistemología, ética, historia del pensamiento antiguo, moderno, contemporáneo y peruano.",
+  "weeks": 13,
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia",
+  "weekManifests": [
+    {
+      "week": 1,
+      "title": "TEMA 01: NOCIONES PRELIMINARES DE FILOSOFÍA",
+      "path": "semana01/manifest.json"
+    },
+    {
+      "week": 2,
+      "title": "Semana 2",
+      "path": "semana02/manifest.json"
+    },
+    {
+      "week": 3,
+      "title": "TEMA 03: PROBLEMAS FUNDAMENTALES DE LA FILOSOFÍA",
+      "path": "semana03/manifest.json"
+    },
+    {
+      "week": 4,
+      "title": "TEMA 04: LÓGICA Y TEORÍA DE LA ARGUMENTACIÓN",
+      "path": "semana04/manifest.json"
+    },
+    {
+      "week": 5,
+      "title": "TEMA 05: CONOCIMIENTO, CIENCIA Y VERDAD",
+      "path": "semana05/manifest.json"
+    },
+    {
+      "week": 6,
+      "title": "TEMA 06: LA FILOSOFÍA EN LA HISTORIA",
+      "path": "semana06/manifest.json"
+    },
+    {
+      "week": 7,
+      "title": "TEMA 07: FILOSOFÍA EN LATINOAMÉRICA Y EL PERÚ",
+      "path": "semana07/manifest.json"
+    },
+    {
+      "week": 8,
+      "title": "TEMA 08: PENSAMIENTO FILOSÓFICO CONTEMPORÁNEO",
+      "path": "semana08/manifest.json"
+    },
+    {
+      "week": 9,
+      "title": "TEMA 09: ESTÉTICA Y FILOSOFÍA DEL ARTE",
+      "path": "semana09/manifest.json"
+    },
+    {
+      "week": 10,
+      "title": "TEMA 10: ÉTICA Y MORAL",
+      "path": "semana10/manifest.json"
+    },
+    {
+      "week": 11,
+      "title": "TEMA 11: AXIOLOGÍA Y TEORÍA DEL VALOR",
+      "path": "semana11/manifest.json"
+    },
+    {
+      "week": 12,
+      "title": "TEMA 12: FILOSOFÍA POLÍTICA",
+      "path": "semana12/manifest.json"
+    },
+    {
+      "week": 13,
+      "title": "TEMA 13: ANTROPOLOGÍA FILOSÓFICA",
+      "path": "semana13/manifest.json"
+    }
+  ]
+}

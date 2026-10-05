@@ -1,0 +1,18 @@
+{
+  "id": "filo_t03_s01",
+  "subjectId": "filosofia",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "A. El Problema del Ser (Problema Ontológico)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t03_s01",
+    "asignatura": "Filosofía",
+    "semana": 3,
+    "titulo": "A. El Problema del Ser (Problema Ontológico)",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

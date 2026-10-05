@@ -1,0 +1,18 @@
+{
+  "id": "fis_t04_s02",
+  "subjectId": "fisica",
+  "semana": 4,
+  "subtema": "4.2",
+  "title": "ESTÁTICA - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/fisica/FisicaSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_fis_t04_s02",
+    "asignatura": "Física",
+    "semana": 4,
+    "titulo": "ESTÁTICA - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

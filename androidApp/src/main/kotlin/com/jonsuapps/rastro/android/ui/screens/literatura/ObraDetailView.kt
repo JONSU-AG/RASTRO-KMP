@@ -37,8 +37,8 @@ private enum class ObraSectionType(val displayTitle: String) {
     CONTEXTO("Contexto Histórico"),
     PERSONAJES("Personajes"),
     TRAMA("Trama y Escenas"),
-    SIMBOLOS("Símbolos Clave"),
-    PREGUNTAS("Preguntas Clave")
+    SIMBOLOS("Símbolos"),
+    PREGUNTAS("Preguntas")
 }
 
 /**
@@ -51,6 +51,7 @@ private enum class ObraSectionType(val displayTitle: String) {
  * - Responsive para móviles pequeños, grandes y tablets.
  */
 @Composable
+@OptIn(ExperimentalLayoutApi::class)
 fun ObraDetailView(
     obra: ObraLiteraria,
     theme: RastroPalette,
@@ -81,6 +82,11 @@ fun ObraDetailView(
     val themeColor = runCatching {
         Color(android.graphics.Color.parseColor(obra.colorHex))
     }.getOrDefault(Color(0xFF047857))
+    val readingColors = readingPastels(theme)
+    val contentAccent = readingColors.accent
+    val readingTerms = remember(obra) {
+        obra.personajes.map { it.nombre } + obra.simbolosClave.map { it.substringBefore(':') }
+    }
 
     // Detección 100% DINÁMICA de las secciones reales disponibles en esta obra
     val availableSections = remember(obra) {
@@ -128,12 +134,12 @@ fun ObraDetailView(
                     )
 
                     // Fila superior de botones de acción
-                    Row(
+                    FlowRow(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(12.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         // Badge de Categoría
                         if (obra.categoria.isNotBlank()) {
@@ -245,6 +251,7 @@ fun ObraDetailView(
                 }
 
                 // Fila de Portada + Metadatos de la Obra (Solapada sutilmente con la cabecera)
+                Column(Modifier.weight(1f).fillMaxWidth().verticalScroll(rememberScrollState())) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -292,19 +299,14 @@ fun ObraDetailView(
                             Text(
                                 text = metaTags.joinToString(" • "),
                                 fontSize = 11.5.sp,
-                                color = themeColor,
+                                color = contentAccent,
                                 fontWeight = FontWeight.SemiBold,
                                 lineHeight = 14.sp
                             )
                         }
 
                         if (obra.temaPrincipal.isNotBlank()) {
-                            Text(
-                                text = "Tema: ${obra.temaPrincipal}",
-                                fontSize = 11.sp,
-                                color = theme.textMuted,
-                                maxLines = 2
-                            )
+                            ObraReadingNote("Tema principal", obra.temaPrincipal, theme, 11.sp)
                         }
                     }
                 }
@@ -342,62 +344,62 @@ fun ObraDetailView(
                 // ──────────────── 3. CONTENIDO COMPLETO SIN SUPERRESUMEN (SCROLL LARGO) ────────────────
                 Column(
                     modifier = Modifier
-                        .fillMaxSize()
-                        .verticalScroll(rememberScrollState())
+                        .fillMaxWidth()
                         .padding(16.dp),
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
                     when (selectedSection) {
                         ObraSectionType.SINOPSIS -> {
-                            SectionHeaderBadge("Argumento de la obra", Icons.Rounded.MenuBook, themeColor)
-                            Text(
+                            SectionHeaderBadge("Argumento de la obra", Icons.Rounded.MenuBook, contentAccent)
+                            ObraReadingText(
                                 text = obra.sinopsis,
                                 fontSize = bodyFontSize,
                                 lineHeight = bodyLineHeight,
-                                color = theme.textPrimary
+                                theme = theme, terms = readingTerms
                             )
                         }
 
                         ObraSectionType.CONTEXTO -> {
-                            SectionHeaderBadge("Contexto histórico y cultural", Icons.Rounded.HistoryEdu, themeColor)
-                            Text(
+                            SectionHeaderBadge("Contexto histórico y cultural", Icons.Rounded.HistoryEdu, contentAccent)
+                            ObraReadingText(
                                 text = obra.contextoHistorico,
                                 fontSize = bodyFontSize,
                                 lineHeight = bodyLineHeight,
-                                color = theme.textPrimary
+                                theme = theme, terms = readingTerms
                             )
                         }
 
                         ObraSectionType.PERSONAJES -> {
-                            SectionHeaderBadge("Personajes de la obra", Icons.Rounded.Group, themeColor)
+                            SectionHeaderBadge("Personajes de la obra", Icons.Rounded.Group, contentAccent)
                             obra.personajes.forEach { personaje ->
-                                PersonajeCardCartoon(personaje = personaje, theme = theme, bodyFontSize = bodyFontSize)
+                                PersonajeCardCartoon(personaje = personaje, theme = theme, bodyFontSize = bodyFontSize, terms = readingTerms)
                             }
                         }
 
                         ObraSectionType.TRAMA -> {
-                            SectionHeaderBadge("Desarrollo de la trama y escenas", Icons.Rounded.Timeline, themeColor)
+                            SectionHeaderBadge("Desarrollo de la trama y escenas", Icons.Rounded.Timeline, contentAccent)
                             obra.analisisTrama.forEachIndexed { index, escena ->
-                                EscenaTramaCardCartoon(index = index + 1, escena = escena, theme = theme, bodyFontSize = bodyFontSize)
+                                EscenaTramaCardCartoon(index = index + 1, escena = escena, theme = theme, bodyFontSize = bodyFontSize, terms = readingTerms)
                             }
                         }
 
                         ObraSectionType.SIMBOLOS -> {
-                            SectionHeaderBadge("Símbolos y motivos clave", Icons.Rounded.Lightbulb, themeColor)
+                            SectionHeaderBadge("Símbolos y motivos", Icons.Rounded.Lightbulb, contentAccent)
                             obra.simbolosClave.forEach { simbolo ->
-                                SimboloCardCartoon(simbolo = simbolo, theme = theme, bodyFontSize = bodyFontSize)
+                                SimboloCardCartoon(simbolo = simbolo, theme = theme, bodyFontSize = bodyFontSize, terms = readingTerms)
                             }
                         }
 
                         ObraSectionType.PREGUNTAS -> {
-                            SectionHeaderBadge("Preguntas clave tipo examen", Icons.Rounded.Quiz, themeColor)
+                            SectionHeaderBadge("Preguntas tipo examen", Icons.Rounded.Quiz, contentAccent)
                             obra.preguntasClave.forEachIndexed { index, pregunta ->
-                                PreguntaClaveCardCartoon(index = index + 1, pregunta = pregunta, theme = theme, bodyFontSize = bodyFontSize)
+                                PreguntaClaveCardCartoon(index = index + 1, pregunta = pregunta, theme = theme, bodyFontSize = bodyFontSize, terms = readingTerms)
                             }
                         }
                     }
 
                     Spacer(Modifier.height(16.dp))
+                }
                 }
             }
         }
@@ -422,6 +424,7 @@ private fun SectionHeaderBadge(title: String, icon: androidx.compose.ui.graphics
         }
         Text(
             text = title,
+            modifier = Modifier.weight(1f),
             fontSize = 16.sp,
             fontWeight = FontWeight.Black,
             color = accentColor
@@ -433,14 +436,16 @@ private fun SectionHeaderBadge(title: String, icon: androidx.compose.ui.graphics
 private fun PersonajeCardCartoon(
     personaje: com.jonsuapps.rastro.model.PersonajeLiterario,
     theme: RastroPalette,
-    bodyFontSize: androidx.compose.ui.unit.TextUnit
+    bodyFontSize: androidx.compose.ui.unit.TextUnit,
+    terms: List<String> = emptyList()
 ) {
+    val palette = readingPastels(theme)
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(16.dp))
-            .background(theme.surface)
-            .border(1.5.dp, theme.strokeBorder.copy(alpha = 0.4f), RoundedCornerShape(16.dp))
+            .background(palette.surface)
+            .border(1.dp, palette.border, RoundedCornerShape(16.dp))
             .padding(14.dp)
     ) {
         Row(
@@ -455,39 +460,38 @@ private fun PersonajeCardCartoon(
                 modifier = Modifier.weight(1f),
                 verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
-                Row(
+                Column(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
+                    verticalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
                     Text(
                         text = personaje.nombre,
                         fontSize = 15.sp,
                         fontWeight = FontWeight.Black,
-                        color = theme.textPrimary
+                        color = palette.text
                     )
 
                     if (personaje.rol.isNotBlank()) {
                         Surface(
                             shape = RoundedCornerShape(6.dp),
-                            color = Color(0xFF1E293B).copy(alpha = 0.08f)
+                            color = palette.marker
                         ) {
                             Text(
                                 text = personaje.rol,
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = theme.accent,
+                                color = palette.accent,
                                 modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
                             )
                         }
                     }
                 }
 
-                Text(
+                ObraReadingText(
                     text = personaje.descripcion,
                     fontSize = bodyFontSize,
-                    lineHeight = 20.sp,
-                    color = theme.textSecondary
+                    lineHeight = bodyFontSize * 1.4f,
+                    theme = theme, terms = terms
                 )
             }
         }
@@ -499,14 +503,16 @@ private fun EscenaTramaCardCartoon(
     index: Int,
     escena: com.jonsuapps.rastro.model.EscenaTrama,
     theme: RastroPalette,
-    bodyFontSize: androidx.compose.ui.unit.TextUnit
+    bodyFontSize: androidx.compose.ui.unit.TextUnit,
+    terms: List<String> = emptyList()
 ) {
+    val palette = readingPastels(theme)
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(14.dp))
-            .background(theme.surface)
-            .border(1.5.dp, theme.strokeBorder.copy(alpha = 0.35f), RoundedCornerShape(14.dp))
+            .background(palette.surface)
+            .border(1.dp, palette.border, RoundedCornerShape(14.dp))
             .padding(14.dp)
     ) {
         Row(
@@ -518,15 +524,15 @@ private fun EscenaTramaCardCartoon(
                 modifier = Modifier
                     .size(28.dp)
                     .clip(RoundedCornerShape(8.dp))
-                    .background(Color(0xFF2563EB))
-                    .border(1.dp, Color(0xFF1E293B), RoundedCornerShape(8.dp)),
+                    .background(palette.marker)
+                    .border(1.dp, palette.border, RoundedCornerShape(8.dp)),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = "$index",
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Black,
-                    color = Color.White
+                    color = palette.accent
                 )
             }
 
@@ -538,13 +544,13 @@ private fun EscenaTramaCardCartoon(
                     text = escena.titulo,
                     fontSize = 14.5.sp,
                     fontWeight = FontWeight.Black,
-                    color = theme.textPrimary
+                    color = palette.text
                 )
-                Text(
+                ObraReadingText(
                     text = escena.detalle,
                     fontSize = bodyFontSize,
-                    lineHeight = 20.sp,
-                    color = theme.textSecondary
+                    lineHeight = bodyFontSize * 1.4f,
+                    theme = theme, terms = terms
                 )
             }
         }
@@ -555,14 +561,16 @@ private fun EscenaTramaCardCartoon(
 private fun SimboloCardCartoon(
     simbolo: String,
     theme: RastroPalette,
-    bodyFontSize: androidx.compose.ui.unit.TextUnit
+    bodyFontSize: androidx.compose.ui.unit.TextUnit,
+    terms: List<String> = emptyList()
 ) {
+    val palette = readingPastels(theme)
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
-            .background(theme.surface)
-            .border(1.5.dp, theme.strokeBorder.copy(alpha = 0.35f), RoundedCornerShape(12.dp))
+            .background(palette.surface)
+            .border(1.dp, palette.border, RoundedCornerShape(12.dp))
             .padding(12.dp)
     ) {
         Row(
@@ -572,14 +580,15 @@ private fun SimboloCardCartoon(
             Icon(
                 Icons.Rounded.AutoAwesome,
                 contentDescription = null,
-                tint = Color(0xFFD97706),
+                tint = palette.accent,
                 modifier = Modifier.size(18.dp)
             )
-            Text(
+            ObraReadingText(
                 text = simbolo,
+                modifier = Modifier.weight(1f),
                 fontSize = bodyFontSize,
-                lineHeight = 20.sp,
-                color = theme.textPrimary
+                lineHeight = bodyFontSize * 1.4f,
+                theme = theme, terms = terms
             )
         }
     }
@@ -590,14 +599,16 @@ private fun PreguntaClaveCardCartoon(
     index: Int,
     pregunta: com.jonsuapps.rastro.model.PreguntaClaveObra,
     theme: RastroPalette,
-    bodyFontSize: androidx.compose.ui.unit.TextUnit
+    bodyFontSize: androidx.compose.ui.unit.TextUnit,
+    terms: List<String> = emptyList()
 ) {
+    val palette = readingPastels(theme)
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(14.dp))
-            .background(theme.surface)
-            .border(1.5.dp, theme.strokeBorder.copy(alpha = 0.35f), RoundedCornerShape(14.dp))
+            .background(palette.surface)
+            .border(1.dp, palette.border, RoundedCornerShape(14.dp))
             .padding(14.dp)
     ) {
         Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -609,28 +620,29 @@ private fun PreguntaClaveCardCartoon(
                     modifier = Modifier
                         .size(24.dp)
                         .clip(RoundedCornerShape(6.dp))
-                        .background(Color(0xFF059669)),
+                        .background(palette.marker),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = "Q$index",
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Black,
-                        color = Color.White
+                        color = palette.accent
                     )
                 }
                 Text(
                     text = pregunta.pregunta,
+                    modifier = Modifier.weight(1f),
                     fontSize = 14.5.sp,
                     fontWeight = FontWeight.Black,
-                    color = theme.textPrimary
+                    color = palette.text
                 )
             }
-            Text(
+            ObraReadingText(
                 text = pregunta.respuesta,
                 fontSize = bodyFontSize,
-                lineHeight = 20.sp,
-                color = theme.textSecondary
+                lineHeight = bodyFontSize * 1.4f,
+                theme = theme, terms = terms
             )
         }
     }

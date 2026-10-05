@@ -1,6 +1,12 @@
 @file:OptIn(androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
 
 package com.jonsuapps.rastro.android.ui.screens
+import com.jonsuapps.rastro.theme.accentText
+import com.jonsuapps.rastro.theme.onAccent
+import com.jonsuapps.rastro.android.ui.components.rastroAcademicBackground
+import com.jonsuapps.rastro.android.ui.components.RastroAdaptiveViewport
+import com.jonsuapps.rastro.android.ui.components.RastroBoundedBlock
+
 
 import android.content.Intent
 import androidx.compose.animation.AnimatedVisibility
@@ -12,6 +18,7 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.grid.*
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.collectAsState
@@ -91,6 +98,7 @@ fun BibliotecaScreen(
     initialTab: Int = 0
 ) {
     val theme = ThemeManager.currentTheme
+    var coverView by androidx.compose.runtime.saveable.rememberSaveable { mutableStateOf(false) }
     val uriHandler = LocalUriHandler.current
     var communityUploads by remember { mutableStateOf(emptyList<UserUpload>()) }
     var selectedTab by remember { mutableIntStateOf(initialTab) }
@@ -254,21 +262,18 @@ fun BibliotecaScreen(
         onDismiss = { isAddObraDialogOpen = false }
     )
 
-    Box(
-        modifier = modifier
-            .fillMaxSize()
-            .background(theme.background),
-        contentAlignment = Alignment.TopCenter
-    ) {
-        LazyColumn(
+    RastroAdaptiveViewport(modifier.rastroAcademicBackground(theme)) { layout ->
+        LazyVerticalGrid(
+            columns = if (selectedTab == 2 && coverView) GridCells.Adaptive(120.dp) else GridCells.Fixed(layout.columns),
             modifier = Modifier
-                .fillMaxSize()
-                .widthIn(max = 760.dp),
+                .fillMaxSize(),
             contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 120.dp),
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
         // Cabecera de la Biblioteca
-        item {
+        item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RastroShapes.Squircle,
@@ -289,7 +294,7 @@ fun BibliotecaScreen(
                         Icon(
                             imageVector = Icons.Rounded.AutoStories,
                             contentDescription = null,
-                            tint = theme.accent,
+                            tint = theme.accentText,
                             modifier = Modifier.size(24.dp)
                         )
                     }
@@ -310,9 +315,12 @@ fun BibliotecaScreen(
                     }
                 }
             }
-        }
 
-        item {
+                }
+            }
+
+        item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -352,16 +360,19 @@ fun BibliotecaScreen(
                     }
                 }
             }
-        }
 
-        item {
+                }
+            }
+
+        item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
             OutlinedTextField(
                 value = searchQuery,
                 onValueChange = { searchQuery = it },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
                 placeholder = { Text("Buscar tomo, aporte, libro o tema") },
-                leadingIcon = { Icon(Icons.Rounded.Search, contentDescription = null, tint = theme.accent) },
+                leadingIcon = { Icon(Icons.Rounded.Search, contentDescription = null, tint = theme.accentText) },
                 trailingIcon = if (searchQuery.isNotBlank()) ({
                     IconButton(onClick = { searchQuery = "" }) { Icon(Icons.Rounded.Close, contentDescription = "Limpiar búsqueda") }
                 }) else null,
@@ -373,9 +384,12 @@ fun BibliotecaScreen(
                     unfocusedContainerColor = theme.surface
                 )
             )
-        }
 
-        if (selectedTab == 0) item {
+                }
+            }
+
+        if (selectedTab == 0) item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Text("Material Oficial CEPRE / UNSA", style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold, color = theme.textPrimary)
@@ -390,12 +404,19 @@ fun BibliotecaScreen(
                             modifier = Modifier.padding(16.dp), color = theme.textSecondary)
                     }
                 } else {
-                    displayedOfficialMaterials.forEach { item -> OfficialMaterialCard(item, theme) }
+                    // Materials are independent grid items below the section heading.
                 }
             }
+
+                }
+            }
+
+        if (selectedTab == 0) items(displayedOfficialMaterials, key = { it.id }) { material ->
+            OfficialMaterialCard(material, theme)
         }
 
-        if (selectedTab == 1) item {
+        if (selectedTab == 1) item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Sticker3dCard(
                     modifier = Modifier.fillMaxWidth(),
@@ -423,9 +444,9 @@ fun BibliotecaScreen(
                             shape = RastroShapes.Pill,
                             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 9.dp)
                         ) {
-                            Icon(Icons.Rounded.CloudUpload, contentDescription = null, tint = Color.White)
+                            Icon(Icons.Rounded.CloudUpload, contentDescription = null, tint = theme.onAccent)
                             Spacer(Modifier.width(8.dp))
-                            Text("Aportar material", fontWeight = FontWeight.Bold, color = Color.White)
+                            Text("Aportar material", fontWeight = FontWeight.Bold, color = theme.onAccent)
                         }
                     }
                 }
@@ -440,29 +461,27 @@ fun BibliotecaScreen(
                         Text(if (searchQuery.isBlank()) "Los aportes publicados aparecerán aquí." else "No se encontraron aportes.", modifier = Modifier.padding(16.dp),
                             color = theme.textSecondary, style = MaterialTheme.typography.bodyMedium)
                     }
-                } else {
-                    displayedUploads.forEach { upload ->
-                        CommunityUploadCard(
-                            upload = upload,
-                            theme = theme,
-                            defaultPreviewOpen = showAllPreviews,
-                            onNavigateToProfile = onNavigateToProfile,
-                            onRequestSignIn = onNavigateToAuth
-                        )
-                    }
                 }
             }
+
+                }
+            }
+
+        if (selectedTab == 1) items(displayedUploads, key = { it.id }) { upload ->
+            CommunityUploadCard(upload = upload, theme = theme, defaultPreviewOpen = showAllPreviews,
+                onNavigateToProfile = onNavigateToProfile, onRequestSignIn = onNavigateToAuth)
         }
 
         // Cabecera y Filtro por Categoría de Obras
-        if (selectedTab == 2) item {
+        if (selectedTab == 2) item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Column {
+                    Column(Modifier.weight(1f)) {
                         Text(
                             text = "Catálogo de Obras Literarias",
                             style = MaterialTheme.typography.titleMedium,
@@ -475,6 +494,7 @@ fun BibliotecaScreen(
                             color = theme.textSecondary
                         )
                     }
+                    Spacer(Modifier.width(8.dp))
                     Sticker3dButton(
                         onClick = { isAddObraDialogOpen = true },
                         containerColor = Color(0xFF047857),
@@ -487,6 +507,20 @@ fun BibliotecaScreen(
                         Spacer(Modifier.width(6.dp))
                         Text("Añadir Obra", fontWeight = FontWeight.Bold, color = Color.White, fontSize = 12.sp)
                     }
+                }
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    FilterChip(selected = !coverView, onClick = { coverView = false },
+                        label = { Text("Lista detallada", fontWeight = if (!coverView) FontWeight.Bold else FontWeight.Normal) },
+                        colors = FilterChipDefaults.filterChipColors(containerColor = theme.surface, labelColor = theme.textPrimary,
+                            selectedContainerColor = theme.accent, selectedLabelColor = com.jonsuapps.rastro.theme.onColor(theme.accent),
+                            selectedLeadingIconColor = com.jonsuapps.rastro.theme.onColor(theme.accent), iconColor = theme.textSecondary),
+                        leadingIcon = { Icon(if (!coverView) Icons.Rounded.Check else Icons.Rounded.ViewList, null) })
+                    FilterChip(selected = coverView, onClick = { coverView = true },
+                        label = { Text("Portadas", fontWeight = if (coverView) FontWeight.Bold else FontWeight.Normal) },
+                        colors = FilterChipDefaults.filterChipColors(containerColor = theme.surface, labelColor = theme.textPrimary,
+                            selectedContainerColor = theme.accent, selectedLabelColor = com.jonsuapps.rastro.theme.onColor(theme.accent),
+                            selectedLeadingIconColor = com.jonsuapps.rastro.theme.onColor(theme.accent), iconColor = theme.textSecondary),
+                        leadingIcon = { Icon(if (coverView) Icons.Rounded.Check else Icons.Rounded.GridView, null) })
                 }
                 LazyRow(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -515,12 +549,15 @@ fun BibliotecaScreen(
                 }
             }
         }
-    }
+
+                }
+            }
 
         // Listado de Obras
         if (selectedTab == 2) items(displayedObras, key = { it.id }) { obra ->
             val isFav = savedObraIds.contains(obra.id)
-            ObraLiterariaCard(
+            if (coverView) ObraCoverTile(obra, theme) { selectedObraForModal = obra }
+            else ObraLiterariaCard(
                 obra = obra,
                 isFavorito = isFav,
                 theme = theme,
@@ -530,7 +567,12 @@ fun BibliotecaScreen(
                 onClick = { selectedObraForModal = obra }
             )
         }
-    }
+
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock { com.jonsuapps.rastro.android.ui.components.MainPageEnd()
+                }
+            }
+}
 }
 }
 
@@ -564,12 +606,12 @@ private fun OfficialMaterialCard(item: OfficialMaterialResource, theme: com.jons
                 Box(Modifier.size(38.dp).clip(RoundedCornerShape(12.dp)).background(theme.accent.copy(alpha = 0.15f)).border(1.2.dp, theme.strokeBorder.copy(alpha = 0.4f), RoundedCornerShape(12.dp)),
                     contentAlignment = Alignment.Center) {
                     Icon(if (item.isFolder) Icons.Rounded.FolderOpen else Icons.Rounded.Description,
-                        contentDescription = null, tint = theme.accent)
+                        contentDescription = null, tint = theme.accentText)
                 }
                 Spacer(Modifier.width(10.dp))
                 Column(Modifier.weight(1f)) {
                     Text("MATERIAL OFICIAL CEPRE / UNSA", style = MaterialTheme.typography.labelSmall,
-                        color = theme.accent, fontWeight = FontWeight.Bold)
+                        color = theme.accentText, fontWeight = FontWeight.Bold)
                     Text(item.title, style = MaterialTheme.typography.titleSmall,
                         color = theme.textPrimary, fontWeight = FontWeight.Bold)
                 }
@@ -611,9 +653,9 @@ private fun OfficialMaterialCard(item: OfficialMaterialResource, theme: com.jons
                     shape = RastroShapes.Pill,
                     contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp)
                 ) {
-                    Icon(Icons.Rounded.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp), tint = Color.White)
+                    Icon(Icons.Rounded.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp), tint = theme.onAccent)
                     Spacer(Modifier.width(6.dp))
-                    Text(if (item.isFolder) "Abrir en Drive" else "Abrir recurso", maxLines = 1, fontWeight = FontWeight.Bold, color = Color.White)
+                    Text(if (item.isFolder) "Abrir en Drive" else "Abrir recurso", maxLines = 1, fontWeight = FontWeight.Bold, color = theme.onAccent)
                 }
                 Sticker3dButton(
                     onClick = { showPreview = !showPreview },
@@ -750,7 +792,7 @@ fun CommunityUploadCard(
                         if (upload.category.isNotBlank()) {
                             Text(
                                 text = upload.category,
-                                color = theme.accent,
+                                color = theme.accentText,
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = FontWeight.Bold
                             )
@@ -765,12 +807,13 @@ fun CommunityUploadCard(
                                 UserProfileRepository.toggleFollow(user.uid, upload.ownerUid, !isFollowingAuthor)
                             },
                             shape = RastroShapes.Pill,
-                            color = if (isFollowingAuthor) theme.surfaceAccent else theme.accent,
+                            color = if (isFollowingAuthor) theme.surfaceAccent else theme.accentText,
                             border = if (isFollowingAuthor) androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle) else null
                         ) {
-                            FlowRow(
+                            Row(
                                 modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
-                                verticalArrangement = Arrangement.spacedBy(8.dp)
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(4.dp)
                             ) {
                                 Icon(
                                     imageVector = if (isFollowingAuthor) Icons.Rounded.Check else Icons.Rounded.Add,
@@ -778,7 +821,6 @@ fun CommunityUploadCard(
                                     tint = if (isFollowingAuthor) theme.textSecondary else Color.White,
                                     modifier = Modifier.size(13.dp)
                                 )
-                                Spacer(Modifier.width(4.dp))
                                 Text(
                                     text = if (isFollowingAuthor) "Siguiendo" else "Seguir",
                                     fontSize = 11.sp,
@@ -820,7 +862,7 @@ fun CommunityUploadCard(
                             Icon(
                                 imageVector = Icons.Rounded.PushPin,
                                 contentDescription = if (upload.isPinned) "Desfijar" else "Fijar en perfil",
-                                tint = if (upload.isPinned) theme.accent else theme.textSecondary,
+                                tint = if (upload.isPinned) theme.accentText else theme.textSecondary,
                                 modifier = Modifier.size(18.dp)
                             )
                         }
@@ -851,7 +893,7 @@ fun CommunityUploadCard(
                             if (isOwnUpload) {
                                 DropdownMenuItem(
                                     text = { Text("Editar", fontWeight = FontWeight.Bold) },
-                                    leadingIcon = { Icon(Icons.Rounded.Edit, contentDescription = null, tint = theme.accent) },
+                                    leadingIcon = { Icon(Icons.Rounded.Edit, contentDescription = null, tint = theme.accentText) },
                                     onClick = {
                                         showThreeDotsMenu = false
                                         showEditDialog = true
@@ -859,7 +901,7 @@ fun CommunityUploadCard(
                                 )
                                 DropdownMenuItem(
                                     text = { Text(if (upload.isPinned) "Desfijar de perfil" else "Fijar en perfil", fontWeight = FontWeight.Bold) },
-                                    leadingIcon = { Icon(Icons.Rounded.PushPin, contentDescription = null, tint = theme.accent) },
+                                    leadingIcon = { Icon(Icons.Rounded.PushPin, contentDescription = null, tint = theme.accentText) },
                                     onClick = {
                                         showThreeDotsMenu = false
                                         UserUploadRepository.togglePinned(upload.id, !upload.isPinned)
@@ -876,7 +918,7 @@ fun CommunityUploadCard(
                             } else if (isAdmin) {
                                 DropdownMenuItem(
                                     text = { Text("Editar", fontWeight = FontWeight.Bold) },
-                                    leadingIcon = { Icon(Icons.Rounded.Edit, contentDescription = null, tint = theme.accent) },
+                                    leadingIcon = { Icon(Icons.Rounded.Edit, contentDescription = null, tint = theme.accentText) },
                                     onClick = {
                                         showThreeDotsMenu = false
                                         showEditDialog = true
@@ -971,7 +1013,7 @@ fun CommunityUploadCard(
                     UserUploadPreview(
                         upload = upload,
                         theme = theme,
-                        modifier = Modifier.fillMaxWidth().height(210.dp)
+                        modifier = Modifier.fillMaxWidth()
                     )
                 }
             }
@@ -987,9 +1029,9 @@ fun CommunityUploadCard(
                     shape = RastroShapes.Pill,
                     contentPadding = PaddingValues(horizontal = 16.dp, vertical = 11.dp)
                 ) {
-                    Icon(Icons.Rounded.OpenInNew, contentDescription = null, modifier = Modifier.size(18.dp), tint = Color.White)
+                    Icon(Icons.Rounded.OpenInNew, contentDescription = null, modifier = Modifier.size(18.dp), tint = theme.onAccent)
                     Spacer(Modifier.width(8.dp))
-                    Text("Abrir recurso", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = Color.White)
+                    Text("Abrir recurso", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = theme.onAccent)
                 }
             }
 
@@ -1037,7 +1079,7 @@ fun CommunityUploadCard(
                         onClick = {
                             val share = Intent(Intent.ACTION_SEND).apply {
                                 type = "text/plain"
-                                putExtra(Intent.EXTRA_TEXT, listOf(upload.title, upload.description, upload.url).filter(String::isNotBlank).joinToString("\n"))
+                                putExtra(Intent.EXTRA_TEXT, listOf(upload.title, com.jonsuapps.rastro.android.navigation.RastroAppLinks.profileUrl(upload.ownerUid, upload.id)).joinToString("\n"))
                             }
                             context.startActivity(Intent.createChooser(share, "Compartir material"))
                         },
@@ -1097,7 +1139,7 @@ fun CommunityUploadCard(
                                 .background(theme.surfaceAccent.copy(alpha = 0.5f), RoundedCornerShape(10.dp))
                                 .padding(8.dp)
                         ) {
-                            Text("Editando comentario:", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = theme.accent)
+                            Text("Editando comentario:", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = theme.accentText)
                             Spacer(Modifier.height(4.dp))
                             OutlinedTextField(
                                 value = editingCommentText,
@@ -1121,9 +1163,9 @@ fun CommunityUploadCard(
                                     strokeColor = theme.strokeBorder,
                                     contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
                                 ) {
-                                    Icon(Icons.Rounded.Check, contentDescription = null, tint = Color.White, modifier = Modifier.size(13.dp))
+                                    Icon(Icons.Rounded.Check, contentDescription = null, tint = theme.onAccent, modifier = Modifier.size(13.dp))
                                     Spacer(Modifier.width(4.dp))
-                                    Text("Guardar", color = Color.White, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                                    Text("Guardar", color = theme.onAccent, fontSize = 11.sp, fontWeight = FontWeight.Bold)
                                 }
                                 Sticker3dButton(
                                     onClick = { editingCommentId = null },
@@ -1145,7 +1187,7 @@ fun CommunityUploadCard(
                             horizontalArrangement = Arrangement.SpaceBetween
                         ) {
                             Column(Modifier.weight(1f).padding(end = 6.dp)) {
-                                Text(comment.authorName, style = MaterialTheme.typography.labelSmall, color = theme.accent, fontWeight = FontWeight.Bold)
+                                Text(comment.authorName, style = MaterialTheme.typography.labelSmall, color = theme.accentText, fontWeight = FontWeight.Bold)
                                 Text(comment.text, style = MaterialTheme.typography.bodySmall, color = theme.textPrimary)
                             }
                             if (canManageComment) {
@@ -1158,7 +1200,7 @@ fun CommunityUploadCard(
                                             },
                                             modifier = Modifier.size(26.dp)
                                         ) {
-                                            Icon(Icons.Rounded.Edit, contentDescription = "Editar", tint = theme.accent, modifier = Modifier.size(15.dp))
+                                            Icon(Icons.Rounded.Edit, contentDescription = "Editar", tint = theme.accentText, modifier = Modifier.size(15.dp))
                                         }
                                     }
                                     IconButton(
@@ -1403,25 +1445,25 @@ fun ObraLiterariaCard(
 
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = obra.categoria,
+                    text = obra.categoria, maxLines = 1, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.labelSmall,
                     color = coverColor,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
-                    text = obra.titulo,
+                    text = obra.titulo, minLines = 2, maxLines = 2, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
                     color = theme.textPrimary
                 )
                 Text(
-                    text = "${obra.autor} (${obra.anio})",
+                    text = "${obra.autor} (${obra.anio})", maxLines = 1, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.bodySmall,
                     color = theme.textSecondary
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "${obra.corriente} • ${obra.especie}",
+                    text = "${obra.corriente} • ${obra.especie}", maxLines = 1, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.labelSmall,
                     color = theme.textSecondary.copy(alpha = 0.8f)
                 )
@@ -1453,5 +1495,19 @@ fun LiteraturaViewerDialog(
             theme = theme,
             onDismiss = onDismiss
         )
+    }
+}
+
+@Composable
+private fun ObraCoverTile(obra: ObraLiteraria, theme: com.jonsuapps.rastro.theme.RastroPalette, onClick: () -> Unit) {
+    Sticker3dCard(modifier = Modifier.fillMaxWidth(), containerColor = theme.surface,
+        strokeColor = theme.strokeBorder, bevelColor = theme.cardBevel,
+        shape = RoundedCornerShape(18.dp), onClick = onClick) {
+        Column(Modifier.fillMaxWidth().padding(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            com.jonsuapps.rastro.android.ui.screens.literatura.ObraCoverGraphic(
+                obra = obra, modifier = Modifier.fillMaxWidth().aspectRatio(.68f))
+            Text(obra.titulo, color = theme.textPrimary, fontWeight = FontWeight.Black, fontSize = 15.sp, lineHeight = 20.sp,
+                minLines = 3, maxLines = 3, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
+        }
     }
 }

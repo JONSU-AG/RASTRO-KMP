@@ -1,0 +1,18 @@
+{
+  "id": "cl_t05_s02",
+  "subjectId": "comprension_lectora",
+  "semana": 5,
+  "subtema": "5.2",
+  "title": "3.2 La Frontera entre Hecho y Opinión",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t05_s02",
+    "asignatura": "Comp. Lectora",
+    "semana": 5,
+    "titulo": "3.2 La Frontera entre Hecho y Opinión",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

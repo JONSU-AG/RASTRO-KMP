@@ -1,0 +1,18 @@
+{
+  "id": "cl_t04_s02",
+  "subjectId": "comprension_lectora",
+  "semana": 4,
+  "subtema": "4.2",
+  "title": "3.2 El Tono del Autor: Glosario de Actitudes Discursivas",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t04_s02",
+    "asignatura": "Comp. Lectora",
+    "semana": 4,
+    "titulo": "3.2 El Tono del Autor: Glosario de Actitudes Discursivas",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

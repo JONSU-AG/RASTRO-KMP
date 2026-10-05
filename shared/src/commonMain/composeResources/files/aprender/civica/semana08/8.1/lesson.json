@@ -1,0 +1,18 @@
+{
+  "id": "civ_t08_s01",
+  "subjectId": "civica",
+  "semana": 8,
+  "subtema": "8.1",
+  "title": "Derechos de Participación Ciudadana: Iniciativas Normativas, Referéndum y Consulta Previa",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana08.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t08_s01",
+    "asignatura": "Ed. Cívica",
+    "semana": 8,
+    "titulo": "Derechos de Participación Ciudadana: Iniciativas Normativas, Referéndum y Consulta Previa",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

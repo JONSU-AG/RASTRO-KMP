@@ -1,0 +1,18 @@
+{
+  "id": "trig_t06_s01",
+  "subjectId": "trigonometria",
+  "semana": 6,
+  "subtema": "6.1",
+  "title": "RAZONES DE ÁNGULOS COMPUESTOS, ÁNGULO DOBLE, MITAD Y TRIPLE - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/trigonometria/TrigonometriaSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_trig_t06_s01",
+    "asignatura": "Trigonometría",
+    "semana": 6,
+    "titulo": "RAZONES DE ÁNGULOS COMPUESTOS, ÁNGULO DOBLE, MITAD Y TRIPLE - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

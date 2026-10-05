@@ -1,0 +1,18 @@
+{
+  "id": "cl_t01_s02",
+  "subjectId": "comprension_lectora",
+  "semana": 1,
+  "subtema": "1.2",
+  "title": "3.1 La Naturaleza de la Pregunta Literal en Exámenes de Admisión",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t01_s02",
+    "asignatura": "Comp. Lectora",
+    "semana": 1,
+    "titulo": "3.1 La Naturaleza de la Pregunta Literal en Exámenes de Admisión",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

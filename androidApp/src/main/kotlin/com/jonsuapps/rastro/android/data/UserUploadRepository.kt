@@ -73,10 +73,9 @@ object UserUploadRepository {
     fun observeFeatured(onUploads: (List<UserUpload>) -> Unit): ListenerRegistration =
         FirebaseFirestore.getInstance().collection("uploads")
             .whereEqualTo("destacado", true)
-            .limit(20)
             .addSnapshotListener { snapshot, error ->
                 if (error != null || snapshot == null) return@addSnapshotListener
-                onUploads(snapshot.documents.mapNotNull(::toUserUpload).sortedByDescending { it.createdAtMillis })
+                onUploads(snapshot.documents.mapNotNull(::toUserUpload).sortedWith(compareByDescending<UserUpload> { it.createdAtMillis }.thenBy { it.id }).take(20))
             }
 
     /** Same live collection used by React's Biblioteca community tab. */

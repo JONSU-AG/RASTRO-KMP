@@ -1,0 +1,18 @@
+{
+  "id": "civ_t11_s02",
+  "subjectId": "civica",
+  "semana": 11,
+  "subtema": "11.2",
+  "title": "Estructura de Gobierno Universitario, Comunidad Académica (Tercio Estudiantil) y la SUNEDU",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana11.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t11_s02",
+    "asignatura": "Ed. Cívica",
+    "semana": 11,
+    "titulo": "Estructura de Gobierno Universitario, Comunidad Académica (Tercio Estudiantil) y la SUNEDU",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

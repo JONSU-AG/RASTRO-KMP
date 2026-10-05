@@ -1,0 +1,18 @@
+{
+  "id": "filo_t06_s01",
+  "subjectId": "filosofia",
+  "semana": 6,
+  "subtema": "6.1",
+  "title": "A. Filosofía Antigua (Grecia y Roma)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t06_s01",
+    "asignatura": "Filosofía",
+    "semana": 6,
+    "titulo": "A. Filosofía Antigua (Grecia y Roma)",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

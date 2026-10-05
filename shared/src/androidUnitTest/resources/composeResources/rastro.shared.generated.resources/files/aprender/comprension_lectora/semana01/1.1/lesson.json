@@ -1,0 +1,18 @@
+{
+  "id": "cl_t01_s01",
+  "subjectId": "comprension_lectora",
+  "semana": 1,
+  "subtema": "1.1",
+  "title": "Comprensión Literal: Fundamentos y Conceptos Clave",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t01_s01",
+    "asignatura": "Comp. Lectora",
+    "semana": 1,
+    "titulo": "Comprensión Literal: Fundamentos y Conceptos Clave",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -25,8 +25,8 @@ data class QuestionJson(
     val id: String,
     val type: String = "MULTIPLE_CHOICE",
     val statement: String,
-    val options: List<String>,
-    val correctIndex: Int,
+    val options: List<String> = emptyList(),
+    val correctIndex: Int = 0,
     val explanation: String,
     val formula: String? = null,
     val subject: String = "",
@@ -40,7 +40,9 @@ data class QuestionJson(
     val instruction: String? = null,
     val pedagogicalTier: String? = null,
     val fuente: String? = null,
-    val concept: String? = null
+    val concept: String? = null,
+    val textTemplate: String? = null,
+    val blanks: List<com.jonsuapps.rastro.model.ChallengeBlank> = emptyList()
 )
 
 @Serializable
@@ -82,8 +84,13 @@ object LessonContentMapper {
                 rightOptions = q.rightOptions.map { com.jonsuapps.rastro.model.ChallengeMatchOption(it.id, it.text) },
                 instruction = q.instruction,
                 pedagogicalTier = q.pedagogicalTier,
-                fuente = q.fuente
-            )
+                fuente = q.fuente,
+                textTemplate = q.textTemplate,
+                blanks = q.blanks
+            ).also { challenge ->
+                val errors = com.jonsuapps.rastro.model.ChallengeInteraction.validationErrors(challenge)
+                require(errors.isEmpty()) { "FAIL LOCAL pregunta ${q.id}: ${errors.joinToString()}" }
+            }
         }
     }
 }

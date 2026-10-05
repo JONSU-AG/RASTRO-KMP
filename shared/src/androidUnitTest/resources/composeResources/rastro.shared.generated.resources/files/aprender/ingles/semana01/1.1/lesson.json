@@ -1,0 +1,18 @@
+{
+  "id": "ing_t01_s01",
+  "subjectId": "ingles",
+  "semana": 1,
+  "subtema": "1.1",
+  "title": "Tiempos Verbales de Presente: Present Simple vs. Present Continuous y Stative Verbs - Core Rules & Foundations",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/ingles/InglesSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_ing_t01_s01",
+    "asignatura": "Inglés",
+    "semana": 1,
+    "titulo": "Tiempos Verbales de Presente: Present Simple vs. Present Continuous y Stative Verbs - Core Rules & Foundations",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

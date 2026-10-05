@@ -1,0 +1,18 @@
+{
+  "week": 1,
+  "title": "TEMA 01: NOCIONES PRELIMINARES DE FILOSOFÍA",
+  "lessons": [
+    {
+      "subtopic": "1.1",
+      "lessonId": "filo_t01_s01",
+      "title": "3.1. Etimología y Definición de la Filosofía",
+      "path": "1.1/lesson.json"
+    },
+    {
+      "subtopic": "1.2",
+      "lessonId": "filo_t01_s02",
+      "title": "3.2. El Origen Histórico: Del Mito al Logos",
+      "path": "1.2/lesson.json"
+    }
+  ]
+}

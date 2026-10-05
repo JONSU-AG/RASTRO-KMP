@@ -1,0 +1,18 @@
+{
+  "week": 5,
+  "title": "Semana 5",
+  "lessons": [
+    {
+      "subtopic": "5.1",
+      "lessonId": "ing_t05_s01",
+      "title": "Sistema Pronominal, Preposiciones (Tiempo, Lugar, Movimiento) y Sintaxis de la Oración - Core Rules & Foundations",
+      "path": "5.1/lesson.json"
+    },
+    {
+      "subtopic": "5.2",
+      "lessonId": "ing_t05_s02",
+      "title": "Sistema Pronominal, Preposiciones (Tiempo, Lugar, Movimiento) y Sintaxis de la Oración - Applied Skills, Hacks & Reading Practice",
+      "path": "5.2/lesson.json"
+    }
+  ]
+}

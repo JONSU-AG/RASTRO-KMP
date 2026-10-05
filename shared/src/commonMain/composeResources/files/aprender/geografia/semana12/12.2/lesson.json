@@ -1,0 +1,18 @@
+{
+  "id": "geo_t12_s02",
+  "subjectId": "geografia",
+  "semana": 12,
+  "subtema": "12.2",
+  "title": "3.3. Sector Secundario: La Industria Peruana",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana12.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t12_s02",
+    "asignatura": "Geografía",
+    "semana": 12,
+    "titulo": "3.3. Sector Secundario: La Industria Peruana",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

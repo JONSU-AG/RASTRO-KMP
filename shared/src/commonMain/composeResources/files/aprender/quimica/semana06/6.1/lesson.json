@@ -1,0 +1,18 @@
+{
+  "id": "quim_t06_s01",
+  "subjectId": "quimica",
+  "semana": 6,
+  "subtema": "6.1",
+  "title": "Nomenclatura Química Inorgánica - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/quimica/QuimicaSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_quim_t06_s01",
+    "asignatura": "Química",
+    "semana": 6,
+    "titulo": "Nomenclatura Química Inorgánica - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

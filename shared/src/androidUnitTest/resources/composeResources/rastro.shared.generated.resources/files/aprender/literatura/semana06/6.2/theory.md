@@ -140,3 +140,9 @@ Aquelarre 1916 igual a Gibson más Rodríguez más Calle. Gibson igual a Jornada
 
 ## RESUMEN
 Bohemia del Aquelarre en 1916 con Gibson y Rodríguez hacia nativismo mistiano. Vanguardia con Hidalgo y Simplismo de verso desnudo. Novela histórica con Aguirre y sol trágico en Huayna Cápac. Narrativa urbana con Reynoso y collera de jerga lírica y procesión coral. Altiplano con Orkopata y Titikaka y Pez de oro con lengua híbrida y dios lacustre más quechua culto de Kilku con Taki parwa más Ande de Peralta con Collao. Proyección universal con Vargas Llosa arequipeño y Leoncio Prado. Mapa de Aquelarre a modernidad para examen.
+
+## Percy Gibson y José Luis Ayala: obras verificadas
+
+Percy Gibson Möller se vincula al modernismo y al ambiente literario arequipeño. Jornada heroica, publicada en 1916, permite estudiar su poesía cívica como un título individual. No debe confundirse con Percy Gibson Parra, su hijo. Una lista de autores del temario no autoriza a atribuirles cualquier libro con un título de apariencia regional.
+
+José Luis Ayala desarrolla escritura vinculada a la cultura aimara. Jake Aru ofrece poesía en aimara y traducción al español; la edición consultada se registra en 1981. La lectura bilingüe relaciona lengua, territorio y memoria sin transformar el poemario en una novela. Los títulos antes atribuidos como Sinfonía al viento del altiplano y Wanq’uri no se utilizan como datos confirmados: se conserva una ficha de obra bibliográficamente verificable.

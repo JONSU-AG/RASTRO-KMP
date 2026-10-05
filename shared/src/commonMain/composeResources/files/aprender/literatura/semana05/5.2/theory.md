@@ -168,3 +168,11 @@ Trilce igual a ruptura carcelaria. Heraldos igual a Hay golpes. Poemas igual a P
 
 ## RESUMEN
 Vanguardia vallejiana con cuatro cumbres L T P E y ruptura total. Indigenismo norte épico con Rumi y líderes y masacre. Indigenismo sur íntimo con Ernesto y zumbayllu y sal y tifus. Contraste exterior frente a interior para no invertir Maqui y Castro ni confundir juguetes ni líderes.
+
+## Los heraldos negros y las colecciones de Vallejo
+
+Los heraldos negros es el primer poemario de Vallejo. Su portada indica 1918, pero circuló en 1919. Conserva recursos modernistas e incorpora dolor, memoria familiar y experiencia andina. El poema que abre el volumen y el libro comparten título; no son el mismo tipo de unidad.
+
+Trilce apareció en 1922 y desarrolla una ruptura intensa del lenguaje. Poemas humanos es una colección póstuma de 1939. España, aparta de mí este cáliz es un conjunto diferenciado y contiene Masa. Comparar estos libros exige atender a procedimientos y contextos, no trasladar automáticamente poemas o fechas de uno a otro.
+
+Canto villano, de Blanca Varela, figura como obra específica en el temario. Su voz, imágenes y relación con la experiencia corporal deben estudiarse sin confundir a la autora con Vallejo ni clasificar toda poesía del siglo XX como una misma escuela. Cada título cuenta con su ficha individual en Obras.

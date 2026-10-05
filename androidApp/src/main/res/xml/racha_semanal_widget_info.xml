@@ -4,6 +4,7 @@
     android:minHeight="40dp"
     android:targetCellWidth="4"
     android:targetCellHeight="1"
+    android:previewLayout="@layout/widget_racha_semanal"
     android:updatePeriodMillis="1800000"
     android:initialLayout="@layout/widget_racha_semanal"
     android:previewImage="@drawable/widget_bg_racha_semanal"

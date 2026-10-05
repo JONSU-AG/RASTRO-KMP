@@ -1,0 +1,640 @@
+package com.jonsuapps.rastro.android.ui.mascots.loki
+
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.PathOperation
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.drawscope.*
+import androidx.compose.ui.graphics.lerp
+import kotlin.math.max
+import kotlin.math.PI
+import kotlin.math.sin
+
+/** Independent transforms for every part of the native Classic rig. */
+private data class ClassicGeometry(
+    val body: Offset, val bodySize: Size, val lowerWeight: Float,
+    val eyeY: Float, val eyeSpacing: Float, val eyeScale: Float,
+    val leftHand: Offset, val rightHand: Offset, val handSize: Size,
+    val leftFoot: Offset, val rightFoot: Offset, val footSize: Size,
+    val soles: Boolean, val feetBehind: Boolean,
+    val topOffset: Offset, val topScale: Offset, val topRotation: Float
+)
+
+private fun LokiClassicPose.geometry() = when (this) {
+    LokiClassicPose.NORMAL -> ClassicGeometry(
+        Offset(122f, 160f), Size(194f, 181f), 1.08f, 157f, 38.5f, 1.08f,
+        Offset(23f, 200f), Offset(221f, 200f), Size(60f, 64f),
+        Offset(83f, 258f), Offset(161f, 258f), Size(80f, 53f), false, true,
+        Offset.Zero, Offset(1f, 1f), 0f)
+    LokiClassicPose.SITTING -> ClassicGeometry(
+        Offset(122f, 178.5f), Size(194f, 178f), 1.16f, 174f, 38.5f, 1.08f,
+        Offset(23f, 208f), Offset(221f, 208f), Size(60f, 62f),
+        Offset(61f, 250f), Offset(183f, 250f), Size(85f, 83f), true, false,
+        Offset(0f, 11f), Offset(1.01f, .97f), -2f)
+    LokiClassicPose.PRONE -> ClassicGeometry(
+        Offset(122f, 207f), Size(295f, 128f), 1.22f, 231f, 37f, 1f,
+        Offset(15f, 247f), Offset(229f, 247f), Size(80f, 61f),
+        Offset(82f, 226f), Offset(162f, 226f), Size(45f, 22f), false, true,
+        Offset(-8f, 75f), Offset(1f, .92f), -30f)
+}
+
+private fun ClassicGeometry.blend(other: ClassicGeometry, t: Float) = copy(
+    body = Offset(mix(body.x, other.body.x, t), mix(body.y, other.body.y, t)),
+    bodySize = Size(mix(bodySize.width, other.bodySize.width, t), mix(bodySize.height, other.bodySize.height, t)),
+    lowerWeight = mix(lowerWeight, other.lowerWeight, t), eyeY = mix(eyeY, other.eyeY, t),
+    eyeSpacing = mix(eyeSpacing, other.eyeSpacing, t), eyeScale = mix(eyeScale, other.eyeScale, t),
+    leftHand = Offset(mix(leftHand.x, other.leftHand.x, t), mix(leftHand.y, other.leftHand.y, t)),
+    rightHand = Offset(mix(rightHand.x, other.rightHand.x, t), mix(rightHand.y, other.rightHand.y, t)),
+    handSize = Size(mix(handSize.width, other.handSize.width, t), mix(handSize.height, other.handSize.height, t)),
+    leftFoot = Offset(mix(leftFoot.x, other.leftFoot.x, t), mix(leftFoot.y, other.leftFoot.y, t)),
+    rightFoot = Offset(mix(rightFoot.x, other.rightFoot.x, t), mix(rightFoot.y, other.rightFoot.y, t)),
+    footSize = Size(mix(footSize.width, other.footSize.width, t), mix(footSize.height, other.footSize.height, t)),
+    soles = if (t > .5f) other.soles else soles, feetBehind = if (t > .5f) other.feetBehind else feetBehind,
+    topOffset = Offset(mix(topOffset.x, other.topOffset.x, t), mix(topOffset.y, other.topOffset.y, t)),
+    topScale = Offset(mix(topScale.x, other.topScale.x, t), mix(topScale.y, other.topScale.y, t)),
+    topRotation = mix(topRotation, other.topRotation, t)
+)
+
+private fun ClassicGeometry.react(mood: LokiClassicMood, progress: Float, amount: Float): ClassicGeometry {
+    val wave = sin(progress * PI.toFloat() * 6f) * amount
+    return when (mood) {
+        LokiClassicMood.HAPPY, LokiClassicMood.STREAK -> copy(
+            body = body.copy(y = body.y - 4f * wave),
+            bodySize = bodySize.copy(width = bodySize.width - 4f * amount + 2f * wave,
+                height = bodySize.height + 5f * amount - 2f * wave),
+            leftHand = leftHand.copy(x = leftHand.x - 5f * amount, y = leftHand.y - 40f * amount - 5f * wave),
+            rightHand = rightHand.copy(x = rightHand.x + 5f * amount, y = rightHand.y - 40f * amount - 5f * wave),
+            leftFoot = leftFoot.copy(y = leftFoot.y - 3f * wave),
+            rightFoot = rightFoot.copy(y = rightFoot.y - 3f * wave),
+            topRotation = topRotation + wave * 3f)
+        LokiClassicMood.SAD -> copy(body = body.copy(y = body.y + 4f * amount),
+            bodySize = bodySize.copy(width = bodySize.width + 4f * amount,
+                height = bodySize.height - 6f * amount),
+            leftHand = leftHand.copy(x = leftHand.x + 6f * amount, y = leftHand.y + 12f * amount),
+            rightHand = rightHand.copy(x = rightHand.x - 6f * amount, y = rightHand.y + 12f * amount),
+            eyeY = eyeY + 4f * amount, topRotation = topRotation - 9f * amount)
+        LokiClassicMood.ANGRY -> copy(leftHand = leftHand.copy(x = leftHand.x + 5f * amount),
+            rightHand = rightHand.copy(x = rightHand.x - 5f * amount),
+            bodySize = bodySize.copy(width = bodySize.width + 7f * amount,
+                height = bodySize.height - 4f * amount),
+            leftFoot = leftFoot.copy(x = leftFoot.x - 5f * amount),
+            rightFoot = rightFoot.copy(x = rightFoot.x + 5f * amount),
+            topRotation = topRotation + 2f * wave)
+        LokiClassicMood.SLEEPING -> copy(bodySize = bodySize.copy(width = bodySize.width + wave * 1.2f),
+            topRotation = topRotation - 3f * amount)
+        LokiClassicMood.DOUBTFUL -> copy(topRotation = topRotation + 5f * amount + wave * 2f,
+            body = body.copy(x = body.x + 3f * amount),
+            leftHand = leftHand.copy(x = leftHand.x + 11f * amount, y = leftHand.y - 8f * amount),
+            rightHand = rightHand.copy(y = rightHand.y + 5f * amount))
+        LokiClassicMood.KNOCKED_OUT -> copy(body = body.copy(x = body.x + wave * 2f),
+            leftHand = leftHand.copy(x = leftHand.x + wave * 2f),
+            rightHand = rightHand.copy(x = rightHand.x + wave * 2f), topRotation = topRotation + wave * 4f)
+        LokiClassicMood.IN_LOVE -> copy(
+            leftHand = leftHand.copy(x = leftHand.x + 8f * amount, y = leftHand.y - 12f * amount),
+            rightHand = rightHand.copy(x = rightHand.x - 8f * amount, y = rightHand.y - 12f * amount),
+            topRotation = topRotation + wave * 2f)
+        else -> this
+    }
+}
+
+/** One Classic rig for all three palettes; expression moves existing parts and overlays only. */
+internal fun DrawScope.drawLokiClassic(
+    frame: LokiFrame, character: LokiCharacter,
+    mood: LokiClassicMood = LokiClassicMood.NORMAL, progress: Float = 0f,
+    eyeEffect: LokiClassicEyeEffect = LokiClassicEyeEffect.DEFAULT,
+    effects: List<LokiEffectCue> = emptyList()
+) {
+    val amount = if (mood == LokiClassicMood.NORMAL) 0f else classicMoodStrength(progress)
+    if (mood == LokiClassicMood.PLEADING && amount <= .001f) {
+        drawLokiClassic(frame, character, LokiClassicMood.NORMAL, progress, eyeEffect, effects)
+        return
+    }
+    val gag = frame.paperGag
+    val grippingSheet = gag != null && (gag.grip > .001f || gag.swing > .001f)
+    val from = (if (gag != null) LokiClassicPose.NORMAL else character.classicPose).geometry()
+    val target = when (mood) {
+        LokiClassicMood.NORMAL, LokiClassicMood.PLEADING -> from
+        LokiClassicMood.SLEEPING -> LokiClassicPose.SITTING.geometry()
+        else -> LokiClassicPose.NORMAL.geometry()
+    }
+    var g = from.blend(target, amount).react(mood, progress, amount).copy(eyeScale = from.eyeScale)
+    if (gag != null) g = g.copy(
+        leftHand = Offset(mix(g.leftHand.x, 73f, gag.grip) - 25f * gag.swing,
+            mix(g.leftHand.y, 210f, gag.grip) - 95f * gag.swing),
+        rightHand = Offset(mix(g.rightHand.x, 171f, gag.grip), mix(g.rightHand.y, 210f, gag.grip)))
+    val style = character.style.safe()
+    val rig = character.rig.safe()
+    val defaultStyle = LokiTemplate.base(character.species).style
+    val classicTone = when (character.species) {
+        LokiSpecies.LOKI -> Color(0xFF342D25)
+        LokiSpecies.ARTYON -> Color(0xFF00E1C8)
+        LokiSpecies.ORSTTY -> Color(0xFFAA52D7)
+    }
+    fun color(part: LokiPart): Color {
+        val actual = style.color(part)
+        val isBodyPart = part == LokiPart.BODY || part == LokiPart.LARGE_TUFT ||
+            part == LokiPart.SMALL_TUFT || part == LokiPart.LEFT_ARM || part == LokiPart.RIGHT_ARM ||
+            part == LokiPart.LEFT_FOOT || part == LokiPart.RIGHT_FOOT
+        return if (isBodyPart && actual == defaultStyle.color(part)) classicTone else Color(actual)
+    }
+    // Classic uses one warm-black ink across every palette, like a single hand-inked model sheet.
+    val outline = lerp(color(LokiPart.OUTLINE), Color.Black, .78f)
+    // Include the feet and upper appendages in a square preview; the old 300-unit
+    // fit clipped the soles, making every pose look like it had truncated legs.
+    val unit = minOf(size.width / 290f, size.height / 335f)
+    translate((size.width - 244f * unit) / 2f, (size.height - 300f * unit) / 2f + 25f * unit) {
+      scale(unit, unit, Offset.Zero) {
+       scale(rig.width, rig.height, Offset(122f, 208f)) {
+        translate(frame.stance.offsetX, frame.pose.bodyY * .35f) {
+         rotate(frame.stance.rotation * .25f + frame.pose.lean * .25f, Offset(122f, 190f)) {
+            classicGround(g, outline)
+            gag?.let { drawPaperGagBehind(it, outline) }
+            if (mood == LokiClassicMood.STREAK) classicStreakFire(progress, amount, outline)
+            if (g.feetBehind) classicFeet(g, rig, color(LokiPart.LEFT_FOOT), color(LokiPart.RIGHT_FOOT), outline)
+            classicTufts(g, frame.pose.tuft, color(LokiPart.LARGE_TUFT), color(LokiPart.SMALL_TUFT), outline)
+            classicBody(g, color(LokiPart.BODY), outline)
+            if (!grippingSheet) classicHands(g, rig, color(LokiPart.LEFT_ARM), color(LokiPart.RIGHT_ARM), outline)
+            val faceFrame = if (mood == LokiClassicMood.DOUBTFUL && style.faceEdit.look == LokiLook.AUTO)
+                frame.copy(pose = frame.pose.copy(gazeX = frame.pose.gazeX + sin(progress * PI.toFloat() * 4f) * 5f * amount)) else frame
+            classicEyes(g, faceFrame, style, rig, outline, mood, eyeEffect, amount, progress,
+                gag == null && character.classicPose == LokiClassicPose.PRONE)
+            if (mood == LokiClassicMood.PLEADING) classicPleadingBrows(g, rig, outline, amount, progress)
+            if (character.species == LokiSpecies.ORSTTY) classicLashes(g, rig,
+                outline.copy(alpha = if (mood == LokiClassicMood.SLEEPING) 1f - amount else 1f))
+            classicCheeks(g, mood, amount)
+            classicMouth(g, frame, style, character.species, outline, mood, amount, progress)
+            if (gag != null) {
+                drawPaperGagFront(gag, outline)
+                if (grippingSheet) classicHands(g, rig, color(LokiPart.LEFT_ARM), color(LokiPart.RIGHT_ARM), outline)
+            }
+            if (!g.feetBehind) classicFeet(g, rig, color(LokiPart.LEFT_FOOT), color(LokiPart.RIGHT_FOOT), outline)
+            if (character.species == LokiSpecies.ORSTTY && style.flower) classicFlower(g, outline)
+            classicMoodEffects(mood, progress, amount, outline)
+            if (effects.isNotEmpty()) drawLokiEffects(effects, frame.pose, rig, progress, classicInk = outline)
+         }
+        }
+       }
+      }
+    }
+}
+
+private fun DrawScope.classicBody(g: ClassicGeometry, base: Color, outline: Color) {
+    val left = g.body.x - g.bodySize.width / 2f; val right = g.body.x + g.bodySize.width / 2f
+    val top = g.body.y - g.bodySize.height / 2f; val bottom = g.body.y + g.bodySize.height / 2f
+    val path = Path().apply {
+        moveTo(g.body.x - 5f, top)
+        cubicTo(left + g.bodySize.width * .17f, top - 7f, left - 4f, top + g.bodySize.height * .26f, left, g.body.y - 5f)
+        cubicTo(left - 2f, bottom - g.bodySize.height * .17f, left + g.bodySize.width * .23f, bottom + 7f * g.lowerWeight, g.body.x - 2f, bottom)
+        cubicTo(right - g.bodySize.width * .23f, bottom + 11f * g.lowerWeight, right + 4f, bottom - g.bodySize.height * .11f, right, g.body.y + 4f)
+        cubicTo(right + 3f, top + g.bodySize.height * .21f, right - g.bodySize.width * .17f, top - 3f, g.body.x - 5f, top); close()
+    }
+    val aged = lerp(base, Color(0xFFE9D8B9), .035f)
+    drawPath(path, Brush.linearGradient(listOf(lerp(aged, Color.White, .12f), aged, lerp(aged, Color.Black, .23f)), Offset(left + 18f, top + 10f), Offset(right - 10f, bottom)))
+    clipPath(path) {
+        drawPath(Path().apply {
+            moveTo(right - 49f, top + 15f)
+            cubicTo(right - 10f, top + 51f, right - 1f, bottom - 67f, right - 38f, bottom - 25f)
+            cubicTo(right - 75f, bottom + 12f, left + 58f, bottom + 4f, left + 46f, bottom - 13f)
+            cubicTo(g.body.x + 41f, bottom + 19f, right - 16f, bottom - 4f, right - 49f, top + 15f)
+            close()
+        }, Color.Black.copy(alpha = .10f))
+        drawPath(Path().apply { moveTo(left + 28f, top + 36f); quadraticTo(left + 45f, top + 9f, left + 70f, top + 8f) }, lerp(aged, Color.White, .55f), style = Stroke(4.2f, cap = StrokeCap.Round))
+        drawPath(Path().apply { moveTo(left + 39f, top + 42f); quadraticTo(left + 47f, top + 28f, left + 57f, top + 25f) }, lerp(aged, Color.White, .40f), style = Stroke(2f, cap = StrokeCap.Round))
+        drawPath(Path().apply { moveTo(right - 33f, top + 20f); quadraticTo(right - 17f, top + 34f, right - 12f, top + 50f) }, lerp(base, Color.White, .28f), style = Stroke(2.2f, cap = StrokeCap.Round))
+        repeat(4) { i ->
+            val y = bottom - 9f - i * 4f
+            drawLine(lerp(aged, Color.Black, .52f), Offset(left + 23f + i * 2f, y), Offset(left + 39f + i * 3f, y - 5f), 1.25f, StrokeCap.Round)
+            drawLine(lerp(aged, Color.Black, .44f), Offset(right - 40f - i * 2f, y - 2f), Offset(right - 24f - i * 2f, y + 1f), 1.25f, StrokeCap.Round)
+        }
+        val grain = lerp(aged, Color.Black, .62f).copy(alpha = .17f)
+        repeat(43) { i ->
+            val px = left + 12f + ((i * 71) % max(1, (g.bodySize.width - 24f).toInt()))
+            val py = top + 12f + ((i * 53) % max(1, (g.bodySize.height - 24f).toInt()))
+            drawCircle(grain, if (i % 5 == 0) 1.25f else .75f, Offset(px, py))
+        }
+    }
+    drawPath(path, outline, style = Stroke(4.8f, join = StrokeJoin.Round))
+}
+
+/** The two canonical tufts always move as one group rooted at the same point. */
+private fun DrawScope.classicTufts(g: ClassicGeometry, tilt: Float, large: Color, small: Color, outline: Color) {
+    val root = Offset(112f, 87f)
+    translate(g.topOffset.x, g.topOffset.y) {
+        scale(g.topScale.x, g.topScale.y, root) {
+            rotate(g.topRotation + tilt * .45f, root) { feature(classicLargeTuft, large, outline) }
+            if (g.bodySize.width > 240f) {
+                // In the prone pose the smaller leaf stays visible above the wide head.
+                translate(-13f, -21f) {
+                    rotate(g.topRotation + 18f + tilt * .45f, root) { feature(classicSmallTuft, small, outline) }
+                }
+            } else rotate(g.topRotation + tilt * .45f, root) { feature(classicSmallTuft, small, outline) }
+        }
+    }
+}
+
+private val classicLargeTuft = Path().apply {
+    // Both leaves retain these roots in every pose; only the shared rig moves them.
+    moveTo(111f, 87f)
+    cubicTo(112f, 69f, 99f, 48f, 101f, 25f)
+    cubicTo(103f, -6f, 128f, -12f, 147f, 11f)
+    cubicTo(166f, 36f, 159f, 68f, 139f, 87f)
+    close()
+}
+private val classicSmallTuft = Path().apply {
+    moveTo(111f, 84f)
+    cubicTo(92f, 66f, 80f, 34f, 51f, 36f)
+    cubicTo(17f, 36f, 8f, 66f, 31f, 87f)
+    cubicTo(53f, 105f, 82f, 78f, 111f, 84f)
+    close()
+}
+private fun DrawScope.feature(path: Path, fill: Color, outline: Color) {
+    val aged = lerp(fill, Color(0xFFE9D8B9), .045f)
+    drawPath(path, Brush.linearGradient(listOf(lerp(aged, Color.White, .13f), aged, lerp(aged, Color.Black, .20f)), Offset(65f, 25f), Offset(140f, 88f)))
+    drawPath(path, outline, style = Stroke(4.8f, join = StrokeJoin.Round))
+    // Two imperfect ink/paint strokes keep the appendages from reading as flat vector ovals.
+    clipPath(path) {
+        drawPath(Path().apply { moveTo(108f, 30f); quadraticTo(114f, 10f, 127f, 10f) },
+            lerp(fill, Color.White, .52f), style = Stroke(2.7f, cap = StrokeCap.Round))
+        drawPath(Path().apply { moveTo(43f, 72f); quadraticTo(54f, 56f, 69f, 61f) },
+            lerp(fill, Color.White, .43f), style = Stroke(2.5f, cap = StrokeCap.Round))
+    }
+}
+
+private fun DrawScope.classicHands(g: ClassicGeometry, rig: LokiRig, left: Color, right: Color, outline: Color) {
+    val handSize = g.handSize * rig.hands
+    // The open inner contour joins the lobe directly to the shoulder. A complete
+    // stroked oval would turn the same limb into a separate disc on the body.
+    val angle = 18f * (1f - ((g.bodySize.width - 194f) / 101f).coerceIn(0f, 1f))
+    limb(g.leftHand, handSize, left, outline, false, angle)
+    limb(g.rightHand, handSize, right, outline, true, -angle)
+}
+private fun DrawScope.limb(center: Offset, size: Size, fill: Color, outline: Color, mirrored: Boolean, angle: Float) {
+  rotate(angle, center) {
+    val rx = size.width / 2f; val ry = size.height / 2f
+    val inner = if (mirrored) -1f else 1f
+    val path = Path().apply {
+        moveTo(center.x + inner * rx * .76f, center.y - ry * .57f)
+        cubicTo(center.x + inner * rx * .25f, center.y - ry * 1.08f,
+            center.x - inner * rx * .77f, center.y - ry * .98f,
+            center.x - inner * rx * .96f, center.y - ry * .10f)
+        cubicTo(center.x - inner * rx * 1.09f, center.y + ry * .66f,
+            center.x - inner * rx * .51f, center.y + ry * 1.08f,
+            center.x + inner * rx * .12f, center.y + ry)
+        cubicTo(center.x + inner * rx * .58f, center.y + ry * .88f,
+            center.x + inner * rx * .86f, center.y + ry * .41f,
+            center.x + inner * rx * .78f, center.y + ry * .08f)
+    }
+    // Filling closes the shoulder internally; the outline follows only the
+    // exposed edge, leaving the shared body/arm junction continuous.
+    drawPath(path, Brush.linearGradient(listOf(lerp(fill, Color.White, .13f), fill, lerp(fill, Color.Black, .19f)), center - Offset(14f, 15f), center + Offset(16f, 18f)))
+    drawPath(path, outline, style = Stroke(4.4f, join = StrokeJoin.Round))
+    drawLine(lerp(fill, Color.White, .48f), center - Offset(10f, 12f), center - Offset(3f, 17f), 2.3f, StrokeCap.Round)
+    repeat(5) { i -> drawLine(lerp(fill, Color.Black, .38f), center + Offset(-13f + i * 5f, 10f + i), center + Offset(-6f + i * 5f, 7f + i), 1f, StrokeCap.Round) }
+  }
+}
+
+private fun DrawScope.classicFeet(g: ClassicGeometry, rig: LokiRig, left: Color, right: Color, outline: Color) {
+    foot(g.leftFoot, g.footSize * rig.feet, left, outline, if (g.soles) -16f else -7f, g.soles)
+    foot(g.rightFoot, g.footSize * rig.feet, right, outline, if (g.soles) 16f else 7f, g.soles)
+}
+private fun DrawScope.foot(center: Offset, size: Size, fill: Color, outline: Color, angle: Float, sole: Boolean) {
+    rotate(angle, center) {
+        val rx = size.width / 2f; val ry = size.height / 2f
+        val path = Path().apply {
+            moveTo(center.x - rx * .53f, center.y - ry * .72f)
+            cubicTo(center.x - rx * 1.18f, center.y - ry * .42f, center.x - rx * 1.04f, center.y + ry * .67f, center.x - rx * .27f, center.y + ry)
+            cubicTo(center.x + rx * .53f, center.y + ry * 1.14f, center.x + rx * 1.18f, center.y + ry * .47f, center.x + rx * .88f, center.y - ry * .26f)
+            cubicTo(center.x + rx * .64f, center.y - ry * .92f, center.x - rx * .12f, center.y - ry * 1.04f, center.x - rx * .53f, center.y - ry * .72f)
+            close()
+        }
+        drawPath(path, Brush.linearGradient(listOf(lerp(fill, Color.White, .12f), fill, lerp(fill, Color.Black, .16f)), center - Offset(14f, 17f), center + Offset(16f, 20f)))
+        drawPath(path, outline, style = Stroke(4.5f, join = StrokeJoin.Round))
+        if (sole) {
+            val inset = organicOval(center + Offset(0f, 2f), Size(size.width * .78f, size.height * .80f), 0f)
+            drawPath(inset, lerp(fill, Color.Black, .38f)); drawPath(inset, outline, style = Stroke(2.2f))
+            drawPath(Path().apply {
+                moveTo(center.x - size.width * .28f, center.y - size.height * .23f)
+                quadraticTo(center.x - size.width * .39f, center.y + size.height * .02f,
+                    center.x - size.width * .23f, center.y + size.height * .29f)
+            }, Color(0xFFF6EAD4), style = Stroke(2.5f, cap = StrokeCap.Round))
+            clipPath(inset) {
+                repeat(6) { i ->
+                    val y = center.y + size.height * (.06f + i * .055f)
+                    drawLine(lerp(fill, Color.Black, .8f).copy(alpha = .42f),
+                        Offset(center.x - size.width * .12f, y),
+                        Offset(center.x + size.width * .23f, y - size.height * .13f),
+                        1.1f, StrokeCap.Round)
+                }
+            }
+        }
+        if (!sole) drawPath(Path().apply { moveTo(center.x - size.width * .18f, center.y - size.height * .22f); quadraticTo(center.x, center.y - size.height * .43f, center.x + size.width * .17f, center.y - size.height * .24f) }, lerp(fill, Color.White, .48f), style = Stroke(2f, cap = StrokeCap.Round))
+    }
+}
+
+private fun DrawScope.classicEyes(
+    g: ClassicGeometry, frame: LokiFrame, style: LokiStyle, rig: LokiRig, outline: Color,
+    mood: LokiClassicMood, effect: LokiClassicEyeEffect, amount: Float, progress: Float, restingAnatomy: Boolean
+) {
+    val state = when {
+        effect == LokiClassicEyeEffect.STREAK_EYES || mood != LokiClassicMood.NORMAL -> mood.eyeState(effect)
+        g.bodySize.width > 270f -> LokiClassicEyeState.SAD
+        else -> LokiClassicEyeState.OPEN
+    }
+    val left = if (mood == LokiClassicMood.NORMAL) frame.pose.left else LokiEye()
+    val right = if (mood == LokiClassicMood.NORMAL) frame.pose.right else LokiEye()
+    val resting = g.bodySize.width > 270f && mood == LokiClassicMood.NORMAL
+    val strength = if (resting || effect == LokiClassicEyeEffect.STREAK_EYES) 1f else amount
+    val separatedSmile = mood == LokiClassicMood.HAPPY || mood == LokiClassicMood.STREAK
+    classicEye(Offset(122f - g.eyeSpacing * rig.eyeSpacing, g.eyeY), left, frame, style, rig, true, g.eyeScale, outline, state, resting, strength, restingAnatomy, progress, separatedSmile)
+    classicEye(Offset(122f + g.eyeSpacing * rig.eyeSpacing, g.eyeY), right, frame, style, rig, false, g.eyeScale, outline, state, resting, strength, restingAnatomy, progress, separatedSmile)
+}
+
+private fun DrawScope.classicEye(
+    center: Offset, source: LokiEye, frame: LokiFrame, style: LokiStyle, rig: LokiRig,
+    left: Boolean, poseScale: Float, outline: Color, animatedState: LokiClassicEyeState,
+    resting: Boolean, strength: Float, restingAnatomy: Boolean, progress: Float, separatedSmile: Boolean
+) {
+    val lidLowering = frame.paperGag?.lidLowering ?: 0f
+    // The gag lowers only the upper lids; the white and pupils keep their anatomy.
+    val edit = style.faceEdit.eye(if (frame.paperGag != null) source.copy(height = 31f) else source, left)
+    val state = when (style.faceEdit.look) {
+        LokiLook.ANGRY -> LokiClassicEyeState.ANGRY
+        LokiLook.SAD -> LokiClassicEyeState.SAD
+        LokiLook.HAPPY -> LokiClassicEyeState.HAPPY_CLOSED
+        LokiLook.AUTO -> animatedState
+        else -> LokiClassicEyeState.OPEN
+    }
+    val expression = if (style.faceEdit.look == LokiLook.AUTO) strength else 1f
+    val rx = 42f * rig.eyeWidth * poseScale
+    // Anatomy is independent of closure: height edits and blinking move lids,
+    // never scale either the canonical white or its pupil.
+    val ry = 41f * rig.eyeHeight * poseScale * (if (restingAnatomy) .94f else 1f)
+    val x = center.x
+    val y = center.y + edit.y.coerceIn(-4f, 4f) +
+        if (left) 0f else if (resting) -1.5f else -3f
+    val happyClosure = if (state == LokiClassicEyeState.HAPPY_CLOSED) expression else edit.smile.coerceIn(0f, 1f)
+    val sleepClosure = if (state == LokiClassicEyeState.SLEEP_CLOSED) expression else 0f
+    val opening = minOf((edit.height - 3f) / 28f, 1f - happyClosure,
+        1f - sleepClosure, ((frame.blink - .04f) / .96f)).coerceIn(0f, 1f)
+    // Short, distinct smile lids for these two performances only. The eye and
+    // pupil underneath keep their canonical dimensions throughout the closure.
+    val smilingLids = separatedSmile && style.faceEdit.look == LokiLook.AUTO && state == LokiClassicEyeState.HAPPY_CLOSED
+    val closedHalfWidth = rx * if (smilingLids) .64f else .80f
+    val rise = mix(8f, if (smilingLids) -30f else -22f, happyClosure)
+    if (opening <= .015f) {
+        drawPath(Path().apply { moveTo(x - closedHalfWidth, y); quadraticTo(x, y + rise, x + closedHalfWidth, y) },
+            outline, style = Stroke(if (state == LokiClassicEyeState.HAPPY_CLOSED) 6f else 4.5f, cap = StrokeCap.Round))
+        return
+    }
+    val oval = Path().apply {
+        moveTo(x - 2f, y - ry)
+        cubicTo(x - rx * .86f, y - ry * 1.06f, x - rx * 1.15f, y + ry * .65f, x - 4f, y + ry)
+        cubicTo(x + rx * .95f, y + ry * 1.03f, x + rx * 1.08f, y - ry * .82f, x - 2f, y - ry)
+        close()
+    }
+    // Cut the actual eye aperture before drawing white, pupil and outline. The
+    // old skin overlay left the original oval border visible above the eyelid.
+    val expressiveLid = lidLowering > .001f || state == LokiClassicEyeState.SAD || state == LokiClassicEyeState.ANGRY || state == LokiClassicEyeState.DOUBTFUL || state == LokiClassicEyeState.PLEADING
+    val path = if (expressiveLid || opening < .999f || style.faceEdit.leftTilt != 0f || style.faceEdit.rightTilt != 0f) {
+        val outer = when {
+            lidLowering > .001f -> y - ry * .12f
+            state == LokiClassicEyeState.PLEADING -> y - ry * .72f
+            resting -> y - ry * .58f
+            state == LokiClassicEyeState.ANGRY -> y - ry * .68f
+            state == LokiClassicEyeState.SAD -> y - ry * .18f
+            else -> y - ry * .36f
+        }
+        val inner = when {
+            lidLowering > .001f -> y - ry * .12f
+            state == LokiClassicEyeState.PLEADING -> y - ry * .98f
+            resting -> y - ry * 1.03f
+            state == LokiClassicEyeState.ANGRY -> y - ry * .16f
+            state == LokiClassicEyeState.SAD -> y - ry * .61f
+            else -> y - ry * .57f
+        }
+        val tilt = (if (left) style.faceEdit.leftTilt else style.faceEdit.rightTilt) * ry * .45f
+        val baseline = y - ry - 8f
+        val lidAmount = if (lidLowering > .001f) lidLowering else if (expressiveLid) expression else 0f
+        val leftEdge = mix(y, mix(baseline, if (left) outer else inner, lidAmount) + tilt, opening)
+        val rightEdge = mix(y, mix(baseline, if (left) inner else outer, lidAmount) - tilt, opening)
+        val upperCurve = mix(y + rise, (leftEdge + rightEdge) / 2f - (if (resting) 6f else 3f) * lidAmount, opening)
+        val bottom = mix(y, y + ry + 8f, opening)
+        val lowerCurve = mix(y + rise, bottom, opening)
+        val apertureHalfWidth = if (smilingLids) mix(closedHalfWidth, rx + 8f, opening) else rx + 8f
+        val aperture = Path().apply {
+            moveTo(x - apertureHalfWidth, leftEdge)
+            quadraticTo(x, upperCurve, x + apertureHalfWidth, rightEdge)
+            lineTo(x + apertureHalfWidth, bottom)
+            quadraticTo(x, lowerCurve, x - apertureHalfWidth, bottom)
+            close()
+        }
+        Path.combine(PathOperation.Intersect, oval, aperture)
+    } else oval
+    val white = lerp(Color(style.color(if (left) LokiPart.LEFT_EYE else LokiPart.RIGHT_EYE)), Color(0xFFF6EEDC), .58f)
+    if (state == LokiClassicEyeState.STREAK) {
+        drawPath(path, Color(0xFFFFBD40))
+        clipPath(path) {
+            drawPath(Path().apply { moveTo(x - rx, y + 18f); quadraticTo(x - 20f, y - 22f, x - 9f, y - ry - 8f)
+                quadraticTo(x + 1f, y - 4f, x + 9f, y - ry + 3f)
+                quadraticTo(x + 25f, y - 5f, x + rx, y + 17f); close() }, Color(0xFFF24A22))
+        }
+    } else {
+        drawPath(path, white)
+        clipPath(path) {
+            when (state) {
+                LokiClassicEyeState.HEARTS -> rotate(sin(progress * PI.toFloat() * 4f) * 6f * expression, Offset(x, y + 2f)) {
+                    classicHeart(Offset(x, y + 2f), 18f, Color(0xFFEE3C56).copy(alpha = expression), outline)
+                }
+                LokiClassicEyeState.SPIRAL -> {
+                    val swirl = Path().apply {
+                        moveTo(x + 4f, y + 3f)
+                        cubicTo(x + 2f, y - 10f, x - 15f, y - 10f, x - 17f, y + 2f)
+                        cubicTo(x - 20f, y + 20f, x + 10f, y + 24f, x + 18f, y + 4f)
+                        cubicTo(x + 27f, y - 18f, x - 7f, y - 31f, x - 22f, y - 12f)
+                    }
+                    rotate(progress * 1080f, Offset(x, y)) {
+                        drawPath(swirl, outline.copy(alpha = expression), style = Stroke(4.5f, cap = StrokeCap.Round))
+                    }
+                }
+                else -> Unit
+            }
+            val symbolicPupil = state == LokiClassicEyeState.HEARTS || state == LokiClassicEyeState.SPIRAL
+            if (style.pupils && (!symbolicPupil || expression < 1f)) {
+                    val shift = when (state) {
+                        LokiClassicEyeState.DOUBTFUL -> if (left) 10f else 8f
+                        LokiClassicEyeState.SAD -> if (resting) { if (left) 12f else -12f } else { if (left) 4f else -4f }
+                        else -> if (left) 11f else -11f
+                    }
+                    val neutralShift = if (left) 11f else -11f
+                    val px = x + mix(neutralShift, shift, expression) + (frame.pose.gazeX + style.faceEdit.gazeX * 10f).coerceIn(-5f, 5f)
+                    val neutralY = (frame.pose.gazeY + style.faceEdit.gazeY * 8f).coerceIn(-7f, 7f)
+                    val py = y + mix(neutralY, when (state) {
+                        LokiClassicEyeState.SAD -> if (resting) 3f else 8f
+                        LokiClassicEyeState.ANGRY -> 3f
+                        LokiClassicEyeState.DOUBTFUL -> -13f
+                        LokiClassicEyeState.PLEADING -> -6f + sin(progress * PI.toFloat() * 2f) * 1.5f
+                        else -> (frame.pose.gazeY + style.faceEdit.gazeY * 8f).coerceIn(-7f, 7f)
+                    }, expression)
+                    val pupilColor = lerp(Color(style.color(if (left) LokiPart.LEFT_PUPIL else LokiPart.RIGHT_PUPIL)), Color.Black, .83f)
+                    val pw = (if (restingAnatomy) 12.25f else 13.75f) * style.pupilSize / .6f
+                    val ph = ry * if (restingAnatomy) .57f else .56f
+                    val pupil = Path().apply {
+                        moveTo(px, py - ph)
+                        cubicTo(px + pw * .78f, py - ph, px + pw, py - ph * .43f, px + pw, py)
+                        cubicTo(px + pw, py + ph * .49f, px + pw * .69f, py + ph, px, py + ph)
+                        cubicTo(px - pw * .84f, py + ph, px - pw, py + ph * .55f, px - pw, py + ph * .20f)
+                        lineTo(px - pw * .45f, py)
+                        lineTo(px - pw, py - ph * .20f)
+                        cubicTo(px - pw, py - ph * .55f, px - pw * .80f, py - ph, px, py - ph)
+                        close()
+                    }
+                    drawPath(pupil, pupilColor.copy(alpha = if (symbolicPupil) 1f - expression else 1f))
+                    if (state == LokiClassicEyeState.PLEADING) clipPath(pupil) {
+                        // Reflections animate over the existing pupil, without changing its shape or size.
+                        val glow = expression * (.88f + sin(progress * PI.toFloat() * 4f) * .12f)
+                        drawOval(Color(0xFFFFF6E5).copy(alpha = glow), Offset(px - pw * .40f, py - ph * .72f), Size(6.5f, 9f))
+                        drawCircle(Color(0xFFFFF6E5).copy(alpha = glow * .8f), 2.2f, Offset(px + pw * .42f, py + ph * .46f))
+                    }
+            }
+        }
+    }
+    drawPath(path, outline, style = Stroke(3.8f, join = StrokeJoin.Round))
+}
+
+private fun DrawScope.classicCheeks(g: ClassicGeometry, mood: LokiClassicMood, amount: Float) {
+    if (amount < .25f || mood !in listOf(LokiClassicMood.IN_LOVE, LokiClassicMood.HAPPY, LokiClassicMood.PLEADING)) return
+    val alpha = (if (mood == LokiClassicMood.IN_LOVE) .53f else if (mood == LokiClassicMood.PLEADING) .22f else .31f) * amount
+    val y = g.eyeY + 27f
+    for (x in listOf(52f, 192f)) {
+        drawCircle(Color(0xFFEE7283).copy(alpha = alpha * .55f), 10f, Offset(x, y))
+        repeat(2) { i -> drawLine(Color(0xFFDA5070).copy(alpha = alpha), Offset(x - 6f + i * 7f, y + 2f), Offset(x - 2f + i * 7f, y - 4f), 1.5f, StrokeCap.Round) }
+    }
+}
+
+private fun DrawScope.classicPleadingBrows(g: ClassicGeometry, rig: LokiRig, ink: Color, amount: Float, progress: Float) {
+    if (amount <= .001f) return
+    val lift = sin(progress * PI.toFloat() * 2f) * 1.5f
+    for (side in listOf(-1f, 1f)) {
+        val x = 122f + side * g.eyeSpacing * rig.eyeSpacing
+        val y = g.eyeY - 48f * g.eyeScale * rig.eyeHeight
+        drawPath(Path().apply {
+            moveTo(x + side * 18f, y + 4f)
+            quadraticTo(x, y - 6f - lift, x - side * 13f, y - 8f - lift)
+        }, ink.copy(alpha = amount), style = Stroke(3.8f, cap = StrokeCap.Round))
+    }
+}
+
+private fun DrawScope.classicLashes(g: ClassicGeometry, rig: LokiRig, ink: Color) {
+    val eyeDistance = g.eyeSpacing * rig.eyeSpacing
+    val xLeft = 122f - eyeDistance - 31f * rig.eyeWidth
+    val xRight = 122f + eyeDistance + 31f * rig.eyeWidth
+    val y = g.eyeY - 24f
+    for (side in listOf(-1f, 1f)) {
+        val x = if (side < 0f) xLeft else xRight
+        drawLine(ink, Offset(x, y), Offset(x + side * 8f, y - 9f), 2.7f, StrokeCap.Round)
+        drawLine(ink, Offset(x + side * 2f, y + 6f), Offset(x + side * 11f, y + 1f), 2.4f, StrokeCap.Round)
+    }
+}
+
+private fun DrawScope.classicMouth(g: ClassicGeometry, frame: LokiFrame, style: LokiStyle, species: LokiSpecies, outline: Color, mood: LokiClassicMood, amount: Float, progress: Float) {
+    if (style.faceEdit.mouth == LokiMouth.NONE) return
+    val face = style.faceEdit.face(frame.face)
+    val prone = g.bodySize.width > 270f
+    val mouthDistance = when { prone -> 36f; g.soles -> 44f; else -> 48f }
+    val y = g.eyeY + mouthDistance + style.faceEdit.mouthY * 8f
+    val half = (6.5f + face.width * .25f).coerceIn(7f, 16f)
+    val smile = when (mood) {
+        LokiClassicMood.HAPPY, LokiClassicMood.IN_LOVE, LokiClassicMood.STREAK -> mix(face.smile * 5f, 11f, amount)
+        LokiClassicMood.SAD, LokiClassicMood.ANGRY, LokiClassicMood.DOUBTFUL -> mix(face.smile * 5f, -7f, amount)
+        else -> face.smile * 5f
+    }
+    val ink = if (species == LokiSpecies.LOKI) Color(0xFFF5E9D1) else outline
+    if ((mood == LokiClassicMood.HAPPY || mood == LokiClassicMood.IN_LOVE || mood == LokiClassicMood.STREAK) &&
+        style.faceEdit.mouth == LokiMouth.AUTO && amount > .001f) {
+        val opening = amount * (.97f + .03f * kotlin.math.cos(progress * PI.toFloat() * 6f))
+        val openHalf = mix(half, 17f, opening)
+        val restingCurve = if (species == LokiSpecies.LOKI) 6.5f else 8.5f
+        val mouthHeight = if (mood == LokiClassicMood.HAPPY || mood == LokiClassicMood.STREAK) .65f else 1f
+        val edgeY = mix(y - 2f, y - 5f, opening)
+        val bottomY = mix(y - 2f + restingCurve / 2f, y - 5f + 39f * mouthHeight, opening)
+        val bottomControlY = mix(y - 2f + restingCurve / 2f, y - 5f + 36f * mouthHeight, opening)
+        val bottomControlX = openHalf * mix(.5f, .82f, opening)
+        val mouth = Path().apply {
+            moveTo(122f - openHalf, edgeY)
+            quadraticTo(122f, mix(y - 2f + restingCurve, y - 5f + 10f * mouthHeight, opening), 122f + openHalf, edgeY)
+            quadraticTo(122f + bottomControlX, bottomControlY, 122f, bottomY)
+            quadraticTo(122f - bottomControlX, bottomControlY, 122f - openHalf, edgeY)
+            close()
+        }
+        drawPath(mouth, Color(0xFF351827))
+        drawPath(mouth, ink, style = Stroke(mix(if (species == LokiSpecies.LOKI) 2.7f else 3.8f, 3f, opening), join = StrokeJoin.Round))
+        clipPath(mouth) {
+            drawPath(Path().apply { moveTo(115f, bottomY - 3f * mouthHeight); quadraticTo(122f, bottomY - 11f * mouthHeight, 130f, bottomY - 3f * mouthHeight) },
+                Color(0xFFF17881).copy(alpha = opening), style = Stroke(5f, cap = StrokeCap.Round))
+        }
+    } else if (mood == LokiClassicMood.PLEADING && style.faceEdit.mouth == LokiMouth.AUTO && amount > .001f) {
+        val smallHalf = mix(half, 6.5f, amount)
+        val edgeY = mix(y - 2f, y + 1f, amount)
+        val restingCurve = if (species == LokiSpecies.LOKI) 6.5f else 8.5f
+        val controlY = mix(y - 2f + restingCurve, y - 6f + sin(progress * PI.toFloat() * 2f) * .7f, amount)
+        drawPath(Path().apply {
+            moveTo(122f - smallHalf, edgeY)
+            cubicTo(122f - smallHalf * .70f, controlY, 122f + smallHalf * .70f, controlY, 122f + smallHalf, edgeY)
+        }, ink, style = Stroke(if (species == LokiSpecies.LOKI) 2.7f else 3.8f, cap = StrokeCap.Round))
+    } else if ((mood == LokiClassicMood.ANGRY || mood == LokiClassicMood.SAD) &&
+        style.faceEdit.mouth == LokiMouth.AUTO && amount > .001f) {
+        val angry = mood == LokiClassicMood.ANGRY
+        val expressionHalf = mix(half, 10f, amount)
+        val edgeY = mix(y - 2f, y + if (angry) 6f else 4f, amount)
+        val restingCurve = if (species == LokiSpecies.LOKI) 6.5f else 8.5f
+        val controlY = mix(y - 2f + restingCurve, y - if (angry) 5f else 8f, amount)
+        drawPath(Path().apply { moveTo(122f - expressionHalf, edgeY); quadraticTo(122f, controlY, 122f + expressionHalf, edgeY) },
+            ink, style = Stroke(mix(if (species == LokiSpecies.LOKI) 2.7f else 3.8f,
+                if (angry) 3.6f else 3.1f, amount), cap = StrokeCap.Round))
+    } else {
+        val mouthX = 122f + style.faceEdit.mouthX * 10f
+        val curve = (when {
+            style.faceEdit.mouth == LokiMouth.LINE -> face.smile * 10f
+            prone && species == LokiSpecies.ARTYON -> -4.5f
+            prone -> 5.5f
+            else -> (if (species == LokiSpecies.LOKI) 6.5f else 8.5f) + smile
+        }) * (1f - (frame.paperGag?.serious ?: 0f))
+        drawPath(Path().apply {
+            moveTo(mouthX - half, y - 2f)
+            cubicTo(mouthX - half * .70f, y - 2f + curve,
+                mouthX + half * .70f, y - 2f + curve, mouthX + half, y - 2f)
+        }, ink, style = Stroke(if (species == LokiSpecies.LOKI) 2.7f else 3.8f, cap = StrokeCap.Round))
+    }
+}
+
+private fun DrawScope.classicFlower(g: ClassicGeometry, outline: Color) {
+    val root = Offset(181f, 75f) + g.topOffset
+    rotate(g.topRotation, root) {
+        repeat(5) { i -> rotate(i * 72f, root) {
+            val petal = Path().apply { moveTo(root.x - 9f, root.y - 4f); quadraticTo(root.x - 20f, root.y - 33f, root.x, root.y - 37f); quadraticTo(root.x + 20f, root.y - 33f, root.x + 9f, root.y - 4f); close() }
+            drawPath(petal, Color(0xFFFFB928)); drawPath(petal, outline, style = Stroke(2.7f, join = StrokeJoin.Round))
+        } }
+        drawCircle(outline, 8f, root); drawCircle(Color(0xFFF9EFD8), 5.7f, root)
+    }
+}
+
+private fun DrawScope.classicGround(g: ClassicGeometry, ink: Color) {
+    val y = when { g.bodySize.height < 110f -> 270f; g.soles -> 272f; else -> 270f }
+    val half = if (g.bodySize.height < 100f) 115f else 89f
+    val faded = ink.copy(alpha = .58f)
+    drawLine(faded, Offset(122f - half, y), Offset(122f + half, y), 1.2f, StrokeCap.Round)
+    drawLine(faded, Offset(122f - half + 17f, y + 4f), Offset(122f + half - 25f, y + 4f), .9f, StrokeCap.Round)
+    drawLine(faded, Offset(122f - half - 6f, y - 3f), Offset(122f - half + 29f, y - 3f), .8f, StrokeCap.Round)
+    drawLine(faded, Offset(122f + half - 34f, y - 2f), Offset(122f + half + 8f, y - 2f), .8f, StrokeCap.Round)
+}
+
+private fun organicOval(center: Offset, size: Size, wobble: Float) = Path().apply {
+    val rx = size.width / 2f; val ry = size.height / 2f
+    moveTo(center.x + wobble, center.y - ry)
+    cubicTo(center.x - rx * .92f, center.y - ry * .98f, center.x - rx * 1.06f, center.y + ry * .62f, center.x - wobble, center.y + ry)
+    cubicTo(center.x + rx * .91f, center.y + ry * 1.05f, center.x + rx * 1.04f, center.y - ry * .70f, center.x + wobble, center.y - ry); close()
+}

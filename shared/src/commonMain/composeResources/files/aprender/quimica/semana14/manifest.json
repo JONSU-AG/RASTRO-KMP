@@ -1,0 +1,18 @@
+{
+  "week": 14,
+  "title": "Semana 14",
+  "lessons": [
+    {
+      "subtopic": "14.1",
+      "lessonId": "quim_t14_s01",
+      "title": "Química Orgánica, El Átomo de Carbono e Hidrocarburos - Fundamentos y Leyes Principales",
+      "path": "14.1/lesson.json"
+    },
+    {
+      "subtopic": "14.2",
+      "lessonId": "quim_t14_s02",
+      "title": "Química Orgánica, El Átomo de Carbono e Hidrocarburos - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "14.2/lesson.json"
+    }
+  ]
+}

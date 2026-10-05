@@ -1,0 +1,18 @@
+{
+  "id": "geom_t10_s01",
+  "subjectId": "geometria",
+  "semana": 10,
+  "subtema": "10.1",
+  "title": "CUERPOS DE REVOLUCIÓN: CILINDRO, CONO Y ESFERA - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geometria/GeometriaSemana10.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geom_t10_s01",
+    "asignatura": "Geometría",
+    "semana": 10,
+    "titulo": "CUERPOS DE REVOLUCIÓN: CILINDRO, CONO Y ESFERA - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

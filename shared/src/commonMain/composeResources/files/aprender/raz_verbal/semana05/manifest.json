@@ -1,0 +1,18 @@
+{
+  "week": 5,
+  "title": "Semana 5",
+  "lessons": [
+    {
+      "subtopic": "5.1",
+      "lessonId": "rv_t05_s01",
+      "title": "3.1 Anatomía de un Texto Argumentativo",
+      "path": "5.1/lesson.json"
+    },
+    {
+      "subtopic": "5.2",
+      "lessonId": "rv_t05_s02",
+      "title": "3.2 La Prueba del Debilitamiento y Reforzamiento (Estándar DECO)",
+      "path": "5.2/lesson.json"
+    }
+  ]
+}

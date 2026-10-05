@@ -1,0 +1,18 @@
+{
+  "id": "filo_t08_s01",
+  "subjectId": "filosofia",
+  "semana": 8,
+  "subtema": "8.1",
+  "title": "A. La Crisis de la Subjetividad Moderna y la Razón Ilustrada",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana08.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t08_s01",
+    "asignatura": "Filosofía",
+    "semana": 8,
+    "titulo": "A. La Crisis de la Subjetividad Moderna y la Razón Ilustrada",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

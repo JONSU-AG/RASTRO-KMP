@@ -241,7 +241,11 @@ object CatalogValidator {
         var duplicatesCount = 0
 
         lesson.challenges.forEachIndexed { index, ch ->
-            val normStatement = ch.statement.trim().lowercase()
+            val normStatement = when (ch.type) {
+                ChallengeType.MULTIPLE_CHOICE -> ch.statement
+                ChallengeType.FILL_BLANK -> ch.statement + "\n" + com.jonsuapps.rastro.model.ChallengeInteraction.template(ch)
+                ChallengeType.MATCH_PAIRS -> ch.statement + "\n" + ch.pairs.map { it.left.trim().lowercase() + " → " + it.right.trim().lowercase() }.sorted().joinToString("\n")
+            }.trim().lowercase()
             if (normStatement in statementsSeen) {
                 duplicatesCount++
                 issues.add(
@@ -311,6 +315,12 @@ object CatalogValidator {
                         )
                     }
                 }
+            }
+
+            com.jonsuapps.rastro.model.ChallengeInteraction.validationErrors(ch).forEach { error ->
+                issues.add(ValidationIssue(severity = ValidationSeverity.ERROR, lessonId = lesson.id,
+                    subtema = lesson.subtema, code = "INVALID_INTERACTIVE_CHALLENGE",
+                    message = "Pregunta ${ch.id}: $error"))
             }
 
             // 6. Explicaciones vacías

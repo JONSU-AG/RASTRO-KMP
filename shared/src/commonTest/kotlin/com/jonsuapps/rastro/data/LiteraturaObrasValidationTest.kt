@@ -9,9 +9,9 @@ import kotlin.test.assertTrue
 class LiteraturaObrasValidationTest {
 
     @Test
-    fun testAll40ObrasArePresent() {
+    fun testIndividual2027ObrasArePresent() {
         val allObras = LiteraturaRepository.obras
-        assertEquals(40, allObras.size, "Deben existir exactamente 40 obras literarias en LiteraturaRepository")
+        assertEquals(48, allObras.size, "Catálogo individual ampliado con las obras del temario 2027")
     }
 
     @Test

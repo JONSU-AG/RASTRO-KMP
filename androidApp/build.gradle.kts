@@ -11,8 +11,26 @@ val localSecrets = Properties().apply {
     rootProject.file("local.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) }
 }
 
+// Signing material stays outside Git, in the existing ignored local.properties.
+val releaseSigningKeys = listOf("storeFile", "storePassword", "keyAlias", "keyPassword")
+val releaseSigningValues = releaseSigningKeys.associateWith {
+    localSecrets.getProperty("rastro.signing.$it").orEmpty()
+}
+val hasReleaseSigning = releaseSigningValues.values.any { it.isNotEmpty() }
+if (hasReleaseSigning) {
+    require(releaseSigningValues.values.all { it.isNotEmpty() }) {
+        "Incomplete local RASTRO release signing configuration."
+    }
+    require(rootProject.file(releaseSigningValues.getValue("storeFile")).isFile) {
+        "RASTRO release keystore not found."
+    }
+}
+
 android {
     namespace = "com.jonsuapps.rastro"
+    // Single source of truth. Android's asset merge tracks these files on every build.
+    // Replacing a PNG with the same name requires no manual copy/import or code change.
+    sourceSets.getByName("main").assets.srcDir(rootProject.file("LOGO/BANNER-CURSOS"))
     compileSdk = 36
     val youtubeDataApiKey = providers.gradleProperty("YOUTUBE_DATA_API_KEY").orNull
         ?: localSecrets.getProperty("YOUTUBE_DATA_API_KEY").orEmpty()
@@ -21,8 +39,8 @@ android {
         applicationId = "com.jonsuapps.rastro"
         minSdk = 24
         targetSdk = 36
-        versionCode = 3
-        versionName = "1.0.3"
+        versionCode = 201
+        versionName = "2.0.1"
         buildConfigField("String", "YOUTUBE_DATA_API_KEY", "\"$youtubeDataApiKey\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -33,9 +51,24 @@ android {
         buildConfig = true
     }
 
+    if (hasReleaseSigning) {
+        signingConfigs {
+            create("rastroRelease") {
+                storeFile = rootProject.file(releaseSigningValues.getValue("storeFile"))
+                storePassword = releaseSigningValues.getValue("storePassword")
+                keyAlias = releaseSigningValues.getValue("keyAlias")
+                keyPassword = releaseSigningValues.getValue("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isDebuggable = false
+            if (hasReleaseSigning) {
+                signingConfig = signingConfigs.getByName("rastroRelease")
+            }
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -53,84 +86,14 @@ android {
     }
 }
 
-// Sincronización automática inmediata de mascotas y logos desde copia rastro react
-val mascotSrcDir = file("../copia rastro react/public/assets/mascots")
-val resDrawableDir = file("src/main/res/drawable")
-if (mascotSrcDir.exists() && resDrawableDir.exists()) {
-    mascotSrcDir.listFiles()?.filter { it.extension.equals("png", ignoreCase = true) }?.forEach { f ->
-        val destFile = File(resDrawableDir, f.name.lowercase().replace("-", "_"))
-        if (!destFile.exists() || destFile.length() != f.length()) {
-            f.copyTo(destFile, overwrite = true)
-        }
-    }
-    val assetsSrcDir = file("../copia rastro react/public/assets")
-    File(assetsSrcDir, "ARTYON.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "artyon_banner.png"), overwrite = true) }
-    File(assetsSrcDir, "ORSTYY_ARTYON.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "orstty_artyon.png"), overwrite = true) }
-    File(assetsSrcDir, "ORSTYY_ARTYON2.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "orstty_artyon2.png"), overwrite = true) }
-    val pubSrcDir = file("../copia rastro react/public")
-    File(pubSrcDir, "applogo.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "app_logo.png"), overwrite = true) }
-    File(pubSrcDir, "astrologo.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "astro_logo.png"), overwrite = true) }
-    
-    // Logos emocionales dinámicos desde la carpeta LOGO
-    val logoSrcDir = file("../LOGO")
-    if (logoSrcDir.exists()) {
-        File(logoSrcDir, "LOGOBASE.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "rastro_logo_base.png"), overwrite = true) }
-        File(logoSrcDir, "LOGO-ENOJO.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "rastro_logo_enojo.png"), overwrite = true) }
-        File(logoSrcDir, "LOGO-FURIA.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "rastro_logo_furia.png"), overwrite = true) }
-        File(logoSrcDir, "LOGOTRISTE.png").let { if (it.exists()) it.copyTo(File(resDrawableDir, "rastro_logo_triste.png"), overwrite = true) }
-    }
-}
-
-val copyMascotAssets by tasks.registering(Copy::class) {
-    from(file("../copia rastro react/public/assets/mascots")) {
-        rename { name -> name.lowercase().replace("-", "_") }
-    }
-    from(file("../copia rastro react/public/assets")) {
-        include("ARTYON.png")
-        rename { "artyon_banner.png" }
-    }
-    from(file("../copia rastro react/public/assets")) {
-        include("ORSTYY_ARTYON.png")
-        rename { "orstty_artyon.png" }
-    }
-    from(file("../copia rastro react/public/assets")) {
-        include("ORSTYY_ARTYON2.png")
-        rename { "orstty_artyon2.png" }
-    }
-    from(file("../copia rastro react/public")) {
-        include("applogo.png")
-        rename { "app_logo.png" }
-    }
-    from(file("../copia rastro react/public")) {
-        include("astrologo.png")
-        rename { "astro_logo.png" }
-    }
-    from(file("../LOGO")) {
-        include("LOGOBASE.png")
-        rename { "rastro_logo_base.png" }
-    }
-    from(file("../LOGO")) {
-        include("LOGO-ENOJO.png")
-        rename { "rastro_logo_enojo.png" }
-    }
-    from(file("../LOGO")) {
-        include("LOGO-FURIA.png")
-        rename { "rastro_logo_furia.png" }
-    }
-    from(file("../LOGO")) {
-        include("LOGOTRISTE.png")
-        rename { "rastro_logo_triste.png" }
-    }
-    into(file("src/main/res/drawable"))
-}
-
-tasks.named("preBuild") {
-    dependsOn(copyMascotAssets)
-}
+// Mascotas y logos son recursos locales versionados; el build no lee ni escribe copias externas.
 
 dependencies {
+    implementation("com.airbnb.android:lottie:6.6.7")
     implementation(project(":shared"))
     testImplementation("junit:junit:4.13.2")
+    testImplementation(libs.kotlinx.serialization.json)
+    implementation(libs.kotlinx.serialization.json)
     
     // Compose BoM Oficial
     implementation(platform(libs.compose.bom))
@@ -163,3 +126,13 @@ dependencies {
     implementation(libs.firebase.storage)
     implementation(libs.firebase.analytics)
 }
+
+// Prepared RASTRO artwork is packaged verbatim; export/source manifests stay outside the app.
+val prepareLearningArtwork by tasks.registering(Sync::class) {
+    from(rootProject.file("LOGO")) {
+        include("ANIMACION/*.json", "SONIDOS/*.mp3")
+    }
+    into(layout.buildDirectory.dir("generated/learningArtwork"))
+}
+android.sourceSets.getByName("main").assets.srcDir(layout.buildDirectory.dir("generated/learningArtwork"))
+tasks.named("preBuild") { dependsOn(prepareLearningArtwork) }

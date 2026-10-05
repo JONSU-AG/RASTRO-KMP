@@ -1,0 +1,18 @@
+{
+  "week": 5,
+  "title": "TEMA 05: DEMOCRACIA Y SISTEMA POLÍTICO",
+  "lessons": [
+    {
+      "subtopic": "5.1",
+      "lessonId": "civ_t05_s01",
+      "title": "La Democracia: Concepto, Principios, Modelos y Partidos Políticos",
+      "path": "5.1/lesson.json"
+    },
+    {
+      "subtopic": "5.2",
+      "lessonId": "civ_t05_s02",
+      "title": "El Sistema Electoral Peruano: Procesos, Balotaje, Valla Electoral y Cifra Repartidora",
+      "path": "5.2/lesson.json"
+    }
+  ]
+}

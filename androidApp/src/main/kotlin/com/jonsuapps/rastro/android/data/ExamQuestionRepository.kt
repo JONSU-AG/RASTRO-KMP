@@ -16,25 +16,8 @@ object ExamQuestionRepository {
         details: String,
         onComplete: (Result<Unit>) -> Unit
     ) {
-        val user = FirebaseAuth.getInstance().currentUser
-        val payload = mapOf(
-            "targetId" to question.id,
-            "targetTitle" to question.q,
-            "targetType" to "examen",
-            "reportedUser" to null,
-            "reporterUid" to (user?.uid ?: "anonimo"),
-            "reporterEmail" to (user?.email ?: "anonimo"),
-            "reason" to reason,
-            "reasonLabel" to reason,
-            "details" to details.trim(),
-            "autoHideApplied" to false,
-            "status" to "pendiente",
-            "createdAt" to FieldValue.serverTimestamp(),
-            "timestamp" to System.currentTimeMillis()
-        )
-        FirebaseFirestore.getInstance().collection("reportes").add(payload)
-            .addOnSuccessListener { onComplete(Result.success(Unit)) }
-            .addOnFailureListener { onComplete(Result.failure(it)) }
+        AcademicReportRepository.send(question.id, question.q, "Simulador · ${question.asignatura}",
+            "$reason\n$details\nOpciones: ${question.options.joinToString()}\nClave: ${question.answer}", onComplete)
     }
 
     fun createCommunityQuestion(

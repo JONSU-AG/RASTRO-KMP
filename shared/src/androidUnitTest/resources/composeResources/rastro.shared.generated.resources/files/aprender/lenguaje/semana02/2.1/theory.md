@@ -133,3 +133,9 @@ Lugar igual a dialecto diatópico con cinco niveles. Chibolo y churre igual a l�
 ## RESUMEN
 
 Variaciones de la lengua con dialecto geográfico en cinco niveles, sociolecto social en tres niveles e idiolecto individual por edad, profesión y registro. Dialecto con seseo y aspiración en fonética, chibolo y pibe en léxico, guagua con doble sentido en semántica, aquicito en morfología y genitivo antepuesto en sintaxis. Sociolecto con superestándar literario, estándar culto y coloquial, y subestándar popular con haiga y vulgar con replana. Idiolecto con lenguaje infantil y juvenil, tecnolecto médico y jurídico, y alternancia formal e informal. Perú multilingüe con 48 lenguas, quechua mayoritario, Aru con aimara y jacaru, y Amazonía con ASH-SHI-AWA como contexto nacional.
+
+## Variedad situacional y origen latino del español
+
+La variedad situacional o registro cambia según propósito, relación entre participantes, canal y contexto. Una misma persona puede usar un registro formal en una exposición e informal con amistades; esto no implica que hable dos idiomas diferentes. Dialecto se relaciona con variación territorial, sociolecto con grupos sociales e idiolecto con rasgos personales.
+
+El español procede principalmente del latín hablado, transformado históricamente en la península ibérica. El contacto con otras lenguas aportó vocabulario y usos. Su origen latino no significa que el español actual tenga la misma gramática ni que todas sus palabras provengan del latín. Adecuar un registro consiste en elegir recursos apropiados al intercambio, sin considerar inferior una variedad por la identidad de sus hablantes.

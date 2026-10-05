@@ -1,0 +1,18 @@
+{
+  "id": "huni_t04_s01",
+  "subjectId": "historia_universal",
+  "semana": 4,
+  "subtema": "4.1",
+  "title": "3.1. Reinos Romano-Germánicos, Imperio Carolingio y el Islam",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_huni_t04_s01",
+    "asignatura": "Historia Universal",
+    "semana": 4,
+    "titulo": "3.1. Reinos Romano-Germánicos, Imperio Carolingio y el Islam",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

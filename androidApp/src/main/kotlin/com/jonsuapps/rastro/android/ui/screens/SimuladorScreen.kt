@@ -1,10 +1,25 @@
 package com.jonsuapps.rastro.android.ui.screens
+import com.jonsuapps.rastro.android.util.openExternalIntent
+import com.jonsuapps.rastro.theme.accentText
+import com.jonsuapps.rastro.theme.onAccent
+import com.jonsuapps.rastro.android.ui.components.rastroAcademicBackground
 
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.*
+import com.jonsuapps.rastro.model.RankingExamCatalog
+import com.jonsuapps.rastro.android.data.RankingExamRepository
+import com.jonsuapps.rastro.android.ui.components.contrastingText
+import com.jonsuapps.rastro.android.ui.components.answerText
+import com.jonsuapps.rastro.android.ui.components.answerSurface
+import com.jonsuapps.rastro.android.ui.components.ClassicArtwork
+import com.jonsuapps.rastro.android.ui.components.ClassicAppearance
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -51,6 +66,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.key
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -61,9 +77,12 @@ import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -97,7 +116,9 @@ import com.jonsuapps.rastro.theme.ThemeManager
 
 @Composable
 fun SimuladorScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    initialTab: Int = 0,
+    onOpenLeagues: () -> Unit = {}
 ) {
     val theme = ThemeManager.currentTheme
     val context = LocalContext.current
@@ -111,7 +132,7 @@ fun SimuladorScreen(
     val orderOptions = listOf("Oficial UNSA", "Letras primero", "Ciencias primero", "Aleatorio")
 
     var isExamRunning by remember { mutableStateOf(false) }
-    var activeSimulatorTab by remember { mutableIntStateOf(2) }
+    var activeSimulatorTab by remember { mutableIntStateOf(initialTab) }
     var quickQuestionCount by remember { mutableIntStateOf(15) }
     var quickSearch by remember { mutableStateOf("") }
     var quickSubjectFilter by remember { mutableStateOf("todas") }
@@ -119,9 +140,42 @@ fun SimuladorScreen(
     var quickAuthorFilter by remember { mutableStateOf("todos") }
     var currentQuestionIndex by remember { mutableIntStateOf(0) }
     val userAnswers = remember { mutableStateMapOf<String, Int>() }
+    var examAttemptId by remember { mutableStateOf("") }
     var examResult by remember { mutableStateOf<ExamEvaluationResult?>(null) }
     var showFinishConfirmationDialog by remember { mutableStateOf(false) }
     var showCreateQuestionDialog by remember { mutableStateOf(false) }
+    var frozenQuestions by remember { mutableStateOf(emptyList<com.jonsuapps.rastro.model.ExamQuestion>()) }
+    var activeRankingConfig by remember { mutableStateOf<com.jonsuapps.rastro.model.RankingExamConfig?>(null) }
+    var competitionMessage by remember { mutableStateOf<String?>(null) }
+    var reserving by remember { mutableStateOf(false) }
+    var rankingUsed by remember { mutableIntStateOf(0) }
+    var rankingBonus by remember { mutableIntStateOf(0) }
+    var usageReady by remember { mutableStateOf(false) }
+    var rankingRetry by remember { mutableIntStateOf(0) }
+    val screenActive = remember { java.util.concurrent.atomic.AtomicBoolean(true) }
+    DisposableEffect(Unit) { onDispose { screenActive.set(false) } }
+    var rankingConfig by remember(selectedArea) { mutableStateOf(RankingExamCatalog.forArea(selectedArea)) }
+    val latestRankingConfig by androidx.compose.runtime.rememberUpdatedState(rankingConfig)
+    LaunchedEffect(selectedArea, activeSimulatorTab, isExamRunning, rankingRetry) {
+        if (activeSimulatorTab == 4 && !isExamRunning) {
+            usageReady = false
+            val area = selectedArea
+            var requestActive = true
+            try {
+            RankingExamRepository.config(area) { result ->
+                if (requestActive && screenActive.get() && latestRankingConfig.area == area) result.onSuccess { loaded ->
+                    rankingConfig = loaded
+                    RankingExamRepository.usage(loaded) { usage ->
+                        if (requestActive && screenActive.get() && latestRankingConfig == loaded) usage.onSuccess { rankingUsed = it.first; rankingBonus = it.second; usageReady = true; competitionMessage = null }
+                            .onFailure { competitionMessage = it.localizedMessage }
+                    }
+                }.onFailure { competitionMessage = "No se pudo cargar la configuración: ${it.localizedMessage}" }
+            }
+            kotlinx.coroutines.awaitCancellation()
+            } finally { requestActive = false }
+        }
+    }
+
 
     LaunchedEffect(context) {
         officialQuestionBank = withContext(Dispatchers.IO) { ExamQuestionRepository.loadOfficialBank(context) }
@@ -153,18 +207,25 @@ fun SimuladorScreen(
             subjectMatches && weekMatches && authorMatches && searchMatches
         }
     }
-    val examQuestions by produceState(
+    val preparedQuestions by produceState(
         initialValue = emptyList<com.jonsuapps.rastro.model.ExamQuestion>(),
         activeSimulatorTab, allExamQuestions, quickFilteredQuestions, quickQuestionCount, selectedArea, selectedOrderPreference, questionShuffleSeed
     ) {
         value = withContext(Dispatchers.Default) {
             when (activeSimulatorTab) {
                 0 -> if (allExamQuestions.isNotEmpty()) SimuladorRepository.generateOfficialSimulacro80(allExamQuestions, selectedArea, selectedOrderPreference, questionShuffleSeed) else emptyList()
+                4 -> runCatching { SimuladorRepository.generateRankingExam(
+                    ExamQuestionRepository.getQuestionsForSimulacro(officialQuestionBank), selectedArea, questionShuffleSeed)
+                }.getOrElse { emptyList() }
                 1 -> if (quickQuestionCount < 0) quickFilteredQuestions else quickFilteredQuestions.take(quickQuestionCount.coerceAtLeast(1))
                 else -> allExamQuestions
             }
         }
     }
+
+    val examQuestions = if ((isExamRunning && activeSimulatorTab != 1) || examResult != null) frozenQuestions else preparedQuestions
+    val rankingBankError = if (activeSimulatorTab == 4 && preparedQuestions.isEmpty())
+        "El banco todavía no tiene 80 preguntas reales con peso conocido disponibles para este examen." else null
 
     if (showFinishConfirmationDialog) {
         val answeredCount = examQuestions.count { it.id in userAnswers }
@@ -178,6 +239,7 @@ fun SimuladorScreen(
             theme = theme,
             onConfirm = {
                 showFinishConfirmationDialog = false
+                frozenQuestions = examQuestions.toList()
                 isExamRunning = false
                 examResult = SimuladorRepository.calculateScore(
                     questions = examQuestions,
@@ -186,6 +248,27 @@ fun SimuladorScreen(
                     }.toMap(),
                     area = selectedArea
                 )
+                com.jonsuapps.rastro.android.data.ErrorBankRepository.recordExam(frozenQuestions, userAnswers.toMap(),
+                    when { activeRankingConfig != null -> com.jonsuapps.rastro.android.data.ErrorBankOrigins.RANKING
+                        activeSimulatorTab == 1 -> com.jonsuapps.rastro.android.data.ErrorBankOrigins.EXAMEN_RAPIDO
+                        else -> com.jonsuapps.rastro.android.data.ErrorBankOrigins.SIMULACRO })
+                activeRankingConfig?.let { config ->
+                    competitionMessage = "Guardando puntaje Ranking…"
+                    RankingExamRepository.complete(config, examAttemptId, examResult!!) { result ->
+                        result.onSuccess { competitionMessage = "Puntaje Ranking registrado: ${examResult?.let { SimuladorRepository.rankingScore(it) }}" }
+                            .onFailure { competitionMessage = "No se pudo guardar el puntaje. Reintenta el envío: ${it.localizedMessage}" }
+                    }
+                }
+                val awarded = com.jonsuapps.rastro.gamification.GamificationManager.claimExamReward(
+                    examAttemptId, examResult!!.correctCount)
+                if (awarded > 0) {
+                    val uid = com.google.firebase.auth.FirebaseAuth.getInstance().currentUser?.uid.orEmpty()
+                    com.jonsuapps.rastro.android.data.GamificationRepository.saveLocal(uid,
+                        com.jonsuapps.rastro.gamification.GamificationManager.state.value)
+                    if (uid.isNotBlank()) com.jonsuapps.rastro.android.data.GamificationRepository.save(uid,
+                        com.jonsuapps.rastro.gamification.GamificationManager.state.value)
+                    com.jonsuapps.rastro.android.ui.components.XpDelivery.show(awarded)
+                }
             }
         )
     }
@@ -193,22 +276,39 @@ fun SimuladorScreen(
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(theme.background),
+            .rastroAcademicBackground(theme),
         contentAlignment = Alignment.TopCenter
     ) {
         when {
             // Pantalla de Resultados Ponderados Oficiales
             examResult != null -> {
+                Column(Modifier.fillMaxSize()) {
+                if (activeRankingConfig != null) {
+                    Text(competitionMessage.orEmpty(), color = theme.textPrimary, modifier = Modifier.padding(16.dp))
+                    Row {
+                        TextButton(onClick = onOpenLeagues) { Text("Ver Ligas") }
+                        TextButton(onClick = { activeRankingConfig?.let { config ->
+                            RankingExamRepository.complete(config, examAttemptId, examResult!!) { result ->
+                                competitionMessage = if (result.isSuccess) "Puntaje Ranking registrado" else "Error: ${result.exceptionOrNull()?.localizedMessage}"
+                            }
+                        } }) { Text("Sincronizar puntaje") }
+                    }
+                }
                 ExamResultView(
                     result = examResult!!,
-                    area = selectedArea,
+                    allowReview = activeSimulatorTab != 1,
+                    reviewQuestions = frozenQuestions,
+                    isRanking = activeRankingConfig != null,
+                    area = activeRankingConfig?.area ?: selectedArea,
                     theme = theme,
                     onRetry = {
                         examResult = null
+                        activeRankingConfig = null
                         userAnswers.clear()
                         currentQuestionIndex = 0
                     }
                 )
+                }
             }
 
             // Examen en Curso
@@ -216,7 +316,7 @@ fun SimuladorScreen(
                 ExamActiveView(
                     questions = examQuestions,
                     currentIndex = currentQuestionIndex,
-                    userAnswers = userAnswers,
+                    userAnswers = userAnswers.toMap(),
                     theme = theme,
                     isQuickExam = activeSimulatorTab == 1,
                     search = quickSearch,
@@ -230,6 +330,7 @@ fun SimuladorScreen(
                     selectedAuthor = quickAuthorFilter,
                     onAuthorChange = { quickAuthorFilter = it; currentQuestionIndex = 0 },
                     onSelectAnswer = { questionId, optIdx ->
+                        if (userAnswers[questionId] != optIdx) com.jonsuapps.rastro.android.ui.components.DuolingoHaptics.playOptionSelected(context)
                         userAnswers[questionId] = optIdx
                     },
                     onNavigateQuestion = { nextIdx ->
@@ -246,14 +347,22 @@ fun SimuladorScreen(
             else -> {
                 ExamSetupView(
                     activeTab = activeSimulatorTab,
-                    onSelectTab = { activeSimulatorTab = it },
+                    onSelectTab = { if (!reserving) activeSimulatorTab = it },
                     selectedArea = selectedArea,
-                    onSelectArea = { selectedArea = it },
+                    onSelectArea = { if (!reserving) selectedArea = it },
                     selectedOrder = selectedOrderPreference,
                     onSelectOrder = { selectedOrderPreference = it },
                     orderOptions = orderOptions,
                     theme = theme,
-                    canStartOfficial = allExamQuestions.isNotEmpty(),
+                    canStartOfficial = preparedQuestions.isNotEmpty() && !reserving,
+                    rankingConfig = rankingConfig,
+                    rankingUsage = rankingConfig.remaining(rankingUsed, rankingBonus),
+                    rankingCanStart = usageReady && !reserving && rankingConfig.canAttempt(
+                        FirebaseAuth.getInstance().currentUser?.takeUnless { it.isAnonymous }?.uid.orEmpty(),
+                        com.jonsuapps.rastro.gamification.GamificationManager.state.value.level, rankingUsed, rankingBonus),
+                    rankingMessage = rankingBankError ?: competitionMessage,
+                    onRetryRanking = { if (!reserving) rankingRetry++ },
+                    onOpenLeagues = onOpenLeagues,
                     quickQuestionCount = quickQuestionCount,
                     onQuickQuestionCountChange = { quickQuestionCount = it },
                     availableQuestionCount = quickFilteredQuestions.size,
@@ -272,10 +381,27 @@ fun SimuladorScreen(
                     },
                     onShuffleQuestions = { questionShuffleSeed++ },
                     onCreateQuestion = { showCreateQuestionDialog = true },
-                    onStartExam = {
-                        userAnswers.clear()
-                        currentQuestionIndex = 0
-                        isExamRunning = true
+                    onStartExam = startExam@{
+                        if (reserving || isExamRunning) return@startExam
+                        val snapshot = preparedQuestions.toList()
+                        val attemptId = java.util.UUID.randomUUID().toString()
+                        fun start() {
+                            frozenQuestions = snapshot
+                            userAnswers.clear(); currentQuestionIndex = 0
+                            examAttemptId = attemptId
+                            isExamRunning = true
+                        }
+                        if (activeSimulatorTab == 4 && snapshot.isNotEmpty()) {
+                            val config = rankingConfig
+                            val reservingUid = FirebaseAuth.getInstance().currentUser?.uid
+                            reserving = true; competitionMessage = "Registrando intento…"
+                            RankingExamRepository.reserve(config, com.jonsuapps.rastro.gamification.GamificationManager.state.value.level, attemptId) { result ->
+                                if (!screenActive.get() || FirebaseAuth.getInstance().currentUser?.uid != reservingUid) return@reserve
+                                reserving = false
+                                result.onSuccess { activeRankingConfig = config; competitionMessage = null; start() }
+                                    .onFailure { competitionMessage = it.localizedMessage }
+                            }
+                        } else if (snapshot.isNotEmpty()) { activeRankingConfig = null; start() }
                     }
                 )
             }
@@ -284,6 +410,7 @@ fun SimuladorScreen(
     if (showCreateQuestionDialog) CreateExamQuestionDialog(onDismiss = { showCreateQuestionDialog = false })
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun ExamSetupView(
     activeTab: Int,
@@ -295,6 +422,12 @@ fun ExamSetupView(
     orderOptions: List<String>,
     theme: com.jonsuapps.rastro.theme.RastroPalette,
     canStartOfficial: Boolean,
+    rankingConfig: com.jonsuapps.rastro.model.RankingExamConfig,
+    rankingUsage: Int?,
+    rankingCanStart: Boolean,
+    rankingMessage: String?,
+    onRetryRanking: () -> Unit,
+    onOpenLeagues: () -> Unit,
     quickQuestionCount: Int,
     onQuickQuestionCountChange: (Int) -> Unit,
     availableQuestionCount: Int,
@@ -313,176 +446,45 @@ fun ExamSetupView(
     onCreateQuestion: () -> Unit,
     onStartExam: () -> Unit
 ) {
-    val simulatorTabs = listOf(
-        Pair("Simulacro (80)", Icons.Rounded.TrackChanges),
-        Pair("Examen Rápido", Icons.Rounded.Bolt),
-        Pair("Calculadora", Icons.Rounded.Calculate),
-        Pair("Flashcards", Icons.Rounded.CollectionsBookmark)
-    )
-
     LazyColumn(
         modifier = Modifier
-            .fillMaxSize()
-            .widthIn(max = 760.dp),
-        contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 20.dp, bottom = 120.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+            .widthIn(max = 760.dp)
+            .fillMaxSize(),
+        contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 10.dp, bottom = 120.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        // ──────────────── 1. TÍTULO Y SUBTÍTULO CENTRADO (Foto 5) ────────────────
         item {
-            Column(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Text(
-                    text = "Simulador Académico",
-                    fontSize = 28.sp,
-                    fontWeight = FontWeight.Black,
-                    color = theme.textPrimary,
-                    textAlign = TextAlign.Center,
-                    letterSpacing = (-0.5).sp
-                )
-                Spacer(modifier = Modifier.height(6.dp))
-                Text(
-                    text = "Calcula con precisión tu puntaje ponderado oficial y pon a prueba tu preparación.",
-                    fontSize = 14.sp,
-                    color = theme.textSecondary,
-                    textAlign = TextAlign.Center,
-                    lineHeight = 19.sp,
-                    modifier = Modifier.padding(horizontal = 16.dp)
-                )
+            Column(Modifier.fillMaxWidth()) {
+                Text("Simulador Académico", fontSize = 25.sp, lineHeight = 29.sp,
+                    fontWeight = FontWeight.Black, color = theme.textPrimary, letterSpacing = (-.5).sp)
+                Box(Modifier.width(36.dp).height(3.dp).background(theme.answerText(false).copy(alpha = .55f), RoundedCornerShape(3.dp)))
+                Spacer(Modifier.height(3.dp))
+                Text("Practica, repasa y calcula tu puntaje.", fontSize = 13.sp, lineHeight = 18.sp, color = theme.textSecondary)
             }
         }
-
-        // ──────────────── 2. CARRUSEL CON FLECHITAS < Y > ────────────────
-        item {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(6.dp)
-            ) {
-                // Flecha Izquierda con micro-rebote 3D
-                Sticker3dCircleButton(
-                    onClick = { if (activeTab > 0) onSelectTab(activeTab - 1) },
-                    enabled = activeTab > 0,
-                    size = 38.dp,
-                    containerColor = theme.surface,
-                    bottomBevelColor = theme.cardBevel,
-                    strokeColor = theme.strokeBorder,
-                    strokeWidth = 1.5.dp,
-                    bevelHeight = 2.5.dp
-                ) {
-                    Icon(
-                        Icons.Rounded.ChevronLeft,
-                        contentDescription = "Anterior",
-                        tint = if (activeTab > 0) Color(0xFF007AFF) else theme.textSecondary.copy(alpha = 0.4f),
-                        modifier = Modifier.size(20.dp)
-                    )
-                }
-
-                // Pestañas horizontales con estilo Apple Glass y micro-rebote Duolingo
-                LazyRow(
-                    modifier = Modifier
-                        .weight(1f)
-                        .appleGlass(
-                            cornerRadius = 22.dp,
-                            isDark = !theme.isLight,
-                            tintColor = theme.surface,
-                            alpha = if (theme.isLight) 0.88f else 0.70f
-                        )
-                        .border(1.8.dp, theme.strokeBorder, RoundedCornerShape(22.dp))
-                        .padding(5.dp),
-                    horizontalArrangement = Arrangement.spacedBy(6.dp)
-                ) {
-                    items(simulatorTabs.size) { index ->
-                        val isSelected = activeTab == index
-                        val (tabTitle, tabIcon) = simulatorTabs[index]
-                        val bgBrush = when (index) {
-                            0 -> if (isSelected) Brush.horizontalGradient(listOf(Color(0xFF10B981), Color(0xFF059669))) else null
-                            1 -> if (isSelected) Brush.horizontalGradient(listOf(Color(0xFFEC4899), Color(0xFFF43F5E))) else null
-                            2 -> if (isSelected) Brush.horizontalGradient(listOf(Color(0xFF007AFF), Color(0xFF00C6FF))) else null
-                            else -> if (isSelected) Brush.horizontalGradient(listOf(Color(0xFF6366F1), Color(0xFF8B5CF6))) else null
-                        }
-
-                        Surface(
-                            shape = RoundedCornerShape(14.dp),
-                            color = Color.Transparent,
-                            modifier = Modifier
-                                .then(
-                                    if (bgBrush != null) Modifier.background(bgBrush, RoundedCornerShape(14.dp))
-                                    else Modifier
-                                )
-                                .bouncyClick(scaleDown = 0.92f) { onSelectTab(index) }
-                        ) {
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(6.dp),
-                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)
-                            ) {
-                                Icon(
-                                    imageVector = tabIcon,
-                                    contentDescription = null,
-                                    tint = if (isSelected) Color.White else theme.textSecondary,
-                                    modifier = Modifier.size(15.dp)
-                                )
-                                Text(
-                                    text = tabTitle,
-                                    fontSize = 12.sp,
-                                    fontWeight = FontWeight.ExtraBold,
-                                    color = if (isSelected) Color.White else theme.textSecondary
-                                )
-                            }
-                        }
+        item { SimulatorMenu(theme, activeTab, onSelectTab) }
+        if (activeTab == 4) item {
+            Sticker3dCard(containerColor = theme.surfaceAccent, strokeColor = theme.strokeBorder, bevelColor = theme.cardBevel) {
+                Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Text("Examen Ranking", color = theme.textPrimary, fontSize = 26.sp, fontWeight = FontWeight.Black)
+                    Text("80 preguntas reales del banco · Puntaje competitivo de 0 a 100 con pesos existentes. El simulacro normal continúa disponible para practicar.", color = theme.textSecondary)
+                    FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        AreaAdmision.entries.forEach { area -> FilterChip(selected = selectedArea == area, onClick = { onSelectArea(area) }, label = { Text(area.label) }) }
                     }
-                }
-
-                // Flecha Derecha con micro-rebote 3D
-                Sticker3dCircleButton(
-                    onClick = { if (activeTab < simulatorTabs.size - 1) onSelectTab(activeTab + 1) },
-                    enabled = activeTab < simulatorTabs.size - 1,
-                    size = 38.dp,
-                    containerColor = theme.surface,
-                    bottomBevelColor = theme.cardBevel,
-                    strokeColor = theme.strokeBorder,
-                    strokeWidth = 1.5.dp,
-                    bevelHeight = 2.5.dp
-                ) {
-                    Icon(
-                        Icons.Rounded.ChevronRight,
-                        contentDescription = "Siguiente",
-                        tint = if (activeTab < simulatorTabs.size - 1) Color(0xFF007AFF) else theme.textSecondary.copy(alpha = 0.4f),
-                        modifier = Modifier.size(20.dp)
-                    )
+                    Text(if (rankingUsage == null) "Intentos ilimitados" else "$rankingUsage intentos disponibles", color = theme.textPrimary, fontWeight = FontWeight.Bold)
+                    Text(if (rankingConfig.audience == com.jonsuapps.rastro.model.ExamAudience.EVERYONE) "Participación: cualquier cuenta registrada" else "Participación: usuarios elegibles", color = theme.textSecondary)
+                    rankingMessage?.let {
+                        Text(it, color = theme.textPrimary)
+                        if (it != "Registrando intento…") TextButton(onClick = onRetryRanking) { Text("Reintentar", color = theme.accentText) }
+                    }
+                    Sticker3dButton(onClick = onStartExam, enabled = canStartOfficial && rankingCanStart,
+                        modifier = Modifier.fillMaxWidth(), containerColor = theme.accent, bottomBevelColor = theme.accentBevel) {
+                        Text("COMENZAR EXAMEN RANKING", color = contrastingText(theme.accent), fontWeight = FontWeight.Black)
+                    }
+                    TextButton(onClick = onOpenLeagues) { Text("Ver mi liga y clasificación", color = theme.accentText) }
                 }
             }
         }
-
-        // ──────────────── 3. BANNER AZUL INFORMATIVO (Foto 5) ────────────────
-        item {
-            Sticker3dCard(
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(14.dp),
-                containerColor = Color(0xFF007AFF).copy(alpha = 0.08f),
-                bottomBevelColor = Color(0xFF007AFF).copy(alpha = 0.22f),
-                strokeColor = theme.strokeBorder,
-                bevelHeight = 2.5.dp,
-                strokeWidth = 1.5.dp
-            ) {
-                Row(
-                    modifier = Modifier.padding(vertical = 8.dp, horizontal = 14.dp),
-                    horizontalArrangement = Arrangement.Center,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = "‹ ↔ Desliza horizontalmente para ver las 4 secciones ↔ ›",
-                        fontSize = 11.sp,
-                        fontWeight = FontWeight.Black,
-                        color = Color(0xFF007AFF),
-                        textAlign = TextAlign.Center
-                    )
-                }
-            }
-        }
-
         // ──────────────── 4. TARJETA OFICIAL DE ADMISIÓN (Foto 5) ────────────────
         if (activeTab == 0) item {
             Sticker3dCard(
@@ -493,24 +495,24 @@ fun ExamSetupView(
                 strokeColor = theme.strokeBorder,
                 bevelHeight = 4.dp
             ) {
-                Column(modifier = Modifier.padding(20.dp)) {
+                Column(modifier = Modifier.padding(16.dp)) {
                     // Chip Verde Menta: MODALIDAD OFICIAL UNSA
                     Surface(
                         shape = RoundedCornerShape(10.dp),
-                        color = Color(0xFF10B981).copy(alpha = 0.12f),
-                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF10B981).copy(alpha = 0.3f))
+                        color = theme.answerText(true).copy(alpha = 0.12f),
+                        border = androidx.compose.foundation.BorderStroke(1.dp, theme.answerText(true).copy(alpha = 0.3f))
                     ) {
                         Row(
                             modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Icon(Icons.Rounded.Bookmark, contentDescription = null, tint = Color(0xFF10B981), modifier = Modifier.size(14.dp))
+                            Icon(Icons.Rounded.Bookmark, contentDescription = null, tint = theme.answerText(true), modifier = Modifier.size(14.dp))
                             Spacer(modifier = Modifier.width(4.dp))
                             Text(
                                 text = "MODALIDAD OFICIAL UNSA",
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Black,
-                                color = Color(0xFF059669),
+                                color = theme.answerText(true),
                                 letterSpacing = 0.5.sp
                             )
                         }
@@ -518,26 +520,22 @@ fun ExamSetupView(
 
                     Spacer(modifier = Modifier.height(14.dp))
 
-                    // Título y Descripción del Simulacro
-                    Text(
-                        text = "Simulacro de Admisión (80 Preguntas)",
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Black,
-                        color = theme.textPrimary,
-                        letterSpacing = (-0.4).sp
-                    )
-
-                    Spacer(modifier = Modifier.height(6.dp))
-
-                    Text(
-                        text = "Preguntas oficiales extraídas directamente de los solucionarios CEPREUNSA con ponderación oficial sobre 100.0000 pts.",
-                        fontSize = 13.sp,
-                        color = theme.textSecondary,
-                        lineHeight = 18.sp
-                    )
-
-                    Spacer(modifier = Modifier.height(18.dp))
-
+                    // Same Classic rig and existing New Idea sequence, confined to the illustration slot.
+                    BoxWithConstraints(Modifier.fillMaxWidth()) {
+                        val visualWidth = (maxWidth * .28f).coerceIn(72.dp, 126.dp)
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                            Column(Modifier.weight(1f)) {
+                                Text("Simulacro de Admisión\n(80 Preguntas)", fontSize = 19.sp, lineHeight = 23.sp,
+                                    fontWeight = FontWeight.Black, color = theme.textPrimary, letterSpacing = (-.4).sp)
+                                Spacer(Modifier.height(5.dp))
+                                Text("Preguntas oficiales extraídas directamente de los solucionarios CEPREUNSA con ponderación oficial sobre 100.0000 pts.",
+                                    fontSize = 12.sp, lineHeight = 17.sp, color = theme.textSecondary)
+                            }
+                            ClassicArtwork(ClassicAppearance.NEW_IDEA, Modifier.size(visualWidth),
+                                character = com.jonsuapps.rastro.android.ui.components.ClassicCharacter.LOKI)
+                        }
+                    }
+                    Spacer(Modifier.height(12.dp))
                     // Subsección: 1. Selecciona tu Área de Postulación:
                     Text(
                         text = "1. Selecciona tu Área de Postulación:",
@@ -564,8 +562,8 @@ fun ExamSetupView(
                             Sticker3dPill(
                                 text = label,
                                 isSelected = isSelected,
-                                selectedBgColor = Color(0xFFF59E0B),
-                                selectedContentColor = Color.White,
+                                selectedBgColor = theme.accent,
+                                selectedContentColor = contrastingText(theme.accent),
                                 unselectedBgColor = theme.surface,
                                 unselectedContentColor = theme.textSecondary,
                                 strokeColor = theme.strokeBorder,
@@ -611,59 +609,23 @@ fun ExamSetupView(
                         border = androidx.compose.foundation.BorderStroke(1.5.dp, theme.strokeBorder)
                     ) {
                         Column(modifier = Modifier.padding(14.dp)) {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Text(
-                                    text = "Estructura de Preguntas (${selectedArea.label})",
-                                    fontSize = 12.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = theme.textPrimary
-                                )
-                                Text(
-                                    text = "Total: 80 preg. (100.0000 pts)",
-                                    fontSize = 12.sp,
-                                    fontWeight = FontWeight.Black,
-                                    color = Color(0xFF059669)
-                                )
-                            }
-
-                            Spacer(modifier = Modifier.height(8.dp))
-
-                            val distribution = when (selectedArea) {
-                                AreaAdmision.SOCIALES -> listOf(
-                                    "Habilidad Verbal (12)" to "18.0000 pts",
-                                    "Habilidad Lógica (10)" to "15.0000 pts",
-                                    "Historia & Geografía (14)" to "20.0000 pts",
-                                    "Filosofía, Psicología & Cívica (14)" to "18.0000 pts",
-                                    "Matemáticas (12)" to "14.0000 pts",
-                                    "Ciencias Naturales (18)" to "15.0000 pts"
-                                )
-                                AreaAdmision.INGENIERIAS -> listOf(
-                                    "Matemáticas (Álgebra, Geom., Trig.) (24)" to "35.0000 pts",
-                                    "Física & Química (18)" to "25.0000 pts",
-                                    "Habilidad Lógica & Verbal (20)" to "25.0000 pts",
-                                    "Humanidades & Sociales (18)" to "15.0000 pts"
-                                )
-                                AreaAdmision.BIOMEDICAS -> listOf(
-                                    "Biología & Anatomía (22)" to "32.0000 pts",
-                                    "Química & Física (18)" to "26.0000 pts",
-                                    "Habilidad Verbal & Lógica (20)" to "25.0000 pts",
-                                    "Matemáticas & Sociales (20)" to "17.0000 pts"
-                                )
-                            }
-
-                            distribution.forEach { (materia, puntos) ->
-                                Row(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .padding(vertical = 3.dp),
-                                    horizontalArrangement = Arrangement.SpaceBetween
-                                ) {
-                                    Text(text = "• $materia", fontSize = 11.sp, color = theme.textSecondary)
-                                    Text(text = puntos, fontSize = 11.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
+                            Text("Estructura · ${selectedArea.label}", fontSize = 13.sp,
+                                fontWeight = FontWeight.Bold, color = theme.textPrimary)
+                            Text("80 preguntas · 100 puntos", fontSize = 12.sp,
+                                color = theme.accentText, modifier = Modifier.padding(top = 4.dp, bottom = 10.dp))
+                            val distribution = SimuladorRepository.getPonderaciones(selectedArea).groupBy { it.curso }
+                            distribution.entries.forEachIndexed { index, (course, rules) ->
+                                Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(10.dp))
+                                    .background(if (index % 2 == 0) theme.surfaceAccent else Color.Transparent)
+                                    .padding(horizontal = 10.dp, vertical = 8.dp),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                    Column(Modifier.weight(1f)) {
+                                        Text(course, fontSize = 12.sp, fontWeight = FontWeight.SemiBold, color = theme.textPrimary)
+                                        Text("${rules.sumOf { it.preguntas }} preguntas", fontSize = 10.sp, color = theme.textSecondary)
+                                    }
+                                    Text(String.format(java.util.Locale.US, "%.2f pts", rules.sumOf { it.preguntas * it.valor }),
+                                        fontSize = 12.sp, fontWeight = FontWeight.Bold, color = theme.accentText)
                                 }
                             }
                         }
@@ -732,7 +694,9 @@ fun ExamSetupView(
         if (activeTab == 3) item {
             FlashcardsQuickDeck(theme = theme, communityCards = communityFlashcards)
         }
-    }
+
+            item { com.jonsuapps.rastro.android.ui.components.MainPageEnd() }
+}
 }
 
 @Composable
@@ -833,7 +797,7 @@ private fun QuickExamSetupCard(
                         unselectedBgColor = theme.surface,
                         unselectedBevel = theme.cardBevel,
                         strokeColor = theme.strokeBorder,
-                        selectedContentColor = Color.White,
+                        selectedContentColor = contrastingText(theme.accent),
                         unselectedContentColor = theme.textSecondary,
                         modifier = Modifier.weight(1f)
                     )
@@ -864,7 +828,7 @@ private fun QuickExamSetupCard(
                 shape = RoundedCornerShape(14.dp),
                 contentPadding = PaddingValues(vertical = 10.dp)
             ) {
-                Icon(Icons.Rounded.Add, null, modifier = Modifier.size(16.dp), tint = theme.accent)
+                Icon(Icons.Rounded.Add, null, modifier = Modifier.size(16.dp), tint = theme.accentText)
                 Spacer(Modifier.width(6.dp))
                 Text("Crear pregunta", fontWeight = FontWeight.Bold, color = theme.textPrimary, fontSize = 13.sp)
             }
@@ -920,270 +884,97 @@ private fun SimulatorFilterDropdown(
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun ProjectedScoreCalculator(
-    theme: com.jonsuapps.rastro.theme.RastroPalette,
-    selectedArea: AreaAdmision,
-    onSelectArea: (AreaAdmision) -> Unit
-) {
-    // Secciones Oficiales UNSA con límites reales agregados (Aptitud: 18, Matemática: 12/15, CyT: 9/18/20, etc.)
-    val officialSections = remember(selectedArea) {
-        val rawPonderaciones = SimuladorRepository.getPonderaciones(selectedArea)
-        rawPonderaciones.groupBy { it.asignatura }.map { (asignatura, items) ->
-            val maxQ = items.sumOf { it.preguntas }
-            val totalPts = items.sumOf { it.preguntas * it.valor }
-            Triple(asignatura, maxQ, totalPts)
+private fun ProjectedScoreCalculator(theme: com.jonsuapps.rastro.theme.RastroPalette,
+    selectedArea: AreaAdmision, onSelectArea: (AreaAdmision) -> Unit) {
+    val rules = remember(selectedArea) { SimuladorRepository.getPonderaciones(selectedArea) }
+    val context = androidx.compose.ui.platform.LocalContext.current
+    val scores = androidx.compose.runtime.saveable.rememberSaveable(
+        saver = androidx.compose.runtime.saveable.mapSaver(
+            save = { it.toMap() },
+            restore = { saved -> mutableStateMapOf<String, String>().apply { saved.forEach { (key, value) -> put(key, value as String) } } }
+        )
+    ) { mutableStateMapOf<String, String>() }
+    fun key(subject: String) = "${selectedArea.name}|$subject"
+    val correct = rules.associate { it.asignatura to (scores[key(it.asignatura)]?.toIntOrNull() ?: 0) }
+    val projected = SimuladorRepository.projectedScore(selectedArea, correct)
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Sticker3dCard(containerColor = theme.surfaceAccent, strokeColor = theme.strokeBorder, bevelColor = theme.cardBevel) {
+            Column(Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text("Calculadora de puntaje", color = theme.textPrimary, fontSize = 19.sp, fontWeight = FontWeight.Black)
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    AreaAdmision.entries.forEach { area -> FilterChip(selected = selectedArea == area, onClick = { onSelectArea(area) }, label = { Text(area.label) }) }
+                }
+                Text(String.format("%.4f / 100", projected), color = theme.textPrimary, fontSize = 25.sp, fontWeight = FontWeight.Black)
+                Text("${correct.values.sum()} aciertos / ${rules.sumOf { it.preguntas }} · Matriz UNSA 2027", color = theme.textSecondary, fontSize = 12.sp)
+                Text("Aciertos × peso oficial. Errores y blancas no suman.", color = theme.textSecondary, fontSize = 12.sp)
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                    TextButton(onClick = { context.openExternalIntent(android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(SimuladorRepository.MATRIX_SOURCE_URL))) }) {
+                        Text("Ver matriz oficial", color = theme.accentText)
+                    }
+                    TextButton(onClick = { rules.forEach { scores.remove(key(it.asignatura)) } }) { Text("Limpiar", color = theme.accentText) }
+                    TextButton(onClick = { rules.forEach { scores[key(it.asignatura)] = it.preguntas.toString() } }) { Text("Todos correctos", color = theme.accentText) }
+                }
+            }
         }
+        BoxWithConstraints(Modifier.fillMaxWidth()) {
+            val columns = if (maxWidth >= 850.dp) 3 else if (maxWidth >= 550.dp) 2 else 1
+            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                rules.chunked(columns).forEach { group ->
+                    Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                        group.forEach { rule ->
+                            val count = correct[rule.asignatura] ?: 0
+                            Sticker3dCard(modifier = Modifier.weight(1f), containerColor = theme.surface, strokeColor = theme.strokeBorder, bevelColor = theme.cardBevel) {
+                                Row(Modifier.fillMaxWidth().padding(horizontal = 10.dp, vertical = 6.dp),
+                                    verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                                    Column(Modifier.weight(1f)) {
+                                        Text(rule.asignatura, color = theme.textPrimary, fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                                        Text("${rule.preguntas} preg. · ${String.format(java.util.Locale.US, "%.4f", rule.valor)} pts", color = theme.textSecondary, fontSize = 10.sp)
+                                    }
+                                    IconButton(onClick = { scores[key(rule.asignatura)] = (count - 1).coerceAtLeast(0).toString() }, enabled = count > 0,
+                                        modifier = Modifier.size(40.dp)) { Icon(Icons.Rounded.Remove, "Restar acierto", tint = theme.textPrimary.copy(alpha = if (count > 0) 1f else .35f)) }
+                                    androidx.compose.foundation.text.BasicTextField(
+                                        value = scores[key(rule.asignatura)] ?: "0",
+                                        onValueChange = { value ->
+                                            if (value.isEmpty() || (value.length <= 2 && value.all(Char::isDigit) && value.toIntOrNull() in 0..rule.preguntas))
+                                                scores[key(rule.asignatura)] = value
+                                        }, singleLine = true,
+                                        keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(keyboardType = androidx.compose.ui.text.input.KeyboardType.Number),
+                                        textStyle = androidx.compose.ui.text.TextStyle(color = theme.textPrimary, fontSize = 15.sp, textAlign = TextAlign.Center, fontWeight = FontWeight.Bold),
+                                        cursorBrush = androidx.compose.ui.graphics.SolidColor(theme.accentText),
+                                        modifier = Modifier.width(44.dp).height(44.dp).semantics { contentDescription = "Aciertos de ${rule.asignatura}; máximo ${rule.preguntas}" }.clip(RoundedCornerShape(10.dp))
+                                            .background(theme.surfaceAccent).border(1.dp, theme.strokeBorder, RoundedCornerShape(10.dp)),
+                                        decorationBox = { inner -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { inner() } }
+                                    )
+                                    IconButton(onClick = { scores[key(rule.asignatura)] = (count + 1).coerceAtMost(rule.preguntas).toString() }, enabled = count < rule.preguntas,
+                                        modifier = Modifier.size(40.dp)) { Icon(Icons.Rounded.Add, "Sumar acierto", tint = theme.textPrimary.copy(alpha = if (count < rule.preguntas) 1f else .35f)) }
+                                }
+                            }
+                        }
+                        repeat(columns - group.size) { Spacer(Modifier.weight(1f)) }
+                    }
+                }
+            }
+        }
+        CareerReferenceComparison(theme, projected, selectedArea)
     }
+}
 
-    val sectionScores = remember(selectedArea) { mutableStateMapOf<String, Int>() }
-    val totalPreguntas = officialSections.sumOf { it.second }
-    val totalAciertos = officialSections.sumOf { (sectionScores[it.first] ?: 0).coerceIn(0, it.second) }
-    val projected = officialSections.sumOf { (name, maxQ, totalPts) ->
-        val correct = (sectionScores[name] ?: 0).coerceIn(0, maxQ)
-        correct * (totalPts / maxQ)
-    }.coerceAtMost(100.0)
-
-    Sticker3dCard(
-        modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(22.dp),
-        containerColor = theme.surface,
-        bottomBevelColor = theme.cardBevel,
-        strokeColor = theme.strokeBorder,
-        bevelHeight = 4.dp
-    ) {
-        Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            Text("Puntaje Oficial Proyectado", fontSize = 19.sp, fontWeight = FontWeight.Black, color = theme.textPrimary)
-            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                listOf(
-                    Triple(AreaAdmision.SOCIALES, "Sociales", Color(0xFFEC4899) to Color(0xFFBE185D)),
-                    Triple(AreaAdmision.INGENIERIAS, "Ingenierías", Color(0xFFF59E0B) to Color(0xFFB45309)),
-                    Triple(AreaAdmision.BIOMEDICAS, "Biomédicas", Color(0xFF007AFF) to Color(0xFF0051A8))
-                ).forEach { (area, label, colors) ->
-                    val isSelected = selectedArea == area
-                    Sticker3dPill(
-                        selected = isSelected,
-                        onClick = { onSelectArea(area) },
-                        modifier = Modifier.weight(1f),
-                        selectedColor = colors.first,
-                        unselectedColor = theme.surface,
-                        selectedBevel = colors.second,
-                        unselectedBevel = theme.cardBevel,
-                        strokeColor = theme.strokeBorder,
-                        strokeWidth = 1.5.dp,
-                        bevelHeight = 2.5.dp
-                    ) {
-                        Text(
-                            text = label,
-                            maxLines = 1,
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Black,
-                            color = if (isSelected) Color.White else theme.textSecondary
-                        )
-                    }
-                }
-            }
-
-            // Marcador Oficial 3D
-            Sticker3dCard(
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(16.dp),
-                containerColor = Color(0xFF007AFF).copy(alpha = 0.08f),
-                bottomBevelColor = Color(0xFF007AFF).copy(alpha = 0.22f),
-                strokeColor = theme.strokeBorder,
-                bevelHeight = 3.dp,
-                strokeWidth = 1.5.dp
-            ) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 14.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    Text(
-                        text = String.format("%.2f", projected),
-                        color = Color(0xFF007AFF),
-                        fontSize = 38.sp,
-                        fontWeight = FontWeight.Black,
-                        letterSpacing = (-1).sp
-                    )
-                    Spacer(Modifier.height(2.dp))
-                    Text(
-                        text = "PUNTOS / 100.00  ·  $totalAciertos / $totalPreguntas aciertos reales",
-                        color = theme.textSecondary,
-                        fontSize = 11.sp,
-                        fontWeight = FontWeight.ExtraBold
-                    )
-                }
-            }
-
-            // Botones rápidos globales
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = "Aciertos por sección oficial",
-                    color = theme.textPrimary,
-                    fontWeight = FontWeight.Black,
-                    fontSize = 13.sp
-                )
-                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                    // Botón limpiar todo
-                    if (totalAciertos > 0) {
-                        Box(
-                            modifier = Modifier
-                                .clip(RoundedCornerShape(8.dp))
-                                .background(theme.strokeBorder.copy(alpha = 0.15f))
-                                .clickable { sectionScores.clear() }
-                                .padding(horizontal = 8.dp, vertical = 4.dp)
-                        ) {
-                            Text("Limpiar", fontSize = 10.sp, fontWeight = FontWeight.Black, color = theme.textSecondary)
-                        }
-                    }
-                    // Botón examen perfecto
-                    Box(
-                        modifier = Modifier
-                            .clip(RoundedCornerShape(8.dp))
-                            .background(Color(0xFF10B981).copy(alpha = 0.14f))
-                            .clickable {
-                                officialSections.forEach { (name, maxQ, _) ->
-                                    sectionScores[name] = maxQ
-                                }
-                            }
-                            .padding(horizontal = 8.dp, vertical = 4.dp)
-                    ) {
-                        Text("100 pts (Max)", fontSize = 10.sp, fontWeight = FontWeight.Black, color = Color(0xFF059669))
-                    }
-                }
-            }
-
-            // Lista de las 7 Secciones Oficiales con sus límites reales
-            officialSections.forEach { (name, maxQuestions, totalPoints) ->
-                val correct = (sectionScores[name] ?: 0).coerceIn(0, maxQuestions)
-                val avgWeight = totalPoints / maxQuestions
-                val currentPoints = correct * avgWeight
-
-                Sticker3dCard(
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(16.dp),
-                    containerColor = theme.surface,
-                    bottomBevelColor = theme.cardBevel,
-                    strokeColor = theme.strokeBorder,
-                    strokeWidth = 1.2.dp,
-                    bevelHeight = 2.5.dp
-                ) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 14.dp, vertical = 10.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Column(Modifier.weight(1f)) {
-                                Text(
-                                    text = name,
-                                    fontSize = 13.sp,
-                                    color = theme.textPrimary,
-                                    fontWeight = FontWeight.Black
-                                )
-                                Text(
-                                    text = "$correct / $maxQuestions preguntas  ·  ${String.format("%.2f", currentPoints)} / ${String.format("%.2f", totalPoints)} pts",
-                                    fontSize = 10.5.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = if (correct > 0) Color(0xFF007AFF) else theme.textSecondary
-                                )
-                            }
-
-                            // Stepper de aciertos
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(4.dp)
-                            ) {
-                                // Botón Restar (-) 3D
-                                Sticker3dCounterButton(
-                                    onClick = { sectionScores[name] = (correct - 1).coerceAtLeast(0) },
-                                    enabled = correct > 0,
-                                    size = 32.dp,
-                                    containerColor = theme.surface,
-                                    bottomBevelColor = theme.cardBevel,
-                                    strokeColor = theme.strokeBorder,
-                                    strokeWidth = 1.3.dp,
-                                    bevelHeight = 2.dp
-                                ) {
-                                    Icon(
-                                        Icons.Rounded.Remove,
-                                        contentDescription = "Restar",
-                                        tint = if (correct > 0) theme.accent else theme.textSecondary.copy(alpha = 0.35f),
-                                        modifier = Modifier.size(16.dp)
-                                    )
-                                }
-
-                                Text(
-                                    text = correct.toString(),
-                                    fontSize = 15.sp,
-                                    color = theme.textPrimary,
-                                    fontWeight = FontWeight.Black,
-                                    textAlign = TextAlign.Center,
-                                    modifier = Modifier.widthIn(min = 32.dp)
-                                )
-
-                                // Botón Sumar (+) 3D
-                                Sticker3dCounterButton(
-                                    onClick = { sectionScores[name] = (correct + 1).coerceAtMost(maxQuestions) },
-                                    enabled = correct < maxQuestions,
-                                    size = 32.dp,
-                                    containerColor = theme.surface,
-                                    bottomBevelColor = theme.cardBevel,
-                                    strokeColor = theme.strokeBorder,
-                                    strokeWidth = 1.3.dp,
-                                    bevelHeight = 2.dp
-                                ) {
-                                    Icon(
-                                        Icons.Rounded.Add,
-                                        contentDescription = "Sumar",
-                                        tint = if (correct < maxQuestions) theme.accent else theme.textSecondary.copy(alpha = 0.35f),
-                                        modifier = Modifier.size(16.dp)
-                                    )
-                                }
-                            }
-                        }
-
-                        // Atajos rápidos para esa sección
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.spacedBy(6.dp)
-                        ) {
-                            listOf(
-                                "0" to 0,
-                                "+5" to (correct + 5).coerceAtMost(maxQuestions),
-                                "Mitad (${maxQuestions / 2})" to (maxQuestions / 2),
-                                "Max ($maxQuestions)" to maxQuestions
-                            ).forEach { (lbl, targetVal) ->
-                                Box(
-                                    modifier = Modifier
-                                        .clip(RoundedCornerShape(8.dp))
-                                        .background(
-                                            if (correct == targetVal && targetVal > 0) Color(0xFF007AFF).copy(alpha = 0.15f)
-                                            else theme.surfaceAccent.copy(alpha = 0.5f)
-                                        )
-                                        .clickable { sectionScores[name] = targetVal }
-                                        .padding(horizontal = 8.dp, vertical = 4.dp)
-                                ) {
-                                    Text(
-                                        text = lbl,
-                                        fontSize = 9.5.sp,
-                                        fontWeight = FontWeight.Bold,
-                                        color = if (correct == targetVal && targetVal > 0) Color(0xFF007AFF) else theme.textSecondary
-                                    )
-                                }
-                            }
-                        }
-                    }
+@Composable
+private fun CareerReferenceComparison(theme: com.jonsuapps.rastro.theme.RastroPalette, score: Double, area: AreaAdmision) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+    Text("Referencias: Ordinario II Fase 2025 · ingreso normal", color = theme.textPrimary, fontWeight = FontWeight.Bold)
+    Text("Rangos observados entre ingresantes; no aseguran admisión en 2027. Vacantes, competencia y proceso pueden cambiar.", color = theme.textSecondary, fontSize = 12.sp)
+    SimuladorRepository.carrerasUNSACortes.filter { it.area == area }.forEach { career ->
+        Sticker3dCard(modifier = Modifier.fillMaxWidth(), containerColor = theme.surface,
+            strokeColor = theme.strokeBorder, bevelColor = theme.cardBevel) {
+            Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Text(career.name, color = theme.textPrimary, fontWeight = FontWeight.Bold)
+                Text(String.format(java.util.Locale.US, "Rango histórico: %.4f – %.4f pts", career.minScore, career.maxScore), color = theme.textSecondary, fontSize = 12.sp)
+                Text(if (score >= career.minScore) "Alcanzas el mínimo histórico de referencia" else "Por debajo del mínimo histórico de referencia", color = theme.textPrimary, fontSize = 12.sp)
+                TextButton(onClick = { context.openExternalIntent(android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(career.referenceUrl))) }) {
+                    Text("Ver reporte oficial · ${career.referenceProcess}", color = theme.accentText, fontSize = 11.sp)
                 }
             }
         }
@@ -1205,6 +996,7 @@ private fun FlashcardsQuickDeck(
     var search by remember { mutableStateOf("") }
     var currentIndex by remember { mutableIntStateOf(0) }
     var showingAnswer by remember { mutableStateOf(false) }
+    var showStudyDialog by remember { mutableStateOf(false) }
     var showCreateDialog by remember { mutableStateOf(false) }
     var showReportDialog by remember { mutableStateOf(false) }
     var showDeleteDialog by remember { mutableStateOf(false) }
@@ -1260,11 +1052,28 @@ private fun FlashcardsQuickDeck(
                 shape = RoundedCornerShape(14.dp),
                 contentPadding = PaddingValues(vertical = 10.dp)
             ) {
-                Icon(Icons.Rounded.Add, contentDescription = null, modifier = Modifier.size(17.dp), tint = theme.accent)
+                Icon(Icons.Rounded.Add, contentDescription = null, modifier = Modifier.size(17.dp), tint = theme.accentText)
                 Spacer(Modifier.width(6.dp))
                 Text("Crear tarjeta", fontWeight = FontWeight.Bold, color = theme.textPrimary, fontSize = 13.sp)
             }
             if (card != null) {
+                Sticker3dButton(onClick = { showStudyDialog = true }, modifier = Modifier.fillMaxWidth(),
+                    containerColor = theme.accent, bottomBevelColor = theme.accentBevel, strokeColor = theme.strokeBorder) {
+                    Text("Estudiar ${filtered.size} tarjetas", color = theme.onAccent, fontWeight = FontWeight.Bold)
+                }
+            } else Text("No hay tarjetas para esta materia.", color = theme.textSecondary)
+        }
+    }
+    if (showStudyDialog && card != null) {
+        Dialog(onDismissRequest = { showStudyDialog = false }, properties = DialogProperties(usePlatformDefaultWidth = false)) {
+            Sticker3dCard(Modifier.widthIn(max = 640.dp).fillMaxWidth(.94f).fillMaxHeight(.9f),
+                containerColor = theme.surface, strokeColor = theme.strokeBorder, bottomBevelColor = theme.cardBevel) {
+                Column(Modifier.fillMaxSize().padding(14.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                        Text("Flashcards", color = theme.textPrimary, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+                        IconButton(onClick = { showStudyDialog = false }) { Icon(Icons.Rounded.Close, "Cerrar", tint = theme.textPrimary) }
+                    }
+
                 val currentUid = FirebaseAuth.getInstance().currentUser?.uid
                 val canManage = currentUid != null && card.authorUid == currentUid
                 Row(
@@ -1274,7 +1083,7 @@ private fun FlashcardsQuickDeck(
                 ) {
                     TextButton(onClick = { showReportDialog = true }) {
                         Icon(Icons.Rounded.Flag, contentDescription = null, modifier = Modifier.size(15.dp), tint = Color(0xFFEF4444))
-                        Text("Reportar", color = Color(0xFFEF4444), fontSize = 11.sp)
+                        Text("Reportar", color = theme.answerText(false), fontSize = 11.sp)
                     }
                     if (canManage) {
                         TextButton(onClick = { showCreateDialog = true }) {
@@ -1283,7 +1092,7 @@ private fun FlashcardsQuickDeck(
                         }
                         TextButton(onClick = { showDeleteDialog = true }) {
                             Icon(Icons.Rounded.DeleteOutline, contentDescription = null, modifier = Modifier.size(15.dp), tint = Color(0xFFEF4444))
-                            Text("Eliminar", color = Color(0xFFEF4444), fontSize = 11.sp)
+                            Text("Eliminar", color = theme.answerText(false), fontSize = 11.sp)
                         }
                     }
                 }
@@ -1291,8 +1100,8 @@ private fun FlashcardsQuickDeck(
                 val rotation by androidx.compose.animation.core.animateFloatAsState(
                     targetValue = if (showingAnswer) 180f else 0f,
                     animationSpec = androidx.compose.animation.core.spring(
-                        dampingRatio = androidx.compose.animation.core.Spring.DampingRatioMediumBouncy,
-                        stiffness = androidx.compose.animation.core.Spring.StiffnessMediumLow
+                        dampingRatio = androidx.compose.animation.core.Spring.DampingRatioNoBouncy,
+                        stiffness = androidx.compose.animation.core.Spring.StiffnessMedium
                     ),
                     label = "FlashcardFlipAnim"
                 )
@@ -1301,85 +1110,62 @@ private fun FlashcardsQuickDeck(
                 Sticker3dCard(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .heightIn(min = 180.dp)
+                        .weight(1f)
                         .graphicsLayer {
                             rotationY = rotation
                             cameraDistance = 14f * density
                         },
                     onClick = { showingAnswer = !showingAnswer },
                     shape = RoundedCornerShape(22.dp),
-                    containerColor = if (isBack) Color(0xFFEEF2FF) else theme.surface,
-                    bottomBevelColor = if (isBack) Color(0xFFC7D2FE) else theme.cardBevel,
+                    containerColor = if (isBack) theme.surfaceAccent else theme.surface,
+                    bottomBevelColor = theme.cardBevel,
                     strokeColor = theme.strokeBorder,
                     bevelHeight = 4.dp
                 ) {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .then(if (isBack) Modifier.graphicsLayer { rotationY = 180f } else Modifier)
-                            .padding(20.dp),
-                        contentAlignment = Alignment.Center
+                    Column(
+                        Modifier.fillMaxSize().then(if (isBack) Modifier.graphicsLayer { rotationY = 180f } else Modifier).padding(16.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(10.dp)
                     ) {
-                        Column(
-                            Modifier.fillMaxWidth(),
-                            verticalArrangement = Arrangement.spacedBy(10.dp),
-                            horizontalAlignment = Alignment.CenterHorizontally
-                        ) {
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(5.dp)
-                            ) {
-                                Icon(
-                                    imageVector = if (isBack) Icons.Rounded.Bookmark else Icons.Rounded.Bolt,
-                                    contentDescription = null,
-                                    tint = Color(0xFF6366F1),
-                                    modifier = Modifier.size(14.dp)
-                                )
-                                Text(
-                                    text = if (isBack) "RESPUESTA" else card.subject.uppercase().ifBlank { "PREGUNTA" },
-                                    fontSize = 10.sp,
-                                    color = Color(0xFF6366F1),
-                                    fontWeight = FontWeight.Black,
-                                    letterSpacing = 0.5.sp
-                                )
-                            }
-                            Text(
-                                text = if (isBack) card.a else card.q,
-                                fontSize = 16.sp,
-                                lineHeight = 24.sp,
-                                color = theme.textPrimary,
-                                fontWeight = FontWeight.Bold,
-                                textAlign = TextAlign.Center,
-                                modifier = Modifier.fillMaxWidth()
-                            )
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(4.dp)
-                            ) {
-                                Icon(
-                                    imageVector = Icons.Rounded.PlayArrow,
-                                    contentDescription = null,
-                                    tint = theme.textSecondary.copy(alpha = 0.6f),
-                                    modifier = Modifier.size(13.dp)
-                                )
-                                Text(
-                                    text = if (isBack) "Toca para ver la pregunta" else "Toca para ver la respuesta",
-                                    fontSize = 10.sp,
-                                    fontWeight = FontWeight.Medium,
-                                    color = theme.textSecondary.copy(alpha = 0.6f)
-                                )
-                            }
-                            if (card.authorName.isNotBlank()) {
-                                Text(
-                                    text = "por ${card.authorName}",
-                                    fontSize = 9.sp,
-                                    color = theme.textSecondary.copy(alpha = 0.45f),
-                                    fontWeight = FontWeight.Medium
-                                )
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                            Icon(androidx.compose.ui.res.painterResource(if (isBack) com.jonsuapps.rastro.R.drawable.trail_lightbulb else com.jonsuapps.rastro.R.drawable.trail_book_open),
+                                null, tint = Color.Unspecified, modifier = Modifier.size(23.dp))
+                            Text(if (isBack) "Respuesta" else card.subject.ifBlank { "Pregunta" }, fontSize = 12.sp,
+                                color = theme.accentText, fontWeight = FontWeight.Bold)
+                        }
+                        val parts = remember(card.id, card.a) { flashcardAnswerParts(card.a) }
+                        key(card.id, isBack) {
+                            BoxWithConstraints(Modifier.weight(1f).fillMaxWidth()) {
+                            val bodyHeight = maxHeight
+                            Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).heightIn(min = bodyHeight),
+                                verticalArrangement = if (isBack && parts.explanation != null) Arrangement.spacedBy(14.dp) else Arrangement.Center,
+                                horizontalAlignment = Alignment.CenterHorizontally) {
+                                Text(if (isBack) parts.answer else card.q, color = theme.textPrimary,
+                                    fontSize = if (isBack) 16.sp else 17.sp, lineHeight = 24.sp,
+                                    fontWeight = FontWeight.SemiBold, textAlign = TextAlign.Center,
+                                    modifier = Modifier.fillMaxWidth())
+                                if (isBack && parts.explanation != null) {
+                                    Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                            Icon(androidx.compose.ui.res.painterResource(com.jonsuapps.rastro.R.drawable.trail_notebook_pen),
+                                                null, tint = Color.Unspecified, modifier = Modifier.size(20.dp))
+                                            Text(parts.heading.orEmpty(), color = theme.accentText, fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                                        }
+                                        Text(parts.explanation, fontSize = 14.sp, lineHeight = 21.sp, fontWeight = FontWeight.Normal,
+                                            color = theme.textPrimary, textAlign = TextAlign.Start, modifier = Modifier.fillMaxWidth())
+                                    }
+                                }
                             }
                         }
+                            }
+                        Text(if (isBack) "Toca para ver la pregunta" else "Toca para ver la respuesta",
+                            fontSize = 11.sp, color = theme.textSecondary, textAlign = TextAlign.Center)
                     }
                 }
+                if (card.authorName.isNotBlank()) Text(card.authorName, color = theme.textSecondary,
+                    fontSize = 10.sp, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center,
+                    maxLines = 1, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
+
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                     TextButton(onClick = { currentIndex = (currentIndex - 1).coerceAtLeast(0); showingAnswer = false }, enabled = currentIndex > 0) {
                         Text("Anterior")
@@ -1388,7 +1174,9 @@ private fun FlashcardsQuickDeck(
                     TextButton(onClick = { currentIndex = (currentIndex + 1).coerceAtMost(filtered.lastIndex); showingAnswer = false },
                         enabled = currentIndex < filtered.lastIndex) { Text("Siguiente") }
                 }
-            } else Text("No hay tarjetas para esta materia.", color = theme.textSecondary)
+
+                }
+            }
         }
     }
     if (showCreateDialog) CreateFlashcardDialog(
@@ -1472,7 +1260,7 @@ private fun ReportFlashcardDialog(
                         bottomBevelColor = theme.accentBevel,
                         strokeColor = theme.strokeBorder
                     ) {
-                        Text("Cerrar", color = Color.White, fontWeight = FontWeight.Bold)
+                        Text("Cerrar", color = theme.onAccent, fontWeight = FontWeight.Bold)
                     }
                 } else {
                     Text(card.q, color = theme.textSecondary, maxLines = 3, fontSize = 12.5.sp)
@@ -1595,7 +1383,7 @@ private fun CreateFlashcardDialog(
                         bottomBevelColor = theme.accentBevel,
                         strokeColor = theme.strokeBorder
                     ) {
-                        Text("Aceptar", color = Color.White, fontWeight = FontWeight.Bold)
+                        Text("Aceptar", color = theme.onAccent, fontWeight = FontWeight.Bold)
                     }
                 } else {
                     OutlinedTextField(
@@ -1687,7 +1475,7 @@ private fun CreateFlashcardDialog(
                         ) {
                             Text(
                                 text = if (submitting) "Guardando..." else if (initialCard == null) "Publicar" else "Guardar",
-                                color = Color.White,
+                                color = theme.onAccent,
                                 fontWeight = FontWeight.Black,
                                 fontSize = 13.sp
                             )
@@ -1733,13 +1521,13 @@ fun ExamActiveView(
 
     if (q == null) {
         Column(
-            Modifier.fillMaxSize().widthIn(max = 760.dp).padding(20.dp),
+            Modifier.widthIn(max = 760.dp).fillMaxSize().padding(20.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text("No hay preguntas con estos filtros", color = theme.textPrimary, fontWeight = FontWeight.Bold)
             Text("Cambia o limpia la búsqueda para continuar.", color = theme.textSecondary)
-            Button(onClick = onExitNoQuestions, colors = ButtonDefaults.buttonColors(containerColor = theme.accent)) {
+            Sticker3dButton(onClick = onExitNoQuestions, containerColor = theme.accent, bottomBevelColor = theme.accentBevel, strokeColor = theme.strokeBorder) {
                 Text("Volver a la configuración", color = theme.surface)
             }
         }
@@ -1764,12 +1552,12 @@ fun ExamActiveView(
                     text = "Pregunta ${currentIndex + 1} de ${questions.size}",
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
-                    color = theme.accent
+                    color = theme.accentText
                 )
 
-                Button(
+                Sticker3dButton(
                     onClick = onFinishExam,
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFEF4444)),
+                    containerColor = Color(0xFFEF4444), bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder,
                     shape = RastroShapes.Pill,
                     contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
                 ) {
@@ -1848,18 +1636,17 @@ fun ExamActiveView(
             Spacer(modifier = Modifier.height(16.dp))
 
             // Tarjeta de Enunciado
-            Card(
+            Sticker3dCard(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RastroShapes.Squircle,
-                colors = CardDefaults.cardColors(containerColor = theme.surface),
-                border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
+                containerColor = theme.surface, strokeColor = theme.strokeBorder, bevelColor = theme.cardBevel
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                         Text(
                             text = q.asignatura,
                             style = MaterialTheme.typography.labelSmall,
-                            color = theme.accent,
+                            color = theme.accentText,
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier.weight(1f)
                         )
@@ -1893,7 +1680,7 @@ fun ExamActiveView(
 
                         TextButton(onClick = { showReportDialog = true }) {
                             Icon(Icons.Rounded.Flag, contentDescription = null, modifier = Modifier.size(15.dp), tint = Color(0xFFEF4444))
-                            Text("Reportar", color = Color(0xFFEF4444), fontSize = 11.sp)
+                            Text("Reportar", color = theme.answerText(false), fontSize = 11.sp)
                         }
                     }
                     Text(
@@ -1957,7 +1744,7 @@ fun ExamActiveView(
                             text = letter,
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
-                            color = if (isSelected) theme.surface else theme.textPrimary
+                            color = if (isSelected) contrastingText(theme.accent) else theme.textPrimary
                         )
                     }
                     Spacer(modifier = Modifier.width(12.dp))
@@ -1975,27 +1762,27 @@ fun ExamActiveView(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Button(
+            Sticker3dButton(
                 onClick = { onNavigateQuestion(safeIndex - 1) },
                 enabled = safeIndex > 0,
-                colors = ButtonDefaults.buttonColors(containerColor = theme.surfaceAccent),
+                containerColor = theme.surfaceAccent, bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder,
                 shape = RastroShapes.Pill
             ) {
                 Text("Anterior", color = theme.textPrimary)
             }
 
             if (safeIndex < questions.size - 1) {
-                Button(
+                Sticker3dButton(
                     onClick = { onNavigateQuestion(safeIndex + 1) },
-                    colors = ButtonDefaults.buttonColors(containerColor = theme.accent),
+                    containerColor = theme.accent, bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder,
                     shape = RastroShapes.Pill
                 ) {
-                    Text("Siguiente", color = theme.surface)
+                    Text("Siguiente", color = contrastingText(theme.accent))
                 }
             } else {
-                Button(
+                Sticker3dButton(
                     onClick = onFinishExam,
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF10B981)),
+                    containerColor = Color(0xFF10B981), bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder,
                     shape = RastroShapes.Pill
                 ) {
                     Text("Calificar", color = Color.White)
@@ -2008,6 +1795,9 @@ fun ExamActiveView(
 @Composable
 fun ExamResultView(
     result: ExamEvaluationResult,
+    allowReview: Boolean = false,
+    reviewQuestions: List<com.jonsuapps.rastro.model.ExamQuestion> = emptyList(),
+    isRanking: Boolean = false,
     area: AreaAdmision,
     theme: com.jonsuapps.rastro.theme.RastroPalette,
     onRetry: () -> Unit
@@ -2021,11 +1811,10 @@ fun ExamResultView(
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         // Tarjeta de Puntaje Ponderado
-        Card(
+        Sticker3dCard(
             modifier = Modifier.fillMaxWidth(),
             shape = RastroShapes.Squircle,
-            colors = CardDefaults.cardColors(containerColor = theme.surface),
-            border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
+            containerColor = theme.surface, strokeColor = theme.strokeBorder, bevelColor = theme.cardBevel
         ) {
             Column(
                 modifier = Modifier
@@ -2034,24 +1823,28 @@ fun ExamResultView(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 // Dúo Oficial de Mascotas celebrando el simulacro
-                DualMascotDuo(size = 72.dp)
+                ClassicArtwork(when {
+                    result.percentage == 100 -> ClassicAppearance.HAPPY
+                    result.percentage >= 60 -> ClassicAppearance.IN_LOVE
+                    else -> ClassicAppearance.SAD
+                }, Modifier.size(130.dp))
 
                 Spacer(modifier = Modifier.height(14.dp))
 
                 Text(
-                    text = "Puntaje Ponderado Oficial UNSA",
+                    text = if (isRanking) "Puntaje Examen Ranking" else "Puntaje Ponderado Oficial UNSA",
                     style = MaterialTheme.typography.labelMedium,
                     color = theme.textSecondary
                 )
                 Spacer(modifier = Modifier.height(6.dp))
                 Text(
-                    text = "${result.unsaWeightedScore}",
+                    text = "${if (isRanking) SimuladorRepository.rankingScore(result) else result.unsaWeightedScore}",
                     style = MaterialTheme.typography.displaySmall,
                     fontWeight = FontWeight.Bold,
-                    color = theme.accent
+                    color = theme.accentText
                 )
                 Text(
-                    text = "sobre 100.0000 puntos",
+                    text = "sobre 100.0000 puntos · ${result.correctCount * com.jonsuapps.rastro.gamification.GamificationManager.EXAM_CORRECT_XP} EXP por aciertos",
                     style = MaterialTheme.typography.labelSmall,
                     color = theme.textSecondary
                 )
@@ -2067,7 +1860,7 @@ fun ExamResultView(
                             text = "${result.correctCount}",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFF10B981)
+                            color = theme.answerText(true)
                         )
                         Text("Correctas", style = MaterialTheme.typography.labelSmall, color = theme.textSecondary)
                     }
@@ -2076,7 +1869,7 @@ fun ExamResultView(
                             text = "${result.wrongCount}",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFFEF4444)
+                            color = theme.answerText(false)
                         )
                         Text("Incorrectas", style = MaterialTheme.typography.labelSmall, color = theme.textSecondary)
                     }
@@ -2095,73 +1888,42 @@ fun ExamResultView(
 
         // Puntajes de Corte de Carreras de la UNSA
         Text(
-            text = "Comparativa con Puntajes de Corte UNSA",
+            text = if (isRanking) "Tu EXP se suma a Aprender y Ligas" else "Referencia histórica UNSA",
             style = MaterialTheme.typography.titleSmall,
             fontWeight = FontWeight.Bold,
             color = theme.textPrimary
         )
 
-        val relevantCareers = remember(area) {
-            SimuladorRepository.carrerasUNSACortes.filter { it.area == area }
-        }
-
-        relevantCareers.forEach { carrera ->
-            val hasPassed = result.unsaWeightedScore >= carrera.minScore
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                shape = RastroShapes.Squircle,
-                colors = CardDefaults.cardColors(containerColor = theme.surface),
-                border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(14.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Column {
-                        Text(
-                            text = carrera.name,
-                            style = MaterialTheme.typography.titleSmall,
-                            fontWeight = FontWeight.Bold,
-                            color = theme.textPrimary
-                        )
-                        Text(
-                            text = "Corte: ${carrera.minScore} - ${carrera.maxScore} pts",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = theme.textSecondary
-                        )
-                    }
-
-                    Box(
-                        modifier = Modifier
-                            .clip(RastroShapes.Pill)
-                            .background(if (hasPassed) Color(0xFFD1FAE5) else Color(0xFFFEE2E2))
-                            .padding(horizontal = 10.dp, vertical = 4.dp)
-                    ) {
-                        Text(
-                            text = if (hasPassed) "Puntaje Apto" else "Requiere Refuerzo",
-                            style = MaterialTheme.typography.labelSmall,
-                            fontWeight = FontWeight.Bold,
-                            color = if (hasPassed) Color(0xFF047857) else Color(0xFFB91C1C)
-                        )
-                    }
-                }
-            }
-        }
+        if (!isRanking) CareerReferenceComparison(theme, result.unsaWeightedScore, area)
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        Button(
+        if (allowReview) {
+            var showReview by remember { mutableStateOf(false) }
+            Sticker3dButton(onClick = { showReview = !showReview }, containerColor = theme.surfaceAccent,
+                bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder, modifier = Modifier.fillMaxWidth()) {
+                Text(if (showReview) "Ocultar revisión" else "Revisar mis respuestas", color = theme.textPrimary)
+            }
+            if (showReview) result.details.forEachIndexed { index, detail ->
+                QuestionReviewCard(com.jonsuapps.rastro.android.data.FailedQuestion(
+                    id = "review:$index", subject = detail.asignatura, subtema = "Pregunta ${index + 1}",
+                    question = detail.question, options = detail.options, correctAnswerIndex = detail.correctChoice,
+                    explanation = detail.explanation, selectedAnswerIndex = detail.userChoice,
+                    imageUrl = reviewQuestions.getOrNull(index)?.imageUrl,
+                    origin = if (isRanking) "Ranking" else "Simulacro"), theme,
+                    status = when { detail.isBlank -> "Sin responder"; detail.isCorrect -> "Correcta"; else -> "Incorrecta" })
+            }
+        }
+
+        Sticker3dButton(
             onClick = onRetry,
             modifier = Modifier
                 .fillMaxWidth()
                 .height(50.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = theme.accent),
+            containerColor = theme.accent, bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder,
             shape = RastroShapes.Pill
         ) {
-            Text("Realizar Otro Simulacro", color = theme.surface, fontWeight = FontWeight.Bold)
+            Text("Realizar Otro Simulacro", color = contrastingText(theme.accent), fontWeight = FontWeight.Bold)
         }
     }
 }

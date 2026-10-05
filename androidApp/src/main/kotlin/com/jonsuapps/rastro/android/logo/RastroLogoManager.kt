@@ -42,6 +42,7 @@ object RastroLogoManager {
      * Inicializa el gestor con el contexto de la aplicación.
      */
     fun initialize(context: Context) {
+        if (appContext != null) return
         appContext = context.applicationContext
         prefs = context.getSharedPreferences("rastro_logo_prefs", Context.MODE_PRIVATE)
         recordUserActive()
@@ -81,7 +82,8 @@ object RastroLogoManager {
         // El usuario está actualmente interactuando si entró hace menos de 1 hora
         val isCurrentlyActive = inactiveHours < 1L
 
-        val mood = RastroLogoEvaluator.evaluateMood(
+        val mood = if (isAtRisk(streak.currentStreak, streak.lastActiveDate, System.currentTimeMillis())) RastroLogoMood.ENOJO
+            else RastroLogoEvaluator.evaluateMood(
             isStreakLost = isStreakLost,
             inactiveHours = inactiveHours,
             isUserCurrentlyActive = isCurrentlyActive
@@ -92,6 +94,27 @@ object RastroLogoManager {
         appContext?.let { ctx ->
             updateLauncherIcon(ctx, mood)
         }
+    }
+
+    private fun isAtRisk(streak: Int, lastDate: String, now: Long): Boolean {
+        val current = java.time.Instant.ofEpochMilli(now).atZone(java.time.ZoneId.of("America/Lima"))
+        return streak > 0 && current.hour >= 18 && lastDate == current.toLocalDate().minusDays(1).toString()
+    }
+
+    /** Background refresh uses the same persisted progress and never marks the user as active. */
+    fun refreshLauncherInBackground(context: Context) {
+        val uid = com.google.firebase.auth.FirebaseAuth.getInstance().currentUser?.uid.orEmpty()
+        val progress = com.jonsuapps.rastro.android.data.GamificationRepository.loadLocal(uid) ?: return
+        val now = System.currentTimeMillis()
+        val last = context.getSharedPreferences("rastro_logo_prefs", Context.MODE_PRIVATE)
+            .getLong(PREF_KEY_LAST_ACTIVE_MILLIS, now)
+        val today = java.time.Instant.ofEpochMilli(now).atZone(java.time.ZoneId.of("America/Lima")).toLocalDate()
+        val lastStudy = runCatching { java.time.LocalDate.parse(progress.lastStudyDate) }.getOrNull()
+        val missed = lastStudy?.let { java.time.temporal.ChronoUnit.DAYS.between(it, today) } ?: 0
+        val lost = missed > 1 && progress.streakFreeze <= 0 && (progress.streak > 0 || progress.bestStreak >= 1)
+        val mood = if (!lost && isAtRisk(progress.streak, progress.lastStudyDate, now)) RastroLogoMood.ENOJO
+            else RastroLogoEvaluator.evaluateMood(lost, ((now-last).coerceAtLeast(0)/3_600_000), false)
+        updateLauncherIcon(context, mood)
     }
 
     /**
@@ -105,7 +128,7 @@ object RastroLogoManager {
         val days = currentLocal.toEpochDays() - previous.toEpochDays()
 
         // Si pasó más de un día sin estudiar y no tenía congelador de racha
-        return days > 1 && streak.streakFreezeCount <= 0 && streak.bestStreak > 1 && streak.currentStreak <= 1
+        return days > 1 && streak.streakFreezeCount <= 0 && (streak.bestStreak >= 1 || streak.currentStreak > 0)
     }
 
     /**

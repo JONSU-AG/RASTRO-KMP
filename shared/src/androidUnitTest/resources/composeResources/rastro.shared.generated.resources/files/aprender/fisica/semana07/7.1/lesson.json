@@ -1,0 +1,18 @@
+{
+  "id": "fis_t07_s01",
+  "subjectId": "fisica",
+  "semana": 7,
+  "subtema": "7.1",
+  "title": "FENÓMENOS TÉRMICOS - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/fisica/FisicaSemana07.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_fis_t07_s01",
+    "asignatura": "Física",
+    "semana": 7,
+    "titulo": "FENÓMENOS TÉRMICOS - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

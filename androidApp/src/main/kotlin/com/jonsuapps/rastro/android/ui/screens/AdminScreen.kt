@@ -1,5 +1,6 @@
 package com.jonsuapps.rastro.android.ui.screens
 
+import com.jonsuapps.rastro.theme.accentText
 import android.app.DatePickerDialog
 import android.app.PendingIntent
 import android.content.Context
@@ -188,17 +189,20 @@ fun AdminScreen(
 
     // Estado de pestañas administrativas
     var selectedTab by remember { mutableIntStateOf(0) } // 0: Ajustes Sitio, 1: Actividad Testers, 2: Usuarios, 3: Contenido UGC, 4: Notificaciones, 5: Banco
-    val tabs = listOf("Ajustes Sitio", "Actividad Testers", "Usuarios", "Contenido UGC", "Notificaciones", "Banco")
+    val tabs = listOf("Ajustes Sitio", "Ingresos diarios", "Usuarios", "Contenido UGC", "Notificaciones", "Banco", "Errores y sugerencias")
 
     // ── 0. ACTIVIDAD DE TESTERS / PRUEBA CERRADA ─────────────────────────────
-    var testerPeriodStart by remember { mutableStateOf("2026-09-24") }
-    var testerPeriodEnd by remember { mutableStateOf("2026-10-08") }
-    var testerPeriodStartInput by remember { mutableStateOf("2026-09-24") }
-    var testerPeriodEndInput by remember { mutableStateOf("2026-10-08") }
+    var testerPeriodStart by remember { mutableStateOf(java.time.LocalDate.now().minusDays(29).toString()) }
+    var testerPeriodEnd by remember { mutableStateOf(GamificationManager.getLocalDayString()) }
+    var testerPeriodStartInput by remember { mutableStateOf(java.time.LocalDate.now().minusDays(29).toString()) }
+    var testerPeriodEndInput by remember { mutableStateOf(GamificationManager.getLocalDayString()) }
     var isSavingPeriod by remember { mutableStateOf(false) }
 
     var testersList by remember { mutableStateOf(emptyList<TesterSummary>()) }
     var isLoadingTesters by remember { mutableStateOf(false) }
+    var testerLoadError by remember { mutableStateOf<String?>(null) }
+    var detailLoadError by remember { mutableStateOf<String?>(null) }
+    var activityRequestId by remember { mutableIntStateOf(0) }
     var testerSearchQuery by remember { mutableStateOf("") }
     var selectedTesterForDetail by remember { mutableStateOf<TesterSummary?>(null) }
     var detailFilter by remember { mutableStateOf("TODOS") } // "TODOS", "ACTIVOS", "SIN_ACTIVIDAD"
@@ -209,7 +213,10 @@ fun AdminScreen(
     var customStartDateInput by remember { mutableStateOf(GamificationManager.getLocalDayString()) }
     var customEndDateInput by remember { mutableStateOf(GamificationManager.getLocalDayString()) }
 
-    val todayStr = remember { GamificationManager.getLocalDayString() }
+    var todayStr by remember { mutableStateOf(GamificationManager.getLocalDayString()) }
+    LaunchedEffect(Unit) {
+        while (true) { kotlinx.coroutines.delay(60_000); todayStr = GamificationManager.getLocalDayString() }
+    }
     val (queryStart, queryEnd) = remember(activityRangePreset, customStartDateInput, customEndDateInput, testerPeriodStart, testerPeriodEnd, todayStr) {
         when (activityRangePreset) {
             "HOY" -> todayStr to todayStr
@@ -251,15 +258,22 @@ fun AdminScreen(
         onDispose { listener.remove() }
     }
 
-    LaunchedEffect(selectedTab, queryStart, queryEnd) {
-        if (selectedTab == 1) {
-            isLoadingTesters = true
-            TesterActivityRepository.loadAllTestersActivity(queryStart, queryEnd) { list ->
-                testersList = list
-                isLoadingTesters = false
-            }
+    val reloadAttendance = {
+        val request = ++activityRequestId
+        isLoadingTesters = true
+        testerLoadError = null
+        testersList = emptyList()
+        TesterActivityRepository.loadAllTestersActivity(queryStart, queryEnd, onError = { error ->
+            if (request == activityRequestId) { testerLoadError = error; isLoadingTesters = false }
+        }) { list ->
+            if (request == activityRequestId) { testersList = list; isLoadingTesters = false }
         }
     }
+    LaunchedEffect(selectedTab, queryStart, queryEnd) {
+        selectedTesterForDetail = null
+        if (selectedTab == 1) reloadAttendance() else activityRequestId++
+    }
+
 
     // ── 1. DATOS REALES DE FIRESTORE ─────────────────────────────────────────
     // Ajustes de Sitio desde Firestore
@@ -503,6 +517,7 @@ fun AdminScreen(
 
         // ── CONTENIDO POR PESTAÑAS ──────────────────────────────────────────
         when (selectedTab) {
+            6 -> item { AppFeedbackAdminPanel() }
             0 -> {
                 // 1. AJUSTES DEL SITIO (SITE SETTINGS) - Sincronizado en Firestore
                 item {
@@ -1239,7 +1254,7 @@ fun AdminScreen(
                             }
 
                             Text(
-                                text = "Rango consultado: ${TesterActivityRepository.formatDateShort(queryStart)} → ${TesterActivityRepository.formatDateShort(queryEnd)}",
+                                text = "Rango consultado: ${TesterActivityRepository.formatDateShort(queryStart)} → ${TesterActivityRepository.formatDateShort(queryEnd)}. Días futuros no evaluados.",
                                 fontSize = 10.5.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = theme.accent
@@ -1297,10 +1312,8 @@ fun AdminScreen(
 
                     val totalTesters = searchFiltered.size
                     val activeTestersCount = searchFiltered.count { it.activeDaysCount > 0 }
-                    val totalSecs = searchFiltered.sumOf { it.totalSeconds }
-                    val totalTimeFormatted = TesterActivityRepository.formatDuration(totalSecs)
-                    val globalAvgSecs = if (activeTestersCount > 0) totalSecs / activeTestersCount else 0L
-                    val globalAvgFormatted = TesterActivityRepository.formatAverageMinutesAndSeconds(globalAvgSecs)
+                    val totalTimeFormatted = "${searchFiltered.sumOf { it.longVisitDaysCount }} días"
+                    val globalAvgFormatted = "${searchFiltered.sumOf { it.shortVisitDaysCount }} días"
 
                     Sticker3dCard(
                         containerColor = theme.surface,
@@ -1340,7 +1353,7 @@ fun AdminScreen(
                                         .padding(10.dp)
                                 ) {
                                     Column {
-                                        Text("Tiempo Total", fontSize = 10.sp, color = theme.textSecondary)
+                                        Text("5 min o más", fontSize = 10.sp, color = theme.textSecondary)
                                         Text(totalTimeFormatted, fontSize = 15.sp, fontWeight = FontWeight.Black, color = Color(0xFF2563EB))
                                     }
                                 }
@@ -1352,7 +1365,7 @@ fun AdminScreen(
                                         .padding(10.dp)
                                 ) {
                                     Column {
-                                        Text("Promedio / Activo", fontSize = 10.sp, color = theme.textSecondary)
+                                        Text("Menos de 5 min", fontSize = 10.sp, color = theme.textSecondary)
                                         Text(globalAvgFormatted, fontSize = 13.5.sp, fontWeight = FontWeight.Black, color = Color(0xFFF59E0B))
                                     }
                                 }
@@ -1381,11 +1394,7 @@ fun AdminScreen(
                         Sticker3dButton(
                             onClick = {
                                 DuolingoHaptics.playOptionSelected(context)
-                                isLoadingTesters = true
-                                TesterActivityRepository.loadAllTestersActivity(queryStart, queryEnd) { list ->
-                                    testersList = list
-                                    isLoadingTesters = false
-                                }
+                                reloadAttendance()
                             },
                             containerColor = theme.surface,
                             bottomBevelColor = theme.cardBevel,
@@ -1399,6 +1408,9 @@ fun AdminScreen(
                     }
                 }
 
+                testerLoadError?.let { error ->
+                    item { Text(error, color = theme.textPrimary, modifier = Modifier.padding(12.dp)) }
+                }
                 if (isLoadingTesters) {
                     item {
                         Box(Modifier.fillMaxWidth().padding(32.dp), contentAlignment = Alignment.Center) {
@@ -1418,7 +1430,7 @@ fun AdminScreen(
                         else -> searchFiltered
                     }
 
-                    if (finalFilteredTesters.isEmpty()) {
+                    if (finalFilteredTesters.isEmpty() && testerLoadError == null) {
                         item {
                             Box(Modifier.fillMaxWidth().padding(32.dp), contentAlignment = Alignment.Center) {
                                 Text(
@@ -1442,6 +1454,8 @@ fun AdminScreen(
                                     .fillMaxWidth()
                                     .bouncyClick(scaleDown = 0.98f) {
                                         DuolingoHaptics.playOptionSelected(context)
+                                        val detailRequest = activityRequestId
+                                        detailLoadError = null
                                         isLoadingDetail = true
                                         selectedTesterForDetail = tester
                                         detailFilter = "TODOS"
@@ -1451,10 +1465,13 @@ fun AdminScreen(
                                             displayName = tester.displayName,
                                             photoUrl = tester.photoUrl,
                                             startDate = queryStart,
-                                            endDate = queryEnd
+                                            endDate = queryEnd,
+                                            onError = { error -> if (detailRequest == activityRequestId && selectedTesterForDetail?.uid == tester.uid) { detailLoadError = error; isLoadingDetail = false } }
                                         ) { detailed ->
-                                            selectedTesterForDetail = detailed
-                                            isLoadingDetail = false
+                                            if (detailRequest == activityRequestId && selectedTesterForDetail?.uid == tester.uid) {
+                                                selectedTesterForDetail = detailed
+                                                isLoadingDetail = false
+                                            }
                                         }
                                     }
                             ) {
@@ -1511,160 +1528,14 @@ fun AdminScreen(
 
                                     Divider(color = theme.strokeBorder.copy(alpha = 0.2f), thickness = 0.8.dp)
 
-                                    // Grid 2x2 para métricas del tester (adaptado a móvil)
                                     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                                        Row(
-                                            modifier = Modifier.fillMaxWidth(),
-                                            horizontalArrangement = Arrangement.SpaceBetween
-                                        ) {
-                                            Column(modifier = Modifier.weight(1f)) {
-                                                Text("Asistencia", fontSize = 10.sp, color = theme.textSecondary)
-                                                Text(
-                                                    text = "${tester.activeDaysCount}/${tester.activeDaysCount + tester.inactiveDaysCount} días",
-                                                    fontSize = 13.sp,
-                                                    fontWeight = FontWeight.Black,
-                                                    color = if (tester.activeDaysCount > 0) Color(0xFF10B981) else theme.textSecondary
-                                                )
-                                            }
-
-                                            Column(modifier = Modifier.weight(1f)) {
-                                                Text("Días sin actividad", fontSize = 10.sp, color = theme.textSecondary)
-                                                Text(
-                                                    text = "${tester.inactiveDaysCount}",
-                                                    fontSize = 13.sp,
-                                                    fontWeight = FontWeight.Black,
-                                                    color = theme.textSecondary
-                                                )
-                                            }
-                                        }
-
-                                        Row(
-                                            modifier = Modifier.fillMaxWidth(),
-                                            horizontalArrangement = Arrangement.SpaceBetween
-                                        ) {
-                                            Column(modifier = Modifier.weight(1f)) {
-                                                Text("Total período", fontSize = 10.sp, color = theme.textSecondary)
-                                                Text(
-                                                    text = tester.formattedTotalTime,
-                                                    fontSize = 13.sp,
-                                                    fontWeight = FontWeight.Black,
-                                                    color = theme.textPrimary
-                                                )
-                                            }
-
-                                            Column(modifier = Modifier.weight(1f)) {
-                                                Text("Promedio/día activo", fontSize = 10.sp, color = theme.textSecondary)
-                                                Text(
-                                                    text = tester.formattedAverage,
-                                                    fontSize = 13.sp,
-                                                    fontWeight = FontWeight.Black,
-                                                    color = Color(0xFF2563EB)
-                                                )
-                                            }
-                                        }
-
-                                        Row(
-                                            modifier = Modifier.fillMaxWidth(),
-                                            horizontalArrangement = Arrangement.SpaceBetween
-                                        ) {
-                                            Column(modifier = Modifier.weight(1f)) {
-                                                Text("APK período", fontSize = 10.sp, color = theme.textSecondary)
-                                                Text(
-                                                    text = tester.formattedAppPeriodTime,
-                                                    fontSize = 13.sp,
-                                                    fontWeight = FontWeight.Black,
-                                                    color = theme.textPrimary
-                                                )
-                                            }
-
-                                            Column(modifier = Modifier.weight(1f)) {
-                                                Text("Web período", fontSize = 10.sp, color = theme.textSecondary)
-                                                Text(
-                                                    text = tester.formattedWebPeriodTime,
-                                                    fontSize = 13.sp,
-                                                    fontWeight = FontWeight.Black,
-                                                    color = theme.textPrimary
-                                                )
-                                            }
-                                        }
-
-                                        Text(
-                                            text = "Total histórico: ${tester.formattedHistoricTotalTime}",
-                                            fontSize = 10.5.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = theme.textSecondary
-                                        )
-                                    }
-
-                                    // Fila de Última Actividad
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.SpaceBetween,
-                                        verticalAlignment = Alignment.CenterVertically
-                                    ) {
-                                        Row(verticalAlignment = Alignment.CenterVertically) {
-                                            Icon(
-                                                Icons.Rounded.Schedule,
-                                                contentDescription = null,
-                                                tint = theme.textSecondary,
-                                                modifier = Modifier.size(14.dp)
-                                            )
-                                            Spacer(modifier = Modifier.width(4.dp))
-                                            Text(
-                                                text = "Última actividad: ${tester.formattedLastActiveDateTime}",
-                                                fontSize = 10.5.sp,
-                                                color = theme.textSecondary,
-                                                fontWeight = FontWeight.Medium
-                                            )
-                                        }
-
-                                        Text(
-                                            text = "Tocar para ver detalle →",
-                                            fontSize = 10.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = theme.accent
-                                        )
-                                    }
-
-                                        Column {
-                                            Text("Promedio/día activo", fontSize = 10.sp, color = theme.textSecondary)
-                                            Text(
-                                                text = tester.formattedAverage,
-                                                fontSize = 13.sp,
-                                                fontWeight = FontWeight.Black,
-                                                color = Color(0xFF2563EB)
-                                            )
-                                        }
-                                    }
-
-                                    // Fila de Última Actividad
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.SpaceBetween,
-                                        verticalAlignment = Alignment.CenterVertically
-                                    ) {
-                                        Row(verticalAlignment = Alignment.CenterVertically) {
-                                            Icon(
-                                                Icons.Rounded.Schedule,
-                                                contentDescription = null,
-                                                tint = theme.textSecondary,
-                                                modifier = Modifier.size(14.dp)
-                                            )
-                                            Spacer(modifier = Modifier.width(4.dp))
-                                            Text(
-                                                text = "Última actividad: ${tester.formattedLastActiveDateTime}",
-                                                fontSize = 10.5.sp,
-                                                color = theme.textSecondary,
-                                                fontWeight = FontWeight.Medium
-                                            )
-                                        }
-
-                                        Text(
-                                            text = "Tocar para ver detalle →",
-                                            fontSize = 10.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = theme.accent
-                                        )
+                                        Text("Días que entró: ${tester.activeDaysCount} / ${tester.dailyItems.size}", color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                                        Text("5 min o más: ${tester.longVisitDaysCount} días", color = theme.textPrimary, fontSize = 12.sp)
+                                        Text("Menos de 5 min: ${tester.shortVisitDaysCount} días", color = theme.textPrimary, fontSize = 12.sp)
+                                        Text("Sin ingreso: ${tester.inactiveDaysCount} días", color = theme.textSecondary, fontSize = 12.sp)
+                                        Text("Uso medido: ${tester.formattedTotalTime} · App: ${tester.formattedAppPeriodTime} · Web: ${tester.formattedWebPeriodTime}", color = theme.textSecondary, fontSize = 11.sp)
+                                        Text("Último acceso: ${tester.formattedLastActive}", color = theme.textSecondary, fontSize = 11.sp)
+                                        Text("Tocar para ver fechas →", color = theme.accentText, fontSize = 11.sp)
                                     }
                                 }
                             }
@@ -1672,6 +1543,7 @@ fun AdminScreen(
                     }
                 }
 
+            }
             2 -> {
                 // 2. GESTIÓN Y MODERACIÓN DE USUARIOS REALES (FIRESTORE)
                 item {
@@ -1864,7 +1736,7 @@ fun AdminScreen(
                                     horizontalArrangement = Arrangement.SpaceBetween,
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
-                                    Text(report.postTitle.take(35), fontWeight = FontWeight.Black, fontSize = 14.sp, color = theme.textPrimary)
+                                    Text(report.postTitle, modifier = Modifier.weight(1f), fontWeight = FontWeight.Black, fontSize = 14.sp, color = theme.textPrimary)
                                     if (report.urgent) {
                                         Box(
                                             modifier = Modifier
@@ -1905,12 +1777,14 @@ fun AdminScreen(
                                     Button(
                                         onClick = {
                                             DuolingoHaptics.playOptionSelected(context)
+                                            if (report.postId.isBlank()) return@Button
                                             UserUploadRepository.setUploadHidden(report.postId, hidden = true)
                                             UserUploadRepository.resolveReport(report.id)
                                             Toast.makeText(context, "Publicación oculta para todos", Toast.LENGTH_SHORT).show()
                                         },
                                         modifier = Modifier.weight(1f).height(36.dp),
                                         shape = RoundedCornerShape(10.dp),
+                                        enabled = report.postId.isNotBlank(),
                                         colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFF59E0B))
                                     ) {
                                         Text("Ocultar Post", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Color.White)
@@ -1926,6 +1800,7 @@ fun AdminScreen(
                                         },
                                         modifier = Modifier.weight(1f).height(36.dp),
                                         shape = RoundedCornerShape(10.dp),
+                                        enabled = report.postId.isNotBlank(),
                                         colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFEF4444))
                                     ) {
                                         Text("Eliminar Post", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Color.White)
@@ -2025,6 +1900,7 @@ fun AdminScreen(
             }
 
             4 -> {
+                item { StudyReminderEditor(theme) }
                 // 4. NOTIFICACIONES PUSH & DIFUSIÓN
                 item {
                     AdminSectionCard(title = "Envío de Notificación Masiva (Difusión a Postulantes)", theme = theme) {
@@ -2268,15 +2144,15 @@ fun AdminScreen(
                                     horizontalArrangement = Arrangement.SpaceBetween
                                 ) {
                                     Text("Período observado:", fontSize = 11.sp, color = theme.textSecondary)
-                                    Text("$testerPeriodStart → $testerPeriodEnd", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
+                                    Text("$queryStart → ${minOf(queryEnd, todayStr)}", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
                                 }
                                 Divider(color = theme.strokeBorder.copy(alpha = 0.2f), thickness = 0.8.dp)
                                 Row(
                                     modifier = Modifier.fillMaxWidth(),
                                     horizontalArrangement = Arrangement.SpaceBetween
                                 ) {
-                                    Text("Días activos:", fontSize = 11.sp, color = theme.textSecondary)
-                                    Text("${detail.activeDaysCount} días", fontSize = 11.sp, fontWeight = FontWeight.Black, color = Color(0xFF10B981))
+                                    Text("Días que entró:", fontSize = 11.sp, color = theme.textSecondary)
+                                    Text("${detail.activeDaysCount} / ${detail.dailyItems.size} días", fontSize = 11.sp, fontWeight = FontWeight.Black, color = Color(0xFF10B981))
                                 }
                                 Row(
                                     modifier = Modifier.fillMaxWidth(),
@@ -2285,40 +2161,15 @@ fun AdminScreen(
                                     Text("Días sin actividad:", fontSize = 11.sp, color = theme.textSecondary)
                                     Text("${detail.inactiveDaysCount} días", fontSize = 11.sp, fontWeight = FontWeight.Black, color = theme.textSecondary)
                                 }
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceBetween
-                                ) {
-                                    Text("APK período:", fontSize = 11.sp, color = theme.textSecondary)
-                                    Text(detail.formattedAppPeriodTime, fontSize = 11.sp, fontWeight = FontWeight.Black, color = theme.textPrimary)
+                                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                                    Text("5 min o más:", color = theme.textSecondary, fontSize = 11.sp)
+                                    Text("${detail.longVisitDaysCount} días", color = theme.textPrimary, fontSize = 11.sp, fontWeight = FontWeight.Bold)
                                 }
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceBetween
-                                ) {
-                                    Text("Web período:", fontSize = 11.sp, color = theme.textSecondary)
-                                    Text(detail.formattedWebPeriodTime, fontSize = 11.sp, fontWeight = FontWeight.Black, color = theme.textPrimary)
-                                }
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceBetween
-                                ) {
-                                    Text("Total período:", fontSize = 11.sp, color = theme.textSecondary)
-                                    Text(detail.formattedTotalTime, fontSize = 11.sp, fontWeight = FontWeight.Black, color = theme.textPrimary)
-                                }
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceBetween
-                                ) {
-                                    Text("Total histórico:", fontSize = 11.sp, color = theme.textSecondary)
-                                    Text(detail.formattedHistoricTotalTime, fontSize = 11.sp, fontWeight = FontWeight.Black, color = theme.textPrimary)
-                                }
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceBetween
-                                ) {
-                                    Text("Promedio por día activo:", fontSize = 11.sp, color = theme.textSecondary)
-                                    Text(detail.formattedAverage, fontSize = 11.sp, fontWeight = FontWeight.Black, color = Color(0xFF2563EB))
+                                Text("Uso medido: ${detail.formattedTotalTime} · App: ${detail.formattedAppPeriodTime} · Web: ${detail.formattedWebPeriodTime}",
+                                    color = theme.textPrimary, fontSize = 11.sp)
+                                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                                    Text("Menos de 5 min:", color = theme.textSecondary, fontSize = 11.sp)
+                                    Text("${detail.shortVisitDaysCount} días", color = theme.textPrimary, fontSize = 11.sp, fontWeight = FontWeight.Bold)
                                 }
                                 Row(
                                     modifier = Modifier.fillMaxWidth(),
@@ -2328,23 +2179,7 @@ fun AdminScreen(
                                     Text(detail.formattedLastActiveDateTime, fontSize = 11.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
                                 }
 
-                                if (detail.historicalRecoveredDates.isNotEmpty()) {
-                                    Box(
-                                        modifier = Modifier
-                                            .fillMaxWidth()
-                                            .clip(RoundedCornerShape(8.dp))
-                                            .background(Color(0xFF3B82F6).copy(alpha = 0.12f))
-                                            .padding(6.dp),
-                                        contentAlignment = Alignment.Center
-                                    ) {
-                                        Text(
-                                            text = "Histórico previo de gamificación vinculado (${detail.historicalRecoveredDates.size} días)",
-                                            fontSize = 9.5.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = Color(0xFF2563EB)
-                                        )
-                                    }
-                                }
+
                             }
                         }
 
@@ -2389,6 +2224,8 @@ fun AdminScreen(
                         }
 
                         Spacer(modifier = Modifier.height(10.dp))
+
+                        detailLoadError?.let { Text(it, color = theme.textPrimary, fontSize = 12.sp) }
 
                         // Lista Filtrada de Días
                         val filteredDays = when (detailFilter) {
@@ -2436,7 +2273,7 @@ fun AdminScreen(
                                             )
                                             Spacer(modifier = Modifier.width(8.dp))
                                             Text(
-                                                text = dayItem.formattedDate + if (dayItem.isActive) " ✓" else " ✗",
+                                                text = dayItem.formattedDate + if (dayItem.isActive) " ✓" else " —",
                                                 fontSize = 12.5.sp,
                                                 fontWeight = FontWeight.Bold,
                                                 color = theme.textPrimary
@@ -2445,6 +2282,8 @@ fun AdminScreen(
 
                                         Text(
                                             text = dayItem.formattedTime,
+                                            modifier = Modifier.weight(1f).padding(start = 8.dp),
+                                            textAlign = androidx.compose.ui.text.style.TextAlign.End,
                                             fontSize = 12.sp,
                                             fontWeight = if (dayItem.isActive) FontWeight.Black else FontWeight.Normal,
                                             color = if (dayItem.isActive) Color(0xFF10B981) else theme.textSecondary

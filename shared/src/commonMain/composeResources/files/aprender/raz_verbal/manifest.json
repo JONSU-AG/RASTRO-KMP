@@ -1,0 +1,51 @@
+{
+  "subjectId": "raz_verbal",
+  "name": "Raz. Verbal",
+  "area": "Aptitud Académica",
+  "colorHex": "#D946EF",
+  "description": "Relaciones semánticas, analogías, series verbales, lógica de enunciados, pragmática y razonamiento argumentativo.",
+  "weeks": 8,
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_verbal",
+  "weekManifests": [
+    {
+      "week": 1,
+      "title": "Semana 1",
+      "path": "semana01/manifest.json"
+    },
+    {
+      "week": 2,
+      "title": "Semana 2",
+      "path": "semana02/manifest.json"
+    },
+    {
+      "week": 3,
+      "title": "Semana 3",
+      "path": "semana03/manifest.json"
+    },
+    {
+      "week": 4,
+      "title": "Semana 4",
+      "path": "semana04/manifest.json"
+    },
+    {
+      "week": 5,
+      "title": "Semana 5",
+      "path": "semana05/manifest.json"
+    },
+    {
+      "week": 6,
+      "title": "Semana 6",
+      "path": "semana06/manifest.json"
+    },
+    {
+      "week": 7,
+      "title": "Semana 7",
+      "path": "semana07/manifest.json"
+    },
+    {
+      "week": 8,
+      "title": "Semana 8",
+      "path": "semana08/manifest.json"
+    }
+  ]
+}

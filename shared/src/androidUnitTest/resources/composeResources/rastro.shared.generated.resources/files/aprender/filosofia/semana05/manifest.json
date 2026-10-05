@@ -1,0 +1,18 @@
+{
+  "week": 5,
+  "title": "TEMA 05: CONOCIMIENTO, CIENCIA Y VERDAD",
+  "lessons": [
+    {
+      "subtopic": "5.1",
+      "lessonId": "filo_t05_s01",
+      "title": "A. El Conocimiento Científico: Concepto y Niveles",
+      "path": "5.1/lesson.json"
+    },
+    {
+      "subtopic": "5.2",
+      "lessonId": "filo_t05_s02",
+      "title": "C. Hecho, Hipótesis, Ley y Teoría Científica",
+      "path": "5.2/lesson.json"
+    }
+  ]
+}

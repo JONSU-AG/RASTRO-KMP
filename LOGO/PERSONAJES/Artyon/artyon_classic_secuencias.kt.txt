@@ -1,0 +1,34 @@
+package com.jonsuapps.rastro.android.ui.mascots.loki
+
+private fun smooth(t: Float) = t.coerceIn(0f, 1f).let { it * it * (3f - 2f * it) }
+private fun pulse(p: Float, start: Float, peak: Float, end: Float): Float = when {
+    p <= start || p >= end -> 0f
+    p < peak -> smooth((p - start) / (peak - start))
+    else -> 1f - smooth((p - peak) / (end - peak))
+}
+
+enum class LokiSequence(val title: String, val description: String, val emotions: List<LokiEmotion>) {
+    WELCOME("Bienvenida", "Observa, se interesa y te saluda.", listOf(LokiEmotion.NEUTRAL, LokiEmotion.CURIOUS, LokiEmotion.WINKING)),
+    STUDY("Una idea nueva", "Se confunde, piensa y encuentra la respuesta.", listOf(LokiEmotion.CONFUSED, LokiEmotion.THINKING, LokiEmotion.PROUD)),
+    ACHIEVEMENT("Meta cumplida", "Se concentra, se emociona y celebra contigo.", listOf(LokiEmotion.FOCUSED, LokiEmotion.EXCITED, LokiEmotion.CELEBRATING)),
+    RETRY("Volver a intentar", "Se entristece un momento, te anima y vuelve a concentrarse.", listOf(LokiEmotion.SAD, LokiEmotion.CHEERING, LokiEmotion.FOCUSED)),
+    READ_THROW_EXPLODE("Leer, lanzar y explosión", "Parado, lee una hoja 1,3 segundos, la lanza hacia atrás y una explosión aparece detrás.", emptyList());
+
+    val seconds: Float get() = if (this == READ_THROW_EXPLODE) LOKI_PAPER_GAG_SECONDS else emotions.sumOf { it.motion.seconds.toDouble() }.toFloat()
+}
+
+internal fun sampleLokiSequence(sequence: LokiSequence, progress: Float): LokiFrame {
+    if (sequence == LokiSequence.READ_THROW_EXPLODE) return sampleLokiPaperGag(progress)
+    var elapsed = progress.coerceIn(0f, 1f) * sequence.seconds
+    sequence.emotions.forEachIndexed { index, emotion ->
+        val duration = emotion.motion.seconds
+        if (elapsed <= duration || index == sequence.emotions.lastIndex) {
+            val localProgress = (elapsed / duration).coerceIn(0f, 1f)
+            val frame = sampleLoki(emotion, emotion.motion, localProgress)
+            val previous = sequence.emotions[(index + sequence.emotions.size - 1) % sequence.emotions.size]
+            return if (elapsed < .45f) sampleLoki(previous, previous.motion, 1f).blend(frame, smooth(elapsed / .45f)) else frame
+        }
+        elapsed -= duration
+    }
+    return LokiFrame(LokiPose())
+}

@@ -1,0 +1,18 @@
+{
+  "week": 12,
+  "title": "Semana 12",
+  "lessons": [
+    {
+      "subtopic": "12.1",
+      "lessonId": "arit_t12_s01",
+      "title": "Análisis Combinatorio: Principios, Permutaciones y Combinaciones - Fundamentos y Leyes Principales",
+      "path": "12.1/lesson.json"
+    },
+    {
+      "subtopic": "12.2",
+      "lessonId": "arit_t12_s02",
+      "title": "Análisis Combinatorio: Principios, Permutaciones y Combinaciones - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "12.2/lesson.json"
+    }
+  ]
+}

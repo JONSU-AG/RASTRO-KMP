@@ -1,0 +1,18 @@
+{
+  "id": "civ_t11_s01",
+  "subjectId": "civica",
+  "semana": 11,
+  "subtema": "11.1",
+  "title": "La Universidad: Fines, Gratuidad, las Cinco Dimensiones de la Autonomía e Inviolabilidad del Recinto",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana11.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t11_s01",
+    "asignatura": "Ed. Cívica",
+    "semana": 11,
+    "titulo": "La Universidad: Fines, Gratuidad, las Cinco Dimensiones de la Autonomía e Inviolabilidad del Recinto",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

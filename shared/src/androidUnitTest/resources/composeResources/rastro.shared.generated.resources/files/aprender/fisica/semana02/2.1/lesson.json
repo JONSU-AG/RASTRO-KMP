@@ -1,0 +1,18 @@
+{
+  "id": "fis_t02_s01",
+  "subjectId": "fisica",
+  "semana": 2,
+  "subtema": "2.1",
+  "title": "CINEMÁTICA - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/fisica/FisicaSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_fis_t02_s01",
+    "asignatura": "Física",
+    "semana": 2,
+    "titulo": "CINEMÁTICA - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

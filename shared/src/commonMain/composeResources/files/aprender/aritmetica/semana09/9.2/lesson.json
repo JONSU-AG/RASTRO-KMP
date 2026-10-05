@@ -1,0 +1,18 @@
+{
+  "id": "arit_t09_s02",
+  "subjectId": "aritmetica",
+  "semana": 9,
+  "subtema": "9.2",
+  "title": "Sucesiones, Progresiones Aritméticas y Geométricas - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/aritmetica/AritmeticaSemana09.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_arit_t09_s02",
+    "asignatura": "Aritmética",
+    "semana": 9,
+    "titulo": "Sucesiones, Progresiones Aritméticas y Geométricas - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

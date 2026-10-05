@@ -1,0 +1,18 @@
+{
+  "id": "alg_t03_s01",
+  "subjectId": "algebra",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "Potenciación, Radicación, Radicales Dobles y Racionalización - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_alg_t03_s01",
+    "asignatura": "Álgebra",
+    "semana": 3,
+    "titulo": "Potenciación, Radicación, Radicales Dobles y Racionalización - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "week": 13,
+  "title": "TEMA 13: Geopolítica, Fronteras y Tratados del Perú",
+  "lessons": [
+    {
+      "subtopic": "13.1",
+      "lessonId": "geo_t13_s01",
+      "title": "3.1. Fundamentos Epistemológicos de la Geopolítica",
+      "path": "13.1/lesson.json"
+    },
+    {
+      "subtopic": "13.2",
+      "lessonId": "geo_t13_s02",
+      "title": "3.4. Proyección Geopolítica del Perú: Presencia en la Antártida y la Cuenca del Pacífico",
+      "path": "13.2/lesson.json"
+    }
+  ]
+}

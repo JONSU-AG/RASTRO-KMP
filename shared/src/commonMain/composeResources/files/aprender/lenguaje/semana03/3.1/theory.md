@@ -140,3 +140,9 @@ Fonema igual a barras con distintiva, alófono igual a corchetes materiales. 24 
 ## RESUMEN
 
 Plano fónico con fonología mental de fonemas entre barras y fonética material de alófonos entre corchetes. Fonema con función distintiva en pares mínimos sin significado propio. Sistema con 24 fonemas de 5 vocales y 19 consonantes, vocales anteriores, central y posteriores con alturas abierta, medias y cerradas. Asimetría con 27 grafías y 5 dígrafos, polifonía de c, poligrafía de k y mudas h y u de gue. Sílaba con ataque, cima nuclear y coda, libre pa sin coda y trabada trans con coda, con pan como modelo. Panorama de diptongos, triptongos, hiatos y acentuación para las lecciones siguientes.
+
+## Propiedades del lenguaje y silabeo
+
+El lenguaje humano permite crear mensajes nuevos mediante combinaciones de unidades. La arbitrariedad relaciona signos y significados por convención, no por semejanza necesaria; la doble articulación combina unidades significativas y unidades sonoras distintivas. Estas propiedades no deben confundirse con funciones como informar o expresar emociones.
+
+Una sílaba organiza sonidos alrededor de un núcleo, normalmente vocálico. El silabeo requiere reconocer diptongos, triptongos e hiatos y atender a la realización fonológica, no solamente contar letras. En país hay hiato y dos sílabas; en tierra, el diptongo participa en la sílaba inicial. La tilde señala una regla ortográfica y no convierte cualquier secuencia de vocales en el mismo fenómeno.

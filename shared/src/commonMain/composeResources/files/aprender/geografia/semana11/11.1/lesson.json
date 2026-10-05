@@ -1,0 +1,18 @@
+{
+  "id": "geo_t11_s01",
+  "subjectId": "geografia",
+  "semana": 11,
+  "subtema": "11.1",
+  "title": "3.1. Demografía: Definición, Fuentes y Censos",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana11.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t11_s01",
+    "asignatura": "Geografía",
+    "semana": 11,
+    "titulo": "3.1. Demografía: Definición, Fuentes y Censos",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "trig_t05_s02",
+  "subjectId": "trigonometria",
+  "semana": 5,
+  "subtema": "5.2",
+  "title": "IDENTIDADES TRIGONOMÉTRICAS FUNDAMENTALES Y AUXILIARES - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/trigonometria/TrigonometriaSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_trig_t05_s02",
+    "asignatura": "Trigonometría",
+    "semana": 5,
+    "titulo": "IDENTIDADES TRIGONOMÉTRICAS FUNDAMENTALES Y AUXILIARES - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

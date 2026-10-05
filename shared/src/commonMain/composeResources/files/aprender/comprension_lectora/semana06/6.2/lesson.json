@@ -1,0 +1,18 @@
+{
+  "id": "cl_t06_s02",
+  "subjectId": "comprension_lectora",
+  "semana": 6,
+  "subtema": "6.2",
+  "title": "3.2 Clasificación de los Usos Contextuales en Exámenes de Admisión",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t06_s02",
+    "asignatura": "Comp. Lectora",
+    "semana": 6,
+    "titulo": "3.2 Clasificación de los Usos Contextuales en Exámenes de Admisión",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

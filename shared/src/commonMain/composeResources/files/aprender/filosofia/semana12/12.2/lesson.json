@@ -1,0 +1,18 @@
+{
+  "id": "filo_t12_s02",
+  "subjectId": "filosofia",
+  "semana": 12,
+  "subtema": "12.2",
+  "title": "D. Teorías de la Justicia: John Rawls y el Liberalismo Igualitario",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana12.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t12_s02",
+    "asignatura": "Filosofía",
+    "semana": 12,
+    "titulo": "D. Teorías de la Justicia: John Rawls y el Liberalismo Igualitario",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

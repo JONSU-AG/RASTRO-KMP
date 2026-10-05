@@ -1,0 +1,18 @@
+{
+  "id": "geo_t09_s02",
+  "subjectId": "geografia",
+  "semana": 9,
+  "subtema": "9.2",
+  "title": "Cuadro Comparativo de las 11 Ecorregiones de Antonio Brack Egg",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana09.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t09_s02",
+    "asignatura": "Geografía",
+    "semana": 9,
+    "titulo": "Cuadro Comparativo de las 11 Ecorregiones de Antonio Brack Egg",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

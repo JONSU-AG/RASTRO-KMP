@@ -1,0 +1,18 @@
+{
+  "id": "rm_t03_s01",
+  "subjectId": "raz_matematico",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "RAZONAMIENTO ALGEBRAICO INTUITIVO Y EDADES - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_matematico/RazonamientoMatematicoSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rm_t03_s01",
+    "asignatura": "Raz. Matemático",
+    "semana": 3,
+    "titulo": "RAZONAMIENTO ALGEBRAICO INTUITIVO Y EDADES - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

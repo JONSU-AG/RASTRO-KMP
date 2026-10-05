@@ -1,0 +1,18 @@
+{
+  "id": "quim_t01_s01",
+  "subjectId": "quimica",
+  "semana": 1,
+  "subtema": "1.1",
+  "title": "Química, Materia, Sustancias y Transformaciones - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/quimica/QuimicaSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_quim_t01_s01",
+    "asignatura": "Química",
+    "semana": 1,
+    "titulo": "Química, Materia, Sustancias y Transformaciones - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,296 @@
+package com.jonsuapps.rastro.android.ui.mascots.loki
+
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.PathOperation
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.drawscope.clipPath
+import androidx.compose.ui.graphics.drawscope.rotate
+import androidx.compose.ui.graphics.drawscope.scale
+import androidx.compose.ui.graphics.drawscope.translate
+import androidx.compose.ui.graphics.lerp
+import kotlin.math.PI
+import kotlin.math.cos
+import kotlin.math.min
+import kotlin.math.sin
+
+/** Classic-only expressions. The Original renderer and its emotion catalog are unchanged. */
+internal enum class LokiClassicMood(val title: String) {
+    NORMAL("Normal"), HAPPY("Feliz"), SAD("Triste"), ANGRY("Enojado"),
+    SLEEPING("Dormir"), IN_LOVE("Enamorado"), DOUBTFUL("Dudoso"),
+    KNOCKED_OUT("Noqueado"), STREAK("Racha"), PLEADING("No te vayas")
+}
+
+internal enum class LokiClassicEyeEffect(val title: String) {
+    DEFAULT("Según emoción"), STREAK_EYES("Ojos de racha")
+}
+
+internal enum class LokiClassicEyeState {
+    OPEN, HAPPY_CLOSED, SAD, ANGRY, SLEEP_CLOSED, HEARTS, DOUBTFUL, SPIRAL, STREAK, PLEADING
+}
+
+internal fun LokiClassicMood.eyeState(effect: LokiClassicEyeEffect) = when {
+    effect == LokiClassicEyeEffect.STREAK_EYES -> LokiClassicEyeState.STREAK
+    this == LokiClassicMood.HAPPY || this == LokiClassicMood.STREAK -> LokiClassicEyeState.HAPPY_CLOSED
+    this == LokiClassicMood.SAD -> LokiClassicEyeState.SAD
+    this == LokiClassicMood.ANGRY -> LokiClassicEyeState.ANGRY
+    this == LokiClassicMood.SLEEPING -> LokiClassicEyeState.SLEEP_CLOSED
+    this == LokiClassicMood.IN_LOVE -> LokiClassicEyeState.HEARTS
+    this == LokiClassicMood.DOUBTFUL -> LokiClassicEyeState.DOUBTFUL
+    this == LokiClassicMood.KNOCKED_OUT -> LokiClassicEyeState.SPIRAL
+    this == LokiClassicMood.PLEADING -> LokiClassicEyeState.PLEADING
+    else -> LokiClassicEyeState.OPEN
+}
+
+internal fun LokiEmotion.toClassicMood() = when (this) {
+    LokiEmotion.HAPPY, LokiEmotion.HAPPY_TWO, LokiEmotion.HAPPY_THREE,
+    LokiEmotion.EXCITED, LokiEmotion.CELEBRATING -> LokiClassicMood.HAPPY
+    LokiEmotion.SAD, LokiEmotion.WORRIED -> LokiClassicMood.SAD
+    LokiEmotion.ANGRY -> LokiClassicMood.ANGRY
+    LokiEmotion.SLEEPING -> LokiClassicMood.SLEEPING
+    LokiEmotion.THINKING, LokiEmotion.CONFUSED, LokiEmotion.SKEPTICAL -> LokiClassicMood.DOUBTFUL
+    else -> LokiClassicMood.NORMAL
+}
+
+/** First and last part of a clip are the enter/exit transition; the middle is a living loop. */
+internal fun classicMoodStrength(progress: Float): Float {
+    val t = progress.coerceIn(0f, 1f)
+    val edge = min(1f, min(t / .15f, (1f - t) / .15f)).coerceAtLeast(0f)
+    return edge * edge * (3f - 2f * edge)
+}
+
+private val orange = Color(0xFFFF8D16)
+private val yellow = Color(0xFFFFC52C)
+private val red = Color(0xFFF04938)
+private val blue = Color(0xFF236BC8)
+internal val classicSymbolInk = Color(0xFF211D19)
+
+/** Same rounded ink edge for filled ornaments and stroked glyphs. */
+internal fun DrawScope.classicSymbolFill(path: Path, color: Color, ink: Color = classicSymbolInk) {
+    drawPath(path, color)
+    drawPath(path, ink.copy(alpha = color.alpha), style = Stroke(3.8f, join = StrokeJoin.Round))
+}
+
+internal fun DrawScope.classicSymbolStroke(path: Path, color: Color, ink: Color = classicSymbolInk, width: Float = 5f) {
+    drawPath(path, ink.copy(alpha = color.alpha), style = Stroke(width + 6f, cap = StrokeCap.Round, join = StrokeJoin.Round))
+    drawPath(path, color, style = Stroke(width, cap = StrokeCap.Round, join = StrokeJoin.Round))
+}
+
+internal fun DrawScope.classicSymbolDot(center: Offset, radius: Float, color: Color, ink: Color = classicSymbolInk) {
+    drawCircle(ink.copy(alpha = color.alpha), radius + 3f, center)
+    drawCircle(color, radius, center)
+}
+
+/** Behind the character, including its appendages. Never painted over anatomy. */
+internal fun DrawScope.classicStreakFire(progress: Float, strength: Float, ink: Color = classicSymbolInk) {
+    if (strength <= .01f) return
+    val phase = progress * PI.toFloat() * 8f
+    val wave = sin(phase) * 5f
+    val fireInk = lerp(Color(0xFFC5471C), ink, .06f)
+    val outside = Path().apply {
+        moveTo(24f, 270f)
+        cubicTo(-27f, 253f, -35f, 210f, -13f, 176f + wave)
+        cubicTo(-6f, 191f, 1f, 193f, -2f, 166f)
+        cubicTo(-12f, 134f, 6f, 98f, 20f, 78f - wave)
+        cubicTo(21f, 87f, 28f, 98f, 35f, 103f)
+        cubicTo(39f, 63f, 66f, 6f, 101f, -26f + wave)
+        cubicTo(113f, 8f, 124f, 12f, 132f, 20f)
+        cubicTo(151f, 14f, 161f, -8f, 159f, -34f - wave * .5f)
+        cubicTo(192f, -12f, 204f, 18f, 208f, 43f)
+        cubicTo(219f, 46f, 227f, 23f, 225f, 4f + wave)
+        cubicTo(247f, 35f, 248f, 64f, 236f, 94f)
+        cubicTo(244f, 107f, 250f, 91f, 249f, 78f)
+        cubicTo(266f, 107f, 268f, 146f, 252f, 176f)
+        cubicTo(264f, 175f, 270f, 160f, 268f, 146f - wave)
+        cubicTo(280f, 208f, 265f, 254f, 223f, 270f)
+        close()
+    }
+    val inside = Path().apply {
+        moveTo(35f, 270f)
+        cubicTo(-4f, 255f, -17f, 214f, 13f, 158f)
+        cubicTo(13f, 190f, 25f, 195f, 35f, 176f)
+        cubicTo(35f, 123f, 67f, 59f, 96f, 22f + wave)
+        cubicTo(98f, 62f, 113f, 85f, 127f, 102f)
+        cubicTo(137f, 69f, 162f, 53f, 172f, 21f - wave)
+        cubicTo(190f, 68f, 205f, 102f, 210f, 137f)
+        cubicTo(224f, 136f, 229f, 114f, 228f, 103f)
+        cubicTo(249f, 148f, 253f, 193f, 237f, 215f)
+        cubicTo(249f, 211f, 255f, 199f, 258f, 185f)
+        cubicTo(270f, 229f, 249f, 259f, 212f, 270f)
+        close()
+    }
+    // Expand only the halo, keeping its highest tip within the preview and
+    // increasing its width, height and upper shoulders independently of the rig.
+    scale(1.06f, 1.05f, Offset(122f, -35f)) {
+        drawPath(outside, Color(0xFFFF981F).copy(alpha = strength))
+        drawPath(outside, fireInk.copy(alpha = strength), style = Stroke(5f, join = StrokeJoin.Round))
+        drawPath(inside, Color(0xFFFFD348).copy(alpha = strength))
+    }
+}
+
+/** Symbols are transient overlays, separate from the character rig. */
+internal fun DrawScope.classicMoodEffects(mood: LokiClassicMood, progress: Float, strength: Float, ink: Color = classicSymbolInk) {
+    if (strength <= .01f) return
+    val t = progress.coerceIn(0f, 1f)
+    when (mood) {
+        LokiClassicMood.HAPPY -> {
+            val anchors = listOf(Offset(184f, 22f), Offset(225f, 51f), Offset(242f, 98f))
+            anchors.forEachIndexed { index, anchor ->
+                // Preserve the original timing and angles of the right-hand rays.
+                val i = index + 3
+                val pulse = sin(t * PI.toFloat() * 6f + i * .8f)
+                val direction = 1f
+                classicOrnament(anchor + Offset(direction * pulse * 3f, -pulse * 3f),
+                    .88f + pulse * .10f, direction * (25f + i % 3 * 18f)) {
+                    val ray = Path().apply { moveTo(-4f, 9f); lineTo(-10f, -15f); lineTo(10f, -15f); lineTo(4f, 9f); close() }
+                    classicSymbolFill(ray, yellow.copy(alpha = strength), ink)
+                    clipPath(ray) { drawPath(Path().apply { moveTo(-10f, -15f); lineTo(-4f, 9f); lineTo(4f, 9f); close() }, orange.copy(alpha = strength * .6f)) }
+                }
+            }
+        }
+        LokiClassicMood.SAD -> {
+            val cloudX = sin(t * PI.toFloat() * 2f) * 4f
+            val cloudY = -19f + sin(t * PI.toFloat() * 4f) * 1.5f
+            classicCloud(Offset(122f + cloudX, cloudY), 1f, Color(0xFF68758E).copy(alpha = strength), ink)
+            repeat(8) { i ->
+                val travel = (t * 5f + i * .37f) % 1f
+                val x = 72f + i * 14f + cloudX + sin(travel * PI.toFloat()) * 2f
+                val y = 2f + travel * 67f
+                val alpha = strength * sin(travel * PI.toFloat()).coerceAtLeast(0f)
+                val drop = Path().apply { moveTo(x, y - 8f); cubicTo(x - 2f, y - 1f, x - 5f, y + 7f, x, y + 8f); cubicTo(x + 5f, y + 7f, x + 2f, y - 1f, x, y - 8f); close() }
+                classicSymbolFill(drop, blue.copy(alpha = alpha), ink)
+            }
+        }
+        LokiClassicMood.ANGRY -> {
+            val pulse = sin(t * PI.toFloat() * 10f)
+            classicOrnament(Offset(212f, 61f), 1.1f + pulse * .12f, pulse * 7f) { classicAnger(Offset.Zero, red.copy(alpha = strength), ink) }
+            repeat(4) { i ->
+                val rise = (t * 3f + i * .25f) % 1f
+                val side = if (i % 2 == 0) -1f else 1f
+                val x = 122f + side * (103f + rise * 9f)
+                val y = 90f - rise * 56f
+                val alpha = strength * sin(rise * PI.toFloat()).coerceAtLeast(0f)
+                classicOrnament(Offset(x, y), .68f + rise * .25f, side * rise * 20f) {
+                    classicCloud(Offset.Zero, .42f, Color(0xFFF6EEDC).copy(alpha = alpha), ink)
+                    classicSymbolStroke(Path().apply { moveTo(-side * 9f, 16f); lineTo(-side * 21f, 29f) }, Color(0xFFF6EEDC).copy(alpha = alpha), ink, 3f)
+                }
+            }
+        }
+        LokiClassicMood.SLEEPING -> repeat(3) { i ->
+            val travel = (t * 2f + i / 3f) % 1f
+            val x = 181f + travel * 49f + sin(travel * PI.toFloat() * 2f) * 3f
+            val y = 79f - travel * 94f
+            classicOrnament(Offset(x, y), 1f, -10f + travel * 15f) {
+                classicZ(Offset.Zero, 6f + travel * 9f, blue.copy(alpha = strength * sin(travel * PI.toFloat()).coerceAtLeast(0f)), ink)
+            }
+        }
+        LokiClassicMood.IN_LOVE -> repeat(4) { i ->
+            val travel = (t * 2f + i / 4f) % 1f
+            val side = if (i % 2 == 0) -1f else 1f
+            val x = 122f + side * (91f + sin(travel * PI.toFloat() * 2f) * 10f)
+            val y = 131f - travel * 137f
+            classicOrnament(Offset(x, y), 1f + sin(travel * PI.toFloat() * 4f) * .08f, side * (12f + travel * 10f)) {
+                classicHeart(Offset.Zero, 12f + travel * 4f, red.copy(alpha = strength * sin(travel * PI.toFloat()).coerceAtLeast(0f)), ink)
+            }
+        }
+        LokiClassicMood.DOUBTFUL -> repeat(3) { i ->
+            val wave = sin(t * PI.toFloat() * 4f + i * 2f)
+            val anchor = when (i) { 0 -> Offset(23f, 72f); 1 -> Offset(216f, 30f); else -> Offset(243f, 98f) }
+            classicOrnament(anchor.copy(y = anchor.y - wave * 6f), if (i == 1) 1.25f else .90f, wave * 11f) {
+                classicQuestion(Offset.Zero, blue.copy(alpha = strength * (.85f + wave * .15f)), ink)
+            }
+        }
+        LokiClassicMood.KNOCKED_OUT -> {
+            val orbit = Path().apply {
+                repeat(41) { i ->
+                    val angle = i * PI.toFloat() / 20f
+                    val x = 122f + cos(angle) * 84f; val y = -3f + sin(angle) * 13f
+                    if (i == 0) moveTo(x, y) else lineTo(x, y)
+                }
+            }
+            drawPath(orbit, ink.copy(alpha = strength * .65f), style = Stroke(2.7f, cap = StrokeCap.Round))
+            repeat(4) { i ->
+                val angle = t * PI.toFloat() * 6f + i * PI.toFloat() / 2f
+                val depth = sin(angle)
+                classicOrnament(Offset(122f + cos(angle) * 84f, -3f + depth * 13f), .95f + depth * .12f, angle * 180f / PI.toFloat()) {
+                    classicStar(Offset.Zero, 12f, yellow.copy(alpha = strength), ink)
+                }
+            }
+        }
+        LokiClassicMood.STREAK -> Unit
+        LokiClassicMood.NORMAL -> Unit
+        LokiClassicMood.PLEADING -> Unit // This performance lives entirely in the face.
+    }
+}
+
+/** Ornaments move independently; the canonical character geometry is untouched. */
+private fun DrawScope.classicOrnament(center: Offset, size: Float, degrees: Float, draw: DrawScope.() -> Unit) {
+    translate(center.x, center.y) { rotate(degrees, Offset.Zero) { scale(size, size, Offset.Zero) { draw() } } }
+}
+
+private fun DrawScope.classicCloud(center: Offset, size: Float, color: Color, ink: Color) {
+    classicOrnament(center, size, 0f) {
+        var cloud = Path()
+        val lobes = listOf(Triple(-45f, 3f, 14f), Triple(-21f, -1f, 18f),
+            Triple(7f, -1f, 18f), Triple(32f, 3f, 16f), Triple(48f, 6f, 11f))
+        lobes.forEachIndexed { i, (x, y, radius) ->
+            val lobe = Path().apply { addOval(androidx.compose.ui.geometry.Rect(x - radius, y - radius, x + radius, y + radius)) }
+            cloud = if (i == 0) lobe else Path.combine(PathOperation.Union, cloud, lobe)
+        }
+        classicSymbolFill(cloud, color, ink)
+        clipPath(cloud) {
+            drawPath(Path().apply { moveTo(-57f, 10f); quadraticTo(0f, 26f, 59f, 8f); lineTo(59f, 26f); lineTo(-57f, 26f); close() },
+                ink.copy(alpha = color.alpha * .14f))
+            drawPath(Path().apply { moveTo(-31f, -9f); quadraticTo(-25f, -17f, -13f, -11f) },
+                Color.White.copy(alpha = color.alpha * .28f), style = Stroke(2.2f, cap = StrokeCap.Round))
+        }
+    }
+}
+
+internal fun DrawScope.classicHeart(center: Offset, radius: Float, color: Color, ink: Color = classicSymbolInk) {
+    val x = center.x; val y = center.y; val r = radius
+    val path = Path().apply {
+        moveTo(x, y + r)
+        cubicTo(x - r * 1.5f, y, x - r, y - r, x, y - r * .35f)
+        cubicTo(x + r, y - r, x + r * 1.5f, y, x, y + r)
+        close()
+    }
+    classicSymbolFill(path, color, ink)
+}
+
+private fun DrawScope.classicZ(center: Offset, radius: Float, color: Color, ink: Color) {
+    val x = center.x; val y = center.y; val r = radius
+    classicSymbolStroke(Path().apply { moveTo(x - r, y - r); lineTo(x + r, y - r); lineTo(x - r, y + r); lineTo(x + r, y + r) }, color, ink, 4f)
+}
+
+internal fun DrawScope.classicQuestion(center: Offset, color: Color, ink: Color = classicSymbolInk) {
+    val x = center.x; val y = center.y
+    classicSymbolStroke(Path().apply { moveTo(x - 8f, y - 9f); cubicTo(x - 14f, y - 24f, x + 15f, y - 26f, x + 9f, y - 8f); quadraticTo(x + 3f, y - 1f, x, y + 3f) }, color, ink)
+    classicSymbolDot(Offset(x, y + 15f), 3f, color, ink)
+}
+
+internal fun DrawScope.classicAnger(center: Offset, color: Color, ink: Color = classicSymbolInk) {
+    val x = center.x; val y = center.y
+    classicSymbolStroke(Path().apply {
+        moveTo(x - 12f, y - 3f); quadraticTo(x - 3f, y - 3f, x - 3f, y - 12f)
+        moveTo(x + 3f, y - 12f); quadraticTo(x + 3f, y - 3f, x + 12f, y - 3f)
+        moveTo(x + 12f, y + 3f); quadraticTo(x + 3f, y + 3f, x + 3f, y + 12f)
+        moveTo(x - 3f, y + 12f); quadraticTo(x - 3f, y + 3f, x - 12f, y + 3f)
+    }, color, ink, 4f)
+}
+
+internal fun DrawScope.classicStar(center: Offset, radius: Float, color: Color, ink: Color = classicSymbolInk) {
+    val path = Path()
+    repeat(10) { i ->
+        val angle = -PI.toFloat() / 2f + i * PI.toFloat() / 5f
+        val r = if (i % 2 == 0) radius else radius * .47f
+        val x = center.x + cos(angle) * r; val y = center.y + sin(angle) * r
+        if (i == 0) path.moveTo(x, y) else path.lineTo(x, y)
+    }
+    path.close()
+    classicSymbolFill(path, color, ink)
+}

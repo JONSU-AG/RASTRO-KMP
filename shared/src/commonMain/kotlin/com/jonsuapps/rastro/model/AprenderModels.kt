@@ -59,8 +59,14 @@ data class Challenge(
     val rightOptions: List<ChallengeMatchOption> = emptyList(),
     val instruction: String? = null,
     val pedagogicalTier: String? = null,
-    val fuente: String? = null
+    val fuente: String? = null,
+    val textTemplate: String? = null,
+    val blanks: List<ChallengeBlank> = emptyList()
 )
+
+/** A placeholder {{id}} in textTemplate, with selectable answers. */
+@Serializable
+data class ChallengeBlank(val id: String, val options: List<String>, val correctText: String)
 
 @Serializable
 data class ChallengePair(

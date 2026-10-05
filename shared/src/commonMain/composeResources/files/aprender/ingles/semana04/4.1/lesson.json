@@ -1,0 +1,18 @@
+{
+  "id": "ing_t04_s01",
+  "subjectId": "ingles",
+  "semana": 4,
+  "subtema": "4.1",
+  "title": "Funciones Comunicativas (Gustos, Preferencias, Solicitudes) y Conectores Lógicos Discursivos - Core Rules & Foundations",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/ingles/InglesSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_ing_t04_s01",
+    "asignatura": "Inglés",
+    "semana": 4,
+    "titulo": "Funciones Comunicativas (Gustos, Preferencias, Solicitudes) y Conectores Lógicos Discursivos - Core Rules & Foundations",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

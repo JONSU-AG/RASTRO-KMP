@@ -1,0 +1,18 @@
+{
+  "id": "civ_t09_s02",
+  "subjectId": "civica",
+  "semana": 9,
+  "subtema": "9.2",
+  "title": "Los Gobiernos Locales (Municipalidades), Rentas Subnacionales y Presupuesto Participativo",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana09.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t09_s02",
+    "asignatura": "Ed. Cívica",
+    "semana": 9,
+    "titulo": "Los Gobiernos Locales (Municipalidades), Rentas Subnacionales y Presupuesto Participativo",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

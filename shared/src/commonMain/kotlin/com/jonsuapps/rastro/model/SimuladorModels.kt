@@ -73,7 +73,10 @@ data class CareerCutoff(
     val area: AreaAdmision,
     val minScore: Double,
     val maxScore: Double,
-    val vacantCount: Int
+    val vacantCount: Int,
+    val referenceProcess: String = "",
+    val referenceUrl: String = "",
+    val admittedCount: Int = 0
 )
 
 @Serializable

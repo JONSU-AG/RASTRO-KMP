@@ -1,0 +1,18 @@
+{
+  "id": "arit_t06_s01",
+  "subjectId": "aritmetica",
+  "semana": 6,
+  "subtema": "6.1",
+  "title": "Razones, Proporciones y Series de Razones Geométricas Equivalentes - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/aritmetica/AritmeticaSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_arit_t06_s01",
+    "asignatura": "Aritmética",
+    "semana": 6,
+    "titulo": "Razones, Proporciones y Series de Razones Geométricas Equivalentes - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

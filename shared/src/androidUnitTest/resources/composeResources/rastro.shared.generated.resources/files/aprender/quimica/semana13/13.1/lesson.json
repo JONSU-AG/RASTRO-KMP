@@ -1,0 +1,18 @@
+{
+  "id": "quim_t13_s01",
+  "subjectId": "quimica",
+  "semana": 13,
+  "subtema": "13.1",
+  "title": "Electroquímica - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/quimica/QuimicaSemana13.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_quim_t13_s01",
+    "asignatura": "Química",
+    "semana": 13,
+    "titulo": "Electroquímica - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

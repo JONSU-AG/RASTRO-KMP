@@ -1,4 +1,12 @@
 package com.jonsuapps.rastro.android.ui.screens
+import kotlinx.coroutines.launch
+import com.jonsuapps.rastro.android.ui.components.answerText
+import com.jonsuapps.rastro.theme.accentText
+import com.jonsuapps.rastro.theme.onAccent
+import com.jonsuapps.rastro.android.ui.components.rastroAcademicBackground
+import com.jonsuapps.rastro.android.ui.components.RastroAdaptiveViewport
+import com.jonsuapps.rastro.android.ui.components.RastroBoundedBlock
+
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
@@ -87,6 +95,7 @@ import com.jonsuapps.rastro.navigation.RastroScreen
 import com.jonsuapps.rastro.theme.RastroPalette
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import androidx.compose.foundation.lazy.grid.*
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import java.net.URL
@@ -124,7 +133,13 @@ fun UserProfileScreen(
     val isBlockedByMe = currentUser.blockedUsers.contains(profileUid)
 
     val streakState by GamificationManager.streakState.collectAsState()
-    val errorBankQuestions by ErrorBankRepository.errors.collectAsState()
+    val ownErrors by ErrorBankRepository.errors.collectAsState()
+    val errorsShared by ErrorBankRepository.shared.collectAsState()
+    val errorBankMessage by ErrorBankRepository.message.collectAsState()
+    val errorSavingPaused by ErrorBankRepository.paused.collectAsState()
+    val errorsClearing by ErrorBankRepository.clearing.collectAsState()
+    val errorBankQuestions = if (isOtherProfile) ErrorBankRepository.publicQuestions(otherUserData) else ownErrors
+    val canViewErrors = !isOtherProfile || otherUserData["errorsPublic"] == true
     val unsolvedErrorsCount = remember(errorBankQuestions) { errorBankQuestions.count { !it.isSolved } }
     var showErrorBankModal by remember { mutableStateOf(false) }
     var errorBankInitialOrigin by remember { mutableStateOf(ErrorBankOrigins.APRENDER) }
@@ -170,6 +185,7 @@ fun UserProfileScreen(
     var showStreakInfo by remember { mutableStateOf(false) }
     val uriHandler = LocalUriHandler.current
     val context = LocalContext.current
+    val mediaScope = rememberCoroutineScope()
 
     LaunchedEffect(currentUser.uid) {
         FavoritesRepository.init(context)
@@ -261,7 +277,7 @@ fun UserProfileScreen(
         else onNavigate("auth")
     }
 
-    val listState = rememberLazyListState()
+    val listState = rememberLazyGridState()
     val otherVisibleUploads = remember(userUploads, currentUser.blockedUsers) {
         userUploads.filter { it.ownerUid !in currentUser.blockedUsers }
     }
@@ -273,24 +289,23 @@ fun UserProfileScreen(
             val targetIdx = visibleUploads.indexOfFirst { it.id == targetPublicationId }
             if (targetIdx >= 0) {
                 // Item 0: Portada, Item 1: Tarjeta Perfil, Item 2: Cabecera Aportes, Item 3+targetIdx: La publicación exacta
-                val targetItemIndex = if (isOtherProfile) 3 + targetIdx else 1
+                val targetItemIndex = 3 + targetIdx
                 listState.animateScrollToItem(index = targetItemIndex, scrollOffset = -20)
             }
         }
     }
 
-    Box(
-        modifier = modifier
-            .fillMaxSize()
-            .background(theme.background)
-    ) {
-        LazyColumn(
+    RastroAdaptiveViewport(modifier.rastroAcademicBackground(theme)) { layout ->
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(layout.columns),
             state = listState,
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
             modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(bottom = 120.dp)
         ) {
             // ──────────────── 1. PORTADA CON CORAJE (Fondo Rosa Oficial) ────────────────
-            item {
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -388,7 +403,7 @@ fun UserProfileScreen(
                                             text = {
                                                 Text(
                                                     if (isBlockedByMe) "Desbloquear usuario" else "Bloquear usuario",
-                                                    color = if (isBlockedByMe) theme.accent else Color(0xFFEF4444),
+                                                    color = if (isBlockedByMe) theme.accentText else Color(0xFFEF4444),
                                                     fontWeight = FontWeight.Bold
                                                 )
                                             },
@@ -396,7 +411,7 @@ fun UserProfileScreen(
                                                 Icon(
                                                     Icons.Rounded.Block,
                                                     contentDescription = null,
-                                                    tint = if (isBlockedByMe) theme.accent else Color(0xFFEF4444)
+                                                    tint = if (isBlockedByMe) theme.accentText else Color(0xFFEF4444)
                                                 )
                                             },
                                             onClick = {
@@ -416,7 +431,7 @@ fun UserProfileScreen(
 
                             LucideShareIcon(
                                 onClick = {
-                                    val profileUrl = "https://rumbo-jonsu.web.app/#/usuario/$profileUid"
+                                    val profileUrl = com.jonsuapps.rastro.android.navigation.RastroAppLinks.profileUrl(profileUid)
                                     val shareIntent = Intent(Intent.ACTION_SEND).apply {
                                         type = "text/plain"
                                         putExtra(Intent.EXTRA_TEXT, "Mira el perfil de $displayedName: $profileUrl")
@@ -433,10 +448,13 @@ fun UserProfileScreen(
                         }
                     }
                 }
+
+                }
             }
 
             // ──────────────── 2. TARJETA PRINCIPAL DEL PERFIL ────────────────
-            item {
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -543,7 +561,7 @@ fun UserProfileScreen(
                                         UserProfileRepository.blockUser(currentUser.uid, profileUid, block = false) { }
                                     }
                                 ) {
-                                    Text("Desbloquear", color = theme.accent, fontWeight = FontWeight.Black, fontSize = 12.sp)
+                                    Text("Desbloquear", color = theme.accentText, fontWeight = FontWeight.Black, fontSize = 12.sp)
                                 }
                             }
                         }
@@ -648,7 +666,7 @@ fun UserProfileScreen(
                                 contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp)
                             ) {
                                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                                    Icon(Icons.Rounded.Edit, contentDescription = null, tint = theme.accent, modifier = Modifier.size(15.dp))
+                                    Icon(Icons.Rounded.Edit, contentDescription = null, tint = theme.accentText, modifier = Modifier.size(15.dp))
                                     Text("Editar Perfil", fontSize = 12.5.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
                                 }
                             }
@@ -721,7 +739,7 @@ fun UserProfileScreen(
                                 horizontalArrangement = Arrangement.Center,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Icon(Icons.Rounded.Group, contentDescription = null, tint = theme.accent, modifier = Modifier.size(16.dp))
+                                Icon(Icons.Rounded.Group, contentDescription = null, tint = theme.accentText, modifier = Modifier.size(16.dp))
                                 Spacer(modifier = Modifier.width(6.dp))
                                 Text(
                                     text = "$followersCount seguidores",
@@ -753,7 +771,7 @@ fun UserProfileScreen(
                                 horizontalArrangement = Arrangement.Center,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Icon(Icons.Rounded.PersonAdd, contentDescription = null, tint = theme.accent, modifier = Modifier.size(16.dp))
+                                Icon(Icons.Rounded.PersonAdd, contentDescription = null, tint = theme.accentText, modifier = Modifier.size(16.dp))
                                 Spacer(modifier = Modifier.width(6.dp))
                                 Text(
                                     text = "$followingCount seguidos",
@@ -865,7 +883,7 @@ fun UserProfileScreen(
                                         Spacer(modifier = Modifier.width(8.dp))
                                         Surface(
                                             shape = RoundedCornerShape(12.dp),
-                                            color = theme.accent,
+                                            color = theme.accentText,
                                             shadowElevation = 3.dp,
                                             modifier = Modifier.clickable { runCatching { uriHandler.openUri(displayedInstagram) } }
                                         ) {
@@ -927,16 +945,19 @@ fun UserProfileScreen(
                                     bevelHeight = 3.dp,
                                     contentPadding = PaddingValues(horizontal = 20.dp, vertical = 8.dp)
                                 ) {
-                                    Text("Desbloquear usuario", fontWeight = FontWeight.Bold, color = Color.White, fontSize = 13.sp)
+                                    Text("Desbloquear usuario", fontWeight = FontWeight.Bold, color = theme.onAccent, fontSize = 13.sp)
                                 }
                             }
                         }
                     }
                 }
+
+                }
             }
 
             if (isOtherProfile) {
-                item(key = "other_profile_header") {
+                item(key = "other_profile_header", span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -944,6 +965,13 @@ fun UserProfileScreen(
                             .padding(horizontal = 16.dp)
                     ) {
                         Spacer(modifier = Modifier.height(18.dp))
+                        Sticker3dButton(onClick = { showErrorBankModal = true },
+                            modifier = Modifier.fillMaxWidth(), containerColor = theme.surface,
+                            bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder) {
+                            Text(if (canViewErrors) "Ver errores compartidos" else "Mis errores · Privados", color = theme.textPrimary,
+                                fontWeight = FontWeight.Bold)
+                        }
+                        Spacer(Modifier.height(14.dp))
                         Row(
                             modifier = Modifier.fillMaxWidth(),
                             verticalAlignment = Alignment.CenterVertically
@@ -951,7 +979,7 @@ fun UserProfileScreen(
                             Icon(
                                 imageVector = Icons.Rounded.FolderShared,
                                 contentDescription = null,
-                                tint = theme.accent,
+                                tint = theme.accentText,
                                 modifier = Modifier.size(18.dp)
                             )
                             Spacer(modifier = Modifier.width(8.dp))
@@ -971,7 +999,9 @@ fun UserProfileScreen(
                             )
                         }
                     }
+
                 }
+            }
 
                 if (otherVisibleUploads.isNotEmpty()) {
                     items(
@@ -995,7 +1025,8 @@ fun UserProfileScreen(
                     }
                 }
             } else {
-                item {
+                item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -1032,7 +1063,7 @@ fun UserProfileScreen(
                                         Icon(
                                             imageVector = Icons.Rounded.MenuBook,
                                             contentDescription = null,
-                                            tint = theme.accent,
+                                            tint = theme.accentText,
                                             modifier = Modifier.size(15.dp)
                                         )
                                     }
@@ -1042,7 +1073,7 @@ fun UserProfileScreen(
                                             text = "${userUploads.size}",
                                             fontSize = 15.sp,
                                             fontWeight = FontWeight.Black,
-                                            color = theme.accent,
+                                            color = theme.accentText,
                                             lineHeight = 16.sp
                                         )
                                         Text(
@@ -1088,7 +1119,7 @@ fun UserProfileScreen(
                                     Spacer(modifier = Modifier.width(8.dp))
                                     Column {
                                         Text(
-                                            text = "$unsolvedErrorsCount",
+                                            text = if (!canViewErrors) "Privado" else "$unsolvedErrorsCount",
                                             fontSize = 15.sp,
                                             fontWeight = FontWeight.Black,
                                             color = Color(0xFFEF4444),
@@ -1135,18 +1166,18 @@ fun UserProfileScreen(
                                 onClick = openUploadDialog
                             )
                             ProfileToolButton(
-                                title = "Ranking",
+                                title = "Ligas",
                                 icon = Icons.Rounded.EmojiEvents,
                                 badgeColor = Color(0xFFF59E0B),
                                 modifier = Modifier.weight(1f),
-                                onClick = { onNavigate("simulador") }
+                                onClick = { onNavigate("ligas") }
                             )
                             ProfileToolButton(
                                 title = "Racha",
                                 icon = Icons.Rounded.LocalFireDepartment,
                                 badgeColor = Color(0xFFEF4444),
                                 modifier = Modifier.weight(1f),
-                                onClick = { showStreakInfo = true }
+                                onClick = { onNavigate(RastroScreen.DiasDeRacha.route) }
                             )
                         }
 
@@ -1163,7 +1194,6 @@ fun UserProfileScreen(
                                 icon = Icons.Rounded.FolderShared,
                                 isSelected = selectedTab == 0,
                                 selectedBgColor = theme.accent,
-                                selectedContentColor = Color.White,
                                 unselectedBgColor = theme.surface,
                                 unselectedContentColor = theme.textSecondary,
                                 strokeColor = theme.strokeBorder,
@@ -1177,7 +1207,6 @@ fun UserProfileScreen(
                                 icon = Icons.Rounded.Bookmark,
                                 isSelected = selectedTab == 1,
                                 selectedBgColor = theme.accent,
-                                selectedContentColor = Color.White,
                                 unselectedBgColor = theme.surface,
                                 unselectedContentColor = theme.textSecondary,
                                 strokeColor = theme.strokeBorder,
@@ -1203,7 +1232,7 @@ fun UserProfileScreen(
                                         Icon(
                                             Icons.Rounded.AutoAwesome,
                                             contentDescription = null,
-                                            tint = theme.accent,
+                                            tint = theme.accentText,
                                             modifier = Modifier.size(18.dp)
                                         )
                                         Spacer(modifier = Modifier.width(6.dp))
@@ -1231,9 +1260,9 @@ fun UserProfileScreen(
                                     bevelHeight = 3.dp,
                                     contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
                                 ) {
-                                    Icon(Icons.Rounded.Add, contentDescription = null, tint = Color.White, modifier = Modifier.size(16.dp))
+                                    Icon(Icons.Rounded.Add, contentDescription = null, tint = theme.onAccent, modifier = Modifier.size(16.dp))
                                     Spacer(modifier = Modifier.width(4.dp))
-                                    Text("Aportar", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = Color.White)
+                                    Text("Aportar", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = theme.onAccent)
                                 }
                             }
 
@@ -1250,12 +1279,12 @@ fun UserProfileScreen(
                                 shape = RoundedCornerShape(16.dp)
                             ) {
                                 Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-                                    Icon(Icons.Rounded.Link, contentDescription = null, tint = theme.accent)
+                                    Icon(Icons.Rounded.Link, contentDescription = null, tint = theme.accentText)
                                     Spacer(Modifier.width(10.dp))
                                     Text("Comparte un enlace o material con la comunidad", color = theme.textSecondary, modifier = Modifier.weight(1f), fontSize = 12.sp)
                                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                                        Text("Publicar", color = theme.accent, fontWeight = FontWeight.Bold, fontSize = 12.sp)
-                                        Icon(Icons.AutoMirrored.Rounded.ArrowForward, contentDescription = null, tint = theme.accent, modifier = Modifier.size(14.dp))
+                                        Text("Publicar", color = theme.accentText, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                                        Icon(Icons.AutoMirrored.Rounded.ArrowForward, contentDescription = null, tint = theme.accentText, modifier = Modifier.size(14.dp))
                                     }
                                 }
                             }
@@ -1266,16 +1295,7 @@ fun UserProfileScreen(
                             if (userUploads.isEmpty()) {
                                 Text("Aún no compartiste materiales. Usa Aportar para publicar un enlace y verlo aquí.", color = theme.textSecondary, fontSize = 13.sp)
                             } else {
-                                userUploads.forEach { upload ->
-                                    CommunityUploadCard(
-                                        upload = upload,
-                                        theme = theme,
-                                        isHighlighted = (upload.id == targetPublicationId),
-                                        onNavigateToProfile = { uid -> onNavigate(RastroScreen.UsuarioDetail.createRoute(uid)) },
-                                        onRequestSignIn = { onNavigate("auth") }
-                                    )
-                                    Spacer(modifier = Modifier.height(12.dp))
-                                }
+
                             }
                         } else {
                             // ──────────────── SECCIÓN MULTI-ORIGEN: GUARDADOS ────────────────
@@ -1293,7 +1313,7 @@ fun UserProfileScreen(
                                             Icon(
                                                 imageVector = Icons.Rounded.Bookmark,
                                                 contentDescription = null,
-                                                tint = theme.accent,
+                                                tint = theme.accentText,
                                                 modifier = Modifier.size(20.dp)
                                             )
                                             Spacer(modifier = Modifier.width(6.dp))
@@ -1328,7 +1348,6 @@ fun UserProfileScreen(
                                             text = "$filterName ($count)",
                                             isSelected = selectedSavedFilter == filterName,
                                             selectedBgColor = theme.accent,
-                                            selectedContentColor = Color.White,
                                             unselectedBgColor = theme.surface,
                                             unselectedContentColor = theme.textSecondary,
                                             strokeColor = theme.strokeBorder,
@@ -1394,7 +1413,7 @@ fun UserProfileScreen(
                                             text = "OBRAS LITERARIAS (${savedObras.size})",
                                             fontSize = 11.sp,
                                             fontWeight = FontWeight.Black,
-                                            color = theme.accent,
+                                            color = theme.accentText,
                                             letterSpacing = 0.5.sp
                                         )
                                         savedObras.forEach { obra ->
@@ -1485,7 +1504,7 @@ fun UserProfileScreen(
                                             text = "MATERIAL OFICIAL CEPRE / UNSA (${savedOfficialMaterials.size})",
                                             fontSize = 11.sp,
                                             fontWeight = FontWeight.Black,
-                                            color = theme.accent,
+                                            color = theme.accentText,
                                             letterSpacing = 0.5.sp
                                         )
                                         savedOfficialMaterials.forEach { material ->
@@ -1513,7 +1532,7 @@ fun UserProfileScreen(
                                                             Icon(
                                                                 imageVector = if (material.extraPayload.contains("/folders/")) Icons.Rounded.FolderOpen else Icons.Rounded.Description,
                                                                 contentDescription = null,
-                                                                tint = theme.accent,
+                                                                tint = theme.accentText,
                                                                 modifier = Modifier.size(18.dp)
                                                             )
                                                         }
@@ -1522,7 +1541,7 @@ fun UserProfileScreen(
                                                             Text(
                                                                 text = "MATERIAL OFICIAL",
                                                                 style = MaterialTheme.typography.labelSmall,
-                                                                color = theme.accent,
+                                                                color = theme.accentText,
                                                                 fontWeight = FontWeight.Bold
                                                             )
                                                             Text(
@@ -1577,9 +1596,9 @@ fun UserProfileScreen(
                                                                 verticalAlignment = Alignment.CenterVertically,
                                                                 horizontalArrangement = Arrangement.Center
                                                             ) {
-                                                                Icon(Icons.Rounded.OpenInNew, contentDescription = null, tint = Color.White, modifier = Modifier.size(14.dp))
+                                                                Icon(Icons.Rounded.OpenInNew, contentDescription = null, tint = theme.onAccent, modifier = Modifier.size(14.dp))
                                                                 Spacer(Modifier.width(6.dp))
-                                                                Text("Abrir material", fontSize = 11.5.sp, fontWeight = FontWeight.Bold, color = Color.White)
+                                                                Text("Abrir material", fontSize = 11.5.sp, fontWeight = FontWeight.Bold, color = theme.onAccent)
                                                             }
                                                         }
                                                     }
@@ -1595,7 +1614,7 @@ fun UserProfileScreen(
                                             text = "APORTES DE LA COMUNIDAD (${savedUploads.size})",
                                             fontSize = 11.sp,
                                             fontWeight = FontWeight.Black,
-                                            color = theme.accent,
+                                            color = theme.accentText,
                                             letterSpacing = 0.5.sp
                                         )
                                         savedUploads.forEach { saved ->
@@ -1612,9 +1631,24 @@ fun UserProfileScreen(
                             }
                         }
                     }
+
                 }
             }
-        }
+            }
+
+            if (!isOtherProfile && selectedTab == 0) items(userUploads, key = { "own_${it.id}" }) { upload ->
+                Box(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 6.dp)) {
+                    CommunityUploadCard(upload = upload, theme = theme,
+                        isHighlighted = upload.id == targetPublicationId,
+                        onNavigateToProfile = { uid -> onNavigate(RastroScreen.UsuarioDetail.createRoute(uid)) },
+                        onRequestSignIn = { onNavigate("auth") })
+                }
+            }
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock { com.jonsuapps.rastro.android.ui.components.MainPageEnd()
+                }
+            }
+}
 
         if (showProfileEditor) {
                             Dialog(onDismissRequest = { if (!savingProfile && !uploadingCover) { discardPendingMedia(); showProfileEditor = false } }) {
@@ -1837,7 +1871,9 @@ fun UserProfileScreen(
                             // Botón Físico 3D estilo Sticker (Ganar XP)
                             com.jonsuapps.rastro.android.ui.components.Sticker3dButton(
                                 onClick = {
+                                    if (savingProfile) return@Sticker3dButton
                                     savingProfile = true
+                                    // Snapshot reads run on IO; publishing remains guarded until completion.
                                     profileMessage = null
                                     val avatarUri = pendingAvatarUri
                                     val coverUri = pendingCoverUri
@@ -1850,9 +1886,15 @@ fun UserProfileScreen(
                                         uploadingCover = false
                                         profileMessage = msg
                                     }
-                                    fun readBytes(uri: Uri): ByteArray? = try {
-                                        context.contentResolver.openInputStream(uri)?.use { it.readBytes() }
-                                    } catch (_: Exception) { null }
+                                    fun readBytes(uri: Uri, onRead: (ByteArray?) -> Unit) {
+                                        mediaScope.launch {
+                                            val bytes = withContext(Dispatchers.IO) {
+                                                try { context.contentResolver.openInputStream(uri)?.use { it.readBytes() } }
+                                                catch (_: Exception) { null }
+                                            }
+                                            onRead(bytes)
+                                        }
+                                    }
 
                                     // Solo se sube la selección FINAL pendiente; CANCELAR nunca llega aquí.
                                     fun saveAll(newPhotoUrl: String?, newCoverUrl: String?) {
@@ -1913,10 +1955,10 @@ fun UserProfileScreen(
                                             return
                                         }
                                         uploadingCover = true
-                                        val bytes = readBytes(coverUri)
+                                        readBytes(coverUri) readCover@{ bytes ->
                                         if (bytes == null || bytes.isEmpty()) {
                                             fail("No se pudo leer la portada seleccionada.")
-                                            return
+                                            return@readCover
                                         }
                                         com.jonsuapps.rastro.android.data.DriveUploadRepository.uploadUserFile(
                                             context = context,
@@ -1929,13 +1971,14 @@ fun UserProfileScreen(
                                                     .onFailure { fail("No se pudo subir la portada: ${it.localizedMessage}") }
                                             }
                                         )
+                                        }
                                     }
 
                                     if (avatarUri == null) {
                                         uploadCoverThenSave(null)
                                     } else {
                                         uploadingAvatar = true
-                                        val bytes = readBytes(avatarUri)
+                                        readBytes(avatarUri) { bytes ->
                                         if (bytes == null || bytes.isEmpty()) {
                                             fail("No se pudo leer la foto seleccionada.")
                                         } else {
@@ -1951,6 +1994,7 @@ fun UserProfileScreen(
                                                 }
                                             )
                                         }
+                                        }
                                     }
                                 },
                                 enabled = !savingProfile && !uploadingCover && !uploadingAvatar && editName.trim().length >= 2,
@@ -1961,7 +2005,7 @@ fun UserProfileScreen(
                             ) {
                                 Text(
                                     if (savingProfile) "Guardando…" else "Guardar cambios",
-                                    color = Color.White,
+                                    color = theme.onAccent,
                                     fontWeight = FontWeight.Black,
                                     fontSize = 13.sp
                                 )
@@ -2020,7 +2064,7 @@ fun UserProfileScreen(
 
                         if (loadingConnections) {
                             Box(modifier = Modifier.fillMaxWidth().height(100.dp), contentAlignment = Alignment.Center) {
-                                CircularProgressIndicator(color = theme.accent)
+                                CircularProgressIndicator(color = theme.accentText)
                             }
                         } else if (connectionUsers.isEmpty()) {
                             Text("Aún no hay conexiones.", color = theme.textSecondary, fontSize = 12.sp)
@@ -2074,14 +2118,23 @@ fun UserProfileScreen(
             onRequestSignIn = { onNavigate("auth") }
         )
 
-        // Modal Banco de Errores (Mis Errores)
+        // Never supply the visitor with the active account's private error list.
         if (showErrorBankModal) {
-            ErrorBankDialog(
-                questions = errorBankQuestions,
-                theme = theme,
-                initialOrigin = errorBankInitialOrigin,
+            if (!canViewErrors) AlertDialog(
+                onDismissRequest = { showErrorBankModal = false },
+                title = { Text("Errores privados") },
+                text = { Text("Los errores son privados de cada usuario. Solo se pueden ver si su propietario decide compartirlos.") },
+                confirmButton = { TextButton(onClick = { showErrorBankModal = false }) { Text("Entendido") } }
+            ) else ErrorBankDialog(
+                questions = errorBankQuestions, theme = theme, initialOrigin = errorBankInitialOrigin,
                 onDismiss = { showErrorBankModal = false },
-                onSolve = { id -> ErrorBankRepository.markAsSolved(id) }
+                onSolve = if (isOtherProfile) null else { id -> ErrorBankRepository.markAsSolved(id) },
+                shared = errorsShared, onShareChange = if (isOtherProfile) null else ErrorBankRepository::setShared,
+                status = if (isOtherProfile) null else errorBankMessage,
+                title = if (isOtherProfile) "Errores compartidos" else "Mis errores",
+                paused = errorSavingPaused, clearing = errorsClearing,
+                onPauseChange = if (isOtherProfile) null else ErrorBankRepository::setPaused,
+                onClearAll = if (isOtherProfile) null else ErrorBankRepository::clearAll
             )
         }
 
@@ -2125,12 +2178,20 @@ fun FriendsAndStreaksDialog(
     var friendSearchQuery by remember { mutableStateOf("") }
     var statusMessage by remember { mutableStateOf<String?>(null) }
     var isSending by remember { mutableStateOf(false) }
+    var streaks by remember(currentUserUid) { mutableStateOf(emptyList<Map<String, Any>>()) }
+    var friendsError by remember { mutableStateOf<String?>(null) }
+    var busyStreak by remember { mutableStateOf<String?>(null) }
+    DisposableEffect(currentUserUid) {
+        val listeners = UserProfileRepository.observeDualStreaks(currentUserUid,
+            onStreaks = { streaks = it; friendsError = null }, onError = { friendsError = it })
+        onDispose { listeners.forEach { it.remove() } }
+    }
 
     Dialog(onDismissRequest = onDismiss) {
         Sticker3dCard(
             modifier = Modifier
-                .fillMaxWidth(0.96f)
-                .widthIn(max = 460.dp),
+                .widthIn(max = 460.dp)
+                .fillMaxWidth(0.96f),
             containerColor = theme.surface,
             bottomBevelColor = theme.cardBevel,
             strokeColor = theme.strokeBorder,
@@ -2207,48 +2268,46 @@ fun FriendsAndStreaksDialog(
                     0 -> {
                         Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                             Text(
-                                text = "Elige con qué amigos compartir racha (puedes activar con uno, varios o muchos):",
+                                text = "Tus solicitudes y rachas de amigos:",
                                 fontSize = 12.sp,
                                 color = theme.textSecondary,
                                 lineHeight = 16.sp
                             )
 
-                            // Muestra lista de amigos
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .clip(RoundedCornerShape(14.dp))
-                                    .background(theme.surfaceAccent)
-                                    .padding(12.dp)
-                            ) {
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.SpaceBetween
-                                ) {
-                                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                                        CartoonAvatar(photoUrl = null, size = 36.dp, strokeColor = theme.strokeBorder)
-                                        Column {
-                                            Text("Estudiante RASTRO", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = theme.textPrimary)
-                                            Text("Amigo de estudio", fontSize = 11.sp, color = theme.textSecondary)
+                            friendsError?.let { Text(it, color = theme.answerText(false), fontSize = 12.sp) }
+                            if (streaks.isEmpty() && friendsError == null) Text("Todavía no tienes amigos o solicitudes. Busca a tu compañero en Agregar.", color = theme.textSecondary, fontSize = 12.sp)
+                            GroupStreakSection(streaks, currentUserUid, theme) { statusMessage = it }
+                            streaks.filter { it["type"] != "group" && it["status"] != "rejected" }.sortedBy { if (it["status"] == "pending") 0 else 1 }.forEach { streak ->
+                                val incoming = streak["user2Uid"] == currentUserUid
+                                val name = (streak[if (incoming) "senderName" else "recipientName"] as? String).orEmpty().ifBlank { "Estudiante RASTRO" }
+                                val active = streak["status"] == "active"
+                                val id = streak["id"] as? String ?: ""
+                                Column(Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)).background(theme.surfaceAccent).padding(12.dp),
+                                    verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                                    Text(name, color = theme.textPrimary, fontWeight = FontWeight.Bold)
+                                    Text(if (active) "Racha de amigos activa con $name" else if (incoming) "$name te envió una solicitud de amistad" else "Solicitud enviada a $name",
+                                        color = theme.textSecondary, fontSize = 12.sp)
+                                    if (active) Text("${com.jonsuapps.rastro.android.data.SharedStreakMath.days(streak)} días compartidos", color = theme.accentText, fontSize = 12.sp)
+                                    val previousDays = (streak["streakDays"] as? Number)?.toInt() ?: 0
+                                    if (active && previousDays > 0) Text("Historial anterior: $previousDays días", color = theme.textSecondary, fontSize = 12.sp)
+                                    else if (incoming) Sticker3dButton(onClick = {
+                                        busyStreak = id
+                                        UserProfileRepository.acceptDualStreak(id) { success ->
+                                            busyStreak = null
+                                            statusMessage = if (success) "¡Amistad aceptada! Racha de amigos activa con $name." else "No se pudo aceptar. Inténtalo de nuevo."
                                         }
+                                    }, enabled = busyStreak == null, containerColor = theme.accent,
+                                        bottomBevelColor = theme.accentBevel, strokeColor = theme.strokeBorder,
+                                        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp)) {
+                                        Text("Aceptar amistad", color = theme.onAccent, fontWeight = FontWeight.Bold)
                                     }
-
-                                    Sticker3dButton(
-                                        onClick = {
-                                            DuolingoHaptics.playAnswerCorrect(context)
-                                            statusMessage = "¡Racha activada con este amigo!"
-                                        },
-                                        containerColor = Color(0xFFF97316),
-                                        bottomBevelColor = Color(0xFFC2410C),
-                                        strokeColor = theme.strokeBorder,
-                                        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 5.dp)
-                                    ) {
-                                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                                            Icon(Icons.Rounded.LocalFireDepartment, contentDescription = null, tint = Color.White, modifier = Modifier.size(14.dp))
-                                            Text("Activar Racha", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color.White)
+                                    if (!active && incoming) TextButton(onClick = {
+                                        busyStreak = id
+                                        UserProfileRepository.rejectDualStreak(id) { success ->
+                                            busyStreak = null
+                                            statusMessage = if (success) "Solicitud rechazada." else "No se pudo responder. Inténtalo de nuevo."
                                         }
-                                    }
+                                    }, enabled = busyStreak == null) { Text("Rechazar", color = theme.textSecondary) }
                                 }
                             }
                         }
@@ -2288,7 +2347,7 @@ fun FriendsAndStreaksDialog(
                                 shape = RoundedCornerShape(12.dp),
                                 trailingIcon = {
                                     IconButton(onClick = { doSearch() }) {
-                                        Icon(Icons.Rounded.Search, contentDescription = "Buscar", tint = theme.accent)
+                                        Icon(Icons.Rounded.Search, contentDescription = "Buscar", tint = theme.accentText)
                                     }
                                 },
                                 modifier = Modifier.fillMaxWidth()
@@ -2296,7 +2355,7 @@ fun FriendsAndStreaksDialog(
 
                             if (isSearching) {
                                 Box(modifier = Modifier.fillMaxWidth().height(60.dp), contentAlignment = Alignment.Center) {
-                                    CircularProgressIndicator(color = theme.accent, modifier = Modifier.size(24.dp))
+                                    CircularProgressIndicator(color = theme.accentText, modifier = Modifier.size(24.dp))
                                 }
                             } else if (searchResults.isNotEmpty()) {
                                 Column(
@@ -2354,8 +2413,8 @@ fun FriendsAndStreaksDialog(
                                                 contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp)
                                             ) {
                                                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                                                    Icon(Icons.Rounded.PersonAdd, contentDescription = null, tint = Color.White, modifier = Modifier.size(14.dp))
-                                                    Text("Solicitud", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color.White, maxLines = 1)
+                                                    Icon(Icons.Rounded.PersonAdd, contentDescription = null, tint = theme.onAccent, modifier = Modifier.size(14.dp))
+                                                    Text("Solicitud", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = theme.onAccent, maxLines = 1)
                                                 }
                                             }
                                         }
@@ -2372,18 +2431,18 @@ fun FriendsAndStreaksDialog(
                         Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                             Surface(
                                 shape = RoundedCornerShape(14.dp),
-                                color = Color(0xFFEFF6FF),
-                                border = BorderStroke(1.dp, Color(0xFFDBEAFE))
+                                color = theme.surfaceAccent,
+                                border = BorderStroke(1.dp, theme.strokeBorder.copy(alpha = .35f))
                             ) {
                                 Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                                        Icon(Icons.Rounded.Shield, contentDescription = null, tint = Color(0xFF2563EB), modifier = Modifier.size(18.dp))
-                                        Text("Reglas de Escudos de Protección:", fontWeight = FontWeight.Black, fontSize = 12.5.sp, color = Color(0xFF1E40AF))
+                                        Icon(Icons.Rounded.Shield, contentDescription = null, tint = theme.accentText, modifier = Modifier.size(18.dp))
+                                        Text("Reglas de Escudos de Protección:", fontWeight = FontWeight.Black, fontSize = 12.5.sp, color = theme.accentText)
                                     }
-                                    Text("• 10+ días consecutivos = 1 Escudo de Protección", fontSize = 11.5.sp, color = Color(0xFF1E3A8A))
-                                    Text("• 20+ días consecutivos = 2 Escudos de Protección", fontSize = 11.5.sp, color = Color(0xFF1E3A8A))
-                                    Text("• 30+ días consecutivos = 3 Escudos de Protección (Máximo 3)", fontSize = 11.5.sp, color = Color(0xFF1E3A8A))
-                                    Text("• Si solo uno de los dos no cumple su estudio diario (1 lección o 5 min), la racha se rompe a menos que tengan un Escudo activo.", fontSize = 11.sp, color = Color(0xFF1D4ED8), lineHeight = 15.sp)
+                                    Text("• 10+ días consecutivos = 1 Escudo de Protección", fontSize = 11.5.sp, color = theme.textPrimary)
+                                    Text("• 20+ días consecutivos = 2 Escudos de Protección", fontSize = 11.5.sp, color = theme.textPrimary)
+                                    Text("• 30+ días consecutivos = 3 Escudos de Protección (Máximo 3)", fontSize = 11.5.sp, color = theme.textPrimary)
+                                    Text("• Si solo uno de los dos no cumple su estudio diario (1 lección o 15 min), la racha se rompe a menos que tengan un Escudo activo.", fontSize = 11.sp, color = theme.textPrimary, lineHeight = 15.sp)
                                 }
                             }
 
@@ -2398,7 +2457,7 @@ fun FriendsAndStreaksDialog(
                                 horizontalArrangement = Arrangement.SpaceBetween
                             ) {
                                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                    Icon(Icons.Rounded.Shield, contentDescription = null, tint = Color(0xFF3B82F6), modifier = Modifier.size(22.dp))
+                                    Icon(Icons.Rounded.Shield, contentDescription = null, tint = theme.accentText, modifier = Modifier.size(22.dp))
                                     Column {
                                         Text("Escudos Acumulados", fontWeight = FontWeight.Bold, fontSize = 12.5.sp, color = theme.textPrimary)
                                         Text("Protege tu racha compartida", fontSize = 10.5.sp, color = theme.textSecondary)
@@ -2407,9 +2466,9 @@ fun FriendsAndStreaksDialog(
 
                                 Surface(
                                     shape = RoundedCornerShape(10.dp),
-                                    color = Color(0xFF2563EB)
+                                    color = theme.accent
                                 ) {
-                                    Text("1 / 3 Escudos", modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp), color = Color.White, fontWeight = FontWeight.Black, fontSize = 11.sp)
+                                    Text("${streaks.filter { it["status"] == "active" }.sumOf { (it["shields"] as? Number)?.toInt() ?: 0 }} Escudos", modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp), color = theme.onAccent, fontWeight = FontWeight.Black, fontSize = 11.sp)
                                 }
                             }
                         }
@@ -2417,7 +2476,12 @@ fun FriendsAndStreaksDialog(
                 }
 
                 statusMessage?.let { msg ->
-                    Text(msg, color = theme.accent, fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                    Surface(color = theme.surfaceAccent, shape = RoundedCornerShape(12.dp), border = BorderStroke(1.dp, theme.strokeBorder)) {
+                        Row(Modifier.fillMaxWidth().padding(12.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            Icon(Icons.Rounded.Info, null, tint = theme.accentText, modifier = Modifier.size(20.dp))
+                            Text(msg, color = theme.textPrimary, fontSize = 12.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+                        }
+                    }
                 }
             }
         }
@@ -2475,6 +2539,7 @@ private fun ProfileUploadCard(
     theme: com.jonsuapps.rastro.theme.RastroPalette
 ) {
     var previewOpen by remember(upload.id) { mutableStateOf(false) }
+    var previewBitmap by remember(upload.id) { mutableStateOf<androidx.compose.ui.graphics.ImageBitmap?>(null) }
     val uriHandler = LocalUriHandler.current
     Sticker3dCard(
         modifier = Modifier.fillMaxWidth(),
@@ -2485,12 +2550,12 @@ private fun ProfileUploadCard(
         bevelHeight = 4.dp
     ) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            Text(upload.category.ifBlank { "Material compartido" }, color = theme.accent, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+            Text(upload.category.ifBlank { "Material compartido" }, color = theme.accentText, fontSize = 11.sp, fontWeight = FontWeight.Bold)
             Text(upload.title, color = theme.textPrimary, fontSize = 15.sp, fontWeight = FontWeight.Bold)
             if (upload.description.isNotBlank()) Text(upload.description, color = theme.textSecondary, fontSize = 13.sp, lineHeight = 18.sp)
             UserUploadPreview(upload = upload, theme = theme)
             if (upload.author.isNotBlank()) Text("Autor: ${upload.author}", color = theme.textSecondary, fontSize = 11.sp)
-            Text(upload.url, color = theme.accent, fontSize = 11.sp, maxLines = 2)
+            Text(upload.url, color = theme.accentText, fontSize = 11.sp, maxLines = 2)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 OutlinedButton(onClick = { previewOpen = true }) { Text("Vista previa") }
                 Button(onClick = { runCatching { uriHandler.openUri(upload.url) } }) { Text("Abrir enlace") }
@@ -2499,27 +2564,13 @@ private fun ProfileUploadCard(
     }
 
     if (previewOpen) {
-        Dialog(onDismissRequest = { previewOpen = false }) {
-            Sticker3dCard(
-                modifier = Modifier
-                    .fillMaxWidth(0.96f)
-                    .heightIn(min = 300.dp, max = 720.dp),
-                containerColor = theme.surface,
-                bottomBevelColor = theme.cardBevel,
-                strokeColor = theme.strokeBorder,
-                bevelHeight = 5.dp,
-                shape = RoundedCornerShape(22.dp)
-            ) {
-                Column {
-                    Row(
-                        Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(upload.title, modifier = Modifier.weight(1f), color = theme.textPrimary, fontWeight = FontWeight.Bold, maxLines = 1)
-                        TextButton(onClick = { previewOpen = false }) { Text("Cerrar") }
-                    }
-                    UserUploadPreview(upload = upload, theme = theme, modifier = Modifier.weight(1f))
+        val bitmap = previewBitmap
+        if (bitmap != null) ResourcePreviewDialog(bitmap, upload.title, theme) { previewOpen = false }
+        else Dialog(onDismissRequest = { previewOpen = false }) {
+            Sticker3dCard(containerColor = theme.surface, strokeColor = theme.strokeBorder, bevelColor = theme.cardBevel) {
+                Column(Modifier.padding(14.dp)) {
+                    TextButton(onClick = { previewOpen = false }) { Text("Cerrar") }
+                    UserUploadPreview(upload, theme, onPreviewReady = { previewBitmap = it })
                 }
             }
         }
@@ -2614,13 +2665,13 @@ fun MuroPostCard(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Surface(
                         shape = RoundedCornerShape(8.dp),
-                        color = theme.accent.copy(alpha = 0.1f)
+                        color = theme.accentText.copy(alpha = 0.1f)
                     ) {
                         Text(
                             text = post.tag,
                             fontSize = 11.sp,
                             fontWeight = FontWeight.ExtraBold,
-                            color = theme.accent,
+                            color = theme.accentText,
                             modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                         )
                     }
@@ -2664,7 +2715,7 @@ fun MuroPostCard(
                 Spacer(modifier = Modifier.height(10.dp))
                 Surface(
                     shape = RoundedCornerShape(10.dp),
-                    color = theme.accent.copy(alpha = 0.08f),
+                    color = theme.accentText.copy(alpha = 0.08f),
                     border = androidx.compose.foundation.BorderStroke(1.dp, theme.accent.copy(alpha = 0.2f)),
                     modifier = Modifier.fillMaxWidth()
                 ) {
@@ -2672,13 +2723,13 @@ fun MuroPostCard(
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Icon(Icons.Rounded.CloudDownload, contentDescription = null, tint = theme.accent, modifier = Modifier.size(18.dp))
+                        Icon(Icons.Rounded.CloudDownload, contentDescription = null, tint = theme.accentText, modifier = Modifier.size(18.dp))
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
                             text = "Material Académico Adjunto (Drive / PDF)",
                             fontSize = 12.sp,
                             fontWeight = FontWeight.SemiBold,
-                            color = theme.accent
+                            color = theme.accentText
                         )
                     }
                 }
@@ -2728,14 +2779,14 @@ fun MuroPostCard(
                     Icon(
                         Icons.Rounded.ChatBubbleOutline,
                         contentDescription = null,
-                        tint = if (showComments) theme.accent else theme.textSecondary,
+                        tint = if (showComments) theme.accentText else theme.textSecondary,
                         modifier = Modifier.size(16.dp)
                     )
                     Spacer(modifier = Modifier.width(4.dp))
                     Text(
                         if (visibleComments.isNotEmpty()) "Comentarios (${visibleComments.size})" else "Comentar",
                         fontSize = 12.sp,
-                        color = if (showComments) theme.accent else theme.textSecondary,
+                        color = if (showComments) theme.accentText else theme.textSecondary,
                         fontWeight = FontWeight.SemiBold
                     )
                 }
@@ -2803,7 +2854,7 @@ fun MuroPostCard(
                                         Icon(
                                             imageVector = if (hasLiked) Icons.Rounded.ThumbUp else Icons.Rounded.ThumbUpOffAlt,
                                             contentDescription = "Me gusta",
-                                            tint = if (hasLiked) theme.accent else theme.textSecondary,
+                                            tint = if (hasLiked) theme.accentText else theme.textSecondary,
                                             modifier = Modifier.size(12.dp)
                                         )
                                         Spacer(modifier = Modifier.width(4.dp))
@@ -2811,7 +2862,7 @@ fun MuroPostCard(
                                             text = if (hasLiked) "Te gusta ($commentLikes)" else if (commentLikes > 0) "$commentLikes" else "Me gusta",
                                             fontSize = 10.sp,
                                             fontWeight = FontWeight.SemiBold,
-                                            color = if (hasLiked) theme.accent else theme.textSecondary
+                                            color = if (hasLiked) theme.accentText else theme.textSecondary
                                         )
                                     }
 
@@ -2924,7 +2975,7 @@ fun MuroPostCard(
                             Icon(
                                 Icons.Rounded.Send,
                                 contentDescription = "Enviar",
-                                tint = if (commentText.isNotBlank()) theme.accent else theme.textSecondary,
+                                tint = if (commentText.isNotBlank()) theme.accentText else theme.textSecondary,
                                 modifier = Modifier.size(18.dp)
                             )
                         }
@@ -2956,339 +3007,4 @@ fun MuroPostCard(
         }
     }
 }
-
-@Composable
-fun ErrorBankDialog(
-    questions: List<FailedQuestion>,
-    theme: com.jonsuapps.rastro.theme.RastroPalette,
-    initialOrigin: String = ErrorBankOrigins.APRENDER,
-    onDismiss: () -> Unit,
-    onSolve: (String) -> Unit
-) {
-    val haptic = androidx.compose.ui.platform.LocalHapticFeedback.current
-    val context = androidx.compose.ui.platform.LocalContext.current
-    var selectedOrigin by remember(initialOrigin) { mutableStateOf(initialOrigin) }
-
-    Dialog(
-        onDismissRequest = onDismiss,
-        properties = DialogProperties(usePlatformDefaultWidth = false)
-    ) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color.Black.copy(alpha = 0.65f))
-                .padding(horizontal = 12.dp, vertical = 14.dp),
-            contentAlignment = Alignment.Center
-        ) {
-            Sticker3dCard(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .widthIn(max = 680.dp)
-                    .fillMaxHeight(0.92f),
-                containerColor = theme.surface,
-                bottomBevelColor = theme.cardBevel,
-                strokeColor = theme.strokeBorder,
-                bevelHeight = 5.dp,
-                shape = RoundedCornerShape(26.dp)
-            ) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(18.dp)
-                ) {
-                    // Header
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Box(
-                                modifier = Modifier
-                                    .size(38.dp)
-                                    .clip(RoundedCornerShape(12.dp))
-                                    .background(Color(0xFFEF4444).copy(alpha = 0.14f))
-                                    .border(1.2.dp, Color(0xFFEF4444).copy(alpha = 0.35f), RoundedCornerShape(12.dp)),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Icon(Icons.Rounded.Rule, contentDescription = null, tint = Color(0xFFEF4444), modifier = Modifier.size(22.dp))
-                            }
-                            Spacer(Modifier.width(10.dp))
-                            Column {
-                                Text("Mis Errores", fontWeight = FontWeight.Black, fontSize = 18.sp, color = theme.textPrimary)
-                                Text("Repasa y supera tus fallos por modalidad", fontSize = 11.5.sp, color = theme.textSecondary)
-                            }
-                        }
-                        IconButton(onClick = onDismiss, modifier = Modifier.size(32.dp)) {
-                            Icon(Icons.Rounded.Close, contentDescription = "Cerrar", tint = theme.textSecondary)
-                        }
-                    }
-
-                    Spacer(Modifier.height(14.dp))
-
-                    // Selector de 3 Modalidades: 1. Aprender | 2. Modo Simulacro | 3. Examen Rápido
-                    val originTabs = listOf(
-                        Triple(ErrorBankOrigins.APRENDER, Icons.Rounded.School, theme.accent),
-                        Triple(ErrorBankOrigins.SIMULACRO, Icons.Rounded.Assignment, Color(0xFFA855F7)),
-                        Triple(ErrorBankOrigins.EXAMEN_RAPIDO, Icons.Rounded.Bolt, Color(0xFFF59E0B))
-                    )
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        originTabs.forEach { (origin, icon, color) ->
-                            val isSelected = selectedOrigin == origin
-                            val pendingCount = questions.count { !it.isSolved && it.origin == origin }
-                            Sticker3dCard(
-                                onClick = {
-                                    DuolingoHaptics.playOptionSelected(context)
-                                    selectedOrigin = origin
-                                },
-                                modifier = Modifier.weight(1f),
-                                containerColor = if (isSelected) color else theme.surface,
-                                bottomBevelColor = if (isSelected) color.copy(alpha = 0.75f) else theme.cardBevel,
-                                strokeColor = if (isSelected) color else theme.strokeBorder,
-                                bevelHeight = if (isSelected) 2.dp else 3.5.dp,
-                                shape = RoundedCornerShape(14.dp)
-                            ) {
-                                Column(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .padding(vertical = 8.dp, horizontal = 4.dp),
-                                    horizontalAlignment = Alignment.CenterHorizontally,
-                                    verticalArrangement = Arrangement.Center
-                                ) {
-                                    Row(
-                                        verticalAlignment = Alignment.CenterVertically,
-                                        horizontalArrangement = Arrangement.Center
-                                    ) {
-                                        Icon(
-                                            imageVector = icon,
-                                            contentDescription = null,
-                                            tint = if (isSelected) Color.White else color,
-                                            modifier = Modifier.size(15.dp)
-                                        )
-                                        Spacer(Modifier.width(4.dp))
-                                        Text(
-                                            text = origin,
-                                            fontSize = 11.5.sp,
-                                            fontWeight = FontWeight.Black,
-                                            color = if (isSelected) Color.White else theme.textPrimary,
-                                            maxLines = 1
-                                        )
-                                    }
-                                    Spacer(Modifier.height(4.dp))
-                                    Surface(
-                                        shape = CircleShape,
-                                        color = if (isSelected) Color.White.copy(alpha = 0.28f) else color.copy(alpha = 0.15f)
-                                    ) {
-                                        Text(
-                                            text = "$pendingCount pendientes",
-                                            fontSize = 9.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = if (isSelected) Color.White else color,
-                                            modifier = Modifier.padding(horizontal = 7.dp, vertical = 2.dp)
-                                        )
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    Spacer(Modifier.height(14.dp))
-                    HorizontalDivider(color = theme.borderSubtle)
-                    Spacer(Modifier.height(14.dp))
-
-                    val filteredUnsolved = questions.filter { !it.isSolved && it.origin == selectedOrigin }
-                    if (filteredUnsolved.isEmpty()) {
-                        Box(
-                            modifier = Modifier.weight(1f).fillMaxWidth(),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                Icon(Icons.Rounded.CheckCircle, contentDescription = null, tint = Color(0xFF10B981), modifier = Modifier.size(54.dp))
-                                Spacer(Modifier.height(12.dp))
-                                Text(
-                                    text = "¡Sin errores pendientes en $selectedOrigin!",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 15.sp,
-                                    color = theme.textPrimary,
-                                    textAlign = TextAlign.Center
-                                )
-                                Spacer(Modifier.height(4.dp))
-                                Text(
-                                    text = when (selectedOrigin) {
-                                        ErrorBankOrigins.APRENDER -> "Has dominado todas las preguntas falladas en las lecciones de Aprender."
-                                        ErrorBankOrigins.SIMULACRO -> "Excelente precisión en tus simulacros de examen tipo admisión UNSA."
-                                        else -> "Tus repasos y quizzes rápidos diarios están impecables."
-                                    },
-                                    fontSize = 12.sp,
-                                    color = theme.textSecondary,
-                                    textAlign = TextAlign.Center
-                                )
-                            }
-                        }
-                    } else {
-                        LazyColumn(
-                            modifier = Modifier.weight(1f),
-                            verticalArrangement = Arrangement.spacedBy(14.dp)
-                        ) {
-                            items(filteredUnsolved.size, key = { filteredUnsolved[it].id }) { index ->
-                                val item = filteredUnsolved[index]
-                                val originColor = when (item.origin) {
-                                    ErrorBankOrigins.SIMULACRO -> Color(0xFFA855F7)
-                                    ErrorBankOrigins.EXAMEN_RAPIDO -> Color(0xFFF59E0B)
-                                    else -> theme.accent
-                                }
-                                Sticker3dCard(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    containerColor = theme.surface,
-                                    strokeColor = theme.strokeBorder,
-                                    bottomBevelColor = theme.cardBevel,
-                                    bevelHeight = 3.5.dp,
-                                    shape = RoundedCornerShape(18.dp)
-                                ) {
-                                    Column(modifier = Modifier.padding(14.dp)) {
-                                        Row(
-                                            modifier = Modifier.fillMaxWidth(),
-                                            horizontalArrangement = Arrangement.SpaceBetween,
-                                            verticalAlignment = Alignment.CenterVertically
-                                        ) {
-                                            Surface(
-                                                shape = RastroShapes.Pill,
-                                                color = originColor.copy(alpha = 0.12f),
-                                                border = BorderStroke(1.dp, originColor.copy(alpha = 0.3f))
-                                            ) {
-                                                Text(
-                                                    text = "${item.origin} • ${item.subject} • ${item.subtema}",
-                                                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                                                    fontSize = 10.sp,
-                                                    fontWeight = FontWeight.Bold,
-                                                    color = originColor
-                                                )
-                                            }
-                                            Surface(
-                                                shape = RastroShapes.Pill,
-                                                color = Color(0xFFEF4444).copy(alpha = 0.12f),
-                                                border = BorderStroke(1.dp, Color(0xFFEF4444).copy(alpha = 0.3f))
-                                            ) {
-                                                Text(
-                                                    text = "Pendiente",
-                                                    modifier = Modifier.padding(horizontal = 7.dp, vertical = 3.dp),
-                                                    fontSize = 9.5.sp,
-                                                    fontWeight = FontWeight.ExtraBold,
-                                                    color = Color(0xFFEF4444)
-                                                )
-                                            }
-                                        }
-
-                                        Spacer(Modifier.height(10.dp))
-                                        Text(
-                                            text = item.question,
-                                            fontSize = 13.5.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = theme.textPrimary,
-                                            lineHeight = 19.sp
-                                        )
-                                        Spacer(Modifier.height(10.dp))
-
-                                        // Opciones
-                                        item.options.forEachIndexed { optIndex, optText ->
-                                            val isCorrect = optIndex == item.correctAnswerIndex
-                                            Row(
-                                                modifier = Modifier
-                                                    .fillMaxWidth()
-                                                    .padding(vertical = 3.dp)
-                                                    .clip(RoundedCornerShape(10.dp))
-                                                    .background(if (isCorrect) Color(0xFF10B981).copy(alpha = 0.12f) else theme.surfaceAccent.copy(alpha = 0.4f))
-                                                    .border(1.dp, if (isCorrect) Color(0xFF10B981).copy(alpha = 0.5f) else theme.borderSubtle, RoundedCornerShape(10.dp))
-                                                    .padding(horizontal = 10.dp, vertical = 6.dp),
-                                                verticalAlignment = Alignment.CenterVertically
-                                            ) {
-                                                Box(
-                                                    modifier = Modifier
-                                                        .size(20.dp)
-                                                        .clip(CircleShape)
-                                                        .background(if (isCorrect) Color(0xFF10B981) else theme.surface)
-                                                        .border(1.dp, if (isCorrect) Color(0xFF10B981) else theme.strokeBorder, CircleShape),
-                                                    contentAlignment = Alignment.Center
-                                                ) {
-                                                    Text(
-                                                        text = ('A' + optIndex).toString(),
-                                                        fontSize = 10.5.sp,
-                                                        fontWeight = FontWeight.Black,
-                                                        color = if (isCorrect) Color.White else theme.textSecondary
-                                                    )
-                                                }
-                                                Spacer(Modifier.width(8.dp))
-                                                Text(
-                                                    text = optText,
-                                                    fontSize = 12.sp,
-                                                    fontWeight = if (isCorrect) FontWeight.Bold else FontWeight.Normal,
-                                                    color = if (isCorrect) Color(0xFF047857) else theme.textPrimary,
-                                                    modifier = Modifier.weight(1f)
-                                                )
-                                                if (isCorrect) {
-                                                    Icon(
-                                                        imageVector = Icons.Rounded.CheckCircle,
-                                                        contentDescription = "Correcta",
-                                                        tint = Color(0xFF10B981),
-                                                        modifier = Modifier.size(16.dp)
-                                                    )
-                                                }
-                                            }
-                                        }
-
-                                        if (item.explanation.isNotBlank()) {
-                                            Spacer(Modifier.height(8.dp))
-                                            Box(
-                                                modifier = Modifier
-                                                    .fillMaxWidth()
-                                                    .clip(RoundedCornerShape(10.dp))
-                                                    .background(theme.surfaceAccent.copy(alpha = 0.5f))
-                                                    .border(1.dp, theme.borderSubtle, RoundedCornerShape(10.dp))
-                                                .padding(9.dp)
-                                            ) {
-                                                Row(verticalAlignment = Alignment.Top) {
-                                                    Icon(Icons.Rounded.Lightbulb, contentDescription = null, tint = Color(0xFFF59E0B), modifier = Modifier.size(15.dp))
-                                                    Spacer(Modifier.width(6.dp))
-                                                    Text(item.explanation, fontSize = 11.sp, color = theme.textSecondary, lineHeight = 15.sp)
-                                                }
-                                            }
-                                        }
-
-                                        Spacer(Modifier.height(12.dp))
-                                        Sticker3dButton(
-                                            onClick = {
-                                                DuolingoHaptics.playLessonComplete(context)
-                                                onSolve(item.id)
-                                            },
-                                            modifier = Modifier.fillMaxWidth(),
-                                            containerColor = Color(0xFF10B981),
-                                            bottomBevelColor = Color(0xFF047857),
-                                            strokeColor = theme.strokeBorder,
-                                            bevelHeight = 3.dp,
-                                            shape = RastroShapes.Pill,
-                                            contentPadding = PaddingValues(vertical = 8.dp)
-                                        ) {
-                                            Row(
-                                                verticalAlignment = Alignment.CenterVertically,
-                                                horizontalArrangement = Arrangement.Center
-                                            ) {
-                                                Icon(Icons.Rounded.Check, contentDescription = null, modifier = Modifier.size(16.dp), tint = Color.White)
-                                                Spacer(Modifier.width(6.dp))
-                                                Text("Ya lo entendí (Resolver)", fontSize = 12.sp, fontWeight = FontWeight.Black, color = Color.White)
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 

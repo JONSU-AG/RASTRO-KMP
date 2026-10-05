@@ -1,0 +1,18 @@
+{
+  "week": 3,
+  "title": "Semana 3",
+  "lessons": [
+    {
+      "subtopic": "3.1",
+      "lessonId": "ing_t03_s01",
+      "title": "Verbos Modales (Can, Must, Should), Estructuras Existenciales y Grados del Adjetivo - Core Rules & Foundations",
+      "path": "3.1/lesson.json"
+    },
+    {
+      "subtopic": "3.2",
+      "lessonId": "ing_t03_s02",
+      "title": "Verbos Modales (Can, Must, Should), Estructuras Existenciales y Grados del Adjetivo - Applied Skills, Hacks & Reading Practice",
+      "path": "3.2/lesson.json"
+    }
+  ]
+}

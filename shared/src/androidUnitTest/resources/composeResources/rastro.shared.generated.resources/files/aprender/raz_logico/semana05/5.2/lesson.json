@@ -1,0 +1,18 @@
+{
+  "id": "rl_t05_s02",
+  "subjectId": "raz_logico",
+  "semana": 5,
+  "subtema": "5.2",
+  "title": "SILOGISMOS Y RAZONAMIENTO DEDUCTIVO BÁSICO - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_logico/RazonamientoLogicoSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rl_t05_s02",
+    "asignatura": "Raz. Lógico",
+    "semana": 5,
+    "titulo": "SILOGISMOS Y RAZONAMIENTO DEDUCTIVO BÁSICO - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

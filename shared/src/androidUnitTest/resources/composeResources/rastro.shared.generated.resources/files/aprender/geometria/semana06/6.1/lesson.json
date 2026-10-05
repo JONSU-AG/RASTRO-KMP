@@ -1,0 +1,18 @@
+{
+  "id": "geom_t06_s01",
+  "subjectId": "geometria",
+  "semana": 6,
+  "subtema": "6.1",
+  "title": "GEOMETRÍA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geometria/GeometriaSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geom_t06_s01",
+    "asignatura": "Geometría",
+    "semana": 6,
+    "titulo": "GEOMETRÍA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,7 +1,11 @@
 package com.jonsuapps.rastro.android.ui
+import kotlinx.coroutines.launch
 
 import android.Manifest
 import android.app.Activity
+import androidx.compose.ui.geometry.Offset
+import com.jonsuapps.rastro.android.ui.components.LearningProgressHud
+import com.jonsuapps.rastro.android.ui.components.XpDeliveryOverlay
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
@@ -12,6 +16,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -62,15 +67,25 @@ fun RastroApp(
     onThemeChange: (RastroThemeId) -> Unit = { ThemeManager.setTheme(it) }
 ) {
     val context = LocalContext.current
+    val restoreScope = rememberCoroutineScope()
     // Fuente única y reactiva del Theme: incluye override dinámico (Tema adaptable)
     // y paleta personalizada (Mi tema). NO usar getColors directo (omite el override).
     val theme = ThemeManager.currentTheme
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route ?: RastroScreen.Home.route
+    var openStreakCalendar by remember { mutableStateOf(false) }
+    var xpTarget by remember { mutableStateOf<Offset?>(null) }
+    val hasLearningHud = currentRoute == RastroScreen.Aprender.route || currentRoute == RastroScreen.AprenderSubject.route
+    val linkedRoute by com.jonsuapps.rastro.android.navigation.RastroAppLinks.route.collectAsState()
+    LaunchedEffect(linkedRoute) {
+        linkedRoute?.let { navController.navigate(it) { launchSingleTop = true } }
+        com.jonsuapps.rastro.android.navigation.RastroAppLinks.consume()
+    }
     val currentUser by UserManager.currentUser.collectAsState()
     var authStateResolved by remember { mutableStateOf(false) }
     var showNotificationPrompt by remember { mutableStateOf(false) }
+    var showFriendNotifications by remember { mutableStateOf(false) }
     var showNotifications by remember { mutableStateOf(false) }
     var showMoreActions by remember { mutableStateOf(false) }
     val canOpenLokiLab = currentUser.isAuthenticated && !currentUser.isAnonymous && AdminConfig.isAdmin(currentUser.email)
@@ -145,7 +160,7 @@ fun RastroApp(
     }
 
     LaunchedEffect(Unit) {
-        GamificationManager.checkStreak()
+        GamificationManager.checkStreakStatusOnLaunch()
         FirebaseAuth.getInstance().currentUser?.let { user ->
             UserManager.updateUserFromFirebase(
                 uid = user.uid,
@@ -169,20 +184,34 @@ fun RastroApp(
         }
     }
     LaunchedEffect(Unit) {
-        RastroWidgetManager.updateAllWidgets(context)
+        kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) { RastroWidgetManager.updateAllWidgets(context) }
     }
 
     LaunchedEffect(currentUser.uid, currentUser.isAuthenticated, currentUser.isAnonymous) {
-        GamificationManager.restore(GamificationRepository.loadLocal(currentUser.uid)
-            ?: com.jonsuapps.rastro.gamification.GamificationState())
-        GamificationManager.checkStreak()
+        val loadingUid = currentUser.uid
+        if (currentUser.isAuthenticated && !currentUser.isAnonymous) GamificationRepository.beginRestore(loadingUid)
+        val localSaved = GamificationRepository.loadLocal(loadingUid)
+        val prepared = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            GamificationManager.prepareRestore(localSaved
+                ?: com.jonsuapps.rastro.gamification.GamificationState())
+        }
+        if (UserManager.currentUser.value.uid != loadingUid) return@LaunchedEffect
+        GamificationManager.applyRestored(prepared)
+        GamificationManager.checkStreakStatusOnLaunch()
+        GamificationRepository.saveLocal(currentUser.uid, GamificationManager.state.value)
         if (currentUser.isAuthenticated && !currentUser.isAnonymous) {
-            val loadingUid = currentUser.uid
             GamificationRepository.load(loadingUid) { result ->
                 if (UserManager.currentUser.value.uid != loadingUid) return@load
+                if (result.isSuccess && result.getOrNull() == null) GamificationRepository.finishRestore(loadingUid)
                 result.getOrNull()?.let { savedState ->
-                    GamificationManager.restore(savedState)
-                    GamificationManager.checkStreak()
+                    restoreScope.launch {
+                    val remotePrepared = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                        GamificationManager.prepareRestore(com.jonsuapps.rastro.android.data.StreakActivityMigration.merge(localSaved, savedState))
+                    }
+                    if (UserManager.currentUser.value.uid != loadingUid) return@launch
+                    GamificationManager.applyRestored(remotePrepared)
+                    GamificationRepository.finishRestore(loadingUid)
+                    GamificationManager.checkStreakStatusOnLaunch()
                     GamificationRepository.save(currentUser.uid, GamificationManager.state.value)
                     RastroWidgetManager.updateStreakInWidgets(
                         context,
@@ -190,6 +219,7 @@ fun RastroApp(
                         GamificationManager.streakState.value.lastActiveDate,
                         GamificationManager.streakState.value.activityDates
                     )
+                    }
                 }
             }
         }
@@ -309,7 +339,10 @@ fun RastroApp(
 
     // Manejo de BackHandler nativo: navega hacia atrás antes de salir o minimizar
     val canGoBack = navController.previousBackStackEntry != null
-    BackHandler(enabled = canGoBack || activeEntryAnnouncement != null || showLokiLab) {
+    BackHandler(enabled = canGoBack || activeEntryAnnouncement != null || showLokiLab ||
+        pomodoroState.viewState == PomodoroViewState.FULL_MODAL || termsDialogInitialTab != null ||
+        isProfileSettingsVisible || isVocationalDialogVisible || isPeriodicTableVisible ||
+        showMoreActions || isThemeDialogVisible) {
         if (activeEntryAnnouncement != null) {
             activeEntryAnnouncement = null
         } else if (pomodoroState.viewState == PomodoroViewState.FULL_MODAL) {
@@ -343,6 +376,7 @@ fun RastroApp(
             topBar = {
                 if (currentRoute != RastroScreen.DiasDeRacha.route) {
                     // Barra superior limpia con micro-botones (36px) del §3.16 del mapa
+                    Column {
                     TopHeaderActions(
                         colors = theme,
                         userPhotoUrl = currentUser.photoURL,
@@ -361,6 +395,11 @@ fun RastroApp(
                         onOpenFormulas = { navController.navigate(RastroScreen.Formulario.route) },
                         onOpenThemeSelector = { isThemeDialogVisible = true }
                     )
+                    if (hasLearningHud) LearningProgressHud(
+                        onStreak = { openStreakCalendar = true; navController.navigate(RastroScreen.DiasDeRacha.route) },
+                        onTricks = { navController.navigate(RastroScreen.Flashcards.route) },
+                        onTarget = { xpTarget = it })
+                    }
                 }
             },
             bottomBar = {
@@ -396,10 +435,19 @@ fun RastroApp(
                 }
             }
         ) { paddingValues ->
+            CompositionLocalProvider(
+                com.jonsuapps.rastro.android.ui.components.LocalAcademicBackgroundPilot provides
+                    ThemeManager.academicBackgroundEnabled,
+                com.jonsuapps.rastro.android.ui.components.LocalMainPage provides
+                (currentRoute in listOf(RastroScreen.Home.route, RastroScreen.Aprender.route, RastroScreen.Cursos.route,
+                    RastroScreen.Biblioteca.route, RastroScreen.BibliotecaAportes.route, RastroScreen.BibliotecaObras.route,
+                    RastroScreen.Simulador.route, RastroScreen.Perfil.route))) {
+            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
             NavHost(
                 navController = navController,
                 startDestination = RastroScreen.Home.route,
                 modifier = Modifier
+                    .widthIn(max = 1440.dp)
                     .fillMaxSize()
                     .padding(paddingValues),
                 enterTransition = { EnterTransition.None },
@@ -420,7 +468,8 @@ fun RastroApp(
                 // 1b. Días de Racha Oficial
                 composable(RastroScreen.DiasDeRacha.route) {
                     DiasDeRachaScreen(
-                        onBack = { navController.popBackStack() },
+                        startAtCalendar = openStreakCalendar,
+                        onBack = { openStreakCalendar = false; navController.popBackStack() },
                         onNavigateToAprender = {
                             navController.navigate(RastroScreen.Aprender.route) {
                                 popUpTo(RastroScreen.Home.route) { inclusive = false }
@@ -436,7 +485,7 @@ fun RastroApp(
                             navController.navigate(RastroScreen.AprenderSubject.createRoute(subjectId))
                         },
                         onNavigateToLesson = { lessonId ->
-                            navController.navigate(RastroScreen.LessonEngine.createRoute(lessonId))
+                            navController.navigate(RastroScreen.LessonEngine.createRoute(lessonId)) { launchSingleTop = true }
                         }
                     )
                 }
@@ -446,7 +495,7 @@ fun RastroApp(
                         subjectId = subjectId,
                         onNavigateBack = { navController.popBackStack() },
                         onNavigateToLesson = { lessonId ->
-                            navController.navigate(RastroScreen.LessonEngine.createRoute(lessonId))
+                            navController.navigate(RastroScreen.LessonEngine.createRoute(lessonId)) { launchSingleTop = true }
                         }
                     )
                 }
@@ -511,7 +560,14 @@ fun RastroApp(
 
                 // 6. Simulador
                 composable(RastroScreen.Simulador.route) {
-                    SimuladorScreen()
+                    SimuladorScreen(onOpenLeagues = { navController.navigate(RastroScreen.Ligas.route) })
+                }
+                composable(RastroScreen.RankingExam.route) {
+                    SimuladorScreen(initialTab = 4, onOpenLeagues = { navController.navigate(RastroScreen.Ligas.route) })
+                }
+                composable(RastroScreen.Ligas.route) {
+                    LeaguesScreen(onProfile = { uid -> navController.navigate(RastroScreen.UsuarioDetail.createRoute(uid)) },
+                        onExams = { navController.navigate(RastroScreen.RankingExam.route) })
                 }
 
                 // 7. Pizarra de Dibujo / Relajo (Doodle Canvas)
@@ -525,7 +581,10 @@ fun RastroApp(
                 composable(RastroScreen.Perfil.route) {
                     UserProfileScreen(
                         onOpenSettings = { isProfileSettingsVisible = true },
-                        onNavigate = { route -> navController.navigate(route) },
+                        onNavigate = { route ->
+                            if (route == RastroScreen.DiasDeRacha.route) openStreakCalendar = true
+                            navController.navigate(route)
+                        },
                         onOpenPomodoro = { pomodoroState = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL) }
                     )
                 }
@@ -544,7 +603,10 @@ fun RastroApp(
                 // 10. Auth
                 composable(RastroScreen.Auth.route) {
                     AuthScreen(
-                        onAuthSuccess = { navController.navigate(RastroScreen.Home.route) },
+                        onAuthSuccess = { navController.navigate(RastroScreen.Home.route) {
+                            popUpTo(RastroScreen.Auth.route) { inclusive = true }
+                            launchSingleTop = true
+                        } },
                         onContinueAsGuest = { navController.navigate(RastroScreen.Home.route) }
                     )
                 }
@@ -564,7 +626,11 @@ fun RastroApp(
                 composable(RastroScreen.Terminos.route) { LegalScreen(title = "Términos de Servicio", onNavigateBack = { navController.popBackStack() }, colors = theme) }
                 composable(RastroScreen.EliminarCuenta.route) { LegalScreen(title = "Eliminar Cuenta", onNavigateBack = { navController.popBackStack() }, colors = theme) }
             }
+            }
         }
+        }
+
+        XpDeliveryOverlay(if (hasLearningHud) xpTarget else null)
 
         // Píldora flotante Pomodoro con fijación magnética (siempre visible en primer plano)
         if (pomodoroState.viewState != PomodoroViewState.FULL_MODAL && pomodoroState.viewState != PomodoroViewState.HIDDEN) {
@@ -712,6 +778,12 @@ fun RastroApp(
         if (isThemeDialogVisible) {
             ThemeSelectorDialog(
                 currentThemeId = currentThemeId,
+                showAcademicBackgroundPilot = true,
+                academicBackgroundEnabled = ThemeManager.academicBackgroundEnabled,
+                onAcademicBackgroundChange = { enabled ->
+                    ThemeManager.setAcademicBackground(enabled)
+                    context.getSharedPreferences("rastro_preferences", Context.MODE_PRIVATE).edit().putBoolean("academic_background", enabled).apply()
+                },
                 onSelectTheme = { chosen ->
                     ThemeManager.setTheme(chosen)
                     onThemeChange(chosen)
@@ -840,6 +912,7 @@ fun RastroApp(
             onSelect = { item ->
                 showNotifications = false
                 when {
+                    item.type in setOf("friend_request", "friend_active") -> showFriendNotifications = true
                     item.type in setOf("chat", "mensaje", "direct_message") -> {
                         val targetUid = item.targetUid.ifBlank { FirebaseAuth.getInstance().currentUser?.uid.orEmpty() }
                         if (targetUid.isNotBlank()) navController.navigate(RastroScreen.UsuarioDetail.createRoute(targetUid))
@@ -852,6 +925,12 @@ fun RastroApp(
                 }
             }
         )
+
+        if (showFriendNotifications && currentUser.uid.isNotBlank()) {
+            com.jonsuapps.rastro.android.ui.screens.FriendsAndStreaksDialog(
+                currentUserUid = currentUser.uid, currentUserName = currentUser.displayName,
+                theme = theme, onDismiss = { showFriendNotifications = false })
+        }
 
         TermsConsentDialog(
             isOpen = showTermsConsent,

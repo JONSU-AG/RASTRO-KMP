@@ -1,0 +1,18 @@
+{
+  "week": 11,
+  "title": "Semana 11",
+  "lessons": [
+    {
+      "subtopic": "11.1",
+      "lessonId": "arit_t11_s01",
+      "title": "Estadística Descriptiva, Medidas de Tendencia Central y Dispersión - Fundamentos y Leyes Principales",
+      "path": "11.1/lesson.json"
+    },
+    {
+      "subtopic": "11.2",
+      "lessonId": "arit_t11_s02",
+      "title": "Estadística Descriptiva, Medidas de Tendencia Central y Dispersión - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "11.2/lesson.json"
+    }
+  ]
+}

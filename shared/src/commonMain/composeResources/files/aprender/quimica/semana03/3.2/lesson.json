@@ -1,0 +1,18 @@
+{
+  "id": "quim_t03_s02",
+  "subjectId": "quimica",
+  "semana": 3,
+  "subtema": "3.2",
+  "title": "Estructura Atómica, Modelos y Núclidos - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/quimica/QuimicaSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_quim_t03_s02",
+    "asignatura": "Química",
+    "semana": 3,
+    "titulo": "Estructura Atómica, Modelos y Núclidos - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

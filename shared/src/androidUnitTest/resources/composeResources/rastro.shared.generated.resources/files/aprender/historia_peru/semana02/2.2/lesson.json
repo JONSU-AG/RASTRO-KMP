@@ -1,0 +1,18 @@
+{
+  "id": "hper_t02_s02",
+  "subjectId": "historia_peru",
+  "semana": 2,
+  "subtema": "2.2",
+  "title": "3.4. Horizonte Medio o Primer Imperio Andino (600 - 1000 d.C.)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_hper_t02_s02",
+    "asignatura": "Historia del Perú",
+    "semana": 2,
+    "titulo": "3.4. Horizonte Medio o Primer Imperio Andino (600 - 1000 d.C.)",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

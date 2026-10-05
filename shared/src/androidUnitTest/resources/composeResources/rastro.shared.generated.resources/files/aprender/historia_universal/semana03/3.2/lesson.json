@@ -1,0 +1,18 @@
+{
+  "id": "huni_t03_s02",
+  "subjectId": "historia_universal",
+  "semana": 3,
+  "subtema": "3.2",
+  "title": "3.4. La República y el Imperio Romano",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_huni_t03_s02",
+    "asignatura": "Historia Universal",
+    "semana": 3,
+    "titulo": "3.4. La República y el Imperio Romano",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ing_t05_s01",
+  "subjectId": "ingles",
+  "semana": 5,
+  "subtema": "5.1",
+  "title": "Sistema Pronominal, Preposiciones (Tiempo, Lugar, Movimiento) y Sintaxis de la Oración - Core Rules & Foundations",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/ingles/InglesSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_ing_t05_s01",
+    "asignatura": "Inglés",
+    "semana": 5,
+    "titulo": "Sistema Pronominal, Preposiciones (Tiempo, Lugar, Movimiento) y Sintaxis de la Oración - Core Rules & Foundations",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

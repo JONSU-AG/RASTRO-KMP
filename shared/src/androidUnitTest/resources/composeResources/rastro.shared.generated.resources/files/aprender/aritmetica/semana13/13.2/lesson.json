@@ -1,0 +1,18 @@
+{
+  "id": "arit_t13_s02",
+  "subjectId": "aritmetica",
+  "semana": 13,
+  "subtema": "13.2",
+  "title": "Teoría de la Probabilidad, Probabilidad Condicional y Teorema de Bayes - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/aritmetica/AritmeticaSemana13.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_arit_t13_s02",
+    "asignatura": "Aritmética",
+    "semana": 13,
+    "titulo": "Teoría de la Probabilidad, Probabilidad Condicional y Teorema de Bayes - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

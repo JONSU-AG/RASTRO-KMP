@@ -1,0 +1,18 @@
+{
+  "week": 2,
+  "title": "Semana 2",
+  "lessons": [
+    {
+      "subtopic": "2.1",
+      "lessonId": "rl_t02_s01",
+      "title": "CONECTORES LÓGICOS Y TABLAS DE VERDAD - Fundamentos y Leyes Principales",
+      "path": "2.1/lesson.json"
+    },
+    {
+      "subtopic": "2.2",
+      "lessonId": "rl_t02_s02",
+      "title": "CONECTORES LÓGICOS Y TABLAS DE VERDAD - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "2.2/lesson.json"
+    }
+  ]
+}

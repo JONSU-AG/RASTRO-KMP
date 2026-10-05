@@ -1,0 +1,18 @@
+{
+  "week": 5,
+  "title": "Semana 5",
+  "lessons": [
+    {
+      "subtopic": "5.1",
+      "lessonId": "huni_t05_s01",
+      "title": "El Humanismo, el Renacimiento y los Grandes Descubrimientos Geográficos",
+      "path": "5.1/lesson.json"
+    },
+    {
+      "subtopic": "5.2",
+      "lessonId": "huni_t05_s02",
+      "title": "La Reforma Protestante, la Contrarreforma Católica y la Ilustración",
+      "path": "5.2/lesson.json"
+    }
+  ]
+}

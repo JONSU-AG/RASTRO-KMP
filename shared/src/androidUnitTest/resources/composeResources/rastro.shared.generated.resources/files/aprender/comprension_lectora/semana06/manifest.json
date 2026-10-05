@@ -1,0 +1,18 @@
+{
+  "week": 6,
+  "title": "Semana 6",
+  "lessons": [
+    {
+      "subtopic": "6.1",
+      "lessonId": "cl_t06_s01",
+      "title": "3.1 La Falacia del Diccionario Aislado en Comprensión Lectora",
+      "path": "6.1/lesson.json"
+    },
+    {
+      "subtopic": "6.2",
+      "lessonId": "cl_t06_s02",
+      "title": "3.2 Clasificación de los Usos Contextuales en Exámenes de Admisión",
+      "path": "6.2/lesson.json"
+    }
+  ]
+}

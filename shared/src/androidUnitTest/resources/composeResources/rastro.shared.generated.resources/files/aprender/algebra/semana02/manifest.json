@@ -1,0 +1,18 @@
+{
+  "week": 2,
+  "title": "Semana 2",
+  "lessons": [
+    {
+      "subtopic": "2.1",
+      "lessonId": "alg_t02_s01",
+      "title": "Sistema de los Números Reales (\\mathbb{R}), Intervalos y Valor Absoluto - Fundamentos y Leyes Principales",
+      "path": "2.1/lesson.json"
+    },
+    {
+      "subtopic": "2.2",
+      "lessonId": "alg_t02_s02",
+      "title": "Sistema de los Números Reales (\\mathbb{R}), Intervalos y Valor Absoluto - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "2.2/lesson.json"
+    }
+  ]
+}

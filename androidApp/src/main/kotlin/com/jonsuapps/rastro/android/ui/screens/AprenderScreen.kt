@@ -1,4 +1,9 @@
 package com.jonsuapps.rastro.android.ui.screens
+import com.jonsuapps.rastro.model.LessonNode
+import com.jonsuapps.rastro.android.ui.components.rastroAcademicBackground
+import com.jonsuapps.rastro.android.ui.components.RastroAdaptiveViewport
+import com.jonsuapps.rastro.android.ui.components.RastroBoundedBlock
+
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -28,7 +33,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.jonsuapps.rastro.android.ui.components.DualMascotDuo
+import com.jonsuapps.rastro.android.ui.components.rememberLearningAudio
+import com.jonsuapps.rastro.android.ui.components.LearningSound
+import com.jonsuapps.rastro.android.ui.components.CourseBannerSurface
 import com.jonsuapps.rastro.data.AprenderRepository
 import com.jonsuapps.rastro.data.withSubtemaIndex
 import com.jonsuapps.rastro.gamification.GamificationManager
@@ -147,6 +154,7 @@ fun AprenderScreen(
     onNavigateToLesson: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val audio = rememberLearningAudio()
     val theme = ThemeManager.currentTheme
     val progression by GamificationManager.state.collectAsState()
     val streakState by GamificationManager.streakState.collectAsState()
@@ -162,8 +170,27 @@ fun AprenderScreen(
     val currentSubject = remember(selectedSubjectId) {
         AprenderRepository.getSubjectById(selectedSubjectId) ?: subjects.first()
     }
-    val currentLessons = remember(progression, selectedSubjectId) {
-        progression.learningPath(selectedSubjectId).withSubtemaIndex()
+    var catalogRetry by remember { mutableIntStateOf(0) }
+    var catalogError by remember(selectedSubjectId) { mutableStateOf<String?>(null) }
+    var catalogLoading by remember(selectedSubjectId) { mutableStateOf(true) }
+    val subjectLessons by androidx.compose.runtime.produceState<List<LessonNode>>(emptyList(), selectedSubjectId, catalogRetry) {
+        value = emptyList()
+        catalogLoading = true
+        catalogError = null
+        try {
+            value = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                AprenderRepository.getLessonsForSubject(selectedSubjectId)
+            }
+        } catch (cancelled: kotlinx.coroutines.CancellationException) {
+            throw cancelled
+        } catch (_: Exception) {
+            catalogError = "No se pudo cargar esta materia. Puedes volver a intentarlo."
+        } finally {
+            catalogLoading = false
+        }
+    }
+    val currentLessons = remember(progression, selectedSubjectId, subjectLessons) {
+        progression.learningPath(selectedSubjectId, subjectLessons).withSubtemaIndex()
     }
     val trailListState = rememberLazyListState()
     val journeyFrom by GamificationManager.journeyFrom.collectAsState()
@@ -183,7 +210,7 @@ fun AprenderScreen(
         withFrameNanos { }
         val target = currentLessons.firstOrNull { it.isCurrent }
         val topicIndex = topicGroups.indexOfFirst { it.key == (target?.semana ?: currentLessons.lastOrNull()?.semana) }
-        if (topicIndex >= 0) trailListState.scrollToItem(4 + topicIndex * 3)
+        if (topicIndex >= 0) trailListState.scrollToItem(3 + topicIndex * 3)
         kotlinx.coroutines.delay(2200)
         GamificationManager.finishJourney(from)
     }
@@ -199,143 +226,15 @@ fun AprenderScreen(
         }
     }
 
-    Box(
-        modifier = modifier
-            .fillMaxSize()
-            .background(theme.background),
-        contentAlignment = Alignment.TopCenter
-    ) {
+    RastroAdaptiveViewport(modifier.rastroAcademicBackground(theme), reader = true) { _ ->
         LazyColumn(
             state = trailListState,
             modifier = Modifier
                 .fillMaxSize()
-                .widthIn(max = 760.dp)
                 .padding(horizontal = 16.dp),
             contentPadding = PaddingValues(top = 10.dp, bottom = 100.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            // 1. Barra de Estado de Gamificación: [🔥 5d] [✨ Nv.8 (735 XP)] [❤️ 100] [💡 Truquitos]
-            item {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    // Racha
-                    Surface(
-                        shape = RastroShapes.CircularPill,
-                        color = Color(0xFFFEE2E2),
-                        border = androidx.compose.foundation.BorderStroke(1.5.dp, theme.strokeBorder),
-                        modifier = Modifier.weight(1f)
-                    ) {
-                        Row(
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.Center
-                        ) {
-                            Icon(
-                                imageVector = Icons.Filled.LocalFireDepartment,
-                                contentDescription = null,
-                                tint = Color(0xFFDC2626),
-                                modifier = Modifier.size(15.dp)
-                            )
-                            Spacer(modifier = Modifier.width(4.dp))
-                            Text(
-                                text = "${streakState.currentStreak}d",
-                                fontSize = 12.sp,
-                                fontWeight = FontWeight.Black,
-                                color = Color(0xFFDC2626)
-                            )
-                        }
-                    }
-
-                    // Nivel y XP
-                    Surface(
-                        shape = RastroShapes.CircularPill,
-                        color = Color(0xFFFEF3C7),
-                        border = androidx.compose.foundation.BorderStroke(1.5.dp, theme.strokeBorder),
-                        modifier = Modifier.weight(1.3f)
-                    ) {
-                        Row(
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.Center
-                        ) {
-                            Icon(
-                                imageVector = Icons.Rounded.AutoAwesome,
-                                contentDescription = null,
-                                tint = Color(0xFFD97706),
-                                modifier = Modifier.size(14.dp)
-                            )
-                            Spacer(modifier = Modifier.width(4.dp))
-                            Text(
-                                text = "Nv.${totalXp / 100 + 1} ($totalXp XP)",
-                                fontSize = 11.sp,
-                                fontWeight = FontWeight.Black,
-                                color = Color(0xFFB45309),
-                                maxLines = 1
-                            )
-                        }
-                    }
-
-                    // Vidas (Corazones)
-                    Surface(
-                        shape = RastroShapes.CircularPill,
-                        color = Color(0xFFFCE7F3),
-                        border = androidx.compose.foundation.BorderStroke(1.5.dp, theme.strokeBorder),
-                        modifier = Modifier.weight(1f)
-                    ) {
-                        Row(
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.Center
-                        ) {
-                            Icon(
-                                imageVector = Icons.Rounded.Favorite,
-                                contentDescription = null,
-                                tint = Color(0xFFE11D48),
-                                modifier = Modifier.size(14.dp)
-                            )
-                            Spacer(modifier = Modifier.width(4.dp))
-                            Text(
-                                text = "$dailyHearts",
-                                fontSize = 12.sp,
-                                fontWeight = FontWeight.Black,
-                                color = Color(0xFFBE123C)
-                            )
-                        }
-                    }
-
-                    // Truquitos
-                    Surface(
-                        shape = RastroShapes.CircularPill,
-                        color = Color(0xFFCCFBF1),
-                        border = androidx.compose.foundation.BorderStroke(1.5.dp, theme.strokeBorder),
-                        modifier = Modifier.weight(1.2f)
-                    ) {
-                        Row(
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.Center
-                        ) {
-                            Icon(
-                                imageVector = Icons.Outlined.Lightbulb,
-                                contentDescription = null,
-                                tint = Color(0xFF0F766E),
-                                modifier = Modifier.size(14.dp)
-                            )
-                            Spacer(modifier = Modifier.width(4.dp))
-                            Text(
-                                text = "Truquitos",
-                                fontSize = 11.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = Color(0xFF0F766E)
-                            )
-                        }
-                    }
-                }
-            }
-
             // 2. Carrusel Horizontal de Asignaturas: < [ Biología 🟡 ] [ ⚡ Física ] >
             item {
                 Row(
@@ -345,7 +244,7 @@ fun AprenderScreen(
                     val currentSubjectIndex = subjects.indexOfFirst { it.id == selectedSubjectId }
                     Sticker3dCircleButton(
                         onClick = {
-                            if (currentSubjectIndex > 0) selectedSubjectId = subjects[currentSubjectIndex - 1].id
+                            if (currentSubjectIndex > 0) { audio.play(LearningSound.OPCIONES); selectedSubjectId = subjects[currentSubjectIndex - 1].id }
                         },
                         size = 36.dp,
                         containerColor = theme.surface,
@@ -373,7 +272,7 @@ fun AprenderScreen(
                             val subTheme = getSubjectColorTheme(subject.id)
                             Sticker3dPill(
                                 selected = isSelected,
-                                onClick = { selectedSubjectId = subject.id },
+                                onClick = { audio.play(LearningSound.OPCIONES); selectedSubjectId = subject.id },
                                 selectedColor = subTheme.primary,
                                 unselectedColor = theme.surface,
                                 selectedBevel = subTheme.bevel,
@@ -403,7 +302,7 @@ fun AprenderScreen(
 
                     Sticker3dCircleButton(
                         onClick = {
-                            if (currentSubjectIndex < subjects.size - 1) selectedSubjectId = subjects[currentSubjectIndex + 1].id
+                            if (currentSubjectIndex < subjects.size - 1) { audio.play(LearningSound.OPCIONES); selectedSubjectId = subjects[currentSubjectIndex + 1].id }
                         },
                         size = 36.dp,
                         containerColor = theme.surface,
@@ -425,6 +324,7 @@ fun AprenderScreen(
             // 3. Subject Hero Banner Dinámico según Materia (Sin naranja genérico/oscuro)
             item {
                 val currentTheme = getSubjectColorTheme(currentSubject.id)
+                RastroBoundedBlock(hero = true) {
                 Sticker3dCard(
                     modifier = Modifier.fillMaxWidth(),
                     containerColor = currentTheme.primary,
@@ -433,19 +333,12 @@ fun AprenderScreen(
                     bevelHeight = 5.dp,
                     shape = RoundedCornerShape(26.dp)
                 ) {
-                    Box(
-                        modifier = Modifier
-                            .background(
-                                Brush.verticalGradient(
-                                    listOf(currentTheme.gradientTop, currentTheme.gradientBottom)
-                                )
-                            )
-                            .padding(horizontal = 12.dp, vertical = 9.dp)
-                    ) {
-                        Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                            // Icono del curso y mascotas originales
+                    CourseBannerSurface(currentSubject.id,
+                        fallback = Brush.verticalGradient(listOf(currentTheme.gradientTop, currentTheme.gradientBottom))) {
+                        Column(Modifier.padding(horizontal = 12.dp, vertical = 9.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                            // Dynamic subject information; PNG supplies the characters in this banner.
                             Row(
-                                modifier = Modifier.fillMaxWidth(),
+                                modifier = Modifier.fillMaxWidth(.65f),
                                 horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
@@ -455,24 +348,22 @@ fun AprenderScreen(
                                     modifier = Modifier.weight(1f)
                                 ) {
                                     CourseIcon(currentSubject.id, Modifier.size(28.dp))
-                                    Text(
+                                    com.jonsuapps.rastro.android.ui.components.BannerOutlinedText(
                                         text = currentSubject.name,
                                         fontSize = 20.sp,
-                                        fontWeight = FontWeight.Black,
-                                        color = Color.White
+                                        fontWeight = FontWeight.Black
                                     )
                                 }
 
-                                DualMascotDuo(size = 36.dp)
                             }
                             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                                    Text("$completedCount / ${currentLessons.size} lecciones · ${topicGroups.size} temas",
-                                        color = Color.White, fontSize = 11.sp, fontWeight = FontWeight.Bold)
-                                    Text("${kotlin.math.round(courseProgress * 100).toInt()}%", color = Color.White,
+                                Row(Modifier.fillMaxWidth(.65f), horizontalArrangement = Arrangement.SpaceBetween) {
+                                    com.jonsuapps.rastro.android.ui.components.BannerOutlinedText("$completedCount / ${currentLessons.size} lecciones · ${topicGroups.size} temas",
+                                        fontSize = 11.sp, lineHeight = 14.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+                                    com.jonsuapps.rastro.android.ui.components.BannerOutlinedText("${kotlin.math.round(courseProgress * 100).toInt()}%",
                                         fontSize = 12.sp, fontWeight = FontWeight.Black)
                                 }
-                                CourseProgressBar(courseProgress, Modifier.fillMaxWidth(), onBanner = true)
+                                com.jonsuapps.rastro.android.ui.components.CourseBannerProgress(courseProgress, Modifier.fillMaxWidth(.65f))
                             }
 
                             // Fila Inferior de 3 Píldoras de Acción
@@ -484,28 +375,40 @@ fun AprenderScreen(
                                     text = "Fichas",
                                     icon = Icons.Rounded.Bolt,
                                     modifier = Modifier.weight(1f),
-                                    onClick = { showCourseFlashcards = true }
+                                    onClick = { audio.play(LearningSound.OPCIONES); showCourseFlashcards = true }
                                 )
                                 ActionPill(
                                     text = "Temas",
                                     icon = Icons.AutoMirrored.Rounded.FormatListBulleted,
                                     modifier = Modifier.weight(1f),
-                                    onClick = { onNavigateToSubjectDetail(selectedSubjectId) }
+                                    onClick = { audio.play(LearningSound.OPCIONES); onNavigateToSubjectDetail(selectedSubjectId) }
                                 )
                                 ActionPill(
                                     text = "Guía",
                                     icon = Icons.AutoMirrored.Rounded.MenuBook,
                                     modifier = Modifier.weight(1f),
-                                    onClick = { showGuide = true }
+                                    onClick = { audio.play(LearningSound.OPCIONES); showGuide = true }
                                 )
                             }
                         }
                     }
                 }
+                }
             }
 
             item {
                 val activeSubjectTheme = getSubjectColorTheme(selectedSubjectId)
+                if (catalogLoading) {
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+                        CircularProgressIndicator(Modifier.size(24.dp), color = theme.accent)
+                    }
+                }
+                catalogError?.let { error ->
+                    Column(Modifier.fillMaxWidth()) {
+                        Text(error, color = theme.textPrimary)
+                        TextButton(onClick = { catalogRetry++ }) { Text("Reintentar") }
+                    }
+                }
                 LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     item {
                         TopicFilter(
@@ -540,7 +443,9 @@ fun AprenderScreen(
                     }
                 }
             }
-        }
+
+            item { com.jonsuapps.rastro.android.ui.components.MainPageEnd() }
+}
     }
 
     if (showNoLivesDialog) {
@@ -582,10 +487,11 @@ private fun ActionPill(
     modifier: Modifier = Modifier,
     onClick: () -> Unit
 ) {
+    val bannerColors = com.jonsuapps.rastro.android.ui.components.bannerContrast(ThemeManager.currentTheme)
     Surface(
         shape = RastroShapes.CircularPill,
-        color = Color.White.copy(alpha = 0.22f),
-        border = androidx.compose.foundation.BorderStroke(1.dp, Color.White.copy(alpha = 0.40f)),
+        color = bannerColors.button,
+        border = androidx.compose.foundation.BorderStroke(1.dp, bannerColors.buttonBorder),
         modifier = modifier
             .clip(RastroShapes.CircularPill)
             .bouncyClick(scaleDown = 0.92f, onClick = onClick)
@@ -600,16 +506,14 @@ private fun ActionPill(
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                tint = Color.White,
+                tint = bannerColors.foreground,
                 modifier = Modifier.size(13.dp)
             )
             Spacer(modifier = Modifier.width(4.dp))
-            Text(
+            com.jonsuapps.rastro.android.ui.components.BannerOutlinedText(
                 text = text,
                 fontSize = 12.sp,
-                fontWeight = FontWeight.Bold,
-                color = Color.White,
-                textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                fontWeight = FontWeight.Bold
             )
         }
     }

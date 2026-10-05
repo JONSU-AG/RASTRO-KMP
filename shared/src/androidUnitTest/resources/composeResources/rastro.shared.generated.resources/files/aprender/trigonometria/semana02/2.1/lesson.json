@@ -1,0 +1,18 @@
+{
+  "id": "trig_t02_s01",
+  "subjectId": "trigonometria",
+  "semana": 2,
+  "subtema": "2.1",
+  "title": "LONGITUD DE ARCO, SECTOR CIRCULAR Y APLICACIONES DE ROTACIÓN - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/trigonometria/TrigonometriaSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_trig_t02_s01",
+    "asignatura": "Trigonometría",
+    "semana": 2,
+    "titulo": "LONGITUD DE ARCO, SECTOR CIRCULAR Y APLICACIONES DE ROTACIÓN - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

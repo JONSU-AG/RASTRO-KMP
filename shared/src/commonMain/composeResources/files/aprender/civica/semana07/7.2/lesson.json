@@ -1,0 +1,18 @@
+{
+  "id": "civ_t07_s02",
+  "subjectId": "civica",
+  "semana": 7,
+  "subtema": "7.2",
+  "title": "La Jerarquía Normativa (Pirámide de Kelsen) y el Procedimiento de Reforma Constitucional",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana07.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t07_s02",
+    "asignatura": "Ed. Cívica",
+    "semana": 7,
+    "titulo": "La Jerarquía Normativa (Pirámide de Kelsen) y el Procedimiento de Reforma Constitucional",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

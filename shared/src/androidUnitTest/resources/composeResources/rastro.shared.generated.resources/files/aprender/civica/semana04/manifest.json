@@ -1,0 +1,18 @@
+{
+  "week": 4,
+  "title": "Semana 4",
+  "lessons": [
+    {
+      "subtopic": "4.1",
+      "lessonId": "civ_t04_s01",
+      "title": "Los Poderes del Estado Peruano: Legislativo, Ejecutivo y Judicial",
+      "path": "4.1/lesson.json"
+    },
+    {
+      "subtopic": "4.2",
+      "lessonId": "civ_t04_s02",
+      "title": "Los Organismos Constitucionales Autónomos (OCAs): Electorales, Jurídicos y Económicos",
+      "path": "4.2/lesson.json"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rl_t07_s02",
+  "subjectId": "raz_logico",
+  "semana": 7,
+  "subtema": "7.2",
+  "title": "Razonamiento con Condicionales - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_logico/RazonamientoLogicoSemana07.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rl_t07_s02",
+    "asignatura": "Raz. Lógico",
+    "semana": 7,
+    "titulo": "Razonamiento con Condicionales - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

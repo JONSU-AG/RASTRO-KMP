@@ -202,7 +202,7 @@ fun FormularioScreen(
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
-                .widthIn(max = 760.dp),
+                .widthIn(max = 1100.dp),
             contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 120.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
@@ -506,7 +506,9 @@ fun FormularioScreen(
                 }
             }
         }
-    }
+
+            item { com.jonsuapps.rastro.android.ui.components.MainPageEnd() }
+}
 }
 }
 

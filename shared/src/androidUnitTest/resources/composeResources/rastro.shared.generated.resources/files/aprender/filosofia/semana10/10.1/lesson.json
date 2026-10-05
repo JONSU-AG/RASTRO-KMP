@@ -1,0 +1,18 @@
+{
+  "id": "filo_t10_s01",
+  "subjectId": "filosofia",
+  "semana": 10,
+  "subtema": "10.1",
+  "title": "A. Distinción Conceptual: Moral vs. Ética",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana10.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t10_s01",
+    "asignatura": "Filosofía",
+    "semana": 10,
+    "titulo": "A. Distinción Conceptual: Moral vs. Ética",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

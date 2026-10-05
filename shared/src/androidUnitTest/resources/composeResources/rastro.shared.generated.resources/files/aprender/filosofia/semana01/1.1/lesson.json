@@ -1,0 +1,18 @@
+{
+  "id": "filo_t01_s01",
+  "subjectId": "filosofia",
+  "semana": 1,
+  "subtema": "1.1",
+  "title": "3.1. Etimología y Definición de la Filosofía",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t01_s01",
+    "asignatura": "Filosofía",
+    "semana": 1,
+    "titulo": "3.1. Etimología y Definición de la Filosofía",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

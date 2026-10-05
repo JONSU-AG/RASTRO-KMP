@@ -1,0 +1,18 @@
+{
+  "id": "filo_t13_s01",
+  "subjectId": "filosofia",
+  "semana": 13,
+  "subtema": "13.1",
+  "title": "A. La Pregunta por el Hombre: Naturaleza y Objeto de Estudio",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana13.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t13_s01",
+    "asignatura": "Filosofía",
+    "semana": 13,
+    "titulo": "A. La Pregunta por el Hombre: Naturaleza y Objeto de Estudio",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

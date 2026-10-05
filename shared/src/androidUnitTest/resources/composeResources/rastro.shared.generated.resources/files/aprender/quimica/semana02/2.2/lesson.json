@@ -1,0 +1,18 @@
+{
+  "id": "quim_t02_s02",
+  "subjectId": "quimica",
+  "semana": 2,
+  "subtema": "2.2",
+  "title": "Energía y Cambios Físicos de la Materia - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/quimica/QuimicaSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_quim_t02_s02",
+    "asignatura": "Química",
+    "semana": 2,
+    "titulo": "Energía y Cambios Físicos de la Materia - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -59,6 +59,7 @@ fun LessonPresentationPopup(
     modifier: Modifier = Modifier,
     theme: RastroPalette = ThemeManager.currentTheme
 ) {
+    val audio = rememberLearningAudio()
     Dialog(
         onDismissRequest = onDismiss,
         properties = DialogProperties(
@@ -83,6 +84,7 @@ fun LessonPresentationPopup(
                 modifier = modifier
                     .fillMaxWidth(0.92f)
                     .widthIn(max = 420.dp)
+                    .heightIn(max = 720.dp)
                     .wrapContentHeight()
                     .clickable(
                         interactionSource = remember { MutableInteractionSource() },
@@ -90,13 +92,14 @@ fun LessonPresentationPopup(
                         onClick = { /* Evitar que el clic en la tarjeta cierre el popup */ }
                     ),
                 shape = RoundedCornerShape(28.dp),
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = androidx.compose.foundation.BorderStroke(1.5.dp, Color(0xFFE2E8F0)),
+                colors = CardDefaults.cardColors(containerColor = theme.surface),
+                border = androidx.compose.foundation.BorderStroke(1.5.dp, theme.borderSubtle),
                 elevation = CardDefaults.cardElevation(defaultElevation = 12.dp)
             ) {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
+                        .verticalScroll(rememberScrollState())
                         .padding(horizontal = 22.dp, vertical = 20.dp)
                 ) {
                     // Header Superior: "MATERIA · SEMANA X" y Botón Cerrar (X)
@@ -109,7 +112,7 @@ fun LessonPresentationPopup(
                             text = "${lesson.theory.asignatura.uppercase()} · SEMANA ${lesson.semana}",
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Black,
-                            color = Color(0xFF0284C7), // Azul cielo vivo
+                            color = theme.accent, // Azul cielo vivo
                             letterSpacing = 0.8.sp
                         )
 
@@ -118,12 +121,12 @@ fun LessonPresentationPopup(
                             modifier = Modifier
                                 .size(32.dp)
                                 .clip(CircleShape)
-                                .background(Color(0xFFF1F5F9))
+                                .background(theme.surfaceAccent)
                         ) {
                             Icon(
                                 imageVector = Icons.Rounded.Close,
                                 contentDescription = "Cerrar",
-                                tint = Color(0xFF64748B),
+                                tint = theme.textSecondary,
                                 modifier = Modifier.size(18.dp)
                             )
                         }
@@ -144,11 +147,7 @@ fun LessonPresentationPopup(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             // PNG Existente de Orstty con animación física de flotación
-                            OrsttyMascot(
-                                size = 88.dp,
-                                mood = MascotMood.CHEERING,
-                                modifier = Modifier.padding(end = 8.dp)
-                            )
+                            ClassicArtwork(ClassicAppearance.STUDY, Modifier.size(88.dp).padding(end = 8.dp))
 
                             // Ilustración académica SVG estilizada según la materia/tema de la lección
                             val conceptKey = "${lesson.subjectId} ${lesson.title} ${lesson.subtema}"
@@ -172,14 +171,14 @@ fun LessonPresentationPopup(
                     Box(
                         modifier = Modifier
                             .clip(RastroShapes.Pill)
-                            .background(Color(0xFFEDE9FE))
+                            .background(theme.surfaceAccent)
                             .padding(horizontal = 14.dp, vertical = 5.dp)
                     ) {
                         Text(
                             text = subtemaFormatted,
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFF7C3AED)
+                            color = theme.accent
                         )
                     }
 
@@ -190,7 +189,7 @@ fun LessonPresentationPopup(
                         text = lesson.theory.titulo.ifBlank { lesson.title },
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF0F172A),
+                        color = theme.textPrimary,
                         lineHeight = 27.sp
                     )
 
@@ -200,8 +199,8 @@ fun LessonPresentationPopup(
                     Surface(
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(16.dp),
-                        color = Color(0xFFF8FAFC),
-                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0))
+                        color = theme.surfaceAccent,
+                        border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
                     ) {
                         Column(
                             modifier = Modifier.padding(horizontal = 14.dp, vertical = 12.dp),
@@ -211,7 +210,7 @@ fun LessonPresentationPopup(
                                 Icon(
                                     imageVector = Icons.Rounded.Extension,
                                     contentDescription = null,
-                                    tint = Color(0xFF3B82F6),
+                                    tint = theme.accent,
                                     modifier = Modifier.size(18.dp)
                                 )
                                 Spacer(modifier = Modifier.width(10.dp))
@@ -220,7 +219,7 @@ fun LessonPresentationPopup(
                                     text = "$retosCount reto${if (retosCount > 1) "s" else ""} interactivo${if (retosCount > 1) "s" else ""}",
                                     style = MaterialTheme.typography.bodyMedium,
                                     fontWeight = FontWeight.SemiBold,
-                                    color = Color(0xFF1E293B)
+                                    color = theme.textPrimary
                                 )
                             }
 
@@ -228,14 +227,14 @@ fun LessonPresentationPopup(
                                 Icon(
                                     imageVector = Icons.Rounded.Schedule,
                                     contentDescription = null,
-                                    tint = Color(0xFF64748B),
+                                    tint = theme.textSecondary,
                                     modifier = Modifier.size(18.dp)
                                 )
                                 Spacer(modifier = Modifier.width(10.dp))
                                 Text(
                                     text = "Tiempo estimado: 10 min",
                                     style = MaterialTheme.typography.bodyMedium,
-                                    color = Color(0xFF475569)
+                                    color = theme.textSecondary
                                 )
                             }
                         }
@@ -248,7 +247,7 @@ fun LessonPresentationPopup(
                         text = "Aprenderás:",
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF0284C7)
+                        color = theme.accent
                     )
 
                     Spacer(modifier = Modifier.height(6.dp))
@@ -273,7 +272,7 @@ fun LessonPresentationPopup(
                                 Text(
                                     text = point,
                                     style = MaterialTheme.typography.bodySmall,
-                                    color = Color(0xFF334155),
+                                    color = theme.textPrimary,
                                     fontWeight = FontWeight.Medium
                                 )
                             }
@@ -286,8 +285,8 @@ fun LessonPresentationPopup(
                     Surface(
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(14.dp),
-                        color = Color(0xFFFEF3C7), // Amarillo dorado suave
-                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFFDE68A))
+                        color = theme.surfaceAccent, // Amarillo dorado suave
+                        border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
                     ) {
                         Column(
                             modifier = Modifier
@@ -300,13 +299,13 @@ fun LessonPresentationPopup(
                                     text = "⚡ +25 XP",
                                     style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Black,
-                                    color = Color(0xFFD97706)
+                                    color = theme.accent
                                 )
                             }
                             Text(
                                 text = "Recompensa de expedición",
                                 style = MaterialTheme.typography.labelSmall,
-                                color = Color(0xFFB45309),
+                                color = theme.textSecondary,
                                 fontWeight = FontWeight.SemiBold
                             )
                         }
@@ -316,20 +315,20 @@ fun LessonPresentationPopup(
 
                     // Botón Azul RASTRO con bisel 3D inferior: "▶ COMENZAR LECCIÓN"
                     Sticker3dButton(
-                        onClick = onStartLesson,
+                        onClick = { audio.play(LearningSound.OPCIONES); onStartLesson() },
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(52.dp),
-                        containerColor = Color(0xFF1D84FE), // Azul RASTRO
-                        bottomBevelColor = Color(0xFF145CB5), // Bisel 3D inferior azul oscuro
-                        strokeColor = Color(0xFF145CB5).copy(alpha = 0.5f),
+                        containerColor = theme.accent, // Azul RASTRO
+                        bottomBevelColor = theme.accentBevel, // Bisel 3D inferior azul oscuro
+                        strokeColor = theme.accentBevel.copy(alpha = 0.5f),
                         shape = RastroShapes.Pill,
                         contentPadding = PaddingValues(vertical = 12.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Rounded.PlayArrow,
                             contentDescription = null,
-                            tint = Color.White,
+                            tint = contrastingText(theme.accent),
                             modifier = Modifier.size(20.dp)
                         )
                         Spacer(modifier = Modifier.width(6.dp))
@@ -337,7 +336,7 @@ fun LessonPresentationPopup(
                             text = "COMENZAR LECCIÓN",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Black,
-                            color = Color.White,
+                            color = contrastingText(theme.accent),
                             letterSpacing = 0.5.sp
                         )
                     }

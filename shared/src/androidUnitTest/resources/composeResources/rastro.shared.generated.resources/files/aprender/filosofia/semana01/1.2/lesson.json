@@ -1,0 +1,18 @@
+{
+  "id": "filo_t01_s02",
+  "subjectId": "filosofia",
+  "semana": 1,
+  "subtema": "1.2",
+  "title": "3.2. El Origen Histórico: Del Mito al Logos",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t01_s02",
+    "asignatura": "Filosofía",
+    "semana": 1,
+    "titulo": "3.2. El Origen Histórico: Del Mito al Logos",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "week": 7,
+  "title": "Semana 7",
+  "lessons": [
+    {
+      "subtopic": "7.1",
+      "lessonId": "arit_t07_s01",
+      "title": "Magnitudes Proporcionales, Reparto Proporcional y Regla de Tres - Fundamentos y Leyes Principales",
+      "path": "7.1/lesson.json"
+    },
+    {
+      "subtopic": "7.2",
+      "lessonId": "arit_t07_s02",
+      "title": "Magnitudes Proporcionales, Reparto Proporcional y Regla de Tres - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "7.2/lesson.json"
+    }
+  ]
+}

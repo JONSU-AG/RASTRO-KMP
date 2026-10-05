@@ -1,0 +1,18 @@
+{
+  "id": "rl_t03_s02",
+  "subjectId": "raz_logico",
+  "semana": 3,
+  "subtema": "3.2",
+  "title": "RELACIONES LÓGICAS ENTRE PROPOSICIONES - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_logico/RazonamientoLogicoSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rl_t03_s02",
+    "asignatura": "Raz. Lógico",
+    "semana": 3,
+    "titulo": "RELACIONES LÓGICAS ENTRE PROPOSICIONES - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "week": 8,
+  "title": "Semana 8",
+  "lessons": [
+    {
+      "subtopic": "8.1",
+      "lessonId": "trig_t08_s01",
+      "title": "RESOLUCIÓN DE TRIÁNGULOS OBLICUÁNGULOS: LEYES DE SENOS, COSENOS, TANGENTES Y PROYECCIONES - Fundamentos y Leyes Principales",
+      "path": "8.1/lesson.json"
+    },
+    {
+      "subtopic": "8.2",
+      "lessonId": "trig_t08_s02",
+      "title": "RESOLUCIÓN DE TRIÁNGULOS OBLICUÁNGULOS: LEYES DE SENOS, COSENOS, TANGENTES Y PROYECCIONES - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "8.2/lesson.json"
+    }
+  ]
+}

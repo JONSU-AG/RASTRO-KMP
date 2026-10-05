@@ -1,0 +1,18 @@
+{
+  "week": 2,
+  "title": "TEMA 02: PRIMERAS CIVILIZACIONES DE LA ANTIGÜEDAD (MESOPOTAMIA Y EGIPTO)",
+  "lessons": [
+    {
+      "subtopic": "2.1",
+      "lessonId": "huni_t02_s01",
+      "title": "3.1. Las Sociedades Fluviales e Hidráulicas de Mesopotamia",
+      "path": "2.1/lesson.json"
+    },
+    {
+      "subtopic": "2.2",
+      "lessonId": "huni_t02_s02",
+      "title": "3.3. Egipto: El Don del Nilo y el Estado Faraónico",
+      "path": "2.2/lesson.json"
+    }
+  ]
+}

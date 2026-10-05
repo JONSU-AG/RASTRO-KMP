@@ -162,3 +162,9 @@ Mil seiscientos nueve igual a incas. Mil seiscientos diecisiete igual a español
 
 ## RESUMEN
 Mestizo que corrige con quechua y utopía romana. Dos partes con incas y españoles. Costumbrismo polémico con Catita venal y Goyito indeciso y Juan revelador. Politeama juvenil con reforma emancipadora. Salaverry elegíaco y Matto indigenista en Kíllac.
+
+## Discurso en el Politeama: texto y colección
+
+Manuel González Prada plantea en su discurso de 1888 una crítica de las élites tras la Guerra del Pacífico y una renovación basada en educación y participación de quienes estaban excluidos. El texto presenta una tesis y argumentos dirigidos a un auditorio, no una trama con personajes ficticios.
+
+Pájinas libres, colección publicada en 1894, contiene el discurso. Reconocer la relación evita confundir el título de un texto individual con el libro que lo reúne. En el análisis, vincula el contraste entre grupos dirigentes y juventud con el propósito de renovación y examina cómo las exhortaciones buscan involucrar al lector.

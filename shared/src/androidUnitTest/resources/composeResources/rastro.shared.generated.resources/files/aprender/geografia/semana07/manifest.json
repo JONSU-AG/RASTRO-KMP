@@ -1,0 +1,18 @@
+{
+  "week": 7,
+  "title": "TEMA 07: Geomorfología y Relieve del Territorio Peruano",
+  "lessons": [
+    {
+      "subtopic": "7.1",
+      "lessonId": "geo_t07_s01",
+      "title": "3.1. Relieve Submarino del Mar Peruano",
+      "path": "7.1/lesson.json"
+    },
+    {
+      "subtopic": "7.2",
+      "lessonId": "geo_t07_s02",
+      "title": "3.4. Geomorfología de la Selva (Región Amazónica)",
+      "path": "7.2/lesson.json"
+    }
+  ]
+}

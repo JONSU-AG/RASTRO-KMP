@@ -1,0 +1,18 @@
+{
+  "id": "civ_t06_s01",
+  "subjectId": "civica",
+  "semana": 6,
+  "subtema": "6.1",
+  "title": "Los Derechos Humanos: Concepto, Características y las Cuatro Generaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t06_s01",
+    "asignatura": "Ed. Cívica",
+    "semana": 6,
+    "titulo": "Los Derechos Humanos: Concepto, Características y las Cuatro Generaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "week": 12,
+  "title": "TEMA 12: FILOSOFÍA POLÍTICA",
+  "lessons": [
+    {
+      "subtopic": "12.1",
+      "lessonId": "filo_t12_s01",
+      "title": "A. Naturaleza de la Filosofía Política y el Poder",
+      "path": "12.1/lesson.json"
+    },
+    {
+      "subtopic": "12.2",
+      "lessonId": "filo_t12_s02",
+      "title": "D. Teorías de la Justicia: John Rawls y el Liberalismo Igualitario",
+      "path": "12.2/lesson.json"
+    }
+  ]
+}

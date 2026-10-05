@@ -112,3 +112,9 @@ Piensa en bloques con función fija. Si es verbo conjugado y la terminación acu
 ## RESUMEN
 
 Morfología como estudio del interior de la palabra con el morfema como unidad mínima con significado. Alomorfos con s, es y Ø para plural y con in, im e i para negación según contexto fónico. Lexema con significado base en pan, sol, niñ y gat. Flexivos simples de género y número sin crear palabras y flexivo amalgama exclusivo del verbo con cinco accidentes en canté y escribí. Derivativos con prefijos, sufijos e infijos eufónicos que sí crean palabras como desarmar, panadero y panecito. Libres autónomos como sol frente a ligados dependientes como ero y des. Segmentaciones modelo en gatos, alumnas y panaderías que sostienen las diez preguntas de la lección.
+
+## Flexión y formación de palabras
+
+La flexión expresa información gramatical sin crear necesariamente una nueva palabra léxica: niño/niños cambia número; canto/cantábamos cambia rasgos verbales. La derivación puede formar una nueva unidad mediante afijos, como pan/panadero. La composición combina bases, como sacapuntas.
+
+Un morfema es una unidad mínima de significado o función gramatical, no una sílaba. Un mismo segmento sonoro puede cumplir funciones distintas según la palabra; por eso el análisis debe relacionar forma y función. Identificar raíz y morfemas evita confundir número de letras, sílabas y unidades morfológicas.

@@ -1,0 +1,18 @@
+{
+  "id": "rm_t05_s01",
+  "subjectId": "raz_matematico",
+  "semana": 5,
+  "subtema": "5.1",
+  "title": "ANÁLISIS COMBINATORIO INTUITIVO Y CONTEO - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/razonamiento_matematico/RazonamientoMatematicoSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_rm_t05_s01",
+    "asignatura": "Raz. Matemático",
+    "semana": 5,
+    "titulo": "ANÁLISIS COMBINATORIO INTUITIVO Y CONTEO - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

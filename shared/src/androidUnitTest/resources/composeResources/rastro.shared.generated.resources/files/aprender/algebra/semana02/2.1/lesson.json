@@ -1,0 +1,18 @@
+{
+  "id": "alg_t02_s01",
+  "subjectId": "algebra",
+  "semana": 2,
+  "subtema": "2.1",
+  "title": "Sistema de los Números Reales (\\mathbb{R}), Intervalos y Valor Absoluto - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_alg_t02_s01",
+    "asignatura": "Álgebra",
+    "semana": 2,
+    "titulo": "Sistema de los Números Reales (\\mathbb{R}), Intervalos y Valor Absoluto - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

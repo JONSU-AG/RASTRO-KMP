@@ -1,0 +1,18 @@
+{
+  "week": 11,
+  "title": "Semana 11",
+  "lessons": [
+    {
+      "subtopic": "11.1",
+      "lessonId": "civ_t11_s01",
+      "title": "La Universidad: Fines, Gratuidad, las Cinco Dimensiones de la Autonomía e Inviolabilidad del Recinto",
+      "path": "11.1/lesson.json"
+    },
+    {
+      "subtopic": "11.2",
+      "lessonId": "civ_t11_s02",
+      "title": "Estructura de Gobierno Universitario, Comunidad Académica (Tercio Estudiantil) y la SUNEDU",
+      "path": "11.2/lesson.json"
+    }
+  ]
+}

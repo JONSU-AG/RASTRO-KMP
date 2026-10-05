@@ -34,6 +34,8 @@ sealed class RastroScreen(val route: String) {
 
     // 6. Simulador (Cronómetro y Ranking)
     data object Simulador : RastroScreen("simulador")
+    data object Ligas : RastroScreen("ligas")
+    data object RankingExam : RastroScreen("examen-ranking")
 
     // 7. Pizarra de Dibujo / Relajo (Doodle Canvas)
     data object Pizarra : RastroScreen("pizarra")

@@ -4,6 +4,11 @@ import android.content.Context
 import android.net.Uri
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateMapOf
+import androidx.compose.runtime.mutableStateOf
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ListenerRegistration
+import com.google.firebase.firestore.FieldValue
 import com.jonsuapps.rastro.BuildConfig
 import com.jonsuapps.rastro.data.CoursePlaylist
 import kotlinx.coroutines.Dispatchers
@@ -28,11 +33,81 @@ object UserPlaylistsRepository {
     val customVideosMap = mutableStateMapOf<String, List<CustomVideoItem>>()
     val isCustomListMap = mutableStateMapOf<String, Boolean>()
     private var initialized = false
+    private var accountKey = ""
+    private var cloudListener: ListenerRegistration? = null
+    private var appContext: Context? = null
+    val syncError = mutableStateOf<String?>(null)
+    val hasMore = mutableStateOf(false)
+    private val migrating = mutableSetOf<String>()
+    private var cloudLimit = 100L
+    private val collection get() = FirebaseFirestore.getInstance().collection("rastro_yt_playlists")
+
+    fun stopSync() { cloudListener?.remove(); cloudListener = null }
+
+    fun loadMore() { cloudLimit += 100; startSync() }
+
+    private fun cloudData(pl: CoursePlaylist): Map<String, Any> = playlistAccountPayload(
+        accountKey, pl, isCustomListMap[pl.id] == true, customVideosMap[pl.id].orEmpty()
+    ) + mapOf("updatedAt" to FieldValue.serverTimestamp())
+
+    private fun startSync() {
+        stopSync()
+        val uid = accountKey
+        if (FirebaseAuth.getInstance().currentUser?.let { !it.isAnonymous && it.uid == uid } != true) return
+        cloudListener = collection.whereEqualTo("ownerUid", uid).whereEqualTo("isHidden", false)
+            .limit(cloudLimit).addSnapshotListener { snapshot, error ->
+                if (accountKey != uid || FirebaseAuth.getInstance().currentUser?.uid != uid) return@addSnapshotListener
+                if (error != null) { syncError.value = "No se pudieron sincronizar tus playlists. Revisa la conexión y vuelve a entrar."; return@addSnapshotListener }
+                syncError.value = null
+                hasMore.value = snapshot?.size()?.toLong() == cloudLimit
+                snapshot?.documents.orEmpty().forEach { doc ->
+                    val id = doc.getString("localId") ?: return@forEach
+                    if (doc.getBoolean("isDeleted") == true) {
+                        playlists.removeAll { it.id == id }; customVideosMap.remove(id); isCustomListMap.remove(id)
+                        return@forEach
+                    }
+                    val videos = (doc.get("videos") as? List<*>)?.mapNotNull { raw ->
+                        val v = raw as? Map<*, *> ?: return@mapNotNull null
+                        val url = v["urlOrId"] as? String ?: return@mapNotNull null
+                        CustomVideoItem(v["id"] as? String ?: url, v["title"] as? String ?: "", url)
+                    }.orEmpty()
+                    isCustomListMap[id] = doc.getBoolean("isCustomList") == true
+                    customVideosMap[id] = videos
+                    val pl = CoursePlaylist(id, doc.getString("title") ?: "Mi Playlist",
+                        doc.getString("channelTitle") ?: "Playlist de YouTube", doc.getString("subject") ?: "General",
+                        doc.getString("playlistId") ?: "", doc.getLong("videoCount")?.toInt() ?: 0,
+                        "Mías", description = doc.getString("description") ?: "")
+                    val index = playlists.indexOfFirst { it.id == id }
+                    if (index < 0) playlists.add(pl) else playlists[index] = pl
+                }
+                appContext?.let { save(it) }
+            }
+    }
 
     fun init(context: Context) {
-        if (initialized) return
+        val uid = com.google.firebase.auth.FirebaseAuth.getInstance().currentUser?.uid ?: "guest"
+        if (initialized && accountKey == uid) { migrateLocalToCloud(); startSync(); return }
+        stopSync()
+        appContext = context.applicationContext
+        cloudLimit = 100
+        hasMore.value = false
+        syncError.value = null
+        migrating.clear()
         initialized = true
-        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        accountKey = uid
+        playlists.clear()
+        customVideosMap.clear()
+        isCustomListMap.clear()
+        val legacy = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        // The first account keeps its existing device lists; never migrate them again to another account.
+        if (!legacy.contains("migratedOwner")) {
+            val old = legacy.getString(KEY_PLAYLISTS, null)
+            context.getSharedPreferences("${PREFS_NAME}_$uid", Context.MODE_PRIVATE).edit()
+                .putString(KEY_PLAYLISTS, old).apply()
+            legacy.edit().putString("migratedOwner", uid).apply()
+        }
+        val prefs = context.getSharedPreferences("${PREFS_NAME}_$accountKey", Context.MODE_PRIVATE)
+        migrating.addAll(prefs.getStringSet("cloudMigrated", emptySet()).orEmpty())
         val jsonStr = prefs.getString(KEY_PLAYLISTS, null)
         if (!jsonStr.isNullOrBlank()) {
             try {
@@ -79,6 +154,30 @@ object UserPlaylistsRepository {
                 e.printStackTrace()
             }
         }
+        migrateLocalToCloud()
+        startSync()
+    }
+
+    private fun migrateLocalToCloud() {
+        val uid = accountKey
+        if (FirebaseAuth.getInstance().currentUser?.let { !it.isAnonymous && it.uid == uid } != true) return
+        playlists.toList().forEach { pl ->
+            if (!migrating.add(pl.id)) return@forEach
+            val payload = cloudData(pl)
+            val ref = collection.document("${uid}_${pl.id}")
+            // Only seed missing documents: an old device must never replace remote edits or tombstones.
+            FirebaseFirestore.getInstance().runTransaction { tx ->
+                if (!tx.get(ref).exists()) tx.set(ref, payload)
+            }.addOnSuccessListener {
+                if (accountKey == uid) {
+                    val prefs = appContext?.getSharedPreferences("${PREFS_NAME}_$uid", Context.MODE_PRIVATE)
+                    val migrated = prefs?.getStringSet("cloudMigrated", emptySet()).orEmpty() + pl.id
+                    prefs?.edit()?.putStringSet("cloudMigrated", migrated)?.apply()
+                }
+            }.addOnFailureListener {
+                if (accountKey == uid) { migrating.remove(pl.id); syncError.value = "Tus listas siguen guardadas aquí; su sincronización está pendiente." }
+            }
+        }
     }
 
     fun extractPlaylistId(urlOrId: String): String {
@@ -111,23 +210,21 @@ object UserPlaylistsRepository {
             return@withContext listOf(CustomVideoItem(id = cleanId, title = "Video de la clase", urlOrId = cleanId))
         }
 
-        fetchPlaylistItemsFromYouTubeApi(cleanId).ifEmpty {
-            fetchPlaylistItemsFromRss(cleanId)
-        }
+        // Never label the RSS feed's latest 15 entries as the complete playlist.
+        // When Data API is unavailable the screen uses the official IFrame queue instead.
+        fetchPlaylistItemsFromYouTubeApi(cleanId)
     }
 
     /**
      * The official Data API paginates all playlist items (up to 50 per request).
-     * A blank key intentionally falls back to RSS, which only exposes the latest 15 items.
+     * A blank/unavailable key delegates to the official IFrame API in the screen.
      */
     private fun fetchPlaylistItemsFromYouTubeApi(cleanId: String): List<CustomVideoItem> {
         val key = BuildConfig.YOUTUBE_DATA_API_KEY.trim()
         if (key.isBlank()) return emptyList()
 
         return runCatching {
-            val items = mutableListOf<CustomVideoItem>()
-            var pageToken: String? = null
-            do {
+            YouTubePlaylistPages.readAll { pageToken ->
                 val url = Uri.Builder()
                     .scheme("https")
                     .authority("www.googleapis.com")
@@ -145,25 +242,20 @@ object UserPlaylistsRepository {
                 connection.connectTimeout = 8000
                 connection.readTimeout = 8000
                 connection.requestMethod = "GET"
-                val response = connection.inputStream.bufferedReader().use { it.readText() }
+                val response = try { connection.inputStream.bufferedReader().use { it.readText() } } finally { connection.disconnect() }
                 val payload = JSONObject(response)
-                val pageItems = payload.optJSONArray("items") ?: JSONArray()
-                for (index in 0 until pageItems.length()) {
-                    val item = pageItems.optJSONObject(index) ?: continue
+                check(!payload.has("error")) { "YouTube no pudo cargar la playlist." }
+                val page = payload.getJSONArray("items")
+                val videos = (0 until page.length()).mapNotNull { index ->
+                    val item = page.getJSONObject(index)
                     val snippet = item.optJSONObject("snippet")
-                    val videoId = item.optJSONObject("contentDetails")?.optString("videoId").orEmpty()
+                    val id = item.optJSONObject("contentDetails")?.optString("videoId").orEmpty()
                         .ifBlank { snippet?.optJSONObject("resourceId")?.optString("videoId").orEmpty() }
-                    if (videoId.isNotBlank()) {
-                        items += CustomVideoItem(
-                            id = videoId,
-                            title = snippet?.optString("title").orEmpty().ifBlank { "Clase ${items.size + 1}" },
-                            urlOrId = videoId
-                        )
-                    }
+                    if (id.isBlank()) null else CustomVideoItem(id,
+                        snippet?.optString("title").orEmpty().ifBlank { "Clase" }, id)
                 }
-                pageToken = payload.optString("nextPageToken").takeIf { it.isNotBlank() }
-            } while (pageToken != null)
-            items
+                YouTubePlaylistPage(videos, payload.optString("nextPageToken"))
+            }
         }.getOrDefault(emptyList())
     }
 
@@ -244,9 +336,28 @@ object UserPlaylistsRepository {
             playlists.add(0, newPlaylist)
         }
         save(context)
+        if (FirebaseAuth.getInstance().currentUser?.let { !it.isAnonymous && it.uid == accountKey } == true) {
+            val uid = accountKey
+            val ref = collection.document("${uid}_$id")
+            val payload = cloudData(newPlaylist)
+            // Merge preserves the independently selected community visibility.
+            ref.set(payload, com.google.firebase.firestore.SetOptions.mergeFields(
+                playlistEditFields(payload)
+            )).addOnFailureListener {
+                if (accountKey == uid) syncError.value = "No se pudo guardar la playlist en tu cuenta. La copia local se conserva."
+            }
+        }
     }
 
     fun deletePlaylist(context: Context, id: String) {
+        val pl = playlists.firstOrNull { it.id == id }
+        if (pl != null && FirebaseAuth.getInstance().currentUser?.let { !it.isAnonymous && it.uid == accountKey } == true) {
+            val uid = accountKey
+            collection.document("${uid}_$id").set(cloudData(pl) + mapOf("isDeleted" to true),
+                com.google.firebase.firestore.SetOptions.merge()).addOnFailureListener {
+                if (accountKey == uid) syncError.value = "No se pudo sincronizar la eliminación de esta playlist."
+            }
+        }
         playlists.removeAll { it.id == id }
         customVideosMap.remove(id)
         isCustomListMap.remove(id)
@@ -254,7 +365,7 @@ object UserPlaylistsRepository {
     }
 
     private fun save(context: Context) {
-        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val prefs = context.getSharedPreferences("${PREFS_NAME}_$accountKey", Context.MODE_PRIVATE)
         val array = JSONArray()
         playlists.forEach { pl ->
             val isCustom = isCustomListMap[pl.id] ?: false

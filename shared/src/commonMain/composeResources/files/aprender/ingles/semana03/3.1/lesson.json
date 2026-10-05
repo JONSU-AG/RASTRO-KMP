@@ -1,0 +1,18 @@
+{
+  "id": "ing_t03_s01",
+  "subjectId": "ingles",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "Verbos Modales (Can, Must, Should), Estructuras Existenciales y Grados del Adjetivo - Core Rules & Foundations",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/ingles/InglesSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_ing_t03_s01",
+    "asignatura": "Inglés",
+    "semana": 3,
+    "titulo": "Verbos Modales (Can, Must, Should), Estructuras Existenciales y Grados del Adjetivo - Core Rules & Foundations",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

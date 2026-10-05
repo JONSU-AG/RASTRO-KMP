@@ -12,7 +12,7 @@ service cloud.firestore {
     }
 
     function author() {
-      return signedIn() && request.auth.token.email in [
+      return signedIn() && request.auth.token.email_verified == true && request.auth.token.email in [
         'aguilar.jonsu@gmail.com',
         'rumbo.jonsu@gmail.com',
         'jhojan.aguilar.13.10@gmail.com',
@@ -31,6 +31,7 @@ service cloud.firestore {
     function ownsDoc() {
       return signedIn() && (
         resource.data.get('authorUid', '') == request.auth.uid ||
+        resource.data.get('ownerId', '') == request.auth.uid ||
         resource.data.get('uid', '') == request.auth.uid ||
         resource.data.get('senderUid', '') == request.auth.uid ||
         resource.data.get('followerUid', '') == request.auth.uid ||
@@ -38,6 +39,30 @@ service cloud.firestore {
         (resource.data.get('uploadedBy', {}) is map &&
          resource.data.uploadedBy.get('uid', '') == request.auth.uid)
       );
+    }
+
+    function createsOwnContent() {
+      return signedIn() && request.resource.data.get('authorUid', '') == request.auth.uid;
+    }
+
+    function preservesOwnership() {
+      return !request.resource.data.diff(resource.data).affectedKeys().hasAny(
+        ['authorUid', 'ownerId', 'uploadedBy', 'uid', 'senderUid', 'recipientUid', 'followerUid']);
+    }
+
+    function preservesModeration() {
+      return !request.resource.data.diff(resource.data).affectedKeys().hasAny(
+        ['oculto', 'hidden', 'autoModerated', 'moderationReason']);
+    }
+
+    function canAutoHide() {
+      return request.resource.data.get('oculto', false) == true
+        && request.resource.data.get('hidden', false) == true
+        && request.resource.data.get('reportsCount', 0) == resource.data.get('reportsCount', 0) + 1
+        && request.resource.data.get('reportsCount', 0) >= 3
+        && request.auth.uid in request.resource.data.get('reportedBy', [])
+        && request.resource.data.get('autoModerated', false) == resource.data.get('autoModerated', false)
+        && request.resource.data.get('moderationReason', '') == resource.data.get('moderationReason', '');
     }
 
     // —— Perfiles: públicos para leer, cada uno edita solo el suyo sin tocar privilegios ——
@@ -62,44 +87,52 @@ service cloud.firestore {
     // —— Contenido de la comunidad: lectura pública, crear con sesión, editar/borrar dueño o autor ——
     match /uploads/{d} {
       allow read: if true;
-      allow create: if signedIn();
+      allow create: if author() || (signedIn()
+        && request.resource.data.get('ownerId', '') == request.auth.uid
+        && request.resource.data.get('uploadedBy', {}).get('uid', '') == request.auth.uid);
       allow delete: if ownsDoc() || author();
-      allow update: if ownsDoc() || author() || (
+      allow update: if author() || (ownsDoc() && preservesOwnership() && preservesModeration()) || (
         signedIn() &&
         request.resource.data.diff(resource.data).affectedKeys().hasOnly([
           'savedBy', 'likedBy', 'reportedBy', 'reportsCount', 'oculto', 'hidden', 'autoModerated', 'moderationReason', 'reactions'
-        ])
+        ]) && (preservesModeration() || canAutoHide())
       );
     }
     match /libros/{d} {
       allow read: if true;
-      allow create: if signedIn();
-      allow update, delete: if ownsDoc() || author();
+      allow create: if createsOwnContent() || author();
+      allow update: if author() || (ownsDoc() && preservesOwnership());
+      allow delete: if ownsDoc() || author();
     }
     match /flashcards/{d} {
       allow read: if true;
-      allow create: if signedIn();
-      allow update, delete: if ownsDoc() || author();
+      allow create: if createsOwnContent() || author();
+      allow update: if author() || (ownsDoc() && preservesOwnership());
+      allow delete: if ownsDoc() || author();
     }
     match /preguntas_examen/{d} {
       allow read: if true;
-      allow create: if signedIn();
-      allow update, delete: if ownsDoc() || author();
+      allow create: if createsOwnContent() || author();
+      allow update: if author() || (ownsDoc() && preservesOwnership());
+      allow delete: if ownsDoc() || author();
     }
     match /perfil_comentarios/{d} {
       allow read: if true;
-      allow create: if signedIn();
-      allow update, delete: if ownsDoc() || author();
+      allow create: if createsOwnContent() || author();
+      allow update: if author() || (ownsDoc() && preservesOwnership());
+      allow delete: if ownsDoc() || author();
     }
     match /publicacion_comentarios/{d} {
       allow read: if true;
-      allow create: if signedIn();
-      allow update, delete: if ownsDoc() || author();
+      allow create: if createsOwnContent() || author();
+      allow update: if author() || (ownsDoc() && preservesOwnership());
+      allow delete: if ownsDoc() || author();
     }
     match /clase_comentarios/{d} {
       allow read: if true;
-      allow create: if signedIn();
-      allow update, delete: if ownsDoc() || author();
+      allow create: if createsOwnContent() || author();
+      allow update: if author() || (ownsDoc() && preservesOwnership());
+      allow delete: if ownsDoc() || author();
     }
 
     // —— Notificaciones: solo el destinatario las lee; el remitente las crea ——
@@ -137,21 +170,22 @@ service cloud.firestore {
     // —— Ranking: lectura pública, cada uno registra su propio puntaje ——
     match /ranking_simulacros/{d} {
       allow read: if true;
-      allow create: if signedIn();
-      allow update, delete: if ownsDoc() || author();
+      allow create: if author() || (signedIn() && request.resource.data.get('uid', '') == request.auth.uid);
+      allow update: if author() || (ownsDoc() && preservesOwnership());
+      allow delete: if ownsDoc() || author();
     }
 
     // —— Reportes y solicitudes: crear con sesión, gestionar solo el autor ——
     match /reportes/{d} {
-      allow create: if signedIn();
+      allow create: if signedIn() && request.resource.data.get('reporterUid', '') == request.auth.uid;
       allow read, update, delete: if author();
     }
     match /reportes_ugc/{d} {
-      allow create: if signedIn();
+      allow create: if signedIn() && request.resource.data.get('reporterUid', '') == request.auth.uid;
       allow read, update, delete: if author();
     }
     match /solicitudes_aliados/{d} {
-      allow create: if signedIn();
+      allow create: if signedIn() && request.resource.data.get('uid', '') == request.auth.uid;
       allow read: if author() || (signedIn() &&
         resource.data.get('uid', '') == request.auth.uid);
       allow update, delete: if author();
@@ -185,8 +219,69 @@ service cloud.firestore {
         (signedIn() && resource.data.get('ownerUid', '') == request.auth.uid) ||
         author()
       );
-      allow update: if (signedIn() && resource.data.get('ownerUid', '') == request.auth.uid) || author();
+      allow update: if author() || (signedIn()
+        && resource.data.get('ownerUid', '') == request.auth.uid
+        && request.resource.data.get('ownerUid', '') == request.auth.uid
+        && request.resource.data.get('isCurated', false) == resource.data.get('isCurated', false)
+        && request.resource.data.get('isHidden', false) == resource.data.get('isHidden', false));
       allow delete: if (signedIn() && resource.data.get('ownerUid', '') == request.auth.uid) || author();
+    }
+
+    // Amistad/racha compartida: leer solo como participante y aceptar solo como destinatario.
+    match /racha_dual/{d} {
+      function member() { return signedIn() && (request.auth.uid in resource.data.get('participants', [])
+        || resource.data.user1Uid == request.auth.uid || resource.data.user2Uid == request.auth.uid); }
+      function ownDailyUpdate() {
+        return member() && resource.data.status == 'active'
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['dailyActivity'])
+          && request.resource.data.dailyActivity.diff(resource.data.get('dailyActivity', {})).affectedKeys().hasOnly([request.auth.uid]);
+      }
+      allow get: if signedIn() && (!exists(/databases/$(database)/documents/racha_dual/$(d)) ||
+        resource.data.user1Uid == request.auth.uid || resource.data.user2Uid == request.auth.uid || member());
+      allow list: if signedIn() &&
+        (resource.data.user1Uid == request.auth.uid || resource.data.user2Uid == request.auth.uid || member());
+      allow create: if signedIn() && request.resource.data.get('type', '') == 'group'
+        && request.resource.data.user1Uid == request.auth.uid
+        && request.resource.data.participants is list && request.resource.data.participants.size() >= 2
+        && request.resource.data.participants.size() <= 10
+        && request.resource.data.participants.size() == request.resource.data.participants.toSet().size()
+        && request.auth.uid in request.resource.data.participants
+        && request.resource.data.user2Uid in request.resource.data.participants && request.resource.data.user2Uid != request.auth.uid
+        && request.resource.data.accepted.keys().hasOnly([request.auth.uid])
+        && request.resource.data.accepted.get(request.auth.uid, false) == true
+        && request.resource.data.dailyActivity == {} && request.resource.data.status == 'pending'
+        && request.resource.data.streakDays == 0;
+      allow create: if signedIn() && request.resource.data.get('type', '') != 'group' && request.resource.data.user1Uid == request.auth.uid
+        && request.resource.data.user2Uid is string && request.resource.data.user2Uid != request.auth.uid
+        && request.resource.data.status == 'pending' && request.resource.data.streakDays == 0
+        && request.resource.data.participants == [request.resource.data.user1Uid, request.resource.data.user2Uid]
+        && (d == request.resource.data.user1Uid + '_' + request.resource.data.user2Uid ||
+            d == request.resource.data.user2Uid + '_' + request.resource.data.user1Uid);
+      allow update: if ownDailyUpdate();
+      allow update: if signedIn() && resource.data.get('type', '') != 'group' && resource.data.status == 'rejected'
+        && request.auth.uid in [resource.data.user1Uid, resource.data.user2Uid]
+        && request.resource.data.user1Uid == request.auth.uid
+        && request.resource.data.user2Uid in [resource.data.user1Uid, resource.data.user2Uid]
+        && request.resource.data.user2Uid != request.auth.uid
+        && request.resource.data.status == 'pending' && request.resource.data.streakDays == 0
+        && request.resource.data.participants == [request.resource.data.user1Uid, request.resource.data.user2Uid]
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(
+          ['id', 'user1Uid', 'user2Uid', 'status', 'streakDays', 'senderName', 'recipientName', 'participants', 'updatedAt']);
+      allow update: if member() && resource.data.get('type', '') == 'group' && resource.data.status == 'pending'
+        && resource.data.get('accepted', {}).get(request.auth.uid, false) != true
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['accepted', 'status'])
+        && request.resource.data.accepted.diff(resource.data.accepted).affectedKeys().hasOnly([request.auth.uid])
+        && request.resource.data.accepted.get(request.auth.uid, null) is bool
+        && ((request.resource.data.accepted[request.auth.uid] == false && request.resource.data.status == 'rejected')
+          || (request.resource.data.accepted[request.auth.uid] == true
+            && ((request.resource.data.accepted.keys().hasAll(resource.data.participants)
+                 && request.resource.data.accepted.values().hasOnly([true]) && request.resource.data.status == 'active')
+              || (request.resource.data.status == 'pending' && !request.resource.data.accepted.keys().hasAll(resource.data.participants)))));
+      allow update: if signedIn() && resource.data.user2Uid == request.auth.uid && resource.data.get('type', '') != 'group'
+        && resource.data.status == 'pending' && request.resource.data.status in ['active', 'rejected']
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(
+          ['status', 'senderName', 'recipientName', 'participants', 'updatedAt'])
+        && request.resource.data.participants == [resource.data.user1Uid, resource.data.user2Uid];
     }
 
     // —— Todo lo demás: denegado por defecto ——

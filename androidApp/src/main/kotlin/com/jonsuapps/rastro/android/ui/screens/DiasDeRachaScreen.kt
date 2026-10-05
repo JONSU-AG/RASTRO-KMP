@@ -3,6 +3,8 @@ package com.jonsuapps.rastro.android.ui.screens
 import android.content.Intent
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.relocation.BringIntoViewRequester
+import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -33,6 +35,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.jonsuapps.rastro.R
+import com.jonsuapps.rastro.android.ui.components.*
 import com.jonsuapps.rastro.android.ui.components.Sticker3dButton
 import com.jonsuapps.rastro.android.ui.components.Sticker3dCard
 import com.jonsuapps.rastro.android.ui.components.bouncyClick
@@ -47,11 +50,20 @@ import java.util.Calendar
  * y un calendario perpetuo dinámico basado en actividad académica real.
  * CERO emojis, CERO destellos falsos ("//"), estética cartoon sticker 3D.
  */
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 @Composable
 fun DiasDeRachaScreen(
     onBack: () -> Unit,
-    onNavigateToAprender: () -> Unit
+    onNavigateToAprender: () -> Unit,
+    startAtCalendar: Boolean = false
 ) {
+    val calendarTarget = remember { BringIntoViewRequester() }
+    LaunchedEffect(startAtCalendar) {
+        if (startAtCalendar) {
+            kotlinx.coroutines.delay(150)
+            calendarTarget.bringIntoView()
+        }
+    }
     val theme = ThemeManager.currentTheme
     val streakState by GamificationManager.streakState.collectAsState()
     val context = LocalContext.current
@@ -161,11 +173,7 @@ fun DiasDeRachaScreen(
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     // Fuego grande SVG/Vector (SIN cara, SIN ojos)
-                    StreakBigFlameVector(
-                        modifier = Modifier
-                            .size(width = 72.dp, height = 84.dp),
-                        strokeColor = theme.strokeBorder
-                    )
+                    PreparedAnimation("R-MEDIO", Modifier.size(width = 72.dp, height = 84.dp), loop = true)
 
                     // Racha real central con plural/singular correcto
                     Column(
@@ -205,11 +213,7 @@ fun DiasDeRachaScreen(
                     }
 
                     // Mascota oficial ORSTTY de RASTRO
-                    Image(
-                        painter = painterResource(id = R.drawable.orstty_contento),
-                        contentDescription = "Orstty",
-                        modifier = Modifier.size(80.dp)
-                    )
+                    ClassicArtwork(ClassicAppearance.STREAK, Modifier.size(100.dp), speed = 2f)
                 }
             }
 
@@ -241,7 +245,7 @@ fun DiasDeRachaScreen(
                                 text = "Racha protegida por hoy",
                                 fontSize = 13.5.sp,
                                 fontWeight = FontWeight.Black,
-                                color = Color(0xFF15803D)
+                                color = theme.answerText(true)
                             )
                             Text(
                                 text = "¡Completaste tu actividad diaria! Tu racha está a salvo.",
@@ -254,7 +258,7 @@ fun DiasDeRachaScreen(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(12.dp))
-                                .background(Color(0xFFDCFCE7))
+                                .background(theme.answerSurface(true))
                                 .border(1.2.dp, Color(0xFF16A34A), RoundedCornerShape(12.dp))
                                 .padding(horizontal = 10.dp, vertical = 5.dp)
                         ) {
@@ -262,7 +266,7 @@ fun DiasDeRachaScreen(
                                 text = "Protegida",
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Black,
-                                color = Color(0xFF15803D)
+                                color = theme.answerText(true)
                             )
                         }
                     } else {
@@ -398,6 +402,7 @@ fun DiasDeRachaScreen(
             }
 
             // ── 5. CALENDARIO REAL DE RACHA (Dinámico, sin emojis) ─────────
+            Box(Modifier.fillMaxWidth().bringIntoViewRequester(calendarTarget)) {
             StreakCalendarCard(
                 viewingYear = viewingYear,
                 viewingMonth = viewingMonth,
@@ -423,6 +428,7 @@ fun DiasDeRachaScreen(
                     }
                 }
             )
+            }
 
             // ── 6. TARJETA "CADA DÍA CUENTA" ──────────────────────────────
             Sticker3dCard(
@@ -472,6 +478,7 @@ fun DiasDeRachaScreen(
 // COMPONENTE: CALENDARIO DE RACHA PERPETUO DINÁMICO
 // ─────────────────────────────────────────────────────────────────────────────
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun StreakCalendarCard(
     viewingYear: Int,
@@ -532,11 +539,11 @@ private fun StreakCalendarCard(
                 .padding(14.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            // Cabecera: [Icono Calendario] Calendario de racha   [< mes y año >]
-            Row(
+            // El selector pasa a otra línea si no cabe junto al título.
+            FlowRow(
                 modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -676,15 +683,13 @@ private fun StreakCalendarCard(
                                                         verticalAlignment = Alignment.CenterVertically,
                                                         horizontalArrangement = Arrangement.spacedBy(2.dp)
                                                     ) {
-                                                        StreakMiniFlameVector(
-                                                            modifier = Modifier.size(12.dp)
-                                                        )
                                                         Text(
                                                             text = "$dayNum",
                                                             fontSize = 11.5.sp,
                                                             fontWeight = FontWeight.Black,
                                                             color = Color(0xFF7C2D12)
                                                         )
+                                                        PreparedAnimation("R-MINI", Modifier.size(22.dp), loop = true)
                                                     }
                                                 }
                                             }

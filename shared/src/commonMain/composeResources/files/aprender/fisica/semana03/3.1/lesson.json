@@ -1,0 +1,18 @@
+{
+  "id": "fis_t03_s01",
+  "subjectId": "fisica",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "DINÁMICA - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/fisica/FisicaSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_fis_t03_s01",
+    "asignatura": "Física",
+    "semana": 3,
+    "titulo": "DINÁMICA - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "quim_t16_s01",
+  "subjectId": "quimica",
+  "semana": 16,
+  "subtema": "16.1",
+  "title": "Química Ambiental I: Atmósfera, Aire y Contaminación Atmosférica",
+  "depth": "NORMAL",
+  "source": "TEMARIO_OFICIAL_UNSA.md XV (redacción propia RASTRO)",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_quim_t16_s01",
+    "asignatura": "Química",
+    "semana": 16,
+    "titulo": "Química Ambiental I: Atmósfera, Aire y Contaminación Atmosférica",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

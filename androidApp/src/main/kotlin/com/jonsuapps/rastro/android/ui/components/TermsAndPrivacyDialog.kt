@@ -1,4 +1,5 @@
 package com.jonsuapps.rastro.android.ui.components
+import com.jonsuapps.rastro.android.util.openExternalIntent
 
 import android.content.Intent
 import android.net.Uri
@@ -215,7 +216,7 @@ fun TermsAndPrivacyDialog(
                                 data = Uri.parse("mailto:aguilar.jonsu@gmail.com")
                                 putExtra(Intent.EXTRA_SUBJECT, "Consulta Legal / Privacidad RASTRO")
                             }
-                            context.startActivity(intent)
+                            context.openExternalIntent(intent)
                         },
                         contentPadding = PaddingValues(horizontal = 8.dp, vertical = 2.dp)
                     ) {
@@ -311,28 +312,17 @@ fun TermsAndPrivacyDialog(
 
                         Sticker3dButton(
                             onClick = {
+                                if (isDeletingAccount) return@Sticker3dButton
                                 isDeletingAccount = true
                                 deleteError = null
-                                scope.launch {
-                                    val user = FirebaseAuth.getInstance().currentUser
-                                    if (user == null) {
+                                com.jonsuapps.rastro.android.data.AccountDeletionRepository.deleteCurrentAccount { result ->
+                                    isDeletingAccount = false
+                                    result.onSuccess {
                                         UserManager.clearUser()
                                         showDeleteConfirmDialog = false
                                         onAccountDeleted()
                                         onDismiss()
-                                    } else {
-                                        user.delete().addOnCompleteListener { task ->
-                                            isDeletingAccount = false
-                                            if (task.isSuccessful) {
-                                                UserManager.clearUser()
-                                                showDeleteConfirmDialog = false
-                                                onAccountDeleted()
-                                                onDismiss()
-                                            } else {
-                                                deleteError = "Para seguridad, debes haber iniciado sesión recientemente antes de eliminar tu cuenta. Inicia sesión de nuevo e inténtalo."
-                                            }
-                                        }
-                                    }
+                                    }.onFailure { deleteError = it.localizedMessage }
                                 }
                             },
                             modifier = Modifier.weight(1.3f).height(44.dp),

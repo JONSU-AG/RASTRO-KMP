@@ -1,0 +1,18 @@
+{
+  "id": "arit_t07_s01",
+  "subjectId": "aritmetica",
+  "semana": 7,
+  "subtema": "7.1",
+  "title": "Magnitudes Proporcionales, Reparto Proporcional y Regla de Tres - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/aritmetica/AritmeticaSemana07.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_arit_t07_s01",
+    "asignatura": "Aritmética",
+    "semana": 7,
+    "titulo": "Magnitudes Proporcionales, Reparto Proporcional y Regla de Tres - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

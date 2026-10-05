@@ -1,0 +1,18 @@
+{
+  "id": "geom_t11_s01",
+  "subjectId": "geometria",
+  "semana": 11,
+  "subtema": "11.1",
+  "title": "GEOMETRÍA ANALÍTICA: PUNTO, RECTA Y CÓNICAS - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geometria/GeometriaSemana11.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geom_t11_s01",
+    "asignatura": "Geometría",
+    "semana": 11,
+    "titulo": "GEOMETRÍA ANALÍTICA: PUNTO, RECTA Y CÓNICAS - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

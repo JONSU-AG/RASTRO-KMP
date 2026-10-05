@@ -1,0 +1,18 @@
+{
+  "id": "cl_t07_s02",
+  "subjectId": "comprension_lectora",
+  "semana": 7,
+  "subtema": "7.2",
+  "title": "3.2 Los Dos Grandes Criterios de Supresión de Oraciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t07_s02",
+    "asignatura": "Comp. Lectora",
+    "semana": 7,
+    "titulo": "3.2 Los Dos Grandes Criterios de Supresión de Oraciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

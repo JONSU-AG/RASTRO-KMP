@@ -1,0 +1,18 @@
+{
+  "id": "cl_t02_s01",
+  "subjectId": "comprension_lectora",
+  "semana": 2,
+  "subtema": "2.1",
+  "title": "3.1 La Ecuación Epistemológica de la Inferencia",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t02_s01",
+    "asignatura": "Comp. Lectora",
+    "semana": 2,
+    "titulo": "3.1 La Ecuación Epistemológica de la Inferencia",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,114 +1,241 @@
 package com.jonsuapps.rastro.android.data
 
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FieldValue
+import com.google.firebase.firestore.ListenerRegistration
+import com.google.firebase.firestore.SetOptions
+import com.jonsuapps.rastro.android.RastroApplication
+import com.jonsuapps.rastro.model.ExamQuestion
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import org.json.JSONArray
+import org.json.JSONObject
 
 object ErrorBankOrigins {
     const val APRENDER = "Aprender"
     const val SIMULACRO = "Simulacro"
     const val EXAMEN_RAPIDO = "Examen Rápido"
+    const val RANKING = "Ranking"
+    val all = listOf(APRENDER, SIMULACRO, EXAMEN_RAPIDO, RANKING)
 }
+data class FailedQuestion(val id: String, val subject: String, val subtema: String,
+    val question: String, val options: List<String>, val correctAnswerIndex: Int,
+    val explanation: String, val dateAdded: Long = System.currentTimeMillis(),
+    val isSolved: Boolean = false, val origin: String = ErrorBankOrigins.APRENDER,
+    val selectedAnswerIndex: Int? = null, val imageUrl: String? = null) {
+    fun payload(): Map<String, Any?> = mapOf("id" to id, "subject" to subject, "subtema" to subtema,
+        "question" to question, "options" to options, "correctAnswerIndex" to correctAnswerIndex,
+        "explanation" to explanation, "dateAdded" to dateAdded, "isSolved" to isSolved,
+        "origin" to origin, "selectedAnswerIndex" to selectedAnswerIndex, "imageUrl" to imageUrl)
+    companion object {
+        fun from(data: Map<String, Any?>): FailedQuestion? = runCatching {
+            val options = (data["options"] as List<*>).map { it as String }
+            val correct = (data["correctAnswerIndex"] as Number).toInt()
+            require(correct in options.indices)
+            FailedQuestion(data["id"] as String, data["subject"] as? String ?: "", data["subtema"] as? String ?: "",
+                data["question"] as String, options, correct, data["explanation"] as? String ?: "",
+                (data["dateAdded"] as? Number)?.toLong() ?: 0, data["isSolved"] == true,
+                data["origin"] as? String ?: ErrorBankOrigins.APRENDER,
+                (data["selectedAnswerIndex"] as? Number)?.toInt()?.takeIf { it in options.indices }, data["imageUrl"] as? String)
+        }.getOrNull()
+    }
+}
+internal fun examErrors(questions: List<ExamQuestion>, answers: Map<String, Int>, origin: String): List<FailedQuestion> =
+    questions.filter { it.answer in it.options.indices && answers[it.id] != it.answer }.map {
+        FailedQuestion("$origin:${it.id}", it.asignatura, it.subtema.ifBlank { it.curso }, it.q, it.options,
+            it.answer, it.explanation, origin = origin, selectedAnswerIndex = answers[it.id]?.takeIf { i -> i in it.options.indices }, imageUrl = it.imageUrl)
+    }
+internal fun mergeError(current: List<FailedQuestion>, next: FailedQuestion): List<FailedQuestion> =
+    listOf(next.copy(isSolved = false)) + current.filterNot { it.id == next.id }
 
-data class FailedQuestion(
-    val id: String,
-    val subject: String,
-    val subtema: String,
-    val question: String,
-    val options: List<String>,
-    val correctAnswerIndex: Int,
-    val explanation: String,
-    val dateAdded: Long = System.currentTimeMillis(),
-    val isSolved: Boolean = false,
-    val origin: String = ErrorBankOrigins.APRENDER
-)
+internal fun visibleErrors(rows: List<FailedQuestion>, clearedAt: Long): List<FailedQuestion> =
+    rows.filter { clearedAt == 0L || it.dateAdded > clearedAt }
 
+/** Only the active account's private documents are observed. Public data is a separate opt-in projection. */
 object ErrorBankRepository {
-    private val defaultCuratedErrors = listOf(
-        FailedQuestion(
-            id = "err_fis_01",
-            subject = "Física",
-            subtema = "Análisis Dimensional",
-            question = "En la ecuación homogénea E = A · v² + B · F, donde E es energía, v es velocidad y F es fuerza, determine la dimensión de [A/B].",
-            options = listOf("M L⁻¹", "M L T⁻¹", "L⁻¹", "M⁰ L⁰ T⁰", "M L"),
-            correctAnswerIndex = 0,
-            explanation = "Por el principio de homogeneidad: [E] = [A][v]² ⟹ M L² T⁻² = [A] (L T⁻¹)² ⟹ [A] = M. Además [E] = [B][F] ⟹ M L² T⁻² = [B] (M L T⁻²) ⟹ [B] = L. Por lo tanto [A/B] = M / L = M L⁻¹.",
-            origin = ErrorBankOrigins.APRENDER
-        ),
-        FailedQuestion(
-            id = "err_bio_02",
-            subject = "Biología",
-            subtema = "Genética Clásica",
-            question = "Al cruzar dos individuos heterocigotos para un solo carácter con dominancia completa (Aa × Aa), ¿cuál es la probabilidad genotípica de obtener un individuo homocigoto?",
-            options = listOf("25%", "50%", "75%", "100%", "33%"),
-            correctAnswerIndex = 1,
-            explanation = "El cruce Aa × Aa produce genotipos: 1/4 AA (homocigoto dominante), 2/4 Aa (heterocigoto) y 1/4 aa (homocigoto recesivo). Los homocigotos son AA + aa = 1/4 + 1/4 = 2/4 = 50%.",
-            origin = ErrorBankOrigins.APRENDER
-        ),
-        FailedQuestion(
-            id = "err_rv_03",
-            subject = "Razonamiento Verbal",
-            subtema = "Sinónimos Contextuales",
-            question = "Identifique el antónimo contextual de la palabra destacada: 'El orador pronunció un discurso lacónico ante la asamblea.'",
-            options = listOf("Breve", "Conciso", "Elocuente", "Locuaz", "Sentencioso"),
-            correctAnswerIndex = 3,
-            explanation = "Lacónico significa breve, conciso o parco en palabras. Su antónimo directo en el contexto de hablar extensamente es 'locuaz' o 'prolijo'.",
-            origin = ErrorBankOrigins.SIMULACRO
-        ),
-        FailedQuestion(
-            id = "err_alg_05",
-            subject = "Álgebra",
-            subtema = "Funciones Cuadráticas",
-            question = "Determine el rango de la función real f(x) = -2x² + 4x + 5.",
-            options = listOf("⟨-∞, 7]", "[7, +∞⟩", "⟨-∞, 5]", "[5, +∞⟩", "ℝ"),
-            correctAnswerIndex = 0,
-            explanation = "Como a = -2 < 0, la parábola abre hacia abajo. El vértice es h = -b / (2a) = -4 / (2(-2)) = 1. Evaluando: k = f(1) = -2(1)² + 4(1) + 5 = 7. Por ende, el rango es ⟨-∞, 7].",
-            origin = ErrorBankOrigins.SIMULACRO
-        ),
-        FailedQuestion(
-            id = "err_qui_04",
-            subject = "Química",
-            subtema = "Tabla Periódica",
-            question = "¿Cuál de los siguientes elementos presenta la mayor electronegatividad según la escala de Pauling?",
-            options = listOf("Cloro", "Oxígeno", "Flúor", "Nitrógeno", "Bromo"),
-            correctAnswerIndex = 2,
-            explanation = "El flúor (F) es el elemento más electronegativo de la tabla periódica con un valor aproximado de 4.0 en la escala de Pauling.",
-            origin = ErrorBankOrigins.EXAMEN_RAPIDO
-        ),
-        FailedQuestion(
-            id = "err_hist_06",
-            subject = "Historia",
-            subtema = "Horizonte Temprano",
-            question = "¿Cuál fue la cultura matriz del formativo andino destacada por su arte lítico (Lanzón Monolítico, Cabezas Clavas)?",
-            options = listOf("Paracas", "Chavín", "Moche", "Tiahuanaco", "Chimú"),
-            correctAnswerIndex = 1,
-            explanation = "La cultura Chavín, descubierta por Julio C. Tello (considerada por él como la cultura matriz andina), destacó por su arquitectura y litoescultura en Chavín de Huántar.",
-            origin = ErrorBankOrigins.EXAMEN_RAPIDO
-        )
-    )
-
-    private val _errors = MutableStateFlow<List<FailedQuestion>>(defaultCuratedErrors)
-    val errors: StateFlow<List<FailedQuestion>> = _errors.asStateFlow()
-
-    fun addFailedQuestion(failedQuestion: FailedQuestion) {
-        val current = _errors.value.toMutableList()
-        if (current.none { it.id == failedQuestion.id || it.question == failedQuestion.question }) {
-            current.add(0, failedQuestion)
-            _errors.value = current
+    private val _errors = MutableStateFlow<List<FailedQuestion>>(emptyList())
+    val errors = _errors.asStateFlow()
+    private val _shared = MutableStateFlow(false)
+    val shared = _shared.asStateFlow()
+    private val _paused = MutableStateFlow(false)
+    val paused = _paused.asStateFlow()
+    private val _clearing = MutableStateFlow(false)
+    val clearing = _clearing.asStateFlow()
+    private var clearedAt = 0L
+    private val _message = MutableStateFlow<String?>(null)
+    val message = _message.asStateFlow()
+    private var initialized = false
+    private var uid = "__unbound__"
+    private var listener: ListenerRegistration? = null
+    private var publicListener: ListenerRegistration? = null
+    private val db get() = FirebaseFirestore.getInstance()
+    private val prefs get() = RastroApplication.instance.getSharedPreferences("rastro_errors_by_account", 0)
+    private fun collection(owner: String) = db.collection("usuarios").document(owner).collection("gamificacion")
+    private fun docId(id: String) = "failed_" + java.security.MessageDigest.getInstance("SHA-256")
+        .digest(id.toByteArray()).joinToString("") { "%02x".format(it) }
+    fun init() {
+        val auth = FirebaseAuth.getInstance()
+        bindAccount(auth.currentUser?.uid.orEmpty())
+        if (initialized) return
+        initialized = true
+        auth.addAuthStateListener { bindAccount(it.currentUser?.uid.orEmpty()) }
+    }
+    private fun bindAccount(owner: String) {
+        if (uid == owner) return
+        listener?.remove(); publicListener?.remove(); uid = owner
+        _shared.value = false; _message.value = null; _clearing.value = false
+        _paused.value = prefs.getBoolean("paused:$owner", false)
+        clearedAt = prefs.getLong("cleared:$owner", 0L)
+        _errors.value = visibleErrors(loadLocal(owner), clearedAt)
+        if (owner.isNotBlank()) {
+            publicListener = db.collection("usuarios").document(owner).addSnapshotListener { snap, _ ->
+                if (uid == owner && snap != null) {
+                    _shared.value = snap.getBoolean("errorsPublic") == true
+                    snap.getBoolean("errorSavingPaused")?.let { _paused.value = it }
+                    clearedAt = maxOf(clearedAt, snap.getLong("errorsClearedAt") ?: 0L)
+                    prefs.edit().putBoolean("paused:$owner", _paused.value).putLong("cleared:$owner", clearedAt).apply()
+                    _errors.value = visibleErrors(_errors.value, clearedAt)
+                    saveLocal()
+                }
+            }
+            listener = collection(owner).whereEqualTo("recordType", "failed_question").addSnapshotListener { snap, error ->
+                if (uid != owner) return@addSnapshotListener
+                if (error != null) { _message.value = "Errores guardados en este dispositivo; sincronización pendiente."; return@addSnapshotListener }
+                if (snap != null) {
+                    val remote = snap.documents.mapNotNull { FailedQuestion.from(it.data.orEmpty()) }
+                    // Local offline writes stay visible until acknowledged, including freshly captured answers.
+                    val merged = visibleErrors(_errors.value + remote, clearedAt).groupBy { it.id }.values.map { rows -> rows.maxBy { it.dateAdded } }
+                    _errors.value = merged.sortedByDescending { it.dateAdded }; saveLocal()
+                }
+            }
         }
     }
-
+    private fun loadLocal(owner: String): List<FailedQuestion> = runCatching {
+        val array = JSONArray(prefs.getString(owner.ifBlank { "guest" }, "[]"))
+        (0 until array.length()).mapNotNull { i ->
+            val obj = array.getJSONObject(i)
+            val data = obj.keys().asSequence().associateWith { key ->
+                val value = obj.opt(key)
+                if (value is JSONArray) (0 until value.length()).map { value.getString(it) } else value.takeUnless { it == JSONObject.NULL }
+            }
+            FailedQuestion.from(data)
+        }
+    }.getOrDefault(emptyList())
+    private fun saveLocal() { prefs.edit().putString(uid.ifBlank { "guest" }, JSONArray(_errors.value.map { JSONObject(it.payload()) }).toString()).apply() }
+    fun recordExam(questions: List<ExamQuestion>, answers: Map<String, Int>, origin: String) {
+        init()
+        if (_paused.value) return
+        val captured = examErrors(questions, answers, origin)
+        if (captured.isEmpty()) return
+        captured.forEach { _errors.value = mergeError(_errors.value, it) }
+        saveLocal()
+        if (uid.isNotBlank()) {
+            val batch = db.batch()
+            captured.forEach { batch.set(collection(uid).document(docId(it.id)), it.payload() + ("recordType" to "failed_question")) }
+            batch.commit().addOnFailureListener { _message.value = "Guardado local; sincronización del examen pendiente." }
+        }
+        if (_shared.value) publishCurrent()
+    }
+    fun addFailedQuestion(question: FailedQuestion) {
+        init()
+        if (_paused.value) return
+        _errors.value = mergeError(_errors.value, question); saveLocal()
+        if (uid.isNotBlank()) collection(uid).document(docId(question.id)).set(question.payload() + ("recordType" to "failed_question"))
+            .addOnFailureListener { _message.value = "Guardado local; no se pudo sincronizar este error." }
+        if (_shared.value) publishCurrent()
+    }
     fun markAsSolved(id: String) {
-        _errors.value = _errors.value.map {
-            if (it.id == id) it.copy(isSolved = true) else it
+        init()
+        val next = _errors.value.firstOrNull { it.id == id }?.copy(isSolved = true, dateAdded = System.currentTimeMillis()) ?: return
+        _errors.value = _errors.value.map { if (it.id == id) next else it }; saveLocal()
+        if (uid.isNotBlank()) collection(uid).document(docId(id)).set(next.payload() + ("recordType" to "failed_question"))
+        if (_shared.value) publishCurrent()
+    }
+    fun setPaused(enabled: Boolean) {
+        init()
+        val owner = uid
+        _paused.value = enabled
+        prefs.edit().putBoolean("paused:$owner", enabled).apply()
+        _message.value = if (enabled) "Guardado de errores pausado." else "Se guardarán los errores nuevos."
+        if (owner.isNotBlank()) db.collection("usuarios").document(owner)
+            .set(mapOf("errorSavingPaused" to enabled), SetOptions.merge())
+            .addOnFailureListener { if (uid == owner) _message.value = "Preferencia aplicada aquí; sincronización pendiente." }
+    }
+
+    fun clearAll() {
+        init()
+        if (_clearing.value) return
+        val owner = uid
+        val cutoff = maxOf(System.currentTimeMillis(), clearedAt + 1,
+            (_errors.value.maxOfOrNull { it.dateAdded } ?: 0L) + 1)
+        clearedAt = cutoff
+        prefs.edit().putLong("cleared:$owner", cutoff).apply()
+        _errors.value = emptyList()
+        saveLocal()
+        _message.value = "Historial de errores limpio."
+        if (owner.isBlank()) return
+        _clearing.value = true
+        // A persistent cutoff prevents cached/offline documents on another device from reappearing.
+        db.collection("usuarios").document(owner).set(mapOf("errorsClearedAt" to cutoff,
+            "sharedErrorBank" to emptyList<Map<String, Any?>>()), SetOptions.merge())
+            .addOnFailureListener {
+                if (uid == owner) { _clearing.value = false; _message.value = "Historial limpio aquí; sincronización pendiente." }
+            }
+            .addOnSuccessListener {
+                collection(owner).whereEqualTo("recordType", "failed_question").get(com.google.firebase.firestore.Source.SERVER)
+                    .addOnSuccessListener { snapshot ->
+                        val tasks = snapshot.documents.filter { (it.getLong("dateAdded") ?: 0L) <= cutoff }.chunked(100).map { rows ->
+                            db.runTransaction { transaction ->
+                                // A question answered again during cleanup must survive the old-history deletion.
+                                val old = rows.map { transaction.get(it.reference) }.filter {
+                                    it.getString("recordType") == "failed_question" && (it.getLong("dateAdded") ?: 0L) <= cutoff
+                                }
+                                old.forEach { transaction.delete(it.reference) }
+                            }
+                        }
+                        com.google.android.gms.tasks.Tasks.whenAll(tasks).addOnCompleteListener { result ->
+                            if (uid == owner) {
+                                _clearing.value = false
+                                if (!result.isSuccessful) _message.value = "Historial ocultado; limpieza remota pendiente."
+                                else if (_shared.value && _errors.value.isNotEmpty()) publishCurrent()
+                            }
+                        }
+                    }.addOnFailureListener {
+                        if (uid == owner) { _clearing.value = false; _message.value = "Historial ocultado; limpieza remota pendiente." }
+                    }
+            }
+    }
+    fun setShared(enabled: Boolean) {
+        init()
+        if (uid.isBlank() || FirebaseAuth.getInstance().currentUser?.isAnonymous == true) {
+            _message.value = "Inicia sesión para compartir tus errores."; return
+        }
+        val owner = uid
+        db.collection("usuarios").document(owner).set(mapOf("errorsPublic" to enabled,
+            "sharedErrorBank" to if (enabled) publicProjection(_errors.value) else FieldValue.delete()), SetOptions.merge())
+            .addOnSuccessListener { if (uid == owner) { _shared.value = enabled; _message.value = if (enabled) "Errores publicados." else "Tus errores son privados." } }
+            .addOnFailureListener { if (uid == owner) _message.value = "No se cambió la privacidad: ${it.localizedMessage}" }
+    }
+    private fun publishCurrent() {
+        // Update only the projection; cannot re-enable a remotely revoked sharing preference.
+        if (uid.isNotBlank()) {
+            val profile = db.collection("usuarios").document(uid)
+            val rows = _errors.value
+            db.runTransaction { transaction ->
+                val data = transaction.get(profile)
+                if (data.getBoolean("errorsPublic") == true)
+                    transaction.update(profile, "sharedErrorBank", publicProjection(visibleErrors(rows, data.getLong("errorsClearedAt") ?: 0L)))
+            }.addOnFailureListener { _message.value = "Tus errores se guardaron; publicación pendiente de conexión." }
         }
     }
-
-    fun deleteError(id: String) {
-        _errors.value = _errors.value.filterNot { it.id == id }
+    internal fun publicProjection(rows: List<FailedQuestion>) = rows.sortedByDescending { it.dateAdded }.take(30).map { it.payload() }
+    fun publicQuestions(data: Map<String, Any?>): List<FailedQuestion> {
+        if (data["errorsPublic"] != true) return emptyList()
+        val rows = (data["sharedErrorBank"] as? List<*>)?.mapNotNull { row ->
+            @Suppress("UNCHECKED_CAST")
+            (row as? Map<String, Any?>)?.let(FailedQuestion::from)
+        }.orEmpty()
+        return visibleErrors(rows, (data["errorsClearedAt"] as? Number)?.toLong() ?: 0L)
     }
-
-    fun getUnsolvedCount(): Int = _errors.value.count { !it.isSolved }
-
-    fun getUnsolvedCountByOrigin(origin: String): Int = _errors.value.count { !it.isSolved && it.origin == origin }
 }

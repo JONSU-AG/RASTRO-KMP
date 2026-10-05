@@ -84,7 +84,8 @@ internal object ImagePreviewCache {
 fun UserUploadPreview(
     upload: UserUpload,
     theme: RastroPalette,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onPreviewReady: ((ImageBitmap) -> Unit)? = null
 ) {
     var selectedImage by remember(upload.id) { mutableStateOf<ImageBitmap?>(null) }
     val uriHandler = LocalUriHandler.current
@@ -143,8 +144,9 @@ fun UserUploadPreview(
                     RemoteUploadImageWithFallback(
                         candidateUrls = candidateUrls,
                         theme = theme,
-                        modifier = modifier.fillMaxWidth().heightIn(min = 190.dp, max = 340.dp),
-                        onImageClick = { bmp -> selectedImage = bmp }
+                        modifier = modifier.fillMaxWidth(),
+                        onImageClick = { bmp -> selectedImage = bmp },
+                        onReady = onPreviewReady
                     )
                 }
                 upload.isPdf -> {
@@ -164,20 +166,19 @@ fun UserUploadPreview(
                         PreviewResult.Loading -> PreviewLoading(theme, modifier)
                         is PreviewResult.Ready -> {
                             val bmp = (result as PreviewResult.Ready).bitmap
-                            Box(
+                            LaunchedEffect(bmp) { onPreviewReady?.invoke(bmp) }
+                            com.jonsuapps.rastro.android.ui.components.RastroMediaFrame(
+                                ratio = bmp.width.toFloat() / bmp.height.toFloat(),
                                 modifier = modifier
-                                    .fillMaxWidth()
-                                    .heightIn(min = 190.dp, max = 340.dp)
                                     .clip(RoundedCornerShape(16.dp))
-                                    .background(if (theme.isLight) Color(0xFFF8FAFC) else Color(0xFF0F172A))
+                                    .background(theme.surface)
                                     .border(1.8.dp, theme.strokeBorder, RoundedCornerShape(16.dp))
-                                    .clickable { selectedImage = bmp },
-                                contentAlignment = Alignment.Center
+                                    .clickable { selectedImage = bmp }
                             ) {
                                 Image(
                                     bitmap = bmp,
                                     contentDescription = "Portada de ${upload.title}",
-                                    modifier = Modifier.fillMaxWidth().heightIn(min = 190.dp, max = 340.dp),
+                                    modifier = Modifier.fillMaxSize(),
                                     contentScale = ContentScale.Fit
                                 )
                             }
@@ -202,54 +203,8 @@ fun UserUploadPreview(
         }
     }
 
-    // Modal a pantalla completa para ampliar imagen / portada
     selectedImage?.let { bmp ->
-        Dialog(onDismissRequest = { selectedImage = null }) {
-            com.jonsuapps.rastro.android.ui.components.Sticker3dCard(
-                modifier = Modifier.fillMaxWidth(0.96f),
-                containerColor = theme.surface,
-                bottomBevelColor = theme.cardBevel,
-                strokeColor = theme.strokeBorder,
-                bevelHeight = 5.dp,
-                shape = RoundedCornerShape(22.dp)
-            ) {
-                Column(modifier = Modifier.padding(14.dp)) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(
-                            text = upload.title,
-                            style = MaterialTheme.typography.titleSmall,
-                            fontWeight = FontWeight.Bold,
-                            color = theme.textPrimary,
-                            maxLines = 1,
-                            modifier = Modifier.weight(1f)
-                        )
-                        TextButton(onClick = { selectedImage = null }) {
-                            Text("Cerrar", color = theme.accent, fontWeight = FontWeight.Bold)
-                        }
-                    }
-                    Spacer(Modifier.height(8.dp))
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .heightIn(min = 280.dp, max = 560.dp)
-                            .clip(RoundedCornerShape(14.dp))
-                            .background(Color.Black.copy(alpha = 0.85f)),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Image(
-                            bitmap = bmp,
-                            contentDescription = "Vista ampliada",
-                            modifier = Modifier.fillMaxSize(),
-                            contentScale = ContentScale.Fit
-                        )
-                    }
-                }
-            }
-        }
+        ResourcePreviewDialog(bmp, upload.title, theme) { selectedImage = null }
     }
 }
 
@@ -369,7 +324,8 @@ private fun RemoteUploadImageWithFallback(
     candidateUrls: List<String>,
     theme: RastroPalette,
     modifier: Modifier = Modifier,
-    onImageClick: (ImageBitmap) -> Unit = {}
+    onImageClick: (ImageBitmap) -> Unit = {},
+    onReady: ((ImageBitmap) -> Unit)? = null
 ) {
     val cachedBitmap = remember(candidateUrls) {
         candidateUrls.firstNotNullOfOrNull { ImagePreviewCache.get(it) }
@@ -397,18 +353,19 @@ private fun RemoteUploadImageWithFallback(
         PreviewResult.Loading -> PreviewLoading(theme, modifier)
         is PreviewResult.Ready -> {
             val bmp = (result as PreviewResult.Ready).bitmap
-            Box(
+            LaunchedEffect(bmp) { onReady?.invoke(bmp) }
+            com.jonsuapps.rastro.android.ui.components.RastroMediaFrame(
+                ratio = bmp.width.toFloat() / bmp.height.toFloat(),
                 modifier = modifier
                     .clip(RoundedCornerShape(16.dp))
-                    .background(if (theme.isLight) Color(0xFFF1F5F9) else Color(0xFF0B132B))
+                    .background(theme.surface)
                     .border(1.8.dp, theme.strokeBorder, RoundedCornerShape(16.dp))
-                    .clickable { onImageClick(bmp) },
-                contentAlignment = Alignment.Center
+                    .clickable { onImageClick(bmp) }
             ) {
                 Image(
                     bitmap = bmp,
                     contentDescription = "Portada del recurso",
-                    modifier = Modifier.fillMaxWidth().heightIn(min = 190.dp, max = 340.dp),
+                    modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.Fit // Preserva proporción vertical u horizontal sin recortes
                 )
             }

@@ -1,0 +1,18 @@
+{
+  "id": "trig_t10_s01",
+  "subjectId": "trigonometria",
+  "semana": 10,
+  "subtema": "10.1",
+  "title": "FUNCIONES TRIGONOMÉTRICAS REALES: DOMINIO, RANGO, GRÁFICAS Y TRANSFORMACIONES - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/trigonometria/TrigonometriaSemana10.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_trig_t10_s01",
+    "asignatura": "Trigonometría",
+    "semana": 10,
+    "titulo": "FUNCIONES TRIGONOMÉTRICAS REALES: DOMINIO, RANGO, GRÁFICAS Y TRANSFORMACIONES - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "subjectId": "historia_universal",
+  "name": "Historia Universal",
+  "area": "Ciencias Sociales",
+  "colorHex": "#EA580C",
+  "description": "Hominización, primeras civilizaciones fluviales, antigüedad clásica (Grecia y Roma), Edad Media, Edad Moderna y contemporaneidad.",
+  "weeks": 6,
+  "source": "curso-prueba/SALIDA_KOTLIN/historia_universal",
+  "weekManifests": [
+    {
+      "week": 1,
+      "title": "TEMA 01: HOMINIZACIÓN Y PREHISTORIA",
+      "path": "semana01/manifest.json"
+    },
+    {
+      "week": 2,
+      "title": "TEMA 02: PRIMERAS CIVILIZACIONES DE LA ANTIGÜEDAD (MESOPOTAMIA Y EGIPTO)",
+      "path": "semana02/manifest.json"
+    },
+    {
+      "week": 3,
+      "title": "Semana 3",
+      "path": "semana03/manifest.json"
+    },
+    {
+      "week": 4,
+      "title": "TEMA 04: LA EDAD MEDIA, EL FEUDALISMO, EL ISLAM Y LAS CRUZADAS",
+      "path": "semana04/manifest.json"
+    },
+    {
+      "week": 5,
+      "title": "Semana 5",
+      "path": "semana05/manifest.json"
+    },
+    {
+      "week": 6,
+      "title": "TEMA 06: LA EDAD CONTEMPORÁNEA (REVOLUCIONES, REVOLUCIONES INDUSTRIALES, GUERRAS MUNDIALES Y GUERRA FRÍA)",
+      "path": "semana06/manifest.json"
+    }
+  ]
+}

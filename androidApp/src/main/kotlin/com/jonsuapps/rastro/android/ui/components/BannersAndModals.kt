@@ -1,4 +1,6 @@
 package com.jonsuapps.rastro.android.ui.components
+import com.jonsuapps.rastro.theme.accentText
+import com.jonsuapps.rastro.theme.onAccent
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -43,6 +45,8 @@ import androidx.compose.ui.window.Dialog
 import com.jonsuapps.rastro.theme.RastroColors
 import com.jonsuapps.rastro.theme.RastroShapes
 import com.jonsuapps.rastro.theme.RastroThemeId
+import com.jonsuapps.rastro.theme.MaterialYouIntensity
+import com.jonsuapps.rastro.theme.ThemeManager
 
 /**
  * Diálogo de Selección de Temas (9 temas del ecosistema RASTRO, §4.5 del mapa).
@@ -51,12 +55,16 @@ import com.jonsuapps.rastro.theme.RastroThemeId
 fun ThemeSelectorDialog(
     currentThemeId: RastroThemeId,
     onSelectTheme: (RastroThemeId) -> Unit,
-    onDismiss: () -> Unit
+    onDismiss: () -> Unit,
+    showAcademicBackgroundPilot: Boolean = false,
+    academicBackgroundEnabled: Boolean = false,
+    onAcademicBackgroundChange: (Boolean) -> Unit = {}
 ) {
     val theme = com.jonsuapps.rastro.theme.ThemeManager.currentTheme
     val context = androidx.compose.ui.platform.LocalContext.current
     // Editor "Crear mi tema" como diálogo independiente (abre directo, sin scroll).
     var showEditorDialog by remember { mutableStateOf(false) }
+    var showIntensityDialog by remember { mutableStateOf(false) }
     // "Mi tema" solo existe si alguna vez se guardó (clave escrita únicamente en Guardar).
     var hasCustomTheme by remember {
         mutableStateOf(
@@ -64,6 +72,16 @@ fun ThemeSelectorDialog(
                 .contains("custom_highlight")
         )
     }
+    if (showIntensityDialog) {
+        MaterialYouIntensityDialog(onDismiss = { showIntensityDialog = false }, onChoose = { intensity ->
+            ThemeManager.chooseMaterialYouIntensity(intensity)
+            context.getSharedPreferences("rastro_preferences", android.content.Context.MODE_PRIVATE)
+                .edit().putString("material_you_intensity", intensity.id).apply()
+            showIntensityDialog = false
+            onSelectTheme(RastroThemeId.MATERIAL_YOU)
+        })
+    }
+
     Dialog(
         onDismissRequest = onDismiss,
         properties = androidx.compose.ui.window.DialogProperties(usePlatformDefaultWidth = false)
@@ -99,6 +117,18 @@ fun ThemeSelectorDialog(
 
                 Spacer(modifier = Modifier.height(12.dp))
 
+                if (showAcademicBackgroundPilot) {
+                    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                        Column(Modifier.weight(1f)) {
+                            Text("Fondo académico", color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                            Text("Opcional · puedes desactivarlo cuando quieras", color = theme.textSecondary, fontSize = 10.sp)
+                        }
+                        Switch(checked = academicBackgroundEnabled, onCheckedChange = onAcademicBackgroundChange,
+                            colors = SwitchDefaults.colors(checkedTrackColor = theme.accent))
+                    }
+                    Spacer(Modifier.height(8.dp))
+                }
+
                 // Cuadrícula responsive de tarjetas (3/2/1 columnas según ancho).
                 // parseColor precalculado una sola vez: abrir "Crear mi tema" no debe repetirlo por item.
                 val themeBgDots = remember {
@@ -110,21 +140,22 @@ fun ThemeSelectorDialog(
                     columns = GridCells.Adaptive(minSize = 150.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp),
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    modifier = Modifier.heightIn(max = 430.dp)
+                    modifier = Modifier.heightIn(max = if (showAcademicBackgroundPilot) 350.dp else 430.dp)
                 ) {
                     items(RastroThemeId.entries.filter { it != RastroThemeId.CUSTOM }) { themeItem ->
                         val isSelected = themeItem == currentThemeId
                         Column {
                             Surface(
                                 shape = RastroShapes.ButtonSquircle,
-                                color = if (isSelected) theme.accent.copy(alpha = 0.15f) else theme.surfaceAccent,
+                                color = if (isSelected) theme.accentText.copy(alpha = 0.15f) else theme.surfaceAccent,
                                 border = if (isSelected) androidx.compose.foundation.BorderStroke(2.dp, theme.accent) else androidx.compose.foundation.BorderStroke(1.dp, theme.strokeBorder.copy(alpha = 0.35f)),
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .clickable {
                                         DuolingoHaptics.playOptionSelected(context)
                                         // "Mi tema" selecciona los colores guardados sin reiniciarlos.
-                                        onSelectTheme(themeItem)
+                                        if (themeItem == RastroThemeId.MATERIAL_YOU) showIntensityDialog = true
+                                        else onSelectTheme(themeItem)
                                     }
                             ) {
                                 Row(
@@ -185,13 +216,13 @@ fun ThemeSelectorDialog(
                                                 text = themeItem.displayName,
                                                 fontSize = 12.5.sp,
                                                 fontWeight = if (isSelected) androidx.compose.ui.text.font.FontWeight.Bold else androidx.compose.ui.text.font.FontWeight.Medium,
-                                                color = if (isSelected) theme.accent else theme.textPrimary,
+                                                color = if (isSelected) theme.accentText else theme.textPrimary,
                                                 maxLines = 1,
                                                 overflow = TextOverflow.Ellipsis
                                             )
                                             if (themeItem == RastroThemeId.MATERIAL_YOU) {
                                                 Text(
-                                                    text = "Colores de tu dispositivo",
+                                                    text = "Colores del dispositivo · ${ThemeManager.materialYouIntensity.title}",
                                                     fontSize = 10.sp,
                                                     color = theme.textSecondary,
                                                     maxLines = 1,
@@ -205,7 +236,7 @@ fun ThemeSelectorDialog(
                                         Icon(
                                             imageVector = Icons.Default.Check,
                                             contentDescription = null,
-                                            tint = theme.accent
+                                            tint = theme.accentText
                                         )
                                     }
                                 }
@@ -276,7 +307,7 @@ fun ThemeSelectorDialog(
                                 val isCustomSelected = currentThemeId == RastroThemeId.CUSTOM
                                 Surface(
                                     shape = RastroShapes.ButtonSquircle,
-                                    color = if (isCustomSelected) theme.accent.copy(alpha = 0.15f) else theme.surfaceAccent,
+                                    color = if (isCustomSelected) theme.accentText.copy(alpha = 0.15f) else theme.surfaceAccent,
                                     border = if (isCustomSelected) androidx.compose.foundation.BorderStroke(2.dp, theme.accent) else androidx.compose.foundation.BorderStroke(1.dp, theme.strokeBorder.copy(alpha = 0.35f)),
                                     modifier = Modifier
                                         .fillMaxWidth()
@@ -330,7 +361,7 @@ fun ThemeSelectorDialog(
                                                 text = "Mi tema",
                                                 fontSize = 12.5.sp,
                                                 fontWeight = if (isCustomSelected) androidx.compose.ui.text.font.FontWeight.Bold else androidx.compose.ui.text.font.FontWeight.Medium,
-                                                color = if (isCustomSelected) theme.accent else theme.textPrimary,
+                                                color = if (isCustomSelected) theme.accentText else theme.textPrimary,
                                                 maxLines = 1,
                                                 overflow = TextOverflow.Ellipsis
                                             )
@@ -339,7 +370,7 @@ fun ThemeSelectorDialog(
                                             Icon(
                                                 imageVector = Icons.Default.Check,
                                                 contentDescription = null,
-                                                tint = theme.accent
+                                                tint = theme.accentText
                                             )
                                         }
                                     }
@@ -396,6 +427,39 @@ private fun composeColorToHex6(color: Color): String {
 
 private fun isDraftLight(color: Color): Boolean =
     (0.299f * color.red + 0.587f * color.green + 0.114f * color.blue) > 0.5f
+
+/** Intensidad persistida del tema adaptable existente; cancelar conserva el tema anterior. */
+@Composable
+private fun MaterialYouIntensityDialog(onChoose: (MaterialYouIntensity) -> Unit, onDismiss: () -> Unit) {
+    val theme = ThemeManager.currentTheme
+    Dialog(onDismissRequest = onDismiss) {
+        Sticker3dCard(containerColor = theme.surface, bottomBevelColor = theme.cardBevel,
+            strokeColor = theme.strokeBorder, shape = RoundedCornerShape(24.dp)) {
+            Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                Text("Intensidad del tema adaptable", fontWeight = FontWeight.Black, color = theme.textPrimary, fontSize = 18.sp)
+                Text("Refuerza los acentos y detalles; conserva fondos cómodos para leer.", color = theme.textSecondary, fontSize = 12.sp)
+                MaterialYouIntensity.entries.forEach { level ->
+                    val selected = level == ThemeManager.materialYouIntensity
+                    val fill = if (selected) theme.accent else theme.surfaceAccent
+                    Sticker3dButton(onClick = { onChoose(level) }, containerColor = fill,
+                        bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder,
+                        modifier = Modifier.fillMaxWidth(), contentPadding = PaddingValues(12.dp)) {
+                        Column(Modifier.weight(1f)) {
+                            Text(level.title, fontWeight = FontWeight.Bold, color = contrastingText(fill))
+                            Text(when(level) {
+                                MaterialYouIntensity.SOFT -> "Acabado suave actual"
+                                MaterialYouIntensity.MEDIUM -> "Más color en tarjetas y controles"
+                                MaterialYouIntensity.STRONG -> "Acentos definidos y superficies más expresivas"
+                            }, fontSize = 11.sp, color = contrastingText(fill))
+                        }
+                        if(selected) Icon(Icons.Default.Check, null, tint = contrastingText(fill))
+                    }
+                }
+                TextButton(onClick = onDismiss) { Text("Cancelar", color = theme.textSecondary) }
+            }
+        }
+    }
+}
 
 /**
  * Selector visual completo de color (HSV + RGB + HEX sincronizados, ✓/X
@@ -1357,7 +1421,7 @@ fun RastroStickerDialog(
                         Icon(
                             imageVector = icon,
                             contentDescription = null,
-                            tint = if (isDestructive) Color(0xFFDC2626) else theme.accent,
+                            tint = if (isDestructive) Color(0xFFDC2626) else theme.accentText,
                             modifier = Modifier.size(28.dp)
                         )
                     }
@@ -1408,7 +1472,7 @@ fun RastroStickerDialog(
                         ) {
                             Text(
                                 text = cancelText,
-                                color = Color.White,
+                                color = theme.onAccent,
                                 fontWeight = androidx.compose.ui.text.font.FontWeight.Black,
                                 fontSize = 13.sp,
                                 textAlign = androidx.compose.ui.text.style.TextAlign.Center

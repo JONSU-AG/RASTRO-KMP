@@ -1,0 +1,18 @@
+{
+  "id": "geom_t09_s01",
+  "subjectId": "geometria",
+  "semana": 9,
+  "subtema": "9.1",
+  "title": "GEOMETRÍA ESPACIAL, POLIEDROS, PRISMAS Y PIRÁMIDES - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geometria/GeometriaSemana09.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geom_t09_s01",
+    "asignatura": "Geometría",
+    "semana": 9,
+    "titulo": "GEOMETRÍA ESPACIAL, POLIEDROS, PRISMAS Y PIRÁMIDES - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "cl_t03_s02",
+  "subjectId": "comprension_lectora",
+  "semana": 3,
+  "subtema": "3.2",
+  "title": "3.3 El Criterio de Jerarquización de Ideas Secundarias",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t03_s02",
+    "asignatura": "Comp. Lectora",
+    "semana": 3,
+    "titulo": "3.3 El Criterio de Jerarquización de Ideas Secundarias",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

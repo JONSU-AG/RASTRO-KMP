@@ -1,0 +1,18 @@
+{
+  "id": "civ_t09_s01",
+  "subjectId": "civica",
+  "semana": 9,
+  "subtema": "9.1",
+  "title": "La Descentralización y los Gobiernos Regionales: Estructura, Atribuciones y Competencias",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana09.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t09_s01",
+    "asignatura": "Ed. Cívica",
+    "semana": 9,
+    "titulo": "La Descentralización y los Gobiernos Regionales: Estructura, Atribuciones y Competencias",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

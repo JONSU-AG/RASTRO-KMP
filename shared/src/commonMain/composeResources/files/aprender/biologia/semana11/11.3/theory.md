@@ -45,7 +45,7 @@ Esta lección trae los gonosomas de cada sexo, el corpúsculo de Barr, los reces
 
 **¿Cómo se demuestra con el cruce padre afectado por madre sana?** Un padre hemofílico XhY por una madre sana XHXH solo puede producir hijas XHXh (el padre da Xh a todas y la madre da XH a todas: cien por ciento portadoras sanas) e hijos XHY (el padre da Y a todos: cien por ciento sanos para este rasgo). De ahí la regla de oro: padre afectado nunca transmite su rasgo X a sus hijos varones. El caso del abuelo materno daltónico con madre sana se resuelve igual: esa madre recibió obligatoriamente el Xd del abuelo, luego es portadora XDXd, y sus hijos varones serán cincuenta por ciento daltónicos XdY.
 
-**¿Qué es la herencia holandrica y cómo se diferencia?** Es la herencia de los genes del segmento no homólogo del **cromosoma Y** (el gen SRY determinante del sexo y la hipertricosis auricular con pelos en el pabellón). Viaja exclusivamente de **padre a todos los hijos varones** y nunca a las hijas, en línea directa varonil. No debe confundirse con la herencia **influida por el sexo**, que es autosómica pero modulada por hormonas: en la calvicie prematura el heterocigoto es calvo en el varón (actúa como dominante por andrógenos) pero no calvo en la mujer (actúa como recesivo). Esa es autosómica con expresión distinta por sexo, no ligada a ningún gonosoma.
+**¿Qué es la herencia holándrica?** Es la transmisión de variantes del segmento no homólogo del cromosoma Y, que pasa normalmente de padre a hijos varones. No equivale a un carácter limitado al sexo: la limitación describe su expresión, no la ubicación del gen. La hipertricosis auricular no se toma como ejemplo clínico universal de herencia ligada al Y; tampoco se modela la calvicie real con un único par de alelos.
 
 **¿Cómo se diferencia todo el bloque?** Ligado al X (cruza sexos en zigzag, afecta más a varones pero admite portadoras y afectadas) frente a holandrico del Y (línea directa de padre a hijos varones, cien por ciento de los varones, cero hijas) frente a influido por el sexo (autosómico, el mismo genotipo se ve distinto según las hormonas). Refuerzo: padre a todas las hijas portadoras e hijos sanos es igual a ligado al X; padre a todos los hijos varones es igual a holandrico Y; abuelo materno afectado con madre sana y nieto afectado al cincuenta por ciento es igual a zigzag clásico.
 
@@ -61,7 +61,7 @@ Esta lección trae los gonosomas de cada sexo, el corpúsculo de Barr, los reces
 - **Padre afectado por madre sana:** hijas cien por ciento portadoras e hijos cien por ciento sanos para ese rasgo.
 - **Portadora por sano:** cero por ciento de hijas hemofílicas, porque falta el X mutado del padre.
 - **Zigzag:** abuelo afectado, hija portadora obligada, nieto afectado en el cincuenta por ciento de los varones.
-- **Holandrica Y (SRY, hipertricosis):** de padre a todos los hijos varones, nunca a hijas.
+- **Holandrica Y (genes del segmento no homólogo del Y):** de padre a todos los hijos varones, nunca a hijas.
 
 ## DIFERENCIAS QUE CONFUNDEN
 
@@ -83,7 +83,7 @@ Esta lección trae los gonosomas de cada sexo, el corpúsculo de Barr, los reces
 - **Padre hemofílico XhY por madre XHXH:** hijas cien por ciento portadoras XHXh e hijos cien por ciento sanos XHY.
 - **Portadora XHXh por sano XHY:** cero por ciento de hijas hemofílicas.
 - **Abuelo materno daltónico:** madre obligadamente portadora y nietos varones cincuenta por ciento daltónicos.
-- **SRY e hipertricosis:** herencia holandrica de padre a todos los hijos varones.
+- **Región no homóloga del Y:** herencia holandrica de padre a todos los hijos varones.
 
 ## EJEMPLOS
 
@@ -104,4 +104,12 @@ Padre afectado ligado al X: hijas cien por ciento portadoras e hijos sanos, nunc
 
 - Gonosomas y gametos: mujer 46,XX homogamética con óvulos todos X, varón 46,XY heterogamético que define el sexo, hemicigosis masculina y corpúsculo de Barr como X inactivado con fórmula de X menos uno.
 - Recesivos ligados al X con genotipos por sexo: daltonismo y hemofilias A (ocho) y B (nueve), mayor frecuencia masculina porque basta una copia, cruce modelo en cuatro cuartos y cruces extremos con madre mutada y con portadora.
-- Transmisión en zigzag (abuelo, hija portadora obligada, nieto al cincuenta por ciento) y herencia holandrica del Y (SRY e hipertricosis de padre a todos los varones), diferenciadas de la herencia influida por el sexo autosómica de la calvicie.
+- Transmisión en zigzag (abuelo, hija portadora obligada, nieto al cincuenta por ciento) y herencia holandrica del Y (variantes de la región no homóloga del Y), diferenciadas de la herencia influida por el sexo en rasgos cuyo modelo esté definido por el enunciado.
+
+## Herencia influenciada, restricta al sexo y asesoramiento genético
+
+Ligada al sexo describe la ubicación de un gen en un cromosoma sexual. Influenciada por el sexo describe una expresión o penetrancia que cambia con el contexto sexual y hormonal, aun cuando los genes sean autosómicos. Restricta o limitada al sexo describe un carácter que se expresa en un sexo por sus condiciones anatómicas o fisiológicas, aunque ambos puedan transmitir sus variantes; la producción de leche en mamíferos es un ejemplo didáctico.
+
+La diferencia está entre ubicación y expresión: un rasgo limitado a un sexo no tiene que estar en el cromosoma Y. Un cuadro de Punnett puede modelar un rasgo monogénico definido por el enunciado, pero no representa automáticamente todos los rasgos reales. La calvicie androgenética es compleja y multifactorial; no se debe predecir con un único par de alelos como si fuera una ley universal.
+
+El asesoramiento genético analiza antecedentes y resultados disponibles para explicar patrones de herencia, posibilidades y límites de las estimaciones. No decide por la familia ni convierte un riesgo en certeza. Requiere información confiable, consentimiento y respeto de la autonomía. Este contenido enseña conceptos; no permite diagnosticar a una persona a partir de una pregunta escolar.

@@ -1,0 +1,18 @@
+{
+  "week": 9,
+  "title": "TEMA 09: ESTÉTICA Y FILOSOFÍA DEL ARTE",
+  "lessons": [
+    {
+      "subtopic": "9.1",
+      "lessonId": "filo_t09_s01",
+      "title": "A. Naturaleza de la Estética y la Experiencia Estética",
+      "path": "9.1/lesson.json"
+    },
+    {
+      "subtopic": "9.2",
+      "lessonId": "filo_t09_s02",
+      "title": "C. Concepciones Filosóficas del Arte a lo Largo de la Historia",
+      "path": "9.2/lesson.json"
+    }
+  ]
+}

@@ -62,42 +62,31 @@ class LimaStudyReminderWorker(
     }
 
     override suspend fun doWork(): Result {
+        com.jonsuapps.rastro.android.logo.RastroLogoManager.refreshLauncherInBackground(context)
         val limaCalendar = Calendar.getInstance(TimeZone.getTimeZone("America/Lima"))
         val currentHour = limaCalendar.get(Calendar.HOUR_OF_DAY)
 
-        // Comprobar inactividad desde preferencias
-        val prefs = context.getSharedPreferences("rastro_activity_prefs", Context.MODE_PRIVATE)
-        val lastActiveTimestamp = prefs.getLong("last_active_time", System.currentTimeMillis())
-        val hoursInactive = (System.currentTimeMillis() - lastActiveTimestamp) / (1000 * 60 * 60)
-
-        val notificationContent = when {
-            hoursInactive >= 24 && currentHour in 9..21 -> NotificationContent(
-                title = "🎯 ¡Te extrañamos en RASTRO!",
-                body = "Tu meta preuniversitaria no se detiene. Vuelve hoy para mantener encendida tu racha de estudio."
-            )
-            currentHour in 7..11 -> NotificationContent(
-                title = "☀️ ¡Buen día, futuro cachimbo!",
-                body = "Un repaso matutino de 15 minutos en Fórmulas duplica tu retención para el examen."
-            )
-            currentHour in 15..18 -> NotificationContent(
-                title = "🎯 Momento de avance preuniversitario",
-                body = "Completa 1 lección en el Camino de Aprendizaje y asegura tu racha de hoy."
-            )
-            currentHour in 19..23 -> NotificationContent(
-                title = "🔥 ¡Protege tu racha antes de medianoche!",
-                body = "Solo te faltan 3 retos rápidos para mantener encendida tu llama de preparación."
-            )
-            else -> null
-        }
-
-        if (notificationContent != null) {
-            sendNotification(notificationContent.title, notificationContent.body)
+        val zone = java.time.ZoneId.of("America/Lima")
+        val today = java.time.LocalDate.now(zone)
+        val uid = com.google.firebase.auth.FirebaseAuth.getInstance().currentUser?.uid.orEmpty()
+        val state = com.jonsuapps.rastro.android.data.GamificationRepository.loadLocal(uid)
+        val completedToday = state?.completedLessons?.values?.any {
+            !it.skipped && java.time.Instant.ofEpochMilli(it.completedAt).atZone(zone).toLocalDate() == today
+        } == true
+        val activity = reminderActivity(today, completedToday, state?.lastStudyDate.orEmpty(), state?.streakFreeze ?: 1)
+        val prefs = context.getSharedPreferences("rastro_reminder_delivery", Context.MODE_PRIVATE)
+        val key = "${uid.ifBlank { "guest" }}:${activity.name}"
+        if (prefs.getString(key, null) == today.toString()) return Result.success()
+        val candidates = StudyReminderTemplates.load().filter { it.enabled && it.activity == activity && currentHour in it.startHour..it.endHour }
+        val content = candidates.getOrNull(if (candidates.isEmpty()) 0 else today.dayOfYear % candidates.size)
+        if (content != null && sendNotification(content.title, content.body)) {
+            prefs.edit().putString(key, today.toString()).apply()
         }
 
         return Result.success()
     }
 
-    private fun sendNotification(title: String, body: String) {
+    private fun sendNotification(title: String, body: String): Boolean {
         createNotificationChannel(context)
 
         val intent = Intent(context, MainActivity::class.java).apply {
@@ -122,10 +111,10 @@ class LimaStudyReminderWorker(
 
         try {
             NotificationManagerCompat.from(context).notify(NOTIFICATION_ID, notification)
+            return true
         } catch (_: SecurityException) {
-            // Ignorar si el usuario denegó permisos de POST_NOTIFICATIONS en Android 13+
+            return false // Permiso de notificaciones denegado.
         }
     }
 
-    private data class NotificationContent(val title: String, val body: String)
 }

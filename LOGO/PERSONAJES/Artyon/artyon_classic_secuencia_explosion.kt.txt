@@ -1,0 +1,164 @@
+package com.jonsuapps.rastro.android.ui.mascots.loki
+
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.drawscope.*
+import kotlin.math.PI
+import kotlin.math.cos
+import kotlin.math.sin
+
+internal const val LOKI_PAPER_GAG_SECONDS = 5.1f
+
+/** Transient props for one finite sequence, never stored in a character. */
+internal data class LokiPaperGagFrame(
+    val grip: Float,
+    val swing: Float,
+    val paperCenter: Offset,
+    val paperRotation: Float,
+    val paperScale: Float,
+    val paperAlpha: Float,
+    val paperBehind: Boolean,
+    val blast: Float,
+    val serious: Float = 0f,
+    val lidLowering: Float = serious
+)
+
+private fun gagEase(t: Float) = t.coerceIn(0f, 1f).let { it * it * (3f - 2f * it) }
+
+/** 0.25 s to hold, exactly 1.3 s reading, then throw and one rear explosion. */
+internal fun sampleLokiPaperGag(progress: Float): LokiFrame {
+    val seconds = progress.coerceIn(0f, 1f) * LOKI_PAPER_GAG_SECONDS
+    val enter = gagEase(seconds / .25f)
+    val release = gagEase((seconds - 1.78f) / .52f)
+    val grip = enter * (1f - release)
+    val flight = ((seconds - 1.55f) / .55f).coerceIn(0f, 1f)
+    val swing = sin(flight * PI.toFloat()).coerceAtLeast(0f)
+    val paperAlpha = enter * (1f - gagEase((seconds - 2.1f) / .18f))
+    val blast = gagEase((seconds - 2.08f) / .17f) * (1f - gagEase((seconds - 4.1f) / .7f))
+    val impact = gagEase((seconds - 2.08f) / .22f)
+    val settle = 1f - gagEase((seconds - 4.75f) / .35f)
+    val serious = impact * settle
+    // A mild reading lid carries through the throw, then smoothly lowers further.
+    val lidLowering = mix(.24f * gagEase(seconds / .65f), 1f, impact) * settle
+    val reading = if (seconds < 1.55f) sin(seconds * PI.toFloat() * 2f) * .8f * grip else 0f
+    val paper = LokiPaperGagFrame(grip, swing,
+        Offset(mix(122f, 65f, flight), 211f - 156f * flight - 32f * sin(flight * PI.toFloat()) + reading),
+        mix(0f, 38f, flight), mix(1f, .46f, flight), paperAlpha,
+        seconds >= 1.78f, blast, serious, lidLowering)
+    // Anatomical right is on the viewer's left in the front-facing rig.
+    val pose = LokiPose(left = LokiEye(height = mix(31f, 16f, lidLowering), tilt = mix(-6f, 0f, serious)),
+        right = LokiEye(height = mix(31f, 16f, lidLowering), tilt = mix(6f, 0f, serious)),
+        gazeX = if (seconds < 1.55f) sin(seconds * 2f) * grip else 0f, gazeY = 7f * grip,
+        leftHandX = mix(35f, 73f, grip) - 25f * swing, rightHandX = mix(205f, 171f, grip),
+        leftHandY = mix(171f, 210f, grip) - 95f * swing, rightHandY = mix(171f, 210f, grip))
+    return LokiFrame(pose, paperGag = paper)
+}
+
+/** Called before the unchanged torso, eyes, hair, arms and feet. */
+internal fun DrawScope.drawPaperGagBehind(gag: LokiPaperGagFrame, ink: Color, compactRig: Boolean = false) {
+    if (gag.paperBehind) drawGagPaper(gag, ink)
+    if (gag.blast <= .001f) return
+    val center = Offset(122f, 125f)
+    fun burst(rx: Float, ry: Float, color: Color, border: Color, phase: Float) {
+        val path = Path().apply {
+            // Uneven tongues of fire, rather than concentric regular stars.
+            repeat(84) { i ->
+                val angle = -PI.toFloat() / 2f + i * PI.toFloat() / 42f + phase
+                val variation = (sin(i * 2.37f) + 1f) * .5f
+                val radius = if (i % 2 == 0) .88f + .12f * variation else .66f + .12f * variation
+                val x = center.x + cos(angle) * rx * radius
+                val y = center.y + sin(angle) * ry * radius
+                if (i == 0) moveTo(x, y) else lineTo(x, y)
+            }
+            close()
+        }
+        drawPath(path, color.copy(alpha = gag.blast))
+        drawPath(path, border.copy(alpha = gag.blast), style = Stroke(2.7f, join = StrokeJoin.Round))
+    }
+    val expansion = .45f + gag.blast * .55f
+    val height = expansion * if (compactRig) .88f else 1f
+    burst(173f * expansion, 165f * height, Color(0xFFFFE8A0), Color(0xFFED811D), 0f)
+    burst(155f * expansion, 146f * height, Color(0xFFFF7108), Color(0xFFFFA126), .025f)
+    drawGagBoom(gag.blast)
+}
+
+/** Hand-drawn lettering stays in the rear layer, above the character's face. */
+private fun DrawScope.drawGagBoom(amount: Float) {
+    val letters = listOf(
+        Path().apply {
+            fillType = PathFillType.EvenOdd
+            moveTo(1f, 44f); lineTo(0f, 2f); cubicTo(39f, -4f, 45f, 20f, 26f, 22f)
+            cubicTo(48f, 25f, 43f, 44f, 1f, 44f); close()
+            moveTo(10f, 9f); lineTo(11f, 18f); cubicTo(31f, 20f, 30f, 7f, 10f, 9f); close()
+            moveTo(11f, 26f); lineTo(12f, 36f); cubicTo(34f, 36f, 34f, 23f, 11f, 26f); close()
+        },
+        Path().apply {
+            fillType = PathFillType.EvenOdd
+            moveTo(22f, 0f); cubicTo(-3f, -2f, -6f, 44f, 18f, 45f)
+            cubicTo(46f, 48f, 47f, 0f, 22f, 0f); close()
+            moveTo(21f, 8f); cubicTo(7f, 6f, 5f, 36f, 19f, 37f)
+            cubicTo(32f, 39f, 35f, 8f, 21f, 8f); close()
+        },
+        Path().apply {
+            fillType = PathFillType.EvenOdd
+            moveTo(19f, 0f); cubicTo(-7f, 0f, -4f, 44f, 21f, 45f)
+            cubicTo(46f, 46f, 44f, -1f, 19f, 0f); close()
+            moveTo(19f, 8f); cubicTo(6f, 7f, 8f, 36f, 21f, 37f)
+            cubicTo(34f, 37f, 33f, 8f, 19f, 8f); close()
+        },
+        Path().apply {
+            moveTo(0f, 44f); lineTo(3f, 1f); lineTo(13f, 0f); lineTo(27f, 25f)
+            lineTo(42f, 1f); lineTo(52f, 0f); lineTo(55f, 45f); lineTo(44f, 44f)
+            lineTo(42f, 18f); lineTo(29f, 40f); lineTo(24f, 40f); lineTo(13f, 18f)
+            lineTo(11f, 44f); close()
+        },
+        Path().apply {
+            moveTo(3f, 0f); lineTo(15f, -1f); lineTo(10f, 30f); lineTo(3f, 31f); close()
+            moveTo(2f, 37f); lineTo(11f, 36f); lineTo(10f, 45f); lineTo(1f, 45f); close()
+        }
+    )
+    translate(14f, -37f) {
+        scale(1f, .82f, Offset.Zero) {
+            var x = 0f
+            letters.forEachIndexed { index, letter ->
+                translate(x, 0f) {
+                    drawPath(letter, Color(0xFFFFEEC7).copy(alpha = amount), style = Stroke(5.5f, join = StrokeJoin.Round))
+                    drawPath(letter, Color(0xFFD93C16).copy(alpha = amount))
+                    drawPath(letter, Color(0xFF321D14).copy(alpha = amount), style = Stroke(2f, join = StrokeJoin.Round))
+                }
+                x += if (index == 3) 62f else 47f
+            }
+        }
+    }
+}
+
+/** Sheet before the existing hands so they visibly grip its lower corners. */
+internal fun DrawScope.drawPaperGagFront(gag: LokiPaperGagFrame, ink: Color) {
+    if (!gag.paperBehind) drawGagPaper(gag, ink)
+}
+
+private fun DrawScope.drawGagPaper(gag: LokiPaperGagFrame, ink: Color) {
+    if (gag.paperAlpha <= .001f) return
+    translate(gag.paperCenter.x, gag.paperCenter.y) {
+        rotate(gag.paperRotation, Offset.Zero) {
+            scale(gag.paperScale, gag.paperScale, Offset.Zero) {
+                val sheet = Path().apply {
+                    moveTo(-40f, -32f); lineTo(27f, -32f); lineTo(40f, -19f)
+                    lineTo(40f, 32f); lineTo(-40f, 32f); close()
+                }
+                drawPath(sheet, Color(0xFFFFF3D9).copy(alpha = gag.paperAlpha))
+                drawPath(sheet, ink.copy(alpha = gag.paperAlpha), style = Stroke(3.8f, join = StrokeJoin.Round))
+                val fold = Path().apply { moveTo(27f, -32f); lineTo(27f, -19f); lineTo(40f, -19f) }
+                drawPath(fold, ink.copy(alpha = gag.paperAlpha), style = Stroke(3f, join = StrokeJoin.Round))
+                repeat(4) { i ->
+                    drawLine(ink.copy(alpha = gag.paperAlpha * .65f), Offset(-25f, -14f + i * 12f),
+                        Offset(if (i == 3) 8f else 23f, -14f + i * 12f), 3f, StrokeCap.Round)
+                }
+            }
+        }
+    }
+}

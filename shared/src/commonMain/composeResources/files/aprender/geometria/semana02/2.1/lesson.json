@@ -1,0 +1,18 @@
+{
+  "id": "geom_t02_s01",
+  "subjectId": "geometria",
+  "semana": 2,
+  "subtema": "2.1",
+  "title": "GEOMETRÍA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geometria/GeometriaSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geom_t02_s01",
+    "asignatura": "Geometría",
+    "semana": 2,
+    "titulo": "GEOMETRÍA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

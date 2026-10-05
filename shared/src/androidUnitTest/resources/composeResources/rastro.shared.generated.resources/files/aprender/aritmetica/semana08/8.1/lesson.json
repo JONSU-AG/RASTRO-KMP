@@ -1,0 +1,18 @@
+{
+  "id": "arit_t08_s01",
+  "subjectId": "aritmetica",
+  "semana": 8,
+  "subtema": "8.1",
+  "title": "Tanto por Ciento y Aplicaciones Comerciales - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/aritmetica/AritmeticaSemana08.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_arit_t08_s01",
+    "asignatura": "Aritmética",
+    "semana": 8,
+    "titulo": "Tanto por Ciento y Aplicaciones Comerciales - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

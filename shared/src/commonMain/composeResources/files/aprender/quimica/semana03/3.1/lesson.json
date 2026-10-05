@@ -1,0 +1,18 @@
+{
+  "id": "quim_t03_s01",
+  "subjectId": "quimica",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "Estructura Atómica, Modelos y Núclidos - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/quimica/QuimicaSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_quim_t03_s01",
+    "asignatura": "Química",
+    "semana": 3,
+    "titulo": "Estructura Atómica, Modelos y Núclidos - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

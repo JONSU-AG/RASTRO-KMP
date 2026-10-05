@@ -1,0 +1,18 @@
+{
+  "id": "filo_t04_s01",
+  "subjectId": "filosofia",
+  "semana": 4,
+  "subtema": "4.1",
+  "title": "A. Los Principios Lógicos Supremos",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t04_s01",
+    "asignatura": "Filosofía",
+    "semana": 4,
+    "titulo": "A. Los Principios Lógicos Supremos",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

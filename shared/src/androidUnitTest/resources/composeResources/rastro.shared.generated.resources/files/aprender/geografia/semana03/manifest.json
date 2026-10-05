@@ -1,0 +1,18 @@
+{
+  "week": 3,
+  "title": "TEMA 03: El Universo, el Sistema Planetario Solar y la Tierra",
+  "lessons": [
+    {
+      "subtopic": "3.1",
+      "lessonId": "geo_t03_s01",
+      "title": "3.1. El Universo: Origen y Estructura",
+      "path": "3.1/lesson.json"
+    },
+    {
+      "subtopic": "3.2",
+      "lessonId": "geo_t03_s02",
+      "title": "3.3. Movimientos de la Tierra y sus Consecuencias Geográficas",
+      "path": "3.2/lesson.json"
+    }
+  ]
+}

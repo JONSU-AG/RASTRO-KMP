@@ -1,0 +1,18 @@
+{
+  "id": "filo_t06_s02",
+  "subjectId": "filosofia",
+  "semana": 6,
+  "subtema": "6.2",
+  "title": "C. Filosofía Moderna (s. XVII - XVIII)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t06_s02",
+    "asignatura": "Filosofía",
+    "semana": 6,
+    "titulo": "C. Filosofía Moderna (s. XVII - XVIII)",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

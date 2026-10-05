@@ -1,0 +1,18 @@
+{
+  "week": 11,
+  "title": "Semana 11",
+  "lessons": [
+    {
+      "subtopic": "11.1",
+      "lessonId": "geom_t11_s01",
+      "title": "GEOMETRÍA ANALÍTICA: PUNTO, RECTA Y CÓNICAS - Fundamentos y Leyes Principales",
+      "path": "11.1/lesson.json"
+    },
+    {
+      "subtopic": "11.2",
+      "lessonId": "geom_t11_s02",
+      "title": "GEOMETRÍA ANALÍTICA: PUNTO, RECTA Y CÓNICAS - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "11.2/lesson.json"
+    }
+  ]
+}

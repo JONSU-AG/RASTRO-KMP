@@ -1,0 +1,18 @@
+{
+  "id": "civ_t01_s02",
+  "subjectId": "civica",
+  "semana": 1,
+  "subtema": "1.2",
+  "title": "El Sistema de Normas de Convivencia y Valores Cívicos Fundamentales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t01_s02",
+    "asignatura": "Ed. Cívica",
+    "semana": 1,
+    "titulo": "El Sistema de Normas de Convivencia y Valores Cívicos Fundamentales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

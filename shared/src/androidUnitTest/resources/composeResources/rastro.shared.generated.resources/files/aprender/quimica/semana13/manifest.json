@@ -1,0 +1,18 @@
+{
+  "week": 13,
+  "title": "Semana 13",
+  "lessons": [
+    {
+      "subtopic": "13.1",
+      "lessonId": "quim_t13_s01",
+      "title": "Electroquímica - Fundamentos y Leyes Principales",
+      "path": "13.1/lesson.json"
+    },
+    {
+      "subtopic": "13.2",
+      "lessonId": "quim_t13_s02",
+      "title": "Electroquímica - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "13.2/lesson.json"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "week": 4,
+  "title": "Semana 4",
+  "lessons": [
+    {
+      "subtopic": "4.1",
+      "lessonId": "arit_t04_s01",
+      "title": "Sistema de los Números Enteros (\\mathbb{Z}) y Ecuaciones Diofánticas - Fundamentos y Leyes Principales",
+      "path": "4.1/lesson.json"
+    },
+    {
+      "subtopic": "4.2",
+      "lessonId": "arit_t04_s02",
+      "title": "Sistema de los Números Enteros (\\mathbb{Z}) y Ecuaciones Diofánticas - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "4.2/lesson.json"
+    }
+  ]
+}

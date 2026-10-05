@@ -1,0 +1,18 @@
+{
+  "id": "filo_t09_s01",
+  "subjectId": "filosofia",
+  "semana": 9,
+  "subtema": "9.1",
+  "title": "A. Naturaleza de la Estética y la Experiencia Estética",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana09.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t09_s01",
+    "asignatura": "Filosofía",
+    "semana": 9,
+    "titulo": "A. Naturaleza de la Estética y la Experiencia Estética",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

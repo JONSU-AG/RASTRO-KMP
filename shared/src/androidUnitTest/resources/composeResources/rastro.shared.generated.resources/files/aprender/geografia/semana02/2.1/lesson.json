@@ -1,0 +1,18 @@
+{
+  "id": "geo_t02_s01",
+  "subjectId": "geografia",
+  "semana": 2,
+  "subtema": "2.1",
+  "title": "3.1. Geodesia y la Forma de la Tierra",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t02_s01",
+    "asignatura": "Geografía",
+    "semana": 2,
+    "titulo": "3.1. Geodesia y la Forma de la Tierra",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

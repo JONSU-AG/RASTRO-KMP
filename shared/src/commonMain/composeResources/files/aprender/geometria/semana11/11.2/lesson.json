@@ -1,0 +1,18 @@
+{
+  "id": "geom_t11_s02",
+  "subjectId": "geometria",
+  "semana": 11,
+  "subtema": "11.2",
+  "title": "GEOMETRÍA ANALÍTICA: PUNTO, RECTA Y CÓNICAS - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geometria/GeometriaSemana11.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geom_t11_s02",
+    "asignatura": "Geometría",
+    "semana": 11,
+    "titulo": "GEOMETRÍA ANALÍTICA: PUNTO, RECTA Y CÓNICAS - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

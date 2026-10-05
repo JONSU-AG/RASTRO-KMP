@@ -34,6 +34,14 @@
             </intent-filter>
         </activity>
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.pizarra.files"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/pizarra_file_paths" />
+        </provider>
+
         <!-- Dynamic Launcher Aliases -->
         <activity-alias
             android:name=".android.MainActivityBase"
@@ -47,6 +55,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/rastro_shortcuts" />
         </activity-alias>
 
         <activity-alias
@@ -61,6 +70,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/rastro_shortcuts" />
         </activity-alias>
 
         <activity-alias
@@ -75,6 +85,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/rastro_shortcuts" />
         </activity-alias>
 
         <activity-alias
@@ -89,11 +100,13 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/rastro_shortcuts" />
         </activity-alias>
 
         <!-- Widgets de RASTRO -->
         <receiver
             android:name=".android.widgets.RachaWidgetProvider"
+            android:label="@string/widget_daily_name"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -105,6 +118,7 @@
 
         <receiver
             android:name=".android.widgets.RachaSemanalWidgetProvider"
+            android:label="@string/widget_weekly_name"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -116,9 +130,12 @@
 
         <receiver
             android:name=".android.widgets.ExamCountdownWidgetProvider"
+            android:label="@string/widget_countdown_name"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
@@ -127,6 +144,7 @@
 
         <receiver
             android:name=".android.widgets.MotivacionWidgetProvider"
+            android:label="@string/widget_quote_name"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

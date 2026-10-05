@@ -1,0 +1,18 @@
+{
+  "week": 2,
+  "title": "Semana 2",
+  "lessons": [
+    {
+      "subtopic": "2.1",
+      "lessonId": "geo_t02_s01",
+      "title": "3.1. Geodesia y la Forma de la Tierra",
+      "path": "2.1/lesson.json"
+    },
+    {
+      "subtopic": "2.2",
+      "lessonId": "geo_t02_s02",
+      "title": "3.4. Documentos Cartográficos: Mapas, Cartas y Planos",
+      "path": "2.2/lesson.json"
+    }
+  ]
+}

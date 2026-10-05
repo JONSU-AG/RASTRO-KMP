@@ -1,0 +1,18 @@
+{
+  "id": "cl_t02_s02",
+  "subjectId": "comprension_lectora",
+  "semana": 2,
+  "subtema": "2.2",
+  "title": "3.3 El Límite Dorado: Inferencia vs. Especulación",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana02.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t02_s02",
+    "asignatura": "Comp. Lectora",
+    "semana": 2,
+    "titulo": "3.3 El Límite Dorado: Inferencia vs. Especulación",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

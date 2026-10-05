@@ -144,3 +144,11 @@ Signo igual a significado concepto más significante imagen. Arbitrariedad igual
 
 ## RESUMEN
 Signo biplánico saussureano con significado y significante mentales, arbitrario por convención multilingüe, lineal por cadena temporal, mutable en historia e inmutable en presente, doblemente articulado con morfemas significativos y fonemas distintivos, usado en denotación literal objetiva de diccionario o connotación figurada afectiva según contexto con pares estrella, corazón, rata y león como prueba.
+
+## Clases de signo, significado y contexto
+
+Un indicio mantiene una relación de conexión con lo que señala, como humo respecto de combustión; un icono se basa en semejanza; un símbolo funciona por convención. Son criterios para analizar la relación entre signo y objeto, no sinónimos del signo lingüístico. En este último se distinguen significante y significado.
+
+El contexto verbal son los enunciados que rodean una expresión; la situación comprende participantes, lugar, momento y condiciones del intercambio. Aquí, mañana o yo cambian de referencia según quién habla y cuándo. La polisemia exige seleccionar un sentido entre los de una palabra: banco se interpreta de manera distinta junto a préstamo que junto a sentarse.
+
+Denotación apunta a un significado convencional; connotación incorpora asociaciones y valoraciones. Un texto puede usar ambas. Comprender el significado exige reconocer la expresión y sus relaciones, sin asignarle un sentido aislado incompatible con el intercambio.

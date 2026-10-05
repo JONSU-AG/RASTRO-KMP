@@ -1,0 +1,18 @@
+{
+  "id": "filo_t11_s01",
+  "subjectId": "filosofia",
+  "semana": 11,
+  "subtema": "11.1",
+  "title": "A. Concepto de Valor y el Acto Valorativo",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana11.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t11_s01",
+    "asignatura": "Filosofía",
+    "semana": 11,
+    "titulo": "A. Concepto de Valor y el Acto Valorativo",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

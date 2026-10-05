@@ -1,0 +1,18 @@
+{
+  "id": "geo_t08_s01",
+  "subjectId": "geografia",
+  "semana": 8,
+  "subtema": "8.1",
+  "title": "3.1. Origen, Criterios y Pisos Ecológicos Occidentales (Chala a Suni)",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana08.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t08_s01",
+    "asignatura": "Geografía",
+    "semana": 8,
+    "titulo": "3.1. Origen, Criterios y Pisos Ecológicos Occidentales (Chala a Suni)",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

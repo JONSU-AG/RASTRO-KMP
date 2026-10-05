@@ -1,0 +1,18 @@
+{
+  "week": 15,
+  "title": "Semana 15",
+  "lessons": [
+    {
+      "subtopic": "15.1",
+      "lessonId": "alg_t15_s01",
+      "title": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+      "path": "15.1/lesson.json"
+    },
+    {
+      "subtopic": "15.2",
+      "lessonId": "alg_t15_s02",
+      "title": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "15.2/lesson.json"
+    }
+  ]
+}

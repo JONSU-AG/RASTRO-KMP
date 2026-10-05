@@ -1,0 +1,18 @@
+{
+  "id": "geo_t01_s01",
+  "subjectId": "geografia",
+  "semana": 1,
+  "subtema": "1.1",
+  "title": "3.1. Definición y Etimología de la Geografía",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t01_s01",
+    "asignatura": "Geografía",
+    "semana": 1,
+    "titulo": "3.1. Definición y Etimología de la Geografía",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

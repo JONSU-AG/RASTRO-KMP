@@ -32,6 +32,34 @@ object RastroWidgetManager {
     private const val KEY_EXAM_CAREER = "widget_exam_career"
     private const val KEY_WEEK_DAYS = "widget_week_active_dates" // Set<String> YYYY-MM-DD
 
+    fun observeChanges(context: Context, onChanged: () -> Unit): () -> Unit {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val listener = android.content.SharedPreferences.OnSharedPreferenceChangeListener { _, _ -> onChanged() }
+        prefs.registerOnSharedPreferenceChangeListener(listener)
+        return { prefs.unregisterOnSharedPreferenceChangeListener(listener) }
+    }
+
+    internal fun updatePickerPreviews(context: Context, manager: AppWidgetManager, only: RastroWidgetKind? = null) {
+        if (android.os.Build.VERSION.SDK_INT < 35) return
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        RastroWidgetKind.entries.filter { only == null || it == only }.forEach { kind ->
+            val fingerprint = when (kind) {
+                RastroWidgetKind.DAILY -> getStreak(context).toString()
+                RastroWidgetKind.WEEKLY -> getWeeklyActiveDates(context).joinToString()
+                RastroWidgetKind.COUNTDOWN -> "${getExamDetails(context)}:${getExamDateYmd(context)}:${WidgetDates.display(getExamDateYmd(context), System.currentTimeMillis())}"
+                RastroWidgetKind.QUOTE -> getDailyQuote().toString()
+            } + ":v3-illustrated"
+            val key = "picker_preview_${kind.name}"
+            if (prefs.getString(key, null) != fingerprint) runCatching {
+                if (manager.setWidgetPreview(ComponentName(context, kind.provider),
+                        android.appwidget.AppWidgetProviderInfo.WIDGET_CATEGORY_HOME_SCREEN,
+                        RastroWidgetViews.create(context, kind))) {
+                    prefs.edit().putString(key, fingerprint).apply()
+                }
+            }.onFailure { android.util.Log.w("RastroWidget", "Vista previa de ${kind.name}", it) }
+        }
+    }
+
     private val MOTIVATIONAL_QUOTES = listOf(
         Pair("Cada problema resuelto hoy es un punto más en tu examen de admisión.", "— Orstty (RASTRO)"),
         Pair("La disciplina vence al talento cuando el talento no se esfuerza. ¡Sigue con todo!", "— Artyon (RASTRO)"),
@@ -71,11 +99,12 @@ object RastroWidgetManager {
         val liveStreak = GamificationManager.streakState.value.currentStreak
         if (liveStreak > 0) return liveStreak
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        return prefs.getInt(KEY_STREAK, 1)
+        return prefs.getInt(KEY_STREAK, 0)
     }
 
     fun updateAllWidgets(context: Context) {
         val appWidgetManager = AppWidgetManager.getInstance(context)
+        updatePickerPreviews(context, appWidgetManager)
 
         // 1. Racha
         val rachaComp = ComponentName(context, RachaWidgetProvider::class.java)
@@ -118,19 +147,7 @@ object RastroWidgetManager {
         val career = prefs.getString(KEY_EXAM_CAREER, "¡Asegura tu vacante!") ?: "¡Asegura tu vacante!"
         val examDateStr = prefs.getString(KEY_EXAM_DATE, null)
 
-        val daysRemaining: Int = if (!examDateStr.isNullOrBlank()) {
-            runCatching {
-                val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.US)
-                val targetDate = sdf.parse(examDateStr) ?: Date()
-                val diffMillis = targetDate.time - System.currentTimeMillis()
-                (TimeUnit.MILLISECONDS.toDays(diffMillis)).toInt().coerceAtLeast(0)
-            }.getOrDefault(38)
-        } else {
-            // Default dinámico aproximado para el próximo proceso CEPRUNSA/Ordinario
-            val calendar = Calendar.getInstance()
-            val dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH)
-            (45 - (dayOfMonth % 20)).coerceAtLeast(1)
-        }
+        val daysRemaining = WidgetDates.daysUntil(examDateStr.orEmpty(), System.currentTimeMillis()) ?: 0
 
         return Triple(examName, daysRemaining, career)
     }

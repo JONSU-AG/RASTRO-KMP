@@ -1,0 +1,18 @@
+{
+  "id": "alg_t01_s01",
+  "subjectId": "algebra",
+  "semana": 1,
+  "subtema": "1.1",
+  "title": "Álgebra de Conjuntos, Cuantificadores y Operaciones - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_alg_t01_s01",
+    "asignatura": "Álgebra",
+    "semana": 1,
+    "titulo": "Álgebra de Conjuntos, Cuantificadores y Operaciones - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

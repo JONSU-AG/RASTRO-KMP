@@ -1,0 +1,18 @@
+{
+  "id": "civ_t04_s02",
+  "subjectId": "civica",
+  "semana": 4,
+  "subtema": "4.2",
+  "title": "Los Organismos Constitucionales Autónomos (OCAs): Electorales, Jurídicos y Económicos",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t04_s02",
+    "asignatura": "Ed. Cívica",
+    "semana": 4,
+    "titulo": "Los Organismos Constitucionales Autónomos (OCAs): Electorales, Jurídicos y Económicos",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "week": 9,
+  "title": "Semana 9",
+  "lessons": [
+    {
+      "subtopic": "9.1",
+      "lessonId": "quim_t09_s01",
+      "title": "Estado Gaseoso y Mezclas de Gases - Fundamentos y Leyes Principales",
+      "path": "9.1/lesson.json"
+    },
+    {
+      "subtopic": "9.2",
+      "lessonId": "quim_t09_s02",
+      "title": "Estado Gaseoso y Mezclas de Gases - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "9.2/lesson.json"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "civ_t03_s01",
+  "subjectId": "civica",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "Concepto de Estado, Elementos Constitutivos y Distinción con Nación",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t03_s01",
+    "asignatura": "Ed. Cívica",
+    "semana": 3,
+    "titulo": "Concepto de Estado, Elementos Constitutivos y Distinción con Nación",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

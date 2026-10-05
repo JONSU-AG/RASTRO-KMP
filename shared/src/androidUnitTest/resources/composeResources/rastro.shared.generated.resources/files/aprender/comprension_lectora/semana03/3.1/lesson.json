@@ -1,0 +1,18 @@
+{
+  "id": "cl_t03_s01",
+  "subjectId": "comprension_lectora",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "3.1 La Trinidad de la Comprensión Global: Tema, Idea Principal y Título",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t03_s01",
+    "asignatura": "Comp. Lectora",
+    "semana": 3,
+    "titulo": "3.1 La Trinidad de la Comprensión Global: Tema, Idea Principal y Título",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

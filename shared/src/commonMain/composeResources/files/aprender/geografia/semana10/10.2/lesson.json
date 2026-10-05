@@ -1,0 +1,18 @@
+{
+  "id": "geo_t10_s02",
+  "subjectId": "geografia",
+  "semana": 10,
+  "subtema": "10.2",
+  "title": "3.4. Desarrollo Sostenible y la Agenda 2030",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana10.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t10_s02",
+    "asignatura": "Geografía",
+    "semana": 10,
+    "titulo": "3.4. Desarrollo Sostenible y la Agenda 2030",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

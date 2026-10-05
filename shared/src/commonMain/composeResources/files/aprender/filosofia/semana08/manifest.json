@@ -1,0 +1,18 @@
+{
+  "week": 8,
+  "title": "TEMA 08: PENSAMIENTO FILOSÓFICO CONTEMPORÁNEO",
+  "lessons": [
+    {
+      "subtopic": "8.1",
+      "lessonId": "filo_t08_s01",
+      "title": "A. La Crisis de la Subjetividad Moderna y la Razón Ilustrada",
+      "path": "8.1/lesson.json"
+    },
+    {
+      "subtopic": "8.2",
+      "lessonId": "filo_t08_s02",
+      "title": "D. La Condición Posmoderna: Jean-François Lyotard",
+      "path": "8.2/lesson.json"
+    }
+  ]
+}

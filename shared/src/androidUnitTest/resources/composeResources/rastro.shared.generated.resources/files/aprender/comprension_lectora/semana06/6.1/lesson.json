@@ -1,0 +1,18 @@
+{
+  "id": "cl_t06_s01",
+  "subjectId": "comprension_lectora",
+  "semana": 6,
+  "subtema": "6.1",
+  "title": "3.1 La Falacia del Diccionario Aislado en Comprensión Lectora",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t06_s01",
+    "asignatura": "Comp. Lectora",
+    "semana": 6,
+    "titulo": "3.1 La Falacia del Diccionario Aislado en Comprensión Lectora",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

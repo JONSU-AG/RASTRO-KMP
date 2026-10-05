@@ -1,0 +1,18 @@
+{
+  "id": "fis_t04_s01",
+  "subjectId": "fisica",
+  "semana": 4,
+  "subtema": "4.1",
+  "title": "ESTÁTICA - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/fisica/FisicaSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_fis_t04_s01",
+    "asignatura": "Física",
+    "semana": 4,
+    "titulo": "ESTÁTICA - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ing_t07_s01",
+  "subjectId": "ingles",
+  "semana": 7,
+  "subtema": "7.1",
+  "title": "Lectura Temática: Información Personal, Rutinas Diarias, Estudios, Nutrición y Salud - Core Rules & Foundations",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/ingles/InglesSemana07.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_ing_t07_s01",
+    "asignatura": "Inglés",
+    "semana": 7,
+    "titulo": "Lectura Temática: Información Personal, Rutinas Diarias, Estudios, Nutrición y Salud - Core Rules & Foundations",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

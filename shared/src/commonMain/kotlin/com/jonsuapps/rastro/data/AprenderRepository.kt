@@ -8,6 +8,8 @@ import com.jonsuapps.rastro.model.SubjectConfig
 import com.jonsuapps.rastro.data.content.JsonContentLoader
 import com.jonsuapps.rastro.data.content.ContentLoader
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.serialization.json.Json
 
 /**
@@ -33,6 +35,8 @@ fun List<LessonNode>.withSubtemaIndex(): List<LessonNode> {
 }
 
 object AprenderRepository {
+    private val catalogMutex = Mutex()
+    private val catalogs = mutableMapOf<String, List<LessonNode>>()
 
     // Loader para contenido nuevo (JSON + Markdown en resources).
     private val defaultLoader: ContentLoader = JsonContentLoader(
@@ -262,7 +266,7 @@ object AprenderRepository {
             val nuevo = contentLoader.loadSubjectLessons(subjectId)
                 .filter { it.semana >= 8 }
             return (legacy + nuevo).sortedWith(compareBy({ it.semana }, { it.id })).withSubtemaIndex()
-        } else if (subjectId == "lenguaje" || subjectId == "literatura" || subjectId == "psicologia") {
+        } else if (subjectId == "lenguaje" || subjectId == "literatura" || subjectId == "psicologia" || subjectId == "historia_peru" || subjectId == "historia_universal" || subjectId == "civica" || subjectId == "filosofia" || subjectId == "comprension_lectora" || subjectId == "geografia" || subjectId == "raz_verbal" || subjectId == "ingles" || subjectId == "raz_logico" || subjectId == "raz_matematico" || subjectId == "quimica" || subjectId == "fisica" || subjectId == "trigonometria" || subjectId == "geometria" || subjectId == "aritmetica" || subjectId == "algebra") {
             // Google (mismo sistema genérico que Biología): legacy solo en las semanas
             // aún no cubiertas por el contenido nuevo; al completar todas las semanas
             // el legacy queda excluido sin duplicar. Sin cross-subject fallback.
@@ -281,10 +285,14 @@ object AprenderRepository {
     }
 
     fun getLessonsForSubjectSync(subjectId: String): List<LessonNode> = runBlocking {
-        getSampleLessonsForSubject(subjectId)
+        getLessonsForSubject(subjectId)
     }
 
-    suspend fun getLessonsForSubject(subjectId: String): List<LessonNode> = getSampleLessonsForSubject(subjectId)
+    suspend fun getLessonsForSubject(subjectId: String): List<LessonNode> = catalogMutex.withLock {
+        // Test loaders must remain independent; production resources are immutable.
+        if (testLoaderOverride != null) getSampleLessonsForSubject(subjectId)
+        else catalogs.getOrPut(normalizeSubjectId(subjectId)) { getSampleLessonsForSubject(subjectId) }
+    }
 
     suspend fun getLessonById(lessonId: String): LessonNode? {
         // Contenido nuevo primero para Biología semana 8+ (reemplaza al legacy 8.x);
@@ -333,6 +341,230 @@ object AprenderRepository {
             val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
             try {
                 return contentLoader.loadLesson("psicologia", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Historia del Perú (IDs hper_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy usa prefijo distinto (hp_): sin colisión; semanas 1-5 nuevo,
+        // semanas 6+ legacy por exclusión semanal (igual que bio 8+/legacy 1-7).
+        Regex("""hper_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("historia_peru", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Historia Universal (IDs huni_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy usa prefijo distinto (hu_): sin colisión; semanas 1-6 nuevo,
+        // semanas 7+ legacy por exclusión semanal. Staging sem05 trae
+        // subtema Int normalizado a "5.1"/"5.2" en la generación (ver conversor).
+        Regex("""huni_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("historia_universal", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Ed. Cívica (IDs civ_tWW_sNN, mismo esquema que psi_);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy comparte prefijo civ_: reemplazo intencional; semanas 1-11 nuevo
+        // excluyen al legacy completo. Staging trae subjectId/semana/subtema
+        // vacíos normalizados a "w.k" en la generación (ver conversor).
+        Regex("""civ_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("civica", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Filosofía (IDs filo_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy usa prefijo distinto (fil_): sin colisión; semanas 1-13 nuevo
+        // excluyen al legacy completo.
+        Regex("""filo_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("filosofia", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Comp. Lectora (IDs cl_tWW_sNN, mismo esquema que psi_);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy comparte prefijo cl_: reemplazo intencional; semanas 1-8 nuevo
+        // excluyen al legacy completo. Staging trae subjectId/semana/subtema
+        // vacíos o ausentes normalizados a "w.k" en la generación (ver conversor).
+        Regex("""cl_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("comprension_lectora", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Geografía (IDs geo_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy usa prefijo distinto (geog_): sin colisión; semanas 1-13 nuevo
+        // excluyen al legacy completo. Staging trae subjectId/semana/subtema
+        // vacíos o ausentes normalizados a "w.k" en la generación (ver conversor).
+        Regex("""geo_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("geografia", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Raz. Verbal (IDs rv_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy comparte prefijo rv_: reemplazo intencional; semanas 1-8 nuevo
+        // excluyen al legacy completo.
+        Regex("""rv_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("raz_verbal", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Inglés (IDs ing_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy comparte prefijo ing_: reemplazo intencional; semanas 1-7 nuevo
+        // excluyen al legacy completo. Staging trae subjectId/semana/subtema
+        // vacíos o ausentes normalizados a "w.k" en la generación (ver conversor).
+        Regex("""ing_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("ingles", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Raz. Lógico (IDs rl_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy comparte prefijo rl_: reemplazo intencional; semanas 1-9 nuevo
+        // excluyen al legacy completo. Staging trae subjectId/semana/subtema
+        // vacíos o ausentes normalizados a "w.k" en la generación (ver conversor).
+        Regex("""rl_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("raz_logico", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Raz. Matemático (IDs rm_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy comparte prefijo rm_: reemplazo intencional; semanas 1-7 nuevo
+        // excluyen al legacy completo. Staging trae subjectId/semana/subtema
+        // vacíos o ausentes normalizados a "w.k" en la generación (ver conversor).
+        Regex("""rm_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("raz_matematico", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Química (IDs quim_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy Part1/Part2 con subjectId "quimica" en semanas 1-15 queda
+        // excluido (reemplazo total); el resto del legacy tiene subjectId
+        // defectuoso (invisible para forSubject). Staging trae subjectId/semana/
+        // subtema vacíos o ausentes normalizados a "w.k" en la generación.
+        Regex("""quim_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("quimica", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Física (IDs fis_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy comparte prefijo fis_: reemplazo intencional; semanas 1-12 nuevo
+        // excluyen al legacy completo. Staging trae subjectId/semana/subtema
+        // vacíos o ausentes normalizados a "w.k" en la generación (ver conversor).
+        Regex("""fis_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("fisica", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Trigonometría (IDs trig_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy usa prefijo distinto (tri_): sin colisión; semanas 1-12 nuevo
+        // excluyen al legacy completo. Staging trae subjectId/semana/subtema
+        // vacíos o ausentes normalizados a "w.k" en la generación (ver conversor).
+        Regex("""trig_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("trigonometria", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Geometría (IDs geom_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy usa prefijo distinto (geo_): sin colisión; semanas 1-11 nuevo
+        // excluyen al legacy completo. Staging trae subjectId/semana/subtema
+        // vacíos o ausentes normalizados a "w.k" en la generación (ver conversor).
+        // NOTA: geo_t* también existe en geografía-nuevo, pero con distinto
+        // subjectId: sin contaminación cruzada (cada mapa filtra por subjectId).
+        Regex("""geom_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("geometria", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Aritmética (IDs arit_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy usa prefijo distinto (ari_): sin colisión; semanas 1-13 nuevo
+        // excluyen al legacy completo. Staging trae subjectId/semana/subtema
+        // vacíos o ausentes normalizados a "w.k" en la generación (ver conversor).
+        Regex("""arit_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("aritmetica", week, subtopic).lesson
+            } catch (_: Exception) {
+                // cae a legacy abajo
+            }
+        }
+        // Contenido nuevo para Álgebra (IDs alg_tWW_sNN);
+        // si el loader falla, cae al catálogo legacy (FAIL LOCAL, sin contaminar).
+        // Legacy comparte prefijo alg_: reemplazo intencional; semanas 1-16 nuevo
+        // excluyen al legacy completo. Staging trae subjectId/semana/subtema
+        // vacíos o ausentes normalizados a "w.k" en la generación (ver conversor).
+        Regex("""alg_t(\d+)_s(\d+)""").matchEntire(lessonId)?.let { m ->
+            val week = m.groupValues[1].toIntOrNull() ?: 0
+            val subtopic = "$week.${m.groupValues[2].toIntOrNull() ?: 0}"
+            try {
+                return contentLoader.loadLesson("algebra", week, subtopic).lesson
             } catch (_: Exception) {
                 // cae a legacy abajo
             }

@@ -1,6 +1,7 @@
 package com.jonsuapps.rastro.theme
 
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
@@ -38,7 +39,11 @@ data class RastroPalette(
     val strokeBorder: Color = if (isLight) Color(0xFF1E293B) else Color(0xFF475569),
     val cardBevel: Color = if (isLight) Color(0xFFCBD5E1) else Color(0xFF0F172A),
     val accentBevel: Color = if (isLight) Color(0xFF0056B3) else Color(0xFF0284C7)
-)
+) {
+    // Immutable derived roles, computed once per palette rather than once per Text/Icon.
+    val readableAccent: Color = readableTextAcross(accent, listOf(background, surface, surfaceAccent))
+    val accentForeground: Color = onColor(accent)
+}
 
 typealias RastroColors = RastroPalette
 
@@ -70,28 +75,28 @@ object RastroThemeTokens {
     fun getColors(themeId: RastroThemeId): RastroPalette {
         return when (themeId) {
             RastroThemeId.LIGHT -> RastroPalette(
-                background = Color(0xFFF2F2F7),
-                surface = Color(0xFFFFFFFF),
-                surfaceAccent = Color(0xFFF1F5F9),
+                background = Color(0xFFF7F3E9),
+                surface = Color(0xFFFFFBF2),
+                surfaceAccent = Color(0xFFF2EBDD),
                 borderSubtle = Color(0x2E787880),
                 surfaceBorder = Color(0x2E787880),
-                strokeBorder = Color(0xFF1E293B),
-                cardBevel = Color(0xFFCBD5E1),
-                accentBevel = Color(0xFF0056B3),
+                strokeBorder = Color(0xFF292524),
+                cardBevel = Color(0xFFB5AB99),
+                accentBevel = Color(0xFF075E45),
                 textPrimary = Color(0xFF0F172A),
                 textSecondary = Color(0xFF64748B),
                 textMuted = Color(0xFF94A3B8),
-                accent = Color(0xFF007AFF),
+                accent = Color(0xFF128664),
                 isLight = true
             )
             RastroThemeId.LIGHT_WARM -> RastroPalette(
                 background = Color(0xFFF6F3EC),
-                surface = Color(0xFFFFFFFF),
+                surface = Color(0xFFFFFBF2),
                 surfaceAccent = Color(0xFFF0ECE4),
                 borderSubtle = Color(0x33D1C7BD),
                 surfaceBorder = Color(0x33D1C7BD),
                 strokeBorder = Color(0xFF292524),
-                cardBevel = Color(0xFFD6D3D1),
+                cardBevel = Color(0xFFB5AB99),
                 accentBevel = Color(0xFFB45309),
                 textPrimary = Color(0xFF1C1917),
                 textSecondary = Color(0xFF78716C),
@@ -271,7 +276,11 @@ fun generateCustomPalette(primary: Color, secondary: Color, accent: Color, highl
 }
 
 object ThemeManager {
-    var currentThemeId by mutableStateOf(RastroThemeId.LIGHT)
+    var academicBackgroundEnabled by mutableStateOf(true)
+        private set
+    fun setAcademicBackground(enabled: Boolean) { academicBackgroundEnabled = enabled }
+
+    var currentThemeId by mutableStateOf(RastroThemeId.MATERIAL_YOU)
         private set
 
     var customColors by mutableStateOf(CustomThemeColors())
@@ -282,12 +291,20 @@ object ThemeManager {
 
     var dynamicPaletteOverride by mutableStateOf<RastroPalette?>(null)
 
-    val currentTheme: RastroPalette
-        get() = when {
+    var materialYouIntensity by mutableStateOf(MaterialYouIntensity.MEDIUM)
+        private set
+    fun chooseMaterialYouIntensity(intensity: MaterialYouIntensity) { materialYouIntensity = intensity }
+
+    private val resolvedPalette = derivedStateOf {
+        val raw = when {
             currentThemeId == RastroThemeId.CUSTOM -> customPalette
-            currentThemeId == RastroThemeId.MATERIAL_YOU && dynamicPaletteOverride != null -> dynamicPaletteOverride!!
+            currentThemeId == RastroThemeId.MATERIAL_YOU -> materialYouPalette(
+                dynamicPaletteOverride ?: RastroThemeTokens.getColors(currentThemeId), materialYouIntensity)
             else -> RastroThemeTokens.getColors(currentThemeId)
         }
+        accessiblePalette(raw)
+    }
+    val currentTheme: RastroPalette get() = resolvedPalette.value
 
     fun setTheme(themeId: RastroThemeId) {
         currentThemeId = themeId

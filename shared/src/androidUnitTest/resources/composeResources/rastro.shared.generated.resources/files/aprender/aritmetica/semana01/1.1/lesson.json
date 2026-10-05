@@ -1,0 +1,18 @@
+{
+  "id": "arit_t01_s01",
+  "subjectId": "aritmetica",
+  "semana": 1,
+  "subtema": "1.1",
+  "title": "Relaciones Lógicas y Conjuntos - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/aritmetica/AritmeticaSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_arit_t01_s01",
+    "asignatura": "Aritmética",
+    "semana": 1,
+    "titulo": "Relaciones Lógicas y Conjuntos - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

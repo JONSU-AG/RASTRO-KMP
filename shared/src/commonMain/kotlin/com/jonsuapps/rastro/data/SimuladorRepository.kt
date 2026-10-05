@@ -12,71 +12,74 @@ import kotlin.random.Random
 
 object SimuladorRepository {
 
+    // RCU 0028-2026: matriz admisión 2027, dos páginas. Conservar precisión hasta la suma final.
+    const val MATRIX_SOURCE_URL = "https://admision.unsa.edu.pe/wp-content/uploads/2026/03/RCU-0028-Aprobacion-de-TEMARIO-y-MATRIZ-ADMISION-2027.pdf"
+
     val ponderacionesSociales = listOf(
-        PonderacionAsignatura("Aptitud Académica", "Raz. Lógico", 4, 1.1242),
-        PonderacionAsignatura("Aptitud Académica", "Raz. Matemático", 5, 1.1007),
-        PonderacionAsignatura("Aptitud Académica", "Raz. Verbal", 4, 1.1242),
-        PonderacionAsignatura("Aptitud Académica", "Comp. Lectora", 5, 1.1007),
-        PonderacionAsignatura("Matemática", "Álgebra", 3, 0.8246),
-        PonderacionAsignatura("Matemática", "Aritmética", 3, 0.8241),
-        PonderacionAsignatura("Matemática", "Geometría", 3, 0.8250),
-        PonderacionAsignatura("Matemática", "Trigonometría", 3, 0.8596),
-        PonderacionAsignatura("Ciencias Sociales", "Historia", 8, 1.7747),
-        PonderacionAsignatura("Ciencias Sociales", "Geografía", 5, 1.7604),
-        PonderacionAsignatura("Ciencia y Tecnología", "Química", 3, 1.1093),
-        PonderacionAsignatura("Ciencia y Tecnología", "Biología", 3, 1.1469),
-        PonderacionAsignatura("Ciencia y Tecnología", "Física", 3, 1.0771),
-        PonderacionAsignatura("Persona y Familia", "Filosofía", 3, 0.8879),
-        PonderacionAsignatura("Persona y Familia", "Psicología", 5, 0.9345),
-        PonderacionAsignatura("Persona y Familia", "Ed. Cívica", 3, 0.8879),
-        PonderacionAsignatura("Comunicación", "Lenguaje", 8, 1.7015),
-        PonderacionAsignatura("Comunicación", "Literatura", 5, 1.6775),
+        PonderacionAsignatura("Aptitud Académica", "Raz. Lógico", 4, 1.12415),
+        PonderacionAsignatura("Aptitud Académica", "Raz. Matemático", 5, 1.10068),
+        PonderacionAsignatura("Aptitud Académica", "Raz. Verbal", 4, 1.12415),
+        PonderacionAsignatura("Aptitud Académica", "Comp. Lectora", 5, 1.10068),
+        PonderacionAsignatura("Matemática", "Álgebra", 3, 0.824574),
+        PonderacionAsignatura("Matemática", "Aritmética", 3, 0.8241343),
+        PonderacionAsignatura("Matemática", "Geometría", 3, 0.825011634),
+        PonderacionAsignatura("Matemática", "Trigonometría", 3, 0.8596135),
+        PonderacionAsignatura("Ciencias Sociales", "Historia", 8, 1.77474),
+        PonderacionAsignatura("Ciencias Sociales", "Geografía", 5, 1.760416),
+        PonderacionAsignatura("Ciencia y Tecnología", "Química", 3, 1.109300781),
+        PonderacionAsignatura("Ciencia y Tecnología", "Biología", 3, 1.146903363),
+        PonderacionAsignatura("Ciencia y Tecnología", "Física", 3, 1.077129189),
+        PonderacionAsignatura("Persona y Familia", "Filosofía", 3, 0.887877),
+        PonderacionAsignatura("Persona y Familia", "Psicología", 5, 0.9345476),
+        PonderacionAsignatura("Persona y Familia", "Ed. Cívica", 3, 0.887877),
+        PonderacionAsignatura("Comunicación", "Lenguaje", 8, 1.701541),
+        PonderacionAsignatura("Comunicación", "Literatura", 5, 1.6775344),
         PonderacionAsignatura("Idioma Extranjero", "Lectura", 2, 1.2587),
         PonderacionAsignatura("Idioma Extranjero", "Gramática", 2, 1.2413)
     )
 
     val ponderacionesIngenierias = listOf(
-        PonderacionAsignatura("Aptitud Académica", "Raz. Lógico", 4, 1.1242),
-        PonderacionAsignatura("Aptitud Académica", "Raz. Matemático", 5, 1.1007),
-        PonderacionAsignatura("Aptitud Académica", "Raz. Verbal", 4, 1.1242),
-        PonderacionAsignatura("Aptitud Académica", "Comp. Lectora", 5, 1.1007),
-        PonderacionAsignatura("Matemática", "Álgebra", 4, 1.6583),
-        PonderacionAsignatura("Matemática", "Aritmética", 4, 1.6583),
-        PonderacionAsignatura("Matemática", "Geometría", 4, 1.6588),
-        PonderacionAsignatura("Matemática", "Trigonometría", 3, 1.6995),
-        PonderacionAsignatura("Ciencias Sociales", "Historia", 4, 1.2899),
-        PonderacionAsignatura("Ciencias Sociales", "Geografía", 4, 1.2101),
-        PonderacionAsignatura("Ciencia y Tecnología", "Química", 6, 1.4254),
-        PonderacionAsignatura("Ciencia y Tecnología", "Biología", 5, 1.1547),
-        PonderacionAsignatura("Ciencia y Tecnología", "Física", 7, 1.5248),
-        PonderacionAsignatura("Persona y Familia", "Filosofía", 3, 0.7987),
-        PonderacionAsignatura("Persona y Familia", "Psicología", 4, 0.8019),
-        PonderacionAsignatura("Persona y Familia", "Ed. Cívica", 3, 0.7987),
-        PonderacionAsignatura("Comunicación", "Lenguaje", 4, 1.0214),
-        PonderacionAsignatura("Comunicación", "Literatura", 3, 0.9714),
+        PonderacionAsignatura("Aptitud Académica", "Raz. Lógico", 4, 1.12415),
+        PonderacionAsignatura("Aptitud Académica", "Raz. Matemático", 5, 1.10068),
+        PonderacionAsignatura("Aptitud Académica", "Raz. Verbal", 4, 1.12415),
+        PonderacionAsignatura("Aptitud Académica", "Comp. Lectora", 5, 1.10068),
+        PonderacionAsignatura("Matemática", "Álgebra", 4, 1.6583374),
+        PonderacionAsignatura("Matemática", "Aritmética", 4, 1.6582674),
+        PonderacionAsignatura("Matemática", "Geometría", 4, 1.65878745),
+        PonderacionAsignatura("Matemática", "Trigonometría", 3, 1.699477),
+        PonderacionAsignatura("Ciencias Sociales", "Historia", 4, 1.289859),
+        PonderacionAsignatura("Ciencias Sociales", "Geografía", 4, 1.210141),
+        PonderacionAsignatura("Ciencia y Tecnología", "Química", 6, 1.425411425),
+        PonderacionAsignatura("Ciencia y Tecnología", "Biología", 5, 1.1547487),
+        PonderacionAsignatura("Ciencia y Tecnología", "Física", 7, 1.524826850),
+        PonderacionAsignatura("Persona y Familia", "Filosofía", 3, 0.79874),
+        PonderacionAsignatura("Persona y Familia", "Psicología", 4, 0.80189),
+        PonderacionAsignatura("Persona y Familia", "Ed. Cívica", 3, 0.79874),
+        PonderacionAsignatura("Comunicación", "Lenguaje", 4, 1.021414),
+        PonderacionAsignatura("Comunicación", "Literatura", 3, 0.971448),
         PonderacionAsignatura("Idioma Extranjero", "Lectura", 2, 1.2587),
         PonderacionAsignatura("Idioma Extranjero", "Gramática", 2, 1.2413)
     )
 
     val ponderacionesBiomedicas = listOf(
-        PonderacionAsignatura("Aptitud Académica", "Raz. Lógico", 4, 1.1242),
-        PonderacionAsignatura("Aptitud Académica", "Raz. Matemático", 5, 1.1007),
-        PonderacionAsignatura("Aptitud Académica", "Raz. Verbal", 4, 1.1242),
-        PonderacionAsignatura("Aptitud Académica", "Comp. Lectora", 5, 1.1007),
-        PonderacionAsignatura("Matemática", "Álgebra", 3, 1.2654),
-        PonderacionAsignatura("Matemática", "Aritmética", 3, 1.2654),
-        PonderacionAsignatura("Matemática", "Geometría", 3, 1.2654),
-        PonderacionAsignatura("Matemática", "Trigonometría", 3, 1.2037),
-        PonderacionAsignatura("Ciencias Sociales", "Historia", 5, 1.1235),
-        PonderacionAsignatura("Ciencias Sociales", "Geografía", 4, 1.0956),
-        PonderacionAsignatura("Ciencia y Tecnología", "Química", 6, 1.6847),
-        PonderacionAsignatura("Ciencia y Tecnología", "Biología", 9, 1.9451),
-        PonderacionAsignatura("Ciencia y Tecnología", "Física", 5, 1.4771),
-        PonderacionAsignatura("Persona y Familia", "Filosofía", 3, 0.7987),
-        PonderacionAsignatura("Persona y Familia", "Psicología", 4, 0.8019),
-        PonderacionAsignatura("Persona y Familia", "Ed. Cívica", 3, 0.7987),
-        PonderacionAsignatura("Comunicación", "Lenguaje", 4, 1.0214),
-        PonderacionAsignatura("Comunicación", "Literatura", 3, 0.9714),
+        PonderacionAsignatura("Aptitud Académica", "Raz. Lógico", 4, 1.12415),
+        PonderacionAsignatura("Aptitud Académica", "Raz. Matemático", 5, 1.10068),
+        PonderacionAsignatura("Aptitud Académica", "Raz. Verbal", 4, 1.12415),
+        PonderacionAsignatura("Aptitud Académica", "Comp. Lectora", 5, 1.10068),
+        PonderacionAsignatura("Matemática", "Álgebra", 3, 1.2654474),
+        PonderacionAsignatura("Matemática", "Aritmética", 3, 1.2654474),
+        PonderacionAsignatura("Matemática", "Geometría", 3, 1.2654474),
+        PonderacionAsignatura("Matemática", "Trigonometría", 3, 1.2036578),
+        PonderacionAsignatura("Ciencias Sociales", "Historia", 5, 1.12354),
+        PonderacionAsignatura("Ciencias Sociales", "Geografía", 4, 1.095575),
+        PonderacionAsignatura("Ciencia y Tecnología", "Química", 6, 1.68474),
+        PonderacionAsignatura("Ciencia y Tecnología", "Biología", 9, 1.94514),
+        PonderacionAsignatura("Ciencia y Tecnología", "Física", 5, 1.47706),
+        PonderacionAsignatura("Persona y Familia", "Filosofía", 3, 0.79874),
+        PonderacionAsignatura("Persona y Familia", "Psicología", 4, 0.80189),
+        PonderacionAsignatura("Persona y Familia", "Ed. Cívica", 3, 0.79874),
+        PonderacionAsignatura("Comunicación", "Lenguaje", 4, 1.021414),
+        PonderacionAsignatura("Comunicación", "Literatura", 3, 0.971448),
         PonderacionAsignatura("Idioma Extranjero", "Lectura", 2, 1.2587),
         PonderacionAsignatura("Idioma Extranjero", "Gramática", 2, 1.2413)
     )
@@ -159,20 +162,71 @@ object SimuladorRepository {
         }
     }.replace(Regex("\\s+"), " ").trim()
 
+    /** Ranking uses only actual subjects with known weights; never relabels a question. */
+    fun generateRankingExam(bank: List<ExamQuestion>, area: AreaAdmision, seed: Int): List<ExamQuestion> {
+        val used = mutableSetOf<String>()
+        val rules = getPonderaciones(area)
+        val selected = rules.flatMap { rule ->
+            val eligible = bank.filter { it.id !in used && normalizeExamSubject(it.asignatura) == normalizeExamSubject(rule.asignatura) }
+                .distinctBy { it.id }.shuffled(Random(seed + used.size))
+            eligible.take(rule.preguntas).map { q ->
+                used += q.id
+                q.copy(asignatura = rule.asignatura, curso = rule.curso, area = area.label, valorPonderado = rule.valor)
+            }
+        }.toMutableList()
+        val extra = bank.filter { it.id !in used && rules.any { rule -> normalizeExamSubject(rule.asignatura) == normalizeExamSubject(it.asignatura) } }
+            .distinctBy { it.id }.shuffled(Random(seed)).take(80 - selected.size)
+        selected += extra.map { q ->
+            val rule = rules.first { normalizeExamSubject(it.asignatura) == normalizeExamSubject(q.asignatura) }
+            q.copy(curso = rule.curso, area = area.label, valorPonderado = rule.valor)
+        }
+        require(selected.size == 80) { "Banco insuficiente: hacen falta 80 preguntas reales con ponderación conocida." }
+        return selected
+    }
+
+    /** Competitive score on 100, using the actual paper's total weights. Official score is unchanged. */
+    fun rankingScore(result: ExamEvaluationResult): Double {
+        val possible = result.details.sumOf { it.valorPonderado }
+        val earned = result.details.filter { it.isCorrect }.sumOf { it.valorPonderado }
+        return if (possible <= 0) 0.0 else (earned / possible * 1000000).roundToInt() / 10000.0
+    }
+
+    /** Same exact per-subject weights as exam scoring, never an averaged course weight. */
+    fun projectedScore(area: AreaAdmision, correctBySubject: Map<String, Int>): Double {
+        val score = getPonderaciones(area).sumOf { rule ->
+            (correctBySubject[rule.asignatura] ?: 0).coerceIn(0, rule.preguntas) * rule.valor
+        }
+        return (score.coerceIn(0.0, 100.0) * 10000).roundToInt() / 10000.0
+    }
+
+    /** Historical NORMAL admitted ranges, not guaranteed admission thresholds or vacancies. */
     val carrerasUNSACortes = listOf(
-        CareerCutoff("Medicina Humana", AreaAdmision.BIOMEDICAS, 87.5420, 96.8200, 32),
-        CareerCutoff("Enfermería", AreaAdmision.BIOMEDICAS, 72.1100, 81.4500, 50),
-        CareerCutoff("Biología", AreaAdmision.BIOMEDICAS, 68.3200, 76.8000, 45),
-        CareerCutoff("Nutrición Humana", AreaAdmision.BIOMEDICAS, 69.4500, 78.2000, 40),
-        CareerCutoff("Ingeniería de Sistemas", AreaAdmision.INGENIERIAS, 82.1500, 92.4000, 40),
-        CareerCutoff("Ingeniería Civil", AreaAdmision.INGENIERIAS, 84.3000, 94.1000, 45),
-        CareerCutoff("Ingeniería Mecánica", AreaAdmision.INGENIERIAS, 75.8000, 85.2000, 40),
-        CareerCutoff("Ingeniería Industrial", AreaAdmision.INGENIERIAS, 81.2000, 89.9000, 50),
-        CareerCutoff("Derecho", AreaAdmision.SOCIALES, 83.4500, 93.1200, 60),
-        CareerCutoff("Psicología", AreaAdmision.SOCIALES, 76.5000, 84.9000, 45),
-        CareerCutoff("Administración", AreaAdmision.SOCIALES, 74.2000, 82.6000, 65),
-        CareerCutoff("Contabilidad", AreaAdmision.SOCIALES, 72.9000, 80.5000, 70),
-        CareerCutoff("Ciencias de la Comunicación", AreaAdmision.SOCIALES, 71.1000, 79.4000, 40)
+        CareerCutoff("Medicina Humana", AreaAdmision.BIOMEDICAS, 73.498049, 89.014969, 0,
+            referenceProcess = "Ordinario II Fase 2025", referenceUrl = "https://www.unsa.edu.pe/wp-content/uploads/2022/11/reportes_resultados_Ing_ord2025F2R.pdf", admittedCount = 18),
+        CareerCutoff("Enfermería", AreaAdmision.BIOMEDICAS, 54.298114, 68.312787, 0,
+            referenceProcess = "Ordinario II Fase 2025", referenceUrl = "https://www.unsa.edu.pe/wp-content/uploads/2022/11/reportes_resultados_Ing_ord2025F2R.pdf", admittedCount = 21),
+        CareerCutoff("Biología", AreaAdmision.BIOMEDICAS, 50.387682, 64.774219, 0,
+            referenceProcess = "Ordinario II Fase 2025", referenceUrl = "https://www.unsa.edu.pe/wp-content/uploads/2022/11/reportes_resultados_Ing_ord2025F2R.pdf", admittedCount = 37),
+        CareerCutoff("Nutrición Humana", AreaAdmision.BIOMEDICAS, 46.187953, 59.367138, 0,
+            referenceProcess = "Ordinario II Fase 2025", referenceUrl = "https://www.unsa.edu.pe/wp-content/uploads/2022/11/reportes_resultados_Ing_ord2025F2R.pdf", admittedCount = 18),
+        CareerCutoff("Ingeniería de Sistemas", AreaAdmision.INGENIERIAS, 49.459067, 65.33287, 0,
+            referenceProcess = "Ordinario II Fase 2025", referenceUrl = "https://www.unsa.edu.pe/wp-content/uploads/2022/11/reportes_resultados_Ing_ord2025F2R.pdf", admittedCount = 24),
+        CareerCutoff("Ingeniería Civil", AreaAdmision.INGENIERIAS, 55.753406, 80.176365, 0,
+            referenceProcess = "Ordinario II Fase 2025", referenceUrl = "https://www.unsa.edu.pe/wp-content/uploads/2022/11/reportes_resultados_Ing_ord2025F2R.pdf", admittedCount = 25),
+        CareerCutoff("Ingeniería Mecánica", AreaAdmision.INGENIERIAS, 47.981227, 62.115488, 0,
+            referenceProcess = "Ordinario II Fase 2025", referenceUrl = "https://www.unsa.edu.pe/wp-content/uploads/2022/11/reportes_resultados_Ing_ord2025F2R.pdf", admittedCount = 25),
+        CareerCutoff("Ingeniería Industrial", AreaAdmision.INGENIERIAS, 51.768612, 62.863329, 0,
+            referenceProcess = "Ordinario II Fase 2025", referenceUrl = "https://www.unsa.edu.pe/wp-content/uploads/2022/11/reportes_resultados_Ing_ord2025F2R.pdf", admittedCount = 28),
+        CareerCutoff("Derecho", AreaAdmision.SOCIALES, 57.754028, 70.953546, 0,
+            referenceProcess = "Ordinario II Fase 2025", referenceUrl = "https://www.unsa.edu.pe/wp-content/uploads/2022/11/reportes_resultados_Ing_ord2025F2R.pdf", admittedCount = 40),
+        CareerCutoff("Psicología", AreaAdmision.SOCIALES, 54.124514, 69.13536, 0,
+            referenceProcess = "Ordinario II Fase 2025", referenceUrl = "https://www.unsa.edu.pe/wp-content/uploads/2025/03/reportes_resultados_Ingresa_ord2025F2_psicoR.pdf", admittedCount = 44),
+        CareerCutoff("Administración", AreaAdmision.SOCIALES, 56.700027, 66.275751, 0,
+            referenceProcess = "Ordinario II Fase 2025", referenceUrl = "https://www.unsa.edu.pe/wp-content/uploads/2022/11/reportes_resultados_Ing_ord2025F2R.pdf", admittedCount = 10),
+        CareerCutoff("Contabilidad", AreaAdmision.SOCIALES, 47.539813, 59.424452, 0,
+            referenceProcess = "Ordinario II Fase 2025", referenceUrl = "https://www.unsa.edu.pe/wp-content/uploads/2022/11/reportes_resultados_Ing_ord2025F2R.pdf", admittedCount = 54),
+        CareerCutoff("Ciencias de la Comunicación", AreaAdmision.SOCIALES, 35.300763, 60.88862, 0,
+            referenceProcess = "Ordinario II Fase 2025", referenceUrl = "https://www.unsa.edu.pe/wp-content/uploads/2022/11/reportes_resultados_Ing_ord2025F2R.pdf", admittedCount = 65)
     )
 
     fun calculateScore(

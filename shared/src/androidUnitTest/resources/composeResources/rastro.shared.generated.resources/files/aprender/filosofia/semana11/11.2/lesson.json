@@ -1,0 +1,18 @@
+{
+  "id": "filo_t11_s02",
+  "subjectId": "filosofia",
+  "semana": 11,
+  "subtema": "11.2",
+  "title": "C. El Gran Debate Axiológico: Subjetivismo vs. Objetivismo",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana11.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t11_s02",
+    "asignatura": "Filosofía",
+    "semana": 11,
+    "titulo": "C. El Gran Debate Axiológico: Subjetivismo vs. Objetivismo",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

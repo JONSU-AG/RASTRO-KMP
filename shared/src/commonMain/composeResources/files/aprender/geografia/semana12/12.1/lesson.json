@@ -1,0 +1,18 @@
+{
+  "id": "geo_t12_s01",
+  "subjectId": "geografia",
+  "semana": 12,
+  "subtema": "12.1",
+  "title": "3.1. Sector Primario: Actividades Extractivas",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana12.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t12_s01",
+    "asignatura": "Geografía",
+    "semana": 12,
+    "titulo": "3.1. Sector Primario: Actividades Extractivas",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

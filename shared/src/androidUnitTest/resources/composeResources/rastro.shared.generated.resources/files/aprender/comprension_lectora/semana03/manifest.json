@@ -1,0 +1,18 @@
+{
+  "week": 3,
+  "title": "Semana 3",
+  "lessons": [
+    {
+      "subtopic": "3.1",
+      "lessonId": "cl_t03_s01",
+      "title": "3.1 La Trinidad de la Comprensión Global: Tema, Idea Principal y Título",
+      "path": "3.1/lesson.json"
+    },
+    {
+      "subtopic": "3.2",
+      "lessonId": "cl_t03_s02",
+      "title": "3.3 El Criterio de Jerarquización de Ideas Secundarias",
+      "path": "3.2/lesson.json"
+    }
+  ]
+}

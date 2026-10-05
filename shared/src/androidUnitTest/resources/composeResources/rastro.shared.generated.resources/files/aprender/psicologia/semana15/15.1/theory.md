@@ -138,3 +138,11 @@ Desarrollo igual a continuo toda la vida. Herencia igual a potencial. Maduració
 
 ## RESUMEN
 Desarrollo continuo Baltes con herencia, maduración, ambiente y aprendizaje. Leyes céfalo caudal para caminar y próximo distal para pinzar. Prenatal germinal, embrionario y fetal más infancia 0 a 3 con marcha bípeda y lenguaje. Pubertad con menarquia y espermarquia más audiencia que se siente observada y fábula que se siente inmune. Adultez temprana plena y senectud con integridad serena más Erikson ocho crisis y duelo N I N D A.
+
+## Crecimiento, maduración y desarrollo: diferencias
+
+Crecimiento describe cambios cuantitativos, como aumento de talla o masa corporal. Maduración alude a cambios biológicos que permiten nuevas funciones. Desarrollo comprende transformaciones y continuidad en dimensiones biológicas, cognitivas, emocionales y sociales durante el ciclo vital. No se reduce al crecimiento ni termina al alcanzar una estatura adulta.
+
+Aprendizaje y ambiente intervienen junto con condiciones biológicas. Una nueva habilidad puede necesitar cierta maduración y, además, oportunidades de práctica y apoyo. Las edades expresan referencias aproximadas, no calendarios rígidos idénticos para todas las personas. La comparación debe considerar contexto y variabilidad, evitando convertir una descripción general en diagnóstico individual.
+
+Las conductas de riesgo se estudian relacionando circunstancias, percepción de consecuencias y factores de protección. Apoyo familiar, vínculos comunitarios e información ayudan a comprender prevención, sin atribuir toda conducta adolescente a una causa única o a un destino inevitable.

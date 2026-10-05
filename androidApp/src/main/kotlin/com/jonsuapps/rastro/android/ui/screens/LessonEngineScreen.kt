@@ -1,5 +1,15 @@
 package com.jonsuapps.rastro.android.ui.screens
+import com.jonsuapps.rastro.theme.accentText
+import com.jonsuapps.rastro.theme.onAccent
 
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.mutableLongStateOf
+import com.jonsuapps.rastro.model.LessonComboState
+import com.jonsuapps.rastro.model.ComboEvent
+import com.jonsuapps.rastro.android.ui.components.LessonComboSaver
+import com.jonsuapps.rastro.android.ui.components.LessonComboIndicator
+import com.jonsuapps.rastro.android.ui.components.ComboMilestoneEffect
+import com.jonsuapps.rastro.android.ui.components.resolveComboEffect
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -8,12 +18,15 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -68,10 +81,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.jonsuapps.rastro.android.ui.components.ArtyonMascot
-import com.jonsuapps.rastro.android.ui.components.DualMascotDuo
+import com.jonsuapps.rastro.android.ui.components.*
 import com.jonsuapps.rastro.android.ui.components.MascotMood
-import com.jonsuapps.rastro.android.ui.components.OrsttyMascot
 import com.jonsuapps.rastro.auth.AdminConfig
 import com.jonsuapps.rastro.data.AprenderRepository
 import com.jonsuapps.rastro.android.data.GamificationRepository
@@ -79,6 +90,8 @@ import com.jonsuapps.rastro.auth.UserManager
 import com.jonsuapps.rastro.gamification.GamificationManager
 import com.jonsuapps.rastro.model.Challenge
 import com.jonsuapps.rastro.model.ChallengeType
+import com.jonsuapps.rastro.model.ChallengeInteraction
+import com.jonsuapps.rastro.model.MatchAnswerState
 import com.jonsuapps.rastro.model.LessonNode
 import com.jonsuapps.rastro.model.LessonTheory
 import com.jonsuapps.rastro.theme.RastroShapes
@@ -90,31 +103,79 @@ fun LessonEngineScreen(
     onFinishLesson: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    var retry by remember(lessonId) { mutableIntStateOf(0) }
+    val loaded by androidx.compose.runtime.produceState<Result<LessonNode>?>(null, lessonId, retry) {
+        value = null
+        value = try {
+            kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                val node = AprenderRepository.getLessonById(lessonId)
+                    ?: error("No se encontró esta lección.")
+                Result.success(com.jonsuapps.rastro.model.LessonSpecialActivities.prepare(node))
+            }
+        } catch (cancelled: kotlinx.coroutines.CancellationException) {
+            throw cancelled
+        } catch (error: Exception) {
+            Result.failure(error)
+        }
+    }
+    val lesson = loaded?.getOrNull()
+    if (lesson != null) {
+        LoadedLessonEngineScreen(lessonId, lesson, onFinishLesson, modifier)
+    } else {
+        val theme = ThemeManager.currentTheme
+        androidx.activity.compose.BackHandler { onFinishLesson() }
+        Column(modifier.fillMaxSize().background(theme.background).padding(24.dp),
+            verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
+            Text(if (loaded == null) "Cargando lección…" else "No se pudo cargar esta lección.", color = theme.textPrimary)
+            if (loaded != null) TextButton(onClick = { retry++ }) { Text("Reintentar", color = theme.accentText) }
+            TextButton(onClick = onFinishLesson) { Text("Volver", color = theme.textPrimary) }
+        }
+    }
+}
+
+@Composable
+private fun LoadedLessonEngineScreen(
+    lessonId: String,
+    lesson: LessonNode,
+    onFinishLesson: () -> Unit,
+    modifier: Modifier
+) {
     val theme = ThemeManager.currentTheme
     val context = LocalContext.current
+    val audio = rememberLearningAudio()
+    var completedTopic by remember(lessonId) { mutableStateOf<String?>(null) }
+    var topicLevelUp by remember(lessonId) { mutableStateOf(false) }
+    var pendingTopicXp by remember(lessonId) { mutableIntStateOf(0) }
     val hearts by GamificationManager.hearts.collectAsState()
     val currentUser by UserManager.currentUser.collectAsState()
     val isAdmin = remember(currentUser.email) { AdminConfig.isAdmin(currentUser.email) }
     var isAutoModeEnabled by remember(lessonId) { mutableStateOf(false) }
-
-    // Cargar lección
-    val lesson = remember(lessonId) {
-        AprenderRepository.getLessonByIdSync(lessonId)
-            ?: AprenderRepository.getLessonsForSubjectSync("biologia").first()
-    }
 
     // Las preguntas falladas vuelven una vez en la fase Fénix, después del bloque original.
     val missedChallenges = remember(lessonId) { mutableStateListOf<Challenge>() }
 
     var currentStep by remember(lessonId) { mutableIntStateOf(0) } // 0: Teoría, 1..N: Retos
     var selectedOptionIndex by remember(lessonId) { mutableStateOf<Int?>(null) }
-    var selectedBlankAnswer by remember(lessonId) { mutableStateOf<String?>(null) }
+    var blankAnswers by remember(lessonId) { mutableStateOf<Map<String, String>>(emptyMap()) }
     var selectedLeftIndex by remember(lessonId) { mutableStateOf<Int?>(null) }
     var selectedRightIndex by remember(lessonId) { mutableStateOf<Int?>(null) }
-    var matchedPairIndices by remember(lessonId) { mutableStateOf<Map<Int, Int>>(emptyMap()) }
+    var matchState by remember(lessonId) { mutableStateOf(MatchAnswerState()) }
     var isAnswerChecked by remember(lessonId) { mutableStateOf(false) }
     var isCorrectAnswer by remember(lessonId) { mutableStateOf(false) }
     var correctAnswers by remember(lessonId) { mutableIntStateOf(0) }
+    var combo by rememberSaveable(lessonId, stateSaver = LessonComboSaver) { mutableStateOf(LessonComboState()) }
+    // Transient visual events are intentionally not saved/replayed on recreation.
+    var comboPopEvent by remember(lessonId) { mutableIntStateOf(0) }
+    var comboEffect by remember(lessonId) { mutableStateOf<ComboMilestoneEffect?>(null) }
+    var comboEffectUntil by remember(lessonId) { mutableLongStateOf(0L) }
+    LaunchedEffect(comboEffectUntil) {
+        if (comboEffectUntil > 0L) {
+            kotlinx.coroutines.delay((comboEffectUntil - android.os.SystemClock.elapsedRealtime()).coerceAtLeast(0L))
+            comboEffect = null
+            comboEffectUntil = 0L
+        }
+    }
+
     var showExitConfirmDialog by remember(lessonId) { mutableStateOf(false) }
     var firstPassCorrect by remember(lessonId) { mutableIntStateOf(0) }
     val previouslyCompleted = remember(lessonId) {
@@ -125,18 +186,48 @@ fun LessonEngineScreen(
         firstPassCorrect * 2 >= lesson.challenges.size -> 2
         else -> 1
     }
-    val earnedXp = if (previouslyCompleted) 0 else 25 + correctAnswers * 5
+    val rewardAttemptId = androidx.compose.runtime.saveable.rememberSaveable(lessonId) { java.util.UUID.randomUUID().toString() }
+    var rewardDelivered by remember(lessonId) { mutableStateOf(false) }
+    val fullLessonXp = 25 + correctAnswers * 5
+    val lessonReward = com.jonsuapps.rastro.gamification.LessonRewardPolicy.quote(
+        GamificationManager.state.value.completedLessons[lessonId], fullLessonXp, earnedStars)
+    val earnedXp = lessonReward.xp
     var isLessonCompleted by remember(lessonId) { mutableStateOf(false) }
     var isRedemptionPhase by remember(lessonId) { mutableStateOf(false) }
     var showRedemptionModal by remember(lessonId) { mutableStateOf(false) }
+    androidx.activity.compose.BackHandler {
+        when {
+            showExitConfirmDialog -> showExitConfirmDialog = false
+            showRedemptionModal -> showRedemptionModal = false
+            currentStep <= 0 -> onFinishLesson()
+            else -> showExitConfirmDialog = true
+        }
+    }
 
-    val currentChallenge = if (currentStep > 0) {
+    val challengeSource = if (currentStep > 0) {
         if (isRedemptionPhase) {
             missedChallenges.getOrNull(currentStep - lesson.challenges.size - 1)
         } else {
             lesson.challenges.getOrNull(currentStep - 1)
         }
     } else null
+
+    val currentChallenge = remember(challengeSource, currentStep) {
+        challengeSource?.let { challenge ->
+            if (challenge.type == ChallengeType.MATCH_PAIRS) challenge.copy(
+                rightOptions = ChallengeInteraction.rightOptions(challenge).shuffled()) else challenge
+        }
+    }
+    fun attemptPair(left: Int, right: Int) {
+        val challenge = currentChallenge ?: return
+        val next = ChallengeInteraction.match(challenge, matchState, left, right)
+        if (next != matchState) {
+            audio.play(if (next.links.size > matchState.links.size) LearningSound.CORRECTA else LearningSound.INCORRECTA)
+            matchState = next
+        }
+        selectedLeftIndex = null
+        selectedRightIndex = null
+    }
 
     // Auto-selección rápida exclusiva para ADMIN en modo prueba (sin auto-avance ni alteración de flujo)
     LaunchedEffect(currentStep, isRedemptionPhase, isAutoModeEnabled) {
@@ -146,7 +237,7 @@ fun LessonEngineScreen(
                     selectedOptionIndex = currentChallenge.correctIndex
                 }
                 ChallengeType.FILL_BLANK -> {
-                    selectedBlankAnswer = currentChallenge.correctText
+                    blankAnswers = ChallengeInteraction.blanks(currentChallenge).associate { it.id to it.correctText }
                 }
                 ChallengeType.MATCH_PAIRS -> {
                     val autoMatches = mutableMapOf<Int, Int>()
@@ -157,7 +248,7 @@ fun LessonEngineScreen(
                         }
                     }
                     if (autoMatches.isNotEmpty()) {
-                        matchedPairIndices = autoMatches
+                        matchState = MatchAnswerState(links = autoMatches)
                     }
                 }
             }
@@ -186,16 +277,7 @@ fun LessonEngineScreen(
             isDestructive = true,
             stackButtons = true,
             headerContent = {
-                Box(
-                    modifier = Modifier
-                        .size(80.dp)
-                        .clip(CircleShape)
-                        .background(Color(0xFFFEF2F2))
-                        .border(2.dp, Color(0xFFFCA5A5), CircleShape),
-                    contentAlignment = Alignment.Center
-                ) {
-                    ArtyonMascot(size = 64.dp, mood = MascotMood.SAD)
-                }
+                ClassicArtwork(ClassicAppearance.LEAVE, Modifier.size(140.dp))
             },
             theme = theme,
             onConfirm = {
@@ -203,6 +285,21 @@ fun LessonEngineScreen(
                 onFinishLesson()
             }
         )
+    }
+
+    completedTopic?.let { title ->
+        LearningCelebrationDialog("¡TEMA COMPLETADO!", title, onContinue = {
+            completedTopic = null
+            com.jonsuapps.rastro.android.ui.components.XpDelivery.show(pendingTopicXp)
+            pendingTopicXp = 0
+            if (topicLevelUp) audio.play(LearningSound.LEVELUP, "lesson-level:${lesson.id}")
+            else audio.play(LearningSound.OPCIONES)
+            onFinishLesson()
+        }) {
+            PreparedAnimation("TROFEO", Modifier.size(180.dp), onProgress = { progress ->
+                if (progress > 0f) audio.play(LearningSound.COMPLETADO, "topic:${lesson.subjectId}:${lesson.semana}")
+            })
+        }
     }
 
     Column(
@@ -246,9 +343,14 @@ fun LessonEngineScreen(
                     .weight(1f)
                     .height(8.dp)
                     .clip(RastroShapes.Pill),
-                color = theme.accent,
+                color = theme.accentText,
                 trackColor = theme.surfaceAccent
             )
+
+            if (combo.value >= 2) {
+                Spacer(Modifier.width(8.dp))
+                LessonComboIndicator(combo.value, comboPopEvent, theme)
+            }
 
             // Chip exclusivo para ADMIN: Auto-seleccionar respuesta correcta
             if (isAdmin) {
@@ -287,22 +389,48 @@ fun LessonEngineScreen(
             when {
                 // Pantalla de Victoria / Finalización
                 isLessonCompleted -> {
-                    LessonVictoryView(
+                    if (completedTopic == null) LessonVictoryView(
                         lessonTitle = lesson.title,
                         stars = earnedStars,
                         earnedXp = earnedXp,
+                        earnedCoins = lessonReward.coins,
+                        answers = correctAnswers,
                         theme = theme,
                         onContinue = {
+                            if (completedTopic != null || rewardDelivered) return@LessonVictoryView
+                            rewardDelivered = true
+                            val beforeXp = GamificationManager.state.value.xp
+                            val beforeLevel = GamificationManager.state.value.level
+                            val topicLessons = AprenderRepository.getLessonsForSubjectSync(lesson.subjectId)
+                                .filter { it.semana == lesson.semana && it.challenges.isNotEmpty() }
+                            val wasComplete = topicLessons.isNotEmpty() && topicLessons.all {
+                                GamificationManager.state.value.completedLessons[it.id]?.skipped == false
+                            }
                             GamificationManager.recordLessonCompletion(
                                 lessonId = lesson.id,
-                                earnedXp = earnedXp,
-                                stars = earnedStars
+                                earnedXp = fullLessonXp,
+                                stars = earnedStars,
+                                attemptId = rewardAttemptId
                             )
+                            val awardedXp = GamificationManager.state.value.xp - beforeXp
                             GamificationRepository.saveLocal(currentUser.uid, GamificationManager.state.value)
                             if (currentUser.isAuthenticated && !currentUser.isAnonymous) {
                                 GamificationRepository.save(currentUser.uid, GamificationManager.state.value)
                             }
-                            onFinishLesson()
+                            val leveledUp = GamificationManager.state.value.level > beforeLevel
+                            val nowComplete = topicLessons.isNotEmpty() && topicLessons.all {
+                                GamificationManager.state.value.completedLessons[it.id]?.skipped == false
+                            }
+                            if (!wasComplete && nowComplete) {
+                                pendingTopicXp = awardedXp
+                                topicLevelUp = leveledUp
+                                completedTopic = "Completaste el Tema ${lesson.semana} de ${lesson.theory.asignatura}."
+                            } else {
+                                com.jonsuapps.rastro.android.ui.components.XpDelivery.show(awardedXp)
+                                if (leveledUp) audio.play(LearningSound.LEVELUP, "lesson-level:${lesson.id}")
+                                else audio.play(LearningSound.OPCIONES)
+                                onFinishLesson()
+                            }
                         }
                     )
                 }
@@ -313,10 +441,11 @@ fun LessonEngineScreen(
                         lesson = lesson,
                         theme = theme,
                         onStartChallenges = {
+                            audio.play(LearningSound.OPCIONES)
                             currentStep = 1
                             selectedOptionIndex = null
-                            selectedBlankAnswer = null
-                            matchedPairIndices = emptyMap()
+                            blankAnswers = emptyMap()
+                            matchState = MatchAnswerState()
                             isAnswerChecked = false
                         }
                     )
@@ -324,65 +453,87 @@ fun LessonEngineScreen(
 
                 // Pasos 1..N: Reto interactivo de opción múltiple
                 currentChallenge != null -> {
+                    androidx.compose.runtime.key(currentStep, isRedemptionPhase) {
                     ChallengeQuestionView(
                         challenge = currentChallenge,
                         stepNumber = if (isRedemptionPhase) currentStep - lesson.challenges.size else currentStep,
                         totalChallenges = if (isRedemptionPhase) missedChallenges.size else lesson.challenges.size,
                         isRedemptionPhase = isRedemptionPhase,
+                        answerXp = if (previouslyCompleted) 1 else 5,
                         selectedOptionIndex = selectedOptionIndex,
-                        selectedBlankAnswer = selectedBlankAnswer,
-                        matchedPairIndices = matchedPairIndices,
+                        blankAnswers = blankAnswers,
+                        matchState = matchState,
                         isAnswerChecked = isAnswerChecked,
                         isCorrectAnswer = isCorrectAnswer,
                         theme = theme,
                         onOptionSelected = { idx ->
                             if (!isAnswerChecked) {
+                                audio.play(LearningSound.OPCIONES)
                                 selectedOptionIndex = idx
                             }
                         },
-                        onBlankSelected = { value -> if (!isAnswerChecked) selectedBlankAnswer = value },
+                        onBlankSelected = { id, value ->
+                            if (!isAnswerChecked && value in ChallengeInteraction.blanks(currentChallenge).firstOrNull { it.id == id }?.options.orEmpty()) {
+                                audio.play(LearningSound.OPCIONES)
+                                blankAnswers = blankAnswers + (id to value)
+                            }
+                        },
                         onMatchLeftSelected = { idx ->
-                            if (!isAnswerChecked) {
-                                val selectedRight = selectedRightIndex
-                                if (selectedRight != null) {
-                                    matchedPairIndices = matchedPairIndices + (idx to selectedRight)
-                                    selectedLeftIndex = null
-                                    selectedRightIndex = null
-                                } else if (matchedPairIndices.containsKey(idx)) {
-                                    matchedPairIndices = matchedPairIndices - idx
-                                    selectedLeftIndex = idx
-                                } else selectedLeftIndex = idx
+                            if (!isAnswerChecked && idx !in matchState.links) {
+                                val right = selectedRightIndex
+                                if (right != null) attemptPair(idx, right)
+                                else { audio.play(LearningSound.OPCIONES); selectedLeftIndex = idx }
                             }
                         },
                         onMatchRightSelected = { idx ->
-                            if (!isAnswerChecked) {
-                                val selectedLeft = selectedLeftIndex
-                                if (selectedLeft != null) {
-                                    matchedPairIndices = matchedPairIndices + (selectedLeft to idx)
-                                    selectedLeftIndex = null
-                                    selectedRightIndex = null
-                                } else selectedRightIndex = idx
+                            if (!isAnswerChecked && idx !in matchState.links.values) {
+                                val left = selectedLeftIndex
+                                if (left != null) attemptPair(left, idx)
+                                else { audio.play(LearningSound.OPCIONES); selectedRightIndex = idx }
                             }
                         },
                         selectedLeftIndex = selectedLeftIndex,
                         selectedRightIndex = selectedRightIndex,
+                        comboEffect = comboEffect,
                         onCheckAnswer = {
+                            if (isAnswerChecked) return@ChallengeQuestionView
                             val correct = when (currentChallenge.type) {
                                 ChallengeType.MULTIPLE_CHOICE -> selectedOptionIndex == currentChallenge.correctIndex
-                                ChallengeType.FILL_BLANK -> selectedBlankAnswer.equals(currentChallenge.correctText, ignoreCase = true)
-                                ChallengeType.MATCH_PAIRS -> currentChallenge.pairs.indices.all { leftIndex ->
-                                    val rightIndex = matchedPairIndices[leftIndex]
-                                    rightIndex != null && currentChallenge.rightOptions.getOrNull(rightIndex)?.id == currentChallenge.pairs[leftIndex].id
-                                }
+                                ChallengeType.FILL_BLANK -> ChallengeInteraction.fillingCorrect(currentChallenge, blankAnswers)
+                                ChallengeType.MATCH_PAIRS -> ChallengeInteraction.matchingComplete(currentChallenge, matchState) && matchState.mistakes == 0
                             }
+                            audio.play(if (correct) LearningSound.CORRECTA else LearningSound.INCORRECTA, "answer:${currentChallenge.id}:$isRedemptionPhase")
                             isCorrectAnswer = correct
                             isAnswerChecked = true
+                            val comboUpdate = combo.answer("$isRedemptionPhase:$currentStep:${currentChallenge.id}", correct)
+                            combo = comboUpdate.state
+                            comboUpdate.events.forEach { event ->
+                                when (event) {
+                                    is ComboEvent.Reached -> {
+                                        comboPopEvent += 1
+                                        if (event.value == LessonComboState.MAX) {
+                                            comboEffect = ComboMilestoneEffect.MAX_COMBO
+                                            comboEffectUntil = android.os.SystemClock.elapsedRealtime() + resolveComboEffect(ComboMilestoneEffect.MAX_COMBO).durationMillis
+                                        }
+                                    }
+                                    is ComboEvent.Broken -> { comboEffect = null; comboEffectUntil = 0L }
+                                }
+                            }
+
                             if (correct) {
                                 correctAnswers += 1
                                 if (!isRedemptionPhase) firstPassCorrect += 1
                                 DuolingoHaptics.playAnswerCorrect(context)
                             } else {
                                 DuolingoHaptics.playAnswerIncorrect(context)
+                                if (currentChallenge.type == ChallengeType.MULTIPLE_CHOICE && currentChallenge.correctIndex in currentChallenge.options.indices) {
+                                    com.jonsuapps.rastro.android.data.ErrorBankRepository.addFailedQuestion(
+                                        com.jonsuapps.rastro.android.data.FailedQuestion(
+                                            id = "Aprender:${lesson.id}:${currentChallenge.id}", subject = lesson.theory.asignatura,
+                                            subtema = lesson.title, question = currentChallenge.statement,
+                                            options = currentChallenge.options, correctAnswerIndex = currentChallenge.correctIndex,
+                                            explanation = currentChallenge.explanation, selectedAnswerIndex = selectedOptionIndex))
+                                }
                                 GamificationManager.loseHeart()
                                 if (currentUser.isAuthenticated && !currentUser.isAnonymous) {
                                     GamificationRepository.save(currentUser.uid, GamificationManager.state.value)
@@ -394,37 +545,40 @@ fun LessonEngineScreen(
                             }
                         },
                         onNextStep = {
+                            comboEffect = null; comboEffectUntil = 0L
+                            audio.play(LearningSound.OPCIONES)
                             if (!isRedemptionPhase && currentStep < lesson.challenges.size) {
                                 currentStep++
                                 selectedOptionIndex = null
-                                selectedBlankAnswer = null
+                                blankAnswers = emptyMap()
                                 selectedLeftIndex = null
                                 selectedRightIndex = null
-                                matchedPairIndices = emptyMap()
+                                matchState = MatchAnswerState()
                                 isAnswerChecked = false
                             } else if (!isRedemptionPhase && missedChallenges.isNotEmpty()) {
                                 isRedemptionPhase = true
                                 showRedemptionModal = true
                                 currentStep = lesson.challenges.size + 1
                                 selectedOptionIndex = null
-                                selectedBlankAnswer = null
+                                blankAnswers = emptyMap()
                                 selectedLeftIndex = null
                                 selectedRightIndex = null
-                                matchedPairIndices = emptyMap()
+                                matchState = MatchAnswerState()
                                 isAnswerChecked = false
                             } else if (isRedemptionPhase && currentStep < lesson.challenges.size + missedChallenges.size) {
                                 currentStep++
                                 selectedOptionIndex = null
-                                selectedBlankAnswer = null
+                                blankAnswers = emptyMap()
                                 selectedLeftIndex = null
                                 selectedRightIndex = null
-                                matchedPairIndices = emptyMap()
+                                matchState = MatchAnswerState()
                                 isAnswerChecked = false
                             } else {
                                 isLessonCompleted = true
                             }
                         }
                     )
+                    }
                 }
             }
         }
@@ -444,12 +598,16 @@ fun LessonTheoryScreen(
             .padding(horizontal = 18.dp, vertical = 14.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp)
     ) {
+        // Existing theory step owns the lesson-start sequence; course banner is independent.
+        ClassicArtwork(ClassicAppearance.NEW_IDEA, Modifier.align(Alignment.CenterHorizontally).size(110.dp))
+        Text("Idea nueva", color = theme.accentText, fontWeight = FontWeight.Bold,
+            modifier = Modifier.align(Alignment.CenterHorizontally))
         // Badge Subheader: 📘 Paso 0 · Teoría Esencial
         Row(verticalAlignment = Alignment.CenterVertically) {
             Icon(
                 imageVector = Icons.Rounded.MenuBook,
                 contentDescription = null,
-                tint = Color(0xFF0284C7),
+                tint = theme.accentText,
                 modifier = Modifier.size(20.dp)
             )
             Spacer(modifier = Modifier.width(8.dp))
@@ -457,7 +615,7 @@ fun LessonTheoryScreen(
                 text = "Paso 0 · Teoría Esencial",
                 style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF0284C7)
+                color = theme.accentText
             )
         }
 
@@ -466,7 +624,7 @@ fun LessonTheoryScreen(
             text = lesson.theory.titulo.ifBlank { lesson.title },
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(0xFF0F172A),
+            color = theme.textPrimary,
             lineHeight = 30.sp
         )
 
@@ -528,24 +686,28 @@ fun ChallengeQuestionView(
     totalChallenges: Int,
     isRedemptionPhase: Boolean,
     selectedOptionIndex: Int?,
-    selectedBlankAnswer: String?,
-    matchedPairIndices: Map<Int, Int>,
+    blankAnswers: Map<String, String>,
+    matchState: MatchAnswerState,
     selectedLeftIndex: Int?,
     selectedRightIndex: Int?,
     isAnswerChecked: Boolean,
     isCorrectAnswer: Boolean,
     theme: com.jonsuapps.rastro.theme.RastroPalette,
     onOptionSelected: (Int) -> Unit,
-    onBlankSelected: (String) -> Unit,
+    onBlankSelected: (String, String) -> Unit,
     onMatchLeftSelected: (Int) -> Unit,
     onMatchRightSelected: (Int) -> Unit,
     onCheckAnswer: () -> Unit,
-    onNextStep: () -> Unit
+    onNextStep: () -> Unit,
+    answerXp: Int = 5,
+    comboEffect: ComboMilestoneEffect? = null
 ) {
     val context = LocalContext.current
     var showExplanationModal by remember { mutableStateOf(false) }
     var showReportModal by remember { mutableStateOf(false) }
-    var reportSent by remember { mutableStateOf(false) }
+    var reportSent by remember(challenge.id) { mutableStateOf(false) }
+    var reportSending by remember(challenge.id) { mutableStateOf(false) }
+    var reportError by remember(challenge.id) { mutableStateOf<String?>(null) }
 
     Box(
         modifier = Modifier.fillMaxSize()
@@ -563,13 +725,13 @@ fun ChallengeQuestionView(
                     Icon(
                         imageVector = if (isRedemptionPhase) Icons.Rounded.LocalFireDepartment else Icons.Rounded.TrackChanges,
                         contentDescription = null,
-                        tint = if (isRedemptionPhase) Color(0xFFEF4444) else theme.accent,
+                        tint = if (isRedemptionPhase) Color(0xFFEF4444) else theme.accentText,
                         modifier = Modifier.size(14.dp)
                     )
                     Text(
                         text = if (isRedemptionPhase) "MODO FÉNIX • REDENCIÓN" else "PRÁCTICA OFICIAL • ${challenge.subject.uppercase()}",
                         style = MaterialTheme.typography.labelSmall,
-                        color = if (isRedemptionPhase) Color(0xFFEF4444) else theme.accent,
+                        color = if (isRedemptionPhase) Color(0xFFEF4444) else theme.accentText,
                         fontWeight = FontWeight.ExtraBold
                     )
                 }
@@ -581,8 +743,18 @@ fun ChallengeQuestionView(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                if (stepNumber % 2 == 0) OrsttyMascot(size = 46.dp, mood = MascotMood.STUDYING)
-                else ArtyonMascot(size = 46.dp, mood = MascotMood.STUDYING)
+                androidx.compose.runtime.key(challenge.id, isRedemptionPhase, isAnswerChecked) {
+                    val appearance = remember {
+                        if (isAnswerChecked && !isCorrectAnswer) ClassicAppearance.KNOCKED_OUT
+                        else LearningArtworkResolver.appearance(if (challenge.type == ChallengeType.MULTIPLE_CHOICE)
+                            listOf(ClassicAppearance.STUDY, ClassicAppearance.RETRY)
+                            else listOf(ClassicAppearance.STUDY, ClassicAppearance.RETRY, ClassicAppearance.SLEEP))
+                    }
+                    val character = remember { LearningArtworkResolver.character() }
+                    val effect = comboEffect?.let(::resolveComboEffect)
+                    ClassicArtwork(effect?.appearance ?: appearance, Modifier.size(64.dp),
+                        character = effect?.character ?: character, speed = effect?.speed ?: 1f)
+                }
                 Text(
                     text = challenge.instruction?.takeIf(String::isNotBlank)
                         ?: if (isRedemptionPhase) "Revisa la explicación oficial y responde con seguridad." else "Aplica el principio general estudiado para deducir la solución correcta:",
@@ -595,7 +767,7 @@ fun ChallengeQuestionView(
             }
 
             challenge.pedagogicalTier?.takeIf(String::isNotBlank)?.let { tier ->
-                Text(tier, color = theme.accent, fontSize = 10.sp, fontWeight = FontWeight.Bold)
+                Text(tier, color = theme.accentText, fontSize = 10.sp, fontWeight = FontWeight.Bold)
             }
 
             Text(
@@ -606,7 +778,12 @@ fun ChallengeQuestionView(
                 lineHeight = 22.sp
             )
 
-            when (challenge.type) {
+            val activityErrors = ChallengeInteraction.validationErrors(challenge)
+            if (activityErrors.isNotEmpty()) {
+                Text("Actividad no disponible (${challenge.id}): ${activityErrors.joinToString()}\nPuedes reportar este contenido para que lo corrijamos.",
+                    color = theme.answerText(false), fontWeight = FontWeight.Bold)
+                TextButton(onClick = { showReportModal = true }) { Text("Reportar actividad") }
+            } else when (challenge.type) {
                 ChallengeType.MULTIPLE_CHOICE -> challenge.options.forEachIndexed { index, optionText ->
                     val isSelected = selectedOptionIndex == index
                     val isCorrectChoice = index == challenge.correctIndex
@@ -619,14 +796,14 @@ fun ChallengeQuestionView(
                     }
 
                     val containerColor = when {
-                        isAnswerChecked && isCorrectChoice -> Color(0xFFDCFCE7)
-                        isAnswerChecked && isSelected && !isCorrectAnswer -> Color(0xFFFEE2E2)
+                        isAnswerChecked && isCorrectChoice -> theme.answerSurface(true)
+                        isAnswerChecked && isSelected && !isCorrectAnswer -> theme.answerSurface(false)
                         isSelected -> theme.accent.copy(alpha = 0.12f)
                         else -> theme.surface
                     }
 
                     val bevelColor = when {
-                        isAnswerChecked && isCorrectChoice -> Color(0xFF16A34A)
+                        isAnswerChecked && isCorrectChoice -> theme.answerText(true)
                         isAnswerChecked && isSelected && !isCorrectAnswer -> Color(0xFFDC2626)
                         isSelected -> theme.cardBevel
                         else -> theme.cardBevel
@@ -666,7 +843,7 @@ fun ChallengeQuestionView(
                                     text = optionLetter,
                                     style = MaterialTheme.typography.labelMedium,
                                     fontWeight = FontWeight.Black,
-                                    color = if (isSelected) Color.White else theme.textPrimary
+                                    color = if (isSelected) contrastingText(theme.accent) else theme.textPrimary
                                 )
                             }
 
@@ -682,127 +859,17 @@ fun ChallengeQuestionView(
                         }
                     }
                 }
-                ChallengeType.FILL_BLANK -> {
-                    val before = challenge.sentenceBefore ?: challenge.statement.substringBefore("___", "")
-                    val after = challenge.sentenceAfter ?: challenge.statement.substringAfter("___", "")
-                    Surface(shape = RastroShapes.Squircle, color = theme.surface, border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)) {
-                        Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                Text(before, color = theme.textPrimary, fontWeight = FontWeight.SemiBold, lineHeight = 22.sp, modifier = Modifier.weight(1f, fill = false))
-                                Spacer(Modifier.width(5.dp))
-                                Text(selectedBlankAnswer ?: "________", color = theme.accent, fontWeight = FontWeight.ExtraBold, modifier = Modifier.clip(RoundedCornerShape(8.dp)).background(theme.surfaceAccent).padding(horizontal = 8.dp, vertical = 4.dp))
-                                Spacer(Modifier.width(5.dp))
-                                Text(after, color = theme.textPrimary, fontWeight = FontWeight.SemiBold, lineHeight = 22.sp, modifier = Modifier.weight(1f, fill = false))
-                            }
-                            Text("Toca la palabra que completa la proposición:", fontSize = 11.sp, color = theme.textSecondary)
-                        }
-                    }
-                    Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-                        challenge.chips.forEach { chip ->
-                            val selected = selectedBlankAnswer == chip
-                            Sticker3dButton(
-                                onClick = {
-                                    if (!isAnswerChecked) {
-                                        DuolingoHaptics.playOptionSelected(context)
-                                        onBlankSelected(chip)
-                                    }
-                                },
-                                containerColor = if (selected) theme.accent else theme.surface,
-                                bottomBevelColor = if (selected) theme.cardBevel else Color(0xFFCBD5E1),
-                                strokeColor = theme.strokeBorder,
-                                shape = RoundedCornerShape(14.dp),
-                                bevelHeight = 3.dp,
-                                contentPadding = PaddingValues(horizontal = 6.dp, vertical = 10.dp),
-                                modifier = Modifier.weight(1f)
-                            ) {
-                                Text(
-                                    text = chip,
-                                    textAlign = androidx.compose.ui.text.style.TextAlign.Center,
-                                    color = if (selected) Color.White else theme.textPrimary,
-                                    fontWeight = FontWeight.Black,
-                                    fontSize = 12.sp
-                                )
-                            }
-                        }
-                    }
-                }
-                ChallengeType.MATCH_PAIRS -> {
-                    val matchedCount = matchedPairIndices.size
-                    Surface(shape = RastroShapes.Squircle, color = theme.surfaceAccent) {
-                        Row(modifier = Modifier.fillMaxWidth().padding(10.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                            Text(if (selectedLeftIndex != null) "Elige su definición a la derecha" else if (selectedRightIndex != null) "Elige el concepto correspondiente" else "Toca un concepto y su definición", color = theme.textSecondary, fontSize = 11.sp, fontWeight = FontWeight.SemiBold)
-                            Text("$matchedCount / ${challenge.pairs.size}", color = Color(0xFF10B981), fontWeight = FontWeight.Bold, fontSize = 11.sp)
-                        }
-                    }
-                    val rightOptions = challenge.rightOptions.ifEmpty {
-                        challenge.pairs.map { com.jonsuapps.rastro.model.ChallengeMatchOption(it.id, it.right) }
-                    }
-                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.Top) {
-                        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                            challenge.pairs.forEachIndexed { index, pair ->
-                                val linked = matchedPairIndices[index]
-                                val isPairCorrect = linked != null && rightOptions.getOrNull(linked)?.id == pair.id
-                                val borderColor = when {
-                                    isAnswerChecked && isPairCorrect -> Color(0xFF10B981)
-                                    isAnswerChecked && !isPairCorrect -> Color(0xFFEF4444)
-                                    selectedLeftIndex == index -> theme.accent
-                                    else -> theme.borderSubtle
-                                }
-                                Surface(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .bouncyClick(scaleDown = 0.95f) {
-                                            if (!isAnswerChecked) {
-                                                DuolingoHaptics.playOptionSelected(context)
-                                                onMatchLeftSelected(index)
-                                            }
-                                        },
-                                    shape = RastroShapes.Squircle,
-                                    color = when { isAnswerChecked && isPairCorrect -> Color(0xFFD1FAE5); isAnswerChecked && !isPairCorrect -> Color(0xFFFEE2E2); selectedLeftIndex == index -> theme.accent.copy(alpha = 0.10f); else -> theme.surface },
-                                    border = androidx.compose.foundation.BorderStroke(1.5.dp, borderColor)
-                                ) {
-                                    Text(pair.left, modifier = Modifier.padding(9.dp), color = theme.textPrimary, fontWeight = FontWeight.SemiBold, fontSize = 11.sp, lineHeight = 15.sp)
-                                }
-                            }
-                        }
-                        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                            rightOptions.forEachIndexed { index, option ->
-                                val isUsed = matchedPairIndices.values.contains(index)
-                                val linkedLeft = matchedPairIndices.entries.firstOrNull { it.value == index }?.key
-                                val isRightCorrect = linkedLeft?.let { left -> challenge.pairs.getOrNull(left)?.id == option.id } == true
-                                val borderColor = when {
-                                    isAnswerChecked && isRightCorrect -> Color(0xFF10B981)
-                                    isAnswerChecked && linkedLeft != null -> Color(0xFFEF4444)
-                                    selectedRightIndex == index -> theme.accent
-                                    else -> theme.borderSubtle
-                                }
-                                Surface(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .bouncyClick(scaleDown = 0.95f) {
-                                            if (!isAnswerChecked && !isUsed) {
-                                                DuolingoHaptics.playOptionSelected(context)
-                                                onMatchRightSelected(index)
-                                            }
-                                        },
-                                    shape = RastroShapes.Squircle,
-                                    color = when { isAnswerChecked && isRightCorrect -> Color(0xFFD1FAE5); isAnswerChecked && linkedLeft != null -> Color(0xFFFEE2E2); selectedRightIndex == index -> theme.accent.copy(alpha = 0.10f); else -> theme.surface },
-                                    border = androidx.compose.foundation.BorderStroke(1.5.dp, borderColor)
-                                ) {
-                                    Text(option.text, modifier = Modifier.padding(9.dp), color = theme.textPrimary, fontWeight = FontWeight.Medium, fontSize = 10.sp, lineHeight = 14.sp)
-                                }
-                            }
-                        }
-                    }
-                }
+                ChallengeType.FILL_BLANK -> FillTheoryChallengeView(challenge, blankAnswers, isAnswerChecked, theme, onBlankSelected)
+                ChallengeType.MATCH_PAIRS -> MatchingChallengeView(challenge, matchState, selectedLeftIndex,
+                    selectedRightIndex, isAnswerChecked, theme, onMatchLeftSelected, onMatchRightSelected)
             }
         }
 
         // 2. Barrita Fija Inferior Estilo Duolingo
         val responseComplete = when (challenge.type) {
             ChallengeType.MULTIPLE_CHOICE -> selectedOptionIndex != null
-            ChallengeType.FILL_BLANK -> selectedBlankAnswer != null
-            ChallengeType.MATCH_PAIRS -> challenge.pairs.isNotEmpty() && matchedPairIndices.size == challenge.pairs.size
+            ChallengeType.FILL_BLANK -> ChallengeInteraction.fillingComplete(challenge, blankAnswers)
+            ChallengeType.MATCH_PAIRS -> ChallengeInteraction.matchingComplete(challenge, matchState)
         }
 
         Surface(
@@ -810,15 +877,15 @@ fun ChallengeQuestionView(
                 .fillMaxWidth()
                 .align(Alignment.BottomCenter),
             color = when {
-                isAnswerChecked && isCorrectAnswer -> Color(0xFFDCFCE7)
-                isAnswerChecked && !isCorrectAnswer -> Color(0xFFFEE2E2)
+                isAnswerChecked && isCorrectAnswer -> theme.answerSurface(true)
+                isAnswerChecked && !isCorrectAnswer -> theme.answerSurface(false)
                 else -> theme.surface
             },
             shadowElevation = 18.dp,
             border = androidx.compose.foundation.BorderStroke(
                 2.dp,
                 when {
-                    isAnswerChecked && isCorrectAnswer -> Color(0xFF16A34A)
+                    isAnswerChecked && isCorrectAnswer -> theme.answerText(true)
                     isAnswerChecked && !isCorrectAnswer -> Color(0xFFDC2626)
                     else -> theme.strokeBorder
                 }
@@ -848,7 +915,7 @@ fun ChallengeQuestionView(
                             text = "COMPROBAR RESPUESTA",
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Black,
-                            color = if (responseComplete) Color.White else Color(0xFF64748B)
+                            color = if (responseComplete) contrastingText(theme.accent) else theme.textSecondary
                         )
                     }
                 } else {
@@ -864,21 +931,20 @@ fun ChallengeQuestionView(
                             modifier = Modifier.weight(1f)
                         ) {
                             if (isCorrectAnswer) {
-                                OrsttyMascot(size = 46.dp, mood = MascotMood.CHEERING)
+                                ClassicArtwork(ClassicAppearance.ACHIEVEMENT, Modifier.size(52.dp))
                                 Column {
-                                    Text("¡Excelente!", fontWeight = FontWeight.Black, fontSize = 16.sp, color = Color(0xFF15803D))
-                                    Text("Respuesta correcta • +5 XP 🎯", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = Color(0xFF16A34A))
+                                    Text("¡Excelente!", fontWeight = FontWeight.Black, fontSize = 16.sp, color = theme.answerText(true))
+                                    Text(if (answerXp > 0) "Respuesta correcta • +$answerXp XP" else "Respuesta correcta • Repaso", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = theme.answerText(true))
                                 }
                             } else {
-                                ArtyonMascot(size = 46.dp, mood = MascotMood.STUDYING)
                                 Column {
-                                    Text("¡Vamos a repasarlo!", fontWeight = FontWeight.Black, fontSize = 15.sp, color = Color(0xFFB91C1C))
-                                    Text("Toca '💡 Truquito' para ver la clave", fontSize = 11.sp, fontWeight = FontWeight.Medium, color = Color(0xFF7F1D1D))
+                                    Text("¡Vamos a repasarlo!", fontWeight = FontWeight.Black, fontSize = 15.sp, color = theme.answerText(false))
+                                    Text("Abre la explicación para repasar", fontSize = 11.sp, fontWeight = FontWeight.Medium, color = theme.answerText(false))
                                 }
                             }
                         }
 
-                        // Botones auxiliares: Reportar y Truquito
+                        // Botones auxiliares: Reportar y Ayuda
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.spacedBy(6.dp)
@@ -890,29 +956,31 @@ fun ChallengeQuestionView(
                                 Icon(
                                     imageVector = Icons.Rounded.Warning,
                                     contentDescription = "Reportar pregunta",
-                                    tint = if (isCorrectAnswer) Color(0xFF15803D) else Color(0xFFB91C1C),
+                                    tint = if (isCorrectAnswer) theme.answerText(true) else theme.answerText(false),
                                     modifier = Modifier.size(20.dp)
                                 )
                             }
 
-                            if (!isCorrectAnswer) {
-                                Sticker3dButton(
-                                    onClick = { showExplanationModal = true },
-                                    containerColor = Color(0xFFFEF08A),
-                                    bottomBevelColor = Color(0xFFCA8A04),
-                                    strokeColor = theme.strokeBorder,
-                                    shape = RoundedCornerShape(12.dp),
-                                    bevelHeight = 2.5.dp,
-                                    contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp)
-                                ) {
-                                    Icon(Icons.Rounded.Lightbulb, contentDescription = null, tint = Color(0xFF854D0E), modifier = Modifier.size(15.dp))
-                                    Spacer(Modifier.width(4.dp))
-                                    Text("💡 Truquito", fontSize = 11.sp, fontWeight = FontWeight.Black, color = Color(0xFF854D0E))
-                                }
-                            }
+
                         }
                     }
 
+                            if (!isCorrectAnswer) {
+                                Sticker3dButton(
+                                    onClick = { showExplanationModal = true },
+                                    modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp),
+                                    containerColor = Color(0xFF7C3AED),
+                                    bottomBevelColor = Color(0xFF4C1D95),
+                                    strokeColor = theme.strokeBorder,
+                                    shape = RoundedCornerShape(12.dp),
+                                    bevelHeight = 2.5.dp,
+                                    contentPadding = PaddingValues(horizontal = 14.dp, vertical = 10.dp)
+                                ) {
+                                    Icon(Icons.Rounded.Lightbulb, contentDescription = null, tint = Color.White, modifier = Modifier.size(20.dp))
+                                    Spacer(Modifier.width(4.dp))
+                                    Text("Explicación", fontSize = 13.sp, fontWeight = FontWeight.Black, color = Color.White)
+                                }
+                            }
                     Spacer(Modifier.height(10.dp))
 
                     // Botón CONTINUAR fijo
@@ -922,7 +990,7 @@ fun ChallengeQuestionView(
                             .fillMaxWidth()
                             .height(50.dp),
                         containerColor = if (isCorrectAnswer) Color(0xFF22C55E) else theme.accent,
-                        bottomBevelColor = if (isCorrectAnswer) Color(0xFF15803D) else theme.cardBevel,
+                        bottomBevelColor = if (isCorrectAnswer) theme.answerText(true) else theme.cardBevel,
                         strokeColor = theme.strokeBorder,
                         shape = RastroShapes.Pill,
                         contentPadding = PaddingValues(vertical = 12.dp)
@@ -931,25 +999,22 @@ fun ChallengeQuestionView(
                             text = if (isCorrectAnswer) "¡CONTINUAR! →" else "ENTENDIDO, CONTINUAR →",
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Black,
-                            color = Color.White
+                            color = contrastingText(if (isCorrectAnswer) Color(0xFF22C55E) else theme.accent)
                         )
                     }
                 }
             }
         }
 
-        // Modal de Truquito y Explicación
+        // Ayuda: animación centrada y una sola acción
         if (showExplanationModal) {
-            com.jonsuapps.rastro.android.ui.components.RastroStickerDialog(
-                onDismissRequest = { showExplanationModal = false },
-                title = "💡 Truquito y Explicación Oficial",
+            LearningCelebrationDialog(
+                title = "Explicación",
                 message = if (challenge.explanation.isNotBlank()) challenge.explanation else "Esta pregunta volverá al final en el Modo Fénix para que la domines sin perder racha.",
-                confirmText = "¡Entendido!",
-                cancelText = "Cerrar",
-                icon = Icons.Rounded.Lightbulb,
-                theme = theme,
-                onConfirm = { showExplanationModal = false }
-            )
+                onContinue = { showExplanationModal = false }
+            ) {
+                ClassicArtwork(ClassicAppearance.ACHIEVEMENT, Modifier.size(140.dp))
+            }
         }
 
         // Modal de Reportar Pregunta
@@ -957,15 +1022,23 @@ fun ChallengeQuestionView(
             com.jonsuapps.rastro.android.ui.components.RastroStickerDialog(
                 onDismissRequest = { showReportModal = false },
                 title = if (reportSent) "Reporte Enviado" else "Reportar Pregunta",
-                message = if (reportSent) "¡Muchas gracias! Nuestro equipo revisará esta pregunta a la brevedad." else "¿Notaste algún error ortográfico o clave incorrecta en este reto preuniversitario?",
-                confirmText = if (reportSent) "Aceptar" else "Enviar Reporte",
+                message = if (reportSent) "Tu reporte se guardó para revisión en el panel admin." else reportError ?: "¿Notaste algún error ortográfico o clave incorrecta en este reto preuniversitario?",
+                confirmText = if (reportSent) "Aceptar" else if (reportSending) "Enviando…" else "Enviar Reporte",
                 cancelText = "Cancelar",
                 icon = Icons.Rounded.Warning,
                 theme = theme,
                 onConfirm = {
-                    if (!reportSent) {
-                        reportSent = true
-                    } else {
+                    if (!reportSent && !reportSending) {
+                        reportSending = true
+                        reportError = null
+                        com.jonsuapps.rastro.android.data.AcademicReportRepository.send(
+                            challenge.id, challenge.statement, "Aprender · ${challenge.subject} · Semana ${challenge.semana}",
+                            "Opciones: ${challenge.options.joinToString()}\nClave: ${challenge.correctIndex}\nExplicación: ${challenge.explanation}") { result ->
+                            reportSending = false
+                            result.fold(onSuccess = { reportSent = true },
+                                onFailure = { reportError = it.localizedMessage ?: "No se pudo enviar. Intenta nuevamente." })
+                        }
+                    } else if (reportSent) {
                         showReportModal = false
                         reportSent = false
                     }
@@ -981,113 +1054,47 @@ fun LessonVictoryView(
     stars: Int,
     earnedXp: Int,
     theme: com.jonsuapps.rastro.theme.RastroPalette,
-    onContinue: () -> Unit
+    onContinue: () -> Unit,
+    answers: Int = 0,
+    earnedCoins: Int = 0
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        // Dúo Oficial Orstty + Artyon Celebrando en Pantalla de Victoria (Estilo Duolingo)
-        DualMascotDuo(size = 84.dp)
-        Spacer(Modifier.height(14.dp))
-        EarnedStars(stars)
-
-        Spacer(modifier = Modifier.height(20.dp))
-
-        Text(
-            text = "¡Lección Superada!",
-            style = MaterialTheme.typography.headlineSmall,
-            fontWeight = FontWeight.Bold,
-            color = theme.textPrimary
-        )
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        Text(
-            text = lessonTitle,
-            style = MaterialTheme.typography.bodyMedium,
-            color = theme.textSecondary
-        )
-
-        Spacer(modifier = Modifier.height(24.dp))
-
-        // Recompensas: XP y Racha con estilo 3D Sticker
-        Sticker3dCard(
-            shape = RoundedCornerShape(20.dp),
-            containerColor = theme.surface,
-            bottomBevelColor = theme.cardBevel,
-            strokeColor = theme.strokeBorder,
-            strokeWidth = 2.dp,
-            bevelHeight = 4.dp,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(16.dp),
-                horizontalArrangement = Arrangement.SpaceEvenly
-            ) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(
-                        text = if (earnedXp > 0) "+$earnedXp XP" else "Repaso",
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Black,
-                        color = Color(0xFFF59E0B)
-                    )
-                    Text(
-                        text = if (earnedXp > 0) "Puntos ganados" else "Mejora tus estrellas",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = theme.textSecondary
-                    )
-                }
-
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(
-                            imageVector = Icons.Rounded.LocalFireDepartment,
-                            contentDescription = null,
-                            tint = Color(0xFFF97316),
-                            modifier = Modifier.size(20.dp)
-                        )
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text(
-                            text = "Activa",
-                            style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.Black,
-                            color = Color(0xFFF97316)
-                        )
-                    }
-                    Text(
-                        text = "Racha de Hoy",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = theme.textSecondary
-                    )
-                }
-            }
+    BoxWithConstraints(Modifier.fillMaxSize().padding(horizontal = 16.dp, vertical = 8.dp)) {
+        val compact = maxHeight < 430.dp
+        val sideBySide = maxWidth > 560.dp && compact
+        val audio = rememberLearningAudio()
+        val character = remember { LearningArtworkResolver.character() }
+        val celebration = remember { LearningArtworkResolver.victoryAppearance(stars) }
+        val progressState by GamificationManager.state.collectAsState()
+        val resultTotalXp = remember(earnedXp) { GamificationManager.state.value.xp + earnedXp }
+        @Composable fun mascot(modifier: Modifier) {
+            ClassicArtwork(celebration, modifier, character) { audio.play(LearningSound.EXPLOSION, "explosion") }
         }
-
-        Spacer(modifier = Modifier.height(32.dp))
-
-        Sticker3dButton(
-            onClick = onContinue,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(52.dp),
-            containerColor = Color(0xFF22C55E),
-            bottomBevelColor = Color(0xFF15803D),
-            strokeColor = theme.strokeBorder,
-            shape = RastroShapes.Pill,
-            contentPadding = PaddingValues(vertical = 12.dp)
-        ) {
-            Text(
-                text = "CONTINUAR",
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Black,
-                color = Color.White
-            )
+        @Composable fun details(modifier: Modifier) {
+            LearningResultsArtwork(stars, answers, earnedXp, resultTotalXp, modifier, compact = true, earnedCoins = earnedCoins)
+        }
+        Column(Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(if (compact) 4.dp else 8.dp)) {
+            Text(when { stars >= 3 -> "¡Perfecto!"; stars == 2 -> "¡Lección superada!"; else -> "Repasemos lo aprendido" },
+                fontSize = if(compact) 20.sp else 24.sp, fontWeight = FontWeight.Bold, color = theme.textPrimary)
+            Text(lessonTitle, fontSize = 12.sp, color = theme.textSecondary, maxLines = 2,
+                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
+                textAlign = androidx.compose.ui.text.style.TextAlign.Center)
+            if (sideBySide) {
+                Row(Modifier.weight(1f).fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                    mascot(Modifier.weight(1f).fillMaxHeight())
+                    details(Modifier.weight(1f).fillMaxHeight())
+                }
+            } else {
+                mascot(Modifier.weight(.55f).fillMaxWidth())
+                details(Modifier.weight(.45f).fillMaxWidth())
+            }
+            Text("Racha: ${progressState.streak} días", color = theme.textSecondary, fontSize = 11.sp)
+            Sticker3dButton(onClick = onContinue, modifier = Modifier.fillMaxWidth().height(48.dp),
+                containerColor = theme.accent, bottomBevelColor = theme.accentBevel,
+                strokeColor = theme.strokeBorder, shape = RastroShapes.Pill,
+                contentPadding = PaddingValues(vertical = 8.dp)) {
+                Text("CONTINUAR", fontSize = 14.sp, fontWeight = FontWeight.Black, color = contrastingText(theme.accent))
+            }
         }
     }
 }
@@ -1122,22 +1129,7 @@ private fun RedemptionPhoenixDialog(
                     .padding(24.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                // Flame icon in 3D badge
-                Box(
-                    modifier = Modifier
-                        .size(60.dp)
-                        .clip(RoundedCornerShape(20.dp))
-                        .background(Color(0xFFFFEDD5))
-                        .border(2.dp, Color(0xFFF97316), RoundedCornerShape(20.dp)),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Icon(
-                        imageVector = Icons.Rounded.LocalFireDepartment,
-                        contentDescription = null,
-                        tint = Color(0xFFEA580C),
-                        modifier = Modifier.size(36.dp)
-                    )
-                }
+                ClassicArtwork(ClassicAppearance.KNOCKED_OUT, Modifier.size(140.dp))
 
                 Spacer(Modifier.height(14.dp))
 

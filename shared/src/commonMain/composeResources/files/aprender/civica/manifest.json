@@ -1,0 +1,66 @@
+{
+  "subjectId": "civica",
+  "name": "Ed. Cívica",
+  "area": "Persona y Familia",
+  "colorHex": "#EC4899",
+  "description": "Derechos humanos, Constitución de 1993, garantías constitucionales, poderes del Estado, organismos autónomos y derecho universitario.",
+  "weeks": 11,
+  "source": "curso-prueba/SALIDA_KOTLIN/civica",
+  "weekManifests": [
+    {
+      "week": 1,
+      "title": "TEMA 01: LA PERSONA Y LA VIDA EN SOCIEDAD",
+      "path": "semana01/manifest.json"
+    },
+    {
+      "week": 2,
+      "title": "TEMA 02: CIUDADANÍA: DERECHOS Y DEBERES",
+      "path": "semana02/manifest.json"
+    },
+    {
+      "week": 3,
+      "title": "TEMA 03: ESTADO Y NACIÓN",
+      "path": "semana03/manifest.json"
+    },
+    {
+      "week": 4,
+      "title": "Semana 4",
+      "path": "semana04/manifest.json"
+    },
+    {
+      "week": 5,
+      "title": "TEMA 05: DEMOCRACIA Y SISTEMA POLÍTICO",
+      "path": "semana05/manifest.json"
+    },
+    {
+      "week": 6,
+      "title": "TEMA 06: DERECHOS HUMANOS Y GARANTÍAS CONSTITUCIONALES",
+      "path": "semana06/manifest.json"
+    },
+    {
+      "week": 7,
+      "title": "TEMA 07: CONSTITUCIÓN Y ORDEN JURÍDICO",
+      "path": "semana07/manifest.json"
+    },
+    {
+      "week": 8,
+      "title": "TEMA 08: PARTICIPACIÓN Y CONTROL CIUDADANO",
+      "path": "semana08/manifest.json"
+    },
+    {
+      "week": 9,
+      "title": "TEMA 09: GOBIERNOS REGIONALES Y LOCALES",
+      "path": "semana09/manifest.json"
+    },
+    {
+      "week": 10,
+      "title": "TEMA 10: DESARROLLO, CONVIVENCIA Y CULTURA CÍVICA",
+      "path": "semana10/manifest.json"
+    },
+    {
+      "week": 11,
+      "title": "Semana 11",
+      "path": "semana11/manifest.json"
+    }
+  ]
+}

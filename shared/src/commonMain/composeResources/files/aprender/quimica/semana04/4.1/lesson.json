@@ -1,0 +1,18 @@
+{
+  "id": "quim_t04_s01",
+  "subjectId": "quimica",
+  "semana": 4,
+  "subtema": "4.1",
+  "title": "Estructura Electrónica y Tabla Periódica Moderna - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/quimica/QuimicaSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_quim_t04_s01",
+    "asignatura": "Química",
+    "semana": 4,
+    "titulo": "Estructura Electrónica y Tabla Periódica Moderna - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

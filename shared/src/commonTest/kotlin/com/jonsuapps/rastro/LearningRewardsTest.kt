@@ -20,6 +20,20 @@ class LearningRewardsTest {
         }
     }
 
+    @Test fun examRewardsShareLessonBalanceAndCannotRepeatAfterRestore() = isolated {
+        GamificationManager.recordLessonCompletion("biologia_s1_p1", 25, 1)
+        assertEquals(50, GamificationManager.claimExamReward("attempt-1", 10))
+        val saved = GamificationManager.state.value
+        GamificationManager.restore(Json.decodeFromString<GamificationState>(Json.encodeToString(saved)))
+        assertEquals(0, GamificationManager.claimExamReward("attempt-1", 10))
+        assertEquals(75, GamificationManager.state.value.xp)
+        assertEquals(5, GamificationManager.claimExamReward("attempt-2", 1))
+        assertEquals(80, GamificationManager.state.value.xp)
+        assertEquals(0, GamificationManager.claimExamReward("", 10))
+        assertEquals(0, GamificationManager.claimExamReward("invalid", -1))
+        assertEquals(emptyList(), Json.decodeFromString<GamificationState>("{\"xp\":125}").claimedExamRewards)
+    }
+
     @Test fun chestRequiresRealCompletionsAndSurvivesRestore() = isolated {
         val lessons = AprenderRepository.getLessonsForSubjectSync("biologia")
             .filter { it.semana == 1 && it.challenges.isNotEmpty() }
@@ -36,10 +50,10 @@ class LearningRewardsTest {
         assertEquals(lessons.size * 25 + 30, GamificationManager.state.value.xp)
     }
 
-    @Test fun replayImprovesStarsWithoutRepeatedXp() = isolated {
+    @Test fun replayImprovesStarsWithReducedXp() = isolated {
         GamificationManager.recordLessonCompletion("biologia_s1_p1", 25, 1)
         GamificationManager.recordLessonCompletion("biologia_s1_p1", 50, 3)
-        assertEquals(25, GamificationManager.state.value.xp)
+        assertEquals(35, GamificationManager.state.value.xp)
         assertEquals(3, GamificationManager.state.value.completedLessons["biologia_s1_p1"]?.stars)
         GamificationManager.recordLessonCompletion("biologia_s1_p1", 25, 1)
         assertEquals(3, GamificationManager.state.value.completedLessons["biologia_s1_p1"]?.stars)

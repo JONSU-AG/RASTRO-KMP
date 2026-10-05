@@ -1,0 +1,18 @@
+{
+  "week": 8,
+  "title": "Semana 8",
+  "lessons": [
+    {
+      "subtopic": "8.1",
+      "lessonId": "rl_t08_s01",
+      "title": "Organización y Orden Lógico - Fundamentos y Leyes Principales",
+      "path": "8.1/lesson.json"
+    },
+    {
+      "subtopic": "8.2",
+      "lessonId": "rl_t08_s02",
+      "title": "Organización y Orden Lógico - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "8.2/lesson.json"
+    }
+  ]
+}

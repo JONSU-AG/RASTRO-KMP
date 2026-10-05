@@ -1,0 +1,18 @@
+{
+  "id": "alg_t08_s01",
+  "subjectId": "algebra",
+  "semana": 8,
+  "subtema": "8.1",
+  "title": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana08.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_alg_t08_s01",
+    "asignatura": "Álgebra",
+    "semana": 8,
+    "titulo": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:shortcutId="one_last_lesson" android:enabled="true"
+        android:icon="@drawable/ic_nav_learn_filled"
+        android:shortcutShortLabel="@string/shortcut_learn_short"
+        android:shortcutLongLabel="@string/shortcut_learn_long">
+        <intent android:action="com.jonsuapps.rastro.action.LEARN"
+            android:targetPackage="com.jonsuapps.rastro"
+            android:targetClass="com.jonsuapps.rastro.android.MainActivity" />
+    </shortcut>
+    <shortcut android:shortcutId="do_not_give_up" android:enabled="true"
+        android:icon="@drawable/ic_nav_library_outline"
+        android:shortcutShortLabel="@string/shortcut_contribute_short"
+        android:shortcutLongLabel="@string/shortcut_contribute_long">
+        <intent android:action="com.jonsuapps.rastro.action.CONTRIBUTE"
+            android:targetPackage="com.jonsuapps.rastro"
+            android:targetClass="com.jonsuapps.rastro.android.MainActivity" />
+    </shortcut>
+</shortcuts>

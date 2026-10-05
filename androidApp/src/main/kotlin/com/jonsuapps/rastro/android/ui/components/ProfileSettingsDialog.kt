@@ -1,4 +1,6 @@
 package com.jonsuapps.rastro.android.ui.components
+import com.jonsuapps.rastro.theme.accentText
+import com.jonsuapps.rastro.theme.onAccent
 
 import android.content.Intent
 import android.net.Uri
@@ -53,6 +55,7 @@ fun ProfileSettingsDialog(
     val currentUser by UserManager.currentUser.collectAsState()
     var showDeleteConfirmDialog by remember { mutableStateOf(false) }
     var showBlockedUsersDialog by remember { mutableStateOf(false) }
+    var showWidgetsDialog by remember { mutableStateOf(false) }
     var isDeleting by remember { mutableStateOf(false) }
     var deletionError by remember { mutableStateOf<String?>(null) }
 
@@ -68,6 +71,8 @@ fun ProfileSettingsDialog(
     var vibrationsEnabled by remember {
         mutableStateOf(rastroPrefs.getBoolean("vibrations_enabled", true))
     }
+
+
 
     Dialog(
         onDismissRequest = onDismiss,
@@ -107,7 +112,7 @@ fun ProfileSettingsDialog(
                             Icon(
                                 imageVector = Icons.Rounded.Settings,
                                 contentDescription = null,
-                                tint = colors.accent,
+                                tint = colors.accentText,
                                 modifier = Modifier.size(24.dp)
                             )
                         }
@@ -150,6 +155,16 @@ fun ProfileSettingsDialog(
                     verticalArrangement = Arrangement.spacedBy(14.dp)
                 ) {
                     // ── 1. SECCIÓN PERSONALIZACIÓN VISUAL (Separado a su propio selector) ──
+                    SettingsSectionCard(title = "Widgets de inicio", icon = Icons.Rounded.Widgets,
+                        iconColor = colors.accent, colors = colors) {
+                        Text("Racha, calendario semanal, contador y frase del día.",
+                            color = colors.textSecondary, fontSize = 12.sp)
+                        Sticker3dButton(onClick = { showWidgetsDialog = true }, modifier = Modifier.fillMaxWidth(),
+                            containerColor = colors.surfaceAccent, bottomBevelColor = colors.cardBevel,
+                            strokeColor = colors.strokeBorder) {
+                            Text("Ver vistas previas y agregar", color = colors.textPrimary, fontWeight = FontWeight.Bold)
+                        }
+                    }
                     SettingsSectionCard(
                         title = "Personalización Visual",
                         icon = Icons.Rounded.Palette,
@@ -198,7 +213,7 @@ fun ProfileSettingsDialog(
                                             text = "Tema actual: ${currentThemeId.displayName}",
                                             fontSize = 11.sp,
                                             fontWeight = FontWeight.Medium,
-                                            color = colors.accent
+                                            color = colors.accentText
                                         )
                                     }
                                 }
@@ -393,7 +408,7 @@ fun ProfileSettingsDialog(
 
                     // ── 4. ZONA DE PELIGRO: ELIMINAR CUENTA (GOOGLE PLAY) ────
                     SettingsSectionCard(
-                        title = "Eliminar Cuenta y Datos (Play Store)",
+                        title = "Eliminar cuenta y datos",
                         icon = Icons.Rounded.DeleteForever,
                         iconColor = Color(0xFFEF4444),
                         colors = colors
@@ -510,28 +525,17 @@ fun ProfileSettingsDialog(
 
                         Sticker3dButton(
                             onClick = {
+                                if (isDeleting) return@Sticker3dButton
                                 isDeleting = true
                                 deletionError = null
-                                val user = FirebaseAuth.getInstance().currentUser
-                                if (user == null) {
-                                    UserManager.clearUser()
-                                    showDeleteConfirmDialog = false
-                                    onAccountDeleted()
-                                    onDismiss()
-                                } else {
-                                    val uid = user.uid
-                                    FirebaseFirestore.getInstance().collection("usuarios").document(uid).delete()
-                                    user.delete().addOnCompleteListener { task ->
-                                        isDeleting = false
-                                        if (task.isSuccessful) {
-                                            UserManager.clearUser()
-                                            showDeleteConfirmDialog = false
-                                            onAccountDeleted()
-                                            onDismiss()
-                                        } else {
-                                            deletionError = "Por seguridad, debes haber iniciado sesión recientemente. Vuelve a iniciar sesión e inténtalo."
-                                        }
-                                    }
+                                com.jonsuapps.rastro.android.data.AccountDeletionRepository.deleteCurrentAccount { result ->
+                                    isDeleting = false
+                                    result.onSuccess {
+                                        UserManager.clearUser()
+                                        showDeleteConfirmDialog = false
+                                        onAccountDeleted()
+                                        onDismiss()
+                                    }.onFailure { deletionError = it.localizedMessage }
                                 }
                             },
                             enabled = !isDeleting,
@@ -560,6 +564,7 @@ fun ProfileSettingsDialog(
             onDismiss = { showBlockedUsersDialog = false }
         )
     }
+    if (showWidgetsDialog) WidgetsAndShortcutsDialog(colors) { showWidgetsDialog = false }
 }
 
 @Composable
@@ -628,7 +633,7 @@ private fun SettingsOptionRow(
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                tint = colors.accent,
+                tint = colors.accentText,
                 modifier = Modifier.size(17.dp)
             )
             Spacer(modifier = Modifier.width(8.dp))
@@ -668,7 +673,7 @@ private fun SettingsSwitchRow(
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                tint = colors.accent,
+                tint = colors.accentText,
                 modifier = Modifier.size(20.dp)
             )
             Spacer(modifier = Modifier.width(10.dp))
@@ -689,4 +694,3 @@ private fun SettingsSwitchRow(
         )
     }
 }
-

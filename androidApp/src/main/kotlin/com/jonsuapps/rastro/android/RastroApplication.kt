@@ -34,6 +34,7 @@ class RastroApplication : Application() {
         } catch (_: Exception) {
             // Ignorar si ya fue inicializado por otro componente
         }
+        com.jonsuapps.rastro.android.data.ErrorBankRepository.init()
         LimaStudyReminderWorker.enqueuePeriodicWork(this)
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
             private var visibleActivities = 0

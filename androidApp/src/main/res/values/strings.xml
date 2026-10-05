@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">RASTRO</string>
+    <string name="shortcut_learn_short">🥺 ¿Nos dejas?</string>
+    <string name="shortcut_learn_long">🥺 ¿Nos dejas? Una última lección</string>
+    <string name="shortcut_contribute_short">💪 Aún no te rindas</string>
+    <string name="shortcut_contribute_long">💪 Aún no te rindas · Mira los aportes</string>
+    <string name="widget_daily_name">Racha diaria · 2 × 1</string>
+    <string name="widget_weekly_name">Racha semanal · 4 × 1</string>
+    <string name="widget_countdown_name">Contador de examen · 2 × 1</string>
+    <string name="widget_quote_name">Frase del día · 4 × 1</string>
 </resources>

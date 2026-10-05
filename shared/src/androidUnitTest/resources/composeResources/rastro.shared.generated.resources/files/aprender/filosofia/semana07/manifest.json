@@ -1,0 +1,18 @@
+{
+  "week": 7,
+  "title": "TEMA 07: FILOSOFÍA EN LATINOAMÉRICA Y EL PERÚ",
+  "lessons": [
+    {
+      "subtopic": "7.1",
+      "lessonId": "filo_t07_s01",
+      "title": "A. El Gran Debate sobre la Filosofía Latinoamericana",
+      "path": "7.1/lesson.json"
+    },
+    {
+      "subtopic": "7.2",
+      "lessonId": "filo_t07_s02",
+      "title": "Nemotecnia del Debate Salazar vs. Zea:",
+      "path": "7.2/lesson.json"
+    }
+  ]
+}

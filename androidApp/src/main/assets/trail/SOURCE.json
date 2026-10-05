@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/lucide-icons/lucide",
+  "commit": "500620a2e8123f8d1db191538886dc0c223f69a9",
+  "license": "ISC + MIT (Feather derivatives); see LICENSE.txt",
+  "groups": {
+    "biology": "dna dna-off microscope leaf sprout flower-2 tree-pine trees brain heart-pulse bone fish bird bug snail turtle rabbit shell biohazard syringe droplet circle-dot network layers",
+    "physics": "atom magnet zap orbit satellite rocket gauge waves-horizontal thermometer sun eclipse lightbulb radio circuit-board weight scale move compass timer wind",
+    "chemistry": "flask-conical flask-round test-tube test-tubes pipette beaker bubbles hexagon diamond gem flame snowflake radiation",
+    "history": "scroll scroll-text crown columns-3 landmark castle shield swords ship anchor amphora hourglass flag map pin",
+    "literature": "book book-open book-bookmark library-big notebook-pen feather pen-tool drama quote text-initial speech languages newspaper",
+    "math": "pi sigma radical divide percent ruler triangle square circle pentagon chart-line chart-bar chart-pie binary infinity calculator drafting-compass",
+    "generic": "puzzle target graduation-cap globe earth mountain telescope book-check lightbulb compass message-circle handshake eye scale route"
+  }
+}

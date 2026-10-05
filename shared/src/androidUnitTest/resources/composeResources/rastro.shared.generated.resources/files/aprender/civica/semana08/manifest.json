@@ -1,0 +1,18 @@
+{
+  "week": 8,
+  "title": "TEMA 08: PARTICIPACIÓN Y CONTROL CIUDADANO",
+  "lessons": [
+    {
+      "subtopic": "8.1",
+      "lessonId": "civ_t08_s01",
+      "title": "Derechos de Participación Ciudadana: Iniciativas Normativas, Referéndum y Consulta Previa",
+      "path": "8.1/lesson.json"
+    },
+    {
+      "subtopic": "8.2",
+      "lessonId": "civ_t08_s02",
+      "title": "Derechos de Control Ciudadano: Revocatoria, Remoción y Rendición de Cuentas",
+      "path": "8.2/lesson.json"
+    }
+  ]
+}

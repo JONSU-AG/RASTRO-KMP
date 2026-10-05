@@ -1,0 +1,18 @@
+{
+  "week": 4,
+  "title": "TEMA 04: EL VIRREINATO DEL PERÚ (POLÍTICA, ECONOMÍA, SOCIEDAD Y REFORMAS BORBÓNICAS)",
+  "lessons": [
+    {
+      "subtopic": "4.1",
+      "lessonId": "hper_t04_s01",
+      "title": "3.1. Invasión, Resistencia Andina y Guerras Civiles",
+      "path": "4.1/lesson.json"
+    },
+    {
+      "subtopic": "4.2",
+      "lessonId": "hper_t04_s02",
+      "title": "3.4. La Sociedad Colonial: Régimen Estamental de Castas",
+      "path": "4.2/lesson.json"
+    }
+  ]
+}

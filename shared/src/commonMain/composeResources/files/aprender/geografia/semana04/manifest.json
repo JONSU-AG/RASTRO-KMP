@@ -1,0 +1,18 @@
+{
+  "week": 4,
+  "title": "Semana 4",
+  "lessons": [
+    {
+      "subtopic": "4.1",
+      "lessonId": "geo_t04_s01",
+      "title": "3.1. Estructura Interna de la Geósfera",
+      "path": "4.1/lesson.json"
+    },
+    {
+      "subtopic": "4.2",
+      "lessonId": "geo_t04_s02",
+      "title": "3.3. Geodinámica Externa (Fuerzas Exógenas)",
+      "path": "4.2/lesson.json"
+    }
+  ]
+}

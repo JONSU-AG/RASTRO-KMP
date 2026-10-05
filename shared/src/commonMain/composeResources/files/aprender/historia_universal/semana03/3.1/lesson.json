@@ -1,0 +1,18 @@
+{
+  "id": "huni_t03_s01",
+  "subjectId": "historia_universal",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "3.1. Grecia Antigua: La Matriz Democrática y Cultural de Occidente",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/historia_universal/HistoriaUniversalSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_huni_t03_s01",
+    "asignatura": "Historia Universal",
+    "semana": 3,
+    "titulo": "3.1. Grecia Antigua: La Matriz Democrática y Cultural de Occidente",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

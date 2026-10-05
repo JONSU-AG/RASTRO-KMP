@@ -1,0 +1,18 @@
+{
+  "id": "geo_t01_s02",
+  "subjectId": "geografia",
+  "semana": 1,
+  "subtema": "1.2",
+  "title": "3.4. Principios Geográficos Metodológicos",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana01.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t01_s02",
+    "asignatura": "Geografía",
+    "semana": 1,
+    "titulo": "3.4. Principios Geográficos Metodológicos",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

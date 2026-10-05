@@ -1,0 +1,18 @@
+{
+  "id": "civ_t08_s02",
+  "subjectId": "civica",
+  "semana": 8,
+  "subtema": "8.2",
+  "title": "Derechos de Control Ciudadano: Revocatoria, Remoción y Rendición de Cuentas",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/civica/CivicaSemana08.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_civ_t08_s02",
+    "asignatura": "Ed. Cívica",
+    "semana": 8,
+    "titulo": "Derechos de Control Ciudadano: Revocatoria, Remoción y Rendición de Cuentas",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

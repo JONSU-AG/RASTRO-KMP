@@ -1,0 +1,18 @@
+{
+  "week": 6,
+  "title": "Semana 6",
+  "lessons": [
+    {
+      "subtopic": "6.1",
+      "lessonId": "arit_t06_s01",
+      "title": "Razones, Proporciones y Series de Razones Geométricas Equivalentes - Fundamentos y Leyes Principales",
+      "path": "6.1/lesson.json"
+    },
+    {
+      "subtopic": "6.2",
+      "lessonId": "arit_t06_s02",
+      "title": "Razones, Proporciones y Series de Razones Geométricas Equivalentes - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "6.2/lesson.json"
+    }
+  ]
+}

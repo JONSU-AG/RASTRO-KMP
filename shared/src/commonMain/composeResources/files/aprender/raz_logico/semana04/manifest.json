@@ -1,0 +1,18 @@
+{
+  "week": 4,
+  "title": "Semana 4",
+  "lessons": [
+    {
+      "subtopic": "4.1",
+      "lessonId": "rl_t04_s01",
+      "title": "INFERENCIAS LÓGICAS Y REGLAS DE INFERENCIA - Fundamentos y Leyes Principales",
+      "path": "4.1/lesson.json"
+    },
+    {
+      "subtopic": "4.2",
+      "lessonId": "rl_t04_s02",
+      "title": "INFERENCIAS LÓGICAS Y REGLAS DE INFERENCIA - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "4.2/lesson.json"
+    }
+  ]
+}

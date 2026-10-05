@@ -1,0 +1,18 @@
+{
+  "week": 4,
+  "title": "Semana 4",
+  "lessons": [
+    {
+      "subtopic": "4.1",
+      "lessonId": "ing_t04_s01",
+      "title": "Funciones Comunicativas (Gustos, Preferencias, Solicitudes) y Conectores Lógicos Discursivos - Core Rules & Foundations",
+      "path": "4.1/lesson.json"
+    },
+    {
+      "subtopic": "4.2",
+      "lessonId": "ing_t04_s02",
+      "title": "Funciones Comunicativas (Gustos, Preferencias, Solicitudes) y Conectores Lógicos Discursivos - Applied Skills, Hacks & Reading Practice",
+      "path": "4.2/lesson.json"
+    }
+  ]
+}

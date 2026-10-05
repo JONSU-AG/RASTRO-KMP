@@ -52,9 +52,17 @@ class VocationalTestValidationTest {
     }
 
     @Test
-    fun testPendingStateItemBank() {
-        assertFalse(VocationalItemBank.isBankLoaded, "El banco de ítems inicialmente está pendiente de carga oficial")
-        assertEquals(emptyList(), VocationalItemBank.getQuestions())
+    fun testOfficialMiniIpCompleteBank() {
+        assertTrue(VocationalItemBank.isBankLoaded)
+        val questions = VocationalItemBank.getQuestions()
+        assertEquals(30, questions.size)
+        assertTrue(VocationalItemBank.validateBankStructure(questions))
+        RiasecDimension.entries.forEach { dimension ->
+            assertEquals(5, questions.count { it.dimension == dimension })
+        }
+        val result = VocationalScoringEngine.calculateResult(questions, questions.associate { it.id to 5 })
+        assertEquals(5, result.itemsPerDimension)
+        assertTrue(result.orderedScores().all { it.score == 25 && it.itemsPerDimension == 5 })
     }
 
     @Test

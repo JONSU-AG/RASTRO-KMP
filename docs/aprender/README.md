@@ -159,3 +159,5 @@ data class Challenge(
 ## Próximos Pasos
 
 Ver `docs/aprender/ARQUITECTURA.md` para el diseño del nuevo loader y `docs/aprender/biologia/` para el piloto 8.1.
+## 04/10 — Recompensas y matriz UNSA
+Detalle vigente: [RECOMPENSAS_MONEDAS_EXP.md](RECOMPENSAS_MONEDAS_EXP.md). Sustituye políticas anteriores incompatibles.

@@ -1,0 +1,18 @@
+{
+  "id": "cl_t05_s01",
+  "subjectId": "comprension_lectora",
+  "semana": 5,
+  "subtema": "5.1",
+  "title": "3.1 La Matriz de Compatibilidad e Incompatibilidad en Admisión",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t05_s01",
+    "asignatura": "Comp. Lectora",
+    "semana": 5,
+    "titulo": "3.1 La Matriz de Compatibilidad e Incompatibilidad en Admisión",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

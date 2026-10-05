@@ -121,3 +121,9 @@ Aplica pruebas en este orden. Pregunta si admite lo más pasiva, si la admite es
 ## RESUMEN
 
 Frase nominal con núcleo más directos, indirectos y aposición en la fascinante novela, el reloj de oro, el río Chili y César Vallejo poeta. Objeto directo con lo y pasiva y objeto indirecto con le y duplicación en a la científica, las medallas, al director y les a los ingresantes. Atributo con copulativo y lo en son competentes frente a predicativo subjetivo en contentos y entusiasmado y objetivo en culpable y ganadora. Agente con por en pasiva en por los cancilleres y circunstancial prescindible en en el auditorio, base verificada de las diez preguntas de la lección.
+
+## Frases: clase, núcleo y función
+
+Una frase o sintagma se organiza alrededor de un núcleo: nominal, verbal, adjetival, adverbial o preposicional según el análisis adoptado. Su clase no determina por sí sola su función en una oración. Una frase nominal puede ser sujeto o complemento: en La estudiante lee un libro, La estudiante funciona como sujeto y un libro como complemento directo.
+
+Para identificar función, examina la relación con otros elementos. La posición inicial no garantiza que una expresión sea sujeto. En A María le gusta la música, la música concuerda con gusta y funciona como sujeto; A María expresa a quién afecta la experiencia. Las pruebas de concordancia y sustitución son más confiables que una pregunta mecánica aislada.

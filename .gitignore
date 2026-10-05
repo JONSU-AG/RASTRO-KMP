@@ -72,3 +72,19 @@ TEMARIO_OFICIAL_*.md
 
 # AI Agents configuration
 .agents/
+
+# Private signing material and machine caches
+*.jks
+*.keystore
+*.p12
+*.pfx
+.env
+.env.*
+!.env.example
+*service-account*.json
+*serviceAccount*.json
+node_modules/
+.codegraph/
+__pycache__/
+*.pyc
+

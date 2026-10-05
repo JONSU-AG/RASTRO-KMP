@@ -1,0 +1,18 @@
+{
+  "week": 10,
+  "title": "Semana 10",
+  "lessons": [
+    {
+      "subtopic": "10.1",
+      "lessonId": "fis_t10_s01",
+      "title": "MAGNETISMO Y ELECTROMAGNETISMO - Fundamentos y Leyes Principales",
+      "path": "10.1/lesson.json"
+    },
+    {
+      "subtopic": "10.2",
+      "lessonId": "fis_t10_s02",
+      "title": "MAGNETISMO Y ELECTROMAGNETISMO - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "10.2/lesson.json"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "week": 1,
+  "title": "TEMA 01: Nociones Fundamentales de Geografía y Espacio Geográfico",
+  "lessons": [
+    {
+      "subtopic": "1.1",
+      "lessonId": "geo_t01_s01",
+      "title": "3.1. Definición y Etimología de la Geografía",
+      "path": "1.1/lesson.json"
+    },
+    {
+      "subtopic": "1.2",
+      "lessonId": "geo_t01_s02",
+      "title": "3.4. Principios Geográficos Metodológicos",
+      "path": "1.2/lesson.json"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "week": 7,
+  "title": "TEMA 07: CONSTITUCIÓN Y ORDEN JURÍDICO",
+  "lessons": [
+    {
+      "subtopic": "7.1",
+      "lessonId": "civ_t07_s01",
+      "title": "La Constitución: Concepto, Estructura de la Carta de 1993 y Principio de Supremacía",
+      "path": "7.1/lesson.json"
+    },
+    {
+      "subtopic": "7.2",
+      "lessonId": "civ_t07_s02",
+      "title": "La Jerarquía Normativa (Pirámide de Kelsen) y el Procedimiento de Reforma Constitucional",
+      "path": "7.2/lesson.json"
+    }
+  ]
+}

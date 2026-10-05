@@ -76,3 +76,9 @@ Todo vínculo entre especies distintas se resume en quién gana, quién pierde, 
 Liquen es mutualismo obligado. Orquídea y rémora son comensalismo. Payaso separable es protocooperación. Tenia es parasitismo. Puma es depredación. Gause es competencia. Penicillium y eucalipto son amensalismo.
 ## RESUMEN
 Seis relaciones con signos claros, obligatoriedad que separa mutualismo de protocooperación, comensales neutros, parásitos crónicos, depredadores letales, competidores con exclusión y amensales inhibidores, con casos peruanos de examen.
+
+## Relaciones intraespecíficas e interespecíficas
+
+Una relación intraespecífica ocurre entre individuos de una misma especie: puede incluir cooperación, competencia, agrupaciones familiares o sociales. Una interespecífica relaciona especies distintas. En competencia, ambos participantes pueden perder acceso a recursos; en depredación, uno obtiene alimento y otro es consumido; en parasitismo, el beneficiado vive a costa del hospedador sin implicar necesariamente su muerte inmediata.
+
+En mutualismo ambos obtienen beneficio; en comensalismo uno se beneficia y no se reconoce un efecto relevante sobre el otro. Estos signos resumen resultados, pero el contexto importa. La cooperación entre abejas de una misma colonia es intraespecífica; la polinización entre abeja y planta se analiza entre especies. Las relaciones ayudan a explicar redes ecológicas y no sustituyen el estudio del hábitat y los recursos.

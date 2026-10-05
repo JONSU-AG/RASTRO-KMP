@@ -1,0 +1,18 @@
+{
+  "week": 5,
+  "title": "TEMA 05: LA REPÚBLICA DEL PERÚ (INDEPENDENCIA, SIGLOS XIX, XX Y RETOS DEL SIGLO XXI)",
+  "lessons": [
+    {
+      "subtopic": "5.1",
+      "lessonId": "hper_t05_s01",
+      "title": "3.1. El Proceso de la Independencia del Perú (1820 - 1824)",
+      "path": "5.1/lesson.json"
+    },
+    {
+      "subtopic": "5.2",
+      "lessonId": "hper_t05_s02",
+      "title": "3.4. La Reconstrucción Nacional y la República Aristocrática (1883 - 1919)",
+      "path": "5.2/lesson.json"
+    }
+  ]
+}

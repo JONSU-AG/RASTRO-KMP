@@ -11,10 +11,16 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import com.jonsuapps.rastro.android.util.ImageCacheManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlinx.coroutines.CancellationException
+import kotlin.coroutines.resume
+import com.jonsuapps.rastro.android.util.awaitResult
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -47,6 +53,7 @@ fun AddObraDialog(
 
     val theme = ThemeManager.currentTheme
     val context = LocalContext.current
+    val scope = rememberCoroutineScope()
     val currentUser by UserManager.currentUser.collectAsState()
 
     var titulo by remember { mutableStateOf("") }
@@ -61,6 +68,8 @@ fun AddObraDialog(
     var coverUrl by remember { mutableStateOf("") }
     var bannerUrl by remember { mutableStateOf("") }
     var documentUrl by remember { mutableStateOf("") }
+    var pendingCover by remember { mutableStateOf<Uri?>(null) }
+    var pendingDocument by remember { mutableStateOf<Uri?>(null) }
 
     var isCategoryDropdownOpen by remember { mutableStateOf(false) }
     var isUploadingMedia by remember { mutableStateOf(false) }
@@ -76,78 +85,31 @@ fun AddObraDialog(
         "Literatura Regional"
     )
 
-    // Selector de portada
+    // Picking a file is local; only Guardar publishes it to the owner's Drive.
     val pickCoverLauncher = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
-        if (uri != null) {
-            isUploadingMedia = true
-            uploadStatusMessage = "Subiendo portada a la nube..."
-            errorMessage = null
-            val bytes = try {
-                context.contentResolver.openInputStream(uri)?.use { it.readBytes() }
-            } catch (e: Exception) {
-                null
-            }
-            if (bytes == null || bytes.isEmpty()) {
-                errorMessage = "No se pudo leer la imagen local seleccionada."
-                isUploadingMedia = false
-                return@rememberLauncherForActivityResult
-            }
-            DriveUploadRepository.uploadUserFile(
-                context = context,
-                bytes = bytes,
-                displayName = "portada_${System.currentTimeMillis()}.jpg",
-                mimeType = "image/jpeg",
-                makePublic = true,
-                onResult = { result ->
-                    result.onSuccess { file ->
-                        coverUrl = file.directUrl
-                        isUploadingMedia = false
-                        DuolingoHaptics.playAnswerCorrect(context)
-                    }.onFailure {
-                        isUploadingMedia = false
-                        errorMessage = "Error al subir portada: ${it.localizedMessage}"
-                        DuolingoHaptics.playAnswerIncorrect(context)
-                    }
-                }
-            )
-        }
+        if (uri != null) { pendingCover = uri; errorMessage = null }
+    }
+    val pickDocLauncher = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+        if (uri != null) { pendingDocument = uri; errorMessage = null }
     }
 
-    // Selector de documento / PDF
-    val pickDocLauncher = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
-        if (uri != null) {
-            isUploadingMedia = true
-            uploadStatusMessage = "Subiendo documento/PDF de la obra..."
-            errorMessage = null
-            val bytes = try {
-                context.contentResolver.openInputStream(uri)?.use { it.readBytes() }
-            } catch (e: Exception) {
-                null
+    suspend fun uploadSelected(uri: Uri, mime: String, prefix: String): String {
+        val actualMime = context.contentResolver.getType(uri)?.takeIf {
+            if (mime.startsWith("image/")) it.startsWith("image/") else it == mime
+        } ?: mime
+        val extension = android.webkit.MimeTypeMap.getSingleton().getExtensionFromMimeType(actualMime)
+            ?: if (actualMime == "application/pdf") "pdf" else "jpg"
+        val bytes = withContext(Dispatchers.IO) {
+            context.contentResolver.openInputStream(uri)?.use { it.readBytes() }
+        } ?: error("No se pudo leer el archivo seleccionado.")
+        require(bytes.isNotEmpty()) { "El archivo seleccionado está vacío." }
+        return suspendCancellableCoroutine { continuation ->
+            DriveUploadRepository.uploadUserFile(context, bytes,
+                "${prefix}_${System.currentTimeMillis()}.$extension",
+                actualMime, true) { result ->
+                if (continuation.isActive) continuation.resume(result.map { it.directUrl })
             }
-            if (bytes == null || bytes.isEmpty()) {
-                errorMessage = "No se pudo leer el archivo local."
-                isUploadingMedia = false
-                return@rememberLauncherForActivityResult
-            }
-            DriveUploadRepository.uploadUserFile(
-                context = context,
-                bytes = bytes,
-                displayName = "documento_${System.currentTimeMillis()}.pdf",
-                mimeType = "application/pdf",
-                makePublic = true,
-                onResult = { result ->
-                    result.onSuccess { file ->
-                        documentUrl = file.directUrl
-                        isUploadingMedia = false
-                        DuolingoHaptics.playAnswerCorrect(context)
-                    }.onFailure {
-                        isUploadingMedia = false
-                        errorMessage = "Error al subir documento: ${it.localizedMessage}"
-                        DuolingoHaptics.playAnswerIncorrect(context)
-                    }
-                }
-            )
-        }
+        }.getOrThrow()
     }
 
     Dialog(
@@ -420,7 +382,7 @@ fun AddObraDialog(
                     ) {
                         OutlinedTextField(
                             value = coverUrl,
-                            onValueChange = { coverUrl = it },
+                            onValueChange = { coverUrl = it; pendingCover = null },
                             placeholder = { Text("URL HTTPS o sube de tu galería", fontSize = 11.sp) },
                             modifier = Modifier.weight(1f),
                             shape = RoundedCornerShape(12.dp),
@@ -437,7 +399,7 @@ fun AddObraDialog(
                     }
 
                     CoverLinkPreview(
-                        link = coverUrl,
+                        link = pendingCover?.toString() ?: coverUrl,
                         modifier = Modifier.fillMaxWidth().height(140.dp)
                     )
 
@@ -453,7 +415,7 @@ fun AddObraDialog(
                     ) {
                         OutlinedTextField(
                             value = documentUrl,
-                            onValueChange = { documentUrl = it },
+                            onValueChange = { documentUrl = it; pendingDocument = null },
                             placeholder = { Text("URL de Google Drive o PDF local", fontSize = 11.sp) },
                             modifier = Modifier.weight(1f),
                             shape = RoundedCornerShape(12.dp),
@@ -469,6 +431,7 @@ fun AddObraDialog(
                         }
                     }
 
+                    if (pendingDocument != null) Text("PDF seleccionado · se subirá al guardar", color = theme.textSecondary, fontSize = 12.sp)
                     Spacer(modifier = Modifier.height(20.dp))
                     } // Fin contenido desplazable: Cancelar/Guardar fijos abajo.
 
@@ -487,19 +450,27 @@ fun AddObraDialog(
                         Sticker3dButton(
                             enabled = !isSaving && titulo.isNotBlank() && autor.isNotBlank() && sinopsis.isNotBlank(),
                             onClick = {
+                                if (isSaving) return@Sticker3dButton
                                 if (titulo.isBlank() || autor.isBlank() || sinopsis.isBlank()) {
                                     DuolingoHaptics.playAnswerIncorrect(context)
                                     errorMessage = "Por favor ingresa título, autor y argumento de la obra."
                                     return@Sticker3dButton
                                 }
                                 val cleanCover = coverUrl.trim()
-                                if (cleanCover.isNotBlank() && !cleanCover.startsWith("https://") && !cleanCover.startsWith("http://")) {
+                                if (pendingCover == null && cleanCover.isNotBlank() && !cleanCover.startsWith("https://") && !cleanCover.startsWith("http://")) {
                                     DuolingoHaptics.playAnswerIncorrect(context)
                                     errorMessage = "La URL de la portada debe empezar con http:// o https://."
                                     return@Sticker3dButton
                                 }
 
                                 isSaving = true
+                                scope.launch {
+                                  try {
+                                    isUploadingMedia = pendingCover != null || pendingDocument != null
+                                    uploadStatusMessage = "Preparando archivos de la obra…"
+                                    pendingCover?.let { uri -> coverUrl = uploadSelected(uri, "image/jpeg", "portada"); pendingCover = null }
+                                    pendingDocument?.let { uri -> documentUrl = uploadSelected(uri, "application/pdf", "documento"); pendingDocument = null }
+                                    isUploadingMedia = false
                                 val newId = "obra_adicional_${System.currentTimeMillis()}"
                                 val newObraData = mapOf(
                                     "id" to newId,
@@ -513,7 +484,7 @@ fun AddObraDialog(
                                     "ano" to anio.trim().ifBlank { "S/F" },
                                     "sinopsis" to sinopsis.trim(),
                                     "contextoHistorico" to contextoHistorico.trim(),
-                                    "coverUrl" to cleanCover,
+                                    "coverUrl" to coverUrl.trim(),
                                     "bannerUrl" to bannerUrl.trim(),
                                     "documentUrl" to documentUrl.trim(),
                                     "colorHex" to "#047857",
@@ -523,17 +494,15 @@ fun AddObraDialog(
                                 )
 
                                 FirebaseFirestore.getInstance().collection("libros").document(newId)
-                                    .set(newObraData, SetOptions.merge())
-                                    .addOnSuccessListener {
-                                        isSaving = false
-                                        DuolingoHaptics.playAnswerCorrect(context)
-                                        onDismiss()
-                                    }
-                                    .addOnFailureListener {
-                                        isSaving = false
-                                        errorMessage = "Error al guardar obra: ${it.localizedMessage}"
-                                        DuolingoHaptics.playAnswerIncorrect(context)
-                                    }
+                                    .set(newObraData, SetOptions.merge()).awaitResult()
+                                DuolingoHaptics.playAnswerCorrect(context)
+                                onDismiss()
+                                  } catch (cancelled: CancellationException) { throw cancelled
+                                  } catch (error: Exception) {
+                                    errorMessage = "No se pudo guardar la obra: ${error.localizedMessage}"
+                                    DuolingoHaptics.playAnswerIncorrect(context)
+                                  } finally { isSaving = false; isUploadingMedia = false }
+                                }
                             },
                             containerColor = Color(0xFF047857),
                             bottomBevelColor = Color(0xFF065F46),
@@ -570,6 +539,7 @@ private fun CoverLinkPreview(link: String, modifier: Modifier = Modifier) {
     val driveId = remember(trimmed) { DriveUploadRepository.extractDriveFileId(trimmed) }
     val previewUrl = when {
         driveId != null -> "https://drive.google.com/thumbnail?id=$driveId&sz=w400"
+        trimmed.startsWith("content://") -> trimmed
         trimmed.startsWith("http://") || trimmed.startsWith("https://") -> trimmed
         else -> null
     }
@@ -588,7 +558,23 @@ private fun CoverLinkPreview(link: String, modifier: Modifier = Modifier) {
         bitmap = null
         failed = false
         val bmp = withContext(Dispatchers.IO) {
-            runCatching { ImageCacheManager.loadImage(context, previewUrl) }.getOrNull()
+            runCatching {
+                if (previewUrl.startsWith("content://")) {
+                    val uri = Uri.parse(previewUrl)
+                    val options = android.graphics.BitmapFactory.Options().apply { inJustDecodeBounds = true }
+                    context.contentResolver.openInputStream(uri)?.use {
+                        android.graphics.BitmapFactory.decodeStream(it, null, options)
+                    }
+                    options.inJustDecodeBounds = false
+                    options.inSampleSize = 1
+                    while (maxOf(options.outWidth, options.outHeight) / options.inSampleSize > 800) {
+                        options.inSampleSize *= 2
+                    }
+                    context.contentResolver.openInputStream(uri)?.use {
+                        android.graphics.BitmapFactory.decodeStream(it, null, options)?.asImageBitmap()
+                    }
+                } else ImageCacheManager.loadImage(context, previewUrl)
+            }.getOrNull()
         }
         if (bmp != null) bitmap = bmp else failed = true
     }

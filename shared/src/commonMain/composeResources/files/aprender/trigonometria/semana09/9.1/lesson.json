@@ -1,0 +1,18 @@
+{
+  "id": "trig_t09_s01",
+  "subjectId": "trigonometria",
+  "semana": 9,
+  "subtema": "9.1",
+  "title": "APLICACIONES GEOMÉTRICAS: ÁNGULOS VERTICALES Y HORIZONTALES (ROSA NÁUTICA) - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/trigonometria/TrigonometriaSemana09.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_trig_t09_s01",
+    "asignatura": "Trigonometría",
+    "semana": 9,
+    "titulo": "APLICACIONES GEOMÉTRICAS: ÁNGULOS VERTICALES Y HORIZONTALES (ROSA NÁUTICA) - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

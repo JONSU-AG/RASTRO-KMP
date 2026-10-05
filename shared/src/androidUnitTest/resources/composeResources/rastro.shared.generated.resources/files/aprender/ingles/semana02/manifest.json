@@ -1,0 +1,18 @@
+{
+  "week": 2,
+  "title": "Semana 2",
+  "lessons": [
+    {
+      "subtopic": "2.1",
+      "lessonId": "ing_t02_s01",
+      "title": "Pasado Simple (Regulares e Irregulares) y Formas de Futuro (Be going to vs. Will) - Core Rules & Foundations",
+      "path": "2.1/lesson.json"
+    },
+    {
+      "subtopic": "2.2",
+      "lessonId": "ing_t02_s02",
+      "title": "Pasado Simple (Regulares e Irregulares) y Formas de Futuro (Be going to vs. Will) - Applied Skills, Hacks & Reading Practice",
+      "path": "2.2/lesson.json"
+    }
+  ]
+}

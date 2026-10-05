@@ -1,6 +1,7 @@
 package com.jonsuapps.rastro.android.ui.screens
 
 import android.content.Context
+import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
@@ -22,6 +23,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.platform.LocalConfiguration
+import com.jonsuapps.rastro.android.ui.components.contrastingText
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -157,7 +160,7 @@ fun CourseFlashcardsDialog(
         properties = DialogProperties(usePlatformDefaultWidth = false)
     ) {
         Sticker3dCard(
-            modifier = Modifier.fillMaxWidth(0.96f).fillMaxHeight(0.92f),
+            modifier = Modifier.fillMaxWidth(0.96f).heightIn(max = (LocalConfiguration.current.screenHeightDp * 0.92f).dp),
             shape = RoundedCornerShape(28.dp),
             containerColor = theme.surface,
             bottomBevelColor = theme.cardBevel,
@@ -165,20 +168,20 @@ fun CourseFlashcardsDialog(
             bevelHeight = 6.dp
         ) {
             Column(
-                modifier = Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 14.dp),
+                modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(horizontal = 14.dp, vertical = 14.dp),
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Surface(shape = RastroShapes.Squircle, color = Color(0xFFE7F8F3)) {
-                        Text("▤", modifier = Modifier.padding(horizontal = 11.dp, vertical = 8.dp), color = Color(0xFF07966D), fontSize = 20.sp)
+                    Surface(shape = RastroShapes.Squircle, color = theme.surfaceAccent) {
+                        Text("▤", modifier = Modifier.padding(horizontal = 11.dp, vertical = 8.dp), color = theme.accent, fontSize = 20.sp)
                     }
                     Spacer(Modifier.width(10.dp))
                     Column(Modifier.weight(1f)) {
                         Text("Flashcards • ${subject.name}", color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 17.sp, maxLines = 1)
                         Text("Repaso activo por temas y subtemas", color = theme.textSecondary, fontSize = 11.sp, maxLines = 1)
                     }
-                    Surface(shape = RastroShapes.CircularPill, color = Color(0xFFEDE9FE)) {
-                        Text("${filteredCards.size} fichas", modifier = Modifier.padding(horizontal = 9.dp, vertical = 5.dp), color = Color(0xFF7C3AED), fontWeight = FontWeight.Bold, fontSize = 10.sp)
+                    Surface(shape = RastroShapes.CircularPill, color = theme.surfaceAccent) {
+                        Text("${filteredCards.size} fichas", modifier = Modifier.padding(horizontal = 9.dp, vertical = 5.dp), color = theme.accent, fontWeight = FontWeight.Bold, fontSize = 10.sp)
                     }
                     IconButton(onClick = onDismiss, modifier = Modifier.size(34.dp)) {
                         Icon(Icons.Rounded.Close, contentDescription = "Cerrar fichas", tint = theme.textSecondary)
@@ -215,7 +218,7 @@ fun CourseFlashcardsDialog(
 
                 if (currentCard == null) {
                     Column(
-                        modifier = Modifier.weight(1f).fillMaxWidth().clip(RoundedCornerShape(22.dp)).background(theme.surfaceAccent).padding(20.dp),
+                        modifier = Modifier.heightIn(min = 160.dp).fillMaxWidth().clip(RoundedCornerShape(22.dp)).background(theme.surfaceAccent).padding(20.dp),
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center
                     ) {
@@ -234,8 +237,8 @@ fun CourseFlashcardsDialog(
 
                     Sticker3dCard(
                         modifier = Modifier
-                            .weight(1f)
                             .fillMaxWidth()
+                            .animateContentSize()
                             .graphicsLayer {
                                 rotationY = rotationAnim
                                 cameraDistance = 12f * density
@@ -252,27 +255,17 @@ fun CourseFlashcardsDialog(
                     ) {
                         Column(
                             modifier = Modifier
-                                .fillMaxSize()
+                                .fillMaxWidth()
                                 .graphicsLayer {
                                     if (rotationAnim > 90f) rotationY = 180f
                                 }
                                 .padding(18.dp),
                             verticalArrangement = Arrangement.spacedBy(10.dp)
                         ) {
-                            Surface(shape = RastroShapes.CircularPill, color = if (isFlipped) Color(0xFFEDE9FE) else Color(0xFFE8F7F1)) {
-                                Text(
-                                    "${currentCard.type.uppercase()} • ${currentCard.topicTitle}",
-                                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
-                                    color = if (isFlipped) Color(0xFF7C3AED) else Color(0xFF059669),
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 10.sp,
-                                    maxLines = 1
-                                )
-                            }
                             Text(if (isFlipped) "RESPUESTA" else "PREGUNTA", color = theme.textSecondary, fontSize = 10.sp, fontWeight = FontWeight.Black)
                             Text(
                                 text = if (isFlipped) currentCard.answer else currentCard.question,
-                                modifier = Modifier.weight(1f).fillMaxWidth().verticalScroll(rememberScrollState()),
+                                modifier = Modifier.fillMaxWidth().heightIn(max = 320.dp).verticalScroll(rememberScrollState()),
                                 color = theme.textPrimary,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = if (isFlipped) 18.sp else 19.sp,
@@ -358,7 +351,7 @@ fun CourseFlashcardsDialog(
                     ) {
                         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                             Icon(Icons.Rounded.Check, contentDescription = null, tint = Color.White, modifier = Modifier.size(16.dp))
-                            Text(if (isMastered) "Dominada" else "Aprendida", fontSize = 12.sp, color = Color.White, fontWeight = FontWeight.Black)
+                            Text(if (isMastered) "Dominada" else "Aprendida", fontSize = 12.sp, color = contrastingText(if (isMastered) Color(0xFF059669) else Color(0xFF10B981)), fontWeight = FontWeight.Black)
                         }
                     }
 
@@ -377,7 +370,7 @@ fun CourseFlashcardsDialog(
                         strokeColor = theme.strokeBorder
                     ) {
                         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                            Text("Siguiente", fontSize = 12.sp, color = Color.White, fontWeight = FontWeight.Bold)
+                            Text("Siguiente", fontSize = 12.sp, color = contrastingText(theme.accent), fontWeight = FontWeight.Bold)
                             Icon(Icons.AutoMirrored.Rounded.ArrowForward, contentDescription = null, tint = Color.White, modifier = Modifier.size(15.dp))
                         }
                     }
@@ -409,13 +402,13 @@ fun CourseFlashcardsDialog(
                             Icon(
                                 imageVector = if (isCurrentFav) Icons.Rounded.Star else Icons.Rounded.StarOutline,
                                 contentDescription = null,
-                                tint = if (isCurrentFav) Color(0xFFD97706) else theme.textPrimary,
+                                tint = if (isCurrentFav) Color(0xFF92400E) else theme.textPrimary,
                                 modifier = Modifier.size(15.dp)
                             )
                             Text(
                                 text = "Favorita",
                                 fontSize = 11.5.sp,
-                                color = if (isCurrentFav) Color(0xFFD97706) else theme.textPrimary,
+                                color = if (isCurrentFav) Color(0xFF92400E) else theme.textPrimary,
                                 fontWeight = FontWeight.Bold
                             )
                         }
@@ -438,13 +431,13 @@ fun CourseFlashcardsDialog(
                     Sticker3dButton(
                         onClick = { showCreate = true },
                         modifier = Modifier.weight(1.2f).height(42.dp),
-                        containerColor = Color(0xFF7C3AED),
+                        containerColor = theme.accent,
                         bottomBevelColor = Color(0xFF6D28D9),
                         strokeColor = theme.strokeBorder
                     ) {
                         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                             Icon(Icons.Rounded.Add, contentDescription = null, tint = Color.White, modifier = Modifier.size(16.dp))
-                            Text("Nueva ficha", fontSize = 11.5.sp, color = Color.White, fontWeight = FontWeight.Black)
+                            Text("Nueva ficha", fontSize = 11.5.sp, color = contrastingText(theme.accent), fontWeight = FontWeight.Black)
                         }
                     }
                 }
@@ -652,7 +645,7 @@ private fun CreateCourseFlashcardDialog(
                         bottomBevelColor = theme.accentBevel,
                         strokeColor = theme.strokeBorder
                     ) {
-                        Text("Publicar Ficha", color = Color.White, fontWeight = FontWeight.Black, fontSize = 13.sp)
+                        Text("Publicar Ficha", color = contrastingText(theme.accent), fontWeight = FontWeight.Black, fontSize = 13.sp)
                     }
                 }
             }

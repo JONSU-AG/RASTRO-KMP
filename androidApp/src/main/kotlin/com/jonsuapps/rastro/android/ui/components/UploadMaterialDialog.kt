@@ -620,6 +620,7 @@ fun UploadMaterialDialog(
                         Sticker3dButton(
                             enabled = !isPublishing && currentUser.isAuthenticated && !currentUser.isAnonymous,
                             onClick = {
+                                if (isPublishing || isUploadingFile) return@Sticker3dButton
                                 if (title.isBlank()) {
                                     DuolingoHaptics.playAnswerIncorrect(context)
                                     errorMessage = "Por favor ingresa un título para tu aporte."

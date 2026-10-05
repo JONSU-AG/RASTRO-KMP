@@ -1,0 +1,18 @@
+{
+  "id": "filo_t03_s02",
+  "subjectId": "filosofia",
+  "semana": 3,
+  "subtema": "3.2",
+  "title": "C. El Problema de la Verdad",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t03_s02",
+    "asignatura": "Filosofía",
+    "semana": 3,
+    "titulo": "C. El Problema de la Verdad",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

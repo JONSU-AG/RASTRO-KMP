@@ -1,0 +1,18 @@
+{
+  "id": "hper_t03_s02",
+  "subjectId": "historia_peru",
+  "semana": 3,
+  "subtema": "3.2",
+  "title": "3.4. Organización Económica: Principios, Tierras y Formas de Trabajo",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_hper_t03_s02",
+    "asignatura": "Historia del Perú",
+    "semana": 3,
+    "titulo": "3.4. Organización Económica: Principios, Tierras y Formas de Trabajo",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

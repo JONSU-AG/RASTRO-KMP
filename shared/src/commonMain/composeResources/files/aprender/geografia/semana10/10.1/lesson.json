@@ -1,0 +1,18 @@
+{
+  "id": "geo_t10_s01",
+  "subjectId": "geografia",
+  "semana": 10,
+  "subtema": "10.1",
+  "title": "3.1. Los Recursos Naturales: Definición y Tipología",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana10.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t10_s01",
+    "asignatura": "Geografía",
+    "semana": 10,
+    "titulo": "3.1. Los Recursos Naturales: Definición y Tipología",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

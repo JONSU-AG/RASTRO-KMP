@@ -1,0 +1,18 @@
+{
+  "id": "cl_t08_s02",
+  "subjectId": "comprension_lectora",
+  "semana": 8,
+  "subtema": "8.2",
+  "title": "3.2 Cuadro Comparativo de Tipologías Textuales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana08.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t08_s02",
+    "asignatura": "Comp. Lectora",
+    "semana": 8,
+    "titulo": "3.2 Cuadro Comparativo de Tipologías Textuales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

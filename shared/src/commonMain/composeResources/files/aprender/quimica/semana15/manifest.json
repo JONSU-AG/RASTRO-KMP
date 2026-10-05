@@ -1,0 +1,18 @@
+{
+  "week": 15,
+  "title": "Semana 15",
+  "lessons": [
+    {
+      "subtopic": "15.1",
+      "lessonId": "quim_t15_s01",
+      "title": "Funciones Químicas Orgánicas Oxigenadas y Nitrogenadas - Fundamentos y Leyes Principales",
+      "path": "15.1/lesson.json"
+    },
+    {
+      "subtopic": "15.2",
+      "lessonId": "quim_t15_s02",
+      "title": "Funciones Químicas Orgánicas Oxigenadas y Nitrogenadas - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "15.2/lesson.json"
+    }
+  ]
+}

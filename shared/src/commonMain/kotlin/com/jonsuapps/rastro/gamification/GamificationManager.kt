@@ -160,20 +160,20 @@ object GamificationManager {
         syncState()
     }
 
-    /** A day also counts after five real foreground-study minutes: fichas, apuntes or lecciones. */
+    /** A day also counts after fifteen real foreground-study minutes: fichas, apuntes or lecciones. */
     fun recordActiveStudySeconds(seconds: Int) {
         if (seconds <= 0) return
         val today = getLocalDayString()
         val current = _state.value
         val accumulated = (if (current.activeStudyDate == today) current.activeStudySeconds else 0) + seconds
         _state.value = current.copy(activeStudyDate = today, activeStudySeconds = accumulated)
-        if (accumulated >= DAILY_STUDY_SECONDS && _streakState.value.lastActiveDate != today) {
+        if (accumulated >= DAILY_STUDY_SECONDS && today !in _streakState.value.activityDates) {
             checkStreak()
         }
         syncState()
     }
 
-    const val DAILY_STUDY_SECONDS = 5 * 60
+    const val DAILY_STUDY_SECONDS = 15 * 60
 
     fun remainingStudySecondsToday(): Int {
         val current = _state.value
@@ -204,20 +204,18 @@ object GamificationManager {
 
     const val TOPIC_REWARD_XP = 30
 
-    fun recordLessonCompletion(lessonId: String, earnedXp: Int, stars: Int) {
+    fun recordLessonCompletion(lessonId: String, earnedXp: Int, stars: Int, attemptId: String = "") {
         if (lessonId.isBlank()) return
         val previous = _state.value.completedLessons[lessonId]
-        if (previous != null && !previous.skipped) {
-            if (stars > previous.stars) _state.value = _state.value.copy(
-                completedLessons = _state.value.completedLessons + (lessonId to previous.copy(stars = stars.coerceIn(0, 3))))
-            return
-        }
-        _journeyFrom.value = lessonId
-        val safeXp = earnedXp.coerceAtLeast(0)
-        val completed = _state.value.completedLessons + (
-            lessonId to LessonCompletion(stars = stars.coerceIn(0, 3), completedAt = Clock.System.now().toEpochMilliseconds())
-        )
-        _totalXp.value += safeXp
+        if (attemptId.isNotBlank() && previous?.lastRewardAttemptId == attemptId) return
+        val reward = LessonRewardPolicy.quote(previous, earnedXp, stars)
+        val replay = previous != null && !previous.skipped
+        if (!replay) _journeyFrom.value = lessonId
+        val completed = _state.value.completedLessons + (lessonId to LessonCompletion(
+            stars = maxOf(if (replay) previous!!.stars else 0, stars.coerceIn(0, 3)),
+            completedAt = if (replay) previous!!.completedAt else Clock.System.now().toEpochMilliseconds(),
+            earnedCoins = reward.starEntitlement, lastRewardAttemptId = attemptId))
+        _totalXp.value += reward.xp
         _hearts.value = _maxHearts.value
         _lastHeartLostTimestamp.value = 0L
         checkStreak()
@@ -228,17 +226,30 @@ object GamificationManager {
         }).distinct()
         _state.value = _state.value.copy(
             xp = _totalXp.value,
+            coins = _state.value.coins + reward.coins,
             streak = _streakState.value.currentStreak,
             bestStreak = _streakState.value.bestStreak,
             lastStudyDate = _streakState.value.lastActiveDate,
             streakFreeze = _streakState.value.streakFreezeCount,
             hearts = _hearts.value,
             completedLessons = completed,
-            activeLessonBySubject = nextLessonPointer(lessonId, completed),
+            activeLessonBySubject = if (replay) _state.value.activeLessonBySubject else nextLessonPointer(lessonId, completed),
             achievements = achievements,
             activityDates = _streakState.value.activityDates
         )
     }
+
+    /** Both learning sources feed the same XP balance; an attempt is paid only once. */
+    fun claimExamReward(attemptId: String, correctCount: Int): Int {
+        if (attemptId.isBlank() || correctCount <= 0 || attemptId in _state.value.claimedExamRewards) return 0
+        val awarded = correctCount.coerceAtMost(1000) * EXAM_CORRECT_XP
+        _totalXp.value += awarded
+        _state.value = _state.value.copy(xp = _totalXp.value,
+            claimedExamRewards = _state.value.claimedExamRewards + attemptId)
+        return awarded
+    }
+
+    const val EXAM_CORRECT_XP = 5
 
     fun addXp(amount: Int) {
         if (amount <= 0) return
@@ -272,8 +283,9 @@ object GamificationManager {
         return true
     }
 
-    fun restore(state: GamificationState) {
-        _journeyFrom.value = null
+    /** Catalog migration is prepared off Main; applying it never performs catalog I/O. */
+    fun prepareRestore(savedState: GamificationState): GamificationState {
+        val state = LessonRewardPolicy.reconcileLegacy(savedState)
         // Older versions stored skipped lessons in the completion map. Keep their access,
         // but remove the false completion so counters and chest eligibility agree.
         val skippedIds = state.completedLessons.filterValues { it.skipped }.keys
@@ -285,9 +297,16 @@ object GamificationManager {
             val last = catalog.indexOfLast { node -> skipped.any { it.id == node.id } }
             catalog.getOrNull(last + 1)?.id ?: catalog.getOrNull(last)?.id.orEmpty()
         }.filterValues { it.isNotBlank() }
-        _state.value = state.copy(completedLessons = state.completedLessons.filterValues { !it.skipped },
+        return state.copy(completedLessons = state.completedLessons.filterValues { !it.skipped },
             unlockedNodes = (state.unlockedNodes + skippedIds + migratedTargets.values).distinct(),
             activeLessonBySubject = migratedTargets + state.activeLessonBySubject)
+    }
+
+    fun restore(savedState: GamificationState) = applyRestored(prepareRestore(savedState))
+
+    fun applyRestored(state: GamificationState) {
+        _journeyFrom.value = null
+        _state.value = state
         _totalXp.value = state.xp.coerceAtLeast(0)
         val restoredMax = state.maxHearts.coerceIn(1, 1_000_000)
         _maxHearts.value = restoredMax
@@ -306,7 +325,7 @@ object GamificationManager {
                     add("${local.year}-${local.monthNumber.toString().padStart(2, '0')}-${local.dayOfMonth.toString().padStart(2, '0')}")
                 }
             }
-            val last = state.lastStudyDate.ifBlank { getLocalDayString() }
+            val last = state.lastStudyDate
             val streakCount = state.streak.coerceAtLeast(1)
             runCatching {
                 val lastDate = LocalDate.parse(last)
@@ -321,22 +340,16 @@ object GamificationManager {
         _streakState.value = StreakState(
             currentStreak = state.streak.coerceAtLeast(1),
             bestStreak = initialBestStreak,
-            lastActiveDate = state.lastStudyDate.ifBlank { getLocalDayString() },
+            lastActiveDate = state.lastStudyDate,
             streakFreezeCount = state.streakFreeze.coerceAtLeast(0),
             activityDates = derivedActivity
         )
         checkStreakStatusOnLaunch()
     }
 
-    private var todayActiveStudySeconds = 0
-
     /** Suma tiempo activo de estudio (en segundos) en la app (flashcards, lectura, ejercicios) */
     fun recordActiveStudyTime(seconds: Int) {
-        if (seconds <= 0) return
-        todayActiveStudySeconds += seconds
-        if (todayActiveStudySeconds >= 300) { // 5 minutos de estudio activo
-            markDailyStreakEarned()
-        }
+        recordActiveStudySeconds(seconds)
     }
 
     /** Revisa si la racha expiró por días sin estudiar, sin incrementarla automáticamente por abrir la app */
@@ -362,15 +375,22 @@ object GamificationManager {
         }
     }
 
-    /** Marca la racha diaria como ganada por haber estudiado 5 min o completado 1 lección hoy */
+    /** Marca la racha diaria como ganada por haber estudiado 15 min o completado 1 lección hoy */
     fun markDailyStreakEarned() {
         val today = getLocalDayString()
         val current = _streakState.value
-        if (current.lastActiveDate == today) return // Ya fue ganada hoy
+        if (current.lastActiveDate == today) {
+            // A shield can protect today without recording study; qualify it when study actually occurs.
+            if (today !in current.activityDates) {
+                _streakState.value = current.copy(activityDates = current.activityDates + today)
+                syncState()
+            }
+            return
+        }
         val previous = runCatching { LocalDate.parse(current.lastActiveDate) }.getOrNull()
         val currentLocal = runCatching { LocalDate.parse(today) }.getOrNull()
         val daysDiff = if (previous != null && currentLocal != null) (currentLocal.toEpochDays() - previous.toEpochDays()) else 1
-        val newStreak = if (daysDiff <= 1) (current.currentStreak + 1).coerceAtLeast(1) else 1
+        val newStreak = if (previous == null) 1 else if (daysDiff <= 1) (current.currentStreak + 1).coerceAtLeast(1) else 1
         val newBestStreak = maxOf(current.bestStreak, newStreak)
         val newActivity = current.activityDates + today
         _streakState.value = current.copy(

@@ -1,0 +1,18 @@
+{
+  "week": 16,
+  "title": "TEMA XV: Química ambiental",
+  "lessons": [
+    {
+      "subtopic": "16.1",
+      "lessonId": "quim_t16_s01",
+      "title": "Química Ambiental I: Atmósfera, Aire y Contaminación Atmosférica",
+      "path": "16.1/lesson.json"
+    },
+    {
+      "subtopic": "16.2",
+      "lessonId": "quim_t16_s02",
+      "title": "Química Ambiental II: Agua, Suelo y Potabilización",
+      "path": "16.2/lesson.json"
+    }
+  ]
+}

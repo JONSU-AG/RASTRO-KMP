@@ -14,6 +14,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Surface
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.runtime.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -31,6 +32,8 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.jonsuapps.rastro.theme.CartoonFinish
+import com.jonsuapps.rastro.theme.ThemeManager
 import com.jonsuapps.rastro.theme.RastroPalette
 import com.jonsuapps.rastro.theme.RastroShapes
 import kotlinx.coroutines.Job
@@ -38,6 +41,13 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 
 enum class ButtonPressState { Idle, Pressed }
+
+/** A running pointer coroutine must invoke the latest action after recomposition. */
+@Composable
+internal fun rememberLiveClick(onClick: () -> Unit): () -> Unit {
+    val currentAction by rememberUpdatedState(onClick)
+    return remember { { currentAction() } }
+}
 
 /**
  * Efecto Bouncy Click estilo Duolingo / Apple iOS:
@@ -346,10 +356,10 @@ fun Sticker3dButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
-    containerColor: Color = Color(0xFFF472B6), // Rosa vívido de referencia
+    containerColor: Color = ThemeManager.currentTheme.accent, // Rosa vívido de referencia
     bottomBevelColor: Color? = null,
-    strokeColor: Color = Color(0xFF2A0824), // Trazo contorneado oscuro estilo dibujo/sticker
-    strokeWidth: Dp = 1.8.dp,
+    strokeColor: Color = ThemeManager.currentTheme.strokeBorder, // Trazo contorneado oscuro estilo dibujo/sticker
+    strokeWidth: Dp = CartoonFinish.outline,
     bevelHeight: Dp = 4.dp,
     shape: Shape = RastroShapes.Pill,
     contentPadding: PaddingValues = PaddingValues(horizontal = 20.dp, vertical = 10.dp),
@@ -384,6 +394,7 @@ fun Sticker3dButton(
         ),
         label = "Sticker3dOffset"
     )
+    val liveClick = rememberLiveClick(onClick)
 
     Box(
         modifier = modifier
@@ -406,7 +417,7 @@ fun Sticker3dButton(
                             isPressedState = false
                         }
                         if (up != null) {
-                            onClick()
+                            liveClick()
                         }
                     }
                 }
@@ -419,7 +430,7 @@ fun Sticker3dButton(
                 .matchParentSize()
                 .offset(y = bevelHeight)
                 .clip(shape)
-                .background(if (enabled) actualBottomColor else Color.Gray.copy(alpha = 0.5f))
+                .background(if (enabled) actualBottomColor else ThemeManager.currentTheme.cardBevel)
                 .border(strokeWidth, strokeColor, shape)
         )
 
@@ -428,17 +439,20 @@ fun Sticker3dButton(
             modifier = Modifier
                 .offset(y = animatedOffset)
                 .clip(shape)
-                .background(if (enabled) containerColor else Color(0xFFCBD5E1))
-                .border(strokeWidth, if (enabled) strokeColor else Color(0xFF94A3B8), shape),
+                .background(if (enabled) containerColor else ThemeManager.currentTheme.surfaceAccent)
+                .border(strokeWidth, if (enabled) strokeColor else ThemeManager.currentTheme.strokeBorder, shape),
             contentAlignment = Alignment.Center,
             propagateMinConstraints = true
         ) {
-            Row(
-                modifier = Modifier.padding(contentPadding),
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically,
-                content = content
-            )
+            CompositionLocalProvider(LocalContentColor provides contrastingText(
+                if (enabled) containerColor else ThemeManager.currentTheme.surfaceAccent)) {
+                Row(
+                    modifier = Modifier.padding(contentPadding),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically,
+                    content = content
+                )
+            }
         }
     }
 }
@@ -450,12 +464,12 @@ fun Sticker3dButton(
 @Composable
 fun Sticker3dCard(
     modifier: Modifier = Modifier,
-    containerColor: Color = Color.White,
-    strokeColor: Color = Color(0xFF1E293B),
-    bevelColor: Color = Color(0xFFCBD5E1),
+    containerColor: Color = ThemeManager.currentTheme.surface,
+    strokeColor: Color = CartoonFinish.ink(ThemeManager.currentTheme),
+    bevelColor: Color = ThemeManager.currentTheme.cardBevel,
     bottomBevelColor: Color = bevelColor,
-    strokeWidth: Dp = 1.5.dp,
-    bevelHeight: Dp = 3.dp,
+    strokeWidth: Dp = CartoonFinish.outline,
+    bevelHeight: Dp = CartoonFinish.depth,
     shape: Shape = RoundedCornerShape(20.dp),
     onClick: (() -> Unit)? = null,
     content: @Composable BoxScope.() -> Unit
@@ -543,8 +557,8 @@ fun Sticker3dPill(
     selectedBevel: Color,
     unselectedBevel: Color,
     strokeColor: Color,
-    strokeWidth: Dp = 1.5.dp,
-    bevelHeight: Dp = 2.5.dp,
+    strokeWidth: Dp = CartoonFinish.outline,
+    bevelHeight: Dp = CartoonFinish.compactDepth,
     content: @Composable RowScope.() -> Unit
 ) {
     var isPressedState by remember { mutableStateOf(false) }
@@ -627,13 +641,13 @@ fun Sticker3dPill(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     icon: androidx.compose.ui.graphics.vector.ImageVector? = null,
-    selectedBgColor: Color = Color(0xFF10B981),
-    selectedContentColor: Color = Color.White,
-    unselectedBgColor: Color = Color.White,
-    unselectedContentColor: Color = Color(0xFF64748B),
-    strokeColor: Color = Color(0xFF1E293B),
-    strokeWidth: Dp = 1.5.dp,
-    bevelHeight: Dp = 2.5.dp,
+    selectedBgColor: Color = ThemeManager.currentTheme.accent,
+    selectedContentColor: Color = contrastingText(selectedBgColor),
+    unselectedBgColor: Color = ThemeManager.currentTheme.surface,
+    unselectedContentColor: Color = ThemeManager.currentTheme.textSecondary,
+    strokeColor: Color = CartoonFinish.ink(ThemeManager.currentTheme),
+    strokeWidth: Dp = CartoonFinish.outline,
+    bevelHeight: Dp = CartoonFinish.compactDepth,
     selectedBevel: Color = selectedBgColor,
     unselectedBevel: Color = unselectedBgColor
 ) {
@@ -763,14 +777,15 @@ fun Sticker3dCircleButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     size: Dp = 38.dp,
-    containerColor: Color = Color.White,
-    bottomBevelColor: Color = Color(0xFFCBD5E1),
-    strokeColor: Color = Color(0xFF1E293B),
-    strokeWidth: Dp = 1.5.dp,
-    bevelHeight: Dp = 2.5.dp,
+    containerColor: Color = ThemeManager.currentTheme.surface,
+    bottomBevelColor: Color = ThemeManager.currentTheme.cardBevel,
+    strokeColor: Color = CartoonFinish.ink(ThemeManager.currentTheme),
+    strokeWidth: Dp = CartoonFinish.outline,
+    bevelHeight: Dp = CartoonFinish.compactDepth,
     enabled: Boolean = true,
     content: @Composable BoxScope.() -> Unit
 ) {
+    val liveClick = rememberLiveClick(onClick)
     var isPressedState by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
     var pressJob by remember { mutableStateOf<Job?>(null) }
@@ -809,7 +824,7 @@ fun Sticker3dCircleButton(
                             isPressedState = false
                         }
                         if (up != null) {
-                            onClick()
+                            liveClick()
                         }
                     }
                 }
@@ -846,14 +861,15 @@ fun Sticker3dCounterButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     size: Dp = 32.dp,
-    containerColor: Color = Color.White,
-    bottomBevelColor: Color = Color(0xFFCBD5E1),
-    strokeColor: Color = Color(0xFF1E293B),
-    strokeWidth: Dp = 1.5.dp,
+    containerColor: Color = ThemeManager.currentTheme.surface,
+    bottomBevelColor: Color = ThemeManager.currentTheme.cardBevel,
+    strokeColor: Color = CartoonFinish.ink(ThemeManager.currentTheme),
+    strokeWidth: Dp = CartoonFinish.outline,
     bevelHeight: Dp = 2.dp,
     enabled: Boolean = true,
     content: @Composable BoxScope.() -> Unit
 ) {
+    val liveClick = rememberLiveClick(onClick)
     var isPressedState by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
     var pressJob by remember { mutableStateOf<Job?>(null) }
@@ -893,7 +909,7 @@ fun Sticker3dCounterButton(
                             isPressedState = false
                         }
                         if (up != null) {
-                            onClick()
+                            liveClick()
                         }
                     }
                 }

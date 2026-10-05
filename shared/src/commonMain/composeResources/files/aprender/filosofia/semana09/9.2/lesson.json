@@ -1,0 +1,18 @@
+{
+  "id": "filo_t09_s02",
+  "subjectId": "filosofia",
+  "semana": 9,
+  "subtema": "9.2",
+  "title": "C. Concepciones Filosóficas del Arte a lo Largo de la Historia",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/filosofia/FilosofiaSemana09.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_filo_t09_s02",
+    "asignatura": "Filosofía",
+    "semana": 9,
+    "titulo": "C. Concepciones Filosóficas del Arte a lo Largo de la Historia",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

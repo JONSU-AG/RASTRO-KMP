@@ -1,0 +1,18 @@
+{
+  "id": "quim_t10_s01",
+  "subjectId": "quimica",
+  "semana": 10,
+  "subtema": "10.1",
+  "title": "Sistemas Dispersos y Soluciones - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/quimica/QuimicaSemana10.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_quim_t10_s01",
+    "asignatura": "Química",
+    "semana": 10,
+    "titulo": "Sistemas Dispersos y Soluciones - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

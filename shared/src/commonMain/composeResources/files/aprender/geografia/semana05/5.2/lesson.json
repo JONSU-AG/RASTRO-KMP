@@ -1,0 +1,18 @@
+{
+  "id": "geo_t05_s02",
+  "subjectId": "geografia",
+  "semana": 5,
+  "subtema": "5.2",
+  "title": "3.3. Tiempo Meteorológico vs. Clima",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana05.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t05_s02",
+    "asignatura": "Geografía",
+    "semana": 5,
+    "titulo": "3.3. Tiempo Meteorológico vs. Clima",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

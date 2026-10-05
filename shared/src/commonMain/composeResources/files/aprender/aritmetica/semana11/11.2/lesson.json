@@ -1,0 +1,18 @@
+{
+  "id": "arit_t11_s02",
+  "subjectId": "aritmetica",
+  "semana": 11,
+  "subtema": "11.2",
+  "title": "Estadística Descriptiva, Medidas de Tendencia Central y Dispersión - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/aritmetica/AritmeticaSemana11.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_arit_t11_s02",
+    "asignatura": "Aritmética",
+    "semana": 11,
+    "titulo": "Estadística Descriptiva, Medidas de Tendencia Central y Dispersión - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

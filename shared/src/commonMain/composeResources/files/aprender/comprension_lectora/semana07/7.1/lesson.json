@@ -1,0 +1,18 @@
+{
+  "id": "cl_t07_s01",
+  "subjectId": "comprension_lectora",
+  "semana": 7,
+  "subtema": "7.1",
+  "title": "3.1 Mecanismos de Cohesión Textual en el Examen de Admisión",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/comprension_lectora/ComprensionLectoraSemana07.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_cl_t07_s01",
+    "asignatura": "Comp. Lectora",
+    "semana": 7,
+    "titulo": "3.1 Mecanismos de Cohesión Textual en el Examen de Admisión",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

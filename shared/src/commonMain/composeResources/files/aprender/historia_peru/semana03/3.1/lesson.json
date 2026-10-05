@@ -1,0 +1,18 @@
+{
+  "id": "hper_t03_s01",
+  "subjectId": "historia_peru",
+  "semana": 3,
+  "subtema": "3.1",
+  "title": "3.1. Orígenes Míticos e Históricos del Tawantinsuyu",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/historia_peru/HistoriaPeruSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_hper_t03_s01",
+    "asignatura": "Historia del Perú",
+    "semana": 3,
+    "titulo": "3.1. Orígenes Míticos e Históricos del Tawantinsuyu",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -3,677 +3,205 @@ package com.jonsuapps.rastro.android.data
 import android.content.Context
 import android.os.Handler
 import android.os.Looper
+import android.os.SystemClock
 import android.util.Log
-import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.SetOptions
 import com.jonsuapps.rastro.android.RastroApplication
-import com.jonsuapps.rastro.auth.UserManager
-import com.jonsuapps.rastro.gamification.GamificationManager
-import kotlinx.datetime.LocalDate
+import java.time.LocalDate
+import java.util.UUID
 
-/**
- * Elemento de actividad diaria de un tester en un día calendario específico.
- */
-data class DailyActivityItem(
-    val date: String,             // Formato YYYY-MM-DD
-    val formattedDate: String,    // Ej: "24 sep."
-    val activeSeconds: Long,      // Segundos activos
-    val appSeconds: Long = 0L,    // Segundos en App
-    val webSeconds: Long = 0L,    // Segundos en Web
-    val formattedTime: String,    // Ej: "25 min (App: 15 min · Web: 10 min)" o "Sin actividad"
-    val isActive: Boolean,        // true si tuvo tiempo > 0 o actividad comprobada
-    val isHistoricalOnly: Boolean = false, // true si proviene de historial gamificación sin minutos exactos
-    val isNoHistoricalData: Boolean = false // true si es previo al inicio de la medición sin evidencia
-)
-
-/**
- * Resumen consolidado de actividad para un tester dentro del período observado.
- */
-data class TesterSummary(
-    val uid: String,
-    val email: String,
-    val displayName: String,
-    val photoUrl: String? = null,
-    val activeDaysCount: Int = 0,
-    val inactiveDaysCount: Int = 0,
-    val totalSeconds: Long = 0L,
-    val formattedTotalTime: String = "0 min",
-    val averageSecondsPerActiveDay: Long = 0L,
-    val formattedAverage: String = "0 min",
-    val lastActiveDate: String = "",
-    val formattedLastActive: String = "Sin registro",
-    val dailyItems: List<DailyActivityItem> = emptyList(),
-    val historicalRecoveredDates: Set<String> = emptySet(),
-    // Desglose APK/Web del período + histórico acumulado (totalTesterSeconds).
-    val appPeriodSeconds: Long = 0L,
-    val formattedAppPeriodTime: String = "0 min",
-    val webPeriodSeconds: Long = 0L,
-    val formattedWebPeriodTime: String = "0 min",
-    val historicTotalSeconds: Long = 0L,
-    val formattedHistoricTotalTime: String = "0 min",
-    val formattedLastActiveDateTime: String = "Sin registro"
-)
-
-/**
- * Repositorio y Engine de Actividad de Testers en Prueba Cerrada.
- * - Registra tiempo activo en primer plano (foreground) exclusivamente para la APP.
- * - Acumula y sincroniza App/Web bajo el mismo UID técnico de Firebase Auth.
- * - Período de prueba configurable desde Panel Admin (Fecha Inicio / Fecha Fin).
- */
+/** Existing daily activity record: foreground only; persistent queue and idempotent sync. */
 object TesterActivityRepository {
-
     private const val PREFS_NAME = "rastro_tester_activity_prefs"
-    private const val DEFAULT_START_DATE = "2026-09-24"
-    private const val DEFAULT_END_DATE = "2026-10-08"
-
     private val handler = Handler(Looper.getMainLooper())
-    private var isTracking = false
-    private var sessionStartTimeMs = 0L
-    private var lastCheckpointTimeMs = 0L
-    @Volatile
-    private var isFlushInFlight = false
-
-    // Ticker periódico cada 30 segundos mientras la app está en foreground
-    private val periodicTicker = object : Runnable {
+    private val prefs get() = RastroApplication.instance.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+    private var tracking = false
+    private var trackedUid: String? = null
+    private var checkpointElapsed = 0L
+    private var flushing = false
+    private var authListener: FirebaseAuth.AuthStateListener? = null
+    private fun authenticatedUid() = FirebaseAuth.getInstance().currentUser?.takeUnless { it.isAnonymous }?.uid
+    private val ticker = object : Runnable {
         override fun run() {
-            if (!isTracking) return
-            checkpointForegroundTime(forceFlush = false)
+            if (!tracking) return
+            checkpoint(false)
             handler.postDelayed(this, 30_000L)
         }
     }
-
-    /**
-     * Valida y retorna las credenciales reales del usuario autenticado.
-     * Retorna null si es un usuario invitado, anónimo o con identificador local sin Auth.
-     */
-    private fun getAuthenticatedUser(): Pair<String, String?>? {
-        val authUser = FirebaseAuth.getInstance().currentUser
-        val user = UserManager.currentUser.value
-
-        val uid = (authUser?.uid ?: user.uid).trim()
-        val email = authUser?.email ?: user.email
-
-        if (uid.isBlank() || uid == "guest" || uid == "local_student_1" || uid == "local_student_guest") {
-            return null
-        }
-        if (authUser != null && authUser.isAnonymous) return null
-        if (authUser == null && (!user.isAuthenticated || user.isAnonymous)) return null
-
-        return uid to email
-    }
-
-    /**
-     * Inicia la medición al pasar RASTRO al primer plano (foreground).
-     */
     fun onForegroundStarted() {
-        if (isTracking) return
-        isTracking = true
-        val now = System.currentTimeMillis()
-        sessionStartTimeMs = now
-        lastCheckpointTimeMs = now
-        handler.removeCallbacks(periodicTicker)
-        handler.postDelayed(periodicTicker, 30_000L)
-
-        Log.d("TESTER_TRACKER", "TESTER_TRACKER foreground started")
-
-        // Configuración segura de User ID en Firebase Analytics (UID únicamente, nunca correo)
+        if (tracking) return
+        tracking = true
+        checkpointElapsed = SystemClock.elapsedRealtime()
+        trackedUid = authenticatedUid()
+        if (authListener == null) {
+            authListener = FirebaseAuth.AuthStateListener {
+                val newUid = authenticatedUid()
+                if (trackedUid != newUid) {
+                    if (tracking) checkpoint(false)
+                    trackedUid = newUid
+                    checkpointElapsed = SystemClock.elapsedRealtime()
+                    if (tracking && newUid != null) { migratePending(newUid); recordOpening(newUid) }
+                }
+            }.also { FirebaseAuth.getInstance().addAuthStateListener(it) }
+        }
+        trackedUid?.let { migratePending(it); recordOpening(it) }
+        // Preserve the existing Analytics identity setup; attendance does not read Analytics.
         try {
-            val authPair = getAuthenticatedUser()
-            if (authPair != null) {
-                val analytics = FirebaseAnalytics.getInstance(RastroApplication.instance)
-                analytics.setUserId(authPair.first)
+            trackedUid?.let { uid ->
+                val analytics = com.google.firebase.analytics.FirebaseAnalytics.getInstance(RastroApplication.instance)
+                analytics.setUserId(uid)
                 analytics.setUserProperty("rastro_user_type", "closed_tester")
             }
         } catch (_: Exception) {}
+        handler.removeCallbacks(ticker)
+        handler.postDelayed(ticker, 30_000L)
     }
-
-    /**
-     * Detiene la medición al pasar a segundo plano (background).
-     * Garantiza que el tiempo en background NO se contabilice jamás.
-     */
     fun onForegroundStopped() {
-        if (!isTracking) return
-        isTracking = false
-        handler.removeCallbacks(periodicTicker)
-        checkpointForegroundTime(forceFlush = true)
-        sessionStartTimeMs = 0L
-        lastCheckpointTimeMs = 0L
-        Log.d("TESTER_TRACKER", "TESTER_TRACKER foreground stopped")
+        if (!tracking) return
+        checkpoint(true)
+        tracking = false
+        handler.removeCallbacks(ticker)
     }
-
-    /**
-     * Acumula el intervalo de tiempo transcurrido en primer plano y persiste a Firestore si corresponde.
-     */
-    @Synchronized
-    private fun checkpointForegroundTime(forceFlush: Boolean) {
+    private fun recordOpening(uid: String) {
         val now = System.currentTimeMillis()
-        if (lastCheckpointTimeMs <= 0L) {
-            lastCheckpointTimeMs = now
-            return
-        }
-
-        val elapsedMs = now - lastCheckpointTimeMs
-        val elapsedSeconds = elapsedMs / 1000L
-        if (elapsedSeconds <= 0L) return
-
-        lastCheckpointTimeMs = now
-
-        val authPair = getAuthenticatedUser()
-        val today = GamificationManager.getLocalDayString()
-
-        if (authPair != null) {
-            val (uid, email) = authPair
-            val user = UserManager.currentUser.value
-            val prefs = RastroApplication.instance.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-
-            // Contabilizar en SharedPreferences local para visualización instantánea
-            val localKey = "daily_${uid}_$today"
-            val currentLocal = prefs.getLong(localKey, 0L)
-            prefs.edit().putLong(localKey, currentLocal + elapsedSeconds).apply()
-
-            // Búfer acumulado para el flush
-            val pendingKey = "pending_flush_${uid}_$today"
-            val currentPending = prefs.getLong(pendingKey, 0L) + elapsedSeconds
-            prefs.edit().putLong(pendingKey, currentPending).apply()
-
-            Log.d("TESTER_TRACKER", "TESTER_TRACKER checkpoint uid=$uid elapsed=$elapsedSeconds pending=$currentPending forceFlush=$forceFlush")
-
-            // Flush si acumula >=60s o si la app pasa a background (forceFlush)
-            if ((forceFlush || currentPending >= 60L) && !isFlushInFlight) {
-                flushSecondsToFirestore(uid, email, user.displayName, today, currentPending)
+        val day = DailyActivityMath.dateAt(now)
+        prefs.edit().putBoolean("opened_${uid}_$day", true).putLong("opened_at_${uid}_$day", now).putLong("active_at_${uid}_$day", now).commit()
+        flush(uid, force = true)
+    }
+    private fun migratePending(uid: String) {
+        val prefix = "pending_flush_${uid}_"
+        val edit = prefs.edit()
+        prefs.all.filterKeys { it.startsWith(prefix) }.forEach { (key, value) ->
+            val date = key.removePrefix(prefix)
+            if (runCatching { LocalDate.parse(date) }.isSuccess) {
+                val seconds = (value as? Number)?.toLong() ?: 0
+                edit.putLong("pending_ms_${uid}_$date", prefs.getLong("pending_ms_${uid}_$date", 0) + seconds * 1000)
+                    .putBoolean("opened_${uid}_$date", true).remove(key)
             }
         }
+        edit.commit()
     }
-
-    /**
-     * Escritura atómica eficiente en Firestore usando FieldValue.increment.
-     * Descuenta del búfer local ÚNICAMENTE tras confirmación de éxito en servidor.
-     */
-    @Synchronized
-    private fun flushSecondsToFirestore(
-        uid: String,
-        email: String?,
-        displayName: String?,
-        date: String,
-        secondsToSend: Long
-    ) {
-        if (secondsToSend <= 0L || isFlushInFlight) return
-        isFlushInFlight = true
-
-        Log.d("TESTER_TRACKER", "TESTER_TRACKER flush start uid=$uid seconds=$secondsToSend date=$date")
-
-        try {
-            val db = FirebaseFirestore.getInstance()
-            val payload = mapOf(
-                "uid" to uid,
-                "email" to (email ?: ""),
-                "displayName" to (displayName ?: "Estudiante"),
-                "lastTesterActiveDate" to date,
-                "lastTesterActiveTimestamp" to System.currentTimeMillis(),
-                "testerDailySeconds.$date" to FieldValue.increment(secondsToSend),
-                "testerDailyApp.$date" to FieldValue.increment(secondsToSend),
-                "totalTesterSeconds" to FieldValue.increment(secondsToSend)
-            )
-
-            val docRef = db.collection("usuarios").document(uid)
-            val subDocRef = db.collection("usuarios").document(uid)
-                .collection("gamificacion").document("tester_activity")
-
-            docRef.set(payload, SetOptions.merge())
-                .addOnSuccessListener {
-                    subDocRef.set(payload, SetOptions.merge())
-
-                    // Descontar atómicamente los segundos confirmados del búfer local
-                    val prefs = RastroApplication.instance.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-                    val pendingKey = "pending_flush_${uid}_$date"
-                    val currentPending = prefs.getLong(pendingKey, 0L)
-                    val remaining = (currentPending - secondsToSend).coerceAtLeast(0L)
-                    if (remaining > 0L) {
-                        prefs.edit().putLong(pendingKey, remaining).apply()
-                    } else {
-                        prefs.edit().remove(pendingKey).apply()
-                    }
-
-                    isFlushInFlight = false
-                    Log.d("TESTER_TRACKER", "TESTER_TRACKER flush SUCCESS uid=$uid seconds=$secondsToSend remainingPending=$remaining")
-                }
-                .addOnFailureListener { error ->
-                    isFlushInFlight = false
-                    Log.e("TESTER_TRACKER", "TESTER_TRACKER flush FAILURE uid=$uid seconds=$secondsToSend error=${error.localizedMessage}", error)
-                }
-        } catch (e: Exception) {
-            isFlushInFlight = false
-            Log.e("TESTER_TRACKER", "TESTER_TRACKER flush EXCEPTION uid=$uid seconds=$secondsToSend error=${e.localizedMessage}", e)
+    private fun checkpoint(force: Boolean) {
+        val elapsed = SystemClock.elapsedRealtime()
+        val duration = (elapsed - checkpointElapsed).coerceAtLeast(0)
+        checkpointElapsed = elapsed
+        val uid = trackedUid ?: return
+        val now = System.currentTimeMillis()
+        DailyActivityMath.splitInterval(now, duration).forEach { (date, millis) ->
+            val key = "pending_ms_${uid}_$date"
+            val edit = prefs.edit().putLong(key, prefs.getLong(key, 0) + millis)
+            val dateEnd = LocalDate.parse(date).plusDays(1).atStartOfDay(java.time.ZoneId.systemDefault()).toInstant().toEpochMilli() - 1
+            val activeAt = minOf(now, dateEnd)
+            if (!prefs.contains("opened_${uid}_$date")) edit.putBoolean("opened_${uid}_$date", true).putLong("opened_at_${uid}_$date", activeAt)
+            edit.putLong("active_at_${uid}_$date", activeAt).commit()
         }
+        // Do not write another account's pending data after an Auth switch.
+        if (uid == authenticatedUid()) flush(uid, force)
     }
-
-    /**
-     * Guarda el período de prueba en Firestore (site_settings/global).
-     */
-    fun saveTesterPeriod(
-        startDate: String,
-        endDate: String,
-        onComplete: (Result<Unit>) -> Unit = {}
-    ) {
-        try {
-            FirebaseFirestore.getInstance().collection("site_settings").document("global")
-                .set(
-                    mapOf(
-                        "testerPeriodStart" to startDate,
-                        "testerPeriodEnd" to endDate
-                    ),
-                    SetOptions.merge()
-                )
-                .addOnSuccessListener { onComplete(Result.success(Unit)) }
-                .addOnFailureListener { onComplete(Result.failure(it)) }
-        } catch (e: Exception) {
-            onComplete(Result.failure(e))
+    private fun flush(uid: String, force: Boolean) {
+        if (flushing || uid != authenticatedUid()) return
+        val batchPrefix = "batch_${uid}_"
+        var token = prefs.getString(batchPrefix + "token", null)
+        var date = prefs.getString(batchPrefix + "date", null)
+        var seconds = prefs.getLong(batchPrefix + "seconds", 0)
+        var activeAt = prefs.getLong(batchPrefix + "at", 0)
+        if (token == null || date == null) {
+            val prefix = "opened_${uid}_"
+            date = prefs.all.keys.filter { it.startsWith(prefix) }.map { it.removePrefix(prefix) }
+                .filter { runCatching { LocalDate.parse(it) }.isSuccess }
+                .sorted().firstOrNull { day ->
+                    val ms = prefs.getLong("pending_ms_${uid}_$day", 0)
+                    prefs.getBoolean("opened_${uid}_$day", false) || ((force || day < LocalDate.now().toString()) && ms >= 1000) || ms >= 60_000
+                } ?: return
+            seconds = prefs.getLong("pending_ms_${uid}_$date", 0) / 1000
+            activeAt = prefs.getLong("active_at_${uid}_$date", System.currentTimeMillis())
+            token = UUID.randomUUID().toString()
+            // Journal before sending. A process restart reuses this token instead of duplicating increments.
+            prefs.edit().putString(batchPrefix + "token", token).putString(batchPrefix + "date", date)
+                .putLong(batchPrefix + "seconds", seconds).putLong(batchPrefix + "at", activeAt).commit()
         }
-    }
-
-    /**
-     * Escucha en tiempo real el período de prueba configurado por el Administrador.
-     */
-    fun observeTesterPeriod(
-        onUpdate: (startDate: String, endDate: String) -> Unit
-    ): ListenerRegistration {
-        return FirebaseFirestore.getInstance().collection("site_settings").document("global")
-            .addSnapshotListener { snapshot, _ ->
-                val start = snapshot?.getString("testerPeriodStart") ?: DEFAULT_START_DATE
-                val end = snapshot?.getString("testerPeriodEnd") ?: DEFAULT_END_DATE
-                onUpdate(start, end)
-            }
-    }
-
-    /**
-     * Carga todos los usuarios y calcula las estadísticas de actividad dentro del período observado.
-     * Unifica los mapas de `testerDailySeconds`, `testerDailyApp` y `testerDailyWeb`.
-     */
-    fun loadAllTestersActivity(
-        startDate: String,
-        endDate: String,
-        onResult: (List<TesterSummary>) -> Unit
-    ) {
+        val batchDate = date!!
+        val batchToken = token!!
+        val batchSeconds = seconds
+        val batchAt = activeAt
+        val device = prefs.getString("device_id", null) ?: UUID.randomUUID().toString().also { prefs.edit().putString("device_id", it).commit() }
+        flushing = true
         val db = FirebaseFirestore.getInstance()
-        val today = GamificationManager.getLocalDayString()
-
-        db.collection("usuarios").limit(200).get()
-            .addOnSuccessListener { snapshot ->
-                val summaries = snapshot.documents.map { doc ->
-                    val uid = doc.id
-                    val rawEmail = doc.getString("email").orEmpty().trim()
-                    val email = if (rawEmail.isBlank() || rawEmail.equals("Sin correo", ignoreCase = true)) "Cuenta sin correo" else rawEmail
-                    val displayName = doc.getString("displayName") ?: doc.getString("name") ?: "Tester"
-                    val photoUrl = doc.getString("photoURL") ?: doc.getString("photoUrl")
-
-                    // Extraer mapas de segundos diarios
-                    @Suppress("UNCHECKED_CAST")
-                    val rawDailyMap = doc.get("testerDailySeconds") as? Map<String, Any> ?: emptyMap()
-                    @Suppress("UNCHECKED_CAST")
-                    val rawAppMap = doc.get("testerDailyApp") as? Map<String, Any> ?: emptyMap()
-                    @Suppress("UNCHECKED_CAST")
-                    val rawWebMap = doc.get("testerDailyWeb") as? Map<String, Any> ?: emptyMap()
-
-                    val appDailySeconds = rawAppMap.mapNotNull { (date, value) ->
-                        val sec = (value as? Number)?.toLong() ?: return@mapNotNull null
-                        date to sec
-                    }.toMap()
-
-                    val webDailySeconds = rawWebMap.mapNotNull { (date, value) ->
-                        val sec = (value as? Number)?.toLong() ?: return@mapNotNull null
-                        date to sec
-                    }.toMap()
-
-                    // ADMIN_ACTIVITY: diagnóstico temporal lectura Admin (NO borrar sin avisar).
-                    Log.d("ADMIN_ACTIVITY", "ADMIN_ACTIVITY uid=$uid testerDailyApp RAW=$rawAppMap testerDailySeconds RAW=$rawDailyMap testerDailyWeb RAW=$rawWebMap totalTesterSeconds RAW=${doc.getLong("totalTesterSeconds")} lastTesterActiveDate RAW=${doc.getString("lastTesterActiveDate")} lastTesterActiveTimestamp RAW=${doc.getLong("lastTesterActiveTimestamp")} queryStart=$startDate queryEnd=$endDate")
-
-                    // Unificar todas las fuentes de actividad
-                    val allDates = (rawDailyMap.keys + rawAppMap.keys + rawWebMap.keys).distinct()
-                    val dailySeconds = allDates.associateWith { date ->
-                        val dSec = (rawDailyMap[date] as? Number)?.toLong() ?: 0L
-                        val aSec = appDailySeconds[date] ?: 0L
-                        val wSec = webDailySeconds[date] ?: 0L
-                        maxOf(dSec, aSec + wSec)
-                    }
-
-                    // Extraer última fecha registrada + acumulados históricos
-                    val lastActiveDate = doc.getString("lastTesterActiveDate")
-                        ?: dailySeconds.keys.maxOrNull()
-                        ?: ""
-                    val historicTotalSeconds = doc.getLong("totalTesterSeconds") ?: 0L
-                    val lastActiveTimestamp = doc.getLong("lastTesterActiveTimestamp") ?: 0L
-
-                    buildTesterSummary(
-                        uid = uid,
-                        email = email,
-                        displayName = displayName,
-                        photoUrl = photoUrl,
-                        dailySeconds = dailySeconds,
-                        appDailySeconds = appDailySeconds,
-                        webDailySeconds = webDailySeconds,
-                        lastActiveDate = lastActiveDate,
-                        startDate = startDate,
-                        endDate = endDate,
-                        today = today,
-                        historicalDates = emptySet(),
-                        trackingStartDate = startDate,
-                        historicTotalSeconds = historicTotalSeconds,
-                        lastActiveTimestamp = lastActiveTimestamp
-                    )
+        val ref = db.collection("usuarios").document(uid)
+        db.runTransaction { tx ->
+            val doc = tx.get(ref)
+            val receipts = doc.get("testerSyncReceipts") as? Map<*, *>
+            if (receipts?.get(device) != batchToken) {
+                val payload = mutableMapOf<String, Any>(
+                    "testerDailySeconds" to mapOf(batchDate to FieldValue.increment(batchSeconds)),
+                    "testerDailyApp" to mapOf(batchDate to FieldValue.increment(batchSeconds)),
+                    "totalTesterSeconds" to FieldValue.increment(batchSeconds),
+                    "testerSyncReceipts" to mapOf(device to batchToken))
+                if (batchAt >= (doc.getLong("lastTesterActiveTimestamp") ?: 0L)) {
+                    payload["lastTesterActiveDate"] = batchDate
+                    payload["lastTesterActiveTimestamp"] = batchAt
                 }
-
-                // Ordenar por días activos descendente y luego tiempo total
-                val sorted = summaries.sortedWith(
-                    compareByDescending<TesterSummary> { it.activeDaysCount }
-                        .thenByDescending { it.totalSeconds }
-                )
-                onResult(sorted)
+                tx.set(ref, payload, SetOptions.merge())
             }
-            .addOnFailureListener {
-                onResult(emptyList())
-            }
-    }
-
-    /**
-     * Carga el detalle profundo de un tester individual, incluyendo posible histórico de gamificación previa.
-     */
-    fun loadTesterDetail(
-        uid: String,
-        email: String,
-        displayName: String,
-        photoUrl: String?,
-        startDate: String,
-        endDate: String,
-        onResult: (TesterSummary) -> Unit
-    ) {
-        val db = FirebaseFirestore.getInstance()
-        val today = GamificationManager.getLocalDayString()
-
-        // 1. Obtener documento principal del usuario
-        db.collection("usuarios").document(uid).get()
-            .addOnSuccessListener { userDoc ->
-                val rawEmail = userDoc.getString("email").orEmpty().ifBlank { email }.trim()
-                val cleanEmail = if (rawEmail.isBlank() || rawEmail.equals("Sin correo", ignoreCase = true)) "Cuenta sin correo" else rawEmail
-
-                @Suppress("UNCHECKED_CAST")
-                val rawDailyMap = userDoc.get("testerDailySeconds") as? Map<String, Any> ?: emptyMap()
-                @Suppress("UNCHECKED_CAST")
-                val rawAppMap = userDoc.get("testerDailyApp") as? Map<String, Any> ?: emptyMap()
-                @Suppress("UNCHECKED_CAST")
-                val rawWebMap = userDoc.get("testerDailyWeb") as? Map<String, Any> ?: emptyMap()
-
-                val appDailySeconds = rawAppMap.mapNotNull { (date, value) ->
-                    val sec = (value as? Number)?.toLong() ?: return@mapNotNull null
-                    date to sec
-                }.toMap()
-
-                val webDailySeconds = rawWebMap.mapNotNull { (date, value) ->
-                    val sec = (value as? Number)?.toLong() ?: return@mapNotNull null
-                    date to sec
-                }.toMap()
-
-                val allDates = (rawDailyMap.keys + rawAppMap.keys + rawWebMap.keys).distinct()
-                val dailySeconds = allDates.associateWith { date ->
-                    val dSec = (rawDailyMap[date] as? Number)?.toLong() ?: 0L
-                    val aSec = appDailySeconds[date] ?: 0L
-                    val wSec = webDailySeconds[date] ?: 0L
-                    maxOf(dSec, aSec + wSec)
-                }
-
-                val lastActiveDate = userDoc.getString("lastTesterActiveDate") ?: ""
-                val historicTotalSeconds = userDoc.getLong("totalTesterSeconds") ?: 0L
-                val lastActiveTimestamp = userDoc.getLong("lastTesterActiveTimestamp") ?: 0L
-
-                // 2. Intentar recuperar histórico anterior de usuarios/{uid}/gamificacion/rastro_progress
-                db.collection("usuarios").document(uid)
-                    .collection("gamificacion").document("rastro_progress").get()
-                    .addOnSuccessListener { gamDoc ->
-                        val historicalDates = mutableSetOf<String>()
-                        if (gamDoc.exists()) {
-                            @Suppress("UNCHECKED_CAST")
-                            val activityDatesList = gamDoc.get("activityDates") as? List<String>
-                            if (activityDatesList != null) {
-                                historicalDates.addAll(activityDatesList)
-                            }
-                        }
-
-                        val summary = buildTesterSummary(
-                            uid = uid,
-                            email = cleanEmail,
-                            displayName = displayName,
-                            photoUrl = photoUrl,
-                            dailySeconds = dailySeconds,
-                            appDailySeconds = appDailySeconds,
-                            webDailySeconds = webDailySeconds,
-                            lastActiveDate = lastActiveDate,
-                            startDate = startDate,
-                            endDate = endDate,
-                            today = today,
-                            historicalDates = historicalDates,
-                            trackingStartDate = startDate,
-                            historicTotalSeconds = historicTotalSeconds,
-                            lastActiveTimestamp = lastActiveTimestamp
-                        )
-                        onResult(summary)
-                    }
-                    .addOnFailureListener {
-                        val summary = buildTesterSummary(
-                            uid = uid,
-                            email = cleanEmail,
-                            displayName = displayName,
-                            photoUrl = photoUrl,
-                            dailySeconds = dailySeconds,
-                            appDailySeconds = appDailySeconds,
-                            webDailySeconds = webDailySeconds,
-                            lastActiveDate = lastActiveDate,
-                            startDate = startDate,
-                            endDate = endDate,
-                            today = today,
-                            historicalDates = emptySet(),
-                            trackingStartDate = startDate
-                        )
-                        onResult(summary)
-                    }
-            }
-            .addOnFailureListener {
-                val cleanEmail = if (email.isBlank() || email.equals("Sin correo", ignoreCase = true)) "Cuenta sin correo" else email
-                onResult(
-                    buildTesterSummary(
-                        uid = uid,
-                        email = cleanEmail,
-                        displayName = displayName,
-                        photoUrl = photoUrl,
-                        dailySeconds = emptyMap(),
-                        appDailySeconds = emptyMap(),
-                        webDailySeconds = emptyMap(),
-                        lastActiveDate = "",
-                        startDate = startDate,
-                        endDate = endDate,
-                        today = today,
-                        historicalDates = emptySet(),
-                        trackingStartDate = startDate
-                    )
-                )
-            }
-    }
-
-    /**
-     * Construye las estadísticas del tester dentro del período observado.
-     * Respeta escrupulosamente los casos de prueba e histórico:
-     * - Distingue entre 'Activo', 'Sin actividad', 'Activo (Histórico)' y 'Sin datos históricos'.
-     * - Días futuros NO se evalúan.
-     * - El promedio se calcula únicamente entre días activos.
-     */
-    fun buildTesterSummary(
-        uid: String,
-        email: String,
-        displayName: String,
-        photoUrl: String?,
-        dailySeconds: Map<String, Long>,
-        appDailySeconds: Map<String, Long> = emptyMap(),
-        webDailySeconds: Map<String, Long> = emptyMap(),
-        lastActiveDate: String,
-        startDate: String,
-        endDate: String,
-        today: String = GamificationManager.getLocalDayString(),
-        historicalDates: Set<String> = emptySet(),
-        trackingStartDate: String = "2026-09-24",
-        historicTotalSeconds: Long = 0L,
-        lastActiveTimestamp: Long = 0L
-    ): TesterSummary {
-        val effectiveEnd = if (today < endDate) today else endDate
-        val observedDates = getDaysBetween(startDate, effectiveEnd)
-
-        var activeCount = 0
-        var totalSecs = 0L
-        var appPeriodSecs = 0L
-        var webPeriodSecs = 0L
-        var latestActiveDate = lastActiveDate
-
-        val dailyItems = observedDates.map { date ->
-            val recordedSeconds = dailySeconds[date] ?: 0L
-            val appSecs = appDailySeconds[date] ?: 0L
-            val webSecs = webDailySeconds[date] ?: 0L
-
-            val isHistorical = historicalDates.contains(date) && recordedSeconds == 0L
-            val isBeforeStart = date < trackingStartDate && !isHistorical && recordedSeconds == 0L
-            val isActive = recordedSeconds > 0L || isHistorical
-
-            if (isActive) {
-                activeCount++
-                totalSecs += recordedSeconds
-                appPeriodSecs += appSecs
-                webPeriodSecs += webSecs
-                if (date > latestActiveDate) {
-                    latestActiveDate = date
-                }
-            }
-
-            val timeDisplay = when {
-                recordedSeconds > 0L -> {
-                    val totalStr = formatDuration(recordedSeconds)
-                    val details = mutableListOf<String>()
-                    if (appSecs > 0L) details.add("App: ${formatDuration(appSecs)}")
-                    if (webSecs > 0L) details.add("Web: ${formatDuration(webSecs)}")
-                    if (details.isNotEmpty()) "$totalStr (${details.joinToString(" · ")})" else totalStr
-                }
-                isHistorical -> "Activo · tiempo histórico no disponible"
-                isBeforeStart -> "Sin datos históricos"
-                else -> "Sin actividad"
-            }
-
-            DailyActivityItem(
-                date = date,
-                formattedDate = formatDateShort(date),
-                activeSeconds = recordedSeconds,
-                appSeconds = appSecs,
-                webSeconds = webSecs,
-                formattedTime = timeDisplay,
-                isActive = isActive,
-                isHistoricalOnly = isHistorical,
-                isNoHistoricalData = isBeforeStart
-            )
+        }.addOnSuccessListener {
+            val key = "pending_ms_${uid}_$batchDate"
+            val remaining = (prefs.getLong(key, 0) - batchSeconds * 1000).coerceAtLeast(0)
+            prefs.edit().putLong(key, remaining).putBoolean("opened_${uid}_$batchDate", prefs.getLong("opened_at_${uid}_$batchDate", 0) > batchAt)
+                .remove(batchPrefix + "token").remove(batchPrefix + "date").remove(batchPrefix + "seconds").remove(batchPrefix + "at").commit()
+            flushing = false
+            // Drain old-day/account buffers as well, not only today's pending seconds.
+            authenticatedUid()?.let { flush(it, force = !tracking) }
+        }.addOnFailureListener {
+            flushing = false
+            Log.w("TESTER_TRACKER", "No se sincronizó actividad; se conserva el lote para reintentar.", it)
         }
-
-        val inactiveCount = (observedDates.size - activeCount).coerceAtLeast(0)
-        val avgSecs = if (activeCount > 0) totalSecs / activeCount else 0L
-
-        // ADMIN_ACTIVITY: diagnóstico temporal cálculo Admin (NO borrar sin avisar).
-        Log.d("ADMIN_ACTIVITY", "ADMIN_ACTIVITY uid=$uid observedDates=$observedDates appPeriodSeconds=$appPeriodSecs webPeriodSeconds=$webPeriodSecs totalPeriodSeconds=$totalSecs historicSeconds=$historicTotalSeconds activeDays=$activeCount")
-
-        val cleanEmail = if (email.isBlank() || email.equals("Sin correo", ignoreCase = true)) "Cuenta sin correo" else email
-
-        return TesterSummary(
-            uid = uid,
-            email = cleanEmail,
-            displayName = displayName,
-            photoUrl = photoUrl,
-            activeDaysCount = activeCount,
-            inactiveDaysCount = inactiveCount,
-            totalSeconds = totalSecs,
-            formattedTotalTime = formatDuration(totalSecs),
-            averageSecondsPerActiveDay = avgSecs,
-            formattedAverage = formatAverageMinutesAndSeconds(avgSecs),
-            lastActiveDate = latestActiveDate,
-            formattedLastActive = if (latestActiveDate.isNotBlank()) formatDateShort(latestActiveDate) else "Sin actividad",
-            appPeriodSeconds = appPeriodSecs,
-            formattedAppPeriodTime = formatDuration(appPeriodSecs),
-            webPeriodSeconds = webPeriodSecs,
-            formattedWebPeriodTime = formatDuration(webPeriodSecs),
-            historicTotalSeconds = historicTotalSeconds,
-            formattedHistoricTotalTime = formatDuration(historicTotalSeconds),
-            formattedLastActiveDateTime = formatLastActiveDateTime(lastActiveTimestamp, today),
-            dailyItems = dailyItems,
-            historicalRecoveredDates = historicalDates
-        )
     }
-
-    /**
-     * Genera la lista de fechas consecutivas YYYY-MM-DD entre startStr y endStr inclusive.
-     */
-    fun getDaysBetween(startStr: String, endStr: String): List<String> {
-        return runCatching {
-            val start = LocalDate.parse(startStr)
-            val end = LocalDate.parse(endStr)
-            if (start.toEpochDays() > end.toEpochDays()) return emptyList()
-            (start.toEpochDays()..end.toEpochDays()).map { epochDay ->
-                LocalDate.fromEpochDays(epochDay).toString()
-            }
-        }.getOrDefault(emptyList())
+    fun saveTesterPeriod(startDate: String, endDate: String, onComplete: (Result<Unit>) -> Unit = {}) {
+        if (!DailyActivityMath.validRange(startDate, endDate)) return onComplete(Result.failure(IllegalArgumentException("Rango de fechas inválido")))
+        FirebaseFirestore.getInstance().collection("site_settings").document("global")
+            .set(mapOf("testerPeriodStart" to startDate, "testerPeriodEnd" to endDate), SetOptions.merge())
+            .addOnSuccessListener { onComplete(Result.success(Unit)) }.addOnFailureListener { onComplete(Result.failure(it)) }
     }
+    fun observeTesterPeriod(onUpdate: (String, String) -> Unit): ListenerRegistration =
+        FirebaseFirestore.getInstance().collection("site_settings").document("global").addSnapshotListener { snapshot, _ ->
+            val today = LocalDate.now()
+            val start = snapshot?.getString("testerPeriodStart") ?: today.minusDays(29).toString()
+            val end = snapshot?.getString("testerPeriodEnd") ?: today.toString()
+            onUpdate(start, end)
+        }
+    private fun fromDocument(doc: com.google.firebase.firestore.DocumentSnapshot, start: String, end: String): TesterSummary =
+        DailyActivityMath.summary(doc.id, doc.getString("email").orEmpty(), doc.getString("displayName") ?: doc.getString("name") ?: "Estudiante",
+            doc.getString("photoURL") ?: doc.getString("photoUrl"), doc.data.orEmpty(), start, end, LocalDate.now().toString())
 
-    /**
-     * Formatea última actividad como "Hoy 14:32" si es hoy, o "24 sep. 14:32".
-     * Usa lastTesterActiveTimestamp (millis, hora local del dispositivo).
-     */
-    fun formatLastActiveDateTime(timestampMillis: Long, today: String): String {
-        if (timestampMillis <= 0L) return "Sin registro"
-        return runCatching {
-            val cal = java.util.Calendar.getInstance()
-            cal.timeInMillis = timestampMillis
-            val hh = cal.get(java.util.Calendar.HOUR_OF_DAY).toString().padStart(2, '0')
-            val mm = cal.get(java.util.Calendar.MINUTE).toString().padStart(2, '0')
-            val y = cal.get(java.util.Calendar.YEAR)
-            val mo = (cal.get(java.util.Calendar.MONTH) + 1).toString().padStart(2, '0')
-            val d = cal.get(java.util.Calendar.DAY_OF_MONTH).toString().padStart(2, '0')
-            val dateStr = "$y-$mo-$d"
-            if (dateStr == today) "Hoy $hh:$mm" else "${formatDateShort(dateStr)} $hh:$mm"
-        }.getOrDefault("Sin registro")
+    fun loadAllTestersActivity(startDate: String, endDate: String,
+        onError: (String) -> Unit = {}, onResult: (List<TesterSummary>) -> Unit) {
+        if (!DailyActivityMath.validRange(startDate, endDate)) return onError("Selecciona una fecha inicial anterior o igual a la final.")
+        val users = mutableListOf<TesterSummary>()
+        val collection = FirebaseFirestore.getInstance().collection("usuarios")
+        fun page(after: com.google.firebase.firestore.DocumentSnapshot?) {
+            val query = collection.orderBy(com.google.firebase.firestore.FieldPath.documentId()).limit(100)
+            (if (after == null) query else query.startAfter(after)).get(com.google.firebase.firestore.Source.SERVER)
+                .addOnSuccessListener { snapshot ->
+                    users += snapshot.documents.map { fromDocument(it, startDate, endDate) }
+                    if (snapshot.size() == 100) page(snapshot.documents.last())
+                    else onResult(users.sortedWith(compareByDescending<TesterSummary> { it.activeDaysCount }.thenBy { it.displayName }))
+                }.addOnFailureListener { onError("No se pudo cargar la actividad. Comprueba la conexión y vuelve a intentar.") }
+        }
+        page(null)
     }
-
-    /**
-     * Formatea fecha YYYY-MM-DD a formato legible: ej "24 sep." o "01 oct."
-     */
-    fun formatDateShort(dateStr: String): String {
-        return runCatching {
-            val date = LocalDate.parse(dateStr)
-            val day = date.dayOfMonth.toString().padStart(2, '0')
-            val month = when (date.monthNumber) {
-                1 -> "ene."
-                2 -> "feb."
-                3 -> "mar."
-                4 -> "abr."
-                5 -> "may."
-                6 -> "jun."
-                7 -> "jul."
-                8 -> "ago."
-                9 -> "sep."
-                10 -> "oct."
-                11 -> "nov."
-                12 -> "dic."
-                else -> ""
-            }
-            "$day $month"
-        }.getOrDefault(dateStr)
+    fun loadTesterDetail(uid: String, email: String, displayName: String, photoUrl: String?, startDate: String, endDate: String,
+        onError: (String) -> Unit = {}, onResult: (TesterSummary) -> Unit) {
+        FirebaseFirestore.getInstance().collection("usuarios").document(uid).get(com.google.firebase.firestore.Source.SERVER)
+            .addOnSuccessListener { onResult(fromDocument(it, startDate, endDate)) }
+            .addOnFailureListener { onError("No se pudo cargar el detalle. Inténtalo de nuevo.") }
     }
+    fun getDaysBetween(startStr: String, endStr: String) = DailyActivityMath.dates(startStr, endStr)
+    fun formatDateShort(dateStr: String) = DailyActivityMath.shortDate(dateStr)
 
-    /**
-     * Formatea duración total a minutos / horas (ej: "47 min", "1h 12m", "0 min").
-     */
     fun formatDuration(seconds: Long): String {
         if (seconds <= 0L) return "0 min"
         val minutes = seconds / 60L

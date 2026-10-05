@@ -1,0 +1,18 @@
+{
+  "week": 12,
+  "title": "Semana 12",
+  "lessons": [
+    {
+      "subtopic": "12.1",
+      "lessonId": "quim_t12_s01",
+      "title": "Ácidos, Bases y Escala de pH - Fundamentos y Leyes Principales",
+      "path": "12.1/lesson.json"
+    },
+    {
+      "subtopic": "12.2",
+      "lessonId": "quim_t12_s02",
+      "title": "Ácidos, Bases y Escala de pH - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "12.2/lesson.json"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "week": 12,
+  "title": "Semana 12",
+  "lessons": [
+    {
+      "subtopic": "12.1",
+      "lessonId": "trig_t12_s01",
+      "title": "APLICACIONES DE LAS FUNCIONES TRIGONOMÉTRICAS - Fundamentos y Leyes Principales",
+      "path": "12.1/lesson.json"
+    },
+    {
+      "subtopic": "12.2",
+      "lessonId": "trig_t12_s02",
+      "title": "APLICACIONES DE LAS FUNCIONES TRIGONOMÉTRICAS - Propiedades Avanzadas, Artificios y Aplicaciones",
+      "path": "12.2/lesson.json"
+    }
+  ]
+}

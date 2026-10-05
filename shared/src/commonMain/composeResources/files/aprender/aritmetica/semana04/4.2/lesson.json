@@ -1,0 +1,18 @@
+{
+  "id": "arit_t04_s02",
+  "subjectId": "aritmetica",
+  "semana": 4,
+  "subtema": "4.2",
+  "title": "Sistema de los Números Enteros (\\mathbb{Z}) y Ecuaciones Diofánticas - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/aritmetica/AritmeticaSemana04.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_arit_t04_s02",
+    "asignatura": "Aritmética",
+    "semana": 4,
+    "titulo": "Sistema de los Números Enteros (\\mathbb{Z}) y Ecuaciones Diofánticas - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "quim_t07_s01",
+  "subjectId": "quimica",
+  "semana": 7,
+  "subtema": "7.1",
+  "title": "Reacciones Químicas y Balanceo de Ecuaciones - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/quimica/QuimicaSemana07.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_quim_t07_s01",
+    "asignatura": "Química",
+    "semana": 7,
+    "titulo": "Reacciones Químicas y Balanceo de Ecuaciones - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

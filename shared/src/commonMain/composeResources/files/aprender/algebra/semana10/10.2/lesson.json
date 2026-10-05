@@ -1,0 +1,18 @@
+{
+  "id": "alg_t10_s02",
+  "subjectId": "algebra",
+  "semana": 10,
+  "subtema": "10.2",
+  "title": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana10.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_alg_t10_s02",
+    "asignatura": "Álgebra",
+    "semana": 10,
+    "titulo": "ÁLGEBRA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

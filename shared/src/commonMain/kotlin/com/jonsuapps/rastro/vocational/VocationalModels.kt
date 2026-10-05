@@ -87,12 +87,13 @@ data class VocationalAnswer(
  */
 data class VocationalDimensionScore(
     val dimension: RiasecDimension,
-    val score: Int
+    val score: Int,
+    val itemsPerDimension: Int = 10
 )
 
 /**
  * Resultado completo del Test Vocacional RIASEC.
- * Incluye puntuaciones por cada escala (10 a 50 puntos cada una), código Holland resultante,
+ * Incluye puntuaciones por cada escala (5 a 25 en Mini-IP; 10 a 50 en la versión de 60), código Holland resultante,
  * fecha de evaluación y registro de posibles empates para reflejar la incertidumbre real.
  */
 data class VocationalResult(
@@ -104,7 +105,8 @@ data class VocationalResult(
     val conventional: Int,
     val hollandCode: String,
     val timestamp: Long = 0L,
-    val tiedDimensions: List<Pair<RiasecDimension, RiasecDimension>> = emptyList()
+    val tiedDimensions: List<Pair<RiasecDimension, RiasecDimension>> = emptyList(),
+    val itemsPerDimension: Int = 10
 ) {
     fun scoreFor(dimension: RiasecDimension): Int = when (dimension) {
         RiasecDimension.REALISTIC -> realistic
@@ -123,7 +125,7 @@ data class VocationalResult(
             VocationalDimensionScore(RiasecDimension.SOCIAL, social),
             VocationalDimensionScore(RiasecDimension.ENTERPRISING, enterprising),
             VocationalDimensionScore(RiasecDimension.CONVENTIONAL, conventional)
-        ).sortedByDescending { it.score }
+        ).map { it.copy(itemsPerDimension = itemsPerDimension) }.sortedByDescending { it.score }
     }
 }
 

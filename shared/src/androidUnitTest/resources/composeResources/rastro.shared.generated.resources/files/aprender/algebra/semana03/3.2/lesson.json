@@ -1,0 +1,18 @@
+{
+  "id": "alg_t03_s02",
+  "subjectId": "algebra",
+  "semana": 3,
+  "subtema": "3.2",
+  "title": "Potenciación, Radicación, Radicales Dobles y Racionalización - Propiedades Avanzadas, Artificios y Aplicaciones",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana03.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_alg_t03_s02",
+    "asignatura": "Álgebra",
+    "semana": 3,
+    "titulo": "Potenciación, Radicación, Radicales Dobles y Racionalización - Propiedades Avanzadas, Artificios y Aplicaciones",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "geo_t06_s01",
+  "subjectId": "geografia",
+  "semana": 6,
+  "subtema": "6.1",
+  "title": "3.1. La Hidrósfera y el Ciclo Hidrológico",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/geografia/GeografiaSemana06.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_geo_t06_s01",
+    "asignatura": "Geografía",
+    "semana": 6,
+    "titulo": "3.1. La Hidrósfera y el Ciclo Hidrológico",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "trig_t07_s01",
+  "subjectId": "trigonometria",
+  "semana": 7,
+  "subtema": "7.1",
+  "title": "ECUACIONES TRIGONOMÉTRICAS ELEMENTALES Y NO ELEMENTALES - Fundamentos y Leyes Principales",
+  "depth": "NORMAL",
+  "source": "curso-prueba/SALIDA_KOTLIN/trigonometria/TrigonometriaSemana07.kt",
+  "learningObjectives": [],
+  "theory": {
+    "id": "th_trig_t07_s01",
+    "asignatura": "Trigonometría",
+    "semana": 7,
+    "titulo": "ECUACIONES TRIGONOMÉTRICAS ELEMENTALES Y NO ELEMENTALES - Fundamentos y Leyes Principales",
+    "resumen": "",
+    "conceptosClave": []
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "indexes": [
+    {"collectionGroup":"usuarios","queryScope":"COLLECTION","fields":[{"fieldPath":"leagueId","order":"ASCENDING"},{"fieldPath":"leagueXp","order":"DESCENDING"},{"fieldPath":"__name__","order":"ASCENDING"}]},
+    {"collectionGroup":"usuarios","queryScope":"COLLECTION","fields":[{"fieldPath":"leagueId","order":"ASCENDING"},{"fieldPath":"leagueStreak","order":"DESCENDING"},{"fieldPath":"__name__","order":"ASCENDING"}]}
+  ],
+  "fieldOverrides": []
+}
