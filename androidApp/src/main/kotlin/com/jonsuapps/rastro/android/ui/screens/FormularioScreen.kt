@@ -36,8 +36,6 @@ import androidx.compose.material.icons.rounded.Bolt
 import androidx.compose.material.icons.rounded.Shuffle
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.graphics.graphicsLayer
-import com.jonsuapps.rastro.android.data.FavoritesRepository
-import com.jonsuapps.rastro.android.data.FavoriteType
 import com.jonsuapps.rastro.android.ui.components.CachedRemoteImage
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -76,7 +74,6 @@ import com.jonsuapps.rastro.android.ui.components.DuolingoHaptics
 import com.jonsuapps.rastro.android.ui.components.Sticker3dButton
 import com.jonsuapps.rastro.android.data.FormulasRepository
 import com.jonsuapps.rastro.android.data.CanonicalFormula
-import com.jonsuapps.rastro.android.data.ExamQuestionRepository
 import com.jonsuapps.rastro.android.ui.components.CanonicalFormulaCard
 import com.jonsuapps.rastro.data.MnemotecniasRepository
 import com.jonsuapps.rastro.model.MnemotecniaItem
@@ -90,35 +87,16 @@ fun FormularioScreen(
 ) {
     val theme = ThemeManager.currentTheme
     val context = LocalContext.current
-    var selectedFaceIndex by remember { mutableIntStateOf(initialFaceIndex.coerceIn(0, 2)) } // 0: Fórmulas, 1: Mnemotecnias, 2: Flashcards
-    val faces = listOf("Cara A: Fórmulas Vivas", "Cara B: Mnemotecnias", "Cara C: Flashcards")
+    var selectedFaceIndex by remember { mutableIntStateOf(initialFaceIndex.coerceIn(0, 1)) } // 0: Fórmulas, 1: Mnemotecnias
 
-    val allFavorites by FavoritesRepository.favoritesFlow.collectAsState()
     var selectedSubjectFilter by remember { mutableStateOf("Todas") }
-    var showOnlyFavoritesInFlashcards by remember { mutableStateOf(false) }
-    var selectedAreaFilter by remember { mutableStateOf("Todas") }
-    var flashcardShuffleSeed by remember { mutableIntStateOf(0) }
-
-    val officialBankCards = remember {
-        val questions = ExamQuestionRepository.loadOfficialBank(context)
-        ExamQuestionRepository.getQuestionsForFlashcards(questions)
-    }
 
     val baseSubjects = listOf(
         "Todas", "Biología", "Química", "Física", "Psicología", "Historia",
         "Lenguaje", "Literatura", "Filosofía", "Geografía", "Ed. Cívica",
         "Álgebra", "Aritmética", "Geometría", "Trigonometría", "Raz. Verbal", "Raz. Lógico"
     )
-    val favoriteFlashcardSubjects = remember(allFavorites) {
-        val favCards = allFavorites.filter { it.type == FavoriteType.FLASHCARD }
-        listOf("Todas") + favCards.map { it.subject }.filter(String::isNotBlank).distinct()
-    }
-    val subjects = if (selectedFaceIndex == 2 && showOnlyFavoritesInFlashcards && favoriteFlashcardSubjects.size > 1) {
-        favoriteFlashcardSubjects
-    } else {
-        baseSubjects
-    }
-
+    val subjects = baseSubjects
 
     var searchQuery by remember { mutableStateOf("") }
     val savedMnemotecniaIds by UserManager.savedMnemotecniaIds.collectAsState()
@@ -148,51 +126,6 @@ fun FormularioScreen(
         }
     }
 
-    val filteredFlashcards = remember(
-        selectedSubjectFilter,
-        searchQuery,
-        showOnlyFavoritesInFlashcards,
-        selectedAreaFilter,
-        allFavorites,
-        flashcardShuffleSeed
-    ) {
-        val baseList: List<com.jonsuapps.rastro.model.FlashcardItem> = if (showOnlyFavoritesInFlashcards) {
-            val favs = allFavorites.filter { it.type == FavoriteType.FLASHCARD }
-            val byArea = if (selectedAreaFilter == "Todas") favs else favs.filter { it.area.equals(selectedAreaFilter, ignoreCase = true) }
-            val bySub = if (selectedSubjectFilter == "Todas") byArea else byArea.filter { it.subject.equals(selectedSubjectFilter, ignoreCase = true) }
-            bySub.map { fav ->
-                com.jonsuapps.rastro.model.FlashcardItem(
-                    id = fav.itemId,
-                    q = fav.title,
-                    a = fav.subtitle,
-                    subject = fav.subject,
-                    imageUrl = fav.imageUrl ?: fav.extra.takeIf { it.isNotBlank() }
-                )
-            }
-        } else {
-            val allCards = if (officialBankCards.isNotEmpty()) {
-                (officialBankCards + com.jonsuapps.rastro.data.SimuladorRepository.defaultFlashcards).distinctBy { it.id }
-            } else {
-                com.jonsuapps.rastro.data.SimuladorRepository.defaultFlashcards
-            }
-            if (selectedSubjectFilter == "Todas") allCards 
-            else allCards.filter { it.subject.equals(selectedSubjectFilter, ignoreCase = true) }
-        }
-
-        val searched = if (searchQuery.isBlank()) {
-            baseList
-        } else {
-            baseList.filter {
-                it.q.contains(searchQuery, ignoreCase = true) ||
-                it.a.contains(searchQuery, ignoreCase = true) ||
-                it.subject.contains(searchQuery, ignoreCase = true) ||
-                (it.subtemaTitle?.contains(searchQuery, ignoreCase = true) == true)
-            }
-        }
-
-        if (flashcardShuffleSeed == 0) searched else searched.shuffled(kotlin.random.Random(flashcardShuffleSeed))
-    }
-
     Box(
         modifier = modifier
             .fillMaxSize()
@@ -206,7 +139,7 @@ fun FormularioScreen(
             contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 120.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-        // Selector 3D de Caras: Cara A, Cara B, Cara C
+        // Un único acceso a cada herramienta; las Flashcards viven en Simulador.
         item {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -214,8 +147,7 @@ fun FormularioScreen(
             ) {
                 val faceItems = listOf(
                     Triple("Cara A", "Fórmulas", Icons.Rounded.Calculate),
-                    Triple("Cara B", "Mnemotecnias", Icons.Rounded.Lightbulb),
-                    Triple("Cara C", "Flashcards", Icons.Rounded.Psychology)
+                    Triple("Cara B", "Mnemotecnias", Icons.Rounded.Lightbulb)
                 )
                 faceItems.forEachIndexed { index, (faceLabel, title, _) ->
                     val isSelected = selectedFaceIndex == index
@@ -343,168 +275,7 @@ fun FormularioScreen(
                     )
                 }
             }
-            else -> {
-                // Cara C: Flashcards de Repaso Rápido
-                val favCount = allFavorites.count { it.type == FavoriteType.FLASHCARD }
-                item {
-                    Column(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalArrangement = Arrangement.spacedBy(10.dp)
-                    ) {
-                        // Switch de modo: Todas vs Favoritas
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clip(RoundedCornerShape(18.dp))
-                                .background(theme.surface)
-                                .border(1.2.dp, theme.strokeBorder, RoundedCornerShape(18.dp))
-                                .padding(5.dp),
-                            horizontalArrangement = Arrangement.spacedBy(6.dp)
-                        ) {
-                            com.jonsuapps.rastro.android.ui.components.Sticker3dPill(
-                                selected = !showOnlyFavoritesInFlashcards,
-                                onClick = {
-                                    DuolingoHaptics.playOptionSelected(context)
-                                    showOnlyFavoritesInFlashcards = false
-                                },
-                                modifier = Modifier.weight(1f),
-                                selectedColor = theme.accent,
-                                unselectedColor = Color.Transparent,
-                                selectedBevel = theme.accentBevel,
-                                unselectedBevel = Color.Transparent,
-                                strokeColor = if (!showOnlyFavoritesInFlashcards) theme.strokeBorder else Color.Transparent,
-                                strokeWidth = if (!showOnlyFavoritesInFlashcards) 1.2.dp else 0.dp,
-                                bevelHeight = if (!showOnlyFavoritesInFlashcards) 2.5.dp else 0.dp
-                            ) {
-                                Text(
-                                    text = "📚 Todas",
-                                    fontSize = 12.sp,
-                                    fontWeight = if (!showOnlyFavoritesInFlashcards) FontWeight.Black else FontWeight.Bold,
-                                    color = if (!showOnlyFavoritesInFlashcards) Color.White else theme.textSecondary
-                                )
-                            }
 
-                            com.jonsuapps.rastro.android.ui.components.Sticker3dPill(
-                                selected = showOnlyFavoritesInFlashcards,
-                                onClick = {
-                                    DuolingoHaptics.playOptionSelected(context)
-                                    showOnlyFavoritesInFlashcards = true
-                                },
-                                modifier = Modifier.weight(1.2f),
-                                selectedColor = Color(0xFFF59E0B),
-                                unselectedColor = Color.Transparent,
-                                selectedBevel = Color(0xFFB45309),
-                                unselectedBevel = Color.Transparent,
-                                strokeColor = if (showOnlyFavoritesInFlashcards) theme.strokeBorder else Color.Transparent,
-                                strokeWidth = if (showOnlyFavoritesInFlashcards) 1.2.dp else 0.dp,
-                                bevelHeight = if (showOnlyFavoritesInFlashcards) 2.5.dp else 0.dp
-                            ) {
-                                Text(
-                                    text = "⭐ Favoritas ($favCount)",
-                                    fontSize = 12.sp,
-                                    fontWeight = if (showOnlyFavoritesInFlashcards) FontWeight.Black else FontWeight.Bold,
-                                    color = if (showOnlyFavoritesInFlashcards) Color.White else theme.textSecondary
-                                )
-                            }
-                        }
-
-                        // Filtros por Área y Botón Mix si Favoritas está activo
-                        if (showOnlyFavoritesInFlashcards) {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.spacedBy(6.dp)
-                            ) {
-                                listOf("Todas", "Ingenierías", "Biomédicas", "Sociales").forEach { area ->
-                                    val isSelected = selectedAreaFilter == area
-                                    com.jonsuapps.rastro.android.ui.components.Sticker3dPill(
-                                        selected = isSelected,
-                                        onClick = {
-                                            DuolingoHaptics.playOptionSelected(context)
-                                            selectedAreaFilter = area
-                                        },
-                                        modifier = Modifier.weight(1f),
-                                        selectedColor = theme.accent,
-                                        unselectedColor = theme.surface,
-                                        selectedBevel = theme.accentBevel,
-                                        unselectedBevel = theme.cardBevel,
-                                        strokeColor = theme.strokeBorder,
-                                        strokeWidth = 1.dp,
-                                        bevelHeight = 2.dp
-                                    ) {
-                                        Text(
-                                            text = area,
-                                            fontSize = 10.sp,
-                                            fontWeight = if (isSelected) FontWeight.Black else FontWeight.Bold,
-                                            color = if (isSelected) Color.White else theme.textSecondary,
-                                            maxLines = 1
-                                        )
-                                    }
-                                }
-                            }
-
-                            if (favCount > 0) {
-                                Sticker3dButton(
-                                    onClick = {
-                                        DuolingoHaptics.playCelebration(context)
-                                        flashcardShuffleSeed = kotlin.random.Random.nextInt(1, 999999)
-                                    },
-                                    modifier = Modifier.fillMaxWidth(),
-                                    containerColor = Color(0xFFF59E0B),
-                                    bottomBevelColor = Color(0xFFB45309),
-                                    strokeColor = theme.strokeBorder,
-                                    shape = RoundedCornerShape(16.dp),
-                                    bevelHeight = 4.dp
-                                ) {
-                                    Icon(Icons.Rounded.Shuffle, contentDescription = null, tint = Color.White)
-                                    Spacer(Modifier.width(8.dp))
-                                    Text("⚡ Mix de Favoritas (Aleatorio)", fontWeight = FontWeight.Black, color = Color.White, fontSize = 13.sp)
-                                }
-                            }
-                        }
-                    }
-                }
-
-                if (showOnlyFavoritesInFlashcards && filteredFlashcards.isEmpty()) {
-                    item {
-                        Card(
-                            modifier = Modifier.fillMaxWidth(),
-                            shape = RastroShapes.Squircle,
-                            colors = CardDefaults.cardColors(containerColor = theme.surface),
-                            border = androidx.compose.foundation.BorderStroke(1.dp, theme.borderSubtle)
-                        ) {
-                            Column(
-                                modifier = Modifier.padding(24.dp),
-                                horizontalAlignment = Alignment.CenterHorizontally,
-                                verticalArrangement = Arrangement.spacedBy(8.dp)
-                            ) {
-                                Icon(
-                                    imageVector = Icons.Rounded.StarOutline,
-                                    contentDescription = null,
-                                    tint = Color(0xFFF59E0B),
-                                    modifier = Modifier.size(36.dp)
-                                )
-                                Text(
-                                    text = "Sin flashcards favoritas aquí",
-                                    fontWeight = FontWeight.Black,
-                                    fontSize = 15.sp,
-                                    color = theme.textPrimary
-                                )
-                                Text(
-                                    text = "Toca la estrella ⭐ en cualquier flashcard para guardarla por materia (ej. Biología) y repásalas todas con el Mix de Favoritas.",
-                                    fontSize = 12.sp,
-                                    color = theme.textSecondary,
-                                    textAlign = androidx.compose.ui.text.style.TextAlign.Center,
-                                    lineHeight = 17.sp
-                                )
-                            }
-                        }
-                    }
-                } else {
-                    items(filteredFlashcards, key = { it.id }) { card ->
-                        FlashcardStudyCard(card = card, theme = theme)
-                    }
-                }
-            }
         }
 
             item { com.jonsuapps.rastro.android.ui.components.MainPageEnd() }
@@ -697,10 +468,11 @@ fun MnemotecniaItemCard(
             )
 
             Text(
-                text = "Fórmula: ${item.shortFormula}",
+                text = com.jonsuapps.rastro.android.ui.components.scientificNotation("Fórmula: ${item.shortFormula}"),
                 style = MaterialTheme.typography.bodySmall,
                 color = theme.accent,
-                fontWeight = FontWeight.SemiBold
+                fontWeight = FontWeight.Bold,
+                fontFamily = androidx.compose.ui.text.font.FontFamily.Serif
             )
 
             Spacer(modifier = Modifier.height(8.dp))
@@ -778,178 +550,6 @@ fun MnemotecniaItemCard(
                     fontWeight = FontWeight.Medium,
                     lineHeight = 16.sp
                 )
-            }
-        }
-    }
-}
-
-@Composable
-fun FlashcardStudyCard(
-    card: com.jonsuapps.rastro.model.FlashcardItem,
-    theme: com.jonsuapps.rastro.theme.RastroPalette
-) {
-    var isFlipped by remember { mutableStateOf(false) }
-    val density = androidx.compose.ui.platform.LocalDensity.current.density
-    val rotation by androidx.compose.animation.core.animateFloatAsState(
-        targetValue = if (isFlipped) 180f else 0f,
-        animationSpec = androidx.compose.animation.core.spring(
-            dampingRatio = androidx.compose.animation.core.Spring.DampingRatioMediumBouncy,
-            stiffness = androidx.compose.animation.core.Spring.StiffnessMediumLow
-        ),
-        label = "FormularioCardFlip"
-    )
-    val isBack = rotation > 90f
-
-    com.jonsuapps.rastro.android.ui.components.Sticker3dCard(
-        modifier = Modifier
-            .fillMaxWidth()
-            .graphicsLayer {
-                rotationY = rotation
-                cameraDistance = 14f * density
-            },
-        onClick = { isFlipped = !isFlipped },
-        shape = RoundedCornerShape(20.dp),
-        containerColor = if (isBack) Color(0xFFF0FDF4) else theme.surface,
-        bottomBevelColor = if (isBack) Color(0xFFBBF7D0) else theme.cardBevel,
-        strokeColor = theme.strokeBorder,
-        bevelHeight = 3.5.dp
-    ) {
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .then(if (isBack) Modifier.graphicsLayer { rotationY = 180f } else Modifier)
-                .padding(16.dp)
-        ) {
-            Column(modifier = Modifier.fillMaxWidth()) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .clip(RastroShapes.Pill)
-                            .background(theme.accent.copy(alpha = 0.12f))
-                            .padding(horizontal = 8.dp, vertical = 4.dp)
-                    ) {
-                        Text(
-                            text = card.subject,
-                            style = MaterialTheme.typography.labelSmall,
-                            color = theme.accent,
-                            fontWeight = FontWeight.Bold
-                        )
-                    }
-
-                    val favorites by FavoritesRepository.favoritesFlow.collectAsState()
-                    val isFav = favorites.any { it.itemId == card.id && it.type == FavoriteType.FLASHCARD }
-
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        IconButton(
-                            onClick = {
-                                FavoritesRepository.toggle(
-                                    type = FavoriteType.FLASHCARD,
-                                    itemId = card.id,
-                                    title = card.q,
-                                    subtitle = card.a,
-                                    subject = card.subject,
-                                    area = "General",
-                                    imageUrl = card.imageUrl
-                                )
-                            },
-                            modifier = Modifier.size(28.dp)
-                        ) {
-                            Icon(
-                                imageVector = if (isFav) Icons.Rounded.Star else Icons.Rounded.StarOutline,
-                                contentDescription = "Favorito",
-                                tint = if (isFav) Color(0xFFF59E0B) else theme.textSecondary,
-                                modifier = Modifier.size(19.dp)
-                            )
-                        }
-
-                        Spacer(modifier = Modifier.width(4.dp))
-
-                        Text(
-                            text = if (isBack) "Pregunta 🔄" else "Voltear 🔄",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = theme.textSecondary
-                        )
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(12.dp))
-
-                if (!isBack) {
-                    Text(
-                        text = card.q,
-                        style = MaterialTheme.typography.titleMedium,
-                        color = theme.textPrimary,
-                        fontWeight = FontWeight.SemiBold,
-                        lineHeight = 22.sp
-                    )
-                    if (!card.imageUrl.isNullOrBlank()) {
-                        Spacer(modifier = Modifier.height(8.dp))
-                        CachedRemoteImage(
-                            url = card.imageUrl,
-                            contentDescription = "Imagen de la ficha",
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(130.dp)
-                                .clip(RoundedCornerShape(12.dp))
-                                .border(1.dp, theme.strokeBorder.copy(alpha = 0.35f), RoundedCornerShape(12.dp)),
-                            contentScale = ContentScale.Fit
-                        )
-                    }
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Text(
-                        text = "¿Sabes la respuesta fija? ¡Voltea para comprobar!",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = theme.textSecondary
-                    )
-                } else {
-                    Text(
-                        text = "Respuesta Oficial:",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = Color(0xFF15803D),
-                        fontWeight = FontWeight.Bold
-                    )
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = card.a,
-                        style = MaterialTheme.typography.titleMedium,
-                        color = theme.textPrimary,
-                        fontWeight = FontWeight.Bold,
-                        lineHeight = 22.sp
-                    )
-                    if (!card.imageUrl.isNullOrBlank()) {
-                        Spacer(modifier = Modifier.height(8.dp))
-                        CachedRemoteImage(
-                            url = card.imageUrl,
-                            contentDescription = "Imagen de la ficha",
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(130.dp)
-                                .clip(RoundedCornerShape(12.dp))
-                                .border(1.dp, theme.strokeBorder.copy(alpha = 0.35f), RoundedCornerShape(12.dp)),
-                            contentScale = ContentScale.Fit
-                        )
-                    }
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(
-                            imageVector = Icons.Rounded.CheckCircle,
-                            contentDescription = null,
-                            tint = Color(0xFF10B981),
-                            modifier = Modifier.size(16.dp)
-                        )
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text(
-                            text = "Clave de Admisión verificada",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = Color(0xFF10B981),
-                            fontWeight = FontWeight.Medium
-                        )
-                    }
-                }
             }
         }
     }

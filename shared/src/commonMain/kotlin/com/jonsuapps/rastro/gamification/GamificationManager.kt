@@ -28,7 +28,7 @@ object GamificationManager {
     private val _streakState = MutableStateFlow(StreakState())
     val streakState: StateFlow<StreakState> = _streakState.asStateFlow()
 
-    const val DEFAULT_MAX_HEARTS = 5
+    const val DEFAULT_MAX_HEARTS = 15
 
     private val _maxHearts = MutableStateFlow(DEFAULT_MAX_HEARTS)
     val maxHearts: StateFlow<Int> = _maxHearts.asStateFlow()
@@ -36,7 +36,7 @@ object GamificationManager {
     private val _hearts = MutableStateFlow(DEFAULT_MAX_HEARTS)
     val hearts: StateFlow<Int> = _hearts.asStateFlow()
 
-    private val _recoveryAmount = MutableStateFlow(3L)
+    private val _recoveryAmount = MutableStateFlow(30L)
     val recoveryAmount: StateFlow<Long> = _recoveryAmount.asStateFlow()
 
     private val _recoveryUnit = MutableStateFlow(LifeRecoveryUnit.MINUTOS)
@@ -154,8 +154,6 @@ object GamificationManager {
 
     fun recordLessonCompleted(earnedXp: Int = 25) {
         _totalXp.value += earnedXp.coerceAtLeast(0)
-        _hearts.value = _maxHearts.value
-        _lastHeartLostTimestamp.value = 0L
         checkStreak()
         syncState()
     }
@@ -196,19 +194,66 @@ object GamificationManager {
         if (key in _state.value.claimedTopicRewards || lessons.isEmpty() || lessons.any {
             _state.value.completedLessons[it.id]?.skipped != false
         }) return 0
-        _totalXp.value += TOPIC_REWARD_XP
+        val topicReward = TOPIC_REWARD_XP * if (com.jonsuapps.rastro.monetization.ProAccess.active()) 2 else 1
+        _totalXp.value += topicReward
         _state.value = _state.value.copy(xp = _totalXp.value,
             claimedTopicRewards = _state.value.claimedTopicRewards + key)
-        return TOPIC_REWARD_XP
+        return topicReward
     }
 
     const val TOPIC_REWARD_XP = 30
+
+    fun openRewardPack(pack: com.jonsuapps.rastro.monetization.RewardPack): com.jonsuapps.rastro.monetization.RewardPackProgress {
+        val previous = _state.value.rewardPacks[pack.id]
+        if(previous != null && !previous.claimed) return previous
+        val pending = com.jonsuapps.rastro.monetization.RewardPackProgress("${pack.id}_${Clock.System.now().toEpochMilliseconds()}",pack.id,pack.videos.coerceIn(1,5),pack.coins.coerceAtLeast(0))
+        _state.value = _state.value.copy(rewardPacks = _state.value.rewardPacks + (pack.id to pending))
+        return pending
+    }
+    fun confirmRewardedVideo(offerId: String, sessionId: String, receipt: String) {
+        val previous = _state.value.rewardPacks[offerId] ?: return
+        if(previous.sessionId != sessionId) return
+        _state.value = _state.value.copy(rewardPacks = _state.value.rewardPacks + (offerId to previous.confirm(receipt)))
+    }
+    fun claimRewardPack(offerId: String): Int {
+        val previous = _state.value.rewardPacks[offerId] ?: return 0
+        val (claimed, coins) = previous.claim()
+        _state.value = _state.value.copy(coins = _state.value.coins + coins, rewardPacks = _state.value.rewardPacks + (offerId to claimed))
+        return coins
+    }
+    fun quoteLessonReward(lessonId: String, xp: Int, stars: Int): LessonReward {
+        val base = LessonRewardPolicy.quote(_state.value.completedLessons[lessonId], xp, stars)
+        return if (com.jonsuapps.rastro.monetization.ProAccess.active()) base.copy(xp = base.xp * 2, coins = base.coins * 2) else base
+    }
+    fun buyLives(amount: Int, price: Int): Boolean {
+        updateHeartRegeneration()
+        if (price < 0 || _state.value.coins < price || _hearts.value >= _maxHearts.value) return false
+        _state.value = _state.value.copy(coins = _state.value.coins - price)
+        refillHearts((_hearts.value + amount.coerceAtLeast(0)).coerceAtMost(_maxHearts.value))
+        return true
+    }
+    fun reserveEconomyAttempt(id: String, kind: String): Boolean {
+        if (id.isBlank()) return false
+        if (_state.value.economyAttempts.any { it.id == id }) return true
+        val grant = com.jonsuapps.rastro.monetization.ProAccess.grant.value
+        val cost = com.jonsuapps.rastro.monetization.EconomyPolicy.cost(kind, _state.value.economyAttempts, grant,
+            Clock.System.now().toEpochMilliseconds(), com.jonsuapps.rastro.monetization.EconomySettings.config.value)
+        if (_state.value.coins < cost) return false
+        val proId = if (kind == "SIMULACRO" && cost == 0 && _state.value.economyAttempts.any { it.kind == kind } && grant.active(Clock.System.now().toEpochMilliseconds())) grant.grantId else ""
+        _state.value = _state.value.copy(coins = _state.value.coins - cost,
+            economyAttempts = _state.value.economyAttempts + com.jonsuapps.rastro.monetization.EconomyAttempt(id, kind, cost, proId))
+        return true
+    }
+    fun releaseUnstartedEconomyAttempt(id: String) {
+        val attempt = _state.value.economyAttempts.firstOrNull { it.id == id } ?: return
+        _state.value = _state.value.copy(coins = _state.value.coins + attempt.cost, economyAttempts = _state.value.economyAttempts.filterNot { it.id == id })
+    }
 
     fun recordLessonCompletion(lessonId: String, earnedXp: Int, stars: Int, attemptId: String = "") {
         if (lessonId.isBlank()) return
         val previous = _state.value.completedLessons[lessonId]
         if (attemptId.isNotBlank() && previous?.lastRewardAttemptId == attemptId) return
-        val reward = LessonRewardPolicy.quote(previous, earnedXp, stars)
+        val reward = quoteLessonReward(lessonId, earnedXp, stars)
         val replay = previous != null && !previous.skipped
         if (!replay) _journeyFrom.value = lessonId
         val completed = _state.value.completedLessons + (lessonId to LessonCompletion(
@@ -216,8 +261,6 @@ object GamificationManager {
             completedAt = if (replay) previous!!.completedAt else Clock.System.now().toEpochMilliseconds(),
             earnedCoins = reward.starEntitlement, lastRewardAttemptId = attemptId))
         _totalXp.value += reward.xp
-        _hearts.value = _maxHearts.value
-        _lastHeartLostTimestamp.value = 0L
         checkStreak()
         val achievements = (_state.value.achievements + buildList {
             if (completed.size >= 1) add("first_lesson")
@@ -242,11 +285,18 @@ object GamificationManager {
     /** Both learning sources feed the same XP balance; an attempt is paid only once. */
     fun claimExamReward(attemptId: String, correctCount: Int): Int {
         if (attemptId.isBlank() || correctCount <= 0 || attemptId in _state.value.claimedExamRewards) return 0
-        val awarded = correctCount.coerceAtMost(1000) * EXAM_CORRECT_XP
+        val awarded = correctCount.coerceAtMost(1000) * EXAM_CORRECT_XP * if (com.jonsuapps.rastro.monetization.ProAccess.active()) 2 else 1
         _totalXp.value += awarded
         _state.value = _state.value.copy(xp = _totalXp.value,
             claimedExamRewards = _state.value.claimedExamRewards + attemptId)
         return awarded
+    }
+
+    fun claimCoinGift(receipt: String, amount: Int): Int {
+        val before = _state.value
+        val after = com.jonsuapps.rastro.monetization.CoinRewardPolicy.apply(before, receipt, amount)
+        _state.value = after
+        return after.coins - before.coins
     }
 
     const val EXAM_CORRECT_XP = 5
@@ -408,6 +458,7 @@ object GamificationManager {
     }
 
     fun loseHeart(nowMillis: Long = Clock.System.now().toEpochMilliseconds()) {
+        if (com.jonsuapps.rastro.monetization.ProAccess.active()) return
         if (_hearts.value > 0) {
             val wasFull = _hearts.value >= _maxHearts.value
             _hearts.value -= 1

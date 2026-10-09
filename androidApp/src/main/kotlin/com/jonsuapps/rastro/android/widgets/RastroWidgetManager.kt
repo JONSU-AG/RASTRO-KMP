@@ -143,9 +143,9 @@ object RastroWidgetManager {
 
     fun getExamDetails(context: Context): Triple<String, Int, String> {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        val examName = prefs.getString(KEY_EXAM_NAME, "EXAMEN UNSA") ?: "EXAMEN UNSA"
+        val examName = prefs.getString(KEY_EXAM_NAME, null) ?: defaultExam()?.title ?: "Mi examen"
         val career = prefs.getString(KEY_EXAM_CAREER, "¡Asegura tu vacante!") ?: "¡Asegura tu vacante!"
-        val examDateStr = prefs.getString(KEY_EXAM_DATE, null)
+        val examDateStr = getExamDateYmd(context)
 
         val daysRemaining = WidgetDates.daysUntil(examDateStr.orEmpty(), System.currentTimeMillis()) ?: 0
 
@@ -154,8 +154,11 @@ object RastroWidgetManager {
 
     fun getExamDateYmd(context: Context): String {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        return prefs.getString(KEY_EXAM_DATE, "").orEmpty()
+        return prefs.getString(KEY_EXAM_DATE, null) ?: defaultExam()?.date.orEmpty()
     }
+
+    private fun defaultExam() = UnsaExamDates.nearestKnowledgeExam(
+        java.time.LocalDate.now(java.time.ZoneId.of("America/Lima")).toString())
 
     /**
      * Estados REALES de la semana actual (lunes..domingo) según activityDates

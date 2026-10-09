@@ -284,20 +284,8 @@ fun BibliotecaScreen(
                     modifier = Modifier.padding(16.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Box(
-                        modifier = Modifier
-                            .size(44.dp)
-                            .clip(RastroShapes.Pill)
-                            .background(theme.accent.copy(alpha = 0.15f)),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Icon(
-                            imageVector = Icons.Rounded.AutoStories,
-                            contentDescription = null,
-                            tint = theme.accentText,
-                            modifier = Modifier.size(24.dp)
-                        )
-                    }
+                    androidx.compose.foundation.Image(androidx.compose.ui.res.painterResource(R.drawable.ic_course_literatura),
+                        contentDescription = null, modifier = Modifier.size(44.dp))
                     Spacer(modifier = Modifier.width(14.dp))
                     Column {
                         Text(
@@ -603,10 +591,10 @@ private fun OfficialMaterialCard(item: OfficialMaterialResource, theme: com.jons
     ) {
         Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Box(Modifier.size(38.dp).clip(RoundedCornerShape(12.dp)).background(theme.accent.copy(alpha = 0.15f)).border(1.2.dp, theme.strokeBorder.copy(alpha = 0.4f), RoundedCornerShape(12.dp)),
-                    contentAlignment = Alignment.Center) {
-                    Icon(if (item.isFolder) Icons.Rounded.FolderOpen else Icons.Rounded.Description,
-                        contentDescription = null, tint = theme.accentText)
+                if (item.isFolder) androidx.compose.foundation.Image(androidx.compose.ui.res.painterResource(R.drawable.ic_library_folder_sticker),
+                    contentDescription = null, modifier = Modifier.size(38.dp))
+                else Box(Modifier.size(38.dp).clip(RoundedCornerShape(12.dp)).background(theme.accent.copy(alpha = 0.15f)).border(1.2.dp, theme.strokeBorder.copy(alpha = 0.4f), RoundedCornerShape(12.dp)), contentAlignment = Alignment.Center) {
+                    Icon(Icons.Rounded.Description, contentDescription = null, tint = theme.accentText)
                 }
                 Spacer(Modifier.width(10.dp))
                 Column(Modifier.weight(1f)) {
@@ -709,6 +697,8 @@ fun CommunityUploadCard(
     val isSaved = localSavedState
     val canInteract = user.isAuthenticated && !user.isAnonymous
     val isOwnUpload = user.uid == upload.ownerUid
+    val liveAuthorPhoto = com.jonsuapps.rastro.android.ui.components.publicAuthorPhoto(upload.ownerUid, upload.ownerPhotoUrl)
+
     val canManageUpload = canInteract && (isOwnUpload || user.email?.lowercase() in setOf(
         "aguilar.jonsu@gmail.com", "rumbo.jonsu@gmail.com", "jhojan.aguilar.13.10@gmail.com",
         "rulua617@gmail.com", "147279812+rulua617@users.noreply.github.com"
@@ -773,7 +763,7 @@ fun CommunityUploadCard(
                         }
                 ) {
                     CartoonAvatar(
-                        photoUrl = upload.ownerPhotoUrl,
+                        photoUrl = if(isOwnUpload) user.photoURL else liveAuthorPhoto,
                         size = 40.dp,
                         strokeColor = theme.strokeBorder,
                         strokeWidth = 1.8.dp,
@@ -1075,18 +1065,15 @@ fun CommunityUploadCard(
                     color = theme.surfaceAccent,
                     border = BorderStroke(1.2.dp, theme.strokeBorder.copy(alpha = 0.35f))
                 ) {
-                    LucideShareIcon(
-                        onClick = {
+                    IconButton(onClick = {
                             val share = Intent(Intent.ACTION_SEND).apply {
                                 type = "text/plain"
                                 putExtra(Intent.EXTRA_TEXT, listOf(upload.title, com.jonsuapps.rastro.android.navigation.RastroAppLinks.profileUrl(upload.ownerUid, upload.id)).joinToString("\n"))
                             }
                             context.startActivity(Intent.createChooser(share, "Compartir material"))
-                        },
-                        tint = theme.textPrimary,
-                        size = 18.dp,
-                        modifier = Modifier.padding(8.dp)
-                    )
+                        }) {
+                        Icon(Icons.Rounded.Share, "Compartir material", tint = theme.textPrimary, modifier = Modifier.size(18.dp))
+                    }
                 }
             }
 

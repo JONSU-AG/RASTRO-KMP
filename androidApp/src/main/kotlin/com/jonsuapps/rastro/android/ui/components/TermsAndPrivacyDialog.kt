@@ -106,7 +106,7 @@ fun TermsAndPrivacyDialog(
                                 color = colors.textPrimary
                             )
                             Text(
-                                text = "Reglamentos y Normativas de Google Play",
+                                text = "Propuesta legal · 8 de octubre de 2026",
                                 fontSize = 10.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = Color(0xFF10B981)
@@ -273,7 +273,7 @@ fun TermsAndPrivacyDialog(
                     }
 
                     Text(
-                        text = "¿Eliminar Cuenta y Todos tus Datos?",
+                        text = "¿Eliminar tu cuenta y datos de RASTRO?",
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Black,
                         color = colors.textPrimary,
@@ -281,7 +281,7 @@ fun TermsAndPrivacyDialog(
                     )
 
                     Text(
-                        text = "Esta acción es permanente e irreversible. Se borrarán tus registros de estudio, tu racha de días, tus simulacros y tu perfil de la nube conforme a las normativas de Google Play.",
+                        text = "Se eliminarán tu perfil, progreso y contenido publicado en RASTRO antes de borrar el acceso. Esta acción no se puede deshacer. Los archivos de tu Drive personal permanecen bajo tu control. Eliminar la cuenta no cancela una suscripción de Google Play.",
                         fontSize = 12.sp,
                         color = colors.textSecondary,
                         lineHeight = 17.sp,
@@ -315,7 +315,7 @@ fun TermsAndPrivacyDialog(
                                 if (isDeletingAccount) return@Sticker3dButton
                                 isDeletingAccount = true
                                 deleteError = null
-                                com.jonsuapps.rastro.android.data.AccountDeletionRepository.deleteCurrentAccount { result ->
+                                com.jonsuapps.rastro.android.data.AccountDeletionRepository.deleteCurrentAccount(context) { result ->
                                     isDeletingAccount = false
                                     result.onSuccess {
                                         UserManager.clearUser()
@@ -351,30 +351,32 @@ private fun PrivacyTabContent(colors: RastroPalette) {
     LegalCardSection(
         icon = Icons.Rounded.Lock,
         title = "1. Recopilación Mínima de Datos",
-        description = "RASTRO solo recopila los datos estrictamente indispensables para la sincronización pedagógica: tu nombre de usuario, correo electrónico proporcionado por Google Sign-In y tu avatar. No recopilamos número de teléfono, ubicación en tiempo real ni información financiera.",
+        description = "Para las funciones con cuenta, RASTRO trata correo, identificador, nombre y datos de inicio de sesión mediante correo o Google. La foto, portada y enlaces de redes son opcionales. Puede registrar progreso, actividad aproximada, contenido compartido y reportes según las funciones utilizadas. El estudio como invitado guarda el avance localmente sin crear un perfil en Firebase.",
         colors = colors
     )
 
     LegalCardSection(
         icon = Icons.Rounded.CloudSync,
         title = "2. Almacenamiento Seguro (Firebase & Google Cloud)",
-        description = "Todos tus puntajes, racha de estudio, vidas y respuestas se resguardan en servidores de Google Firebase protegidos por reglas de seguridad de nivel de producción. Tus datos personales están aislados y no son accesibles por otros usuarios sin tu consentimiento.",
+        description = "El estudio se guarda en el dispositivo. Con una cuenta puedes respaldar y recuperar progreso y errores; el respaldo automático es opcional y se intenta al abrir la app cuando han pasado tres días desde el último respaldo correcto. Las funciones sociales, perfiles y operaciones de publicación utilizan Firebase independientemente de ese respaldo. Tu nombre, foto, portada y contenido publicado pueden ser visibles para otros usuarios.",
         colors = colors
     )
 
     LegalCardSection(
         icon = Icons.Rounded.Block,
         title = "3. Cero Venta de Información Personal",
-        description = "RASTRO NO vende, comercializa ni alquila tus datos a empresas publicitarias o terceros de mercadeo. El propósito de la plataforma es 100% formativo y de preparación para exámenes de admisión.",
+        description = "RASTRO no vende tus datos personales. Firebase y servicios de Google tratan la información necesaria para sus funciones. Firebase Analytics y AdMob pueden tratar datos técnicos, de interacción e identificadores según su configuración y los consentimientos aplicables. La actividad aproximada de las cuentas puede consultarse por administradores autorizados; el historial sin duración suficiente no se convierte en minutos inventados.",
         colors = colors
     )
 
     LegalCardSection(
         icon = Icons.Rounded.PlayCircle,
         title = "4. Videos de YouTube y servicios de terceros",
-        description = "Las clases en video se abren directamente en YouTube. Sus datos, cookies e inicio de sesión se rigen por las políticas de Google y YouTube; RASTRO no recibe sus credenciales de YouTube.",
+        description = "Los videos pueden reproducirse mediante el reproductor de YouTube o abrirse en su aplicación o navegador. Sus datos, cookies e inicio de sesión se rigen por las políticas de Google y YouTube. RASTRO no recibe tu contraseña de YouTube. Las imágenes de perfil pueden almacenarse en Firebase Storage; las funciones de Drive utilizan los permisos y archivos de tu cuenta cuando corresponda.",
         colors = colors
     )
+    LegalCardSection(icon = Icons.Rounded.CloudSync, title = "5. Errores, portadas y conservación", description = "Mis errores comienza pausado para instalaciones nuevas y conserva tu preferencia existente. Al habilitarlo, los errores caducan en la copia local a los quince días; esto no equivale a una eliminación inmediata de cualquier copia remota. La portada y su encuadre se guardan al confirmar cambios; usarla en Inicio es opcional. Para consultas de conservación o eliminación, escribe a aguilar.jonsu@gmail.com.", colors = colors)
+
 }
 
 @Composable
@@ -389,21 +391,21 @@ private fun TermsUgcTabContent(colors: RastroPalette) {
     LegalCardSection(
         icon = Icons.Rounded.Report,
         title = "2. Moderación de Contenido de la Comunidad (UGC)",
-        description = "En cumplimiento estricto con las políticas de Contenido Generado por el Usuario de Google Play, RASTRO mantiene una política de TOLERANCIA CERO ante publicaciones con spam, material ofensivo o infracciones a derechos de autor. Cualquier aporte puede ser reportado y será retirado de forma expedita por el equipo moderador.",
+        description = "No se permite acoso, suplantación, spam, contenido sexual prohibido ni infracciones de derechos de terceros. Usa las opciones de reportar y bloquear disponibles. Los administradores revisan reportes y pueden retirar contenido o restringir cuentas según la infracción; no se promete un plazo automático de revisión.",
         colors = colors
     )
 
     LegalCardSection(
         icon = Icons.Rounded.School,
         title = "3. Exclusión de Garantía de Ingreso",
-        description = "RASTRO es un simulador pedagógico de entrenamiento intensivo. El rendimiento obtenido en los simulacros virtuales es un indicador de progreso, pero el ingreso a la Universidad Nacional de San Agustín (UNSA) depende exclusivamente de la evaluación oficial presencial.",
+        description = "RASTRO es una herramienta independiente de apoyo preuniversitario. No garantiza ingreso, notas ni resultados oficiales. Los ejercicios y simulacros no sustituyen las evaluaciones ni instrucciones de cada universidad.",
         colors = colors
     )
 
     LegalCardSection(
         icon = Icons.Rounded.CloudUpload,
         title = "4. Almacenamiento Descentralizado en Google Drive",
-        description = "RASTRO no aloja archivos pesados ni documentos privados en servidores propios. Toda la compartición de materiales, PDFs y bancos de preguntas se gestiona directamente a través del Google Drive personal del propio usuario. RASTRO utiliza el almacenamiento del usuario para salvaguardar la privacidad y descentralizar los recursos.",
+        description = "RASTRO utiliza almacenamiento local, Firebase y enlaces o archivos de Google Drive según la función. Los archivos en tu Drive personal permanecen bajo tu control y pueden seguir existiendo después de eliminar una cuenta de RASTRO. Comparte únicamente materiales propios, autorizados o con licencia compatible.",
         colors = colors
     )
 
@@ -417,7 +419,7 @@ private fun TermsUgcTabContent(colors: RastroPalette) {
     LegalCardSection(
         icon = Icons.Rounded.Psychology,
         title = "6. Uso y Transparencia de Inteligencia Artificial (IA)",
-        description = "RASTRO implementa modelos de Inteligencia Artificial avanzada para potenciar la experiencia de aprendizaje: tutoría interactiva con Orstty, generación adaptativa de mnemotecnias y retroalimentación analítica de errores. La IA actúa como asistente de estudio complementario y sus respuestas deben tomarse como apoyo formativo.",
+        description = "Parte del material puede prepararse con apoyo de inteligencia artificial. Puede contener errores y debe contrastarse con fuentes académicas; no constituye una respuesta oficial. Esto no implica que exista un tutor de IA activo ni generación de respuestas en tiempo real en todas las funciones.",
         colors = colors
     )
 
@@ -427,6 +429,9 @@ private fun TermsUgcTabContent(colors: RastroPalette) {
         description = "RASTRO organiza enlaces a videos públicos como apoyo académico. No aloja, modifica ni controla esos videos: pertenecen a sus creadores y su disponibilidad depende de YouTube y de cada titular.",
         colors = colors
     )
+    LegalCardSection(icon = Icons.Rounded.Paid, title = "8. Monedas, publicidad y RASTRO Pro", description = "Las monedas no son dinero ni se canjean por efectivo. Los anuncios recompensados son voluntarios; su duración y disponibilidad dependen del proveedor y la recompensa exige completarlos. Los anuncios automáticos se reservan a pausas naturales, nunca durante preguntas. Pro puede otorgarse por administración; las compras no están habilitadas actualmente. Cuando se habiliten, Google Play mostrará el precio y condiciones reales antes de confirmar. Pro ofrece vidas ilimitadas, XP y monedas de estudio multiplicados por dos, ausencia de anuncios automáticos y tres intentos Pro de simulacro; no modifica estrellas, notas, ranking académico ni protege la racha. Los anuncios recompensados siguen siendo voluntarios para Pro.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.School, title = "9. Rachas y acceso", description = "El día de racha se obtiene al completar una lección o acumular quince minutos de uso en primer plano. La migración conserva días anteriores cuando existen registros suficientes, sin inventarlos. Las funciones de comunidad y respaldo requieren una cuenta. RASTRO está orientado a personas de diecisiete años en adelante; los menores requieren la autorización que corresponda según su legislación.", colors = colors)
+
 }
 
 @Composable
@@ -437,7 +442,7 @@ private fun AccountDeletionTabContent(
     LegalCardSection(
         icon = Icons.Rounded.DeleteForever,
         title = "Directriz de Eliminación de Cuenta (Google Play)",
-        description = "Google Play exige que todo usuario pueda solicitar el borrado total de su cuenta y registros de datos asociados directamente desde la aplicación. Puedes ejecutar la eliminación inmediata con el botón a continuación.",
+        description = "Puedes eliminar el acceso de tu cuenta desde esta sección; puede requerirse volver a iniciar sesión. También puedes solicitar la eliminación de los datos asociados en https://rumbo-jonsu.web.app/eliminar-cuenta o escribiendo a aguilar.jonsu@gmail.com. La eliminación de acceso no acredita por sí sola que todos los datos asociados hayan sido depurados.",
         colors = colors
     )
 
@@ -459,14 +464,14 @@ private fun AccountDeletionTabContent(
                 )
                 Spacer(modifier = Modifier.width(6.dp))
                 Text(
-                    text = "¿Qué datos se borran?",
+                    text = "Cuenta y datos asociados",
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFFEF4444)
                 )
             }
             Text(
-                text = "• Identidad de usuario y correo registrado en Firebase.\n• Historial completo de simulacros y estadísticas.\n• Racha de días, gemas, vidas y logros.\n• Aportes compartidos en la biblioteca y comentarios en el muro.",
+                text = "El acceso se elimina mediante Firebase Authentication. La solicitud de limpieza abarca el perfil, progreso y datos personales asociados bajo control de RASTRO. No envíes contraseñas por correo. Los archivos en tu Drive se administran desde Google.",
                 fontSize = 11.5.sp,
                 color = colors.textPrimary,
                 lineHeight = 17.sp
@@ -486,7 +491,7 @@ private fun AccountDeletionTabContent(
                 Icon(Icons.Rounded.DeleteForever, contentDescription = null, tint = Color.White, modifier = Modifier.size(18.dp))
                 Spacer(Modifier.width(8.dp))
                 Text(
-                    text = "Eliminar Mi Cuenta y Datos",
+                    text = "Eliminar mi cuenta",
                     color = Color.White,
                     fontWeight = FontWeight.Bold,
                     fontSize = 13.sp
@@ -496,7 +501,7 @@ private fun AccountDeletionTabContent(
     }
 
     Text(
-        text = "Si tienes inconvenientes para eliminar tu cuenta en la app, también puedes remitir un correo electrónico a aguilar.jonsu@gmail.com con el asunto 'Solicitud de Eliminación de Datos RASTRO' y procesaremos tu baja en menos de 24 horas.",
+        text = "Si tienes inconvenientes para eliminar tu cuenta en la app, también puedes remitir un correo electrónico a aguilar.jonsu@gmail.com con el asunto 'Solicitud de Eliminación de Datos RASTRO' para solicitar la limpieza de los datos asociados. No se establece un plazo automático sin comprobar la tramitación.",
         fontSize = 11.sp,
         color = colors.textSecondary,
         lineHeight = 15.sp
@@ -508,7 +513,7 @@ private fun AuthorshipTabContent(colors: RastroPalette) {
     LegalCardSection(
         icon = Icons.Rounded.Code,
         title = "Autoría y Propiedad Intelectual",
-        description = "El software, las mnemotecnias exclusivas, el diseño de interfaces táctiles y los algoritmos de simulación son propiedad intelectual del Autor de la aplicación RASTRO. Los ejercicios académicos corresponden a recopilaciones de bancos públicos oficiales con propósitos didácticos.",
+        description = "El software y el diseño de RASTRO son una creación independiente. El material académico puede incluir contenido propio y referencias de terceros, con sus derechos correspondientes. Solo se considera oficial un material cuya procedencia esté identificada y comprobada; no todos los ejercicios pertenecen a bancos oficiales.",
         colors = colors
     )
 

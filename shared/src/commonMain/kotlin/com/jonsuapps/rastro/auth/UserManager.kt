@@ -10,10 +10,10 @@ object UserManager {
 
     private val _currentUser = MutableStateFlow(
         UserData(
-            uid = "local_student_1",
+            uid = "local_student_guest",
             displayName = "Estudiante RASTRO",
-            targetUniversity = "Universidad Nacional de San Agustín (UNSA)",
-            targetCareer = "Medicina Humana",
+            targetUniversity = "",
+            targetCareer = "",
             hasChosenUsername = false
         )
     )
@@ -44,7 +44,7 @@ object UserManager {
         val trimmedName = name.trim().ifBlank { "Estudiante RASTRO" }
         _currentUser.value = _currentUser.value.copy(
             displayName = trimmedName,
-            targetCareer = career.trim().ifBlank { "Medicina Humana" },
+            targetCareer = career.trim(),
             hasChosenUsername = true
         )
         _selectedArea.value = area
@@ -95,6 +95,10 @@ object UserManager {
         bio: String? = null,
         coverUrl: String? = null,
         coverGradient: String? = null,
+        homeUseProfileCover: Boolean? = null,
+        coverZoom: Float? = null,
+        coverX: Float? = null,
+        coverY: Float? = null,
         whatsappChannel: String? = null,
         tiktokUrl: String? = null,
         instagramUrl: String? = null,
@@ -107,6 +111,10 @@ object UserManager {
             bio = bio ?: _currentUser.value.bio,
             coverUrl = coverUrl ?: _currentUser.value.coverUrl,
             coverGradient = coverGradient ?: _currentUser.value.coverGradient,
+            homeUseProfileCover = homeUseProfileCover ?: _currentUser.value.homeUseProfileCover,
+            coverZoom = coverZoom?.takeIf { it.isFinite() }?.coerceIn(1f, 3f) ?: _currentUser.value.coverZoom,
+            coverX = coverX?.takeIf { it.isFinite() }?.coerceIn(-1f, 1f) ?: _currentUser.value.coverX,
+            coverY = coverY?.takeIf { it.isFinite() }?.coerceIn(-1f, 1f) ?: _currentUser.value.coverY,
             whatsappChannel = whatsappChannel ?: _currentUser.value.whatsappChannel,
             tiktokUrl = tiktokUrl ?: _currentUser.value.tiktokUrl,
             instagramUrl = instagramUrl ?: _currentUser.value.instagramUrl,
@@ -140,8 +148,8 @@ object UserManager {
             displayName = "Estudiante Invitado",
             isAuthenticated = false,
             isAnonymous = false,
-            targetUniversity = "Universidad Nacional de San Agustín (UNSA)",
-            targetCareer = "Medicina Humana",
+            targetUniversity = "",
+            targetCareer = "",
             hasChosenUsername = false
         )
     }

@@ -2,6 +2,7 @@ package com.jonsuapps.rastro.auth
 
 import androidx.compose.runtime.mutableStateOf
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
 /**
  * Correos oficiales autorizados del autor / creador del proyecto Firebase (rumbo-jonsu)
@@ -28,6 +29,7 @@ object AdminConfig {
     }
 
     private val _isUserViewModeEnabled = MutableStateFlow(false)
+    val userViewMode = _isUserViewModeEnabled.asStateFlow()
 
     var isUserViewModeEnabled: Boolean
         get() = _isUserViewModeEnabled.value

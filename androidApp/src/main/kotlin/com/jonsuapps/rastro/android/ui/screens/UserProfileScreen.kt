@@ -9,6 +9,7 @@ import com.jonsuapps.rastro.android.ui.components.RastroBoundedBlock
 
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -101,6 +102,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import java.net.URL
 
 @Composable
+@OptIn(ExperimentalLayoutApi::class)
 fun UserProfileScreen(
     targetUid: String? = null,
     targetPublicationId: String? = null,
@@ -153,9 +155,11 @@ fun UserProfileScreen(
     val savedObras = remember(savedObraIds) {
         LiteraturaRepository.obrasUNSA.filter { it.id in savedObraIds }
     }
-    val totalSavedCount = remember(savedUploads, savedOfficialMaterials, savedObras) {
-        savedUploads.size + savedOfficialMaterials.size + savedObras.size
-    }
+    val savedFormulaIds = allFavorites.filter { !isOtherProfile && it.type == FavoriteType.FORMULA }.map { it.id }.toSet()
+    val savedFormulas = com.jonsuapps.rastro.android.data.FormulasRepository.allFormulas.filter { it.id in savedFormulaIds }
+    val savedMnemotecniaIds by UserManager.savedMnemotecniaIds.collectAsState()
+    val savedMnemotecnias = com.jonsuapps.rastro.data.MnemotecniasRepository.items.filter { !isOtherProfile && it.id in savedMnemotecniaIds }
+    val totalSavedCount = savedUploads.size + savedOfficialMaterials.size + savedObras.size + savedFormulas.size + savedMnemotecnias.size
     var selectedSavedFilter by remember { mutableStateOf("Todos") }
     var selectedObraForViewer by remember { mutableStateOf<ObraLiteraria?>(null) }
     var followersCount by remember(profileUid) { mutableIntStateOf(0) }
@@ -167,6 +171,8 @@ fun UserProfileScreen(
     var editTikTok by remember { mutableStateOf(currentUser.tiktokUrl) }
     var editInstagram by remember { mutableStateOf(currentUser.instagramUrl) }
     var selectedBanner by remember { mutableStateOf(currentUser.coverGradient) }
+    var useCoverInHome by remember { mutableStateOf(currentUser.homeUseProfileCover) }
+    var coverPlacement by remember { mutableStateOf(com.jonsuapps.rastro.android.ui.components.CoverPlacement(currentUser.coverZoom, currentUser.coverX, currentUser.coverY)) }
     var clearCoverImage by remember { mutableStateOf(false) }
     var savingProfile by remember { mutableStateOf(false) }
     var uploadingCover by remember { mutableStateOf(false) }
@@ -197,6 +203,8 @@ fun UserProfileScreen(
         editTikTok = currentUser.tiktokUrl
         editInstagram = currentUser.instagramUrl
         selectedBanner = currentUser.coverGradient
+        useCoverInHome = currentUser.homeUseProfileCover
+        coverPlacement = com.jonsuapps.rastro.android.ui.components.CoverPlacement(currentUser.coverZoom, currentUser.coverX, currentUser.coverY)
         clearCoverImage = false
         profileMessage = null
         showProfileEditor = true
@@ -208,10 +216,10 @@ fun UserProfileScreen(
     }
 
     DisposableEffect(profileUid) {
-        if (profileUid.isBlank()) return@DisposableEffect onDispose { }
+        if (profileUid.isBlank() || !currentUser.isAuthenticated || currentUser.isAnonymous) return@DisposableEffect onDispose { }
         val registration = UserUploadRepository.observe(profileUid) { userUploads = it }
         val savedRegistration = if (!isOtherProfile) UserUploadRepository.observeSaved(profileUid) { savedUploads = it } else null
-        val profileRegistration = UserProfileRepository.observe(profileUid) { data ->
+        val profileRegistration = if (isOtherProfile) UserProfileRepository.observe(profileUid) { data ->
             if (isOtherProfile) {
                 otherUserData = data
             } else {
@@ -223,6 +231,10 @@ fun UserProfileScreen(
                     bio = data["bio"] as? String,
                     coverUrl = data["coverUrl"] as? String,
                     coverGradient = data["coverGradient"] as? String,
+                    homeUseProfileCover = data["homeUseProfileCover"] as? Boolean,
+                    coverZoom = (data["coverZoom"] as? Number)?.toFloat(),
+                    coverX = (data["coverX"] as? Number)?.toFloat(),
+                    coverY = (data["coverY"] as? Number)?.toFloat(),
                     whatsappChannel = data["whatsappChannel"] as? String,
                     tiktokUrl = data["tiktokUrl"] as? String,
                     instagramUrl = data["instagramUrl"] as? String,
@@ -230,7 +242,7 @@ fun UserProfileScreen(
                     blockedUsers = blocked
                 )
             }
-        }
+        } else null
         val connectionListeners = UserProfileRepository.observeConnections(profileUid) { followers, following ->
             followersCount = followers
             followingCount = following
@@ -244,7 +256,7 @@ fun UserProfileScreen(
         onDispose {
             registration.remove()
             savedRegistration?.remove()
-            profileRegistration.remove()
+            profileRegistration?.remove()
             connectionListeners.first.remove()
             connectionListeners.second.remove()
             followingObserver?.remove()
@@ -256,6 +268,7 @@ fun UserProfileScreen(
     val coverPicker = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         if (uri != null && currentUser.uid.isNotBlank()) {
             pendingCoverUri = uri
+            coverPlacement = com.jonsuapps.rastro.android.ui.components.CoverPlacement()
             clearCoverImage = false
             if (!showProfileEditor) openProfileEditor()
         }
@@ -314,7 +327,12 @@ fun UserProfileScreen(
                         .background(Brush.linearGradient(bannerColors))
                 ) {
                     displayedCoverUrl?.takeIf(String::isNotBlank)?.let { cover ->
-                        CachedRemoteImage(cover, Modifier.fillMaxSize(), ContentScale.Crop, "Portada del perfil")
+                        val placement = if (isOtherProfile) com.jonsuapps.rastro.android.ui.components.CoverPlacement(
+                            (otherUserData["coverZoom"] as? Number)?.toFloat() ?: 1f,
+                            (otherUserData["coverX"] as? Number)?.toFloat() ?: 0f,
+                            (otherUserData["coverY"] as? Number)?.toFloat() ?: 0f)
+                        else com.jonsuapps.rastro.android.ui.components.CoverPlacement(currentUser.coverZoom, currentUser.coverX, currentUser.coverY)
+                        com.jonsuapps.rastro.android.ui.components.ProfileCoverImage(cover, placement, Modifier.fillMaxSize())
                     }
 
                     // Gradiente sutil
@@ -805,93 +823,28 @@ fun UserProfileScreen(
                                 fontWeight = FontWeight.Medium
                             )
 
-                            if (displayedWhatsApp.isNotBlank() || displayedTikTok.isNotBlank() || displayedInstagram.isNotBlank() || !isOtherProfile) {
+                            if (displayedWhatsApp.isNotBlank() || displayedTikTok.isNotBlank() || displayedInstagram.isNotBlank()) {
                                 Spacer(modifier = Modifier.height(14.dp))
 
-                                Row(
+                                FlowRow(
                                     modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.End,
-                                    verticalAlignment = Alignment.CenterVertically
+                                    horizontalArrangement = Arrangement.spacedBy(6.dp, Alignment.End),
+                                    verticalArrangement = Arrangement.spacedBy(6.dp)
                                 ) {
-                                    if (displayedWhatsApp.isNotBlank() || !isOtherProfile) {
-                                        // Botón WhatsApp
-                                        Surface(
+                                    listOf(
+                                        Triple("WhatsApp", displayedWhatsApp, R.drawable.ic_whatsapp),
+                                        Triple("TikTok", displayedTikTok, R.drawable.ic_tiktok),
+                                        Triple("Instagram", displayedInstagram, null)
+                                    ).filter { it.second.isNotBlank() }.forEach { (label, link, drawable) ->
+                                        Sticker3dButton(onClick = { runCatching { uriHandler.openUri(link) } },
+                                            containerColor = theme.surfaceAccent, bottomBevelColor = theme.cardBevel,
+                                            strokeColor = theme.strokeBorder, bevelHeight = 3.dp,
                                             shape = RoundedCornerShape(12.dp),
-                                            color = Color(0xFF25D366),
-                                            shadowElevation = 3.dp,
-                                            modifier = Modifier.clickable {
-                                                if (displayedWhatsApp.isNotBlank()) runCatching { uriHandler.openUri(displayedWhatsApp) }
-                                                else if (!isOtherProfile) openProfileEditor()
-                                            }
-                                        ) {
-                                            Row(
-                                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp),
-                                                verticalAlignment = Alignment.CenterVertically
-                                            ) {
-                                                Icon(
-                                                    painter = painterResource(id = R.drawable.ic_whatsapp),
-                                                    contentDescription = "WhatsApp",
-                                                    tint = Color.White,
-                                                    modifier = Modifier.size(15.dp)
-                                                )
-                                                Spacer(modifier = Modifier.width(6.dp))
-                                                Text(
-                                                    text = "WhatsApp",
-                                                    fontSize = 12.sp,
-                                                    fontWeight = FontWeight.Bold,
-                                                    color = Color.White
-                                                )
-                                            }
-                                        }
-                                    }
-
-                                    if (displayedTikTok.isNotBlank() || !isOtherProfile) {
-                                        Spacer(modifier = Modifier.width(8.dp))
-
-                                        // Botón TikTok
-                                        Surface(
-                                            shape = RoundedCornerShape(12.dp),
-                                            color = Color.Black,
-                                            shadowElevation = 3.dp,
-                                            modifier = Modifier.clickable {
-                                                if (displayedTikTok.isNotBlank()) runCatching { uriHandler.openUri(displayedTikTok) }
-                                                else if (!isOtherProfile) openProfileEditor()
-                                            }
-                                        ) {
-                                            Row(
-                                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp),
-                                                verticalAlignment = Alignment.CenterVertically
-                                            ) {
-                                                Icon(
-                                                    painter = painterResource(id = R.drawable.ic_tiktok),
-                                                    contentDescription = "TikTok",
-                                                    tint = Color.White,
-                                                    modifier = Modifier.size(15.dp)
-                                                )
-                                                Spacer(modifier = Modifier.width(6.dp))
-                                                Text(
-                                                    text = "TikTok",
-                                                    fontSize = 12.sp,
-                                                    fontWeight = FontWeight.Bold,
-                                                    color = Color.White
-                                                )
-                                            }
-                                        }
-                                    }
-
-                                    if (displayedInstagram.isNotBlank()) {
-                                        Spacer(modifier = Modifier.width(8.dp))
-                                        Surface(
-                                            shape = RoundedCornerShape(12.dp),
-                                            color = theme.accentText,
-                                            shadowElevation = 3.dp,
-                                            modifier = Modifier.clickable { runCatching { uriHandler.openUri(displayedInstagram) } }
-                                        ) {
-                                            Row(Modifier.padding(horizontal = 10.dp, vertical = 7.dp), verticalAlignment = Alignment.CenterVertically) {
-                                                Icon(Icons.Rounded.CameraAlt, contentDescription = "Instagram", tint = Color.White, modifier = Modifier.size(15.dp))
-                                                Spacer(Modifier.width(5.dp))
-                                                Text("Instagram", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color.White)
-                                            }
+                                            contentPadding = PaddingValues(horizontal = 9.dp, vertical = 7.dp)) {
+                                            if (drawable != null) Icon(painterResource(drawable), null, tint = theme.textPrimary, modifier = Modifier.size(17.dp))
+                                            else Icon(Icons.Rounded.CameraAlt, null, tint = theme.textPrimary, modifier = Modifier.size(17.dp))
+                                            Spacer(Modifier.width(4.dp))
+                                            Text(label, fontSize = 11.sp, fontWeight = FontWeight.Black, color = theme.textPrimary)
                                         }
                                     }
                                 }
@@ -1060,12 +1013,7 @@ fun UserProfileScreen(
                                             .background(theme.accent.copy(alpha = 0.15f)),
                                         contentAlignment = Alignment.Center
                                     ) {
-                                        Icon(
-                                            imageVector = Icons.Rounded.MenuBook,
-                                            contentDescription = null,
-                                            tint = theme.accentText,
-                                            modifier = Modifier.size(15.dp)
-                                        )
+                                        Image(painterResource(R.drawable.ic_materials_sticker), "Aportes subidos", Modifier.size(26.dp))
                                     }
                                     Spacer(modifier = Modifier.width(8.dp))
                                     Column {
@@ -1109,12 +1057,7 @@ fun UserProfileScreen(
                                             .background(Color(0xFFEF4444).copy(alpha = 0.15f)),
                                         contentAlignment = Alignment.Center
                                     ) {
-                                        Icon(
-                                            imageVector = Icons.Rounded.Rule,
-                                            contentDescription = null,
-                                            tint = Color(0xFFEF4444),
-                                            modifier = Modifier.size(15.dp)
-                                        )
+                                        Image(painterResource(R.drawable.ic_errors_sticker), null, Modifier.size(26.dp))
                                     }
                                     Spacer(modifier = Modifier.width(8.dp))
                                     Column {
@@ -1325,7 +1268,7 @@ fun UserProfileScreen(
                                             )
                                         }
                                         Text(
-                                            text = "Material oficial, obras literarias y aportes guardados.",
+                                            text = "Materiales, obras, fórmulas y mnemotecnias guardados.",
                                             style = MaterialTheme.typography.bodySmall,
                                             color = theme.textSecondary,
                                             fontSize = 11.sp
@@ -1335,14 +1278,15 @@ fun UserProfileScreen(
 
                                 // Filtros por tipo de guardado
                                 Row(
-                                    modifier = Modifier.fillMaxWidth(),
+                                    modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                                     horizontalArrangement = Arrangement.spacedBy(6.dp)
                                 ) {
                                     listOf(
                                         "Todos" to totalSavedCount,
                                         "Oficial" to savedOfficialMaterials.size,
                                         "Obras" to savedObras.size,
-                                        "Aportes" to savedUploads.size
+                                        "Aportes" to savedUploads.size,
+                                        "Estudio" to (savedFormulas.size + savedMnemotecnias.size)
                                     ).forEach { (filterName, count) ->
                                         Sticker3dPill(
                                             text = "$filterName ($count)",
@@ -1352,7 +1296,7 @@ fun UserProfileScreen(
                                             unselectedContentColor = theme.textSecondary,
                                             strokeColor = theme.strokeBorder,
                                             onClick = { selectedSavedFilter = filterName },
-                                            modifier = Modifier.weight(1f)
+                                            modifier = Modifier
                                         )
                                     }
                                 }
@@ -1363,9 +1307,12 @@ fun UserProfileScreen(
                                 val showObras = selectedSavedFilter == "Todos" || selectedSavedFilter == "Obras"
                                 val showAportes = selectedSavedFilter == "Todos" || selectedSavedFilter == "Aportes"
 
+                                val showStudy = selectedSavedFilter == "Todos" || selectedSavedFilter == "Estudio"
+
                                 val hasAnySaved = (showOfficial && savedOfficialMaterials.isNotEmpty()) ||
                                         (showObras && savedObras.isNotEmpty()) ||
-                                        (showAportes && savedUploads.isNotEmpty())
+                                        (showAportes && savedUploads.isNotEmpty()) ||
+                                        (showStudy && (savedFormulas.isNotEmpty() || savedMnemotecnias.isNotEmpty()))
 
                                 if (!hasAnySaved) {
                                     Sticker3dCard(
@@ -1399,7 +1346,7 @@ fun UserProfileScreen(
                                             )
                                             Spacer(Modifier.height(4.dp))
                                             Text(
-                                                text = "Guarda materiales oficiales u obras en la Biblioteca tocando el ícono de marcador.",
+                                                text = "Guarda materiales y obras de Biblioteca, o fórmulas y mnemotecnias, con el marcador.",
                                                 fontSize = 11.5.sp,
                                                 color = theme.textSecondary,
                                                 textAlign = TextAlign.Center
@@ -1407,6 +1354,15 @@ fun UserProfileScreen(
                                         }
                                     }
                                 } else {
+                                    if (showStudy) {
+                                        savedFormulas.forEach { formula ->
+                                            com.jonsuapps.rastro.android.ui.components.CanonicalFormulaCard(formula, theme)
+                                        }
+                                        savedMnemotecnias.forEach { item ->
+                                            MnemotecniaItemCard(item = item, isSaved = true,
+                                                onToggleSave = { UserManager.toggleSaveMnemotecnia(item.id) }, theme = theme)
+                                        }
+                                    }
                                     // 1. Obras Literarias Guardadas
                                     if (showObras && savedObras.isNotEmpty()) {
                                         Text(
@@ -1840,14 +1796,24 @@ fun UserProfileScreen(
                                 Text("Elegir foto personalizada para portada")
                             }
                             val pendingCoverBitmap = rememberLocalBitmap(pendingCoverUri)
-                            if (pendingCoverBitmap != null) {
-                                Image(
-                                    bitmap = pendingCoverBitmap,
-                                    contentDescription = "Nueva portada (sin guardar)",
-                                    modifier = Modifier.fillMaxWidth().height(110.dp).clip(RoundedCornerShape(14.dp)),
-                                    contentScale = ContentScale.Crop
-                                )
-                                Text("Vista previa local: se subirá solo al GUARDAR.", fontSize = 11.sp, color = theme.textSecondary)
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text("Usar mi portada en Inicio", Modifier.weight(1f), color = theme.textPrimary, fontWeight = FontWeight.Bold)
+                                Switch(checked = useCoverInHome, onCheckedChange = { useCoverInHome = it }, enabled = !savingProfile)
+                            }
+                            val previewUrl = currentUser.coverUrl?.takeUnless { clearCoverImage }
+                            if (pendingCoverBitmap != null || !previewUrl.isNullOrBlank()) {
+                                Text("Vista previa de Inicio · arrastra o pellizca para encuadrar", fontSize = 11.sp, color = theme.textSecondary)
+                                com.jonsuapps.rastro.android.ui.components.ProfileCoverImage(previewUrl, coverPlacement,
+                                    Modifier.fillMaxWidth().aspectRatio(1944f / 809f).clip(RoundedCornerShape(14.dp)),
+                                    bitmap = pendingCoverBitmap, onChange = { coverPlacement = it })
+                                Text("Ampliación", fontSize = 11.sp, color = theme.textSecondary)
+                                Slider(value = coverPlacement.zoom, onValueChange = { coverPlacement = coverPlacement.copy(zoom = it) }, valueRange = 1f..3f)
+                                Text("Horizontal", fontSize = 11.sp, color = theme.textSecondary)
+                                Slider(value = coverPlacement.x, onValueChange = { coverPlacement = coverPlacement.copy(x = it) }, valueRange = -1f..1f)
+                                Text("Vertical", fontSize = 11.sp, color = theme.textSecondary)
+                                Slider(value = coverPlacement.y, onValueChange = { coverPlacement = coverPlacement.copy(y = it) }, valueRange = -1f..1f)
+                                TextButton(onClick = { coverPlacement = com.jonsuapps.rastro.android.ui.components.CoverPlacement() }) { Text("Centrar portada") }
+                                Text("El encuadre y la foto se guardan al tocar Guardar.", fontSize = 11.sp, color = theme.textSecondary)
                             }
                         }
 
@@ -1911,6 +1877,10 @@ fun UserProfileScreen(
                                             "tiktokUrl" to editTikTok.trim(),
                                             "instagram" to editInstagram.trim(),
                                             "coverGradient" to selectedBanner,
+                                            "homeUseProfileCover" to useCoverInHome,
+                                            "coverZoom" to coverPlacement.zoom,
+                                            "coverX" to coverPlacement.x,
+                                            "coverY" to coverPlacement.y,
                                             "coverUrl" to finalCover
                                         )
                                         if (newPhotoUrl != null) fields["photoURL"] = newPhotoUrl
@@ -1935,6 +1905,10 @@ fun UserProfileScreen(
                                                     tiktokUrl = editTikTok.trim(),
                                                     instagramUrl = editInstagram.trim(),
                                                     coverGradient = selectedBanner,
+                                                    homeUseProfileCover = useCoverInHome,
+                                                    coverZoom = coverPlacement.zoom,
+                                                    coverX = coverPlacement.x,
+                                                    coverY = coverPlacement.y,
                                                     photoURL = newPhotoUrl ?: currentUser.photoURL,
                                                     coverUrl = finalCover
                                                 )
@@ -2512,15 +2486,15 @@ fun ProfileToolButton(
                 .padding(vertical = 10.dp, horizontal = 4.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Surface(
-                shape = RoundedCornerShape(10.dp),
-                color = badgeColor.copy(alpha = 0.14f),
-                modifier = Modifier.size(32.dp)
-            ) {
-                Box(contentAlignment = Alignment.Center) {
-                    Icon(icon, contentDescription = title, tint = badgeColor, modifier = Modifier.size(19.dp))
-                }
+            val drawable = when (title) {
+                "Pomodoro" -> R.drawable.ic_timer_sticker
+                "Fórmulas" -> R.drawable.ic_formula_sticker
+                "Aportar" -> R.drawable.ic_material_upload_sticker
+                "Ligas" -> R.drawable.ic_trophy_sticker
+                "Racha" -> R.drawable.ic_reaction_fire
+                else -> R.drawable.ic_materials_sticker
             }
+            Image(painterResource(drawable), if (title == "Aportar") "Subir material" else title, Modifier.size(34.dp))
             Spacer(modifier = Modifier.height(6.dp))
             Text(
                 text = title,

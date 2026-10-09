@@ -58,3 +58,12 @@ Estado detallado: RELEASE_2.0.1.md.
 
 - [x] Tras autorización expresa, cinco cambios enviados; Console muestra Cambios en la etapa de revisión (05/10/2026).
 - [ ] Aprobación de Google y disponibilidad para testers: pendientes.
+
+## 09/10/2026 — Eliminación sin dependencia de Blaze
+- [x] assembleDebug y 169 pruebas Android aprobadas, cero fallos/errores; build/account-deletion-build.log. App no ejecutada.
+- [x] Causa Auth sin limpieza identificada; repositorio limpia datos antes de borrar Auth.
+- [x] Reglas antiresurrección y limpieza por propiedad: 20 pruebas sin fallos y desplegadas en rumbo-jonsu.
+- [x] Limpieza de grupos conserva miembros/progreso restantes; fotos generadas delimitadas por UID/propiedad Drive.
+- [ ] Cuenta descartable eliminada y reingreso en dispositivo; agente no ejecuta Android.
+- [ ] Inventario/limpieza confirmada de perfiles huérfanos históricos. No borrar por coincidencia de correo/nombre.
+- [ ] Nueva AAB con código superior a 205, distribución de esta corrección y validación del propietario.

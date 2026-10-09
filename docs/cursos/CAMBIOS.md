@@ -16,3 +16,14 @@ Añadida sincronización de listas propias por UID, recuperación de documentos 
 
 ## 04/10/2026 — popup y orientación natural
 Quitar controles SVG extra tanto bajo el IFrame como en fullscreen; no borrar assets. Adaptar popup al 94% de altura segura y scroll de controles; video conserva 200 dp. ChromeClient solo atiende pantalla completa oficial, usa FULL_USER y restaura orientación al cerrar. Sesión original intacta. Compilación y 112 tests Android pasan; validación física de recorte/giro pendiente, sin ejecutar app/generar APK/AAB.
+
+## 08/10/2026 — operación local y consumo reducido
+
+Ver ../sincronizacion/README.md para el ámbito y límites. Progreso personal local, respaldo explícito/semanal, actividad agrupada, playlists por consulta y foto compartida por autor. UI de vidas/packs/Pro conserva componentes Sticker3d. Sin publicación ni ejecución de app.
+
+
+## 08/10/2026 — Iconos, herramientas y tarjetas compactas
+
+Retirado el texto descriptivo fijo que variaba entre Mías, Comunidad y Compartidas. Se conserva Actualizar listas, estados reales de error y sus reintentos.
+
+Validación: 153 pruebas Android sin fallos/errores/omitidas y lintVitalRelease correcto (build/sections-final-validation.log). Compilación/paquete debug verificados por separado. No se ejecutó app, dispositivo o emulador, ni se publicó una versión. Pendiente revisión física de tamaños, orientación, fuente ampliada y temas.

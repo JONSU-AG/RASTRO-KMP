@@ -16,3 +16,6 @@ La nueva petición autoriza cambiar la versión local a 2.0.1, con código 201 s
 
 ## 05/10/2026 — Bundle autorizado y cargado
 2.0.1/code 201, firma existente verificada, 121 pruebas Android y lintVitalRelease correctos. Play aceptó el AAB y guardó el lanzamiento Alpha. Estado de distribución actualizado en VERSIONES DE LA APP SUBIDAS A PLAY CONSOLE.md. Sin commit/push ni ejecución de la app.
+
+## 09/10/2026 — Limpieza compatible con Spark
+No depender de un trigger Auth no desplegado. Exigir login reciente y depurar antes de liberar identidad; confirmar éxito solo tras ambas fases. Conservar un marcador mínimo sin datos de perfil para impedir writes tardíos. Conservar grupos cuando quedan dos miembros; Drive solo copias de perfil generadas por RASTRO y pertenecientes a esa cuenta. No reutilizar datos de un UID huérfano por coincidencia de correo ni borrar huérfanos sin cotejo. La eliminación de cuenta no cancela una suscripción Play.

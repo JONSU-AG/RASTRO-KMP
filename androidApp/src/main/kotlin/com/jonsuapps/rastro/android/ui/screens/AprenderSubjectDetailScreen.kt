@@ -128,7 +128,7 @@ fun AprenderSubjectDetailScreen(
                     )
                 }
                 Spacer(modifier = Modifier.width(12.dp))
-                CourseIcon(subject.id, Modifier.size(32.dp))
+                CourseIcon(subject.id, Modifier.size(32.dp), sticker = true)
                 Spacer(Modifier.width(10.dp))
                 Column {
                     Text(

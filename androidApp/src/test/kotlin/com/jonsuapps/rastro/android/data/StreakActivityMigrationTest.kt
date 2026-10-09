@@ -6,6 +6,18 @@ import org.junit.Test
 import java.time.LocalDate
 
 class StreakActivityMigrationTest {
+    @Test fun loginExceptionRequiresVerifiedAdminAndDoesNotInventMissingDays() {
+        val day = LocalDate.parse("2026-10-09")
+        val state = GamificationState(streak = 1, lastStudyDate = day.toString(), coins = 500)
+        val accesses = mapOf<String, Any>("testerDailyApp" to mapOf("2026-10-07" to 1, "2026-10-08" to 2))
+        assertEquals(state, StreakActivityMigration.recoverAdminAccess(state, accesses, false, day))
+        val repaired = StreakActivityMigration.recoverAdminAccess(state, accesses, true, day)
+        assertEquals(3, repaired.streak)
+        assertEquals(500, repaired.coins)
+        assertEquals(repaired, StreakActivityMigration.recoverAdminAccess(repaired, accesses, true, day))
+        val gap = mapOf<String, Any>("testerDailyApp" to mapOf("2026-10-07" to 1, "2026-10-10" to 5))
+        assertEquals(1, StreakActivityMigration.recoverAdminAccess(state, gap, true, day).streak)
+    }
     @Test fun presenceNeedsFifteenMinutesAndOpeningDoesNotEarnIt() {
         val manager = com.jonsuapps.rastro.gamification.GamificationManager
         val saved = manager.state.value
@@ -32,6 +44,31 @@ class StreakActivityMigrationTest {
         assertEquals(20, merged.coins)
     }
     private val today = LocalDate.parse("2026-10-04")
+    @Test fun resetStreakIsRebuiltFromContinuousEvidenceForAnyAccount() {
+        val end=LocalDate.parse("2026-10-08")
+        val evidence=(0L..14L).map {end.minusDays(it).toString()}.toSet()
+        val broken=GamificationState(streak=2,bestStreak=14,lastStudyDate=end.toString(),activityDates=evidence,coins=123,streakActivityVersion=1)
+        val repaired=StreakActivityMigration.recover(broken,emptyMap(),end)
+        assertEquals(15,repaired.streak)
+        assertEquals(123,repaired.coins)
+        assertEquals(2,repaired.streakActivityVersion)
+        assertEquals(repaired,StreakActivityMigration.recover(repaired,emptyMap(),end))
+    }
+    @Test fun oldMaximumAndMissingDaysCannotRestoreCurrentStreak() {
+        val end=LocalDate.parse("2026-10-08")
+        val broken=GamificationState(streak=2,bestStreak=14,lastStudyDate=end.toString(),activityDates=setOf("2026-10-05","2026-10-07","2026-10-08"))
+        assertEquals(2,StreakActivityMigration.reconstruct(broken,end).streak)
+        val old=broken.copy(streak=14,lastStudyDate="2026-10-01",activityDates=emptySet())
+        assertEquals("2026-10-01",StreakActivityMigration.reconstruct(old,end).lastStudyDate)
+    }
+    @Test fun migrationDoesNotApplyOldFiveMinuteRuleToNewDates() {
+        val end=LocalDate.parse("2026-10-10")
+        val state=GamificationState(streak=2,lastStudyDate="2026-10-07",streakActivityVersion=1)
+        val profile=mapOf<String,Any>("testerDailyApp" to mapOf("2026-10-08" to 300L,"2026-10-09" to 300L))
+        val result=StreakActivityMigration.recover(state,profile,end)
+        assertFalse("2026-10-08" in result.activityDates)
+        assertEquals("2026-10-07",result.lastStudyDate)
+    }
     @Test fun verifiedLegacyDaysContinueExistingStreakOnce() {
         val state = GamificationState(streak = 12, lastStudyDate = "2026-10-01")
         val profile = mapOf<String, Any>("testerDailyWeb" to mapOf("2026-10-02" to 300L, "2026-10-03" to 900L))

@@ -87,6 +87,7 @@ fun HomeScreen(
     colors: RastroColors,
     onNavigate: (String) -> Unit,
     onOpenVocationalTest: () -> Unit,
+    onOpenPeriodicTable: () -> Unit = {},
     onNavigateToProfile: (String) -> Unit = {},
     onNavigateToPublication: (authorUid: String, publicationId: String) -> Unit = { uid, pubId ->
         onNavigate(RastroScreen.UsuarioDetail.createRoute(uid, pubId))
@@ -99,9 +100,11 @@ fun HomeScreen(
 
     // Carrusel Destacados: observa en tiempo real las publicaciones marcadas por el admin
     var featuredUploads by remember { mutableStateOf<List<UserUpload>>(emptyList()) }
-    DisposableEffect(Unit) {
-        val reg = UserUploadRepository.observeFeatured { featuredUploads = it }
-        onDispose { reg.remove() }
+    DisposableEffect(currentUser.isAuthenticated, currentUser.isAnonymous) {
+        val reg = if (currentUser.isAuthenticated && !currentUser.isAnonymous)
+            UserUploadRepository.observeFeatured { featuredUploads = it } else null
+        if (reg == null) featuredUploads = emptyList()
+        onDispose { reg?.remove() }
     }
 
     val mottoPhrases = remember {
@@ -195,6 +198,10 @@ fun HomeScreen(
                     HomeHeroBanner(
                         colors = colors,
                         displayName = currentUser.displayName,
+                        profileCover = currentUser.coverUrl.takeIf { currentUser.homeUseProfileCover },
+                        useProfileCover = currentUser.homeUseProfileCover,
+                        coverGradient = currentUser.coverGradient,
+                        placement = com.jonsuapps.rastro.android.ui.components.CoverPlacement(currentUser.coverZoom, currentUser.coverX, currentUser.coverY),
                         modifier = Modifier.align(Alignment.CenterHorizontally).widthIn(max = LocalRastroLayout.current.heroWidth.dp).fillMaxWidth()
                     )
                 }
@@ -323,7 +330,7 @@ fun HomeScreen(
                                                 color = if (index == currentDayIndex) colors.accentText else colors.textSecondary
                                             )
                                             Box(Modifier.size(36.dp), contentAlignment = Alignment.Center) {
-                                                DoodleDayCheckCircle(isDayActive, colors.strokeBorder)
+                                                DoodleDayCheckCircle(isDayActive, colors.strokeBorder, isPast = index < currentDayIndex, isToday = index == currentDayIndex, inactiveColor = colors.surface, labelColor = colors.textSecondary)
                                             }
                                         }
                                     }
@@ -375,6 +382,9 @@ fun HomeScreen(
                 }
             }
 
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock { com.jonsuapps.rastro.android.ui.components.HomeExamCountdown(colors) }
+            }
             // 2. Tarjeta: Ruta de Preparación Activa
             item(span = { GridItemSpan(maxLineSpan) }) {
                 RastroBoundedBlock {
@@ -399,21 +409,7 @@ fun HomeScreen(
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.spacedBy(10.dp)
                         ) {
-                            Box(
-                                modifier = Modifier
-                                    .size(46.dp)
-                                    .clip(RoundedCornerShape(15.dp))
-                                    .background(Color(0xFF007AFF))
-                                    .border(1.8.dp, colors.strokeBorder, RoundedCornerShape(15.dp)),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Icon(
-                                    imageVector = Icons.Filled.TrackChanges,
-                                    contentDescription = null,
-                                    tint = Color.White,
-                                    modifier = Modifier.size(26.dp)
-                                )
-                            }
+                            Image(painterResource(R.drawable.league_cachimbo), null, Modifier.size(42.dp))
 
                             Column(modifier = Modifier.weight(1f)) {
                                 Text(
@@ -446,41 +442,10 @@ fun HomeScreen(
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.SpaceBetween
                         ) {
-                            // Garabato curvado/tilde a la izquierda
-                            DoodleSmallCurve(
-                                modifier = Modifier.size(24.dp, 14.dp),
-                                color = colors.strokeBorder
+                            DoodleTrailWithStars(
+                                modifier = Modifier.weight(1f).height(40.dp).padding(end = 10.dp),
+                                strokeColor = colors.strokeBorder
                             )
-
-                            // Camino punteado con 2 estrellitas
-                            Box(
-                                modifier = Modifier
-                                    .weight(1f)
-                                    .height(24.dp)
-                                    .padding(horizontal = 8.dp),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                DoodleTrailWithStars(
-                                    modifier = Modifier.fillMaxSize(),
-                                    strokeColor = colors.strokeBorder
-                                )
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceEvenly,
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    DoodleStar(
-                                        modifier = Modifier.size(13.dp),
-                                        strokeColor = colors.strokeBorder,
-                                        strokeWidth = 1.4f
-                                    )
-                                    DoodleStar(
-                                        modifier = Modifier.size(11.dp),
-                                        strokeColor = colors.strokeBorder,
-                                        strokeWidth = 1.2f
-                                    )
-                                }
-                            }
 
                             // Botón naranja "Estudiar ahora →"
                             Sticker3dButton(
@@ -532,6 +497,7 @@ fun HomeScreen(
             }
 
             // 4. Canal de WhatsApp Oficial (Franja Horizontal Compacta)
+            run {
             item(span = { GridItemSpan(maxLineSpan) }) {
                 RastroBoundedBlock {
                 val context = LocalContext.current
@@ -543,13 +509,9 @@ fun HomeScreen(
                     bevelHeight = 3.dp,
                     shape = RoundedCornerShape(20.dp),
                     onClick = {
-                        val waChannel = currentUser.whatsappChannel.trim()
-                        val waUrl = if (waChannel.isNotBlank()) {
-                            if (waChannel.startsWith("http://") || waChannel.startsWith("https://")) waChannel
+                        val waChannel = "https://whatsapp.com/channel/0029VbDFAEu7YScyVZBNul0X"
+                        val waUrl = if (waChannel.startsWith("http://") || waChannel.startsWith("https://")) waChannel
                             else "https://whatsapp.com/channel/$waChannel"
-                        } else {
-                            "https://whatsapp.com/channel/0029VaJonsuRastro"
-                        }
                         runCatching {
                             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(waUrl))
                             context.startActivity(intent)
@@ -587,7 +549,7 @@ fun HomeScreen(
                                 horizontalArrangement = Arrangement.spacedBy(6.dp)
                             ) {
                                 Text(
-                                    text = "Canal de WhatsApp",
+                                    text = "Comunidad RASTRO",
                                     fontSize = 13.sp,
                                     fontWeight = FontWeight.Black,
                                     color = colors.textPrimary,
@@ -611,7 +573,7 @@ fun HomeScreen(
                             }
                             Spacer(modifier = Modifier.height(1.dp))
                             Text(
-                                text = "Comunidad pre-U y alertas en vivo",
+                                text = "Nuestro canal oficial de WhatsApp",
                                 fontSize = 10.5.sp,
                                 color = colors.textSecondary,
                                 maxLines = 1,
@@ -650,6 +612,8 @@ fun HomeScreen(
                 }
 
                 }
+            }
+
             }
 
             // 5. Explora RASTRO / Herramientas (Grid 2 columnas compacto)
@@ -801,6 +765,14 @@ fun HomeScreen(
                                 modifier = Modifier.weight(1f),
                                 onClick = { onNavigate(RastroScreen.Pizarra.route) }
                             )
+                        }
+                        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                            HomeToolCard("Tabla periódica", "118 elementos", colors.textSecondary,
+                                Icons.Outlined.Calculate, colors.surfaceAccent, colors.accent, colors,
+                                Modifier.weight(1f), onOpenPeriodicTable)
+                            HomeToolCard("Ligas", com.jonsuapps.rastro.android.ui.components.learningLeague(progress.level).title,
+                                colors.textSecondary, Icons.Filled.Star, colors.surfaceAccent, colors.accent, colors,
+                                Modifier.weight(1f), { onNavigate(RastroScreen.Ligas.route) })
                         }
                     }
                 }
@@ -1107,7 +1079,7 @@ private fun DestacadoCard(
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     CartoonAvatar(
-                        photoUrl = upload.ownerPhotoUrl,
+                        photoUrl = com.jonsuapps.rastro.android.ui.components.publicAuthorPhoto(upload.ownerUid, upload.ownerPhotoUrl),
                         size = 19.dp,
                         strokeColor = colors.strokeBorder,
                         strokeWidth = 1.2.dp,
@@ -1178,21 +1150,18 @@ private fun HomeToolCard(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(7.dp)
         ) {
-            Box(
-                modifier = Modifier
-                    .size(32.dp)
-                    .clip(RoundedCornerShape(10.dp))
-                    .background(iconBg)
-                    .border(1.2.dp, colors.strokeBorder.copy(alpha = 0.45f), RoundedCornerShape(10.dp)),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    imageVector = icon,
-                    contentDescription = null,
-                    tint = iconTint,
-                    modifier = Modifier.size(17.dp)
-                )
+            val stickerResource = when (title) {
+                "Obras Literarias", "Biblioteca" -> R.drawable.ic_course_literatura
+                "Test Vocacional" -> R.drawable.league_cachimbo
+                "Fórmulas & Trucos" -> R.drawable.ic_course_filosofia
+                "Aprender" -> R.drawable.league_kinder
+                "Cursos" -> R.drawable.ic_courses_video_sticker
+                "Simulador" -> R.drawable.ic_home_exam_sticker
+                "Pizarra Doodle" -> R.drawable.ic_pizarra
+                "Tabla periódica" -> R.drawable.ic_course_quimica
+                else -> R.drawable.league_cachimbo
             }
+            Image(painterResource(stickerResource), null, Modifier.size(34.dp))
 
             Column(
                 modifier = Modifier.weight(1f),
@@ -1213,7 +1182,7 @@ private fun HomeToolCard(
                     text = subtitle,
                     fontSize = 9.sp,
                     fontWeight = FontWeight.Bold,
-                    color = subtitleColor,
+                    color = colors.textSecondary,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -1265,7 +1234,11 @@ private fun HomeSquareCard(
 private fun DoodleDayCheckCircle(
     isActive: Boolean,
     strokeColor: Color,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    isPast: Boolean = false,
+    isToday: Boolean = false,
+    inactiveColor: Color = Color(0xFFF8FAFC),
+    labelColor: Color = strokeColor
 ) {
     Canvas(modifier = modifier.size(19.dp)) {
         val r = size.minDimension / 2f
@@ -1284,8 +1257,11 @@ private fun DoodleDayCheckCircle(
                 style = Stroke(width = 2.2f, cap = StrokeCap.Round, join = StrokeJoin.Round)
             )
         } else {
-            drawCircle(color = Color(0xFFE2E8F0), radius = r - 1f, center = center)
-            drawCircle(color = strokeColor.copy(alpha = 0.35f), radius = r - 1f, center = center, style = Stroke(1.2f))
+            drawCircle(color = inactiveColor, radius = r - 1f, center = center)
+            drawCircle(color = labelColor, radius = r - 1f, center = center, style = Stroke(
+                width = if (isToday) 2.dp.toPx() else 1.dp.toPx(),
+                pathEffect = if (!isPast && !isToday) PathEffect.dashPathEffect(floatArrayOf(2.dp.toPx(), 2.dp.toPx())) else null))
+            if (isPast) drawLine(labelColor, Offset(size.width * .32f, center.y), Offset(size.width * .68f, center.y), strokeWidth = 1.5.dp.toPx(), cap = StrokeCap.Round)
         }
     }
 }
@@ -1299,6 +1275,10 @@ private val WelcomeBannerFont = androidx.compose.ui.text.font.FontFamily(
 private fun HomeHeroBanner(
     colors: RastroColors,
     displayName: String,
+    profileCover: String? = null,
+    useProfileCover: Boolean = false,
+    coverGradient: String = "",
+    placement: com.jonsuapps.rastro.android.ui.components.CoverPlacement = com.jonsuapps.rastro.android.ui.components.CoverPlacement(),
     modifier: Modifier = Modifier
 ) {
     // Hero con el banner oficial: saludo dinámico superpuesto a la izquierda
@@ -1311,6 +1291,15 @@ private fun HomeHeroBanner(
             .background(colors.surfaceAccent)
             .border(1.5.dp, colors.strokeBorder, RoundedCornerShape(22.dp))
     ) {
+        if (useProfileCover) {
+            Box(Modifier.fillMaxWidth().aspectRatio(1944f / 809f)) {
+                if (!profileCover.isNullOrBlank()) com.jonsuapps.rastro.android.ui.components.ProfileCoverImage(profileCover, placement, Modifier.fillMaxSize())
+                else {
+                    val stops = remember(coverGradient) { Regex("#[0-9A-Fa-f]{6}").findAll(coverGradient).map { Color(android.graphics.Color.parseColor(it.value)) }.toList() }
+                    Box(Modifier.fillMaxSize().background(androidx.compose.ui.graphics.Brush.linearGradient(stops.takeIf { it.size >= 2 } ?: listOf(colors.surfaceAccent, colors.accent))))
+                }
+            }
+        } else {
         Image(
             painter = painterResource(id = R.drawable.banner_inicio),
             contentDescription = "Banner de inicio RASTRO",
@@ -1321,6 +1310,7 @@ private fun HomeHeroBanner(
             contentScale = ContentScale.Crop,
             alignment = Alignment.Center
         )
+        }
         Box(
             modifier = Modifier
                 .matchParentSize()
@@ -1587,19 +1577,29 @@ private fun DoodleTrailWithStars(
         val w = size.width
         val h = size.height
 
+        fun point(t: Float) = Offset(w * t, h * (0.5f + 0.25f * kotlin.math.sin(t * kotlin.math.PI.toFloat() * 2f)))
         val path = Path().apply {
-            moveTo(0f, h * 0.5f)
-            cubicTo(w * 0.35f, h * 0.9f, w * 0.65f, h * 0.1f, w, h * 0.5f)
+            val first = point(0f)
+            moveTo(first.x, first.y)
+            for (step in 1..48) { val p = point(step / 48f); lineTo(p.x, p.y) }
         }
-        drawPath(
-            path = path,
-            color = trailColor,
-            style = Stroke(
-                width = 1.8f,
-                cap = StrokeCap.Round,
-                pathEffect = PathEffect.dashPathEffect(floatArrayOf(6f, 6f), 0f)
-            )
-        )
+        drawPath(path, strokeColor, style = Stroke(width = 2.dp.toPx(), cap = StrokeCap.Round,
+            pathEffect = PathEffect.dashPathEffect(floatArrayOf(5.dp.toPx(), 4.dp.toPx()))))
+        for (t in listOf(0.2f, 0.5f, 0.8f)) {
+            val center = point(t)
+            val star = Path().apply {
+                for (i in 0..9) {
+                    val angle = -kotlin.math.PI / 2 + i * kotlin.math.PI / 5
+                    val radius = if (i % 2 == 0) 7.dp.toPx() else 3.5.dp.toPx()
+                    val x = center.x + kotlin.math.cos(angle).toFloat() * radius
+                    val y = center.y + kotlin.math.sin(angle).toFloat() * radius
+                    if (i == 0) moveTo(x, y) else lineTo(x, y)
+                }
+                close()
+            }
+            drawPath(star, Color(0xFFFFD65B))
+            drawPath(star, Color(0xFF17263C), style = Stroke(width = 1.4.dp.toPx(), join = StrokeJoin.Round))
+        }
     }
 }
 
@@ -1636,4 +1636,3 @@ private fun DoodleGridIcon(
         }
     }
 }
-

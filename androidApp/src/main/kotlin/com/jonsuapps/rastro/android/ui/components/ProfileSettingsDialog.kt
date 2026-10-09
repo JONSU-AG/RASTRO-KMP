@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import kotlinx.coroutines.launch
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.jonsuapps.rastro.auth.UserManager
@@ -55,6 +56,18 @@ fun ProfileSettingsDialog(
     val currentUser by UserManager.currentUser.collectAsState()
     var showDeleteConfirmDialog by remember { mutableStateOf(false) }
     var showBlockedUsersDialog by remember { mutableStateOf(false) }
+    var showProDialog by remember { mutableStateOf(false) }
+    var showCoinsDialog by remember { mutableStateOf(false) }
+    val proGrant by com.jonsuapps.rastro.monetization.ProAccess.grant.collectAsState()
+    val backupBusy by com.jonsuapps.rastro.android.data.CloudBackupRepository.busy.collectAsState()
+    val backupMessage by com.jonsuapps.rastro.android.data.CloudBackupRepository.message.collectAsState()
+    var weeklyBackup by remember(currentUser.uid) { mutableStateOf(com.jonsuapps.rastro.android.data.CloudBackupRepository.weekly(currentUser.uid)) }
+    var savingHomeCover by remember { mutableStateOf(false) }
+    var homeCoverMessage by remember { mutableStateOf("") }
+    var showRestoreBackup by remember { mutableStateOf(false) }
+    var restoringBackup by remember { mutableStateOf(false) }
+    var restoreMessage by remember { mutableStateOf("") }
+    val backupScope = rememberCoroutineScope()
     var showWidgetsDialog by remember { mutableStateOf(false) }
     var isDeleting by remember { mutableStateOf(false) }
     var deletionError by remember { mutableStateOf<String?>(null) }
@@ -74,6 +87,33 @@ fun ProfileSettingsDialog(
 
 
 
+    if(showProDialog) RastroProDialog { showProDialog = false }
+    if(showCoinsDialog) CoinAndLivesDialog { showCoinsDialog = false }
+    if (showRestoreBackup) RastroStickerDialog(onDismissRequest = { showRestoreBackup = false },
+        title = "¿Recuperar el respaldo?", message = "El avance de este dispositivo se reemplazará por el respaldo de tu cuenta. Sincroniza primero si quieres conservar cambios locales.",
+        confirmText = "Recuperar", cancelText = "Cancelar", isDestructive = true, icon = Icons.Rounded.CloudDownload,
+        theme = colors, onConfirm = {
+            showRestoreBackup = false
+            restoringBackup = true
+            val uid = currentUser.uid
+            com.jonsuapps.rastro.android.data.GamificationRepository.load(uid) { result ->
+                backupScope.launch {
+                    val remote = result.getOrNull()
+                    if (remote != null && UserManager.currentUser.value.uid == uid) {
+                        val prepared = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                            com.jonsuapps.rastro.gamification.GamificationManager.prepareRestore(remote)
+                        }
+                        if (UserManager.currentUser.value.uid == uid) {
+                            com.jonsuapps.rastro.android.data.GamificationRepository.saveLocal("$uid:before_restore", com.jonsuapps.rastro.gamification.GamificationManager.state.value)
+                            com.jonsuapps.rastro.gamification.GamificationManager.applyRestored(prepared)
+                            com.jonsuapps.rastro.android.data.GamificationRepository.saveLocal(uid, prepared)
+                            restoreMessage = "Respaldo recuperado."
+                        }
+                    } else restoreMessage = "No se pudo recuperar un respaldo. Tu avance local se conserva."
+                    restoringBackup = false
+                }
+            }
+        })
     Dialog(
         onDismissRequest = onDismiss,
         properties = DialogProperties(usePlatformDefaultWidth = false)
@@ -154,6 +194,60 @@ fun ProfileSettingsDialog(
                         .verticalScroll(rememberScrollState()),
                     verticalArrangement = Arrangement.spacedBy(14.dp)
                 ) {
+                    if (currentUser.isAuthenticated && !currentUser.isAnonymous) {
+                        SettingsSectionCard(title = "Portada en Inicio", icon = Icons.Rounded.Image,
+                            iconColor = colors.accent, colors = colors) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text("Usar mi portada del perfil", Modifier.weight(1f), color = colors.textPrimary)
+                                Switch(checked = currentUser.homeUseProfileCover, enabled = !savingHomeCover,
+                                    onCheckedChange = { enabled ->
+                                        val uid = currentUser.uid
+                                        savingHomeCover = true
+                                        com.jonsuapps.rastro.android.data.UserProfileRepository.save(uid, mapOf("homeUseProfileCover" to enabled)) { result ->
+                                            savingHomeCover = false
+                                            if (UserManager.currentUser.value.uid == uid) {
+                                                result.onSuccess { UserManager.applyProfileFields(homeUseProfileCover = enabled) }
+                                                homeCoverMessage = result.exceptionOrNull()?.message.orEmpty()
+                                            }
+                                        }
+                                    })
+                            }
+                            Text("Mueve y amplía la imagen desde Editar perfil → Portada. Al desactivarlo vuelve el banner de RASTRO.",
+                                color = colors.textSecondary, fontSize = 12.sp)
+                            if (homeCoverMessage.isNotBlank()) Text(homeCoverMessage, color = colors.textPrimary, fontSize = 12.sp)
+                        }
+                    }
+                    SettingsSectionCard(title = "Respaldo en la nube", icon = Icons.Rounded.Cloud,
+                        iconColor = colors.accent, colors = colors) {
+                        if (currentUser.isAuthenticated && !currentUser.isAnonymous) {
+                            Text("Tu avance se guarda en este dispositivo. Playlists, mensajes y publicaciones se guardan al realizar la acción.", color = colors.textSecondary, fontSize = 12.sp)
+                            val lastBackup = com.jonsuapps.rastro.android.data.CloudBackupRepository.lastSuccess(currentUser.uid)
+                            Text(if (lastBackup == 0L) "Todavía sin respaldo personal" else "Último respaldo: " + java.text.SimpleDateFormat("dd/MM/yyyy HH:mm", java.util.Locale.getDefault()).format(java.util.Date(lastBackup)), color = colors.textSecondary, fontSize = 12.sp)
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text("Respaldo cada 3 días al abrir la app", Modifier.weight(1f), color = colors.textPrimary)
+                                Switch(checked = weeklyBackup, onCheckedChange = {
+                                    weeklyBackup = it
+                                    com.jonsuapps.rastro.android.data.CloudBackupRepository.setWeekly(currentUser.uid, it)
+                                })
+                            }
+                            Sticker3dButton(onClick = { com.jonsuapps.rastro.android.data.CloudBackupRepository.sync() },
+                                enabled = !backupBusy && !restoringBackup, modifier = Modifier.fillMaxWidth(), containerColor = colors.accent,
+                                bottomBevelColor = colors.cardBevel, strokeColor = colors.strokeBorder) {
+                                Text(if (backupBusy) "Sincronizando…" else "Sincronizar con la nube", color = colors.onAccent, fontWeight = FontWeight.Bold)
+                            }
+                            if (backupMessage.isNotBlank()) Text(backupMessage, color = colors.textSecondary, fontSize = 12.sp)
+                            TextButton(enabled = !backupBusy && !restoringBackup, onClick = { showRestoreBackup = true }) { Text("Recuperar respaldo de la nube") }
+                            if (restoreMessage.isNotBlank()) Text(restoreMessage, color = colors.textSecondary, fontSize = 12.sp)
+                            Text("Sin respaldo, desinstalar la app o perder el celular puede hacer perder el avance local.", color = colors.textSecondary, fontSize = 12.sp)
+                        } else Text("Estudias sin cuenta. Inicia sesión para respaldar y recuperar tu avance en otro dispositivo.", color = colors.textSecondary)
+                    }
+                    SettingsSectionCard(title = if (proGrant.active(System.currentTimeMillis())) "RASTRO Pro" else "Monedas y vidas", icon = Icons.Rounded.Star,
+                        iconColor = colors.accent, colors = colors) {
+                        Text(if (proGrant.active(System.currentTimeMillis())) "Pro activo" else "Recupera vidas y completa misiones de monedas", color = colors.textPrimary)
+                        if (proGrant.active(System.currentTimeMillis()) || com.jonsuapps.rastro.android.data.PlayBillingConfig.checkoutEnabled)
+                            TextButton(onClick = { showProDialog = true }) { Text("Ver beneficios Pro") }
+                        TextButton(onClick = { showCoinsDialog = true }) { Text("Monedas y vidas") }
+                    }
                     // ── 1. SECCIÓN PERSONALIZACIÓN VISUAL (Separado a su propio selector) ──
                     SettingsSectionCard(title = "Widgets de inicio", icon = Icons.Rounded.Widgets,
                         iconColor = colors.accent, colors = colors) {
@@ -345,6 +439,14 @@ fun ProfileSettingsDialog(
                         colors = colors
                     ) {
                         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                            val adPrivacyRequired by com.jonsuapps.rastro.android.data.AdMobProvider.privacyRequired.collectAsState()
+                            if (adPrivacyRequired) SettingsOptionRow(
+                                title = "Privacidad de los anuncios",
+                                subtitle = "Revisar tus opciones de consentimiento",
+                                icon = Icons.Rounded.Shield,
+                                colors = colors,
+                                onClick = { com.jonsuapps.rastro.android.data.AdMobProvider.showPrivacyOptions() }
+                            )
                             SettingsOptionRow(
                                 title = "Legal y privacidad (Centro Oficial)",
                                 subtitle = "Política, Términos, Normas y Eliminación de datos",
@@ -494,7 +596,7 @@ fun ProfileSettingsDialog(
                     )
 
                     Text(
-                        text = "Se borrarán todos tus simulacros, racha, vidas y perfil en la nube. Esta acción no se puede deshacer.",
+                        text = "Se eliminarán tu perfil, progreso y contenido publicado en RASTRO. Esta acción no se puede deshacer. Los archivos de tu Drive personal permanecen bajo tu control. Eliminar la cuenta no cancela una suscripción de Google Play.",
                         fontSize = 12.sp,
                         color = colors.textSecondary,
                         lineHeight = 17.sp,
@@ -528,7 +630,7 @@ fun ProfileSettingsDialog(
                                 if (isDeleting) return@Sticker3dButton
                                 isDeleting = true
                                 deletionError = null
-                                com.jonsuapps.rastro.android.data.AccountDeletionRepository.deleteCurrentAccount { result ->
+                                com.jonsuapps.rastro.android.data.AccountDeletionRepository.deleteCurrentAccount(context) { result ->
                                     isDeleting = false
                                     result.onSuccess {
                                         UserManager.clearUser()

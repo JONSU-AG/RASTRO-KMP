@@ -52,13 +52,17 @@ internal fun mergeError(current: List<FailedQuestion>, next: FailedQuestion): Li
 internal fun visibleErrors(rows: List<FailedQuestion>, clearedAt: Long): List<FailedQuestion> =
     rows.filter { clearedAt == 0L || it.dateAdded > clearedAt }
 
+internal const val ERROR_RETENTION_MILLIS = 15L * 24 * 60 * 60 * 1000
+internal fun retainedErrors(rows: List<FailedQuestion>, now: Long = System.currentTimeMillis()) =
+    rows.filter { it.dateAdded > now - ERROR_RETENTION_MILLIS }
+
 /** Only the active account's private documents are observed. Public data is a separate opt-in projection. */
 object ErrorBankRepository {
     private val _errors = MutableStateFlow<List<FailedQuestion>>(emptyList())
     val errors = _errors.asStateFlow()
     private val _shared = MutableStateFlow(false)
     val shared = _shared.asStateFlow()
-    private val _paused = MutableStateFlow(false)
+    private val _paused = MutableStateFlow(true)
     val paused = _paused.asStateFlow()
     private val _clearing = MutableStateFlow(false)
     val clearing = _clearing.asStateFlow()
@@ -76,41 +80,90 @@ object ErrorBankRepository {
         .digest(id.toByteArray()).joinToString("") { "%02x".format(it) }
     fun init() {
         val auth = FirebaseAuth.getInstance()
-        bindAccount(auth.currentUser?.uid.orEmpty())
+        bindAccount(auth.currentUser?.takeUnless { it.isAnonymous }?.uid.orEmpty())
+        pruneExpired()
         if (initialized) return
         initialized = true
-        auth.addAuthStateListener { bindAccount(it.currentUser?.uid.orEmpty()) }
+        auth.addAuthStateListener { bindAccount(it.currentUser?.takeUnless { user -> user.isAnonymous }?.uid.orEmpty()) }
     }
     private fun bindAccount(owner: String) {
         if (uid == owner) return
         listener?.remove(); publicListener?.remove(); uid = owner
         _shared.value = false; _message.value = null; _clearing.value = false
-        _paused.value = prefs.getBoolean("paused:$owner", false)
+        _paused.value = prefs.getBoolean("paused:$owner", true)
         clearedAt = prefs.getLong("cleared:$owner", 0L)
         _errors.value = visibleErrors(loadLocal(owner), clearedAt)
-        if (owner.isNotBlank()) {
-            publicListener = db.collection("usuarios").document(owner).addSnapshotListener { snap, _ ->
-                if (uid == owner && snap != null) {
-                    _shared.value = snap.getBoolean("errorsPublic") == true
-                    snap.getBoolean("errorSavingPaused")?.let { _paused.value = it }
-                    clearedAt = maxOf(clearedAt, snap.getLong("errorsClearedAt") ?: 0L)
-                    prefs.edit().putBoolean("paused:$owner", _paused.value).putLong("cleared:$owner", clearedAt).apply()
-                    _errors.value = visibleErrors(_errors.value, clearedAt)
-                    saveLocal()
+        pruneExpired()
+        if (owner.isNotBlank() && !prefs.contains(owner)) {
+            val bound = owner
+            collection(owner).whereEqualTo("recordType", "failed_question").get()
+                .addOnSuccessListener { snap ->
+                    if (uid == bound) {
+                        val remote = snap.documents.mapNotNull { FailedQuestion.from(it.data.orEmpty()) }
+                        _errors.value = visibleErrors(_errors.value + remote, clearedAt).distinctBy { it.id }
+                        pruneExpired()
+                        saveLocal()
+                    }
                 }
-            }
-            listener = collection(owner).whereEqualTo("recordType", "failed_question").addSnapshotListener { snap, error ->
-                if (uid != owner) return@addSnapshotListener
-                if (error != null) { _message.value = "Errores guardados en este dispositivo; sincronización pendiente."; return@addSnapshotListener }
-                if (snap != null) {
-                    val remote = snap.documents.mapNotNull { FailedQuestion.from(it.data.orEmpty()) }
-                    // Local offline writes stay visible until acknowledged, including freshly captured answers.
-                    val merged = visibleErrors(_errors.value + remote, clearedAt).groupBy { it.id }.values.map { rows -> rows.maxBy { it.dateAdded } }
-                    _errors.value = merged.sortedByDescending { it.dateAdded }; saveLocal()
-                }
-            }
         }
     }
+    /** Reuse the existing account profile observation, without another listener. */
+    fun applyProfile(owner: String, data: Map<String, Any?>) {
+        init()
+        if (uid != owner) return
+        _shared.value = data["errorsPublic"] == true
+        if (!prefs.contains("paused:$owner")) (data["errorSavingPaused"] as? Boolean)?.let { _paused.value = it }
+        clearedAt = maxOf(clearedAt, (data["errorsClearedAt"] as? Number)?.toLong() ?: 0L)
+        prefs.edit().putBoolean("paused:$owner", _paused.value).putLong("cleared:$owner", clearedAt).apply()
+        _errors.value = visibleErrors(_errors.value, clearedAt)
+        pruneExpired()
+        saveLocal()
+    }
+    /** Local expiration; deletes are deferred to the existing explicit/weekly cloud backup. */
+    private fun pruneExpired() {
+        val rows = _errors.value
+        val retained = retainedErrors(rows)
+        val expired = rows.filterNot { it in retained }
+        if (expired.isEmpty()) return
+        if (uid.isNotBlank()) {
+            val pending = prefs.getStringSet("expired:$uid", emptySet()).orEmpty() + expired.map { it.id }
+            prefs.edit().putStringSet("expired:$uid", pending).apply()
+        }
+        _errors.value = retained
+        saveLocal()
+    }
+    fun syncBackup(callback: (Result<Unit>) -> Unit) {
+        init()
+        val owner = uid
+        if (owner.isBlank()) { callback(Result.success(Unit)); return }
+        val profile = db.collection("usuarios").document(owner)
+        val rows = _errors.value.toList()
+        // Chunks respect Firestore batch limits. Only locally changed rows are sent.
+        val dirty = rows.filter { prefs.getLong("uploaded:$owner:${it.id}", 0) != it.dateAdded }
+        val expiredIds = prefs.getStringSet("expired:$owner", emptySet()).orEmpty().toSet()
+        val cutoff = System.currentTimeMillis() - ERROR_RETENTION_MILLIS
+        val cleanup = expiredIds.chunked(100).map { ids ->
+            db.runTransaction { transaction ->
+                val docs = ids.map { transaction.get(collection(owner).document(docId(it))) }
+                docs.filter { it.getString("recordType") == "failed_question" && (it.getLong("dateAdded") ?: 0L) <= cutoff }
+                    .forEach { transaction.delete(it.reference) }
+            }
+        }
+        val tasks = dirty.chunked(400).map { chunk ->
+            val batch = db.batch()
+            chunk.forEach { batch.set(collection(owner).document(docId(it.id)), it.payload() + ("recordType" to "failed_question")) }
+            batch.commit()
+        } + cleanup + profile.set(mapOf("errorSavingPaused" to _paused.value), SetOptions.merge())
+        com.google.android.gms.tasks.Tasks.whenAll(tasks).addOnSuccessListener {
+            val edit = prefs.edit()
+            val remaining = prefs.getStringSet("expired:$owner", emptySet()).orEmpty() - expiredIds
+            edit.putStringSet("expired:$owner", remaining)
+            dirty.forEach { edit.putLong("uploaded:$owner:${it.id}", it.dateAdded) }
+            edit.apply()
+            callback(Result.success(Unit))
+        }.addOnFailureListener { callback(Result.failure(it)) }
+    }
+
     private fun loadLocal(owner: String): List<FailedQuestion> = runCatching {
         val array = JSONArray(prefs.getString(owner.ifBlank { "guest" }, "[]"))
         (0 until array.length()).mapNotNull { i ->
@@ -130,26 +183,18 @@ object ErrorBankRepository {
         if (captured.isEmpty()) return
         captured.forEach { _errors.value = mergeError(_errors.value, it) }
         saveLocal()
-        if (uid.isNotBlank()) {
-            val batch = db.batch()
-            captured.forEach { batch.set(collection(uid).document(docId(it.id)), it.payload() + ("recordType" to "failed_question")) }
-            batch.commit().addOnFailureListener { _message.value = "Guardado local; sincronización del examen pendiente." }
-        }
         if (_shared.value) publishCurrent()
     }
     fun addFailedQuestion(question: FailedQuestion) {
         init()
         if (_paused.value) return
         _errors.value = mergeError(_errors.value, question); saveLocal()
-        if (uid.isNotBlank()) collection(uid).document(docId(question.id)).set(question.payload() + ("recordType" to "failed_question"))
-            .addOnFailureListener { _message.value = "Guardado local; no se pudo sincronizar este error." }
         if (_shared.value) publishCurrent()
     }
     fun markAsSolved(id: String) {
         init()
         val next = _errors.value.firstOrNull { it.id == id }?.copy(isSolved = true, dateAdded = System.currentTimeMillis()) ?: return
         _errors.value = _errors.value.map { if (it.id == id) next else it }; saveLocal()
-        if (uid.isNotBlank()) collection(uid).document(docId(id)).set(next.payload() + ("recordType" to "failed_question"))
         if (_shared.value) publishCurrent()
     }
     fun setPaused(enabled: Boolean) {
@@ -158,9 +203,7 @@ object ErrorBankRepository {
         _paused.value = enabled
         prefs.edit().putBoolean("paused:$owner", enabled).apply()
         _message.value = if (enabled) "Guardado de errores pausado." else "Se guardarán los errores nuevos."
-        if (owner.isNotBlank()) db.collection("usuarios").document(owner)
-            .set(mapOf("errorSavingPaused" to enabled), SetOptions.merge())
-            .addOnFailureListener { if (uid == owner) _message.value = "Preferencia aplicada aquí; sincronización pendiente." }
+
     }
 
     fun clearAll() {
@@ -236,6 +279,6 @@ object ErrorBankRepository {
             @Suppress("UNCHECKED_CAST")
             (row as? Map<String, Any?>)?.let(FailedQuestion::from)
         }.orEmpty()
-        return visibleErrors(rows, (data["errorsClearedAt"] as? Number)?.toLong() ?: 0L)
+        return retainedErrors(visibleErrors(rows, (data["errorsClearedAt"] as? Number)?.toLong() ?: 0L))
     }
 }

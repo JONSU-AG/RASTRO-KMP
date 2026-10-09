@@ -39,25 +39,33 @@ object UserPlaylistsRepository {
     val syncError = mutableStateOf<String?>(null)
     val hasMore = mutableStateOf(false)
     private val migrating = mutableSetOf<String>()
-    private var cloudLimit = 100L
+    private val cloudLimit = 20L
+    private var cursor: com.google.firebase.firestore.DocumentSnapshot? = null
+    private var syncGeneration = 0
+    private var loading = false
     private val collection get() = FirebaseFirestore.getInstance().collection("rastro_yt_playlists")
 
-    fun stopSync() { cloudListener?.remove(); cloudListener = null }
+    fun stopSync() { syncGeneration++; loading = false; cloudListener?.remove(); cloudListener = null }
 
-    fun loadMore() { cloudLimit += 100; startSync() }
+    fun loadMore() { startSync(append = true) }
 
     private fun cloudData(pl: CoursePlaylist): Map<String, Any> = playlistAccountPayload(
         accountKey, pl, isCustomListMap[pl.id] == true, customVideosMap[pl.id].orEmpty()
     ) + mapOf("updatedAt" to FieldValue.serverTimestamp())
 
-    private fun startSync() {
-        stopSync()
+    private fun startSync(append: Boolean = false) {
+        if (loading || (append && cursor == null)) return
+        if (!append) { stopSync(); cursor = null }
         val uid = accountKey
         if (FirebaseAuth.getInstance().currentUser?.let { !it.isAnonymous && it.uid == uid } != true) return
-        cloudListener = collection.whereEqualTo("ownerUid", uid).whereEqualTo("isHidden", false)
-            .limit(cloudLimit).addSnapshotListener { snapshot, error ->
-                if (accountKey != uid || FirebaseAuth.getInstance().currentUser?.uid != uid) return@addSnapshotListener
-                if (error != null) { syncError.value = "No se pudieron sincronizar tus playlists. Revisa la conexión y vuelve a entrar."; return@addSnapshotListener }
+        loading = true
+        val request = syncGeneration
+        var query = collection.whereEqualTo("ownerUid", uid).whereEqualTo("isHidden", false).limit(cloudLimit)
+        if (append) cursor?.let { query = query.startAfter(it) }
+        query.get().addOnSuccessListener { snapshot ->
+                if (request != syncGeneration || accountKey != uid || FirebaseAuth.getInstance().currentUser?.uid != uid) return@addOnSuccessListener
+                loading = false
+                cursor = snapshot.documents.lastOrNull()
                 syncError.value = null
                 hasMore.value = snapshot?.size()?.toLong() == cloudLimit
                 snapshot?.documents.orEmpty().forEach { doc ->
@@ -81,15 +89,15 @@ object UserPlaylistsRepository {
                     if (index < 0) playlists.add(pl) else playlists[index] = pl
                 }
                 appContext?.let { save(it) }
-            }
+            }.addOnFailureListener { if (request == syncGeneration && accountKey == uid) { loading = false; syncError.value = "No se pudieron actualizar tus playlists. La copia local se conserva." } }
     }
 
     fun init(context: Context) {
-        val uid = com.google.firebase.auth.FirebaseAuth.getInstance().currentUser?.uid ?: "guest"
+        val uid = com.google.firebase.auth.FirebaseAuth.getInstance().currentUser?.takeUnless { it.isAnonymous }?.uid ?: "guest"
         if (initialized && accountKey == uid) { migrateLocalToCloud(); startSync(); return }
         stopSync()
         appContext = context.applicationContext
-        cloudLimit = 100
+        cursor = null
         hasMore.value = false
         syncError.value = null
         migrating.clear()
@@ -162,7 +170,7 @@ object UserPlaylistsRepository {
         val uid = accountKey
         if (FirebaseAuth.getInstance().currentUser?.let { !it.isAnonymous && it.uid == uid } != true) return
         playlists.toList().forEach { pl ->
-            if (!migrating.add(pl.id)) return@forEach
+            if (appContext?.getSharedPreferences("${PREFS_NAME}_$uid", Context.MODE_PRIVATE)?.getStringSet("cloudMigrated", emptySet())?.contains(pl.id) == true || !migrating.add(pl.id)) return@forEach
             val payload = cloudData(pl)
             val ref = collection.document("${uid}_${pl.id}")
             // Only seed missing documents: an old device must never replace remote edits or tombstones.
@@ -307,6 +315,10 @@ object UserPlaylistsRepository {
         isCustomList: Boolean,
         videos: List<CustomVideoItem>
     ) {
+        if (FirebaseAuth.getInstance().currentUser?.let { !it.isAnonymous && it.uid == accountKey } != true) {
+            syncError.value = "Inicia sesión para crear playlists."
+            return
+        }
         val playlistId = extractPlaylistId(urlOrId)
         val cleanSubject = subject.trim().ifBlank { "General" }
         val cleanTitle = title.trim().ifBlank {
@@ -343,7 +355,12 @@ object UserPlaylistsRepository {
             // Merge preserves the independently selected community visibility.
             ref.set(payload, com.google.firebase.firestore.SetOptions.mergeFields(
                 playlistEditFields(payload)
-            )).addOnFailureListener {
+            )).addOnSuccessListener {
+                if (accountKey == uid) {
+                    val prefs = context.getSharedPreferences("${PREFS_NAME}_$uid", Context.MODE_PRIVATE)
+                    prefs.edit().putStringSet("cloudMigrated", prefs.getStringSet("cloudMigrated", emptySet()).orEmpty() + id).apply()
+                }
+            }.addOnFailureListener {
                 if (accountKey == uid) syncError.value = "No se pudo guardar la playlist en tu cuenta. La copia local se conserva."
             }
         }

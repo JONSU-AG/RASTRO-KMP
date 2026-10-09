@@ -42,3 +42,14 @@ Validación final: Kotlin Android correcto; 9 pruebas de YouTube y 4 del catálo
 - [x] Popup al 94% del espacio seguro, padding menor y panel del reproductor desplazable con altura acotada; lista conserva scroll propio.
 - [x] compileDebugKotlin y 112 tests Android correctos, build/errors-background-playlist-validation.log.
 - [ ] Video completo sin recorte, salida fullscreen y auto-rotación ON/OFF en teléfono/tablet: app no ejecutada.
+
+## 08/10/2026 — local y consumo
+
+Estado y validación específica en ../sincronizacion/CHECKLIST.md. Prueba física y ahorro real pendientes; no confundir compilación con validación entre dispositivos.
+
+
+## 08/10/2026 — Iconos, herramientas y tarjetas compactas
+
+- [x] Implementación existente reutilizada; cambios limitados al ámbito visual y accesos solicitados.
+- [x] Pruebas Android (153, cero fallos) y lintVitalRelease.
+- [ ] Revisión visual en teléfono/tablet, modo claro/oscuro y fuentes grandes: app no ejecutada.

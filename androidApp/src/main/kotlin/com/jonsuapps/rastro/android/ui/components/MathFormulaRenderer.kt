@@ -24,6 +24,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -256,12 +258,12 @@ fun FormattedFraction(
     lineColor: Color = Color(0xFF94A3B8)
 ) {
     Column(
-        modifier = modifier.padding(horizontal = 4.dp),
+        modifier = modifier.width(IntrinsicSize.Max).padding(horizontal = 4.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = numerator,
+            text = scientificNotation(numerator),
             fontSize = 17.sp,
             fontWeight = FontWeight.Bold,
             color = textColor,
@@ -269,13 +271,13 @@ fun FormattedFraction(
         )
         Box(
             modifier = Modifier
-                .widthIn(min = 28.dp)
+                .fillMaxWidth()
                 .height(2.dp)
                 .background(lineColor, RoundedCornerShape(1.dp))
                 .padding(horizontal = 2.dp)
         )
         Text(
-            text = denominator,
+            text = scientificNotation(denominator),
             fontSize = 17.sp,
             fontWeight = FontWeight.Bold,
             color = textColor,
@@ -300,12 +302,13 @@ fun MathFormulaDisplayBox(
     ) {
         if (!formula.numerator.isNullOrBlank() && !formula.denominator.isNullOrBlank()) {
             Row(
+                modifier = Modifier.horizontalScroll(rememberScrollState()),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
             ) {
                 if (formula.leftSide.isNotBlank()) {
                     Text(
-                        text = "${formula.leftSide} = ",
+                        text = scientificNotation("${formula.leftSide} = "),
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Black,
                         color = Color(0xFF60A5FA), // Azul cielo matemático
@@ -314,7 +317,7 @@ fun MathFormulaDisplayBox(
                 }
                 if (formula.prefix.isNotBlank()) {
                     Text(
-                        text = formula.prefix,
+                        text = scientificNotation(formula.prefix),
                         fontSize = 19.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(0xFFF8FAFC),
@@ -329,7 +332,7 @@ fun MathFormulaDisplayBox(
                 )
                 if (formula.suffix.isNotBlank()) {
                     Text(
-                        text = formula.suffix,
+                        text = scientificNotation(formula.suffix),
                         fontSize = 19.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(0xFFF8FAFC),
@@ -338,10 +341,11 @@ fun MathFormulaDisplayBox(
                 }
             }
         } else {
-            // Ecuación directa en línea
+            // Ecuación completa: el desplazamiento horizontal evita cortar identidades largas.
             Text(
-                text = formula.mainExpression,
-                fontSize = 18.sp,
+                modifier = Modifier.horizontalScroll(rememberScrollState()),
+                text = scientificNotation(formula.mainExpression),
+                fontSize = 21.sp,
                 fontWeight = FontWeight.Black,
                 color = Color(0xFFF8FAFC),
                 fontFamily = FontFamily.Serif,
@@ -360,6 +364,7 @@ fun CanonicalFormulaCard(
     val context = LocalContext.current
     var isExpanded by remember { mutableStateOf(false) }
     var showMnemotecnia by remember { mutableStateOf(false) }
+    val linkedMnemonics = remember(formula.id) { com.jonsuapps.rastro.android.data.FormulasRepository.mnemonicsFor(formula.id) }
 
     val subjectBadgeColor = when (formula.subject) {
         "Física" -> Color(0xFF0284C7)
@@ -428,7 +433,7 @@ fun CanonicalFormulaCard(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     // Botón táctil para ver Mnemotecnia
-                    if (formula.mnemotecnia.isNotBlank() || formula.datoClave.isNotBlank()) {
+                    if (formula.mnemotecnia.isNotBlank() || linkedMnemonics.isNotEmpty()) {
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(9.dp))
@@ -471,7 +476,7 @@ fun CanonicalFormulaCard(
 
                     Box(
                         modifier = Modifier
-                            .size(32.dp)
+                            .size(40.dp)
                             .clip(RoundedCornerShape(9.dp))
                             .background(if (isFav) Color(0xFFFEF3C7) else theme.surfaceAccent)
                             .border(
@@ -494,8 +499,8 @@ fun CanonicalFormulaCard(
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
-                            imageVector = if (isFav) Icons.Rounded.Star else Icons.Rounded.StarOutline,
-                            contentDescription = "Favorito",
+                            imageVector = if (isFav) Icons.Rounded.Bookmark else Icons.Rounded.BookmarkBorder,
+                            contentDescription = if (isFav) "Guardado en tu perfil. Quitar" else "Guardar en mi perfil",
                             tint = if (isFav) Color(0xFFF59E0B) else theme.textSecondary,
                             modifier = Modifier.size(17.dp)
                         )
@@ -583,7 +588,7 @@ fun CanonicalFormulaCard(
                                 color = Color(0xFF92400E)
                             )
                             Text(
-                                text = formula.mnemotecnia.ifBlank { formula.datoClave },
+                                text = (linkedMnemonics.map { "${it.phrase}\n${it.shortFormula}\n${it.explicacion}\n${it.ejemplo}" } + listOfNotNull(formula.mnemotecnia.takeIf { it.isNotBlank() })).joinToString("\n\n"),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Medium,
                                 color = Color(0xFF78350F),
@@ -633,7 +638,7 @@ fun CanonicalFormulaCard(
                                     ) {
                                         Text(text = desp.name, fontSize = 11.sp, color = theme.textPrimary)
                                         Text(
-                                            text = desp.mathExpression,
+                                            text = scientificNotation(desp.mathExpression),
                                             fontSize = 11.5.sp,
                                             fontWeight = FontWeight.Black,
                                             color = theme.accent,
@@ -660,7 +665,7 @@ fun CanonicalFormulaCard(
                                     modifier = Modifier.padding(vertical = 1.dp)
                                 ) {
                                     Text(
-                                        text = "${v.symbol}: ",
+                                        text = scientificNotation("${v.symbol}: "),
                                         fontSize = 11.5.sp,
                                         fontWeight = FontWeight.Black,
                                         color = theme.accent,

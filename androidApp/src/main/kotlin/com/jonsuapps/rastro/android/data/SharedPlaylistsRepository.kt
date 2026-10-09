@@ -20,19 +20,32 @@ object SharedPlaylistsRepository {
     val sharedIds = own.asStateFlow()
     private val status = MutableStateFlow<String?>(null)
     val message = status.asStateFlow()
-    private var publicListener: ListenerRegistration? = null
-    private var ownListener: ListenerRegistration? = null
-    private val pageLimit = MutableStateFlow(100L)
+    private val pageLimit = MutableStateFlow(20L)
     val loadedLimit = pageLimit.asStateFlow()
-    fun loadMore() = start(FirebaseAuth.getInstance().currentUser?.uid, pageLimit.value + 100, false)
-    fun start(uid: String?, limit: Long = 100, clear: Boolean = true) {
-        if (clear) stop() else { publicListener?.remove(); ownListener?.remove() }
-        pageLimit.value = limit
+    private var generation = 0
+    private var cursor: com.google.firebase.firestore.DocumentSnapshot? = null
+    private var loading = false
+    fun loadMore() = fetch(FirebaseAuth.getInstance().currentUser?.takeUnless { it.isAnonymous }?.uid, true)
+    fun start(uid: String?, limit: Long = 20, clear: Boolean = true) {
+        generation++
+        loading = false
+        cursor = null
+        pageLimit.value = 20
+        if (clear) { rows.value = emptyList(); own.value = emptySet() }
+        fetch(uid, false)
+    }
+    private fun fetch(uid: String?, append: Boolean) {
+        if (loading || (append && cursor == null)) return
+        loading = true
         status.value = null
-        publicListener = collection.whereEqualTo("isShared", true).whereEqualTo("isHidden", false)
-            .limit(limit).addSnapshotListener { snapshot, error ->
-                if (error != null) { status.value = "No pudimos cargar las listas compartidas. Revisa la conexión e inténtalo de nuevo."; return@addSnapshotListener }
-                rows.value = snapshot?.documents.orEmpty().mapNotNull { doc ->
+        val request = generation
+        var query = collection.whereEqualTo("isShared", true).whereEqualTo("isHidden", false).limit(20)
+        if (append) cursor?.let { query = query.startAfter(it) }
+        query.get().addOnSuccessListener { snapshot ->
+            if (request != generation) return@addOnSuccessListener
+            loading = false
+            cursor = if (snapshot.size() == 20) snapshot.documents.lastOrNull() else null
+            val received = snapshot.documents.mapNotNull { doc ->
                     val d = doc.data ?: return@mapNotNull null
                     val id = d["localId"] as? String ?: return@mapNotNull null
                     val owner = d["ownerUid"] as? String ?: return@mapNotNull null
@@ -46,20 +59,21 @@ object SharedPlaylistsRepository {
                         d["playlistId"] as? String ?: "", (d["videoCount"] as? Number)?.toInt() ?: 0,
                         "Comunidad", description = d["description"] as? String ?: ""), owner, videos,
                         d["isCustomList"] == true)
+            }
+            rows.value = (if (append) rows.value + received else received).distinctBy { it.ownerUid + ":" + it.playlist.id }
+            pageLimit.value = if (cursor != null) rows.value.size.toLong() else Long.MAX_VALUE
+        }.addOnFailureListener {
+            if (request == generation) { loading = false; status.value = "No pudimos actualizar Comunidad. Tu copia anterior se conserva." }
+        }
+        if (!append && uid != null && FirebaseAuth.getInstance().currentUser?.let { !it.isAnonymous && it.uid == uid } == true) {
+            collection.whereEqualTo("ownerUid", uid).whereEqualTo("isShared", true).whereEqualTo("isHidden", false)
+                .limit(100).get().addOnSuccessListener { snapshot ->
+                    if (request == generation && FirebaseAuth.getInstance().currentUser?.uid == uid)
+                        own.value = snapshot.documents.mapNotNull { it.getString("localId") }.toSet()
                 }
-            }
-        if (uid != null) ownListener = collection.whereEqualTo("ownerUid", uid).whereEqualTo("isHidden", false)
-            .limit(limit).addSnapshotListener { snapshot, error ->
-                if (FirebaseAuth.getInstance().currentUser?.uid != uid) return@addSnapshotListener
-                if (error == null) own.value = snapshot?.documents.orEmpty()
-                    .filter { it.getBoolean("isShared") == true }.mapNotNull { it.getString("localId") }.toSet()
-            }
+        }
     }
-    fun stop() {
-        publicListener?.remove(); ownListener?.remove()
-        publicListener = null; ownListener = null
-        rows.value = emptyList(); own.value = emptySet()
-    }
+    fun stop() { generation++; loading = false; cursor = null; rows.value = emptyList(); own.value = emptySet() }
     suspend fun setShared(playlist: CoursePlaylist, shared: Boolean) {
         val user = FirebaseAuth.getInstance().currentUser
         require(user != null && !user.isAnonymous) { "Inicia sesión para compartir tus playlists." }
@@ -73,17 +87,7 @@ object SharedPlaylistsRepository {
             }
             return
         }
-        val videos = if (UserPlaylistsRepository.isCustomListMap[playlist.id] == true)
-            UserPlaylistsRepository.customVideosMap[playlist.id].orEmpty() else emptyList()
-        require(videos.size <= 200) { "Puedes compartir colecciones de hasta 200 videos." }
-        // Existing rules require a private document before opting into public visibility.
-        ref.set(mapOf("ownerUid" to user.uid, "localId" to playlist.id, "isShared" to false,
-            "isCurated" to false, "isHidden" to false, "title" to playlist.title.take(200),
-            "channelTitle" to playlist.channelTitle, "subject" to playlist.subject,
-            "playlistId" to playlist.playlistId, "videoCount" to playlist.videoCount,
-            "description" to playlist.description.take(2000), "isCustomList" to (videos.isNotEmpty()),
-            "videos" to videos.map { mapOf("title" to it.title.take(200), "urlOrId" to it.urlOrId) })).await()
-        check(FirebaseAuth.getInstance().currentUser?.uid == user.uid) { "La sesión cambió; vuelve a intentarlo." }
+        // The private playlist is already created by savePlaylist/migration. Change visibility only.
         ref.update("isShared", true).await()
         if (FirebaseAuth.getInstance().currentUser?.uid == user.uid) own.value = own.value + playlist.id
     }

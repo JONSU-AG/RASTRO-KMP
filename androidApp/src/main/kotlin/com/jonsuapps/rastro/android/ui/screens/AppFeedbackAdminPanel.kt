@@ -32,6 +32,19 @@ internal fun AppFeedbackAdminPanel() {
     var error by remember { mutableStateOf<String?>(null) }
     var refresh by remember { mutableIntStateOf(0) }
     var resolving by remember { mutableStateOf<String?>(null) }
+    var deleting by remember { mutableStateOf<AppFeedback?>(null) }
+    deleting?.let { selected -> AlertDialog(onDismissRequest={deleting=null},
+        title={Text("¿Eliminar este mensaje?")},text={Text("Se borrará definitivamente de la bandeja. Esta acción no se puede deshacer.")},
+        dismissButton={TextButton(onClick={deleting=null}) {Text("Cancelar")}},
+        confirmButton={TextButton(onClick={
+            deleting=null; resolving=selected.id
+            scope.launch {
+                try { AppFeedbackRepository.delete(selected.id); messages=messages.filterNot {it.id==selected.id} }
+                catch(e: CancellationException) {throw e}
+                catch(_: Exception) {error="No se pudo eliminar el mensaje. Intenta de nuevo."}
+                finally {resolving=null}
+            }
+        }) {Text("Eliminar")}}) }
     LaunchedEffect(cursor,refresh) {
         loading=true; error=null; messages=emptyList()
         try {
@@ -69,6 +82,7 @@ internal fun AppFeedbackAdminPanel() {
                             finally { resolving=null }
                         }
                     }) { Text(if(resolving==message.id) "Guardando…" else "Marcar como atendido") }
+                    TextButton(enabled=resolving==null && !loading,onClick={deleting=message}) {Text("Eliminar mensaje")}
                 }
             }
         } }

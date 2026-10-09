@@ -101,6 +101,7 @@ class LimaStudyReminderWorker(
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setLargeIcon(android.graphics.BitmapFactory.decodeResource(context.resources, com.jonsuapps.rastro.R.drawable.rastro_logo_base))
             .setContentTitle(title)
             .setContentText(body)
             .setStyle(NotificationCompat.BigTextStyle().bigText(body))

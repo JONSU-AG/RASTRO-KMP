@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -9,11 +10,12 @@
     <application
         android:name=".android.RastroApplication"
         android:allowBackup="false"
-        android:icon="@drawable/app_logo"
+        android:icon="@drawable/rastro_logo_base"
         android:label="RASTRO"
-        android:roundIcon="@drawable/app_logo"
+        android:roundIcon="@drawable/rastro_logo_base"
         android:supportsRtl="true"
         android:theme="@style/Theme.Rastro">
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="${admobAppId}" />
 
         <activity
             android:name=".android.MainActivity"

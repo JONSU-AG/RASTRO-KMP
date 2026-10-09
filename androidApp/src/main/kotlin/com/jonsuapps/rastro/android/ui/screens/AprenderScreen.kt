@@ -219,7 +219,7 @@ fun AprenderScreen(
     var showNoLivesDialog by remember { mutableStateOf(false) }
 
     val handleLessonClick: (String) -> Unit = { lessonId ->
-        if (dailyHearts <= 0) {
+        if (dailyHearts <= 0 && !com.jonsuapps.rastro.monetization.ProAccess.active()) {
             showNoLivesDialog = true
         } else {
             onNavigateToLesson(lessonId)
@@ -279,7 +279,7 @@ fun AprenderScreen(
                                 unselectedBevel = theme.cardBevel,
                                 strokeColor = theme.strokeBorder
                             ) {
-                                CourseIcon(subject.id, Modifier.size(20.dp))
+                                CourseIcon(subject.id, Modifier.size(26.dp), sticker = true)
                                 Spacer(Modifier.width(6.dp))
                                 Text(
                                     text = subject.name,
@@ -347,7 +347,7 @@ fun AprenderScreen(
                                     horizontalArrangement = Arrangement.spacedBy(10.dp),
                                     modifier = Modifier.weight(1f)
                                 ) {
-                                    CourseIcon(currentSubject.id, Modifier.size(28.dp))
+                                    CourseIcon(currentSubject.id, Modifier.size(32.dp), sticker = true)
                                     com.jonsuapps.rastro.android.ui.components.BannerOutlinedText(
                                         text = currentSubject.name,
                                         fontSize = 20.sp,
@@ -448,17 +448,7 @@ fun AprenderScreen(
 }
     }
 
-    if (showNoLivesDialog) {
-        com.jonsuapps.rastro.android.ui.components.RastroStickerDialog(
-            onDismissRequest = { showNoLivesDialog = false },
-            title = "Te quedaste sin vidas",
-            message = "Has usado todas tus vidas disponibles.",
-            confirmText = "Entendido",
-            icon = Icons.Rounded.FavoriteBorder,
-            theme = theme,
-            onConfirm = { showNoLivesDialog = false }
-        )
-    }
+    if (showNoLivesDialog) com.jonsuapps.rastro.android.ui.components.CoinAndLivesDialog { showNoLivesDialog = false }
 
     if (showGuide) {
         com.jonsuapps.rastro.android.ui.components.RastroStickerDialog(

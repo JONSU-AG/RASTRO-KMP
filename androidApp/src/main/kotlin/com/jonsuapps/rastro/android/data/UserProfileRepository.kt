@@ -1,4 +1,5 @@
 package com.jonsuapps.rastro.android.data
+import com.jonsuapps.rastro.android.util.awaitResult
 
 import android.net.Uri
 import com.google.firebase.auth.FirebaseAuth
@@ -13,6 +14,20 @@ import com.google.firebase.Timestamp
 data class ProfileConnection(val uid: String, val displayName: String, val photoUrl: String?)
 
 object UserProfileRepository {
+    /** Fill only identity needed for discovery; preserve the student's chosen name/profile. */
+    suspend fun ensureAccountIdentity(user: com.google.firebase.auth.FirebaseUser) {
+        if (user.isAnonymous) return
+        val db = FirebaseFirestore.getInstance()
+        val ref = db.collection("usuarios").document(user.uid)
+        db.runTransaction { tx ->
+            val existing = tx.get(ref)
+            val missing = AdminUserDirectory.missingIdentity(existing.data.orEmpty(), user.email, user.displayName)
+            if (missing.isNotEmpty()) tx.set(ref, missing, com.google.firebase.firestore.SetOptions.merge())
+        }.let { task ->
+            // Await the transaction without blocking the main thread.
+            task.awaitResult()
+        }
+    }
     fun loadConnections(uid: String, followers: Boolean, onComplete: (List<ProfileConnection>) -> Unit) {
         val db = FirebaseFirestore.getInstance()
         val field = if (followers) "followedUid" else "followerUid"
@@ -74,6 +89,7 @@ object UserProfileRepository {
         FirebaseFirestore.getInstance().collection("usuarios").document(uid)
             .set(fields, SetOptions.merge())
             .addOnSuccessListener {
+                PublicProfileCache.update(uid, fields)
                 val newName = fields["displayName"] as? String
                 val authUser = FirebaseAuth.getInstance().currentUser
                 if (!newName.isNullOrBlank() && authUser?.uid == uid) {
@@ -151,6 +167,8 @@ object UserProfileRepository {
                     FirebaseFirestore.getInstance().collection("usuarios").document(uid)
                         .set(mapOf("photoURL" to url), SetOptions.merge())
                         .addOnSuccessListener {
+                            com.jonsuapps.rastro.auth.UserManager.applyProfileFields(photoURL = url)
+                            PublicProfileCache.update(uid, mapOf("photoURL" to url, "displayName" to authUser?.displayName))
                             if (updateAuthPhoto == null) onComplete(Result.success(url))
                             else updateAuthPhoto.addOnCompleteListener { task ->
                                 if (task.isSuccessful) onComplete(Result.success(url))
@@ -350,7 +368,7 @@ object UserProfileRepository {
         if (FirebaseAuth.getInstance().currentUser?.uid != uid) return
         val key = "$uid:$day"
         val now = android.os.SystemClock.elapsedRealtime()
-        if (sharedCheckpoints[key]?.let { now - it < 300_000 } == true) return
+        if (sharedCheckpoints[key]?.let { now - it < 24 * 60 * 60_000L } == true) return
         sharedCheckpoints[key] = now
         val collection = FirebaseFirestore.getInstance().collection("racha_dual")
         val queries = listOf(collection.whereArrayContains("participants", uid),

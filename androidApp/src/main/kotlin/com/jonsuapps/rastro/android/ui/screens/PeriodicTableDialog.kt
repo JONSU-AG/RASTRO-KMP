@@ -3,6 +3,10 @@ package com.jonsuapps.rastro.android.ui.screens
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.foundation.gestures.awaitEachGesture
+import androidx.compose.foundation.gestures.awaitFirstDown
+import androidx.compose.foundation.gestures.calculateZoom
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -22,6 +26,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -39,12 +44,14 @@ import com.jonsuapps.rastro.theme.RastroPalette
 
 private val periodicCategories = listOf(
     "Todos", "Alcalino", "Alcalinotérreo", "Metal de transición", "Metaloide",
-    "Metales del bloque p", "No metal", "Halógeno", "Gas noble"
+    "Metales del bloque p", "No metal", "Halógeno", "Gas noble", "Lantánido", "Actínido"
 )
 
 @Composable
 fun PeriodicTableDialog(theme: RastroPalette, onDismiss: () -> Unit) {
     val context = LocalContext.current
+    var tableView by remember { mutableStateOf(true) }
+    var zoom by remember { mutableFloatStateOf(1f) }
     var query by remember { mutableStateOf("") }
     var selectedCategory by remember { mutableStateOf("Todos") }
     var selectedElement by remember { mutableStateOf(PeriodicElementCatalog.elements.first()) }
@@ -100,7 +107,7 @@ fun PeriodicTableDialog(theme: RastroPalette, onDismiss: () -> Unit) {
                             color = Color(0xFFA7F3D0)
                         )
                         Text(
-                            text = "Elementos, Valencias & Tips Pre-U",
+                            text = "118 elementos · Tabla completa",
                             color = Color.White,
                             fontWeight = FontWeight.Black,
                             fontSize = 15.sp,
@@ -180,27 +187,33 @@ fun PeriodicTableDialog(theme: RastroPalette, onDismiss: () -> Unit) {
                     }
                 }
 
-                // Subbarra de Conteo
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 14.dp, vertical = 6.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = "Mostrando ${filtered.size} elementos",
-                        fontSize = 11.sp,
-                        color = Color(0xFF059669),
-                        fontWeight = FontWeight.Bold
-                    )
-                    Text(
-                        text = "Seleccionado: ${selectedElement.symbol} (${selectedElement.name})",
-                        fontSize = 11.sp,
-                        color = theme.textSecondary,
-                        fontWeight = FontWeight.Medium,
-                        maxLines = 1
-                    )
+                Column(Modifier.fillMaxWidth().padding(horizontal = 14.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        listOf(true to "Tabla", false to "Lista").forEach { (mode, label) ->
+                            Sticker3dButton(onClick = { tableView = mode }, modifier = Modifier.weight(1f),
+                                containerColor = if (tableView == mode) theme.accent else theme.surface,
+                                bottomBevelColor = if (tableView == mode) theme.accentBevel else theme.cardBevel,
+                                strokeColor = theme.strokeBorder, contentPadding = PaddingValues(8.dp)) {
+                                Icon(if (mode) Icons.Rounded.GridView else Icons.Rounded.ViewList, null, Modifier.size(18.dp),
+                                    tint = if (tableView == mode) com.jonsuapps.rastro.theme.onColor(theme.accent) else theme.textPrimary)
+                                Spacer(Modifier.width(6.dp))
+                                Text(label, fontWeight = FontWeight.Black, fontSize = 12.sp,
+                                    color = if (tableView == mode) com.jonsuapps.rastro.theme.onColor(theme.accent) else theme.textPrimary)
+                            }
+                        }
+                    }
+                    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                        Text("${filtered.size} elementos", Modifier.weight(1f), fontSize = 11.sp, color = theme.textSecondary)
+                        if (tableView) {
+                            IconButton(onClick = { zoom = boundedPeriodicZoom(zoom, 1 / 1.2f) }) {
+                                Icon(Icons.Rounded.ZoomOut, "Alejar", tint = theme.textPrimary)
+                            }
+                            TextButton(onClick = { zoom = 1f }) { Text("${(zoom * 100).toInt()}%", color = theme.textPrimary) }
+                            IconButton(onClick = { zoom = boundedPeriodicZoom(zoom, 1.2f) }) {
+                                Icon(Icons.Rounded.ZoomIn, "Acercar", tint = theme.textPrimary)
+                            }
+                        }
+                    }
                 }
 
                 // ── GRILLA DE ELEMENTOS COLECCIONABLES 3D ──
@@ -209,6 +222,12 @@ fun PeriodicTableDialog(theme: RastroPalette, onDismiss: () -> Unit) {
                         .weight(1f)
                         .fillMaxWidth()
                 ) {
+                    if (tableView) {
+                        PeriodicTableLayout(theme, filtered, selectedElement.number, zoom, { zoom = it }) { element ->
+                            DuolingoHaptics.playOptionSelected(context)
+                            selectedElement = element; isDetailExpanded = true
+                        }
+                    } else {
                     val columns = if (maxWidth < 420.dp) 3 else 4
                     LazyVerticalGrid(
                         columns = GridCells.Fixed(columns),
@@ -254,7 +273,7 @@ fun PeriodicTableDialog(theme: RastroPalette, onDismiss: () -> Unit) {
                                             color = theme.textSecondary
                                         )
                                         Text(
-                                            text = "G${element.group}",
+                                            text = if (element.group == 0) "f" else "G${element.group}",
                                             fontSize = 8.5.sp,
                                             fontWeight = FontWeight.Bold,
                                             color = accent
@@ -291,6 +310,7 @@ fun PeriodicTableDialog(theme: RastroPalette, onDismiss: () -> Unit) {
                             }
                         }
                     }
+                    }
                 }
 
                 // ── PANEL INFERIOR DE DETALLE TÁCTIL 3D ──
@@ -303,7 +323,7 @@ fun PeriodicTableDialog(theme: RastroPalette, onDismiss: () -> Unit) {
                         .border(1.5.dp, theme.strokeBorder.copy(alpha = 0.4f), RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp))
                         .padding(12.dp)
                 ) {
-                    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Column(Modifier.heightIn(max = 180.dp).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         Row(
                             modifier = Modifier.fillMaxWidth(),
                             verticalAlignment = Alignment.CenterVertically
@@ -362,7 +382,7 @@ fun PeriodicTableDialog(theme: RastroPalette, onDismiss: () -> Unit) {
                                     }
                                 }
                                 Text(
-                                    text = "Masa: ${selectedElement.mass}  ·  Bloque [${selectedElement.block}]  ·  Periodo ${selectedElement.period}  ·  Grupo ${selectedElement.group}",
+                                    text = "Masa: ${selectedElement.mass}  ·  Bloque [${selectedElement.block}]  ·  Periodo ${selectedElement.period}  ·  Grupo ${if (selectedElement.group == 0) "—" else selectedElement.group}",
                                     fontSize = 10.sp,
                                     color = theme.textSecondary,
                                     fontWeight = FontWeight.Medium
@@ -380,13 +400,13 @@ fun PeriodicTableDialog(theme: RastroPalette, onDismiss: () -> Unit) {
                             // Valencias / Estados de Oxidación en Badges
                             Column(horizontalAlignment = Alignment.End) {
                                 Text(
-                                    text = "Valencias",
+                                    text = "Estados de oxidación",
                                     fontSize = 9.sp,
                                     fontWeight = FontWeight.Bold,
                                     color = Color(0xFF059669)
                                 )
                                 Text(
-                                    text = selectedElement.valences.joinToString(", "),
+                                    text = selectedElement.valences.joinToString(", ").ifBlank { "No disponible" },
                                     fontSize = 13.sp,
                                     fontWeight = FontWeight.Black,
                                     color = heroAccent
@@ -436,3 +456,61 @@ fun PeriodicTableDialog(theme: RastroPalette, onDismiss: () -> Unit) {
     }
 }
 
+
+@Composable
+private fun PeriodicTableLayout(theme: RastroPalette, filtered: List<PeriodicElement>, selected: Int,
+    zoom: Float, onZoom: (Float) -> Unit, onSelect: (PeriodicElement) -> Unit) {
+    val positions = remember { PeriodicElementCatalog.elements.associateBy(PeriodicElementCatalog::tablePosition) }
+    val visible = remember(filtered) { filtered.map { it.number }.toSet() }
+    val zoomState by rememberUpdatedState(zoom)
+    val changeZoom by rememberUpdatedState(onZoom)
+    Box(Modifier.fillMaxSize().pointerInput(Unit) {
+        awaitEachGesture {
+            awaitFirstDown(requireUnconsumed = false)
+            do {
+                val event = awaitPointerEvent()
+                if (event.changes.count { it.pressed } >= 2) {
+                    changeZoom(boundedPeriodicZoom(zoomState, event.calculateZoom()))
+                    event.changes.forEach { it.consume() }
+                }
+            } while (event.changes.any { it.pressed })
+        }
+    }.horizontalScroll(rememberScrollState()).verticalScroll(rememberScrollState())) {
+        Column(Modifier.padding(10.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
+            Row(horizontalArrangement = Arrangement.spacedBy(5.dp)) {
+                (1..18).forEach { Text(it.toString(), Modifier.width(56.dp * zoom), color = theme.textSecondary,
+                    fontSize = 10.sp, textAlign = androidx.compose.ui.text.style.TextAlign.Center) }
+            }
+            (1..9).forEach { row ->
+                Row(horizontalArrangement = Arrangement.spacedBy(5.dp)) {
+                    (1..18).forEach { column ->
+                        val element = positions[row to column]
+                        if (element == null) {
+                            Box(Modifier.size(56.dp * zoom, 64.dp * zoom), contentAlignment = Alignment.Center) {
+                                if (column == 3 && row in 6..7) Text(if (row == 6) "57–71 ↓" else "89–103 ↓",
+                                    fontSize = 10.sp, color = theme.textSecondary)
+                            }
+                        } else {
+                            val shown = element.number in visible
+                            val accent = Color(element.colorHex)
+                            Column(Modifier.size(56.dp * zoom, 64.dp * zoom)
+                                .graphicsLayer { alpha = if (shown) 1f else 0.25f }
+                                .clip(RoundedCornerShape(10.dp))
+                                .background(if (selected == element.number) theme.surfaceAccent else theme.surface)
+                                .border(if (selected == element.number) 2.dp else 1.dp, accent, RoundedCornerShape(10.dp))
+                                .clickable(enabled = shown) { onSelect(element) }.padding(4.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.SpaceBetween) {
+                                Text(element.number.toString(), color = theme.textSecondary, fontSize = 9.sp)
+                                Text(element.symbol, color = theme.textPrimary, fontWeight = FontWeight.Black, fontSize = (18 * zoom).sp)
+                                Text(element.mass, color = theme.textSecondary, fontSize = (8 * zoom).sp, maxLines = 1)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+internal fun boundedPeriodicZoom(current: Float, factor: Float): Float =
+    if (factor.isFinite() && factor > 0) (current * factor).coerceIn(0.6f, 2.25f) else current

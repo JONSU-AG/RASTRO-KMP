@@ -85,3 +85,63 @@ Google: opción específica y carga separada. Amigos: rechazo, reenvío, grupos 
 
 ## 04/10/2026 — petición adicional
 Mis errores: botón general y pausa de captura. Fondo académico: default true en ThemeManager y lectura de MainActivity, sin cambiar geometría, colores ni preferencia explícita existente. ErrorBankTest añade dos comprobaciones contra caché antigua y publicación; compilación/112 tests correctos. Sin reglas nuevas, modificaciones de datos remotos ni ejecución de app. Sin APK/AAB/commit/push.
+
+## 08/10/2026 — Inicio, invitados y herramientas
+
+Ámbito: acceso invitado a Perfil, Home, logo general/notificación, contador existente, tabla periódica, vista usuario Admin para probar anuncios y caducidad de Mis errores. No catálogos de lecciones, temario, firmas/versionado, publicaciones ni despliegues.
+
+- Perfil propio: la ruta completa deriva a Auth para invitado/anónimo sin componer UserProfileScreen; el botón superior ya lo hacía. No se crea cuenta/perfil de invitado.
+- Logo general de aplicación (incluidos diálogos Android que leen application.icon) y recordatorios grandes usan rastro_logo_base. Estado inicial/fallback del gestor de logo usa el mismo recurso. Iconos launcher emocionales conservados. Cachés de Android/branding remoto Google no son comprobación visual automática.
+- Inicio: pista discreta y pulsable para personalizar colores, contador amplio antes de ruta de preparación; accesos parejos Tabla periódica y Ligas (liga real de progress.level). Reutiliza modal global de tabla, Ligas y preferencias del widget.
+- Contador sin fecha elegida: próximo examen de Conocimientos, incluyendo hoy; excluye Previa y Aptitudes. Una fecha personalizada nunca se reemplaza. Refresco local cada minuto mientras Home está compuesto; sin red. Si se agota el cronograma, pide configurar.
+- Tabla: 118 números únicos, nombres en español, propiedades de snapshot PubChem; se conservan tips existentes. Vista tradicional por grupos/períodos con dos ejes de desplazamiento y filas f separadas; lista buscable alternativa. Campos no disponibles quedan vacíos/indicados, sin inventar valencias. Detalle acotado con scroll interno para conservar espacio de tabla.
+
+Fuentes: https://admision.unsa.edu.pe/cronograma-de-admision-2027/ y https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/CSV (consultadas 08/10/2026). PubChem AtomicMass no equivale necesariamente a peso atómico estándar: para elementos sin isótopos estables puede representar masa de referencia. Valores transuránicos pueden ser estimados; no presentarlos como mediciones experimentales garantizadas.
+
+Validación: 149 pruebas Android, cero fallos/errores/omitidas; lintVitalRelease correcto. compilar_app.bat/assembleDebug correcto. Sin ejecutar APK ni cambiar versión/crear AAB/publicar. Matriz visual física pendiente.
+
+## 08/10/2026 — Acabado de Home, tabla y temas
+
+- Retirada la pista textual sobre la paleta. Herramientas Home usan vectores opacos de colores y contorno, sin cuadros de fondo: recursos académicos y de ligas existentes. Simulador utiliza una variante de color del vector de examen existente; no cambia el icono en otros lugares.
+- Contador: tarjeta con bisel, calendario crema/dorado con contraste oscuro, número dominante y botón Elegir mi examen. Fecha y lógica existentes intactas.
+- Tabla: selector explícito Tabla/Lista con estado seleccionado, zoom por botones/pellizco 60–225%, reset 100%. El zoom cambia las dimensiones de las celdas y sus límites de scroll; desplazamiento con un dedo, gesto de dos dedos consumido solo para zoom. Datos de 118 elementos conservados.
+- Causa de apertura del editor: CustomThemeEditorDialog estaba dentro de un item de LazyVerticalGrid; composición dependía de visibilidad de ese item. Ahora es diálogo independiente del listado, activación inmediata del estado. Tres colores reales: Fondo/ Tarjetas/ Acento; campo heredado custom_highlight se conserva como compatibilidad al guardar. Vista previa usa onColor para contraste, sin segunda arquitectura ni cambios a preferencias existentes hasta Guardar.
+- Ligas: filas con cantidad de columnas según ancho, tarjetas iguales y última fila centrada; podio con tres columnas de igual ancho y nombres acotados/centrados. EXP, participantes y consultas intactos.
+
+Validación: 150 pruebas Android, 0 fallos/errores/omitidas; lintVitalRelease correcto (home-polish-validation.log). compilar_app.bat/assembleDebug correcto (home-polish-assemble.log). Vector XML válido y git diff --check correcto. No ejecución APK, emulador, publicación ni cambio de versión. Pendiente prueba física de pinch/scroll/selector/editor, modo claro/oscuro y fuentes grandes. No afirmar latencia medida ni segundo toque comprobado físicamente.
+
+
+## 08/10/2026 — Iconos, herramientas y tarjetas compactas
+
+Contador de examen compacto (calendario de 78 dp, edición en la misma tarjeta); ruta ondulada dibujada en Canvas con tres estrellas sobre sus coordenadas. Redes del Perfil solo con enlace no vacío, botones físicos y distribución que admite varias filas. Fórmulas con subíndices tipográficos y fracciones dimensionadas al contenido. Guardados del Perfil integra fórmulas y mnemotecnias mediante los almacenes existentes, filtro Estudio; los nuevos guardados no se muestran al consultar otro perfil.
+
+Validación: 153 pruebas Android sin fallos/errores/omitidas y lintVitalRelease correcto (build/sections-final-validation.log). Compilación/paquete debug verificados por separado. No se ejecutó app, dispositivo o emulador, ni se publicó una versión. Pendiente revisión física de tamaños, orientación, fuente ampliada y temas.
+
+La franja de WhatsApp de Inicio también exige enlace configurado; eliminado el canal de relleno. Empaquetado final correcto: build/sections-home-final.log. Validación anterior: build/sections-complete.log (153 pruebas y assembleDebug), build/sections-final-validation.log (incluye lintVitalRelease).
+
+
+## 08/10/2026 — Refinamiento solicitado
+
+Iconos sólidos y nueva carpeta de Biblioteca; insignias del perfil mantienen el fuego existente. Días pasados sin actividad: guion y borde continuo; futuros: borde discontinuo. Contador compacto con número y unidad en línea. Portada opcional en Inicio con switch; editor arrastrable, zoom y controles de posición. Modelo de cuenta existente extendido, sin nueva colección ni observadores. Misma proporción de Inicio en la vista previa. Guardar confirma imagen/encuadre; cancelar no publica el borrador.
+
+
+## 08/10/2026 — Iconos, revisión y regalos
+
+Aportar/Aportes separados; Fórmulas con Σ, Ligas con copa y fuego original en Racha. Aprender/Cursos distintos; carpeta Biblioteca opaca. Formulario ampliado a 32 fórmulas/37 mnemotecnias con enlaces explícitos y notación serif/fracciones. Ver AJUSTES_2026-10-08_ICONOS_FORMULAS_Y_SIMULADOR.md.
+
+
+## 08/10/2026 — Aviso opcional de actualización
+
+Aviso temático con bisel RASTRO situado encima de LiquidNavbar; entra desde abajo y sale al cerrar. X y Cerrar descartan el aviso; Actualizar abre directamente market://details de este paquete en Google Play, con enlace HTTPS de respaldo si no está instalada la tienda. No fuerza instalación, descarga ni reinicio.
+
+Disponibilidad consultada con Google Play AppUpdateManager, biblioteca oficial app-update 2.1.0. Solo muestra UPDATE_AVAILABLE con versionCode superior al instalado; nunca compara textos de versión ni usa un número supuesto de Play. Error/sin conexión/instalación no reconocida: aviso omitido. Consultas al crear RastroApp, caché de seis horas en proceso; sin Firebase, listeners ni tareas periódicas. Cerrar recuerda la versión por 24 horas; una versión posterior no hereda el cierre.
+
+Se muestra en Inicio, Aprender (selector), Cursos, Biblioteca y Perfil. No se muestra en lecciones, examen, login ni Admin. No añade rutas ni altera autenticación, pagos, gamificación o catálogos.
+
+Referencia oficial: https://developer.android.com/guide/playcore/in-app-updates/kotlin-java
+Prueba de disponibilidad real requiere una instalación y cuenta elegibles en Google Play, con una versión superior publicada en su canal. Una compilación local no demuestra que exista tal actualización.
+Validación final: 163 pruebas Android y lintVitalRelease correctos; compilar_app.bat terminó BUILD SUCCESSFUL. No se lanzó ni instaló la app y no se publicó en Play. Registro: build/optional-update-final.log y build/optional-update-assemble.log.
+
+## 08/10/2026 — Accesos y comunidad
+
+Más → RASTRO Pro reutiliza el diálogo de compras existente y corona sticker actual. Inicio muestra Comunidad RASTRO con canal oficial indicado por el propietario, fijo para todas las cuentas/invitados; no utiliza canal personal ni dice Tu canal. Gestión extensa Pro y códigos se mueve a popup Admin sin nueva navegación.

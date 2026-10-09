@@ -138,3 +138,28 @@ Resultado compacto: tarjetas XP/monedas con conteo; relaciones locales 4–6 y f
 
 ## 04/10/2026 — ajuste puntual de score final
 Solo LearningArtwork.kt y documentación: resultado compacto a1,3×, etiquetas/números con Lilita One gruesa existente y tarjetas más marcadas según tema. Sin modificar tamaños de fuente, padding, orden, datos reales, recompensas, personaje, archivos Loki u otras pantallas. Compilación y112 pruebas Android pasan. App no ejecutada; sin APK/AAB, commit ni push.
+
+## 07/10/2026 — RASTRO Pro y preparación publicitaria
+
+Pro duplica XP/monedas de estudio y evita consumir vidas, sin alterar estrellas o racha. Máximo inicial 15 y regeneración 30 min; comprar vidas desde Monedas. Eliminada recarga al terminar lección; entrada bloqueada solo a cero y sin Pro, no interrupción del nivel en curso.
+Detalle y estado real: docs/monetizacion/README.md.
+
+## Validación 07/10/2026
+
+129 pruebas Android y 185 shared sin fallos; lintVitalRelease correcto. Dos pruebas de reglas Firestore en emulador correctas. git diff --check sin errores. No se ejecutó la app, no se generó bundle y no se desplegaron reglas/configuración.
+
+## 08/10/2026 — operación local y consumo reducido
+
+Ver ../sincronizacion/README.md para el ámbito y límites. Progreso personal local, respaldo explícito/semanal, actividad agrupada, playlists por consulta y foto compartida por autor. UI de vidas/packs/Pro conserva componentes Sticker3d. Sin publicación ni ejecución de app.
+
+
+## 08/10/2026 — Iconos, herramientas y tarjetas compactas
+
+Selector y encabezados usan mapeo vectorial propio para las veinte materias. Añadidos Comprensión Lectora, Álgebra, Geometría, Trigonometría e Historia del Perú; los IDs reales de Aritmética e Historia Universal ya no caen en el icono de Inglés. Recursos opacos y contorneados, sin tintado por tema.
+
+Validación: 153 pruebas Android sin fallos/errores/omitidas y lintVitalRelease correcto (build/sections-final-validation.log). Compilación/paquete debug verificados por separado. No se ejecutó app, dispositivo o emulador, ni se publicó una versión. Pendiente revisión física de tamaños, orientación, fuente ampliada y temas.
+
+
+## 08/10/2026 — Refinamiento solicitado
+
+Solo Historia Universal, Biología y Física cambian su icono de banner/selector por vectores rellenos opacos. Catálogos, preguntas y SVG del camino no se modificaron.

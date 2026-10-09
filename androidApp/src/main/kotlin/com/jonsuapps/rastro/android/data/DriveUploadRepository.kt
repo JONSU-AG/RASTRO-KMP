@@ -161,9 +161,38 @@ object DriveUploadRepository {
 
     // ==================== OAuth (drive.file, cuenta de la sesión) ====================
 
-    private fun requestAccessToken(activity: Activity, screen: String): String {
+    /** Only RASTRO-generated avatar/cover files for this UID; never personal source material. Run on IO. */
+    internal fun trashGeneratedProfileImages(context: Context, uid: String) {
+        require(uid.isNotBlank() && !uid.contains('/'))
+        val activity = resolveActivity(context) ?: error("Vuelve a abrir la app para confirmar el acceso a Drive.")
+        check(FirebaseAuth.getInstance().currentUser?.uid == uid)
+        val email = FirebaseAuth.getInstance().currentUser?.email?.takeIf { it.isNotBlank() }
+            ?: error("Inicia sesión con la cuenta que contiene tus fotos de RASTRO.")
+        val token = requestAccessToken(activity, "eliminar perfil", email)
+        val query = URLEncoder.encode("trashed = false and 'me' in owners and name contains '${uid.replace("'", "\\'")}_'", "UTF-8")
+        val ids = mutableListOf<String>()
+        var pageToken: String? = null
+        do {
+            check(FirebaseAuth.getInstance().currentUser?.uid == uid)
+            val page = JSONObject(driveRequest(token, "GET", "https://www.googleapis.com/drive/v3/files?q=$query&pageSize=100&fields=nextPageToken,files(id,name,ownedByMe)" +
+                (pageToken?.let { "&pageToken=" + URLEncoder.encode(it, "UTF-8") } ?: ""), null, null))
+            val files = page.optJSONArray("files") ?: org.json.JSONArray()
+            for (index in 0 until files.length()) {
+                val file = files.getJSONObject(index)
+                if (file.optBoolean("ownedByMe") && AccountDeletionPlan.isGeneratedProfileImage(uid, file.optString("name"))) ids += file.getString("id")
+            }
+            pageToken = page.optString("nextPageToken").takeIf { it.isNotBlank() }
+        } while (pageToken != null)
+        ids.forEach { id ->
+            check(FirebaseAuth.getInstance().currentUser?.uid == uid)
+            driveRequest(token, "PATCH", "https://www.googleapis.com/drive/v3/files/$id", "{\"trashed\":true}".toByteArray(Charsets.UTF_8), "application/json")
+        }
+    }
+
+    private fun requestAccessToken(activity: Activity, screen: String, accountEmail: String? = null): String {
         val request = AuthorizationRequest.builder()
             .setRequestedScopes(listOf(Scope(DRIVE_FILE_SCOPE)))
+            .apply { if (accountEmail != null) setAccount(android.accounts.Account(accountEmail, "com.google")) }
             .build()
         Log.d("DRIVE_AUTH", "DRIVE_AUTH pantalla=$screen solicitandoToken scope=drive.file")
         try {

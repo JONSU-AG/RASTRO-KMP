@@ -176,3 +176,31 @@ Kotlin debug/release y R8 compilan; 185 pruebas shared y 100 Android pasan. No s
 - [x] Contenedores mismos radio, bisel, dimensiones y separación: superficie del tema, trazo 2,5 dp interior y bisel tintado.
 - [x] compileDebugKotlin + 112 tests Android correctos; build/lesson-result-style-speed-validation.log.
 - [ ] Verificación visual/táctil en dispositivo; app no ejecutada.
+
+## 07/10/2026 — RASTRO Pro y preparación publicitaria
+
+Pro duplica XP/monedas de estudio y evita consumir vidas, sin alterar estrellas o racha. Máximo inicial 15 y regeneración 30 min; comprar vidas desde Monedas. Eliminada recarga al terminar lección; entrada bloqueada solo a cero y sin Pro, no interrupción del nivel en curso.
+Detalle y estado real: docs/monetizacion/README.md.
+
+## Validación 07/10/2026
+
+129 pruebas Android y 185 shared sin fallos; lintVitalRelease correcto. Dos pruebas de reglas Firestore en emulador correctas. git diff --check sin errores. No se ejecutó la app, no se generó bundle y no se desplegaron reglas/configuración.
+
+## 08/10/2026 — local y consumo
+
+Estado y validación específica en ../sincronizacion/CHECKLIST.md. Prueba física y ahorro real pendientes; no confundir compilación con validación entre dispositivos.
+
+
+## 08/10/2026 — Iconos, herramientas y tarjetas compactas
+
+- [x] Implementación existente reutilizada; cambios limitados al ámbito visual y accesos solicitados.
+- [x] Pruebas Android (153, cero fallos) y lintVitalRelease.
+- [ ] Revisión visual en teléfono/tablet, modo claro/oscuro y fuentes grandes: app no ejecutada.
+
+
+## 08/10/2026 — Refinamiento solicitado
+
+- [x] Cambios implementados y compilación de Kotlin incluida en tests.
+- [x] 155 tests Android; cero fallos/errores. Vectores XML válidos.
+- [ ] Revisión física en temas claro/oscuro, pantallas pequeñas y gestos: no se ejecutó la app.
+- [x] lintVitalRelease y compilar_app.bat (assembleDebug) correctos. App no instalada ni ejecutada.

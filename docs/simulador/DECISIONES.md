@@ -44,3 +44,23 @@ Estado y evidencias vigentes: ../../../CHECKLIST_GOOGLE_PLAY.md (desde Obras), .
 ## Auditoría 04/10: reserva y red
 
 Guardia de doble reserva antes de mutar estado; resultado válido solo mientras pantalla y UID sigan activos. Efecto de carga sin rankingConfig como propia key y con Reintentar; cancelar descarta respuestas obsoletas. Funciones actuales y la matriz de puntaje conservadas; el peso de Física Ingeniería se corrigió a 1.524826850 conforme al PDF oficial. Enlaces externos controlan ActivityNotFound/SecurityException sin crash.
+
+## 07/10/2026 — RASTRO Pro y preparación publicitaria
+
+Primer Simulacro gratuito; tres intentos por concesión Pro; intentos con monedas e ID único. Sesión guardada por cuenta/dispositivo en IO, retomada sin cobrar de nuevo. Ajuste de ancho del desplegable y cierre natural Terminar en la última Flashcard.
+Detalle y estado real: docs/monetizacion/README.md.
+
+## 08/10 — Ligas
+La geometría de Ligas depende del ancho del contenedor, no de la longitud del título. Mantener orden del catálogo y orden real del ranking.
+
+
+## 08/10/2026 — Cierre al iniciar examen y anuncios
+
+Corregido guardado de SavedExamSession activando el plugin Kotlin existente y usando serializador generado. Checkpoint con error no termina el proceso. Ver `docs/simulador/CIERRE_Y_ANUNCIOS_2026-10-08.md` para evidencia y límites.
+
+
+## 08/10/2026 — Iconos, revisión y regalos
+
+Revisión de resultados en popup con LazyColumn, X y filtros, en lugar de 80 tarjetas compuestas. Back permanece en Simulador; coste/confirmación de monedas y fin de actividad publicitario conectados. OOM en medición de texto documentado; prueba física pendiente.
+
+Reutilizar saldo, repositorios, Pro y avisos existentes. No crear una economía paralela ni activar cobros. Catálogos de lecciones y recurso original de fuego conservados.

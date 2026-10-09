@@ -65,6 +65,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.Surface
+import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.key
 import androidx.compose.runtime.DisposableEffect
@@ -80,6 +81,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
@@ -148,6 +150,22 @@ fun SimuladorScreen(
     var activeRankingConfig by remember { mutableStateOf<com.jonsuapps.rastro.model.RankingExamConfig?>(null) }
     var competitionMessage by remember { mutableStateOf<String?>(null) }
     var reserving by remember { mutableStateOf(false) }
+    var showCoinsDialog by remember { mutableStateOf(false) }
+    if(showCoinsDialog) com.jonsuapps.rastro.android.ui.components.CoinAndLivesDialog { showCoinsDialog = false }
+    val sessionUid = FirebaseAuth.getInstance().currentUser?.uid.orEmpty()
+    LaunchedEffect(sessionUid) {
+        withContext(Dispatchers.IO) { com.jonsuapps.rastro.android.data.ExamSessionStore.load(sessionUid) }?.let { saved ->
+            activeSimulatorTab = saved.tab; selectedArea = saved.area; examAttemptId = saved.attemptId
+            frozenQuestions = saved.questions; currentQuestionIndex = saved.index.coerceIn(0,saved.questions.lastIndex)
+            userAnswers.clear(); userAnswers.putAll(saved.answers); activeRankingConfig = saved.ranking; isExamRunning = true
+        }
+    }
+    LaunchedEffect(isExamRunning, currentQuestionIndex, userAnswers.toMap()) {
+        if(isExamRunning && frozenQuestions.isNotEmpty()) com.jonsuapps.rastro.android.data.ExamSessionStore.save(
+            com.jonsuapps.rastro.android.data.SavedExamSession(sessionUid,activeSimulatorTab,selectedArea,examAttemptId,
+                frozenQuestions,userAnswers.toMap(),currentQuestionIndex,activeRankingConfig))
+    }
+
     var rankingUsed by remember { mutableIntStateOf(0) }
     var rankingBonus by remember { mutableIntStateOf(0) }
     var usageReady by remember { mutableStateOf(false) }
@@ -227,6 +245,62 @@ fun SimuladorScreen(
     val rankingBankError = if (activeSimulatorTab == 4 && preparedQuestions.isEmpty())
         "El banco todavía no tiene 80 preguntas reales con peso conocido disponibles para este examen." else null
 
+    var showPayExam by remember { mutableStateOf(false) }
+    val wallet by com.jonsuapps.rastro.gamification.GamificationManager.state.collectAsState()
+    val economy by com.jonsuapps.rastro.monetization.EconomySettings.config.collectAsState()
+    val grant by com.jonsuapps.rastro.monetization.ProAccess.grant.collectAsState()
+    val entryKind = when (activeSimulatorTab) { 0 -> "SIMULACRO"; 4 -> "RANKING"; 1 -> "RAPIDO"; else -> "" }
+    val entryCost = com.jonsuapps.rastro.monetization.EconomyPolicy.cost(entryKind, wallet.economyAttempts, grant,
+        System.currentTimeMillis(), economy)
+    fun beginExam() {
+                        if (reserving || isExamRunning) return
+                        val snapshot = preparedQuestions.toList()
+                        if(snapshot.isEmpty()) return
+                        val attemptId = java.util.UUID.randomUUID().toString()
+                        val kind = when(activeSimulatorTab) { 0 -> "SIMULACRO"; 4 -> "RANKING"; 1 -> "RAPIDO"; else -> "" }
+                        if(kind.isNotBlank() && !com.jonsuapps.rastro.gamification.GamificationManager.reserveEconomyAttempt(attemptId,kind)) {
+                            showCoinsDialog = true; return
+                        }
+                        fun start() {
+                            frozenQuestions = snapshot
+                            userAnswers.clear(); currentQuestionIndex = 0
+                            examAttemptId = attemptId
+                            isExamRunning = true
+                            com.jonsuapps.rastro.android.data.MonetizationRepository.persistWallet()
+                            com.jonsuapps.rastro.android.data.ExamSessionStore.save(com.jonsuapps.rastro.android.data.SavedExamSession(
+                                sessionUid,activeSimulatorTab,selectedArea,attemptId,snapshot,emptyMap(),0,activeRankingConfig))
+                        }
+                        if (activeSimulatorTab == 4 && snapshot.isNotEmpty()) {
+                            val config = rankingConfig
+                            val reservingUid = FirebaseAuth.getInstance().currentUser?.uid
+                            reserving = true; competitionMessage = "Registrando intento…"
+                            RankingExamRepository.reserve(config, com.jonsuapps.rastro.gamification.GamificationManager.state.value.level, attemptId) { result ->
+                                if (!screenActive.get() || FirebaseAuth.getInstance().currentUser?.uid != reservingUid) {
+                                    if(FirebaseAuth.getInstance().currentUser?.uid == reservingUid) com.jonsuapps.rastro.gamification.GamificationManager.releaseUnstartedEconomyAttempt(attemptId)
+                                    return@reserve
+                                }
+                                reserving = false
+                                result.onSuccess { activeRankingConfig = config; competitionMessage = null; start() }
+                                    .onFailure {
+                                        com.jonsuapps.rastro.gamification.GamificationManager.releaseUnstartedEconomyAttempt(attemptId)
+                                        competitionMessage = it.localizedMessage
+                                    }
+                            }
+                        } else if (snapshot.isNotEmpty()) { activeRankingConfig = null; start() }
+    }
+    fun returnToSimulator() {
+        examResult = null; activeRankingConfig = null; userAnswers.clear(); currentQuestionIndex = 0
+        com.jonsuapps.rastro.android.data.AdsPlacementController.naturalEnd()
+    }
+    BackHandler(enabled = examResult != null || isExamRunning) {
+        if (examResult != null) returnToSimulator() else showFinishConfirmationDialog = true
+    }
+    if (showPayExam) com.jonsuapps.rastro.android.ui.components.RastroStickerDialog(
+        onDismissRequest = { showPayExam = false }, title = "Usar mis monedas",
+        message = "Este intento cuesta $entryCost monedas. Tienes ${wallet.coins} monedas de estudio. ¿Quieres comenzar?",
+        confirmText = "Pagar $entryCost monedas", cancelText = "Cancelar",
+        onConfirm = { showPayExam = false; beginExam() })
+
     if (showFinishConfirmationDialog) {
         val answeredCount = examQuestions.count { it.id in userAnswers }
         com.jonsuapps.rastro.android.ui.components.RastroStickerDialog(
@@ -241,6 +315,7 @@ fun SimuladorScreen(
                 showFinishConfirmationDialog = false
                 frozenQuestions = examQuestions.toList()
                 isExamRunning = false
+                com.jonsuapps.rastro.android.data.ExamSessionStore.clear(sessionUid)
                 examResult = SimuladorRepository.calculateScore(
                     questions = examQuestions,
                     userAnswers = examQuestions.mapIndexedNotNull { index, question ->
@@ -301,12 +376,7 @@ fun SimuladorScreen(
                     isRanking = activeRankingConfig != null,
                     area = activeRankingConfig?.area ?: selectedArea,
                     theme = theme,
-                    onRetry = {
-                        examResult = null
-                        activeRankingConfig = null
-                        userAnswers.clear()
-                        currentQuestionIndex = 0
-                    }
+                    onRetry = { returnToSimulator() }
                 )
                 }
             }
@@ -355,6 +425,7 @@ fun SimuladorScreen(
                     orderOptions = orderOptions,
                     theme = theme,
                     canStartOfficial = preparedQuestions.isNotEmpty() && !reserving,
+                    entryCost = entryCost,
                     rankingConfig = rankingConfig,
                     rankingUsage = rankingConfig.remaining(rankingUsed, rankingBonus),
                     rankingCanStart = usageReady && !reserving && rankingConfig.canAttempt(
@@ -381,27 +452,8 @@ fun SimuladorScreen(
                     },
                     onShuffleQuestions = { questionShuffleSeed++ },
                     onCreateQuestion = { showCreateQuestionDialog = true },
-                    onStartExam = startExam@{
-                        if (reserving || isExamRunning) return@startExam
-                        val snapshot = preparedQuestions.toList()
-                        val attemptId = java.util.UUID.randomUUID().toString()
-                        fun start() {
-                            frozenQuestions = snapshot
-                            userAnswers.clear(); currentQuestionIndex = 0
-                            examAttemptId = attemptId
-                            isExamRunning = true
-                        }
-                        if (activeSimulatorTab == 4 && snapshot.isNotEmpty()) {
-                            val config = rankingConfig
-                            val reservingUid = FirebaseAuth.getInstance().currentUser?.uid
-                            reserving = true; competitionMessage = "Registrando intento…"
-                            RankingExamRepository.reserve(config, com.jonsuapps.rastro.gamification.GamificationManager.state.value.level, attemptId) { result ->
-                                if (!screenActive.get() || FirebaseAuth.getInstance().currentUser?.uid != reservingUid) return@reserve
-                                reserving = false
-                                result.onSuccess { activeRankingConfig = config; competitionMessage = null; start() }
-                                    .onFailure { competitionMessage = it.localizedMessage }
-                            }
-                        } else if (snapshot.isNotEmpty()) { activeRankingConfig = null; start() }
+                    onStartExam = {
+                        if (entryCost > wallet.coins) showCoinsDialog = true else if (entryCost > 0) showPayExam = true else beginExam()
                     }
                 )
             }
@@ -422,6 +474,7 @@ fun ExamSetupView(
     orderOptions: List<String>,
     theme: com.jonsuapps.rastro.theme.RastroPalette,
     canStartOfficial: Boolean,
+    entryCost: Int,
     rankingConfig: com.jonsuapps.rastro.model.RankingExamConfig,
     rankingUsage: Int?,
     rankingCanStart: Boolean,
@@ -479,7 +532,7 @@ fun ExamSetupView(
                     }
                     Sticker3dButton(onClick = onStartExam, enabled = canStartOfficial && rankingCanStart,
                         modifier = Modifier.fillMaxWidth(), containerColor = theme.accent, bottomBevelColor = theme.accentBevel) {
-                        Text("COMENZAR EXAMEN RANKING", color = contrastingText(theme.accent), fontWeight = FontWeight.Black)
+                        Text(if (entryCost == 0) "Comenzar · Gratis" else "Pagar $entryCost monedas y comenzar", color = contrastingText(theme.accent), fontWeight = FontWeight.Black)
                     }
                     TextButton(onClick = onOpenLeagues) { Text("Ver mi liga y clasificación", color = theme.accentText) }
                 }
@@ -648,7 +701,7 @@ fun ExamSetupView(
                             Icon(Icons.Rounded.PlayArrow, contentDescription = null, tint = Color.White, modifier = Modifier.size(20.dp))
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
-                                text = "Iniciar Simulacro Oficial (80 Preguntas)",
+                                text = if (entryCost == 0) "Iniciar Simulacro · Gratis" else "Pagar $entryCost monedas y comenzar",
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Black,
                                 color = Color.White
@@ -679,7 +732,8 @@ fun ExamSetupView(
                 onAuthorChange = onAuthorChange,
                 onShuffleQuestions = onShuffleQuestions,
                 onCreateQuestion = onCreateQuestion,
-                onStartExam = onStartExam
+                onStartExam = onStartExam,
+                entryCost = entryCost
             )
         }
 
@@ -719,7 +773,8 @@ private fun QuickExamSetupCard(
     onAuthorChange: (String) -> Unit,
     onShuffleQuestions: () -> Unit,
     onCreateQuestion: () -> Unit,
-    onStartExam: () -> Unit
+    onStartExam: () -> Unit,
+    entryCost: Int
 ) {
     val actualCount = if (questionCount < 0) availableCount else minOf(questionCount, availableCount)
     Sticker3dCard(
@@ -844,7 +899,7 @@ private fun QuickExamSetupCard(
             ) {
                 Icon(Icons.Rounded.PlayArrow, null, tint = Color.White)
                 Spacer(Modifier.width(6.dp))
-                Text("Iniciar examen rápido ($actualCount)", fontWeight = FontWeight.Black, color = Color.White)
+                Text(if (entryCost == 0) "Iniciar · $actualCount preguntas · Gratis" else "Pagar $entryCost monedas · $actualCount preguntas", fontWeight = FontWeight.Black, color = Color.White)
             }
         }
     }
@@ -860,17 +915,20 @@ private fun SimulatorFilterDropdown(
 ) {
     var expanded by remember { mutableStateOf(false) }
     val selectedLabel = options.firstOrNull { it.first == selected }?.second ?: selected
-    Box(modifier) {
+    var filterWidth by remember { mutableIntStateOf(0) }
+    val density = androidx.compose.ui.platform.LocalDensity.current
+    Box(modifier.then(Modifier.onSizeChanged { filterWidth = it.width })) {
         OutlinedButton(
             onClick = { expanded = true },
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(13.dp),
             contentPadding = PaddingValues(horizontal = 10.dp, vertical = 8.dp)
         ) {
-            Text(selectedLabel, maxLines = 1, fontSize = 11.sp, color = theme.textPrimary, modifier = Modifier.weight(1f))
+            Text(selectedLabel, maxLines = 2, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis, fontSize = 12.sp, color = theme.textPrimary, modifier = Modifier.weight(1f))
             Icon(Icons.Rounded.ExpandMore, contentDescription = "Mostrar opciones", tint = theme.textSecondary, modifier = Modifier.size(17.dp))
         }
-        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false },
+            modifier = Modifier.width(with(density) { filterWidth.toDp() }).heightIn(max = 320.dp)) {
             options.forEach { (value, label) ->
                 DropdownMenuItem(
                     text = { Text(label, fontSize = 13.sp) },
@@ -1171,8 +1229,12 @@ private fun FlashcardsQuickDeck(
                         Text("Anterior")
                     }
                     Text("${currentIndex + 1} / ${filtered.size}", color = theme.textSecondary, fontSize = 11.sp)
-                    TextButton(onClick = { currentIndex = (currentIndex + 1).coerceAtMost(filtered.lastIndex); showingAnswer = false },
-                        enabled = currentIndex < filtered.lastIndex) { Text("Siguiente") }
+                    TextButton(onClick = {
+                        if(currentIndex == filtered.lastIndex) {
+                            showStudyDialog = false
+                            com.jonsuapps.rastro.android.data.AdsPlacementController.naturalEnd()
+                        } else { currentIndex = (currentIndex + 1).coerceAtMost(filtered.lastIndex); showingAnswer = false }
+                    }) { Text(if(currentIndex == filtered.lastIndex) "Terminar" else "Siguiente") }
                 }
 
                 }
@@ -1900,19 +1962,12 @@ fun ExamResultView(
 
         if (allowReview) {
             var showReview by remember { mutableStateOf(false) }
-            Sticker3dButton(onClick = { showReview = !showReview }, containerColor = theme.surfaceAccent,
+            Sticker3dButton(onClick = { showReview = true }, containerColor = theme.surfaceAccent,
                 bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder, modifier = Modifier.fillMaxWidth()) {
-                Text(if (showReview) "Ocultar revisión" else "Revisar mis respuestas", color = theme.textPrimary)
+                Text("Revisar mis respuestas", color = theme.textPrimary)
             }
-            if (showReview) result.details.forEachIndexed { index, detail ->
-                QuestionReviewCard(com.jonsuapps.rastro.android.data.FailedQuestion(
-                    id = "review:$index", subject = detail.asignatura, subtema = "Pregunta ${index + 1}",
-                    question = detail.question, options = detail.options, correctAnswerIndex = detail.correctChoice,
-                    explanation = detail.explanation, selectedAnswerIndex = detail.userChoice,
-                    imageUrl = reviewQuestions.getOrNull(index)?.imageUrl,
-                    origin = if (isRanking) "Ranking" else "Simulacro"), theme,
-                    status = when { detail.isBlank -> "Sin responder"; detail.isCorrect -> "Correcta"; else -> "Incorrecta" })
-            }
+            if (showReview) ExamReviewPopup(result, reviewQuestions, isRanking, theme) { showReview = false }
+
         }
 
         Sticker3dButton(
@@ -1923,7 +1978,44 @@ fun ExamResultView(
             containerColor = theme.accent, bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder,
             shape = RastroShapes.Pill
         ) {
-            Text("Realizar Otro Simulacro", color = contrastingText(theme.accent), fontWeight = FontWeight.Bold)
+            Text("Volver al Simulador", color = contrastingText(theme.accent), fontWeight = FontWeight.Bold)
+        }
+    }
+}
+
+
+@Composable
+private fun ExamReviewPopup(result: ExamEvaluationResult,
+    questions: List<com.jonsuapps.rastro.model.ExamQuestion>, isRanking: Boolean,
+    theme: com.jonsuapps.rastro.theme.RastroPalette, onDismiss: () -> Unit) {
+    var onlyErrors by remember { mutableStateOf(false) }
+    val rows = remember(result, onlyErrors) { result.details.withIndex().filter { !onlyErrors || !it.value.isCorrect } }
+    Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false)) {
+        Sticker3dCard(Modifier.widthIn(max = 720.dp).fillMaxWidth(.94f).fillMaxHeight(.88f),
+            containerColor = theme.surface, bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder) {
+            Column(Modifier.fillMaxSize().padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text("Mis respuestas", Modifier.weight(1f), color = theme.textPrimary, fontWeight = FontWeight.Black, fontSize = 21.sp)
+                    IconButton(onClick = onDismiss) { Icon(Icons.Rounded.Close, "Cerrar revisión", tint = theme.textPrimary) }
+                }
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    FilterChip(selected = !onlyErrors, onClick = { onlyErrors = false }, label = { Text("Todas") })
+                    FilterChip(selected = onlyErrors, onClick = { onlyErrors = true }, label = { Text("Errores y omitidas") })
+                }
+                if (rows.isEmpty()) Text("No hay errores ni preguntas omitidas.", color = theme.textPrimary)
+                LazyColumn(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    items(rows, key = { it.index }) { row ->
+                        val index = row.index; val detail = row.value
+                        QuestionReviewCard(com.jonsuapps.rastro.android.data.FailedQuestion(
+                            id = "review:$index", subject = detail.asignatura, subtema = "Pregunta ${index + 1}",
+                            question = detail.question, options = detail.options, correctAnswerIndex = detail.correctChoice,
+                            explanation = detail.explanation, selectedAnswerIndex = detail.userChoice,
+                            imageUrl = questions.getOrNull(index)?.imageUrl,
+                            origin = if (isRanking) "Ranking" else "Simulacro"), theme,
+                            status = when { detail.isBlank -> "Sin responder"; detail.isCorrect -> "Correcta"; else -> "Incorrecta" })
+                    }
+                }
+            }
         }
     }
 }

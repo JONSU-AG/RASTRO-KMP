@@ -147,6 +147,7 @@ private fun LoadedLessonEngineScreen(
     var topicLevelUp by remember(lessonId) { mutableStateOf(false) }
     var pendingTopicXp by remember(lessonId) { mutableIntStateOf(0) }
     val hearts by GamificationManager.hearts.collectAsState()
+    val proActive by com.jonsuapps.rastro.monetization.ProAccess.isActive.collectAsState()
     val currentUser by UserManager.currentUser.collectAsState()
     val isAdmin = remember(currentUser.email) { AdminConfig.isAdmin(currentUser.email) }
     var isAutoModeEnabled by remember(lessonId) { mutableStateOf(false) }
@@ -189,8 +190,7 @@ private fun LoadedLessonEngineScreen(
     val rewardAttemptId = androidx.compose.runtime.saveable.rememberSaveable(lessonId) { java.util.UUID.randomUUID().toString() }
     var rewardDelivered by remember(lessonId) { mutableStateOf(false) }
     val fullLessonXp = 25 + correctAnswers * 5
-    val lessonReward = com.jonsuapps.rastro.gamification.LessonRewardPolicy.quote(
-        GamificationManager.state.value.completedLessons[lessonId], fullLessonXp, earnedStars)
+    val lessonReward = remember(lessonId, fullLessonXp, earnedStars, proActive) { GamificationManager.quoteLessonReward(lessonId, fullLessonXp, earnedStars) }
     val earnedXp = lessonReward.xp
     var isLessonCompleted by remember(lessonId) { mutableStateOf(false) }
     var isRedemptionPhase by remember(lessonId) { mutableStateOf(false) }
@@ -372,7 +372,7 @@ private fun LoadedLessonEngineScreen(
                 )
                 Spacer(modifier = Modifier.width(4.dp))
                 Text(
-                    text = "$hearts",
+                    text = if (proActive) "∞" else "$hearts",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
                     color = theme.textPrimary
@@ -429,6 +429,7 @@ private fun LoadedLessonEngineScreen(
                                 com.jonsuapps.rastro.android.ui.components.XpDelivery.show(awardedXp)
                                 if (leveledUp) audio.play(LearningSound.LEVELUP, "lesson-level:${lesson.id}")
                                 else audio.play(LearningSound.OPCIONES)
+                                com.jonsuapps.rastro.android.data.AdsPlacementController.naturalEnd()
                                 onFinishLesson()
                             }
                         }

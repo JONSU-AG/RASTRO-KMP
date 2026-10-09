@@ -36,7 +36,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.jonsuapps.rastro.theme.RastroPalette
 
-enum class MoreAction { SETTINGS, WIDGETS, PIZARRA, LOGIN, LOGOUT, ADMIN, LOKI_LAB, TOGGLE_ADMIN_VIEW }
+enum class MoreAction { SETTINGS, PRO, WIDGETS, PIZARRA, LOGIN, LOGOUT, ADMIN, LOKI_LAB, TOGGLE_ADMIN_VIEW }
 
 @Composable
 fun MoreActionsDialog(
@@ -52,6 +52,7 @@ fun MoreActionsDialog(
 
     // Común para todos: Configuración, Widgets y Pizarra
     actions.add(Triple(MoreAction.SETTINGS, Icons.Rounded.Settings, "Configuración"))
+    actions.add(Triple(MoreAction.PRO, Icons.Rounded.AutoAwesome, "RASTRO Pro"))
     actions.add(Triple(MoreAction.WIDGETS, Icons.Rounded.Widgets, "Widgets"))
     actions.add(Triple(MoreAction.PIZARRA, Icons.Rounded.Gesture, "Pizarra"))
 
@@ -121,7 +122,7 @@ fun MoreActionsDialog(
                         MoreAction.TOGGLE_ADMIN_VIEW -> Color(0xFF10B981) // Color semántico de alternancia
                         else -> colors.accent
                     }
-                    MoreActionRow(label, icon, accent, colors, action == MoreAction.ADMIN || action == MoreAction.TOGGLE_ADMIN_VIEW || index == actions.lastIndex) {
+                    MoreActionRow(label, icon, accent, colors, action == MoreAction.ADMIN || action == MoreAction.TOGGLE_ADMIN_VIEW || index == actions.lastIndex, action == MoreAction.PRO) {
                         onDismiss()
                         onAction(action)
                     }
@@ -138,6 +139,7 @@ private fun MoreActionRow(
     accent: Color,
     colors: RastroPalette,
     emphasized: Boolean,
+    pro: Boolean,
     onClick: () -> Unit
 ) {
     val shape = RoundedCornerShape(14.dp)
@@ -175,7 +177,10 @@ private fun MoreActionRow(
                         .background(accent.copy(alpha = 0.18f)),
                     contentAlignment = Alignment.Center
                 ) {
-                    Icon(icon, null, tint = accent, modifier = Modifier.size(16.dp))
+                    if (pro) androidx.compose.foundation.Image(
+                        painter = androidx.compose.ui.res.painterResource(com.jonsuapps.rastro.R.drawable.ic_pro_crown_sticker),
+                        contentDescription = null, modifier = Modifier.size(26.dp))
+                    else Icon(icon, null, tint = accent, modifier = Modifier.size(16.dp))
                 }
                 Spacer(Modifier.width(10.dp))
                 Text(

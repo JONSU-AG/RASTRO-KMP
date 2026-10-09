@@ -74,3 +74,37 @@ Estado y evidencias vigentes: ../../../CHECKLIST_GOOGLE_PLAY.md (desde Obras), .
 ## 04/10 — Cierre local de auditoría
 
 Kotlin debug/release y R8 compilan; 185 pruebas shared y 100 Android pasan. No se ejecutó la app. Crash Completar identificado en Logcat y parser compartido corregido; IO/caché, navegación, Ranking y Pizarra corregidos en su ámbito. Estado físico/externo separado en CHECKLIST_GOOGLE_PLAY.md; no se equipara compilación a prueba en dispositivo. Los complementos académicos conservan incidencias **heredadas** del banco: detalle en docs/aprender/VALIDACION_CATALOGO_2027.md. No commit/push/cambio de versión.
+
+## 07/10/2026 — RASTRO Pro y preparación publicitaria
+
+Primer Simulacro gratuito; tres intentos por concesión Pro; intentos con monedas e ID único. Sesión guardada por cuenta/dispositivo en IO, retomada sin cobrar de nuevo. Ajuste de ancho del desplegable y cierre natural Terminar en la última Flashcard.
+Detalle y estado real: docs/monetizacion/README.md.
+
+## Validación 07/10/2026
+
+129 pruebas Android y 185 shared sin fallos; lintVitalRelease correcto. Dos pruebas de reglas Firestore en emulador correctas. git diff --check sin errores. No se ejecutó la app, no se generó bundle y no se desplegaron reglas/configuración.
+
+## 08/10 — Ligas
+- [x] Camino con tarjetas uniformes/centradas y podio uniforme; compila.
+- [ ] Matriz física de ancho/fuentes grandes pendiente.
+
+
+## 08/10/2026 — Sesiones y publicidad
+
+- [x] Causa del cierre comprobada en logs: falta serializador SavedExamSession.
+- [x] Plugin existente activado y serializador explícito generado en debug/release.
+- [x] 159 tests, cero fallos; cuatro pruebas nuevas de sesiones de los tres exámenes.
+- [x] lintVitalRelease y assembleDebug correctos.
+- [x] Introducción previa eliminada; agradecimiento/Pro solo tras anuncio mostrado y cerrado.
+- [x] Revisados puntos de anuncios: preguntas/inicio de examen sin publicidad; Flashcards y rewarded conservados.
+- [ ] Prueba física posterior de iniciar/responder/restaurar los tres modos y cierre de anuncio. No se ejecutó app.
+
+
+## 08/10/2026 — Iconos, revisión y regalos
+
+Revisión de resultados en popup con LazyColumn, X y filtros, en lugar de 80 tarjetas compuestas. Back permanece en Simulador; coste/confirmación de monedas y fin de actividad publicitario conectados. OOM en medición de texto documentado; prueba física pendiente.
+
+- [x] Compilación, 348 pruebas Android/shared y lintVitalRelease sin errores.
+- [x] Ocho pruebas de reglas Firestore sin fallos; reglas remotas coinciden.
+- [ ] Recorrido físico y verificación visual en teléfono: app no ejecutada.
+- [x] compilar_app.bat / assembleDebug final correcto; no se lanzó ni instaló la app.

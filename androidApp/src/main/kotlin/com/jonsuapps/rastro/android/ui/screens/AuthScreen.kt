@@ -482,22 +482,12 @@ fun AuthScreen(
             }
         }
 
-        // Modo Invitado con sesión anónima de Firebase.
+        // Invitado local: no crea una identidad ni escribe un perfil en Firebase.
         TextButton(onClick = {
             if (isLoading) return@TextButton
-            isLoading = true
-            scope.launch {
-                try {
-                    val result = withTimeout(30_000) { FirebaseAuth.getInstance().signInAnonymously().awaitResult() }
-                    val user = result.user ?: error("No se pudo iniciar el modo invitado.")
-                    UserManager.updateUserFromFirebase(user.uid, "Invitado", null, null, isAnonymous = true)
-                    onContinueAsGuest()
-                } catch (cancelled: CancellationException) {
-                    if (cancelled is TimeoutCancellationException) errorMessage = "La conexión tardó demasiado. Inténtalo de nuevo."
-                    else throw cancelled
-                } catch (_: Exception) { errorMessage = "No se pudo iniciar el modo invitado. Comprueba tu conexión."
-                } finally { isLoading = false }
-            }
+            FirebaseAuth.getInstance().signOut()
+            UserManager.logout()
+            onContinueAsGuest()
         }, enabled = !isLoading) {
             Text(
                 text = "Explorar como Invitado",

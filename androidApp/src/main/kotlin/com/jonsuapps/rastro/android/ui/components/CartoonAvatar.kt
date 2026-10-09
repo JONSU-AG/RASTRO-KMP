@@ -129,7 +129,8 @@ fun CachedRemoteImage(
     modifier: Modifier = Modifier,
     contentScale: ContentScale = ContentScale.Crop,
     contentDescription: String = "Imagen remota",
-    placeholderColor: Color = Color(0xFF334155)
+    placeholderColor: Color = Color(0xFF334155),
+    alignment: Alignment = Alignment.Center
 ) {
     val context = LocalContext.current
     val normalizedUrl = url?.trim().orEmpty()
@@ -150,7 +151,8 @@ fun CachedRemoteImage(
             bitmap = bitmap,
             contentDescription = contentDescription,
             modifier = modifier,
-            contentScale = contentScale
+            contentScale = contentScale,
+            alignment = alignment
         )
     } else {
         Box(

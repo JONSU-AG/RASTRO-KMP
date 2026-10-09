@@ -31,11 +31,18 @@ object RastroLogoManager {
     private val _currentMood = MutableStateFlow(RastroLogoMood.BASE)
     val currentMood: StateFlow<RastroLogoMood> = _currentMood.asStateFlow()
 
-    private val _currentDrawableRes = MutableStateFlow(R.drawable.astro_logo)
+    private val _currentDrawableRes = MutableStateFlow(R.drawable.rastro_logo_base)
     val currentDrawableRes: StateFlow<Int> = _currentDrawableRes.asStateFlow()
 
     private var appContext: Context? = null
     private var prefs: SharedPreferences? = null
+    private val launcherGate = LauncherIconUpdateGate()
+
+    /** Disabling a launcher alias can finish its task even with DONT_KILL_APP. */
+    fun setActivityVisible(visible: Boolean) {
+        val pending = launcherGate.visibilityChanged(visible) ?: return
+        appContext?.let { updateLauncherIcon(it, pending) }
+    }
     private const val PREF_KEY_LAST_ACTIVE_MILLIS = "rastro_last_active_millis"
 
     /**
@@ -140,10 +147,10 @@ object RastroLogoManager {
     fun getDrawableForMood(mood: RastroLogoMood): Int {
         // En primer lugar intentamos usar los nuevos recursos rastro_logo_* si están disponibles
         return when (mood) {
-            RastroLogoMood.BASE -> resolveDrawableOrFallback("rastro_logo_base", R.drawable.astro_logo)
-            RastroLogoMood.ENOJO -> resolveDrawableOrFallback("rastro_logo_enojo", R.drawable.astro_logo)
-            RastroLogoMood.FURIA -> resolveDrawableOrFallback("rastro_logo_furia", R.drawable.astro_logo)
-            RastroLogoMood.TRISTE -> resolveDrawableOrFallback("rastro_logo_triste", R.drawable.astro_logo)
+            RastroLogoMood.BASE -> resolveDrawableOrFallback("rastro_logo_base", R.drawable.rastro_logo_base)
+            RastroLogoMood.ENOJO -> resolveDrawableOrFallback("rastro_logo_enojo", R.drawable.rastro_logo_base)
+            RastroLogoMood.FURIA -> resolveDrawableOrFallback("rastro_logo_furia", R.drawable.rastro_logo_base)
+            RastroLogoMood.TRISTE -> resolveDrawableOrFallback("rastro_logo_triste", R.drawable.rastro_logo_base)
         }
     }
 
@@ -161,6 +168,7 @@ object RastroLogoManager {
      * Habilita primero el alias objetivo para garantizar que la app nunca desaparezca del cajón/escritorio.
      */
     fun updateLauncherIcon(context: Context, mood: RastroLogoMood) {
+        if (launcherGate.request(mood) == null) return
         try {
             val pm = context.packageManager
             val packageName = context.packageName

@@ -39,6 +39,12 @@ fun ExamCountdownSettingsDialog(theme: RastroPalette, onDismiss: () -> Unit, onS
     var custom by remember { mutableStateOf(initialDate.isNotBlank() && UnsaExamDates.options.none { it.date == initialDate }) }
     var preliminary by remember { mutableStateOf(UnsaExamDates.options.any { it.date == initialDate && it.preliminary }) }
     var menu by remember { mutableStateOf(false) }
+    val inputColors = OutlinedTextFieldDefaults.colors(
+        focusedTextColor = theme.textPrimary, unfocusedTextColor = theme.textPrimary,
+        focusedLabelColor = theme.textPrimary, unfocusedLabelColor = theme.textSecondary,
+        focusedContainerColor = theme.surface, unfocusedContainerColor = theme.surface,
+        focusedBorderColor = theme.accent, unfocusedBorderColor = theme.strokeBorder,
+        cursorColor = theme.textPrimary)
     val picker = rememberDatePickerState(initialSelectedDateMillis = runCatching { dateFormat.parse(initialDate)?.time }.getOrNull())
     LaunchedEffect(picker.selectedDateMillis, custom) {
         if (custom) date = picker.selectedDateMillis?.let { dateFormat.format(Date(it)) }.orEmpty()
@@ -78,16 +84,16 @@ fun ExamCountdownSettingsDialog(theme: RastroPalette, onDismiss: () -> Unit, onS
                                 containerColor = theme.surfaceAccent, bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder) {
                                 Text("Elegir evaluación UNSA", color = theme.textPrimary, fontWeight = FontWeight.Bold)
                             }
-                            DropdownMenu(expanded = menu, onDismissRequest = { menu = false }, modifier = Modifier.heightIn(max = 340.dp)) {
+                            DropdownMenu(expanded = menu, onDismissRequest = { menu = false }, modifier = Modifier.heightIn(max = 340.dp), containerColor = theme.surface) {
                                 UnsaExamDates.options.filter { it.preliminary == preliminary }.forEach { option ->
                                     DropdownMenuItem(text = { Column {
-                                        Text(option.title, fontWeight = FontWeight.Bold)
-                                        Text(option.date.split('-').reversed().joinToString("/"), fontSize = 12.sp)
+                                        Text(option.title, fontWeight = FontWeight.Bold, color = theme.textPrimary)
+                                        Text(option.date.split('-').reversed().joinToString("/"), fontSize = 12.sp, color = theme.textSecondary)
                                     } }, onClick = { name = option.title; date = option.date; menu = false })
                                 }
                             }
                         }
-                        Text("Fechas del cronograma 2026–2027 proporcionado para RASTRO. Filiales: Mollendo, Camaná y El Pedregal.",
+                        Text("Cronograma oficial UNSA 2027, consultado el 08/10/2026. Filiales: Mollendo, Camaná y El Pedregal.",
                             color = theme.textSecondary, fontSize = 11.sp)
                     } else {
                         BoxWithConstraints(Modifier.fillMaxWidth()) {
@@ -104,11 +110,11 @@ fun ExamCountdownSettingsDialog(theme: RastroPalette, onDismiss: () -> Unit, onS
                         }
                     }
                     Text(if (date.isBlank()) "Selecciona una fecha" else "Fecha elegida: ${date.split('-').reversed().joinToString("/")}",
-                        color = theme.accent, fontWeight = FontWeight.Bold)
+                        color = theme.textPrimary, fontWeight = FontWeight.Bold)
                     OutlinedTextField(value = name, onValueChange = { name = it.take(80) }, modifier = Modifier.fillMaxWidth(),
-                        label = { Text("Nombre del examen") }, singleLine = true)
+                        label = { Text("Nombre del examen") }, colors = inputColors, singleLine = true)
                     OutlinedTextField(value = career, onValueChange = { career = it.take(80) }, modifier = Modifier.fillMaxWidth(),
-                        label = { Text("Carrera (opcional)") }, singleLine = true)
+                        label = { Text("Carrera (opcional)") }, colors = inputColors, singleLine = true)
                 }
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End, verticalAlignment = Alignment.CenterVertically) {
                     TextButton(onClick = onDismiss) { Text("Cancelar", color = theme.textSecondary) }

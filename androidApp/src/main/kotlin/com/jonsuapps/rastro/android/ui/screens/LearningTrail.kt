@@ -53,8 +53,8 @@ import com.jonsuapps.rastro.theme.CartoonFinish
 import com.jonsuapps.rastro.theme.ThemeManager
 
 @Composable
-internal fun CourseIcon(subjectId: String, modifier: Modifier = Modifier) {
-    val drawable = when (subjectId) {
+internal fun CourseIcon(subjectId: String, modifier: Modifier = Modifier, sticker: Boolean = false) {
+    val drawable = if (sticker) subjectStickerDrawable(subjectId) else when (subjectId) {
         "biologia" -> R.drawable.ic_course_biologia
         "fisica" -> R.drawable.ic_course_fisica
         "quimica" -> R.drawable.ic_course_quimica

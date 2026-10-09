@@ -41,11 +41,12 @@ internal object AppFeedbackRepository {
         if (cursor != null) query = query.startAfter(cursor)
         val documents = query.get(Source.SERVER).await().documents
         val visible = documents.take(20)
-        return AppFeedbackPage(visible.map { document -> AppFeedback(
+        return AppFeedbackPage(visible.filter { it.getBoolean("deleted") != true }.map { document -> AppFeedback(
             document.id,document.getString("kind").orEmpty(),document.getString("message").orEmpty(),
             document.getString("reporterName") ?: "Estudiante",document.getTimestamp("createdAt")?.toDate()?.time ?: 0L,
             document.getBoolean("resolved") == true
         ) },visible.lastOrNull(),documents.size > 20)
     }
     suspend fun resolve(id: String) { reports.document(id).update("resolved",true).await() }
+    suspend fun delete(id: String) { reports.document(id).delete().await() }
 }

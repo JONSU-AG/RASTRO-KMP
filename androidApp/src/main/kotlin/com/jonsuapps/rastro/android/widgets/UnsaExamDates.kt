@@ -1,8 +1,11 @@
 package com.jonsuapps.rastro.android.widgets
 
-/** Dates supplied by the user, not automatically maintained by an UNSA service. */
+/** Snapshot verified against https://admision.unsa.edu.pe/cronograma-de-admision-2027/ on 2026-10-08. */
 internal data class ExamDateOption(val id: String, val title: String, val date: String, val preliminary: Boolean = false)
 internal object UnsaExamDates {
+    fun nearestKnowledgeExam(today: String): ExamDateOption? = options
+        .filter { !it.preliminary && it.title.contains("Conocimientos") && it.date >= today }
+        .minByOrNull { it.date }
     val options = listOf(
         ExamDateOption("quintos", "CEPRUNSA Ciclo Quintos · Conocimientos", "2026-11-01"),
         ExamDateOption("quintos-previa", "CEPRUNSA Ciclo Quintos · Previa", "2026-10-18", true),

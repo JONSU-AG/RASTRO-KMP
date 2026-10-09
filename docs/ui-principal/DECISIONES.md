@@ -76,3 +76,53 @@ La migración de racha personal es versionada/idempotente y recupera únicamente
 
 ## 04/10/2026 — historial y valor por defecto
 Limpiar se limita a failed_question; errorsClearedAt sincroniza el corte y evita resurrección de datos cacheados. Transacciones revalidan fecha/tipo antes de eliminar para no borrar fallos nuevos concurrentes. Pausa en el mismo repositorio, errorSavingPaused y preferencias por UID. Solo dueño accede a controles. Fondo académico activo si aún no hay preferencia; no sobrescribir una elección explícita de desactivarlo.
+
+## 08/10/2026 — Inicio, invitados y herramientas
+
+Ámbito: acceso invitado a Perfil, Home, logo general/notificación, contador existente, tabla periódica, vista usuario Admin para probar anuncios y caducidad de Mis errores. No catálogos de lecciones, temario, firmas/versionado, publicaciones ni despliegues.
+
+- Perfil propio: la ruta completa deriva a Auth para invitado/anónimo sin componer UserProfileScreen; el botón superior ya lo hacía. No se crea cuenta/perfil de invitado.
+- Logo general de aplicación (incluidos diálogos Android que leen application.icon) y recordatorios grandes usan rastro_logo_base. Estado inicial/fallback del gestor de logo usa el mismo recurso. Iconos launcher emocionales conservados. Cachés de Android/branding remoto Google no son comprobación visual automática.
+- Inicio: pista discreta y pulsable para personalizar colores, contador amplio antes de ruta de preparación; accesos parejos Tabla periódica y Ligas (liga real de progress.level). Reutiliza modal global de tabla, Ligas y preferencias del widget.
+- Contador sin fecha elegida: próximo examen de Conocimientos, incluyendo hoy; excluye Previa y Aptitudes. Una fecha personalizada nunca se reemplaza. Refresco local cada minuto mientras Home está compuesto; sin red. Si se agota el cronograma, pide configurar.
+- Tabla: 118 números únicos, nombres en español, propiedades de snapshot PubChem; se conservan tips existentes. Vista tradicional por grupos/períodos con dos ejes de desplazamiento y filas f separadas; lista buscable alternativa. Campos no disponibles quedan vacíos/indicados, sin inventar valencias. Detalle acotado con scroll interno para conservar espacio de tabla.
+
+Fuentes: https://admision.unsa.edu.pe/cronograma-de-admision-2027/ y https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/CSV (consultadas 08/10/2026). PubChem AtomicMass no equivale necesariamente a peso atómico estándar: para elementos sin isótopos estables puede representar masa de referencia. Valores transuránicos pueden ser estimados; no presentarlos como mediciones experimentales garantizadas.
+
+Validación: 149 pruebas Android, cero fallos/errores/omitidas; lintVitalRelease correcto. compilar_app.bat/assembleDebug correcto. Sin ejecutar APK ni cambiar versión/crear AAB/publicar. Matriz visual física pendiente.
+
+## 08/10 — Acabado y apertura inmediata
+Diálogos independientes nunca dentro de un item lazy: su apertura depende del estado, no de la visibilidad del elemento. Tema de tres controles sobre la arquitectura existente; cuarto campo persistido conserva compatibilidad. Contraste automático para textos, pigmentos opacos de vectores para ilustraciones Home. Zoom cambia geometría real de tabla con límites 60–225%, sin modificar datos. No reorganizar progreso por cambios visuales.
+
+
+## 08/10/2026 — Iconos, herramientas y tarjetas compactas
+
+Reutilizar FavoritesRepository para fórmulas y UserManager.savedMnemotecniaIds para mnemotecnias; no crear otra persistencia ni nuevas escrituras Firestore. La antigua ruta Flashcards muestra Simulador en su pestaña 3; Formulario contiene solo Fórmulas y Mnemotecnias, sin cargar otra vez el banco oficial. El banco del Simulador es un superconjunto del anterior: oficiales, predeterminadas y comunidad; ningún contenido borrado.
+
+
+## 08/10/2026 — Refinamiento solicitado
+
+Iconos sólidos y nueva carpeta de Biblioteca; insignias del perfil mantienen el fuego existente. Días pasados sin actividad: guion y borde continuo; futuros: borde discontinuo. Contador compacto con número y unidad en línea. Portada opcional en Inicio con switch; editor arrastrable, zoom y controles de posición. Modelo de cuenta existente extendido, sin nueva colección ni observadores. Misma proporción de Inicio en la vista previa. Guardar confirma imagen/encuadre; cancelar no publica el borrador.
+
+
+## 08/10/2026 — Iconos, revisión y regalos
+
+Aportar/Aportes separados; Fórmulas con Σ, Ligas con copa y fuego original en Racha. Aprender/Cursos distintos; carpeta Biblioteca opaca. Formulario ampliado a 32 fórmulas/37 mnemotecnias con enlaces explícitos y notación serif/fracciones. Ver AJUSTES_2026-10-08_ICONOS_FORMULAS_Y_SIMULADOR.md.
+
+Reutilizar saldo, repositorios, Pro y avisos existentes. No crear una economía paralela ni activar cobros. Catálogos de lecciones y recurso original de fuego conservados.
+
+
+## 08/10/2026 — Aviso opcional de actualización
+
+Aviso temático con bisel RASTRO situado encima de LiquidNavbar; entra desde abajo y sale al cerrar. X y Cerrar descartan el aviso; Actualizar abre directamente market://details de este paquete en Google Play, con enlace HTTPS de respaldo si no está instalada la tienda. No fuerza instalación, descarga ni reinicio.
+
+Disponibilidad consultada con Google Play AppUpdateManager, biblioteca oficial app-update 2.1.0. Solo muestra UPDATE_AVAILABLE con versionCode superior al instalado; nunca compara textos de versión ni usa un número supuesto de Play. Error/sin conexión/instalación no reconocida: aviso omitido. Consultas al crear RastroApp, caché de seis horas en proceso; sin Firebase, listeners ni tareas periódicas. Cerrar recuerda la versión por 24 horas; una versión posterior no hereda el cierre.
+
+Se muestra en Inicio, Aprender (selector), Cursos, Biblioteca y Perfil. No se muestra en lecciones, examen, login ni Admin. No añade rutas ni altera autenticación, pagos, gamificación o catálogos.
+
+Referencia oficial: https://developer.android.com/guide/playcore/in-app-updates/kotlin-java
+Prueba de disponibilidad real requiere una instalación y cuenta elegibles en Google Play, con una versión superior publicada en su canal. Una compilación local no demuestra que exista tal actualización.
+
+## 08/10/2026 — Comunidad fija
+
+Canal oficial común: https://whatsapp.com/channel/0029VbDFAEu7YScyVZBNul0X . Inicio no utiliza redes personales del usuario; esas se conservan en Perfil. Entrada Pro reutiliza el modal existente.

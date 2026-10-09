@@ -59,10 +59,12 @@ import com.jonsuapps.rastro.theme.RastroPalette
                                 Column(Modifier.weight(1f)) {
                                     Text("Pausar guardado de errores", color = theme.textPrimary, fontWeight = FontWeight.Bold)
                                     Text(if (paused) "Puedes seguir practicando. Tus errores nuevos no se guardarán."
-                                        else "Guarda los fallos nuevos para repasarlos después.", color = theme.textSecondary, fontSize = 12.sp)
+                                        else "Guarda los fallos nuevos para repasarlos durante 15 días.", color = theme.textSecondary, fontSize = 12.sp)
                                 }
                                 Switch(paused, onCheckedChange = onPauseChange)
                             }
+                            Text("El historial caduca tras 15 días sin actualizar el error.", color = theme.textSecondary, fontSize = 11.sp)
+
                         }
                         if (onClearAll != null) item {
                             Sticker3dButton(onClick = onClearAll, enabled = questions.isNotEmpty() && !clearing,

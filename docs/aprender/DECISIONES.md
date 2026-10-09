@@ -103,3 +103,22 @@ El resultado compacto de Aprender usa LessonResultTiming sobre el reloj existent
 
 ## 04/10/2026 — velocidad y tipografía del resultado
 Asignar speed=1.3 únicamente al playback compacto de LearningResultsArtwork; los conteos y vibraciones siguen usando la misma fase, sin cambiar las animaciones fuente de Loki ni el orden Aciertos→XP→Monedas. Reutilizar el asset local welcome_lilita_one para la nueva solicitud de tipografía de resultados, sin modificar el banner ni descargar fuentes. FontWeight.Black en etiquetas/valores; conservar 10 sp de etiqueta y tamaño heredado del valor. Color de texto derivado con contrastingText(surfaceAccent), borde CartoonFinish.ink, grosor interior 2,5 dp y bisel con 28% del acento. Mantener radio12, padding6, bisel2 y espacio6 dp para no añadir altura/scroll.
+
+## 07/10/2026 — RASTRO Pro y preparación publicitaria
+
+Pro duplica XP/monedas de estudio y evita consumir vidas, sin alterar estrellas o racha. Máximo inicial 15 y regeneración 30 min; comprar vidas desde Monedas. Eliminada recarga al terminar lección; entrada bloqueada solo a cero y sin Pro, no interrupción del nivel en curso.
+Detalle y estado real: docs/monetizacion/README.md.
+
+## 08/10/2026
+
+Separar respaldo personal de operaciones sociales; no depender de Blaze para estudiar. Cuenta RevenueCat y conexión de compras pendientes, sin doble sistema Pro. Detalles en ../sincronizacion/DECISIONES.md.
+
+
+## 08/10/2026 — Iconos, herramientas y tarjetas compactas
+
+CourseIcon incorpora opción sticker solo solicitada desde selector/banner/encabezado. El camino de lecciones conserva el mapeo original por defecto. No cambiar catálogos, semanas, progreso, motor de preguntas o recompensas por una intervención visual.
+
+
+## 08/10/2026 — Refinamiento solicitado
+
+Solo Historia Universal, Biología y Física cambian su icono de banner/selector por vectores rellenos opacos. Catálogos, preguntas y SVG del camino no se modificaron.

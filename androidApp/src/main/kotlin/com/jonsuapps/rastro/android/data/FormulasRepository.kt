@@ -425,7 +425,33 @@ object FormulasRepository {
             ),
             datoClave = "¡Pregunta fija de examen de admisión! El oxígeno (O₂) que respiramos NO proviene del CO₂, proviene de la FOTÓLISIS DEL AGUA (H₂O) en la fase luminosa."
         )
+    ) + additionalFormulas
+
+    private val mnemonicLinks = mapOf(
+"alg_cuadrado_suma" to listOf("mne_alg_cuadrado_suma"),
+"alg_cuadrado_resta" to listOf("mne_alg_cuadrado_resta"),
+"alg_diferencia_cuadrados" to listOf("mne_alg_diferencia_cuadrados"),
+"geo_triangulo_area" to listOf("mne_geo_triangulo_area"),
+"geo_circulo_area" to listOf("mne_geo_circulo_area"),
+"geo_circunferencia" to listOf("mne_geo_circunferencia"),
+"geo_prisma_volumen" to listOf("mne_geo_prisma_volumen"),
+"fis_trabajo" to listOf("mne_fis_trabajo"),
+"fis_potencia" to listOf("mne_fis_potencia"),
+"fis_ohm" to listOf("mne_fis_ohm_reina_isabel","mne_fis_ohm"),
+"qui_densidad" to listOf("mne_qui_densidad_policia_militar","mne_qui_densidad"),
+"qui_dilucion" to listOf("mne_qui_dilucion"),
+"tri_seno_rectangulo" to listOf("mne_tri_seno_rectangulo"),
+"tri_coseno_rectangulo" to listOf("mne_tri_coseno_rectangulo"),
+"ari_porcentaje" to listOf("mne_ari_porcentaje"),
+"fis_energia_potencial" to listOf("mne_fis_energia_potencial"),
+"fis_mru_rapidez" to listOf("mne_fis_mru_diosito"),
+"fis_newton_fuerza" to listOf("mne_fis_newton_fama"),
+"qui_gases_ideales" to listOf("mne_qui_gases_pavoraton"),
+"qui_soluciones_molaridad" to listOf("mne_qui_molaridad_puercos"),
+"fis_mruv_aceleracion" to listOf("mne_fis_mruv_viejos_feos"),
+"tri_tangente_cociente" to listOf("mne_tri_coca_coca_hielito")
     )
+    fun mnemonicsFor(id: String) = com.jonsuapps.rastro.data.MnemotecniasRepository.items.filter { it.id in mnemonicLinks[id].orEmpty() }
 
     fun getBySubject(subject: String): List<CanonicalFormula> {
         return if (subject == "Todas" || subject.isBlank()) allFormulas

@@ -14,6 +14,8 @@ data class RastroNotification(
     val read: Boolean,
     val senderUid: String = "",
     val targetUid: String = "",
+    val startsAt: Long = 0L,
+    val endsAt: Long = 0L,
     val isBroadcast: Boolean = false
 )
 
@@ -73,6 +75,8 @@ object NotificationRepository {
                             read = document.getBoolean("read") ?: false,
                             senderUid = document.getString("senderUid").orEmpty(),
                             targetUid = document.getString("profileUid") ?: document.getString("targetUid").orEmpty(),
+                            startsAt = document.getLong("startsAt") ?: 0L,
+                            endsAt = document.getLong("endsAt") ?: 0L,
                             isBroadcast = isBroad
                         )
                     })

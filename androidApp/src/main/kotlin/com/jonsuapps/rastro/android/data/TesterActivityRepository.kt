@@ -70,7 +70,7 @@ object TesterActivityRepository {
         val now = System.currentTimeMillis()
         val day = DailyActivityMath.dateAt(now)
         prefs.edit().putBoolean("opened_${uid}_$day", true).putLong("opened_at_${uid}_$day", now).putLong("active_at_${uid}_$day", now).commit()
-        flush(uid, force = true)
+        if (!prefs.getBoolean("reported_open_${uid}_$day", false)) flush(uid, force = true)
     }
     private fun migratePending(uid: String) {
         val prefix = "pending_flush_${uid}_"
@@ -96,11 +96,11 @@ object TesterActivityRepository {
             val edit = prefs.edit().putLong(key, prefs.getLong(key, 0) + millis)
             val dateEnd = LocalDate.parse(date).plusDays(1).atStartOfDay(java.time.ZoneId.systemDefault()).toInstant().toEpochMilli() - 1
             val activeAt = minOf(now, dateEnd)
-            if (!prefs.contains("opened_${uid}_$date")) edit.putBoolean("opened_${uid}_$date", true).putLong("opened_at_${uid}_$date", activeAt)
+            if (!prefs.contains("opened_${uid}_$date") && !prefs.getBoolean("reported_open_${uid}_$date", false)) edit.putBoolean("opened_${uid}_$date", true).putLong("opened_at_${uid}_$date", activeAt)
             edit.putLong("active_at_${uid}_$date", activeAt).commit()
         }
         // Do not write another account's pending data after an Auth switch.
-        if (uid == authenticatedUid()) flush(uid, force)
+        if (uid == authenticatedUid()) flush(uid, force = false)
     }
     private fun flush(uid: String, force: Boolean) {
         if (flushing || uid != authenticatedUid()) return
@@ -115,7 +115,7 @@ object TesterActivityRepository {
                 .filter { runCatching { LocalDate.parse(it) }.isSuccess }
                 .sorted().firstOrNull { day ->
                     val ms = prefs.getLong("pending_ms_${uid}_$day", 0)
-                    prefs.getBoolean("opened_${uid}_$day", false) || ((force || day < LocalDate.now().toString()) && ms >= 1000) || ms >= 60_000
+                    prefs.getBoolean("opened_${uid}_$day", false) || ((force || day < LocalDate.now().toString()) && ms >= 1000) || ms >= 15 * 60_000
                 } ?: return
             seconds = prefs.getLong("pending_ms_${uid}_$date", 0) / 1000
             activeAt = prefs.getLong("active_at_${uid}_$date", System.currentTimeMillis())
@@ -149,6 +149,7 @@ object TesterActivityRepository {
             }
         }.addOnSuccessListener {
             val key = "pending_ms_${uid}_$batchDate"
+            prefs.edit().putBoolean("reported_open_${uid}_$batchDate", true).apply()
             val remaining = (prefs.getLong(key, 0) - batchSeconds * 1000).coerceAtLeast(0)
             prefs.edit().putLong(key, remaining).putBoolean("opened_${uid}_$batchDate", prefs.getLong("opened_at_${uid}_$batchDate", 0) > batchAt)
                 .remove(batchPrefix + "token").remove(batchPrefix + "date").remove(batchPrefix + "seconds").remove(batchPrefix + "at").commit()

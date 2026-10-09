@@ -440,7 +440,7 @@ object MnemotecniasRepository {
             ejemplo = "6 campanadas en 10 s -> 5 intervalos = 10 s -> 1 intervalo = 2 s. ¿11 campanadas? 10 intervalos × 2 s = 20 s.",
             tags = listOf("Campanadas", "Intervalos", "RM", "Trampa")
         )
-    )
+    ) + additionalMnemotecnias
 
     fun getBySubject(subject: String): List<MnemotecniaItem> {
         if (subject.isBlank() || subject.equals("Todas", ignoreCase = true)) return items

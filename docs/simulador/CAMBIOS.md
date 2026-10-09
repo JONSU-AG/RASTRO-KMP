@@ -52,3 +52,25 @@ Estado y evidencias vigentes: ../../../CHECKLIST_GOOGLE_PLAY.md (desde Obras), .
 ## 04/10 — Cierre local de auditoría
 
 Kotlin debug/release y R8 compilan; 185 pruebas shared y 100 Android pasan. No se ejecutó la app. Crash Completar identificado en Logcat y parser compartido corregido; IO/caché, navegación, Ranking y Pizarra corregidos en su ámbito. Estado físico/externo separado en CHECKLIST_GOOGLE_PLAY.md; no se equipara compilación a prueba en dispositivo. Los complementos académicos conservan incidencias **heredadas** del banco: detalle en docs/aprender/VALIDACION_CATALOGO_2027.md. No commit/push/cambio de versión.
+
+## 07/10/2026 — RASTRO Pro y preparación publicitaria
+
+Primer Simulacro gratuito; tres intentos por concesión Pro; intentos con monedas e ID único. Sesión guardada por cuenta/dispositivo en IO, retomada sin cobrar de nuevo. Ajuste de ancho del desplegable y cierre natural Terminar en la última Flashcard.
+Detalle y estado real: docs/monetizacion/README.md.
+
+## Validación 07/10/2026
+
+129 pruebas Android y 185 shared sin fallos; lintVitalRelease correcto. Dos pruebas de reglas Firestore en emulador correctas. git diff --check sin errores. No se ejecutó la app, no se generó bundle y no se desplegaron reglas/configuración.
+
+## 08/10 — Ligas
+Filas del camino de ligas con tarjetas del mismo tamaño y última fila centrada; podio de columnas iguales, nombres acotados/centrados. Datos, puestos y consultas intactos.
+
+
+## 08/10/2026 — Cierre al iniciar examen y anuncios
+
+Corregido guardado de SavedExamSession activando el plugin Kotlin existente y usando serializador generado. Checkpoint con error no termina el proceso. Ver `docs/simulador/CIERRE_Y_ANUNCIOS_2026-10-08.md` para evidencia y límites.
+
+
+## 08/10/2026 — Iconos, revisión y regalos
+
+Revisión de resultados en popup con LazyColumn, X y filtros, en lugar de 80 tarjetas compuestas. Back permanece en Simulador; coste/confirmación de monedas y fin de actividad publicitario conectados. OOM en medición de texto documentado; prueba física pendiente.

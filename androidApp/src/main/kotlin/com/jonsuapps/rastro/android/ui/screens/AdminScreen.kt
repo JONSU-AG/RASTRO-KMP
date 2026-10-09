@@ -189,7 +189,7 @@ fun AdminScreen(
 
     // Estado de pestañas administrativas
     var selectedTab by remember { mutableIntStateOf(0) } // 0: Ajustes Sitio, 1: Actividad Testers, 2: Usuarios, 3: Contenido UGC, 4: Notificaciones, 5: Banco
-    val tabs = listOf("Ajustes Sitio", "Ingresos diarios", "Usuarios", "Contenido UGC", "Notificaciones", "Banco", "Errores y sugerencias")
+    val tabs = listOf("Ajustes Sitio", "Ingresos diarios", "Usuarios", "Contenido UGC", "Notificaciones", "Banco", "Errores y sugerencias", "Pro y economía", "Bienvenida y avisos")
 
     // ── 0. ACTIVIDAD DE TESTERS / PRUEBA CERRADA ─────────────────────────────
     var testerPeriodStart by remember { mutableStateOf(java.time.LocalDate.now().minusDays(29).toString()) }
@@ -311,29 +311,18 @@ fun AdminScreen(
     // Usuarios Reales de Firestore
     var userSearchQuery by remember { mutableStateOf("") }
     var realUsers by remember { mutableStateOf(emptyList<UserData>()) }
-
-    DisposableEffect(Unit) {
-        val listener = FirebaseFirestore.getInstance().collection("usuarios")
-            .limit(100)
-            .addSnapshotListener { snapshot, error ->
-                if (error != null || snapshot == null) return@addSnapshotListener
-                val list = snapshot.documents.map { doc ->
-                    UserData(
-                        uid = doc.id,
-                        email = doc.getString("email"),
-                        displayName = doc.getString("displayName") ?: doc.getString("name") ?: "Estudiante",
-                        photoURL = doc.getString("photoURL") ?: doc.getString("photoUrl"),
-                        targetCareer = doc.getString("targetCareer") ?: "",
-                        targetUniversity = doc.getString("targetUniversity") ?: "Universidad Nacional",
-                        isAlly = doc.getBoolean("isAlly") ?: false,
-                        hasWarning = doc.getBoolean("hasWarning") ?: false,
-                        warningMessage = doc.getString("warningMessage") ?: "",
-                        banned = doc.getBoolean("banned") ?: false
-                    )
-                }
-                realUsers = list
-            }
-        onDispose { listener.remove() }
+    var usersLoading by remember { mutableStateOf(false) }
+    var usersError by remember { mutableStateOf<String?>(null) }
+    var usersRefresh by remember { mutableIntStateOf(0) }
+    LaunchedEffect(selectedTab, usersRefresh, currentUserEmail) {
+        if (selectedTab != 2) return@LaunchedEffect
+        usersLoading = true
+        usersError = null
+        try {
+            realUsers = com.jonsuapps.rastro.android.data.AdminUserDirectory.load(force = usersRefresh > 0)
+        } catch (cancelled: kotlinx.coroutines.CancellationException) { throw cancelled
+        } catch (_: Exception) { usersError = "No se pudieron cargar los usuarios. Comprueba la conexión y pulsa Actualizar."
+        } finally { usersLoading = false }
     }
 
     // Reportes Reales de Contenido UGC desde Firestore
@@ -517,6 +506,8 @@ fun AdminScreen(
 
         // ── CONTENIDO POR PESTAÑAS ──────────────────────────────────────────
         when (selectedTab) {
+            8 -> item { EntryNoticesAdminPanel() }
+            7 -> item { MonetizationAdminPanel() }
             6 -> item { AppFeedbackAdminPanel() }
             0 -> {
                 // 1. AJUSTES DEL SITIO (SITE SETTINGS) - Sincronizado en Firestore
@@ -1396,6 +1387,7 @@ fun AdminScreen(
                                 DuolingoHaptics.playOptionSelected(context)
                                 reloadAttendance()
                             },
+                            enabled = !isLoadingTesters,
                             containerColor = theme.surface,
                             bottomBevelColor = theme.cardBevel,
                             strokeColor = theme.strokeBorder,
@@ -1403,7 +1395,10 @@ fun AdminScreen(
                             modifier = Modifier.height(52.dp),
                             contentPadding = PaddingValues(horizontal = 12.dp)
                         ) {
-                            Icon(Icons.Rounded.Refresh, contentDescription = "Recargar", tint = theme.textPrimary, modifier = Modifier.size(20.dp))
+                            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                                Icon(Icons.Rounded.Refresh, contentDescription = null, tint = theme.textPrimary, modifier = Modifier.size(18.dp))
+                                Text(if (isLoadingTesters) "Cargando…" else "Actualizar", fontSize = 11.sp, color = theme.textPrimary)
+                            }
                         }
                     }
                 }
@@ -1550,18 +1545,19 @@ fun AdminScreen(
                     OutlinedTextField(
                         value = userSearchQuery,
                         onValueChange = { userSearchQuery = it },
-                        placeholder = { Text("Buscar estudiante por nombre, correo o carrera...", fontSize = 12.sp) },
+                        placeholder = { Text("Buscar por nombre, correo o UID...", fontSize = 12.sp) },
                         leadingIcon = { Icon(Icons.Rounded.Search, null, tint = theme.textSecondary) },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(14.dp),
                         singleLine = true
                     )
+                    TextButton(onClick = { usersRefresh++ }, enabled = !usersLoading) { Text(if (usersLoading) "Cargando usuarios…" else "Actualizar usuarios") }
+                    usersError?.let { Text(it, color = theme.textPrimary, fontSize = 12.sp) }
+                    Text("${realUsers.size} perfiles registrados · invitados locales no incluidos", color = theme.textSecondary, fontSize = 11.sp)
                 }
 
                 val filteredUsers = realUsers.filter {
-                    it.displayName.contains(userSearchQuery, ignoreCase = true) ||
-                    (it.email?.contains(userSearchQuery, ignoreCase = true) == true) ||
-                    it.targetCareer.contains(userSearchQuery, ignoreCase = true)
+                    com.jonsuapps.rastro.android.data.AdminUserDirectory.matches(it, userSearchQuery)
                 }
 
                 if (filteredUsers.isEmpty()) {

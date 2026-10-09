@@ -14,10 +14,18 @@ class ErrorBankTest {
     }
     @Test fun stalePublicProjectionCannotResurrectClearedErrors() {
         val base = examErrors(listOf(question("same")), emptyMap(), ErrorBankOrigins.APRENDER).single()
-        val old = base.copy(dateAdded = 100L)
-        val newer = base.copy(id = "new", dateAdded = 201L)
+        val cutoff = System.currentTimeMillis() - 1000
+        val old = base.copy(dateAdded = cutoff)
+        val newer = base.copy(id = "new", dateAdded = cutoff + 1)
         assertEquals(listOf(newer), ErrorBankRepository.publicQuestions(mapOf("errorsPublic" to true,
-            "errorsClearedAt" to 200L, "sharedErrorBank" to listOf(old.payload(), newer.payload()))))
+            "errorsClearedAt" to cutoff, "sharedErrorBank" to listOf(old.payload(), newer.payload()))))
+    }
+    @Test fun expiresAtFifteenDaysWithoutRemovingRecentFailures() {
+        val now = 20L * 24 * 60 * 60 * 1000
+        val base = examErrors(listOf(question("same")), emptyMap(), ErrorBankOrigins.APRENDER).single()
+        val old = base.copy(dateAdded = now - ERROR_RETENTION_MILLIS)
+        val recent = base.copy(id = "recent", dateAdded = now - ERROR_RETENTION_MILLIS + 1)
+        assertEquals(listOf(recent), retainedErrors(listOf(old, recent), now))
     }
     private fun question(id: String) = ExamQuestion(id, "Pregunta $id", listOf("A", "B", "C"), 1,
         "Biología", "Curso", "SOCIALES", explanation = "Explicación original")

@@ -4,7 +4,7 @@ import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
+import androidx.compose.ui.platform.ComposeView
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -21,6 +21,7 @@ import com.jonsuapps.rastro.theme.onAccent
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        com.jonsuapps.rastro.android.logo.RastroLogoManager.setActivityVisible(true)
         com.jonsuapps.rastro.android.navigation.RastroAppLinks.accept(intent?.data)
         com.jonsuapps.rastro.android.navigation.RastroAppLinks.acceptShortcut(intent?.action)
 
@@ -45,7 +46,11 @@ class MainActivity : ComponentActivity() {
             ThemeManager.setTheme(initialTheme)
         }
 
-        setContent {
+        // Install the Compose host through setContentView: some restored windows have no
+        // android.R.id.content yet, which Activity.setContent dereferences on startup.
+        val composeHost = ComposeView(this)
+        setContentView(composeHost)
+        composeHost.setContent {
             val systemDark = isSystemInDarkTheme()
             val currentThemeId = ThemeManager.currentThemeId
 
@@ -144,6 +149,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        com.jonsuapps.rastro.android.data.AdMobProvider.attach(this)
     }
 
     override fun onNewIntent(intent: android.content.Intent) {
@@ -153,9 +159,29 @@ class MainActivity : ComponentActivity() {
         com.jonsuapps.rastro.android.navigation.RastroAppLinks.acceptShortcut(intent.action)
     }
 
+    override fun onStart() {
+        super.onStart()
+        com.jonsuapps.rastro.android.logo.RastroLogoManager.setActivityVisible(true)
+    }
+
     override fun onResume() {
         super.onResume()
+        com.jonsuapps.rastro.android.logo.RastroLogoManager.setActivityVisible(true)
         // Al regresar a la app, actualiza estado de actividad del usuario (regreso a BASE si no hay racha perdida)
         com.jonsuapps.rastro.android.logo.RastroLogoManager.recordUserActive()
+        com.jonsuapps.rastro.android.data.AdMobProvider.preload()
+        if (com.jonsuapps.rastro.android.data.PlayBillingConfig.checkoutEnabled)
+            com.jonsuapps.rastro.android.data.MonetizationRepository.playBilling(this).refreshEntitlement()
+    }
+
+    override fun onDestroy() {
+        com.jonsuapps.rastro.android.data.AdMobProvider.detach(this)
+        if (!isChangingConfigurations) com.jonsuapps.rastro.android.data.MonetizationRepository.closePlayBilling()
+        super.onDestroy()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        if (!isChangingConfigurations) com.jonsuapps.rastro.android.logo.RastroLogoManager.setActivityVisible(false)
     }
 }

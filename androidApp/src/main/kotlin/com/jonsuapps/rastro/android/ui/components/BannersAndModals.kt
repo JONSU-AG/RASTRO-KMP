@@ -72,6 +72,10 @@ fun ThemeSelectorDialog(
                 .contains("custom_highlight")
         )
     }
+    if (showEditorDialog) {
+        CustomThemeEditorDialog(theme = theme, onSaved = { hasCustomTheme = true },
+            onDismiss = { showEditorDialog = false })
+    }
     if (showIntensityDialog) {
         MaterialYouIntensityDialog(onDismiss = { showIntensityDialog = false }, onChoose = { intensity ->
             ThemeManager.chooseMaterialYouIntensity(intensity)
@@ -253,8 +257,8 @@ fun ThemeSelectorDialog(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable {
-                                    DuolingoHaptics.playOptionSelected(context)
                                     showEditorDialog = true
+                                    DuolingoHaptics.playOptionSelected(context)
                                 }
                         ) {
                             Row(
@@ -378,16 +382,7 @@ fun ThemeSelectorDialog(
                             }
                         }
                     }
-                    if (showEditorDialog) {
-                        item(span = { GridItemSpan(maxLineSpan) }) {
-                            // El editor es ventana independiente; el item no dibuja nada.
-                            CustomThemeEditorDialog(
-                                theme = theme,
-                                onSaved = { hasCustomTheme = true },
-                                onDismiss = { showEditorDialog = false }
-                            )
-                        }
-                    }
+
                 }
             }
         }
@@ -725,7 +720,6 @@ private fun CustomThemeEditorDialog(
     var draftPrimary by remember { mutableStateOf(com.jonsuapps.rastro.theme.ThemeManager.customColors.primary) }
     var draftSecondary by remember { mutableStateOf(com.jonsuapps.rastro.theme.ThemeManager.customColors.secondary) }
     var draftAccent by remember { mutableStateOf(com.jonsuapps.rastro.theme.ThemeManager.customColors.accent) }
-    var draftHighlight by remember { mutableStateOf(com.jonsuapps.rastro.theme.ThemeManager.customColors.highlight) }
     Dialog(
         onDismissRequest = onDismiss,
         properties = androidx.compose.ui.window.DialogProperties(usePlatformDefaultWidth = false)
@@ -767,12 +761,11 @@ private fun CustomThemeEditorDialog(
                         .verticalScroll(rememberScrollState()),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                val slotDefs = remember(draftPrimary, draftSecondary, draftAccent, draftHighlight) {
+                val slotDefs = remember(draftPrimary, draftSecondary, draftAccent) {
                     listOf(
-                    Triple("Color de la app", "Botones, iconos activos y elementos principales.", draftPrimary),
-                    Triple("Color de las tarjetas", "Tarjetas, navbar y paneles.", draftSecondary),
-                    Triple("Color para destacar", "Racha, indicadores y detalles especiales.", draftAccent),
-                    Triple("Color del fondo", "Fondo general de las pantallas.", draftHighlight)
+                    Triple("Fondo", "Color base de las pantallas.", draftPrimary),
+                    Triple("Tarjetas", "Tarjetas, navbar y paneles.", draftSecondary),
+                    Triple("Acento", "Botones y detalles; el texto se adapta automáticamente.", draftAccent)
                     )
                 }
                 Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -842,7 +835,7 @@ private fun CustomThemeEditorDialog(
                                 text = "Texto sobre tarjeta",
                                 fontSize = 12.sp,
                                 fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
-                                color = if (isDraftLight(draftSecondary)) androidx.compose.ui.graphics.Color(0xFF0F172A) else androidx.compose.ui.graphics.Color.White,
+                                color = com.jonsuapps.rastro.theme.onColor(draftSecondary),
                                 modifier = Modifier.padding(horizontal = 10.dp, vertical = 8.dp)
                             )
                         }
@@ -859,7 +852,7 @@ private fun CustomThemeEditorDialog(
                                     text = "Botón principal",
                                     fontSize = 12.sp,
                                     fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
-                                    color = if (isDraftLight(draftAccent)) androidx.compose.ui.graphics.Color(0xFF0F172A) else androidx.compose.ui.graphics.Color.White,
+                                    color = com.jonsuapps.rastro.theme.onColor(draftAccent),
                                     modifier = Modifier.padding(horizontal = 10.dp, vertical = 8.dp)
                                 )
                             }
@@ -867,7 +860,7 @@ private fun CustomThemeEditorDialog(
                                 modifier = Modifier
                                     .size(30.dp)
                                     .clip(CircleShape)
-                                    .background(draftHighlight)
+                                    .background(draftAccent)
                                     .border(1.5.dp, theme.strokeBorder, CircleShape)
                             )
                         }
@@ -891,21 +884,21 @@ private fun CustomThemeEditorDialog(
                     Button(
                         onClick = {
                             DuolingoHaptics.playOptionSelected(context)
-                            com.jonsuapps.rastro.theme.ThemeManager.setCustomTheme(draftPrimary, draftSecondary, draftAccent, draftHighlight)
+                            com.jonsuapps.rastro.theme.ThemeManager.setCustomTheme(draftPrimary, draftSecondary, draftAccent, draftAccent)
                             val prefs = context.getSharedPreferences("rastro_preferences", android.content.Context.MODE_PRIVATE)
                             prefs.edit()
                                 .putString("selected_theme", RastroThemeId.CUSTOM.idName)
                                 .putInt("custom_primary", draftPrimary.toArgb())
                                 .putInt("custom_secondary", draftSecondary.toArgb())
                                 .putInt("custom_accent", draftAccent.toArgb())
-                                .putInt("custom_highlight", draftHighlight.toArgb())
+                                .putInt("custom_highlight", draftAccent.toArgb())
                                 .apply()
                             onSaved()
                             onDismiss()
                         },
                         colors = ButtonDefaults.buttonColors(containerColor = theme.accent)
                     ) {
-                        Text("Guardar y aplicar", fontWeight = androidx.compose.ui.text.font.FontWeight.Bold, color = androidx.compose.ui.graphics.Color.White)
+                        Text("Guardar y aplicar", fontWeight = androidx.compose.ui.text.font.FontWeight.Bold, color = theme.onAccent)
                     }
                 }
             }
@@ -915,7 +908,7 @@ private fun CustomThemeEditorDialog(
         0 -> draftPrimary
         1 -> draftSecondary
         2 -> draftAccent
-        else -> draftHighlight
+        else -> draftAccent
     }
     if (pickerSlot != null) {
         FullColorPickerDialog(
@@ -926,7 +919,7 @@ private fun CustomThemeEditorDialog(
                     0 -> draftPrimary = chosen
                     1 -> draftSecondary = chosen
                     2 -> draftAccent = chosen
-                    else -> draftHighlight = chosen
+                    else -> draftAccent = chosen
                 }
                 pickerSlot = null
             },

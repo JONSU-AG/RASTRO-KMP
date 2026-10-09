@@ -20,3 +20,12 @@ Reutilizar rastro_yt_playlists para listas privadas y compartidas, sin crear otr
 ## 04/10/2026 — YouTube gestiona fullscreen
 Sustituye la decisión anterior de controles Girar/Pantalla completa propios. Mantener controles oficiales del IFrame y responder a onShowCustomView/onHideCustomView. FULL_USER sigue bloqueo/auto-rotación del teléfono, en lugar de SENSOR_LANDSCAPE/SENSOR_PORTRAIT. Root FrameLayout negro sin toolbar sobre el video. Mantener movableContent y layout estable mientras fullscreen para conservar WebView/sesión. Reducir espacio del popup/padding y permitir scroll del panel corto, sin reducir viewport del IFrame de 200 dp por debajo del mínimo oficial. No se cambia cola/títulos ni carga de videos.
 Fuentes: https://developers.google.com/youtube/iframe_api_reference#Requirements y https://developer.android.com/reference/android/content/pm/ActivityInfo#SCREEN_ORIENTATION_FULL_USER.
+
+## 08/10/2026
+
+Separar respaldo personal de operaciones sociales; no depender de Blaze para estudiar. Cuenta RevenueCat y conexión de compras pendientes, sin doble sistema Pro. Detalles en ../sincronizacion/DECISIONES.md.
+
+
+## 08/10/2026 — Iconos, herramientas y tarjetas compactas
+
+No ocultar fallos de sincronización junto con el texto informativo eliminado. Consultas, cuenta propietaria, visibilidad y publicación de listas quedan intactas.

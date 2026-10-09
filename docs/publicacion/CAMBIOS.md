@@ -40,3 +40,6 @@ Esta actualización supera el apartado anterior que indicaba envío detenido. No
 ## 05/10/2026 — Respaldo en GitHub autorizado
 Subida del estado actual 2.0.1/code 201 a JONSU-AG/RASTRO-KMP, incluyendo código, recursos, backend, documentación y scripts de mantenimiento. Excluidos secretos, firmas privadas, configuración local y productos generados. Validación de esta versión: 121 pruebas Android, lintVitalRelease y bundleRelease correctos. Sin ejecución de la app.
 
+
+## 09/10/2026 — Corrección de eliminación de cuenta
+Ámbito: AccountDeletionRepository/Plan, ambos llamadores de confirmación, DriveUploadRepository solo limpieza de imágenes generadas, reglas de cuenta y pruebas/documentación. Auth deja de borrarse antes de la limpieza; marcador privado evita recreación tardía. Sin activar Blaze ni borrar usuarios reales. 20 pruebas de permisos y regresión aprobadas, reglas desplegadas. Flujo y límites: ELIMINACION_CUENTA_2026-10-09.md. Compilación y prueba final móvil se registran por separado.

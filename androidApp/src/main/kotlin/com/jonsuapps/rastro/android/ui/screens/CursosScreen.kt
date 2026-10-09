@@ -600,13 +600,14 @@ fun CreateOrEditPlaylistDialog(
 @Composable
 fun CursosScreen(
     onOpenCourseDetail: (String) -> Unit = {},
+    onSignIn: () -> Unit = {},
     onOpenPeriodicTable: () -> Unit = {},
     onOpenVocationalTest: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
-    var accountUid by remember { mutableStateOf(FirebaseAuth.getInstance().currentUser?.uid) }
+    var accountUid by remember { mutableStateOf(FirebaseAuth.getInstance().currentUser?.takeUnless { it.isAnonymous }?.uid) }
     var sharingBusy by remember { mutableStateOf<String?>(null) }
     var actionMessage by remember { mutableStateOf<String?>(null) }
     val community by SharedPlaylistsRepository.community.collectAsState()
@@ -615,7 +616,7 @@ fun CursosScreen(
     val communityMessage by SharedPlaylistsRepository.message.collectAsState()
     DisposableEffect(Unit) {
         val auth = FirebaseAuth.getInstance()
-        val listener = FirebaseAuth.AuthStateListener { accountUid = it.currentUser?.uid }
+        val listener = FirebaseAuth.AuthStateListener { accountUid = it.currentUser?.takeUnless { user -> user.isAnonymous }?.uid }
         auth.addAuthStateListener(listener)
         onDispose { auth.removeAuthStateListener(listener); SharedPlaylistsRepository.stop(); UserPlaylistsRepository.stopSync() }
     }
@@ -637,9 +638,11 @@ fun CursosScreen(
         playlistToEdit = null
         playlistToDelete = null
         UserPlaylistsRepository.init(context)
-        SharedPlaylistsRepository.start(accountUid)
     }
 
+    LaunchedEffect(selectedTabIndex, accountUid) {
+        if (selectedTabIndex == 1) SharedPlaylistsRepository.start(accountUid, clear = false)
+    }
     val currentCategory = tabs[selectedTabIndex]
     val byCategory = when (currentCategory) {
         "Mías" -> UserPlaylistsRepository.playlists.toList()
@@ -1026,11 +1029,10 @@ fun CursosScreen(
         item(span = { GridItemSpan(maxLineSpan) }) {
             RastroBoundedBlock {
                 Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                    Text(when (currentCategory) {
-                        "Mías" -> "Tus listas privadas y compartidas. Tú eliges cuáles publicar."
-                        "Compartidas" -> "Tus playlists publicadas. Retíralas de Comunidad cuando quieras."
-                        else -> "Playlists que los usuarios han elegido compartir."
-                    }, color = theme.textSecondary, fontSize = 12.sp)
+                    TextButton(onClick = {
+                        UserPlaylistsRepository.init(context)
+                        SharedPlaylistsRepository.start(accountUid, clear = false)
+                    }) { Text("Actualizar listas", color = theme.accentText) }
                     (actionMessage ?: UserPlaylistsRepository.syncError.value ?: communityMessage)?.let {
                         Text(it, color = theme.textSecondary, fontSize = 12.sp)
                         if (communityMessage != null) TextButton(onClick = { SharedPlaylistsRepository.start(accountUid) }) {
@@ -1103,7 +1105,10 @@ fun CursosScreen(
                         )
                     }
                     Button(
-                        onClick = { showCreatePlaylistDialog = true },
+                        onClick = {
+                            if (FirebaseAuth.getInstance().currentUser?.isAnonymous == false) showCreatePlaylistDialog = true
+                            else onSignIn()
+                        },
                         colors = androidx.compose.material3.ButtonDefaults.buttonColors(containerColor = theme.accent),
                         shape = RastroShapes.Pill,
                         contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp)
@@ -1144,7 +1149,10 @@ fun CursosScreen(
                         if (currentCategory == "Mías") {
                             Spacer(modifier = Modifier.height(12.dp))
                             Button(
-                                onClick = { showCreatePlaylistDialog = true },
+                                onClick = {
+                            if (FirebaseAuth.getInstance().currentUser?.isAnonymous == false) showCreatePlaylistDialog = true
+                            else onSignIn()
+                        },
                                 colors = androidx.compose.material3.ButtonDefaults.buttonColors(containerColor = theme.accent),
                                 shape = RastroShapes.Pill
                             ) {

@@ -11,6 +11,83 @@ service cloud.firestore {
       return request.auth != null;
     }
 
+    function deletingOwnAccount() {
+      return signedIn() && exists(/databases/$(database)/documents/account_deletions/$(request.auth.uid));
+    }
+    function activeOwnAccount() { return !deletingOwnAccount(); }
+    // Minimal tombstone: no email/name/photo. Blocks late writes from resurrecting a profile.
+    match /account_deletions/{uid} {
+      allow get: if signedIn() && request.auth.uid == uid;
+      allow create: if signedIn() && request.auth.uid == uid
+        && request.auth.token.auth_time >= request.time.toMillis() / 1000 - 300
+        && request.resource.data.keys().hasOnly(['requestedAt'])
+        && request.resource.data.requestedAt == request.time;
+    }
+    function cleanupOwns() {
+      return resource.data.get('authorUid', '') == request.auth.uid
+        || resource.data.get('ownerId', '') == request.auth.uid
+        || resource.data.get('ownerUid', '') == request.auth.uid
+        || resource.data.get('uid', '') == request.auth.uid
+        || resource.data.get('reporterUid', '') == request.auth.uid
+        || resource.data.get('profileUid', '') == request.auth.uid
+        || resource.data.get('senderUid', '') == request.auth.uid
+        || resource.data.get('recipientUid', '') == request.auth.uid
+        || resource.data.get('followerUid', '') == request.auth.uid
+        || resource.data.get('followedUid', '') == request.auth.uid
+        || resource.data.get('user1Uid', '') == request.auth.uid
+        || resource.data.get('user2Uid', '') == request.auth.uid
+        || request.auth.uid in resource.data.get('participants', [])
+        || resource.data.get('uploadedBy', {}).get('uid', '') == request.auth.uid;
+    }
+    function removesOnlySelf(field) {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly([field])
+        && resource.data.get(field, []) is list
+        && request.resource.data.get(field, []) == resource.data.get(field, []).removeAll([request.auth.uid]);
+    }
+    function removesOwnReaction(emoji) {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(['reactions'])
+        && request.resource.data.reactions.diff(resource.data.reactions).affectedKeys().hasOnly([emoji])
+        && request.resource.data.reactions[emoji] == resource.data.reactions[emoji].removeAll([request.auth.uid]);
+    }
+    match /{collection}/{id} {
+      allow update: if deletingOwnAccount() && collection == 'racha_dual'
+        && request.auth.uid in resource.data.participants && resource.data.get('type', '') == 'group'
+        && request.resource.data.participants == resource.data.participants.removeAll([request.auth.uid])
+        && request.resource.data.participants.size() >= 2
+        && request.resource.data.user1Uid in request.resource.data.participants
+        && request.resource.data.user2Uid in request.resource.data.participants
+        && request.resource.data.user1Uid != request.resource.data.user2Uid
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['participants', 'user1Uid', 'user2Uid', 'accepted', 'dailyActivity', 'senderName', 'recipientName'])
+        && request.resource.data.accepted.diff(resource.data.get('accepted', {})).affectedKeys().hasOnly([request.auth.uid])
+        && !request.resource.data.accepted.keys().hasAny([request.auth.uid])
+        && request.resource.data.dailyActivity.diff(resource.data.get('dailyActivity', {})).affectedKeys().hasOnly([request.auth.uid])
+        && !request.resource.data.dailyActivity.keys().hasAny([request.auth.uid])
+        && (request.resource.data.get('senderName', '') == resource.data.get('senderName', '') || request.resource.data.get('senderName', '') == '')
+        && (request.resource.data.get('recipientName', '') == resource.data.get('recipientName', '') || request.resource.data.get('recipientName', '') == '');
+      allow read: if deletingOwnAccount()
+        && collection in ['uploads', 'libros', 'flashcards', 'preguntas_examen', 'perfil_comentarios',
+          'publicacion_comentarios', 'clase_comentarios', 'notificaciones', 'mensajes_directos_privados',
+          'siguiendo', 'ranking_simulacros', 'rastro_yt_playlists', 'racha_dual', 'reportes', 'reportes_ugc', 'solicitudes_aliados']
+        && cleanupOwns();
+      allow delete: if deletingOwnAccount()
+        && collection in ['uploads', 'libros', 'flashcards', 'preguntas_examen', 'perfil_comentarios',
+          'publicacion_comentarios', 'clase_comentarios', 'notificaciones', 'mensajes_directos_privados',
+          'siguiendo', 'ranking_simulacros', 'rastro_yt_playlists', 'racha_dual', 'reportes', 'reportes_ugc', 'solicitudes_aliados']
+        && cleanupOwns()
+        && (collection != 'racha_dual' || resource.data.get('type', '') != 'group' || resource.data.get('participants', []).size() <= 2);
+      allow read, delete: if deletingOwnAccount() && collection == 'publicacion_comentarios'
+        && get(/databases/$(database)/documents/uploads/$(resource.data.postId)).data.get('ownerId', '') == request.auth.uid;
+      allow update: if deletingOwnAccount() && (
+        (collection == 'usuarios' && (removesOnlySelf('blockedUsers') || removesOnlySelf('friends') || removesOnlySelf('followers') || removesOnlySelf('following')))
+        || (collection == 'uploads' && (removesOnlySelf('savedBy') || removesOnlySelf('likedBy') || removesOnlySelf('reportedBy')))
+        || (collection in ['uploads', 'publicacion_comentarios', 'perfil_comentarios', 'clase_comentarios']
+          && (removesOwnReaction('👍') || removesOwnReaction('❤️') || removesOwnReaction('🔥'))));
+    }
+    match /usuarios/{uid}/{subcollection}/{id} {
+      allow read, delete: if deletingOwnAccount() && request.auth.uid == uid
+        && subcollection in ['gamificacion', 'coin_rewards'];
+    }
+
     function author() {
       return signedIn() && request.auth.token.email_verified == true && request.auth.token.email in [
         'aguilar.jonsu@gmail.com',
@@ -18,7 +95,7 @@ service cloud.firestore {
         'jhojan.aguilar.13.10@gmail.com',
         'rulua617@gmail.com',
         '147279812+rulua617@users.noreply.github.com'
-      ];
+      ] && activeOwnAccount();
     }
 
     // Campos que NADIE salvo el autor puede crear ni modificar
@@ -69,9 +146,9 @@ service cloud.firestore {
     match /usuarios/{uid} {
       allow read: if true;
       allow create: if signedIn() && request.auth.uid == uid
-        && !request.resource.data.keys().hasAny(privKeys());
+        && activeOwnAccount() && !request.resource.data.keys().hasAny(privKeys());
       allow update: if signedIn() && (
-        (request.auth.uid == uid && !request.resource.data.diff(resource.data).affectedKeys().hasAny(privKeys())) ||
+        (request.auth.uid == uid && activeOwnAccount() && !request.resource.data.diff(resource.data).affectedKeys().hasAny(privKeys())) ||
         author()
       );
       allow delete: if (signedIn() && request.auth.uid == uid) || author();
@@ -191,9 +268,18 @@ service cloud.firestore {
       allow update, delete: if author();
     }
 
+    // Private subscription entitlement. Clients cannot grant Pro to themselves.
+    match /rastro_pro/{uid} {
+      allow read: if (signedIn() && request.auth.uid == uid) || author();
+      allow write: if author();
+      allow delete: if deletingOwnAccount() && request.auth.uid == uid;
+    }
+
     // —— Progreso de gamificación: cada usuario sincroniza solo el suyo ——
     match /usuarios/{uid}/gamificacion/{d} {
-      allow read, write: if (signedIn() && request.auth.uid == uid) || author();
+      allow read: if (signedIn() && request.auth.uid == uid) || author();
+      allow create, update: if (signedIn() && request.auth.uid == uid && activeOwnAccount()) || author();
+      allow delete: if (signedIn() && request.auth.uid == uid) || author();
     }
 
     // —— Configuración del sitio (switches, ocultos, banners): lectura pública, escritura del autor ——
@@ -282,6 +368,43 @@ service cloud.firestore {
         && request.resource.data.diff(resource.data).affectedKeys().hasOnly(
           ['status', 'senderName', 'recipientName', 'participants', 'updatedAt'])
         && request.resource.data.participants == [resource.data.user1Uid, resource.data.user2Uid];
+    }
+
+    // Administrative gifts and promotional receipts share the existing wallet.
+    function registeredAccount() {
+      return signedIn() && request.auth.token.get('email', '') != ''
+        && request.auth.token.get('firebase', {}).get('sign_in_provider', '') != 'anonymous';
+    }
+    match /coin_promos/{code} {
+      allow get: if registeredAccount();
+      allow list: if author();
+      allow create, delete: if author();
+      allow update: if author() || (registeredAccount()
+        && resource.data.enabled == true && resource.data.singleUser == true
+        && resource.data.redeemedBy == null
+        && request.resource.data.redeemedBy == request.auth.uid
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['redeemedBy'])
+        && !exists(/databases/$(database)/documents/usuarios/$(request.auth.uid)/coin_rewards/$("promo_" + code))
+        && existsAfter(/databases/$(database)/documents/usuarios/$(request.auth.uid)/coin_rewards/$("promo_" + code)));
+    }
+    match /usuarios/{uid}/coin_rewards/{receipt} {
+      allow read: if author() || (registeredAccount() && request.auth.uid == uid);
+      allow update, delete: if author();
+      allow create: if author() || validPromoReceipt(uid, receipt);
+      function validPromoReceipt(uid, receipt) {
+        let data = request.resource.data;
+        let code = data.code;
+        let offer = get(/databases/$(database)/documents/coin_promos/$(code)).data;
+        return registeredAccount() && request.auth.uid == uid
+          && data.keys().hasOnly(['coins', 'kind', 'code', 'createdAt', 'grantedBy'])
+          && code is string && code.matches('[A-Z0-9_-]{3,32}')
+          && receipt == 'promo_' + code && data.kind == 'PROMO' && data.grantedBy == ''
+          && data.createdAt == request.time && data.coins is int
+          && data.coins >= 1 && data.coins <= 1000000 && data.coins == offer.coins
+          && offer.enabled == true
+          && (offer.singleUser == false || (offer.redeemedBy == null
+            && getAfter(/databases/$(database)/documents/coin_promos/$(code)).data.redeemedBy == uid));
+      }
     }
 
     // —— Todo lo demás: denegado por defecto ——

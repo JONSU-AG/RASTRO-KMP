@@ -83,14 +83,26 @@ import com.jonsuapps.rastro.theme.ThemeManager
         }
         item {
             Text("Camino de ligas", fontSize = 20.sp, fontWeight = FontWeight.Black, color = theme.textPrimary)
-            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                LeagueCatalog.all.forEach { item ->
-                    Sticker3dCard(containerColor = if (item.id == league.id) theme.surfaceAccent else theme.surface,
-                        strokeColor = if (item.id == league.id) theme.accent else theme.strokeBorder, bevelColor = theme.cardBevel) {
-                        Column(Modifier.widthIn(min = 90.dp, max = 150.dp).padding(10.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                            LeagueBadge(item, Modifier.size(42.dp))
-                            Text(item.title, color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 12.sp)
-                            Text(if (item.id == league.id) "Actual" else "${item.minXp}+ EXP", color = theme.textSecondary, fontSize = 11.sp)
+            BoxWithConstraints(Modifier.fillMaxWidth()) {
+                val columns = if (maxWidth >= 700.dp) 5 else if (maxWidth >= 360.dp) 3 else 2
+                val width = (maxWidth - 8.dp * (columns - 1)) / columns
+                val fontScale = androidx.compose.ui.platform.LocalDensity.current.fontScale.coerceAtLeast(1f)
+                Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    LeagueCatalog.all.chunked(columns).forEach { row ->
+                        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally)) {
+                            row.forEach { item ->
+                                Sticker3dCard(modifier = Modifier.width(width).height(126.dp * fontScale),
+                                    containerColor = if (item.id == league.id) theme.surfaceAccent else theme.surface,
+                                    strokeColor = if (item.id == league.id) theme.accent else theme.strokeBorder, bevelColor = theme.cardBevel) {
+                                    Column(Modifier.fillMaxSize().padding(8.dp), horizontalAlignment = Alignment.CenterHorizontally,
+                                        verticalArrangement = Arrangement.SpaceEvenly) {
+                                        LeagueBadge(item, Modifier.size(40.dp))
+                                        Text(item.title, color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 12.sp,
+                                            textAlign = androidx.compose.ui.text.style.TextAlign.Center, maxLines = 2)
+                                        Text(if (item.id == league.id) "Actual" else "${item.minXp}+ EXP", color = theme.textSecondary, fontSize = 11.sp)
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -119,16 +131,16 @@ import com.jonsuapps.rastro.theme.ThemeManager
         }
         item {
             Text("Podio · ${league.title}", color = theme.textPrimary, fontWeight = FontWeight.Black, fontSize = 22.sp)
-            FlowRow(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 rows.take(3).forEachIndexed { index, member ->
-                    Sticker3dCard(modifier = Modifier.widthIn(min = 95.dp, max = 220.dp), containerColor = theme.surfaceAccent,
+                    Sticker3dCard(modifier = Modifier.weight(1f).height(220.dp * androidx.compose.ui.platform.LocalDensity.current.fontScale.coerceAtLeast(1f)), containerColor = theme.surfaceAccent,
                         strokeColor = theme.accent, bevelColor = theme.cardBevel, onClick = { onProfile(member.uid) }) {
-                        Column(Modifier.padding(12.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                        Column(Modifier.fillMaxSize().padding(8.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(6.dp)) {
                             Icon(painterResource(R.drawable.ic_nav_ranking_filled), null, tint = theme.accent, modifier = Modifier.size(if (index == 0) 42.dp else 32.dp))
                             Text("${index + 1}.º", color = theme.textPrimary, fontWeight = FontWeight.Black, fontSize = 24.sp)
                             CartoonAvatar(photoUrl = member.photo, size = 40.dp)
-                            Text(member.name + if (member.uid == uid) " · Tú" else "", color = theme.textPrimary, fontWeight = FontWeight.Bold)
-                            Text(if (metric == LeagueMetric.XP) "${member.xp} EXP" else "${member.streak} días", color = theme.textSecondary)
+                            Text(member.name + if (member.uid == uid) " · Tú" else "", color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 13.sp, maxLines = 2, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis, textAlign = androidx.compose.ui.text.style.TextAlign.Center)
+                            Text(if (metric == LeagueMetric.XP) "${member.xp} EXP" else "${member.streak} días", color = theme.textSecondary, fontSize = 12.sp)
                             member.examScore?.let { Text("Examen: $it / 100", color = theme.textSecondary, fontSize = 11.sp) }
                         }
                     }

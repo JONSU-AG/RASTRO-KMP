@@ -68,12 +68,14 @@ fun RastroApp(
 ) {
     val context = LocalContext.current
     val restoreScope = rememberCoroutineScope()
+    LaunchedEffect(Unit) { com.jonsuapps.rastro.android.data.OptionalAppUpdateRepository.check(context) }
     // Fuente única y reactiva del Theme: incluye override dinámico (Tema adaptable)
     // y paleta personalizada (Mi tema). NO usar getColors directo (omite el override).
     val theme = ThemeManager.currentTheme
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route ?: RastroScreen.Home.route
+    SideEffect { com.jonsuapps.rastro.android.data.AdsPlacementController.adminSurfaceActive = currentRoute == RastroScreen.Admin.route }
     var openStreakCalendar by remember { mutableStateOf(false) }
     var xpTarget by remember { mutableStateOf<Offset?>(null) }
     val hasLearningHud = currentRoute == RastroScreen.Aprender.route || currentRoute == RastroScreen.AprenderSubject.route
@@ -83,6 +85,11 @@ fun RastroApp(
         com.jonsuapps.rastro.android.navigation.RastroAppLinks.consume()
     }
     val currentUser by UserManager.currentUser.collectAsState()
+    val adminUserMode by AdminConfig.userViewMode.collectAsState()
+    LaunchedEffect(adminUserMode, currentUser.uid) {
+        com.jonsuapps.rastro.android.data.AdMobProvider.preload()
+    }
+
     var authStateResolved by remember { mutableStateOf(false) }
     var showNotificationPrompt by remember { mutableStateOf(false) }
     var showFriendNotifications by remember { mutableStateOf(false) }
@@ -100,43 +107,65 @@ fun RastroApp(
     }
     var activeEntryAnnouncement by remember { mutableStateOf<RastroNotification?>(null) }
 
-    LaunchedEffect(notifications) {
-        val latestBroadcast = notifications.firstOrNull { it.isBroadcast }
-        if (latestBroadcast != null) {
-            val lastSeenPopupId = rastroPrefs.getString("last_seen_popup_id", null)
-            if (latestBroadcast.id != lastSeenPopupId) {
-                activeEntryAnnouncement = latestBroadcast
-            }
+    var seenEntryNotices by remember(currentUser.uid) { mutableStateOf<Set<String>?>(null) }
+    var welcomeNotice by remember(currentUser.uid) { mutableStateOf<RastroNotification?>(null) }
+    var noticeClock by remember { mutableLongStateOf(System.currentTimeMillis()) }
+    DisposableEffect(currentUser.uid) {
+        activeEntryAnnouncement = null
+        val seen = if(currentUser.isAuthenticated && !currentUser.isAnonymous) com.jonsuapps.rastro.android.data.EntryNoticeRepository.seen(currentUser.uid) { seenEntryNotices = it } else null
+        val welcome = if (currentUser.isAuthenticated && !currentUser.isAnonymous) com.jonsuapps.rastro.android.data.EntryNoticeRepository.welcome { welcomeNotice = it } else null
+        onDispose { seen?.remove(); welcome?.remove() }
+    }
+    LaunchedEffect(Unit) { while(true) { noticeClock = System.currentTimeMillis(); kotlinx.coroutines.delay(30_000) } }
+    LaunchedEffect(notifications, seenEntryNotices, welcomeNotice, noticeClock) {
+        val seen = seenEntryNotices ?: return@LaunchedEffect
+        if(activeEntryAnnouncement == null) {
+        activeEntryAnnouncement = (listOfNotNull(welcomeNotice) + notifications.filter { it.isBroadcast })
+            .firstOrNull { notice -> notice.id !in seen && (notice.id == "welcome" ||
+                (notice.endsAt > notice.startsAt && notice.startsAt <= noticeClock && noticeClock < notice.endsAt)) }
+        activeEntryAnnouncement?.let { notice ->
+            seenEntryNotices = seen + notice.id
+            com.jonsuapps.rastro.android.data.EntryNoticeRepository.mark(currentUser.uid,notice.id)
+        }
         }
     }
 
-    DisposableEffect(Unit) {
-        val settingsListener = FirebaseFirestore.getInstance().collection("site_settings").document("global")
-            .addSnapshotListener { snapshot, _ ->
-                if (snapshot != null && snapshot.exists()) {
-                    val maxLives = snapshot.getLong("maxLives")?.toInt() ?: GamificationManager.DEFAULT_MAX_HEARTS
-                    GamificationManager.setMaxHearts(maxLives)
-                    val recAmount = snapshot.getLong("lifeRecoveryAmount") ?: 3L
-                    val recUnitStr = snapshot.getString("lifeRecoveryUnit") ?: "MINUTOS"
-                    val recUnit = com.jonsuapps.rastro.gamification.LifeRecoveryUnit.fromString(recUnitStr)
-                    GamificationManager.setRecoveryConfig(recAmount, recUnit)
-                }
-            }
-        onDispose { settingsListener.remove() }
-    }
+    var showLivesShop by remember { mutableStateOf(false) }
+    var showProOffer by remember { mutableStateOf(false) }
+    val showAdSupport by com.jonsuapps.rastro.android.data.AdsPlacementController.showSupport.collectAsState()
+    if(showAdSupport) com.jonsuapps.rastro.android.ui.components.AdSupportDialog(
+        onDismiss = { com.jonsuapps.rastro.android.data.AdsPlacementController.dismissSupport() },
+        onPro = { com.jonsuapps.rastro.android.data.AdsPlacementController.dismissSupport(); showProOffer = true })
+    if(showProOffer) com.jonsuapps.rastro.android.ui.components.RastroProDialog { showProOffer = false }
 
+    if(showLivesShop) com.jonsuapps.rastro.android.ui.components.CoinAndLivesDialog { showLivesShop = false }
+    DisposableEffect(currentUser.uid) {
+        com.jonsuapps.rastro.monetization.ProAccess.clear()
+        val registration = if(currentUser.isAuthenticated && currentUser.uid.isNotBlank() && !currentUser.isAnonymous) com.jonsuapps.rastro.android.data.MonetizationRepository.observe(currentUser.uid) else null
+        com.jonsuapps.rastro.android.data.MonetizationRepository.playBilling(context).refreshEntitlement()
+        onDispose { registration?.remove() }
+    }
+    DisposableEffect(currentUser.isAuthenticated, currentUser.isAnonymous) {
+        val registration = if (currentUser.isAuthenticated && !currentUser.isAnonymous) com.jonsuapps.rastro.android.data.MonetizationRepository.observeEconomy() else null
+        onDispose { registration?.remove() }
+    }
     // Ticker ligero de regeneración periódica mientras la app está abierta
     LaunchedEffect(Unit) {
         while (true) {
+            com.jonsuapps.rastro.monetization.ProAccess.refresh()
             GamificationManager.updateHeartRegeneration()
             kotlinx.coroutines.delay(1000L)
         }
     }
 
     DisposableEffect(currentUser.uid) {
-        val listeners = NotificationRepository.observe(currentUser.uid, context) { notifications = it }
-        val profileListener = if (currentUser.uid.isNotBlank()) {
+        val listeners = if (currentUser.isAuthenticated && !currentUser.isAnonymous) NotificationRepository.observe(currentUser.uid, context) { notifications = it } else emptyList()
+        val profileUid = currentUser.uid
+        val profileListener = if (currentUser.isAuthenticated && !currentUser.isAnonymous && currentUser.uid.isNotBlank()) {
             UserProfileRepository.observe(currentUser.uid) { data ->
+                if (UserManager.currentUser.value.uid != profileUid || FirebaseAuth.getInstance().currentUser?.uid != profileUid) return@observe
+                com.jonsuapps.rastro.android.data.ErrorBankRepository.applyProfile(currentUser.uid, data)
+                com.jonsuapps.rastro.android.data.PublicProfileCache.update(currentUser.uid, data)
                 @Suppress("UNCHECKED_CAST")
                 val blocked = data["blockedUsers"] as? List<String>
                 UserManager.applyProfileFields(
@@ -145,6 +174,10 @@ fun RastroApp(
                     bio = data["bio"] as? String,
                     coverUrl = data["coverUrl"] as? String,
                     coverGradient = data["coverGradient"] as? String,
+                    homeUseProfileCover = data["homeUseProfileCover"] as? Boolean,
+                    coverZoom = (data["coverZoom"] as? Number)?.toFloat(),
+                    coverX = (data["coverX"] as? Number)?.toFloat(),
+                    coverY = (data["coverY"] as? Number)?.toFloat(),
                     whatsappChannel = data["whatsappChannel"] as? String,
                     tiktokUrl = data["tiktokUrl"] as? String,
                     instagramUrl = data["instagramUrl"] as? String,
@@ -159,9 +192,27 @@ fun RastroApp(
         }
     }
 
+    LaunchedEffect(currentUser.uid, currentUser.isAuthenticated) {
+        val firebaseUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser.isAuthenticated && firebaseUser?.uid == currentUser.uid && !firebaseUser.isAnonymous) {
+            try {
+                UserProfileRepository.ensureAccountIdentity(firebaseUser)
+            } catch (cancelled: kotlinx.coroutines.CancellationException) { throw cancelled
+            } catch (_: Exception) {
+                android.util.Log.w("RASTRO_SESSION", "No se pudo completar la identidad del perfil; se reintentará al ingresar.")
+            }
+        }
+    }
+
     LaunchedEffect(Unit) {
         GamificationManager.checkStreakStatusOnLaunch()
         FirebaseAuth.getInstance().currentUser?.let { user ->
+            if (user.isAnonymous) {
+                GamificationRepository.loadLocal(user.uid)?.let { GamificationRepository.saveLocal("local_student_guest", it) }
+                FirebaseAuth.getInstance().signOut()
+                UserManager.logout()
+                return@let
+            }
             UserManager.updateUserFromFirebase(
                 uid = user.uid,
                 displayName = user.displayName,
@@ -189,20 +240,53 @@ fun RastroApp(
 
     LaunchedEffect(currentUser.uid, currentUser.isAuthenticated, currentUser.isAnonymous) {
         val loadingUid = currentUser.uid
-        if (currentUser.isAuthenticated && !currentUser.isAnonymous) GamificationRepository.beginRestore(loadingUid)
+
         val localSaved = GamificationRepository.loadLocal(loadingUid)
+            ?: if (loadingUid == "local_student_guest") GamificationRepository.loadLocal("local_student_1") else null
         val prepared = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
             GamificationManager.prepareRestore(localSaved
                 ?: com.jonsuapps.rastro.gamification.GamificationState())
         }
         if (UserManager.currentUser.value.uid != loadingUid) return@LaunchedEffect
         GamificationManager.applyRestored(prepared)
+        val configuredEconomy = com.jonsuapps.rastro.monetization.EconomySettings.config.value
+        GamificationManager.setMaxHearts(configuredEconomy.maxLives)
+        GamificationManager.setRecoveryConfig(configuredEconomy.recoveryMinutes, com.jonsuapps.rastro.gamification.LifeRecoveryUnit.MINUTOS)
         GamificationManager.checkStreakStatusOnLaunch()
+        val adminAccess = GamificationRepository.isVerifiedAdmin(loadingUid)
+        if (adminAccess) GamificationManager.markDailyStreakEarned()
         GamificationRepository.saveLocal(currentUser.uid, GamificationManager.state.value)
-        if (currentUser.isAuthenticated && !currentUser.isAnonymous) {
+        val accessPrefs = context.getSharedPreferences("rastro_admin_access_recovery", Context.MODE_PRIVATE)
+        val accessDay = GamificationManager.getLocalDayString()
+        if (currentUser.isAuthenticated && !currentUser.isAnonymous && localSaved != null &&
+            (localSaved.streakActivityVersion < com.jonsuapps.rastro.android.data.StreakActivityMigration.VERSION ||
+                (adminAccess && accessPrefs.getString(loadingUid, "") != accessDay))) {
+            GamificationRepository.recoverSavedStreak(loadingUid) { result ->
+                if (UserManager.currentUser.value.uid == loadingUid) result.getOrNull()?.let { repaired ->
+                    GamificationManager.applyRestored(repaired)
+                    GamificationRepository.saveLocal(loadingUid, GamificationManager.state.value)
+                    if (GamificationRepository.isVerifiedAdmin(loadingUid)) accessPrefs.edit().putString(loadingUid, accessDay).apply()
+                }
+            }
+        }
+        if (currentUser.isAuthenticated && !currentUser.isAnonymous && localSaved == null) {
+            GamificationRepository.beginRestore(loadingUid)
             GamificationRepository.load(loadingUid) { result ->
                 if (UserManager.currentUser.value.uid != loadingUid) return@load
-                if (result.isSuccess && result.getOrNull() == null) GamificationRepository.finishRestore(loadingUid)
+                if (result.getOrNull() == null) {
+                    GamificationRepository.finishRestore(loadingUid)
+                    if (result.isSuccess) {
+                        GamificationRepository.loadLocal("local_student_guest")?.takeIf { com.jonsuapps.rastro.android.data.CloudBackupRepository.claimGuest(loadingUid) }?.let { guest ->
+                            restoreScope.launch {
+                                val preparedGuest = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) { GamificationManager.prepareRestore(guest) }
+                                if (UserManager.currentUser.value.uid == loadingUid) {
+                                    GamificationManager.applyRestored(preparedGuest)
+                                    GamificationRepository.saveLocal(loadingUid, preparedGuest)
+                                }
+                            }
+                        }
+                    }
+                }
                 result.getOrNull()?.let { savedState ->
                     restoreScope.launch {
                     val remotePrepared = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
@@ -210,9 +294,13 @@ fun RastroApp(
                     }
                     if (UserManager.currentUser.value.uid != loadingUid) return@launch
                     GamificationManager.applyRestored(remotePrepared)
+                    val economy = com.jonsuapps.rastro.monetization.EconomySettings.config.value
+                    GamificationManager.setMaxHearts(economy.maxLives)
+                    GamificationManager.setRecoveryConfig(economy.recoveryMinutes, com.jonsuapps.rastro.gamification.LifeRecoveryUnit.MINUTOS)
                     GamificationRepository.finishRestore(loadingUid)
                     GamificationManager.checkStreakStatusOnLaunch()
-                    GamificationRepository.save(currentUser.uid, GamificationManager.state.value)
+                    if (GamificationRepository.isVerifiedAdmin(loadingUid)) GamificationManager.markDailyStreakEarned()
+                    GamificationRepository.saveLocal(currentUser.uid, GamificationManager.state.value)
                     RastroWidgetManager.updateStreakInWidgets(
                         context,
                         GamificationManager.streakState.value.currentStreak,
@@ -222,6 +310,8 @@ fun RastroApp(
                     }
                 }
             }
+        } else if (currentUser.isAuthenticated && !currentUser.isAnonymous) {
+            com.jonsuapps.rastro.android.data.CloudBackupRepository.maybeBackup(loadingUid)
         }
     }
 
@@ -404,6 +494,11 @@ fun RastroApp(
             },
             bottomBar = {
                 if (currentRoute != RastroScreen.DiasDeRacha.route) {
+                    Column {
+                    if (currentRoute in listOf(RastroScreen.Home.route, RastroScreen.Aprender.route,
+                        RastroScreen.Cursos.route, RastroScreen.Biblioteca.route, RastroScreen.Perfil.route)) {
+                        com.jonsuapps.rastro.android.ui.components.OptionalAppUpdateBanner()
+                    }
                     // LiquidNavbar inferior compacto
                     LiquidNavbar(
                         currentRoute = if (showMoreActions) RastroScreen.Legal.route else currentRoute,
@@ -432,6 +527,7 @@ fun RastroApp(
                         },
                         onMoreClick = { showMoreActions = true }
                     )
+                    }
                 }
             }
         ) { paddingValues ->
@@ -461,6 +557,7 @@ fun RastroApp(
                         colors = theme,
                         onNavigate = { route -> navController.navigate(route) },
                         onOpenVocationalTest = { isVocationalDialogVisible = true },
+                        onOpenPeriodicTable = { isPeriodicTableVisible = true },
                         onNavigateToProfile = { uid -> navController.navigate(RastroScreen.UsuarioDetail.createRoute(uid)) },
                         onNavigateToPublication = { uid, pubId -> navController.navigate(RastroScreen.UsuarioDetail.createRoute(uid, pubId)) }
                     )
@@ -485,7 +582,10 @@ fun RastroApp(
                             navController.navigate(RastroScreen.AprenderSubject.createRoute(subjectId))
                         },
                         onNavigateToLesson = { lessonId ->
-                            navController.navigate(RastroScreen.LessonEngine.createRoute(lessonId)) { launchSingleTop = true }
+                            GamificationManager.updateHeartRegeneration()
+                            if (GamificationManager.hearts.value > 0 || com.jonsuapps.rastro.monetization.ProAccess.active()) {
+                                navController.navigate(RastroScreen.LessonEngine.createRoute(lessonId)) { launchSingleTop = true }
+                            } else showLivesShop = true
                         }
                     )
                 }
@@ -495,7 +595,10 @@ fun RastroApp(
                         subjectId = subjectId,
                         onNavigateBack = { navController.popBackStack() },
                         onNavigateToLesson = { lessonId ->
-                            navController.navigate(RastroScreen.LessonEngine.createRoute(lessonId)) { launchSingleTop = true }
+                            GamificationManager.updateHeartRegeneration()
+                            if (GamificationManager.hearts.value > 0 || com.jonsuapps.rastro.monetization.ProAccess.active()) {
+                                navController.navigate(RastroScreen.LessonEngine.createRoute(lessonId)) { launchSingleTop = true }
+                            } else showLivesShop = true
                         }
                     )
                 }
@@ -510,6 +613,7 @@ fun RastroApp(
                 // 3. Cursos
                 composable(RastroScreen.Cursos.route) {
                     CursosScreen(
+                        onSignIn = { navController.navigate(RastroScreen.Auth.route) { launchSingleTop = true } },
                         onOpenCourseDetail = { id ->
                             navController.navigate(RastroScreen.AcademyDetail.createRoute(id))
                         },
@@ -555,7 +659,7 @@ fun RastroApp(
                     FormularioScreen()
                 }
                 composable(RastroScreen.Flashcards.route) {
-                    FormularioScreen(initialFaceIndex = 2)
+                    SimuladorScreen(initialTab = 3, onOpenLeagues = { navController.navigate(RastroScreen.Ligas.route) })
                 }
 
                 // 6. Simulador
@@ -579,6 +683,14 @@ fun RastroApp(
 
                 // 9. Perfil Propio y Público
                 composable(RastroScreen.Perfil.route) {
+                    if (!currentUser.isAuthenticated || currentUser.isAnonymous) {
+                        LaunchedEffect(Unit) {
+                            navController.navigate(RastroScreen.Auth.route) {
+                                popUpTo(RastroScreen.Perfil.route) { inclusive = true }
+                                launchSingleTop = true
+                            }
+                        }
+                    } else {
                     UserProfileScreen(
                         onOpenSettings = { isProfileSettingsVisible = true },
                         onNavigate = { route ->
@@ -587,6 +699,7 @@ fun RastroApp(
                         },
                         onOpenPomodoro = { pomodoroState = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL) }
                     )
+                    }
                 }
                 composable(RastroScreen.UsuarioDetail.route) { backStackEntry ->
                     val targetUid = backStackEntry.arguments?.getString("uid")
@@ -607,7 +720,9 @@ fun RastroApp(
                             popUpTo(RastroScreen.Auth.route) { inclusive = true }
                             launchSingleTop = true
                         } },
-                        onContinueAsGuest = { navController.navigate(RastroScreen.Home.route) }
+                        onContinueAsGuest = { navController.navigate(RastroScreen.Home.route) {
+                            popUpTo(RastroScreen.Auth.route) { inclusive = true }; launchSingleTop = true
+                        } }
                     )
                 }
 
@@ -740,12 +855,16 @@ fun RastroApp(
                 },
                 onLogout = {
                     isProfileSettingsVisible = false
+                    FirebaseAuth.getInstance().signOut()
                     UserManager.clearUser()
+                    AdminConfig.isUserViewModeEnabled = false
                     try {
                         com.google.firebase.analytics.FirebaseAnalytics.getInstance(context).setUserId(null)
                     } catch (_: Exception) {}
-                    FirebaseAuth.getInstance().signOut()
-                    navController.navigate(RastroScreen.Home.route)
+                    navController.navigate(RastroScreen.Home.route) {
+                        popUpTo(navController.graph.id) { inclusive = false }
+                        launchSingleTop = true
+                    }
                 },
                 onAccountDeleted = {
                     isProfileSettingsVisible = false
@@ -804,19 +923,23 @@ fun RastroApp(
                 onAction = { action ->
                     when (action) {
                         MoreAction.SETTINGS -> isProfileSettingsVisible = true
+                        MoreAction.PRO -> showProOffer = true
                         MoreAction.WIDGETS -> showWidgetsHub = true
                         MoreAction.PIZARRA -> navController.navigate(RastroScreen.Pizarra.route)
                         MoreAction.LOGIN -> navController.navigate(RastroScreen.Auth.route)
                         MoreAction.LOGOUT -> {
                             isProfileSettingsVisible = false
                             showMoreActions = false
+                            FirebaseAuth.getInstance().signOut()
                             UserManager.clearUser()
                             try {
                                 com.google.firebase.analytics.FirebaseAnalytics.getInstance(context).setUserId(null)
                             } catch (_: Exception) {}
-                            FirebaseAuth.getInstance().signOut()
                             AdminConfig.isUserViewModeEnabled = false
-                            navController.navigate(RastroScreen.Home.route)
+                            navController.navigate(RastroScreen.Home.route) {
+                                popUpTo(navController.graph.id) { inclusive = false }
+                                launchSingleTop = true
+                            }
                         }
                         MoreAction.ADMIN -> navController.navigate(RastroScreen.Admin.route)
                         MoreAction.LOKI_LAB -> if (canOpenLokiLab) { showLokiLab = true }
@@ -960,7 +1083,8 @@ fun RastroApp(
                 tag = if (announcement.type.isNotBlank()) announcement.type.uppercase() else "AVISO OFICIAL",
                 mood = mood,
                 onDismiss = {
-                    rastroPrefs.edit().putString("last_seen_popup_id", announcement.id).apply()
+                    seenEntryNotices = seenEntryNotices.orEmpty() + announcement.id
+                    com.jonsuapps.rastro.android.data.EntryNoticeRepository.mark(currentUser.uid, announcement.id)
                     activeEntryAnnouncement = null
                 },
                 theme = theme

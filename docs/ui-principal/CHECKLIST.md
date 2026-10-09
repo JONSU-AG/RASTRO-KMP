@@ -144,3 +144,64 @@ Kotlin debug/release y R8 compilan; 185 pruebas shared y 100 Android pasan. No s
 - [x] Fondo académico inicial y fallback de preferencias activados; conserva false explícito guardado por el usuario.
 - [x] Compilación y 112 tests Android correctos. Detalle MIS_ERRORES.md.
 - [ ] Validación física y sincronización con dos dispositivos; no se ejecutó la app.
+
+## Inicio y herramientas — 08/10/2026
+- [x] Invitado no compone Perfil propio; deriva al login.
+- [x] Logo base existente integrado en manifest, fallback y recordatorio grande.
+- [x] Contador, acceso de tabla y liga actual conectados a sistemas existentes.
+- [x] 118 elementos y posiciones únicos; prueba de filas f y elemento 118.
+- [x] Default Conocimientos excluye Previa/Aptitudes y mantiene el día del examen; prueba aprobada.
+- [x] 149 pruebas Android y lintVitalRelease correctos; assembleDebug correcto.
+- [ ] Revisión física de temas, rotación, fuente grande, Google/avisos y rutas: no app ejecutada.
+
+## Acabado Home/tabla/tema — 08/10
+- [x] Mensaje de paleta retirado y herramientas con vectores coloreados sin panel detrás.
+- [x] Calendario con CTA sobre contador existente.
+- [x] Selector Tabla/Lista explícito y zoom de geometría real, botones/reset/pellizco.
+- [x] Test de límites/factor inválido de zoom aprobado; 150 tests Android correctos.
+- [x] Editor fuera de lista lazy y tres controles Fondo/Tarjetas/Acento, sin reemplazar sistema de temas.
+- [x] lintVitalRelease, assembleDebug y diff check correctos.
+- [ ] Prueba física de gestos, latencia del editor, temas y accesibilidad; no app ejecutada.
+
+
+## 08/10/2026 — Iconos, herramientas y tarjetas compactas
+
+- [x] Implementación existente reutilizada; cambios limitados al ámbito visual y accesos solicitados.
+- [x] Pruebas Android (153, cero fallos) y lintVitalRelease.
+- [ ] Revisión visual en teléfono/tablet, modo claro/oscuro y fuentes grandes: app no ejecutada.
+
+- [x] compilar_app.bat y assembleDebug final correctos, sin instalar/lanzar la app.
+
+
+## 08/10/2026 — Refinamiento solicitado
+
+- [x] Cambios implementados y compilación de Kotlin incluida en tests.
+- [x] 155 tests Android; cero fallos/errores. Vectores XML válidos.
+- [ ] Revisión física en temas claro/oscuro, pantallas pequeñas y gestos: no se ejecutó la app.
+- [x] lintVitalRelease y compilar_app.bat (assembleDebug) correctos. App no instalada ni ejecutada.
+
+
+## 08/10/2026 — Iconos, revisión y regalos
+
+Aportar/Aportes separados; Fórmulas con Σ, Ligas con copa y fuego original en Racha. Aprender/Cursos distintos; carpeta Biblioteca opaca. Formulario ampliado a 32 fórmulas/37 mnemotecnias con enlaces explícitos y notación serif/fracciones. Ver AJUSTES_2026-10-08_ICONOS_FORMULAS_Y_SIMULADOR.md.
+
+- [x] Compilación, 348 pruebas Android/shared y lintVitalRelease sin errores.
+- [x] Ocho pruebas de reglas Firestore sin fallos; reglas remotas coinciden.
+- [ ] Recorrido físico y verificación visual en teléfono: app no ejecutada.
+- [x] compilar_app.bat / assembleDebug final correcto; no se lanzó ni instaló la app.
+
+
+## 08/10/2026 — Aviso opcional de actualización
+
+- [x] Google Play app-update 2.1.0 integrado; disponibilidad real y código superior al instalado.
+- [x] Tarjeta del tema con entrada desde abajo sobre la barra inferior, X/Cerrar y Actualizar hacia Google Play.
+- [x] Cierre por versión durante 24 horas; nueva versión independiente. Sin Firebase y oculto durante preguntas.
+- [x] 163 pruebas Android sin fallos ni errores, incluidas tres de versión/cierre/cambio de reloj; lintVitalRelease correcto.
+- [x] git diff --check correcto; se conservaron cambios previos.
+- [ ] Verificación física del aviso con actualización elegible en Play: no se ejecutó la app.
+- [x] compilar_app.bat / assembleDebug correcto, sin iniciar ni instalar la app.
+
+## 08/10/2026 — Comunidad y Pro
+- [x] Canal oficial común dado por el propietario: Comunidad RASTRO/OFICIAL, sin canal personal en Inicio.
+- [x] Más → RASTRO Pro con corona sticker y diálogo existente; sin compras duplicadas.
+- [x] 358 pruebas y lintVitalRelease sin fallos; comprobación física pendiente, app no ejecutada.

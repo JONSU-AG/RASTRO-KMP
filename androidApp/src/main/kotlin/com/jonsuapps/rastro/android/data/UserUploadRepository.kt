@@ -61,6 +61,10 @@ data class UploadComment(
 object UserUploadRepository {
     fun observe(uid: String, onUploads: (List<UserUpload>) -> Unit): ListenerRegistration =
         FirebaseFirestore.getInstance().collection("uploads")
+            .where(com.google.firebase.firestore.Filter.or(
+                com.google.firebase.firestore.Filter.equalTo("uploadedBy.uid", uid),
+                com.google.firebase.firestore.Filter.equalTo("ownerId", uid),
+                com.google.firebase.firestore.Filter.equalTo("authorUid", uid)))
             .addSnapshotListener { snapshot, error ->
                 if (error != null || snapshot == null) return@addSnapshotListener
                 onUploads(snapshot.documents.filter { document ->
@@ -69,14 +73,21 @@ object UserUploadRepository {
                 }.mapNotNull(::toUserUpload).sortedWith(compareByDescending<UserUpload> { it.isPinned }.thenByDescending { it.createdAtMillis }))
             }
 
-    /** Flujo en tiempo real solo de publicaciones marcadas como destacadas (destacado == true). */
-    fun observeFeatured(onUploads: (List<UserUpload>) -> Unit): ListenerRegistration =
-        FirebaseFirestore.getInstance().collection("uploads")
+    private var featuredCache = emptyList<UserUpload>()
+    private var featuredFetchedAt = 0L
+    /** Existing API, now a cached one-shot request rather than a permanent listener. */
+    fun observeFeatured(onUploads: (List<UserUpload>) -> Unit): ListenerRegistration {
+        var cancelled = false
+        if (featuredFetchedAt != 0L) onUploads(featuredCache)
+        if (System.currentTimeMillis() - featuredFetchedAt >= 5 * 60_000L) FirebaseFirestore.getInstance().collection("uploads")
             .whereEqualTo("destacado", true)
-            .addSnapshotListener { snapshot, error ->
-                if (error != null || snapshot == null) return@addSnapshotListener
-                onUploads(snapshot.documents.mapNotNull(::toUserUpload).sortedWith(compareByDescending<UserUpload> { it.createdAtMillis }.thenBy { it.id }).take(20))
+            .get().addOnSuccessListener { snapshot ->
+                featuredCache = snapshot.documents.mapNotNull(::toUserUpload).sortedWith(compareByDescending<UserUpload> { it.createdAtMillis }.thenBy { it.id }).take(20)
+                featuredFetchedAt = System.currentTimeMillis()
+                if (!cancelled) onUploads(featuredCache)
             }
+        return ListenerRegistration { cancelled = true }
+    }
 
     /** Same live collection used by React's Biblioteca community tab. */
     fun observeCommunity(onUploads: (List<UserUpload>) -> Unit): ListenerRegistration =

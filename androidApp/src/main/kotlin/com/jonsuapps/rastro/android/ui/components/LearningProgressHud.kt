@@ -53,6 +53,7 @@ fun LearningProgressHud(onStreak: () -> Unit, onTricks: () -> Unit, onTarget: (O
     val theme = ThemeManager.currentTheme
     val progress by GamificationManager.state.collectAsState()
     val hearts by GamificationManager.hearts.collectAsState()
+    val proActive by com.jonsuapps.rastro.monetization.ProAccess.isActive.collectAsState()
     var showLeagues by remember { mutableStateOf(false) }
     var showCoins by remember { mutableStateOf(false) }
     var showLives by remember { mutableStateOf(false) }
@@ -64,7 +65,7 @@ fun LearningProgressHud(onStreak: () -> Unit, onTricks: () -> Unit, onTarget: (O
     Box(Modifier.fillMaxWidth().background(theme.background), contentAlignment = Alignment.Center) {
         BoxWithConstraints(Modifier.widthIn(max = 720.dp).fillMaxWidth().padding(horizontal = 10.dp, vertical = 5.dp)) {
             val availableWidth = maxWidth
-            val labels = listOf("${progress.streak}d", "Nv.${progress.level}", "$hearts", "${progress.coins}")
+            val labels = listOf("${progress.streak}d", "Nv.${progress.level}", if(proActive) "∞" else "$hearts", "${progress.coins}")
             val subtitles = listOf("Racha", "${progress.xp} XP", "Vidas", "Monedas")
             fun textWidth(text: String) = with(density) {
                 measurer.measure(text, TextStyle(fontSize = 11.sp, fontWeight = FontWeight.Black), softWrap = false).size.width.toDp()
@@ -103,15 +104,11 @@ fun LearningProgressHud(onStreak: () -> Unit, onTricks: () -> Unit, onTarget: (O
             }
         }
     }
-    if (showCoins) RastroStickerDialog(onDismissRequest = { showCoins = false }, title = "Tus monedas",
-        message = "Tienes ${progress.coins} monedas. Ganas 10 por estrella al completar una lección por primera vez. Al repetir recibes 2 por estrella y el 20% de la EXP. Las estrellas antiguas también se reconocen.",
-        confirmText = "Entendido", icon = Icons.Rounded.Paid, theme = theme, onConfirm = { showCoins = false })
-    if (showLives) RastroStickerDialog(
-        onDismissRequest = { showLives = false }, title = "Tus vidas",
-        message = "Tienes $hearts de $maxHearts vidas. Recuperas una vida cada $recoveryAmount ${recoveryUnit.title.lowercase()}, hasta completar tu máximo. Las vidas se usan al equivocarte en las actividades.",
-        confirmText = "Entendido", icon = Icons.Rounded.Favorite, theme = theme,
-        onConfirm = { showLives = false }
-    )
+    if (showCoins) CoinAndLivesDialog { showCoins = false }
+    if (showLives) {
+        if(proActive) RastroProDialog { showLives = false }
+        else CoinAndLivesDialog { showLives = false }
+    }
     if (showLeagues) Dialog(onDismissRequest = { showLeagues = false }) {
         Sticker3dCard(containerColor = theme.surface, strokeColor = theme.strokeBorder,
             bevelColor = theme.cardBevel, shape = RoundedCornerShape(24.dp)) {
