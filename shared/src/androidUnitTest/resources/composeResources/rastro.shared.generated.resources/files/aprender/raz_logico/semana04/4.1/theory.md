@@ -19,24 +19,45 @@
 
 ## 2. 🗺️ MAPA TAXONÓMICO Y ONTOLOGÍA DEL TEMA
 
-```text
-                               ┌─ Inferencia Inductiva (De lo particular a lo general: Probable)
-        ┌─ 1. Tipos de ────────┼─ Inferencia Deductiva (De lo general a lo particular: Necesaria)
-        │      Inferencias     └─ Inferencia Abductiva (La mejor explicación causal disponible)
-        │
-INFERENCIAS                    ┌─ Premisas (Enunciados que sirven de fundamento lógico)
-LÓGICAS ────────┼─ 2. Estructura de ───┼─ Conclusión (Enunciado que se deriva de las premisas)
-        │      un Razonamiento └─ Validez Formal vs. Verdad Fáctica (La validez es de la forma)
-        │
-        │                      ┌─ Modus Ponendo Ponens (MPP: Afirmando el antecedente)
-        ├─ 3. Reglas ──────────┼─ Modus Tollendo Tollens (MTT: Negando el consecuente)
-        │      Clásicas de     ├─ Silogismo Hipotético Puro (SHP: Transitividad de causas)
-        │      Inferencia      ├─ Silogismo Disyuntivo (SD: Modus Tollendo Ponens)
-        │                      └─ Dilemas Constructivo y Destructivo
-        │
-        └─ 4. Falacias ────────┌─ Falacia de Afirmación del Consecuente (Inferencia inválida)
-               Formales de     └─ Falacia de Negación del Antecedente (Inferencia inválida)
-               Inferencia
+```mermaid
+graph TD
+ ROOT["Inferencias y argumentos"]
+ B1["Tipos de razonamiento"]
+ B1N1["Deductivo: una inferencia válida preserva la verdad de las premisas."]
+ B1N2["Inductivo: apoya una conclusión que no queda garantizada por la forma."]
+ B1N3["Abductivo: propone una explicación para los datos; no demuestra su unicidad."]
+ B2["Estructura de un argumento"]
+ B2N1["Premisas: razones ofrecidas como fundamento."]
+ B2N2["Conclusión: afirmación que se intenta justificar."]
+ B2N3["Verdad: propiedad de proposiciones en una interpretación."]
+ B2N4["Validez: ausencia de un caso con premisas V y conclusión F."]
+ B3["Reglas deductivas"]
+ B3N1["Modus ponens: $p\to q$, $p$; se concluye $q$."]
+ B3N2["Modus tollens: $p\to q$, $\neg q$; se concluye $\neg p$."]
+ B3N3["Silogismo hipotético: $p\to q$, $q\to r$; se concluye $p\to r$."]
+ B3N4["Silogismo disyuntivo: $p\lor q$, $\neg p$; se concluye $q$."]
+ B3N5["Dilemas: combinar disyunciones y condiciones justificadas; revisar sus premisas."]
+ B4["Formas inválidas frecuentes"]
+ B4N1["Afirmar el consecuente no autoriza afirmar el antecedente."]
+ B4N2["Negar el antecedente no autoriza negar el consecuente."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
+ B3 --> B3N5
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
 ```
 
 ---

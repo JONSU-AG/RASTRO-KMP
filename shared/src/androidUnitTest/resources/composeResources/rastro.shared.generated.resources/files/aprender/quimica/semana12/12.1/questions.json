@@ -1,1 +1,200 @@
-[{"concept":"12.1.1","correctIndex":0,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t12_s01_c01","options":["Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":12,"statement":"Frente al distractor frecuente de examen: \"Trampa 1: Calcular pH de una solución de HCl \\ 10^{-8}\\text{ M} como 8. ERROR FATAL DE ADMISIÓN. ¡Un ácido jamás puede tener un pH básico (> 7)! A concentraciones ultra dil\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.2","correctIndex":1,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t12_s01_c02","options":["Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":12,"statement":"Frente al distractor frecuente de examen: \"Trampa 2: Olvidar el factor de disociación para bases dipróticas como Ca(OH)_2. Si tienes Ca(OH)_2 \\ 0.05\\text{ M}, cada mol libera 2\\text{ moles} de OH^-, por lo que [OH^\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "quim_t12_s01_c01",
+    "concept": "12.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "En el modelo acuoso ideal, $[\\mathrm{H_3O^+}]=10^{-3}$ mol/L. ¿Cuál es el pH?",
+    "options": [
+      "$3$",
+      "$6$",
+      "$1.5$",
+      "$9$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Usamos pH=−log10 de la concentración en la aproximación dada.\n2. Aplicamos los datos y conservamos las unidades: $pH=-\\log_{10}(10^{-3})$.\n3. El resultado es $3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s01_c02",
+    "concept": "12.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "En el modelo ideal, $[\\mathrm{OH^-}]=10^{-4}$ mol/L. ¿Cuál es el pOH?",
+    "options": [
+      "$8$",
+      "$2$",
+      "$12$",
+      "$4$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La función pOH usa el logaritmo negativo.\n2. Aplicamos los datos y conservamos las unidades: $pOH=-\\log_{10}(10^{-4})$.\n3. El resultado es $4$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s01_c03",
+    "concept": "12.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "A 25 °C adopta pKw=14. Una solución ideal tiene pH=5. ¿Cuál es su pOH?",
+    "options": [
+      "$4.5$",
+      "$27$",
+      "$9$",
+      "$18$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. A esa temperatura se suman pH y pOH para obtener pKw.\n2. Aplicamos los datos y conservamos las unidades: $pOH=14-5$.\n3. El resultado es $9$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s01_c04",
+    "concept": "12.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "Una solución ideal tiene pH=2. ¿Qué concentración de H3O+ corresponde en mol/L?",
+    "options": [
+      "$0.03\\,\\mathrm{mol/L}$",
+      "$0.01\\,\\mathrm{mol/L}$",
+      "$0.02\\,\\mathrm{mol/L}$",
+      "$0.005\\,\\mathrm{mol/L}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Invertimos el logaritmo.\n2. Aplicamos los datos y conservamos las unidades: $[H_3O^+]=10^{-pH}=10^{-2}$.\n3. El resultado es $0.01\\,\\mathrm{mol/L}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s01_c05",
+    "concept": "12.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "A 25 °C usa Kw=10⁻¹⁴ y neutralidad [H3O+]=[OH−]. ¿Cuál es [H3O+] en mol/L para el modelo ideal?",
+    "options": [
+      "$1\\times10^{-7}\\,\\mathrm{mol/L}$",
+      "$2\\times10^{-7}\\,\\mathrm{mol/L}$",
+      "$5\\times10^{-8}\\,\\mathrm{mol/L}$",
+      "$3\\times10^{-7}\\,\\mathrm{mol/L}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La neutralidad iguala ambas concentraciones.\n2. Aplicamos los datos y conservamos las unidades: $[H_3O^+]=\\sqrt{K_w}=10^{-7}$.\n3. El resultado es $1\\times10^{-7}\\,\\mathrm{mol/L}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s01_c06",
+    "concept": "12.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "A 25 °C, Kw=10⁻¹⁴. Si [H3O+]=10⁻⁴ mol/L en el modelo ideal, ¿cuál es [OH−]?",
+    "options": [
+      "$2\\times10^{-10}\\,\\mathrm{mol/L}$",
+      "$5\\times10^{-11}\\,\\mathrm{mol/L}$",
+      "$3\\times10^{-10}\\,\\mathrm{mol/L}$",
+      "$1\\times10^{-10}\\,\\mathrm{mol/L}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El producto de concentraciones es Kw en esta aproximación.\n2. Aplicamos los datos y conservamos las unidades: $[OH^-]=10^{-14}/10^{-4}=10^{-10}$.\n3. El resultado es $1\\times10^{-10}\\,\\mathrm{mol/L}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s01_c07",
+    "concept": "12.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "Un ácido de Brønsted–Lowry es una especie que…",
+    "options": [
+      "Siempre contiene un metal.",
+      "Nunca puede ser un ion.",
+      "Dona un protón.",
+      "Acepta obligatoriamente un neutrón."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La definición sigue transferencias de protones.\n2. El ácido aporta el protón a otra especie.\n3. Puede ser una molécula o un ion.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s01_c08",
+    "concept": "12.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "Una base de Brønsted–Lowry…",
+    "options": [
+      "Solo puede ser un sólido.",
+      "Acepta un protón.",
+      "Siempre dona todos sus electrones.",
+      "Tiene necesariamente pH=0."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La base recibe el protón transferido.\n2. Se transforma en su ácido conjugado.\n3. El concepto no depende de ser sólido o líquido.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s01_c09",
+    "concept": "12.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "Un ácido de Lewis…",
+    "options": [
+      "Acepta un par electrónico para formar un enlace.",
+      "Es cualquier especie que pierde un neutrón.",
+      "Siempre tiene carga negativa.",
+      "Nunca puede ser un catión."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Lewis describe interacción de pares electrónicos.\n2. El ácido es el aceptor del par.\n3. La base es quien lo dona.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s01_c10",
+    "concept": "12.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "Una solución acuosa neutra se define porque…",
+    "options": [
+      "Las concentraciones o actividades de H3O+ y OH− se igualan según el modelo.",
+      "No contiene iones.",
+      "Siempre tiene concentración cero de agua.",
+      "pH vale siete a cualquier temperatura obligatoriamente."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Neutralidad compara ambos tipos de iones.\n2. El producto iónico del agua depende de temperatura.\n3. pH neutro igual a siete corresponde aproximadamente a 25 °C, no a cualquier temperatura.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s01_c11",
+    "concept": "12.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "El pH riguroso se relaciona con…",
+    "options": [
+      "El número de neutrones del oxígeno.",
+      "La concentración de cualquier sal sin considerar actividad.",
+      "La actividad del ion hidrógeno; en soluciones suficientemente diluidas se aproxima con concentración.",
+      "Solo la masa total de la solución."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La actividad expresa el comportamiento efectivo de la especie.\n2. La concentración se usa como aproximación en el tratamiento ideal.\n3. Las soluciones reales pueden desviarse de esa aproximación.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

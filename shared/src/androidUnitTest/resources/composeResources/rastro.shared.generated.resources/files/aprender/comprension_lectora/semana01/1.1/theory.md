@@ -16,20 +16,33 @@
 
 ## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
 
-```
-                           COMPRENSIÓN LITERAL
-                                    │
-          ┌─────────────────────────┴─────────────────────────┐
-          ▼                                                   ▼
-   NIVEL EXPLÍCITO DIRECTO                             PARÁFRASIS FIEL
- (Palabras textuales del autor)                     (Mismo contenido, otra forma)
-          │                                                   │
-    ┌─────┴─────┐                                       ┌─────┴─────┐
-    ▼           ▼                                       ▼           ▼
-Datos Puros   Hechos y                               Sinonimia    Estructura
-(Cifras,      Detalles                              Contextual   Sintáctica
- Fechas,      (Acciones                             (Sustitución Invertida
- Nombres)      narradas)                             de vocablos) (Voz Pasiva/Activa)
+```mermaid
+graph TD
+ ROOT["Leer información explícita"]
+ B1["Localizar datos"]
+ B1N1["Identificar quién realiza cada acción y a qué momento se refiere."]
+ B1N2["Conservar cifras, fechas, condiciones y referencias que delimitan una afirmación."]
+ B1N3["Distinguir las palabras del narrador de las de un personaje o una fuente citada."]
+ B2["Parafrasear con fidelidad"]
+ B2N1["Reformular sin añadir causas, intenciones o consecuencias no expresadas."]
+ B2N2["Comprobar que un cambio de voz verbal conserve participantes y relaciones."]
+ B2N3["La sustitución por un sinónimo depende del contexto, no solo del diccionario."]
+ B3["Verificar el alcance"]
+ B3N1["Mantener negaciones y cuantificadores: algunos no equivale a todos."]
+ B3N2["Una posibilidad no se convierte en certeza al resumirla."]
+ B3N3["La información explícita también puede estar repartida en varias oraciones."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
 
@@ -309,3 +322,12 @@ E) La superaleación fue diseñada para operar de forma exclusiva a temperatura 
 Una pregunta literal exige localizar un dato que el texto presenta. Busca palabras de referencia, identifica quién realiza la acción y revisa condiciones como tiempo, lugar o cantidad. Una alternativa puede repetir palabras del texto y alterar su relación; la coincidencia verbal no garantiza una respuesta correcta.
 
 Inferir requiere relacionar datos para obtener una conclusión apoyada, no agregar conocimientos externos sin necesidad. Si un texto indica que una carretera está cerrada por inundación y recomienda otra ruta, puede inferirse una dificultad para circular por la primera; no puede concluirse que toda la ciudad está aislada. Diferencia dato, relación y conclusión antes de elegir.
+
+
+### Conservar el alcance al parafrasear
+
+| Texto de partida | Reformulación | Evaluación |
+|---|---|---|
+| Algunos talleres abren los sábados | Hay talleres que abren los sábados | Conserva el alcance básico |
+| Algunos talleres abren los sábados | Todos los talleres abren los sábados | Añade una generalización |
+| La visita puede aplazarse | La visita se aplazará | Convierte posibilidad en certeza |

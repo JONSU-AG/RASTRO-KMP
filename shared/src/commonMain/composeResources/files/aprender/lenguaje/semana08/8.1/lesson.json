@@ -7,10 +7,10 @@
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana08.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_08_Semantica_y_Lexicologia.md",
   "learningObjectives": [
-    "Describir el signo biplánico de Saussure con significado y significante",
-    "Explicar arbitrariedad, linealidad, mutabilidad diacrónica e inmutabilidad sincrónica",
-    "Diferenciar primera articulación con morfemas de segunda con fonemas",
-    "Discriminar denotación literal de connotación figurada en oraciones de examen"
+    "Distinguir significante, significado y referente en el modelo saussureano",
+    "Explicar arbitrariedad y linealidad en su ámbito de aplicación",
+    "Contrastar estabilidad social, cambio histórico y doble articulación",
+    "Interpretar sentido literal, usos figurados y asociaciones sin reducirlos al diccionario"
   ],
   "theory": {
     "id": "th_leng_t08_s01",
@@ -19,15 +19,14 @@
     "titulo": "El Signo Lingüístico y la Distinción Denotación vs. Connotación",
     "resumen": "",
     "conceptosClave": [
-      "Significado = concepto mental; significante = imagen acústica psíquica",
-      "Arbitrariedad: perro, dog y allqo prueban convención sin lazo natural",
-      "Linealidad: fonemas en cadena temporal unidimensional sucesiva",
-      "Mutabilidad diacrónica aurum→oro; inmutabilidad sincrónica anti-cambio individual",
-      "Primera articulación morfemas con significado; segunda fonemas distintivos",
-      "Denotación de diccionario objetiva; connotación figurada contextual",
-      "Rata traidora y corazón de oro son connotación; hielo y león científico son denotación"
+      "El signo saussureano relaciona significante y significado, no palabra y objeto físico",
+      "La convención social no depende de una elección individual sin límites",
+      "La linealidad se explica para el significante oral; letras y fonemas no son equivalentes",
+      "Estabilidad social no significa ausencia de innovación ni de variación",
+      "Primera articulación: monemas; segunda: unidades distintivas",
+      "Los sentidos figurados pueden estar convencionalizados y recogidos en diccionarios"
     ],
-    "admissionTip": "Si la palabra nombra el cuerpo celeste, el hielo que se derrite o el león clasificado, es denotación; si nombra fama como estrella, traición como rata u ojos de lince en negocios, es connotación.",
-    "admissionExplanation": "Denotación es valor primario de diccionario compartido por todos; connotación es valor secundario afectivo que depende del contexto pragmático."
+    "admissionTip": "Distingue el modelo del signo, el nivel de análisis y el sentido usado en el fragmento.",
+    "admissionExplanation": "Una explicación del modelo no debe confundirse con una regla sobre todos los sistemas lingüísticos ni con neutralidad absoluta de cada oración."
   }
 }

@@ -171,3 +171,33 @@
 
 Total nuevo: 20 lecciones, 240 preguntas. Total BiologÌa: 52 (28 legacy + 24 nuevas).
 Renderer general: tablas?tarjetas, `---` filtrados, negritas/listas/jerarquÌa OK (genÈrico, sin lÛgica por tema).
+
+## Reparaciones verificadas del 02/11/2026
+
+- [x] Diez ejercicios con cuatro pares reales en el motor MATCH_PAIRS existente; IDs conservados, columna derecha desordenada y fixtures equivalentes.
+- [x] Pregunta de factor intrÌnseco reformulada como fisiologÌa sin prescripciÛn clÌnica.
+- [x] Los once cambios pasan loader, CatalogValidator 0/0, sanitizador y comprobaciÛn aislada de textos. Ver REVISION_RELACIONES_2026-11-02.md.
+- [ ] RevisiÛn acadÈmica integral del resto del banco y prueba de interacciÛn fÌsica en telÈfono.
+
+
+## 03/11/2026 ‚Äî Piloto visual 8.3
+
+- [x] Ruta nativa limitada al coraz√≥n de bio_t08_s03, sin cambios en otros temas ni preguntas.
+- [x] Imagen de Bioicons derivada con hash/licencia; GLB BodyParts3D conserva 83 componentes y 102 802 tri√°ngulos.
+- [x] Compilaci√≥n y 16 pruebas pertinentes; shaders/buffer exactos producen fotograma visible, giro y zoom en prueba WebGL.
+- [ ] Prueba f√≠sica y aceptaci√≥n del usuario antes de ampliar el piloto.
+
+Detalle y l√≠mites: PILOTO_8_3_VISOR_NATIVO.md.
+
+
+## 03/11/2026 ‚Äî Segundo piloto: c√©lula vegetal 5.4
+
+Recurso ilustrativo de 3DCellForge asociado solo a bio_t05_s04 (N√∫cleo y comparaci√≥n animal vs. vegetal), visible en teor√≠a del nivel y Material. GLB reducido de 60,7 MB a 1,93 MB, con textura y colores, conservando fuente/aviso MIT. Se reutiliza el visor nativo; no cambian bancos ni Firebase. Ver PILOTO_CELULA_VEGETAL_5_4.md. Prueba f√≠sica y aceptaci√≥n pendientes.
+
+
+## 03/11/2026 ‚Äî Partes interactivas de la c√©lula 5.4
+
+La superficie original se agrupa en ocho partes para identificar, resaltar, aislar y separar visualmente, preservando todos los tri√°ngulos y texturas. N√∫cleo incluye nucl√©olo al aislar; selecci√≥n por rayos sobre la geometr√≠a real. Se conservan l√≠mites del piloto y licencias. assembleDebug y 17 pruebas pertinentes correctas, con ocho estados gr√°ficos no vac√≠os; prueba f√≠sica pendiente. Ver PARTES_CELULA_5_4_2026-11-03.md.
+
+
+04/11/2026: pilotos 3D 5.4 y 8.3 comprobados contra las lecciones reales y Material. Tarjetas identificadas, estados por recurso, controles acotados y vuelta al modelo completo. Se conserva el contenido y las ocho partes de la celula; 19 cadenas del catalogo/metadatos corregidas. assembleDebug y 667 pruebas correctas, sin fallos, errores u omisiones; dos modelos y ocho estados de partes dibujados en la prueba grafica. APK: 28 archivos graficos/licencias identicos a sus fuentes. No se ejecuto Android: gestos, rotacion y rendimiento fisicos pendientes. Detalle en docs/material/CAMBIOS.md; no se creo otro informe.

@@ -1,145 +1,94 @@
 # El Discurso Escrito: Adecuación, Coherencia y Mecanismos de Cohesión
 
-## INTRODUCCIÓN
-Un texto no es una suma de oraciones sueltas sino una unidad comunicativa máxima emitida con intención en una situación concreta. En admisión UNSA te piden decidir si un fragmento está bien construido y qué mecanismo liga sus partes. Para eso necesitas tres propiedades inseparables. La adecuación adapta el mensaje al destinatario y al registro, la coherencia le da sentido global sin contradicciones y la cohesión lo cose con marcas explícitas entre oraciones y párrafos.
+## Introducción
+Un texto se interpreta como una unidad de comunicación en una situación concreta. Puede ocupar una palabra, un aviso o varios párrafos. Su calidad no depende de acumular conectores: importa qué comunica, a quién se dirige y cómo relaciona sus ideas. Para revisar un escrito conviene distinguir **adecuación**, **coherencia** y **cohesión**, aunque en la lectura actúen juntas.
 
-En esta lección recorrerás primero las tres propiedades con sus principios y luego los cuatro mecanismos de cohesión que más preguntan. Verás la referencia endofórica con anáfora que mira atrás y catáfora que anticipa, la elipsis que suprime lo recuperable y la sustitución léxica que reemplaza con sinónimo, hiperónimo o perífrasis. Cada mecanismo aparece con casos modelo como el volcán Misti, César Vallejo, el adverbio allí y las fórmulas esto y lo mismo antes de dos puntos.
+Compara estas situaciones: un informe correcto que el destinatario no entiende por sus tecnicismos; un párrafo lleno de enlaces que afirma ideas incompatibles; y una explicación breve que se entiende sin repetir su tema en cada oración. Cada caso obliga a mirar un aspecto diferente del discurso. Las categorías ayudan a justificar un análisis; no sustituyen la lectura del fragmento completo.
 
-Al final podrás resolver sin dudar casos como distinguir coherencia de cohesión, explicar por qué el médico cambia de registro ante junta científica o paciente, reconocer progresión tema rema y clasificar ella y las como anafóricos. Es la base de toda la semana siete porque la puntuación y las mayúsculas solo tienen sentido sobre un texto previamente adecuado, coherente y cohesionado.
+```mermaid
+flowchart TD
+A[Discurso escrito] --> B[Adecuación]
+A --> C[Coherencia]
+A --> D[Cohesión]
+B --> E[Destinatario y propósito]
+B --> F[Registro y género]
+C --> G[Unidad de sentido]
+C --> H[Relación y progresión]
+D --> I[Referencia interna]
+D --> J[Elipsis y recursos léxicos]
+I --> K[Anáfora: retoma]
+I --> L[Catáfora: anticipa]
+J --> M[Recuperar y relacionar información]
+```
 
-## DESARROLLO DEL TEMA
+## 7.1.1 · Adecuación, coherencia y cohesión
+La **adecuación** es la relación del texto con su propósito, destinatario, género y circunstancias. Una explicación médica para un paciente puede ser precisa y comprensible sin reproducir todas las abreviaturas de una comunicación entre especialistas. Adecuar no significa tratar al lector con condescendencia ni suponer que todo intercambio cotidiano requiere expresiones informales.
 
-# 7.1.1 — Adecuación, coherencia y cohesión como propiedades constitutivas
-**¿Qué es?** Todo texto posee tres propiedades constitutivas. La adecuación es la adaptación pragmática al contexto comunicativo, al perfil del destinatario y al canal, con elección del registro pertinente formal, académico o coloquial y respeto al género discursivo. La coherencia es la dimensión semántica y lógica que hace percibir el mensaje como unidad con sentido global. La cohesión es la dimensión sintáctica y léxica formada por la red de conexiones explícitas que ligan oraciones y párrafos.
+La **coherencia** permite construir un sentido global. Intervienen las ideas expresadas, sus relaciones y el conocimiento pertinente de la situación. No es una propiedad que se mida contando pronombres. Un texto puede usar conectores correctos y, sin embargo, sostener afirmaciones incompatibles acerca del mismo hecho, momento y punto de vista.
 
-**¿Cómo funciona?** La adecuación opera antes y durante la escritura con decisiones como las siguientes.
-- Destino científico → registro técnico preciso con terminología especializada y tono objetivo
-- Destino lego como paciente sin formación → registro claro con explicación sin tecnicismo innecesario
-- Canal académico → género ensayo con estructura formal y cita rigurosa
-- Canal cotidiano → género mensaje breve con registro coloquial controlado
-La coherencia opera con tres principios que actúan juntos.
-- Principio de no contradicción → ninguna idea puede colisionar lógicamente con otra del mismo texto
-- Principio de relación temática → todo enunciado debe guardar vínculo con el tema central llamado tópico
-- Principio de progresión temática → equilibrio entre información conocida llamada tema e información nueva llamada rema
-La cohesión opera con marcas visibles como pronombres, adverbios, elipsis, conectores, signos de puntuación y repetición léxica controlada.
+La **cohesión** reúne procedimientos lingüísticos que conectan partes del texto: referencias, repeticiones pertinentes, relaciones léxicas, omisiones recuperables y conectores, entre otros. No todas las conexiones deben estar señaladas por una palabra específica. El lector también infiere relaciones; esa inferencia debe apoyarse en el contexto, no en información inventada.
 
-**¿Por qué?** Porque sin adecuación el mensaje fracasa aunque sea gramatical, como un médico que habla con jerga quirúrgica a un niño asustado. Sin coherencia el mensaje se vuelve contradictorio o disperso, como un ensayo que afirma y niega la misma tesis en párrafos distintos. Sin cohesión el mensaje se fragmenta, como oraciones yuxtapuestas sin pronombres ni conectores que obligan al lector a adivinar la relación. Las tres se exigen juntas y cada pregunta de examen ataca una de ellas. Cuando preguntan por unidad temática y ausencia de contradicciones la respuesta es coherencia. Cuando preguntan por adaptación al auditorio la respuesta es adecuación. Cuando preguntan por red explícita de enlaces la respuesta es cohesión.
+| Aspecto | Pregunta de revisión | Problema reconocible |
+| --- | --- | --- |
+| Adecuación | ¿La manera de comunicar corresponde al propósito y al destinatario? | Un aviso práctico usa terminología que su público no puede interpretar. |
+| Coherencia | ¿Puede construirse un sentido global compatible con lo dicho? | Se afirma que una sala está vacía y que contiene asistentes en el mismo momento, sin explicación. |
+| Cohesión | ¿Cómo se enlazan las expresiones y sus referentes? | Un pronombre puede remitir a dos personas y el texto no permite decidir a cuál. |
 
-**¿Cómo se diferencia?** La adecuación es pragmática y mira hacia fuera del texto hacia el destinatario y la situación. La coherencia es semántica y mira hacia dentro del sentido global. La cohesión es formal y mira hacia las marcas visibles de enlace. Un texto puede ser cohesionado con muchos conectores pero incoherente por contradicción interna. Un texto puede ser coherente en ideas pero inadecuado por registro pedante ante público escolar. Recuerda la cadena de refuerzo. Adecuación elige el traje según el invitado, coherencia cuida que la historia tenga lógica, cohesión cose las piezas con hilo visible.
+**Ejemplo de revisión.** «La biblioteca cerró a las seis. A las siete, el público seguía entrando por su puerta principal». No basta con declarar que hay contradicción: puede existir una apertura extraordinaria, otra fecha o un uso distinto de cerrar. Si el fragmento establece que se trata del mismo día, del cierre al público y de ninguna excepción, entonces sí corresponde señalar la incompatibilidad. Un juicio sobre coherencia necesita esas condiciones.
 
-# 7.1.2 — Referencia endofórica con anáfora que retoma y catáfora que anticipa
-**¿Qué es?** La referencia endofórica es el mecanismo que remite dentro del propio texto. Tiene dos direcciones opuestas. La anáfora es el elemento que asume el significado de una palabra mencionada previamente y mira hacia atrás hacia el antecedente. La catáfora es el elemento que anuncia una palabra o frase que será explicada posteriormente y mira hacia adelante hacia el consecuente. Ambas crean cohesión porque obligan a conectar dos puntos del discurso.
+## 7.1.2 · Anáfora, catáfora y referencia al contexto
+Un elemento tiene valor **anafórico** cuando se interpreta mediante una expresión anterior. En «Visité Arequipa. Allí recorrí el centro», *allí* retoma el lugar mencionado. No significa que la palabra *allí* sea anafórica en todos sus usos: al señalar un sitio durante una conversación, también puede depender de la situación.
 
-**¿Cómo funciona?** La anáfora funciona con pronombres, posesivos, demostrativos y adverbios que recogen antecedentes.
-- Mario Vargas Llosa escribió La ciudad y los perros y este le valió reconocimiento → este retoma a Vargas Llosa o a su obra ya citada
-- Visitó Arequipa en agosto y allí disfrutó del sillar → allí retoma el lugar Arequipa ya mencionado y es anáfora locativa
-- Compré flores para mi madre y ella siempre las aprecia → ella retoma a mi madre y las retoma a flores, ambos anafóricos
-- El volcán Misti domina la campiña y su silueta cautiva → su retoma al Misti ya citado
-La catáfora funciona con pronombres y frases anuncio que exigen seguir leyendo.
-- Ella solo trajo esto y luego se precisa su mochila y sus libros → esto anticipa lo que viene tras los dos puntos
-- Todos esperaban lo mismo y luego se precisa la publicación del padrón → lo mismo anticipa el concepto posterior
-- Solo necesitas tres cosas y luego se listan disciplina, perseverancia y método → tres cosas anticipa la enumeración
-La marca formal más rentable es la siguiente. Pronombre o frase general antes de dos puntos con enumeración posterior → catáfora casi segura.
+La **catáfora** dirige la interpretación hacia una expresión posterior. En «Preparó esto: una carpeta y dos cuadernos», *esto* se concreta después de los dos puntos. El signo ayuda a organizar la información, pero no basta por sí solo para diagnosticar catáfora. Antes de una cita o de una consecuencia también puede haber dos puntos sin que exista el pronombre anticipador de este ejemplo.
 
-**¿Por qué?** Porque el texto necesita economía y suspense controlado. Repetir Arequipa en cada oración cansa, por eso se usa allí. Repetir flores y madre cansa, por eso se usan las y ella. Anticipar con esto o lo mismo crea expectativa y cohesiona porque el lector debe avanzar para completar el sentido. Sin estos mecanismos el texto sería una lista repetitiva o una serie de cabos sueltos. La anáfora garantiza continuidad hacia atrás y la catáfora garantiza proyección hacia adelante.
+Cuando la referencia se resuelve dentro del texto se habla de **endófora**. Si depende de la situación del intercambio, se habla de referencia **exofórica**. En «Déjalo aquí», *aquí* puede señalar el escritorio de quien habla sin que el escritorio se haya nombrado. Hay que reconstruir el uso concreto antes de elegir una categoría.
 
-**¿Cómo se diferencia?** La prueba es la dirección temporal en el texto.
-- Si el elemento remite a algo ya dicho → anáfora con fórmula antecedente → elemento anafórico
-- Si el elemento anuncia algo aún no dicho → catáfora con fórmula elemento catafórico → término consecuente
-- Si el elemento falta pero se recupera → no es referencia sino elipsis que se estudia en el siguiente bloque
-- Si el elemento reemplaza con otra palabra plena → no es referencia pronominal sino sustitución léxica
-Confusión típica. Su en su silueta del Misti es anáfora porque el Misti ya apareció. Esto en solo trajo esto es catáfora porque la mochila aún no apareció. Lo mismo en esperaban lo mismo es catáfora porque el padrón aún no apareció. Ella y las en flores para mi madre son anafóricos porque flores y madre ya aparecieron.
+| Fragmento | Elemento analizado | Cómo se interpreta |
+| --- | --- | --- |
+| Ana llegó temprano. Ella abrió la sala. | Ella | Retoma a Ana: anáfora. |
+| Solo pidió esto: unos minutos de silencio. | Esto | Anticipa la petición que se precisa después: catáfora. |
+| Viajé a Arequipa. Allí encontré a mis amigos. | Allí | Recupera el lugar nombrado: anáfora locativa. |
+| Una persona señala una mesa y dice «déjalo aquí». | Aquí | Se interpreta por la situación: referencia exofórica. |
 
-# 7.1.3 — Elipsis que suprime y sustitución léxica que reemplaza
-**¿Qué es?** La elipsis es la supresión intencionada de un elemento verbal o nominal fácilmente recuperable por el contexto para evitar redundancia fatigosa. La sustitución léxica es el reemplazo de un término por otro equivalente para evitar repetición con riqueza expresiva. La sustitución usa sinónimo con médico por galeno, hiperónimo con perro por animal o perífrasis designativa con Arequipa por la Ciudad Blanca y con César Vallejo por el ilustre vate liberteño.
+Los posesivos necesitan la misma atención. «Luis habló con Pablo sobre su proyecto» puede resultar ambiguo: *su* no identifica automáticamente al dueño. Repetir el nombre pertinente puede mejorar el texto más que introducir otro pronombre. La economía de palabras deja de ser útil cuando vuelve incierta la referencia.
 
-**¿Cómo funciona?** La elipsis funciona por omisión visible o contextual.
-- Mariano Melgar escribió yaravíes y Carlos Augusto Salaverry coma poemas románticos → falta escribió y la coma elíptica marca el hueco
-- Los estudiantes llegaron temprano y luego ingresaron a sus aulas → falta los estudiantes como sujeto de ingresaron y se sobreentiende
-- Juan postuló a Sistemas y Luis coma a Electrónica → falta postuló y la coma lo señala
-La sustitución funciona por reemplazo pleno.
-- César Vallejo nació en Santiago de Chuco y el ilustre vate liberteño escribió Los heraldos negros → el ilustre vate liberteño sustituye al nombre propio con perífrasis sinonímica
-- El volcán Misti domina y este coloso andino cautiva → este coloso andino sustituye con perífrasis sinonímica y a la vez es anáfora
-- El médico diagnosticó y el galeno recetó → galeno sustituye por sinónimo culto
-- Compró un perro y el animal ladra → animal sustituye por hiperónimo
-El lector recupera la elipsis por contexto gramatical y reconoce la sustitución por equivalencia semántica.
+Un ejemplo claro de referencia a una obra sería «Leí una novela. Esa obra me sorprendió». Si se escribe «Mario publicó una novela y este obtuvo reconocimiento», el masculino *este* no debe presentarse indistintamente como sustituto del autor y de una obra femenina. El género, la concordancia y el contexto participan en la interpretación.
 
-**¿Por qué?** Porque la repetición literal empobrece y alarga. Decir Vallejo en cada oración es torpe, decir el ilustre vate liberteño mantiene la referencia con elegancia. Decir escribió dos veces seguidas es redundante, omitirlo con coma es eficiente. La elipsis agiliza y la sustitución enriquece sin perder referente. Ambas sostienen la cohesión porque mantienen el hilo temático con variación formal.
+## 7.1.3 · Elipsis y relaciones léxicas
+La **elipsis** consiste en no expresar un elemento recuperable. En «Marta eligió Historia; Pedro, Geografía», el verbo de la segunda parte se recupera como *eligió*. La coma señala esa omisión en la escritura. No faltan al azar palabras necesarias: la estructura y el contexto permiten reconstruirlas.
 
-**¿Cómo se diferencia?** La clave es presencia frente a ausencia.
-- Si hay hueco recuperable sin palabra → elipsis con fórmula elemento omitido recuperable por contexto
-- Si hay otra palabra plena equivalente → sustitución léxica con fórmula término original → sinónimo o hiperónimo o perífrasis
-- Si hay pronombre o adverbio que retoma → anáfora, no sustitución léxica plena
-- Si hay anuncio previo a enumeración → catáfora, no elipsis
-Caso doble rentable. Este coloso andino referido al Misti es a la vez sustitución por perífrasis y anáfora por dirección hacia atrás. En examen preguntan una u otra según opciones. Si las opciones ofrecen sustitución léxica por perífrasis sinonímica frente a catáfora o elipsis, elige sustitución cuando veas frase descriptiva plena como el ilustre vate liberteño.
+El español también admite **sujeto tácito**: «Los estudiantes llegaron y ocuparon sus asientos». La segunda forma verbal mantiene el referente del sujeto sin repetirlo. En el análisis escolar de cohesión puede describirse como elipsis del sujeto; gramaticalmente se relaciona con la posibilidad de dejarlo implícito. No debe confundirse con un pronombre visible ni afirmarse que todo sujeto ausente tiene un antecedente inequívoco.
 
-# 7.1.4 — Progresión temática tema rema y coherencia global sin contradicción
-**¿Qué es?** La progresión temática es el avance informativo del texto que articula lo conocido con lo nuevo. El tema es la información conocida, previa o ya instalada. El rema es la información nueva que se aporta progresivamente. La coherencia global exige además no contradicción entre párrafos, relación de cada enunciado con el tópico y avance constante sin estancamiento ni salto brusco.
+Los recursos **léxicos** incluyen repetir una palabra cuando conviene y emplear otra expresión que conserve una relación pertinente. Un hiperónimo permite pasar de una denominación específica a una más general: «Apareció un perro. El animal estaba herido». Esa relación depende del sentido zoológico de *perro* usado aquí.
 
-**¿Cómo funciona?** El texto avanza en cadenas como las siguientes.
-- Tema inicial Arequipa → rema es ciudad de sillar → nuevo tema el sillar → nuevo rema atrae turismo
-- Tema los estudiantes → rema llegaron temprano → nuevo tema implícito ellos → nuevo rema ingresaron a sus aulas con elipsis de sujeto
-- Tema el Misti → rema domina la campiña → nuevo tema este coloso → nuevo rema cautiva a visitantes
-Cada oración retoma parte de lo anterior y añade algo. Si solo se repite lo conocido el texto se estanca. Si solo se añade novedad sin anclaje el texto se dispersa. Si un párrafo afirma que la obra es indigenista y otro afirma que niega lo andino sin matiz, se rompe la no contradicción y cae la coherencia aunque haya conectores correctos.
+Una expresión descriptiva puede recuperar a una persona ya identificada: «César Vallejo nació en Santiago de Chuco. El poeta peruano escribió *Los heraldos negros*». *El poeta peruano* es una denominación contextual del mismo referente; no es un sinónimo de diccionario del nombre propio ni permite identificar a Vallejo fuera de cualquier contexto.
 
-**¿Por qué?** Porque leer es construir sentido paso a paso. El cerebro necesita punto de apoyo conocido para asimilar novedad. La fórmula tema más rema dosifica la carga informativa. La no contradicción sostiene la credibilidad lógica. Por eso la contradicción explícita entre párrafos vulnera directamente la coherencia y no la cohesión ni la puntuación ni la adecuación. La cohesión puede estar perfecta con pronombres bien usados y aun así el texto ser incoherente por ideas incompatibles.
+| Recurso | Ejemplo | Qué se conserva o recupera |
+| --- | --- | --- |
+| Elipsis verbal | Marta eligió Historia; Pedro, Geografía. | Se recupera eligió en la segunda parte. |
+| Sujeto tácito en continuidad | Los estudiantes llegaron y ocuparon sus asientos. | Se mantiene el referente de los estudiantes. |
+| Hiperónimo | Apareció un perro. El animal estaba herido. | Animal incluye al perro mencionado. |
+| Expresión descriptiva | Se mencionó a Vallejo. El poeta peruano… | El contexto identifica al referente. |
 
-**¿Cómo se diferencia?** Distingue niveles.
-- Progresión temática → pregunta por balance entre conocido y nuevo con respuesta tema rema
-- No contradicción → pregunta por choque lógico entre ideas con respuesta coherencia
-- Relación temática → pregunta por enunciado ajeno al tópico con respuesta coherencia por desvío
-- Red de enlaces → pregunta por pronombres o conectores con respuesta cohesión
-Recuerda el refuerzo para no caer. Coherencia es lógica invisible del sentido, cohesión es costura visible de las formas. La contradicción rompe la primera, la falta de pronombre rompe la segunda, el registro errado rompe la adecuación.
+La repetición no es siempre un defecto. En una demostración, una norma o una explicación técnica puede ser preferible conservar el mismo término para evitar cambios de significado. Cambiar *célula* por una palabra imprecisa solo para no repetirla perjudica la claridad. El propósito de la cohesión es mantener las relaciones del discurso, no exhibir variedad léxica a cualquier precio.
 
-## CONCEPTOS IMPORTANTES
-- Texto como unidad comunicativa máxima con intención y situación concreta que exige tres propiedades juntas.
-- Adecuación como adaptación al destinatario, canal y género con registro formal, académico o coloquial según caso del médico ante junta o paciente.
-- Coherencia como unidad temática con no contradicción, relación con el tópico y progresión tema rema.
-- Cohesión como red explícita con referencia, elipsis, sustitución, conectores y puntuación.
-- Anáfora como retorno a antecedente previo con este, su, ella, las y allí referido a Arequipa.
-- Catáfora como anuncio de consecuente posterior con esto, lo mismo y tres cosas antes de dos puntos.
-- Elipsis como omisión recuperable de verbo o sujeto con marca de coma elíptica o contexto.
-- Sustitución léxica como reemplazo con sinónimo galeno, hiperónimo animal y perífrasis Ciudad Blanca e ilustre vate liberteño.
-- Progresión temática como cadena tema conocido más rema nuevo que hace avanzar sin estancar ni dispersar.
+## 7.1.4 · Progresión temática y revisión del sentido
+El **tema** puede entenderse como aquello de lo que se habla y el **rema** como lo que se dice de ello. Con frecuencia el tema se relaciona con información conocida y el rema con información nueva, pero no son equivalencias automáticas. Un texto puede introducir por primera vez a su protagonista como tema; el receptor no necesita conocerlo antes.
 
-## DIFERENCIAS QUE CONFUNDEN
-- Coherencia frente a cohesión. Coherencia es sentido global invisible con no contradicción y tópico. Cohesión es enlace visible con pronombres y conectores. Contradicción entre párrafos rompe coherencia aunque la cohesión sea impecable.
-- Adecuación frente a coherencia. Adecuación mira al auditorio y al registro como médico que simplifica ante paciente. Coherencia mira a la lógica interna entre ideas. Un texto lógico puede ser inadecuado por pedante y un texto adecuado puede ser incoherente por contradictorio.
-- Anáfora frente a catáfora. Anáfora resuelve hacia atrás como allí hacia Arequipa y ella hacia madre. Catáfora resuelve hacia adelante como esto hacia mochila y libros y lo mismo hacia padrón. La posición respecto a los dos puntos suele delatar a la catáfora.
-- Anáfora pronominal frente a sustitución léxica. Pronombre como su, ella y las es anáfora gramatical. Frase plena como coloso andino e ilustre vate es sustitución léxica con valor anafórico. Si la opción ofrece perífrasis sinonímica elige sustitución.
-- Elipsis frente a anáfora. Elipsis es ausencia con hueco como sujeto omitido en ingresaron. Anáfora es presencia con palabra que retoma como ellos explícito. Si no hay palabra no puede ser anáfora.
-- Tema frente a rema. Tema es lo ya conocido que ancla, rema es lo nuevo que hace avanzar. Pregunta por balance conocido nuevo con respuesta progresión temática.
-- Cohesión frente a puntuación. La puntuación es una herramienta de cohesión pero no toda cohesión es puntuación. La coma elíptica une elipsis y puntuación en un solo signo.
+Hay distintas maneras de avanzar. En la progresión con tema constante, varias oraciones añaden datos sobre el mismo asunto. En la progresión lineal, una parte de la información nueva pasa a servir de punto de partida de la oración siguiente. Son modelos de organización, no moldes obligatorios para cada oración de cualquier texto.
 
-## DATOS IMPORTANTES
-- Tres propiedades en orden de control. Primero adecuación al contexto, luego coherencia del sentido, luego cohesión de las formas.
-- Tres principios de coherencia. No contradicción lógica, relación de cada enunciado con el tópico, progresión con tema conocido y rema nuevo.
-- Dos direcciones de referencia. Atrás con anáfora y adelante con catáfora, con fórmulas antecedente hacia elemento y elemento hacia consecuente.
-- Dos formas de evitar repetición. Elipsis por supresión y sustitución por reemplazo con sinónimo, hiperónimo o perífrasis.
-- Casos ancla de anáfora. Allí hacia Arequipa, ella hacia madre, las hacia flores, su hacia Misti, este hacia Vargas Llosa.
-- Casos ancla de catáfora. Esto hacia mochila y libros, lo mismo hacia padrón, tres cosas hacia disciplina, perseverancia y método.
-- Casos ancla de elipsis y sustitución. Sujeto omitido en llegaron e ingresaron, verbo omitido en Melgar y Salaverry, perífrasis ilustre vate liberteño para Vallejo y coloso andino para Misti.
-- Error clásico. Llamar catáfora a todo pronombre. Solo es catáfora si lo anunciado viene después.
-- Error clásico. Llamar coherencia a todo enlace. Si hay pronombre bien usado pero ideas contradictorias, el fallo es coherencia y el acierto formal es cohesión.
+| Organización | Secuencia breve | Cómo avanza |
+| --- | --- | --- |
+| Tema constante | La biblioteca tiene dos salas. La biblioteca abre temprano. | Añade información sobre el mismo lugar. |
+| Progresión lineal | La biblioteca recibió una colección. La colección contiene mapas. | El aporte de la primera oración se retoma como tema de la segunda. |
+| Tema general y aspectos | El informe describe el centro: primero las salas, después el archivo. | Desarrolla aspectos relacionados con un tema general. |
 
-## EJEMPLOS
-- Propiedad que asegura unidad temática sin contradicciones. Pregunta directa por definición con opciones coherencia, elipsis, cohesión y adecuación. Se resuelve con el principio de no contradicción y relación temática. Respuesta coherencia porque es la dimensión semántica global.
-- Esto en ella solo trajo esto con mochila y libros. El pronombre anticipa lo que se detalla tras los dos puntos. No puede ser anáfora porque nada previo se retoma ni elipsis porque hay palabra presente. Respuesta catáfora.
-- Ilustre vate liberteño para César Vallejo. Frase descriptiva plena que reemplaza nombre propio para evitar repetición. No es pronombre ni omisión ni conector. Respuesta sustitución léxica por perífrasis sinonímica.
-- Sujeto omitido en los estudiantes llegaron e ingresaron. La segunda proposición carece de sujeto explícito pero se recupera del contexto anterior. No es diglosia ni catáfora ni anáfora adverbial. Respuesta elipsis.
-- Allí en visitó Arequipa y allí disfrutó. Adverbio locativo que retoma lugar ya mencionado. Dirección hacia atrás con antecedente claro. Respuesta anáfora locativa.
-- Médico ante junta científica o paciente. Exige cambiar léxico y tono según auditorio. No es problema de pronombres ni de lógica interna sino de registro. Respuesta adecuación textual.
-- Balance tema rema. Pregunta por información conocida más nueva con distractores de elipsis y concordancia. Se resuelve con progresión temática de la coherencia. Respuesta progresión temática.
-- Ella y las en compré flores para mi madre. Ambos retoman antecedentes previos flores y madre. Doble marca hacia atrás. Respuesta anafóricos.
-- Contradicción entre párrafos de un ensayo. Choque lógico directo que destruye unidad de sentido. Aunque la puntuación sea correcta el texto pierde validez. Respuesta coherencia vulnerada.
-- Lo mismo en esperaban lo mismo con padrón. Frase pronominal anuncio antes de dos puntos con precisión posterior. Elemento catafórico por excelencia. Respuesta lo mismo.
-- Refuerzo con Misti. Este coloso andino retoma al volcán ya citado y su recupera al mismo referente. Doble anáfora con sustitución perifrástica incluida. Modelo perfecto de cohesión mixta.
+**Revisión guiada.** En «El grupo necesita un lugar tranquilo. La biblioteca ofrece una sala de estudio. Esa sala abre por la mañana», las oraciones se conectan por el problema inicial, la propuesta de un lugar y una referencia posterior. No es necesario insertar *por tanto* en cada enlace. Sí sería necesario aclarar quién puede entrar si el texto pretende orientar a un público concreto.
 
-## IDEA CLAVE
-El texto vive si se adapta a quien lo recibe, piensa sin contradecirse y cose sus oraciones con hilos visibles. La adecuación elige el registro, la coherencia sostiene el sentido con tópico y progresión tema rema, la cohesión enlaza con anáfora hacia atrás, catáfora hacia adelante, elipsis por ausencia y sustitución por reemplazo elegante como el ilustre vate o el coloso andino.
+Para revisar un fragmento, identifica primero su asunto y finalidad. Después comprueba los referentes de pronombres y omisiones. Finalmente examina si cada idea añade algo pertinente y si las relaciones se sostienen en las condiciones descritas. Cambiar la puntuación puede aclarar un vínculo, pero no convierte una afirmación falsa o incompatible en una explicación correcta.
 
-## CLAVE DE ADMISIÓN
-Coherencia igual a unidad sin contradicción, adecuación igual a registro según destinatario como médico ante junta o paciente, cohesión igual a red explícita. Anáfora igual a retorno con allí, su, ella y las hacia antecedente previo. Catáfora igual a anuncio con esto, lo mismo y tres cosas antes de dos puntos. Elipsis igual a hueco recuperable de sujeto o verbo. Sustitución igual a reemplazo con sinónimo, hiperónimo o perífrasis como galeno, animal, Ciudad Blanca e ilustre vate. Progresión igual a tema conocido más rema nuevo.
+## Importante
+La clasificación depende del uso. Un pronombre no es siempre anafórico; los dos puntos no garantizan catáfora; una repetición no es siempre defectuosa. Una expresión descriptiva puede recuperar a alguien sin ser su sinónimo léxico. Tampoco toda diferencia entre dos frases es contradicción: hay que comprobar tiempo, referente y perspectiva. Justifica cada respuesta con el fragmento, evitando reglas basadas en una sola palabra.
 
-## RESUMEN
-Texto con tres propiedades inseparables donde adecuación adapta, coherencia da sentido sin contradicción y cohesión enlaza. Referencia endofórica con anáfora que retoma Arequipa, madre, flores y Misti y catáfora que anticipa mochila, padrón y lista de tres. Elipsis que omite sujeto o verbo recuperable y sustitución que reemplaza con sinónimo, hiperónimo o perífrasis como ilustre vate liberteño. Progresión tema rema que equilibra conocido y nuevo y explica por qué la contradicción rompe coherencia y el registro errado rompe adecuación.
+## Síntesis
+La adecuación relaciona el texto con su situación; la coherencia permite interpretarlo globalmente; la cohesión aporta enlaces lingüísticos. Anáfora y catáfora se distinguen por la dirección de la referencia. La elipsis deja implícito lo recuperable y los recursos léxicos mantienen o precisan referentes. La progresión temática organiza lo que se presenta como punto de partida y lo que se añade sobre ello. Estas herramientas sirven para explicar y mejorar un texto, no para asignarle etiquetas sin leerlo.

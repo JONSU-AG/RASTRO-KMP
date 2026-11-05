@@ -1,1 +1,200 @@
-[{"concept":"2.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t02_s01_c01","options":["V, V, F, V","V, V, F, F","V, F, V, V","F, V, V, V"],"pedagogicalTier":"concepto","semana":2,"statement":"Al evaluar la tabla de verdad de la fórmula molecular:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.2","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t02_s01_c02","options":["(q \\to \\sim r) \\to p","(p \\land q) \\to \\sim r","p \\to (q \\land \\sim r)","(q \\land \\sim r) \\to p"],"pedagogicalTier":"concepto","semana":2,"statement":"Formalice correctamente el siguiente enunciado:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.3","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t02_s01_c03","options":["\\sim p","q","\\sim q","p"],"pedagogicalTier":"concepto","semana":2,"statement":"Simplifique al máximo el siguiente esquema molecular:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Equivale a \\sim p \\lor q (\"Niega al primero O mantén al segundo\").","fuente":"temario","id":"rl_t02_s01_c04","options":["Por Ley de De Morgan: \"No llueve O no hace frío\" (\\sim p \\lor \\sim q).","Tiene 2^3 = 8 filas.","Valor o condición no aplicable al caso planteado","Equivale a \\sim p \\lor q (\"Niega al primero O mantén al segundo\")."],"pedagogicalTier":"concepto","semana":2,"statement":"¿A qué equivale la fórmula del condicional p \\to q mediante disyunción?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Por Ley de De Morgan: \"No llueve O no hace frío\" (\\sim p \\lor \\sim q).","fuente":"temario","id":"rl_t02_s01_c05","options":["Por Ley de De Morgan: \"No llueve O no hace frío\" (\\sim p \\lor \\sim q).","Equivale a \\sim p \\lor q (\"Niega al primero O mantén al segundo\").","Tiene 2^3 = 8 filas.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":2,"statement":"¿Cuál es la negación de la proposición \"Llueve y hace frío\"?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Tiene 2^3 = 8 filas.","fuente":"temario","id":"rl_t02_s01_c06","options":["Equivale a \\sim p \\lor q (\"Niega al primero O mantén al segundo\").","Tiene 2^3 = 8 filas.","Por Ley de De Morgan: \"No llueve O no hace frío\" (\\sim p \\lor \\sim q).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":2,"statement":"¿Cuántas filas tiene la tabla de verdad de una proposición con 3 variables (p, q, r)?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.7","correctIndex":2,"explanation":"Por absorción, ~p o (p y ~q) = ~p o ~q. Luego [q o ~q o ~p] = [V o ~p] = V. Finalmente: p y V = p.","fuente":"temario","id":"rl_t02_s01_c07","options":["~p","p y q","p","q"],"pedagogicalTier":"concepto","semana":2,"statement":"Simplifique al máximo el circuito equivalente a: p y [q o (~p o (p y ~q))]. ¿A qué proposición simple equivale?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t02_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t02_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t02_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rl_t02_s01_c01",
+    "concept": "2.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 2,
+    "statement": "Con p=V, q=F, ¿qué valor tiene $p \\wedge \\neg q$?",
+    "options": [
+      "Verdadera.",
+      "Falsa.",
+      "No puede determinarse con esos valores.",
+      "La fórmula carece de sintaxis lógica."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Sustituimos los valores dados de todas las variables.\n2. Aplicamos los conectores de la fórmula $p \\wedge \\neg q$.\n3. Con la asignación p=V, q=F, la fórmula resulta verdadera.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t02_s01_c02",
+    "concept": "2.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 2,
+    "statement": "Con p=V, q=F, ¿qué valor tiene $q \\vee \\neg p$?",
+    "options": [
+      "Falsa.",
+      "No puede determinarse con esos valores.",
+      "La fórmula carece de sintaxis lógica.",
+      "Verdadera."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Sustituimos los valores dados de todas las variables.\n2. Aplicamos los conectores de la fórmula $q \\vee \\neg p$.\n3. Con la asignación p=V, q=F, la fórmula resulta falsa.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t02_s01_c03",
+    "concept": "2.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 2,
+    "statement": "Con p=V, q=V, r=F, ¿qué valor tiene $p \\Rightarrow \\left(q \\wedge r\\right)$?",
+    "options": [
+      "No puede determinarse con esos valores.",
+      "La fórmula carece de sintaxis lógica.",
+      "Verdadera.",
+      "Falsa."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Sustituimos los valores dados de todas las variables.\n2. Aplicamos los conectores de la fórmula $p \\Rightarrow \\left(q \\wedge r\\right)$.\n3. Con la asignación p=V, q=V, r=F, la fórmula resulta falsa.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t02_s01_c04",
+    "concept": "2.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 2,
+    "statement": "Con p=V, q=F, ¿qué valor tiene $p \\Leftrightarrow q$?",
+    "options": [
+      "La fórmula carece de sintaxis lógica.",
+      "Verdadera.",
+      "Falsa.",
+      "No puede determinarse con esos valores."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Sustituimos los valores dados de todas las variables.\n2. Aplicamos los conectores de la fórmula $p \\Leftrightarrow q$.\n3. Con la asignación p=V, q=F, la fórmula resulta falsa.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t02_s01_c05",
+    "concept": "2.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 2,
+    "statement": "¿En cuántas asignaciones de sus 2 variables es verdadera $p \\wedge q$?",
+    "options": [
+      "$1\\,\\mathrm{filas}$",
+      "$2\\,\\mathrm{filas}$",
+      "$3\\,\\mathrm{filas}$",
+      "$0\\,\\mathrm{filas}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La tabla completa incluye cada combinación de V y F una sola vez.\n2. Desarrollamos: $n_V=1$.\n3. El resultado es $1\\,\\mathrm{filas}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t02_s01_c06",
+    "concept": "2.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 2,
+    "statement": "¿En cuántas asignaciones de sus 2 variables es verdadera $p \\vee q$?",
+    "options": [
+      "$6\\,\\mathrm{filas}$",
+      "$9\\,\\mathrm{filas}$",
+      "$1\\,\\mathrm{filas}$",
+      "$3\\,\\mathrm{filas}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La tabla completa incluye cada combinación de V y F una sola vez.\n2. Desarrollamos: $n_V=3$.\n3. El resultado es $3\\,\\mathrm{filas}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t02_s01_c07",
+    "concept": "2.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 2,
+    "statement": "¿En cuántas asignaciones de sus 2 variables es verdadera $p \\Rightarrow q$?",
+    "options": [
+      "$9\\,\\mathrm{filas}$",
+      "$1\\,\\mathrm{filas}$",
+      "$3\\,\\mathrm{filas}$",
+      "$6\\,\\mathrm{filas}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La tabla completa incluye cada combinación de V y F una sola vez.\n2. Desarrollamos: $n_V=3$.\n3. El resultado es $3\\,\\mathrm{filas}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t02_s01_c08",
+    "concept": "2.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 2,
+    "statement": "¿En cuántas asignaciones de sus 2 variables es verdadera $p \\Leftrightarrow q$?",
+    "options": [
+      "$6\\,\\mathrm{filas}$",
+      "$2\\,\\mathrm{filas}$",
+      "$4\\,\\mathrm{filas}$",
+      "$1\\,\\mathrm{filas}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La tabla completa incluye cada combinación de V y F una sola vez.\n2. Desarrollamos: $n_V=2$.\n3. El resultado es $2\\,\\mathrm{filas}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t02_s01_c09",
+    "concept": "2.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 2,
+    "statement": "¿En cuántas asignaciones de sus 2 variables es verdadera $p \\veebar q$?",
+    "options": [
+      "$2\\,\\mathrm{filas}$",
+      "$4\\,\\mathrm{filas}$",
+      "$1\\,\\mathrm{filas}$",
+      "$6\\,\\mathrm{filas}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La tabla completa incluye cada combinación de V y F una sola vez.\n2. Desarrollamos: $n_V=2$.\n3. El resultado es $2\\,\\mathrm{filas}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t02_s01_c10",
+    "concept": "2.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 2,
+    "statement": "En lógica clásica bivalente, ¿cómo se clasifica $p \\vee \\neg p$?",
+    "options": [
+      "Contradicción.",
+      "Contingencia.",
+      "Expresión sin valor lógico por no estar bien formada.",
+      "Tautología."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Se consideran todas las asignaciones de sus variables.\n2. La columna final contiene 2 valores V de 2 filas.\n3. La clasificación es tautología.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t02_s01_c11",
+    "concept": "2.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 2,
+    "statement": "En lógica clásica bivalente, ¿cómo se clasifica $p \\wedge \\neg p$?",
+    "options": [
+      "Contingencia.",
+      "Expresión sin valor lógico por no estar bien formada.",
+      "Tautología.",
+      "Contradicción."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Se consideran todas las asignaciones de sus variables.\n2. La columna final contiene 0 valores V de 2 filas.\n3. La clasificación es contradicción.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

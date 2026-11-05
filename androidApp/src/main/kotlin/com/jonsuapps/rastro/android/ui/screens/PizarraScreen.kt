@@ -70,12 +70,16 @@ class PizarraViewModel : androidx.lifecycle.ViewModel() {
     override fun onCleared() { pendingExport?.recycle(); engine.release() }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun PizarraScreen(onBack: () -> Unit) {
     val theme = ThemeManager.currentTheme
     val context = LocalContext.current
     val density = LocalDensity.current
-    val model = androidx.lifecycle.viewmodel.compose.viewModel<PizarraViewModel>()
+    var host: android.content.Context = context
+    while (host is android.content.ContextWrapper && host !is androidx.activity.ComponentActivity) host = host.baseContext
+    val owner = host as? androidx.activity.ComponentActivity ?: androidx.lifecycle.viewmodel.compose.LocalViewModelStoreOwner.current!!
+    val model = androidx.lifecycle.viewmodel.compose.viewModel<PizarraViewModel>(viewModelStoreOwner = owner, key = "rastro_shared_whiteboard")
     val engine = model.engine
     val scope = rememberCoroutineScope()
     var argb by rememberSaveable { mutableIntStateOf(0xFF172033.toInt()) }
@@ -153,6 +157,26 @@ fun PizarraScreen(onBack: () -> Unit) {
                 }
                 PizarraIconTool("Limpiar lienzo",Icons.Rounded.DeleteOutline,engine.hasDrawing) { clearDialog=true }
             }
+            FlowRow(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(8.dp),verticalArrangement=Arrangement.spacedBy(4.dp)) {
+                Sticker3dButton(onClick={ rgbDialog=true },containerColor=theme.surface,contentPadding=PaddingValues(10.dp)) {
+                    Icon(Icons.Rounded.Palette,"Elegir color RGB",tint=theme.textPrimary,modifier=Modifier.size(22.dp))
+                }
+                Sticker3dButton(onClick={ eraser=!eraser },containerColor=if(eraser) theme.accent else theme.surface,
+                    contentPadding=PaddingValues(10.dp)) {
+                    Icon(painterResource(R.drawable.ic_pizarra_eraser),"Activar borrador",
+                        tint=if(eraser) theme.onAccent else theme.textPrimary,modifier=Modifier.size(22.dp))
+                }
+                if (eraser) {
+                    FilterChip(selected=!preciseEraser,onClick={ preciseEraser=false },label={ Text("Por trazo") })
+                    FilterChip(selected=preciseEraser,onClick={ preciseEraser=true },label={ Text("Precisión") })
+                }
+            }
+            Row(verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.spacedBy(10.dp)) {
+                Text("${if(eraser) "Borrador" else "Grosor"}: ${thickness.roundToInt()}",color=theme.textPrimary,
+                    fontSize=13.sp,fontWeight=FontWeight.Bold)
+                Slider(value=thickness,onValueChange={ thickness=it.roundToInt().toFloat() },valueRange=1f..100f,steps=98,
+                    modifier=Modifier.weight(1f))
+            }
             Sticker3dCard(modifier=Modifier.fillMaxWidth().weight(1f),containerColor=Color.White,
                 shape=RoundedCornerShape(22.dp)) {
                 Canvas(Modifier.fillMaxSize().clip(RoundedCornerShape(22.dp)).onSizeChanged(engine::resize)
@@ -187,35 +211,6 @@ fun PizarraScreen(onBack: () -> Unit) {
                     Text("Dibuja aquí",Modifier.align(Alignment.Center),color=Color(0xFF667085),fontSize=16.sp)
                 }
             }
-            Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),verticalAlignment=Alignment.CenterVertically,
-                horizontalArrangement=Arrangement.spacedBy(8.dp)) {
-                val palette = remember { listOf(0xFF172033,0xFFDC2626,0xFFF59E0B,0xFF15803D,0xFF2563EB,0xFF7C3AED).map { it.toInt() } }
-                if (!eraser) palette.forEach { value ->
-                    Box(Modifier.size(44.dp).clip(CircleShape).clickable { argb=value; eraser=false },contentAlignment=Alignment.Center) {
-                        Box(Modifier.size(32.dp).background(Color(value),CircleShape)
-                            .border(if (argb==value && !eraser) 3.dp else 1.dp,theme.strokeBorder,CircleShape))
-                        if (argb==value && !eraser) Icon(Icons.Rounded.Check,null,tint=Color.White,modifier=Modifier.size(19.dp))
-                    }
-                }
-                Sticker3dButton(onClick={ rgbDialog=true },containerColor=theme.surface,contentPadding=PaddingValues(10.dp)) {
-                    Icon(Icons.Rounded.Palette,"Elegir color RGB",tint=theme.textPrimary,modifier=Modifier.size(22.dp))
-                }
-                Sticker3dButton(onClick={ eraser=!eraser },containerColor=if(eraser) theme.accent else theme.surface,
-                    contentPadding=PaddingValues(10.dp)) {
-                    Icon(painterResource(R.drawable.ic_pizarra_eraser),"Activar borrador",
-                        tint=if(eraser) theme.onAccent else theme.textPrimary,modifier=Modifier.size(22.dp))
-                }
-                if (eraser) {
-                    FilterChip(selected=!preciseEraser,onClick={ preciseEraser=false },label={ Text("Por trazo") })
-                    FilterChip(selected=preciseEraser,onClick={ preciseEraser=true },label={ Text("Precisión") })
-                }
-            }
-            Row(verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.spacedBy(10.dp)) {
-                Text("${if(eraser) "Borrador" else "Grosor"}: ${thickness.roundToInt()}",color=theme.textPrimary,
-                    fontSize=13.sp,fontWeight=FontWeight.Bold)
-                Slider(value=thickness,onValueChange={ thickness=it.roundToInt().toFloat() },valueRange=1f..100f,steps=98,
-                    modifier=Modifier.weight(1f))
-            }
         }
     }
     if (rgbDialog) PizarraRgbDialog(argb,onDismiss={ rgbDialog=false }) { argb=it; eraser=false; rgbDialog=false }
@@ -235,7 +230,7 @@ private fun PizarraIconTool(label: String,icon: androidx.compose.ui.graphics.vec
 }
 
 @Composable
-private fun PizarraRgbDialog(initial: Int,onDismiss: () -> Unit,onSelect: (Int) -> Unit) {
+internal fun PizarraRgbDialog(initial: Int,onDismiss: () -> Unit,onSelect: (Int) -> Unit) {
     var red by rememberSaveable { mutableFloatStateOf(android.graphics.Color.red(initial).toFloat()) }
     var green by rememberSaveable { mutableFloatStateOf(android.graphics.Color.green(initial).toFloat()) }
     var blue by rememberSaveable { mutableFloatStateOf(android.graphics.Color.blue(initial).toFloat()) }

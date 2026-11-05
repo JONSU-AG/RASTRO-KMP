@@ -205,3 +205,6 @@ Aportar/Aportes separados; Fórmulas con Σ, Ligas con copa y fuego original en 
 - [x] Canal oficial común dado por el propietario: Comunidad RASTRO/OFICIAL, sin canal personal en Inicio.
 - [x] Más → RASTRO Pro con corona sticker y diálogo existente; sin compras duplicadas.
 - [x] 358 pruebas y lintVitalRelease sin fallos; comprobación física pendiente, app no ejecutada.
+
+- [x] 01/11/2026: assembleDebug y 205 pruebas Android sin fallos/errores (build/lesson-streak-layout.log). Cambios limitados a presentación de lección, visibilidad de barra inferior y distribución de racha; lógica de actividad intacta.
+- [ ] Verificar en teléfono: opciones accesibles tras feedback, regreso de navbar al salir, racha completa en meses de seis filas y letra ampliada. No se ejecutó Android.

@@ -6,13 +6,24 @@
   "title": "Potenciación, Radicación, Radicales Dobles y Racionalización - Propiedades Avanzadas, Artificios y Aplicaciones",
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana03.kt",
-  "learningObjectives": [],
+  "learningObjectives": [
+    "Descomponer radicales dobles conservando el signo principal",
+    "Racionalizar con factores no nulos y denominadores definidos",
+    "Explicar la cancelación telescópica y su número de términos",
+    "Resolver ecuaciones de base común sin deducir unicidad por analogía"
+  ],
   "theory": {
     "id": "th_alg_t03_s02",
     "asignatura": "Álgebra",
     "semana": 3,
     "titulo": "Potenciación, Radicación, Radicales Dobles y Racionalización - Propiedades Avanzadas, Artificios y Aplicaciones",
     "resumen": "",
-    "conceptosClave": []
+    "conceptosClave": [
+      "La diferencia de raíces dentro de un cuadrado requiere valor absoluto",
+      "Una identidad con radicales dobles no exige racionalidad del discriminante para existir",
+      "No se racionaliza multiplicando por cero",
+      "Una suma desde k igual a uno hasta noventa y nueve contiene noventa y nueve términos",
+      "La igualdad de x elevado a x no determina por sí sola un valor único"
+    ]
   }
 }

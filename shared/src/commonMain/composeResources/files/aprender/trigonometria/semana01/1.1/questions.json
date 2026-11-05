@@ -1,1 +1,207 @@
-[{"concept":"1.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t01_s01_c01","options":["\\dfrac{2\\pi}{5}\\text{ rad}","\\dfrac{3\\pi}{5}\\text{ rad}","\\dfrac{\\pi}{5}\\text{ rad}","\\dfrac{4\\pi}{5}\\text{ rad}"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado:** Convierta un ángulo que mide 72^\\circ al sistema radial (circular).","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t01_s01_c02","options":["\\dfrac{\\pi}{5}\\text{ rad}","\\dfrac{\\pi}{10}\\text{ rad}","\\dfrac{\\pi}{20}\\text{ rad}","\\dfrac{\\pi}{4}\\text{ rad}"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado:** Siendo S y C los números convencionales que representan la medida de un ángulo en los sistemas sexagesimal y centesimal respectivamente, se cumple la siguiente relación:","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t01_s01_c03","options":["36^\\circ","18^\\circ","27^\\circ","45^\\circ"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado:** La suma de las medidas de dos ángulos es 80^g y su diferencia es 18^\\circ. Calcule la medida del menor de los ángulos en el sistema sexagesimal.","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "1.1.1",
+    "correctIndex": 0,
+    "explanation": "1. Relacionamos una media vuelta: 180° equivalen a $\\pi$ rad.\n2. Multiplicamos: $72\\cdot\\frac{\\pi}{180}=\\frac{72\\pi}{180}$.\n3. Simplificamos entre 36: $\\frac{2\\pi}{5}$ rad.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "trig_t01_s01_c01",
+    "options": [
+      "\\frac{2\\pi}{5}\\text{ rad}",
+      "\\frac{3\\pi}{5}\\text{ rad}",
+      "\\frac{\\pi}{5}\\text{ rad}",
+      "\\frac{4\\pi}{5}\\text{ rad}"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Convierte 72° al sistema radial.",
+    "subject": "trigonometria",
+    "type": "MULTIPLE_CHOICE",
+    "angleDegrees": 72
+  },
+  {
+    "concept": "1.1.2",
+    "correctIndex": 0,
+    "explanation": "1. Una vuelta equivale a 360° y a 400 g.\n2. Usamos $C=36\\cdot\\frac{400}{360}$.\n3. Calculamos $C=40$ g; la medida angular no cambia, solo la unidad.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "trig_t01_s01_c02",
+    "options": [
+      "40 g",
+      "36 g",
+      "32.4 g",
+      "45 g"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Un ángulo mide 36° en el sistema sexagesimal. ¿Cuánto mide en grados centesimales?",
+    "subject": "trigonometria",
+    "type": "MULTIPLE_CHOICE",
+    "angleDegrees": 36
+  },
+  {
+    "concept": "1.1.3",
+    "correctIndex": 2,
+    "explanation": "1. Convertimos la suma: $80\\cdot\\frac{360}{400}=72$ grados.\n2. Si el mayor es A y el menor B: $A+B=72$ y $A-B=18$.\n3. Restamos las ecuaciones: $2B=54$.\n4. Dividimos entre dos: $B=27$ grados.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "trig_t01_s01_c03",
+    "options": [
+      "36°",
+      "18°",
+      "27°",
+      "45°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "La suma de dos ángulos positivos es 80 g y su diferencia es 18°. Calcula el menor en grados sexagesimales.",
+    "subject": "trigonometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.4",
+    "correctIndex": 3,
+    "explanation": "1. Una media vuelta mide 180°, es decir, $\\pi$ radianes.\n2. Una vuelta completa contiene dos medias vueltas.\n3. Su medida es $2\\pi$ radianes.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "trig_t01_s01_c04",
+    "options": [
+      "$\\pi$",
+      "$\\frac{\\pi}{2}$",
+      "$4\\pi$",
+      "$2\\pi$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Cuántos radianes tiene una vuelta completa?",
+    "subject": "trigonometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.5",
+    "correctIndex": 0,
+    "explanation": "1. El ángulo trigonométrico incluye el sentido de giro.\n2. El sentido horario se toma negativo.\n3. Un giro horario de 90° se representa con −90°.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "trig_t01_s01_c05",
+    "options": [
+      "−90°",
+      "90°",
+      "180°",
+      "−180°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Un rayo gira 90° en sentido horario desde su posición inicial. ¿Cuál es su ángulo trigonométrico?",
+    "subject": "trigonometria",
+    "type": "MULTIPLE_CHOICE",
+    "angleDegrees": -90
+  },
+  {
+    "concept": "1.1.6",
+    "correctIndex": 1,
+    "explanation": "1. Usamos la equivalencia $\\pi$ rad = 180°.\n2. Multiplicamos $\\frac{\\pi}{6}\\cdot\\frac{180}{\\pi}$.\n3. Cancelamos $\\pi$ y obtenemos $180/6=30$ grados.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "trig_t01_s01_c06",
+    "options": [
+      "15°",
+      "30°",
+      "45°",
+      "60°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Convierte $\\frac{\\pi}{6}$ radianes a grados sexagesimales.",
+    "subject": "trigonometria",
+    "type": "MULTIPLE_CHOICE",
+    "angleDegrees": 30
+  },
+  {
+    "concept": "1.1.7",
+    "correctIndex": 2,
+    "explanation": "1. Una vuelta tiene 400 g o 360°.\n2. Multiplicamos $150\\cdot\\frac{360}{400}$.\n3. Simplificamos: $150\\cdot\\frac{9}{10}=135$ grados.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "trig_t01_s01_c07",
+    "options": [
+      "150°",
+      "120°",
+      "135°",
+      "166.67°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Convierte 150 g a grados sexagesimales.",
+    "subject": "trigonometria",
+    "type": "MULTIPLE_CHOICE",
+    "angleDegrees": 135
+  },
+  {
+    "concept": "1.1.8",
+    "correctIndex": 3,
+    "explanation": "1. Cada grado contiene 60 minutos sexagesimales.\n2. Dos grados equivalen a 120 minutos.\n3. Sumamos los 15 minutos restantes: 120 + 15 = 135 minutos.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "trig_t01_s01_c08",
+    "options": [
+      "75′",
+      "120′",
+      "215′",
+      "135′"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Expresa 2° 15′ exclusivamente en minutos sexagesimales.",
+    "subject": "trigonometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.9",
+    "correctIndex": 0,
+    "explanation": "1. Del mismo ángulo se cumple $\\frac{S}{9}=\\frac{C}{10}$.\n2. Escribimos $S=9k$ y $C=10k$.\n3. Entonces $19k=76$, de donde $k=4$.\n4. Por tanto, $S=9\\cdot4=36$.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "trig_t01_s01_c09",
+    "options": [
+      "36",
+      "40",
+      "38",
+      "72"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "S y C son los números que expresan el mismo ángulo en grados sexagesimales y centesimales. Si S + C = 76, calcula S.",
+    "subject": "trigonometria",
+    "type": "MULTIPLE_CHOICE",
+    "angleDegrees": 36
+  },
+  {
+    "concept": "1.1.10",
+    "correctIndex": 1,
+    "explanation": "1. Convertimos con el factor $180/\\pi$.\n2. Calculamos $\\frac{3\\pi}{4}\\cdot\\frac{180}{\\pi}=\\frac{540}{4}$.\n3. El resultado es 135 grados.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "trig_t01_s01_c10",
+    "options": [
+      "120°",
+      "135°",
+      "150°",
+      "225°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Un ángulo mide $\\frac{3\\pi}{4}$ radianes. ¿Cuánto mide en grados sexagesimales?",
+    "subject": "trigonometria",
+    "type": "MULTIPLE_CHOICE",
+    "angleDegrees": 135
+  },
+  {
+    "concept": "1.1.11",
+    "correctIndex": 1,
+    "explanation": "1. El signo negativo indica giro horario.\n2. Multiplicamos $-\\frac{2\\pi}{3}\\cdot\\frac{180}{\\pi}=-\\frac{360}{3}$.\n3. La medida es −120°; el cambio de unidad no invierte el giro.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "trig_t01_s01_c11",
+    "options": [
+      "−60°",
+      "−120°",
+      "120°",
+      "240°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Convierte $-\\frac{2\\pi}{3}$ radianes a grados sexagesimales.",
+    "subject": "trigonometria",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

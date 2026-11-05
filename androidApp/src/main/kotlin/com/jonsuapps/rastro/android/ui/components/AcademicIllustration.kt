@@ -1,6 +1,9 @@
 package com.jonsuapps.rastro.android.ui.components
 
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
+import com.jonsuapps.rastro.R
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -24,22 +27,12 @@ import androidx.compose.ui.unit.dp
  * Resuelve automáticamente el SVG/vector según el concepto pedagógico indicado por la data.
  */
 object AcademicIllustrationsCatalog {
-    fun resolveConcept(raw: String): String {
-        val normalized = raw.lowercase().trim()
-        return when {
-            normalized.contains("popup") || normalized.contains("presentacion") -> "popup_hero"
-            normalized.contains("zool") || normalized.contains("animal") || normalized.contains("mastozoo") || normalized.contains("ornit") || normalized.contains("ictio") -> "zoologia"
-            normalized.contains("botan") || normalized.contains("planta") || normalized.contains("fitol") || normalized.contains("flora") -> "botanica"
-            normalized.contains("quim") || normalized.contains("matraz") || normalized.contains("molecul") || normalized.contains("laboratorio") || normalized.contains("reaccion") -> "quimica"
-            normalized.contains("fisic") || normalized.contains("atomo") || normalized.contains("energi") || normalized.contains("cinemat") || normalized.contains("dinam") || normalized.contains("vector") || normalized.contains("fuerza") || normalized.contains("electr") -> "fisica"
-            normalized.contains("mate") || normalized.contains("algeb") || normalized.contains("geom") || normalized.contains("trigono") || normalized.contains("aritmet") || normalized.contains("numero") || normalized.contains("calcul") -> "matematica"
-            normalized.contains("geog") || normalized.contains("mapa") || normalized.contains("tierra") || normalized.contains("cartog") || normalized.contains("espacio") -> "geografia"
-            normalized.contains("liter") || normalized.contains("libro") || normalized.contains("novela") || normalized.contains("lenguaj") || normalized.contains("verbal") || normalized.contains("gramat") || normalized.contains("lector") -> "literatura"
-            normalized.contains("hist") || normalized.contains("peru") || normalized.contains("cultur") || normalized.contains("civic") || normalized.contains("constituc") || normalized.contains("derecho") -> "historia"
-            normalized.contains("psic") || normalized.contains("cerebro") || normalized.contains("mente") || normalized.contains("filosof") -> "psicologia"
-            normalized.contains("biol") || normalized.contains("adn") || normalized.contains("vida") || normalized.contains("celul") || normalized.contains("organism") || normalized.contains("ecolog") -> "biologia"
-            else -> "popup_hero"
-        }
+    fun resolveArtwork(raw: String): AcademicArtwork =
+        AcademicArtwork.entries.firstOrNull { it.key == raw.lowercase().trim() }
+            ?: academicArtworkFor(raw, raw) ?: AcademicArtwork.BOOKS
+
+    fun resolveConcept(raw: String): String = resolveArtwork(raw).let {
+        if (it == AcademicArtwork.BOOKS) "popup_hero" else it.family
     }
 
     /**
@@ -68,21 +61,34 @@ fun AcademicIllustration(
     modifier: Modifier = Modifier,
     size: Dp = 48.dp
 ) {
-    val resolved = AcademicIllustrationsCatalog.resolveConcept(concept)
+    val resolved = AcademicIllustrationsCatalog.resolveArtwork(concept)
 
     Box(
         modifier = modifier.size(size),
         contentAlignment = Alignment.Center
     ) {
         when (resolved) {
-            "popup_hero" -> AcademicPopupHeroBooks(modifier = Modifier.fillMaxSize())
-            "zoologia" -> ZoologyCatDoodle(modifier = Modifier.fillMaxSize())
-            "botanica" -> BotanyPlantDoodle(modifier = Modifier.fillMaxSize())
-            "quimica" -> ChemistryFlaskDoodle(modifier = Modifier.fillMaxSize())
-            "fisica" -> PhysicsAtomDoodle(modifier = Modifier.fillMaxSize())
-            "literatura" -> LiteratureBooksDoodle(modifier = Modifier.fillMaxSize())
-            "psicologia" -> PsychologyBrainDoodle(modifier = Modifier.fillMaxSize())
-            else -> BiologyDnaDoodle(modifier = Modifier.fillMaxSize())
+            AcademicArtwork.POTTERY, AcademicArtwork.TEXTILE, AcademicArtwork.TEMPLE, AcademicArtwork.QUIPU -> {
+                val resource=when(resolved) {
+                    AcademicArtwork.POTTERY->R.drawable.academic_history_pottery
+                    AcademicArtwork.TEXTILE->R.drawable.academic_history_weaving
+                    AcademicArtwork.TEMPLE->R.drawable.academic_history_andes_temple
+                    else->R.drawable.academic_history_quipu
+                }
+                Image(painterResource(resource),contentDescription=null,modifier=Modifier.fillMaxSize())
+            }
+            AcademicArtwork.BOOKS -> AcademicPopupHeroBooks(modifier = Modifier.fillMaxSize())
+            AcademicArtwork.CAT -> ZoologyCatDoodle(modifier = Modifier.fillMaxSize())
+            AcademicArtwork.PLANT -> BotanyPlantDoodle(modifier = Modifier.fillMaxSize())
+            AcademicArtwork.FLASK -> ChemistryFlaskDoodle(modifier = Modifier.fillMaxSize())
+            AcademicArtwork.ATOM -> PhysicsAtomDoodle(modifier = Modifier.fillMaxSize())
+            AcademicArtwork.LITERATURE -> LiteratureBooksDoodle(modifier = Modifier.fillMaxSize())
+            AcademicArtwork.BRAIN -> PsychologyBrainDoodle(modifier = Modifier.fillMaxSize())
+            AcademicArtwork.DNA -> BiologyDnaDoodle(modifier = Modifier.fillMaxSize())
+            AcademicArtwork.CELL, AcademicArtwork.PAW, AcademicArtwork.GLOBE, AcademicArtwork.PIN,
+            AcademicArtwork.WEATHER, AcademicArtwork.MOUNTAIN, AcademicArtwork.WATER, AcademicArtwork.PEOPLE,
+            AcademicArtwork.SCROLL, AcademicArtwork.SCALES, AcademicArtwork.MATH, AcademicArtwork.TRIANGLE,
+            AcademicArtwork.SPEECH, AcademicArtwork.IDEA -> AcademicContextDoodle(resolved, Modifier.fillMaxSize())
         }
     }
 }

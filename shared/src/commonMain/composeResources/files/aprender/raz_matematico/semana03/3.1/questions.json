@@ -1,1 +1,200 @@
-[{"concept":"3.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t03_s01_c01","options":["12","14","16","18"],"pedagogicalTier":"concepto","semana":3,"statement":"El exceso del cuádruple de un número sobre 18 equivale al doble del mismo número aumentado en 14. Calcule dicho número.","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t03_s01_c02","options":["35 años","20 años","25 años","30 años"],"pedagogicalTier":"concepto","semana":3,"statement":"La edad actual de Juan es el triple de la edad de Pedro. Si dentro de 10 años la edad de Juan será el doble de la que Pedro tenga en ese momento, ¿cuántos años tiene Juan actualmente?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t03_s01_c03","options":["35 años","36 años","28 años","32 años"],"pedagogicalTier":"concepto","semana":3,"statement":"Yo tengo el doble de la edad que tú tenías cuando yo tenía la edad que tú tienes. Si la suma de nuestras edades actuales es de 63 años, ¿cuántos años tengo yo?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Significa A = 4B (el valor de B más tres veces su valor).","fuente":"temario","id":"rm_t03_s01_c04","options":["La suma en aspa entre dos tiempos cualesquiera siempre es exactamente igual (a_1 + b_2 = b_1 + a_2).","\\text{Año de Nacimiento} + \\text{Edad} = \\text{Año Actual} - 1.","Valor o condición no aplicable al caso planteado","Significa A = 4B (el valor de B más tres veces su valor)."],"pedagogicalTier":"concepto","semana":3,"statement":"¿Qué significa en lenguaje algebraico la frase \"A es tres veces más que B\"?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: La suma en aspa entre dos tiempos cualesquiera siempre es exactamente igual (a_1 + b_2 = b_1 + a_2).","fuente":"temario","id":"rm_t03_s01_c05","options":["La suma en aspa entre dos tiempos cualesquiera siempre es exactamente igual (a_1 + b_2 = b_1 + a_2).","Significa A = 4B (el valor de B más tres veces su valor).","\\text{Año de Nacimiento} + \\text{Edad} = \\text{Año Actual} - 1.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":3,"statement":"¿Qué propiedad fundamental se cumple en la suma cruzada de un cuadro de edades para dos personas?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: \\text{Año de Nacimiento} + \\text{Edad} = \\text{Año Actual} - 1.","fuente":"temario","id":"rm_t03_s01_c06","options":["Significa A = 4B (el valor de B más tres veces su valor).","\\text{Año de Nacimiento} + \\text{Edad} = \\text{Año Actual} - 1.","La suma en aspa entre dos tiempos cualesquiera siempre es exactamente igual (a_1 + b_2 = b_1 + a_2).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":3,"statement":"¿Cuál es la relación matemática entre el año de nacimiento y la edad si la persona aún NO cumple años en el año actual?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.7","correctIndex":3,"explanation":"Al plantear la matriz con 'y' y '2x', la suma en aspa da 2y = 3x (y = 1.5x). La suma actual es 2x + 1.5x = 3.5x = 63 => x = 18. Mi edad es 2(18) = 36 años.","fuente":"temario","id":"rm_t03_s01_c07","options":["28 años","32 años","35 años","36 años"],"pedagogicalTier":"concepto","semana":3,"statement":"Yo tengo el doble de la edad que tú tenías cuando yo tenía la edad que tú tienes. Si la suma de nuestras edades actuales es 63 años, ¿qué edad tengo yo?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.8","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t03_s01_c08","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t03_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t03_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rm_t03_s01_c01",
+    "concept": "3.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 3,
+    "statement": "La suma de las edades actuales de Ana y Beto es 34 años. Ana tiene 6 años más. ¿Cuántos años tiene Beto?",
+    "options": [
+      "$14\\,\\text{años}$",
+      "$28\\,\\text{años}$",
+      "$7\\,\\text{años}$",
+      "$42\\,\\text{años}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La menor edad x cumple x+(x+6)=34.\n2. Desarrollamos: $2x+6=34\\Rightarrow x=14$.\n3. El resultado es $14\\,\\text{años}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t03_s01_c02",
+    "concept": "3.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 3,
+    "statement": "Una persona tiene hoy 18 años. ¿Cuántos tendrá dentro de 7 años?",
+    "options": [
+      "$50\\,\\text{años}$",
+      "$75\\,\\text{años}$",
+      "$26\\,\\text{años}$",
+      "$25\\,\\text{años}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El transcurso de siete años se suma a la edad actual.\n2. Desarrollamos: $E=18+7$.\n3. El resultado es $25\\,\\text{años}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t03_s01_c03",
+    "concept": "3.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 3,
+    "statement": "Hoy una madre tiene 40 años y su hija 10. ¿Dentro de cuántos años la madre tendrá el doble que su hija?",
+    "options": [
+      "$10\\,\\text{años}$",
+      "$60\\,\\text{años}$",
+      "$20\\,\\text{años}$",
+      "$40\\,\\text{años}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Ambas edades aumentan el mismo número de años.\n2. Desarrollamos: $40+x=2(10+x)\\Rightarrow x=20$.\n3. El resultado es $20\\,\\text{años}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t03_s01_c04",
+    "concept": "3.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 3,
+    "statement": "Un número más su doble suma 45. ¿Cuál es el número?",
+    "options": [
+      "$5$",
+      "$15$",
+      "$30$",
+      "$45$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Representamos el número por x.\n2. Desarrollamos: $x+2x=45\\Rightarrow x=15$.\n3. El resultado es $15$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t03_s01_c05",
+    "concept": "3.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 3,
+    "statement": "En un corral hay 12 animales, todos gallinas de dos patas o conejos de cuatro. Se cuentan 34 patas. ¿Cuántos conejos hay?",
+    "options": [
+      "$5\\,\\mathrm{conejos}$",
+      "$10\\,\\mathrm{conejos}$",
+      "$15\\,\\mathrm{conejos}$",
+      "$6\\,\\mathrm{conejos}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Cada conejo aporta dos patas más que una gallina.\n2. Desarrollamos: $c=(34-2(12))/2$.\n3. El resultado es $5\\,\\mathrm{conejos}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t03_s01_c06",
+    "concept": "3.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 3,
+    "statement": "Un número de dos cifras tiene decena 4 y unidad x. Su valor es 47. ¿Qué cifra es x?",
+    "options": [
+      "$14$",
+      "$21$",
+      "$8$",
+      "$7$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La decena aporta 40.\n2. Desarrollamos: $40+x=47\\Rightarrow x=7$.\n3. El resultado es $7$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t03_s01_c07",
+    "concept": "3.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 3,
+    "statement": "A un número se le resta 5 y luego se duplica el resultado, obteniendo 26. ¿Cuál era el número?",
+    "options": [
+      "$9$",
+      "$54$",
+      "$18$",
+      "$36$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Deshacemos las operaciones en orden inverso.\n2. Desarrollamos: $x=26/2+5$.\n3. El resultado es $18$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t03_s01_c08",
+    "concept": "3.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 3,
+    "statement": "En un aula, el triple de asistentes menos 8 es 43. ¿Cuántos asistentes hay?",
+    "options": [
+      "$18\\,\\mathrm{personas}$",
+      "$17\\,\\mathrm{personas}$",
+      "$34\\,\\mathrm{personas}$",
+      "$51\\,\\mathrm{personas}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Formamos y despejamos una ecuación lineal.\n2. Desarrollamos: $3x-8=43\\Rightarrow x=17$.\n3. El resultado es $17\\,\\mathrm{personas}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t03_s01_c09",
+    "concept": "3.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 3,
+    "statement": "Dos enteros consecutivos suman 51. ¿Cuál es el menor?",
+    "options": [
+      "$25$",
+      "$50$",
+      "$75$",
+      "$26$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El segundo entero es x+1.\n2. Desarrollamos: $x+(x+1)=51\\Rightarrow x=25$.\n3. El resultado es $25$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t03_s01_c10",
+    "concept": "3.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 3,
+    "statement": "La diferencia entre las edades de dos personas, medida con el mismo criterio,…",
+    "options": [
+      "Siempre aumenta cada año.",
+      "Siempre se reduce a cero.",
+      "Es igual al cociente de edades.",
+      "Se mantiene al sumarles el mismo tiempo transcurrido."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Se comparan $a+t$ y $b+t$.\n2. Al restar, los dos términos t se cancelan.\n3. La razón entre las edades sí puede cambiar.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t03_s01_c11",
+    "concept": "3.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 3,
+    "statement": "Al traducir «el doble de un número aumentado en tres», una redacción ambigua debe…",
+    "options": [
+      "Convertirse automáticamente en x².",
+      "Ignorarse porque ambas expresiones son iguales.",
+      "Precisarse antes de decidir entre 2x+3 y 2(x+3).",
+      "Interpretarse siempre como la expresión más larga."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El alcance de «aumentado» puede cambiar la operación.\n2. Los paréntesis distinguen las dos lecturas.\n3. El enunciado debe indicar qué cantidad aumenta.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

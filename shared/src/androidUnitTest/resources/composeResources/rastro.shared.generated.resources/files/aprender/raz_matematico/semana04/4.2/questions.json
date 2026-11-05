@@ -1,1 +1,200 @@
-[{"concept":"4.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t04_s02_c01","options":["12 \\text{ cm}^2","15 \\text{ cm}^2","6 \\text{ cm}^2","8 \\text{ cm}^2"],"pedagogicalTier":"concepto","semana":4,"statement":"En un triángulo ABC de área 72 \\text{ cm}^2, se traza la mediana AM. Sobre AM se ubica el punto P tal que AP = 2(PM). Luego se traza el segmento CP y se prolonga hasta cortar al lado AB en el punto Q. Halle el área de la región triangular APQ.","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.2","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t04_s02_c02","options":["\\frac{a \\cdot b}{2}","\\frac{\\pi(a^2 + b^2)}{8}","\\frac{\\pi \\cdot a \\cdot b}{4}","\\frac{a^2 + b^2}{2}"],"pedagogicalTier":"concepto","semana":4,"statement":"Sobre los tres lados de un triángulo rectángulo de catetos a y b e hipotenusa c, se construyen semicírculos exteriores. Luego, el semicírculo construido sobre la hipotenusa c se pliega hacia adentro del triángulo cubriendo parte de él. Demuestre analíticamente y calcule el área total encerrada por las dos lúnulas resultantes en función de los catetos a y b.","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: A_s = \\frac{L^2}{2}(\\pi - 2).","fuente":"temario","id":"rm_t04_s02_c03","options":["Sumando el perímetro del contorno exterior MÁS el perímetro del contorno interior del hueco.","Valor o condición no aplicable al caso planteado","A_s = \\frac{L^2}{2}(\\pi - 2).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":4,"statement":"¿Cuál es la fórmula para el área de una hojita (pétalo) formada por dos cuadrantes en un cuadrado de lado L?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Sumando el perímetro del contorno exterior MÁS el perímetro del contorno interior del hueco.","fuente":"temario","id":"rm_t04_s02_c04","options":["A_s = \\frac{L^2}{2}(\\pi - 2).","Valor o condición no aplicable al caso planteado","Valor o condición no aplicable al caso planteado","Sumando el perímetro del contorno exterior MÁS el perímetro del contorno interior del hueco."],"pedagogicalTier":"concepto","semana":4,"statement":"Si una región sombreada tiene una perforación o hueco interior, ¿cómo se calcula su perímetro?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t04_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t04_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t04_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t04_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t04_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t04_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rm_t04_s02_c01",
+    "concept": "4.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "A la misma hora y sobre terreno horizontal, un poste vertical de 2 m proyecta sombra de 3 m. Otro poste vertical proyecta 12 m; los rayos solares se modelan paralelos. ¿Qué altura tiene el segundo?",
+    "options": [
+      "$8\\,\\mathrm{m}$",
+      "$16\\,\\mathrm{m}$",
+      "$4\\,\\mathrm{m}$",
+      "$24\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los triángulos formados son semejantes bajo las hipótesis dadas.\n2. Desarrollamos: $h/12=2/3\\Rightarrow h=8$.\n3. El resultado es $8\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s02_c02",
+    "concept": "4.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Una corona circular tiene radio exterior 6 cm e interior 4 cm. ¿Cuál es su área exacta?",
+    "options": [
+      "$40 \\pi\\,\\mathrm{cm^2}$",
+      "$10 \\pi\\,\\mathrm{cm^2}$",
+      "$60 \\pi\\,\\mathrm{cm^2}$",
+      "$20 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Restamos áreas de los dos discos concéntricos.\n2. Desarrollamos: $A=\\pi(6^2-4^2)$.\n3. El resultado es $20 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "concept": "4.2.3",
+    "correctIndex": 2,
+    "explanation": "1. La región común se divide en dos segmentos circulares iguales.\n2. Cada segmento es un sector de 90° de radio 2 menos un triángulo rectángulo de catetos 2: $\\frac{\\pi(2)^2}{4}-\\frac{2\\cdot2}{2}=\\pi-2$.\n3. Al duplicarlo, el área es $2\\pi-4$ unidades cuadradas.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "rm_t04_s02_c03",
+    "options": [
+      "$\\pi-2$",
+      "$4\\pi-4$",
+      "$2\\pi-4$",
+      "$2\\pi-2$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "En un cuadrado de lado 2, se trazan dos cuartos de círculo de radio 2 con centros en vértices opuestos, ambos dentro del cuadrado. ¿Cuál es el área de la región común de los dos cuartos de círculo?",
+    "subject": "raz_matematico",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.4",
+    "correctIndex": 3,
+    "explanation": "1. El borde exterior mide $2\\pi\\cdot5=10\\pi$ cm.\n2. El borde del hueco también pertenece a la frontera y mide $2\\pi\\cdot2=4\\pi$ cm.\n3. Sumamos ambos contornos: $14\\pi$ cm. No se está calculando el área.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "rm_t04_s02_c04",
+    "options": [
+      "$6\\pi$ cm",
+      "$10\\pi$ cm",
+      "$21\\pi$ cm",
+      "$14\\pi$ cm"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "Una región anular tiene radio exterior 5 cm y radio interior 2 cm. ¿Cuál es la longitud total de su frontera, contando el borde del hueco?",
+    "subject": "raz_matematico",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "rm_t04_s02_c05",
+    "concept": "4.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Un semicírculo tiene radio 5 cm. ¿Cuánto mide su frontera completa, incluido el diámetro?",
+    "options": [
+      "$10 + 5 \\pi\\,\\mathrm{cm}$",
+      "$20 + 10 \\pi\\,\\mathrm{cm}$",
+      "$5 + \\frac{5 \\pi}{2}\\,\\mathrm{cm}$",
+      "$30 + 15 \\pi\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Sumamos el arco semicircular y el segmento diametral.\n2. Desarrollamos: $P=5\\pi+2(5)$.\n3. El resultado es $10 + 5 \\pi\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s02_c06",
+    "concept": "4.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Un triángulo tiene área 54 cm². Una mediana lo divide en dos triángulos. ¿Qué área tiene cada uno?",
+    "options": [
+      "$54\\,\\mathrm{cm^2}$",
+      "$13.5\\,\\mathrm{cm^2}$",
+      "$81\\,\\mathrm{cm^2}$",
+      "$27\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Ambos tienen la mitad de la base original y la misma altura.\n2. Desarrollamos: $A=54/2$.\n3. El resultado es $27\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s02_c07",
+    "concept": "4.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Se pinta todo el exterior de un cubo y se divide en 27 cubitos iguales mediante una cuadrícula 3×3×3. ¿Cuántos cubitos tienen exactamente dos caras pintadas?",
+    "options": [
+      "$6\\,\\mathrm{cubitos}$",
+      "$36\\,\\mathrm{cubitos}$",
+      "$12\\,\\mathrm{cubitos}$",
+      "$24\\,\\mathrm{cubitos}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Son los interiores de las doce aristas, excluyendo vértices.\n2. Desarrollamos: $N=12(3-2)$.\n3. El resultado es $12\\,\\mathrm{cubitos}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s02_c08",
+    "concept": "4.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Un prisma rectangular de 8 cm por 5 cm por 3 cm se llena hasta la mitad de su capacidad. ¿Qué volumen contiene?",
+    "options": [
+      "$180\\,\\mathrm{cm^3}$",
+      "$60\\,\\mathrm{cm^3}$",
+      "$120\\,\\mathrm{cm^3}$",
+      "$30\\,\\mathrm{cm^3}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Calculamos la mitad del volumen total.\n2. Desarrollamos: $V=8(5)(3)/2$.\n3. El resultado es $60\\,\\mathrm{cm^3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s02_c09",
+    "concept": "4.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Una cuadrícula de 3 filas y 3 columnas de celdas tiene cuatro líneas horizontales y cuatro verticales. ¿Cuántos rectángulos alineados hay en total?",
+    "options": [
+      "$36\\,\\text{rectángulos}$",
+      "$72\\,\\text{rectángulos}$",
+      "$18\\,\\text{rectángulos}$",
+      "$108\\,\\text{rectángulos}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Cada rectángulo queda determinado por dos líneas de cada dirección.\n2. Desarrollamos: $N=\\binom{4}{2}^2$.\n3. El resultado es $36\\,\\text{rectángulos}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s02_c10",
+    "concept": "4.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Dos figuras semejantes tienen áreas 16 y 100 cm². ¿Cuál es la razón entre sus longitudes correspondientes, mayor entre menor?",
+    "options": [
+      "$5$",
+      "$1.25$",
+      "$7.5$",
+      "$2.5$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La razón de áreas es el cuadrado de la razón lineal.\n2. Desarrollamos: $k=\\sqrt{100/16}=5/2$.\n3. El resultado es $2.5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s02_c11",
+    "concept": "4.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Para sumar áreas de varias partes y obtener el área de su unión se necesita…",
+    "options": [
+      "Que ninguna tenga lados rectos.",
+      "Que las figuras usen colores distintos.",
+      "Que no se superpongan, o descontar las intersecciones apropiadamente.",
+      "Que todas tengan igual perímetro."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Un punto de superposición se contaría más de una vez en la suma.\n2. Si las partes no se superponen, sus áreas se suman directamente.\n3. En caso contrario se corrige el conteo de intersecciones.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

@@ -1,1 +1,200 @@
-[{"concept":"3.2.1","correctIndex":2,"explanation":"**Resolución:** 1. Convertimos la rapidez reglamentaria de \\text{km/h} a \\text{m/s}: v = 72\\text{ km/h} = 72 \\times \\frac{5}{18}\\text{ m/s} = 20\\text{ m/s} 2. Planteamos el DCL del vehículo sobre el plano inclinado peraltado sin rozamiento: - Fuerzas actuantes: el peso vertical hacia abajo (P = mg) y la fuerza normal \\vec{N} perpendicular a la calzada peraltada (que forma un ángulo \\theta con la vertical). 3. Ecuaciones dinámicas en los ejes: - Eje vertical (equilibrio): N \\cos\\theta = mg \\implies N = \\frac{mg}{\\cos\\theta} - Eje horizontal radial (provee la aceleración centrípeta a_c = v^2/R hacia el centro de giro): N \\sin\\theta = m a_c = m \\frac{v^2}{R} 4. Dividimos miembro a miembro la ecuación radial entre la ecuación vertical: \\frac{N \\sin\\theta}{N \\cos\\theta} = \\frac{m \\frac{v^2}{R}}{mg} \\implies \\tan\\theta = \\frac{v^2}{g R} 5. Reemplazamos los datos numéricos: \\tan\\theta = \\frac{(20\\text{ m/s})^2}{(10\\text{ m/s}^2)(200\\text{ m})} = \\frac{400}{2000} = \\frac{4}{20} = 0.20 - La tangente del ángulo de peralte óptimo es **0.20** (aproximadamente \\theta \\approx 11.3^\\circ). **Respuesta:** C ---","fuente":"temario","id":"fis_t03_s02_c01","options":["0.20","0.25","0.10","0.15"],"pedagogicalTier":"concepto","semana":3,"statement":"**Enunciado:** Los ingenieros de transporte diseñan una curva en la autopista Arequipa-La Joya con un radio de curvatura de R = 200\\text{ metros}. La pista debe tener un ángulo de peralte \\theta calculado de manera que un vehículo que transite a la velocidad reglamentaria de diseño de 72\\text{ km/h} no dependa en absoluto de la fuerza de rozamiento entre los neumáticos y el asfalto mojado para mantenerse en su carril sin derrapar lateralmente. Considerando g = 10\\text{ m/s}^2, determine el valor de la tangente del ángulo de peralte óptimo (\\tan\\theta).","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"3.2.2","correctIndex":3,"explanation":"**Resolución:** 1. Determinamos el radio R de la trayectoria circular horizontal a partir de la geometría del péndulo: R = L \\sin\\theta = (1.25\\text{ m}) \\times (\\sin 37^\\circ) = 1.25 \\times 0.6 = 0.75\\text{ m} 2. Realizamos el DCL de la esfera: - Peso: P = mg = (0.5\\text{ kg})(10\\text{ m/s}^2) = 5\\text{ N} hacia abajo. - Tensión \\vec{T} a lo largo de la cuerda formando un ángulo \\theta = 37^\\circ con la vertical. 3. Descomponemos la tensión en ejes vertical y horizontal radial: - En el eje vertical (no hay aceleración vertical, equilibrio): \\sum F_y = 0 \\implies T \\cos 37^\\circ = mg \\implies T(0.8) = 5\\text{ N} T = \\frac{5}{0.8} = \\frac{50}{8} = 6.25\\text{ N} 4. En el eje horizontal radial hacia el centro de la órbita (aceleración centrípeta): \\sum F_c = m a_c \\implies T \\sin 37^\\circ = m \\frac{v^2}{R} (6.25\\text{ N}) \\times (0.6) = (0.5\\text{ kg}) \\frac{v^2}{0.75\\text{ m}} 3.75 = \\frac{0.5}{0.75} v^2 = \\frac{2}{3} v^2 v^2 = \\frac{3 \\times 3.75}{2} = \\frac{11.25}{2} = 5.625 v = \\sqrt{5.625} \\approx 2.37\\text{ m/s} - La tensión es 6.25\\text{ N} y la rapidez es \\approx 2.37\\text{ m/s}. **Respuesta:** C --- 1. ¿Qué magnitud física vectorial posee siempre exactamente la misma dirección y el mismo sentido que la aceleración de un cuerpo? 2. Si un bloque de 4\\text{ kg} se mueve en una superficie horizontal con velocidad constante de 15\\text{ m/s}, ¿cuánto vale la fuerza neta horizontal aplicada sobre él? 3. ¿Cuál es el módulo de la aceleración centrípeta de un automóvil que recorre una pista circular de radio R = 50\\text{ m} a una rapidez constante de 10\\text{ m/s}? 4. Si un resorte de constante k = 400\\text{ N/m} se comprime una distancia de x = 0.05\\text{ m}, ¿qué módulo tiene la fuerza elástica restauradora? 5. ¿Qué ley de Newton fundamenta que cuando disparamos un rifle, este retrocede contra el hombro del tirador? --- 1: C | 2: B | 3: B | 4: A | 5: C","fuente":"temario","id":"fis_t03_s02_c02","options":["T = 5.00\\text{ N}; v = 2.0\\text{ m/s}","T = 6.25\\text{ N}; v = 2.37\\text{ m/s}","T = 4.00\\text{ N}; v = 1.85\\text{ m/s}","T = 6.25\\text{ N}; v = 1.5\\sqrt{3}\\text{ m/s}"],"pedagogicalTier":"concepto","semana":3,"statement":"**Enunciado:** Una pequeña esfera metálica de masa m = 0.5\\text{ kg} está sujeta al extremo de una cuerda inextensible y ligera de longitud L = 1.25\\text{ m}. El otro extremo de la cuerda está fijado a un punto del techo. La esfera gira describiendo una circunferencia en un plano horizontal con rapidez angular constante \\omega, formando la cuerda un ángulo constante de \\theta = 37^\\circ con la línea vertical descendente (péndulo cónico). Si la resistencia del aire es despreciable y tomando \\sin 37^\\circ \\approx 0.6, \\cos 37^\\circ \\approx 0.8 y g = 10\\text{ m/s}^2, calcule la tensión en la cuerda y la rapidez lineal v de la esfera en su órbita.","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"3.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: v_{\\text{crítica}} = \\sqrt{g R}.","fuente":"temario","id":"fis_t03_s02_c03","options":["\\tan\\theta = \\frac{v^2}{g R}.","Marca una normal aparente N = m(g + a).","v_{\\text{crítica}} = \\sqrt{g R}.","F_e = k \\cdot x (vectorialmente \\vec{F}_e = -k \\Delta\\vec{x})."],"pedagogicalTier":"concepto","semana":3,"statement":"¿Cuál es la rapidez crítica mínima en la cúspide de una trayectoria circular vertical para que la cuerda no se afloje?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"3.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: \\tan\\theta = \\frac{v^2}{g R}.","fuente":"temario","id":"fis_t03_s02_c04","options":["v_{\\text{crítica}} = \\sqrt{g R}.","Marca una normal aparente N = m(g + a).","F_e = k \\cdot x (vectorialmente \\vec{F}_e = -k \\Delta\\vec{x}).","\\tan\\theta = \\frac{v^2}{g R}."],"pedagogicalTier":"concepto","semana":3,"statement":"¿Qué fórmula describe el ángulo de peralte óptimo \\theta de una curva de radio R para una rapidez v sin rozamiento?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"3.2.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Marca una normal aparente N = m(g + a).","fuente":"temario","id":"fis_t03_s02_c05","options":["Marca una normal aparente N = m(g + a).","v_{\\text{crítica}} = \\sqrt{g R}.","\\tan\\theta = \\frac{v^2}{g R}.","F_e = k \\cdot x (vectorialmente \\vec{F}_e = -k \\Delta\\vec{x})."],"pedagogicalTier":"concepto","semana":3,"statement":"Si la aceleración de un ascensor de masa m es a hacia arriba, ¿cuánto marca una balanza sobre la que se apoya una persona de masa m?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"3.2.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: F_e = k \\cdot x (vectorialmente \\vec{F}_e = -k \\Delta\\vec{x}).","fuente":"temario","id":"fis_t03_s02_c06","options":["v_{\\text{crítica}} = \\sqrt{g R}.","F_e = k \\cdot x (vectorialmente \\vec{F}_e = -k \\Delta\\vec{x}).","\\tan\\theta = \\frac{v^2}{g R}.","Marca una normal aparente N = m(g + a)."],"pedagogicalTier":"concepto","semana":3,"statement":"¿Cómo se formula la Ley de Hooke para un resorte ideal?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"3.2.7","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: La fuerza de rozamiento estático entre los neumáticos y el asfalto.","fuente":"temario","id":"fis_t03_s02_c07","options":["v_{\\text{crítica}} = \\sqrt{g R}.","\\tan\\theta = \\frac{v^2}{g R}.","La fuerza de rozamiento estático entre los neumáticos y el asfalto.","Marca una normal aparente N = m(g + a)."],"pedagogicalTier":"concepto","semana":3,"statement":"En una curva horizontal plana sin peralte, ¿qué fuerza física proporciona la fuerza centrípeta que impide el derrape del automóvil?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"3.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t03_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"3.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t03_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"3.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t03_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t03_s02_c01",
+    "concept": "3.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 3,
+    "statement": "Un móvil describe una circunferencia de radio 5 m con rapidez constante 10 m/s. ¿Cuál es su aceleración centrípeta?",
+    "options": [
+      "$20\\,\\mathrm{m/s^2}$",
+      "$40\\,\\mathrm{m/s^2}$",
+      "$10\\,\\mathrm{m/s^2}$",
+      "$60\\,\\mathrm{m/s^2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El cambio de dirección produce aceleración hacia el centro.\n2. Sustituimos los datos: $a_c=v^2/r=10^2/5$.\n3. El resultado pedido es $20\\,\\mathrm{m/s^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t03_s02_c02",
+    "concept": "3.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 3,
+    "statement": "Una masa de 2 kg recorre una circunferencia de radio 4 m a 6 m/s. ¿Qué fuerza neta radial necesita?",
+    "options": [
+      "$36\\,\\mathrm{N}$",
+      "$9\\,\\mathrm{N}$",
+      "$54\\,\\mathrm{N}$",
+      "$18\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La fuerza radial neta proporciona la aceleración centrípeta.\n2. Sustituimos los datos: $F_r=mv^2/r=2(6^2)/4$.\n3. El resultado pedido es $18\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t03_s02_c03",
+    "concept": "3.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 3,
+    "statement": "Una curva sin rozamiento tiene radio 200 m y se diseña para v=20 m/s. Usa $g=10\\,\\mathrm{m/s^2}$. ¿Cuánto vale tan(θ) del peralte?",
+    "options": [
+      "$0.1$",
+      "$0.6$",
+      "$0.2$",
+      "$0.4$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Las componentes de la normal sostienen el peso y proporcionan la fuerza radial.\n2. Sustituimos los datos: $\\tan\\theta=v^2/(rg)=20^2/(200\\cdot10)$.\n3. El resultado pedido es $0.2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t03_s02_c04",
+    "concept": "3.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 3,
+    "statement": "Dos bloques de 2 kg y 3 kg están unidos por cuerda ideal sobre piso liso. Una fuerza de 20 N tira del bloque de 3 kg. ¿Cuál es la aceleración común?",
+    "options": [
+      "$12\\,\\mathrm{m/s^2}$",
+      "$4\\,\\mathrm{m/s^2}$",
+      "$8\\,\\mathrm{m/s^2}$",
+      "$2\\,\\mathrm{m/s^2}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Para el sistema completo la tensión es interna.\n2. Sustituimos los datos: $a=20/(2+3)$.\n3. El resultado pedido es $4\\,\\mathrm{m/s^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t03_s02_c05",
+    "concept": "3.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 3,
+    "statement": "Dos bloques de 3 kg y 2 kg están unidos por una cuerda ideal sobre piso liso. Una fuerza horizontal de 20 N tira del bloque de 3 kg. ¿Qué tensión acelera al bloque de 2 kg?",
+    "options": [
+      "$8\\,\\mathrm{N}$",
+      "$16\\,\\mathrm{N}$",
+      "$4\\,\\mathrm{N}$",
+      "$24\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Aislamos el bloque que solo recibe tensión horizontal.\n2. Sustituimos los datos: $a=20/5=4;\\quad T=2(4)$.\n3. El resultado pedido es $8\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t03_s02_c06",
+    "concept": "3.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 3,
+    "statement": "Una máquina de Atwood ideal tiene masas de 3 kg y 5 kg; $g=10\\,\\mathrm{m/s^2}$. ¿Cuál es el módulo de la aceleración?",
+    "options": [
+      "$5\\,\\mathrm{m/s^2}$",
+      "$1.25\\,\\mathrm{m/s^2}$",
+      "$7.5\\,\\mathrm{m/s^2}$",
+      "$2.5\\,\\mathrm{m/s^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Restamos los pesos y dividimos entre la masa total.\n2. Sustituimos los datos: $a=(5-3)10/(5+3)$.\n3. El resultado pedido es $2.5\\,\\mathrm{m/s^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t03_s02_c07",
+    "concept": "3.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 3,
+    "statement": "En una máquina de Atwood ideal de masas 3 kg y 5 kg, $g=10\\,\\mathrm{m/s^2}$, la masa menor sube con 2.5 m/s². ¿Cuál es la tensión?",
+    "options": [
+      "$18.75\\,\\mathrm{N}$",
+      "$112.5\\,\\mathrm{N}$",
+      "$37.5\\,\\mathrm{N}$",
+      "$75\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Aplicamos Newton a la masa que sube.\n2. Sustituimos los datos: $T-3(10)=3(2.5)\\Rightarrow T=37.5$.\n3. El resultado pedido es $37.5\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t03_s02_c08",
+    "concept": "3.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 3,
+    "statement": "Un cuerpo describe un círculo a rapidez v. Si la rapidez se duplica y el radio permanece fijo, ¿por qué factor cambia la fuerza radial neta?",
+    "options": [
+      "$12\\,\\text{veces}$",
+      "$4\\,\\text{veces}$",
+      "$8\\,\\text{veces}$",
+      "$2\\,\\text{veces}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La fuerza radial es proporcional al cuadrado de la rapidez.\n2. Sustituimos los datos: $F_2/F_1=(2v)^2/v^2$.\n3. El resultado pedido es $4\\,\\text{veces}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t03_s02_c09",
+    "concept": "3.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 3,
+    "statement": "Un vehículo de 500 kg toma una curva horizontal de radio 25 m a 10 m/s. ¿Qué módulo de fuerza horizontal neta requiere?",
+    "options": [
+      "$2000\\,\\mathrm{N}$",
+      "$4000\\,\\mathrm{N}$",
+      "$1000\\,\\mathrm{N}$",
+      "$6000\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La resultante horizontal es centrípeta.\n2. Sustituimos los datos: $F=500(10^2)/25$.\n3. El resultado pedido es $2000\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t03_s02_c10",
+    "concept": "3.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 3,
+    "statement": "En movimiento circular uniforme, ¿cuál afirmación es correcta?",
+    "options": [
+      "La velocidad vectorial es constante.",
+      "La aceleración es cero.",
+      "La rapidez es constante y la velocidad cambia de dirección.",
+      "La fuerza neta apunta en el sentido tangencial."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La trayectoria circular cambia la dirección del movimiento.\n2. La rapidez se mantiene, pero la velocidad vectorial no.\n3. La aceleración apunta al centro.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t03_s02_c11",
+    "concept": "3.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 3,
+    "statement": "La llamada fuerza centrípeta es…",
+    "options": [
+      "Una fuerza adicional que siempre se suma a todas las demás.",
+      "La resultante radial de las fuerzas que ya actúan.",
+      "Una fuerza que apunta siempre hacia afuera.",
+      "Una fuerza que solo existe con rozamiento."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Se descomponen las fuerzas reales en direcciones radial y tangencial.\n2. La suma radial debe cumplir la segunda ley.\n3. Centrípeta describe esa resultante, no una interacción nueva.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

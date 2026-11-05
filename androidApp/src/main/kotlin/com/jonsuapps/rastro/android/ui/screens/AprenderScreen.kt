@@ -219,7 +219,7 @@ fun AprenderScreen(
     var showNoLivesDialog by remember { mutableStateOf(false) }
 
     val handleLessonClick: (String) -> Unit = { lessonId ->
-        if (dailyHearts <= 0 && !com.jonsuapps.rastro.monetization.ProAccess.active()) {
+        if (dailyHearts <= 0 && !com.jonsuapps.rastro.monetization.PresentationMode.unlimitedLives()) {
             showNoLivesDialog = true
         } else {
             onNavigateToLesson(lessonId)
@@ -384,7 +384,7 @@ fun AprenderScreen(
                                     onClick = { audio.play(LearningSound.OPCIONES); onNavigateToSubjectDetail(selectedSubjectId) }
                                 )
                                 ActionPill(
-                                    text = "Guía",
+                                    text = "Material",
                                     icon = Icons.AutoMirrored.Rounded.MenuBook,
                                     modifier = Modifier.weight(1f),
                                     onClick = { audio.play(LearningSound.OPCIONES); showGuide = true }
@@ -451,16 +451,7 @@ fun AprenderScreen(
     if (showNoLivesDialog) com.jonsuapps.rastro.android.ui.components.CoinAndLivesDialog { showNoLivesDialog = false }
 
     if (showGuide) {
-        com.jonsuapps.rastro.android.ui.components.RastroStickerDialog(
-            onDismissRequest = { showGuide = false },
-            title = "Guía de ${currentSubject.name}",
-            message = "${currentSubject.description}\n\nConsejo clave: ${currentSubject.mascotTip}",
-            confirmText = "¡Entendido!",
-            cancelText = "Cerrar",
-            icon = Icons.AutoMirrored.Rounded.MenuBook,
-            theme = theme,
-            onConfirm = { showGuide = false }
-        )
+        MaterialReaderDialog(initialSubjectId = selectedSubjectId, onDismiss = { showGuide = false }, onPractice = onNavigateToLesson)
     }
     if (showCourseFlashcards) {
         CourseFlashcardsDialog(

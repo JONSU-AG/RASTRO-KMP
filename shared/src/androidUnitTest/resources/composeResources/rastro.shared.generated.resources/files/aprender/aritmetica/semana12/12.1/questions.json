@@ -1,1 +1,200 @@
-[{"concept":"12.1.1","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. Consideramos a la pareja de novios como un **único elemento ficticio (bloque)**. 2. Contamos el número de elementos a ordenar en la mesa redonda: - Los novios juntos: 1 elemento. - Los otros 4 amigos: 4 elementos. - Total de elementos en el círculo: n' = 1 + 4 = 5 elementos. 3. Aplicamos la fórmula de **Permutación Circular** para estos 5 elementos: P_c(5) = (5 - 1)! = 4! = 4 \\times 3 \\times 2 \\times 1 = 24 \\text{ maneras} 4. Dentro del bloque, los novios pueden permutar entre sí sus posiciones (él a la izquierda o ella a la izquierda): P_2 = 2! = 2 \\text{ maneras} 5. Por el principio de multiplicación: N_{\\text{total}} = P_c(5) \\times 2! = 24 \\times 2 = 48 \\text{ maneras} **Respuesta Correcta:** **C) 48** ---","fuente":"temario","id":"arit_t12_s01_c01","options":["24","36","48","72"],"pedagogicalTier":"concepto","semana":12,"statement":"**Enunciado:** Seis amigos, entre ellos una pareja de novios, se sientan alrededor de una mesa circular con seis asientos simétricamente distribuidos. ¿De cuántas maneras diferentes pueden sentarse si los novios deben estar siempre juntos?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.2","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Analizamos la naturaleza del problema: - Se eligen personas para una comisión general (no hay jerarquía de cargos), por lo que **no importa el orden**: se trata de **combinaciones**. 2. **Selección de los varones:** De un total de 7 profesores varones, debemos seleccionar 3: C_3^7 = \\frac{7 \\times 6 \\times 5}{3 \\times 2 \\times 1} = 35 \\text{ maneras} 3. **Selección de las mujeres:** De un total de 5 profesoras mujeres, debemos seleccionar 2: C_2^5 = \\frac{5 \\times 4}{2 \\times 1} = 10 \\text{ maneras} 4. Por el principio de multiplicación (la comisión requiere varones Y mujeres): N_{\\text{comisiones}} = C_3^7 \\times C_2^5 = 35 \\times 10 = 350 \\text{ comisiones} **Respuesta Correcta:** **C) 350** ---","fuente":"temario","id":"arit_t12_s01_c02","options":["350","420","280","320"],"pedagogicalTier":"concepto","semana":12,"statement":"**Enunciado:** En el departamento de Ingeniería de Sistemas de la UNSA hay 7 profesores varones y 5 profesoras mujeres. Se desea conformar una comisión evaluadora de 5 integrantes compuesta por exactamente 3 varones y 2 mujeres. ¿Cuántas comisiones distintas se pueden estructurar?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.3","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. Analizamos las letras que componen la palabra **AREQUIPA**: - Total de letras: n = 8 letras (A, R, E, Q, U, I, P, A). 2. Contamos la frecuencia de repetición de cada letra: - Letra A: se repite 2 veces. - Letras R, E, Q, U, I, P: se presentan 1 sola vez cada una. 3. Como intervienen todas las letras, el orden es determinante y hay elementos repetidos, aplicamos **Permutación con Repetición**: P_8^{2, 1, 1, 1, 1, 1, 1} = \\frac{8!}{2! \\cdot 1! \\cdot 1! \\cdot 1! \\cdot 1! \\cdot 1! \\cdot 1!} = \\frac{8!}{2!} 4. Calculamos numéricamente: 8! = 40\\,320 P_8^2 = \\frac{40\\,320}{2} = 20\\,160 \\text{ palabras distintas} **Respuesta Correcta:** **C) 20 160** ---","fuente":"temario","id":"arit_t12_s01_c03","options":["10\\,080","15\\,120","20\\,160","40\\,320"],"pedagogicalTier":"concepto","semana":12,"statement":"**Enunciado:** ¿Cuántas palabras o códigos de 8 letras, con o sin sentido lingüístico, pueden formarse utilizando todas las letras de la palabra **AREQUIPA**?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: En la Variación el orden de colocación de los elementos SÍ altera el resultado; en la Combinación el orden NO importa.","fuente":"temario","id":"arit_t12_s01_c04","options":["P_c(n) = (n - 1)!.","Equivale a 2^n (la cantidad total de subconjuntos de un conjunto de n elementos).","Valor o condición no aplicable al caso planteado","En la Variación el orden de colocación de los elementos SÍ altera el resultado; en la Combinación el orden NO importa."],"pedagogicalTier":"concepto","semana":12,"statement":"¿Cuál es la diferencia conceptual determinante entre una Variación y una Combinación?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: P_c(n) = (n - 1)!.","fuente":"temario","id":"arit_t12_s01_c05","options":["P_c(n) = (n - 1)!.","En la Variación el orden de colocación de los elementos SÍ altera el resultado; en la Combinación el orden NO importa.","Equivale a 2^n (la cantidad total de subconjuntos de un conjunto de n elementos).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":12,"statement":"¿Cuál es la fórmula para calcular la permutación circular de n elementos?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Equivale a 2^n (la cantidad total de subconjuntos de un conjunto de n elementos).","fuente":"temario","id":"arit_t12_s01_c06","options":["En la Variación el orden de colocación de los elementos SÍ altera el resultado; en la Combinación el orden NO importa.","Equivale a 2^n (la cantidad total de subconjuntos de un conjunto de n elementos).","P_c(n) = (n - 1)!.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":12,"statement":"¿A qué equivale la suma de todos los números combinatorios \\sum_{k=0}^n C_k^n?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t12_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t12_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t12_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t12_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "arit_t12_s01_c01",
+    "concept": "12.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "Hay 3 camisas y 2 pantalones distintos. ¿Cuántos conjuntos de una camisa y un pantalón pueden formarse?",
+    "options": [
+      "$6$",
+      "$12$",
+      "$3$",
+      "$18$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Las elecciones independientes se multiplican.\n2. Desarrollamos con los datos: $n=3(2)$.\n3. El resultado es $6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s01_c02",
+    "concept": "12.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "Una ruta tiene 4 opciones de autobús o 3 opciones de tren, excluyentes. ¿Cuántas opciones de transporte único hay?",
+    "options": [
+      "$14$",
+      "$21$",
+      "$8$",
+      "$7$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Sumamos alternativas de clases disjuntas.\n2. Desarrollamos con los datos: $n=4+3$.\n3. El resultado es $7$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s01_c03",
+    "concept": "12.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "¿De cuántas formas se ordenan 4 libros distintos en una fila?",
+    "options": [
+      "$12$",
+      "$72$",
+      "$24$",
+      "$48$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El orden de cuatro elementos distintos se cuenta con factorial.\n2. Desarrollamos con los datos: $n=4!=24$.\n3. El resultado es $24$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s01_c04",
+    "concept": "12.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "¿Cuántos grupos de 2 personas se eligen de 5 distintas sin cargos ni orden?",
+    "options": [
+      "$30$",
+      "$10$",
+      "$20$",
+      "$5$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Usamos combinaciones porque el orden no importa.\n2. Desarrollamos con los datos: $n=\\binom52=10$.\n3. El resultado es $10$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s01_c05",
+    "concept": "12.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "Se eligen presidente y secretario distintos entre 5 personas. ¿Cuántas asignaciones hay?",
+    "options": [
+      "$20$",
+      "$40$",
+      "$10$",
+      "$60$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los cargos distinguen el orden y una persona no ocupa ambos.\n2. Desarrollamos con los datos: $n=5(4)$.\n3. El resultado es $20$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s01_c06",
+    "concept": "12.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "Un código de 3 cifras permite repetir cualquiera de los diez dígitos e iniciar con cero. ¿Cuántos códigos hay?",
+    "options": [
+      "$2000$",
+      "$500$",
+      "$3000$",
+      "$1000$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Cada posición tiene diez elecciones.\n2. Desarrollamos con los datos: $n=10^3$.\n3. El resultado es $1000$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s01_c07",
+    "concept": "12.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "¿Cuántas cadenas de longitud 3 se forman con A y B, permitiendo repetición?",
+    "options": [
+      "$4$",
+      "$24$",
+      "$8$",
+      "$16$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Cada una de tres posiciones tiene dos elecciones.\n2. Desarrollamos con los datos: $n=2^3$.\n3. El resultado es $8$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s01_c08",
+    "concept": "12.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "Calcula 0!.",
+    "options": [
+      "$0$",
+      "$1$",
+      "$2$",
+      "$3$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La definición factorial asigna al producto vacío el valor uno.\n2. Desarrollamos con los datos: $0!=1$.\n3. El resultado es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s01_c09",
+    "concept": "12.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "¿Cuántos subconjuntos tiene un conjunto de 4 elementos?",
+    "options": [
+      "$16$",
+      "$32$",
+      "$8$",
+      "$48$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Cada elemento se incluye o no se incluye.\n2. Desarrollamos con los datos: $n=2^4$.\n3. El resultado es $16$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s01_c10",
+    "concept": "12.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "Se usan combinaciones cuando…",
+    "options": [
+      "Importa distinguir todos los órdenes posibles.",
+      "Se elige un grupo y el orden no distingue resultados.",
+      "Se permite dividir por cero.",
+      "Siempre hay exactamente dos elementos."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Un mismo grupo puede listarse de varias maneras.\n2. Si esas listas representan el mismo resultado, no deben contarse por separado.\n3. Las combinaciones eliminan esa repetición de órdenes.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s01_c11",
+    "concept": "12.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "El principio multiplicativo exige contar…",
+    "options": [
+      "Las alternativas sucesivas de cada etapa bajo sus condiciones.",
+      "Solo los resultados de la primera etapa.",
+      "Siempre la suma de alternativas.",
+      "Una sola opción aunque existan más."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Un resultado completo reúne una elección por etapa.\n2. Se cuentan las posibilidades admisibles de cada paso.\n3. Si esas cantidades son las indicadas, se multiplican para obtener el total.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

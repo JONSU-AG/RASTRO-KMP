@@ -1,1 +1,200 @@
-[{"concept":"5.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t05_s02_c01","options":["Falacia de Ilícito Menor","Falacia de Premisas Excluyentes","Falacia de Término Medio No Distribuido","Falacia de Ilícito Mayor"],"pedagogicalTier":"concepto","semana":5,"statement":"Analice el siguiente razonamiento:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.2.2","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t05_s02_c02","options":["Ningún científico es crítico","Todo científico es crítico","Algún científico no es crítico","Todos los críticos son científicos"],"pedagogicalTier":"concepto","semana":5,"statement":"Dadas las premisas categóricas no estándar:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: La conclusión forzosamente debe ser **particular** (la conclusión sigue a la parte más débil).","fuente":"temario","id":"rl_t05_s02_c03","options":["La **Falacia del Término Medio No Distribuido**.","Valor o condición no aplicable al caso planteado","La conclusión forzosamente debe ser **particular** (la conclusión sigue a la parte más débil).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":5,"statement":"Si una de las premisas de un silogismo es particular, ¿cómo debe ser la conclusión?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: La **Falacia del Término Medio No Distribuido**.","fuente":"temario","id":"rl_t05_s02_c04","options":["La conclusión forzosamente debe ser **particular** (la conclusión sigue a la parte más débil).","Valor o condición no aplicable al caso planteado","Valor o condición no aplicable al caso planteado","La **Falacia del Término Medio No Distribuido**."],"pedagogicalTier":"concepto","semana":5,"statement":"¿Qué falacia se comete si el Término Medio no está distribuido en ninguna de las dos premisas?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.2.5","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t05_s02_c05","options":["Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t05_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t05_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t05_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t05_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t05_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rl_t05_s02_c01",
+    "concept": "5.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Todos los A son B. Todos los B son C. Algún C no es A. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Algún C no es A.",
+      "Todos los C son A.",
+      "Algún A es C.",
+      "Todos los B son A."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. La premisa particular ya proporciona un C fuera de A. Las inclusiones adicionales no lo eliminan.\n3. Algún C no es A. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s02_c02",
+    "concept": "5.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Ningún A es C. Algún A es B. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Todos los B son C.",
+      "Todos los A son C.",
+      "Algún A es C.",
+      "Algún B no es C."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. El testigo común a A y B no pertenece a C, porque A y C son disjuntos; es un B fuera de C.\n3. Algún B no es C. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "concept": "5.2.3",
+    "correctIndex": 2,
+    "explanation": "1. Una premisa particular se refiere a algunos miembros de una clase.\n2. En el silogismo válido no permite extender esa información a toda la clase.\n3. La conclusión debe ser particular; su cualidad afirmativa o negativa depende de las premisas.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "rl_t05_s02_c03",
+    "options": [
+      "Universal necesariamente",
+      "Siempre afirmativa",
+      "Particular",
+      "Siempre negativa"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 5,
+    "statement": "En un silogismo categórico válido que tiene una premisa particular, ¿cómo debe ser su conclusión?",
+    "subject": "raz_logico",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.2.4",
+    "correctIndex": 3,
+    "explanation": "1. El término medio debe enlazar los términos de la conclusión.\n2. Si ninguna premisa lo distribuye, ambas pueden referirse a partes distintas de su clase.\n3. No queda garantizado el enlace: es la falacia del término medio no distribuido.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "rl_t05_s02_c04",
+    "options": [
+      "Afirmación del consecuente",
+      "Negación del antecedente",
+      "Cuatro términos",
+      "Término medio no distribuido"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 5,
+    "statement": "En un silogismo categórico, el término medio no está distribuido en ninguna premisa. ¿Qué falacia se comete?",
+    "subject": "raz_logico",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "rl_t05_s02_c05",
+    "concept": "5.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Todos los A son B. Algún A es C. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Algún B es C.",
+      "Ningún B es C.",
+      "Todos los C son B.",
+      "Todos los B son A."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. El testigo común a A y C es B por A⊆B; así pertenece a B∩C.\n3. Algún B es C. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s02_c06",
+    "concept": "5.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Todos los A son B. Algún A no es C. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Todos los B son C.",
+      "Ningún B es C.",
+      "Todos los C son A.",
+      "Algún B no es C."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. El A que no es C pertenece a B; es un testigo de B que no es C.\n3. Algún B no es C. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s02_c07",
+    "concept": "5.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Todos los A son C. Algún A no es B. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Todos los B son A.",
+      "Ningún A es C.",
+      "Algún C no es B.",
+      "Todos los C son B."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. El A que no es B pertenece a C; es un testigo de C que no es B.\n3. Algún C no es B. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s02_c08",
+    "concept": "5.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Todos los B son C. Algún B no es A. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Ningún B es C.",
+      "Algún C no es A.",
+      "Todos los C son A.",
+      "Todos los A son B."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. El B que no es A pertenece a C; es un testigo de C que no es A.\n3. Algún C no es A. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s02_c09",
+    "concept": "5.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Todos los A son B. Ningún B es C. Existe algún C. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Algún C no es A.",
+      "Algún A es C.",
+      "Todos los C son A.",
+      "Existe algún A."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. A⊆B y B∩C vacío implican A∩C vacío. El C cuya existencia se afirma no es A.\n3. Algún C no es A. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s02_c10",
+    "concept": "5.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Ningún A es B. Algún B es C. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Todos los C son A.",
+      "Algún A es B.",
+      "Todos los A son B.",
+      "Algún C no es A."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. El testigo común de B y C no está en A porque A y B son disjuntos; es un C fuera de A.\n3. Algún C no es A. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s02_c11",
+    "concept": "5.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "De «Todos los A son B», sin afirmar que exista algún A, ¿se sigue «Algún A es B»?",
+    "options": [
+      "Sí; A y B siempre son idénticas.",
+      "No; la premisa significa que ningún A es B.",
+      "No; la clase A podría estar vacía.",
+      "Sí; toda universal afirma existencia."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. En la interpretación moderna, la universal expresa inclusión.\n2. La inclusión puede cumplirse con A vacío.\n3. Para concluir la particular hace falta una premisa de existencia apropiada.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

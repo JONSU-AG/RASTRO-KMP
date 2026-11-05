@@ -7,11 +7,11 @@
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana06.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_06_Oracion_Gramatical_Simples_y_Compuestas.md",
   "learningObjectives": [
-    "Diferenciar oraciones bimembres con sujeto expreso o tácito de unimembres verbales y no verbales",
-    "Identificar oraciones unimembres impersonales con haber, fenómenos climáticos, hacer, ser y se impersonal",
-    "Clasificar oraciones por la actitud del hablante en enunciativas, interrogativas, exclamativas, exhortativas, desiderativas y dubitativas",
-    "Distinguir interrogativas directas de indirectas y totales de parciales en casos de admisión",
-    "Explicar la norma del verbo haber existencial en singular y la función de objeto directo del sintagma que lo acompaña"
+    "Distinguir oración y enunciado y declarar la nomenclatura bimembre/unimembre utilizada",
+    "Reconocer sujetos expresos, tácitos referenciales y usos impersonales con contexto suficiente",
+    "Analizar haber existencial, usos meteorológicos y construcciones con se sin generalizar por la forma del verbo",
+    "Clasificar modalidad y actitud del hablante indicando el segmento y el criterio",
+    "Distinguir interrogativas directas/indirectas y totales/parciales sin atribuir automáticamente su modalidad a la oración mayor"
   ],
   "theory": {
     "id": "th_leng_t06_s01",
@@ -20,15 +20,16 @@
     "titulo": "La Oración Gramatical: Bimembre vs. Unimembre y Actitud del Hablante",
     "resumen": "",
     "conceptosClave": [
-      "Bimembre con sujeto expreso o tácito recuperable por la desinencia verbal",
-      "Unimembre verbal impersonal sin sujeto con haber en singular, fenómenos climáticos y se impersonal",
-      "Unimembre no verbal con interjecciones y frases nominales como Auxilio y Buenos días",
-      "Haber existencial siempre en singular con objeto directo comprobable por Las hubo y Lo había",
-      "Interrogativa indirecta sin signos subordinada a verbos de dicción o entendimiento",
-      "Desiderativa con ojalá expresa deseo y dubitativa con tal vez expresa duda",
-      "Exhortativa expresa mandato o prohibición con función apelativa"
+      "Oración y enunciado no son nociones idénticas; un enunciado puede ser no verbal",
+      "Bimembre y unimembre se explican en la nomenclatura escolar del nivel",
+      "Una tercera persona plural necesita contexto para recuperar un sujeto referencial",
+      "Haber existencial es impersonal y singular en la norma general; el grupo nominal se estudia aquí como directo",
+      "Un verbo meteorológico puede tener usos figurados con sujeto, distintos del caso literal impersonal",
+      "Se vive es impersonal; se venden libros presenta pasiva refleja",
+      "Una interrogativa indirecta parcial se distingue de la oración completa que la contiene",
+      "Deseo, duda, exhortación y exclamación no son criterios necesariamente excluyentes en todo contexto"
     ],
-    "admissionTip": "Si ves Hubo, Había, Nevó, Hace frío, Es tarde o Se vive sin sujeto posible, marca unimembre. Si ves Hubieron en plural para existencia, marca error. Si ves Ojalá marca desiderativa y si ves Tal vez o Quizá marca dubitativa.",
-    "admissionExplanation": "La trampa más castigada es presentar el objeto directo de haber como falso sujeto y confundir la interrogativa indirecta sin signos con una enunciativa simple."
+    "admissionTip": "Delimita el segmento y explica el criterio antes de clasificar. No decidas por la ausencia de signos, por una tercera persona plural ni por una forma de haber aislada.",
+    "admissionExplanation": "Los ejemplos separan referencia del sujeto, impersonalidad y modalidad. Se corrige haber con valor existencial sin descalificar hablantes ni prohibir sus usos como auxiliar."
   }
 }

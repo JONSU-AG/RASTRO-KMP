@@ -10,30 +10,33 @@
 
 ## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
 
-```
-                        TEXTUALIDAD: COHERENCIA Y COHESIÓN
-                                       │
-            ┌──────────────────────────┴──────────────────────────┐
-            ▼                                                     ▼
-     COHERENCIA GLOBAL                                     COHESIÓN LINEAL
-    (Dimensión Semántica)                                (Dimensión Gramatical)
-            │                                                     │
-    ┌───────┴───────┐                                     ┌───────┴───────┐
-    ▼               ▼                                     ▼               ▼
-Unidad           No Contradicción                      Mecanismos      Conectores
-Temática         (Sentido sin                          Referenciales   Lógicos
-(Cero saltos     fisuras)                              (Anáfora,       (Causales,
-temáticos)                                             Elipsis)        Opositivos)
-            │                                                     │
-            └──────────────────────────┬──────────────────────────┘
-                                       ▼
-                       SUPRESIÓN DE ORACIONES (DESCARTE)
-                                       │
-                        ┌──────────────┴──────────────┐
-                        ▼                             ▼
-                  IMPERTINENCIA                  REDUNDANCIA
-               (Fuera de Tema /                 (Repetición Inútil
-                Énfasis Distinto)               de Información)
+```mermaid
+graph TD
+ ROOT["Coherencia, cohesión y revisión"]
+ B1["Sentido global"]
+ B1N1["Coherencia: interpretar las relaciones y la organización que dan unidad al texto."]
+ B1N2["La unidad temática admite cambios de aspecto si están relacionados con el propósito."]
+ B1N3["Distinguir contradicciones de voces citadas, hipótesis o cambios de perspectiva."]
+ B2["Vínculos textuales"]
+ B2N1["Cohesión: referencias, repeticiones léxicas, elipsis y conectores, también entre párrafos."]
+ B2N2["Resolver el antecedente de pronombres y expresiones antes de eliminar una oración."]
+ B2N3["La presencia de un conector no garantiza por sí sola una relación coherente."]
+ B3["Supresión con criterio"]
+ B3N1["Revisar pertinencia y enfoque; un detalle relacionado puede cumplir una función necesaria."]
+ B3N2["Distinguir repetición inútil de reiteración explicativa, enfática o referencial."]
+ B3N3["Releer el texto resultante y comprobar que no pierda información ni conexiones necesarias."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
 
@@ -72,19 +75,21 @@ temáticos)                                             Elipsis)        Opositiv
 
 ### 3.2 Los Dos Grandes Criterios de Supresión de Oraciones
 
-```
-                              CRITERIOS DE SUPRESIÓN
-                                        │
-           ┌────────────────────────────┴────────────────────────────┐
-           ▼                                                         ▼
-     IMPERTINENCIA                                              REDUNDANCIA
-   (Falta de Coherencia)                                      (Falta de Concisión)
-           │                                                         │
-     ┌─────┴─────┐                                             ┌─────┴─────┐
-     ▼           ▼                                             ▼           ▼
-  Directa     Indirecta                                     Simple      Compuesta
- (Tema ajeno (Mismo tema,                                  (Copia a     (Resume a
-  completo)   otro enfoque)                                una sola)    dos o más)
+```mermaid
+graph TD
+ ROOT["Revisar antes de suprimir"]
+ B1["Pertinencia"]
+ B1N1["Comprobar relación con el tema y función del detalle."]
+ B2["Redundancia"]
+ B2N1["Comprobar si repite sin añadir explicación, énfasis o referencia necesaria."]
+ B3["Resultado"]
+ B3N1["Releer sin la oración y verificar que no se rompa la información ni la cohesión."]
+ ROOT --> B1
+ B1 --> B1N1
+ ROOT --> B2
+ B2 --> B2N1
+ ROOT --> B3
+ B3 --> B3N1
 ```
 
 #### Criterio 1: Por Impertinencia (Inatingencia)
@@ -105,9 +110,9 @@ temáticos)                                             Elipsis)        Opositiv
 | Paso de Resolución | Algoritmo de Descarte | Regla de Oro en Admisión |
 | :--- | :--- | :--- |
 | **1. Lectura Panorámica** | Determinar el **Tema Central** y el **Enfoque Dominante** del conjunto. | Sintetizar mentalmente el texto en una frase de 5 palabras. |
-| **2. Búsqueda de la Impertinencia** | Cotejar cada oración contra el tema: *¿Esta oración rema hacia el mismo puerto?* | Si una oración habla de otro aspecto, esa es la eliminada sin dudar. |
+| **2. Búsqueda de la Impertinencia** | Cotejar cada oración contra el tema: *¿Esta oración rema hacia el mismo puerto?* | Comprobar si ese aspecto cumple una función dentro del conjunto antes de eliminarlo. |
 | **3. Búsqueda de la Redundancia** | Si todas son pertinentes, buscar el par repetitivo (O_i \approx O_j). | Aplicar la ley: Se elimina la que aporte menor precisión léxica. |
-| **4. Comprobación Final** | Leer el texto omitiendo la oración elegida para verificar que la lectura fluya con perfecta armonía. | Si la ilación del texto mejora y no se pierde nada vital, la respuesta es 100% segura. |
+| **4. Comprobación Final** | Leer el texto omitiendo la oración elegida para verificar que la lectura fluya con perfecta armonía. | Comprobar también referencias, información necesaria y alternativas; una impresión de fluidez no garantiza por sí sola la respuesta. |
 
 ---
 
@@ -449,16 +454,7 @@ Para hallar el **supuesto de un argumento**:
 ### 3.2 El Tono del Autor: Glosario de Actitudes Discursivas
 El tono es la "música" interior del texto. Saber calificar el tono permite al postulante resolver la pregunta más sutil de la prueba:
 
-```
-[TONO CRÍTICO / SEVERO]   ──▶  Juzga con rigor intelectual señalando deficiencias y errores.
-[TONO ESCÉPTICO / CAUTO]   ──▶  Duda de verdades absolutas, exige pruebas y desconfía de optimismos ingenuos.
-[TONO IRÓNICO / SARCÁSTICO]──▶  Usa el doble sentido burlesco para mofarse de una situación o personaje.
-[TONO SOLEMNE / PROTOCOLAR]──▶  Lenguaje grave, formal, majestuoso y respetuoso propio de actos oficiales.
-[TONO PANEGÍRICO / LAUDATORIO]▶ Alaba con entusiasmo desmedido las virtudes de alguien o algo.
-[TONO ELEGÍACO / NOSTÁLGICO] ──▶  Lamenta con melancolía y tristeza una pérdida irreparable o el pasado ido.
-[TONO BELIGERANTE / AGRESIVO]──▶  Confrontacional, violento en adjetivos, busca la colisión frontal abierta.
-[TONO ASERTIVO / OBJETIVO] ──▶  Tranquilo, firme, fundamentado en hechos empíricos sin apasionamiento ciego.
-```
+**Revisión del conjunto:** comprueba pertinencia, referencias y contenido antes de suprimir una oración.
 
 ### 3.3 El Deslinde entre Hecho, Opinión y Punto de Vista
 1. **Hecho:** Suceso fáctico comprobable empíricamente por cualquier observador neutral (*"Arequipa se ubica a 2325 m s. n. m."*).

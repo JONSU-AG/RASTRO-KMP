@@ -1,1 +1,200 @@
-[{"concept":"7.1.1","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. Formalizamos las proposiciones simples: - p: El mineral contiene carbono cristalizado en red octaédrica. - q: El mineral es un diamante. 2. Expresamos el argumento: - P_1: p \\to q - P_2: \\neg q 3. Reconocemos la estructura: Negación del consecuente con implicación dada. 4. Aplicamos la regla del **Modus Tollendo Tollens (MTT)**: [(p \\to q) \\land \\neg q] \\implies \\neg p 5. Por lo tanto, la conclusión obligatoria es \\neg p: *\"El mineral no contiene carbono cristalizado en red octaédrica\"*. **Respuesta:** C ---","fuente":"temario","id":"rl_t07_s01_c01","options":["El mineral contiene carbono cristalizado.","El mineral es grafito.","El mineral no contiene carbono cristalizado en red octaédrica.","El mineral es una roca volcánica."],"pedagogicalTier":"concepto","semana":7,"statement":"**Enunciado:** Dadas las siguientes premisas:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.2","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Identificamos las proposiciones: - p: La economía incrementa desmedidamente su masa monetaria sin respaldo. - q: La economía genera inflación galopante. 2. Analizamos la premisa y conclusión: - Premisa 1: p \\to q - Premisa 2: q (Se afirma que existe inflación galopante). - Conclusión: \\therefore p (Se concluye que se emitió masa monetaria). 3. Estructura formal del argumento: [(p \\to q) \\land q] \\to p 4. Evaluamos mediante tabla de verdad o contraejemplo: la inflación puede ser originada por colapso de oferta externa, guerras o desastres naturales, aun sin emisión. 5. Se ha afirmado el consecuente pretendiendo derivar el antecedente. Esto corresponde a la **Falacia de Afirmación del Consecuente (FAC)**. **Respuesta:** D ---","fuente":"temario","id":"rl_t07_s01_c02","options":["Inválido por incurrir en la Falacia de Negación del Antecedente.","Inválido por incurrir en la Falacia de Afirmación del Consecuente.","Válido por Modus Ponens.","Válido por Modus Tollens."],"pedagogicalTier":"concepto","semana":7,"statement":"**Enunciado (Modelo Admisión UNSA):** Analice el siguiente razonamiento:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.3","correctIndex":3,"explanation":"**Resolución Paso a Paso:** 1. Formalizamos los enunciados: - a: Alberto estudia medicina. - b: Beto estudia ingeniería. - c: Carlos estudia derecho. - d: Daniel estudia arquitectura. 2. Premisas formales: - P_1: a \\to b - P_2: b \\oplus c (Disyunción exclusiva estricta) - P_3: \\neg d \\to \\neg c - P_4: \\neg d (Hecho categórico probado) 3. Deducción encadenada: - De P_3 y P_4, por Modus Ponens: (\\neg d \\to \\neg c) \\land \\neg d \\implies \\neg c *(Carlos NO estudia derecho)*. - De P_2: b \\oplus c. Como sabemos que c es FALSO (\\neg c), para que la disyunción exclusiva sea verdadera, b debe ser obligatoriamente VERDADERO: \\neg c \\land (b \\oplus c) \\implies b *(Beto estudia ingeniería)*. - Analizamos ahora P_1: a \\to b. Sabemos que b es VERDADERO. ¿Podemos deducir que a es verdadero? ¡CUIDADO CON LA TRAMPA! a \\to V es verdadero tanto si a es V como si a es F. Por tanto, el valor de verdad de a queda indeterminado: Alberto podría estudiar o no estudiar medicina. - Revisamos si existe otra conclusión obligatoria: Si la pregunta indaga qué se puede afirmar con certeza sobre Alberto: no podemos afirmar que estudie medicina ni que no la estudie. - Si la opción evaluara a Carlos: sabemos que Carlos no estudia derecho; sobre Beto: Beto estudia ingeniería. - En preguntas de selección múltiple, evaluamos si la proposición P_1 fuera \"Solo si Beto estudia ingeniería...\", pero con a \\to b, el valor de a no queda forzado. - Por tanto, la respuesta certera ante la alternativa formulada es: no se puede determinar que sea médico de forma forzada, salvo que evaluemos la deducción negativa o la pregunta apunte a la certeza de su indeterminación. **Respuesta:** C (En exámenes tipo admisión, cuando plantean la relación contrarrecíproca forzada, o evalúan la alternativa que describe correctamente el estado). ---","fuente":"temario","id":"rl_t07_s01_c03","options":["Derecho","Alberto no estudia medicina","Ingeniería","Medicina"],"pedagogicalTier":"concepto","semana":7,"statement":"**Enunciado:** Se conocen las siguientes proposiciones verdaderas sobre cuatro estudiantes universitarios:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.4","correctIndex":1,"explanation":"Por Modus Tollens, al negar el consecuente ('el tipo de cambio no bajó') se niega válidamente el antecedente ('el precio del cobre no subió').","fuente":"temario","id":"rl_t07_s01_c04","options":["El precio del cobre subió","El precio del cobre no subió","La economía entró en recesión","El tipo de cambio subió de golpe"],"pedagogicalTier":"concepto","semana":7,"statement":"Si se sabe que 'Si sube el precio del cobre, el tipo de cambio baja' y además se constata que 'El tipo de cambio no bajó', ¿qué se concluye por Modus Tollens?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t07_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.6","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t07_s01_c06","options":["Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.7","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t07_s01_c07","options":["Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t07_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t07_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t07_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rl_t07_s01_c01",
+    "concept": "7.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 7,
+    "statement": "En «p es suficiente para q», la forma lógica es…",
+    "options": [
+      "$p\\to q$",
+      "$q\\to p$",
+      "$p\\land\\neg q$",
+      "$\\neg p\\land q$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La condición suficiente garantiza la otra.\n2. Siempre que se cumple p debe cumplirse q.\n3. La flecha parte de p.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t07_s01_c02",
+    "concept": "7.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 7,
+    "statement": "En «p es necesaria para q», la forma lógica es…",
+    "options": [
+      "$p\\to q$",
+      "$p\\lor q$",
+      "$p\\land\\neg q$",
+      "$q\\to p$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Si q ocurre, p no puede faltar.\n2. La necesidad de p se expresa tomando q como antecedente.\n3. No se afirma por ello que p baste para q.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t07_s01_c03",
+    "concept": "7.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 7,
+    "statement": "La recíproca de «si p, entonces q» es…",
+    "options": [
+      "$p\\land q$",
+      "$p\\lor q$",
+      "$q\\to p$",
+      "$\\neg q\\to\\neg p$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La recíproca intercambia antecedente y consecuente.\n2. No añade negaciones.\n3. No es equivalente al original en general.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t07_s01_c04",
+    "concept": "7.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 7,
+    "statement": "La contraposición de «si p, entonces q» es…",
+    "options": [
+      "$p\\land q$",
+      "$\\neg q\\to\\neg p$",
+      "$q\\to p$",
+      "$\\neg p\\to\\neg q$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Se intercambian antecedente y consecuente.\n2. Se niegan ambos.\n3. Esta transformación sí conserva el valor del condicional material.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t07_s01_c05",
+    "concept": "7.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 7,
+    "statement": "Con p=F, q=V, ¿qué valor tiene $p \\Rightarrow q$?",
+    "options": [
+      "Verdadera.",
+      "Falsa.",
+      "No puede determinarse con esos valores.",
+      "La fórmula carece de sintaxis lógica."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Sustituimos los valores dados de todas las variables.\n2. Aplicamos los conectores de la fórmula $p \\Rightarrow q$.\n3. Con la asignación p=F, q=V, la fórmula resulta verdadera.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t07_s01_c06",
+    "concept": "7.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 7,
+    "statement": "Con p=F, q=F, ¿qué valor tiene $p \\Rightarrow q$?",
+    "options": [
+      "Falsa.",
+      "No puede determinarse con esos valores.",
+      "La fórmula carece de sintaxis lógica.",
+      "Verdadera."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Sustituimos los valores dados de todas las variables.\n2. Aplicamos los conectores de la fórmula $p \\Rightarrow q$.\n3. Con la asignación p=F, q=F, la fórmula resulta verdadera.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t07_s01_c07",
+    "concept": "7.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 7,
+    "statement": "Aplica la condición suficiente. Suponiendo verdaderas $p \\Rightarrow q$, $p$, ¿qué conclusión está garantizada?",
+    "options": [
+      "$\\neg p$",
+      "$p \\veebar q$",
+      "$q$",
+      "$\\neg q$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Solo conservamos las asignaciones que satisfacen simultáneamente las premisas.\n2. Las asignaciones compatibles son: p=V, q=V.\n3. En todas las compatibles se cumple $q$; cada alternativa restante tiene un contraejemplo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t07_s01_c08",
+    "concept": "7.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 7,
+    "statement": "Aplica la condición necesaria ausente. Suponiendo verdaderas $p \\Rightarrow q$, $\\neg q$, ¿qué conclusión está garantizada?",
+    "options": [
+      "$p \\vee q$",
+      "$\\neg p$",
+      "$p$",
+      "$q$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Solo conservamos las asignaciones que satisfacen simultáneamente las premisas.\n2. Las asignaciones compatibles son: p=F, q=F.\n3. En todas las compatibles se cumple $\\neg p$; cada alternativa restante tiene un contraejemplo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t07_s01_c09",
+    "concept": "7.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 7,
+    "statement": "De «si estudio, apruebo» y «aprobé», ¿se sigue necesariamente «estudié»?",
+    "options": [
+      "No; afirmar el consecuente no justifica el antecedente.",
+      "Sí; es modus ponens.",
+      "Sí; los condicionales siempre son bicondicionales.",
+      "No; se deduce que no estudié."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El condicional solo impone que estudiar baste para aprobar.\n2. Es compatible aprobar por otra vía en el modelo lógico.\n3. Conocer el consecuente no fija el antecedente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t07_s01_c10",
+    "concept": "7.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 7,
+    "statement": "De «si entreno, mejoro» y «no entrené», ¿se deduce necesariamente «no mejoré»?",
+    "options": [
+      "Sí; es modus tollens.",
+      "Sí; mejorar exige entrenar por esa sola premisa.",
+      "No; se deduce necesariamente que mejoré.",
+      "No; negar el antecedente no fija el consecuente."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La primera premisa no dice «solo si entreno».\n2. Con antecedente falso, el condicional no impone un valor al consecuente.\n3. No queda garantizada ni la mejora ni su negación.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t07_s01_c11",
+    "concept": "7.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 7,
+    "statement": "«Ingreso solo si me inscribo» expresa que inscribirme es…",
+    "options": [
+      "La negación de ingresar.",
+      "Un hecho ya cumplido obligatoriamente.",
+      "Condición necesaria para ingresar.",
+      "Condición suficiente para ingresar, sin más requisitos."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. «Solo si» introduce una condición necesaria.\n2. Si ingreso, la inscripción debe haberse cumplido.\n3. No se garantiza ingresar por la sola inscripción.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

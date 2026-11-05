@@ -1,1 +1,200 @@
-[{"concept":"7.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t07_s02_c01","options":["\\left\\{\\dfrac{\\pi}{4}, \\dfrac{5\\pi}{4}\\right\\}","\\left\\{\\dfrac{\\pi}{2}, \\dfrac{3\\pi}{2}\\right\\}","\\left\\{0, \\dfrac{\\pi}{2}, 2\\pi\\right\\}","\\left\\{0, \\pi\\right\\}"],"pedagogicalTier":"concepto","semana":7,"statement":"**Enunciado:** El perfil de oscilación de una compuerta hidráulica sumergida responde a la ecuación \\sin(x) + \\cos(x) = 1. Determine todas las soluciones angulares en el intervalo cerrado [0, 2\\pi] que determinan la apertura total de la válvula.","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.2","correctIndex":3,"explanation":"4. **Resolución de cada Factor:** - **Primer Factor:** \\sin(3x) = 0 \\implies 3x = k\\pi \\implies x = \\frac{k\\pi}{3} \\quad (k \\in \\mathbb{Z}) - **Segundo Factor:** 2\\cos(2x) + 1 = 0 \\implies \\cos(2x) = -\\frac{1}{2} El valor principal para \\cos(\\theta) = -\\frac{1}{2} es V_p = 180^\\circ - 60^\\circ = 120^\\circ = \\frac{2\\pi}{3}. Aplicamos la fórmula general del coseno: 2x = 2n\\pi \\pm \\frac{2\\pi}{3} \\implies x = n\\pi \\pm \\frac{\\pi}{3} \\quad (n \\in \\mathbb{Z}) 5. **Conjunto Solución General:** x = \\frac{k\\pi}{3} \\quad \\lor \\quad x = n\\pi \\pm \\frac{\\pi}{3} \\quad (k, n \\in \\mathbb{Z}) - **Respuesta Correcta:** B) x = \\dfrac{k\\pi}{3} \\quad \\lor \\quad x = k\\pi \\pm \\dfrac{\\pi}{3} ---","fuente":"temario","id":"trig_t07_s02_c02","options":["x = \\dfrac{k\\pi}{3} \\quad \\lor \\quad x = k\\pi \\pm \\dfrac{\\pi}{3}","x = \\dfrac{k\\pi}{3} \\quad \\lor \\quad x = 2k\\pi \\pm \\dfrac{\\pi}{3}","x = \\dfrac{k\\pi}{2} \\quad \\lor \\quad x = k\\pi \\pm \\dfrac{\\pi}{6}","x = \\dfrac{k\\pi}{3} \\quad \\lor \\quad x = 2k\\pi \\pm \\dfrac{2\\pi}{3}"],"pedagogicalTier":"concepto","semana":7,"statement":"**Enunciado:** Determine la solución general para x en la siguiente ecuación trigonométrica:","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t07_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t07_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t07_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t07_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t07_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t07_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t07_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t07_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "trig_t07_s02_c01",
+    "concept": "7.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 7,
+    "statement": "¿Cuántas soluciones tiene $\\sin^2x=1/4$ en $[0,2\\pi)$?",
+    "options": [
+      "$4$",
+      "$8$",
+      "$2$",
+      "$12$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Deshacer el cuadrado exige ambos signos.\n2. Aplicamos la relación: $\\sin x=\\pm1/2\\Rightarrow x=\\pi/6,5\\pi/6,7\\pi/6,11\\pi/6$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t07_s02_c02",
+    "concept": "7.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 7,
+    "statement": "¿Cuántas soluciones tiene $2\\sin^2x-\\sin x=0$ en $[0,2\\pi)$?",
+    "options": [
+      "$8$",
+      "$2$",
+      "$12$",
+      "$4$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Factorizamos sin dividir por seno.\n2. Aplicamos la relación: $\\sin x(2\\sin x-1)=0$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t07_s02_c03",
+    "concept": "7.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 7,
+    "statement": "¿Cuántas soluciones tiene $\\sin x\\cos x=\\sin x$ en $[0,2\\pi)$?",
+    "options": [
+      "$1$",
+      "$6$",
+      "$2$",
+      "$4$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Llevamos todo a un lado y conservamos ambos factores.\n2. Aplicamos la relación: $\\sin x(\\cos x-1)=0\\Rightarrow x=0,\\pi$.\n3. El valor pedido es $2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t07_s02_c04",
+    "concept": "7.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 7,
+    "statement": "¿Cuántas soluciones tiene $\\cos(2x)=1$ en $[0,2\\pi]$?",
+    "options": [
+      "$9$",
+      "$3$",
+      "$6$",
+      "$1.5$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El argumento doble recorre dos vueltas y ambos extremos se incluyen.\n2. Aplicamos la relación: $2x=0,2\\pi,4\\pi\\Rightarrow x=0,\\pi,2\\pi$.\n3. El valor pedido es $3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t07_s02_c05",
+    "concept": "7.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 7,
+    "statement": "¿Cuántas soluciones tiene $\\tan^2x=1$ en $[0,2\\pi)$?",
+    "options": [
+      "$4$",
+      "$8$",
+      "$2$",
+      "$12$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Las dos tangentes posibles son 1 y −1, evitando los polos.\n2. Aplicamos la relación: $\\tan x=\\pm1$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t07_s02_c06",
+    "concept": "7.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 7,
+    "statement": "¿Cuántas soluciones tiene $\\sin x+\\cos x=\\sqrt2$ en $[0,2\\pi)$?",
+    "options": [
+      "$2$",
+      "$0.5$",
+      "$3$",
+      "$1$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El máximo de la suma se alcanza cuando ambas componentes son iguales y positivas.\n2. Aplicamos la relación: $\\sqrt2\\sin(x+\\pi/4)=\\sqrt2\\Rightarrow x=\\pi/4$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t07_s02_c07",
+    "concept": "7.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 7,
+    "statement": "Suma las soluciones de $\\cos x=-1/2$ en $[0,2\\pi)$.",
+    "options": [
+      "$\\pi\\,\\mathrm{rad}$",
+      "$6 \\pi\\,\\mathrm{rad}$",
+      "$2 \\pi\\,\\mathrm{rad}$",
+      "$4 \\pi\\,\\mathrm{rad}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El coseno negativo fija dos posiciones simétricas.\n2. Aplicamos la relación: $x=2\\pi/3,4\\pi/3;\\quad\\Sigma=2\\pi$.\n3. El valor pedido es $2 \\pi\\,\\mathrm{rad}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t07_s02_c08",
+    "concept": "7.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 7,
+    "statement": "¿Cuántas soluciones tiene $\\sin(2x)=0$ en $[0,2\\pi)$?",
+    "options": [
+      "$12$",
+      "$4$",
+      "$8$",
+      "$2$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El argumento doble genera cuatro ceros en el intervalo semiabierto.\n2. Aplicamos la relación: $x=0,\\pi/2,\\pi,3\\pi/2$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t07_s02_c09",
+    "concept": "7.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 7,
+    "statement": "¿Cuál es la menor solución positiva de $\\cos(2x)=0$?",
+    "options": [
+      "$\\frac{\\pi}{4}\\,\\mathrm{rad}$",
+      "$\\frac{\\pi}{2}\\,\\mathrm{rad}$",
+      "$\\frac{\\pi}{8}\\,\\mathrm{rad}$",
+      "$\\frac{3 \\pi}{4}\\,\\mathrm{rad}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El primer argumento positivo con coseno cero es π/2.\n2. Aplicamos la relación: $2x=\\pi/2\\Rightarrow x=\\pi/4$.\n3. El valor pedido es $\\frac{\\pi}{4}\\,\\mathrm{rad}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t07_s02_c10",
+    "concept": "7.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 7,
+    "statement": "Al resolver $\\sin x\\cos x=\\sin x$, dividir de inmediato entre $\\sin(x)$…",
+    "options": [
+      "Es siempre correcto sin restricciones.",
+      "Puede perder las soluciones donde sin(x)=0.",
+      "Añade todas las soluciones posibles.",
+      "Hace que cos(x) siempre valga cero."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El factor por el que se divide podría ser cero.\n2. Esos casos pueden satisfacer la ecuación original.\n3. Factorizar y estudiar cada factor conserva las soluciones.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t07_s02_c11",
+    "concept": "7.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 7,
+    "statement": "Después de elevar al cuadrado una ecuación, se debe…",
+    "options": [
+      "Aceptar todas las raíces obtenidas sin revisar.",
+      "Comprobar las candidatas en la ecuación original.",
+      "Eliminar todas las raíces negativas aunque sean admisibles.",
+      "Ignorar el dominio inicial."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Elevar al cuadrado puede borrar información de signo.\n2. La ecuación transformada puede admitir soluciones adicionales.\n3. La sustitución en el original y sus restricciones descarta las extrañas.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

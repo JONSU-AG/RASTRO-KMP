@@ -1,389 +1,176 @@
-# TEMA VIII: Resolución de Problemas Verbales
+# Adecuación y situaciones comunicativas
 
----
+Un mensaje puede estar bien construido y no servir para la situación en que se usa. También puede contener expresiones coloquiales y cumplir perfectamente su propósito entre personas que las comparten. Para evaluar la adecuación, hay que relacionar lo que se dice con quién lo recibirá, qué se necesita comunicar y en qué circunstancias.
 
+En esta lección distinguirás registro, variedad geográfica, variedad social y uso individual. Practicarás la elección de mensajes claros y respetuosos y la revisión de inferencias sobre quienes hablan. Los ejemplos son situaciones de práctica redactadas para estudiar; no se atribuyen a un examen oficial.
 
+## Mapa de conceptos
 
-### Matriz de Indicadores de Logro Evaluados
-1. **Análisis de situaciones comunicativas complejas:** Interpretar el rol del emisor, receptor, canal, código y contexto espaciotemporal en interacciones dialogadas o textos polifónicos.
-2. **Deducción de información oculta:** Reconstruir datos no explícitos a partir de pistas léxicas, índices contextuales y presuposiciones sociolingüísticas.
-3. **Resolución de relaciones verbales cruzadas:** Resolver problemas que combinan de forma simultánea analogías, conectores, antonimias y jerarquías en un solo enunciado integrador.
-4. **Evaluación de adecuación comunicativa:** Seleccionar la opción de respuesta lingüística óptima que satisfaga el registro formal, el tono y la cortesía requerida por el contexto profesional o académico.
-
----
-
-
-
-## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
-
-```
-                    RESOLUCIÓN DE PROBLEMAS VERBALES
-                                   │
-         ┌─────────────────────────┴─────────────────────────┐
-         ▼                                                   ▼
-SITUACIONES COMUNICATIVAS                           RELACIONES VERBALES
-(Pragmática y Adecuación)                         (Integración Compleja)
-         │                                                   │
-   ┌─────┴─────┐                                       ┌─────┴─────┐
-   ▼           ▼                                       ▼           ▼
-Registro    Intención y                             Analogías   Inferencia
-Lingüístico Pistas Contextuales                     Cruzadas    Causal
-(Formal vs. (Rastreo de                             y Redes     Deductiva
-Coloquial)   Indicios)                              Léxicas     Multifactorial
-```
-
-
-
-### Ontología de la Comunicación Situacional
-- **Adecuación Pragmática:** Capacidad del mensaje de amoldarse al registro lingüístico, a las convenciones sociales y a la relación jerárquica entre los interlocutores.
-- **Competencia Comunicativa (Hymes):** Habilidad de saber no solo cómo construir oraciones gramaticalmente correctas, sino cuándo hablar, cuándo callar, sobre qué hablar, con quién, dónde y de qué manera.
-- **Pista Contextual (Índice):** Huella lingüística observable que permite deducir un estado anímico, una pertenencia cultural, un estatus socioeconómico o una intencionalidad no declarada.
-- **Registro Formal Culto:** Nivel del lenguaje caracterizado por la riqueza léxica, la estricta concordancia sintáctica, la ausencia de vulgarismos y la sobriedad expresiva.
-
----
-
-
-
-## 3. DESARROLLO TEÓRICO FORMAL
-
-
-
-### 3.1 El Triángulo de Adecuación Sociolingüística
-En los problemas verbales de admisión, el acierto de una respuesta no depende únicamente de la gramaticalidad formal de la frase, sino de su **adecuación contextual**:
-
-\text{Adecuación} = f(\text{Interlocutores}, \text{Canal}, \text{Propósito}, \text{Entorno})
-
-1. **Relación Simétrica vs. Asimétrica:**
-   - *Simétrica (Horizontal):* Amigos íntimos, compañeros de aula, familiares \to Permite registro coloquial, afectivo o juvenil.
-   - *Asimétrica (Vertical):* Rector universitario - postulante, juez - acusado, médico - paciente \to Exige de forma innegociable el **registro formal formalizado**, tratamiento de cortesía (*usted, señor, doctor*) y ausencia de jergas.
-2. **Canal Formal vs. Informal:**
-   - La redacción de una solicitud de beca, un memorial o un oficio requiere un estándar formal impersonal (*"Tengo a bien dirigirme a usted con el debido respeto..."*).
-   - Un correo electrónico institucional no puede redactarse con las abreviaturas de WhatsApp o redes sociales.
-
-
-
-### 3.2 Metodología de Resolución de Problemas de Relaciones Complejas
-
-```
-[FASE 1: MAPEO DEL ESCENARIO]   ───▶  Determinar quién habla, a quién se dirige y en qué circunstancias.
-          │
-          ▼
-[FASE 2: DETECCIÓN DE QUIEBRES] ───▶  Identificar la tensión comunicativa (conflicto, duda, negociación).
-          │
-          ▼
-[FASE 3: PESAJE DE OPCIONES]    ───▶  Descartar respuestas:
-                                      - Demasiado agresivas o descorteses.
-                                      - Vulgares o coloquiales fuera de tono.
-                                      - Lógicamente incoherentes con el objetivo.
-          │
-          ▼
-[FASE 4: SELECCIÓN ÓPTIMA]      ───▶  Elegir la respuesta que resuelve el dilema con la máxima elegancia.
+```mermaid
+graph TD
+ ROOT["Resolver situaciones comunicativas"]
+ B1["Reconstruir el escenario"]
+ B1N1["Identificar participantes, propósito, canal y circunstancias."]
+ B1N2["Distinguir lo que el texto dice de lo que el lector supone."]
+ B1N3["Evaluar el registro según la situación; coloquial no significa incorrecto en cualquier contexto."]
+ B2["Relacionar indicios"]
+ B2N1["Explicitar las relaciones léxicas de cada par sin cambiar de criterio."]
+ B2N2["Separar hechos, hipótesis y consecuencias necesarias."]
+ B2N3["En problemas con varias condiciones, comprobar la respuesta contra todas ellas."]
+ B3["Comparar respuestas"]
+ B3N1["Valorar pertinencia y coherencia con el objetivo, no solo elegancia o longitud."]
+ B3N2["La cortesía puede ser relevante, pero una respuesta cortés que no resuelve el problema no basta."]
+ B3N3["Si el contexto no permite una única interpretación, reconocer la ambigüedad."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
+## 1. Adecuar no es hacer más solemne
 
+La adecuación relaciona el texto con la situación comunicativa. El registro es una forma de uso que se ajusta a esa situación. Un mismo hablante puede escribir una solicitud formal, conversar de manera distendida o explicar una idea a alguien que no conoce sus términos técnicos.
 
-## 4. FORMULARIO MAESTRO DE RESOLUCIÓN COMUNICATIVA
+| Situación de práctica | Información necesaria | Formulación posible |
+|---|---|---|
+| Consulta a una oficina universitaria | Trámite y duda concreta | Quisiera saber qué documentos debo presentar |
+| Acuerdo entre amigas | Lugar y hora compartidos | Nos vemos a las cinco en la entrada |
+| Aviso a participantes de un taller | Cambio y nueva ubicación | La sesión de hoy será en la biblioteca a la misma hora |
+| Explicación para lectores nuevos | Concepto y aclaración | Una muestra es el conjunto de casos que se estudia |
 
-| Dimensión Evaluada | Criterio de Selección de Respuesta | Error Típico en el Examen |
-| :--- | :--- | :--- |
-| **Carta / Oficio / Solicitud** | Registro formal culto, fórmulas de tratamiento protocolar. | Seleccionar frases coloquiales o impositivas directas. |
-| **Debate Científico** | Datos empíricos, léxico unívoco, argumentos libres de falacias. | Recurrir a la descalificación personal o al sentimentalismo. |
-| **Diálogo de Negociación** | Asertividad, búsqueda de consenso, concesiones mutuas. | Marcar opciones de intransigencia o claudicación absoluta. |
-| **Inferencia Situacional** | Deducir la profesión o estado emocional a partir de las pistas. | Afirmar hechos fantasiosos que no tienen respaldo en el texto. |
+Ninguna columna representa una escala de inteligencia. Cambian las necesidades de la interacción. Si un aviso se dirige a personas que no conocen el edificio, «nos vemos donde siempre» no basta. Entre personas que ya acordaron el lugar, esa expresión puede ser suficiente.
 
----
+La formalidad tampoco reemplaza los datos. «Por medio de la presente me dirijo respetuosamente a su digna persona» puede ser cortés, pero no identifica qué se solicita. «Quisiera saber si puedo entregar el documento el viernes» expresa la consulta con menos rodeos. La segunda opción no pierde respeto por ser más breve.
 
+## 2. Reconstruir la situación
 
+Antes de elegir una respuesta, anota qué pretende conseguir quien escribe y qué conoce el destinatario. Comprueba el canal y las circunstancias. No todos los correos son formales ni todos los mensajes breves son informales: el uso concreto importa más que el nombre de la herramienta.
 
-## 5. MNEMOTECNIAS DE COMBATE PREUNIVERSITARIO
+| Pregunta de revisión | Qué permite decidir |
+|---|---|
+| ¿Qué se necesita comunicar? | Si el mensaje informa, solicita, objeta o aclara |
+| ¿Quién lo recibirá? | Qué información puede darse por conocida |
+| ¿Por qué canal se comunicará? | Cómo organizar el mensaje y qué recursos están disponibles |
+| ¿Qué relación mantienen las personas? | Qué tratamiento resulta pertinente |
+| ¿Qué condiciones plantea el caso? | Qué respuesta resuelve realmente el problema |
 
+Estas preguntas son una guía de estudio. No constituyen una ley llamada triángulo ni una fórmula matemática que asegure el éxito de una petición. A veces un caso requiere considerar una condición adicional, como que el mensaje sea accesible para quien desconoce una abreviatura.
 
+**Ejemplo resuelto:** Una estudiante necesita saber qué documentos presentar para solicitar una convalidación. «Buenos días. Quisiera saber qué documentos debo presentar para solicitar la convalidación de mis cursos. Gracias» permite identificar el trámite y responder la duda. No afirma que la convalidación ya esté concedida ni atribuye a una autoridad concreta una competencia que el caso no especifica.
 
-### Mnemotecnia 1: "Las 4 C de la Comunicación de Élite"
-- **C**laridad: Lenguaje transparente y comprensible.
-- **C**oncisión: Cero rodeos inútiles o pleonasmos.
-- **C**ortesía: Tratamiento respetuoso según la jerarquía del interlocutor.
-- **C**oherencia: Fidelidad estricta al propósito comunicativo inicial.
+## 3. Formalidad, precisión y evidencia
 
+En un informe académico se busca comunicar con claridad, usando los términos necesarios y explicándolos cuando los lectores puedan desconocerlos. La precisión no se mide por la longitud de las palabras. Una afirmación adornada sigue necesitando evidencia.
 
+Compara «Participaron veinte personas» con «Se procedió a la ejecución de una participación humana de relevancia extraordinaria». La primera indica un dato. La segunda añade valoraciones y dificulta entender qué ocurrió. No hay una mejora por acumular sustantivos abstractos.
 
-### Mnemotecnia 2: "El Termómetro del Registro"
-- Nivel Frío (Vulgar / Jergal): Prohibido en documentos institucionales y respuestas de admisión.
-- Nivel Templado (Coloquial estándar): Para interacciones cotidianas informales familiares.
-- Nivel Óptimo (Formal / Académico): Es el que premia el examen de la UNSA, UNMSM y UNI.
+En un caso ficticio, se sabe que participaron veinte personas en una actividad. Para un informe que pide cantidad y sobriedad, «La actividad estuvo bravaza y se apuntó un montón de gente» necesita revisión: aporta una valoración coloquial y pierde el número conocido. Eso no significa que bravaza sea una palabra prohibida en toda conversación.
 
----
+**Ejemplo resuelto:** Si solo se midió la asistencia, no escribas «El taller demostró ser eficaz para aprender». La asistencia no mide por sí sola el aprendizaje. Cambiar a un registro formal no autoriza a fortalecer una conclusión. «Asistieron veinte personas» conserva el alcance del dato disponible.
 
+Un tecnicismo puede ser preciso entre especialistas e innecesariamente oscuro para otros lectores. Cuando el concepto es indispensable, explícalo; cuando no aporta una distinción útil, considera una expresión común. No hace falta eliminar todos los términos especializados ni introducirlos para aparentar rigor.
 
+## 4. Variedades lingüísticas y registro
 
-## 6. TÉCNICAS Y ARTIFICIOS DE CÁLCULO (HACKING PREUNIVERSITARIO)
+Conviene separar varias dimensiones de la variación. Se pueden estudiar conjuntamente, pero no significan lo mismo ni identifican por sí solas toda la trayectoria de una persona.
 
+| Término | Dimensión que describe | Qué no permite concluir por sí solo |
+|---|---|---|
+| Dialecto o variedad diatópica | Variación relacionada con el espacio geográfico | Que una forma sea inferior o que alguien haya nacido necesariamente en un lugar |
+| Sociolecto o variedad diastrática | Variación vinculada con factores sociales de un grupo | Los ingresos, la capacidad o la formación exacta de una persona |
+| Idiolecto | Rasgos del uso lingüístico de una persona | Que nunca cambie su manera de expresarse |
+| Registro | Uso relacionado con una situación comunicativa | Que el hablante solo conozca ese registro |
 
+Una misma persona puede compartir rasgos regionales y sociales y adaptar el registro a lo que hace. No son casillas excluyentes entre las que haya que escoger una identidad definitiva.
 
-## 8. APLICACIÓN AL MUNDO REAL Y CONTEXTO DECO
+**Ejemplo resuelto:** La pregunta dice «diferencias relacionadas con el espacio geográfico». La dimensión solicitada es diatópica. Si pregunta «rasgos característicos del uso de una persona», se refiere al idiolecto. La respuesta se apoya en la definición del caso, no en un juicio sobre qué variedad suena más prestigiosa.
 
-En la mediación de conflictos socioambientales (como las mesas de diálogo minero en el sur del Perú: Tía María, Las Bambas), la resolución de problemas verbales y la adecuación del discurso determina el éxito o fracaso de la paz social. Los negociadores del Estado deben emplear un registro intercultural respetuoso que traduzca conceptos técnicos de ingeniería y derecho ambiental a las comunidades campesinas sin sonar paternalistas ni tecnocráticos. De igual forma, en la comunicación de crisis corporativa y las relaciones públicas de empresas globales, emitir un comunicado con adecuación verbal exacta frena crisis de reputación millonarias.
+En el caso del sociolecto, interesa describir patrones de un grupo. No se debe convertir esa descripción en una escala automática de personas cultas e incapaces. La elección de una frase coloquial en un momento concreto tampoco demuestra que quien la dice no pueda redactar un informe formal.
 
----
+## 5. Límites de las pistas sobre el hablante
 
+Las palabras dan indicios, pero una frase aislada no funciona como un documento de identidad. Una persona puede aprender expresiones de otra región, citar a alguien, representar un personaje o usar vocabulario de su trabajo con distintos propósitos.
 
+Si un personaje dice «ahorita», el texto permite observar esa forma. Sin más información no determina su lugar de nacimiento, sus ingresos ni su nivel de estudios. Para resolver una pregunta sobre procedencia, el relato debe aportar datos que la establezcan, en vez de pedir una deducción basada en un estereotipo.
 
-### Ejercicio 1 (Nivel Básico: Adecuación de Registro Comunicativo)
-**Enunciado:** Un estudiante de quinto año de secundaria desea solicitar al decano de la Facultad de Ingeniería de la UNSA una prórroga para la entrega de los documentos de su inscripción al proceso CEPREQUINTOS. ¿Cuál de las siguientes fórmulas de redacción se adecúa de manera óptima al contexto formal y a la relación jerárquica?
-A) *"Hola decano, le escribo por este medio para pedirle que me aguante unos días más con los papeles del examen porque se me pasó la hora."*  
-B) *"Señor decano, le ordeno que extienda el plazo de entrega de documentos debido a mis problemas personales insuperables."*  
-C) *"Estimado señor decano: Por medio del presente documento, me dirijo respetuosamente a usted para solicitarle tenga a bien concederme una prórroga extraordinaria para la entrega de mi expediente de inscripción."*  
-D) *"Mi estimado amigo decano: Espero que todo vaya excelente; le ruego por piedad me reciba los papeles mañana."*  
-E) *"Decano de Ingeniería: Se le comunica que los documentos serán entregados cuando la oficina central emita el certificado correspondiente."*  
+**Contraste resuelto:** «Rosa nació en Puno y vive allí desde niña» aporta una información biográfica explícita dentro del relato. «Rosa empleó una expresión que también se oye en Puno» solo describe un uso. Cambiar la segunda afirmación por la primera introduce un dato no demostrado.
 
-**Resolución Paso a Paso:**
-1. Evaluamos la situación comunicativa:
-   - Emisor: Postulante escolar de secundaria.
-   - Receptor: Decano de Facultad (máxima autoridad académica).
-   - Relación: Estrictamente asimétrica y formal.
-   - Canal: Solicitud formal escrita de trámite administrativo.
-2. Analizamos las opciones:
-   - Opción A: Registro vulgar y coloquial inapropiado (*"Hola decano", "que me aguante"*).
-   - Opción B: Incurre en tono imperativo e insolente (*"le ordeno"*).
-   - Opción D: Confianza indebida y victimismo (*"amigo decano", "por piedad"*).
-   - Opción E: Tono displicente e impersonal agresivo.
-   - Opción C: Emplea el encabezado canónico protocolar (*"Estimado señor decano"*), tratamiento formal de tercera persona (*"usted"*), cortesía administrativa (*"tenga a bien concederme"*) y léxico preciso y sobrio.
-3. La alternativa C satisface con plenitud la adecuación comunicativa.
-**Respuesta:** C
+Lo mismo ocurre con las profesiones. Emplear un término técnico puede sugerir familiaridad con un ámbito, pero no acredita una titulación. Una pregunta que necesita identificar un rol puede decir que dos personas son responsables de revisar el catálogo, en lugar de deducir su profesión con certeza porque usan una palabra especializada.
 
----
+## 6. Cortesía y desacuerdo
 
+La cortesía atiende a la relación interpersonal. Puede ayudar a formular una petición, una negativa o una objeción con respeto. No obliga a aceptar lo que se pide y no garantiza que el interlocutor quede satisfecho.
 
+| Propósito | Ejemplo de práctica |
+|---|---|
+| Pedir una aclaración | ¿Podrías indicar a qué resultado te refieres? |
+| Expresar un desacuerdo | No encuentro datos que apoyen esa conclusión en el informe |
+| Comunicar un límite | Hoy no puedo revisar el archivo; puedo hacerlo mañana |
+| Señalar información faltante | Falta el número de expediente para localizar la solicitud |
 
-### Ejercicio 3 (Nivel Intermedio-Avanzado: Resolución de Problemas de Relaciones Complejas)
-**Enunciado:** Identifique la palabra que satisface simultáneamente las siguientes tres condiciones semánticas y pragmáticas:
-I. Es antónimo de **PUSILÁNIME**.
-II. Es sinónimo contextual de **IMPAVIDO** o **VALEROSO**.
-III. Se utiliza en el registro formal culto para calificar a una persona que no se amilana ante el peligro de muerte.
-A) Prudente  
-B) Temerario  
-C) Denodado  
-D) Audaz  
-E) Sagaz  
+Una respuesta muy cortés que no contesta la duda puede ser poco útil. «Con el mayor respeto y consideración, le deseo un excelente día» no informa de qué documentos se necesitan. La adecuación requiere comparar tanto el trato como la pertinencia del contenido.
 
-**Resolución Paso a Paso:**
-1. Desglosamos las condiciones:
-   - *Pusilánime:* Falto de ánimo y valor para emprender acciones o enfrentar peligros (cobarde, miedoso). Su antónimo debe significar valiente, bravo, con coraje.
-   - Sinónimo de *impávido / valeroso*: Que no muestra miedo, resuelto, intrépido.
-   - Registro culto exacto para quien lucha con esfuerzo y vigor sin rendirse ante el peligro.
-2. Analizamos las opciones:
-   - *Prudente:* Es quien actúa con cautela; no es sinónimo de impávido.
-   - *Temerario:* Quien afronta peligros sin reflexionar, de forma imprudente e insensata (connotación negativa de insensatez).
-   - *Sagaz:* Astuto, perspicaz e inteligente (campo intelectual, no de valentía).
-   - *Audaz:* Atrevido; puede usarse en sentido coloquial y comercial.
-   - *Denodado:* Calificativo culto y heroico que denota intrepidez, esfuerzo, brío y valor indomable (antónimo exacto de pusilánime y sinónimo de valeroso con esfuerzo consciente).
-3. *Denodado* cumple a la perfección las tres restricciones impuestas.
-**Respuesta:** C
+**Ejemplo resuelto:** En una revisión académica aparece «Tu argumento es puro floro». Para convertirlo en una objeción útil, identifica la afirmación cuestionada y el apoyo que falta: «La conclusión afirma que mejoró el aprendizaje, pero el informe solo registra asistencia». Esta revisión no inventa un defecto personal ni ridiculiza al autor.
 
----
+La inadecuación de una expresión en un escrito no permite deducir por sí sola su invalidez jurídica ni una sanción. Para estudiar lenguaje basta explicar qué exige el intercambio y cómo reformular el mensaje. No hace falta añadir consecuencias legales que el caso no aporta.
 
+## 7. Comparar respuestas con todas las condiciones
 
+Una alternativa puede ser gramatical y no resolver la situación planteada. Si se pide una consulta, una amenaza no la sustituye; si se pide una objeción fundamentada, un elogio genérico tampoco cumple el objetivo. No elijas solo por extensión o por el número de fórmulas de cortesía.
 
-### Ejercicio 4 (Nivel Avanzado DECO: Asertividad y Mediación en Conflicto Laboral)
-**Enunciado (Tipo San Marcos DECO / UNSA):** En una empresa minera de Arequipa, un ingeniero jefe de turno detecta que un operador de maquinaria pesada omitió el protocolo de inspección previa de frenos antes de ingresar a la rampa del tajo abierto. Si el objetivo del jefe es garantizar la seguridad de vida del personal y evitar la reincidencia sin vulnerar los derechos laborales ni generar una huelga sindical por maltrato, ¿cuál es la intervención comunicativa más eficaz y adecuada?
-A) *"Usted es un incompetente que pone en riesgo a toda la mina; queda despedido inmediatamente sin derecho a reclamo."*  
-B) *"Compañero, sabemos que la empresa exige metas de producción muy altas, así que no se preocupe por los frenos; continúe operando."*  
-C) *"Juan, he verificado que no registraste la lista de inspección de frenos antes de descender. Esto constituye un incumplimiento grave del protocolo que pone en riesgo tu propia vida y la de tus compañeros. Estaciona la unidad ahora mismo, completemos el checklist de seguridad y te espero en la oficina para firmar el acta preventiva."*  
-D) *"No me importa lo que haya pasado con los frenos, pero si el superintendente se entera, ambos iremos a la cárcel."*  
-E) *"Por favor, si usted tiene la amabilidad y el buen humor de revisar los frenos, se lo agradecería de corazón."*  
+**Caso ficticio:** Un taller cambia de aula. El caso indica que se mantiene la hora y que hay que informar a quienes asistirán.
 
-**Resolución Paso a Paso:**
-1. Analizamos el propósito comunicativo:
-   - Máxima prioridad: Seguridad de vida inmediata (frenar la máquina de inmediato).
-   - Manejo de relaciones laborales: Evitar insultos o despidos arbitrarios ilegales que deterioren el clima y causen parálisis operativa.
-   - Asertividad: Señalar el hecho objetivo probado sin ambages, fundamentar el porqué (riesgo vital) y aplicar la acción correctiva reglada.
-2. Evaluamos las alternativas:
-   - Opción A: Agresiva, insultante e ilegal administrativamente.
-   - Opción B: Negligencia punible y complicidad criminal.
-   - Opción D: Conducta evasiva de encubrimiento.
-   - Opción E: Trato sumiso e ineficaz para una situación de emergencia vital.
-   - Opción C: Señala con serenidad y firmeza la falta concreta comprobada (*"no registraste la lista"*), fundamenta el valor protegido (*"tu vida y la de tus compañeros"*), da la orden operativa urgente (*"estaciona la unidad ahora mismo"*) y canaliza administrativamente el proceso (*"acta preventiva"*).
-3. La opción C es un modelo de comunicación asertiva de liderazgo profesional.
-**Respuesta:** C
+A) «La actividad será increíble; no te la pierdas».
 
----
+B) «La sesión de hoy se realizará en la biblioteca a las cinco, como estaba previsto».
 
+C) «La sesión fue cancelada».
 
+D) «Pregunten dónde será; la organización verá luego».
 
-### Ejercicio 5 (Nivel 5: Boss Challenge - Desciframiento de Pistas en Enigma Polifónico)
-**Enunciado (Nivel UNI / Máxima Exigencia):** Durante una audiencia de control de detención, tres testigos prestaron las siguientes declaraciones sobre la hora del crimen:
-- **Testigo 1 (Sereno municipal):** *"Cuando escuché las dos detonaciones en la esquina de San Camilo, el reloj de la torre del templo de Santo Domingo acababa de dar las campanas del mediodía."*
-- **Testigo 2 (Comerciante ambulante):** *"Apenas vi correr al sujeto encapuchado hacia la avenida Perú, miré mi teléfono celular y marcaba las 12:05 p.m."*
-- **Testigo 3 (Médico legista):** *"La pericia balística y la data del disparo en la arteria femoral sitúan el cese de signos vitales exactamente a las 11:45 de la mañana de acuerdo a la cronometría biológica del hemostato."*
-A partir del análisis crítico de las pistas contextuales y la coherencia testimonial, ¿cuál es la conclusión obligatoria sobre la validez del sistema de testimonios?
-A) Los tres testimonios son perfectamente compatibles y coincidentes.  
-B) El reloj del comerciante ambulante estaba adelantado dos horas.  
-C) Existe una inconsistencia temporal insalvable entre el informe biológico forense del médico legista y las declaraciones testimoniales del sereno y del comerciante.  
-D) El sujeto encapuchado corrió durante quince minutos antes de disparar.  
-E) Las campanas del templo tocaron cuarenta y cinco minutos después del mediodía.  
+**Resolución:** B comunica el nuevo lugar y conserva la hora. A promociona sin informar del cambio; C contradice los datos; D traslada al destinatario una tarea que el aviso debía resolver. La preferencia por B se justifica mediante condiciones explícitas, no porque sea la alternativa más solemne.
 
-**Resolución Paso a Paso:**
-1. Analizamos cronológicamente cada elemento del cuadro:
-   - Testigo 1 y Testigo 2 ubican las detonaciones (el acto del disparo) entre las **12:00 m.** (campanas del mediodía) y las **12:05 p.m.** (reloj de celular). Sus relatos presentan coherencia mutua cercana (ventana de 5 minutos de dispersión).
-   - Testigo 3 (Prueba pericial médica objetiva): Afirma que el disparo y la muerte por hemorragia femoral ocurrieron a las **11:45 a.m.**
-2. Evaluamos la relación temporal:
-   - Un individuo no puede morir desangrado a las 11:45 a.m. por un disparo que recién se efectuó a las 12:00 m. o 12:05 p.m.
-   - El efecto (muerte biológica) no puede preceder cronológicamente a la causa física (detonaciones del arma de fuego).
-3. Se produce una **incompatibilidad temporal objetiva insalvable** entre la prueba pericial científica y los testimonios de los dos primeros declarantes.
-4. La opción C diagnostica con exactitud analítica y procesal esta ruptura lógica de coherencia.
-**Respuesta:** C
+## 8. Revisar coherencia temporal sin inventar pericias
 
----
+**Caso ficticio:** El acta de una reunión indica que terminó a las 10:00. Otro registro describe a la misma persona interviniendo presencialmente a las 10:15 en esa misma reunión, ya terminada según el acta. Para el ejercicio se establece que ambos registros corresponden al mismo día y que sus relojes están sincronizados.
 
+Los dos registros son incompatibles tal como están redactados. El ejercicio permite detectar esa inconsistencia, pero no decidir cuál es falso ni acusar de mentir a una persona. Puede faltar información o haber un error de registro; hace falta comprobarlo.
 
+Si no se especificara que se trata de la misma reunión o que las horas son comparables, la incompatibilidad sería menos clara. Una pregunta de razonamiento debe aportar las condiciones necesarias y reconocer lo que queda sin determinar. La comparación se resuelve con las condiciones del relato, sin añadir supuestos externos.
 
-## 10. GLOSARIO DE TÉRMINOS CLAVE
+## 9. Importante
 
-1. **Competencia Comunicativa:** Habilidad integral de usar el lenguaje con corrección gramatical y adecuación situacional.
-2. **Registro Lingüístico:** Variedad funcional del habla determinada por el contexto, el canal y los interlocutores.
-3. **Asertividad:** Estilo de comunicación que expresa ideas y derechos de forma firme, clara y respetuosa sin agredir ni someterse.
-4. **Pista Contextual:** Rasgo o indicio presente en el entorno lingüístico que permite deducir información no explicitada.
-5. **Relación Simétrica:** Interacción entre interlocutores que comparten el mismo estatus jerárquico o social.
-6. **Relación Asimétrica:** Interacción vertical condicionada por diferencias de autoridad, edad o rol institucional.
-7. **Polifonía:** Presencia articulada de múltiples voces discursivas y perspectivas ideológicas dentro de un mismo texto.
-8. **Inferencia Situacional:** Deducción lógica sobre las circunstancias del entorno a partir de los datos emitidos.
-9. **Tono del Discurso:** Actitud anímica (solemne, irónica, cordial, beligerante) que el emisor imprime a su mensaje.
-10. **Sobriedad Léxica:** Virtud estilística que prescinde de artificios huecos, exageraciones y afectaciones verbales.
+> **Importante:** Ajusta la respuesta al propósito y a los datos del caso. Un registro formal no garantiza verdad ni éxito; una expresión coloquial no demuestra incapacidad. No atribuyas identidad, profesión, intención o consecuencias legales por una pista que no las establece.
 
----
+## Procedimiento de revisión
 
-
-
-## 11. BANCO DE FLASHCARDS (Q/A)
-
-- **Q: ¿Qué define la adecuación de un texto en el examen de admisión?**  
-  **A:** Que el mensaje se amolde con exactitud al nivel de formalidad, al propósito del emisor y al estatus del receptor.
-- **Q: ¿Cuál es la diferencia entre un diálogo simétrico y uno asimétrico?**  
-  **A:** El simétrico se da entre pares de igual jerarquía (amigos); el asimétrico involucra jerarquías distintas (jefe-empleado) y exige cortesía formal.
-- **Q: ¿Cómo se comunica asertivamente una falta grave en el ámbito profesional?**  
-  **A:** Describiendo el hecho objetivo sin insultos, explicando el impacto negativo y estableciendo la medida correctiva reglada.
-- **Q: ¿Qué riesgo entraña resolver una situación comunicativa mediante interpretaciones subjetivas?**  
-  **A:** Incurrir en la falacia de sobreinterpretación, atribuyendo intenciones que carecen de respaldo en las pistas del texto.
-- **Q: ¿Por qué el término "denodado" es preferible a "valiente" en una semblanza heroica militar culta?**  
-  **A:** Porque "denodado" aporta el semema de esfuerzo titánico y perseverancia inquebrantable frente a la muerte en el registro solemne.
-
----
-
-
-
-### 3.3 Problemas Verbales de Redes Léxicas y Doble Vínculo
-Son ejercicios donde una palabra debe satisfacer simultáneamente dos o tres restricciones semánticas:
-- *Ejemplo de matriz combinada:*
-  \text{Debe ser antónimo de } \mathbf{EFÍMERO} \land \text{Debe ser sinónimo de } \mathbf{DURADERO} \land \text{Debe pertenecer al registro culto}
-  - Opciones: *Largo, Perpetuo, Interminable, Eterno*.
-  - Solución razonada: Si el contexto alude a un amor o una ley humana creada por el hombre, *perpetuo* es el vocablo exacto (puesto que *eterno* denota teológicamente lo que no tiene principio ni fin).
-
----
-
-
-
-## 7. ZONA DE TRAMPAS Y DISTRACTORES ("¡PELIGRO EXAMEN!")
-
-> [!WARNING]
-> **Trampa 1: Confundir Asertividad con Agresión Verbal**
-> Muchos postulantes eligen alternativas tajantes creyendo que muestran "carácter firme". En las pruebas de habilidades blandas y razonamiento verbal DECO, la agresividad léxica es penalizada por constituir una falla de adecuación pragmática.
-
-> [!CAUTION]
-> **Trampa 2: La Sobreinterpretación Psicológica**
-> Si el texto dice que Juan miró su reloj dos veces durante la reunión, la inferencia necesaria es que tenía urgencia por el tiempo o la reunión se prolongaba. Concluir que *"Juan detesta a su jefe y padece de un trastorno de ansiedad severo"* es una sobreinterpretación psicologista inválida.
-
----
-
-
-
-### Hack 2: Decodificación por "Huellas Sociodialectales"
-Si en un texto un personaje usa arcaísmos o modismos específicos:
-- Identifica el estrato o la región: El uso de diminutivos afectivos andinos (*"aquicito", "ahoritita"*) o vocablos del castellano arequipeño (*"corito", "chocanear", "choche"*) sitúa de inmediato el marco geográfico y cultural del emisor para resolver inferencias de identidad y entorno.
-
----
-
-
-
-### Ejercicio 2 (Nivel Intermedio: Deducción por Pistas Contextuales)
-**Enunciado (Modelo Admisión UNSA):** Analice el siguiente fragmento de una interacción dialogada:
-- **PERSONAJE A:** *"Doctor, he revisado minuciosamente las imágenes de resonancia magnética. Se aprecia una compresión radicular severa entre L4 y L5 que coincide con la lumbociatalgia que aqueja al paciente."*
-- **PERSONAJE B:** *"Coincido plenamente, colega. Programemos la microdiscectomía para el primer turno del martes en el pabellón central de neurocirugía."*
-A partir de las pistas léxicas y el marco situacional, se deduce de forma indiscutible que:
-A) Los interlocutores son dos médicos especialistas que discuten un caso quirúrgico.  
-B) El personaje A es un estudiante de derecho y el personaje B un juez penal.  
-C) El paciente ha fallecido a consecuencia de un shock cardiogénico.  
-D) La operación quirúrgica se llevará a cabo de forma ambulatoria en una farmacia.  
-E) El personaje B desestima el diagnóstico formulado por el personaje A.  
-
-**Resolución Paso a Paso:**
-1. Rastreamos las pistas léxicas especializadas:
-   - *Resonancia magnética*, *compresión radicular L4-L5*, *lumbociatalgia*.
-   - Tratamiento entre ambos: *"Doctor"*, *"colega"*.
-   - Decisión clínica: *Programar la microdiscectomía en el pabellón de neurocirugía*.
-2. Evaluamos los interlocutores:
-   - El uso del vocativo *"colega"* entre profesionales que analizan resonancias y programan operaciones en pabellones quirúrgicos demuestra que ambos pertenecen a la misma profesión médica de alto nivel (traumatología / neurocirugía).
-3. Evaluamos la coherencia de las alternativas:
-   - Solo la opción A describe de forma exacta y fundada el rol profesional y la interacción clínica.
-**Respuesta:** A
-
----
-
----
-
-## 3. DESARROLLO TEÓRICO FORMAL
-
-### 3.1 El Triángulo de Adecuación Sociolingüística
-En los problemas verbales de admisión, el acierto de una respuesta no depende únicamente de la gramaticalidad formal de la frase, sino de su **adecuación contextual**:
-
-\text{Adecuación} = f(\text{Interlocutores}, \text{Canal}, \text{Propósito}, \text{Entorno})
-
-1. **Relación Simétrica vs. Asimétrica:**
-   - *Simétrica (Horizontal):* Amigos íntimos, compañeros de aula, familiares \to Permite registro coloquial, afectivo o juvenil.
-   - *Asimétrica (Vertical):* Rector universitario - postulante, juez - acusado, médico - paciente \to Exige de forma innegociable el **registro formal formalizado**, tratamiento de cortesía (*usted, señor, doctor*) y ausencia de jergas.
-2. **Canal Formal vs. Informal:**
-   - La redacción de una solicitud de beca, un memorial o un oficio requiere un estándar formal impersonal (*"Tengo a bien dirigirme a usted con el debido respeto..."*).
-   - Un correo electrónico institucional no puede redactarse con las abreviaturas de WhatsApp o redes sociales.
-
-### 3.2 Metodología de Resolución de Problemas de Relaciones Complejas
-
-```
-[FASE 1: MAPEO DEL ESCENARIO]   ───▶  Determinar quién habla, a quién se dirige y en qué circunstancias.
-          │
-          ▼
-[FASE 2: DETECCIÓN DE QUIEBRES] ───▶  Identificar la tensión comunicativa (conflicto, duda, negociación).
-          │
-          ▼
-[FASE 3: PESAJE DE OPCIONES]    ───▶  Descartar respuestas:
-                                      - Demasiado agresivas o descorteses.
-                                      - Vulgares o coloquiales fuera de tono.
-                                      - Lógicamente incoherentes con el objetivo.
-          │
-          ▼
-[FASE 4: SELECCIÓN ÓPTIMA]      ───▶  Elegir la respuesta que resuelve el dilema con la máxima elegancia.
+```mermaid
+graph TD
+ PROOT["Ruta para una situación comunicativa"]
+ P1["Reconstruir participantes, circunstancias y objetivo."]
+ P2["Localizar el conflicto, la duda o la información necesaria."]
+ P3["Comparar opciones por pertinencia, registro y coherencia con el objetivo."]
+ P4["Verificar la respuesta con todos los indicios y reconocer lo que no puede inferirse."]
+ PROOT --> P1
+ P1 --> P2
+ P2 --> P3
+ P3 --> P4
 ```
 
-### 3.3 Problemas Verbales de Redes Léxicas y Doble Vínculo
-Son ejercicios donde una palabra debe satisfacer simultáneamente dos o tres restricciones semánticas:
-- *Ejemplo de matriz combinada:*
-  \text{Debe ser antónimo de } \mathbf{EFÍMERO} \land \text{Debe ser sinónimo de } \mathbf{DURADERO} \land \text{Debe pertenecer al registro culto}
-  - Opciones: *Largo, Perpetuo, Interminable, Eterno*.
-  - Solución razonada: Si el contexto alude a un amor o una ley humana creada por el hombre, *perpetuo* es el vocablo exacto (puesto que *eterno* denota teológicamente lo que no tiene principio ni fin).
+**Procedimiento:** consulta el mapa «Ruta para una situación comunicativa» y comprueba cada respuesta contra las condiciones del caso.
 
----
+Para aplicarlo, identifica primero qué dato o acción falta. Después marca qué sabe el destinatario y qué debe conservar la reformulación. Finalmente descarta las opciones que inventan resultados, cambian el propósito o no resuelven la consulta, aunque tengan apariencia formal.
 
----
+## Comprobación final
 
-## 5. MNEMOTECNIAS DE COMBATE PREUNIVERSITARIO
+Antes de dar una respuesta por única, intenta justificar las otras. Si dos mensajes cumplen el propósito, conservan la información y resultan adecuados para la relación descrita, no inventes una regla de prestigio para excluir uno. La consigna puede necesitar una condición adicional o admitir varias formulaciones.
 
-### Mnemotecnia 1: "Las 4 C de la Comunicación de Élite"
-- **C**laridad: Lenguaje transparente y comprensible.
-- **C**oncisión: Cero rodeos inútiles o pleonasmos.
-- **C**ortesía: Tratamiento respetuoso según la jerarquía del interlocutor.
-- **C**oherencia: Fidelidad estricta al propósito comunicativo inicial.
-
-### Mnemotecnia 2: "El Termómetro del Registro"
-- Nivel Frío (Vulgar / Jergal): Prohibido en documentos institucionales y respuestas de admisión.
-- Nivel Templado (Coloquial estándar): Para interacciones cotidianas informales familiares.
-- Nivel Óptimo (Formal / Académico): Es el que premia el examen de la UNSA, UNMSM y UNI.
-
----
+En ejercicios de vocabulario ocurre algo semejante: audaz y denodado pueden compartir rasgos en determinados contextos. La rareza de una palabra no la vuelve siempre más exacta. Si el caso pide un matiz concreto, debe describirlo; si no lo hace, la corrección no debe fingir una distinción que el texto no sostiene.

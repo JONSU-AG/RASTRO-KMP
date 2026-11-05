@@ -1,1 +1,200 @@
-[{"concept":"10.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t10_s02_c01","options":["288\\pi\\text{ cm}^3","108\\pi\\text{ cm}^3","72\\pi\\text{ cm}^3","144\\pi\\text{ cm}^3"],"pedagogicalTier":"concepto","semana":10,"statement":"**Enunciado:** Un cono de helado en forma de cono invertido de radio R = 6\\text{ cm} y altura H = 12\\text{ cm} se llena hasta el borde con crema líquida. Si se introduce una bola esférica de helado de modo que queda tangente a las paredes laterales del cono y su círculo máximo coincide exactamente con la base superior del cono, calcule el volumen de helado que queda fuera del cono (en la semiesfera superior sobresaliente).","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.2","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t10_s02_c02","options":["384\\pi\\text{ cm}^3","320\\pi\\text{ cm}^3","400\\pi\\text{ cm}^3","360\\pi\\text{ cm}^3"],"pedagogicalTier":"concepto","semana":10,"statement":"**Enunciado:** Un triángulo rectángulo cuyos catetos miden 6\\text{ cm} y 8\\text{ cm} rota 360^\\circ alrededor de una recta coplanar exterior al triángulo, paralela a su hipotenusa y situada a una distancia de 5\\text{ cm} de dicha hipotenusa. Determine el volumen del sólido de revolución generado utilizando el Segundo Teorema de Pappus-Guldin.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "geom_t10_s02_c01",
+    "concept": "10.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Una esfera tiene radio 3 cm. ¿Qué área superficial tiene?",
+    "options": [
+      "$36 \\pi\\,\\mathrm{cm^2}$",
+      "$72 \\pi\\,\\mathrm{cm^2}$",
+      "$18 \\pi\\,\\mathrm{cm^2}$",
+      "$108 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El área es cuatro veces el área de un círculo máximo.\n2. Usamos los datos indicados: $S=4\\pi r^2=4\\pi3^2$.\n3. El resultado es $36 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s02_c02",
+    "concept": "10.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Una esfera tiene radio 3 cm. ¿Qué volumen tiene?",
+    "options": [
+      "$72 \\pi\\,\\mathrm{cm^3}$",
+      "$18 \\pi\\,\\mathrm{cm^3}$",
+      "$108 \\pi\\,\\mathrm{cm^3}$",
+      "$36 \\pi\\,\\mathrm{cm^3}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Usamos el volumen de la esfera.\n2. Usamos los datos indicados: $V=4\\pi r^3/3=4\\pi3^3/3$.\n3. El resultado es $36 \\pi\\,\\mathrm{cm^3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s02_c03",
+    "concept": "10.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Una semiesfera cerrada tiene radio 2 cm. ¿Qué área total tiene contando el disco plano de base?",
+    "options": [
+      "$6 \\pi\\,\\mathrm{cm^2}$",
+      "$36 \\pi\\,\\mathrm{cm^2}$",
+      "$12 \\pi\\,\\mathrm{cm^2}$",
+      "$24 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Sumamos media superficie esférica y un círculo.\n2. Usamos los datos indicados: $S_T=2\\pi r^2+\\pi r^2=3\\pi2^2$.\n3. El resultado es $12 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s02_c04",
+    "concept": "10.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Un casquete esférico tiene altura 2 cm en una esfera de radio 5 cm. ¿Qué área curva tiene?",
+    "options": [
+      "$60 \\pi\\,\\mathrm{cm^2}$",
+      "$20 \\pi\\,\\mathrm{cm^2}$",
+      "$40 \\pi\\,\\mathrm{cm^2}$",
+      "$10 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El área del casquete depende de radio esférico y altura.\n2. Usamos los datos indicados: $S=2\\pi Rh=2\\pi(5)(2)$.\n3. El resultado es $20 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s02_c05",
+    "concept": "10.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Un casquete esférico tiene altura 2 cm en una esfera de radio 5 cm. ¿Qué volumen tiene?",
+    "options": [
+      "$\\frac{52 \\pi}{3}\\,\\mathrm{cm^3}$",
+      "$\\frac{104 \\pi}{3}\\,\\mathrm{cm^3}$",
+      "$\\frac{26 \\pi}{3}\\,\\mathrm{cm^3}$",
+      "$52 \\pi\\,\\mathrm{cm^3}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El volumen del casquete usa su altura y el radio de la esfera.\n2. Usamos los datos indicados: $V=\\pi h^2(R-h/3)=\\pi2^2(5-2/3)$.\n3. El resultado es $\\frac{52 \\pi}{3}\\,\\mathrm{cm^3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s02_c06",
+    "concept": "10.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Un disco de radio 1 cm gira alrededor de una recta de su mismo plano a 3 cm de su centro, sin cortarlo. ¿Qué volumen de toro genera?",
+    "options": [
+      "$12 \\pi^{2}\\,\\mathrm{cm^3}$",
+      "$3 \\pi^{2}\\,\\mathrm{cm^3}$",
+      "$18 \\pi^{2}\\,\\mathrm{cm^3}$",
+      "$6 \\pi^{2}\\,\\mathrm{cm^3}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Pappus multiplica el área por el recorrido del centroide.\n2. Usamos los datos indicados: $V=(\\pi1^2)(2\\pi\\cdot3)$.\n3. El resultado es $6 \\pi^{2}\\,\\mathrm{cm^3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s02_c07",
+    "concept": "10.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Una circunferencia de radio 1 cm gira alrededor de una recta coplanar a 3 cm de su centro, sin cortarla. ¿Qué área de superficie toroidal genera?",
+    "options": [
+      "$6 \\pi^{2}\\,\\mathrm{cm^2}$",
+      "$36 \\pi^{2}\\,\\mathrm{cm^2}$",
+      "$12 \\pi^{2}\\,\\mathrm{cm^2}$",
+      "$24 \\pi^{2}\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Pappus multiplica la longitud de la curva por el recorrido del centroide.\n2. Usamos los datos indicados: $S=(2\\pi\\cdot1)(2\\pi\\cdot3)$.\n3. El resultado es $12 \\pi^{2}\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s02_c08",
+    "concept": "10.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Una esfera tiene diámetro 10 cm. ¿Cuál es el radio de un círculo máximo suyo?",
+    "options": [
+      "$15\\,\\mathrm{cm}$",
+      "$5\\,\\mathrm{cm}$",
+      "$10\\,\\mathrm{cm}$",
+      "$2.5\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El círculo máximo comparte el radio de la esfera.\n2. Usamos los datos indicados: $r=10/2$.\n3. El resultado es $5\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s02_c09",
+    "concept": "10.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Si el radio de una esfera se duplica, ¿por qué factor cambia su volumen?",
+    "options": [
+      "$8\\,\\text{veces}$",
+      "$16\\,\\text{veces}$",
+      "$4\\,\\text{veces}$",
+      "$24\\,\\text{veces}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El volumen escala con el cubo del radio.\n2. Usamos los datos indicados: $V_2/V_1=2^3$.\n3. El resultado es $8\\,\\text{veces}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s02_c10",
+    "concept": "10.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Una sección plana que pasa por el centro de una esfera produce…",
+    "options": [
+      "Un círculo máximo.",
+      "Un punto siempre.",
+      "Una elipse no circular.",
+      "Un círculo de radio cero."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La distancia del plano al centro es cero.\n2. La sección alcanza el radio de la esfera.\n3. Es la mayor sección circular posible.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s02_c11",
+    "concept": "10.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Al aplicar directamente el teorema de Pappus para un sólido de revolución se toma un eje…",
+    "options": [
+      "Que atraviese siempre el interior de la región.",
+      "Coplanar y exterior a la región, para evitar superposiciones en esta forma del teorema.",
+      "Que cambie de posición durante el giro.",
+      "Que no esté en el plano de la figura."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La región plana gira alrededor del eje indicado.\n2. La forma usual de Pappus requiere que el eje no corte su interior.\n3. Así el producto por el recorrido del centroide cuenta el volumen sin superposiciones.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

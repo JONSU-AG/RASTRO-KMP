@@ -64,3 +64,17 @@ Corregido guardado de SavedExamSession activando el plugin Kotlin existente y us
 Revisión de resultados en popup con LazyColumn, X y filtros, en lugar de 80 tarjetas compuestas. Back permanece en Simulador; coste/confirmación de monedas y fin de actividad publicitario conectados. OOM en medición de texto documentado; prueba física pendiente.
 
 Reutilizar saldo, repositorios, Pro y avisos existentes. No crear una economía paralela ni activar cobros. Catálogos de lecciones y recurso original de fuego conservados.
+
+## 03/11/2026 — Acceso a la pizarra existente
+
+La cabecera de preparación y el examen activo abren la misma pizarra como superposición. No se cambian preguntas, pagos, anuncios, respuestas ni temporizadores; el tiempo sigue corriendo al dibujar. Ver `docs/material/INFORME_2026-11-03.md`; cambios locales, sin publicación ni modificación de Firebase remoto.
+
+
+## 03/11/2026 — Corrección de las capturas de Material y pizarra
+
+Se corrigió el documento inicial del visor mediante HTTPS local interceptado. Material conserva su curso, usa desplegables y oculta créditos/revisión hasta solicitarlos. La teoría de los niveles incorpora la misma biblioteca; los avisos se reúnen en Importante. La pizarra nativa se integra junto a preguntas/material con resaltado y desplazamiento; herramientas de Pizarra libre visibles encima del lienzo. Se preservan fuentes, bancos, respuestas, recompensas y Firebase. Ver docs/material/CORRECCIONES_CAPTURAS_2026-11-03.md para pruebas y límites físicos.
+
+
+## 03/11/2026 — Preguntas y pizarra de pantalla completa
+
+Cabecera y progreso únicamente durante las preguntas. Pizarra compartida de preguntas con enunciado integrado en el papel, colores/grosor visibles y conservación acotada por pregunta. No se modifican los bancos, reglas, Firebase ni recompensas. Compilación debug y 543 pruebas unitarias correctas; revisión visual/táctil pendiente, sin ejecutar la app. Detalles y límites en `../preguntas/INFORME_2026-11-03.md`. Esta descripción sustituye la distribución partida inicial en preguntas; Material mantiene su rama de consulta.

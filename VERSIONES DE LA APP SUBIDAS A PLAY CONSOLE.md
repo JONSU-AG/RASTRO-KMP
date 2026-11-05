@@ -116,3 +116,10 @@ Novedades públicas es-419, sin referencias al Admin:
 Corrección de errores.
 Mejoras de estabilidad y rendimiento.
 Ajustes visuales para una mejor experiencia de estudio.
+
+## Producción — 10/10/2026 — 2.0.4 / 206
+
+AAB aceptada y envío confirmado: «Cambios en la etapa de revisión», verificaciones rápidas de Google pendientes. Lanzamiento completo solicitado, 177 países/regiones y resto del mundo. Publicación administrada desactivada; todavía no equivale a disponibilidad pública.
+Incluye eliminación de cuentas corregida y texto legal aprobado, publicado también en web. Seguridad de datos enviada junto con la versión. Sin referencias al Admin en las novedades públicas.
+SHA256 AAB: 08C59DCF40B7CAA282FD1EDB8C40F6520599555FFC3ED7A6EA4876E363599C51. 81 967 487 bytes. 361 pruebas sin fallos; bundle y firma validados. Única recomendación Play: símbolos nativos de depuración. Detalle: docs/publicacion/RELEASE_2.0.4_206.md.
+Próximo versionCode mínimo: 207. Consultar Console antes de una nueva carga.

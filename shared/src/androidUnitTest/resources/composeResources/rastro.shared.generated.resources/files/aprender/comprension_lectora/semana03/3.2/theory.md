@@ -24,32 +24,13 @@
 
 ### 3.2 Clasificación de Textos según la Ubicación de la Idea Principal
 
-```
-1. ANALIZANTE (Deductivo):
-   [   IDEA PRINCIPAL   ]  ──▶  Oración 1 (Inicio)
-   [ Idea Secundaria 1  ]
-   [ Idea Secundaria 2  ]
-
-2. SINTETIZANTE (Inductivo):
-   [ Idea Secundaria 1  ]
-   [ Idea Secundaria 2  ]
-   [   IDEA PRINCIPAL   ]  ──▶  Oración Final (Conclusión)
-
-3. ENCUADRADO (Circular):
-   [ IDEA PRINCIPAL (A) ]  ──▶  Oración 1 (Apertura)
-   [ Ideas Secundarias  ]
-   [ IDEA PRINCIPAL (B) ]  ──▶  Oración Final (Reafirmación / Síntesis)
-
-4. PARALELO (Equipolente):
-   [   Idea 1 (Rango X) ]
-   [   Idea 2 (Rango X) ]  ──▶  No hay idea única dominante; todas tienen el mismo peso.
-   [   Idea 3 (Rango X) ]       (La Idea Principal debe construirse mentalmente).
-
-5. CENTRADO (Alternante / Analizante-Sintetizante):
-   [ Ideas de Entrada   ]
-   [   IDEA PRINCIPAL   ]  ──▶  Ubicada en el corazón del texto (Medio)
-   [ Ideas de Cierre    ]
-```
+| Organización habitual | Dónde buscar la idea central | Precaución |
+|---|---|---|
+| Analizante | Se presenta al inicio y se desarrolla después | La posición inicial no garantiza importancia |
+| Sintetizante | Se construye hacia una conclusión final | Comprobar que el cierre integra el desarrollo |
+| Encuadrada | Apertura y cierre retoman el núcleo central | No exigir una repetición literal |
+| Paralela | Varias ideas se desarrollan con rango semejante | Formular una síntesis que las abarque |
+| Centrada | La idea central aparece en una zona intermedia | Reconocer su función, no contar oraciones |
 
 
 
@@ -92,7 +73,7 @@ En preguntas de Idea Principal o Tema:
 
 > [!CAUTION]
 > **Trampa 2: El Título con Verbo Conjugado**
-> Recuerda la regla morfosintáctica inquebrantable de la lengua castellana y los cánones de admisión: **El título es un sintagma nominal, NO una oración**. Si una opción tiene un verbo conjugado principal (*"El calentamiento global destruye la Amazonía"*), suele ser la formulación de la Idea Principal, no el formato canónico del título (*"El calentamiento global y la devastación amazónica"*).
+> **Importante:** en ejercicios de síntesis suele ser útil formular un título breve y preciso. No existe una prohibición general de usar un verbo conjugado en un título; evaluar el enfoque y el alcance, no solo su forma gramatical.
 
 ---
 
@@ -210,26 +191,33 @@ E) Explicativo-instructivo, cuya finalidad es enseñar a realizar pagos a la tie
 
 ## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
 
-```
-                          COMPRENSIÓN GLOBAL
-                                   │
-         ┌─────────────────────────┼─────────────────────────┐
-         ▼                         ▼                         ▼
-      EL TEMA                  LA IDEA PRINCIPAL          EL MEJOR TÍTULO
- (¿De qué trata?)            (¿Qué afirma de ello?)    (Nombre de la Obra)
-         │                         │                         │
-Sintagma Nominal          Oración Completa          Sintagma Nominal
-(Sin verbo conjugado)     (Con verbo conjugado)     (Tema + Enfoque Central)
-         │                         │                         │
-         └─────────────────────────┼─────────────────────────┘
-                                   ▼
-                      ORGANIZACIÓN ESTRUCTURAL
-                                   │
-         ┌──────────────┬──────────┴───┬──────────────┐
-         ▼              ▼              ▼              ▼
-     Analizante    Sintetizante    Encuadrado     Paralelo
-     (Idea al      (Idea al        (Idea al       (Múltiples ideas
-      inicio)       final)         inicio y fin)   de igual rango)
+```mermaid
+graph TD
+ ROOT["Tema, idea central y organización"]
+ B1["Preguntas diferentes"]
+ B1N1["Tema: de qué trata el texto."]
+ B1N2["Idea principal: qué sostiene o comunica centralmente sobre ese tema."]
+ B1N3["Título: presenta o sugiere un enfoque; no está prohibido que contenga un verbo conjugado."]
+ B2["Jerarquizar ideas"]
+ B2N1["Distinguir tesis, explicaciones, ejemplos y detalles según su función real."]
+ B2N2["La idea central puede estar formulada o necesitar una síntesis del lector."]
+ B2N3["Una afirmación verdadera del fragmento puede ser secundaria."]
+ B3["Reconocer la estructura"]
+ B3N1["Comprobar dónde se desarrolla la idea central: inicio, cierre, ambos o zona intermedia."]
+ B3N2["Un desarrollo paralelo puede requerir integrar varias ideas del mismo rango."]
+ B3N3["La posición de una oración no demuestra por sí sola que una inferencia sea deductiva o inductiva."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
 

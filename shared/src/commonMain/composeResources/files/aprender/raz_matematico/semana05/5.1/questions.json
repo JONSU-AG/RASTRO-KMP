@@ -1,1 +1,200 @@
-[{"concept":"5.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t05_s01_c01","options":["48","60","72","84"],"pedagogicalTier":"concepto","semana":5,"statement":"Para viajar de la ciudad de Arequipa a Mollendo existen 4 empresas terrestres distintas, y para viajar de Mollendo a Camaná existen 3 empresas terrestres. Si un comerciante viaja de Arequipa a Camaná pasando por Mollendo, ¿de cuántas maneras diferentes puede realizar el viaje de ida y vuelta, si para el regreso no puede utilizar ninguna de las empresas que utilizó en la ida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t05_s01_c02","options":["315","180","210","240"],"pedagogicalTier":"concepto","semana":5,"statement":"En un aula de la Facultad de Ingeniería de la UNSA hay 7 varones y 5 mujeres. Se debe conformar una comisión de 4 integrantes. ¿De cuántas formas se puede formar dicha comisión si debe estar integrada exactamente por 2 varones y 2 mujeres?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t05_s01_c03","options":["384","768","24","96"],"pedagogicalTier":"concepto","semana":5,"statement":"Cuatro parejas de esposos asisten al teatro y compran una fila completa de 8 asientos consecutivos. ¿De cuántas maneras diferentes pueden sentarse si cada esposo debe sentarse siempre al lado de su respectiva esposa?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Cuando los eventos ocurren de forma simultánea o en secuencia inmediata (conector lógico \"Y\").","fuente":"temario","id":"rm_t05_s01_c04","options":["P_c(n) = (n - 1)!.","Si al cambiar el orden de los elementos el resultado o grupo es el mismo, es **Combinación**; si el resultado cambia, es **Variación**.","Valor o condición no aplicable al caso planteado","Cuando los eventos ocurren de forma simultánea o en secuencia inmediata (conector lógico \"Y\")."],"pedagogicalTier":"concepto","semana":5,"statement":"¿Cuándo se utiliza el Principio de Multiplicación en conteo?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: P_c(n) = (n - 1)!.","fuente":"temario","id":"rm_t05_s01_c05","options":["P_c(n) = (n - 1)!.","Cuando los eventos ocurren de forma simultánea o en secuencia inmediata (conector lógico \"Y\").","Si al cambiar el orden de los elementos el resultado o grupo es el mismo, es **Combinación**; si el resultado cambia, es **Variación**.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":5,"statement":"¿Cuál es la fórmula para la permutación circular de n personas en una mesa redonda?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Si al cambiar el orden de los elementos el resultado o grupo es el mismo, es **Combinación**; si el resultado cambia, es **Variación**.","fuente":"temario","id":"rm_t05_s01_c06","options":["Cuando los eventos ocurren de forma simultánea o en secuencia inmediata (conector lógico \"Y\").","Si al cambiar el orden de los elementos el resultado o grupo es el mismo, es **Combinación**; si el resultado cambia, es **Variación**.","P_c(n) = (n - 1)!.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":5,"statement":"En un problema de conteo, ¿cómo sé si debo usar Combinación o Variación?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.7","correctIndex":2,"explanation":"Se sientan primero los 6 varones en círculo de (6-1)! = 5! formas. Los 6 asientos restantes para las mujeres quedan fijos, permutando de 6! formas. Total: 5! x 6!.","fuente":"temario","id":"rm_t05_s01_c07","options":["12! / 2","11!","5! x 6!","6! x 6!"],"pedagogicalTier":"concepto","semana":5,"statement":"Seis varones y seis mujeres se sientan en una mesa redonda de 12 asientos. Si deben quedar estrictamente intercalados, ¿de cuántas formas pueden sentarse?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t05_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t05_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t05_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rm_t05_s01_c01",
+    "concept": "5.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 5,
+    "statement": "Hay 4 camisas y 3 pantalones distintos. Se elige una camisa y un pantalón. ¿Cuántos conjuntos diferentes hay?",
+    "options": [
+      "$12\\,\\mathrm{conjuntos}$",
+      "$24\\,\\mathrm{conjuntos}$",
+      "$6\\,\\mathrm{conjuntos}$",
+      "$36\\,\\mathrm{conjuntos}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Las elecciones se combinan mediante el principio del producto.\n2. Desarrollamos: $N=4(3)$.\n3. El resultado es $12\\,\\mathrm{conjuntos}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t05_s01_c02",
+    "concept": "5.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 5,
+    "statement": "¿Cuántas filas distintas pueden formar cuatro personas diferentes?",
+    "options": [
+      "$48\\,\\mathrm{filas}$",
+      "$12\\,\\mathrm{filas}$",
+      "$72\\,\\mathrm{filas}$",
+      "$24\\,\\mathrm{filas}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Se asignan sucesivamente cuatro, tres, dos y una opciones.\n2. Desarrollamos: $N=4!=4(3)(2)(1)$.\n3. El resultado es $24\\,\\mathrm{filas}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t05_s01_c03",
+    "concept": "5.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 5,
+    "statement": "De cinco personas se elige un equipo de dos sin cargos distintos. ¿Cuántos equipos hay?",
+    "options": [
+      "$5\\,\\mathrm{equipos}$",
+      "$30\\,\\mathrm{equipos}$",
+      "$10\\,\\mathrm{equipos}$",
+      "$20\\,\\mathrm{equipos}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El orden dentro del equipo no cambia la selección.\n2. Desarrollamos: $N=\\binom{5}{2}$.\n3. El resultado es $10\\,\\mathrm{equipos}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t05_s01_c04",
+    "concept": "5.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 5,
+    "statement": "De cinco personas se eligen presidente y secretario, sin repetir persona. ¿Cuántas asignaciones hay?",
+    "options": [
+      "$60\\,\\mathrm{asignaciones}$",
+      "$20\\,\\mathrm{asignaciones}$",
+      "$40\\,\\mathrm{asignaciones}$",
+      "$10\\,\\mathrm{asignaciones}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los cargos son distintos, así que importa quién ocupa cada uno.\n2. Desarrollamos: $N=5(4)$.\n3. El resultado es $20\\,\\mathrm{asignaciones}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t05_s01_c05",
+    "concept": "5.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 5,
+    "statement": "Un código tiene dos letras: primero A, B o C y luego A, B o C. Se permite repetir. ¿Cuántos códigos hay?",
+    "options": [
+      "$9\\,\\text{códigos}$",
+      "$18\\,\\text{códigos}$",
+      "$27\\,\\text{códigos}$",
+      "$3\\,\\text{códigos}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Cada posición conserva tres posibilidades.\n2. Desarrollamos: $N=3^2$.\n3. El resultado es $9\\,\\text{códigos}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t05_s01_c06",
+    "concept": "5.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 5,
+    "statement": "Con las cifras 1, 2 y 3, sin repetir, ¿cuántos números de tres cifras se forman?",
+    "options": [
+      "$12\\,\\text{números}$",
+      "$3\\,\\text{números}$",
+      "$18\\,\\text{números}$",
+      "$6\\,\\text{números}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Todas las primeras cifras son no nulas.\n2. Desarrollamos: $N=3!$.\n3. El resultado es $6\\,\\text{números}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t05_s01_c07",
+    "concept": "5.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 5,
+    "statement": "Con las cifras 0, 1 y 2, sin repetir, ¿cuántos números de tres cifras se forman?",
+    "options": [
+      "$2\\,\\text{números}$",
+      "$12\\,\\text{números}$",
+      "$4\\,\\text{números}$",
+      "$8\\,\\text{números}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La primera cifra no puede ser cero.\n2. Desarrollamos: $N=2(2)(1)$.\n3. El resultado es $4\\,\\text{números}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t05_s01_c08",
+    "concept": "5.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 5,
+    "statement": "Tres rutas conectan A con B y dos rutas conectan B con C. Para ir de A a C pasando por B, ¿cuántas combinaciones de rutas hay?",
+    "options": [
+      "$18\\,\\mathrm{recorridos}$",
+      "$6\\,\\mathrm{recorridos}$",
+      "$12\\,\\mathrm{recorridos}$",
+      "$3\\,\\mathrm{recorridos}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Cada ruta del primer tramo puede acompañarse con cada ruta del segundo.\n2. Desarrollamos: $N=3(2)$.\n3. El resultado es $6\\,\\mathrm{recorridos}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t05_s01_c09",
+    "concept": "5.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 5,
+    "statement": "Una biblioteca tiene 7 libros de historia y 5 de geografía, todos distintos y sin coincidencias entre grupos. Se elige un solo libro de cualquiera de los grupos. ¿Cuántas opciones hay?",
+    "options": [
+      "$12\\,\\mathrm{opciones}$",
+      "$24\\,\\mathrm{opciones}$",
+      "$6\\,\\mathrm{opciones}$",
+      "$36\\,\\mathrm{opciones}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Las alternativas pertenecen a conjuntos disjuntos.\n2. Desarrollamos: $N=7+5$.\n3. El resultado es $12\\,\\mathrm{opciones}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t05_s01_c10",
+    "concept": "5.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 5,
+    "statement": "Al elegir un comité sin cargos, intercambiar el orden de las mismas personas…",
+    "options": [
+      "Siempre duplica el comité.",
+      "Hace que desaparezca un miembro.",
+      "Cambia el tamaño del comité.",
+      "No crea un comité nuevo."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Un comité se identifica por sus integrantes.\n2. La posición en una lista no asigna un cargo.\n3. Por eso se usan combinaciones, no ordenaciones.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t05_s01_c11",
+    "concept": "5.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 5,
+    "statement": "El principio de suma se aplica directamente a dos conjuntos de alternativas cuando…",
+    "options": [
+      "Cada uno contiene infinitas opciones por obligación.",
+      "El orden interno es circular.",
+      "Son disjuntos.",
+      "Siempre tienen todos sus elementos en común."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Si una opción está en ambos conjuntos, se contaría dos veces.\n2. La disjunción evita ese doble conteo.\n3. Para conjuntos que se solapan se resta la intersección.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

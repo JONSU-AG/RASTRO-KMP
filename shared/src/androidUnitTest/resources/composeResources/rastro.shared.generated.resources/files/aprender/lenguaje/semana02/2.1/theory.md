@@ -1,138 +1,159 @@
 # Las Variaciones de la Lengua: Dialecto, Sociolecto e Idiolecto
 
-## INTRODUCCIÓN
+Las personas no utilizan todos los recursos de una lengua de la misma manera. Hay diferencias asociadas con las regiones, los grupos sociales, las situaciones y las trayectorias individuales. Para estudiarlas conviene distinguir **qué factor organiza la comparación** y **qué aspecto de la lengua se está comparando**.
 
-Ninguna lengua es un bloque homogéneo ni estático. El castellano que se habla en Arequipa no suena igual que el de Piura o el de Iquitos, el vocabulario de un médico no coincide con el de un adolescente y el registro de una conferencia académica es opuesto al de una conversación familiar. Esa heterogeneidad no es desorden, es el objeto central de la sociolingüística y uno de los temas con mayor frecuencia en admisión UNSA. Quien domina las tres variaciones de la lengua resuelve con seguridad toda pregunta sobre dialecto, sociolecto e idiolecto.
+No es lo mismo preguntar si dos formas se distribuyen en regiones distintas que preguntar si cambian sonidos, significados o construcciones. El primer análisis atiende al factor geográfico; el segundo identifica un plano lingüístico. Ambos pueden aplicarse al mismo caso sin convertirse en la misma pregunta.
 
-En esta lección recorrerás el mapa completo de las variaciones. Partirás del dialecto o variación diatópica con sus cinco niveles de manifestación, pasarás por el sociolecto o variación diastrática con sus tres niveles sociales, llegarás al idiolecto o variación diafásica con la edad, la profesión y el tecnolecto, y cerrarás con la realidad lingüística del Perú que les da contexto nacional. Cada variación trae su factor condicionante, sus ejemplos regionales y sus trampas típicas de examen.
+## Mapa de dimensiones
 
-Al final podrás clasificar cualquier caso sin dudar. Sabrás por qué chibolo frente a pibe es dialecto léxico, por qué guagua con dos significados es dialecto semántico, por qué haiga y fuistes son subestándar popular, por qué luca y tira son replana vulgar, por qué cefalea en boca de un médico es tecnolecto y por qué De don Pedro su chacra es sintaxis amazónica.
+Las ramas organizan perspectivas que pueden combinarse. No son niveles de superioridad ni compartimentos que clasifiquen de manera definitiva a cada persona.
 
-## DESARROLLO DEL TEMA
+```mermaid
+graph TD
+ ROOT["Variación lingüística: precisar el contraste"]
+ A["Distribución geográfica"]
+ A1["Diatópica: comparar usos asociados con regiones"]
+ B["Distribución social"]
+ B1["Diastrática: comparar usos asociados con grupos sociales"]
+ C["Situación de uso"]
+ C1["Diafásica: registro según interlocutor, propósito y contexto"]
+ D["Rasgos individuales"]
+ D1["Idiolecto: particularidades del repertorio de una persona"]
+ E["Plano observado"]
+ E1["Sonidos, vocabulario, significados, estructura de palabras o construcciones"]
+ ROOT --> A
+ A --> A1
+ ROOT --> B
+ B --> B1
+ ROOT --> C
+ C --> C1
+ ROOT --> D
+ D --> D1
+ ROOT --> E
+ E --> E1
+```
 
-# 2.1.1 — El dialecto o variación diatópica con sus cinco niveles
+## 2.1.1 — Variación geográfica y planos de análisis
 
-**¿Qué es?** El dialecto o variación diatópica es la variación regional o geográfica de una misma lengua que experimentan los hablantes según la zona del territorio donde residen. Es la respuesta directa cuando la pregunta describe diferencias condicionadas por la ubicación geográfica. No es una lengua distinta ni un error, es la forma particular que adquiere una misma lengua en cada región y se manifiesta en cinco niveles lingüísticos que debes reconocer por separado.
+La variación **diatópica** se relaciona con la distribución geográfica de rasgos de una lengua. Un estudio puede comparar vocabulario o pronunciación entre regiones. Llamar dialectal a una variedad no significa considerarla un error ni una forma incompleta. El español, como otras lenguas, tiene diversidad interna.
 
-**¿Cómo funciona?** El flujo de reconocimiento opera así.
+Un estudio ficticio compara palabras para nombrar un mismo objeto en dos regiones, manteniendo semejantes las situaciones de uso. El factor que se destaca es geográfico y el plano observado es léxico. El caso no demuestra que todos los habitantes de cada región usen siempre una palabra ni que las diferencias sean exclusivas de esas zonas.
 
-- Punto de partida → **Factor geográfico** entendido como región, país o zona donde viven los hablantes
-- Segundo nivel → **Nivel fonético** entendido como acento y pronunciación con seseo peruano frente a distinción castellana de s y theta en España, aspiración de la s final en la costa como loh amigoh, y cantado arequipeño o selvático
-- Tercer nivel → **Nivel léxico** entendido como vocabulario distinto para el mismo referente con chaval en España, pibe en Argentina y chico, churre o chibolo en el Perú
-- Cuarto nivel → **Nivel semántico** entendido como significados distintos para la misma palabra con guagua como bebé en el Perú y Bolivia frente a guagua como autobús en Cuba y Canarias
-- Quinto nivel → **Nivel morfológico** entendido como estructura de palabra y afijos con ahorita, aquicito y cerquita andinos frente a ahoritica y ratico caribeños
-- Nivel final → **Nivel sintáctico** entendido como orden y concordancia con De la María su hijo vino amazónico y Su casa de Juan o Dice que ya se fue pues andinos
+**Mencionar un lugar no convierte cualquier diferencia en geográfica.** Si Ana está en Arequipa y cambia su explicación según el interlocutor, puede estar variando el registro, no el dialecto. Para atribuir una diferencia a distribución regional se requieren datos pertinentes, no solo un topónimo en el enunciado.
 
-**¿Por qué?** Porque las comunidades separadas por la geografía desarrollan hábitos articulatorios, léxicos y sintácticos propios a lo largo de generaciones. El aislamiento relativo, el contacto con lenguas originarias y las migraciones internas fijan esas marcas. Por eso el norte peruano conserva churre con aspiración, la sierra andina prefiere diminutivos en ito y la Amazonía antepone el genitivo. Cada marca es huella de historia regional, no capricho individual.
+### Cinco planos para comparar rasgos
 
-**¿Cómo se diferencia?** El dialecto se diferencia por su causa espacial. Si el enunciado menciona país, región, ciudad o zona, la respuesta es dialecto diatópico aunque el ejemplo parezca social o profesional. El nivel fonético afecta sonidos, el léxico afecta palabras distintas, el semántico afecta significados distintos de la misma palabra, el morfológico afecta afijos y diminutivos, y el sintáctico afecta el orden de la oración. La confusión típica consiste en marcar sociolecto ante un ejemplo regional con pobreza léxica, pero la geografía manda sobre la clase social en ese caso.
+| Plano | Qué se compara | Ejemplo delimitado |
+|---|---|---|
+| Fonético | Realización de sonidos | Dos maneras de pronunciar un sonido en datos de habla |
+| Léxico | Elección de vocabulario | Palabras distintas para nombrar un mismo objeto |
+| Semántico | Interpretación o significado | Una forma usada con sentidos diferentes |
+| Morfológico | Estructura de las palabras | Elección de un sufijo diminutivo |
+| Sintáctico | Organización y relación de unidades | Formas de construir una expresión de posesión |
 
-# 2.1.2 — El sociolecto o variación diastrática con sus tres niveles
+Los planos se separan para estudiar un contraste concreto; no siempre existen fronteras absolutas entre fenómenos. Una diferencia de vocabulario puede implicar también una diferencia de significado. La pregunta debe aclarar qué se está observando si las opciones se refieren a planos distintos.
 
-**¿Qué es?** El sociolecto o variación diastrática es la variación que experimenta la lengua por factores socioeconómicos, nivel de instrucción académica o pertenencia a un grupo social. Es la respuesta cuando la pregunta describe diferencias condicionadas por la clase, la educación o el prestigio. Se estructura en tres niveles de la lengua que van de la máxima elaboración a la transgresión de la norma.
+### Significados de guagua
 
-**¿Cómo funciona?** El flujo de los tres niveles opera así.
+En los usos especificados por el ejercicio, guagua se refiere a un bebé en un contexto andino y a un autobús en un contexto canario. Al comparar **qué significa esa forma**, se destaca el plano semántico. El uso canario relacionado con transporte colectivo está registrado en la Academia Canaria de la Lengua.
 
-- Nivel superior → **Nivel superestándar** entendido como uso refinado, culto, literario, científico y filosófico con léxico amplio y figuras elaboradas como Aquel egregio pensador exhala una límpida prosa metafísica
-- Nivel medio → **Nivel estándar** entendido como modelo oficial de corrección accesible a la mayoría con dos registros que son el nivel culto de conferencias y textos normativos y el nivel coloquial o familiar de uso cotidiano espontáneo con corrección gramatical
-- Nivel inferior → **Nivel subestándar** entendido como modalidad que vulnera la norma con pobreza léxica e incorrecciones y dos registros que son el nivel popular con haiga, nadies y fuistes y el nivel vulgar o replana con argot marginal como paco por policía, batería por amigo y luca por sol
+No se concluye que todo el territorio andino o canario use siempre esa forma con un único sentido. Tampoco la coincidencia escrita permite deducir una sola etimología. La historia de una palabra y su significado en un caso concreto son preguntas diferentes. Para esta práctica basta con explicar la diferencia de interpretación descrita.
 
-**¿Por qué?** Porque la lengua refleja la estratificación social. La escuela, la universidad y la literatura cultivan el estándar y el superestándar, mientras que la escasa instrucción y la marginalidad producen el popular y la replana. Admisión evalúa si reconoces esa jerarquía de prestigio. El superestándar de la investigación filosófica y el vulgar de la jerga carcelaria son los extremos que nunca debes confundir con el coloquial familiar, que es estándar y correcto aunque sea espontáneo.
+### Morfología y sintaxis
 
-**¿Cómo se diferencia?** El sociolecto se diferencia por su causa social. Si el enunciado menciona instrucción, clase, profesión general o marginalidad, la respuesta es sociolecto diastrático. El superestándar se reconoce por elaboración estética máxima, el estándar culto por formalidad normativa, el estándar coloquial por naturalidad correcta, el popular por errores morfosintácticos como haiga y fuistes, y el vulgar o replana por deformación deliberada como fercho por chofer y tira por policía. La trampa clásica presenta luca o paco y ofrece dialecto como distractor, pero la replana es siempre subestándar social, nunca geográfica.
+En **momentito y momentico** se puede comparar la elección de -ito e -ico para formar diminutivos. Ese contraste atiende al plano morfológico. No se necesita atribuir cada forma a un país ni afirmar que una región utiliza exclusivamente una de ellas. El ejercicio deliberadamente no exige una distribución regional no documentada.
 
-# 2.1.3 — El idiolecto o variación diafásica con edad y profesión
+En **la chacra de Pedro** y **de Pedro su chacra**, el análisis propuesto se centra en cómo se organizan las unidades del grupo nominal y se expresa la posesión. Corresponde al plano sintáctico. El ejemplo de construcción no documenta por sí mismo su frecuencia o ubicación: no se usa para presentar a toda una región como un conjunto de hablantes idénticos.
 
-**¿Qué es?** El idiolecto o variación diafásica es el uso peculiar, personal y distintivo que cada individuo hace de la lengua según su edad, su profesión, su género o la situación formal o informal en la que se encuentra. Es la respuesta cuando la pregunta describe diferencias condicionadas por quién habla en concreto o en qué registro situacional habla. Incluye el tecnolecto como su manifestación profesional más evaluada.
+Del mismo modo, una pronunciación escrita de manera aproximada no demuestra cómo habla una población entera. Conviene evitar caricaturas ortográficas para representar acentos si no se dispone de una transcripción y un propósito claros. Describir un fenómeno requiere identificar el rasgo concreto que se compara.
 
-**¿Cómo funciona?** El flujo de los registros individuales opera así.
+## 2.1.2 — Variación social, norma y adecuación
 
-- Eje de edad → **Lenguaje infantil** con hacer tuto y miau miau, **lenguaje juvenil** con bro y estoy en modo chill, y **habla de la tercera edad** con sus propios giros generacionales
-- Eje profesional → **Tecnolecto médico** con cefalea, edema, isquemia y patología, **tecnolecto jurídico** con litisconsorte, dolo, jurisprudencia y usucapión, y demás léxicos técnicos de ingenieros y especialistas
-- Eje situacional → **Registro formal** de ceremonias y trámites frente a **registro informal** de confianza, donde el mismo hablante cambia de repertorio sin cambiar de dialecto ni de estrato
+La variación **diastrática** se relaciona con usos asociados con grupos sociales de una comunidad. Una investigación puede estudiar diferencias vinculadas con redes sociales, generaciones, trayectorias educativas u otros factores. Las asociaciones se establecen con datos; no autorizan a deducir con certeza el grupo de una persona por una palabra aislada.
 
-**¿Por qué?** Porque cada persona acumula un repertorio ligado a su biografía. La edad impone modas léxicas generacionales, la profesión impone precisión técnica y la situación impone grados de formalidad. Por eso un mismo médico arequipeño usa disnea paroxística nocturna en el hospital, causa con sus amigos y misa el domingo con su familia. El idiolecto explica esa plasticidad individual que ni la geografía ni la clase explican por sí solas.
+La edad puede estudiarse como un factor social o generacional, pero no es equivalente a idiolecto. La profesión puede estar relacionada con el acceso a vocabulario especializado, pero una palabra técnica no demuestra que quien la utiliza ejerza esa profesión. Una persona puede aprenderla, citarla o usarla en un contexto particular.
 
-**¿Cómo se diferencia?** El idiolecto se diferencia por su causa individual y situacional. Si el enunciado menciona edad, generación, profesión u oficio, o contraste formal frente a informal del mismo hablante, la respuesta es idiolecto diafásico. El tecnolecto se reconoce porque solo los especialistas lo dominan y porque designa realidades técnicas con exactitud. La confusión típica consiste en marcar sociolecto ante un tecnolecto médico, pero el criterio profesional individual prima. Otro distractor frecuente ofrece replana ante jerga juvenil sana, pero bro no es delincuencia, es marca generacional.
+### Norma de referencia y valoración de las personas
 
-# 2.1.4 — Mapa de las variaciones y realidad del Perú como contexto
+Una **norma de referencia** orienta elecciones en determinados ámbitos, por ejemplo la escritura formal. Se puede corregir una forma para ajustarla a esa norma sin convertir la corrección en un juicio sobre inteligencia, valor personal o identidad cultural. No hay que confundir «se prefiere esta forma en el texto formal» con «quien usa otra forma es inferior».
 
-**¿Qué es?** El mapa de las variaciones ordena las tres macro divisiones con sus etiquetas técnicas y conecta con la realidad lingüística del Perú, país multilingüe y pluricultural con alrededor de 48 lenguas originarias vivas distribuidas en 19 familias, junto al castellano y lenguas de inmigración. Esta visión de conjunto es la que permite resolver la casuística combinada donde un mismo enunciado mezcla dialecto regional, tecnolecto médico y contexto amazónico.
+En la revisión del ejercicio se cambia «Espero que haiga tiempo» por «Espero que haya tiempo». El caso usa el subjuntivo de haber y la escritura formal elige **haya**. Esa decisión no permite conocer los años de escolaridad del autor, su inteligencia ni el origen regional. La misma secuencia haiga puede aparecer además como palabra citada o con otros usos léxicos; por eso la oración concreta es necesaria para identificar qué se está corrigiendo.
 
-**¿Cómo funciona?** El flujo del mapa opera así.
+El registro coloquial tampoco equivale a incorrección. Las conversaciones cotidianas pueden emplear vocabulario informal y respetar las construcciones habituales de la lengua. Un texto formal puede estar mal organizado o contener errores. Formalidad, corrección normativa y claridad son dimensiones relacionadas, pero no idénticas.
 
-- Tronco común → **Variaciones de la lengua** que se abren en tres ramas
-- Rama geográfica → **Dialecto diatópico** con niveles léxico, fonético, morfológico, semántico y sintáctico
-- Rama social → **Sociolecto diastrático** con superestándar de cultura literaria, estándar coloquial y formal, y subestándar popular con replana
-- Rama individual → **Idiolecto diafásico** con registro según edad, profesión y contexto formal o informal
-- Contexto nacional → **Lenguas amerindias** con 4 andinas y 44 amazónicas, y **lenguas no amerindias** con castellano ribereño, andino y amazónico
-- Familias andinas → **Quechua o runa simi** con ramas norte, centro y sur, y **Aru** con aimara y jacaru
-- Familias amazónicas → **Arawak** con asháninka, **Pano** con shipibo-konibo y **Jíbaro** con awajún, dentro de 17 a 19 familias
+### Etiquetas tradicionales de nivel
 
-**¿Por qué?** Porque admisión combina planos en una sola pregunta. El caso modelo presenta tres expresiones donde la primera es dialecto sintáctico andino o amazónico, la segunda es dialecto léxico fonético norteño con churre y aspiración, y la tercera es tecnolecto médico con disnea paroxística. Solo quien maneja el mapa completo asigna cada una a su rama sin contaminarse. La mnemotecnia de refuerzo fija las etiquetas. **DIA-TOPO es lugar, SOCIO-ESTRATO es clase, IDIO-FASE es individuo.** Diatópico por geografía, diastrático por estrato social y cultural, diafásico por fase o registro individual.
+Algunos esquemas escolares utilizan superestándar, estándar y subestándar para agrupar usos según prestigio o cercanía a una norma. Es necesario reconocer que se trata de **una clasificación tradicional con criterios valorativos**, no de una escala universal de calidad de las variedades o de las personas.
 
-**¿Cómo se diferencia?** El mapa se diferencia por niveles de análisis. La variación clasifica cómo habla cada grupo, la realidad lingüística clasifica qué lenguas coexisten en el país. El quechua es lengua completa e independiente con familia propia, jamás dialecto del español. El jacaru se habla en Lima en la provincia de Yauyos, no en Puno ni en Cusco. El castellano es oficial en todo el país mientras que el quechua, el aimara y las lenguas aborígenes son oficiales en las zonas donde predominen según el artículo 48 de la Constitución. Las lenguas amazónicas más habladas se ordenan con refuerzo. **ASH-SHI-AWA con asháninka primero, shipibo-konibo segundo y awajún tercero.**
+No se enseña que toda investigación filosófica o toda literatura pertenezca a una forma superior del idioma. Una obra puede incluir registros coloquiales, voces regionales y recursos diversos. Tampoco se deduce que una palabra coloquial sea necesariamente carcelaria ni que cualquier forma no estándar pruebe falta de instrucción.
 
-## CONCEPTOS IMPORTANTES
+| Distinción | Qué permite analizar | Qué no permite concluir por sí sola |
+|---|---|---|
+| Norma de escritura | Elección esperada en un ámbito definido | Inteligencia o biografía del autor |
+| Registro formal o informal | Adecuación a la situación | Superioridad de una persona |
+| Léxico de un grupo | Usos documentados y asociaciones de contexto | Pertenencia inequívoca por una palabra |
+| Variedad regional | Distribución de rasgos | Capacidad de aprender o razonar |
 
-- Dialecto como variación diatópica regional que se manifiesta en niveles fonético, léxico, semántico, morfológico y sintáctico.
-- Nivel fonético con seseo, aspiración costeña de la s final y cantado arequipeño o selvático como marcas de pronunciación.
-- Nivel léxico con chaval, pibe, chibolo y churre como palabras distintas para el mismo referente según el país.
-- Nivel semántico con guagua como bebé en los Andes frente a guagua como autobús en Cuba y Canarias.
-- Nivel morfológico con aquicito y cerquita andinos frente a ahoritica caribeño en la selección de diminutivos.
-- Nivel sintáctico con De la María su hijo vino y Su casa de Juan como órdenes peculiares amazónicos y andinos.
-- Sociolecto como variación diastrática con superestándar de máxima elaboración, estándar culto y coloquial correctos, y subestándar popular con haiga y vulgar con replana.
-- Idiolecto como variación diafásica con marcas de edad, tecnolecto médico y jurídico, y alternancia formal frente a informal.
+### Jerga, argot y palabras coloquiales
 
-## DIFERENCIAS QUE CONFUNDEN
+Jerga y argot pueden designar usos de grupos o ámbitos; las delimitaciones dependen del contexto y de la tradición terminológica. No se debe equiparar cualquier jerga con delincuencia. Un grupo profesional, juvenil o de otra clase puede compartir vocabulario que no sea exclusivo de él.
 
-- Dialecto frente a sociolecto. Dialecto responde a dónde se habla con marcas regionales, sociolecto responde a quién habla según estrato con marcas de prestigio. Churre norteño es dialecto aunque lo diga un joven, luca marginal es sociolecto aunque se oiga en Lima.
-- Nivel léxico frente a nivel semántico. Léxico usa palabras distintas para la misma cosa como chibolo frente a pibe, semántico usa la misma palabra con sentidos distintos como guagua bebé frente a guagua autobús. Si cambian las palabras es léxico, si cambia el sentido es semántico.
-- Estándar coloquial frente a subestándar popular. Coloquial es espontáneo pero correcto en familia y amistades, popular vulnera la gramática con haiga, nadies y fuistes. La naturalidad no equivale a incorrección.
-- Replana frente a tecnolecto. Replana deforma con código marginal como paco, batería, luca, fercho y tira, tecnolecto precisa con vocabulario técnico como cefalea, isquemia y usucapión. Una degrada la norma, el otro la especializa.
-- Idiolecto juvenil frente a replana. Bro y modo chill son marcas generacionales sanas, tira y paco son argot delictivo. La edad no equivale a marginalidad.
-- Superestándar frente a estándar culto. Superestándar es elaboración literaria y filosófica máxima como prosa metafísica, culto es formalidad normativa de conferencias. Todo superestándar es culto, pero no todo lo culto es superestándar.
-- Quechua lengua frente a supuesto dialecto. El quechua es familia lingüística independiente con millones de hablantes, llamarlo dialecto del español es error gravísimo que admisión castiga.
+En el ejercicio se menciona un uso coloquial de **luca**. La conclusión prudente es que esa palabra aislada no prueba profesión, estudios ni pertenencia delictiva. Para conocer el sentido preciso y la distribución de un término se consulta un diccionario y el contexto. Una marca de uso del diccionario describe usos; no funciona como un diagnóstico de identidad.
 
-## DATOS IMPORTANTES
+La extensión de palabras entre grupos también cambia con el tiempo. Un término que tuvo un uso restringido puede circular después en otros ámbitos. Por eso no se debe afirmar que una lista de tres palabras permite identificar de modo seguro el origen social de cualquier persona.
 
-- Tres etiquetas técnicas con DIA-TOPO para dialecto geográfico, SOCIO-ESTRATO para sociolecto social e IDIO-FASE para idiolecto individual.
-- Cinco niveles del dialecto con fonético de pronunciación, léxico de vocabulario, semántico de significado, morfológico de afijos y sintáctico de orden oracional.
-- Tres niveles sociales con superestándar literario, estándar culto y coloquial, y subestándar popular con haiga y vulgar con replana.
-- Marcas fonéticas modelo con seseo peruano, aspiración costeña loh amigoh y distinción castellana de s y theta.
-- Marcas léxicas modelo con chaval español, pibe argentino y chibolo o churre peruano para el mismo referente.
-- Marca semántica modelo con guagua bebé andino frente a guagua autobús canario.
-- Marcas morfológicas modelo con ahorita, aquicito y cerquita frente a ahoritica caribeño.
-- Marcas sintácticas modelo con De la Juana su hermano en la chacra trabajando está y Veníte pueh pa-cá churre.
-- Tecnolectos modelo con disnea paroxística nocturna médico y litisconsorte jurídico.
-- Perú multilingüe con 48 lenguas originarias en 19 familias, quechua con 3.5 millones de hablantes y orden amazónico ASH-SHI-AWA.
+## 2.1.3 — Registro, tecnolecto e idiolecto
 
-## EJEMPLOS
+### Registro o variación diafásica
 
-- Definición directa de dialecto. Enunciado con la variación regional en niveles fonético, léxico, morfológico y sintáctico según residencia de hablantes. Resolución con dialecto o variación diatópica como variante regional de una lengua. Clave con la opción de dialecto diatópico.
-- Léxico regional con chibolo y pibe. Enunciado con niño o chibolo en Perú, pibe en Argentina y chaval en España. Resolución con manifestación del dialecto en el nivel léxico por vocabulario según país. Clave con variación diatópica o dialectal.
-- Semántica regional con guagua. Enunciado con guagua como bebé en área andina frente a guagua como autobús en Canarias. Resolución con nivel semántico donde el mismo término adquiere sentidos distintos por zona. Clave con nivel semántico.
-- Popular con haiga y fuistes. Enunciado con transgresiones como haiga, nadies o fuistes. Resolución con subestándar popular de incorrecciones morfosintácticas por escasa instrucción. Clave con subestándar popular.
-- Sintaxis amazónica con De don Pedro. Enunciado con De don Pedro su chacra se inundó. Resolución con anteposición del genitivo como variación dialectal sintáctica. Clave con nivel sintáctico.
-- Tecnolecto médico y jurídico. Enunciado con isquemia y patología de médicos o jurisprudencia y usucapión de abogados. Resolución con registro profesional especializado de la variación diafásica. Clave con tecnolecto.
-- Definición de sociolecto. Enunciado con variación por estrato sociocultural y nivel educativo. Resolución con sociolecto o variación diastrática por factores sociales y académicos. Clave con sociolecto diastrático.
-- Superestándar literario. Enunciado con máxima elaboración estética de literatura culta e investigación filosófica. Resolución con superestándar de formas depuradas y riqueza léxica. Clave con superestándar.
-- Replana con luca y tira. Enunciado con luca por sol, fercho por chofer y tira por policía. Resolución con argot marginal carcelario del estrato subestándar vulgar. Clave con subestándar vulgar.
-- Morfología con aquicito. Enunciado con aquicito y cerquita andinos frente a ahoritica caribeño. Resolución con selección de sufijos diminutivos como variación morfológica regional. Clave con plano morfológico.
-- Casuística combinada de tres expresiones. Enunciado con De la Juana su hermano en la chacra trabajando está, Veníte pueh pa-cá churre y cuadro clínico de disnea paroxística. Resolución con dialecto sintáctico andino o amazónico, dialecto léxico fonético norteño y tecnolecto médico. Clave con esa combinación en orden.
-- Refuerzo de glosario. Diatópico para espacio, diastrático para estratos, diafásico para registros, tecnolecto para jerga profesional, estándar para modelo institucional, diglosia para convivencia desequilibrada, motoseo para interferencia vocálica, replana para argot marginal, amerindia para lengua originaria y EIB para educación bilingüe.
+La variación **diafásica** se relaciona con la situación de uso. El registro puede variar según interlocutores, propósito, tema y medio del intercambio. Ana explica un resultado con términos especializados ante personas que conocen el tema y lo reformula para alguien que no lo conoce. El contraste se centra en la adaptación situacional.
 
-## IDEA CLAVE
+No se concluye que Ana haya cambiado de lengua, región o identidad. Está utilizando recursos de su repertorio según las necesidades del intercambio. La adecuación se evalúa por cómo ayuda a comunicar lo que se necesita en esa situación, no por cuántas palabras difíciles aparezcan.
 
-La lengua varía en tres direcciones inseparables. El lugar donde vives fija tu dialecto con su acento, su vocabulario y su sintaxis. Tu estrato y tu instrucción fijan tu sociolecto entre lo superestándar, lo estándar y lo subestándar. Tu edad, tu profesión y tu situación fijan tu idiolecto con su tecnolecto y su registro. Todo enunciado de examen esconde su factor condicionante en una palabra, y esa palabra decide la respuesta.
+Formal e informal no son dos únicas cajas sin gradaciones. Un mensaje puede combinar una estructura cuidada con un saludo cercano. Un correo dirigido a una institución puede ser escrito y formal, pero la escritura no obliga por sí sola a la formalidad. Una conversación oral también puede ser formal. Hay que considerar datos concretos del caso.
 
-## CLAVE DE ADMISIÓN
+### Léxico especializado o tecnolecto
 
-Lugar igual a dialecto diatópico con cinco niveles. Chibolo y churre igual a léxico, guagua con dos sentidos igual a semántico, aquicito igual a morfológico, De la María su hijo igual a sintáctico, loh amigoh igual a fonético. Clase e instrucción igual a sociolecto diastrático. Egregio y metafísica igual a superestándar, haiga y fuistes igual a popular, luca, paco, fercho y tira igual a replana vulgar. Edad y profesión igual a idiolecto diafásico. Cefalea e isquemia igual a tecnolecto médico, bro igual a juvenil sano. **DIA-TOPO es lugar, SOCIO-ESTRATO es clase, IDIO-FASE es individuo.** Quechua igual a lengua completa, jamás dialecto. Jacaru igual a Lima en Yauyos.
+El **léxico especializado**, llamado tecnolecto en ciertos materiales, se vincula con una disciplina o ámbito. En geometría, bisectriz y mediatriz se usan con sentidos definidos. El nivel utiliza esos términos únicamente para identificar especialización, no para enseñar aquí sus propiedades matemáticas.
 
-## RESUMEN
+Un especialista puede adaptar su explicación a interlocutores distintos. Usar un término especializado no convierte el mensaje en idiolecto ni demuestra que solo los profesionales puedan entenderlo. Un estudiante puede aprenderlo y una persona puede citarlo. La especialización del vocabulario y el conocimiento real del hablante deben distinguirse.
 
-Variaciones de la lengua con dialecto geográfico en cinco niveles, sociolecto social en tres niveles e idiolecto individual por edad, profesión y registro. Dialecto con seseo y aspiración en fonética, chibolo y pibe en léxico, guagua con doble sentido en semántica, aquicito en morfología y genitivo antepuesto en sintaxis. Sociolecto con superestándar literario, estándar culto y coloquial, y subestándar popular con haiga y vulgar con replana. Idiolecto con lenguaje infantil y juvenil, tecnolecto médico y jurídico, y alternancia formal e informal. Perú multilingüe con 48 lenguas, quechua mayoritario, Aru con aimara y jacaru, y Amazonía con ASH-SHI-AWA como contexto nacional.
+### Idiolecto: particularidades de un individuo
+
+El **idiolecto** reúne rasgos propios de la forma de expresarse de una persona. No es sinónimo de registro diafásico. En un análisis individual pueden observarse preferencias de vocabulario, giros recurrentes o maneras habituales de organizar lo que se dice; su descripción necesita más evidencia que una emisión aislada.
+
+Una persona posee un repertorio que cambia según situaciones. Por eso idiolecto y registro pueden relacionarse sin ser lo mismo. La comparación entre dos situaciones de Ana destaca variación diafásica; estudiar patrones particulares de Ana frente a otros hablantes pone el foco en rasgos individuales. La pregunta determina qué comparación se pretende hacer.
+
+Tampoco edad, profesión o género equivalen automáticamente a idiolecto. Son factores que pueden estudiarse en distribuciones sociales o situaciones de uso, y las personas de una misma categoría no hablan todas igual. No se utilizan estereotipos como sustitutos de una descripción lingüística.
+
+## 2.1.4 — Combinar perspectivas sin forzar etiquetas
+
+Un mismo uso puede reflejar región, redes sociales, situación y trayectoria individual. No es necesario decidir que uno de esos factores manda siempre sobre los otros. Si una consigna pretende una respuesta única, debe indicar el contraste: entre regiones, entre grupos, entre situaciones del mismo hablante o entre rasgos individuales.
+
+| Factor destacado | Pregunta de análisis | Término empleado |
+|---|---|---|
+| Distribución territorial | ¿Se comparan usos entre regiones? | Diatópico |
+| Distribución social | ¿Se comparan usos asociados con grupos? | Diastrático |
+| Situación comunicativa | ¿Cambia el uso según propósito o interlocutor? | Diafásico o de registro |
+| Rasgos particulares | ¿Se estudian patrones propios de un individuo? | Idiolectal |
+
+Un ejemplo ficticio muestra el procedimiento. Ana conversa con una amiga y después presenta una exposición. En la segunda intervención explica los términos y organiza la información de otra manera. Si se comparan esas dos situaciones, el foco está en registro. Si otra investigación compara datos de varias regiones, su foco puede ser geográfico. Estar estudiando a la misma persona no hace idénticos ambos análisis.
+
+Los planos también se combinan con estos factores. Una investigación regional puede comparar sonidos y otra puede comparar vocabulario. Una adaptación de registro puede cambiar términos y construcciones. Identificar el factor no sustituye el análisis de qué unidades cambian.
+
+## Importante
+
+**Una palabra aislada no permite deducir identidad, inteligencia, escolaridad o pertenencia delictiva.** Idiolecto y registro no son equivalentes. Una norma puede orientar una corrección formal sin convertir las variedades en una escala de valor personal. Describe el rasgo y justifica el factor con datos del caso.
+
+## Cómo resolver los contrastes
+
+1. Identifica qué compara la consigna: personas, grupos, regiones o situaciones.
+2. Separa el factor de distribución del plano lingüístico observado.
+3. Comprueba si el ejemplo proporciona contexto suficiente para decidir el sentido de una forma.
+4. Evita atribuir distribuciones regionales que el caso no documenta.
+5. No conviertas una asociación de uso en una certeza sobre la biografía del hablante.
+
+En momentito y momentico se pide comparar sufijos: el foco es morfológico. En guagua se comparan los sentidos especificados: el foco es semántico. En la explicación que Ana adapta al interlocutor se compara registro. En el estudio de patrones particulares de una persona se describe idiolecto. Cada respuesta explica el contraste planteado; ninguna autoriza conclusiones sobre el valor de quienes hablan.
 
 ## Variedad situacional y origen latino del español
 

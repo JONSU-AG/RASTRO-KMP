@@ -83,6 +83,8 @@ object AccountDeletionRepository {
                 profile.delete().await()
                 checkAccount()
                 user.delete().await()
+                StudyGoalPreferences(context, studyGoalScope(uid, true, false)).clear()
+                com.jonsuapps.rastro.android.ui.screens.MaterialReaderStore.clear(context, uid)
                 Unit
             }.recoverCatching { error ->
                 val message = if (error is FirebaseAuthRecentLoginRequiredException)

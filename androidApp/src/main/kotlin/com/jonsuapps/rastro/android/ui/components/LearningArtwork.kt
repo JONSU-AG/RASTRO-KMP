@@ -193,7 +193,6 @@ class LearningAudio(private val context: Context) {
     speed: Float = 1f,
     onExplosion: () -> Unit = {}
 ) {
-    val theme = ThemeManager.currentTheme
     val callback by rememberUpdatedState(onExplosion)
     androidx.compose.runtime.key(character, appearance) {
         val seconds = when (appearance) {
@@ -238,9 +237,7 @@ class LearningAudio(private val context: Context) {
         LaunchedEffect(frame.paperGag?.blast?.let { it > .001f } == true) {
             if (!exploded && (frame.paperGag?.blast ?: 0f) > .001f) { exploded = true; callback() }
         }
-        val backdrop = if (theme.isDark && character == ClassicCharacter.LOKI) theme.surfaceAccent
-            else androidx.compose.ui.graphics.Color.Transparent
-        Canvas(modifier.clip(RoundedCornerShape(18.dp)).background(backdrop)
+        Canvas(modifier.clip(RoundedCornerShape(18.dp))
             .semantics { contentDescription = "${character.folder} Classic · $appearance" }) {
             drawLoki(frame, model, effectProgress = p, classicMood = mood)
         }
@@ -348,6 +345,7 @@ internal fun sampleLearningExplosion(progress: Float): LokiFrame {
 
 /** New celebrations and help have one clear action and remain readable on small screens. */
 @Composable fun LearningCelebrationDialog(title: String, message: String, onContinue: () -> Unit,
+    messageContent: (@Composable () -> Unit)? = null,
     artwork: @Composable () -> Unit) {
     val theme = ThemeManager.currentTheme
     Dialog(onDismissRequest = onContinue) {
@@ -357,7 +355,7 @@ internal fun sampleLearningExplosion(progress: Float): LokiFrame {
                 horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(14.dp)) {
                 artwork()
                 Text(title, color = theme.textPrimary, fontWeight = FontWeight.Black)
-                Text(message, color = theme.textSecondary)
+                if (messageContent != null) messageContent() else Text(message, color = theme.textSecondary)
                 Sticker3dButton(onClick = onContinue, modifier = Modifier.fillMaxWidth(),
                     containerColor = theme.accent, bottomBevelColor = theme.accentBevel) {
                     Text(if (title == "Ayuda") "¡ENTENDIDO!" else "CONTINUAR", color = contrastingText(theme.accent), fontWeight = FontWeight.Bold)

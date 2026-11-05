@@ -1,1 +1,200 @@
-[{"concept":"1.1.1","correctIndex":3,"explanation":"El nivel literal se ciñe a lo dicho expresamente en la superficie textual: exige reconocer datos, hechos, nombres, relaciones cronológicas y tesis formuladas explícitamente.","fuente":"temario","id":"cl_t01_s01_c01","options":["Calcular la velocidad lectora promedio en palabras por segundo.","Inventar un final alternativo para una novela histórica.","Emitir juicios éticos y filosóficos sobre la conducta de los personajes.","Recuperar, identificar y procesar la información explícitamente manifestada en el texto por el autor, ya sea mediante transcripción o paráfrasis."],"pedagogicalTier":"concepto","semana":1,"statement":"En los modelos de comprensión lectora de admisión (estándar DECO), el nivel de 'Comprensión Literal' se define formalmente como la capacidad de:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"1.1.2","correctIndex":2,"explanation":"La paráfrasis es una traducción intralingüística: reformula con sinónimos y estructuras sintácticas equivalentes la información explícita del texto original.","fuente":"temario","id":"cl_t01_s01_c02","options":["Copiar literalmente una frase entre comillas cambiando el idioma.","Deducir una hipótesis científica no formulada por el autor.","Expresar una idea o afirmación explícita del texto utilizando palabras distintas o sinónimos sin alterar en absoluto su sentido conceptual original.","Resumir un libro entero en tres palabras poéticas."],"pedagogicalTier":"concepto","semana":1,"statement":"La 'Paráfrasis Literal' en las preguntas de examen de admisión consiste en:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"1.1.3","correctIndex":0,"explanation":"'En las postrimerías del siglo XIX...' parafrasea exactamente con equivalentes léxicos la información temporal y fáctica enunciada explícitamente en el texto base.","fuente":"temario","id":"cl_t01_s01_c03","options":["En las postrimerías del siglo XIX, el hallazgo de la penicilina por parte de Fleming todavía no se había producido.","La penicilina es el antibiótico más utilizado en la medicina moderna.","Fleming descubrió la penicilina a inicios del siglo XIX.","Fleming fue un científico que nunca realizó investigaciones microbiológicas."],"pedagogicalTier":"concepto","semana":1,"statement":"Si un texto afirma explícitamente: 'Hacia finales del siglo XIX, la penicilina aún no había sido descubierta por Alexander Fleming', ¿cuál de las siguientes opciones expresa una paráfrasis literal rigurosa?","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"1.1.4","correctIndex":3,"explanation":"El anclaje 'según el texto' condiciona la respuesta a la evidencia textual directa, invalidando respuestas que dependan de conocimientos extratextuales no respaldados.","fuente":"temario","id":"cl_t01_s01_c04","options":["Validar una afirmación apoyándose exclusivamente en sus conocimientos previos de la escuela.","Imaginar qué pensaría el autor si viviera en el siglo XXI.","Seleccionar la opción que contenga la palabra más extensa del párrafo.","Localizar y cotejar en el cuerpo del texto la afirmación cuya veracidad esté respaldada directamente por lo dicho de forma explícita por el autor."],"pedagogicalTier":"concepto","semana":1,"statement":"Una pregunta de nivel literal formulada con el encabezado 'Según el texto, es correcto afirmar que...' exige al postulante:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"1.1.5","correctIndex":3,"explanation":"Reconocer datos puntuales objetivos consignados explícitamente en el texto es la operación más elemental y directa de la comprensión literal.","fuente":"temario","id":"cl_t01_s01_c05","options":["Crítico-valorativo.","Inferencial profundo.","Extrapolativo contrafáctico.","Literal o de retención fáctica."],"pedagogicalTier":"concepto","semana":1,"statement":"En la lectura de textos expositivos científicos, la identificación de 'datos específicos' (fechas, porcentajes, magnitudes, nombres taxonómicos) corresponde al nivel de lectura:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"1.1.6","correctIndex":3,"explanation":"El error común consiste en proyectar sesgos o preconceptos personales (conocimiento extratextual) en lugar de verificar qué aseveró taxativamente el autor en las líneas del texto.","fuente":"temario","id":"cl_t01_s01_c06","options":["Leer el texto completo antes de mirar las alternativas.","Subrayar las palabras clave con lápiz en la hoja de examen.","Verificar la concordancia gramatical de las oraciones.","Confundir lo que el texto dice efectivamente con sus propias opiniones, creencias o saberes previos sobre el tema."],"pedagogicalTier":"concepto","semana":1,"statement":"¿Cuál es el principal peligro o error metodológico en el que incurre un estudiante al responder una pregunta de nivel literal?","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"1.1.7","correctIndex":0,"explanation":"Contradice explícitamente la condición de exclusividad formulada por el autor ('el único metal líquido').","fuente":"temario","id":"cl_t01_s01_c07","options":["Existen varios metales que se encuentran en estado líquido a temperatura ambiente además del mercurio.","El mercurio presenta estado líquido a temperatura ambiente.","La temperatura ambiente influye en el estado físico de los elementos.","El mercurio pertenece a la categoría de los metales."],"pedagogicalTier":"concepto","semana":1,"statement":"Si el texto asevera: 'El mercurio es el único metal líquido a temperatura ambiente', una afirmación textualmente incompatible por contradicción literal directa sería:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"1.1.8","correctIndex":2,"explanation":"El scanning o barrido visual permite ubicar rápidamente la zona del texto donde se encuentra el dato explícito requerido por la pregunta literal.","fuente":"temario","id":"cl_t01_s01_c08","options":["Aprender a recitar poemas líricos de memoria.","Escribir una reseña crítica para un suplemento cultural.","Localizar con rapidez y exactitud términos clave, cifras, nombres propios o definiciones explícitas dentro del cuerpo del texto.","Corregir la tipografía de los exámenes impresos."],"pedagogicalTier":"concepto","semana":1,"statement":"La técnica de 'Lectura Atenta y Rastreo Localizado' (scanning) es particularmente eficaz en las pruebas de admisión para:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"1.1.9","correctIndex":3,"explanation":"La comprensión literal de definiciones exige captar con fidelidad conceptual los atributos y límites del concepto presentados por el emisor.","fuente":"temario","id":"cl_t01_s01_c09","options":["Criticar la teoría termodinámica de Boltzmann.","Calcular numéricamente la fórmula matemática en un cuaderno de apuntes.","Sustituir el concepto de entropía por el de energía solar.","Aprehender con exactitud el concepto, el género próximo y la diferencia específica tal como han sido delimitados por el autor."],"pedagogicalTier":"concepto","semana":1,"statement":"Cuando un autor introduce una definición explícita formal (por ejemplo: 'La entropía se define como la medida cuantitativa del desorden molecular de un sistema termodinámico'), la comprensión literal demanda:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"1.1.10","correctIndex":1,"explanation":"El nivel literal provee la materia prima textual: si la base explícita se comprende de manera errónea o deformada, cualquier inferencia o juicio crítico posterior será inevitablemente inválido.","fuente":"temario","id":"cl_t01_s01_c10","options":["Es el único nivel que evalúan las universidades de prestigio en el mundo.","Sin una decodificación fiel y precisa de la información explícita del texto resulta imposible formular inferencias válidas, juicios críticos o extrapolaciones.","Exime al lector de tener que reflexionar sobre el significado profundo del mensaje.","Permite aprobar los exámenes sin necesidad de leer las preguntas."],"pedagogicalTier":"concepto","semana":1,"statement":"En conclusión metodológica, la comprensión literal es considerada la base o cimiento de todo el proceso lector porque:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "cl_t01_s01_c01",
+    "concept": "1.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 1,
+    "statement": "Lee el texto original de práctica:\n“El taller de encuadernación abrió en mayo en la biblioteca del barrio. Funciona los martes y jueves, de cuatro a seis de la tarde. Pueden asistir personas desde los dieciséis años. La inscripción es gratuita y se realiza en recepción; cada participante lleva sus hojas usadas y recibe hilo y cartón del taller. Hay doce plazas por sesión. Si una sesión se suspende, la biblioteca publica el aviso en su puerta y llama a las personas inscritas. El préstamo de libros mantiene su horario habitual.”\n\n¿En qué mes abrió el taller?",
+    "options": [
+      "En mayo.",
+      "En junio.",
+      "En marzo.",
+      "En diciembre."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Localizamos la evidencia: “abrió en mayo”.\n2. El mes está expresamente indicado; no depende de la fecha actual.\n3. La alternativa justificada es: En mayo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t01_s01_c02",
+    "concept": "1.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 1,
+    "statement": "Lee el texto original de práctica:\n“El taller de encuadernación abrió en mayo en la biblioteca del barrio. Funciona los martes y jueves, de cuatro a seis de la tarde. Pueden asistir personas desde los dieciséis años. La inscripción es gratuita y se realiza en recepción; cada participante lleva sus hojas usadas y recibe hilo y cartón del taller. Hay doce plazas por sesión. Si una sesión se suspende, la biblioteca publica el aviso en su puerta y llama a las personas inscritas. El préstamo de libros mantiene su horario habitual.”\n\n¿Dónde funciona el taller?",
+    "options": [
+      "En todas las escuelas del país.",
+      "En una fábrica de cartón.",
+      "En la casa de cada participante.",
+      "En la biblioteca del barrio."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Localizamos la evidencia: “en la biblioteca del barrio”.\n2. La expresión identifica el lugar del taller.\n3. La alternativa justificada es: En la biblioteca del barrio.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t01_s01_c03",
+    "concept": "1.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 1,
+    "statement": "Lee el texto original de práctica:\n“El taller de encuadernación abrió en mayo en la biblioteca del barrio. Funciona los martes y jueves, de cuatro a seis de la tarde. Pueden asistir personas desde los dieciséis años. La inscripción es gratuita y se realiza en recepción; cada participante lleva sus hojas usadas y recibe hilo y cartón del taller. Hay doce plazas por sesión. Si una sesión se suspende, la biblioteca publica el aviso en su puerta y llama a las personas inscritas. El préstamo de libros mantiene su horario habitual.”\n\n¿Qué días funciona?",
+    "options": [
+      "Todos los días.",
+      "Sábados y domingos.",
+      "Martes y jueves.",
+      "Lunes y miércoles."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Localizamos la evidencia: “los martes y jueves”.\n2. Se recuperan los dos días citados, sin añadir otros.\n3. La alternativa justificada es: Martes y jueves.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t01_s01_c04",
+    "concept": "1.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 1,
+    "statement": "Lee el texto original de práctica:\n“El taller de encuadernación abrió en mayo en la biblioteca del barrio. Funciona los martes y jueves, de cuatro a seis de la tarde. Pueden asistir personas desde los dieciséis años. La inscripción es gratuita y se realiza en recepción; cada participante lleva sus hojas usadas y recibe hilo y cartón del taller. Hay doce plazas por sesión. Si una sesión se suspende, la biblioteca publica el aviso en su puerta y llama a las personas inscritas. El préstamo de libros mantiene su horario habitual.”\n\n¿Cuánto dura cada sesión según el horario anunciado?",
+    "options": [
+      "Doce horas.",
+      "Dos horas.",
+      "Cuatro horas.",
+      "Seis horas."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Localizamos la evidencia: “de cuatro a seis de la tarde”.\n2. La diferencia entre las seis y las cuatro es de dos horas.\n3. La alternativa justificada es: Dos horas.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t01_s01_c05",
+    "concept": "1.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 1,
+    "statement": "Lee el texto original de práctica:\n“El taller de encuadernación abrió en mayo en la biblioteca del barrio. Funciona los martes y jueves, de cuatro a seis de la tarde. Pueden asistir personas desde los dieciséis años. La inscripción es gratuita y se realiza en recepción; cada participante lleva sus hojas usadas y recibe hilo y cartón del taller. Hay doce plazas por sesión. Si una sesión se suspende, la biblioteca publica el aviso en su puerta y llama a las personas inscritas. El préstamo de libros mantiene su horario habitual.”\n\n¿Cuál es la edad mínima indicada?",
+    "options": [
+      "Dieciséis años.",
+      "Doce años.",
+      "Dieciocho años.",
+      "No se establece una edad."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Localizamos la evidencia: “desde los dieciséis años”.\n2. Desde señala el límite inferior incluido.\n3. La alternativa justificada es: Dieciséis años.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t01_s01_c06",
+    "concept": "1.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 1,
+    "statement": "Lee el texto original de práctica:\n“El taller de encuadernación abrió en mayo en la biblioteca del barrio. Funciona los martes y jueves, de cuatro a seis de la tarde. Pueden asistir personas desde los dieciséis años. La inscripción es gratuita y se realiza en recepción; cada participante lleva sus hojas usadas y recibe hilo y cartón del taller. Hay doce plazas por sesión. Si una sesión se suspende, la biblioteca publica el aviso en su puerta y llama a las personas inscritas. El préstamo de libros mantiene su horario habitual.”\n\n¿Dónde se realiza la inscripción?",
+    "options": [
+      "Únicamente por teléfono.",
+      "En cada salón del colegio.",
+      "En una página mencionada con dirección web.",
+      "En recepción."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Localizamos la evidencia: “se realiza en recepción”.\n2. El texto no presenta una inscripción exclusivamente telefónica o digital.\n3. La alternativa justificada es: En recepción.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t01_s01_c07",
+    "concept": "1.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 1,
+    "statement": "Lee el texto original de práctica:\n“El taller de encuadernación abrió en mayo en la biblioteca del barrio. Funciona los martes y jueves, de cuatro a seis de la tarde. Pueden asistir personas desde los dieciséis años. La inscripción es gratuita y se realiza en recepción; cada participante lleva sus hojas usadas y recibe hilo y cartón del taller. Hay doce plazas por sesión. Si una sesión se suspende, la biblioteca publica el aviso en su puerta y llama a las personas inscritas. El préstamo de libros mantiene su horario habitual.”\n\n¿Qué debe llevar cada participante?",
+    "options": [
+      "Doce libros nuevos.",
+      "Una bicicleta.",
+      "Sus hojas usadas.",
+      "Hilo y cartón obligatoriamente."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Localizamos la evidencia: “cada participante lleva sus hojas usadas”.\n2. El participante aporta las hojas; los otros materiales mencionados los entrega el taller.\n3. La alternativa justificada es: Sus hojas usadas.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t01_s01_c08",
+    "concept": "1.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 1,
+    "statement": "Lee el texto original de práctica:\n“El taller de encuadernación abrió en mayo en la biblioteca del barrio. Funciona los martes y jueves, de cuatro a seis de la tarde. Pueden asistir personas desde los dieciséis años. La inscripción es gratuita y se realiza en recepción; cada participante lleva sus hojas usadas y recibe hilo y cartón del taller. Hay doce plazas por sesión. Si una sesión se suspende, la biblioteca publica el aviso en su puerta y llama a las personas inscritas. El préstamo de libros mantiene su horario habitual.”\n\n¿Qué materiales entrega el taller?",
+    "options": [
+      "Bicicletas y cascos.",
+      "Hilo y cartón.",
+      "Solo hojas nuevas.",
+      "Libros para vender."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Localizamos la evidencia: “recibe hilo y cartón del taller”.\n2. La frase separa lo que se lleva de lo que se recibe.\n3. La alternativa justificada es: Hilo y cartón.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t01_s01_c09",
+    "concept": "1.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 1,
+    "statement": "Lee el texto original de práctica:\n“El taller de encuadernación abrió en mayo en la biblioteca del barrio. Funciona los martes y jueves, de cuatro a seis de la tarde. Pueden asistir personas desde los dieciséis años. La inscripción es gratuita y se realiza en recepción; cada participante lleva sus hojas usadas y recibe hilo y cartón del taller. Hay doce plazas por sesión. Si una sesión se suspende, la biblioteca publica el aviso en su puerta y llama a las personas inscritas. El préstamo de libros mantiene su horario habitual.”\n\n¿Cuántas plazas hay por sesión?",
+    "options": [
+      "Doce.",
+      "Dieciséis.",
+      "Dos.",
+      "Veinticuatro."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Localizamos la evidencia: “Hay doce plazas por sesión”.\n2. La cantidad se refiere a plazas de cada sesión, no a edades o materiales.\n3. La alternativa justificada es: Doce.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t01_s01_c10",
+    "concept": "1.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 1,
+    "statement": "Lee el texto original de práctica:\n“El taller de encuadernación abrió en mayo en la biblioteca del barrio. Funciona los martes y jueves, de cuatro a seis de la tarde. Pueden asistir personas desde los dieciséis años. La inscripción es gratuita y se realiza en recepción; cada participante lleva sus hojas usadas y recibe hilo y cartón del taller. Hay doce plazas por sesión. Si una sesión se suspende, la biblioteca publica el aviso en su puerta y llama a las personas inscritas. El préstamo de libros mantiene su horario habitual.”\n\n¿Cómo se comunica una suspensión?",
+    "options": [
+      "Solo con una noticia por radio.",
+      "Sin avisar a nadie.",
+      "Cambiando el horario de préstamo.",
+      "Con un aviso en la puerta y llamadas a las personas inscritas."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Localizamos la evidencia: “publica el aviso en su puerta y llama a las personas inscritas”.\n2. Se mencionan dos medios; omitir uno cambia la información.\n3. La alternativa justificada es: Con un aviso en la puerta y llamadas a las personas inscritas.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t01_s01_c11",
+    "concept": "1.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 1,
+    "statement": "Lee el texto original de práctica:\n“El taller de encuadernación abrió en mayo en la biblioteca del barrio. Funciona los martes y jueves, de cuatro a seis de la tarde. Pueden asistir personas desde los dieciséis años. La inscripción es gratuita y se realiza en recepción; cada participante lleva sus hojas usadas y recibe hilo y cartón del taller. Hay doce plazas por sesión. Si una sesión se suspende, la biblioteca publica el aviso en su puerta y llama a las personas inscritas. El préstamo de libros mantiene su horario habitual.”\n\n¿Qué ocurre con el préstamo de libros?",
+    "options": [
+      "Solo abre durante el taller.",
+      "Exige llevar cartón.",
+      "Mantiene su horario habitual.",
+      "Se suspende todo el mes."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Localizamos la evidencia: “El préstamo de libros mantiene su horario habitual.”.\n2. La última oración diferencia el taller del servicio de préstamo.\n3. La alternativa justificada es: Mantiene su horario habitual.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

@@ -1,13 +1,15 @@
 ## 1. DESARROLLO TEÓRICO AVANZADO - PARTE II
-En el conjunto \mathbb{N}, la división de un dividendo (D) entre un divisor entero positivo (d > 0) puede realizarse bajo dos modalidades complementarias:
+Para un dividendo natural $D$ y un divisor entero positivo $d$, la división por defecto cumple $D = dq + r$, con $0 \le r < d$. La comparación siguiente corresponde a una **división inexacta**, de modo que $1 \le r < d$ y $d > 1$. El cociente por exceso es el entero inmediatamente superior a $D/d$.
 
 | Parámetro / Propiedad | División por Defecto | División por Exceso |
 | :--- | :--- | :--- |
 | **Algoritmo Fundamental** | D = d \cdot q + r | D = d \cdot q_e - r_e |
 | **Relación de Cocientes** | q (Cociente por defecto) | q_e = q + 1 (Cociente por exceso) |
-| **Suma de Residuos** | \multicolumn{2}{c|}{r + r_e = d (La suma de los residuos es igual al divisor)} |
-| **Residuo Mínimo** | \multicolumn{2}{c|}{r_{mín} = 1} |
-| **Residuo Máximo** | \multicolumn{2}{c|}{r_{máx} = d - 1} |
+| **Suma de residuos** | $r + r_e = d$ | $r_e = d - r$ |
+| **Residuo mínimo en división inexacta** | $r = 1$ | $r_e = 1$ |
+| **Residuo máximo en división inexacta** | $r = d - 1$ | $r_e = d - 1$ |
+
+En una **división exacta**, el cociente inferior y el superior coinciden y ambos residuos valen cero. Por eso las relaciones $q_e = q + 1$ y $r + r_e = d$ de la tabla no se aplican a ese caso. Por ejemplo, en $17/5$, los cocientes son 3 y 4, y los residuos son 2 y 3; en $20/5$, ambos cocientes son 4.
 
 ---
 

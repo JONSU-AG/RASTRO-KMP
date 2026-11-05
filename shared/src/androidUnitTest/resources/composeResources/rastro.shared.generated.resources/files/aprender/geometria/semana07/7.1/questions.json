@@ -1,1 +1,200 @@
-[{"concept":"7.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t07_s01_c01","options":["55^\\circ","110^\\circ","70^\\circ","125^\\circ"],"pedagogicalTier":"concepto","semana":7,"statement":"**Enunciado:** En una circunferencia de centro O, los puntos A, B y C pertenecen a ella de modo que el ángulo central \\angle AOC mide 110^\\circ. Si el punto B se encuentra en el arco mayor AC, calcule la medida del ángulo inscrito \\angle ABC.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t07_s01_c02","options":["2.5\\text{ cm}","2\\text{ cm}","3\\text{ cm}","4\\text{ cm}"],"pedagogicalTier":"concepto","semana":7,"statement":"**Enunciado:** En un triángulo rectángulo ABC recto en B, los catetos miden AB = 8\\text{ cm} y BC = 15\\text{ cm}. Calcule el radio de la circunferencia inscrita (inradio) en dicho triángulo.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t07_s01_c03","options":["5\\text{ m}","4\\sqrt{2}\\text{ m}","4\\text{ m}","2\\sqrt{2}\\text{ m}"],"pedagogicalTier":"concepto","semana":7,"statement":"**Enunciado:** En un trapecio isósceles ABCD (\\overline{BC} \\parallel \\overline{AD}) circunscrito a una circunferencia, las bases miden BC = 4\\text{ m} y AD = 16\\text{ m}. Calcule el radio de la circunferencia inscrita.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "7.1.1",
+    "correctIndex": 0,
+    "explanation": "1. El ángulo central AOC determina el arco menor AC de 110°.\n2. Como B está en el arco mayor, el ángulo inscrito ABC intercepta el arco menor AC.\n3. El ángulo inscrito mide la mitad de ese arco: 110° / 2 = 55°.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t07_s01_c01",
+    "options": [
+      "55°",
+      "110°",
+      "70°",
+      "125°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "En una circunferencia de centro O, el ángulo central AOC mide 110°. El punto B está en el arco mayor AC. ¿Cuánto mide el ángulo inscrito ABC?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.2",
+    "correctIndex": 2,
+    "explanation": "1. Hallamos la hipotenusa: $c=\\sqrt{8^2+15^2}=17$ cm.\n2. El área es $A=\\frac{8\\cdot15}{2}=60$ cm² y el semiperímetro $s=\\frac{8+15+17}{2}=20$ cm.\n3. En un triángulo se cumple $A=rs$.\n4. Despejamos $r=60/20=3$ cm.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t07_s01_c02",
+    "options": [
+      "2.5 cm",
+      "2 cm",
+      "3 cm",
+      "4 cm"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "En un triángulo rectángulo ABC, recto en B, los catetos AB y BC miden 8 cm y 15 cm. Calcula el radio de la circunferencia inscrita.",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.3",
+    "correctIndex": 2,
+    "explanation": "1. En un cuadrilátero tangencial, las sumas de lados opuestos son iguales. Los lados no paralelos son iguales, así que cada uno mide $(4+16)/2=10$ m.\n2. La proyección horizontal de cada lado es $(16-4)/2=6$ m.\n3. Por Pitágoras, la altura es $h=\\sqrt{10^2-6^2}=8$ m.\n4. La circunferencia es tangente a ambas bases paralelas, por lo que $2r=h$ y $r=4$ m.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t07_s01_c03",
+    "options": [
+      "5 m",
+      "$4\\sqrt{2}$ m",
+      "4 m",
+      "$2\\sqrt{2}$ m"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Un trapecio isósceles ABCD, con bases BC = 4 m y AD = 16 m, está circunscrito a una circunferencia. Calcula su inradio.",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.4",
+    "correctIndex": 3,
+    "explanation": "1. El diámetro pasa por el centro y está formado por dos radios.\n2. Multiplicamos 2 × 6 cm.\n3. El diámetro mide 12 cm.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t07_s01_c04",
+    "options": [
+      "6 cm",
+      "3 cm",
+      "18 cm",
+      "12 cm"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Una circunferencia tiene radio de 6 cm. ¿Cuánto mide su diámetro?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.5",
+    "correctIndex": 0,
+    "explanation": "1. El ángulo central mide lo mismo que su arco interceptado: 80°.\n2. El inscrito que intercepta ese mismo arco mide la mitad.\n3. Por tanto, mide 80° / 2 = 40°.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t07_s01_c05",
+    "options": [
+      "40°",
+      "80°",
+      "160°",
+      "20°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Un ángulo central mide 80°. ¿Cuánto mide un ángulo inscrito que intercepta el mismo arco?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.6",
+    "correctIndex": 1,
+    "explanation": "1. Identificamos que T es el punto de contacto de la recta y la circunferencia.\n2. El radio al punto de tangencia es perpendicular a la tangente.\n3. Dos rectas perpendiculares forman un ángulo de 90°.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t07_s01_c06",
+    "options": [
+      "45°",
+      "90°",
+      "180°",
+      "0°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "OT es el radio trazado al punto T de tangencia. ¿Qué ángulo forma OT con la recta tangente en T?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.7",
+    "correctIndex": 2,
+    "explanation": "1. El diámetro AB delimita una semicircunferencia de 180°.\n2. El ángulo APB intercepta esa semicircunferencia.\n3. Por ser inscrito, mide 180° / 2 = 90°.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t07_s01_c07",
+    "options": [
+      "45°",
+      "180°",
+      "90°",
+      "60°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "AB es un diámetro y P es otro punto de la circunferencia. ¿Cuánto mide el ángulo inscrito APB?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.8",
+    "correctIndex": 3,
+    "explanation": "1. El arco menor AB corresponde al ángulo central AOB.\n2. La medida angular de ese arco es igual a la del ángulo central.\n3. El arco menor mide 120°; no se divide entre dos, pues no se pide un ángulo inscrito.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t07_s01_c08",
+    "options": [
+      "60°",
+      "240°",
+      "360°",
+      "120°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Un ángulo central AOB mide 120°. ¿Cuál es la medida del arco menor AB que intercepta?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.9",
+    "correctIndex": 0,
+    "explanation": "1. En una misma circunferencia, dos cuerdas equidistantes del centro son congruentes.\n2. Por eso, CD tiene la misma longitud que AB.\n3. Entonces CD = 8 cm.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t07_s01_c09",
+    "options": [
+      "8 cm",
+      "4 cm",
+      "16 cm",
+      "No se puede determinar"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "En una misma circunferencia, las cuerdas AB y CD están a igual distancia del centro. Si AB mide 8 cm, ¿cuánto mide CD?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.10",
+    "correctIndex": 1,
+    "explanation": "1. La circunferencia es la línea cerrada cuyos puntos están a la misma distancia del centro.\n2. El círculo comprende esa circunferencia y todos sus puntos interiores.\n3. Por tanto, borde y región no son la misma figura.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t07_s01_c10",
+    "options": [
+      "La circunferencia incluye todos los puntos interiores",
+      "La circunferencia es el borde y el círculo incluye el borde y su región interior",
+      "Ambos nombres designan exclusivamente el centro",
+      "El círculo es un segmento que pasa por el centro"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "¿Qué enunciado distingue correctamente círculo y circunferencia?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.11",
+    "correctIndex": 3,
+    "explanation": "1. Un radio perpendicular a una cuerda la divide en dos partes iguales.\n2. Por eso, AM = MB y AM + MB = 18 cm.\n3. Dividimos entre dos: AM = 9 cm.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t07_s01_c11",
+    "options": [
+      "18 cm",
+      "6 cm",
+      "36 cm",
+      "9 cm"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "El radio OM es perpendicular a la cuerda AB en M. Si AB mide 18 cm, ¿cuánto mide AM?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

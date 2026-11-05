@@ -1,1 +1,200 @@
-[{"concept":"7.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t07_s02_c01","options":["8\\text{ cm}","7\\text{ cm}","7.5\\text{ cm}","6.5\\text{ cm}"],"pedagogicalTier":"concepto","semana":7,"statement":"**Enunciado:** Desde un punto exterior P a una circunferencia se trazan la tangente \\overline{PT} (T es el punto de tangencia) y una recta secante que corta a la circunferencia en los puntos A y B (P-A-B). Se sabe que la cuerda AB mide 5\\text{ cm} y el segmento exterior PA mide 4\\text{ cm}. Si se traza otra secante P-C-D que pasa por el centro O, de modo que el radio de la circunferencia mide R = 4.5\\text{ cm}, halle la distancia desde P hasta el centro O.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.2","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t07_s02_c02","options":["32\\text{ m}^2","24\\text{ m}^2","16\\text{ m}^2","48\\text{ m}^2"],"pedagogicalTier":"concepto","semana":7,"statement":"**Enunciado:** En un triángulo acutángulo ABC, se trazan las alturas \\overline{AD} y \\overline{CE} que se intersecan en el ortocentro H. Se traza la recta que pasa por E y D, la cual interseca a la prolongación del lado \\overline{AC} en el punto P. Si AC = b, y los segmentos CD = m y CB = a, demuestre analíticamente y determine el valor del producto PA \\cdot PC en función de la longitud del segmento tangente trazado desde P a la circunferencia circunscrita al cuadrilátero inscriptible ACDE. Si adicionalmente PC = 4\\text{ m} y AC = 8\\text{ m}, calcule la longitud del segmento secante exterior asociado a los puntos E y D.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"7.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t07_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "geom_t07_s02_c01",
+    "concept": "7.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 7,
+    "statement": "Un cuadrilátero convexo está inscrito en una circunferencia. Un ángulo mide 70°. ¿Cuánto mide el opuesto?",
+    "options": [
+      "$110\\,\\mathrm{^\\circ}$",
+      "$220\\,\\mathrm{^\\circ}$",
+      "$55\\,\\mathrm{^\\circ}$",
+      "$330\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los opuestos de un cuadrilátero cíclico suman 180°.\n2. Usamos los datos indicados: $\\beta=180^\\circ-70^\\circ$.\n3. El resultado es $110\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t07_s02_c02",
+    "concept": "7.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 7,
+    "statement": "Los cuatro lados de un cuadrilátero convexo son tangentes a una misma circunferencia. Sus lados consecutivos miden 5, 6, 7 y x cm. ¿Cuánto vale x?",
+    "options": [
+      "$12\\,\\mathrm{cm}$",
+      "$3\\,\\mathrm{cm}$",
+      "$18\\,\\mathrm{cm}$",
+      "$6\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Pitot iguala las sumas de lados opuestos en esta figura.\n2. Usamos los datos indicados: $5+7=6+x\\Rightarrow x=6$.\n3. El resultado es $6\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t07_s02_c03",
+    "concept": "7.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 7,
+    "statement": "Un triángulo rectángulo tiene catetos de 3 y 4 cm e hipotenusa de 5 cm. ¿Cuál es su inradio?",
+    "options": [
+      "$0.5\\,\\mathrm{cm}$",
+      "$3\\,\\mathrm{cm}$",
+      "$1\\,\\mathrm{cm}$",
+      "$2\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La fórmula del triángulo rectángulo relaciona catetos e hipotenusa.\n2. Usamos los datos indicados: $r=(3+4-5)/2$.\n3. El resultado es $1\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t07_s02_c04",
+    "concept": "7.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 7,
+    "statement": "Desde un mismo punto exterior se trazan dos tangentes a una circunferencia. Una mide 9 cm. ¿Cuánto mide la otra?",
+    "options": [
+      "$27\\,\\mathrm{cm}$",
+      "$9\\,\\mathrm{cm}$",
+      "$18\\,\\mathrm{cm}$",
+      "$4.5\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los segmentos tangentes desde el mismo punto tienen igual longitud.\n2. Usamos los datos indicados: $t_2=t_1=9$.\n3. El resultado es $9\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t07_s02_c05",
+    "concept": "7.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 7,
+    "statement": "Dos secantes se cruzan fuera de una circunferencia. Los arcos interceptados por el ángulo exterior y su prolongación miden 140° y 60°. ¿Cuánto mide ese ángulo exterior?",
+    "options": [
+      "$40\\,\\mathrm{^\\circ}$",
+      "$80\\,\\mathrm{^\\circ}$",
+      "$20\\,\\mathrm{^\\circ}$",
+      "$120\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El ángulo exterior es la mitad de la diferencia de arcos.\n2. Usamos los datos indicados: $\\alpha=(140^\\circ-60^\\circ)/2$.\n3. El resultado es $40\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t07_s02_c06",
+    "concept": "7.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 7,
+    "statement": "Dos cuerdas se cortan dentro de una circunferencia. Los arcos opuestos interceptados por un ángulo y su opuesto por el vértice miden 100° y 80°. ¿Cuánto mide ese ángulo?",
+    "options": [
+      "$180\\,\\mathrm{^\\circ}$",
+      "$45\\,\\mathrm{^\\circ}$",
+      "$270\\,\\mathrm{^\\circ}$",
+      "$90\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El ángulo interior es la mitad de la suma de esos arcos.\n2. Usamos los datos indicados: $\\alpha=(100^\\circ+80^\\circ)/2$.\n3. El resultado es $90\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t07_s02_c07",
+    "concept": "7.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 7,
+    "statement": "Un ángulo inscrito intercepta un arco de 120° que no contiene su vértice. ¿Cuánto mide el ángulo?",
+    "options": [
+      "$30\\,\\mathrm{^\\circ}$",
+      "$180\\,\\mathrm{^\\circ}$",
+      "$60\\,\\mathrm{^\\circ}$",
+      "$120\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El ángulo inscrito mide la mitad del arco interceptado.\n2. Usamos los datos indicados: $\\alpha=120^\\circ/2$.\n3. El resultado es $60\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t07_s02_c08",
+    "concept": "7.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 7,
+    "statement": "Una tangente y una cuerda forman un ángulo que intercepta un arco de 80°. ¿Cuánto mide ese ángulo semiinscrito?",
+    "options": [
+      "$120\\,\\mathrm{^\\circ}$",
+      "$40\\,\\mathrm{^\\circ}$",
+      "$80\\,\\mathrm{^\\circ}$",
+      "$20\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La medida es la mitad del arco interceptado correspondiente.\n2. Usamos los datos indicados: $\\alpha=80^\\circ/2$.\n3. El resultado es $40\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t07_s02_c09",
+    "concept": "7.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 7,
+    "statement": "Desde un punto exterior, una tangente mide 8 cm. Una secante desde ese punto tiene segmento exterior 4 cm. ¿Cuánto mide la secante total?",
+    "options": [
+      "$16\\,\\mathrm{cm}$",
+      "$32\\,\\mathrm{cm}$",
+      "$8\\,\\mathrm{cm}$",
+      "$48\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Igualamos tangente al cuadrado con exterior por total.\n2. Usamos los datos indicados: $8^2=4L\\Rightarrow L=16$.\n3. El resultado es $16\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t07_s02_c10",
+    "concept": "7.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 7,
+    "statement": "Pitot afirma una condición necesaria para un cuadrilátero tangencial:…",
+    "options": [
+      "Sus lados opuestos son siempre iguales uno a uno.",
+      "Las sumas de los pares de lados opuestos son iguales.",
+      "Todas sus diagonales son diámetros.",
+      "Sus cuatro ángulos son rectos."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los segmentos tangentes desde cada vértice son iguales por pares.\n2. Al sumar lados opuestos se reúnen los mismos cuatro tramos tangentes.\n3. Se igualan las sumas; no se deduce igualdad individual de lados.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t07_s02_c11",
+    "concept": "7.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 7,
+    "statement": "Si un cuadrilátero convexo está inscrito en una circunferencia, sus ángulos opuestos…",
+    "options": [
+      "Son siempre iguales.",
+      "Suman 90°.",
+      "Suman 180°.",
+      "Suman 360°."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Los arcos que interceptan dos ángulos opuestos completan la circunferencia.\n2. Cada ángulo inscrito es la mitad de su arco.\n3. La suma de ambos es media vuelta.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

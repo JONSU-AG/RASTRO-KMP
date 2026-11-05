@@ -1,0 +1,1327 @@
+FJ2417
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2417
+# Representation ID : BP10131
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7247
+# English name : Left anterior cusp of pulmonary valve
+# Bounds(mm): (23.140200,-159.581000,1244.900000)-(40.921500,-139.537000,1261.450000)
+# Volume(cm3): 0.731300
+#
+
+FJ2418
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2418
+# Representation ID : BP9842
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7265
+# English name : Anterolateral head of lateral papillary muscle of left ventricle
+# Bounds(mm): (31.544700,-160.032000,1191.810100)-(56.589200,-124.512000,1224.650000)
+# Volume(cm3): 5.468400
+#
+
+FJ2419
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2419
+# Representation ID : BP10231
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7260
+# English name : Anterior papillary muscle of right ventricle
+# Bounds(mm): (12.058300,-172.710000,1179.800100)-(47.142400,-151.131000,1209.050100)
+# Volume(cm3): 3.024400
+#
+
+FJ2420
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2420
+# Representation ID : BP9874
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7242
+# English name : Anterior leaflet of mitral valve
+# Bounds(mm): (11.721700,-141.625000,1204.460000)-(45.887900,-93.102200,1235.920000)
+# Volume(cm3): 1.271500
+#
+
+FJ2421
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2421
+# Representation ID : BP9920
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7238
+# English name : Anterior leaflet of tricuspid valve
+# Bounds(mm): (-21.077200,-156.313000,1198.110000)-(23.204700,-129.198000,1236.210000)
+# Volume(cm3): 1.577900
+#
+
+FJ2422
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2422
+# Representation ID : BP10057
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA9466
+# English name : Cavity of left ventricle
+# Bounds(mm): (6.467500,-158.522000,1184.070000)-(70.246300,-86.401600,1251.550100)
+# Volume(cm3): 97.045500
+#
+
+FJ2423
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2423
+# Representation ID : BP10208
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA9291
+# English name : Cavity of right ventricle
+# Bounds(mm): (-18.845800,-173.418000,1179.480000)-(52.663400,-115.195000,1260.030000)
+# Volume(cm3): 116.344000
+#
+
+FJ2424
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2424
+# Representation ID : BP9906
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA11359
+# English name : Cavity of right atrium
+# Bounds(mm): (-34.203000,-153.569000,1185.260000)-(3.187100,-92.441500,1277.520000)
+# Volume(cm3): 84.265100
+#
+
+FJ2425
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2425
+# Representation ID : BP9925
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA9465
+# English name : Cavity of left atrium
+# Bounds(mm): (-20.384600,-126.761000,1206.450000)-(48.323700,-70.990500,1268.290000)
+# Volume(cm3): 51.364700
+#
+
+FJ2426
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2426
+# Representation ID : BP9993
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7254
+# English name : Left posterior cusp of aortic valve
+# Bounds(mm): (16.596900,-126.656000,1240.700000)-(32.388200,-106.410000,1255.080000)
+# Volume(cm3): 0.703900
+#
+
+FJ2427
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2427
+# Representation ID : BP9867
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7250
+# English name : Posterior cusp of pulmonary valve
+# Bounds(mm): (23.549400,-142.209000,1245.189900)-(40.595900,-127.603000,1261.620000)
+# Volume(cm3): 0.651100
+#
+
+FJ2429
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2429
+# Representation ID : BP9853
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7264
+# English name : Lateral papillary muscle of left ventricle
+# Bounds(mm): (46.464800,-146.920000,1188.439900)-(74.540400,-104.767000,1218.260000)
+# Volume(cm3): 5.068100
+#
+
+FJ2430
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2430
+# Representation ID : BP9637
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7261
+# English name : Posterior papillary muscle of right ventricle
+# Bounds(mm): (7.164500,-160.418000,1178.439900)-(36.776600,-131.886000,1192.790000)
+# Volume(cm3): 2.270800
+#
+
+FJ2431
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2431
+# Representation ID : BP9446
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7252
+# English name : Right posterior cusp of aortic valve
+# Bounds(mm): (5.667700,-123.847000,1233.410000)-(23.239600,-104.826000,1250.520000)
+# Volume(cm3): 0.990300
+#
+
+FJ2432
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2432
+# Representation ID : BP9998
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7243
+# English name : Posterior leaflet of mitral valve
+# Bounds(mm): (13.574500,-123.267000,1199.600000)-(62.854300,-85.444600,1231.650000)
+# Volume(cm3): 1.128000
+#
+
+FJ2433
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2433
+# Representation ID : BP9829
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7239
+# English name : Posterior leaflet of tricuspid valve
+# Bounds(mm): (-18.957800,-145.256000,1188.640000)-(16.470100,-113.717000,1216.200000)
+# Volume(cm3): 0.718000
+#
+
+FJ2434
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2434
+# Representation ID : BP10108
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7249
+# English name : Right anterior cusp of pulmonary valve
+# Bounds(mm): (8.767900,-156.869000,1248.070000)-(27.524500,-132.880000,1265.270000)
+# Volume(cm3): 0.979700
+#
+
+FJ2435
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2435
+# Representation ID : BP9760
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7253
+# English name : Anterior cusp of aortic valve
+# Bounds(mm): (6.992200,-132.441000,1234.700000)-(26.656200,-118.971000,1252.730000)
+# Volume(cm3): 0.689600
+#
+
+FJ2436
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2436
+# Representation ID : BP9887
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7240
+# English name : Septal leaflet of tricuspid valve
+# Bounds(mm): (-6.484000,-137.745000,1213.140000)-(29.501400,-113.573000,1236.480000)
+# Volume(cm3): 0.566800
+#
+
+FJ2437
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2437
+# Representation ID : BP9594
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA7262
+# English name : Septal papillary muscle of right ventricle
+# Bounds(mm): (12.891200,-143.599000,1213.460000)-(32.174100,-128.195000,1240.170000)
+# Volume(cm3): 1.989000
+#
+
+FJ2438
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2438
+# Representation ID : BP10221
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA9531
+# English name : Wall of left atrium
+# Bounds(mm): (-22.880100,-151.151000,1199.430100)-(63.239200,-70.170400,1272.400000)
+# Volume(cm3): 40.493400
+#
+
+FJ2439
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2439
+# Representation ID : BP9921
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA9457
+# English name : Wall of right atrium
+# Bounds(mm): (-36.303700,-162.645000,1183.080000)-(6.777900,-96.345000,1279.500000)
+# Volume(cm3): 27.661700
+#
+
+FJ2631
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2631
+# Representation ID : BP10078
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA74912
+# English name : Trunk of anterior interventricular branch of left coronary artery
+# Bounds(mm): (33.292800,-168.008000,1179.540000)-(63.841300,-120.073000,1257.620000)
+# Volume(cm3): 0.684800
+#
+
+FJ2632
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2632
+# Representation ID : BP10050
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3872
+# English name : First right anterior branch of anterior interventricular branch of left coronary artery
+# Bounds(mm): (45.017600,-168.054000,1228.670000)-(49.955400,-163.655000,1230.460000)
+# Volume(cm3): 0.010000
+#
+
+FJ2633
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2633
+# Representation ID : BP9547
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3860
+# English name : Diagonal branch of anterior descending branch of left coronary artery
+# Bounds(mm): (65.693400,-140.950000,1210.200000)-(78.143600,-120.501000,1236.730000)
+# Volume(cm3): 0.028200
+#
+
+FJ2634
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2634
+# Representation ID : BP9547
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3860
+# English name : Diagonal branch of anterior descending branch of left coronary artery
+# Bounds(mm): (70.702900,-131.152000,1227.620000)-(73.642600,-119.706000,1233.910000)
+# Volume(cm3): 0.000500
+#
+
+FJ2635
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2635
+# Representation ID : BP9547
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3860
+# English name : Diagonal branch of anterior descending branch of left coronary artery
+# Bounds(mm): (53.298400,-168.108000,1181.990000)-(67.316300,-156.679000,1227.620000)
+# Volume(cm3): 0.060000
+#
+
+FJ2636
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2636
+# Representation ID : BP9547
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3860
+# English name : Diagonal branch of anterior descending branch of left coronary artery
+# Bounds(mm): (59.333200,-167.282000,1204.820000)-(62.759800,-162.844000,1219.410000)
+# Volume(cm3): 0.011900
+#
+
+FJ2637
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2637
+# Representation ID : BP9547
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3860
+# English name : Diagonal branch of anterior descending branch of left coronary artery
+# Bounds(mm): (62.935500,-161.326000,1182.730000)-(68.723900,-153.245000,1185.660000)
+# Volume(cm3): 0.017900
+#
+
+FJ2638
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2638
+# Representation ID : BP9547
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3860
+# English name : Diagonal branch of anterior descending branch of left coronary artery
+# Bounds(mm): (70.929700,-161.783000,1192.400000)-(76.010800,-151.165000,1198.990000)
+# Volume(cm3): 0.001100
+#
+
+FJ2639
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2639
+# Representation ID : BP9547
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3860
+# English name : Diagonal branch of anterior descending branch of left coronary artery
+# Bounds(mm): (71.111400,-153.497000,1183.580000)-(73.208900,-144.507000,1188.540000)
+# Volume(cm3): 0.024000
+#
+
+FJ2640
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2640
+# Representation ID : BP9547
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3860
+# English name : Diagonal branch of anterior descending branch of left coronary artery
+# Bounds(mm): (67.414500,-153.498000,1179.450000)-(73.208800,-146.035000,1188.550100)
+# Volume(cm3): 0.009000
+#
+
+FJ2641
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2641
+# Representation ID : BP9888
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3876
+# English name : Third right anterior branch of anterior interventricular branch of left coronary artery
+# Bounds(mm): (46.269200,-168.949000,1181.670000)-(54.627100,-158.587000,1205.540000)
+# Volume(cm3): 0.017400
+#
+
+FJ2642
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2642
+# Representation ID : BP9547
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3860
+# English name : Diagonal branch of anterior descending branch of left coronary artery
+# Bounds(mm): (50.062600,-147.441000,1194.770000)-(79.391300,-133.270000,1243.610000)
+# Volume(cm3): 0.109400
+#
+
+FJ2643
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2643
+# Representation ID : BP9555
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3868
+# English name : Conus branch of anterior interventricular branch of left coronary artery
+# Bounds(mm): (33.617800,-171.783000,1239.390000)-(50.415700,-143.073000,1247.020000)
+# Volume(cm3): 0.080800
+#
+
+FJ2644
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2644
+# Representation ID : BP9555
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3868
+# English name : Conus branch of anterior interventricular branch of left coronary artery
+# Bounds(mm): (28.831800,-170.795000,1243.300100)-(43.360500,-163.058000,1246.950000)
+# Volume(cm3): 0.005300
+#
+
+FJ2645
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2645
+# Representation ID : BP10050
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3872
+# English name : First right anterior branch of anterior interventricular branch of left coronary artery
+# Bounds(mm): (42.177000,-171.082000,1223.580000)-(53.142800,-152.680000,1235.500000)
+# Volume(cm3): 0.053000
+#
+
+FJ2646
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2646
+# Representation ID : BP10042
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3874
+# English name : Second right anterior branch of anterior interventricular branch of left coronary artery
+# Bounds(mm): (37.166400,-172.766000,1196.870000)-(54.544000,-160.897000,1222.300100)
+# Volume(cm3): 0.063800
+#
+
+FJ2647
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2647
+# Representation ID : BP9888
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3876
+# English name : Third right anterior branch of anterior interventricular branch of left coronary artery
+# Bounds(mm): (40.427000,-167.238000,1182.830000)-(47.104100,-160.586000,1192.260000)
+# Volume(cm3): 0.006700
+#
+
+FJ2648
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2648
+# Representation ID : BP9547
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3860
+# English name : Diagonal branch of anterior descending branch of left coronary artery
+# Bounds(mm): (74.363200,-148.184000,1210.090000)-(77.092600,-140.968000,1223.070000)
+# Volume(cm3): 0.011800
+#
+
+FJ2649
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2649
+# Representation ID : BP9745
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3895
+# English name : Circumflex branch of left coronary artery
+# Bounds(mm): (34.355300,-121.957000,1222.380000)-(50.517700,-86.980500,1256.310100)
+# Volume(cm3): 0.246500
+#
+
+FJ2650
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2650
+# Representation ID : BP9745
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3895
+# English name : Circumflex branch of left coronary artery
+# Bounds(mm): (55.286500,-95.763400,1199.680100)-(59.817600,-89.426400,1216.540000)
+# Volume(cm3): 0.007800
+#
+
+FJ2651
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2651
+# Representation ID : BP9745
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3895
+# English name : Circumflex branch of left coronary artery
+# Bounds(mm): (58.756000,-115.551000,1211.070000)-(75.633200,-92.256200,1218.220000)
+# Volume(cm3): 0.035100
+#
+
+FJ2652
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2652
+# Representation ID : BP9745
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3895
+# English name : Circumflex branch of left coronary artery
+# Bounds(mm): (64.185600,-107.278000,1194.650000)-(68.242600,-97.319500,1209.610000)
+# Volume(cm3): 0.012700
+#
+
+FJ2653
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2653
+# Representation ID : BP9745
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3895
+# English name : Circumflex branch of left coronary artery
+# Bounds(mm): (73.745700,-128.307000,1188.330000)-(76.831100,-119.449000,1198.680100)
+# Volume(cm3): 0.003200
+#
+
+FJ2654
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2654
+# Representation ID : BP9745
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3895
+# English name : Circumflex branch of left coronary artery
+# Bounds(mm): (74.166700,-142.845000,1187.820000)-(76.491600,-131.297000,1192.210000)
+# Volume(cm3): 0.087200
+#
+
+FJ2655
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2655
+# Representation ID : BP10136
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA4706
+# English name : Coronary sinus
+# Bounds(mm): (-5.522400,-115.565000,1197.500000)-(43.269300,-81.108300,1216.680100)
+# Volume(cm3): 1.304900
+#
+
+FJ2656
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2656
+# Representation ID : BP10060
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA4707
+# English name : Great cardiac vein
+# Bounds(mm): (39.908800,-126.878000,1213.780000)-(48.562200,-81.922800,1253.460000)
+# Volume(cm3): 0.541100
+#
+
+FJ2667
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2667
+# Representation ID : BP9776
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3818
+# English name : Marginal branch of right coronary artery
+# Bounds(mm): (13.297500,-173.963000,1195.640000)-(33.977000,-169.338000,1204.850000)
+# Volume(cm3): 0.046300
+#
+
+FJ2668
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2668
+# Representation ID : BP9776
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3818
+# English name : Marginal branch of right coronary artery
+# Bounds(mm): (23.762300,-173.797000,1201.580000)-(35.717600,-172.332000,1205.790000)
+# Volume(cm3): 0.023100
+#
+
+FJ2670
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2670
+# Representation ID : BP9911
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3807
+# English name : Right conus artery
+# Bounds(mm): (7.007900,-169.622000,1247.030000)-(26.870700,-151.582000,1259.080000)
+# Volume(cm3): 0.017200
+#
+
+FJ2671
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2671
+# Representation ID : BP9354
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3815
+# English name : First anterior ventricular branch of right coronary artery
+# Bounds(mm): (0.417100,-176.517000,1222.240000)-(24.483200,-159.262000,1245.430100)
+# Volume(cm3): 0.044700
+#
+
+FJ2672
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2672
+# Representation ID : BP9776
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3818
+# English name : Marginal branch of right coronary artery
+# Bounds(mm): (-14.289600,-173.149000,1194.380000)-(26.030100,-158.580000,1220.110000)
+# Volume(cm3): 0.054300
+#
+
+FJ2673
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2673
+# Representation ID : BP9354
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3815
+# English name : First anterior ventricular branch of right coronary artery
+# Bounds(mm): (11.319500,-176.509000,1222.500000)-(33.614500,-172.346000,1232.470000)
+# Volume(cm3): 0.025000
+#
+
+FJ2674
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2674
+# Representation ID : BP9776
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3818
+# English name : Marginal branch of right coronary artery
+# Bounds(mm): (3.937200,-170.947000,1195.560100)-(15.607600,-167.824000,1207.930100)
+# Volume(cm3): 0.018000
+#
+
+FJ2675
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2675
+# Representation ID : BP9776
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3818
+# English name : Marginal branch of right coronary artery
+# Bounds(mm): (-6.414800,-166.412000,1203.130000)-(-0.126100,-164.082000,1212.530000)
+# Volume(cm3): 0.020900
+#
+
+FJ2676
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2676
+# Representation ID : BP9911
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3807
+# English name : Right conus artery
+# Bounds(mm): (18.433800,-165.493000,1253.439900)-(32.723900,-163.242000,1257.640000)
+# Volume(cm3): 0.008000
+#
+
+FJ2677
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2677
+# Representation ID : BP9354
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3815
+# English name : First anterior ventricular branch of right coronary artery
+# Bounds(mm): (20.933200,-176.313000,1226.870000)-(34.177000,-174.160000,1231.439900)
+# Volume(cm3): 0.005200
+#
+
+FJ2692
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2692
+# Representation ID : BP9400
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3840
+# English name : Posterior interventricular branch of right coronary artery
+# Bounds(mm): (-0.896800,-151.046000,1175.880000)-(65.567800,-119.205000,1190.439900)
+# Volume(cm3): 0.119200
+#
+
+FJ2693
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2693
+# Representation ID : BP9400
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3840
+# English name : Posterior interventricular branch of right coronary artery
+# Bounds(mm): (-0.780900,-138.002000,1174.920000)-(57.640700,-117.587000,1191.400000)
+# Volume(cm3): 0.075400
+#
+
+FJ2694
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2694
+# Representation ID : BP9400
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3840
+# English name : Posterior interventricular branch of right coronary artery
+# Bounds(mm): (17.739300,-122.364000,1177.780000)-(34.478500,-118.092000,1182.450000)
+# Volume(cm3): 0.005000
+#
+
+FJ2695
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2695
+# Representation ID : BP9400
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3840
+# English name : Posterior interventricular branch of right coronary artery
+# Bounds(mm): (37.641400,-134.781000,1174.950000)-(46.478500,-128.965000,1178.650000)
+# Volume(cm3): 0.006300
+#
+
+FJ2696
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2696
+# Representation ID : BP9400
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3840
+# English name : Posterior interventricular branch of right coronary artery
+# Bounds(mm): (17.456600,-153.798000,1177.970000)-(31.578200,-128.465000,1181.300100)
+# Volume(cm3): 0.142600
+#
+
+FJ2697
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2697
+# Representation ID : BP9400
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3840
+# English name : Posterior interventricular branch of right coronary artery
+# Bounds(mm): (38.799100,-153.360000,1175.890000)-(41.558300,-140.870000,1178.530000)
+# Volume(cm3): 0.010500
+#
+
+FJ2698
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2698
+# Representation ID : BP9400
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3840
+# English name : Posterior interventricular branch of right coronary artery
+# Bounds(mm): (39.459900,-154.170000,1175.900000)-(45.111400,-145.197000,1178.910000)
+# Volume(cm3): 0.003900
+#
+
+FJ2699
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2699
+# Representation ID : BP9400
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3840
+# English name : Posterior interventricular branch of right coronary artery
+# Bounds(mm): (60.371600,-153.435000,1177.900000)-(66.878500,-149.881000,1181.470000)
+# Volume(cm3): 0.026100
+#
+
+FJ2700
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2700
+# Representation ID : BP9400
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3840
+# English name : Posterior interventricular branch of right coronary artery
+# Bounds(mm): (56.449900,-155.870000,1177.350000)-(62.739500,-148.287000,1181.490000)
+# Volume(cm3): 0.003300
+#
+
+FJ2714
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2714
+# Representation ID : BP9298
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3837
+# English name : First posterior ventricular branch of right coronary artery
+# Bounds(mm): (19.339000,-130.561000,1178.000000)-(68.322400,-93.367400,1194.800100)
+# Volume(cm3): 0.177000
+#
+
+FJ2715
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2715
+# Representation ID : BP9298
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3837
+# English name : First posterior ventricular branch of right coronary artery
+# Bounds(mm): (67.565400,-134.496000,1179.750000)-(73.592600,-129.698000,1186.860000)
+# Volume(cm3): 0.003000
+#
+
+FJ2716
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2716
+# Representation ID : BP9298
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3837
+# English name : First posterior ventricular branch of right coronary artery
+# Bounds(mm): (67.552200,-139.107000,1179.650000)-(72.080100,-129.802000,1184.880000)
+# Volume(cm3): 0.000400
+#
+
+FJ2717
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2717
+# Representation ID : BP9298
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3837
+# English name : First posterior ventricular branch of right coronary artery
+# Bounds(mm): (26.225500,-95.239500,1189.270000)-(42.330100,-88.631700,1195.030000)
+# Volume(cm3): 0.013300
+#
+
+FJ2718
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2718
+# Representation ID : BP9298
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3837
+# English name : First posterior ventricular branch of right coronary artery
+# Bounds(mm): (38.770500,-99.312700,1184.110000)-(44.868700,-95.475500,1188.070000)
+# Volume(cm3): 0.012500
+#
+
+FJ2719
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2719
+# Representation ID : BP9298
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3837
+# English name : First posterior ventricular branch of right coronary artery
+# Bounds(mm): (42.874500,-116.788000,1176.200000)-(46.439800,-104.653000,1181.560100)
+# Volume(cm3): 0.020400
+#
+
+FJ2720
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2720
+# Representation ID : BP9298
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3837
+# English name : First posterior ventricular branch of right coronary artery
+# Bounds(mm): (53.370700,-109.305000,1179.910000)-(65.198900,-106.854000,1189.030000)
+# Volume(cm3): 0.007100
+#
+
+FJ2721
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2721
+# Representation ID : BP9298
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3837
+# English name : First posterior ventricular branch of right coronary artery
+# Bounds(mm): (61.824300,-120.001000,1178.120000)-(72.330100,-115.894000,1189.180100)
+# Volume(cm3): 0.024900
+#
+
+FJ2722
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2722
+# Representation ID : BP9298
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3837
+# English name : First posterior ventricular branch of right coronary artery
+# Bounds(mm): (60.989600,-134.395000,1175.570000)-(63.524400,-116.931000,1179.070000)
+# Volume(cm3): 0.024500
+#
+
+FJ2723
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2723
+# Representation ID : BP9674
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3802
+# English name : Trunk of right coronary artery
+# Bounds(mm): (-21.747600,-162.494000,1187.939900)-(20.738500,-93.304200,1261.070000)
+# Volume(cm3): 0.849400
+#
+
+FJ2724
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2724
+# Representation ID : BP9967
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA4714
+# English name : Small cardiac vein
+# Bounds(mm): (-20.840100,-160.431000,1202.070000)-(-1.885500,-147.219000,1241.130000)
+# Volume(cm3): 0.105500
+#
+
+FJ2727
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2727
+# Representation ID : BP9791
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA4716
+# English name : Right marginal vein
+# Bounds(mm): (-20.750000,-156.715000,1178.700000)-(54.833500,-148.373000,1206.270000)
+# Volume(cm3): 0.053800
+#
+
+FJ2728
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2728
+# Representation ID : BP9791
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA4716
+# English name : Right marginal vein
+# Bounds(mm): (-5.138600,-166.860000,1201.670000)-(2.342600,-165.405000,1213.840000)
+# Volume(cm3): 0.011900
+#
+
+FJ2729
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2729
+# Representation ID : BP9791
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA4716
+# English name : Right marginal vein
+# Bounds(mm): (12.474500,-172.408000,1193.060100)-(28.108200,-167.839000,1203.650000)
+# Volume(cm3): 0.025200
+#
+
+FJ2731
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2731
+# Representation ID : BP9967
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA4714
+# English name : Small cardiac vein
+# Bounds(mm): (-20.316500,-148.928000,1186.600000)-(5.994900,-114.357000,1203.830000)
+# Volume(cm3): 0.181000
+#
+
+FJ2737
+#
+# The license for this database is specified in the Creative Commons Attribution-Share Alike 2.1 Japan. If you use data from this database, please be sure attribute this database as follows: "BodyParts3D, (c)  The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan".
+# http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+#
+#
+# Compatibility version : 4.0
+# File ID : FJ2737
+# Representation ID : BP10074
+# Build-up logic : FMA 3.0 part_of
+# Concept ID : FMA3855
+# English name : Trunk of left coronary artery
+# Bounds(mm): (23.389300,-123.425000,1253.950000)-(34.405000,-117.304000,1260.820000)
+# Volume(cm3): 0.115000
+#

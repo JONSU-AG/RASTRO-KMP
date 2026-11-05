@@ -1,1 +1,200 @@
-[{"concept":"6.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t06_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"6.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t06_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"6.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t06_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"6.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t06_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"6.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t06_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"6.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t06_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"6.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t06_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"6.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t06_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"6.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t06_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"6.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t06_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "6.2.1",
+    "correctIndex": 0,
+    "explanation": "1. Agrupamos o evaluamos para comprobar un divisor binómico.\n2. Sustituimos y operamos: $4^3-4\\cdot 4^2-4+4$.\n3. El valor pedido es $0$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t06_s02_c01",
+    "options": [
+      "$0$",
+      "$1$",
+      "$2$",
+      "$3$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 6,
+    "statement": "P(x)=x³−4x²−x+4. ¿Cuál es P(4)?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.2",
+    "correctIndex": 3,
+    "explanation": "1. Los productos cruzados suman coeficientes negativos.\n2. Sustituimos y operamos: $-4x-5x=-9x$.\n3. El valor pedido es $-9$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t06_s02_c02",
+    "options": [
+      "$-8$",
+      "$-10$",
+      "$-18$",
+      "$-9$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 6,
+    "statement": "En (x−4)(x−5), ¿cuál es el coeficiente de x al desarrollar?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.3",
+    "correctIndex": 2,
+    "explanation": "1. Un cuadrado real es no negativo y se le suma una constante positiva.\n2. Sustituimos y operamos: $x^2=-16<0$.\n3. El valor pedido es $0$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t06_s02_c03",
+    "options": [
+      "$2$",
+      "$3$",
+      "$0$",
+      "$1$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 6,
+    "statement": "¿Cuántas raíces reales distintas tiene x²+16=0?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.4",
+    "correctIndex": 1,
+    "explanation": "1. La multiplicidad es el exponente del factor asociado a esa raíz.\n2. Sustituimos y operamos: $(x-4)^2$.\n3. El valor pedido es $2$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t06_s02_c04",
+    "options": [
+      "$4$",
+      "$2$",
+      "$3$",
+      "$1$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 6,
+    "statement": "El polinomio (x−4)²(x+5) tiene la raíz 4. ¿Cuál es su multiplicidad?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.5",
+    "correctIndex": 0,
+    "explanation": "1. La suma de raíces de un cuadrático mónico es el opuesto del coeficiente lineal.\n2. Sustituimos y operamos: $r+t=9$.\n3. El valor pedido es $9$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t06_s02_c05",
+    "options": [
+      "$9$",
+      "$10$",
+      "$8$",
+      "$18$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 6,
+    "statement": "Si x²−9x+20=(x−r)(x−t), ¿cuánto vale r+t?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.6",
+    "correctIndex": 3,
+    "explanation": "1. Agrupamos o evaluamos para comprobar un divisor binómico.\n2. Sustituimos y operamos: $5^3-5\\cdot 5^2-5+5$.\n3. El valor pedido es $0$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t06_s02_c06",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$0$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 6,
+    "statement": "P(x)=x³−5x²−x+5. ¿Cuál es P(5)?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.7",
+    "correctIndex": 2,
+    "explanation": "1. Los productos cruzados suman coeficientes negativos.\n2. Sustituimos y operamos: $-5x-6x=-11x$.\n3. El valor pedido es $-11$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t06_s02_c07",
+    "options": [
+      "$-12$",
+      "$-22$",
+      "$-11$",
+      "$-10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 6,
+    "statement": "En (x−5)(x−6), ¿cuál es el coeficiente de x al desarrollar?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.8",
+    "correctIndex": 1,
+    "explanation": "1. Un cuadrado real es no negativo y se le suma una constante positiva.\n2. Sustituimos y operamos: $x^2=-25<0$.\n3. El valor pedido es $0$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t06_s02_c08",
+    "options": [
+      "$3$",
+      "$0$",
+      "$1$",
+      "$2$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 6,
+    "statement": "¿Cuántas raíces reales distintas tiene x²+25=0?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.9",
+    "correctIndex": 0,
+    "explanation": "1. La multiplicidad es el exponente del factor asociado a esa raíz.\n2. Sustituimos y operamos: $(x-5)^2$.\n3. El valor pedido es $2$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t06_s02_c09",
+    "options": [
+      "$2$",
+      "$3$",
+      "$1$",
+      "$4$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 6,
+    "statement": "El polinomio (x−5)²(x+6) tiene la raíz 5. ¿Cuál es su multiplicidad?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.10",
+    "correctIndex": 3,
+    "explanation": "1. La suma de raíces de un cuadrático mónico es el opuesto del coeficiente lineal.\n2. Sustituimos y operamos: $r+t=11$.\n3. El valor pedido es $11$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t06_s02_c10",
+    "options": [
+      "$12$",
+      "$10$",
+      "$22$",
+      "$11$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 6,
+    "statement": "Si x²−11x+30=(x−r)(x−t), ¿cuánto vale r+t?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "6.2.11",
+    "correctIndex": 2,
+    "explanation": "1. Agrupamos o evaluamos para comprobar un divisor binómico.\n2. Sustituimos y operamos: $6^3-6\\cdot 6^2-6+6$.\n3. El valor pedido es $0$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t06_s02_c11",
+    "options": [
+      "$2$",
+      "$3$",
+      "$0$",
+      "$1$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 6,
+    "statement": "P(x)=x³−6x²−x+6. ¿Cuál es P(6)?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

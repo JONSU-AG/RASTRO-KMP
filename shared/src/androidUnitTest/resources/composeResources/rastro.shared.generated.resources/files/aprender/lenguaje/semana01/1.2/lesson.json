@@ -7,11 +7,11 @@
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana01.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_01_Comunicacion_y_Lenguaje.md",
   "learningObjectives": [
-    "Clasificar la comunicación según el código: verbal, no verbal y no humana",
-    "Distinguir comunicación intrapersonal de interpersonal con ejemplos",
-    "Diferenciar comunicación directa de indirecta por espacio y tiempo",
-    "Clasificar actos según direccionalidad: unidireccional vs. bidireccional",
-    "Distinguir comunicación privada de pública o de masas en casos UNSA"
+    "Distinguir participantes, recursos lingüísticos y modalidades sensoriales como criterios diferentes",
+    "Clasificar un diálogo interior explícito dentro del modelo intrapersonal",
+    "Separar copresencia, mediación, distancia y sincronía en casos delimitados",
+    "Clasificar el flujo descrito sin confundir demora con ausencia de respuesta",
+    "Distinguir destinatario privado, acceso público y difusión de masas sin equipararlos"
   ],
   "theory": {
     "id": "th_leng_t01_s02",
@@ -20,15 +20,15 @@
     "titulo": "Tipología de la Comunicación: Clasificación y Criterios",
     "resumen": "",
     "conceptosClave": [
-      "Verbal = palabra oral o escrita; no verbal = sirena, semáforo, guiño, braille, distancia",
-      "No humana = señales instintivas animales como danza de abejas y feromonas",
-      "Intrapersonal = monólogo interior; interpersonal = dos o más personas",
-      "Directa = mismo espacio-tiempo; indirecta = distancia espacial o temporal",
-      "Unidireccional = sin retorno inmediato; bidireccional = intercambio de roles",
-      "Privada = destinatario selecto; pública = colectividad anónima",
-      "Un acto se clasifica a la vez por los cinco criterios"
+      "Humana o no humana: atiende a los participantes del caso",
+      "Lingüística y no lingüística: no equivalen a oral y visual",
+      "Un texto en español transcrito a braille conserva contenido lingüístico; su lectura puede ser táctil",
+      "Intrapersonal: diálogo para sí en el modelo señalado; interpersonal: entre personas",
+      "Presencia, mediación y sincronía son criterios que deben separarse",
+      "Unidireccional o bidireccional: depende del tramo y del retorno descritos",
+      "Público no equivale necesariamente a masivo; privado no garantiza confidencialidad"
     ],
-    "admissionTip": "Cartel, radio, periódico y libro de Homero son unidireccionales e indirectos; debate, diálogo y llamada con respuesta son bidireccionales; carta personal es privada e indirecta.",
-    "admissionExplanation": "Admisión combina criterios en un solo caso: primero ubica código, luego relación, espacio, direccionalidad y alcance del destinatario."
+    "admissionTip": "Delimita qué intercambio se analiza y aplica solo los criterios que permiten sus datos. En un debate televisado, distingue a los interlocutores presentes de la audiencia remota.",
+    "admissionExplanation": "El braille permite representar texto lingüístico mediante lectura táctil. Una señal acústica puede ser no lingüística, y un intercambio a distancia puede tener respuesta inmediata o diferida."
   }
 }

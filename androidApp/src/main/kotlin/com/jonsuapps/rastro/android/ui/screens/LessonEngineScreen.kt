@@ -66,6 +66,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
+import kotlinx.coroutines.launch
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -149,7 +151,9 @@ private fun LoadedLessonEngineScreen(
     val hearts by GamificationManager.hearts.collectAsState()
     val proActive by com.jonsuapps.rastro.monetization.ProAccess.isActive.collectAsState()
     val currentUser by UserManager.currentUser.collectAsState()
-    val isAdmin = remember(currentUser.email) { AdminConfig.isAdmin(currentUser.email) }
+    val userViewMode by AdminConfig.userViewMode.collectAsState()
+    val isAdmin = !userViewMode && com.jonsuapps.rastro.android.data.GamificationRepository.isVerifiedAdmin(currentUser.uid)
+    var notebookOpen by remember(lessonId) { mutableStateOf(false) }
     var isAutoModeEnabled by remember(lessonId) { mutableStateOf(false) }
 
     // Las preguntas falladas vuelven una vez en la fase Fénix, después del bloque original.
@@ -230,8 +234,8 @@ private fun LoadedLessonEngineScreen(
     }
 
     // Auto-selección rápida exclusiva para ADMIN en modo prueba (sin auto-avance ni alteración de flujo)
-    LaunchedEffect(currentStep, isRedemptionPhase, isAutoModeEnabled) {
-        if (isAdmin && isAutoModeEnabled && currentChallenge != null && !isAnswerChecked) {
+    LaunchedEffect(currentStep, isRedemptionPhase, isAutoModeEnabled, notebookOpen, isAdmin) {
+        if (isAdmin && isAutoModeEnabled && !notebookOpen && currentChallenge != null && !isAnswerChecked) {
             when (currentChallenge.type) {
                 ChallengeType.MULTIPLE_CHOICE -> {
                     selectedOptionIndex = currentChallenge.correctIndex
@@ -255,8 +259,11 @@ private fun LoadedLessonEngineScreen(
         }
     }
 
-    val totalSteps = lesson.challenges.size + missedChallenges.size + 2
-    val progress = ((currentStep + 1).coerceAtLeast(0).toFloat() / totalSteps.coerceAtLeast(1)).coerceIn(0f, 1f)
+    val questionCount = if (isRedemptionPhase) missedChallenges.size else lesson.challenges.size
+    val questionNumber = if (isRedemptionPhase) currentStep - lesson.challenges.size else currentStep
+    val questionProgress = QuestionProgress(questionNumber, questionCount,
+        if(isLessonCompleted) questionCount else (questionNumber - 1 + if(isAnswerChecked) 1 else 0).coerceAtLeast(0))
+    FocusedQuestionMode(!isLessonCompleted)
 
     // Diálogo Modo Fénix / Redención 3D Cartoon
     if (showRedemptionModal) {
@@ -302,82 +309,26 @@ private fun LoadedLessonEngineScreen(
         }
     }
 
-    Column(
+StudyNotebookHost("lesson:${lesson.id}:${currentChallenge?.id ?: currentStep}", questionMode=currentChallenge != null && currentStep>0, onOpenChanged={notebookOpen=it},drawingContent={
+    currentChallenge?.let {question->com.jonsuapps.rastro.android.ui.components.AcademicText(question.statement,color=theme.textPrimary,style=MaterialTheme.typography.titleMedium,fontWeight=FontWeight.Bold)}
+}) {
+        Column(
         modifier = modifier
             .fillMaxSize()
             .background(theme.background)
     ) {
-        // Cabecera Superior: Salir (X), Barra de Progreso y Vidas
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 12.dp),
-            verticalAlignment = Alignment.CenterVertically
+        if(currentStep>0 && !isLessonCompleted) QuestionActivityHeader(
+            title = (if(isRedemptionPhase) "Repaso · " else "") + lesson.title,
+            progress = questionProgress,
+            onBack = {if(currentStep<=0) onFinishLesson() else showExitConfirmDialog=true},
+            hearts = if(proActive && !com.jonsuapps.rastro.monetization.PresentationMode.enabled) "∞" else "$hearts"
         ) {
-            IconButton(
-                onClick = {
-                    if (currentStep <= 0) {
-                        onFinishLesson()
-                    } else {
-                        showExitConfirmDialog = true
-                    }
-                },
-                modifier = Modifier
-                    .size(36.dp)
-                    .clip(RastroShapes.Pill)
-                    .background(theme.surface)
-            ) {
-                Icon(
-                    imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
-                    contentDescription = "Volver",
-                    tint = theme.textPrimary,
-                    modifier = Modifier.size(20.dp)
-                )
-            }
+            if(combo.value>=2) LessonComboIndicator(combo.value,comboPopEvent,theme)
+            if(isAdmin) AdminAutoTestChip(isAuto=isAutoModeEnabled,onToggle={isAutoModeEnabled=!isAutoModeEnabled})
+        }
 
-            Spacer(modifier = Modifier.width(12.dp))
-
-            LinearProgressIndicator(
-                progress = { progress },
-                modifier = Modifier
-                    .weight(1f)
-                    .height(8.dp)
-                    .clip(RastroShapes.Pill),
-                color = theme.accentText,
-                trackColor = theme.surfaceAccent
-            )
-
-            if (combo.value >= 2) {
-                Spacer(Modifier.width(8.dp))
-                LessonComboIndicator(combo.value, comboPopEvent, theme)
-            }
-
-            // Chip exclusivo para ADMIN: Auto-seleccionar respuesta correcta
-            if (isAdmin) {
-                Spacer(modifier = Modifier.width(10.dp))
-                AdminAutoTestChip(
-                    isAuto = isAutoModeEnabled,
-                    onToggle = { isAutoModeEnabled = !isAutoModeEnabled }
-                )
-            }
-
-            Spacer(modifier = Modifier.width(12.dp))
-
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Icon(
-                    imageVector = Icons.Rounded.Favorite,
-                    contentDescription = "Vidas",
-                    tint = Color(0xFFEF4444),
-                    modifier = Modifier.size(22.dp)
-                )
-                Spacer(modifier = Modifier.width(4.dp))
-                Text(
-                    text = if (proActive) "∞" else "$hearts",
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.Bold,
-                    color = theme.textPrimary
-                )
-            }
+        else Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically) {
+            IconButton(onClick=onFinishLesson) {Icon(Icons.AutoMirrored.Rounded.ArrowBack,"Volver",tint=theme.textPrimary)}
         }
 
         // Cuerpo Principal
@@ -584,6 +535,7 @@ private fun LoadedLessonEngineScreen(
             }
         }
     }
+    }
 }
 
 @Composable
@@ -703,42 +655,19 @@ fun ChallengeQuestionView(
     answerXp: Int = 5,
     comboEffect: ComboMilestoneEffect? = null
 ) {
+    val drawing = LocalQuestionDrawing.current
     val context = LocalContext.current
+    val questionScroll = rememberScrollState()
     var showExplanationModal by remember { mutableStateOf(false) }
     var showReportModal by remember { mutableStateOf(false) }
     var reportSent by remember(challenge.id) { mutableStateOf(false) }
     var reportSending by remember(challenge.id) { mutableStateOf(false) }
     var reportError by remember(challenge.id) { mutableStateOf<String?>(null) }
 
-    Box(
+    Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .padding(horizontal = 16.dp, vertical = 16.dp)
-                .padding(bottom = 140.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(5.dp)) {
-                    Icon(
-                        imageVector = if (isRedemptionPhase) Icons.Rounded.LocalFireDepartment else Icons.Rounded.TrackChanges,
-                        contentDescription = null,
-                        tint = if (isRedemptionPhase) Color(0xFFEF4444) else theme.accentText,
-                        modifier = Modifier.size(14.dp)
-                    )
-                    Text(
-                        text = if (isRedemptionPhase) "MODO FÉNIX • REDENCIÓN" else "PRÁCTICA OFICIAL • ${challenge.subject.uppercase()}",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = if (isRedemptionPhase) Color(0xFFEF4444) else theme.accentText,
-                        fontWeight = FontWeight.ExtraBold
-                    )
-                }
-                Text("Reto $stepNumber de $totalChallenges • Semana ${challenge.semana}", fontSize = 10.sp, color = theme.textSecondary, fontWeight = FontWeight.Bold)
-            }
-
+        QuestionScrollArea(questionScroll,Modifier.weight(1f).fillMaxWidth()) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
@@ -753,12 +682,12 @@ fun ChallengeQuestionView(
                     }
                     val character = remember { LearningArtworkResolver.character() }
                     val effect = comboEffect?.let(::resolveComboEffect)
-                    ClassicArtwork(effect?.appearance ?: appearance, Modifier.size(64.dp),
+                    ClassicArtwork(effect?.appearance ?: appearance, Modifier.size(44.dp),
                         character = effect?.character ?: character, speed = effect?.speed ?: 1f)
                 }
                 Text(
-                    text = challenge.instruction?.takeIf(String::isNotBlank)
-                        ?: if (isRedemptionPhase) "Revisa la explicación oficial y responde con seguridad." else "Aplica el principio general estudiado para deducir la solución correcta:",
+                    text = challenge.instruction?.takeIf {it.isNotBlank() && !it.trim().removeSuffix(":").equals("Aplica el principio general estudiado para deducir la solución correcta",ignoreCase=true)}
+                        ?: if (isRedemptionPhase) "Revisa la explicación e inténtalo otra vez." else if(challenge.type==ChallengeType.MATCH_PAIRS) "Relaciona los elementos." else "Lee y resuelve el ejercicio.",
                     modifier = Modifier.weight(1f).clip(RastroShapes.Squircle).background(theme.surface).border(1.dp, theme.borderSubtle, RastroShapes.Squircle).padding(12.dp),
                     color = theme.textPrimary,
                     fontSize = 12.sp,
@@ -767,11 +696,7 @@ fun ChallengeQuestionView(
                 )
             }
 
-            challenge.pedagogicalTier?.takeIf(String::isNotBlank)?.let { tier ->
-                Text(tier, color = theme.accentText, fontSize = 10.sp, fontWeight = FontWeight.Bold)
-            }
-
-            Text(
+            com.jonsuapps.rastro.android.ui.components.AcademicText(
                 text = challenge.statement,
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
@@ -784,7 +709,7 @@ fun ChallengeQuestionView(
                 Text("Actividad no disponible (${challenge.id}): ${activityErrors.joinToString()}\nPuedes reportar este contenido para que lo corrijamos.",
                     color = theme.answerText(false), fontWeight = FontWeight.Bold)
                 TextButton(onClick = { showReportModal = true }) { Text("Reportar actividad") }
-            } else when (challenge.type) {
+            } else if(!drawing) when (challenge.type) {
                 ChallengeType.MULTIPLE_CHOICE -> challenge.options.forEachIndexed { index, optionText ->
                     val isSelected = selectedOptionIndex == index
                     val isCorrectChoice = index == challenge.correctIndex
@@ -850,8 +775,12 @@ fun ChallengeQuestionView(
 
                             Spacer(modifier = Modifier.width(12.dp))
 
-                            Text(
+                            com.jonsuapps.rastro.android.ui.components.AcademicText(
                                 text = optionText,
+                                onMathClick = if (isAnswerChecked) null else ({
+                                    DuolingoHaptics.playOptionSelected(context)
+                                    onOptionSelected(index)
+                                }),
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.SemiBold,
                                 color = theme.textPrimary,
@@ -866,23 +795,23 @@ fun ChallengeQuestionView(
             }
         }
 
+
         // 2. Barrita Fija Inferior Estilo Duolingo
         val responseComplete = when (challenge.type) {
-            ChallengeType.MULTIPLE_CHOICE -> selectedOptionIndex != null
+            ChallengeType.MULTIPLE_CHOICE -> selectedOptionIndex in challenge.options.indices
             ChallengeType.FILL_BLANK -> ChallengeInteraction.fillingComplete(challenge, blankAnswers)
             ChallengeType.MATCH_PAIRS -> ChallengeInteraction.matchingComplete(challenge, matchState)
         }
 
-        Surface(
+        if(!drawing) Surface(
             modifier = Modifier
-                .fillMaxWidth()
-                .align(Alignment.BottomCenter),
+                .fillMaxWidth(),
             color = when {
                 isAnswerChecked && isCorrectAnswer -> theme.answerSurface(true)
                 isAnswerChecked && !isCorrectAnswer -> theme.answerSurface(false)
                 else -> theme.surface
             },
-            shadowElevation = 18.dp,
+            shadowElevation = 0.dp,
             border = androidx.compose.foundation.BorderStroke(
                 2.dp,
                 when {
@@ -896,7 +825,7 @@ fun ChallengeQuestionView(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 14.dp)
+                    .padding(horizontal = 14.dp, vertical = 8.dp)
             ) {
                 if (!isAnswerChecked) {
                     // Botón COMPROBAR fijo
@@ -1012,6 +941,10 @@ fun ChallengeQuestionView(
             LearningCelebrationDialog(
                 title = "Explicación",
                 message = if (challenge.explanation.isNotBlank()) challenge.explanation else "Esta pregunta volverá al final en el Modo Fénix para que la domines sin perder racha.",
+                messageContent = if (challenge.explanation.isNotBlank()) ({
+                    com.jonsuapps.rastro.android.ui.components.ResolutionPlayback(challenge.explanation)
+                    challenge.angleDegrees?.let { com.jonsuapps.rastro.android.ui.components.AngularConversionCard(it) }
+                }) else null,
                 onContinue = { showExplanationModal = false }
             ) {
                 ClassicArtwork(ClassicAppearance.ACHIEVEMENT, Modifier.size(140.dp))
@@ -1135,7 +1068,7 @@ private fun RedemptionPhoenixDialog(
                 Spacer(Modifier.height(14.dp))
 
                 Text(
-                    text = "🔥 ¡ACTIVANDO MODO FÉNIX!",
+                    text = "¡ACTIVANDO MODO FÉNIX!",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Black,
                     color = Color(0xFFEA580C),
@@ -1166,7 +1099,7 @@ private fun RedemptionPhoenixDialog(
                     contentPadding = PaddingValues(vertical = 12.dp)
                 ) {
                     Text(
-                        text = "¡ESTOY LISTO PARA LA REDENCIÓN! 🔥",
+                        text = "¡ESTOY LISTO PARA LA REDENCIÓN!",
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Black,
                         color = Color.White
@@ -1205,7 +1138,7 @@ private fun AdminAutoTestChip(
             horizontalArrangement = Arrangement.Center
         ) {
             Text(
-                text = if (isAuto) "⚡ Auto: ON" else "⚡ Auto: OFF",
+                text = if (isAuto) "Auto: ON" else "Auto: OFF",
                 fontSize = 11.sp,
                 fontWeight = FontWeight.Bold,
                 color = contentColor

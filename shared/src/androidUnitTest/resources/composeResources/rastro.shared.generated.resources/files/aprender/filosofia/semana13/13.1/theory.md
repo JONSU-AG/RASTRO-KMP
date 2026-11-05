@@ -6,23 +6,43 @@
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE LA ANTROPOLOGÍA FILOSÓFICA
 
-```
-                                  ANTROPOLOGÍA FILOSÓFICA
-                                             │
-         ┌──────────────────┬────────────────┴────────────────┬──────────────────┐
-         ▼                  ▼                                 ▼                  ▼
-    EL PROBLEMA        TEORÍAS SOBRE                     TEORÍAS SOBRE      LA DIGNIDAD DE
-    DEL ORIGEN         LA ESENCIA HUMANA                 LA EXISTENCIA      LA PERSONA HUMANA
-         │                  │                                 │                  │
-• Creacionismo       • Animal racional:                • Historicismo:     • Immanuel Kant:
-  (Fijismo divino)     Aristóteles                       - Ortega y Gasset   - Fin en sí mismo
-• Evolucionismo      • Ser espiritual:                   - Dilthey           - Precio vs.
-  (Darwin /            Max Scheler (Apertura           • Existencialismo:      Dignidad
-  Hominización)        al mundo: Weltoffenheit)          - Sartre: La      • Derechos
-                     • Animal simbólico:                   existencia        Humanos y
-                       Ernst Cassirer                      precede a la      Bioética
-                     • Homo Faber / Praxis:                esencia
-                       Karl Marx (Trabajo)
+```mermaid
+graph TD
+ ROOT["Condición humana: preguntas y perspectivas"]
+ B1["Origen y tipos de explicación"]
+ B1N1["La evolución humana se investiga mediante evidencia biológica, fósil y genética."]
+ B1N2["Las explicaciones religiosas de creación no equivalen siempre a fijismo; distinguir sus compromisos de las hipótesis científicas."]
+ B1N3["Compartir ascendencia con otros primates no significa descender de los chimpancés que viven hoy."]
+ B2["Interpretaciones filosóficas"]
+ B2N1["Aristóteles: la racionalidad ocupa un papel central en su comprensión de lo humano."]
+ B2N2["Scheler: atender a su interpretación del espíritu y apertura al mundo sin confundirla con una conclusión de biología experimental."]
+ B2N3["Cassirer: las formas simbólicas orientan su interpretación; no afirma solo que las personas dibujen signos."]
+ B2N4["Marx: situar trabajo y praxis en relaciones sociales e históricas."]
+ B3["Historia y existencia"]
+ B3N1["Dilthey y Ortega y Gasset: reconocer diferencias entre sus propuestas sobre vida e historia."]
+ B3N2["Sartre: la existencia precede a la esencia en su propuesta; no atribuir esta tesis a toda filosofía."]
+ B3N3["Comparar perspectivas sin convertir una caracterización parcial en definición definitiva de cada persona."]
+ B4["Dignidad y relaciones"]
+ B4N1["Kant: respetar a la persona como fin y no meramente como medio."]
+ B4N2["No identificar dignidad con precio, utilidad económica o capacidad de producir."]
+ B4N3["Distinguir explicación del origen, descripción de capacidades y justificación del trato debido a las personas."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---
@@ -274,3 +294,15 @@ E) Demuestra que los ensayos clínicos no están formalizados en el lenguaje de 
 - Persona Humana = Tiene **Dignidad** incondicional.
 
 ---
+
+
+### Separar niveles de una pregunta sobre lo humano
+
+| Pregunta | Tipo de investigación | Precaución |
+|---|---|---|
+| ¿Cómo evolucionó nuestra especie? | Evidencia biológica e histórica | No convertir una intuición filosófica en prueba fósil |
+| ¿Qué papel tienen lenguaje y símbolos? | Interpretación de capacidades y cultura | No reducir a Cassirer a un simple listado de signos |
+| ¿Cómo intervienen trabajo e historia? | Análisis social y filosófico | Identificar la propuesta de cada autor |
+| ¿Por qué respetar a una persona? | Justificación ética | No deducir dignidad del precio o productividad |
+
+Una explicación sobre el origen no decide por sí sola cómo debemos tratar a otras personas.

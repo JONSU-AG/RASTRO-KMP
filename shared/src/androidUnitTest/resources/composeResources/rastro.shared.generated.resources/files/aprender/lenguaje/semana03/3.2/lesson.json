@@ -7,11 +7,11 @@
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana03.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_03_Fonologia_y_Ortografia.md",
   "learningObjectives": [
-    "Clasificar el diptongo en creciente, decreciente y homogéneo con sus combinaciones",
-    "Reconocer el triptongo con estructura cerrada átona más abierta más cerrada átona",
-    "Distinguir el hiato simple de vocales abiertas y de cerradas idénticas",
-    "Aplicar la regla de oro de la tilde robúrica en el hiato acentual",
-    "Resolver conteos de diptongos e hiatos con la regla de la h intermedia"
+    "Distinguir diptongo, triptongo e hiato en un análisis silábico o convención ortográfica explícitos",
+    "Comparar el orden de vocales abiertas y cerradas sin atribuir causalidad física a la tilde",
+    "Aplicar la regla de vocal cerrada tónica junto a abierta, incluso con h intercalada",
+    "Reconocer que ui e iu pueden tildarse según las reglas generales",
+    "Contar secuencias dentro de palabras sin mezclar encuentros entre palabras o licencias poéticas"
   ],
   "theory": {
     "id": "th_leng_t03_s02",
@@ -20,15 +20,15 @@
     "titulo": "Secuencias Vocálicas: Diptongo, Triptongo y Hiato (Acentual y Simple)",
     "resumen": "",
     "conceptosClave": [
-      "Diptongo homosilábico con creciente ia y ue, decreciente ai y au, homogéneo iu y ui",
-      "Triptongo con vocal cerrada átona más abierta más cerrada átona y letra y final como i",
-      "Hiato simple con dos abiertas como ca-os y dos cerradas idénticas como chi-i-ta",
-      "Hiato acentual con cerrada tónica que se tilda siempre como Ra-úl, ba-úl y tí-o",
-      "Letra h intermedia que no rompe diptongos como ahijado ni impide hiatos como bú-ho",
-      "Diptongo que sigue reglas generales frente a hiato acentual que las rompe",
-      "Conteo modelo con 2 diptongos y 3 hiatos en la oración del navío y la bahía"
+      "Diptongo: misma sílaba; hiato: sílabas diferentes; triptongo: tres vocales en una sílaba",
+      "Distinguir pronunciación individual y convención para acentuación gráfica",
+      "H intercalada no causa por sí sola separación ni unión vocálica",
+      "País y búho: cerrada tónica junto a abierta; leer y caos: otras clases de hiato",
+      "Cuidado y cuídate muestran que el diptongo ui no excluye una tilde",
+      "Paraguay: triptongo con y final vocálica; no todo triptongo es tónico",
+      "Conteo interno: Raúl, tenía y baúl aportan tres hiatos de la clase solicitada"
     ],
-    "admissionTip": "Cerrada tónica junto a abierta se tilda siempre; h no rompe nada; ui e iu son diptongo homogéneo que no se tilda.",
-    "admissionExplanation": "La fuerza de voz decide: si la cerrada suena más fuerte que la abierta, hay hiato acentual con tilde robúrica aunque la palabra sea grave terminada en vocal."
+    "admissionTip": "Precisa qué secuencia y qué ámbito se cuentan. No deduzcas hiato por una h ni por cualquier tilde aislada.",
+    "admissionExplanation": "La tilde sigue reglas ortográficas; no se explica como una fuerza física que rompa sílabas. Ui e iu pueden llevar tilde cuando corresponde, y los hiatos de vocales iguales siguen reglas generales."
   }
 }

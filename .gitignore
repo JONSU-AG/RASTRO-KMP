@@ -88,3 +88,8 @@ node_modules/
 __pycache__/
 *.pyc
 
+
+# Versioned academic maintenance and validation sources
+!scripts/academic/*.py
+!scripts/academic/*.ps1
+!scripts/academic/*.mjs

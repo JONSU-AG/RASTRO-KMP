@@ -1,1 +1,218 @@
-[{"concept":"7.2.1","correctIndex":2,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t07_s02_c01","options":["Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente.","Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Aplicar de forma mecánica la fórmula sin verificar el dominio de validez."],"pedagogicalTier":"concepto","semana":7,"statement":"Frente al distractor frecuente de examen: \"Trampa 3: \"Toda reacción de doble desplazamiento es redox\". FALSO CRÍTICO. Las reacciones de metátesis (precipitación y neutralización ácido-base) NUNCA son redox; los estados de o\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t07_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t07_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t07_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t07_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t07_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t07_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t07_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t07_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t07_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.11","correctIndex":2,"explanation":"La respiración oxida glucosa con O2 como oxidante final y la fotosíntesis la reduce de vuelta: redox biológica acoplada.","fuente":"temario","id":"quim_t07_s02_c11","options":["Solo ocurre en laboratorio","No liberan energía","Respiración oxida glucosa y fotosíntesis la reduce","No usan agentes redox"],"pedagogicalTier":"concepto","semana":7,"statement":"La importancia biológica de las redox se ve en que:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.12","correctIndex":3,"explanation":"El hierro se oxida con O2 y agua formando herrumbre; el magnesio se sacrifica oxidándose en su lugar.","fuente":"temario","id":"quim_t07_s02_c12","options":["Pintar sin preparar","Calentar el metal","Sumergir en aceite","La corrosión del hierro y su prevención con ánodo de sacrificio"],"pedagogicalTier":"concepto","semana":7,"statement":"Un ejemplo ambiental-industrial de proceso redox es:","subject":"quimica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "quim_t07_s02_c01",
+    "concept": "7.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 7,
+    "statement": "En $\\mathrm{Fe^{2+}\\to Fe^{3+}+e^-}$, ¿cuántos electrones pierde cada ion hierro?",
+    "options": [
+      "$1\\,\\text{electrones}$",
+      "$2\\,\\text{electrones}$",
+      "$3\\,\\text{electrones}$",
+      "$0\\,\\text{electrones}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El aumento de una unidad en la carga refleja pérdida de un electrón.\n2. Aplicamos los datos y conservamos las unidades: $n_e=3-2$.\n3. El resultado es $1\\,\\text{electrones}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t07_s02_c02",
+    "concept": "7.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 7,
+    "statement": "Para reducir $\\mathrm{Cu^{2+}}$ a Cu metálico, ¿cuántos electrones se requieren por ion?",
+    "options": [
+      "$4\\,\\text{electrones}$",
+      "$1\\,\\text{electrones}$",
+      "$6\\,\\text{electrones}$",
+      "$2\\,\\text{electrones}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La carga +2 se neutraliza con dos electrones.\n2. Aplicamos los datos y conservamos las unidades: $\\mathrm{Cu^{2+}}+2e^-\\to\\mathrm{Cu}$.\n3. El resultado es $2\\,\\text{electrones}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t07_s02_c03",
+    "concept": "7.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 7,
+    "statement": "En $\\mathrm{Al\\to Al^{3+}}$, ¿cuántos electrones pierde cada átomo?",
+    "options": [
+      "$9\\,\\text{electrones}$",
+      "$1\\,\\text{electrones}$",
+      "$3\\,\\text{electrones}$",
+      "$6\\,\\text{electrones}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El estado elemental pasa de cero a +3.\n2. Aplicamos los datos y conservamos las unidades: $\\mathrm{Al}\\to\\mathrm{Al^{3+}}+3e^-$.\n3. El resultado es $3\\,\\text{electrones}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t07_s02_c04",
+    "concept": "7.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 7,
+    "statement": "En $\\mathrm{Zn+Cu^{2+}\\to Zn^{2+}+Cu}$, ¿cuántos electrones se transfieren por átomo de Zn?",
+    "options": [
+      "$6\\,\\text{electrones}$",
+      "$2\\,\\text{electrones}$",
+      "$4\\,\\text{electrones}$",
+      "$1\\,\\text{electrones}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El zinc pasa de estado cero a +2.\n2. Aplicamos los datos y conservamos las unidades: $\\mathrm{Zn}\\to\\mathrm{Zn^{2+}}+2e^-$.\n3. El resultado es $2\\,\\text{electrones}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t07_s02_c05",
+    "concept": "7.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 7,
+    "statement": "Al balancear la combustión completa $\\mathrm{C_2H_4+O_2\\to CO_2+H_2O}$ con enteros mínimos, ¿qué coeficiente lleva O2?",
+    "options": [
+      "$3$",
+      "$6$",
+      "$9$",
+      "$1$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Se conservan C, H y O.\n2. Aplicamos los datos y conservamos las unidades: $\\mathrm{C_2H_4}+3\\mathrm{O_2}\\to2\\mathrm{CO_2}+2\\mathrm{H_2O}$.\n3. El resultado es $3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t07_s02_c06",
+    "concept": "7.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 7,
+    "statement": "Al balancear la combustión completa $\\mathrm{C_3H_8+O_2\\to CO_2+H_2O}$ con enteros mínimos, ¿qué coeficiente lleva O2?",
+    "options": [
+      "$10$",
+      "$15$",
+      "$6$",
+      "$5$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Tres carbonos y ocho hidrógenos fijan primero los productos.\n2. Aplicamos los datos y conservamos las unidades: $\\mathrm{C_3H_8}+5\\mathrm{O_2}\\to3\\mathrm{CO_2}+4\\mathrm{H_2O}$.\n3. El resultado es $5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t07_s02_c07",
+    "concept": "7.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 7,
+    "statement": "Al balancear $\\mathrm{Fe_2O_3+CO\\to Fe+CO_2}$ con enteros mínimos, ¿qué coeficiente lleva CO?",
+    "options": [
+      "$9$",
+      "$1$",
+      "$3$",
+      "$6$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La reducción del óxido conserva hierro, carbono y oxígeno.\n2. Aplicamos los datos y conservamos las unidades: $\\mathrm{Fe_2O_3}+3\\mathrm{CO}\\to2\\mathrm{Fe}+3\\mathrm{CO_2}$.\n3. El resultado es $3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t07_s02_c08",
+    "concept": "7.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 7,
+    "statement": "Oxidarse significa…",
+    "options": [
+      "Perder exclusivamente neutrones.",
+      "Perder electrones o aumentar el estado de oxidación.",
+      "Ganar siempre protones.",
+      "Disminuir siempre el estado de oxidación."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El concepto redox sigue los electrones y los estados formales.\n2. La pérdida electrónica aumenta el estado de oxidación.\n3. No se define por una transformación nuclear.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t07_s02_c09",
+    "concept": "7.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 7,
+    "statement": "Reducirse significa…",
+    "options": [
+      "Ganar electrones o disminuir el estado de oxidación.",
+      "Perder siempre electrones.",
+      "Aumentar necesariamente el número de protones.",
+      "Solo hacer una sustancia más pequeña."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La ganancia electrónica reduce la carga formal o el estado de oxidación.\n2. Se considera junto a una oxidación que aporta los electrones.\n3. El nombre no se refiere a tamaño físico.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t07_s02_c10",
+    "concept": "7.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 7,
+    "statement": "El agente oxidante…",
+    "options": [
+      "Se oxida al perder electrones por definición.",
+      "No cambia nunca.",
+      "Es siempre oxígeno molecular.",
+      "Se reduce al aceptar electrones."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Provoca la oxidación de otra especie.\n2. Para ello acepta los electrones transferidos.\n3. La especie oxidante se reduce.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t07_s02_c11",
+    "concept": "7.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 7,
+    "statement": "El agente reductor…",
+    "options": [
+      "Es siempre hidrógeno molecular.",
+      "Es siempre un producto inerte.",
+      "Entrega electrones y se oxida.",
+      "Recibe electrones y se reduce por definición."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Provoca la reducción de otra especie.\n2. Aporta los electrones necesarios.\n3. Al entregarlos, se oxida.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t07_s02_c12",
+    "concept": "7.2.12",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 7,
+    "statement": "En una reacción redox balanceada, los electrones perdidos y ganados…",
+    "options": [
+      "No se relacionan con la carga.",
+      "Deben ser iguales en número.",
+      "Pueden diferir sin consecuencia.",
+      "Se convierten siempre en neutrones."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los electrones transferidos salen de una semirreacción y entran en otra.\n2. La transferencia interna no crea carga neta.\n3. Se igualan antes de sumar las semirreacciones.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

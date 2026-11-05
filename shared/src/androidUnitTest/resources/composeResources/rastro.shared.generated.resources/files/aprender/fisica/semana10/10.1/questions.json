@@ -1,1 +1,200 @@
-[{"concept":"10.1.1","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s01_c01","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.2","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s01_c02","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t10_s01_c01",
+    "concept": "10.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Una carga de 2 C se mueve a 3 m/s perpendicular a un campo de 4 T. ¿Qué módulo tiene la fuerza magnética?",
+    "options": [
+      "$24\\,\\mathrm{N}$",
+      "$48\\,\\mathrm{N}$",
+      "$12\\,\\mathrm{N}$",
+      "$72\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La fuerza magnética usa la componente perpendicular de la velocidad.\n2. Sustituimos los datos: $F=|q|vB\\sin90^\\circ=2(3)(4)$.\n3. El resultado pedido es $24\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s01_c02",
+    "concept": "10.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Una carga se mueve paralela a un campo magnético uniforme. ¿Qué módulo de fuerza magnética recibe?",
+    "options": [
+      "$1\\,\\mathrm{N}$",
+      "$2\\,\\mathrm{N}$",
+      "$3\\,\\mathrm{N}$",
+      "$0\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El seno del ángulo paralelo es cero.\n2. Sustituimos los datos: $F=|q|vB\\sin0^\\circ=0$.\n3. El resultado pedido es $0\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s01_c03",
+    "concept": "10.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Una partícula de masa 2 kg y carga 1 C entra perpendicularmente a B=4 T con v=6 m/s. ¿Qué radio describe en el modelo clásico?",
+    "options": [
+      "$1.5\\,\\mathrm{m}$",
+      "$9\\,\\mathrm{m}$",
+      "$3\\,\\mathrm{m}$",
+      "$6\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La fuerza magnética proporciona la fuerza radial.\n2. Sustituimos los datos: $r=mv/(|q|B)=2(6)/(1\\cdot4)$.\n3. El resultado pedido es $3\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s01_c04",
+    "concept": "10.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Un conductor recto largo lleva 10 A. A 0.1 m, usa $\\mu_0=4\\pi\\times10^{-7}\\,\\mathrm{T\\,m/A}$. ¿Qué campo produce en microtesla?",
+    "options": [
+      "$60\\,\\mathrm{\\mu T}$",
+      "$20\\,\\mathrm{\\mu T}$",
+      "$40\\,\\mathrm{\\mu T}$",
+      "$10\\,\\mathrm{\\mu T}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El campo de un conductor largo disminuye como 1/r.\n2. Sustituimos los datos: $B=\\mu_0I/(2\\pi r)=2\\cdot10^{-5}\\,T$.\n3. El resultado pedido es $20\\,\\mathrm{\\mu T}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s01_c05",
+    "concept": "10.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Un solenoide largo ideal tiene n=1000 vueltas/m e I=2 A. Usa $\\mu_0=4\\pi\\times10^{-7}\\,\\mathrm{T\\,m/A}$. ¿Cuál es B/π en tesla?",
+    "options": [
+      "$0.0008\\,\\mathrm{T}$",
+      "$0.0016\\,\\mathrm{T}$",
+      "$0.0004\\,\\mathrm{T}$",
+      "$0.0024\\,\\mathrm{T}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Dentro del solenoide largo ideal, B=μ0nI.\n2. Sustituimos los datos: $B/\\pi=4\\cdot10^{-7}(1000)(2)$.\n3. El resultado pedido es $0.0008\\,\\mathrm{T}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s01_c06",
+    "concept": "10.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Para un alambre largo, el campo a distancia r es 12 μT. ¿Cuánto vale a 3r con la misma corriente?",
+    "options": [
+      "$8\\,\\mathrm{\\mu T}$",
+      "$2\\,\\mathrm{\\mu T}$",
+      "$12\\,\\mathrm{\\mu T}$",
+      "$4\\,\\mathrm{\\mu T}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La dependencia radial es inversa.\n2. Sustituimos los datos: $B_2=B_1/3=12/3$.\n3. El resultado pedido es $4\\,\\mathrm{\\mu T}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s01_c07",
+    "concept": "10.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "En una órbita magnética, una partícula mantiene masa, rapidez y campo. Si se duplica |q|, ¿por qué factor cambia el radio?",
+    "options": [
+      "$0.25\\,\\text{veces}$",
+      "$1.5\\,\\text{veces}$",
+      "$0.5\\,\\text{veces}$",
+      "$1\\,\\text{veces}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El radio es inversamente proporcional al módulo de carga.\n2. Sustituimos los datos: $r_2/r_1=|q_1|/|q_2|=1/2$.\n3. El resultado pedido es $0.5\\,\\text{veces}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s01_c08",
+    "concept": "10.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Una partícula con v perpendicular a B tiene $m=1\\,\\mathrm{kg}$, $|q|=2\\,\\mathrm C$ y $B=5\\,\\mathrm T$. ¿Cuánto vale su frecuencia angular clásica?",
+    "options": [
+      "$30\\,\\mathrm{rad/s}$",
+      "$10\\,\\mathrm{rad/s}$",
+      "$20\\,\\mathrm{rad/s}$",
+      "$5\\,\\mathrm{rad/s}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La frecuencia angular es |q|B/m.\n2. Sustituimos los datos: $\\omega=|q|B/m=2(5)/1$.\n3. El resultado pedido es $10\\,\\mathrm{rad/s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s01_c09",
+    "concept": "10.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Una carga positiva de 1 C tiene velocidad 2 m/s hacia +x y campo 3 T hacia +y. ¿Cuál es la componente z de la fuerza?",
+    "options": [
+      "$6\\,\\mathrm{N}$",
+      "$12\\,\\mathrm{N}$",
+      "$3\\,\\mathrm{N}$",
+      "$18\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Usamos el producto vectorial y la orientación de los ejes.\n2. Sustituimos los datos: $\\vec F=q\\vec v\\times\\vec B=1(2)(3)\\hat k$.\n3. El resultado pedido es $6\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s01_c10",
+    "concept": "10.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Una fuerza magnética que es siempre perpendicular a la velocidad…",
+    "options": [
+      "Aumenta necesariamente la rapidez.",
+      "No realiza trabajo sobre la partícula.",
+      "Reduce necesariamente la energía cinética.",
+      "No puede cambiar la dirección de movimiento."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El trabajo instantáneo depende del producto escalar fuerza–velocidad.\n2. Dos vectores perpendiculares tienen producto escalar cero.\n3. La fuerza puede cambiar la dirección sin cambiar la rapidez.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s01_c11",
+    "concept": "10.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Al cambiar el signo de una carga manteniendo v y B, la fuerza magnética…",
+    "options": [
+      "No cambia.",
+      "Se duplica.",
+      "Invierte su sentido.",
+      "Se vuelve paralela al campo."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La fuerza contiene la carga con su signo.\n2. Velocidad y campo permanecen iguales.\n3. Multiplicar por la carga opuesta invierte el vector fuerza.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

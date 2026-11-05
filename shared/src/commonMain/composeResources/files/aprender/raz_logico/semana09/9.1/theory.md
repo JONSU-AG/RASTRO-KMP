@@ -24,24 +24,41 @@
 
 ## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
 
-```
-                            TEORÍA DE LAS FALACIAS
-                                      │
-           ┌──────────────────────────┴──────────────────────────┐
-           ▼                                                     ▼
-   FALACIAS FORMALES                                    FALACIAS NO FORMALES
- (Violan leyes de cálculo)                            (Defectos de contenido/contexto)
-           │                                                     │
-     ┌─────┴─────┐                               ┌───────────────┴───────────────┐
-     ▼           ▼                               ▼                               ▼
-Afirmación    Negación del             FALACIAS DE ATINGENCIA              FALACIAS DE AMBIGÜEDAD
-del Consec.   Antecedente              (Falta de conexión lógica)           (Lenguaje confuso)
-                                                 │                               │
-                      ┌──────────────────────────┼───────────────┐        ┌──────┴──────┐
-                      ▼                          ▼               ▼        ▼             ▼
-                 Generalización                Falsa           Otras   Equívoco    Anfibología
-                    Indebida                   Causa          (Ad hominem,
-                 (Muestra sesgada)         (Post hoc...)      Ad populum...)
+```mermaid
+graph TD
+ ROOT["Detección de falacias"]
+ B1["Falacias formales"]
+ B1N1["Afirmación del consecuente."]
+ B1N2["Negación del antecedente."]
+ B1N3["Se refutan con una asignación de premisas V y conclusión F."]
+ B2["Problemas de apoyo y pertinencia"]
+ B2N1["Generalización precipitada: conclusión más amplia que la evidencia."]
+ B2N2["Falsa causa: secuencia temporal o asociación sin causalidad demostrada."]
+ B2N3["Ataque personal: sustituir la crítica del argumento por la del autor."]
+ B2N4["Apelación a la popularidad: tratar aceptación social como prueba suficiente."]
+ B3["Ambigüedad"]
+ B3N1["Equívoco: una expresión cambia de sentido durante la inferencia."]
+ B3N2["Anfibología: una construcción admite lecturas sintácticas distintas."]
+ B4["Evaluación del argumento"]
+ B4N1["Identificar la conclusión y las razones concretas."]
+ B4N2["Un argumento defectuoso no demuestra que su conclusión sea falsa."]
+ B4N3["Revisar el contexto antes de aplicar una etiqueta de falacia."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ### Ontología de la Falacia

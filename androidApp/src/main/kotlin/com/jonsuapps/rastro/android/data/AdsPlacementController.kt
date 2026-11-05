@@ -26,6 +26,7 @@ object AdsPlacementController {
     private var playing = false
     private val prefs get() = RastroApplication.instance.getSharedPreferences("rastro_ad_frequency",android.content.Context.MODE_PRIVATE)
     fun rewarded(pack: RewardPack): Boolean {
+        if (com.jonsuapps.rastro.monetization.PresentationMode.enabled) return false
         val adapter = provider?.takeIf { it.ready } ?: return false
         if(playing) return false
         playing = true
@@ -42,6 +43,8 @@ object AdsPlacementController {
         return true
     }
     fun naturalEnd(questionActive: Boolean = false) {
+        if (com.jonsuapps.rastro.monetization.PresentationMode.enabled) return
+        if (!AdServingMode.automaticInterstitialsEnabled) return
         val adapter = provider?.takeIf { it.ready } ?: return
         if(playing) return
         val user = FirebaseAuth.getInstance().currentUser ?: return

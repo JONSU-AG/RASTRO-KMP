@@ -1,1 +1,200 @@
-[{"concept":"5.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t05_s01_c01","options":["Delfines","Vertebrados","Mamíferos","Animales"],"pedagogicalTier":"concepto","semana":5,"statement":"Dado el siguiente silogismo:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.2","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t05_s01_c02","options":["Todos los reptiles son cocodrilos.","Ningún animal branquial es vertebrado.","Algunos cocodrilos tienen respiración branquial.","Ningún cocodrilo tiene respiración branquial."],"pedagogicalTier":"concepto","semana":5,"statement":"Dadas las siguientes premisas:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.3","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t05_s01_c03","options":["Algunos guías turísticos son personas cultas.","Ningún guía turístico es persona culta.","Todas las personas cultas son guías turísticos.","Todos los guías turísticos son personas cultas."],"pedagogicalTier":"concepto","semana":5,"statement":"En una investigación de campo en el Cañón del Colca se determinó que:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: El **Término Medio (M)**.","fuente":"temario","id":"rl_t05_s01_c04","options":["**Nada**; de dos premisas negativas no se deriva ninguna conclusión válida.","Están distribuidos **ambos términos** (tanto el Sujeto como el Predicado).","Valor o condición no aplicable al caso planteado","El **Término Medio (M)**."],"pedagogicalTier":"concepto","semana":5,"statement":"¿Qué término del silogismo jamás debe aparecer en la conclusión?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: **Nada**; de dos premisas negativas no se deriva ninguna conclusión válida.","fuente":"temario","id":"rl_t05_s01_c05","options":["**Nada**; de dos premisas negativas no se deriva ninguna conclusión válida.","El **Término Medio (M)**.","Están distribuidos **ambos términos** (tanto el Sujeto como el Predicado).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":5,"statement":"¿Qué se puede concluir válidamente a partir de dos premisas negativas?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Están distribuidos **ambos términos** (tanto el Sujeto como el Predicado).","fuente":"temario","id":"rl_t05_s01_c06","options":["El **Término Medio (M)**.","Están distribuidos **ambos términos** (tanto el Sujeto como el Predicado).","**Nada**; de dos premisas negativas no se deriva ninguna conclusión válida.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":5,"statement":"¿Qué términos están distribuidos en una proposición universal negativa (E: \"Ningún S es P\")?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.7","correctIndex":2,"explanation":"Silogismo válido Celarent (EAE de 1.ª figura): Ningún M es P y Todo S es M concluye forzosamente Ningún S es P ('Ningún cocodrilo respira por branquias').","fuente":"temario","id":"rl_t05_s01_c07","options":["Ningún reptil es cocodrilo","Todos los reptiles son cocodrilos","Ningún cocodrilo respira por branquias","Algunos cocodrilos respiran por branquias"],"pedagogicalTier":"concepto","semana":5,"statement":"Premisas: Ningún reptil respira por branquias. Todos los cocodrilos son reptiles. ¿Qué se concluye válidamente?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t05_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t05_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"5.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t05_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rl_t05_s01_c01",
+    "concept": "5.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Todos los A son B. Todos los B son C. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Todos los A son C.",
+      "Todos los C son A.",
+      "Algún A es C.",
+      "Algún A no es B."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. La inclusión A⊆B y B⊆C encadena A⊆C, sin exigir que A tenga miembros.\n3. Todos los A son C. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s01_c02",
+    "concept": "5.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Todos los A son B. Ningún B es C. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Algún A es C.",
+      "Existe algún A.",
+      "Todos los C son A.",
+      "Ningún A es C."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. Todo A está en B, y B no comparte miembros con C; ningún A puede estar en C.\n3. Ningún A es C. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s01_c03",
+    "concept": "5.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Algún A es B. Todos los B son C. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Ningún A es C.",
+      "Algún A no es C.",
+      "Algún A es C.",
+      "Todos los A son C."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. El testigo que está en A y B también está en C por la inclusión B⊆C.\n3. Algún A es C. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s01_c04",
+    "concept": "5.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Algún A es B. Ningún B es C. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Ningún A es C.",
+      "Algún A no es C.",
+      "Todos los A son C.",
+      "Ningún A es B."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. El testigo de A∩B no está en C, ya que B y C son disjuntos.\n3. Algún A no es C. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s01_c05",
+    "concept": "5.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Todos los A son B. Existe algún A. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Algún A es B.",
+      "Ningún A es B.",
+      "Todos los B son A.",
+      "Algún A no es B."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. La existencia de un A, junto con A⊆B, da un testigo común de ambas clases.\n3. Algún A es B. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s01_c06",
+    "concept": "5.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Ningún A es B. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Algún A es B.",
+      "Todos los B son A.",
+      "Existe algún B.",
+      "Ningún B es A."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. Si A∩B es vacío, B∩A también lo es; intercambiar las clases conserva esta exclusión.\n3. Ningún B es A. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s01_c07",
+    "concept": "5.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Algún A no es B. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Todos los B son A.",
+      "Ningún A es B.",
+      "Existe algún A.",
+      "Todos los A son B."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. Un testigo en A que no pertenece a B es, en particular, un miembro de A.\n3. Existe algún A. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s01_c08",
+    "concept": "5.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Todos los A son C. Todos los C son A. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Algún C no es A.",
+      "A y C tienen exactamente los mismos miembros.",
+      "Existe algún A.",
+      "Algún A es C."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. Cada clase está incluida en la otra: no puede haber un miembro exclusivo de A o de C.\n3. A y C tienen exactamente los mismos miembros. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s01_c09",
+    "concept": "5.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Todos los A son B. Todos los B son A. ¿Qué conclusión es necesaria?",
+    "options": [
+      "A y B tienen exactamente los mismos miembros.",
+      "Existe algún A.",
+      "Algún A es B.",
+      "Algún A no es B."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. Las inclusiones recíprocas igualan los miembros de A y B; pueden ser ambas vacías.\n3. A y B tienen exactamente los mismos miembros. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s01_c10",
+    "concept": "5.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Existe algún A. Ningún A es B. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Algún A es B.",
+      "Todos los A son B.",
+      "Todos los B son A.",
+      "Algún A no es B."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. Existe un A y ninguno pertenece a B; ese mismo testigo es un A que no es B.\n3. Algún A no es B. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t05_s01_c11",
+    "concept": "5.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 5,
+    "statement": "En lógica de clases sin suponer existencia por una premisa universal, se sabe: Algún A es C. Todos los C son B. ¿Qué conclusión es necesaria?",
+    "options": [
+      "Todos los A son B.",
+      "Todos los B son A.",
+      "Algún A es B.",
+      "Ningún A es B."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Representamos A, B y C como clases; una universal puede ser cierta aunque su sujeto esté vacío.\n2. El testigo de A∩C pertenece a B porque C⊆B; por tanto está en A∩B.\n3. Algún A es B. Es la única alternativa que se mantiene en todos los casos compatibles.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

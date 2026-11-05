@@ -1,1 +1,200 @@
-[{"concept":"6.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "geom_t06_s02_c01",
+    "concept": "6.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "Un rectángulo tiene lados de 3 y 4 cm. ¿Qué longitud tiene su diagonal?",
+    "options": [
+      "$5\\,\\mathrm{cm}$",
+      "$10\\,\\mathrm{cm}$",
+      "$2.5\\,\\mathrm{cm}$",
+      "$15\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La diagonal forma un triángulo rectángulo.\n2. Usamos los datos indicados: $d=\\sqrt{3^2+4^2}$.\n3. El resultado es $5\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s02_c02",
+    "concept": "6.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "Un paralelogramo tiene base 8 cm y altura perpendicular 5 cm. ¿Qué área tiene?",
+    "options": [
+      "$80\\,\\mathrm{cm^2}$",
+      "$20\\,\\mathrm{cm^2}$",
+      "$120\\,\\mathrm{cm^2}$",
+      "$40\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El área usa base por altura, no por lado oblicuo.\n2. Usamos los datos indicados: $S=bh=8(5)$.\n3. El resultado es $40\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s02_c03",
+    "concept": "6.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "Un rombo tiene diagonales de 6 y 8 cm. ¿Qué área tiene?",
+    "options": [
+      "$12\\,\\mathrm{cm^2}$",
+      "$72\\,\\mathrm{cm^2}$",
+      "$24\\,\\mathrm{cm^2}$",
+      "$48\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Las diagonales de un rombo son perpendiculares.\n2. Usamos los datos indicados: $S=d_1d_2/2=6(8)/2$.\n3. El resultado es $24\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s02_c04",
+    "concept": "6.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "Un rombo tiene diagonales de 6 y 8 cm. ¿Cuánto mide cada lado?",
+    "options": [
+      "$15\\,\\mathrm{cm}$",
+      "$5\\,\\mathrm{cm}$",
+      "$10\\,\\mathrm{cm}$",
+      "$2.5\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Las semidiagonales forman un triángulo rectángulo.\n2. Usamos los datos indicados: $l=\\sqrt{3^2+4^2}$.\n3. El resultado es $5\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s02_c05",
+    "concept": "6.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "Un trapecio tiene bases paralelas de 6 y 10 cm y altura de 4 cm. ¿Cuál es su área?",
+    "options": [
+      "$32\\,\\mathrm{cm^2}$",
+      "$64\\,\\mathrm{cm^2}$",
+      "$16\\,\\mathrm{cm^2}$",
+      "$96\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Multiplicamos la media de las bases por la altura.\n2. Usamos los datos indicados: $S=(6+10)4/2$.\n3. El resultado es $32\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s02_c06",
+    "concept": "6.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "Un trapecio tiene bases de 7 y 13 cm. ¿Cuánto mide el segmento que une los puntos medios de los lados no paralelos?",
+    "options": [
+      "$20\\,\\mathrm{cm}$",
+      "$5\\,\\mathrm{cm}$",
+      "$30\\,\\mathrm{cm}$",
+      "$10\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La mediana del trapecio es la semisuma de las bases.\n2. Usamos los datos indicados: $m=(7+13)/2$.\n3. El resultado es $10\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s02_c07",
+    "concept": "6.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "Un cuadrado tiene diagonal de 6 cm. ¿Qué área tiene?",
+    "options": [
+      "$9\\,\\mathrm{cm^2}$",
+      "$54\\,\\mathrm{cm^2}$",
+      "$18\\,\\mathrm{cm^2}$",
+      "$36\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La diagonal al cuadrado equivale a dos lados al cuadrado.\n2. Usamos los datos indicados: $S=d^2/2=6^2/2$.\n3. El resultado es $18\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s02_c08",
+    "concept": "6.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "En un paralelogramo, un ángulo interior mide 70°. ¿Cuánto mide el consecutivo?",
+    "options": [
+      "$330\\,\\mathrm{^\\circ}$",
+      "$110\\,\\mathrm{^\\circ}$",
+      "$220\\,\\mathrm{^\\circ}$",
+      "$55\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los consecutivos de un paralelogramo son suplementarios.\n2. Usamos los datos indicados: $\\beta=180^\\circ-70^\\circ$.\n3. El resultado es $110\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s02_c09",
+    "concept": "6.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "Un cuadrado tiene lado 5 cm. ¿Qué perímetro tiene?",
+    "options": [
+      "$20\\,\\mathrm{cm}$",
+      "$40\\,\\mathrm{cm}$",
+      "$10\\,\\mathrm{cm}$",
+      "$60\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Tiene cuatro lados iguales.\n2. Usamos los datos indicados: $P=4(5)$.\n3. El resultado es $20\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s02_c10",
+    "concept": "6.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "Todo cuadrado es también…",
+    "options": [
+      "Un rectángulo y un rombo.",
+      "Un cuadrilátero sin lados paralelos.",
+      "Un trapecio con exactamente un par de lados paralelos.",
+      "Una figura con diagonales desiguales."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El cuadrado tiene cuatro ángulos rectos y cuatro lados iguales.\n2. Cumple la definición de rectángulo y de rombo.\n3. Las clasificaciones no tienen que excluirse entre sí.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s02_c11",
+    "concept": "6.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "En un paralelogramo, las diagonales…",
+    "options": [
+      "Siempre son iguales.",
+      "Siempre son perpendiculares.",
+      "Se bisecan mutuamente.",
+      "Siempre forman cuatro triángulos equiláteros."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El punto de intersección divide cada diagonal en dos partes iguales.\n2. Esa propiedad es común a todos los paralelogramos.\n3. Igualdad y perpendicularidad corresponden a casos especiales.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

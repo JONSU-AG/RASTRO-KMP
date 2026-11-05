@@ -24,6 +24,37 @@
 
 
 
+## Mapa del tema
+
+```mermaid
+graph TD
+ ROOT["Finalidad y formato de los textos"]
+ B1["Secuencias y propósito"]
+ B1N1["Narración, descripción, exposición, explicación, argumentación e instrucción pueden combinarse."]
+ B1N2["Identificar la función dominante sin suponer que cada texto pertenece a una categoría pura."]
+ B1N3["Narrativo y literario no son sinónimos: también se narran hechos en textos no literarios."]
+ B2["Organización de la información"]
+ B2N1["Continuo: oraciones organizadas principalmente en párrafos."]
+ B2N2["Discontinuo: tablas, gráficos, formularios u otras disposiciones que exigen reconocer su organización."]
+ B2N3["Mixto: integra prosa y componentes discontinuos; leer las relaciones entre ambos."]
+ B3["Estrategia de lectura"]
+ B3N1["En prosa, seguir referencias, desarrollo y propósito."]
+ B3N2["En gráficos y tablas, revisar títulos, ejes, unidades y notas antes de interpretar."]
+ B3N3["Contrastar información de distintos componentes sin inventar datos ausentes."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+```
+
 ## 3. DESARROLLO TEÓRICO FORMAL
 
 

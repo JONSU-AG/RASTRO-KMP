@@ -1,1 +1,200 @@
-[{"concept":"9.1.1","correctIndex":0,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t09_s01_c01","options":["Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":9,"statement":"Frente al distractor frecuente de examen: \"Trampa 1: Operar con temperaturas en grados Celsius (^\\circ\\text{C}). Si divides o multiplicas por T(^\\circ\\text{C}), todo el problema se anula. DEBES sumar siempre 273 para \", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.2","correctIndex":1,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t09_s01_c02","options":["Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":9,"statement":"Frente al distractor frecuente de examen: \"Trampa 2: Olvidar restar la presión de vapor del agua en gases recolectados sobre agua. Si te dicen \"gas recolectado sobre agua a 20^\\circ\\text{C} con presión total de 750\\text{\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "quim_t09_s01_c01",
+    "concept": "9.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Un mol de gas ideal a 300 K y 1 atm usa R=0.082 L·atm/(mol·K). ¿Qué volumen ocupa?",
+    "options": [
+      "$24.6\\,\\mathrm{L}$",
+      "$49.2\\,\\mathrm{L}$",
+      "$12.3\\,\\mathrm{L}$",
+      "$73.8\\,\\mathrm{L}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La ecuación ideal exige temperatura absoluta.\n2. Aplicamos los datos y conservamos las unidades: $V=nRT/P=1(0.082)(300)/1$.\n3. El resultado es $24.6\\,\\mathrm{L}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s01_c02",
+    "concept": "9.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Un gas ideal de cantidad fija pasa de P1=2 atm y V1=3 L a V2=6 L, a temperatura constante. ¿Cuánto vale P2?",
+    "options": [
+      "$2\\,\\mathrm{atm}$",
+      "$0.5\\,\\mathrm{atm}$",
+      "$3\\,\\mathrm{atm}$",
+      "$1\\,\\mathrm{atm}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La ley de Boyle conserva PV con n y T fijos.\n2. Aplicamos los datos y conservamos las unidades: $P_2=2(3)/6$.\n3. El resultado es $1\\,\\mathrm{atm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s01_c03",
+    "concept": "9.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Un gas ideal de cantidad fija ocupa 2 L a 300 K. A presión constante se lleva a 600 K. ¿Qué volumen ocupa?",
+    "options": [
+      "$2\\,\\mathrm{L}$",
+      "$12\\,\\mathrm{L}$",
+      "$4\\,\\mathrm{L}$",
+      "$8\\,\\mathrm{L}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El volumen es proporcional a la temperatura absoluta.\n2. Aplicamos los datos y conservamos las unidades: $V_2=2(600/300)$.\n3. El resultado es $4\\,\\mathrm{L}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s01_c04",
+    "concept": "9.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Un gas ideal de cantidad fija está a 1 atm y 300 K. A volumen constante se calienta a 600 K. ¿Qué presión tiene?",
+    "options": [
+      "$6\\,\\mathrm{atm}$",
+      "$2\\,\\mathrm{atm}$",
+      "$4\\,\\mathrm{atm}$",
+      "$1\\,\\mathrm{atm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Con n y V constantes, P/T es constante.\n2. Aplicamos los datos y conservamos las unidades: $P_2=1(600/300)$.\n3. El resultado es $2\\,\\mathrm{atm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s01_c05",
+    "concept": "9.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Usa R=0.082 L·atm/(mol·K). Un gas ideal ocupa 24.6 L a 1 atm y 300 K. ¿Cuántos moles hay?",
+    "options": [
+      "$1\\,\\mathrm{mol}$",
+      "$2\\,\\mathrm{mol}$",
+      "$0.5\\,\\mathrm{mol}$",
+      "$3\\,\\mathrm{mol}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Despejamos n en la ecuación de estado.\n2. Aplicamos los datos y conservamos las unidades: $n=PV/(RT)=24.6/(0.082\\cdot300)$.\n3. El resultado es $1\\,\\mathrm{mol}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s01_c06",
+    "concept": "9.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Para este ejercicio adopta volumen molar ideal 22.4 L/mol a 0 °C y 1 atm. ¿Qué volumen ocupan 2 mol?",
+    "options": [
+      "$89.6\\,\\mathrm{L}$",
+      "$22.4\\,\\mathrm{L}$",
+      "$134.4\\,\\mathrm{L}$",
+      "$44.8\\,\\mathrm{L}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Se usa el volumen molar dado bajo esas condiciones.\n2. Aplicamos los datos y conservamos las unidades: $V=2(22.4)$.\n3. El resultado es $44.8\\,\\mathrm{L}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s01_c07",
+    "concept": "9.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Convierte 27 °C a kelvin usando 273.15 como desplazamiento.",
+    "options": [
+      "$150.075\\,\\mathrm{K}$",
+      "$900.45\\,\\mathrm{K}$",
+      "$300.15\\,\\mathrm{K}$",
+      "$600.3\\,\\mathrm{K}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Sumamos el desplazamiento entre escalas.\n2. Aplicamos los datos y conservamos las unidades: $T=27+273.15$.\n3. El resultado es $300.15\\,\\mathrm{K}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s01_c08",
+    "concept": "9.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Un gas de masa 8 g ocupa 4 L. ¿Qué densidad tiene en g/L?",
+    "options": [
+      "$6\\,\\mathrm{g/L}$",
+      "$2\\,\\mathrm{g/L}$",
+      "$4\\,\\mathrm{g/L}$",
+      "$1\\,\\mathrm{g/L}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La densidad es masa entre volumen.\n2. Aplicamos los datos y conservamos las unidades: $\\rho=8/4$.\n3. El resultado es $2\\,\\mathrm{g/L}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s01_c09",
+    "concept": "9.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "En un modelo ideal, si se duplican n y T manteniendo P, ¿por qué factor cambia V?",
+    "options": [
+      "$4\\,\\text{veces}$",
+      "$8\\,\\text{veces}$",
+      "$2\\,\\text{veces}$",
+      "$12\\,\\text{veces}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. A presión fija, V es proporcional al producto nT.\n2. Aplicamos los datos y conservamos las unidades: $V_2/V_1=2(2)$.\n3. El resultado es $4\\,\\text{veces}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s01_c10",
+    "concept": "9.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "En las leyes de gases que comparan razones de temperatura se usa…",
+    "options": [
+      "Kelvin.",
+      "Fahrenheit sin convertir.",
+      "Cualquier escala sin cambio numérico.",
+      "Celsius sin convertir."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Las proporciones se relacionan con temperatura termodinámica.\n2. La escala kelvin tiene cero absoluto como origen.\n3. Usar Celsius directamente altera esas razones.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s01_c11",
+    "concept": "9.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "El modelo de gas ideal…",
+    "options": [
+      "Exige siempre volumen nulo.",
+      "Incluye atracciones fuertes en su ecuación simple.",
+      "Es exacto para todos los gases en cualquier condición.",
+      "Es una aproximación cuya calidad depende de condiciones como presión y temperatura."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El modelo simplifica volumen molecular e interacciones.\n2. Muchos gases se aproximan a él en ciertas condiciones.\n3. No debe tratarse como igualdad universal para todo gas real.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

@@ -13,20 +13,33 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                              LA MATERIA
-                                  │
-         ┌────────────────────────┴────────────────────────┐
-         ▼                                                 ▼
- SUSTANCIA PURA                                        MEZCLA
-(Composición fija, fórmula)             (Composición variable, sin fórmula)
-         │                                                 │
-    ┌────┴────┐                                      ┌─────┴─────┐
-    ▼         ▼                                      ▼           ▼
-ELEMENTO   COMPUESTO                            HOMOGÉNEA   HETEROGÉNEA
-(1 solo    (2 o más elementos                   (1 fase,     (2 o más fases,
-tipo átomo, combinados químicamente,             Solución)   agregados, coloides,
-alótropos)  descomponibles)                                 suspensiones)
+```mermaid
+graph TD
+ ROOT["Materia: composición y fases"]
+ B1["Sustancias puras"]
+ B1N1["Composición definida; propiedades características bajo condiciones dadas."]
+ B1N2["Elemento: un solo número atómico; puede presentar formas alotrópicas."]
+ B1N3["Compuesto: elementos unidos químicamente en proporción definida; se descompone por procesos químicos."]
+ B2["Mezclas"]
+ B2N1["Composición variable; sus componentes pueden separarse mediante procesos físicos apropiados."]
+ B2N2["Homogénea: una fase a la escala considerada; ejemplo, una solución."]
+ B2N3["Heterogénea: más de una fase; incluye suspensiones y dispersiones coloidales a escala microscópica."]
+ B3["Cómo clasificar"]
+ B3N1["La apariencia uniforme a simple vista no demuestra que sea una sustancia pura."]
+ B3N2["Una solución contiene soluto y disolvente, aunque se observe una sola fase."]
+ B3N3["Un coloide puede parecer uniforme y seguir siendo una dispersión de fases distintas."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
 ---

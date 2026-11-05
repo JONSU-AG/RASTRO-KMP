@@ -1,1 +1,200 @@
-[{"concept":"3.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "geom_t03_s02_c01",
+    "concept": "3.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 3,
+    "statement": "Dos triángulos semejantes tienen razón de lados grande/pequeño igual a 3. Un lado pequeño mide 4 cm. ¿Cuánto mide el correspondiente grande?",
+    "options": [
+      "$12\\,\\mathrm{cm}$",
+      "$24\\,\\mathrm{cm}$",
+      "$6\\,\\mathrm{cm}$",
+      "$36\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los lados correspondientes conservan la razón de semejanza.\n2. Usamos los datos indicados: $L=3(4)$.\n3. El resultado es $12\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t03_s02_c02",
+    "concept": "3.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 3,
+    "statement": "Dos triángulos semejantes tienen razón de lados grande/pequeño igual a 2. El área pequeña es 7 cm². ¿Cuál es la grande?",
+    "options": [
+      "$56\\,\\mathrm{cm^2}$",
+      "$14\\,\\mathrm{cm^2}$",
+      "$84\\,\\mathrm{cm^2}$",
+      "$28\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Las áreas escalan con el cuadrado de la razón lineal.\n2. Usamos los datos indicados: $S_g=2^2(7)$.\n3. El resultado es $28\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t03_s02_c03",
+    "concept": "3.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 3,
+    "statement": "Dos triángulos semejantes tienen perímetros 18 y 30 cm. ¿Cuál es la razón del grande al pequeño?",
+    "options": [
+      "$\\frac{5}{6}$",
+      "$5$",
+      "$\\frac{5}{3}$",
+      "$\\frac{10}{3}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El perímetro escala como cualquier longitud.\n2. Usamos los datos indicados: $k=30/18=5/3$.\n3. El resultado es $\\frac{5}{3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t03_s02_c04",
+    "concept": "3.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 3,
+    "statement": "En un triángulo, el segmento que une puntos medios de dos lados es paralelo al tercero, de 16 cm. ¿Cuánto mide ese segmento medio?",
+    "options": [
+      "$24\\,\\mathrm{cm}$",
+      "$8\\,\\mathrm{cm}$",
+      "$16\\,\\mathrm{cm}$",
+      "$4\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El triángulo menor tiene escala un medio.\n2. Usamos los datos indicados: $m=16/2$.\n3. El resultado es $8\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t03_s02_c05",
+    "concept": "3.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 3,
+    "statement": "Dos triángulos congruentes tienen lados correspondientes de 5 cm y x cm. ¿Cuánto vale x?",
+    "options": [
+      "$5\\,\\mathrm{cm}$",
+      "$10\\,\\mathrm{cm}$",
+      "$2.5\\,\\mathrm{cm}$",
+      "$15\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La congruencia conserva cada longitud.\n2. Usamos los datos indicados: $x=5$.\n3. El resultado es $5\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t03_s02_c06",
+    "concept": "3.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 3,
+    "statement": "Un triángulo semejante a otro de área 12 cm² tiene lados tres veces mayores. ¿Qué área tiene?",
+    "options": [
+      "$216\\,\\mathrm{cm^2}$",
+      "$54\\,\\mathrm{cm^2}$",
+      "$324\\,\\mathrm{cm^2}$",
+      "$108\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La razón de áreas es el cuadrado de la razón de lados.\n2. Usamos los datos indicados: $S=12(3^2)$.\n3. El resultado es $108\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t03_s02_c07",
+    "concept": "3.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 3,
+    "statement": "Dos triángulos semejantes tienen áreas 25 y 100 cm². ¿Cuál es la razón de lados grande/pequeño?",
+    "options": [
+      "$1$",
+      "$6$",
+      "$2$",
+      "$4$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La razón lineal es la raíz positiva de la razón de áreas.\n2. Usamos los datos indicados: $k=\\sqrt{100/25}$.\n3. El resultado es $2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t03_s02_c08",
+    "concept": "3.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 3,
+    "statement": "Una vara de 2 m proyecta sombra de 3 m. Al mismo tiempo y en suelo horizontal, un poste proyecta sombra de 12 m. ¿Qué altura tiene el poste?",
+    "options": [
+      "$24\\,\\mathrm{m}$",
+      "$8\\,\\mathrm{m}$",
+      "$16\\,\\mathrm{m}$",
+      "$4\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los rayos solares paralelos generan triángulos semejantes.\n2. Usamos los datos indicados: $h/12=2/3\\Rightarrow h=8$.\n3. El resultado es $8\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t03_s02_c09",
+    "concept": "3.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 3,
+    "statement": "Dos triángulos semejantes tienen razón de lados grande/pequeño de 5/2. La altura pequeña correspondiente mide 6 cm. ¿Cuánto mide la grande?",
+    "options": [
+      "$15\\,\\mathrm{cm}$",
+      "$30\\,\\mathrm{cm}$",
+      "$7.5\\,\\mathrm{cm}$",
+      "$45\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Las alturas correspondientes escalan con la misma razón.\n2. Usamos los datos indicados: $h_g=(5/2)6$.\n3. El resultado es $15\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t03_s02_c10",
+    "concept": "3.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 3,
+    "statement": "El criterio LAL de congruencia requiere…",
+    "options": [
+      "Dos lados y el ángulo comprendido iguales a sus correspondientes.",
+      "Dos lados y cualquier ángulo.",
+      "Solo tres ángulos iguales.",
+      "Solo el mismo perímetro."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los dos lados dados deben emparejarse.\n2. El ángulo igual debe quedar entre esos dos lados.\n3. Esa configuración determina la congruencia.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t03_s02_c11",
+    "concept": "3.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 3,
+    "statement": "Dos triángulos con sus tres ángulos correspondientes iguales son…",
+    "options": [
+      "Siempre congruentes.",
+      "Semejantes, pero pueden tener tamaños distintos.",
+      "Necesariamente equiláteros.",
+      "Siempre de igual área."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los ángulos determinan la forma.\n2. No fijan la escala de longitud.\n3. Por eso garantizan semejanza y no necesariamente congruencia.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

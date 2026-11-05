@@ -1,5 +1,8 @@
 # Decisiones
 
+## Instrucción vigente 10/10/2026
+La autorización actual permite preparar, cargar y enviar una nueva versión a producción tras el acceso concedido. Supera las suspensiones históricas descritas abajo. Texto legal final aprobado expresamente en esta conversación. Reutilizar firma de carga y versionar por encima del máximo real 205. No tocar la copia Compose web, referencia React protegida, Blaze ni datos fiscales/bancarios. Centro legal reproducible separado en docs/publicacion/centro-legal; desplegar solo Hosting conservando rutas. Consultar candidatos huérfanos no autoriza borrado irreversible por nombre/correo.
+
 La instrucción vigente suspende la generación de APK/AAB y la subida. La versión de Console es 1.0/code 1; 1.0 BETA es el nombre del lanzamiento. Un artefacto local 1.0.3 no define la versión publicada. Completar la SHA-256 del mismo certificado Play existente no crea otra app ni sustituye certificados. Respaldar y probar reglas antes de desplegar, y comparar después con el servidor. Mantener Spark mientras el propietario no habilite facturación; no desplegar Hosting parcial para corregir un único assetlinks.
 
 Auth debe confirmar borrado antes de limpiar datos. Cleanup servidor por propiedad explícita, paginado e idempotente, sin depender de UI. Codebase aislado account-cleanup. No despliegue ni cambio de versión por suposición. Rules requieren correo Admin verificado y propiedad real/inmutable. No confundir pruebas de regresión verdes con aceptación pedagógica global ni compilación con recorrido físico.

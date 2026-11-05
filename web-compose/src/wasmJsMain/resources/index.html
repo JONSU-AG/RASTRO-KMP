@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#6750A4">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="icon.png">
+  <title>RASTRO · Estudia a tu ritmo</title>
+  <style>
+    html,body {width:100%;height:100%;margin:0;padding:0;overflow:hidden;background:#f7f3e9}
+    body{display:flex;flex-direction:column;font-family:system-ui,sans-serif}
+    #webApp{flex:1;min-height:0;position:relative}
+    #platform-notice{display:none;padding:10px 14px;background:#efe5ff;color:#292524;gap:12px;align-items:center;font-size:14px}
+    #platform-notice a{font-weight:800;color:#49307b} #platform-notice button{border:0;background:transparent;font:inherit;cursor:pointer}
+  </style>
+</head>
+<body>
+  <aside id="platform-notice" aria-label="RASTRO en Google Play">
+    <span>Disfruta una experiencia más fluida con la app de RASTRO.</span>
+    <a href="https://play.google.com/store/apps/details?id=com.jonsuapps.rastro" target="_blank" rel="noopener">Ver en Google Play</a>
+    <button id="dismiss-notice" type="button">Ahora no</button>
+  </aside>
+  <div id="webApp"></div>
+  <script src="platform.js"></script>
+  <script src="RASTRO-Web.js"></script>
+</body>
+</html>

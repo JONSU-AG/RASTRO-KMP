@@ -2,7 +2,7 @@
   {
     "id": "leng_t06_s01_c01",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La oración 'Hubo muchos postulantes en el examen de admisión' se clasifica estructuralmente como:",
+    "statement": "En la nomenclatura escolar bimembre/unimembre, ¿cómo se analiza «Hubo muchos postulantes en el examen de admisión» con haber existencial?",
     "options": [
       "Bimembre compuesta",
       "Unimembre verbal impersonal",
@@ -10,7 +10,7 @@
       "Bimembre con sujeto tácito"
     ],
     "correctIndex": 1,
-    "explanation": "El verbo 'haber' en sentido existencial se conjuga obligatoriamente en tercera persona del singular como impersonal; no admite sujeto y forma una oración unimembre.",
+    "explanation": "Criterio: haber existencial se analiza como impersonal en esta construcción. Aplicación: muchos postulantes no es sujeto de hubo y no provoca concordancia plural del verbo. Respuesta: Unimembre verbal impersonal, según la nomenclatura escolar indicada.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.1.1",
@@ -20,7 +20,7 @@
   {
     "id": "leng_t06_s01_c02",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la oración 'Hubo muchas dificultades', el sintagma 'muchas dificultades' desempeña la función de:",
+    "statement": "En el análisis escolar de «Hubo muchas dificultades», ¿qué función tiene el grupo «muchas dificultades»?",
     "options": [
       "Objeto Directo",
       "Sujeto paciente",
@@ -28,7 +28,7 @@
       "Atributo"
     ],
     "correctIndex": 0,
-    "explanation": "Con el verbo haber existencial impersonal, el sustantivo que sigue es el Objeto Directo ('Las hubo'), nunca el sujeto.",
+    "explanation": "Criterio: el grupo nominal del haber existencial se analiza aquí como complemento directo. Aplicación: muchas dificultades se relaciona con las en las hubo, mientras hubo permanece singular. Respuesta: Objeto directo. La sustitución se interpreta dentro de esta construcción y no como una prueba universal de impersonalidad.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.1.1",
@@ -38,7 +38,7 @@
   {
     "id": "leng_t06_s01_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes oraciones es unimembre de tipo meteorológico o climático?",
+    "statement": "¿Qué oración presenta un uso meteorológico literal sin sujeto léxico, llamado unimembre verbal en la nomenclatura escolar?",
     "options": [
       "El granizo destruyó los cultivos en la sierra.",
       "El frío intenso congeló las tuberías.",
@@ -46,7 +46,7 @@
       "La lluvia caía sin cesar sobre el tejado."
     ],
     "correctIndex": 2,
-    "explanation": "'Nevó intensamente sobre la cordillera' emplea un verbo de fenómeno de la naturaleza en tercera persona impersonal (oración unimembre).",
+    "explanation": "Criterio: nevar, en el uso meteorológico literal del ejemplo, forma una construcción impersonal. Aplicación: nevó intensamente sobre la cordillera no introduce un sujeto léxico; en las otras opciones sí aparecen sujetos expresos, como el granizo o la lluvia. Respuesta: Nevó intensamente sobre la cordillera de los Andes.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.1.2",
@@ -56,7 +56,7 @@
   {
     "id": "leng_t06_s01_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La oración '¡Ojalá obtengas el primer puesto en el cómputo general!' se clasifica por la actitud del hablante como:",
+    "statement": "En «¡Ojalá obtengas el primer puesto!», ¿qué valor expresa ojalá en la clasificación escolar por la actitud del hablante?",
     "options": [
       "Exhortativa",
       "Enunciativa afirmativa",
@@ -64,7 +64,7 @@
       "Desiderativa u optativa"
     ],
     "correctIndex": 3,
-    "explanation": "Las oraciones desiderativas u optativas manifiestan el anhelo o deseo del emisor, encabezadas habitualmente por la partícula 'ojalá'.",
+    "explanation": "Criterio: ojalá introduce el contenido como deseado. Aplicación: obtener el primer puesto se presenta como un anhelo del hablante. Respuesta: Desiderativa u optativa. Los signos de exclamación no eliminan ese valor ni hacen incompatibles todos los criterios de clasificación.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.1.3",
@@ -74,7 +74,7 @@
   {
     "id": "leng_t06_s01_c05",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La oración interrogativa 'No sé quién fue el autor de ese informe' se clasifica formalmente como:",
+    "statement": "En «No sé quién fue el autor de ese informe», clasifica únicamente la subordinada «quién fue el autor de ese informe» por su dependencia y su estructura interrogativa.",
     "options": [
       "Interrogativa directa parcial",
       "Interrogativa indirecta parcial",
@@ -82,7 +82,7 @@
       "Interrogativa directa total"
     ],
     "correctIndex": 1,
-    "explanation": "Es indirecta porque no lleva signos de interrogación y se subordina a un verbo de entendimiento ('no sé'); es parcial porque pregunta por un elemento específico con 'quién'.",
+    "explanation": "Criterio: una interrogativa indirecta está subordinada; una parcial deja abierta una información concreta. Aplicación: quién fue el autor depende de sé e introduce una incógnita sobre la persona. Respuesta: Interrogativa indirecta parcial. La oración completa declara un desconocimiento; no se confunde su modalidad con la del segmento subordinado.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.1.3",
@@ -92,15 +92,15 @@
   {
     "id": "leng_t06_s01_c06",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La expresión '¡Auxilio!' constituye un ejemplo paradigmático de oración:",
+    "statement": "En la nomenclatura escolar utilizada, ¿cómo se clasifica «¡Auxilio!» cuando se usa como petición independiente de ayuda?",
     "options": [
       "Bimembre con sujeto omitido",
       "Compuesta subordinada",
       "Bimembre pasiva",
-      "Unimembre no verbal interjectiva"
+      "Unimembre no verbal"
     ],
     "correctIndex": 3,
-    "explanation": "'¡Auxilio!' es una interjección con valor oracional completo que carece de verbo conjugado y no puede dividirse en sujeto y predicado (unimembre no verbal).",
+    "explanation": "Criterio: un enunciado puede comunicar sin contener un verbo. Aplicación: auxilio se interpreta como petición de ayuda en la situación dada, sin dividirse aquí en sujeto y predicado. Respuesta: Unimembre no verbal, en la nomenclatura escolar indicada.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.1.2",
@@ -110,15 +110,15 @@
   {
     "id": "leng_t06_s01_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En 'Caminaron durante tres horas por la avenida', la oración es bimembre porque:",
+    "statement": "Un relato presenta a los excursionistas y continúa: «Caminaron durante tres horas». Si caminaron se refiere a ese grupo, ¿por qué se analiza como bimembre?",
     "options": [
       "Carece de verboide",
       "Tiene dos núcleos de predicado",
       "Posee complemento agente",
-      "Posee un sujeto tácito o elíptico ('Ellos/Ellas')"
+      "Tiene un sujeto tácito referido a los excursionistas mencionados"
     ],
     "correctIndex": 3,
-    "explanation": "Aunque el sujeto no esté escrito explícitamente, se sobreentiende a través de la desinencia verbal de tercera persona plural (sujeto tácito).",
+    "explanation": "Criterio: puede recuperarse un sujeto tácito referencial a partir de la forma verbal y del contexto. Aplicación: caminaron remite aquí a los excursionistas ya mencionados. Respuesta: tiene un sujeto tácito referido a ese grupo. Una tercera persona plural aislada no identifica siempre a varias personas conocidas: llaman a la puerta puede dejar indeterminado quién llama.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.1.1",
@@ -136,7 +136,7 @@
       "Desiderativa"
     ],
     "correctIndex": 0,
-    "explanation": "Las oraciones dubitativas expresan incertidumbre o posibilidad y van acompañadas por adverbios de duda como 'tal vez' o 'quizás'.",
+    "explanation": "Criterio: en la clasificación escolar, tal vez permite presentar incertidumbre o posibilidad. Aplicación: tal vez viajemos no asegura el viaje; ese es el valor que se evalúa. Respuesta: Dubitativa. No se deduce de ello que el hablante sea incapaz de desear también el viaje.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.1.3",
@@ -154,7 +154,7 @@
       "Interrogativa indirecta"
     ],
     "correctIndex": 0,
-    "explanation": "Expresa una orden, mandato o prohibición orientada a regular la conducta de los receptores (función apelativa / actitud exhortativa).",
+    "explanation": "Criterio: el valor exhortativo orienta una conducta mediante mandato, ruego o prohibición. Aplicación: mantengan el orden y no abran el cuadernillo contienen una orden y una prohibición. Respuesta: Exhortativa o imperativa. Señores postulantes es vocativo, no un sujeto expreso identificado solo por estar al inicio.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.1.3",
@@ -164,7 +164,7 @@
   {
     "id": "leng_t06_s01_c10",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes construcciones es gramaticalmente incorrecta según la norma académica estándar para el verbo impersonal 'haber'?",
+    "statement": "Con valor de existencia, ¿qué construcción se aparta de la norma general que mantiene haber en singular?",
     "options": [
       "Hubo muchos festejos en la plaza principal.",
       "Había demasiadas quejas en la mesa de partes.",
@@ -172,7 +172,7 @@
       "Ha habido intensas precipitaciones."
     ],
     "correctIndex": 2,
-    "explanation": "El uso en plural hubieron para indicar existencia es un error vulgar común; el verbo haber impersonal debe conjugarse siempre en singular ('Hubo varios accidentes').",
+    "explanation": "Criterio: el haber existencial se mantiene en singular en la norma general. Aplicación: hubieron varios accidentes, usado para existencia, se corrige a hubo varios accidentes. Respuesta: Hubieron varios accidentes en la carretera. No se prohíbe cualquier hubieron: como auxiliar del pretérito anterior aparece en cuando hubieron terminado.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.1.2",

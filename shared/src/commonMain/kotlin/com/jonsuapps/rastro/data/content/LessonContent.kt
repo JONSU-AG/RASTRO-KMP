@@ -42,7 +42,8 @@ data class QuestionJson(
     val fuente: String? = null,
     val concept: String? = null,
     val textTemplate: String? = null,
-    val blanks: List<com.jonsuapps.rastro.model.ChallengeBlank> = emptyList()
+    val blanks: List<com.jonsuapps.rastro.model.ChallengeBlank> = emptyList(),
+    val angleDegrees: Double? = null
 )
 
 @Serializable

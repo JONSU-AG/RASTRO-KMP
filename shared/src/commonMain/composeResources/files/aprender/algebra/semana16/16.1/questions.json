@@ -1,1 +1,200 @@
-[{"concept":"16.1.1","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s01_c01","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.1.2","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s01_c02","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "16.1.1",
+    "correctIndex": 0,
+    "explanation": "1. En el equilibrio el ingreso es igual al costo.\n2. Sustituimos y operamos: $7q=40+2q;\\quad 5q=40$.\n3. El valor pedido es $8$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s01_c01",
+    "options": [
+      "$8$",
+      "$9$",
+      "$7$",
+      "$16$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "En unidades monetarias, el costo fijo es 40, el costo variable por unidad es 2 y el precio de venta es 7. ¿Cuántas unidades vendidas cubren exactamente el costo total?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.1.2",
+    "correctIndex": 3,
+    "explanation": "1. El costo fijo se suma una sola vez al variable.\n2. Sustituimos y operamos: $C(5)=4+2\\cdot 5$.\n3. El valor pedido es $14$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s01_c02",
+    "options": [
+      "$15$",
+      "$13$",
+      "$28$",
+      "$14$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "El costo total de q unidades es C(q)=4+2q. ¿Cuánto cuesta producir 5 unidades?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.1.3",
+    "correctIndex": 2,
+    "explanation": "1. La utilidad resta el costo total al ingreso.\n2. Sustituimos y operamos: $U=4\\cdot 5-4$.\n3. El valor pedido es $16$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s01_c03",
+    "options": [
+      "$15$",
+      "$32$",
+      "$16$",
+      "$17$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "Se venden 4 unidades a 5 cada una y el costo total es 4. ¿Cuál es la utilidad?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.1.4",
+    "correctIndex": 1,
+    "explanation": "1. El perímetro suma dos largos y dos anchos.\n2. Sustituimos y operamos: $2x+2(x+4)=28$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s01_c04",
+    "options": [
+      "$10$",
+      "$5$",
+      "$6$",
+      "$4$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "Un rectángulo tiene ancho x y largo x+4. Su perímetro es 28. ¿Cuánto vale x?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.1.5",
+    "correctIndex": 0,
+    "explanation": "1. Descontar 10 % deja el 90 % del precio inicial.\n2. Sustituimos y operamos: $40\\cdot 90/100$.\n3. El valor pedido es $36$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s01_c05",
+    "options": [
+      "$36$",
+      "$37$",
+      "$35$",
+      "$72$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "Un producto cuesta 40. Tras un descuento del 10 %, ¿cuál es su precio?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.1.6",
+    "correctIndex": 3,
+    "explanation": "1. En el equilibrio el ingreso es igual al costo.\n2. Sustituimos y operamos: $7q=50+2q;\\quad 5q=50$.\n3. El valor pedido es $10$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s01_c06",
+    "options": [
+      "$11$",
+      "$9$",
+      "$20$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "En unidades monetarias, el costo fijo es 50, el costo variable por unidad es 2 y el precio de venta es 7. ¿Cuántas unidades vendidas cubren exactamente el costo total?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.1.7",
+    "correctIndex": 2,
+    "explanation": "1. El costo fijo se suma una sola vez al variable.\n2. Sustituimos y operamos: $C(6)=5+2\\cdot 6$.\n3. El valor pedido es $17$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s01_c07",
+    "options": [
+      "$16$",
+      "$34$",
+      "$17$",
+      "$18$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "El costo total de q unidades es C(q)=5+2q. ¿Cuánto cuesta producir 6 unidades?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.1.8",
+    "correctIndex": 1,
+    "explanation": "1. La utilidad resta el costo total al ingreso.\n2. Sustituimos y operamos: $U=5\\cdot 6-5$.\n3. El valor pedido es $25$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s01_c08",
+    "options": [
+      "$50$",
+      "$25$",
+      "$26$",
+      "$24$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "Se venden 5 unidades a 6 cada una y el costo total es 5. ¿Cuál es la utilidad?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.1.9",
+    "correctIndex": 0,
+    "explanation": "1. El perímetro suma dos largos y dos anchos.\n2. Sustituimos y operamos: $2x+2(x+5)=34$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s01_c09",
+    "options": [
+      "$6$",
+      "$7$",
+      "$5$",
+      "$12$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "Un rectángulo tiene ancho x y largo x+5. Su perímetro es 34. ¿Cuánto vale x?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.1.10",
+    "correctIndex": 3,
+    "explanation": "1. Descontar 10 % deja el 90 % del precio inicial.\n2. Sustituimos y operamos: $50\\cdot 90/100$.\n3. El valor pedido es $45$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s01_c10",
+    "options": [
+      "$46$",
+      "$44$",
+      "$90$",
+      "$45$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "Un producto cuesta 50. Tras un descuento del 10 %, ¿cuál es su precio?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.1.11",
+    "correctIndex": 2,
+    "explanation": "1. En el equilibrio el ingreso es igual al costo.\n2. Sustituimos y operamos: $7q=60+2q;\\quad 5q=60$.\n3. El valor pedido es $12$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s01_c11",
+    "options": [
+      "$11$",
+      "$24$",
+      "$12$",
+      "$13$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "En unidades monetarias, el costo fijo es 60, el costo variable por unidad es 2 y el precio de venta es 7. ¿Cuántas unidades vendidas cubren exactamente el costo total?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

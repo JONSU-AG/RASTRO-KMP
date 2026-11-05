@@ -8,7 +8,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.unit.IntSize
 
-internal class PizarraCanvasEngine {
+internal class PizarraCanvasEngine(private val paperColor: Int = android.graphics.Color.WHITE,private val virtualViewport:Boolean=false) {
     private val history = PizarraStrokeHistory()
     private val budget = CanvasMemoryPolicy.budget(Runtime.getRuntime().maxMemory())
     var bitmap: Bitmap? = null
@@ -36,10 +36,15 @@ internal class PizarraCanvasEngine {
     var hasDrawing by mutableStateOf(false)
         private set
     var notice by mutableStateOf<String?>(null)
+    private var viewport=InkViewport()
+    val retainedPoints get()=history.retainedPoints
+    private val paths=java.util.IdentityHashMap<InkStroke,Path>()
+    fun setViewport(next:InkViewport){if(viewport!=next){viewport=next;if(virtualViewport)redraw()}}
+    fun releaseRaster(){bitmap?.recycle();bitmap=null;canvas=null;size=IntSize.Zero;paths.clear()}
 
     fun resize(viewport: IntSize) {
         if (viewport.width <= 0 || viewport.height <= 0) return
-        val next = IntSize(maxOf(size.width, viewport.width), maxOf(size.height, viewport.height))
+        val next = if(virtualViewport)viewport else IntSize(maxOf(size.width, viewport.width), maxOf(size.height, viewport.height))
         if (next == size && bitmap != null) return
         val (w, h) = CanvasMemoryPolicy.dimensions(next.width, next.height, budget)
         val buffer = try { Bitmap.createBitmap(w,h,Bitmap.Config.ARGB_8888) }
@@ -52,6 +57,9 @@ internal class PizarraCanvasEngine {
     }
     private fun configure(color: Int, thickness: Float) { paint.color = color; paint.strokeWidth = thickness }
     private fun render(stroke: InkStroke) {
+        val target=canvas ?: return
+        val saved=target.save()
+        if(virtualViewport){target.translate(viewport.panX,viewport.panY);target.scale(viewport.zoom,viewport.zoom)}
         configure(stroke.color, stroke.width)
         paint.xfermode = if (stroke.isEraser) android.graphics.PorterDuffXfermode(android.graphics.PorterDuff.Mode.CLEAR) else null
         if (stroke.points.size == 1) {
@@ -59,17 +67,19 @@ internal class PizarraCanvasEngine {
             canvas?.drawCircle(stroke.points[0].x,stroke.points[0].y,stroke.width/2,paint)
             paint.style = Paint.Style.STROKE
         } else {
-            val path = Path()
-            stroke.points.forEachIndexed { i,p -> if (i == 0) path.moveTo(p.x,p.y) else path.lineTo(p.x,p.y) }
+            val path = paths.getOrPut(stroke){Path().apply {stroke.points.forEachIndexed {i,p->if(i==0)moveTo(p.x,p.y) else lineTo(p.x,p.y)}}}
             canvas?.drawPath(path,paint)
         }
+        target.restoreToCount(saved)
     }
     private fun update() {
         canUndo = history.canUndo; canRedo = history.canRedo
         hasDrawing = history.strokes.any { !it.isEraser }; revision++
     }
     private fun redraw() {
-        canvas?.drawColor(android.graphics.Color.WHITE); history.strokes.forEach(::render)
+        val retained=java.util.IdentityHashMap<InkStroke,Boolean>();history.strokes.forEach {retained[it]=true}
+        paths.keys.removeAll {it !in retained}
+        canvas?.drawColor(paperColor,android.graphics.PorterDuff.Mode.SRC); history.strokes.forEach(::render)
         if (erasing && precision && activePoints.isNotEmpty()) render(InkStroke(activePoints,ink,width,true))
         update()
     }
@@ -109,6 +119,8 @@ internal class PizarraCanvasEngine {
     }
     fun drawActive(target: Canvas) {
         if (erasing || activePoints.isEmpty()) return
+        val saved=target.save()
+        if(virtualViewport){target.translate(viewport.panX,viewport.panY);target.scale(viewport.zoom,viewport.zoom)}
         configure(ink,width)
         paint.xfermode = null
         if (activePoints.size == 1) {
@@ -116,6 +128,7 @@ internal class PizarraCanvasEngine {
             target.drawCircle(activePoints[0].x,activePoints[0].y,width/2,paint)
             paint.style = Paint.Style.STROKE
         } else target.drawPath(activePath,paint)
+        target.restoreToCount(saved)
     }
     fun undo() { history.undo(); redraw() }
     fun redo() { history.redo(); redraw() }
@@ -125,6 +138,6 @@ internal class PizarraCanvasEngine {
         Canvas(it).drawColor(android.graphics.Color.WHITE, android.graphics.PorterDuff.Mode.DST_OVER)
     } }
         catch (_: OutOfMemoryError) { notice = "No hay memoria suficiente para exportar la imagen."; null }
-    fun release() { bitmap?.recycle(); bitmap = null; canvas = null; history.release() }
+    fun release() { releaseRaster();paths.clear();history.release() }
     private fun Offset.inkPoint() = InkPoint(x,y)
 }

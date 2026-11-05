@@ -1,1 +1,200 @@
-[{"concept":"2.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t02_s01_c01","options":["12 años","15 años","18 años","20 años"],"pedagogicalTier":"concepto","semana":2,"statement":"Las edades de dos hermanos están en la relación de 5 a 3. Si dentro de 8 años la suma de sus edades será de 48 años, ¿cuál es la edad actual del hermano menor?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t02_s01_c02","options":["S/.\\, 160","S/.\\, 175","S/.\\, 180","S/.\\, 190"],"pedagogicalTier":"concepto","semana":2,"statement":"En una tienda de Arequipa se ofrece un descuento del 20\\% por liquidación de temporada, y si el pago es en efectivo, se aplica un descuento adicional del 10\\% sobre lo que queda por pagar. Si un cliente compra una casaca cuyo precio original era de S/.\\, 250, ¿cuánto pagó en efectivo?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t02_s01_c03","options":["12 días","15 días","8 días","9 días"],"pedagogicalTier":"concepto","semana":2,"statement":"Una cuadrilla de 15 obreros, trabajando 8 horas diarias durante 12 días, puede asfaltar una avenida de 600 metros con una dificultad de grado 2. ¿Cuántos días necesitarán 20 obreros, que son 50\\% más eficientes que los anteriores, trabajando 6 horas diarias para asfaltar una avenida de 900 metros con una dificultad de grado 3?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: La división: \\frac{A}{B} = k.","fuente":"temario","id":"rm_t02_s01_c04","options":["Son inversamente proporcionales: \\text{Dientes}_A \\cdot \\text{Vueltas}_A = \\text{Dientes}_B \\cdot \\text{Vueltas}_B.","D_u = (20 + 10 - \\frac{20 \\cdot 10}{100})\\% = 28\\%.","Valor o condición no aplicable al caso planteado","La división: \\frac{A}{B} = k."],"pedagogicalTier":"concepto","semana":2,"statement":"Si A es D.P. a B, ¿qué operación permanece matemáticamente constante?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Son inversamente proporcionales: \\text{Dientes}_A \\cdot \\text{Vueltas}_A = \\text{Dientes}_B \\cdot \\text{Vueltas}_B.","fuente":"temario","id":"rm_t02_s01_c05","options":["Son inversamente proporcionales: \\text{Dientes}_A \\cdot \\text{Vueltas}_A = \\text{Dientes}_B \\cdot \\text{Vueltas}_B.","La división: \\frac{A}{B} = k.","D_u = (20 + 10 - \\frac{20 \\cdot 10}{100})\\% = 28\\%.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":2,"statement":"Si dos ruedas dentadas están engranadas, ¿qué relación existe entre sus vueltas y sus dientes?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: D_u = (20 + 10 - \\frac{20 \\cdot 10}{100})\\% = 28\\%.","fuente":"temario","id":"rm_t02_s01_c06","options":["La división: \\frac{A}{B} = k.","D_u = (20 + 10 - \\frac{20 \\cdot 10}{100})\\% = 28\\%.","Son inversamente proporcionales: \\text{Dientes}_A \\cdot \\text{Vueltas}_A = \\text{Dientes}_B \\cdot \\text{Vueltas}_B.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":2,"statement":"¿Cuál es la fórmula para el descuento único de dos descuentos del 20\\% y 10\\%?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.7","correctIndex":2,"explanation":"La masa inicial es 8m (precio 64km^2 = 32000 => km^2 = 500). Los pedazos valen 9(500) y 25(500), sumando S/. 17,000. Pérdida: 32000 - 17000 = S/. 15,000.","fuente":"temario","id":"rm_t02_s01_c07","options":["S/. 20,000","S/. 12,000","S/. 15,000","S/. 17,000"],"pedagogicalTier":"concepto","semana":2,"statement":"Un diamante de S/. 32,000 se rompe en pedazos de masas en relación 3 a 5. Si el precio es D.P. al cuadrado de la masa, ¿cuánto dinero se perdió?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t02_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t02_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"2.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t02_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rm_t02_s01_c01",
+    "concept": "2.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 2,
+    "statement": "A precio unitario constante, 3 cuadernos cuestan 12 unidades monetarias. ¿Cuánto cuestan 7?",
+    "options": [
+      "$28\\,\\mathrm{unidades monetarias}$",
+      "$56\\,\\mathrm{unidades monetarias}$",
+      "$14\\,\\mathrm{unidades monetarias}$",
+      "$84\\,\\mathrm{unidades monetarias}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Primero calculamos el costo por cuaderno.\n2. Desarrollamos: $C=(12/3)7$.\n3. El resultado es $28\\,\\mathrm{unidades monetarias}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t02_s01_c02",
+    "concept": "2.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 2,
+    "statement": "Seis trabajadores terminan una tarea en 10 días. Con igual rendimiento individual constante, ¿cuántos días necesitan 15 trabajadores?",
+    "options": [
+      "$8\\,\\text{días}$",
+      "$2\\,\\text{días}$",
+      "$12\\,\\text{días}$",
+      "$4\\,\\text{días}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Para la misma obra conservamos trabajadores por días.\n2. Desarrollamos: $d=6(10)/15$.\n3. El resultado es $4\\,\\text{días}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t02_s01_c03",
+    "concept": "2.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 2,
+    "statement": "Un vehículo recorre 180 km en 3 h a rapidez constante. ¿Qué distancia recorre en 5 h con esa rapidez?",
+    "options": [
+      "$150\\,\\mathrm{km}$",
+      "$900\\,\\mathrm{km}$",
+      "$300\\,\\mathrm{km}$",
+      "$600\\,\\mathrm{km}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Hallamos la rapidez y multiplicamos por el nuevo tiempo.\n2. Desarrollamos: $d=(180/3)5$.\n3. El resultado es $300\\,\\mathrm{km}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t02_s01_c04",
+    "concept": "2.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 2,
+    "statement": "Una tubería llena sola un depósito en 6 h y otra en 3 h. Ambas trabajan juntas con caudales constantes, sin pérdidas. ¿Cuánto tardan?",
+    "options": [
+      "$6\\,\\mathrm{h}$",
+      "$2\\,\\mathrm{h}$",
+      "$4\\,\\mathrm{h}$",
+      "$1\\,\\mathrm{h}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Se suman fracciones de depósito por hora.\n2. Desarrollamos: $t=1/(1/6+1/3)$.\n3. El resultado es $2\\,\\mathrm{h}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t02_s01_c05",
+    "concept": "2.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 2,
+    "statement": "Un mapa usa escala 1:50000. ¿A cuántos km corresponden 4 cm del mapa?",
+    "options": [
+      "$2\\,\\mathrm{km}$",
+      "$4\\,\\mathrm{km}$",
+      "$1\\,\\mathrm{km}$",
+      "$6\\,\\mathrm{km}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Convertimos la longitud real de cm a km.\n2. Desarrollamos: $d=4(50000)/100000$.\n3. El resultado es $2\\,\\mathrm{km}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t02_s01_c06",
+    "concept": "2.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 2,
+    "statement": "Una rueda de 20 dientes engrana externamente con otra de 40. Si la pequeña da 6 vueltas, ¿cuántas da la grande, en valor absoluto?",
+    "options": [
+      "$6\\,\\mathrm{vueltas}$",
+      "$9\\,\\mathrm{vueltas}$",
+      "$1\\,\\mathrm{vueltas}$",
+      "$3\\,\\mathrm{vueltas}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Los dientes que pasan por el contacto deben coincidir.\n2. Desarrollamos: $n=6(20)/40$.\n3. El resultado es $3\\,\\mathrm{vueltas}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t02_s01_c07",
+    "concept": "2.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 2,
+    "statement": "Una receta usa 300 g para 4 porciones iguales. Manteniendo proporciones, ¿cuántos gramos necesita para 10?",
+    "options": [
+      "$375\\,\\mathrm{g}$",
+      "$2250\\,\\mathrm{g}$",
+      "$750\\,\\mathrm{g}$",
+      "$1500\\,\\mathrm{g}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La masa es directamente proporcional al número de porciones.\n2. Desarrollamos: $m=300(10)/4$.\n3. El resultado es $750\\,\\mathrm{g}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t02_s01_c08",
+    "concept": "2.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 2,
+    "statement": "Para recorrer 240 km, un vehículo aumenta su rapidez constante de 60 a 80 km/h. ¿Cuántas horas tarda a 80 km/h?",
+    "options": [
+      "$9\\,\\mathrm{h}$",
+      "$3\\,\\mathrm{h}$",
+      "$6\\,\\mathrm{h}$",
+      "$1.5\\,\\mathrm{h}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Para la distancia fija dividimos entre la nueva rapidez.\n2. Desarrollamos: $t=240/80$.\n3. El resultado es $3\\,\\mathrm{h}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t02_s01_c09",
+    "concept": "2.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 2,
+    "statement": "Dos figuras semejantes tienen razón de longitudes 3:1. ¿Cuál es la razón numérica de sus áreas en ese mismo orden?",
+    "options": [
+      "$9$",
+      "$18$",
+      "$27$",
+      "$3$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Las áreas escalan con el cuadrado de la razón lineal.\n2. Desarrollamos: $k_A=3^2$.\n3. El resultado es $9$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t02_s01_c10",
+    "concept": "2.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 2,
+    "statement": "Dos magnitudes positivas son inversamente proporcionales cuando…",
+    "options": [
+      "Su suma es siempre cero.",
+      "Su cociente permanece constante.",
+      "Ambas crecen siempre con el mismo factor.",
+      "Su producto permanece constante."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Si una se multiplica por k, la otra se divide por k.\n2. La compensación conserva el producto.\n3. Cociente constante corresponde a proporcionalidad directa.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t02_s01_c11",
+    "concept": "2.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 2,
+    "statement": "Para usar un modelo de trabajadores y días inversamente proporcionales debe suponerse…",
+    "options": [
+      "Que añadir personas siempre acelera sin límite cualquier proceso real.",
+      "Que el tiempo no depende del trabajo.",
+      "La misma obra y rendimiento constante por trabajador, sin interferencias adicionales.",
+      "Cualquier tarea sin importar su tamaño."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El producto trabajadores×días representa trabajo bajo el modelo.\n2. Si cambia la tarea o la productividad, cambia esa relación.\n3. Las hipótesis no se omiten al aplicar la regla.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

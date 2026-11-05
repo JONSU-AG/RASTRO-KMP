@@ -1,1 +1,200 @@
-[{"concept":"4.1.1","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s01_c01","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.1.2","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s01_c02","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "4.1.1",
+    "correctIndex": 0,
+    "explanation": "1. En un monomio polinómico sumamos los exponentes de las variables.\n2. Sustituimos y operamos: $4+5$.\n3. El valor pedido es $9$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s01_c01",
+    "options": [
+      "$9$",
+      "$10$",
+      "$8$",
+      "$18$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "¿Cuál es el grado absoluto del monomio $7x^{4}$$y^{5}$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.2",
+    "correctIndex": 3,
+    "explanation": "1. El grado relativo mira solo el exponente de la variable indicada.\n2. Sustituimos y operamos: $x^4y^5:\\quad GR_x=4$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s01_c02",
+    "options": [
+      "$5$",
+      "$3$",
+      "$8$",
+      "$4$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "¿Cuál es el grado relativo respecto de x de $4x^{4}$$y^{5}$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.3",
+    "correctIndex": 2,
+    "explanation": "1. Los términos semejantes conservan su parte literal y suman coeficientes.\n2. Sustituimos y operamos: $(4+5)x^2$.\n3. El valor pedido es $9$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s01_c03",
+    "options": [
+      "$8$",
+      "$18$",
+      "$9$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "En 4x² + 5x², ¿cuál es el coeficiente al reducir términos semejantes?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.4",
+    "correctIndex": 1,
+    "explanation": "1. Sustituimos antes de multiplicar y respetamos la potencia.\n2. Sustituimos y operamos: $4\\cdot 2^2\\cdot 3$.\n3. El valor pedido es $48$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s01_c04",
+    "options": [
+      "$96$",
+      "$48$",
+      "$49$",
+      "$47$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "Evalúa 4x²y para x=2 e y=3.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.5",
+    "correctIndex": 0,
+    "explanation": "1. Los términos quedan separados por sumas o restas en la expresión reducida.\n2. Sustituimos y operamos: $4x^3;\\quad 5x;\\quad -1$.\n3. El valor pedido es $3$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s01_c05",
+    "options": [
+      "$3$",
+      "$4$",
+      "$2$",
+      "$6$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "¿Cuántos términos tiene 4x³ + 5x − 1?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.6",
+    "correctIndex": 3,
+    "explanation": "1. En un monomio polinómico sumamos los exponentes de las variables.\n2. Sustituimos y operamos: $5+6$.\n3. El valor pedido es $11$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s01_c06",
+    "options": [
+      "$12$",
+      "$10$",
+      "$22$",
+      "$11$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "¿Cuál es el grado absoluto del monomio $7x^{5}$$y^{6}$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.7",
+    "correctIndex": 2,
+    "explanation": "1. El grado relativo mira solo el exponente de la variable indicada.\n2. Sustituimos y operamos: $x^5y^6:\\quad GR_x=5$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s01_c07",
+    "options": [
+      "$4$",
+      "$10$",
+      "$5$",
+      "$6$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "¿Cuál es el grado relativo respecto de x de $4x^{5}$$y^{6}$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.8",
+    "correctIndex": 1,
+    "explanation": "1. Los términos semejantes conservan su parte literal y suman coeficientes.\n2. Sustituimos y operamos: $(5+6)x^2$.\n3. El valor pedido es $11$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s01_c08",
+    "options": [
+      "$22$",
+      "$11$",
+      "$12$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "En 5x² + 6x², ¿cuál es el coeficiente al reducir términos semejantes?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.9",
+    "correctIndex": 0,
+    "explanation": "1. Sustituimos antes de multiplicar y respetamos la potencia.\n2. Sustituimos y operamos: $5\\cdot 2^2\\cdot 3$.\n3. El valor pedido es $60$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s01_c09",
+    "options": [
+      "$60$",
+      "$61$",
+      "$59$",
+      "$120$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "Evalúa 5x²y para x=2 e y=3.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.10",
+    "correctIndex": 3,
+    "explanation": "1. Los términos quedan separados por sumas o restas en la expresión reducida.\n2. Sustituimos y operamos: $5x^3;\\quad 6x;\\quad -1$.\n3. El valor pedido es $3$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s01_c10",
+    "options": [
+      "$4$",
+      "$2$",
+      "$6$",
+      "$3$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "¿Cuántos términos tiene 5x³ + 6x − 1?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.1.11",
+    "correctIndex": 2,
+    "explanation": "1. En un monomio polinómico sumamos los exponentes de las variables.\n2. Sustituimos y operamos: $6+7$.\n3. El valor pedido es $13$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s01_c11",
+    "options": [
+      "$12$",
+      "$26$",
+      "$13$",
+      "$14$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "¿Cuál es el grado absoluto del monomio $7x^{6}$$y^{7}$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

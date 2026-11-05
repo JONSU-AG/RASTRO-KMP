@@ -1,22 +1,46 @@
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE LA ARGUMENTACIÓN
 
-```
-                            LÓGICA Y TEORÍA DE LA ARGUMENTACIÓN
-                                             │
-         ┌──────────────────┬────────────────┼─────────────────┬──────────────────┐
-         ▼                  ▼                ▼                 ▼                  ▼
-    PRINCIPIOS          TIPOS DE         ESTRUCTURA DE     FALACIAS NO        PARADOJAS
-      LÓGICOS         RAZONAMIENTO        ARGUMENTOS         FORMALES          CLÁSICAS
-         │                  │                │                 │                  │
-• Identidad          • Deductivo:       • Premisas        • De Inatingencia: • El mentiroso
-  (A = A)            (De lo general     (Fundamentos)     - Ad hominem       (Epiménides)
-• No contradicción     a lo particular) • Conclusión        - Ad baculum     • Aquiles y la
-  (\sim(A \land \sim A)) • Inductivo:   (Inferencia)      - Ad verecundiam   tortuga (Zenón)
-• Tercio excluso       (De casos        • Conectores        - Ad ignorantiam • Paradoja de
-  (A \lor \sim A)      particulares     lógicos           - Ad populum       Russell (Teoría
-• Razón suficiente     a la ley)                            - Causa falsa      de conjuntos)
-  (Leibniz)                                               • De Ambigüedad:
-                                                            - Equívoco, Énfasis
+```mermaid
+graph TD
+ ROOT["Lógica, argumentos y paradojas"]
+ B1["Lenguaje y lógica clásica"]
+ B1N1["Identidad proposicional: $p\to p$; distinguirla de igualdad entre objetos."]
+ B1N2["No contradicción: $\neg(p\land\neg p)$."]
+ B1N3["Tercero excluido: $p\lor\neg p$."]
+ B1N4["La razón suficiente es un principio filosófico discutido, no una tautología obligatoria de la lógica clásica."]
+ B2["Evaluar razonamientos"]
+ B2N1["Deducción válida: no hay una interpretación con todas las premisas verdaderas y conclusión falsa."]
+ B2N2["Deducir no se limita a ir de lo general a lo particular."]
+ B2N3["Inducción: apoyo ampliativo que no garantiza la conclusión de la misma manera que una deducción válida."]
+ B2N4["Distinguir verdad de enunciados, validez del argumento y verdad de sus premisas."]
+ B3["Estructura y falacias"]
+ B3N1["Localizar premisas y conclusión antes de aplicar reglas o etiquetas."]
+ B3N2["Ataque personal, amenaza, popularidad o autoridad pueden resultar irrelevantes para la conclusión; comprobar el contexto."]
+ B3N3["Equívoco y otras ambigüedades requieren mostrar cómo cambia el sentido relevante."]
+ B3N4["Detectar un argumento defectuoso no prueba automáticamente la falsedad de su conclusión."]
+ B4["Paradojas"]
+ B4N1["El mentiroso explora problemas de autorreferencia y verdad; no identificarlo sin matices con cualquier frase de Epiménides."]
+ B4N2["Aquiles y la tortuga plantea dificultades filosóficas sobre movimiento y división."]
+ B4N3["Russell muestra un problema de la comprensión irrestricta de conjuntos; no invalida cualquier teoría de conjuntos."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---

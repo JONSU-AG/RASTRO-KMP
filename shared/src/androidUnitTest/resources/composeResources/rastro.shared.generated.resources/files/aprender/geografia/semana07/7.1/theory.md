@@ -13,12 +13,12 @@ graph TD
     REL_PERU --> SIERRA["Relieve Andino (Sierra)"]
     REL_PERU --> SELVA["Relieve Amazónico (Selva)"]
 
-    SUBMARINO --> ZOC["Zócalo Continental (0 a -200 m, fótico, pesca, petróleo)"]
+    SUBMARINO --> ZOC["Plataforma continental: relieve sumergido; no equivale exactamente a la zona fótica"]
     SUBMARINO --> TAL["Talud Continental (-200 a -4 000 m)"]
     SUBMARINO --> FOS["Fosas Marinas (Central y Meridional, hasta -6 868 m)"]
     SUBMARINO --> DORS["Dorsal de Nazca (Cordillera submarina frente a Ica)"]
 
-    COSTA --> VAL_C["Valles Transversales (53 ríos, conos aluviales, ciudades)"]
+    COSTA --> VAL_C["Valles transversales: drenaje, depósitos aluviales y asentamientos"]
     COSTA --> PAM["Pampas (Llanuras aluviales secas, irrigación: Olmos, Majes)"]
     COSTA --> TAB["Tablazos (Terrazas marinas en emersión con petróleo: Máncora)"]
     COSTA --> DEP["Depresiones (Afloramiento de sales: Bayóvar -37 m, Otuma)"]
@@ -43,22 +43,21 @@ graph TD
 
 El fondo del Mar de Grau presenta una morfología accidentada determinada por la tectónica de subducción de la Placa de Nazca:
 
-```
-Nivel del mar (0 m)
-===================~~~~~~~~~ Línea de Costa
-\   ZÓCALO CONTINENTAL (0 a -200 m)  ← Plataforma fótica de gran biomasa pesquera
- \  (Ancho máximo: Chimbote 140 km)
-  \
-   \  TALUD CONTINENTAL (-200 a -4 000 m) ← Pendiente abrupta
-    \
-     \                      DORSAL DE NAZCA (Cordillera submarina frente a Ica)
-      \                                /\
-       \                              /  \
-        \__ FOSA MARINA (-6 868 m) __/    \__ LLANURA ABISAL (-4 000 a -6 000 m)
-```
+### Comparar formas del fondo marino
+
+| Forma | Rasgo para reconocerla | Qué no debe deducirse |
+|---|---|---|
+| Plataforma continental | Prolongación sumergida del continente, de pendiente relativamente suave | Su borde no tiene una profundidad universal exacta |
+| Talud continental | Aumento de pendiente hacia el océano profundo | No constituye una pared vertical idéntica en toda costa |
+| Fosa oceánica | Depresión alargada asociada a convergencia de placas | No confundir profundidad bajo el mar con altura de una montaña |
+| Llanura abisal | Superficie extensa y relativamente llana del fondo profundo | No ocupa siempre la misma posición respecto de una dorsal |
+| Dorsal de Nazca | Elevación submarina del contexto peruano | El nombre dorsal no la convierte en una dorsal mediooceánica de expansión |
+
+**Importante:** esta comparación no es un perfil batimétrico a escala. La plataforma y la zona fótica se definen con criterios distintos: relieve y luz disponible. La penetración de luz cambia con las condiciones del agua.
+
 
 1. **Zócalo Continental o Plataforma Continental (0 a -200\text{ m}):**
-   * Meseta submarina suavemente inclinada que bordea la costa. Al ser poco profunda, es plenamente iluminada por la luz solar (**zona fótica**), lo que permite la proliferación masiva del fitoplancton.
+   * Meseta submarina suavemente inclinada que bordea la costa. La luz y los nutrientes favorecen la producción de fitoplancton, pero la zona fótica depende de la penetración de luz y no coincide necesariamente con toda la plataforma.
    * Concentra la mayor biomasa pesquera del planeta y alberga yacimientos de petróleo y gas natural en la costa norte (Piura y Tumbes).
    * **Amplitud variable:**
      * *Sector Norte:* Angosto (entre 4 y 10\text{ km} frente a Tumbes y Piura).
@@ -236,7 +235,7 @@ IV. Los fosfatos de Bayóvar y los hidrocarburos de los tablazos tienen un orige
 7. **Meseta (Altiplano):** Superficie plana o suavemente ondulada situada a gran altitud sobre el nivel del mar (habitualmente > 3\,800\text{ m s.n.m.}).
 8. **Abra o Paso:** Depresión o punto más bajo en una cresta montañosa que facilita el tránsito y cruce de una vertiente a otra.
 9. **Pongo:** Cañón o garganta angosta labrada por ríos amazónicos al atravesar cordilleras andinas en la selva alta.
-10. **Restinga:** Terraza aluvial intermedia en la selva baja que solo se inunda durante las crecientes fluviales estacionales extraordinarias.
+10. **Restinga:** Terreno aluvial de altura relativa variable; su inundabilidad depende de la posición y la dinámica local.
 
 ---
 
@@ -246,25 +245,41 @@ IV. Los fosfatos de Bayóvar y los hidrocarburos de los tablazos tienen un orige
 
 La Cordillera de los Andes es la columna vertebral del territorio peruano; se divide en **tres sectores** delimitados por **dos grandes nudos orográficos**:
 
-```
-[SECTOR NORTE]
-   - Cadena Occidental (C. Blanca, C. Negra) -> Callejón de Huaylas
-   - Cadena Central
-   - Cadena Oriental
-         \       /
-          NUDO DE PASCO (Separa Norte y Centro)
-         /       \
-[SECTOR CENTRO]
-   - Cadena Occidental (C. La Viuda)
-   - Cadena Central
-   - Cadena Oriental
-         \       /
-          NUDO DE VILCANOTA (Separa Centro y Sur)
-         /       \
-[SECTOR SUR]
-   - Cadena Occidental (Cordillera Volcánica: Coropuna, Misti, Sabancaya, Ubinas)
-   - Cadena Oriental (Cordillera de Carabaya)
-   *(En medio de ambas se asienta la Meseta del Collao y el Lago Titicaca)*
+```mermaid
+graph TD
+ ROOT["Relieve andino: referencias y formas"]
+ B1["Sectores como esquema de estudio"]
+ B1N1["Norte, centro y sur permiten organizar referencias regionales; no son bloques idénticos."]
+ B1N2["Los nudos de Pasco y Vilcanota se usan como referencias del esquema escolar."]
+ B1N3["No representar cada cordillera como si terminara en un único cruce geométrico."]
+ B2["Cadenas y ejemplos"]
+ B2N1["Cordilleras Blanca y Negra: referencias para situar el Callejón de Huaylas."]
+ B2N2["La Viuda: ejemplo de cordillera del sector central."]
+ B2N3["En el sur, distinguir el arco volcánico occidental y cordilleras orientales como Carabaya."]
+ B3["Formas del relieve"]
+ B3N1["Un valle es una depresión alargada; una meseta es una superficie relativamente elevada y extensa."]
+ B3N2["Un abra es un paso entre elevaciones; un cañón es un valle profundamente encajado."]
+ B3N3["El Collao y el Titicaca sirven de referencias del altiplano meridional."]
+ B4["Cómo leer el mapa"]
+ B4N1["El mapa clasifica conceptos; no dibuja posiciones ni distancias reales."]
+ B4N2["Usar cartografía para localizar un nevado, una cadena o un paso específico."]
+ B4N3["La altura de una cumbre y la profundidad de un cañón son medidas diferentes."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 #### Principales Geoformas Andinas:
@@ -330,32 +345,63 @@ Relieve extremadamente accidentado, montañoso, con densa vegetación y alta plu
 #### B. Selva Baja (Llanura Amazónica u Omagua): Por debajo de los 400\text{ m s.n.m.}
 Inmensa llanura horizontal cubierta por bosque tropical lluvioso, surcada por ríos meándricos. Presenta **cuatro niveles morfológicos escalonados**:
 
-```
-Altitud (m)
- ↑
-300 |      [FILOS]  ← Colinas agudas que dividen cuencas
-    |       /\
-200 |      /  \   [ALTOS]  ← Terrazas NO inundables (Ciudades: Iquitos, Pucallpa)
-    |     /    \______
-150 |                 \   [RESTINGAS]  ← Se inundan solo en crecidas extraordinarias
-    |                  \______
-100 |                         \   [TAHUAMPAS / AGUAJALES] ← Terrenos pantanosos SIEMPRE inundados
-    |                          \____________________   [COCHAS] ← Lagunas de meandro
-  0 +===============================================~~~~ Río Amazonas ~~~~~~~~~~~~~~~~~~~~~~
+```mermaid
+graph TD
+ ROOT["Relieve amazónico e inundación"]
+ B1["Relieve y agua"]
+ B1N1["Comparar la posición relativa del terreno respecto del río y su régimen de crecidas."]
+ B1N2["Las formas amazónicas no se definen por una única cota universal sobre el nivel del mar."]
+ B1N3["La inundación depende del nivel del agua, el drenaje y las condiciones locales."]
+ B2["Ambientes que deben distinguirse"]
+ B2N1["Tahuampa: ambiente de bosque inundable; no equivale automáticamente a un palmeral."]
+ B2N2["Aguajal: humedal con presencia dominante o característica del aguaje."]
+ B2N3["Restinga: terreno aluvial cuya inundabilidad cambia con la altura relativa y el lugar."]
+ B3["Formas y dinámica fluvial"]
+ B3N1["Barrizales y playones quedan expuestos durante la vaciante y pueden volver a inundarse."]
+ B3N2["Muchas cochas se relacionan con antiguos meandros; no toda laguna comparte un único origen."]
+ B3N3["Altos y filos no son sinónimos: distinguir superficies elevadas de crestas o divisorias."]
+ B4["Aplicación cuidadosa"]
+ B4N1["Tierra firme no significa inmunidad ante cualquier inundación o deslizamiento."]
+ B4N2["No deducir que una ciudad entera está a salvo por nombrar una geoforma."]
+ B4N3["Para evaluar un lugar concreto, consultar sus condiciones y mapas de peligro."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
-1. **Tahuampas o Aguajales:**
-   * Las partes más bajas de la llanura; terrenos pantanosos deprimidos que permanecen **inundados permanentemente** durante todo el año. Predomina la palmera del aguaje (*Mauritia flexuosa*).
-2. **Barrizales y Playones:**
-   * Playas fluviales e islas de sedimentación reciente dejadas por el río en vaciante; aprovechadas para agricultura rápida de subsistencia (arroz, frejol, yuca).
-3. **Restingas:**
-   * Terrazas fluviales bajas intermedias que **solo se inundan durante las crecidas máximas anuales extraordinarias** del verano. Empleadas para cultivos temporales de maíz y plátano.
-4. **Altos:**
-   * Colinas y mesetas fluviales que **nunca se inundan**. En ellos se emplazan las principales ciudades, puertos fluviales y carreteras de la Amazonía: **Iquitos, Pucallpa, Tarapoto, Puerto Maldonado, Yurimaguas y Nauta**.
-5. **Filos:**
-   * Colinas escarpadas de mayor elevación (hasta 300 - 400\text{ m}) que actúan como divisorias de aguas (*divortium aquarum*) entre ríos amazónicos contiguos.
-6. **Cochas o Tipishcas:**
-   * Lagunas con forma de medialuna o herradura originadas por el estrangulamiento natural de antiguos meandros fluviales abandonados; ricas en fauna acuática (paiche, piraña, tortugas taricayas).
+### Distinguir ambiente, forma y exposición al agua
+
+| Término | Qué describe | Precisión |
+|---|---|---|
+| Tahuampa | Ambiente de bosque inundable | No es sinónimo obligatorio de aguajal |
+| Aguajal | Humedal asociado al aguaje | Su vegetación y drenaje son parte de la definición |
+| Restinga | Terreno aluvial relativamente elevado | Comparar restingas bajas y altas, sin una regla única de inundación |
+| Alto | Terreno relativamente elevado | No garantiza ausencia de peligro en cualquier evento |
+| Filo | Cresta estrecha o divisoria | No es una cota fija de 300 metros |
+| Cocha | Cuerpo de agua de la llanura amazónica | Examinar su origen y conexión con el río |
+
+**Importante:** las denominaciones locales y las clasificaciones ecológicas no siempre coinciden exactamente. No convertir una secuencia para memorizar en una escala altitudinal universal.
+
+
+1. **Tahuampas y aguajales:** deben distinguirse. La tahuampa se asocia a bosque inundable; el aguajal se reconoce por su humedal y el aguaje (*Mauritia flexuosa*). No todo bosque inundable es un aguajal.
+2. **Barrizales y playones:** superficies de sedimentos expuestas durante la vaciante. Su exposición cambia con el nivel del río.
+3. **Restingas:** terrenos aluviales de altura relativa diversa. El comportamiento frente a crecidas depende del nivel del terreno y de la dinámica local; no se limita siempre a crecientes extraordinarias.
+4. **Altos:** terrenos elevados respecto de áreas vecinas. Esta denominación no prueba por sí sola que un asentamiento completo sea seguro frente a todos los eventos.
+5. **Filos:** crestas estrechas que pueden actuar como divisorias. No se definen por una cota universal.
+6. **Cochas:** lagunas o cuerpos de agua amazónicos; muchas proceden de meandros abandonados, pero debe examinarse el caso antes de atribuirles un único origen.
 
 ---
 
@@ -396,10 +442,10 @@ La Cordillera de los Andes en el Perú se articula en tres grandes sectores morf
   * **RESPUESTA:** El Cañón de Cotahuasi en Arequipa (3\,535\text{ metros} de profundidad).
 * **PREGUNTA:** ¿Cuáles son los dos grandes nudos orográficos que delimitan los tres sectores de los Andes peruanos?
   * **RESPUESTA:** El Nudo de Pasco (separa Norte y Centro) y el Nudo de Vilcanota (separa Centro y Sur).
-* **PREGUNTA:** ¿En qué nivel morfológico de la Selva Baja se fundan las ciudades como Iquitos y Pucallpa para no inundarse?
-  * **RESPUESTA:** En los Altos.
-* **PREGUNTA:** ¿Qué son las Tahuampas o Aguajales en la llanura amazónica?
-  * **RESPUESTA:** Zonas bajas y pantanosas permanentemente inundadas donde predomina la palmera del aguaje.
+* **PREGUNTA:** ¿Qué significa alto al describir el relieve amazónico?
+  * **RESPUESTA:** Terreno relativamente elevado; el término no garantiza por sí solo seguridad de toda una ciudad frente a inundaciones.
+* **PREGUNTA:** ¿Por qué no deben confundirse tahuampas y aguajales?
+  * **RESPUESTA:** La tahuampa se asocia a bosque inundable; el aguajal es un humedal caracterizado por el aguaje. Son distinciones ecológicas, no sinónimos universales.
 * **PREGUNTA:** ¿Cómo se llama el pongo más largo y peligroso del río Marañón en la Selva Alta?
   * **RESPUESTA:** El Pongo de Manseriche.
 

@@ -1,5 +1,6 @@
 package com.jonsuapps.rastro.android.ui.screens
 import com.jonsuapps.rastro.theme.accentText
+import com.jonsuapps.rastro.theme.onAccent
 import com.jonsuapps.rastro.theme.readableText
 import androidx.compose.ui.graphics.lerp
 
@@ -15,6 +16,9 @@ import androidx.compose.material.icons.rounded.*
 import androidx.compose.material3.*
 import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.activity.compose.BackHandler
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -40,7 +44,6 @@ import kotlinx.coroutines.withTimeout
 import com.jonsuapps.rastro.android.util.awaitResult
 import com.jonsuapps.rastro.android.ui.components.TermsAndPrivacyDialog
 import com.jonsuapps.rastro.android.ui.components.DuolingoHaptics
-import com.jonsuapps.rastro.android.util.LegalLinks
 import com.jonsuapps.rastro.auth.UserManager
 import com.jonsuapps.rastro.theme.RastroShapes
 import com.jonsuapps.rastro.theme.ThemeManager
@@ -60,17 +63,25 @@ fun AuthScreen(
     val scope = rememberCoroutineScope()
     var selectedAuthTab by remember { mutableIntStateOf(0) } // 0: Iniciar Sesión, 1: Registrarse
     val tabs = listOf("Iniciar Sesión", "Crear Cuenta")
-    var showTermsDialog by remember { mutableStateOf(false) }
+    var legalTab by remember { mutableStateOf<Int?>(null) }
 
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var isPasswordVisible by remember { mutableStateOf(false) }
-    var termsAccepted by remember { mutableStateOf(false) }
 
     var isLoading by remember { mutableStateOf(false) }
     var googleLoading by remember { mutableStateOf(false) }
+    var showEmailForm by rememberSaveable { mutableStateOf(false) }
+    var passwordFocused by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
     var successMessage by remember { mutableStateOf<String?>(null) }
+    BackHandler(enabled = showEmailForm && !isLoading) {
+        showEmailForm = false
+        passwordFocused = false
+        password = ""
+        errorMessage = null
+        successMessage = null
+    }
 
     Column(
         modifier = modifier
@@ -84,26 +95,15 @@ fun AuthScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        com.jonsuapps.rastro.android.ui.components.ClassicArtwork(
-            com.jonsuapps.rastro.android.ui.components.ClassicAppearance.ACHIEVEMENT,
-            Modifier.size(128.dp),
-            character = com.jonsuapps.rastro.android.ui.components.ClassicCharacter.LOKI)
-        Spacer(modifier = Modifier.height(14.dp))
+        androidx.compose.foundation.Image(
+            androidx.compose.ui.res.painterResource(com.jonsuapps.rastro.R.drawable.rastro_navbar),
+            contentDescription = "RASTRO", modifier = Modifier.width(160.dp).height(52.dp),
+            contentScale = androidx.compose.ui.layout.ContentScale.Fit)
 
-        Text(
-            text = "RASTRO",
-            style = MaterialTheme.typography.headlineMedium,
-            fontWeight = FontWeight.Black,
-            color = theme.textPrimary
-        )
-
-        Text(
-            text = "Tu preparación preuniversitaria, a tu ritmo",
-            style = MaterialTheme.typography.bodySmall,
-            color = theme.textSecondary
-        )
-
-        Spacer(modifier = Modifier.height(28.dp))
+        Spacer(modifier = Modifier.height(16.dp))
+        com.jonsuapps.rastro.android.ui.components.WelcomeHero(
+            passwordFocused = showEmailForm && passwordFocused && !isPasswordVisible)
+        Spacer(modifier = Modifier.height(24.dp))
 
         // Google Sign-In real mediante Credential Manager y Firebase Auth.
         com.jonsuapps.rastro.android.ui.components.Sticker3dButton(
@@ -157,10 +157,9 @@ fun AuthScreen(
             shape = RastroShapes.Pill,
             containerColor = theme.surfaceAccent, bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder
         ) {
-            Icon(
-                Icons.Rounded.AccountCircle,
+            androidx.compose.foundation.Image(
+                androidx.compose.ui.res.painterResource(com.jonsuapps.rastro.R.drawable.ic_google_signin),
                 contentDescription = null,
-                tint = Color(0xFF4285F4),
                 modifier = Modifier.size(20.dp)
             )
             Spacer(modifier = Modifier.width(8.dp))
@@ -174,8 +173,34 @@ fun AuthScreen(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        Text("Sincroniza tu progreso con tu cuenta de Google", color = theme.textSecondary, fontSize = 12.sp)
-        Spacer(Modifier.height(22.dp))
+        com.jonsuapps.rastro.android.ui.components.Sticker3dButton(onClick = {
+            if (isLoading) return@Sticker3dButton
+            FirebaseAuth.getInstance().signOut()
+            UserManager.logout()
+            onContinueAsGuest()
+        }, enabled = !isLoading, modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp),
+            containerColor = theme.accent, bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder) {
+            Icon(Icons.Rounded.PersonOutline, null, tint = theme.onAccent)
+            Spacer(Modifier.width(8.dp))
+            Text("Entrar como invitado", color = theme.onAccent, fontWeight = FontWeight.Bold)
+        }
+        Spacer(Modifier.height(8.dp))
+        TextButton(onClick = {
+            showEmailForm = !showEmailForm
+            passwordFocused = false
+            password = ""
+            errorMessage = null
+            successMessage = null
+        }, enabled = !isLoading) {
+            Text(if (showEmailForm) "Volver a las opciones de acceso" else "Usar correo y contraseña",
+                color = theme.accentText, fontWeight = FontWeight.Bold)
+        }
+        // Failures from Google remain visible on the welcome page too.
+        if (!showEmailForm && errorMessage != null) {
+            Text(errorMessage.orEmpty(), color = errorInk, modifier = Modifier.padding(vertical = 8.dp))
+        }
+        if (showEmailForm) {
+        Spacer(Modifier.height(12.dp))
         // Pestañas Iniciar Sesión / Registro
         TabRow(
             selectedTabIndex = selectedAuthTab,
@@ -309,13 +334,13 @@ fun AuthScreen(
                 IconButton(onClick = { isPasswordVisible = !isPasswordVisible }) {
                     Icon(
                         imageVector = if (isPasswordVisible) Icons.Rounded.VisibilityOff else Icons.Rounded.Visibility,
-                        contentDescription = null,
+                        contentDescription = if (isPasswordVisible) "Ocultar contraseña" else "Mostrar contraseña",
                         tint = theme.textSecondary
                     )
                 }
             },
             visualTransformation = if (isPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().onFocusChanged { passwordFocused = it.isFocused },
             singleLine = true,
             shape = RastroShapes.Squircle,
             colors = OutlinedTextFieldDefaults.colors(
@@ -326,67 +351,8 @@ fun AuthScreen(
 
         Spacer(modifier = Modifier.height(14.dp))
 
-        // Aceptación de Términos y Política de Privacidad (Exigido en Registro)
-        if (selectedAuthTab == 1) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 4.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Checkbox(
-                    checked = termsAccepted,
-                    onCheckedChange = { termsAccepted = it },
-                    colors = CheckboxDefaults.colors(
-                        checkedColor = theme.accentText,
-                        uncheckedColor = theme.textSecondary
-                    )
-                )
-                Spacer(modifier = Modifier.width(4.dp))
-                Column(modifier = Modifier.weight(1f)) {
-                    val textStyle = MaterialTheme.typography.bodySmall.copy(
-                        fontSize = 12.sp,
-                        color = theme.textSecondary,
-                        lineHeight = 16.sp
-                    )
-                    val linkStyle = androidx.compose.ui.text.SpanStyle(
-                        color = theme.accentText,
-                        fontWeight = FontWeight.Bold,
-                        textDecoration = androidx.compose.ui.text.style.TextDecoration.Underline
-                    )
-                    val annotatedText = androidx.compose.ui.text.buildAnnotatedString {
-                        append("He leído y acepto los ")
-                        pushStringAnnotation(tag = "URL", annotation = LegalLinks.URL_TERMINOS)
-                        withStyle(style = linkStyle) {
-                            append("Términos y Condiciones")
-                        }
-                        pop()
-                        append(" y la ")
-                        pushStringAnnotation(tag = "URL", annotation = LegalLinks.URL_PRIVACIDAD)
-                        withStyle(style = linkStyle) {
-                            append("Política de Privacidad")
-                        }
-                        pop()
-                        append(".")
-                    }
-
-                    @Suppress("DEPRECATION")
-                    androidx.compose.foundation.text.ClickableText(
-                        text = annotatedText,
-                        style = textStyle,
-                        onClick = { offset ->
-                            annotatedText.getStringAnnotations(tag = "URL", start = offset, end = offset)
-                                .firstOrNull()?.let { annotation ->
-                                    LegalLinks.openUrl(context, annotation.item)
-                                } ?: run {
-                                    termsAccepted = !termsAccepted
-                                }
-                        }
-                    )
-                }
-            }
-            Spacer(modifier = Modifier.height(12.dp))
-        }
+        AuthLegalNotice { legalTab = it }
+        Spacer(Modifier.height(12.dp))
 
         // Botón Principal (Firebase Auth)
         Button(
@@ -400,11 +366,6 @@ fun AuthScreen(
                     errorMessage = "La contraseña debe tener al menos 6 caracteres."
                     return@Button
                 }
-                if (selectedAuthTab == 1 && !termsAccepted) {
-                    errorMessage = "Debes aceptar los Términos y Condiciones y la Política de Privacidad para crear una cuenta."
-                    return@Button
-                }
-
                 isLoading = true
                 errorMessage = null
 
@@ -482,57 +443,23 @@ fun AuthScreen(
             }
         }
 
-        // Invitado local: no crea una identidad ni escribe un perfil en Firebase.
-        TextButton(onClick = {
-            if (isLoading) return@TextButton
-            FirebaseAuth.getInstance().signOut()
-            UserManager.logout()
-            onContinueAsGuest()
-        }, enabled = !isLoading) {
-            Text(
-                text = "Explorar como Invitado",
-                style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.Medium,
-                color = theme.accentText
-            )
+        } // Existing email/password form; callbacks and validation retained.
+
+        if (!showEmailForm) {
+            Spacer(Modifier.height(12.dp))
+            AuthLegalNotice { legalTab = it }
         }
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        // Términos y privacidad interactivos (Cumplimiento de Google Play Store)
-        Row(
-            modifier = Modifier
-                .padding(horizontal = 16.dp)
-                .clickable {
-                    DuolingoHaptics.playOptionSelected(context)
-                    showTermsDialog = true
-                },
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Icon(
-                imageVector = Icons.Rounded.Policy,
-                contentDescription = null,
-                tint = theme.accentText,
-                modifier = Modifier.size(15.dp)
-            )
-            Spacer(modifier = Modifier.width(6.dp))
-            Text(
-                text = "Ver Políticas de Privacidad y Términos de Servicio",
-                style = MaterialTheme.typography.labelSmall,
-                color = theme.accentText,
-                fontWeight = FontWeight.Bold,
-                fontSize = 11.5.sp,
-                textDecoration = androidx.compose.ui.text.style.TextDecoration.Underline
-            )
-        }
+
     }
 
-    if (showTermsDialog) {
+    legalTab?.let { tab ->
         TermsAndPrivacyDialog(
             colors = theme,
-            initialTab = 0,
-            onDismiss = { showTermsDialog = false }
+            initialTab = tab,
+            onDismiss = { legalTab = null }
         )
     }
 }

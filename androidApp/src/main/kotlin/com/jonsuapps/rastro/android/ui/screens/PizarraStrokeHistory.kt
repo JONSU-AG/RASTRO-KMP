@@ -14,6 +14,11 @@ internal class PizarraStrokeHistory {
     private var beforeErase: List<InkStroke>? = null
     val canUndo get() = past.isNotEmpty()
     val canRedo get() = future.isNotEmpty()
+    val retainedPoints:Int get() {
+        val unique=java.util.IdentityHashMap<InkStroke,Boolean>()
+        strokes.forEach {unique[it]=true};past.forEach {it.forEach {s->unique[s]=true}};future.forEach {it.forEach {s->unique[s]=true}}
+        return unique.keys.sumOf {it.points.size}
+    }
 
     private fun rememberPrevious(previous: List<InkStroke>) {
         past.addLast(previous)

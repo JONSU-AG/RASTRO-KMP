@@ -1,5 +1,9 @@
 # 07/10/2026
 
+01/11/2026, seguimiento autorizado: robots.txt corregido en Hosting conservando contenido publicado; dominio Play comprobado, AdSense abierta y sección Verificación sin solicitud actual de documentos/SMS. No se enviaron consultas ni se cambiaron datos personales.
+
+01/11/2026: revisión actual de cuenta y app-ads.txt; intersticiales automáticos bloqueados en controlador y SDK mediante AdServingMode. Rewarded existente conservado. Evidencia y límites en REVISION_CUENTA_Y_ANUNCIOS_2026-11-01.md. Sin cambios en cuenta ni publicación.
+
 ## Complemento Billing
 
 Biblioteca oficial 9.1.0 y permiso de facturación en Android. Configuración de cuatro planes con IDs null, adaptador único accesible desde MonetizationRepository para consultas reales futuras y checkout deshabilitado. ProAccess/Firestore conservados. Código 201 comprobado en Play Console; nueva AAB local 2.0.2 (202), no subida. 132 pruebas Android sin fallos, lintVitalRelease y bundleRelease correctos. bundletool valida el archivo y su manifest incluye BILLING/9.1.0/202; jarsigner verifica su firma. Sin ejecutar la app ni desplegar Firebase. Ver PLAY_BILLING.md para límites y pasos pendientes.
@@ -85,3 +89,52 @@ Por autorización explícita del propietario, regenerada, validada y subida AAB 
 
 ## 09/10/2026 — Preparación web AdMob
 Ámbito anunciado: documentación, app-ads.txt y script de incorporación al build web existente. Línea copiada de consola oficial; sin editar copia rastro react ni desplegar su dist antiguo. Propuesta legal actualizada con compras/reembolsos RevenueCat. Pendientes separados entre pasos previos y dependientes de ficha pública en ADMOB_LISTO_Y_PENDIENTES.md. No cambios de APK, facturación, consentimiento publicado o producción.
+
+## Actualización comprobada — 10/10/2026
+
+- [x] Texto legal aprobado por el propietario, integrado en Android 206 y publicado en web.
+- [x] app-ads.txt público con línea oficial y Asset Links conservados.
+- [x] 2.0.4 / 206 aceptada y enviada a producción. Console: «Cambios en la etapa de revisión»; verificaciones rápidas pendientes. Seguridad de datos y disponibilidad enviadas juntas. Evidencia build/play-production-206-enviada.png.
+- [x] 361 pruebas sin fallos; bundle, manifest BILLING y firma verificados. No se ejecutó Android.
+- [ ] Aprobación de Google y ficha pública. No confundir envío con publicación.
+- [ ] AdMob: cuenta en verificación; editor del mensaje europeo falla «No se puede cargar la página». Mensaje sigue en borrador. Vincular ficha pública cuando exista y comprobar anuncios reales.
+- [ ] Seis candidatos de perfiles sin UID en Auth: inventario privado, no borrados. Auditados 218 cuentas Auth y 214 perfiles. Revisión individual pendiente.
+- [ ] Validación académica heredada pendiente.
+
+Firebase continúa Spark. No se eligieron cuentas de pago ni datos bancarios/fiscales. Las listas de tareas anteriores son históricas; este apartado sustituye su estado. Detalle actual: docs/publicacion/RELEASE_2.0.4_206.md. Próximo código mínimo 207, verificar Console antes de cargar.
+
+## 12/10/2026 — Verificación actual sin nueva subida
+
+Play Console, Actividad de envío: envío 3 de producción del 10/10/2026 figura Publicado. No se cargó otro bundle ni se enviaron nuevos cambios.
+AdMob con aguilar.jonsu@gmail.com redirige a signup?sac=true: «No se aprobó su cuenta», «Debe corregir algunos problemas para poder usar AdMob». Muestra confirmación de lectura/cumplimiento de Políticas del Programa y botón Reenviar. No se marcó ni reenvió esa declaración. La pantalla no detalla una infracción específica. El propietario debe revisar la declaración antes de autorizar el reenvío. No se pudo acceder a la configuración de la app para vincularla en esta sesión. Evidencia: build/admob-cuenta-no-aprobada-2026-10-12.png.
+El estado anterior «en verificación» queda sustituido por esta observación. No afirmar vinculación completada, consentimiento publicado ni anuncios reales habilitados.
+
+## 12/10/2026 — Cuenta reenviada y vinculación completada
+
+Por autorización explícita del propietario, se leyeron las políticas oficiales AdMob/AdSense, se marcó la declaración existente de lectura/cumplimiento y se pulsó Reenviar. Resultado: «Estamos revisando su información»; acceso al panel recuperado. No se aceptaron nuevos contratos ni se cambiaron datos bancarios.
+Se vinculó la aplicación AdMob EXISTENTE 3422086209 con Google Play com.jonsuapps.rastro, JONSUAPPS, usando la URL pública exacta. AdMob confirmó «Verificaste RASTRO Preuniversitario (Android) correctamente». Tabla: En preparación / Publicación limitada / Revisión en curso. Dos unidades existentes conservadas; sin nueva aplicación ni bundle. Google indica revisión de app normalmente 2–3 días, no garantizados. Evidencia build/admob-rastro-vinculada-2026-10-12.png.
+
+Pendientes externos: revisión de cuenta/app, rastreo app-ads.txt sin solicitudes, editor europeo cargando (mensaje sin publicar). No se activó monetización automática ni se cambió código Android.
+
+12/10/2026: propietario autorizó terminar/publicar consentimiento europeo existente. Ámbito: AdMob y documentación, sin código/app nueva. Se abrió editor en pestaña del propietario, se esperó y se recargó/reabrió una vez. En ambos intentos diálogo permaneció cargando sin vista previa/configuración; no fue posible revisar ni publicar. Mensaje aún Borrador, sin duplicación. Evidencia build/admob-editor-consentimiento-2026-10-12.png. UMP canRequestAds y loadAndShowConsentFormIfRequired existentes comprobados en código; no ejecución de Android.
+
+12/10 continuación: editor finalmente visible, selección de apps cargó después de espera. Se seleccionó RASTRO com.jonsuapps.rastro y verificó privacidad https://rumbo-jonsu.web.app/privacidad. Editor muestra nombre RASTRO - Consentimiento europeo, español predeterminado, rechazo activado. Sigue cargando datos/vista previa %%APP_NAME%%; Guardar borrador y Publicar desactivados. Cambios SOLO en editor, no guardado/publicación confirmados. Pantalla conservada para continuar; no recargar sin valorar cambios. Evidencia build/admob-consentimiento-rastro-seleccionada-2026-10-12.png.
+
+12/10 preparación sin publicar, por petición del propietario: configuración global observada incluye 198 socios frecuentes, cobertura mensajes activada, identificación especial/sincronización extra desactivadas. Sin cambios globales necesarios. Borrador actual RASTRO seleccionado, español/rechazo activados y segmentación EEE/Reino Unido/Suiza. Se intentó renombrar RASTRO - Consentimiento europeo 2026 y Guardar borrador; editor cerró pero tabla mantiene sin título. Persistencia del nuevo nombre NO confirmada. Reapertura quedó cargando. No se publicó ni se eliminaron otros borradores. Evidencia build/admob-borrador-revision-2026-10-12.png. El propietario realizará publicación final.
+
+18/10/2026: auditoría de solo lectura completada. Cuenta rechazada con aviso genérico; consola apps/políticas bloqueada. app-ads.txt/HTTP/HTTPS/dominio/manifest/IDs revisados; robots.txt sirve HTML SPA y SDK descarta errores (hallazgos menores, NO causas de rechazo demostradas). Existencia de QR no publicado no acredita infracción. Pendiente correo exacto/revisión manual de datos si Google los señala. Informe AUDITORIA_ADMOB_2026-10-18.md. Sin código ni publicaciones.
+
+## ACTUALIZACIÓN POSTERIOR — 18/10/2026, acceso recuperado
+
+Esta observación sustituye el bloqueo descrito arriba: el propietario dejó AdMob en /v2/home?sac=true y el panel ahora permite navegar. NO se reenvió ninguna solicitud en esta comprobación.
+- AdSense aguilar.jonsu@gmail.com tiene el MISMO pub-4563495447517759. Account information: Account status Open; Active products AdMob. No se mostró un rechazo/suspensión de AdSense. Open NO equivale a aprobación publicitaria AdMob ni a sitio AdSense aprobado.
+- AdMob Home: perfil de pagos completo; cuenta en verificación/no aprobada todavía.
+- Policy center > Issues: No current issues. Disapproved apps: No disapproved apps.
+- RASTRO: Getting ready, Review in progress, Limited ad serving; Google Play com.jonsuapps.rastro, 2 unidades activas. QR: Requires review, sin tienda, 0 unidades; no aparece como app rechazada.
+- Notificaciones AdMob observadas son avisos generales de eCPM, Ucrania y privacidad; no señalan duplicación de cuenta.
+- No se pueden descartar otras cuentas con otros correos a partir de esta sesión. El propietario debe indicar si abrió AdSense/AdMob con otro correo; NO enviar contraseña ni códigos.
+- Evidencia local: build/adsense-cuenta-abierta-2026-10-18.png y build/admob-rastro-en-revision-2026-10-18.png. Sin cambios en cuenta, datos, permisos o versiones.
+
+01/11/2026: países producción guardados y verificados (20 LATAM). Doble revisión estática de anuncios/consentimiento y lectura de filtros AdMob. Sin cambios en código ni publicación de APK/AAB; evidencia e informe actualizados.
+
+01/11/2026: exposición temporal configurada. Aclaración vigente: reserva finita 750 monedas/75 vidas, no acceso ilimitado. Pro oculto y anuncios pausados; costes y monedero existentes conservados. No cambios remotos. Detalle en ../exposicion/README.md.

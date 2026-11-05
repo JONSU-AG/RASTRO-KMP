@@ -1,23 +1,42 @@
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE EPISTEMOLOGÍA
 
-```
-                             EPISTEMOLOGÍA Y CIENCIA
-                                        │
-         ┌──────────────────┬───────────┴───────────┬──────────────────┐
-         ▼                  ▼                       ▼                  ▼
-    CONOCIMIENTO         EL MÉTODO              ESTRUCTURA         DEBATE EPISTEMOLÓGICO
-     CIENTÍFICO         CIENTÍFICO               TEÓRICA               CONTEMPORÁNEO
-         │                  │                       │                  │
-• Características:   • Observación           • Hecho            • Neopositivismo:
-  - Objetivo           sistemática           • Hipótesis          (Verificacionismo)
-  - Metódico         • Planteamiento           (Tentativa)      • Karl Popper:
-  - Sistemático        del problema          • Ley                (Falsacionismo /
-  - Verificable      • Formulación de          (Regularidad       Asimetría lógica)
-  - Falible            hipótesis               constante)       • Thomas Kuhn:
-  - Comunicable      • Contrastación         • Teoría             (Paradigmas y
-  - Provisorio         (Experimento/           (Sistema           Revoluciones)
-                       falsación)              explicativo      • Mario Bunge:
-                     • Conclusión              unificado)         (Ciencia vs. Pseudociencia)
+```mermaid
+graph TD
+ ROOT["Ciencia: métodos, evidencia y debate"]
+ B1["Conocimiento científico"]
+ B1N1["La investigación puede ser sistemática, pública y revisable; sus procedimientos varían según el campo."]
+ B1N2["Falible no significa arbitrario: las conclusiones se contrastan y se justifican con criterios pertinentes."]
+ B1N3["Objetividad no exige que cada investigador carezca de toda perspectiva o supuesto."]
+ B2["Métodos de investigación"]
+ B2N1["Formular problemas, observar, modelar, razonar y contrastar son actividades que pueden combinarse."]
+ B2N2["No existe una secuencia rígida de pasos que describa por igual toda investigación."]
+ B2N3["No toda contrastación requiere un experimento de laboratorio; hay observación, simulación y otras estrategias."]
+ B3["Productos y funciones"]
+ B3N1["Hipótesis: propuesta que se examina; especificar qué afirma y qué evidencias la afectarían."]
+ B3N2["Leyes y modelos expresan relaciones bajo condiciones; las teorías articulan explicaciones y compromisos más amplios."]
+ B3N3["Una teoría no se transforma automáticamente en ley por acumular confirmaciones."]
+ B4["Debates sobre la ciencia"]
+ B4N1["Neopositivismo: distintos programas sobre significado, confirmación y análisis del lenguaje científico."]
+ B4N2["Popper: falsabilidad y crítica; evaluar resultados también exige revisar supuestos auxiliares."]
+ B4N3["Kuhn: ciencia normal, paradigmas y cambios históricos; no reducir su propuesta a que cualquier opinión vale lo mismo."]
+ B4N4["Bunge: discusión de conocimiento científico y pseudociencia; identificar criterios y argumentos en vez de usar solo una etiqueta."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ B4 --> B4N4
 ```
 
 ---

@@ -1,22 +1,40 @@
 ## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
 
-```
-                             ANALOGÍAS VERBALES
-                                     │
-           ┌─────────────────────────┴─────────────────────────┐
-           ▼                                                   ▼
- ANALOGÍAS HORIZONTALES                              ANALOGÍAS VERTICALES
-    (A : B :: C : D)                                 (A : B :: C : D)
-(El nexo se da entre A y B)                         (El nexo se da entre A y C)
-           │                                                   │
-  ┌────────┴────────────────────────┬──────────────────────────┤
-  ▼                                 ▼                          ▼
-RELACIONES DE FORMA               RELACIONES FUNCIONALES     RELACIONES DE PROCESO
-• Parte : Todo (Meronimia)        • Sujeto : Instrumento     • Causa : Efecto
-• Elemento : Conjunto             • Objeto : Función         • Evolución histórica
-• Especie : Género (Hiponimia)    • Materia prima : Producto • Grado / Intensidad
-• Sinonimia / Antonimia           • Especialista : Objeto de • Secuencialidad
-                                    estudio
+```mermaid
+graph TD
+ ROOT["Analogías: relación y dirección"]
+ B1["Formular el vínculo"]
+ B1N1["Expresar la relación del par base en una oración breve antes de comparar opciones."]
+ B1N2["Mantener el orden: parte a todo no equivale a todo a parte."]
+ B1N3["Una asociación temática vaga no basta para demostrar analogía."]
+ B2["Relaciones entre entidades"]
+ B2N1["Parte y todo: relación estructural entre un componente y el objeto al que pertenece."]
+ B2N2["Elemento y conjunto: pertenencia a una agrupación."]
+ B2N3["Especie y género: inclusión semántica entre una clase específica y una más general."]
+ B3["Función y proceso"]
+ B3N1["Agente e instrumento; objeto y función; especialista y objeto de estudio."]
+ B3N2["Materia prima y producto; causa y efecto; etapas de una secuencia."]
+ B3N3["Grado e intensidad: la escala debe ser pertinente para ambos pares."]
+ B4["Comparación consistente"]
+ B4N1["En A : B :: C : D se contrasta habitualmente A-B con C-D."]
+ B4N2["Si la consigna propone comparar columnas, formular también el vínculo A-C y B-D; no intercambiar criterios a mitad de la solución."]
+ B4N3["Comprobar significado, dirección y grado de especificidad; reconocer si faltan datos para una respuesta única."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 
@@ -101,7 +119,7 @@ E) Taxidermia : Animal
 
 | Tipo Analógico | Fórmula Relacional | Ejemplo Paradigmático |
 | :--- | :--- | :--- |
-| **Parte : Todo** | A es una fracción física inseparable de B | **PÁGINA : LIBRO** / **ÁPICE : HOJA** |
+| **Parte : Todo** | A es una parte de B; no tiene que ser inseparable | **PÁGINA : LIBRO** / **ÁPICE : HOJA** |
 | **Elemento : Conjunto** | A es el individuo singular y B su sustantivo colectivo | **CERDO : PIARA** / **ARCHIPIÉLAGO : ISLA** (Invertido) |
 | **Especie : Género** | A está incluido taxonómicamente en B | **VICUÑA : CAMÉLIDO** / **ORO : METAL** |
 | **Causa : Efecto** | A desencadena o provoca necesariamente el suceso B | **CHISPA : INCENDIO** / **VIRUS : INFECCIÓN** |
@@ -117,37 +135,25 @@ E) Taxidermia : Animal
 
 ## 8. APLICACIÓN AL MUNDO REAL Y CONTEXTO DECO
 
-El razonamiento analógico es la cúspide de la inteligencia humana y la base de los mayores descubrimientos científicos: Johannes Kepler formuló las leyes del movimiento planetario estableciendo una analogía con la óptica y el reloj mecánico; Niels Bohr concibió el modelo del átomo por analogía directa con el sistema solar. En el derecho constitucional, el *método analógico* permite a los magistrados del Tribunal Constitucional resolver vacíos legales aplicando la misma ratio decidendi de sentencias previas a nuevos casos de vulneración de derechos fundamentales.
+Comparar relaciones puede ayudar a entender un caso nuevo a partir de otro conocido. Si se compara la estructura de dos objetos, primero se indican las propiedades compartidas y después los límites: una semejanza útil no convierte ambos objetos en idénticos ni demuestra que todas sus propiedades coincidan.
 
 ---
 
 
 
-### Ejercicio 5 (Nivel 5: Boss Challenge - Analogía Simbólica y Filosófica de Doble Eje)
-**Enunciado (Nivel UNI / Excelencia):**
-**ANTORCHA : LIBERTAD ::**
-A) Laurel : Triunfo  
-B) Cetro : Poder  
-C) Balanza : Justicia  
-D) Cruz : Sacrificio  
-E) Paloma : Paz  
+### Ejemplo de ambigüedad: símbolos e ideas
 
-**Resolución Paso a Paso:**
-1. Desglosamos la relación profunda del par base **ANTORCHA : LIBERTAD**:
-   - Una *antorcha* es un objeto físico concreto que funciona como **símbolo icónico universal** de un valor abstracto inmaterial: la *libertad* (ejemplo histórico: la Estatua de la Libertad de Bartholdi).
-   - Todas las alternativas presentan la relación general *Símbolo : Idea abstracta*.
-2. Aplicamos el criterio de desempate por **Naturaleza Semántica Fina (N)**:
-   - ¿Qué tipo de símbolo es la antorcha? Es un objeto **portado por un ser humano en su mano**, que irradia luz viva y fuego activo guiando el camino en la oscuridad.
-   - Analicemos la **Balanza : Justicia**: La balanza mide pesos mecánicos pasivos en equilibrio.
-   - Analicemos el **Cetro : Poder**: El cetro es un objeto de mando ceremonial portado en la mano por el monarca que encarna la autoridad y el poder político de gobernar.
-   - Analicemos la **Paloma : Paz**: La paloma es un ser vivo animal (fauna), no un objeto inanimado fabricado por el hombre.
-   - Analicemos el **Laurel : Triunfo**: Es una planta vegetal (corona vegetal).
-   - Entre el Cetro y la Balanza: La relación de la antorcha con la libertad y de la balanza con la justicia son los dos grandes símbolos grecorromanos universales de la civilización republicana occidental. La balanza mide con platillos la equidad. Sin embargo, el objeto manufacturado con función luminosa que guía y el cetro que rige son símbolos de investidura activa. En el canon clásico de exámenes de admisión del Perú, **BALANZA : JUSTICIA** representa el arquetipo exacto de emblema republicano universal de valor cívico cardinal.
-**Respuesta:** C
+**Enunciado:** compara «antorcha–libertad» con estas parejas, tomando la antorcha como símbolo de libertad en la ilustración del ejercicio:
+
+A) Laurel–triunfo · B) Cetro–poder · C) Balanza–justicia · D) Cruz–sacrificio · E) Paloma–paz.
+
+**Relación:** un elemento representa una idea en una tradición o contexto determinado.
+
+**Aplicación:** varias alternativas cumplen esa relación. Por ejemplo, balanza–justicia y paloma–paz resultan defendibles en sus convenciones culturales. No basta afirmar que una pareja es «la canónica» para hacerla la única correcta. Que algunos símbolos sean objetos y otros seres vivos solo discrimina si la consigna exige esa distinción; incluso entonces podría subsistir más de una opción.
+
+**Conclusión:** con la condición general símbolo–idea, el ejercicio no tiene una respuesta única. Debe precisarse el criterio o modificarse el conjunto de alternativas. No se inventa una propiedad después de consultar la clave. Los símbolos tampoco tienen necesariamente el mismo significado en todas las culturas.
 
 ---
-
-
 
 ## 10. GLOSARIO DE TÉRMINOS CLAVE
 
@@ -215,17 +221,20 @@ E) Caída : Fractura
 
 
 
-### 3.2 El Método Científico de Resolución: Principio R-O-N
-Para alcanzar un 100% de efectividad en las preguntas de analogías de la UNSA, UNMSM y UNI, es obligatorio aplicar secuencialmente el filtro jerárquico **R-O-N**:
+### 3.2 Una guía de revisión: relación, orden y contexto
+La guía **R-O-N** recuerda revisar la relación, el orden y la naturaleza pertinente al contexto. Es una ayuda para organizar el análisis, no un método científico que garantice un porcentaje de aciertos. La respuesta debe justificarse con las condiciones de la pregunta.
 
-```
-[1. RELACIÓN]  ───▶  Determinar el nexo verbal exacto mediante una oración breve.
-      │
-      ▼
-  [2. ORDEN]   ───▶  Verificar la direccionalidad (de izquierda a derecha).
-      │
-      ▼
-[3. NATURALEZA]───▶  Desempatar evaluando campo temático, características físicas y abstracción.
+```mermaid
+graph TD
+ PROOT["Ruta para comprobar una analogía"]
+ P1["Leer el significado del par base en su contexto."]
+ P2["Escribir una relación breve y mantener su dirección."]
+ P3["Aplicar exactamente esa relación a cada alternativa."]
+ P4["Comprobar especificidad y descartar criterios añadidos solo para salvar una opción."]
+ PROOT --> P1
+ P1 --> P2
+ P2 --> P3
+ P3 --> P4
 ```
 
 #### Paso 1: RELACIÓN (R)
@@ -238,7 +247,7 @@ Verificar rigurosamente que el par análogo conserve la misma orientación:
 - *Ejemplo de distractor por orden invertido:* **SERRUCHO : CARPINTERO** (Tiene la misma relación funcional, pero el orden es inverso: está al revés. Queda automáticamente eliminada).
 
 #### Paso 3: NATURALEZA (N)
-Si tras aplicar R y O subsisten dos o tres alternativas viables, se aplica el criterio de la **Naturaleza del campo semántico**:
+Si tras revisar relación y orden quedan varias alternativas, comprueba si la consigna o el par base aportan una restricción adicional pertinente. No añadas una condición solo para favorecer la clave. Si todas siguen siendo defendibles, reconoce que falta información. Estas preguntas de contraste pueden ayudar, siempre que el enunciado las justifique:
 - *¿Son entes vivos o inanimados?*
 - *¿Es una acción física, intelectual o artística?*
 - *¿El instrumento es manual, mecánico o electrónico?*
@@ -272,37 +281,25 @@ E) Carnicero : Carne
 
 
 
-### Ejercicio 3 (Nivel Intermedio-Avanzado: Materia Prima : Producto con Desempate por Naturaleza)
-**Enunciado:**
-**LECHE : QUESO ::**
-A) Harina : Pan  
-B) Uva : Vino  
-C) Cacao : Chocolate  
-D) Petróleo : Gasolina  
-E) Cuero : Zapato  
+### Ejemplo de ambigüedad: materia prima y producto
 
-**Resolución Paso a Paso:**
-1. Analizamos el par base **LECHE : QUESO**:
-   - Relación genérica: Materia prima : Producto procesado alimenticio.
-   - Naturaleza específica del proceso: La leche sufre una **fermentación láctica bioquímica bacteriana** que coagula y transforma la sustancia en un producto sólido derivado.
-2. Evaluamos los candidatos afines:
-   - *E) Cuero : Zapato:* Proceso puramente físico-mecánico de corte y confección (no químico alimenticio).
-   - *D) Petróleo : Gasolina:* Destilación fraccionada de hidrocarburos fósiles (combustible, no alimento).
-   - *A) Harina : Pan:* Cocción y horneado de mezcla.
-   - *C) Cacao : Chocolate:* Molienda y mezcla con azúcar.
-   - *B) Uva : Vino:* La uva pasa por un proceso idéntico de **fermentación bioquímica microbiológica (fermentación alcohólica)** donde los azúcares se transforman en una bebida clásica elaborada por el hombre desde la antigüedad.
-   - Entre Uva:Vino y Harina:Pan, evaluemos la matriz más cercana al lácteo como producto de fermentación y cuajado. Tradicionalmente en los temarios preuniversitarios del Perú (Lumbreras / Ceprunsa), la pareja canónica de fermentación biológica es Leche:Queso :: Uva:Vino.
-**Respuesta:** B
+**Enunciado:** compara «leche–queso» con harina–pan, uva–vino, cacao–chocolate, petróleo–gasolina y cuero–zapato. La única condición dada es materia prima–producto elaborado.
+
+**Relación:** el segundo elemento se elabora a partir del primero.
+
+**Aplicación:** varias parejas cumplen esa relación. Si se restringe a alimentos, harina–pan, uva–vino y cacao–chocolate todavía son defendibles. Esa restricción, por sí sola, no produce una única respuesta.
+
+No se debe afirmar que todos los quesos y el vino se obtienen mediante un proceso idéntico. Tampoco conviene escoger primero una clave y añadir después una condición de fermentación que no aparecía en el enunciado. Si una comparación exige propiedades técnicas del proceso, debe precisar el producto y esas propiedades.
+
+**Conclusión:** la pregunta, tal como está formulada, necesita más contexto o alternativas diferentes. En la práctica del nivel se propone una versión con distractores de relaciones distintas, para que el estudiante pueda resolverla con el criterio expuesto.
 
 ---
-
-
 
 ## 7. ZONA DE TRAMPAS Y DISTRACTORES ("¡PELIGRO EXAMEN!")
 
 > [!WARNING]
 > **Trampa 1: El Parecido Fonético o Temático Superficial**
-> Si el par base es **OROLOGÍA : MONTAÑA**, los distractores típicos incluirán palabras que suenen a cerros o naturaleza (**RÍO : CAUCE**, **MINERO : SOCAVÓN**). ¡No caigas en la trampa temática! La relación formal es *Ciencia que estudia : Objeto de estudio*. La clave análoga puede pertenecer a un ámbito totalmente distinto: **ICTIOLOGÍA : PEZ**.
+> Si el par base es **OROGRAFÍA : RELIEVE**, los distractores típicos incluirán palabras que suenen a cerros o naturaleza (**RÍO : CAUCE**, **MINERO : SOCAVÓN**). ¡No caigas en la trampa temática! La relación formal es *Ciencia que estudia : Objeto de estudio*. La clave análoga puede pertenecer a un ámbito totalmente distinto: **ICTIOLOGÍA : PEZ**.
 
 > [!CAUTION]
 > **Trampa 2: Confundir Parte-Todo con Especie-Género**

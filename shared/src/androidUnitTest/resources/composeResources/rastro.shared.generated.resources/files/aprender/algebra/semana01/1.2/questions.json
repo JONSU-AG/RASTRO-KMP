@@ -1,1 +1,200 @@
-[{"concept":"1.2.1","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. **Evaluación de la proposición I:** \\forall x \\in A: x^2 - 1 \\ge -1 \\iff x^2 \\ge 0 Dado que el cuadrado de cualquier número real es siempre mayor o igual a cero (x^2 \\ge 0, \\forall x \\in \\mathbb{R}), se cumple idénticamente para todos los elementos de A. Por lo tanto, la proposición I es **VERDADERA (V)**. 2. **Evaluación de la proposición II:** \\exists x \\in A: x^2 + 2x - 3 = 0 Factorizamos el trinomio: (x + 3)(x - 1) = 0 \\implies x = -3 \\lor x = 1 Verificamos si alguna de las soluciones pertenece al conjunto A = \\{-2, -1, 0, 1, 2, 3\\}: Efectivamente, 1 \\in A. Como basta que exista al menos uno, la proposición II es **VERDADERA (V)**. 3. **Evaluación de la proposición III:** \\forall x \\in A, \\exists y \\in A: x + y = 0 \\iff y = -x Verificamos si para cada elemento x \\in A su opuesto aditivo -x también pertenece a A: - Para x = -2 \\implies y = 2 \\in A. - Para x = -1 \\implies y = 1 \\in A. - Para x = 0 \\implies y = 0 \\in A. - Para x = 1 \\implies y = -1 \\in A. - Para x = 2 \\implies y = -2 \\in A. - Para x = 3 \\implies y = -3. Pero **-3 \\notin A**. Al existir un contraejemplo (x = 3) para el cual no existe y \\in A, la proposición universal III es **FALSA (F)**. 4. Secuencia obtenida: **V - V - F**. **Respuesta Correcta:** **B) V V F** ---","fuente":"temario","id":"alg_t01_s02_c01","options":["V F V","F V V","V V V","V V F"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado:** Dado el conjunto referencial A = \\{-2, -1, 0, 1, 2, 3\\}, determine el valor de verdad de las siguientes proposiciones lógicas cuantificadas:","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.2.2","correctIndex":3,"explanation":"4. **Resolución del Sistema Lineal:** Sustituimos x = 2y: 2y + y = 43 \\implies 3y = 43 \\dots Revisemos si n(A \\cup B \\cup C) = 74: x + y + 32 = 74 \\implies x + y = 42 2y + y = 42 \\implies 3y = 42 \\implies y = 14 x = 2(14) = 28 5. Calculamos el cardinal del conjunto A: n(A) = x + 14 = 28 + 14 = 42 **Respuesta Correcta:** **C) 42** ---","fuente":"temario","id":"alg_t01_s02_c02","options":["40","42","44","38"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado:** Sean los conjuntos A, B y C subconjuntos de un universo finito \\mathbb{U} tales que satisfacen las siguientes condiciones algebraicas y numéricas:","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: A - B = A \\cap B^c.","fuente":"temario","id":"alg_t01_s02_c03","options":["n(A \\times B) = 5 \\times 7 = 35.","Que su intersección sea estrictamente el conjunto vacío (A \\cap B = \\emptyset).","A - B = A \\cap B^c.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":1,"statement":"¿Cómo se expresa la diferencia de conjuntos A - B en términos de intersección y complemento?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: n(A \\times B) = 5 \\times 7 = 35.","fuente":"temario","id":"alg_t01_s02_c04","options":["A - B = A \\cap B^c.","Que su intersección sea estrictamente el conjunto vacío (A \\cap B = \\emptyset).","Valor o condición no aplicable al caso planteado","n(A \\times B) = 5 \\times 7 = 35."],"pedagogicalTier":"concepto","semana":1,"statement":"Si n(A) = 5 y n(B) = 7, ¿cuál es el cardinal del producto cartesiano A \\times B?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.2.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Que su intersección sea estrictamente el conjunto vacío (A \\cap B = \\emptyset).","fuente":"temario","id":"alg_t01_s02_c05","options":["Que su intersección sea estrictamente el conjunto vacío (A \\cap B = \\emptyset).","A - B = A \\cap B^c.","n(A \\times B) = 5 \\times 7 = 35.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":1,"statement":"¿Qué condición define a dos conjuntos mutuamente disjuntos?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t01_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t01_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t01_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t01_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t01_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "1.2.1",
+    "correctIndex": 0,
+    "explanation": "1. Sumamos 20 + 15 = 35, pero las cinco personas que estudian ambos aparecen dos veces.\n2. Restamos una copia de ese grupo.\n3. La unión tiene 35 − 5 = 30 personas.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s02_c01",
+    "options": [
+      "30",
+      "35",
+      "25",
+      "40"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "En una encuesta, 20 personas estudian inglés, 15 francés y 5 ambos idiomas. ¿Cuántas estudian al menos uno?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.2",
+    "correctIndex": 1,
+    "explanation": "1. La unión contiene 20 + 15 − 5 = 30 estudiantes.\n2. Los que no estudian ninguno están fuera de esa unión, dentro del grupo de 40.\n3. Son 40 − 30 = 10.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s02_c02",
+    "options": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "De 40 estudiantes, 20 estudian inglés, 15 francés y 5 ambos. ¿Cuántos no estudian ninguno de esos idiomas?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.3",
+    "correctIndex": 2,
+    "explanation": "1. Usamos $n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$.\n2. Sustituimos $32=18+20-x$.\n3. Despejamos $x=38-32=6$.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s02_c03",
+    "options": [
+      "38",
+      "8",
+      "6",
+      "4"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Si n(A) = 18, n(B) = 20 y n(A ∪ B) = 32, ¿cuánto vale n(A ∩ B)?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.4",
+    "correctIndex": 3,
+    "explanation": "1. Sumamos las preferencias: 30 + 28 = 58.\n2. La unión tiene 45 personas, por lo que el exceso corresponde a quienes fueron contados dos veces.\n3. La intersección contiene 58 − 45 = 13 personas.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s02_c04",
+    "options": [
+      "5",
+      "8",
+      "15",
+      "13"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "En un grupo de 50 personas, 30 prefieren té, 28 café y 45 al menos una de las dos bebidas. ¿Cuántas prefieren ambas?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.5",
+    "correctIndex": 0,
+    "explanation": "1. Estar fuera de la unión significa no pertenecer ni a A ni a B.\n2. Ambas condiciones deben cumplirse a la vez.\n3. Se obtiene la intersección de los complementos.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s02_c05",
+    "options": [
+      "$A^c\\cap B^c$",
+      "$A^c\\cup B^c$",
+      "$A\\cap B$",
+      "$A\\cup B$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿A qué equivale $(A\\cup B)^c$ según De Morgan?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.6",
+    "correctIndex": 1,
+    "explanation": "1. Un elemento de A−B pertenece a A y no pertenece a B.\n2. No pertenecer a B equivale a pertenecer a su complemento.\n3. Ambas condiciones se unen por intersección: A con el complemento de B.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s02_c06",
+    "options": [
+      "$A\\cap B$",
+      "$A\\cap B^c$",
+      "$A^c\\cap B$",
+      "$A\\cup B^c$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Qué expresión equivale a $A-B$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.7",
+    "correctIndex": 2,
+    "explanation": "1. Todo elemento de A ∩ B ya pertenece a A.\n2. Unir ese subconjunto con A no añade elementos nuevos.\n3. Por absorción, el resultado es A.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s02_c07",
+    "options": [
+      "$A\\cap B$",
+      "$B$",
+      "$A$",
+      "$A\\cup B$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Simplifica $A\\cup(A\\cap B)$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.8",
+    "correctIndex": 3,
+    "explanation": "1. Distribuimos la unión: $(A\\cup A^c)\\cap(A\\cup B)$.\n2. La primera unión es el universo U.\n3. Intersectar U con $A\\cup B$ conserva $A\\cup B$.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s02_c08",
+    "options": [
+      "$A\\cap B$",
+      "$A^c\\cup B$",
+      "$A$",
+      "$A\\cup B$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Simplifica $A\\cup(A^c\\cap B)$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.9",
+    "correctIndex": 0,
+    "explanation": "1. En A × B, la primera coordenada se elige de A y la segunda de B.\n2. El único valor posible en la segunda coordenada es a.\n3. Los pares son (1,a) y (2,a); el orden de las coordenadas importa.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s02_c09",
+    "options": [
+      "$\\{(1,a),(2,a)\\}$",
+      "$\\{(a,1),(a,2)\\}$",
+      "$\\{1,2,a\\}$",
+      "$\\{(1,2)\\}$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Si $A=\\{1,2\\}$ y $B=\\{a\\}$, ¿cuál es $A\\times B$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.10",
+    "correctIndex": 1,
+    "explanation": "1. Ser disjuntos significa que la intersección es vacía.\n2. No hay elementos contados dos veces.\n3. La unión tiene 12 + 8 = 20 elementos.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s02_c10",
+    "options": [
+      "4",
+      "20",
+      "96",
+      "12"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "A y B son disjuntos, con 12 y 8 elementos respectivamente. ¿Cuántos elementos tiene su unión?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.11",
+    "correctIndex": 2,
+    "explanation": "1. Sumamos los tamaños: $20+18+15=53$.\n2. Restamos las tres intersecciones por parejas: $53-5-4-3=41$.\n3. Los dos elementos de la intersección triple quedaron descontados de más; los añadimos una vez.\n4. La unión tiene $41+2=43$ elementos.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s02_c11",
+    "options": [
+      "41",
+      "47",
+      "43",
+      "53"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Tres conjuntos tienen 20, 18 y 15 elementos. Sus intersecciones por parejas tienen 5, 4 y 3 elementos, contando en ellas a los 2 elementos comunes a los tres. ¿Cuántos elementos tiene la unión de los tres?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

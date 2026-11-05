@@ -1,1 +1,200 @@
-[{"concept":"6.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t06_s01_c01","options":["5/12","7/18","1/2","13/36"],"pedagogicalTier":"concepto","semana":6,"statement":"Al lanzar dos dados comunes y no cargados, ¿cuál es la probabilidad de que la suma de los puntos obtenidos sea un número primo?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t06_s01_c02","options":["3/25","1/5","1/7","2/15"],"pedagogicalTier":"concepto","semana":6,"statement":"En una urna opaca se tienen 6 esferas rojas, 4 esferas azules y 5 esferas verdes. Si se extraen al azar y consecutivamente 2 esferas sin reposición, ¿cuál es la probabilidad de que la primera sea roja y la segunda sea verde?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t06_s01_c03","options":["7/8","63/64","15/16","31/32"],"pedagogicalTier":"concepto","semana":6,"statement":"Un examen de admisión consta de una prueba virtual donde se lanzan 5 monedas equilibradas al aire. Para ganar el pase a la siguiente ronda, un postulante debe obtener al menos una cara. ¿Cuál es la probabilidad de que el postulante logre pasar a la siguiente ronda?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: P = \\frac{6}{36} = \\frac{1}{6} (es la suma con mayor cantidad de casos favorables).","fuente":"temario","id":"rm_t06_s01_c04","options":["Siempre está acotada entre 0 y 1 inclusive (0 \\le P(A) \\le 1).","Equivale al producto directo de sus probabilidades individuales: P(A \\cap B) = P(A) \\cdot P(B).","Valor o condición no aplicable al caso planteado","P = \\frac{6}{36} = \\frac{1}{6} (es la suma con mayor cantidad de casos favorables)."],"pedagogicalTier":"concepto","semana":6,"statement":"¿Cuál es la probabilidad de que al lanzar dos dados comunes la suma de sus puntos sea 7?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Siempre está acotada entre 0 y 1 inclusive (0 \\le P(A) \\le 1).","fuente":"temario","id":"rm_t06_s01_c05","options":["Siempre está acotada entre 0 y 1 inclusive (0 \\le P(A) \\le 1).","P = \\frac{6}{36} = \\frac{1}{6} (es la suma con mayor cantidad de casos favorables).","Equivale al producto directo de sus probabilidades individuales: P(A \\cap B) = P(A) \\cdot P(B).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":6,"statement":"¿Cuál es el rango de valores posibles para cualquier probabilidad matemática?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Equivale al producto directo de sus probabilidades individuales: P(A \\cap B) = P(A) \\cdot P(B).","fuente":"temario","id":"rm_t06_s01_c06","options":["P = \\frac{6}{36} = \\frac{1}{6} (es la suma con mayor cantidad de casos favorables).","Equivale al producto directo de sus probabilidades individuales: P(A \\cap B) = P(A) \\cdot P(B).","Siempre está acotada entre 0 y 1 inclusive (0 \\le P(A) \\le 1).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":6,"statement":"Si dos eventos A y B son independientes, ¿a qué equivale P(A \\cap B)?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.7","correctIndex":2,"explanation":"Por Bayes: P(A|Blanca) = P(A)P(Blanca|A) / P(Blanca Total). P(Blanca Total) = 1/2(4/6) + 1/2(2/6) = 1/2. Por tanto: (1/2 * 2/3) / (1/2) = 2/3.","fuente":"temario","id":"rm_t06_s01_c07","options":["1/3","1/2","2/3","3/4"],"pedagogicalTier":"concepto","semana":6,"statement":"Se lanza una moneda para elegir entre la Urna A (4 blancas, 2 negras) y la Urna B (2 blancas, 4 negras). Si la bola extraída resultó ser blanca, ¿cuál es la probabilidad de que provenga de la Urna A?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t06_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t06_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t06_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rm_t06_s01_c01",
+    "concept": "6.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 6,
+    "statement": "Se lanza un dado equilibrado de seis caras numeradas del 1 al 6. ¿Cuál es la probabilidad de obtener un número par?",
+    "options": [
+      "$\\frac{1}{2}$",
+      "$1$",
+      "$\\frac{1}{4}$",
+      "$\\frac{1}{6}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Hay tres pares entre seis resultados equiprobables.\n2. Desarrollamos: $P=3/6$.\n3. El resultado es $\\frac{1}{2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t06_s01_c02",
+    "concept": "6.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 6,
+    "statement": "Se lanza un dado equilibrado del 1 al 6. ¿Cuál es la probabilidad de obtener más de 4?",
+    "options": [
+      "$\\frac{2}{3}$",
+      "$\\frac{1}{6}$",
+      "$1$",
+      "$\\frac{1}{3}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Los favorables son 5 y 6.\n2. Desarrollamos: $P=2/6$.\n3. El resultado es $\\frac{1}{3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t06_s01_c03",
+    "concept": "6.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 6,
+    "statement": "Se lanzan dos monedas equilibradas e independientes. ¿Cuál es la probabilidad de dos caras?",
+    "options": [
+      "$\\frac{1}{8}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{1}{4}$",
+      "$\\frac{1}{2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Multiplicamos las probabilidades por independencia.\n2. Desarrollamos: $P=(1/2)(1/2)$.\n3. El resultado es $\\frac{1}{4}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t06_s01_c04",
+    "concept": "6.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 6,
+    "statement": "Una bolsa tiene 4 bolas rojas y 6 azules, distinguibles y elegidas uniformemente. ¿Cuál es la probabilidad de roja en una extracción?",
+    "options": [
+      "$\\frac{2}{15}$",
+      "$\\frac{2}{5}$",
+      "$\\frac{4}{5}$",
+      "$\\frac{1}{5}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Dividimos las cuatro favorables entre las diez bolas.\n2. Desarrollamos: $P=4/10$.\n3. El resultado es $\\frac{2}{5}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t06_s01_c05",
+    "concept": "6.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 6,
+    "statement": "Un evento tiene probabilidad 0.35. ¿Cuál es la probabilidad de su complemento?",
+    "options": [
+      "$\\frac{13}{20}$",
+      "$\\frac{13}{40}$",
+      "$\\frac{13}{60}$",
+      "$\\frac{1}{2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El evento y su complemento suman uno.\n2. Desarrollamos: $P(A^c)=1-0.35$.\n3. El resultado es $\\frac{13}{20}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t06_s01_c06",
+    "concept": "6.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 6,
+    "statement": "Se elige uniformemente un entero del 1 al 12 inclusive. ¿Cuál es la probabilidad de que sea múltiplo de 3?",
+    "options": [
+      "$\\frac{2}{3}$",
+      "$\\frac{1}{6}$",
+      "$1$",
+      "$\\frac{1}{3}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Los favorables son 3, 6, 9 y 12.\n2. Desarrollamos: $P=4/12$.\n3. El resultado es $\\frac{1}{3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t06_s01_c07",
+    "concept": "6.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 6,
+    "statement": "En un dado equilibrado del 1 al 6, ¿cuál es la probabilidad de obtener 1 o 6?",
+    "options": [
+      "$\\frac{1}{6}$",
+      "$1$",
+      "$\\frac{1}{3}$",
+      "$\\frac{2}{3}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Los dos resultados son distintos e incompatibles en un lanzamiento.\n2. Desarrollamos: $P=1/6+1/6$.\n3. El resultado es $\\frac{1}{3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t06_s01_c08",
+    "concept": "6.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 6,
+    "statement": "Una ruleta ideal tiene ocho sectores iguales, tres verdes y cinco blancos. ¿Cuál es la probabilidad de no obtener verde?",
+    "options": [
+      "$\\frac{1}{2}$",
+      "$\\frac{5}{8}$",
+      "$\\frac{5}{16}$",
+      "$\\frac{5}{24}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los cinco sectores blancos componen el complemento.\n2. Desarrollamos: $P=5/8$.\n3. El resultado es $\\frac{5}{8}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t06_s01_c09",
+    "concept": "6.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 6,
+    "statement": "Se lanzan dos dados equilibrados e independientes. ¿Cuál es la probabilidad de sumar 7?",
+    "options": [
+      "$\\frac{1}{6}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{1}{12}$",
+      "$\\frac{1}{2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los pares ordenados favorables son seis entre treinta y seis.\n2. Desarrollamos: $P=6/36$.\n3. El resultado es $\\frac{1}{6}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t06_s01_c10",
+    "concept": "6.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 6,
+    "statement": "Contar favorables y dividir entre posibles es válido directamente cuando…",
+    "options": [
+      "Todos los eventos tienen la misma cantidad de letras.",
+      "Los resultados nunca pueden repetirse.",
+      "No se conoce el espacio de resultados.",
+      "Los resultados elementales contados son equiprobables."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El cociente simple asigna el mismo peso a cada resultado contado.\n2. Si los pesos difieren, se suman sus probabilidades específicas.\n3. Por eso la equiprobabilidad debe estar justificada.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t06_s01_c11",
+    "concept": "6.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 6,
+    "statement": "Dos eventos incompatibles con probabilidad positiva…",
+    "options": [
+      "Deben ocurrir juntos.",
+      "Tienen intersección de probabilidad uno.",
+      "No son independientes.",
+      "Siempre son independientes."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Su intersección tiene probabilidad cero.\n2. Si fueran independientes, sería el producto de dos números positivos.\n3. Ese producto no es cero: las condiciones no coinciden.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

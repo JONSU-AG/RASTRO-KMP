@@ -2,15 +2,15 @@
   {
     "id": "leng_t01_s01_c01",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿En qué fase de la comunicación ocurre la selección y articulación mental de los signos que estructuran el mensaje?",
+    "statement": "Antes de decir un aviso, Ana elige mentalmente las palabras y las organiza. En el modelo de fases de esta lección, ¿a qué actividad corresponde?",
     "options": [
-      "Fase psíquica del emisor",
-      "Fase física del canal",
-      "Fase motora del emisor",
-      "Fase fisiológica del receptor"
+      "Codificación en la fase psíquica del emisor",
+      "Propagación de la señal por el canal",
+      "Articulación de sonidos en la fase fisiológica",
+      "Captación auditiva en el receptor"
     ],
     "correctIndex": 0,
-    "explanation": "La encodificación es un proceso mental que ocurre en la fase psíquica del emisor, donde se seleccionan y combinan los signos del código antes de emitirlos.",
+    "explanation": "Criterio: la codificación consiste en seleccionar y organizar signos para elaborar el mensaje. Aplicación: Ana está eligiendo palabras, no pronunciándolas ni recibiendo sonidos. Respuesta: codificación en la fase psíquica del emisor. Las fases son una distinción de estudio; no implican que todos los procesos reales estén separados en el tiempo.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.1.1",
@@ -20,15 +20,15 @@
   {
     "id": "leng_t01_s01_c02",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Si un estudiante lee una obra de Mario Vargas Llosa en su habitación, el canal físico de dicho acto comunicativo es:",
+    "statement": "Un estudiante lee una novela impresa. Si se pregunta específicamente por el soporte material escrito del mensaje, ¿cuál corresponde?",
     "options": [
-      "El idioma castellano estándar",
-      "La novela como obra de arte",
-      "La memoria visual del estudiante",
-      "El papel impreso del libro"
+      "La lengua española del texto",
+      "Los acontecimientos narrados",
+      "La interpretación del lector",
+      "El papel con las marcas impresas"
     ],
     "correctIndex": 3,
-    "explanation": "El canal es el soporte material físico que porta el mensaje. En la lectura de un libro impreso, el canal es el papel impreso (el castellano es el código).",
+    "explanation": "Criterio: distinguir el soporte material del sistema de signos. Aplicación: el papel conserva las marcas escritas; la lengua española es el código y los acontecimientos narrados pertenecen al contenido. Respuesta: el papel con las marcas impresas. Se especifica soporte escrito porque el análisis del canal también puede considerar la vía visual de acceso al texto.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.1.3",
@@ -38,15 +38,15 @@
   {
     "id": "leng_t01_s01_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Durante una clase universitaria, el zumbido constante de un proyector defectuoso impide oír con claridad al profesor. Este obstáculo constituye un claro ejemplo de:",
+    "statement": "Durante una clase, el zumbido de un proyector impide oír varias palabras del profesor. En relación con ese mensaje oral, el zumbido es:",
     "options": [
-      "Ruido",
-      "Redundancia física",
-      "Contexto asincrónico",
-      "Retroalimentación diferida"
+      "Ruido físico que interfiere en la recepción",
+      "Redundancia que refuerza el contenido",
+      "Respuesta del alumno al mensaje",
+      "Código usado por el profesor"
     ],
     "correctIndex": 0,
-    "explanation": "El ruido es cualquier interferencia o perturbación física, técnica o ambiental que entorpece la recepción correcta del mensaje a través del canal.",
+    "explanation": "Criterio: ruido es una interferencia que dificulta recibir o interpretar el mensaje. Aplicación: el zumbido tapa palabras de la explicación. Respuesta: ruido físico. Se clasifica por su efecto sobre ese mensaje, no por ser necesariamente involuntario.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.1.4",
@@ -56,15 +56,15 @@
   {
     "id": "leng_t01_s01_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El elemento del circuito comunicativo que alude a la realidad concreta o abstracta, objeto o tema del que trata el mensaje se denomina:",
+    "statement": "En el aviso «La biblioteca cerrará a las seis», ¿cómo se denomina la realidad o el hecho al que se alude, según la distinción entre referente y situación comunicativa de esta lección?",
     "options": [
-      "Contexto",
+      "Situación comunicativa",
       "Referente",
       "Código",
       "Canal"
     ],
     "correctIndex": 1,
-    "explanation": "El referente es la realidad objetiva o conceptual exterior aludida por el mensaje (el tema, hecho o entidad del que se habla).",
+    "explanation": "Criterio: el referente es aquello de lo que trata el mensaje; la situación reúne las circunstancias de emisión e interpretación. Aplicación: el aviso se refiere al cierre de la biblioteca a una hora determinada. Respuesta: referente. No se identifica con el lugar donde alguien lee el aviso ni con su soporte.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.1.3",
@@ -74,15 +74,15 @@
   {
     "id": "leng_t01_s01_c05",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál es la función pedagógica principal de la redundancia en el acto comunicativo?",
+    "statement": "Por una interferencia se oye mal una hora. La persona repite «a las seis, seis de la tarde». ¿Qué función cumple esa repetición?",
     "options": [
-      "Reemplazar al referente cuando este es abstracto",
-      "Neutralizar y combatir los efectos distorsionadores del ruido",
-      "Eliminar la necesidad de compartir un mismo código lingüístico",
-      "Acelerar la fase fisiológica del receptor"
+      "Cambiar el tema del que se habla",
+      "Reforzar la información para reducir la pérdida causada por el ruido",
+      "Sustituir cualquier código que los interlocutores no compartan",
+      "Garantizar que el receptor recuerde siempre el aviso"
     ],
     "correctIndex": 1,
-    "explanation": "La redundancia consiste en reiterar o reforzar elementos del mensaje para asegurar su correcta decodificación y contrarrestar las pérdidas causadas por el ruido.",
+    "explanation": "Criterio: la redundancia aporta información reiterada que puede ayudar a recuperar el mensaje. Aplicación: repetir la hora facilita reconocer un dato parcialmente oculto por la interferencia. Respuesta: reforzar la información para reducir la pérdida causada por el ruido. Es una ayuda, no una garantía absoluta de comprensión o recuerdo.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.1.4",
@@ -92,15 +92,15 @@
   {
     "id": "leng_t01_s01_c06",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El proceso inverso mediante el cual el receptor descifra los signos acústicos o gráficos y los asocia a sus respectivos conceptos se denomina:",
+    "statement": "Luis reconoce las palabras de un aviso escrito y las interpreta. ¿Cómo se denomina este proceso de interpretación de los signos?",
     "options": [
-      "Transmisión física",
-      "Articulación motora",
-      "Encodificación",
+      "Propagación de la señal",
+      "Articulación de sonidos",
+      "Codificación del aviso por su autor",
       "Decodificación"
     ],
     "correctIndex": 3,
-    "explanation": "La decodificación es el proceso psíquico realizado por el receptor, consistente en descifrar e interpretar los signos del mensaje.",
+    "explanation": "Criterio: codificar es elaborar el mensaje con signos; decodificar es interpretarlos al recibirlo. Aplicación: Luis es el lector e interpreta las palabras que encuentra. Respuesta: decodificación. La interpretación puede requerir contexto y conocimientos, además de reconocer palabras; no es una copia automática de la intención del autor.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.1.1",
@@ -110,15 +110,15 @@
   {
     "id": "leng_t01_s01_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la expresión '¡Fuego!', su interpretación exacta varía si se pronuncia en un polígono de tiro militar o en un auditorio cerrado. Esta variación depende directamente del:",
+    "statement": "Una profesora dice «ahora» al comenzar una actividad el lunes y vuelve a decir «ahora» al comenzar otra el martes. ¿Qué permite identificar el momento aludido en cada ocasión?",
     "options": [
-      "Contexto o circunstancia",
-      "Canal",
-      "Emisor encodificador",
-      "Código"
+      "El contexto temporal de cada emisión",
+      "El papel como soporte escrito",
+      "Un cambio obligatorio de idioma",
+      "La repetición de los mismos sonidos por sí sola"
     ],
     "correctIndex": 0,
-    "explanation": "El contexto o circunstancia es el espacio, tiempo y situación socioambiental que condiciona y determina el sentido exacto del mensaje emitido.",
+    "explanation": "Criterio: expresiones como ahora se interpretan con relación al momento de emisión. Aplicación: la palabra conserva su forma, pero cada uso señala un momento distinto. Respuesta: el contexto temporal. El contexto orienta la interpretación; no garantiza resolver cualquier ambigüedad de todos los mensajes.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.1.3",
@@ -128,15 +128,15 @@
   {
     "id": "leng_t01_s01_c08",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La respuesta o reacción observable del receptor que permite al emisor comprobar si su mensaje fue comprendido y reajustarlo se denomina:",
+    "statement": "Después de una explicación, una alumna pregunta «¿Debo entregar solo el primer ejercicio?». La profesora recibe esa pregunta y aclara la instrucción. La intervención de la alumna funciona como:",
     "options": [
-      "Decodificación pasiva",
-      "Redundancia contextual",
-      "Retroalimentación o feedback",
-      "Ruido semántico"
+      "La interpretación interna que no se manifiesta",
+      "Una repetición del soporte material",
+      "Retroalimentación para ajustar la explicación",
+      "Un ruido que necesariamente impide comunicarse"
     ],
     "correctIndex": 2,
-    "explanation": "El feedback o retroalimentación es la respuesta emitida por el receptor que permite al emisor evaluar el éxito de la comunicación.",
+    "explanation": "Criterio: la retroalimentación es información que vuelve al interlocutor y permite ajustar el intercambio. Aplicación: la pregunta comunica una duda y la profesora reformula su instrucción. Respuesta: retroalimentación. Puede aparecer durante el intercambio; una reacción observable, como asentir, no demuestra por sí sola comprensión completa.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.1.4",
@@ -146,15 +146,15 @@
   {
     "id": "leng_t01_s01_c09",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Si dos personas intentan dialogar, pero una habla exclusivamente quechua y la otra exclusivamente japonés, la comunicación fracasa primordialmente debido a la falta de concordancia en el:",
+    "statement": "Ana solo comprende quechua y Ken solo comprende japonés. Intentan intercambiar instrucciones exclusivamente habladas en esas lenguas, sin traducción, gestos ni otro apoyo compartido. ¿Qué dificulta principalmente comprender las palabras?",
     "options": [
-      "Canal natural",
-      "Contexto físico",
-      "Código",
-      "Referente"
+      "La ausencia necesaria de aire",
+      "La imposibilidad de tratar un mismo tema",
+      "La falta de un código lingüístico compartido para ese intercambio",
+      "La ausencia de sonido, aunque ambos hablan y se oyen"
     ],
     "correctIndex": 2,
-    "explanation": "El código es el sistema convencional de signos que obligatoriamente deben compartir emisor y receptor para que haya comprensión mutua.",
+    "explanation": "Criterio: comprender un mensaje lingüístico requiere conocer suficientemente el código usado o disponer de una mediación. Aplicación: en el caso se excluyen traducción y otros apoyos; cada persona desconoce la lengua que oye. Respuesta: falta de código lingüístico compartido. Esto no impide toda comunicación posible entre hablantes de distintas lenguas: pueden emplear traducción, gestos u otros recursos.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.1.2",
@@ -164,15 +164,15 @@
   {
     "id": "leng_t01_s01_c10",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En un mensaje oral emitido cara a cara entre dos amigos en un parque, el canal de comunicación es:",
+    "statement": "Dos amigos conversan cara a cara y sus voces llegan por el aire. Si se pregunta por el medio físico de propagación de la señal acústica, ¿cuál es?",
     "options": [
-      "El idioma español coloquial",
-      "El tímpano del oyente",
-      "La voz humana articulada",
-      "El aire y las ondas sonoras"
+      "El español que emplean",
+      "El oído de quien escucha",
+      "Las reglas para formar oraciones",
+      "El aire por el que se propagan las ondas sonoras"
     ],
     "correctIndex": 3,
-    "explanation": "El canal natural en la comunicación oral directa es el aire a través del cual se desplazan las ondas sonoras que transmiten la señal acústica.",
+    "explanation": "Criterio: separar medio de propagación, señal, código y órgano receptor. Aplicación: el aire es el medio, las ondas sonoras constituyen la señal acústica, el español es el código y el oído participa en la recepción. Respuesta: el aire por el que se propagan las ondas sonoras. No se confunde la señal con el material por el que se transmite.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.1.3",

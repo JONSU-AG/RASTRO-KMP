@@ -7,10 +7,10 @@
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana07.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_07_Discurso_Escrito_y_Normativa.md",
   "learningObjectives": [
-    "Aplicar la minúscula obligatoria en cargos, gentilicios, días, meses y estaciones",
-    "Diferenciar sustantivo genérico en minúscula de nombre propio en mayúscula",
-    "Escribir títulos de libros con solo primera palabra en mayúscula y periódicos con significativas",
-    "Usar mayúscula en topónimos, instituciones, épocas históricas y asignaturas formales"
+    "Distinguir mayúscula posicional de la escritura propia de cargos y nombres comunes",
+    "Analizar calendario, orientación y nombres propios según su uso",
+    "Contrastar obras, publicaciones, disciplinas y denominaciones curriculares",
+    "Aplicar reglas a topónimos y nombres históricos sin generalizaciones sobre importancia"
   ],
   "theory": {
     "id": "th_leng_t07_s03",
@@ -19,15 +19,14 @@
     "titulo": "Normativa del Uso de Mayúsculas y Minúsculas (Ortografía RAE)",
     "resumen": "",
     "conceptosClave": [
-      "Cargos presidente, papa, rey, ministro y decano van siempre en minúscula",
-      "Días, meses, estaciones, gentilicios e idiomas van en minúscula",
-      "Río, lago, volcán y océano en minúscula; Chili, Titicaca, Misti en mayúscula",
-      "Libros solo primera palabra en mayúscula; periódicos todas las significativas",
-      "Puntos cardinales de dirección en minúscula; América del Norte en mayúscula",
-      "28 de Julio y Primero de Mayo en mayúscula por festividad oficial",
-      "Renacimiento, Guerra del Pacífico e Ingeniería Civil en mayúscula"
+      "Los cargos son nombres comunes; no llevan mayúscula por respeto",
+      "La posición inicial de oración es un criterio distinto",
+      "Meses y direcciones se distinguen de sus usos dentro de nombres propios",
+      "En obras se escribe con mayúscula la primera palabra y los nombres propios",
+      "Disciplina general y nombre curricular no son usos equivalentes",
+      "La pauta general es guerra del Pacífico; el gentilicio en Revolución francesa va en minúscula"
     ],
-    "admissionTip": "Nadie es más que la minúscula: presidente, papa y rey siempre en minúscula; río y norte de dirección también; solo el nombre propio y la festividad patria suben a mayúscula.",
-    "admissionExplanation": "La RAE 2010 convirtió cargos y tiempo cronológico en nombres comunes con minúscula, y reservó la mayúscula para nombre propio, institución formal, época histórica y festividad consagrada."
+    "admissionTip": "Decide qué se nombra y distingue la posición de la palabra de su categoría.",
+    "admissionExplanation": "No toda referencia histórica exige mayúsculas ni toda disciplina se menciona como una asignatura oficial."
   }
 }

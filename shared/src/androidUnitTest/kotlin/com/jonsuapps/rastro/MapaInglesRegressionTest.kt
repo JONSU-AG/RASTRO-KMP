@@ -12,14 +12,13 @@ import kotlin.test.assertTrue
  * Regresión de Inglés (SALIDA_KOTLIN → RASTRO, mismo sistema genérico
  * que las demás materias): convivencia legacy+nuevo sin duplicar ni contaminar.
  *
- * Nuevo = semanas 1-7 (14 LessonNodes ing_t01_s01..ing_t07_s02, 140 challenges).
+ * Nuevo = semanas 1-7 (14 LessonNodes ing_t01_s01..ing_t07_s02, 154 preguntas revisadas).
  * Legacy ing_t* semanas 1-7 queda excluido (reemplazo total).
  * Usa fixtures espejo de `src/androidUnitTest/resources` (patrón existente).
  *
  * Notas de staging (no se modifica curso-prueba):
  * - Sin CONTROL.md; subjectId/semana/subtema vacíos o ausentes normalizados
  *   a ("ingles", semana, "w.k") en la generación.
- * - Distribución correctIndex real: A=59, B=41, C=19, D=21 (sesgada a A).
  * - Teorías cortas (3420-6429 chars, temas de gramática/vocabulario);
  *   umbral de teoría en 3000.
  */
@@ -51,13 +50,13 @@ class MapaInglesRegressionTest {
     @Test
     fun mapaIngles_nuevoSemanas1a7_sinLegacy() {
         val mapa = mapaIngles()
-        // Reemplazo total: todo nodo tiene 10 challenges (legacy = 2 challenges).
+        // Reemplazo total: todo nodo tiene 11 preguntas revisadas (legacy = 2 challenges).
         assertEquals(14, mapa.size, "Solo los 14 nodos nuevos, sin legacy")
-        assertTrue(mapa.all { it.challenges.size == 10 }, "Sin nodos legacy de 2 challenges")
+        assertTrue(mapa.all { it.challenges.size == 11 }, "Sin nodos legacy de 2 challenges")
 
         val nuevas = mapa.filter { it.id.startsWith("ing_t") }
         assertEquals(14, nuevas.size, "7 semanas nuevas = 14 LessonNodes")
-        assertEquals(140, nuevas.sumOf { it.challenges.size }, "140 challenges staging")
+        assertEquals(154, nuevas.sumOf { it.challenges.size }, "154 preguntas revisadas")
 
         val semanas = nuevas.map { it.semana }.distinct().sorted()
         assertEquals((1..7).toList(), semanas, "Nuevo semanas 1-7: $semanas")
@@ -68,8 +67,8 @@ class MapaInglesRegressionTest {
         val mapa = mapaIngles()
         // (semana, subtema, challenges) por nodo.
         val esperadas = (1..7).flatMap { w ->
-            listOf("ing_t%02d_s01".format(w) to Triple(w, "$w.1", 10),
-                "ing_t%02d_s02".format(w) to Triple(w, "$w.2", 10))
+            listOf("ing_t%02d_s01".format(w) to Triple(w, "$w.1", 11),
+                "ing_t%02d_s02".format(w) to Triple(w, "$w.2", 11))
         }.toMap()
         for ((id, esp) in esperadas) {
             val l = mapa.filter { it.id == id && it.challenges.size == esp.third }
@@ -93,7 +92,7 @@ class MapaInglesRegressionTest {
         // Spot-check anti-corrupción: título staging verbatim.
         assertEquals(
             "Tiempos Verbales de Presente: Present Simple vs. Present Continuous y Stative Verbs - Core Rules & Foundations",
-            mapa.first { it.id == "ing_t01_s01" && it.challenges.size == 10 }.title
+            mapa.first { it.id == "ing_t01_s01" && it.challenges.size == 11 }.title
         )
     }
 
@@ -103,7 +102,7 @@ class MapaInglesRegressionTest {
         try {
             val nueva = AprenderRepository.getLessonByIdSync("ing_t01_s01")
             assertTrue(nueva != null, "ing_t01_s01 debe resolverse")
-            assertEquals(10, nueva.challenges.size, "Nuevo con 10 challenges staging")
+            assertEquals(11, nueva.challenges.size, "Nuevo con 11 preguntas revisadas")
             assertEquals("ingles", nueva.subjectId)
 
             // Fallback legacy: ing_t01_s03 no tiene equivalente nuevo → legacy (2 challenges).

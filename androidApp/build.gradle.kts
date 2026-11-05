@@ -37,11 +37,13 @@ android {
         ?: localSecrets.getProperty("YOUTUBE_DATA_API_KEY").orEmpty()
 
     defaultConfig {
+        // Temporary thesis build; -Prastro.presentation=false restores the configured monetization.
+        buildConfigField("boolean", "PRESENTATION_MODE", providers.gradleProperty("rastro.presentation").orElse("true").get().toBooleanStrict().toString())
         applicationId = "com.jonsuapps.rastro"
         minSdk = 24
         targetSdk = 36
-        versionCode = 205
-        versionName = "2.0.3"
+        versionCode = 206
+        versionName = "2.0.4"
         buildConfigField("String", "YOUTUBE_DATA_API_KEY", "\"$youtubeDataApiKey\"")
         manifestPlaceholders["admobAppId"] = "ca-app-pub-4563495447517759~3422086209"
         buildConfigField("String", "ADMOB_INTERSTITIAL_ID", "\"ca-app-pub-4563495447517759/3633839193\"")

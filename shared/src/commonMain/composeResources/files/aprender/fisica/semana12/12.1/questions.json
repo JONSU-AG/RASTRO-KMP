@@ -1,1 +1,200 @@
-[{"concept":"12.1.1","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t12_s01_c01","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.2","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t12_s01_c02","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t12_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t12_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t12_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t12_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t12_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t12_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t12_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"12.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t12_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t12_s01_c01",
+    "concept": "12.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 12,
+    "statement": "Un fotón tiene frecuencia $10^{15}$ Hz. Para este cálculo usa $h=4\\times10^{-15}\\,\\mathrm{eV\\,s}$. ¿Qué energía tiene?",
+    "options": [
+      "$4\\,\\mathrm{eV}$",
+      "$8\\,\\mathrm{eV}$",
+      "$2\\,\\mathrm{eV}$",
+      "$12\\,\\mathrm{eV}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La energía del fotón es proporcional a su frecuencia.\n2. Sustituimos los datos: $E=hf=(4\\cdot10^{-15})(10^{15})$.\n3. El resultado pedido es $4\\,\\mathrm{eV}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t12_s01_c02",
+    "concept": "12.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 12,
+    "statement": "Un fotón de 5 eV incide sobre un metal de función de trabajo 2 eV. ¿Qué energía cinética máxima puede tener el fotoelectrón?",
+    "options": [
+      "$6\\,\\mathrm{eV}$",
+      "$1.5\\,\\mathrm{eV}$",
+      "$9\\,\\mathrm{eV}$",
+      "$3\\,\\mathrm{eV}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La energía primero debe cubrir la función de trabajo.\n2. Sustituimos los datos: $K_{max}=E-\\phi=5-2$.\n3. El resultado pedido es $3\\,\\mathrm{eV}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t12_s01_c03",
+    "concept": "12.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 12,
+    "statement": "Un metal tiene función de trabajo 3 eV. Usa $h=4\\times10^{-15}\\,\\mathrm{eV\\,s}$. ¿Cuál es su frecuencia umbral?",
+    "options": [
+      "$3.75\\times10^{14}\\,\\mathrm{Hz}$",
+      "$2.25\\times10^{15}\\,\\mathrm{Hz}$",
+      "$7.5\\times10^{14}\\,\\mathrm{Hz}$",
+      "$1.5\\times10^{15}\\,\\mathrm{Hz}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. En el umbral la energía cinética máxima es cero.\n2. Sustituimos los datos: $f_0=\\phi/h=3/(4\\cdot10^{-15})$.\n3. El resultado pedido es $7.5\\times10^{14}\\,\\mathrm{Hz}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t12_s01_c04",
+    "concept": "12.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 12,
+    "statement": "Una partícula viaja a 0.6c. ¿Cuál es su factor relativista γ?",
+    "options": [
+      "$3.75$",
+      "$1.25$",
+      "$2.5$",
+      "$0.625$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El factor relativista depende del cociente v/c.\n2. Sustituimos los datos: $\\gamma=1/\\sqrt{1-(0.6)^2}$.\n3. El resultado pedido es $1.25$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t12_s01_c05",
+    "concept": "12.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 12,
+    "statement": "Un reloj móvil tiene intervalo propio de 4 s y γ=1.25. ¿Qué intervalo mide el observador respecto del cual se mueve?",
+    "options": [
+      "$5\\,\\mathrm{s}$",
+      "$10\\,\\mathrm{s}$",
+      "$2.5\\,\\mathrm{s}$",
+      "$15\\,\\mathrm{s}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La dilatación temporal multiplica el tiempo propio por γ.\n2. Sustituimos los datos: $\\Delta t=\\gamma\\Delta\\tau=1.25(4)$.\n3. El resultado pedido es $5\\,\\mathrm{s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t12_s01_c06",
+    "concept": "12.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 12,
+    "statement": "Una barra tiene longitud propia 10 m y se mueve paralela a ella con γ=1.25. ¿Qué longitud mide el observador del laboratorio?",
+    "options": [
+      "$16\\,\\mathrm{m}$",
+      "$4\\,\\mathrm{m}$",
+      "$24\\,\\mathrm{m}$",
+      "$8\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Solo la longitud paralela al movimiento se contrae en este caso.\n2. Sustituimos los datos: $L=L_0/\\gamma=10/1.25$.\n3. El resultado pedido es $8\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t12_s01_c07",
+    "concept": "12.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 12,
+    "statement": "Una muestra radiactiva tiene 80 núcleos iniciales en un modelo de valor esperado. ¿Cuántos quedan sin desintegrar en promedio tras dos vidas medias?",
+    "options": [
+      "$10\\,\\text{núcleos}$",
+      "$60\\,\\text{núcleos}$",
+      "$20\\,\\text{núcleos}$",
+      "$40\\,\\text{núcleos}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Cada vida media reduce el valor esperado a la mitad.\n2. Sustituimos los datos: $N=80(1/2)^2$.\n3. El resultado pedido es $20\\,\\text{núcleos}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t12_s01_c08",
+    "concept": "12.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 12,
+    "statement": "Una transición atómica va de −2 eV a −5 eV. ¿Qué energía tiene el fotón emitido?",
+    "options": [
+      "$9\\,\\mathrm{eV}$",
+      "$3\\,\\mathrm{eV}$",
+      "$6\\,\\mathrm{eV}$",
+      "$1.5\\,\\mathrm{eV}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La energía emitida es la diferencia positiva entre niveles.\n2. Sustituimos los datos: $E_\\gamma=E_i-E_f=-2-(-5)$.\n3. El resultado pedido es $3\\,\\mathrm{eV}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t12_s01_c09",
+    "concept": "12.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 12,
+    "statement": "Un fotón de 2 eV incide sobre un metal cuya función de trabajo es 3 eV. ¿Cuántos electrones puede emitir ese fotón por el modelo fotoeléctrico de un fotón?",
+    "options": [
+      "$0\\,\\text{electrones}$",
+      "$1\\,\\text{electrones}$",
+      "$2\\,\\text{electrones}$",
+      "$3\\,\\text{electrones}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La energía del fotón no alcanza el umbral de extracción.\n2. Sustituimos los datos: $E_\\gamma=2\\,eV<\\phi=3\\,eV$.\n3. El resultado pedido es $0\\,\\text{electrones}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t12_s01_c10",
+    "concept": "12.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 12,
+    "statement": "En el efecto fotoeléctrico de un fotón, aumentar la intensidad con frecuencia menor al umbral…",
+    "options": [
+      "Garantiza electrones más rápidos.",
+      "No produce emisión en ese modelo, aunque lleguen más fotones.",
+      "Reduce automáticamente la función de trabajo a cero.",
+      "Convierte todos los fotones en electrones."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Cada fotón aporta energía hf.\n2. Si hf es menor que la función de trabajo, no puede extraer el electrón por ese mecanismo.\n3. Más fotones insuficientes no cambian la energía individual en el modelo indicado.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t12_s01_c11",
+    "concept": "12.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 12,
+    "statement": "La vida media radiactiva significa que…",
+    "options": [
+      "Todo núcleo se desintegra exactamente al llegar a ese tiempo.",
+      "La mitad exacta de cualquier muestra de dos núcleos debe desintegrarse.",
+      "El número esperado de núcleos sin desintegrar se reduce a la mitad.",
+      "La radiación desaparece por completo después de una vida media."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La desintegración de cada núcleo es probabilística.\n2. La ley describe valores esperados y el comportamiento de poblaciones grandes.\n3. No fija un instante idéntico de desintegración para cada núcleo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

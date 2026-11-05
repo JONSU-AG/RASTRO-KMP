@@ -7,11 +7,11 @@
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_05_Sintaxis_Categorias_y_Frases.md",
   "learningObjectives": [
-    "Describir la frase nominal con núcleo, modificadores directos, indirectos y aposición",
-    "Distinguir aposición explicativa entre comas de especificativa sin comas",
-    "Diferenciar objeto directo, indirecto, atributo, predicativo, agente y circunstancial por pruebas de sustitución",
-    "Aplicar la doble prueba del objeto directo con clíticos acusativos y voz pasiva",
-    "Analizar oraciones con OD, OI duplicado, atributo y predicativo subjetivo y objetivo"
+    "Distinguir clase de sintagma, estructura interna y función en la oración",
+    "Analizar dependencias nominales y aposición indicando la nomenclatura escolar utilizada",
+    "Reconocer complementos directo e indirecto con pruebas interpretadas en su contexto",
+    "Diferenciar atributo, predicativo y circunstancial sin reducir cada función a una sola clase de palabra",
+    "Analizar pasiva y duplicación pronominal sin confundir agente obligatorio ni duplicación con coordinación"
   ],
   "theory": {
     "id": "th_leng_t05_s02",
@@ -20,15 +20,17 @@
     "titulo": "Estructura de la Frase Nominal (FN), Frase Verbal (FV) y sus Complementos",
     "resumen": "",
     "conceptosClave": [
-      "FN = modificador directo más núcleo más modificador directo más modificador indirecto más aposición",
-      "MD sin preposición como el y fascinante; MI con preposición como de gramática; aposición como Misti o la Ciudad Blanca",
-      "OD conmuta por lo la los las y pasa a sujeto paciente en pasiva; OI conmuta por le les y nunca pasa a sujeto",
-      "Atributo solo con copulativo ser estar parecer y conmuta por lo; predicativo con verbo pleno y concuerda sin conmutar por lo",
-      "Agente con por en pasiva pasa a sujeto agente en activa; circunstancial expresa tiempo lugar modo y es prescindible",
-      "El jurado declaró ganadora a la delegación es predicativo objetivo; son competentes es atributo",
-      "Les duplica al OI como les otorgó a los ingresantes; contentos con caminaban es predicativo subjetivo"
+      "La frase nominal no requiere una secuencia fija de todos sus modificadores",
+      "Modificador indirecto del nombre no equivale a objeto indirecto del verbo",
+      "Las pruebas del directo tienen límites: no toda pasiva resulta natural y lo puede sustituir un atributo",
+      "La preposición a puede aparecer en un directo de persona o en un indirecto",
+      "Un grupo con para no se convierte automáticamente en objeto indirecto",
+      "Les puede duplicar al indirecto; no son dos destinatarios coordinados",
+      "Ganadora se predica del directo en la declaró ganadora; contentos se predica del sujeto en caminaban contentos",
+      "El agente puede quedar sin expresar en una pasiva y no todo por introduce un agente",
+      "Los complementos se interpretan por su relación con el verbo o con otro núcleo, no solo por su significado"
     ],
-    "admissionTip": "Para OD usa lo la los las más pasiva, para OI usa le les, para atributo usa lo neutro con ser estar parecer, para predicativo verifica adjetivo variable que concuerda pero no admite lo.",
-    "admissionExplanation": "El error clásico es marcar como circunstancial de modo lo que es predicativo: si la palabra es adjetivo variable que concuerda con el sujeto o el OD es predicativo, si es adverbio invariable es circunstancial."
+    "admissionTip": "Indica qué segmento analizas y qué conserva cada sustitución. No confundas un complemento del nombre con uno del verbo ni una forma pronominal con una única función posible.",
+    "admissionExplanation": "El atributo y el directo pueden relacionarse con lo en construcciones distintas. Las pruebas se combinan con el tipo de predicado, la referencia y el nivel de dependencia."
   }
 }

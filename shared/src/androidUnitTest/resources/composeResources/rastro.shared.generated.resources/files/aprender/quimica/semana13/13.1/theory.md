@@ -13,24 +13,45 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                              ELECTROQUÍMICA
-                                     │
-         ┌───────────────────────────┴───────────────────────────┐
-         ▼                                                       ▼
-   CELDAS ELECTROLÍTICAS                                  CELDAS GALVÁNICAS O VOLTAICAS
-(Energía Eléctrica -> Química / No espontánea)         (Energía Química -> Eléctrica / Espontánea)
-         │                                                       │
-• Electrólisis (sales fundidas y en solución acuosa)    • Pila de Daniell (Zn / Cu)
-• Electrodos:                                           • Puente Salino (KCl, KNO_3)
-  - Ánodo (+) -> Oxidación                              • Electrodos:
-  - Cátodo (-) -> Reducción                               - Ánodo (-) -> Oxidación
-         │                                                - Cátodo (+) -> Reducción
-         ▼                                                       │
-LEYES DE MICHAEL FARADAY                                         ▼
-• 1.ª Ley:  m = \frac{PE \cdot I \cdot t}{96\,500}    POTENCIALES ESTÁNDAR (E^\circ)
-• 2.ª Ley:  \frac{m_1}{PE_1} = \frac{m_2}{PE_2}       • Fuerza Electromotriz:  E^\circ_{\text{celda}} = E^\circ_{\text{cátodo}} - E^\circ_{\text{ánodo}}
-• Constante: 1\text{ Faraday} = 96\,500\text{ C} \approx 1\text{ mol } e^- • Espontaneidad:  \Delta G^\circ = -n F E^\circ_{\text{celda}} < 0 \iff E^\circ_{\text{celda}} > 0
+```mermaid
+graph TD
+ ROOT["Electroquímica: electrodos y carga"]
+ B1["Lo que siempre se conserva"]
+ B1N1["Ánodo: oxidación. Cátodo: reducción, tanto en pilas como en electrólisis."]
+ B1N2["Los electrones recorren el circuito externo; los iones transportan carga por el electrolito."]
+ B1N3["El puente salino permite compensar la carga sin convertirse en un cable de electrones."]
+ B2["Celda galvánica"]
+ B2N1["La reacción espontánea en las condiciones dadas puede suministrar trabajo eléctrico."]
+ B2N2["En una pila en descarga, el ánodo es negativo y el cátodo positivo."]
+ B2N3["Con potenciales tabulados de reducción: $E^\circ_{\mathrm{celda}}=E^\circ_{\mathrm{catodo}}-E^\circ_{\mathrm{anodo}}$; no multiplicar potenciales por coeficientes."]
+ B2N4["$\Delta G^\circ=-nFE^\circ$ relaciona espontaneidad estándar y potencial estándar."]
+ B3["Celda electrolítica"]
+ B3N1["Una fuente externa impulsa una reacción no espontánea en esas condiciones."]
+ B3N2["En la celda electrolítica usual, ánodo positivo y cátodo negativo."]
+ B3N3["En disolución acuosa pueden competir varias semirreacciones; no suponer los productos de una sal fundida."]
+ B4["Leyes de Faraday"]
+ B4N1["Carga transferida: $Q=It$ para corriente constante; I en amperios y t en segundos."]
+ B4N2["Masa ideal depositada: $m=MIt/(zF)$, con z electrones por entidad y eficiencia de corriente del 100 %. "]
+ B4N3["$F\approx96485\ \mathrm{C/mol}$ de electrones; si se indica otro redondeo, usarlo consistentemente."]
+ B4N4["Comparar masas por equivalente exige la misma carga transferida y controlar las eficiencias."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ B4 --> B4N4
 ```
 
 ---

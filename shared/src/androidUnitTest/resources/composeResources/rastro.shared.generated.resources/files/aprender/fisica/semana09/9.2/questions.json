@@ -1,1 +1,200 @@
-[{"concept":"9.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t09_s02_c01",
+    "concept": "9.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Dos resistencias de 3 Ω y 5 Ω están en serie. ¿Cuál es su resistencia equivalente?",
+    "options": [
+      "$8\\,\\mathrm{\\Omega}$",
+      "$16\\,\\mathrm{\\Omega}$",
+      "$4\\,\\mathrm{\\Omega}$",
+      "$24\\,\\mathrm{\\Omega}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. En serie pasa la misma corriente y las caídas de voltaje se suman.\n2. Sustituimos los datos: $R_{eq}=3+5$.\n3. El resultado pedido es $8\\,\\mathrm{\\Omega}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s02_c02",
+    "concept": "9.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Dos resistencias de 6 Ω están en paralelo. ¿Cuál es su resistencia equivalente?",
+    "options": [
+      "$6\\,\\mathrm{\\Omega}$",
+      "$1.5\\,\\mathrm{\\Omega}$",
+      "$9\\,\\mathrm{\\Omega}$",
+      "$3\\,\\mathrm{\\Omega}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. En paralelo sumamos las conductancias.\n2. Sustituimos los datos: $1/R_{eq}=1/6+1/6\\Rightarrow R_{eq}=3$.\n3. El resultado pedido es $3\\,\\mathrm{\\Omega}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s02_c03",
+    "concept": "9.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Una fuente ideal de 12 V alimenta resistencias en serie de 2 Ω y 4 Ω. ¿Qué corriente circula?",
+    "options": [
+      "$1\\,\\mathrm{A}$",
+      "$6\\,\\mathrm{A}$",
+      "$2\\,\\mathrm{A}$",
+      "$4\\,\\mathrm{A}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Sumamos las resistencias antes de aplicar Ohm.\n2. Sustituimos los datos: $I=12/(2+4)$.\n3. El resultado pedido es $2\\,\\mathrm{A}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s02_c04",
+    "concept": "9.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Una fuente ideal de 12 V alimenta únicamente resistencias de 2 Ω y 4 Ω en serie. ¿Qué voltaje cae en la resistencia de 4 Ω?",
+    "options": [
+      "$24\\,\\mathrm{V}$",
+      "$8\\,\\mathrm{V}$",
+      "$16\\,\\mathrm{V}$",
+      "$4\\,\\mathrm{V}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La caída es corriente común por resistencia.\n2. Sustituimos los datos: $I=12/6=2;\\quad V_4=2(4)$.\n3. El resultado pedido es $8\\,\\mathrm{V}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s02_c05",
+    "concept": "9.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "A un nodo llegan 5 A y 2 A; por una rama salen 3 A. ¿Qué corriente debe salir por la otra rama en régimen estacionario?",
+    "options": [
+      "$4\\,\\mathrm{A}$",
+      "$8\\,\\mathrm{A}$",
+      "$2\\,\\mathrm{A}$",
+      "$12\\,\\mathrm{A}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La ley de nodos conserva carga.\n2. Sustituimos los datos: $I=5+2-3$.\n3. El resultado pedido es $4\\,\\mathrm{A}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s02_c06",
+    "concept": "9.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Una carga de +2 C va de potencial 10 V a 4 V. ¿Qué trabajo realiza la fuerza eléctrica?",
+    "options": [
+      "$24\\,\\mathrm{J}$",
+      "$6\\,\\mathrm{J}$",
+      "$36\\,\\mathrm{J}$",
+      "$12\\,\\mathrm{J}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El trabajo eléctrico es el opuesto del cambio de energía potencial.\n2. Sustituimos los datos: $W=q(V_i-V_f)=2(10-4)$.\n3. El resultado pedido es $12\\,\\mathrm{J}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s02_c07",
+    "concept": "9.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Una resistencia consume 20 W durante 5 s. ¿Qué energía eléctrica transforma?",
+    "options": [
+      "$50\\,\\mathrm{J}$",
+      "$300\\,\\mathrm{J}$",
+      "$100\\,\\mathrm{J}$",
+      "$200\\,\\mathrm{J}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Para potencia constante, energía es potencia por tiempo.\n2. Sustituimos los datos: $E=Pt=20(5)$.\n3. El resultado pedido es $100\\,\\mathrm{J}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s02_c08",
+    "concept": "9.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Una batería tiene fem 12 V, resistencia interna 1 Ω y corriente de descarga 2 A. ¿Qué voltaje hay en sus bornes?",
+    "options": [
+      "$30\\,\\mathrm{V}$",
+      "$10\\,\\mathrm{V}$",
+      "$20\\,\\mathrm{V}$",
+      "$5\\,\\mathrm{V}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Al entregar corriente, la resistencia interna reduce el voltaje terminal.\n2. Sustituimos los datos: $V=\\mathcal E-Ir=12-2(1)$.\n3. El resultado pedido es $10\\,\\mathrm{V}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s02_c09",
+    "concept": "9.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Un condensador de 2 F se carga a 3 V. ¿Qué energía almacena?",
+    "options": [
+      "$9\\,\\mathrm{J}$",
+      "$18\\,\\mathrm{J}$",
+      "$4.5\\,\\mathrm{J}$",
+      "$27\\,\\mathrm{J}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La energía del condensador es CV²/2.\n2. Sustituimos los datos: $U=CV^2/2=2(3^2)/2$.\n3. El resultado pedido es $9\\,\\mathrm{J}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s02_c10",
+    "concept": "9.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "En dos resistencias conectadas en paralelo ideal…",
+    "options": [
+      "Circula necesariamente la misma corriente por ambas.",
+      "El voltaje entre extremos es el mismo.",
+      "La resistencia equivalente es la suma directa.",
+      "Una debe tener corriente cero."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Ambas ramas comparten el mismo par de nodos.\n2. La diferencia de potencial entre esos nodos es única.\n3. La corriente de cada rama depende de su resistencia.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s02_c11",
+    "concept": "9.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "La ley de mallas de Kirchhoff en un circuito de corriente continua sin inducción expresa…",
+    "options": [
+      "La conservación de la carga de cada electrón.",
+      "Que todas las resistencias son iguales.",
+      "Que la suma algebraica de cambios de potencial en una vuelta es cero.",
+      "Que toda batería entrega siempre su corriente máxima."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Al volver al punto inicial, el potencial recupera su valor.\n2. Se suman subidas y caídas con signos coherentes.\n3. La suma algebraica es cero bajo las condiciones del circuito indicadas.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

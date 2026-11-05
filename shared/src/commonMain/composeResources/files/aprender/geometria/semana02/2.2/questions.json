@@ -1,1 +1,200 @@
-[{"concept":"2.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t02_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"2.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t02_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"2.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t02_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"2.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t02_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"2.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t02_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"2.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t02_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"2.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t02_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"2.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t02_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"2.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t02_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"2.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t02_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "geom_t02_s02_c01",
+    "concept": "2.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 2,
+    "statement": "¿Qué pendiente tiene una recta perpendicular a otra de pendiente 2?",
+    "options": [
+      "$-0.5$",
+      "$-1$",
+      "$-0.25$",
+      "$-1.5$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Para pendientes finitas no nulas, el producto es −1.\n2. Usamos los datos indicados: $m_2=-1/2$.\n3. El resultado es $-0.5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t02_s02_c02",
+    "concept": "2.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 2,
+    "statement": "Una recta tiene pendiente −3. ¿Qué pendiente tiene otra paralela no vertical?",
+    "options": [
+      "$-6$",
+      "$-1.5$",
+      "$-9$",
+      "$-3$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Rectas paralelas no verticales comparten pendiente.\n2. Usamos los datos indicados: $m_2=m_1=-3$.\n3. El resultado es $-3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t02_s02_c03",
+    "concept": "2.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 2,
+    "statement": "Calcula la distancia entre (1,2) y (4,6).",
+    "options": [
+      "$2.5$",
+      "$15$",
+      "$5$",
+      "$10$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Usamos la norma de la diferencia de coordenadas.\n2. Usamos los datos indicados: $d=\\sqrt{(4-1)^2+(6-2)^2}$.\n3. El resultado es $5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t02_s02_c04",
+    "concept": "2.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 2,
+    "statement": "¿Cuál es la coordenada x del punto medio entre (2,4) y (8,10)?",
+    "options": [
+      "$15$",
+      "$5$",
+      "$10$",
+      "$2.5$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El punto medio promedia cada coordenada.\n2. Usamos los datos indicados: $x_M=(2+8)/2$.\n3. El resultado es $5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t02_s02_c05",
+    "concept": "2.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 2,
+    "statement": "¿Cuál es la coordenada y del punto medio entre (2,4) y (8,10)?",
+    "options": [
+      "$7$",
+      "$14$",
+      "$3.5$",
+      "$21$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Promediamos las ordenadas.\n2. Usamos los datos indicados: $y_M=(4+10)/2$.\n3. El resultado es $7$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t02_s02_c06",
+    "concept": "2.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 2,
+    "statement": "¿Qué distancia hay del punto (0,0) a la recta $3x+4y-10=0$?",
+    "options": [
+      "$4$",
+      "$1$",
+      "$6$",
+      "$2$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La fórmula usa la normal de la recta.\n2. Usamos los datos indicados: $d=|3(0)+4(0)-10|/\\sqrt{3^2+4^2}$.\n3. El resultado es $2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t02_s02_c07",
+    "concept": "2.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 2,
+    "statement": "¿Qué distancia separa las rectas paralelas $y=2$ e $y=7$?",
+    "options": [
+      "$2.5$",
+      "$15$",
+      "$5$",
+      "$10$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La distancia es la diferencia absoluta de sus ordenadas.\n2. Usamos los datos indicados: $d=|7-2|$.\n3. El resultado es $5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t02_s02_c08",
+    "concept": "2.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 2,
+    "statement": "Las rectas $y=x+1$ e $y=-x+5$ se cortan. ¿Qué x tiene su intersección?",
+    "options": [
+      "$6$",
+      "$2$",
+      "$4$",
+      "$1$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Igualamos las dos expresiones de y.\n2. Usamos los datos indicados: $x+1=-x+5\\Rightarrow2x=4$.\n3. El resultado es $2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t02_s02_c09",
+    "concept": "2.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 2,
+    "statement": "¿Qué ángulo menor forman una recta horizontal y una vertical?",
+    "options": [
+      "$90\\,\\mathrm{^\\circ}$",
+      "$180\\,\\mathrm{^\\circ}$",
+      "$45\\,\\mathrm{^\\circ}$",
+      "$270\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Las direcciones horizontal y vertical son perpendiculares.\n2. Usamos los datos indicados: $\\theta=90^\\circ$.\n3. El resultado es $90\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t02_s02_c10",
+    "concept": "2.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 2,
+    "statement": "Dos rectas con iguales pendientes y distintas ordenadas al origen son…",
+    "options": [
+      "Coincidentes.",
+      "Paralelas distintas.",
+      "Perpendiculares.",
+      "Siempre verticales."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La pendiente fija la dirección.\n2. Una distinta ordenada desplaza la recta sin cambiar esa dirección.\n3. Por eso son paralelas y no coinciden.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t02_s02_c11",
+    "concept": "2.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 2,
+    "statement": "La distancia de un punto a una recta se mide…",
+    "options": [
+      "Sobre cualquier segmento oblicuo.",
+      "Por la perpendicular desde el punto a la recta.",
+      "Solo sobre el eje x.",
+      "Como suma de las coordenadas del punto."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Se busca la menor longitud hasta la recta.\n2. La perpendicular realiza esa distancia mínima.\n3. Un segmento oblicuo sería más largo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

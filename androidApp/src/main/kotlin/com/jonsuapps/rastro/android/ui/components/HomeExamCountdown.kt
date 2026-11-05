@@ -3,6 +3,7 @@ package com.jonsuapps.rastro.android.ui.components
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
@@ -25,7 +26,7 @@ import com.jonsuapps.rastro.theme.accentText
 import kotlinx.coroutines.delay
 
 @Composable
-fun HomeExamCountdown(colors: RastroColors) {
+fun HomeExamCountdown(colors: RastroColors, embedded: Boolean = false) {
     val context = LocalContext.current
     var editing by remember { mutableStateOf(false) }
     var revision by remember { mutableIntStateOf(0) }
@@ -34,7 +35,21 @@ fun HomeExamCountdown(colors: RastroColors) {
     val date = remember(revision, now) { RastroWidgetManager.getExamDateYmd(context) }
     val details = remember(revision, now) { RastroWidgetManager.getExamDetails(context) }
     val display = remember(date, now) { WidgetDates.display(date, now) }
-    Sticker3dCard(modifier = Modifier.fillMaxWidth(), containerColor = colors.surfaceAccent,
+    if (embedded) {
+        Row(Modifier.fillMaxWidth().clickable { editing = true }.padding(horizontal = 12.dp, vertical = 6.dp),
+            verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Icon(Icons.Rounded.EditCalendar, null, Modifier.size(21.dp), tint = colors.accentText)
+            Column(Modifier.weight(1f)) {
+                Text(details.first, color = colors.textPrimary, fontSize = 11.sp, fontWeight = FontWeight.Bold,
+                    maxLines = 1, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
+                Text("${display.value} ${display.label} · ${date.split('-').reversed().joinToString("/")}",
+                    color = colors.textSecondary, fontSize = 11.sp)
+            }
+            androidx.compose.material3.IconButton(onClick = { editing = true }) {
+                Icon(Icons.Rounded.EditCalendar, "Editar examen", tint = colors.accentText, modifier = Modifier.size(18.dp))
+            }
+        }
+    } else Sticker3dCard(modifier = Modifier.fillMaxWidth(), containerColor = colors.surfaceAccent,
         bevelColor = colors.cardBevel, strokeColor = colors.strokeBorder, bevelHeight = 5.dp,
         shape = RoundedCornerShape(24.dp), onClick = { editing = true }) {
         Column(Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {

@@ -1,1 +1,200 @@
-[{"concept":"9.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t09_s01_c01","options":["27\\text{ m}","24\\text{ m}","30\\text{ m}","18\\text{ m}"],"pedagogicalTier":"concepto","semana":9,"statement":"**Enunciado:** Desde un punto en el suelo ubicado a 36\\text{ m} de la base de un edificio, se observa su parte más alta con un ángulo de elevación de 37^\\circ. Calcule la altura del edificio.","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"9.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t09_s01_c02","options":["40\\text{ m}","30\\text{ m}","25\\text{ m}","35\\text{ m}"],"pedagogicalTier":"concepto","semana":9,"statement":"**Enunciado:** Una persona situada en la azotea de un edificio de 40\\text{ m} de altura observa un automóvil estacionado en la calle con un ángulo de depresión de 53^\\circ. ¿A qué distancia de la base del edificio se encuentra el automóvil?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"9.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t09_s01_c03","options":["30\\text{ m}","20\\text{ m}","20\\sqrt{3}\\text{ m}","40\\sqrt{3}\\text{ m}"],"pedagogicalTier":"concepto","semana":9,"statement":"**Enunciado:** Desde un punto en el suelo se observa la parte superior de una antena de telecomunicaciones con un ángulo de elevación de 30^\\circ. Si el observador camina 40\\text{ m} en línea recta horizontal hacia la base de la antena, el nuevo ángulo de elevación es de 60^\\circ. Calcule la altura de la antena.","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"9.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t09_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"9.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t09_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"9.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t09_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"9.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t09_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"9.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t09_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"9.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t09_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"9.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t09_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "trig_t09_s01_c01",
+    "concept": "9.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 9,
+    "statement": "Desde el suelo horizontal, una torre se observa a 45° de elevación y su base está a 20 m. La altura del ojo se desprecia. ¿Qué altura tiene la torre?",
+    "options": [
+      "$20\\,\\mathrm{m}$",
+      "$40\\,\\mathrm{m}$",
+      "$10\\,\\mathrm{m}$",
+      "$60\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La tangente relaciona altura y distancia horizontal.\n2. Aplicamos la relación: $h=20\\tan45^\\circ$.\n3. El valor pedido es $20\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t09_s01_c02",
+    "concept": "9.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 9,
+    "statement": "Un observador con ojos a 1.5 m del suelo está a 10 m de una torre. La elevación a su cima es 45°. ¿Cuál es la altura total?",
+    "options": [
+      "$23\\,\\mathrm{m}$",
+      "$5.75\\,\\mathrm{m}$",
+      "$34.5\\,\\mathrm{m}$",
+      "$11.5\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Se suma la altura del ojo al desnivel observado.\n2. Aplicamos la relación: $H=1.5+10\\tan45^\\circ$.\n3. El valor pedido es $11.5\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t09_s01_c03",
+    "concept": "9.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 9,
+    "statement": "Un poste vertical mide 6 m y su sombra horizontal 6 m. ¿Qué ángulo de elevación solar resulta?",
+    "options": [
+      "$22.5\\,\\mathrm{^\\circ}$",
+      "$135\\,\\mathrm{^\\circ}$",
+      "$45\\,\\mathrm{^\\circ}$",
+      "$90\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La razón altura/sombra determina la tangente.\n2. Aplicamos la relación: $\\theta=\\arctan(6/6)=45^\\circ$.\n3. El valor pedido es $45\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t09_s01_c04",
+    "concept": "9.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 9,
+    "statement": "Desde una altura de 10 m se observa un punto del suelo con depresión de 45°. ¿Qué distancia horizontal lo separa del pie vertical del observador?",
+    "options": [
+      "$30\\,\\mathrm{m}$",
+      "$10\\,\\mathrm{m}$",
+      "$20\\,\\mathrm{m}$",
+      "$5\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El ángulo de depresión usa la horizontal.\n2. Aplicamos la relación: $d=10/\\tan45^\\circ$.\n3. El valor pedido es $10\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t09_s01_c05",
+    "concept": "9.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 9,
+    "statement": "Una torre se observa desde el suelo a 30°; al avanzar 20 m en línea recta hacia su base, la elevación es 60°. Ojos a nivel del suelo. ¿Cuál es la altura?",
+    "options": [
+      "$10 \\sqrt{3}\\,\\mathrm{m}$",
+      "$20 \\sqrt{3}\\,\\mathrm{m}$",
+      "$5 \\sqrt{3}\\,\\mathrm{m}$",
+      "$30 \\sqrt{3}\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Relacionamos ambas distancias con la misma altura.\n2. Aplicamos la relación: $20=h(\\cot30^\\circ-\\cot60^\\circ)\\Rightarrow h=10\\sqrt3$.\n3. El valor pedido es $10 \\sqrt{3}\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t09_s01_c06",
+    "concept": "9.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 9,
+    "statement": "Una escalera de 8 m forma 30° con el suelo. ¿Qué altura vertical alcanza?",
+    "options": [
+      "$8\\,\\mathrm{m}$",
+      "$2\\,\\mathrm{m}$",
+      "$12\\,\\mathrm{m}$",
+      "$4\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La escalera es la hipotenusa.\n2. Aplicamos la relación: $h=8\\sin30^\\circ$.\n3. El valor pedido es $4\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t09_s01_c07",
+    "concept": "9.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 9,
+    "statement": "Un cable de 10 m une el suelo con la cima de un poste y forma 60° con el suelo. ¿Qué distancia horizontal hay entre sus extremos?",
+    "options": [
+      "$2.5\\,\\mathrm{m}$",
+      "$15\\,\\mathrm{m}$",
+      "$5\\,\\mathrm{m}$",
+      "$10\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La proyección horizontal usa el coseno.\n2. Aplicamos la relación: $d=10\\cos60^\\circ$.\n3. El valor pedido es $5\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t09_s01_c08",
+    "concept": "9.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 9,
+    "statement": "Desde el suelo, una cima está a 10 m de distancia horizontal y tiene elevación de 30°. Se desprecia altura del ojo. ¿Qué altura relativa tiene?",
+    "options": [
+      "$10 \\sqrt{3}\\,\\mathrm{m}$",
+      "$\\frac{10 \\sqrt{3}}{3}\\,\\mathrm{m}$",
+      "$\\frac{20 \\sqrt{3}}{3}\\,\\mathrm{m}$",
+      "$\\frac{5 \\sqrt{3}}{3}\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Usamos el cateto opuesto y el adyacente.\n2. Aplicamos la relación: $h=10\\tan30^\\circ$.\n3. El valor pedido es $\\frac{10 \\sqrt{3}}{3}\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t09_s01_c09",
+    "concept": "9.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 9,
+    "statement": "La elevación a un punto es 60°. ¿Qué ángulo forma la misma visual con la vertical ascendente?",
+    "options": [
+      "$30\\,\\mathrm{^\\circ}$",
+      "$60\\,\\mathrm{^\\circ}$",
+      "$15\\,\\mathrm{^\\circ}$",
+      "$90\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Horizontal y vertical son perpendiculares.\n2. Aplicamos la relación: $\\phi=90^\\circ-60^\\circ$.\n3. El valor pedido es $30\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t09_s01_c10",
+    "concept": "9.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 9,
+    "statement": "El ángulo de elevación se mide desde…",
+    "options": [
+      "La vertical hacia abajo.",
+      "La horizontal del observador hacia una visual ascendente.",
+      "La dirección norte en todo caso.",
+      "La base del objeto sin mirar al observador."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La referencia es la horizontal que pasa por el ojo.\n2. Se compara con la visual al objeto elevado.\n3. No se mide desde la vertical.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t09_s01_c11",
+    "concept": "9.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 9,
+    "statement": "Para hallar la altura total de un objeto observado desde ojos a cierta altura…",
+    "options": [
+      "Siempre se resta la altura del ojo.",
+      "Se añade la altura del ojo al desnivel de la cima sobre la horizontal del observador.",
+      "Se ignora siempre la altura del ojo.",
+      "Se multiplica por dos la distancia horizontal."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La tangente da el desnivel respecto del ojo.\n2. La altura total se mide desde el suelo de referencia.\n3. Si ambos apoyos están al mismo nivel, se suma la altura del ojo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

@@ -1,1 +1,200 @@
-[{"concept":"12.1.1","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t12_s01_c01","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"12.1.2","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t12_s01_c02","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"12.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t12_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"12.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t12_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"12.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t12_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"12.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t12_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"12.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t12_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"12.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t12_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"12.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t12_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"12.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t12_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "trig_t12_s01_c01",
+    "concept": "12.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 12,
+    "statement": "La posición es $x(t)=3\\cos(2t)$ m, con t en segundos. ¿Cuál es la amplitud?",
+    "options": [
+      "$3\\,\\mathrm{m}$",
+      "$6\\,\\mathrm{m}$",
+      "$1.5\\,\\mathrm{m}$",
+      "$9\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La amplitud es el módulo del coeficiente exterior.\n2. Aplicamos la relación: $A=|3|=3$.\n3. El valor pedido es $3\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t12_s01_c02",
+    "concept": "12.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 12,
+    "statement": "La posición es $x(t)=3\\cos(2t)$ m, con t en segundos. ¿Cuál es su periodo?",
+    "options": [
+      "$2 \\pi\\,\\mathrm{s}$",
+      "$\\frac{\\pi}{2}\\,\\mathrm{s}$",
+      "$3 \\pi\\,\\mathrm{s}$",
+      "$\\pi\\,\\mathrm{s}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La frecuencia angular es 2 rad/s.\n2. Aplicamos la relación: $T=2\\pi/\\omega=2\\pi/2$.\n3. El valor pedido es $\\pi\\,\\mathrm{s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t12_s01_c03",
+    "concept": "12.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 12,
+    "statement": "La posición es $x(t)=3\\cos(2t)$ m. ¿Cuál es x(0)?",
+    "options": [
+      "$1.5\\,\\mathrm{m}$",
+      "$9\\,\\mathrm{m}$",
+      "$3\\,\\mathrm{m}$",
+      "$6\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Sustituimos t=0 en la función dada.\n2. Aplicamos la relación: $x(0)=3\\cos0$.\n3. El valor pedido es $3\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t12_s01_c04",
+    "concept": "12.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 12,
+    "statement": "La posición es $x(t)=3\\cos(2t)$ m, con t en segundos. ¿Cuál es x(π/4)?",
+    "options": [
+      "$3\\,\\mathrm{m}$",
+      "$0\\,\\mathrm{m}$",
+      "$1\\,\\mathrm{m}$",
+      "$2\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El argumento en ese instante es π/2.\n2. Aplicamos la relación: $x(\\pi/4)=3\\cos(\\pi/2)$.\n3. El valor pedido es $0\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t12_s01_c05",
+    "concept": "12.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 12,
+    "statement": "En MAS, $x(t)=3\\cos(2t)$ m y t está en segundos. ¿Cuál es la rapidez máxima?",
+    "options": [
+      "$6\\,\\mathrm{m/s}$",
+      "$12\\,\\mathrm{m/s}$",
+      "$3\\,\\mathrm{m/s}$",
+      "$18\\,\\mathrm{m/s}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. En el modelo armónico, vmax=Aω.\n2. Aplicamos la relación: $v_{max}=3(2)$.\n3. El valor pedido es $6\\,\\mathrm{m/s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t12_s01_c06",
+    "concept": "12.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 12,
+    "statement": "En MAS, $x(t)=3\\cos(2t)$ m y t está en segundos. ¿Cuál es el módulo máximo de aceleración?",
+    "options": [
+      "$24\\,\\mathrm{m/s^2}$",
+      "$6\\,\\mathrm{m/s^2}$",
+      "$36\\,\\mathrm{m/s^2}$",
+      "$12\\,\\mathrm{m/s^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. En el modelo armónico, amax=Aω².\n2. Aplicamos la relación: $a_{max}=3(2^2)$.\n3. El valor pedido es $12\\,\\mathrm{m/s^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t12_s01_c07",
+    "concept": "12.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 12,
+    "statement": "Una señal tiene periodo $\\pi$ segundos. ¿Cuál es su frecuencia?",
+    "options": [
+      "$\\frac{1}{2 \\pi}\\,\\mathrm{Hz}$",
+      "$\\frac{3}{\\pi}\\,\\mathrm{Hz}$",
+      "$\\frac{1}{\\pi}\\,\\mathrm{Hz}$",
+      "$\\frac{2}{\\pi}\\,\\mathrm{Hz}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La frecuencia es el recíproco del periodo.\n2. Aplicamos la relación: $f=1/T=1/\\pi$.\n3. El valor pedido es $\\frac{1}{\\pi}\\,\\mathrm{Hz}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t12_s01_c08",
+    "concept": "12.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 12,
+    "statement": "Una altura se modela por $h(t)=2+3\\sin t$ m para t real. ¿Qué altura máxima predice el modelo?",
+    "options": [
+      "$15\\,\\mathrm{m}$",
+      "$5\\,\\mathrm{m}$",
+      "$10\\,\\mathrm{m}$",
+      "$2.5\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El seno alcanza uno.\n2. Aplicamos la relación: $h_{max}=2+3=5$.\n3. El valor pedido es $5\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t12_s01_c09",
+    "concept": "12.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 12,
+    "statement": "Una posición se modela por $x(t)=2+3\\sin t$ m. ¿Cuál es su valor inicial?",
+    "options": [
+      "$2\\,\\mathrm{m}$",
+      "$4\\,\\mathrm{m}$",
+      "$1\\,\\mathrm{m}$",
+      "$6\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El valor inicial se evalúa en t=0.\n2. Aplicamos la relación: $x(0)=2+3\\sin0$.\n3. El valor pedido es $2\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t12_s01_c10",
+    "concept": "12.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 12,
+    "statement": "En un modelo sinusoidal de una magnitud física, las unidades deben…",
+    "options": [
+      "Ser coherentes con la magnitud representada y con el tiempo usado.",
+      "Eliminarse siempre del resultado.",
+      "Ser grados Celsius para cualquier variable.",
+      "Depender solo del color de la gráfica."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El modelo describe cantidades medibles.\n2. La amplitud y la traslación vertical comparten la unidad de la salida.\n3. La escala temporal debe ser coherente con el argumento angular.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t12_s01_c11",
+    "concept": "12.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 12,
+    "statement": "Un modelo sinusoidal aproximado de un fenómeno real…",
+    "options": [
+      "Prueba que la realidad será idéntica para siempre.",
+      "Debe contrastarse con datos y se usa bajo sus condiciones y alcance.",
+      "No necesita especificar ninguna unidad.",
+      "Permite omitir todos los cambios del sistema."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El modelo idealiza un comportamiento.\n2. Sus parámetros y límites deben comprobarse con observaciones.\n3. Una fórmula no garantiza predicciones exactas fuera de las condiciones que representa.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

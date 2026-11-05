@@ -1,1 +1,200 @@
-[{"concept":"12.2.1","correctIndex":2,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t12_s02_c01","options":["Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente.","Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Aplicar de forma mecánica la fórmula sin verificar el dominio de validez."],"pedagogicalTier":"concepto","semana":12,"statement":"Frente al distractor frecuente de examen: \"Trampa 3: Creer que el agua a 60^\\circ\\text{C} con pH = 6.5 es ácida. FALSO. Como K_w aumenta con la temperatura, a 60^\\circ\\text{C} la neutralidad ocurre cuando [H^+] = [\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t12_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "quim_t12_s02_c01",
+    "concept": "12.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "HCl 0.01 mol/L se considera totalmente disociado en el modelo acuoso ideal, despreciando la autoionización del agua. ¿Cuál es el pH?",
+    "options": [
+      "$2$",
+      "$4$",
+      "$1$",
+      "$6$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Cada mol de HCl aporta un mol de H3O+ en esta aproximación.\n2. Aplicamos los datos y conservamos las unidades: $pH=-\\log_{10}(0.01)$.\n3. El resultado es $2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s02_c02",
+    "concept": "12.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "NaOH 0.001 mol/L se considera totalmente disociado a 25 °C, pKw=14. En el modelo ideal, ¿cuál es el pH?",
+    "options": [
+      "$22$",
+      "$5.5$",
+      "$33$",
+      "$11$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Primero obtenemos pOH y luego pH.\n2. Aplicamos los datos y conservamos las unidades: $pOH=3;\\quad pH=14-3$.\n3. El resultado es $11$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s02_c03",
+    "concept": "12.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "Ca(OH)2 está totalmente disociado a concentración 0.0005 mol/L. A 25 °C usa pKw=14 y modelo ideal. ¿Cuál es el pH?",
+    "options": [
+      "$5.5$",
+      "$33$",
+      "$11$",
+      "$22$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Cada unidad aporta dos OH−.\n2. Aplicamos los datos y conservamos las unidades: $[OH^-]=2(0.0005)=10^{-3};\\quad pH=11$.\n3. El resultado es $11$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s02_c04",
+    "concept": "12.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "Un ácido débil tiene Ka=10⁻⁵ y $C=0.1$ mol/L. Usando explícitamente [H3O+]≈√(Ka·C) y modelo ideal, ¿qué pH aproximado resulta?",
+    "options": [
+      "$9$",
+      "$3$",
+      "$6$",
+      "$1.5$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La raíz es una aproximación válida si la disociación es pequeña.\n2. Aplicamos los datos y conservamos las unidades: $[H_3O^+]\\approx\\sqrt{10^{-5}(0.1)}=10^{-3};\\quad pH\\approx3$.\n3. El resultado es $3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s02_c05",
+    "concept": "12.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "Un tampón se modela con pH=pKa+log10([base]/[ácido]). Con pKa=4.8 y razón 10, ¿qué pH predice?",
+    "options": [
+      "$5.8$",
+      "$11.6$",
+      "$2.9$",
+      "$17.4$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Aplicamos la ecuación y las condiciones del modelo dadas.\n2. Aplicamos los datos y conservamos las unidades: $pH=4.8+\\log_{10}10=5.8$.\n3. El resultado es $5.8$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s02_c06",
+    "concept": "12.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "Un ácido débil se distingue de uno fuerte por…",
+    "options": [
+      "Ser siempre una solución muy diluida.",
+      "No tener ningún hidrógeno.",
+      "Producir siempre pH exactamente siete.",
+      "Su disociación parcial en el equilibrio bajo las condiciones consideradas."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Fuerza se refiere al equilibrio de ionización.\n2. Concentración se refiere a cantidad por volumen.\n3. Débil no significa automáticamente diluido.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s02_c07",
+    "concept": "12.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "Un tampón típico contiene…",
+    "options": [
+      "Solo un gas noble.",
+      "Una mezcla cualquiera de dos ácidos fuertes.",
+      "Un ácido débil y su base conjugada en cantidades adecuadas.",
+      "Solo agua destilada sin otros componentes."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El par conjugado puede consumir pequeñas cantidades añadidas de ácido o base.\n2. Su composición y concentración determinan la capacidad.\n3. No basta mezclar sustancias sin esa relación.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s02_c08",
+    "concept": "12.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "La capacidad de un tampón…",
+    "options": [
+      "Impide cualquier cambio de temperatura.",
+      "Es infinita.",
+      "Es limitada y puede agotarse con adiciones suficientes.",
+      "No depende nunca de concentración."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El tampón posee cantidades finitas de las especies del par.\n2. Una adición grande puede consumir una de ellas.\n3. La regulación no significa pH absolutamente invariable.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s02_c09",
+    "concept": "12.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "La neutralización entre un ácido fuerte y una base fuerte en agua suele implicar netamente…",
+    "options": [
+      "$\\mathrm{H_3O^++OH^-\\to2H_2O}$",
+      "$\\mathrm{H_2O\\to O_2+H_2}$ sin energía.",
+      "Conversión de protones en neutrones.",
+      "Desaparición de toda la masa."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los iones ácido y base reaccionan para formar agua.\n2. Se conservan átomos y carga.\n3. Los otros iones pueden actuar como espectadores según las especies.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s02_c10",
+    "concept": "12.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "El color de un indicador ácido–base…",
+    "options": [
+      "Prueba por sí solo que el agua es potable.",
+      "Da siempre el mismo color en todo pH.",
+      "Mide directamente la masa atómica.",
+      "Cambia dentro de un intervalo de pH característico."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El indicador tiene formas químicas de distinto color.\n2. Su equilibrio depende del medio ácido–base.\n3. El intervalo de viraje limita la interpretación del color.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t12_s02_c11",
+    "concept": "12.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 12,
+    "statement": "La hidrólisis de una sal…",
+    "options": [
+      "Es una reacción nuclear.",
+      "Hace que todas las sales sean neutras siempre.",
+      "Puede modificar el pH por reacción de sus iones con agua.",
+      "Nunca afecta el equilibrio ácido–base."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Los iones pueden actuar como ácidos o bases según su origen y equilibrio.\n2. Su interacción con agua puede generar H3O+ u OH−.\n3. No todas las sales producen el mismo pH.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

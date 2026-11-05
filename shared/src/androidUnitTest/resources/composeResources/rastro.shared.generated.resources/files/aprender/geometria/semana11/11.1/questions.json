@@ -1,1 +1,200 @@
-[{"concept":"11.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t11_s01_c01","options":["3","4","5","6"],"pedagogicalTier":"concepto","semana":11,"statement":"**Enunciado:** Calcule la distancia entre el punto P(2, -3) y la recta \\mathscr{L}: 3x - 4y + 7 = 0.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"11.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t11_s01_c02","options":["C(-3, 4), r = \\sqrt{11}","C(3, -4), r = 6","C(-3, 4), r = 6","C(3, -4), r = 36"],"pedagogicalTier":"concepto","semana":11,"statement":"**Enunciado:** Determine las coordenadas del centro y la longitud del radio de la circunferencia cuya ecuación general es x^2 + y^2 - 6x + 8y - 11 = 0.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"11.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t11_s01_c03","options":["x^2 = 6y, LR = 6","y^2 = 6x, LR = 6","x^2 = 12y, LR = 12","y^2 = 12x, LR = 12"],"pedagogicalTier":"concepto","semana":11,"statement":"**Enunciado:** Calcule la ecuación ordinaria de la parábola con vértice en el origen V(0, 0) cuyo foco se ubica en el punto F(0, 3), y determine la longitud de su lado recto.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"11.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t11_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"11.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t11_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"11.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t11_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"11.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t11_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"11.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t11_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"11.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t11_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"11.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t11_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "geom_t11_s01_c01",
+    "concept": "11.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 11,
+    "statement": "Calcula la distancia entre (−1,2) y (2,6).",
+    "options": [
+      "$5$",
+      "$10$",
+      "$2.5$",
+      "$15$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La distancia usa diferencias de coordenadas.\n2. Usamos los datos indicados: $d=\\sqrt{(2+1)^2+(6-2)^2}$.\n3. El resultado es $5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t11_s01_c02",
+    "concept": "11.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 11,
+    "statement": "¿Cuál es la coordenada x del punto medio entre (−2,4) y (6,8)?",
+    "options": [
+      "$4$",
+      "$1$",
+      "$6$",
+      "$2$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Promediamos las abscisas.\n2. Usamos los datos indicados: $x_M=(-2+6)/2$.\n3. El resultado es $2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t11_s01_c03",
+    "concept": "11.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 11,
+    "statement": "La circunferencia $(x-2)^2+(y+1)^2=9$ tiene centro de abscisa…",
+    "options": [
+      "$1$",
+      "$6$",
+      "$2$",
+      "$4$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La forma canónica es (x−h)²+(y−k)²=r².\n2. Usamos los datos indicados: $h=2$.\n3. El resultado es $2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t11_s01_c04",
+    "concept": "11.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 11,
+    "statement": "¿Cuál es la ordenada del centro de $(x-2)^2+(y+1)^2=9$?",
+    "options": [
+      "$-3$",
+      "$-1$",
+      "$-2$",
+      "$-0.5$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Comparamos y+1 con y−k.\n2. Usamos los datos indicados: $k=-1$.\n3. El resultado es $-1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t11_s01_c05",
+    "concept": "11.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 11,
+    "statement": "¿Qué radio tiene $(x-2)^2+(y+1)^2=9$?",
+    "options": [
+      "$3$",
+      "$6$",
+      "$1.5$",
+      "$9$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El segundo miembro es el radio al cuadrado.\n2. Usamos los datos indicados: $r=\\sqrt9$.\n3. El resultado es $3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t11_s01_c06",
+    "concept": "11.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 11,
+    "statement": "Para la parábola $y^2=8x$, ¿cuánto vale p en $y^2=4px$?",
+    "options": [
+      "$4$",
+      "$1$",
+      "$6$",
+      "$2$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El coeficiente de x es cuatro veces p.\n2. Usamos los datos indicados: $4p=8\\Rightarrow p=2$.\n3. El resultado es $2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t11_s01_c07",
+    "concept": "11.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 11,
+    "statement": "Para $y^2=8x$, ¿cuál es la abscisa del foco?",
+    "options": [
+      "$1$",
+      "$6$",
+      "$2$",
+      "$4$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El foco de y²=4px está en (p,0).\n2. Usamos los datos indicados: $F=(2,0)\\Rightarrow x_F=2$.\n3. El resultado es $2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t11_s01_c08",
+    "concept": "11.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 11,
+    "statement": "Para $y^2=8x$, la directriz es x=d. ¿Cuánto vale d?",
+    "options": [
+      "$-6$",
+      "$-2$",
+      "$-4$",
+      "$-1$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La directriz está en x=−p.\n2. Usamos los datos indicados: $d=-p=-2$.\n3. El resultado es $-2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t11_s01_c09",
+    "concept": "11.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 11,
+    "statement": "El punto (3,y) está en $x^2+y^2=25$ y tiene y positivo. ¿Cuánto vale y?",
+    "options": [
+      "$4$",
+      "$8$",
+      "$2$",
+      "$12$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Elegimos la raíz positiva por la condición del punto.\n2. Usamos los datos indicados: $y=\\sqrt{25-3^2}$.\n3. El resultado es $4$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t11_s01_c10",
+    "concept": "11.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 11,
+    "statement": "La parábola es el lugar geométrico de los puntos que equidistan…",
+    "options": [
+      "De dos puntos fijos distintos.",
+      "De un punto fijo y una recta fija que no lo contiene.",
+      "Del origen y de todos los ejes a la vez.",
+      "De todas las rectas del plano."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El punto fijo es el foco.\n2. La recta fija es la directriz.\n3. La igualdad de ambas distancias caracteriza la parábola.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t11_s01_c11",
+    "concept": "11.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 11,
+    "statement": "En $(x-h)^2+(y-k)^2=r^2$, con r>0, el centro es…",
+    "options": [
+      "$(h,k)$",
+      "$(-h,-k)$",
+      "$(r,r)$",
+      "$(0,r^2)$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los cuadrados se anulan simultáneamente en x=h e y=k.\n2. La ecuación fija la distancia r a ese punto.\n3. Por eso (h,k) es el centro.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

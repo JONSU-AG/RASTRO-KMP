@@ -2,7 +2,7 @@
   {
     "id": "leng_t03_s01_c01",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La unidad mínima abstracta, mental y con función distintiva estudiada por la fonología se denomina:",
+    "statement": "En el análisis fonológico del español, ¿cómo se llama la unidad segmental abstracta con función distintiva, como /p/ frente a /b/ en pala y bala?",
     "options": [
       "Morfema",
       "Alófono",
@@ -10,7 +10,7 @@
       "Fonema"
     ],
     "correctIndex": 3,
-    "explanation": "El fonema es la unidad abstracta y mínima de la fonología capaz de distinguir significados entre pares de palabras.",
+    "explanation": "Criterio: distinguir unidad fonológica, realización fonética y escritura. Aplicación: /p/ y /b/ permiten contrastar pala y bala en el ejemplo. Respuesta: fonema. Los fonemas distinguen palabras, pero no aportan cada uno un significado léxico independiente.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.1.1",
@@ -20,15 +20,15 @@
   {
     "id": "leng_t03_s01_c02",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El sistema fonológico del idioma castellano estándar está compuesto en total por:",
+    "statement": "En la descripción básica del sistema vocálico del español utilizada aquí, ¿qué inventario de fonemas vocálicos se distingue?",
     "options": [
-      "24 fonemas (5 vocálicos y 19 consonánticos)",
-      "27 fonemas y 5 dígrafos",
-      "29 fonemas segmentales",
-      "22 fonemas orales y 2 nasales"
+      "Cinco: /a/, /e/, /i/, /o/, /u/",
+      "Veintisiete, uno por cada letra del abecedario",
+      "Dos: /a/ y /u/",
+      "Diecinueve vocales y cinco dígrafos"
     ],
     "correctIndex": 0,
-    "explanation": "El español cuenta con exactamente 24 fonemas segmentales: 5 vocálicos (/a, e, i, o, u/) y 19 consonánticos.",
+    "explanation": "Criterio: separar inventario vocálico de total consonántico y de letras. Aplicación: la descripción distingue /a/, /e/, /i/, /o/ y /u/. Respuesta: cinco fonemas vocálicos. Esto no fija un total universal de fonemas consonánticos para todas las variedades del español ni identifica fonema con letra.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.1.2",
@@ -38,15 +38,15 @@
   {
     "id": "leng_t03_s01_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Por el modo de articulación (abertura de la cavidad bucal), las vocales /i/ y /u/ se clasifican como:",
+    "statement": "En la clasificación articulatoria básica de las vocales del español, ¿qué comparten /i/ y /u/ según la altura de la lengua?",
     "options": [
-      "Abiertas o bajas",
-      "Semiabiertas o medias",
-      "Cerradas o altas",
-      "Anteriores y planas"
+      "Son bajas o abiertas",
+      "Son medias",
+      "Son altas o cerradas",
+      "Son ambas anteriores"
     ],
     "correctIndex": 2,
-    "explanation": "Las vocales /i/ y /u/ exigen una mínima abertura de la cavidad bucal y elevación máxima de la lengua; por eso son vocales cerradas o altas.",
+    "explanation": "Criterio: comparar una misma dimensión articulatoria. Aplicación: /i/ y /u/ son altas o cerradas; difieren en anterioridad y posterioridad. Respuesta: altas o cerradas. Cerrada es una clasificación relativa y no significa que se cierre totalmente el paso del aire.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.1.2",
@@ -56,15 +56,15 @@
   {
     "id": "leng_t03_s01_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la palabra 'trans-porte', la primera sílaba 'trans' se clasifica estructuralmente como sílaba:",
+    "statement": "En el análisis silábico trans-por-te, ¿cómo se clasifica la primera sílaba trans por su terminación?",
     "options": [
-      "Trabada o cerrada",
-      "Libre o abierta",
-      "Átona sin núcleo",
-      "Monofonemática"
+      "Cerrada o trabada",
+      "Abierta o libre",
+      "Sin núcleo vocálico",
+      "Formada por un único fonema"
     ],
     "correctIndex": 0,
-    "explanation": "La sílaba 'trans' termina en consonantes que ocupan la coda silábica (-ns); por terminar en consonante es una sílaba trabada o cerrada.",
+    "explanation": "Criterio: la presencia de una coda distingue la sílaba cerrada de la abierta. Aplicación: en trans hay consonantes después del núcleo vocálico. Respuesta: cerrada o trabada. No se deduce la clasificación del número de letras ni se afirma que todas las pronunciaciones realicen igual cada consonante.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.1.3",
@@ -74,15 +74,15 @@
   {
     "id": "leng_t03_s01_c05",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El hecho de que el fonema /k/ pueda representarse en la escritura mediante las letras 'c', 'k' y 'qu' es un fenómeno de:",
+    "statement": "En cama, kilo y queso, /k/ se representa mediante c, k y el dígrafo qu. ¿Qué relación entre fonema y escritura muestra el conjunto?",
     "options": [
-      "Poligrafía",
-      "Diftongación",
-      "Polifonía",
-      "Alomorfia"
+      "Un mismo fonema con distintas representaciones gráficas",
+      "Una secuencia de vocales que siempre forma hiato",
+      "Una única letra que representa varios fonemas en esos ejemplos",
+      "Una diferencia de morfemas por sí sola"
     ],
     "correctIndex": 0,
-    "explanation": "La poligrafía ocurre cuando un único fonema se escribe con diferentes grafemas o letras según el contexto ortográfico.",
+    "explanation": "Criterio: observar la dirección de la relación. Aplicación: se mantiene /k/ y cambian las representaciones c, k y qu según las palabras. Respuesta: un mismo fonema con distintas representaciones gráficas. Qu contiene dos letras y funciona como dígrafo en queso; no es una letra adicional del abecedario.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.1.2",
@@ -92,15 +92,15 @@
   {
     "id": "leng_t03_s01_c06",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la estructura interna de una sílaba, el elemento obligatorio e imprescindible que constituye el núcleo es:",
+    "statement": "En el análisis de la sílaba pan, ¿qué elemento ocupa el núcleo silábico?",
     "options": [
-      "El ataque complejo",
-      "La vocal de la cima",
-      "La cabeza compuesta",
-      "La coda consonántica"
+      "El grupo consonántico inicial",
+      "La vocal /a/",
+      "La consonante /p/",
+      "La consonante /n/"
     ],
     "correctIndex": 1,
-    "explanation": "En el idioma español, toda sílaba requiere obligatoriamente una vocal que ejerce el papel de núcleo en la cima silábica.",
+    "explanation": "Criterio: identificar la unidad que funciona como centro de la sílaba en el ejemplo. Aplicación: /a/ es núcleo; /p/ es ataque y /n/ es coda. Respuesta: la vocal /a/. El ataque y la coda no son obligatorios en todas las sílabas del español.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.1.3",
@@ -110,15 +110,15 @@
   {
     "id": "leng_t03_s01_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes letras del alfabeto español carece por completo de correlato fonológico (es muda) en palabras como 'hoja' o 'humo'?",
+    "statement": "En la pronunciación habitual de hoja y humo, ¿qué letra no representa un fonema propio?",
     "options": [
-      "La letra x",
-      "La letra h",
-      "La letra y",
-      "La letra z"
+      "X",
+      "H",
+      "Y",
+      "Z"
     ],
     "correctIndex": 1,
-    "explanation": "La grafía 'h' no representa ningún fonema segmental en la pronunciación del castellano contemporáneo.",
+    "explanation": "Criterio: analizar las palabras concretas, sin generalizar a cualquier préstamo o dígrafo. Aplicación: la h inicial de hoja y humo no representa un fonema propio. Respuesta: h. No se concluye que toda h escrita sea siempre muda: interviene en ch y puede tener pronunciación en ciertos préstamos o usos.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.1.2",
@@ -128,7 +128,7 @@
   {
     "id": "leng_t03_s01_c08",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Las vocales clasificadas como posteriores por la posición de la lengua en el tracto vocal son:",
+    "statement": "En la clasificación articulatoria básica del español, ¿qué vocales son posteriores?",
     "options": [
       "/e/ y /i/",
       "/a/ y /e/",
@@ -136,7 +136,7 @@
       "/i/ y /a/"
     ],
     "correctIndex": 2,
-    "explanation": "Las vocales /o/ y /u/ se articulan retrayendo el dorso de la lengua hacia la región posterior o velar de la cavidad bucal.",
+    "explanation": "Criterio: clasificar por posición anteroposterior de la lengua, no por altura. Aplicación: /o/ y /u/ son posteriores en el esquema básico. Respuesta: /o/ y /u/. La /u/ es posterior y alta, mientras que /o/ es posterior y media; compartir una dimensión no las hace idénticas.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.1.2",
@@ -146,15 +146,15 @@
   {
     "id": "leng_t03_s01_c09",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la palabra 'pan', la consonante inicial 'p' y la consonante final 'n' cumplen respectivamente las funciones de:",
+    "statement": "En el análisis silábico de pan, ¿qué posiciones ocupan /p/ y /n/, respectivamente?",
     "options": [
-      "Cima y núcleo",
+      "Núcleo y núcleo",
       "Coda y ataque",
-      "Núcleo y margen",
-      "Ataque (cabeza) y coda"
+      "Núcleo y ataque",
+      "Ataque y coda"
     ],
     "correctIndex": 3,
-    "explanation": "La consonante prenuclear 'p' es el ataque o cabeza silábica, mientras que la consonante posnuclear 'n' actúa como coda.",
+    "explanation": "Criterio: ubicar los segmentos con relación al núcleo /a/. Aplicación: /p/ va antes del núcleo y /n/ después. Respuesta: ataque y coda. La palabra tiene una sola sílaba en el análisis del ejemplo.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.1.3",
@@ -164,15 +164,15 @@
   {
     "id": "leng_t03_s01_c10",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La oposición de significado entre las palabras 'masa' y 'mesa' gracias al cambio de /a/ por /e/ demuestra que los fonemas poseen:",
+    "statement": "En masa y mesa cambia /a/ por /e/ en la misma posición y se obtienen palabras de distinto significado. ¿Qué propiedad muestra este par mínimo?",
     "options": [
-      "Independencia sintáctica",
-      "Significado léxico intrínseco",
-      "Naturaleza fónica acústica",
-      "Función distintiva"
+      "Independencia sintáctica de cada fonema",
+      "Significado léxico propio de cada vocal",
+      "Que cada letra es una sílaba",
+      "Función distintiva de los fonemas"
     ],
     "correctIndex": 3,
-    "explanation": "Los fonemas no tienen significado por sí mismos, pero cumplen función distintiva al permitir diferenciar significados en pares mínimos.",
+    "explanation": "Criterio: un par mínimo contrasta un segmento en un mismo entorno y permite distinguir palabras. Aplicación: masa y mesa difieren en /a/ y /e/. Respuesta: función distintiva. No significa que /a/ aporte por sí sola el significado de masa ni que /e/ signifique mesa.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.1.1",

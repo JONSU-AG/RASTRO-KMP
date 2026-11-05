@@ -7,11 +7,11 @@
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana04.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_04_Morfologia_y_Formacion_de_Palabras.md",
   "learningObjectives": [
-    "Explicar la derivación por prefijación y sufijación como el proceso más productivo del español",
-    "Diferenciar composición por yuxtaposición sin cambio fónico de composición propiamente dicha con mutación",
-    "Reconocer la parasíntesis por composición más derivación simultánea y por circunfijación",
-    "Distinguir acronimia, siglación, acortamiento y onomatopeya en la creación léxica",
-    "Aplicar la prueba de supresión para separar parasíntesis verdadera de derivación doble"
+    "Distinguir flexión y derivación con bases y afijos identificables",
+    "Reconocer composición sin convertir una adaptación gráfica en un criterio universal de clasificación",
+    "Analizar afijación conjunta y derivación por etapas atendiendo a bases y significados",
+    "Distinguir formación y lectura de siglas y los dos usos de acrónimo",
+    "Reconocer acortamientos y onomatopeyas sin clasificar solo por longitud o significado"
   ],
   "theory": {
     "id": "th_leng_t04_s02",
@@ -20,15 +20,16 @@
     "titulo": "Procesos Formativos de Palabras en el Español",
     "resumen": "",
     "conceptosClave": [
-      "Derivación = lexema más afijo; composición = lexema más lexema",
-      "Yuxtapuesta no altera bases como cortauñas; propia muta la primera como blanquirrojo y ciempiés",
-      "Parasíntesis exige inexistencia de formas intermedias como quinceañero y desalmado",
-      "Acrónimo une sílabas y se lee corrido como Sedapal; sigla une iniciales y se deletrea como DNI",
-      "Acortamiento recorta como foto y bici; onomatopeya imita sonidos como tictac",
-      "Inalcanzable y deslealtad son derivadas porque alcanzable y lealtad sí existen",
-      "Fórmula de verificación: si quitas un lado y no existe, es parasíntesis"
+      "Derivación: base y afijo; composición: combinación de bases",
+      "Blanquirrojo, sacapuntas y ciempiés son compuestos con distintas adaptaciones",
+      "Parasíntesis: afijación conjunta sobre una base en el análisis de ensombrecer",
+      "La existencia de una secuencia escrita no demuestra que sea una etapa pertinente de formación",
+      "Deslealtad e inalcanzable admiten bases para derivación por etapas",
+      "ONU es sigla y también acrónimo; una sigla no se define por el deletreo",
+      "Ofimática combina fragmentos; foto y bici son acortamientos",
+      "Tictac, miau y quiquiriquí son onomatopeyas; chasquido presenta derivación"
     ],
-    "admissionTip": "Para parasíntesis pregunta si existe la forma sin prefijo o sin sufijo: quinceañero no tiene quinceaño ni añero, desalmado no tiene desalma ni almado; si la base intermedia existe, es derivada.",
-    "admissionExplanation": "Yuxtaposición frente a propia se decide por el cambio fónico, y parasíntesis frente a derivada se decide por la existencia o inexistencia de la palabra intermedia en la lengua."
+    "admissionTip": "Reconoce las bases y justifica el procedimiento. No decidas por una letra cambiada, por la longitud de la palabra ni por la eliminación mecánica de un extremo.",
+    "admissionExplanation": "Las categorías deben corresponder a un criterio explícito: formación, estructura y lectura no son lo mismo. Las clasificaciones discutidas no se utilizan como respuestas únicas sin explicar el modelo."
   }
 }

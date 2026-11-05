@@ -50,12 +50,15 @@ fun LessonContentRenderer(
     theme: RastroPalette = ThemeManager.currentTheme
 ) {
     val theory = lesson.theory
-    val parsedBlocks = remember(theory.id, theory.resumen) { parseAcademicContent(theory) }
+    val parsedBlocks = remember(theory) { parseAcademicContent(theory) }
+    val visualResources=rememberLessonEducationalVisuals(lesson)
+    val visualAnchors=remember(visualResources,parsedBlocks.sections){visualResources.groupBy {com.jonsuapps.rastro.model.educationalVisualAnchor(it,parsedBlocks.sections.map {s->s.title})}}
 
     Column(
         modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(18.dp)
     ) {
+        visualAnchors[-1].orEmpty().forEach {EducationalVisualCard(it)}
         // 1. Tarjeta Introductoria Suave (Celeste claro) - Solo si hay texto introductorio
         if (parsedBlocks.intro.isNotBlank()) {
             Surface(
@@ -64,8 +67,9 @@ fun LessonContentRenderer(
                 color = ThemeManager.currentTheme.surfaceAccent, // Celeste muy suave
                 border = androidx.compose.foundation.BorderStroke(1.dp, ThemeManager.currentTheme.borderSubtle)
             ) {
-                Text(
-                    text = renderFormattedInlineText(parsedBlocks.intro),
+                AcademicText(
+                    theoryStyle = true,
+                    text = parsedBlocks.intro,
                     modifier = Modifier.padding(16.dp),
                     style = MaterialTheme.typography.bodyMedium,
                     color = ThemeManager.currentTheme.accent, // Azul acero legible
@@ -74,12 +78,27 @@ fun LessonContentRenderer(
             }
         }
 
+        parsedBlocks.tables.forEach { ScientificMath(emptyList(), theme.textPrimary, fontSize = 15f, theoryStyle = true, tables = listOf(it)) }
+
+        AcademicLessonDiagram(lesson)
+        parsedBlocks.diagrams.forEach { AcademicSourceMap(it) }
+
         // 2. Secciones Principales Numeradas Dinámicas
-        parsedBlocks.sections.forEach { section ->
+        parsedBlocks.sections.forEachIndexed { sectionIndex,section ->
             AcademicSectionView(
                 section = section,
                 theme = theme
             )
+            geometryDiagramFor(lesson.subjectId, section.title)?.let { GeometryConstructionCard(it) }
+            if (lesson.subjectId == "algebra" && section.title.contains("Operaciones Fundamentales entre Conjuntos", ignoreCase = true)) SetOperationsCard()
+            if (lesson.subjectId == "aritmetica" && section.title.contains("Álgebra de Conjuntos", ignoreCase = true)) SetOperationsCard()
+            if (lesson.subjectId == "quimica" && section.title.contains("Propiedades de la Materia",ignoreCase=true)) DensityLearningCard()
+            if (lesson.subjectId == "fisica" && section.title.contains("MOVIMIENTO PARABÓLICO DE CAÍDA LIBRE",ignoreCase=true)) PhysicsDiagramCard(PhysicsLearningDiagram.PROJECTILE)
+            if (lesson.subjectId == "fisica" && (section.title.contains("ÁLGEBRA VECTORIAL",ignoreCase=true) || section.title.contains("Operaciones Geométricas con Vectores",ignoreCase=true))) PhysicsDiagramCard(PhysicsLearningDiagram.VECTORS)
+            if (lesson.subjectId == "fisica" && section.title.contains("Representación Cartesiana y Operaciones Analíticas",ignoreCase=true)) PhysicsDiagramCard(PhysicsLearningDiagram.COMPONENTS)
+            algebraStudyGraphic(lesson.subjectId,section.title)?.let {AlgebraRealLineCard(it)}
+            visualAnchors[sectionIndex].orEmpty().forEach {EducationalVisualCard(it)}
+            if(parsedBlocks.diagrams.isEmpty()) AcademicConceptMap(section)
         }
 
         // 3. Fórmulas Matemáticas (Física, Química, Matemática) - Solo si existen en la teoría
@@ -92,32 +111,6 @@ fun LessonContentRenderer(
             )
         }
 
-        // 4. Tarjeta Semántica: Idea Clave (Amarillo muy suave) - Solo si existe en la data
-        val ideaClaveText = remember(theory) {
-            when {
-                theory.conceptosClave.isNotEmpty() -> theory.conceptosClave.first()
-                parsedBlocks.detectedKeyIdea.isNotBlank() -> parsedBlocks.detectedKeyIdea
-                else -> null
-            }
-        }
-        if (!ideaClaveText.isNullOrBlank()) {
-            SemanticCard(
-                title = "Idea clave",
-                icon = Icons.Rounded.Lightbulb,
-                iconTint = Color(0xFFD97706),
-                containerColor = ThemeManager.currentTheme.surfaceAccent, // Amarillo pastel muy suave
-                borderColor = ThemeManager.currentTheme.borderSubtle,
-                titleColor = ThemeManager.currentTheme.accent
-            ) {
-                Text(
-                    text = renderFormattedInlineText(ideaClaveText),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = ThemeManager.currentTheme.textPrimary,
-                    lineHeight = 21.sp
-                )
-            }
-        }
-
         // 5. Tarjeta Semántica: Ejemplo Resuelto (Azul muy suave) - Dinámico con el primer reto real
         val sampleChallenge = lesson.challenges.firstOrNull()
         if (sampleChallenge != null) {
@@ -125,27 +118,6 @@ fun LessonContentRenderer(
                 challenge = sampleChallenge,
                 subject = theory.asignatura
             )
-        }
-
-        // 6. Tarjeta Semántica: Clave Fija de Admisión (Rojo/Rosa muy suave) - Solo si existe en la data
-        val admissionTipText = theory.admissionTip?.takeIf(String::isNotBlank)
-            ?: theory.admissionExplanation?.takeIf(String::isNotBlank)
-        if (!admissionTipText.isNullOrBlank()) {
-            SemanticCard(
-                title = "Clave fija de admisión",
-                icon = Icons.Rounded.LocalFireDepartment,
-                iconTint = Color(0xFFEF4444),
-                containerColor = ThemeManager.currentTheme.surfaceAccent, // Rosa/rojo muy suave
-                borderColor = ThemeManager.currentTheme.borderSubtle,
-                titleColor = ThemeManager.currentTheme.accent
-            ) {
-                Text(
-                    text = renderFormattedInlineText(admissionTipText),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = ThemeManager.currentTheme.textPrimary,
-                    lineHeight = 21.sp
-                )
-            }
         }
 
         // 7. Tarjeta Semántica: Resumen (Gris / Azul muy suave) - Dinámico con los puntos de esta lección
@@ -180,8 +152,9 @@ fun LessonContentRenderer(
                                     .clip(CircleShape)
                                     .background(Color(0xFF3B82F6))
                             )
-                            Text(
-                                text = renderFormattedInlineText(item),
+                            AcademicText(
+                    theoryStyle = true,
+                                text = item,
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = ThemeManager.currentTheme.textPrimary,
                                 lineHeight = 20.sp
@@ -198,12 +171,16 @@ fun LessonContentRenderer(
  * Renderizado de una sección numerada con su círculo azul (①, ②)
  */
 @Composable
-private fun AcademicSectionView(
+internal fun AcademicSectionView(
     section: AcademicSection,
     theme: RastroPalette
 ) {
+    val important = AcademicPresentationText.isImportant(section.title)
+    val importantColors = academicImportantColors(theme.isDark)
     Column(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth().then(if (important) Modifier
+            .clip(RoundedCornerShape(16.dp)).background(importantColors.background)
+            .border(1.5.dp, importantColors.border, RoundedCornerShape(16.dp)).padding(14.dp) else Modifier),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         // Cabecera numerada con círculo azul (①, ②, etc.) o píldora de subsección jerárquica (1.1.1)
@@ -217,7 +194,9 @@ private fun AcademicSectionView(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.fillMaxWidth()
         ) {
-            if (subCode != null) {
+            if (important) {
+                Icon(Icons.Rounded.Info, null, tint = importantColors.text, modifier = Modifier.size(22.dp))
+            } else if (subCode != null) {
                 Surface(
                     shape = RoundedCornerShape(8.dp),
                     color = ThemeManager.currentTheme.surfaceAccent,
@@ -248,18 +227,28 @@ private fun AcademicSectionView(
                 }
             }
             Spacer(modifier = Modifier.width(10.dp))
-            Text(
-                text = titleText,
+            AcademicText(
+                text = AcademicPresentationText.clean(titleText),
+                theoryStyle = true,
+                modifier = Modifier.weight(1f),
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
                 color = ThemeManager.currentTheme.textPrimary
             )
         }
 
+        // A heading followed by equations belongs with those equations, not in an empty badge.
+        if(section.flowText.isNotBlank()) {
+            AcademicText(section.flowText,theoryStyle=true,color=theme.textPrimary,
+                style=MaterialTheme.typography.bodyMedium,lineHeight=22.sp)
+            section.tables.forEach {ScientificMath(emptyList(),theme.textPrimary,fontSize=15f,theoryStyle=true,tables=listOf(it))}
+            return@Column
+        }
         // Subtítulo o texto introductorio de la sección
         if (section.leadText.isNotBlank()) {
-            Text(
-                text = renderFormattedInlineText(section.leadText),
+            AcademicText(
+                    theoryStyle = true,
+                text = section.leadText,
                 style = MaterialTheme.typography.bodyMedium,
                 color = ThemeManager.currentTheme.textPrimary,
                 lineHeight = 22.sp
@@ -267,7 +256,9 @@ private fun AcademicSectionView(
         }
 
         // Viñetas o pares de definición
-        if (section.definitions.isNotEmpty()) {
+        val definitionTable = remember(section.definitions) { academicDefinitionTable(section.definitions) }
+        if (definitionTable != null) ScientificMath(emptyList(), theme.textPrimary, fontSize = 15f, theoryStyle = true, tables = listOf(definitionTable))
+        else if (section.definitions.isNotEmpty()) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -286,8 +277,9 @@ private fun AcademicSectionView(
                                 .clip(CircleShape)
                                 .background(ThemeManager.currentTheme.accent)
                         )
-                        Text(
-                            text = renderFormattedInlineText(def),
+                        AcademicText(
+                    theoryStyle = true,
+                            text = def,
                             style = MaterialTheme.typography.bodyMedium,
                             color = ThemeManager.currentTheme.textPrimary,
                             lineHeight = 20.sp
@@ -299,8 +291,9 @@ private fun AcademicSectionView(
 
         // Párrafo complementario
         if (section.bodyText.isNotBlank()) {
-            Text(
-                text = renderFormattedInlineText(section.bodyText),
+            AcademicText(
+                    theoryStyle = true,
+                text = section.bodyText,
                 style = MaterialTheme.typography.bodyMedium,
                 color = ThemeManager.currentTheme.textPrimary,
                 lineHeight = 22.sp
@@ -308,6 +301,10 @@ private fun AcademicSectionView(
         }
 
         // Sub-tarjetas temáticas dinámicas con sus ilustraciones correspondientes
+        section.tables.forEach { table ->
+            ScientificMath(emptyList(), theme.textPrimary, fontSize = 15f, theoryStyle = true, tables = listOf(table))
+        }
+
         section.branchCards.forEach { branch ->
             AcademicBranchCard(branch = branch)
         }
@@ -319,6 +316,11 @@ private fun AcademicSectionView(
  */
 @Composable
 private fun AcademicBranchCard(branch: AcademicBranch) {
+    if (branch.subtitle.isBlank() && branch.bullets.isEmpty()) {
+        AcademicText(branch.name, theoryStyle=true, color=ThemeManager.currentTheme.textPrimary,
+            fontWeight=FontWeight.Bold, style=MaterialTheme.typography.titleSmall)
+        return
+    }
     val (bgColor, borderColor, dotColor, badgeColor) = when (branch.conceptTag) {
         "zoologia" -> QuadColors(ThemeManager.currentTheme.surfaceAccent, Color(0xFFFFE4E6), Color(0xFFF43F5E), Color(0xFFE11D48))
         "botanica" -> QuadColors(Color(0xFFF0FDF4), Color(0xFFDCFCE7), Color(0xFF22C55E), Color(0xFF15803D))
@@ -356,8 +358,9 @@ private fun AcademicBranchCard(branch: AcademicBranch) {
                             .background(badgeColor.copy(alpha = 0.14f))
                             .padding(horizontal = 10.dp, vertical = 4.dp)
                     ) {
-                        Text(
+                        AcademicText(
                             text = branch.name,
+                            theoryStyle = true,
                             style = MaterialTheme.typography.titleSmall,
                             fontWeight = FontWeight.Bold,
                             color = if (ThemeManager.currentTheme.isDark) ThemeManager.currentTheme.accent else badgeColor
@@ -366,8 +369,9 @@ private fun AcademicBranchCard(branch: AcademicBranch) {
                 }
 
                 if (branch.subtitle.isNotBlank()) {
-                    Text(
+                    AcademicText(
                         text = branch.subtitle,
+                        theoryStyle = true,
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = FontWeight.Medium,
                         color = ThemeManager.currentTheme.textSecondary
@@ -392,8 +396,9 @@ private fun AcademicBranchCard(branch: AcademicBranch) {
                                         .clip(CircleShape)
                                         .background(dotColor)
                                 )
-                                Text(
-                                    text = renderFormattedInlineText(bullet),
+                                AcademicText(
+                    theoryStyle = true,
+                                    text = bullet,
                                     style = MaterialTheme.typography.bodySmall,
                                     color = ThemeManager.currentTheme.textPrimary,
                                     lineHeight = 19.sp
@@ -405,12 +410,14 @@ private fun AcademicBranchCard(branch: AcademicBranch) {
             }
 
             // Ilustración Académica Doodle SVG a la derecha
-            Spacer(modifier = Modifier.width(12.dp))
-            AcademicIllustration(
-                concept = branch.conceptTag,
-                size = 56.dp,
-                modifier = Modifier.padding(top = 4.dp)
-            )
+            if (branch.artwork != null) {
+                Spacer(modifier = Modifier.width(12.dp))
+                AcademicIllustration(
+                    concept = branch.artwork.key,
+                    size = 56.dp,
+                    modifier = Modifier.padding(top = 4.dp)
+                )
+            }
         }
     }
 }
@@ -483,8 +490,9 @@ private fun SolvedExampleCard(
         borderColor = ThemeManager.currentTheme.borderSubtle,
         titleColor = ThemeManager.currentTheme.accent
     ) {
-        Text(
-            text = renderFormattedInlineText(statement),
+        AcademicText(
+                    theoryStyle = true,
+            text = statement,
             style = MaterialTheme.typography.bodyMedium,
             color = ThemeManager.currentTheme.textPrimary,
             lineHeight = 21.sp
@@ -508,7 +516,8 @@ private fun SolvedExampleCard(
                         .background(ThemeManager.currentTheme.surfaceAccent)
                         .padding(horizontal = 10.dp, vertical = 2.dp)
                 ) {
-                    Text(
+                    AcademicText(
+                    theoryStyle = true,
                         text = correctAnswer,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Black,
@@ -520,12 +529,8 @@ private fun SolvedExampleCard(
 
         if (explanation.isNotBlank()) {
             Spacer(modifier = Modifier.height(2.dp))
-            Text(
-                text = renderFormattedInlineText(explanation),
-                style = MaterialTheme.typography.bodySmall,
-                color = ThemeManager.currentTheme.textSecondary,
-                lineHeight = 18.sp
-            )
+            ResolutionPlayback(explanation)
+            challenge.angleDegrees?.let { AngularConversionCard(it) }
         }
     }
 }
@@ -548,24 +553,11 @@ private fun AcademicFormulaSection(
         borderColor = ThemeManager.currentTheme.borderSubtle,
         titleColor = ThemeManager.currentTheme.accent
     ) {
-        if (formulaLatex.isNotBlank()) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(12.dp))
-                    .background(ThemeManager.currentTheme.surface)
-                    .border(1.dp, ThemeManager.currentTheme.borderSubtle, RoundedCornerShape(12.dp))
-                    .padding(vertical = 12.dp, horizontal = 16.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = formatMathSymbols(formulaLatex),
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = ThemeManager.currentTheme.accent
-                )
-            }
-        }
+        ScientificMath(
+            expressions = (listOf(formulaLatex) + extraFormulas).filter(String::isNotBlank)
+                .map(ScientificMathSource::normalize).distinct(),
+            color = ThemeManager.currentTheme.textPrimary
+        )
 
         formulaDescription?.takeIf(String::isNotBlank)?.let { desc ->
             Text(
@@ -576,22 +568,6 @@ private fun AcademicFormulaSection(
             )
         }
 
-        extraFormulas.forEach { extra ->
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(10.dp))
-                    .background(ThemeManager.currentTheme.surfaceAccent)
-                    .padding(horizontal = 12.dp, vertical = 8.dp)
-            ) {
-                Text(
-                    text = formatMathSymbols(extra),
-                    style = MaterialTheme.typography.bodySmall,
-                    fontWeight = FontWeight.SemiBold,
-                    color = ThemeManager.currentTheme.accent
-                )
-            }
-        }
     }
 }
 
@@ -632,39 +608,34 @@ fun formatMathSymbols(raw: String): String {
 /**
  * Renderiza texto enriquecido inline soportando **negrita**, *cursiva* y fórmulas
  */
-fun renderFormattedInlineText(text: String): AnnotatedString {
-    val clean = formatMathSymbols(text)
+fun renderFormattedInlineText(text: String, theoryStyle: Boolean = false, dark: Boolean = false): AnnotatedString {
+    val cleaned = AcademicPresentationText.clean(text)
+    val clean = formatMathSymbols(if (theoryStyle) academicTheoryMarkup(cleaned) else cleaned)
+    val ink = academicInk(dark)
     return buildAnnotatedString {
         var currentIndex = 0
-        val regex = Regex("(\\*\\*([^*]+)\\*\\*)|(\\*([^*]+)\\*)")
-        val matches = regex.findAll(clean)
-
-        for (match in matches) {
-            val start = match.range.first
-            val end = match.range.last + 1
-            if (start > currentIndex) {
-                append(clean.substring(currentIndex, start))
-            }
+        val regex = Regex("""(\*\*([^*]+)\*\*)|(\*([^*]+)\*)|(<u>([^<>]+)</u>)""")
+        for (match in regex.findAll(clean)) {
+            if (match.range.first > currentIndex) append(clean.substring(currentIndex, match.range.first))
+            val start = length
             when {
                 match.value.startsWith("**") -> {
-                    val content = match.groupValues[2]
-                    val boldStart = length
-                    append(content)
-                    addStyle(SpanStyle(fontWeight = FontWeight.Bold), boldStart, length)
+                    append(match.groupValues[2])
+                    addStyle(SpanStyle(fontWeight = FontWeight.Bold, color = if (theoryStyle) ink.concept else Color.Unspecified), start, length)
                 }
-                match.value.startsWith("*") -> {
-                    val content = match.groupValues[4]
-                    val italicStart = length
-                    append(content)
-                    addStyle(SpanStyle(fontStyle = FontStyle.Italic), italicStart, length)
+                match.value.startsWith("<u>") -> {
+                    append(match.groupValues[6])
+                    addStyle(SpanStyle(textDecoration = androidx.compose.ui.text.style.TextDecoration.Underline,
+                        color = if (theoryStyle) ink.underline else Color.Unspecified), start, length)
+                }
+                else -> {
+                    append(match.groupValues[4])
+                    addStyle(SpanStyle(fontStyle = FontStyle.Italic, color = if (theoryStyle) ink.secondary else Color.Unspecified), start, length)
                 }
             }
-            currentIndex = end
+            currentIndex = match.range.last + 1
         }
-
-        if (currentIndex < clean.length) {
-            append(clean.substring(currentIndex))
-        }
+        if (currentIndex < clean.length) append(clean.substring(currentIndex))
     }
 }
 
@@ -676,7 +647,9 @@ data class AcademicContent(
     val intro: String,
     val sections: List<AcademicSection>,
     val detectedKeyIdea: String = "",
-    val summaryBullets: List<String> = emptyList()
+    val summaryBullets: List<String> = emptyList(),
+    val tables: List<AcademicTable> = emptyList(),
+    internal val diagrams: List<AcademicSourceDiagram> = emptyList()
 )
 
 data class AcademicSection(
@@ -685,14 +658,17 @@ data class AcademicSection(
     val leadText: String = "",
     val definitions: List<String> = emptyList(),
     val bodyText: String = "",
-    val branchCards: List<AcademicBranch> = emptyList()
+    val branchCards: List<AcademicBranch> = emptyList(),
+    val tables: List<AcademicTable> = emptyList(),
+    val flowText: String = ""
 )
 
 data class AcademicBranch(
     val name: String,
     val subtitle: String,
     val bullets: List<String>,
-    val conceptTag: String
+    val conceptTag: String,
+    val artwork: AcademicArtwork? = null
 )
 
 private data class QuadColors(
@@ -706,18 +682,30 @@ private data class QuadColors(
  * Parsea el texto real de `theory.resumen` en secciones, párrafos y tarjetas estructuradas
  * SIN ninguna palabra fija ni ataduras a una materia particular.
  */
+// Bounded by source value: corrected content replaces its cached presentation automatically.
+private val academicContentCache = object : LinkedHashMap<LessonTheory, AcademicContent>(32, .75f, true) {
+    override fun removeEldestEntry(eldest: MutableMap.MutableEntry<LessonTheory, AcademicContent>?) = size > 64
+}
 fun parseAcademicContent(theory: LessonTheory): AcademicContent {
-    val rawLines = expandMarkdownTables(
-        theory.resumen.lines().map { it.trim() }
+    synchronized(academicContentCache) { academicContentCache[theory]?.let { return it } }
+    val parsed = parseAcademicContentUncached(theory)
+    synchronized(academicContentCache) { academicContentCache[theory] = parsed }
+    return parsed
+}
+private fun parseAcademicContentUncached(theory: LessonTheory): AcademicContent {
+    val document = prepareAcademicTheory(theory.resumen)
+    val rawLines = groupAcademicMathLines(
+        AcademicPresentationText.clean(document.text).lines().map { it.trim() }
             .filter { it.isNotBlank() }
             // Separadores temáticos Markdown (---, ***, ___) no se renderizan.
             .filterNot { it.matches(Regex("^(-{3,}|\\*{3,}|_{3,})$")) }
     )
     if (rawLines.isEmpty()) {
-        return AcademicContent(intro = "", sections = emptyList())
+        return AcademicContent(intro = "", sections = emptyList(), diagrams = document.diagrams)
     }
 
     var intro = ""
+    var introTables = emptyList<AcademicTable>()
     val sections = mutableListOf<AcademicSection>()
     val summaryBullets = mutableListOf<String>()
 
@@ -733,11 +721,13 @@ fun parseAcademicContent(theory: LessonTheory): AcademicContent {
     if (headerIndices.isNotEmpty()) {
         val firstHeaderIdx = headerIndices.first()
         if (firstHeaderIdx > 0) {
-            intro = rawLines.take(firstHeaderIdx).joinToString(" ")
+            val (prose, tables) = extractAcademicTables(rawLines.take(firstHeaderIdx))
+            intro = prose.joinToString(" ")
+            introTables = tables
         }
     } else {
         // Si no hay encabezados, el primer párrafo es el intro
-        intro = rawLines.first()
+        intro = rawLines.first().takeUnless { it.startsWith("|") }.orEmpty()
     }
 
     if (headerIndices.isNotEmpty()) {
@@ -748,16 +738,16 @@ fun parseAcademicContent(theory: LessonTheory): AcademicContent {
 
             val sectionTitle = cleanHeaderTitle(headerLine)
             val parsedSection = parseSectionLines(
-                number = headerListIdx + 1,
+                number = sections.size + 1,
                 title = sectionTitle,
                 lines = contentLines,
                 subjectId = theory.asignatura
             )
-            sections.add(parsedSection)
+            if (parsedSection.leadText.isNotBlank() || parsedSection.bodyText.isNotBlank() || parsedSection.definitions.isNotEmpty() || parsedSection.branchCards.isNotEmpty() || parsedSection.tables.isNotEmpty()) sections.add(parsedSection)
         }
     } else if (rawLines.size > 1) {
         // Sin encabezados explícitos: agrupar el resto de líneas como sección 1
-        val remainingLines = rawLines.drop(1)
+        val remainingLines = if (rawLines.first().startsWith("|")) rawLines else rawLines.drop(1)
         val parsedSection = parseSectionLines(
             number = 1,
             title = theory.titulo.ifBlank { "Desarrollo del tema" },
@@ -769,9 +759,11 @@ fun parseAcademicContent(theory: LessonTheory): AcademicContent {
 
     return AcademicContent(
         intro = intro,
-        sections = sections,
+        sections = withAcademicCompanions(consolidateAcademicImportant(sections, theory.conceptosClave + listOfNotNull(theory.admissionTip,theory.admissionExplanation)), theory.asignatura),
         detectedKeyIdea = "",
-        summaryBullets = summaryBullets
+        summaryBullets = summaryBullets,
+        tables = introTables,
+        diagrams = document.diagrams
     )
 }
 
@@ -831,9 +823,7 @@ private fun isNumberedHeader(line: String): Boolean {
  */
 private fun cleanHeaderTitle(header: String): String {
     val clean = header
-        .removePrefix("###")
-        .removePrefix("##")
-        .removePrefix("#")
+        .replace(Regex("^#+\\s*"), "")
         .trim()
     // Si tiene numeración jerárquica tipo 1.1.1, la preservamos intacta para que la UI cree el badge
     if (clean.matches(Regex("^[0-9]+(?:\\.[0-9]+)+.*"))) {
@@ -858,22 +848,26 @@ private fun parseSectionLines(
     val branchCards = mutableListOf<AcademicBranch>()
 
     // Regex para viñetas destacadas tipo: - **Nombre:** Descripción (subitems...)
-    val bulletHighlightRegex = Regex("^[-*•]\\s*\\*\\*([^*:]+)\\*\\*\\s*:?\\s*(.*)")
+    val bulletHighlightRegex = Regex("^[-*•]\\s*\\*\\*([^*]+)\\*\\*\\s*:?\\s*(.*)")
 
-    for (line in lines) {
+    val (contentLines, tables) = extractAcademicTables(lines)
+    for (line in contentLines) {
         val match = bulletHighlightRegex.find(line)
         if (match != null) {
-            val name = match.groupValues[1].trim()
+            val name = match.groupValues[1].trim().removeSuffix(":")
             val details = match.groupValues[2].trim()
 
-            // Si tiene detalles ricos o subelementos entre paréntesis
+            if (details.isBlank()) {
+                definitions.add("**$name**")
+                continue
+            }
             val (sub, bullets) = extractSubtitleAndBullets(details)
             branchCards.add(
                 AcademicBranch(
                     name = name,
                     subtitle = sub,
                     bullets = bullets,
-                    conceptTag = AcademicIllustrationsCatalog.resolveConcept("$name $title $subjectId")
+                    conceptTag = AcademicIllustrationsCatalog.resolveConcept(subjectId)
                 )
             )
         } else if (line.startsWith("- ") || line.startsWith("* ") || line.startsWith("• ")) {
@@ -898,7 +892,10 @@ private fun parseSectionLines(
         leadText = leadText,
         definitions = definitions,
         bodyText = bodyText,
-        branchCards = branchCards
+        branchCards = branchCards,
+        tables = tables,
+        flowText = if(contentLines.any { line -> hasScientificMarkup(line) || bulletHighlightRegex.find(line)?.groupValues?.get(2)?.isBlank()==true })
+            contentLines.joinToString("\n") else ""
     )
 }
 
@@ -908,16 +905,6 @@ private fun parseSectionLines(
 private fun extractSubtitleAndBullets(details: String): Pair<String, List<String>> {
     if (details.isBlank()) return Pair("", emptyList())
 
-    // Si tiene paréntesis con elementos separados por coma o dos puntos
-    val parenMatch = Regex("\\((.*?)\\)").find(details)
-    if (parenMatch != null) {
-        val outside = details.replace(parenMatch.value, "").trim().removeSuffix(".")
-        val inside = parenMatch.groupValues[1].trim()
-        val items = inside.split(",").map { it.trim() }.filter { it.isNotBlank() }
-        if (items.size > 1) {
-            return Pair(outside, items)
-        }
-    }
-
+    // Parentheses can hold coordinates, units, references or TeX. Never infer a list from commas.
     return Pair(details, emptyList())
 }

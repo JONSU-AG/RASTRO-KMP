@@ -1,1 +1,200 @@
-[{"concept":"2.1.1","correctIndex":2,"explanation":"La inferencia se define como la deducción o derivación lógica de nueva información implícita resultante de conectar la evidencia textual explícita con esquemas de conocimiento pertinentes.","fuente":"temario","id":"cl_t02_s01_c01","options":["Lectura rápida + Memoria visual = Paráfrasis literal.","Imaginación subjetiva - Datos del texto = Conclusión poética.","Información Explícita del texto + Conocimientos Previos pertinentes (contexto/esquema mental) = Inferencia Válida.","Suma de palabras del texto / Número de párrafos = Tesis."],"pedagogicalTier":"concepto","semana":2,"statement":"En la teoría epistemológica de la comprensión lectora, la 'Ecuación Fundamental de la Inferencia' se formula analíticamente como:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"2.1.2","correctIndex":3,"explanation":"La deducción textual deriva de forma necesaria una conclusión particular a partir de premisas universales formuladas expresamente por el autor en el texto.","fuente":"temario","id":"cl_t02_s01_c02","options":["De opiniones de amigos hacia decretos gubernamentales.","De casos particulares dispersos hacia una conjetura intuitiva arriesgada.","De la última palabra del texto hacia el título principal.","De leyes, principios generales o proposiciones universales planteadas en el texto hacia casos o situaciones particulares concretas derivadas necesariamente de ellas."],"pedagogicalTier":"concepto","semana":2,"statement":"La 'Inferencia Deductiva' en la comprensión de lectura procede metodológicamente:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"2.1.3","correctIndex":3,"explanation":"La inducción asciende analíticamente desde una pluralidad de observaciones fácticas particulares hacia una conclusión o regla general que las unifica conceptualmente.","fuente":"temario","id":"cl_t02_s01_c03","options":["Rechaza todos los datos empíricos del texto sin analizarlos.","Memoriza los nombres propios de los científicos citados.","Calcula el promedio aritmético de las edades de los personajes.","Examina una serie de casos particulares, ejemplos o indicios específicos proporcionados en la lectura y abstrae de ellos un patrón regular o conclusión general probable."],"pedagogicalTier":"concepto","semana":2,"statement":"Por el contrario, la 'Inferencia Inductiva' opera en el análisis textual cuando el lector:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"2.1.4","correctIndex":3,"explanation":"Los indicios climáticos textuales (nubarrones oscuros, descenso de temperatura, conducta de las aves) permiten colegir con alta probabilidad meteorológica la proximidad de una lluvia o tormenta.","fuente":"temario","id":"cl_t02_s01_c04","options":["Un terremoto de magnitud extrema ocurrirá en diez segundos.","Las aves del valle han sido domesticadas por los campesinos.","El verano más caluroso del siglo acaba de comenzar.","Una tormenta o precipitación pluvial intensa es inminente en la zona."],"pedagogicalTier":"concepto","semana":2,"statement":"Si un texto describe: 'El cielo se cubrió de densos nubarrones plomizos, las aves volaron apresuradamente hacia sus nidos y un viento helado comenzó a levantar polvo en el valle', se puede INFERIR válidamente que:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"2.1.5","correctIndex":2,"explanation":"La inferencia holística abarca la totalidad del discurso, descubriendo supuestos epistemológicos, marcos conceptuales o la orientación ideológica de fondo del autor.","fuente":"temario","id":"cl_t02_s01_c05","options":["La fecha de nacimiento del tipógrafo que imprimió el folleto.","El número de comas mal utilizadas en el primer párrafo.","La postura ideológica, la cosmovisión o el marco teórico fundamental del autor a partir del análisis articulado de la totalidad de sus argumentos a lo largo del texto.","El significado de una palabra que figura en la portada del libro."],"pedagogicalTier":"concepto","semana":2,"statement":"Una 'Inferencia Holística' o global en una prueba de admisión permite al lector colegir:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"2.1.6","correctIndex":2,"explanation":"Coligir, deducir o desprender demanda extraer conclusiones tácitas necesarias o altamente fundadas en el texto que superan la mera transcripción literal.","fuente":"temario","id":"cl_t02_s01_c06","options":["Buscar una oración literal idéntica y copiarla sin cambios.","Adivinar qué soñó el autor la noche previa a redactar el texto.","Identificar una proposición implícita no dicha textualmente, pero cuya verdad se deduce rigurosamente a partir de las premisas explícitas de la lectura.","Elegir la respuesta que contenga una fórmula algebraica."],"pedagogicalTier":"concepto","semana":2,"statement":"En las preguntas inferenciales, el encabezado 'Se desprende del texto que...' o 'Se colige de la lectura que...' exige al estudiante:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"2.1.7","correctIndex":0,"explanation":"Se deduce lógicamente: si los tratamientos convencionales quedan inocuos ante bacterias resistentes causadas por el mal uso de antibióticos, la salud y la terapia médica futura están en grave riesgo.","fuente":"temario","id":"cl_t02_s01_c07","options":["La automedicación con antibióticos representa una severa amenaza para la eficacia de la medicina terapéutica del futuro.","Las bacterias carecen de capacidad de mutación genética.","Todos los médicos recomiendan comprar fármacos en mercados informales.","Las infecciones bacterianas desaparecerán por completo en diez años."],"pedagogicalTier":"concepto","semana":2,"statement":"Si el autor afirma: 'El empleo de antibióticos sin prescripción médica acelera la aparición de cepas bacterianas multirresistentes frente a las cuales los tratamientos convencionales resultan inocuos', se infiere que:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"2.1.8","correctIndex":1,"explanation":"Identificar causas implícitas requiere enlazar los síntomas o desenlaces narrados con el factor etiológico o motivacional latente en la lógica del texto.","fuente":"temario","id":"cl_t02_s01_c08","options":["Asumir que todo evento es causado por fuerzas sobrenaturales.","Rastrear los efectos descritos en el texto y descubrir el motivo causal subyacente que el autor dejó sobreentendido pero no formuló explícitamente.","Contar cuántas veces se repite el verbo 'causar'.","Eliminar todos los adjetivos de los párrafos del texto."],"pedagogicalTier":"concepto","semana":2,"statement":"Al realizar una inferencia analítica de causa implícita, el lector debe:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"2.1.9","correctIndex":1,"explanation":"La proyección prospectiva infiere cursos de acción o consecuencias futuras coherentes basándose en las variables, patrones y premisas fácticas establecidas en el texto.","fuente":"temario","id":"cl_t02_s01_c09","options":["El nombre de los futuros ministros del Estado peruano.","El desenlace o desarrollo probable de una situación expuesta en el texto en función de las tendencias y leyes descritas por el autor.","Especulaciones predictivas que sobrepasan las premisas epistemológicas del texto.","La temperatura exacta del sol en el próximo eclipse lunar."],"pedagogicalTier":"concepto","semana":2,"statement":"La inferencia prospectiva o de proyección temporal consiste en colegir:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"},{"concept":"2.1.10","correctIndex":0,"explanation":"Si el 95 % aprobó y el 5 % restante quedó en lista prioritaria (sumando el 100 % de la cohorte), se desprende de forma rigurosa y matemática que ninguno quedó totalmente fuera o reprobado.","fuente":"temario","id":"cl_t02_s01_c10","options":["Ningún postulante de dicha academia resultó reprobado de manera absoluta en el proceso.","Todos los postulantes ingresaron al primer puesto de medicina humana.","El examen de admisión fue suspendido por irregularidades técnicas.","La academia cerró sus actividades académicas tras la prueba."],"pedagogicalTier":"concepto","semana":2,"statement":"Si en un texto se afirma que 'el 95 % de los postulantes de la academia aprobó el examen de admisión y el 5 % restante quedó en lista de espera prioritaria', se infiere de modo concluyente que:","subject":"comprension_lectora","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "cl_t02_s01_c01",
+    "concept": "2.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 2,
+    "statement": "Lee el texto original de práctica:\n“El aviso del salón decía: “Solo podrán votar quienes figuren en la lista del grupo”. Al comenzar la votación, Iris buscó su nombre y no lo encontró. La coordinadora revisó la misma lista y confirmó que Iris no figuraba. Iris decidió solicitar una corrección antes de la siguiente votación. El texto no informa si se admitían modificaciones durante la sesión actual.”\n\nSegún la regla anunciada y la lista consultada, ¿podía Iris votar con esa situación de inscripción?",
+    "options": [
+      "No cumplía el requisito de figurar en la lista.",
+      "Tenía garantizado votar por haber llegado.",
+      "La lista no era un requisito.",
+      "Todas las personas del barrio podían votar."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Localizamos la evidencia: “Solo podrán votar quienes figuren en la lista del grupo”; “confirmó que Iris no figuraba”.\n2. La regla convierte aparecer en la lista en requisito necesario; los dos datos permiten comprobar que Iris no lo cumplía.\n3. La alternativa justificada es: No cumplía el requisito de figurar en la lista.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t02_s01_c02",
+    "concept": "2.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 2,
+    "statement": "Lee el texto original de práctica:\n“El aviso del salón decía: “Solo podrán votar quienes figuren en la lista del grupo”. Al comenzar la votación, Iris buscó su nombre y no lo encontró. La coordinadora revisó la misma lista y confirmó que Iris no figuraba. Iris decidió solicitar una corrección antes de la siguiente votación. El texto no informa si se admitían modificaciones durante la sesión actual.”\n\n¿Por qué no basta saber que alguien figura en la lista para afirmar que efectivamente votó?",
+    "options": [
+      "Porque la lista no contenía nombres.",
+      "Porque toda persona inscrita está obligada a votar según el texto.",
+      "Porque Iris ya había votado tres veces.",
+      "Porque cumplir un requisito no prueba que realizara la acción."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Localizamos la evidencia: “Solo podrán votar quienes figuren en la lista del grupo”.\n2. Solo podrán restringe quién puede votar; no afirma que todos los habilitados lo hagan.\n3. La alternativa justificada es: Porque cumplir un requisito no prueba que realizara la acción.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t02_s01_c03",
+    "concept": "2.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 2,
+    "statement": "Lee el texto original de práctica:\n“El aviso del salón decía: “Solo podrán votar quienes figuren en la lista del grupo”. Al comenzar la votación, Iris buscó su nombre y no lo encontró. La coordinadora revisó la misma lista y confirmó que Iris no figuraba. Iris decidió solicitar una corrección antes de la siguiente votación. El texto no informa si se admitían modificaciones durante la sesión actual.”\n\n¿Qué se puede inferir del plan de Iris?",
+    "options": [
+      "Había sido elegida coordinadora.",
+      "Conocía el resultado final de la sesión.",
+      "Quería resolver el problema de la lista antes de otra votación.",
+      "Quería destruir la lista."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Localizamos la evidencia: “decidió solicitar una corrección antes de la siguiente votación”.\n2. El propósito se deduce de su acción futura, sin inventar el resultado de la solicitud.\n3. La alternativa justificada es: Quería resolver el problema de la lista antes de otra votación.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t02_s01_c04",
+    "concept": "2.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 2,
+    "statement": "Lee el texto original de práctica:\n“El aviso del salón decía: “Solo podrán votar quienes figuren en la lista del grupo”. Al comenzar la votación, Iris buscó su nombre y no lo encontró. La coordinadora revisó la misma lista y confirmó que Iris no figuraba. Iris decidió solicitar una corrección antes de la siguiente votación. El texto no informa si se admitían modificaciones durante la sesión actual.”\n\n¿Se sabe si la lista podía corregirse durante esa sesión?",
+    "options": [
+      "Sí; Iris ya había obtenido la corrección.",
+      "No; el texto declara que no lo informa.",
+      "Sí; era obligatorio corregirla ese día.",
+      "Sí; estaba prohibido corregirla por diez años."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Localizamos la evidencia: “no informa si se admitían modificaciones durante la sesión actual”.\n2. La ausencia explícita de ese dato impide elegir una norma que no se ha descrito.\n3. La alternativa justificada es: No; el texto declara que no lo informa.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t02_s01_c05",
+    "concept": "2.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 2,
+    "statement": "Lee el texto original de práctica:\n“El club trasladó su reunión del patio al aula porque la lluvia había mojado los asientos. Ana llevó las carpetas al nuevo lugar; Bruno avisó a quienes aún esperaban fuera. Al empezar, quedaban dos sillas vacías. La crónica no indica cuántas personas habían sido invitadas ni por qué esas sillas estaban libres.”\n\n¿Qué motivó el cambio de lugar de la reunión?",
+    "options": [
+      "La lluvia había dejado mojados los asientos del patio.",
+      "El aula había desaparecido.",
+      "Bruno prohibió todo uso del patio.",
+      "Ana quería celebrar otra reunión."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Localizamos la evidencia: “porque la lluvia había mojado los asientos”.\n2. Aquí sí se enuncia una causa; no se deduce solo por coincidencia temporal.\n3. La alternativa justificada es: La lluvia había dejado mojados los asientos del patio.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t02_s01_c06",
+    "concept": "2.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 2,
+    "statement": "Lee el texto original de práctica:\n“El club trasladó su reunión del patio al aula porque la lluvia había mojado los asientos. Ana llevó las carpetas al nuevo lugar; Bruno avisó a quienes aún esperaban fuera. Al empezar, quedaban dos sillas vacías. La crónica no indica cuántas personas habían sido invitadas ni por qué esas sillas estaban libres.”\n\n¿Qué acción ayudó a que las personas de fuera conocieran el nuevo lugar?",
+    "options": [
+      "Ana dejó de llevar carpetas.",
+      "La lluvia secó las sillas.",
+      "La coordinadora publicó un resultado electoral.",
+      "Bruno les avisó."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Localizamos la evidencia: “Bruno avisó a quienes aún esperaban fuera”.\n2. La acción de avisar comunica el traslado a quienes seguían esperando.\n3. La alternativa justificada es: Bruno les avisó.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t02_s01_c07",
+    "concept": "2.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 2,
+    "statement": "Lee el texto original de práctica:\n“El club trasladó su reunión del patio al aula porque la lluvia había mojado los asientos. Ana llevó las carpetas al nuevo lugar; Bruno avisó a quienes aún esperaban fuera. Al empezar, quedaban dos sillas vacías. La crónica no indica cuántas personas habían sido invitadas ni por qué esas sillas estaban libres.”\n\n¿Puede concluirse que faltaron exactamente dos personas invitadas?",
+    "options": [
+      "Sí; el texto da el total de invitaciones.",
+      "No; se demuestra que nadie fue invitado.",
+      "No; dos sillas vacías no determinan ese número de ausentes.",
+      "Sí; cada silla vacía prueba un invitado ausente."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Localizamos la evidencia: “quedaban dos sillas vacías”; “no indica cuántas personas habían sido invitadas”.\n2. Las sillas disponibles y las invitaciones no se relacionan mediante una regla dada.\n3. La alternativa justificada es: No; dos sillas vacías no determinan ese número de ausentes.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t02_s01_c08",
+    "concept": "2.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 2,
+    "statement": "Lee el texto original de práctica:\n“El club trasladó su reunión del patio al aula porque la lluvia había mojado los asientos. Ana llevó las carpetas al nuevo lugar; Bruno avisó a quienes aún esperaban fuera. Al empezar, quedaban dos sillas vacías. La crónica no indica cuántas personas habían sido invitadas ni por qué esas sillas estaban libres.”\n\n¿Qué secuencia está respaldada?",
+    "options": [
+      "Primero se repararon todas las sillas de la ciudad.",
+      "Se mojaron los asientos, se trasladó la reunión y luego comenzó.",
+      "La reunión comenzó antes de que se decidiera el traslado.",
+      "Ana llevó las carpetas después de terminar toda la reunión."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Localizamos la evidencia: “trasladó su reunión del patio al aula porque la lluvia había mojado los asientos”; “Al empezar”.\n2. La causa del traslado precede al cambio de lugar; al empezar ya se describe el nuevo contexto.\n3. La alternativa justificada es: Se mojaron los asientos, se trasladó la reunión y luego comenzó.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t02_s01_c09",
+    "concept": "2.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 2,
+    "statement": "Lee el texto original de práctica:\n“En una experiencia ficticia, dos grupos usaron durante una semana el mismo salón en horarios distintos. Uno dejó carteles para recordar que se apagaran las luces; el otro recibió recordatorios orales. El informe observó menos luces encendidas al salir en el primer grupo. Sin embargo, no comparó cuántas personas había ni cuánto tiempo permanecían. La autora propone repetir la experiencia antes de atribuir la diferencia únicamente a los carteles.”\n\n¿Qué conclusión considera prematura la autora?",
+    "options": [
+      "Que los carteles fueron la única causa de la diferencia.",
+      "Que había dos grupos en la experiencia.",
+      "Que los grupos usaron el salón en horarios distintos.",
+      "Que el estudio duró una semana."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Localizamos la evidencia: “antes de atribuir la diferencia únicamente a los carteles”.\n2. Únicamente señala la atribución causal que se quiere evitar sin más controles.\n3. La alternativa justificada es: Que los carteles fueron la única causa de la diferencia.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t02_s01_c10",
+    "concept": "2.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 2,
+    "statement": "Lee el texto original de práctica:\n“En una experiencia ficticia, dos grupos usaron durante una semana el mismo salón en horarios distintos. Uno dejó carteles para recordar que se apagaran las luces; el otro recibió recordatorios orales. El informe observó menos luces encendidas al salir en el primer grupo. Sin embargo, no comparó cuántas personas había ni cuánto tiempo permanecían. La autora propone repetir la experiencia antes de atribuir la diferencia únicamente a los carteles.”\n\n¿Por qué importa la falta de comparación de participantes y tiempos?",
+    "options": [
+      "Porque demuestra que ningún cartel existió.",
+      "Porque convierte automáticamente el segundo grupo en el ganador.",
+      "Porque prueba que las luces no consumen energía.",
+      "Porque esas diferencias podrían influir en el resultado observado."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Localizamos la evidencia: “no comparó cuántas personas había ni cuánto tiempo permanecían”.\n2. Se señalan variables sin controlar; no se inventa su efecto exacto ni se descarta toda observación.\n3. La alternativa justificada es: Porque esas diferencias podrían influir en el resultado observado.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "cl_t02_s01_c11",
+    "concept": "2.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "comprension_lectora",
+    "semana": 2,
+    "statement": "Lee el texto original de práctica:\n“En una experiencia ficticia, dos grupos usaron durante una semana el mismo salón en horarios distintos. Uno dejó carteles para recordar que se apagaran las luces; el otro recibió recordatorios orales. El informe observó menos luces encendidas al salir en el primer grupo. Sin embargo, no comparó cuántas personas había ni cuánto tiempo permanecían. La autora propone repetir la experiencia antes de atribuir la diferencia únicamente a los carteles.”\n\n¿Qué actitud frente a la conclusión causal se desprende del cierre?",
+    "options": [
+      "Rechazo de toda investigación.",
+      "Burla hacia quienes usaron carteles.",
+      "Cautela y necesidad de más comprobación.",
+      "Certeza absoluta de una causa única."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Localizamos la evidencia: “propone repetir la experiencia”.\n2. Repetir antes de atribuir una causa única expresa prudencia, no certeza ni burla.\n3. La alternativa justificada es: Cautela y necesidad de más comprobación.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/comprension_lectora/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

@@ -1,137 +1,145 @@
 # Secuencias Vocálicas: Diptongo, Triptongo y Hiato (Acentual y Simple)
 
-## INTRODUCCIÓN
+Una secuencia de letras vocálicas no permite decidir por sí sola cuántas sílabas pronuncia cualquier hablante. En este nivel se distingue el análisis silábico indicado en cada ejemplo de las convenciones usadas para la acentuación gráfica. Esa separación evita convertir la escritura de una tilde en una explicación física de la pronunciación.
 
-Contar vocales parece trivial hasta que admisión te pone delante antiguo, navío, petróleo y bahía en la misma oración y te pide diptongos e hiatos exactos. Las secuencias vocálicas son el ejercicio práctico más repetido de Lenguaje porque combinan silabeo, fuerza de voz y tildación en una sola operación. Quien domina diptongo, triptongo y los dos hiatos convierte el conteo en un mecanismo infalible.
+Las preguntas especifican cuándo se utiliza una división escolar, cuándo se aplica una convención ortográfica y si el conteo se hace dentro de cada palabra. No se suman encuentros entre palabras ni licencias poéticas si la consigna no los incluye.
 
-En esta lección recorrerás las cuatro secuencias con sus reglas. Partirás del diptongo homosilábico con sus tres clases, pasarás por el triptongo de estructura inviolable con la y vocálica, dominarás el hiato simple y el hiato acentual con su tilde robúrica, y cerrarás con la h intermedia y el conteo modelo. Cada secuencia trae sus combinaciones, sus ejemplos silabeados y sus trampas.
+## 3.2.1 — Diptongos y tipos de secuencias
 
-Al final podrás clasificar todo sin dudar. Sabrás por qué via-je es creciente y pai-sa-je es decreciente, por qué cui-da-do es homogéneo, por qué Pa-ra-guay es triptongo, por qué ca-os y chi-i-ta son simples, por qué Ra-úl y ba-úl exigen robúrica, y por qué la h de ahijado y búho no cambia nada.
+Un **diptongo** reúne dos vocales en una misma sílaba en el análisis indicado. Un **hiato** las sitúa en sílabas diferentes. Un **triptongo** reúne tres vocales en una sílaba. La definición atiende a organización silábica; no se decide contando cuántas letras tiene toda la palabra.
 
-## DESARROLLO DEL TEMA
+En la terminología ortográfica, **abiertas** son a, e y o; **cerradas**, i y u. En la clasificación articulatoria más detallada se distingue también la altura media de e y o. Aquí abierta y cerrada permiten nombrar las combinaciones relevantes para las reglas de acentuación, sin confundirlas con dos grados absolutos de fuerza.
 
-# 3.2.1 — El diptongo homosilábico con sus tres clases
+### Creciente, decreciente y dos cerradas distintas
 
-**¿Qué es?** El diptongo es la unión de dos vocales que se pronuncian dentro de una misma sílaba. Se clasifica en creciente con cerrada átona más abierta, decreciente con abierta más cerrada átona y homogéneo con dos cerradas distintas. Es la respuesta cuando dos vocales contiguas comparten sílaba con la cerrada en posición átona. Sigue las reglas generales de tildación sin privilegios.
+En la clasificación escolar se llama **creciente** al diptongo de cerrada átona seguida de abierta, como ia en via-je. Se llama **decreciente** al de abierta seguida de cerrada átona, como ei en pei-ne. El nombre describe el orden del ejemplo, no una garantía de que toda combinación escrita se realice igual en cualquier situación.
 
-**¿Cómo funciona?** El flujo de las tres clases opera así.
+La secuencia de **dos cerradas distintas**, ui o iu, se llama a veces diptongo homogéneo en materiales escolares. A efectos de acentuación gráfica se trata como diptongo. Esta convención no significa que ninguna de sus vocales pueda recibir acento ni tilde. Hay que aplicar la regla de la palabra completa.
 
-- Apertura progresiva → **Diptongo creciente** con cerrada átona más abierta en combinaciones ia, ie, io, ua, ue y uo, con ejemplos via-je, hie-rro, pio-jo, gua-nte, fue-go y cuo-ta
-- Cierre progresivo → **Diptongo decreciente** con abierta más cerrada átona en combinaciones ai, ei, oi, au, eu y ou, con ejemplos pai-sa-je, pei-ne, boi-na, cau-sa, deu-da y souvenir con ou
-- Cierre doble → **Diptongo homogéneo** con dos cerradas distintas iu y ui, con ejemplos ciu-dad, cui-da-do, cons-trui-do y diur-no
-- H invisible → **Regla de la h intermedia** donde ahi-ja-do conserva su diptongo decreciente ai pese a la h intercalada
+| Análisis o convención | Secuencia observada | Clasificación empleada |
+|---|---|---|
+| Via-je | I átona seguida de a en una sílaba | Diptongo creciente |
+| Pei-ne | E seguida de i átona en una sílaba | Diptongo decreciente |
+| Ciu-dad | I y u distintas | Diptongo de dos cerradas para acentuación gráfica |
+| Cui-da-do | U e i distintas | Diptongo de dos cerradas para acentuación gráfica |
 
-**¿Por qué?** Porque la cerrada átona es lo bastante débil para fundirse con su vecina en un solo golpe de voz. La lengua transita de la posición cerrada a la abierta o viceversa sin corte silábico. Por eso via-je une i átona con a en una sílaba y pai-sa-je une a con i átona igualmente. El homogéneo con iu y ui funde dos cierres distintos porque ninguno domina al otro. La h, al carecer de sonido, no interrumpe el tránsito.
+No se enseña que dos vocales se unen porque sean demasiado débiles para separarse. Esa imagen no sustituye una descripción silábica ni explica todas las variaciones de pronunciación. Tampoco se debe llamar hiato a cualquier secuencia con una letra tildada: hay diptongos que llevan tilde.
 
-**¿Cómo se diferencia?** Cada diptongo se diferencia por su orden. Cerrada débil antes de abierta es creciente como via-je, abierta antes de cerrada débil es decreciente como pei-ne y ahijado, dos cerradas distintas son homogéneo como ciu-dad y cui-da-do. La trampa ofrece hiato acentual ante ahijado por la h, pero la h no rompe diptongos. Otra trampa tilda construido con tilde, pero ui grave terminado en vocal no lleva tilde jamás.
+### Por qué ui puede llevar tilde
 
-# 3.2.2 — El triptongo de tres vocales con la y vocálica
+Cuidado no lleva tilde según su clasificación y terminación, mientras que **cuídate** la lleva por ser esdrújula en el análisis cuí-da-te. En un diptongo de dos cerradas distintas, la tilde correspondiente se coloca sobre la segunda vocal. No se puede concluir «ui e iu nunca se tildan».
 
-**¿Qué es?** El triptongo es la unión de tres vocales en una misma sílaba bajo la estructura fija de cerrada átona más abierta tónica o abierta más cerrada átona. Si el acento cae sobre una de las cerradas, el triptongo se rompe. La grafía y al final de sílaba tiene valor fónico de vocal i. Es la secuencia menos frecuente y por eso la más regalada cuando aparece.
+Otro ejemplo de escritura es **construido**, sin tilde, frente a formas que sí la requieren por sus reglas. Para decidir no basta con localizar ui: hay que reconocer el acento y la clasificación ortográfica de la palabra. El hecho de que un diptongo pueda tener tilde impide usar «hay tilde» como prueba universal de hiato.
 
-**¿Cómo funciona?** El flujo triple opera así.
+La clasificación ortográfica mantiene un criterio común para escribir aunque existan realizaciones individuales diferentes. Si una pregunta investiga la pronunciación de una persona concreta, debe aportar ese dato. Si pregunta cómo se escribe una palabra según la norma, se aplica la convención correspondiente.
 
-- Estructura inviolable → **Cerrada átona más abierta más cerrada átona** entendida como única plantilla posible del triptongo
-- Valor vocálico → **Letra y final** que suena como i en U-ru-guay, buey y huayno
-- Ejemplos modelo → **Lim-piáis, a-ve-ri-güéis, huay-co y Pa-ra-guay** con la sílaba tónica cargando las tres vocales
-- Ruptura posible → **Acento en cerrada** que destruye el triptongo y genera hiatos como en cons-tru-í-ais
+## Esquema de ejemplos
 
-**¿Por qué?** Porque tres vocales solo caben en un golpe de voz si las dos cerradas escoltan débiles a la abierta central. En Pa-ra-guay la sílaba guay une u átona más a tónica más i de la y en una sola emisión. Si la cerrada se tensa con el acento, reclama su propia sílaba y el edificio se parte. Por eso construíais no es triptongo sino hiatos encadenados, como demuestra el reto extremo.
+Este mapa compara clases en ejemplos delimitados. Las ramas no son etapas ni instrucciones para cambiar la pronunciación. No representan todas las variantes posibles de cada secuencia.
 
-**¿Cómo se diferencia?** El triptongo se diferencia por su triple plantilla. Cerrada débil más abierta más cerrada débil con y final vocálica es triptongo como Paraguay. Cualquier acento sobre las cerradas lo convierte en hiato. La trampa ofrece triptongo ante huía, pero huía es hiato acentual con tilde. Otra trampa niega valor vocálico a la y, pero en guay la y es la i final del triptongo.
+```mermaid
+graph TD
+ ROOT["Secuencias en los análisis indicados"]
+ D["Diptongo: dos vocales en una sílaba"]
+ D1["via-je: creciente"]
+ D2["pei-ne: decreciente"]
+ D3["cuidado y cuídate: ui según convención ortográfica"]
+ H["Hiato: vocales en sílabas diferentes"]
+ H1["pa-ís: abierta y cerrada tónica"]
+ H2["ca-os: dos abiertas distintas"]
+ H3["le-er: dos iguales"]
+ T["Triptongo: tres vocales en una sílaba"]
+ T1["Pa-ra-guay: secuencia final del ejemplo"]
+ ROOT --> D
+ D --> D1
+ D --> D2
+ D --> D3
+ ROOT --> H
+ H --> H1
+ H --> H2
+ H --> H3
+ ROOT --> T
+ T --> T1
+```
 
-# 3.2.3 — El hiato simple y el hiato acentual con tilde robúrica
+## 3.2.2 — Triptongo y y final
 
-**¿Qué es?** El hiato es la separación de dos vocales contiguas en sílabas distintas. Se divide en simple o formal con dos abiertas contiguas o dos cerradas idénticas, y en acentual o adiptongo con abierta más cerrada tónica en cualquier orden. El acentual se rige por la ley de la tilde robúrica o disolvente. Es la respuesta cuando las vocales vecinas se pronuncian en sílabas separadas.
+El **triptongo** contiene tres vocales en una misma sílaba en el análisis indicado. Para acentuación gráfica se considera el patrón de vocal abierta entre dos cerradas, siempre que ninguna de estas últimas sea tónica. Que la abierta sea tónica en un ejemplo no significa que todo triptongo ocupe necesariamente una sílaba tónica.
 
-**¿Cómo funciona?** El flujo del hiato opera así.
+En **Pa-ra-guay**, la secuencia final reúne u, a e i; la última vocal está representada por y. Las cerradas son átonas y la a es tónica en ese ejemplo. La letra y puede tener valor vocálico en determinadas posiciones; no debe analizarse siempre como una consonante por el solo hecho de estar escrita con esa letra.
 
-- Separación de fuertes → **Hiato simple de abiertas** con a, e y o contiguas como po-e-ta, ca-os, te-a-tro y a-é-re-o
-- Separación de gemelas → **Hiato simple de cerradas idénticas** con ii y uu como ti-i-ta, chi-i-ta, du-un-vi-ra-to y o-dri-is-ta
-- Ruptura tónica → **Hiato acentual** con cerrada tónica junto a abierta como sa-bí-a, ba-úl, ra-íz, o-í-do, grú-a, tí-o, con-ti-nú-o y bú-ho
-- Ley de oro → **Tilde robúrica obligatoria** donde la cerrada tónica se tilda siempre sin importar reglas de agudas o graves, rompiendo el diptongo
-- H invisible → **Regla de la h intermedia** donde bú-ho, pro-hí-be y al-co-hol mantienen su hiato pese a la h
+No toda sucesión de tres letras relacionadas con vocales forma triptongo. Debe comprobarse su organización. Tampoco una y situada en otra posición tiene necesariamente el mismo valor. La pregunta de Paraguay delimita la secuencia final y no permite extender su análisis a toda palabra con y.
 
-**¿Por qué?** Porque la cerrada tónica reclama protagonismo y no acepta fundirse. Cuando la débil i o u suena más fuerte que la fuerte a, e u o, la sílaba se parte y la tilde corona a la vencedora. Por eso Ra-úl, te-ní-a y ba-úl llevan tilde aunque sean graves terminadas en vocal o consonante que normalmente no se tildarían. La mnemotecnia de refuerzo fija la ley. **La cerrada con fuerza rompe la sílaba y lleva tilde.** Si la débil suena más fuerte que la fuerte, se corona con tilde disolvente como en Ma-rí-a y ba-úl.
+Las palabras con triptongo se someten a las reglas de acentuación gráfica pertinentes. Si corresponde tilde en la secuencia, se coloca en la vocal abierta. Un caso con y final exige además atender a su tratamiento ortográfico en la terminación; no se decide una tilde solo porque la y tenga valor vocálico en la pronunciación.
 
-**¿Cómo se diferencia?** Cada hiato se diferencia por su causa. Dos abiertas o dos cerradas iguales separadas por naturaleza son simple como ca-os y chi-i-ta, cerrada tónica junto a abierta separada por fuerza es acentual como tí-o y o-í-do. El simple sigue reglas generales, el acentual tilda siempre. La trampa ofrece diptongo ante tí-o o ru-i-do mal silabeado, pero la cerrada tónica impone hiato. Otra trampa cuenta habitación como hiato, pero ión es diptongo creciente.
+Si una de las cerradas es tónica, no se conserva ese patrón de triptongo ortográfico. Sin embargo, no basta con decir que cualquier grupo restante se convierte en una cadena de hiatos: hay que analizar cada par y la palabra completa. Por eso se retiran silabeos difíciles no justificados y se enseñan los casos concretos de la práctica.
 
-# 3.2.4 — Conteo modelo y panorama fónico como cierre
+## 3.2.3 — Clases de hiato y tildación
 
-**¿Qué es?** El conteo modelo aplica todas las secuencias a textos reales y el panorama fónico recuerda la base de fonemas, sílabas y acentuación que sostiene el análisis. Es la respuesta cuando piden cuántos diptongos e hiatos hay en una oración o cuántas tildes se omitieron en un párrafo. El método es silabear palabra por palabra marcando cada grupo vocálico.
+### Dos abiertas distintas o dos iguales
 
-**¿Cómo funciona?** El flujo del conteo opera así.
+El análisis **ca-os** separa a y o, dos vocales abiertas distintas. **Le-er** separa dos e iguales. En la clasificación ortográfica, esas combinaciones se consideran hiatos. Los hiatos de dos vocales iguales no se limitan a ii o uu: también pueden aparecer con vocales abiertas iguales.
 
-- Oración modelo → **El antiguo navío transportaba petróleo hacia la bahía** silabeada como an-ti-guo con diptongo uo, na-ví-o con hiato acentual í-o, pe-tró-le-o con hiato simple e-o, ha-cia con diptongo ia y ba-hí-a con hiato acentual í-a
-- Resultado → **2 diptongos y 3 hiatos** entendidos como antiguo y hacia frente a navío, petróleo y bahía
-- Párrafo de tildes → **Aun, por qué, Raúl, negó, tío, Héctor, él y recapacitará** con 8 tildes omitidas donde mas sin tilde equivale a pero
-- Base fónica → **24 fonemas con 5 vocales y 19 consonantes, 27 grafías, sílaba con ataque, cima y coda, y acentuación general con agudas, graves y esdrújulas siempre tildadas**
+Estos casos siguen las reglas generales de acentuación. **Leer no lleva tilde** por el simple hecho de contener un hiato. No se debe enseñar que hiato y tilde sean equivalentes. Poeta puede escribirse sin tilde, mientras una palabra con otra posición acentual o terminación puede requerirla.
 
-**¿Por qué?** Porque el conteo es mecánico si el silabeo es correcto. Cada palabra aporta su grupo vocálico y la suma decide. Antiguo aporta uo diptongo, navío aporta í-o hiato, petróleo aporta e-o hiato, hacia aporta ia diptongo y bahía aporta í-a hiato. El párrafo de tildes combina todavía con tilde, interrogativa indirecta, hiatos acentuales, agudas en vocal, grave en erre, pronombre tónico y futura aguda. Nueve fenómenos en ocho tildes porque mas adversativo no lleva.
+En el habla pueden producirse ajustes y uniones vocálicas según el contexto o la variedad. Una convención para escribir no es una predicción infalible de cada emisión. Las divisiones que se muestran en este nivel son las del análisis anunciado; si se pide describir otra pronunciación, hace falta indicarla.
 
-**¿Cómo se diferencia?** Cada conteo se diferencia por grupo. Uo y ia son diptongos, í-o e í-a son hiatos acentuales, e-o es hiato simple. Aún de todavía lleva tilde, aun de incluso no. Por qué interrogativo lleva, porque causal no. Raúl y tío son hiatos con robúrica, negó y recapacitará son agudas en vocal, Héctor es grave en erre, él pronombre lleva y mas adversativo no. La trampa resta uno al confundir habitación, pero habitación es diptongo.
+### Cerrada tónica junto a abierta
 
-## CONCEPTOS IMPORTANTES
+En **pa-ís**, **ba-úl** y **tí-o** hay una vocal cerrada tónica junto a una abierta. La regla ortográfica exige tilde en la cerrada tónica, aunque la palabra no la llevara por la regla general de su terminación. No significa que se incumpla la ortografía: es una regla específica dentro del mismo sistema.
 
-- Diptongo como unión homosilábica de dos vocales con la cerrada en posición átona.
-- Creciente con cerrada átona más abierta en ia, ie, io, ua, ue y uo con via-je y fue-go.
-- Decreciente con abierta más cerrada átona en ai, ei, oi, au, eu y ou con pai-sa-je y pei-ne.
-- Homogéneo con dos cerradas distintas iu y ui con ciu-dad y cui-da-do.
-- Triptongo con cerrada átona más abierta más cerrada átona con lim-piáis y Pa-ra-guay.
-- Letra y final con valor de i vocálica en guay, buey y huayno.
-- Hiato como separación heterosilábica de vocales contiguas en sílabas distintas.
-- Simple con dos abiertas como ca-os y dos cerradas idénticas como chi-i-ta.
-- Acentual con cerrada tónica junto a abierta y tilde robúrica siempre como Ra-úl y ba-úl.
-- H intermedia invisible que no rompe el diptongo de ahijado ni impide el hiato de búho.
+Algunos materiales llaman a esa tilde robúrica o disolvente. Esas denominaciones no deben convertirse en la idea de que el signo gráfico produce físicamente la separación. La pronunciación, la posición del acento y la convención ortográfica se analizan de forma relacionada; una marca escrita no funciona como una fuerza que rompe un sonido.
 
-## DIFERENCIAS QUE CONFUNDEN
+Se precisa siempre el tipo de vocales. La regla de cerrada tónica junto a abierta no debe aplicarse sin más a ui o iu, que son dos cerradas distintas. **Cuídate** muestra que una cerrada puede llevar tilde dentro de un diptongo ortográfico. Escribir una tilde sobre i no prueba, por sí solo, un hiato.
 
-- Diptongo frente a hiato. Diptongo comparte sílaba con cerrada débil, hiato reparte sílabas por naturaleza o por fuerza. Via-je une, tí-o separa.
-- Creciente frente a decreciente. Creciente abre con cerrada antes como ia de hacia, decreciente cierra con cerrada después como ai de paisaje. El orden de la cerrada decide.
-- Homogéneo frente a simple de idénticas. Homogéneo une dos cerradas distintas iu y ui en una sílaba, simple separa dos cerradas iguales ii en dos sílabas. Cuidado con cuidado une, chi-i-ta separa.
-- Simple frente a acentual. Simple separa por composición como ca-os, acentual separa por fuerza tónica como ca-í-da con robúrica. La tilde sobre la cerrada delata al acentual.
-- Triptongo frente a hiatos encadenados. Triptongo concentra tres vocales débiles en torno a la abierta como guay, encadenados reparten con cerrada tónica como cons-tru-í-ais. El acento en la cerrada parte el triptongo.
-- Ahijado frente a búho. Ahijado une ai decreciente pese a la h, búho separa ú-o acentual pese a la h. La misma h invisible produce efectos opuestos según la fuerza.
-- Habitación frente a baúl. Habitación une ión creciente sin tilde especial, baúl separa a-úl con robúrica. La posición del acento decide el cómputo del conteo.
+### La h intercalada
 
-## DATOS IMPORTANTES
+La h intercalada **no determina por sí sola** si una secuencia forma hiato o diptongo. En **bú-ho**, la ú es cerrada tónica y se escribe tilde junto a o abierta; la h no causa esa separación. Tampoco hace cerrada la sílaba bú, porque no ocupa una coda pronunciada en ese ejemplo.
 
-- Combinaciones crecientes con ia, ie, io, ua, ue y uo.
-- Combinaciones decrecientes con ai, ei, oi, au, eu y ou.
-- Combinaciones homogéneas con iu y ui que nunca llevan tilde en graves terminadas en vocal.
-- Plantilla del triptongo con cerrada átona más abierta más cerrada átona.
-- Simples modelo con po-e-ta, ca-os, te-a-tro, ti-i-ta y chi-i-ta.
-- Acentuales modelo con sa-bí-a, ba-úl, ra-íz, o-í-do, tí-o y bú-ho.
-- Ley de oro con cerrada tónica tildada siempre aunque rompa reglas generales.
-- H intermedia con ahi-ja-do diptongo y bú-ho, pro-hí-be y al-co-hol hiatos.
-- Conteo modelo con 2 diptongos y 3 hiatos en la oración del navío y la bahía.
-- Párrafo modelo con 8 tildes omitidas y mas adversativo sin tilde.
+En **ahi-ja-do**, el análisis indicado reúne a e i átona en la primera sílaba y se denomina diptongo decreciente. La presencia de h no obliga a crear una sílaba distinta. El contraste entre ambos ejemplos permite ver que h no significa automáticamente separar ni automáticamente unir.
 
-## EJEMPLOS
+Una regla sobre la h muda intercalada en estos ejemplos no equivale a afirmar que toda h de cualquier palabra carezca siempre de pronunciación. Esa cuestión se delimita en el nivel anterior. Aquí se evalúa su relación con las secuencias concretas que la práctica muestra.
 
-- Definición de hiato. Enunciado con separación de vocales contiguas en sílabas distintas. Resolución con fenómeno heterosilábico frente a diptongo y triptongo. Clave con Hiato.
-- Búho con h. Enunciado con efecto de la h en bú-ho. Resolución con h que no impide el hiato acentual de la cerrada tónica con robúrica. Clave con ruptura en hiato acentual.
-- Creciente con viaje. Enunciado con palabra de diptongo exclusivamente creciente. Resolución con via-je de i átona más a frente a paisaje decreciente y ciudad homogéneo. Clave con Via-je.
-- Nombre de la regla. Enunciado con tilde obligatoria sobre cerrada tónica junto a abierta. Resolución con tilde robúrica o disolvente que destruye el diptongo. Clave con robúrica o disolvente.
-- Triptongo de Paraguay. Enunciado con estructura de Pa-ra-guay. Resolución con u átona más a tónica más i de la y como plantilla triple. Clave con esa estructura.
-- Simple de abiertas. Enunciado con hiato simple de dos abiertas. Resolución con ca-os de a más o frente a tío acentual y fuego diptongo. Clave con Ca-os.
-- Homogéneo con cuidado. Enunciado con secuencia ui de cui-da-do. Resolución con dos cerradas distintas como diptongo homogéneo. Clave con homogéneo.
-- Decreciente con ahijado. Enunciado con concurrencia de ahi-ja-do. Resolución con a más i átona decreciente pese a la h intermedia. Clave con diptongo decreciente.
-- Conteo de tres acentuales. Enunciado con hiatos en Raúl tenía un baúl con habitación. Resolución con Ra-úl, te-ní-a y ba-úl frente a ión diptongo. Clave con 3.
-- Simple de idénticas. Enunciado con chi-i-ta y o-dri-is-ta. Resolución con cerradas iguales separadas como hiato simple. Clave con hiato simple.
-- Conteo del navío. Enunciado con antiguo, navío, petróleo, hacia y bahía. Resolución con 2 diptongos en antiguo y hacia y 3 hiatos en navío, petróleo y bahía. Clave con 2 y 3.
-- Párrafo de 8 tildes. Enunciado con aun, por qué, Raúl, negó, tío, Héctor, él y recapacitará. Resolución con conteo de ocho donde mas adversativo no tilda. Clave con 8.
-- Reto de proposiciones. Enunciado con 24 fonemas verdadero, ahijado sin hiato, fonemas sin significado y construíais sin triptongo. Resolución con solo la primera verdadera. Clave con Solo I.
-- Refuerzo fónico. 24 fonemas con 5 vocales, poligrafía de cama, kilo y queso, h muda de hoja, trans trabada y pan con ataque y coda, porque la base sostiene todo conteo.
+| Ejemplo analizado | Secuencia relevante | Motivo ortográfico o silábico |
+|---|---|---|
+| País: pa-ís | A e í en sílabas distintas | Tilde en cerrada tónica junto a abierta |
+| Búho: bú-ho | Ú y o en sílabas distintas | La h no causa el hiato ni impide la tilde |
+| Caos: ca-os | A y o | Hiato de abiertas distintas |
+| Leer: le-er | E y e | Hiato de iguales; no obliga por sí solo a tildar |
+| Ahijado: ahi-ja-do | A e i átona | Diptongo en el análisis indicado, pese a h |
+| Cuídate: cuí-da-te | U e í | Diptongo ortográfico con tilde por la regla general |
 
-## IDEA CLAVE
+## 3.2.4 — Conteo con un ámbito explícito
 
-La fuerza de voz manda sobre las vocales vecinas. Si la cerrada es débil, se funde en diptongo o triptongo dentro de la misma sílaba. Si la cerrada es tónica, rompe la sílaba en hiato acentual y se corona con tilde robúrica. Si las vecinas son dos abiertas o dos gemelas, se separan por naturaleza en hiato simple. La h nunca vota en esta elección.
+Para contar secuencias hay que fijar la unidad. Puede pedirse analizar el interior de cada palabra, una pronunciación concreta o un verso con fenómenos entre palabras. Son tareas diferentes. La práctica de este nivel cuenta **solo el interior de cada palabra**, sin sinalefas ni uniones a través de espacios.
 
-## CLAVE DE ADMISIÓN
+Considera «Raúl tenía un baúl de recuerdos en su habitación». Se piden únicamente los hiatos de cerrada tónica junto a abierta dentro de palabra. El análisis encuentra Ra-úl, te-ní-a y ba-úl. Habitación no añade uno de esa clase en el análisis escolar utilizado. La respuesta es tres.
 
-Misma sílaba igual a diptongo o triptongo, distintas sílabas igual a hiato. Ia y ue igual a creciente, ai y au igual a decreciente, iu y ui igual a homogéneo sin tilde. Guay igual a triptongo con y vocálica. Ca-os e ii igual a simple, cerrada tónica igual a acentual con robúrica siempre. **La cerrada con fuerza rompe la sílaba y lleva tilde.** H igual a invisible en ahijado y búho. Antiguo y hacia igual a diptongos, navío, petróleo y bahía igual a hiatos. Ra-úl, te-ní-a y ba-úl igual a tres acentuales.
+| Palabra | Secuencia que interesa | Aporte al conteo solicitado |
+|---|---|---|
+| Raúl | A-ú | Un hiato de la clase pedida |
+| Tenía | Í-a | Un hiato de la clase pedida |
+| Baúl | A-ú | Un hiato de la clase pedida |
+| Recuerdos | Ue en el análisis escolar | Ninguno de la clase pedida |
+| Habitación | Ió en el análisis escolar | Ninguno de la clase pedida |
 
-## RESUMEN
+El resultado no es una afirmación sobre cuántos encuentros vocálicos de cualquier naturaleza hay al recitar toda la oración. Tampoco se cuenta cada palabra tildada como un hiato: la tilde puede responder a reglas diferentes. Primero se clasifica la secuencia; después se suma.
 
-Secuencias con diptongo homosilábico creciente, decreciente y homogéneo, triptongo triple con y vocálica, hiato simple de abiertas y gemelas, y hiato acentual con tilde robúrica obligatoria. H intermedia que no altera diptongos ni hiatos. Conteos modelo con 2 diptongos y 3 hiatos en el navío y 8 tildes en el párrafo. Base fónica con 24 fonemas, sílabas con ataque, cima y coda, y acentuación general como soporte del análisis.
+Otro ejemplo de análisis escolar es «El antiguo navío transportaba petróleo hacia la bahía». Dentro de palabra, antiguo y hacia aportan los diptongos señalados en uo e ia; navío y bahía presentan los hiatos í-o e í-a, y petróleo presenta e-o. Si se cuentan todas esas clases en ese análisis, se obtienen dos diptongos y tres hiatos. Se distingue ese encargo del anterior, que pedía solo una clase de hiato.
+
+No se ofrece un conteo de tildes para un párrafo que no se muestra. Un resultado numérico debe acompañarse del texto completo y de la condición que define qué se cuenta. Tampoco se utilizan expresiones como método infalible: una clasificación puede estar mal planteada si se omite la pronunciación o se mezclan criterios.
+
+## Importante
+
+**La h no causa por sí sola un hiato, y una tilde no demuestra por sí sola que lo haya.** Ui e iu pueden llevar tilde cuando corresponde. Distingue análisis de pronunciación y convención ortográfica, y fija si el conteo se hace dentro de palabra o entre palabras.
+
+## Procedimiento para resolver
+
+1. Lee qué se cuenta: sílabas, diptongos, triptongos, hiatos de una clase o tildes.
+2. Identifica la convención o pronunciación indicada en la consigna.
+3. Separa las palabras si se pide análisis interno y marca solo las secuencias pertinentes.
+4. Distingue abiertas, cerradas y posición del acento; no atribuyas causalidad a una h intercalada.
+5. Para tildar, aplica las reglas correspondientes, incluidas las específicas de hiato.
+6. Suma después de clasificar y explica cada aporte, para que el resultado pueda verificarse.
+
+En país se justifica la tilde por la cerrada tónica junto a abierta. En cuídate se aplica la regla general de esdrújulas y la tilde cae sobre la segunda cerrada del diptongo. En leer, el hiato de iguales no obliga a una tilde. Los tres casos muestran por qué no sirve una única regla de «toda tilde separa» o «todo hiato se tilda».

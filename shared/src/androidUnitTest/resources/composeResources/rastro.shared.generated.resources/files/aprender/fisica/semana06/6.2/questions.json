@@ -1,1 +1,200 @@
-[{"concept":"6.2.1","correctIndex":2,"explanation":"**Resolución:** 1. Establecemos el Nivel de Referencia (N.R.) en el suelo horizontal. 2. Identificamos los estados inicial y final: - Estado inicial 1 (en el suelo, h_1 = 0, v_1 = 12\\text{ m/s}): E_{m1} = \\frac{1}{2} m v_1^2 = \\frac{1}{2}(4\\text{ kg})(12\\text{ m/s})^2 = 2 \\times 144 = 288\\text{ J} - Estado final 2 (en la cima de la rampa lisa, v_2 = 0, altura h): E_{m2} = m g h = (4\\text{ kg})(10\\text{ m/s}^2) h = 40 h 3. Calculamos el trabajo realizado por la fuerza no conservativa (rozamiento cinético en el tramo horizontal de 10\\text{ m}): - Fuerza normal en el plano horizontal: N = mg = (4)(10) = 40\\text{ N}. - Fuerza de rozamiento: f_k = \\mu_k N = (0.25)(40\\text{ N}) = 10\\text{ N}. - Trabajo de la fricción: W_{FNC} = W_{f_k} = -f_k \\cdot L = -(10\\text{ N}) \\times (10\\text{ m}) = -100\\text{ J} 4. Aplicamos el Teorema de las Fuerzas No Conservativas: W_{FNC} = \\Delta E_m = E_{m2} - E_{m1} -100 = 40h - 288 40h = 288 - 100 = 188 h = \\frac{188}{40} = 4.7\\text{ metros} **Respuesta:** B ---","fuente":"temario","id":"fis_t06_s02_c01","options":["5.2\\text{ m}","6.0\\text{ m}","3.6\\text{ m}","4.7\\text{ m}"],"pedagogicalTier":"concepto","semana":6,"statement":"**Enunciado:** Un bloque de masa m = 4\\text{ kg} se proyecta horizontalmente sobre una superficie áspera con una rapidez inicial de v_0 = 12\\text{ m/s}. El bloque recorre una distancia horizontal L = 10\\text{ metros} sobre un tramo con coeficiente de fricción cinética \\mu_k = 0.25, y a continuación asciende por una rampa curva lisa (sin rozamiento) hasta detenerse momentáneamente en un punto B a una altura h sobre el suelo horizontal. Determine la altura máxima h alcanzada por el bloque. (g = 10\\text{ m/s}^2).","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"6.2.2","correctIndex":3,"explanation":"**Resolución:** 1. Calculamos el trabajo neto realizado por la fuerza variable mediante la integral de línea unidimensional: W = \\int_{x_0}^{x_f} F(x) \\, dx = \\int_{0}^{3} (6x^2 - 4x + 5) \\, dx 2. Integramos término a término: W = \\left[ 6 \\frac{x^3}{3} - 4 \\frac{x^2}{2} + 5x \\right]_{0}^{3} = \\left[ 2x^3 - 2x^2 + 5x \\right]_{0}^{3} 3. Evaluamos en los límites de integración: W = [2(3)^3 - 2(3)^2 + 5(3)] - [0] W = [2(27) - 2(9) + 15] = 54 - 18 + 15 = 51\\text{ J} El trabajo neto realizado es **51\\text{ Joules}**. 4. Aplicamos el Teorema del Trabajo y la Energía Cinética para hallar la rapidez final: W_{\\text{neto}} = \\Delta E_c = \\frac{1}{2} m v_f^2 - \\frac{1}{2} m v_0^2 51 = \\frac{1}{2}(2\\text{ kg}) v_f^2 - \\frac{1}{2}(2\\text{ kg})(3\\text{ m/s})^2 51 = v_f^2 - 9 \\implies v_f^2 = 51 + 9 = 60 v_f = \\sqrt{60} = 2\\sqrt{15} \\approx 7.75\\text{ m/s} - El trabajo neto es 51\\text{ J} y la rapidez final es \\sqrt{60}\\text{ m/s}. **Respuesta:** C --- 1. ¿Qué unidad dimensional en el Sistema Internacional corresponde al trabajo mecánico? 2. ¿Cuánto vale el trabajo realizado por la fuerza centrípeta sobre una partícula en cualquier trayectoria circular? 3. Si un motor absorbe una potencia eléctrica de 10\\text{ kW} y realiza un trabajo útil de 8\\text{ kW}, ¿cuál es su eficiencia mecánica? 4. Si la rapidez de un automóvil se duplica (v \\to 2v), ¿en qué factor se incrementa su energía cinética? 5. ¿Cuál de las siguientes fuerzas mecánicas es de naturaleza NO conservativa (disipativa)? --- 1: B | 2: B | 3: C | 4: C | 5: D","fuente":"temario","id":"fis_t06_s02_c02","options":["W = 60\\text{ J}; v_f = 7.0\\text{ m/s}","W = 51\\text{ J}; v_f = \\sqrt{60}\\text{ m/s} \\approx 7.75\\text{ m/s}","W = 45\\text{ J}; v_f = 6.5\\text{ m/s}","W = 51\\text{ J}; v_f = 6.0\\text{ m/s}"],"pedagogicalTier":"concepto","semana":6,"statement":"**Enunciado:** Una partícula de masa m = 2\\text{ kg} se desplaza a lo largo del eje X bajo la acción de una fuerza resultante unidimensional cuya magnitud varía con la posición según la ley:","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"6.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: E_{pe} = \\frac{1}{2} k x^2.","fuente":"temario","id":"fis_t06_s02_c03","options":["W_{\\text{cons}} = -\\Delta E_p = -(E_{pf} - E_{p0}).","Aproximadamente 746\\text{ Watts}.","E_{pe} = \\frac{1}{2} k x^2.","Tiene signo negativo (W_{f_k} < 0), porque se opone al desplazamiento relativo (\\cos 180^\\circ = -1)."],"pedagogicalTier":"concepto","semana":6,"statement":"¿Cuál es la fórmula de la energía potencial elástica almacenada en un resorte deformado una distancia x?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"6.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: W_{\\text{cons}} = -\\Delta E_p = -(E_{pf} - E_{p0}).","fuente":"temario","id":"fis_t06_s02_c04","options":["E_{pe} = \\frac{1}{2} k x^2.","Aproximadamente 746\\text{ Watts}.","Tiene signo negativo (W_{f_k} < 0), porque se opone al desplazamiento relativo (\\cos 180^\\circ = -1).","W_{\\text{cons}} = -\\Delta E_p = -(E_{pf} - E_{p0})."],"pedagogicalTier":"concepto","semana":6,"statement":"¿Qué relación existe entre el trabajo realizado por una fuerza conservativa y la energía potencial correspondiente?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"6.2.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Aproximadamente 746\\text{ Watts}.","fuente":"temario","id":"fis_t06_s02_c05","options":["Aproximadamente 746\\text{ Watts}.","E_{pe} = \\frac{1}{2} k x^2.","W_{\\text{cons}} = -\\Delta E_p = -(E_{pf} - E_{p0}).","Tiene signo negativo (W_{f_k} < 0), porque se opone al desplazamiento relativo (\\cos 180^\\circ = -1)."],"pedagogicalTier":"concepto","semana":6,"statement":"¿A cuántos watts equivale aproximadamente un caballo de fuerza métrico (1 HP)?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"6.2.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Tiene signo negativo (W_{f_k} < 0), porque se opone al desplazamiento relativo (\\cos 180^\\circ = -1).","fuente":"temario","id":"fis_t06_s02_c06","options":["E_{pe} = \\frac{1}{2} k x^2.","Tiene signo negativo (W_{f_k} < 0), porque se opone al desplazamiento relativo (\\cos 180^\\circ = -1).","W_{\\text{cons}} = -\\Delta E_p = -(E_{pf} - E_{p0}).","Aproximadamente 746\\text{ Watts}."],"pedagogicalTier":"concepto","semana":6,"statement":"Si un cuerpo se desplaza sobre una superficie rugosa, ¿qué signo tiene siempre el trabajo realizado por la fuerza de rozamiento cinético?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"6.2.7","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: \\eta = \\frac{P_{\\text{útil}}}{P_{\\text{entregada}}} \\times 100\\%.","fuente":"temario","id":"fis_t06_s02_c07","options":["E_{pe} = \\frac{1}{2} k x^2.","W_{\\text{cons}} = -\\Delta E_p = -(E_{pf} - E_{p0}).","\\eta = \\frac{P_{\\text{útil}}}{P_{\\text{entregada}}} \\times 100\\%.","Aproximadamente 746\\text{ Watts}."],"pedagogicalTier":"concepto","semana":6,"statement":"¿Cómo se calcula el rendimiento o eficiencia mecánica de un motor?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"6.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t06_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"6.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t06_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"6.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t06_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t06_s02_c01",
+    "concept": "6.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 6,
+    "statement": "Un cuerpo cae desde el reposo por una altura de 5 m, sin resistencia. Usa $g=10\\,\\mathrm{m/s^2}$. ¿Con qué rapidez llega abajo?",
+    "options": [
+      "$10\\,\\mathrm{m/s}$",
+      "$20\\,\\mathrm{m/s}$",
+      "$5\\,\\mathrm{m/s}$",
+      "$30\\,\\mathrm{m/s}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La energía potencial se transforma en cinética.\n2. Sustituimos los datos: $v=\\sqrt{2gh}=\\sqrt{2(10)(5)}$.\n3. El resultado pedido es $10\\,\\mathrm{m/s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t06_s02_c02",
+    "concept": "6.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 6,
+    "statement": "Una masa de 4 kg inicia con 12 m/s. El rozamiento disipa 88 J antes de subir por una rampa lisa. Usa $g=10\\,\\mathrm{m/s^2}$. ¿Qué altura máxima alcanza?",
+    "options": [
+      "$10\\,\\mathrm{m}$",
+      "$2.5\\,\\mathrm{m}$",
+      "$15\\,\\mathrm{m}$",
+      "$5\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Restamos la disipación antes de convertir la energía restante en potencial.\n2. Sustituimos los datos: $K_i=4(12^2)/2=288;\\quad h=(288-88)/(4\\cdot10)$.\n3. El resultado pedido es $5\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t06_s02_c03",
+    "concept": "6.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 6,
+    "statement": "Una masa de 2 kg baja 3 m sin rozamiento desde el reposo. Usa $g=10\\,\\mathrm{m/s^2}$. ¿Qué energía cinética gana?",
+    "options": [
+      "$30\\,\\mathrm{J}$",
+      "$180\\,\\mathrm{J}$",
+      "$60\\,\\mathrm{J}$",
+      "$120\\,\\mathrm{J}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La pérdida de energía potencial iguala al aumento de cinética.\n2. Sustituimos los datos: $\\Delta K=mg\\Delta h=2(10)(3)$.\n3. El resultado pedido es $60\\,\\mathrm{J}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t06_s02_c04",
+    "concept": "6.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 6,
+    "statement": "Un cuerpo tiene K=80 J y recibe trabajo neto de −30 J. ¿Cuál es su energía cinética final?",
+    "options": [
+      "$150\\,\\mathrm{J}$",
+      "$50\\,\\mathrm{J}$",
+      "$100\\,\\mathrm{J}$",
+      "$25\\,\\mathrm{J}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El trabajo negativo reduce la energía cinética.\n2. Sustituimos los datos: $K_f=80-30$.\n3. El resultado pedido es $50\\,\\mathrm{J}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t06_s02_c05",
+    "concept": "6.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 6,
+    "statement": "Un resorte ideal de 100 N/m libera la energía de una compresión de 0.2 m a una masa de 1 kg sobre piso liso. ¿Qué rapidez adquiere?",
+    "options": [
+      "$2\\,\\mathrm{m/s}$",
+      "$4\\,\\mathrm{m/s}$",
+      "$1\\,\\mathrm{m/s}$",
+      "$6\\,\\mathrm{m/s}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Igualamos energía elástica y cinética.\n2. Sustituimos los datos: $100(0.2)^2/2=1v^2/2\\Rightarrow v=2$.\n3. El resultado pedido es $2\\,\\mathrm{m/s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t06_s02_c06",
+    "concept": "6.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 6,
+    "statement": "Un motor de potencia útil constante 100 W eleva una masa de 5 kg a rapidez constante. Usa $g=10\\,\\mathrm{m/s^2}$. ¿Qué rapidez de ascenso permite?",
+    "options": [
+      "$4\\,\\mathrm{m/s}$",
+      "$1\\,\\mathrm{m/s}$",
+      "$6\\,\\mathrm{m/s}$",
+      "$2\\,\\mathrm{m/s}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. En ascenso uniforme la fuerza útil iguala al peso.\n2. Sustituimos los datos: $P=mgv\\Rightarrow v=100/[5(10)]$.\n3. El resultado pedido es $2\\,\\mathrm{m/s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t06_s02_c07",
+    "concept": "6.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 6,
+    "statement": "Un cuerpo de 2 kg se detiene desde 6 m/s por rozamiento constante de 6 N en horizontal. ¿Qué distancia recorre?",
+    "options": [
+      "$3\\,\\mathrm{m}$",
+      "$18\\,\\mathrm{m}$",
+      "$6\\,\\mathrm{m}$",
+      "$12\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El trabajo del rozamiento elimina la energía cinética inicial.\n2. Sustituimos los datos: $6d=2(6^2)/2\\Rightarrow d=6$.\n3. El resultado pedido es $6\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t06_s02_c08",
+    "concept": "6.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 6,
+    "statement": "Una máquina eleva 200 N una altura de 3 m en 4 s. ¿Qué potencia útil media desarrolla?",
+    "options": [
+      "$450\\,\\mathrm{W}$",
+      "$150\\,\\mathrm{W}$",
+      "$300\\,\\mathrm{W}$",
+      "$75\\,\\mathrm{W}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El trabajo útil de elevación es peso por altura.\n2. Sustituimos los datos: $P=200(3)/4$.\n3. El resultado pedido es $150\\,\\mathrm{W}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t06_s02_c09",
+    "concept": "6.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 6,
+    "statement": "Una masa de 1 kg cae desde 10 m y llega con K=80 J. Usa $g=10\\,\\mathrm{m/s^2}$ y toma U=0 abajo. ¿Cuánta energía mecánica se disipó?",
+    "options": [
+      "$20\\,\\mathrm{J}$",
+      "$40\\,\\mathrm{J}$",
+      "$10\\,\\mathrm{J}$",
+      "$60\\,\\mathrm{J}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Comparamos energía mecánica inicial y final.\n2. Sustituimos los datos: $E_{dis}=1(10)(10)-80$.\n3. El resultado pedido es $20\\,\\mathrm{J}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t06_s02_c10",
+    "concept": "6.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 6,
+    "statement": "Duplicar la rapidez de una masa constante multiplica su energía cinética por…",
+    "options": [
+      "Dos.",
+      "Cuatro.",
+      "Ocho.",
+      "Un medio."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La energía cinética es proporcional a v².\n2. Al sustituir 2v aparece el factor 2².\n3. El factor es cuatro.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t06_s02_c11",
+    "concept": "6.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 6,
+    "statement": "En un resorte ideal, la fuerza recuperadora…",
+    "options": [
+      "Tiene siempre el mismo sentido que la deformación.",
+      "Se opone a la deformación respecto del equilibrio.",
+      "Es independiente de la deformación.",
+      "Es siempre igual al peso."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La ley de Hooke se escribe con signo recuperador.\n2. Una deformación positiva produce fuerza hacia el equilibrio.\n3. El signo expresa oposición al desplazamiento desde el equilibrio.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

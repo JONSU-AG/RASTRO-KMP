@@ -23,23 +23,29 @@
 
 ## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
 
-```
-                          RAZONAMIENTO CONDICIONAL
-                                     │
-           ┌─────────────────────────┴─────────────────────────┐
-           ▼                                                   ▼
-REGLAS VÁLIDAS DE DEDUCCIÓN                         FALACIAS FORMALES TÍPICAS
-(Tautologías de Inferencia)                        (Invalidez Lógica / Ilusión)
-           │                                                   │
-  ┌────────┴────────┐                                 ┌────────┴────────┐
-  ▼                 ▼                                 ▼                 ▼
-Modus Ponens    Modus Tollens                    Afirmación del      Negación del
- (Afirmar el     (Negar el                        Consecuente         Antecedente
- Antecedente)    Consecuente)                    (q \implies p?)   (\neg p \implies \neg q?)
-  p \to q       p \to q                        INVÁLIDO            INVÁLIDO
-     p           \neg q
-  ───────         ─────────
-  \therefore q  \therefore \neg p
+```mermaid
+graph TD
+ ROOT["Razonamiento condicional"]
+ B1["Deducciones válidas"]
+ B1N1["Modus ponens: de $p\to q$ y $p$, se obtiene $q$."]
+ B1N2["Modus tollens: de $p\to q$ y $\neg q$, se obtiene $\neg p$."]
+ B1N3["Contraposición: $p\to q\equiv\neg q\to\neg p$."]
+ B2["Falacias formales"]
+ B2N1["Afirmación del consecuente: de $p\to q$ y $q$ no se deduce necesariamente $p$."]
+ B2N2["Negación del antecedente: de $p\to q$ y $\neg p$ no se deduce necesariamente $\neg q$."]
+ B3["Contraejemplos"]
+ B3N1["Afirmación del consecuente: p=F y q=V hacen verdaderas las premisas y falsa la conclusión p."]
+ B3N2["Negación del antecedente: p=F y q=V hacen verdaderas las premisas y falsa la conclusión no q."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
 ```
 
 ### Ontología de la Relación Condicional

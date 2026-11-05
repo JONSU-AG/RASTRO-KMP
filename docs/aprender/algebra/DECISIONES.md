@@ -1,0 +1,12 @@
+# Decisiones
+
+IDs y niveles conservados. Ejercicios originales sobre los conceptos existentes; no se atribuyen a exámenes oficiales. Alternativas del mismo ámbito, datos explícitos y desarrollo comprobable. No copiar resoluciones incorrectas de los originales.
+
+02/11/2026: la práctica 02–16 se mantiene como recursos estáticos; el programa de autoría/verificación no se ejecuta en la app. Cinco modelos por nivel con variantes explícitas; no se afirma cobertura avanzada completa. No convertir un resultado del verificador en aprobación automática de la teoría. SymPy es herramienta local de desarrollo, sin dependencia nueva de Android.
+
+
+05/11/2026, teoría 2.1–3.2: las fichas de ponderación y supuestas aplicaciones institucionales se sustituyen por explicaciones del contenido, sin cambiar los títulos del catálogo ni las preguntas ya revisadas. Las propiedades llevan dominio y condiciones; se distinguen supremo/máximo, radio cero/negativo, raíces principales y soluciones, exponentes enteros/racionales y racionalización con factor no nulo. La coincidencia de potencias x^x no se convierte en una prueba de unicidad. La suma telescópica hasta k=99 contiene 99 términos. Los ejemplos de aplicación se declaran supuestos.
+
+La recta numérica es un componente local y nativo, ligado a tres encabezados exactos y al curso algebra mediante algebraStudyGraphic. Aprender y Material llaman a la misma selección. No hay animación temporal de frases: centro, radio, relación y extremos cambian un conjunto matemático comprobable. Los casos con radio nulo y negativo están definidos; infinito no se incluye como extremo real. El gráfico de raíz principal distingue x de su valor absoluto. El resto de secciones no recibe un gráfico por semejanza genérica del título.
+
+Fuentes contrastadas: [OpenStax, raíces y exponentes racionales](https://openstax.org/books/college-algebra-2e/pages/1-3-radicals-and-rational-exponents), [inecuaciones de valor absoluto](https://openstax.org/books/intermediate-algebra-2e/pages/2-7-solve-absolute-value-inequalities), [ecuaciones exponenciales](https://openstax.org/books/precalculus-2e/pages/4-6-exponential-and-logarithmic-equations). Se conserva la materia del texto previo y se redactan ejemplos propios. Identidades y contraejemplos comprobados además mediante cálculo numérico y SymPy local, que no se incorpora a Android. Ninguna prueba automática se toma como certificación académica integral de la materia.

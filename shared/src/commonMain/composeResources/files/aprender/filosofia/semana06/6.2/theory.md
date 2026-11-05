@@ -1,18 +1,15 @@
 ## 2. LÍNEA DE TIEMPO Y MAPA HISTÓRICO DE LA FILOSOFÍA
 
-```
-  ANTIGUA (s. VI a.C. - V d.C.)        MEDIEVAL (s. V - XV)      MODERNA (s. XVII - XVIII)   CONTEMPORÁNEA (s. XIX - XXI)
-┌───────────────────────────────┐  ┌─────────────────────────┐  ┌────────────────────────┐  ┌───────────────────────────┐
-│ • Presocráticos (El Arché)    │  │ • Patrística:           │  │ • Racionalismo:        │  │ • Positivismo (Comte)     │
-│ • Período Antropológico:      │  │   San Agustín (Fe/Razón)│  │   Descartes, Spinoza   │  │ • Marxismo (Materialismo) │
-│   Sócrates vs. Sofistas       │  │ • Escolástica:          │  │ • Empirismo:           │  │ • Vitalismo (Nietzsche)   │
-│ • Grandes Sistemas:           │  │   Sto. Tomás (5 Vías)   │  │   Locke, Hume          │  │ • Fenomenología (Husserl) │
-│   Platón (Ideas) y            │  │ • Nominalismo:          │  │ • Criticismo: Kant     │  │ • Existencialismo:        │
-│   Aristóteles (Causas)        │  │   Guillermo de Ockham   │  │ • Idealismo Dialéctico:│  │   Sartre, Heidegger       │
-│ • Helenismo: Estoicos,        │  │                         │  │   Hegel                │  │ • Posmodernidad: Lyotard,  │
-│   Epicúreos, Cínicos          │  │                         │  │                        │  │   Foucault, Bauman         │
-└───────────────────────────────┘  └─────────────────────────┘  └────────────────────────┘  └───────────────────────────┘
-```
+| Recorrido orientativo | Problemas y autores | Precaución histórica |
+|---|---|---|
+| Antigüedad griega y helenística | Presocráticos; Sócrates y sofistas; Platón y Aristóteles; estoicos, epicúreos y cínicos | Son propuestas diferentes, no una doctrina única ni una sucesión sin solapamientos |
+| Antigüedad tardía y tradiciones medievales | Agustín, escolástica, Tomás de Aquino y Ockham; intercambios entre tradiciones latinas, griegas, árabes y judías | Los límites cronológicos son convencionales; no se reduce todo el período a una sola tradición |
+| Modernidad temprana, siglos XVII–XVIII como referencia | Descartes y Spinoza; Locke y Hume; Kant | Las clasificaciones racionalismo, empirismo y criticismo necesitan matices por autor |
+| Idealismo alemán y siglo XIX | Hegel, 1770–1831; Comte, Marx y Nietzsche en debates distintos | La actividad de Hegel se extiende al siglo XIX; no encerrarlo en un período terminado en el XVIII |
+| Siglos XX–XXI | Husserl; Heidegger y Sartre; Lyotard, Foucault y Bauman, entre otros | Fenomenología, existencialismo y diagnósticos de la modernidad no son sinónimos |
+
+**Importante:** esta tabla organiza el recorrido seleccionado en la lección. No es una historia mundial exhaustiva ni supone que una tradición desaparezca cuando surge otra.
+
 
 ---
 

@@ -190,3 +190,22 @@ QUESTIONS_SRC = 1 existente (bio_t08_s01_c1) + 14 nuevas a generar
 | Soporte iOS (KMP) | `commonMain/resources` ya compatible |
 | Tests de integración UI | Post-piloto |
 | Migración Química/Física | Post-Biología completa |
+02/11/2026: las relaciones ambiguas se convierten a MATCH_PAIRS del motor existente con cuatro vínculos concretos, conservando el ID. No se universalizan cariotipos de ejemplo ni se prescriben tratamientos en una pregunta de fisiología. La revisión puntual no modifica la teoría ni el legacy.
+
+
+## 03/11/2026 — Aislamiento del piloto cardiovascular
+
+Se aplica una condición exacta de recurso/materia/lección en la entrada visual. Imagen y modelo de 8.3 no dependen de WebView; otros recursos conservan su ruta. Se reutilizan las fuentes/licencias verificadas. No se integran modelos generados por IA como sustitutos científicos. No se extrapola una prueba de shaders en Chrome a ejecución física Android.
+
+
+## 03/11/2026 — Segundo piloto: célula vegetal 5.4
+
+Recurso ilustrativo de 3DCellForge asociado solo a bio_t05_s04 (Núcleo y comparación animal vs. vegetal), visible en teoría del nivel y Material. GLB reducido de 60,7 MB a 1,93 MB, con textura y colores, conservando fuente/aviso MIT. Se reutiliza el visor nativo; no cambian bancos ni Firebase. Ver PILOTO_CELULA_VEGETAL_5_4.md. Prueba física y aceptación pendientes.
+
+
+## 03/11/2026 — Partes interactivas de la célula 5.4
+
+La superficie original se agrupa en ocho partes para identificar, resaltar, aislar y separar visualmente, preservando todos los triángulos y texturas. Núcleo incluye nucléolo al aislar; selección por rayos sobre la geometría real. Se conservan límites del piloto y licencias. assembleDebug y 17 pruebas pertinentes correctas, con ocho estados gráficos no vacíos; prueba física pendiente. Ver PARTES_CELULA_5_4_2026-11-03.md.
+
+
+04/11/2026: pilotos 3D 5.4 y 8.3 comprobados contra las lecciones reales y Material. Tarjetas identificadas, estados por recurso, controles acotados y vuelta al modelo completo. Se conserva el contenido y las ocho partes de la celula; 19 cadenas del catalogo/metadatos corregidas. assembleDebug y 667 pruebas correctas, sin fallos, errores u omisiones; dos modelos y ocho estados de partes dibujados en la prueba grafica. APK: 28 archivos graficos/licencias identicos a sus fuentes. No se ejecuto Android: gestos, rotacion y rendimiento fisicos pendientes. Detalle en docs/material/CAMBIOS.md; no se creo otro informe.

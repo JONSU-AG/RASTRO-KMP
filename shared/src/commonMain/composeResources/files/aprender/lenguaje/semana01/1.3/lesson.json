@@ -7,11 +7,11 @@
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana01.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_01_Comunicacion_y_Lenguaje.md",
   "learningObjectives": [
-    "Diferenciar lenguaje, lengua y habla según Saussure con sus rasgos",
-    "Correlacionar cada elemento del circuito con su función del lenguaje",
-    "Identificar las tres funciones de Bühler: referencial, expresiva y apelativa",
-    "Identificar las tres funciones de Jakobson: fática, poética y metalingüística",
-    "Resolver trampas: canal vs. código, poética vs. expresiva y metalingüística encubierta"
+    "Distinguir lenguaje, lengua y habla sin equiparar sistema social con inmutabilidad",
+    "Relacionar las seis funciones del modelo de Jakobson con sus factores y reconocer su coexistencia",
+    "Distinguir las tres funciones del modelo de Bühler del modelo de seis funciones de Jakobson",
+    "Identificar una función predominante por el propósito y contexto descritos, no por una palabra aislada",
+    "Relacionar a Martinet con doble articulación y a Chomsky con una propuesta innatista delimitada"
   ],
   "theory": {
     "id": "th_leng_t01_s03",
@@ -20,15 +20,15 @@
     "titulo": "Planos del Lenguaje y las Seis Funciones del Lenguaje (Bühler y Jakobson)",
     "resumen": "",
     "conceptosClave": [
-      "Lenguaje = facultad universal innata; lengua = código social; habla = uso individual",
-      "Referente → referencial, emisor → expresiva, receptor → apelativa",
-      "Canal → fática, mensaje → poética, código → metalingüística",
-      "Expresiva = emoción cruda; poética = belleza con figuras y ritmo",
-      "Toda regla gramatical o definición es metalingüística aunque parezca informar",
-      "Martinet = doble articulación; Chomsky = innatismo; Saussure = lengua social psíquica",
-      "Mnemotecnia RE-RE, EMI-EX, RECEP-APE, CA-FA, MEN-POE, CÓD-META"
+      "Lenguaje: facultad; lengua: sistema social; habla: realización individual en la distinción estudiada",
+      "Bühler: representación, expresión y apelación; Jakobson: modelo de seis funciones",
+      "Referencial: contexto o referente; expresiva: emisor; apelativa: destinatario",
+      "Fática: contacto; poética: forma del mensaje; metalingüística: código",
+      "Las funciones pueden coexistir; exclamación, interrogación o metáfora no deciden por sí solas el predominio",
+      "Martinet: unidades significativas y fonemas, no letras ni sílabas",
+      "Chomsky: propuesta innatista; no equivale a nacer hablando un idioma particular"
     ],
-    "admissionTip": "¿Aló? ¿Me oyes? es fática; orden o ruego es apelativa; dato objetivo es referencial; emoción con ¡...! es expresiva; verso o refrán es poética; hablar de tildes o verbos es metalingüística.",
-    "admissionExplanation": "Cada función enfoca un elemento: ubica primero el propósito dominante y luego confirma con marcas lingüísticas como imperativo, interjección, saludo fático o término gramatical."
+    "admissionTip": "Lee el propósito y la situación antes de decidir qué función predomina. Distingue hablar de una palabra de usarla para hablar de otra cosa.",
+    "admissionExplanation": "Clasificar una función no certifica la verdad del mensaje, su comprensión ni el efecto logrado. Los modelos de Bühler y Jakobson deben distinguirse sin reducir este último a solo tres funciones."
   }
 }

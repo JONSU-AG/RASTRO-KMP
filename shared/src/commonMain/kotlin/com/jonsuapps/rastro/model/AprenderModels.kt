@@ -61,7 +61,8 @@ data class Challenge(
     val pedagogicalTier: String? = null,
     val fuente: String? = null,
     val textTemplate: String? = null,
-    val blanks: List<ChallengeBlank> = emptyList()
+    val blanks: List<ChallengeBlank> = emptyList(),
+    val angleDegrees: Double? = null
 )
 
 /** A placeholder {{id}} in textTemplate, with selectable answers. */

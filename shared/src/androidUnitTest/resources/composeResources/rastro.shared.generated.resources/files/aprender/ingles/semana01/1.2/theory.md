@@ -64,7 +64,6 @@ Cuando aparecen los auxiliares **DOES** o **DOESN'T**, estos ya contienen la mar
 ---
 
 
-## 3. COMMON PITFALLS & ADMISSION EXAM TRAPS
 ## 7. ERRORES FRECUENTES Y TRAMPAS DE EXAMEN
 
 1. **Olvidar la "-s" en afirmaciones con pronombres indefinidos:**
@@ -73,7 +72,7 @@ Cuando aparecen los auxiliares **DOES** o **DOESN'T**, estos ya contienen la mar
      - *Correcto:* \checkmark *Everyone **knows** the answer.*
 2. **Usar Stative Verbs en gerundio por influencia del español:**
    - En español decimos: *"Te estoy entendiendo"*.
-   - En inglés estándar es un error gramatical decir: \times *I am understanding you*. Debe decirse: \checkmark *I **understand** you*.
+   - Para expresar el estado de comprensión en este ejemplo, la forma habitual del inglés estándar es *I understand you*. No conviene extender esta pauta a todo uso de un verbo: algunos admiten sentido de acción o un uso temporal, como *I am thinking about the problem*.
 3. **Duplicación indebida de consonantes en gerundio:**
    - *Visit \rightarrow Visiting* (NO: \times *visitting*, porque la fuerza de voz recae en la primera sílaba: *VI-sit*).
    - *Begin \rightarrow Beginning* (SÍ se duplica porque la fuerza recae en la última sílaba: *be-GIN*).
@@ -81,7 +80,6 @@ Cuando aparecen los auxiliares **DOES** o **DOESN'T**, estos ya contienen la mar
 ---
 
 
-## 4. REAL-WORLD CONTEXT & READING PASSAGES
 ## 5. CASOS PRÁCTICOS Y MODELIZACIONES DEL MUNDO REAL
 
 ### Caso 1: Resolución de Ambigüedades en Entrevistas de Admisión

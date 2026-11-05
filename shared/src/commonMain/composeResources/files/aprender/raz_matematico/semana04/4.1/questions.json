@@ -1,1 +1,200 @@
-[{"concept":"4.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t04_s01_c01","options":["15","18","21","24"],"pedagogicalTier":"concepto","semana":4,"statement":"¿Cuántos triángulos hay en total en la siguiente figura?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t04_s01_c02","options":["20 \\text{ cm}^2","8 \\text{ cm}^2","12 \\text{ cm}^2","16 \\text{ cm}^2"],"pedagogicalTier":"concepto","semana":4,"statement":"En un cuadrado ABCD de 8 \\text{ cm} de lado, se trazan sus dos diagonales y sobre cada lado se toma el punto medio, uniéndolos para formar un nuevo cuadrado interior. Si se sombrean las regiones correspondientes a los dos triángulos superiores del cuadrado interior, calcule el área sombreada.","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t04_s01_c03","options":["140 + 20\\pi","160 + 20\\pi","120 + 10\\pi","120 + 20\\pi"],"pedagogicalTier":"concepto","semana":4,"statement":"Un parque ecológico tiene la forma de un rectángulo de 60 \\text{ m} de largo por 40 \\text{ m} de ancho. En cada uno de sus vértices se ha construido un jardín en forma de cuadrante circular de 10 \\text{ m} de radio. Si se desea colocar una cerca protectora únicamente alrededor de la zona recreativa central (la región remanente del rectángulo que excluye los cuatro jardines), ¿cuántos metros lineales de cerco se necesitarán?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: \\text{N.° de Segmentos} = \\frac{n(n + 1)}{2}.","fuente":"temario","id":"rm_t04_s01_c04","options":["Dividen al triángulo en 6 partes de áreas exactamente iguales a \\frac{A_{\\text{total}}}{6}.","Equivale exactamente al área del triángulo rectángulo interior (A_{\\triangle} = \\frac{a \\cdot b}{2}).","Valor o condición no aplicable al caso planteado","\\text{N.° de Segmentos} = \\frac{n(n + 1)}{2}."],"pedagogicalTier":"concepto","semana":4,"statement":"¿Cuál es la fórmula para calcular el número de segmentos en una línea con n espacios consecutivos?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Dividen al triángulo en 6 partes de áreas exactamente iguales a \\frac{A_{\\text{total}}}{6}.","fuente":"temario","id":"rm_t04_s01_c05","options":["Dividen al triángulo en 6 partes de áreas exactamente iguales a \\frac{A_{\\text{total}}}{6}.","\\text{N.° de Segmentos} = \\frac{n(n + 1)}{2}.","Equivale exactamente al área del triángulo rectángulo interior (A_{\\triangle} = \\frac{a \\cdot b}{2}).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":4,"statement":"¿En cuántas partes de áreas iguales dividen las tres medianas a un triángulo?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Equivale exactamente al área del triángulo rectángulo interior (A_{\\triangle} = \\frac{a \\cdot b}{2}).","fuente":"temario","id":"rm_t04_s01_c06","options":["\\text{N.° de Segmentos} = \\frac{n(n + 1)}{2}.","Equivale exactamente al área del triángulo rectángulo interior (A_{\\triangle} = \\frac{a \\cdot b}{2}).","Dividen al triángulo en 6 partes de áreas exactamente iguales a \\frac{A_{\\text{total}}}{6}.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":4,"statement":"¿A qué equivale el área de las dos Lúnulas de Hipócrates formadas sobre los catetos de un triángulo rectángulo?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.1.7","correctIndex":2,"explanation":"Las 3 medianas dividen al triángulo en 6 regiones de áreas idénticas. El área de cada región elemental es 72 / 6 = 12 cm^2.","fuente":"temario","id":"rm_t04_s01_c07","options":["6 cm^2","8 cm^2","12 cm^2","18 cm^2"],"pedagogicalTier":"concepto","semana":4,"statement":"En un triángulo de área 72 cm^2, las 3 medianas concurren en el baricentro G. ¿Cuál es el área del triángulo formado por un vértice, el punto medio de un lado adyacente y el baricentro?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t04_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t04_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"4.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t04_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rm_t04_s01_c01",
+    "concept": "4.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Un rectángulo mide 9 cm por 4 cm. ¿Cuál es su perímetro?",
+    "options": [
+      "$26\\,\\mathrm{cm}$",
+      "$52\\,\\mathrm{cm}$",
+      "$13\\,\\mathrm{cm}$",
+      "$78\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Sumamos dos lados de cada longitud.\n2. Desarrollamos: $P=2(9+4)$.\n3. El resultado es $26\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s01_c02",
+    "concept": "4.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Un rectángulo mide 9 cm por 4 cm. ¿Cuál es su área?",
+    "options": [
+      "$72\\,\\mathrm{cm^2}$",
+      "$18\\,\\mathrm{cm^2}$",
+      "$108\\,\\mathrm{cm^2}$",
+      "$36\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Multiplicamos base por altura.\n2. Desarrollamos: $A=9(4)$.\n3. El resultado es $36\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s01_c03",
+    "concept": "4.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Un triángulo tiene base 10 cm y altura perpendicular correspondiente de 7 cm. ¿Cuál es su área?",
+    "options": [
+      "$17.5\\,\\mathrm{cm^2}$",
+      "$105\\,\\mathrm{cm^2}$",
+      "$35\\,\\mathrm{cm^2}$",
+      "$70\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El área triangular es la mitad del rectángulo de igual base y altura.\n2. Desarrollamos: $A=10(7)/2$.\n3. El resultado es $35\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s01_c04",
+    "concept": "4.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Un cuadrado tiene perímetro 28 cm. ¿Cuál es su área?",
+    "options": [
+      "$147\\,\\mathrm{cm^2}$",
+      "$49\\,\\mathrm{cm^2}$",
+      "$98\\,\\mathrm{cm^2}$",
+      "$24.5\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Primero dividimos el perímetro entre cuatro para obtener el lado.\n2. Desarrollamos: $l=28/4=7;\\quad A=7^2$.\n3. El resultado es $49\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s01_c05",
+    "concept": "4.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Un círculo tiene radio 3 cm. ¿Cuál es su área exacta?",
+    "options": [
+      "$9 \\pi\\,\\mathrm{cm^2}$",
+      "$18 \\pi\\,\\mathrm{cm^2}$",
+      "$\\frac{9 \\pi}{2}\\,\\mathrm{cm^2}$",
+      "$27 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Se usa el cuadrado del radio, no el diámetro.\n2. Desarrollamos: $A=\\pi(3)^2$.\n3. El resultado es $9 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s01_c06",
+    "concept": "4.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Dos cuadrados de lado 2 cm se unen por un lado completo sin superponerse. ¿Cuál es el perímetro exterior de la figura?",
+    "options": [
+      "$24\\,\\mathrm{cm}$",
+      "$6\\,\\mathrm{cm}$",
+      "$36\\,\\mathrm{cm}$",
+      "$12\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Los dos lados pegados dejan de formar parte de la frontera exterior.\n2. Desarrollamos: $P=2(8)-2(2)$.\n3. El resultado es $12\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s01_c07",
+    "concept": "4.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Un rectángulo de 12 cm por 8 cm se corta por una diagonal. ¿Qué área tiene cada uno de los dos triángulos?",
+    "options": [
+      "$24\\,\\mathrm{cm^2}$",
+      "$144\\,\\mathrm{cm^2}$",
+      "$48\\,\\mathrm{cm^2}$",
+      "$96\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La diagonal divide el rectángulo en dos regiones de igual área.\n2. Desarrollamos: $A=12(8)/2$.\n3. El resultado es $48\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s01_c08",
+    "concept": "4.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Un cubo tiene arista 4 cm. ¿Cuál es su volumen?",
+    "options": [
+      "$192\\,\\mathrm{cm^3}$",
+      "$64\\,\\mathrm{cm^3}$",
+      "$128\\,\\mathrm{cm^3}$",
+      "$32\\,\\mathrm{cm^3}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El volumen multiplica las tres aristas perpendiculares.\n2. Desarrollamos: $V=4^3$.\n3. El resultado es $64\\,\\mathrm{cm^3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s01_c09",
+    "concept": "4.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Un cuadrado se divide en una cuadrícula de 2 filas y 3 columnas de celdas rectangulares. ¿Cuántos rectángulos alineados con la cuadrícula hay, de todos los tamaños?",
+    "options": [
+      "$18\\,\\text{rectángulos}$",
+      "$36\\,\\text{rectángulos}$",
+      "$9\\,\\text{rectángulos}$",
+      "$54\\,\\text{rectángulos}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Elegimos dos de las tres líneas horizontales y dos de las cuatro verticales.\n2. Desarrollamos: $N=\\binom{3}{2}\\binom{4}{2}$.\n3. El resultado es $18\\,\\text{rectángulos}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s01_c10",
+    "concept": "4.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Para usar la fórmula del área de un triángulo, la altura correspondiente debe…",
+    "options": [
+      "Ser cualquier lado inclinado.",
+      "Medir lo mismo que la base obligatoriamente.",
+      "Trazarse siempre dentro del triángulo.",
+      "Ser perpendicular a la recta que contiene la base."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La distancia a una recta se mide perpendicularmente.\n2. Esa distancia es la altura relativa a la base.\n3. En un triángulo obtuso puede quedar fuera de la región.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t04_s01_c11",
+    "concept": "4.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 4,
+    "statement": "Dos figuras con igual perímetro…",
+    "options": [
+      "Deben ser congruentes.",
+      "Deben ser círculos.",
+      "Pueden tener áreas diferentes.",
+      "Tienen siempre la misma área."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El perímetro mide frontera y el área mide superficie.\n2. Un rectángulo 1×5 y otro 2×4 tienen perímetro 12.\n3. Sus áreas son 5 y 8, lo que da un contraejemplo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

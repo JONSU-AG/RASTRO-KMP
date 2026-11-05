@@ -13,31 +13,45 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                              EL ÁTOMO ACTUAL
-                                     │
-         ┌───────────────────────────┴───────────────────────────┐
-         ▼                                                       ▼
-  NÚCLEO ATÓMICO                                          ZONA EXTRANUCLEAR
- (99.99% de la masa,                                      (99.99% del volumen,
-  carga positiva)                                          carga negativa)
-         │                                                       │
-  NUCLEONES FUNDAMENTALES                                 PARTÍCULA FUNDAMENTAL
-  • Protones (p^+, carga +e)                          • Electrones (e^-, carga -e)
-  • Neutrones (n^0, sin carga)                          • Se mueven en orbitales
-         │
-         ▼
-NOTACIÓN DEL NÚCLIDO:  _Z^A X^q
-  • A: Número de masa (A = Z + n)
-  • Z: Número atómico / Carga nuclear (Z = p^+)
-  • q: Carga eléctrica neta (q = p^+ - e^-)
-         │
-         ▼
-ESPECIES QUÍMICAS NUCLEARES:
-  • Isótopos (Hítopos): igual Z
-  • Isóbaros: igual A
-  • Isótonos: igual n
-  • Isoelectrónicos: igual número y configuración electrónica
+```mermaid
+graph TD
+ ROOT["Estructura atómica y especies"]
+ B1["Núcleo"]
+ B1N1["Protones: carga positiva; su cantidad define el elemento."]
+ B1N2["Neutrones: sin carga eléctrica neta."]
+ B1N3["Concentra casi toda la masa del átomo; la proporción exacta depende de la especie."]
+ B2["Región electrónica"]
+ B2N1["Electrones: carga negativa; se describen mediante estados cuánticos."]
+ B2N2["Un orbital expresa una distribución de probabilidad; no es una órbita planetaria."]
+ B2N3["La nube electrónica determina la mayor parte del tamaño del átomo."]
+ B3["Notación y conteo"]
+ B3N1["Notación: ${}^{A}_{Z}X^{q}$. Número atómico: $Z=p$."]
+ B3N2["Número de masa: $A=p+n$; por tanto, $n=A-Z$."]
+ B3N3["Número de carga: $q=p-e$; la carga física es $q e_0$."]
+ B3N4["En un átomo neutro, la cantidad de electrones coincide con Z."]
+ B4["Comparación entre especies"]
+ B4N1["Isótopos: mismo Z y diferente número de neutrones."]
+ B4N2["Isóbaros: igual A y distinto Z."]
+ B4N3["Isótonos: igual número de neutrones y distinto Z."]
+ B4N4["Especies atómicas isoelectrónicas: igual número de electrones; esta comparación no es una propiedad del núcleo."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ B4 --> B4N4
 ```
 
 ---

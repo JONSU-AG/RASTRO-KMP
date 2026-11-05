@@ -1,24 +1,40 @@
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE LA FILOSOFÍA POLÍTICA
 
-```
-                                      FILOSOFÍA POLÍTICA
-                                               │
-         ┌──────────────────┬──────────────────┴───────────────────┬──────────────────┐
-         ▼                  ▼                                      ▼                  ▼
-    ORIGEN DEL         TEORÍAS DEL                            TEORÍA DE LA        PODER Y CRÍTICA
-      ESTADO         CONTRATO SOCIAL                            JUSTICIA          AL TOTALITARISMO
-         │                  │                                      │                  │
-• Naturalismo:       • Thomas Hobbes:                       • John Rawls:       • Hannah Arendt:
-  Aristóteles          - Guerra de todos                      - Justicia como     - La banalidad
-  (Zoon Politikón)       contra todos                           equidad             del mal
-• Teológico:           - Leviatán / Absolutismo               - Posición          - Totalitarismo
-  Origen divino      • John Locke:                              original          - Acción y
-• Contractualismo:     - Derechos naturales (Vida,            - Velo de la          espacio público
-  Pacto social           Libertad, Propiedad)                   ignorancia      • Nicolás Maquiavelo:
-  racional             - Estado Liberal                       - Principio de      - Autonomía de
-                     • Jean-Jacques Rousseau:                   diferencia          la política
-                       - El buen salvaje                      • Comunitarismo:    - El Príncipe
-                       - Voluntad General                       Sandel, Taylor      (Virtù y Fortuna)
+```mermaid
+graph TD
+ ROOT["Poder, legitimidad y justicia"]
+ B1["Preguntas políticas"]
+ B1N1["Distinguir origen histórico, funcionamiento del poder y justificación de la autoridad."]
+ B1N2["Las explicaciones naturalistas, teológicas y contractualistas no son versiones idénticas de una misma tesis."]
+ B1N3["Un contrato social puede ser un recurso normativo o hipotético; no supone que todos hayan firmado un documento histórico."]
+ B2["Contratos y proyectos"]
+ B2N1["Hobbes: examinar seguridad, autoridad y condiciones de la paz."]
+ B2N2["Locke: examinar derechos, consentimiento y límites del gobierno."]
+ B2N3["Rousseau: distinguir voluntad general de la simple suma de intereses privados; evitar reducirlo al eslogan del buen salvaje."]
+ B3["Justicia y comunidad"]
+ B3N1["Rawls: posición original y velo de ignorancia como recursos de justificación, no amnesia real de los participantes."]
+ B3N2["El principio de diferencia se interpreta dentro de una propuesta con libertades básicas e igualdad equitativa de oportunidades."]
+ B3N3["Sandel y Taylor: situar las críticas al individualismo y las cuestiones comunitarias sin afirmar que coinciden en todo."]
+ B4["Crítica y acción"]
+ B4N1["Arendt: totalitarismo, acción y espacio público; banalidad del mal no significa daño insignificante ni exención de responsabilidad."]
+ B4N2["Maquiavelo: examinar las relaciones entre acción política, virtù y fortuna, sin atribuirle cualquier justificación del engaño."]
+ B4N3["Comparar posiciones exige sus argumentos y contexto; una etiqueta política no sustituye la explicación."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---

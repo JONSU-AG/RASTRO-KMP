@@ -1,1 +1,200 @@
-[{"concept":"10.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t10_s01_c01","options":["\\dfrac{\\pi}{2}","\\pi","2\\pi","\\dfrac{\\pi}{4}"],"pedagogicalTier":"concepto","semana":10,"statement":"**Enunciado:** Calcule el periodo fundamental de la función trigonométrica f(x) = 5\\sin(4x - \\pi) + 2.","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t10_s01_c02","options":["[1, 3]","[1, 5]","[-1, 5]","[2, 5]"],"pedagogicalTier":"concepto","semana":10,"statement":"**Enunciado:** Determine el rango de la función real f(x) = 3 - 2\\cos(x).","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t10_s01_c03","options":["\\pi","\\dfrac{\\pi}{4}","\\dfrac{\\pi}{2}","\\dfrac{\\pi}{6}"],"pedagogicalTier":"concepto","semana":10,"statement":"**Enunciado:** Calcule el periodo fundamental de la función f(x) = 4\\cos^2(6x) + 3\\tan(2x).","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "trig_t10_s01_c01",
+    "concept": "10.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuál es el máximo de $\\sin x$ para x real?",
+    "options": [
+      "$1$",
+      "$2$",
+      "$0.5$",
+      "$3$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La coordenada vertical del círculo unitario no supera uno.\n2. Aplicamos la relación: $-1\\le\\sin x\\le1;\\quad\\sin(\\pi/2)=1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s01_c02",
+    "concept": "10.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuál es el mínimo de $\\cos x$ para x real?",
+    "options": [
+      "$-2$",
+      "$-0.5$",
+      "$-3$",
+      "$-1$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La coordenada horizontal llega a −1.\n2. Aplicamos la relación: $-1\\le\\cos x\\le1;\\quad\\cos\\pi=-1$.\n3. El valor pedido es $-1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s01_c03",
+    "concept": "10.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuál es la amplitud de $f(x)=-3\\cos(2x)$?",
+    "options": [
+      "$1.5$",
+      "$9$",
+      "$3$",
+      "$6$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La amplitud usa el valor absoluto del coeficiente exterior.\n2. Aplicamos la relación: $A=|-3|$.\n3. El valor pedido es $3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s01_c04",
+    "concept": "10.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuál es el periodo positivo fundamental de $\\sin(3x)$, con x en radianes?",
+    "options": [
+      "$2 \\pi\\,\\mathrm{rad}$",
+      "$\\frac{2 \\pi}{3}\\,\\mathrm{rad}$",
+      "$\\frac{4 \\pi}{3}\\,\\mathrm{rad}$",
+      "$\\frac{\\pi}{3}\\,\\mathrm{rad}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El factor interior divide el periodo básico.\n2. Aplicamos la relación: $T=2\\pi/3$.\n3. El valor pedido es $\\frac{2 \\pi}{3}\\,\\mathrm{rad}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s01_c05",
+    "concept": "10.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuál es el periodo positivo fundamental de $\\tan(2x)$, con x en radianes?",
+    "options": [
+      "$\\frac{\\pi}{2}\\,\\mathrm{rad}$",
+      "$\\pi\\,\\mathrm{rad}$",
+      "$\\frac{\\pi}{4}\\,\\mathrm{rad}$",
+      "$\\frac{3 \\pi}{2}\\,\\mathrm{rad}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La tangente básica tiene periodo π.\n2. Aplicamos la relación: $T=\\pi/2$.\n3. El valor pedido es $\\frac{\\pi}{2}\\,\\mathrm{rad}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s01_c06",
+    "concept": "10.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "Calcula $\\sin(\\pi/2)$.",
+    "options": [
+      "$2$",
+      "$0.5$",
+      "$3$",
+      "$1$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Evaluamos la coordenada vertical del círculo unitario.\n2. Aplicamos la relación: $\\sin(\\pi/2)=1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s01_c07",
+    "concept": "10.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "Calcula $\\cos0$.",
+    "options": [
+      "$0.5$",
+      "$3$",
+      "$1$",
+      "$2$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El punto inicial del círculo unitario es (1,0).\n2. Aplicamos la relación: $\\cos0=1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s01_c08",
+    "concept": "10.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "Calcula $\\sec0$.",
+    "options": [
+      "$3$",
+      "$1$",
+      "$2$",
+      "$0.5$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La secante es recíproca del coseno no nulo.\n2. Aplicamos la relación: $\\sec0=1/\\cos0=1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s01_c09",
+    "concept": "10.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "Calcula $\\cot(\\pi/4)$.",
+    "options": [
+      "$1$",
+      "$2$",
+      "$0.5$",
+      "$3$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Usamos coseno sobre seno.\n2. Aplicamos la relación: $\\cot(\\pi/4)=\\frac{\\sqrt2/2}{\\sqrt2/2}=1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s01_c10",
+    "concept": "10.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "El dominio real del seno y del coseno es…",
+    "options": [
+      "$\\mathbb R$",
+      "$[-1,1]$ solamente.",
+      "$[0,\\pi]$ solamente.",
+      "Solo los enteros."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los puntos del círculo pueden recorrerse para cualquier ángulo real.\n2. No aparecen divisiones ni raíces que restrinjan el argumento.\n3. Seno y coseno están definidos en todos los reales.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s01_c11",
+    "concept": "10.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "La tangente tiene discontinuidades en…",
+    "options": [
+      "$x=k\\pi$",
+      "$x=\\pi/2+k\\pi$",
+      "$x=\\pi/4+2k\\pi$",
+      "Todos los reales."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Tangente es seno dividido entre coseno.\n2. El coseno se anula en π/2+kπ, con k entero.\n3. Esos puntos se excluyen de su dominio y son asíntotas verticales.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

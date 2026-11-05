@@ -1,1 +1,200 @@
-[{"concept":"2.2.1","correctIndex":2,"explanation":"**Resolución:** 1. Descomponemos la velocidad inicial en sus componentes rectangulares: v_{0x} = v_0 \\cos 53^\\circ = 50 \\times \\frac{3}{5} = 30\\text{ m/s} v_{0y} = v_0 \\sin 53^\\circ = 50 \\times \\frac{4}{5} = 40\\text{ m/s} 2. En el eje horizontal (MRU), determinamos el tiempo t que tarda el proyectil en recorrer los x = 180\\text{ m} hasta la pared: x = v_{0x} \\cdot t \\implies 180 = 30 \\cdot t \\implies t = \\frac{180}{30} = 6\\text{ s} 3. En el eje vertical (MVCL), calculamos la altura y alcanzada por el proyectil a los t = 6\\text{ s}: y(t) = v_{0y} t - \\frac{1}{2} g t^2 y = (40)(6) - \\frac{1}{2}(10)(6)^2 y = 240 - 5(36) = 240 - 180 = 60\\text{ m} - El proyectil impacta la pared exactamente a una altura de **60\\text{ m}**. **Respuesta:** C ---","fuente":"temario","id":"fis_t02_s02_c01","options":["60\\text{ m}","75\\text{ m}","30\\text{ m}","45\\text{ m}"],"pedagogicalTier":"concepto","semana":2,"statement":"**Enunciado:** Un cañón de artillería ubicado en terreno horizontal dispara un proyectil con una rapidez de 50\\text{ m/s} y un ángulo de elevación de 53^\\circ respecto a la horizontal. A una distancia horizontal de 180\\text{ m} del cañón se alza una pared vertical de gran altura. ¿A qué altura respecto al suelo impactará el proyectil contra dicha pared? (Considere \\sin 53^\\circ \\approx 4/5, \\cos 53^\\circ \\approx 3/5 y g = 10\\text{ m/s}^2).","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.2.2","correctIndex":0,"explanation":"**Resolución:** 1. Convertimos la velocidad angular inicial al Sistema Internacional (\\text{rad/s}): \\omega_0 = 120\\text{ RPM} = 120 \\times \\frac{2\\pi\\text{ rad}}{60\\text{ s}} = 4\\pi\\text{ rad/s} Velocidad angular final: \\omega_f = 0. Desplazamiento angular total para detenerse: \\theta_{\\text{total}} = 10\\text{ rev} = 10(2\\pi) = 20\\pi\\text{ rad}. 2. Calculamos la aceleración angular desaceleratriz constante \\alpha: \\omega_f^2 = \\omega_0^2 - 2\\alpha \\theta_{\\text{total}} \\implies 0 = (4\\pi)^2 - 2\\alpha(20\\pi) 40\\pi \\alpha = 16\\pi^2 \\implies \\alpha = \\frac{16\\pi^2}{40\\pi} = \\frac{2\\pi}{5} = 0.4\\pi\\text{ rad/s}^2 3. Calculamos la aceleración tangencial (a_t) de un punto del borde (R = 0.5\\text{ m}): a_t = \\alpha \\cdot R = (0.4\\pi\\text{ rad/s}^2)(0.5\\text{ m}) = 0.2\\pi\\text{ m/s}^2 4. En el instante pedido, le faltan 5\\text{ rev} para detenerse \\implies \\theta_{\\text{remanente}} = 5(2\\pi) = 10\\pi\\text{ rad}. Calculamos la velocidad angular \\omega en ese instante: \\omega^2 = \\omega_f^2 + 2\\alpha \\theta_{\\text{remanente}} = 0 + 2(0.4\\pi)(10\\pi) = 8\\pi^2\\text{ (rad/s)}^2 5. Calculamos la aceleración centrípeta (a_c) en ese mismo instante: a_c = \\omega^2 \\cdot R = (8\\pi^2)(0.5) = 4\\pi^2\\text{ m/s}^2 6. Calculamos el módulo de la aceleración total vectorial (\\vec{a} = \\vec{a}_t + \\vec{a}_c, con \\vec{a}_t \\perp \\vec{a}_c): a = \\sqrt{a_t^2 + a_c^2} = \\sqrt{(0.2\\pi)^2 + (4\\pi^2)^2} = \\sqrt{0.04\\pi^2 + 16\\pi^4}\\text{ m/s}^2 Factorizando 0.04\\pi^2 = (0.2\\pi)^2: a = 0.2\\pi \\sqrt{1 + 400\\pi^2}\\text{ m/s}^2 \\approx \\sqrt{0.16\\pi^2 + 16\\pi^4}\\text{ m/s}^2 \\quad (\\text{según escala de alternativas}) La alternativa C recoge exactamente la forma cuadrática no factorizada: \\sqrt{0.16\\pi^2 + 16\\pi^4}\\text{ m/s}^2. **Respuesta:** C --- 1. ¿Cuál es la aceleración de un móvil que se desplaza en Movimiento Rectilíneo Uniforme (MRU)? 2. En un movimiento parabólico en el vacío, ¿qué componente de la velocidad permanece constante durante toda la trayectoria? 3. Si un móvil parte del reposo y alcanza una rapidez de 20\\text{ m/s} en 4\\text{ segundos} en MRUV, ¿cuál es el módulo de su aceleración? 4. ¿Cuál es el valor del ángulo de disparo para que un proyectil alcance su máxima altura posible? 5. Si un disco en MCU gira con un periodo de T = 0.5\\text{ s}, ¿cuál es su velocidad angular \\omega? --- 1: C | 2: B | 3: C | 4: E | 5: C","fuente":"temario","id":"fis_t02_s02_c02","options":["4\\pi^2\\text{ m/s}^2","\\sqrt{(0.4\\pi)^2 + (8\\pi^2)^2}\\text{ m/s}^2","\\sqrt{0.16\\pi^2 + 16\\pi^4}\\text{ m/s}^2","0.8\\pi\\text{ m/s}^2"],"pedagogicalTier":"concepto","semana":2,"statement":"**Enunciado:** Un volante circular de 0.5\\text{ m} de radio se encuentra girando inicialmente a razón de 120\\text{ RPM}. Se le aplica un freno que produce una desaceleración angular constante, logrando detenerlo por completo tras dar 10 revoluciones completas. En el instante exacto en que al volante le faltan 5 revoluciones para detenerse, determine el módulo de la aceleración total que experimenta un punto ubicado en la periferia exterior del volante.","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: Proporcionales a los números impares de Galileo: 1 : 3 : 5 : 7 : \\dots : (2n - 1).","fuente":"temario","id":"fis_t02_s02_c03","options":["No. La aceleración tangencial es cero (a_t = 0), pero la aceleración centrípeta es diferente de cero (a_c = \\omega^2 R \\ne 0).","Mediante la media armónica: v_{\\text{med}} = \\frac{2 v_1 v_2}{v_1 + v_2}.","Proporcionales a los números impares de Galileo: 1 : 3 : 5 : 7 : \\dots : (2n - 1).","v = \\omega \\cdot R."],"pedagogicalTier":"concepto","semana":2,"statement":"Si un cuerpo parte del reposo en MRUV con aceleración a, ¿en qué relación están las distancias recorridas en cada segundo sucesivo?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: No. La aceleración tangencial es cero (a_t = 0), pero la aceleración centrípeta es diferente de cero (a_c = \\omega^2 R \\ne 0).","fuente":"temario","id":"fis_t02_s02_c04","options":["Proporcionales a los números impares de Galileo: 1 : 3 : 5 : 7 : \\dots : (2n - 1).","Mediante la media armónica: v_{\\text{med}} = \\frac{2 v_1 v_2}{v_1 + v_2}.","v = \\omega \\cdot R.","No. La aceleración tangencial es cero (a_t = 0), pero la aceleración centrípeta es diferente de cero (a_c = \\omega^2 R \\ne 0)."],"pedagogicalTier":"concepto","semana":2,"statement":"En el Movimiento Circular Uniforme (MCU), ¿es nula la aceleración?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.2.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Mediante la media armónica: v_{\\text{med}} = \\frac{2 v_1 v_2}{v_1 + v_2}.","fuente":"temario","id":"fis_t02_s02_c05","options":["Mediante la media armónica: v_{\\text{med}} = \\frac{2 v_1 v_2}{v_1 + v_2}.","Proporcionales a los números impares de Galileo: 1 : 3 : 5 : 7 : \\dots : (2n - 1).","No. La aceleración tangencial es cero (a_t = 0), pero la aceleración centrípeta es diferente de cero (a_c = \\omega^2 R \\ne 0).","v = \\omega \\cdot R."],"pedagogicalTier":"concepto","semana":2,"statement":"¿Cómo se calcula la rapidez media de un móvil que recorre dos distancias iguales con rapideces v_1 y v_2?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.2.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: v = \\omega \\cdot R.","fuente":"temario","id":"fis_t02_s02_c06","options":["Proporcionales a los números impares de Galileo: 1 : 3 : 5 : 7 : \\dots : (2n - 1).","v = \\omega \\cdot R.","No. La aceleración tangencial es cero (a_t = 0), pero la aceleración centrípeta es diferente de cero (a_c = \\omega^2 R \\ne 0).","Mediante la media armónica: v_{\\text{med}} = \\frac{2 v_1 v_2}{v_1 + v_2}."],"pedagogicalTier":"concepto","semana":2,"statement":"¿Qué relación existe entre la velocidad tangencial v y la velocidad angular \\omega de una partícula en radio R?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.2.7","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: 5\\text{ metros} (d = \\frac{1}{2}gt^2 = \\frac{1}{2}(10)(1)^2 = 5\\text{ m}).","fuente":"temario","id":"fis_t02_s02_c07","options":["Proporcionales a los números impares de Galileo: 1 : 3 : 5 : 7 : \\dots : (2n - 1).","No. La aceleración tangencial es cero (a_t = 0), pero la aceleración centrípeta es diferente de cero (a_c = \\omega^2 R \\ne 0).","5\\text{ metros} (d = \\frac{1}{2}gt^2 = \\frac{1}{2}(10)(1)^2 = 5\\text{ m}).","Mediante la media armónica: v_{\\text{med}} = \\frac{2 v_1 v_2}{v_1 + v_2}."],"pedagogicalTier":"concepto","semana":2,"statement":"En caída libre en el vacío (g = 10\\text{ m/s}^2), si un objeto se suelta desde el reposo, ¿qué distancia cae en el primer segundo?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t02_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t02_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t02_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "2.2.1",
+    "correctIndex": 0,
+    "explanation": "1. Las componentes son perpendiculares.\n2. El módulo cumple $v_0=\\sqrt{12^2+16^2}$.\n3. Como $144+256=400$, resulta $v_0=20$ m/s.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s02_c01",
+    "options": [
+      "20 m/s",
+      "28 m/s",
+      "4 m/s",
+      "400 m/s"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Un proyectil sale con componentes iniciales vx = 12 m/s y vy = 16 m/s. ¿Cuál es su rapidez inicial?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.2",
+    "correctIndex": 1,
+    "explanation": "1. En la altura máxima la componente vertical de la velocidad es cero.\n2. Usamos $v_y=v_{0y}-gt$: $0=20-10t$.\n3. Se obtiene $t=2$ s; la componente horizontal no tiene por qué ser cero.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s02_c02",
+    "options": [
+      "4 s",
+      "2 s",
+      "20 s",
+      "0.5 s"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Un proyectil tiene velocidad vertical inicial de 20 m/s hacia arriba. Sin resistencia del aire y con g = 10 m/s², ¿cuánto tarda en alcanzar su altura máxima?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.3",
+    "correctIndex": 2,
+    "explanation": "1. Para regresar a la misma altura, $T=2v_{0y}/g$.\n2. Sustituimos $T=2\\cdot20/10$.\n3. El tiempo total es 4 s: 2 s de subida y 2 s de bajada.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s02_c03",
+    "options": [
+      "2 s",
+      "20 s",
+      "4 s",
+      "8 s"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Se lanza un proyectil desde el suelo con vy inicial = 20 m/s. Regresa a la misma altura, sin resistencia del aire. Usa g = 10 m/s². ¿Cuál es su tiempo de vuelo?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.4",
+    "correctIndex": 3,
+    "explanation": "1. El tiempo de vuelo es $T=2\\cdot20/10=4$ s.\n2. La velocidad horizontal se mantiene constante.\n3. El alcance es $R=v_xT=15\\cdot4=60$ m.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s02_c04",
+    "options": [
+      "30 m",
+      "40 m",
+      "75 m",
+      "60 m"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Un proyectil sale del suelo con vx = 15 m/s y vy = 20 m/s. Regresa al mismo nivel, sin resistencia del aire, con g = 10 m/s². ¿Cuál es su alcance horizontal?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.5",
+    "correctIndex": 0,
+    "explanation": "1. La altura máxima es $H=v_{0y}^2/(2g)$.\n2. Sustituimos $H=20^2/(2\\cdot10)=400/20$.\n3. La altura es 20 m.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s02_c05",
+    "options": [
+      "20 m",
+      "40 m",
+      "10 m",
+      "200 m"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Un proyectil tiene componente vertical inicial de 20 m/s. Con g = 10 m/s² y sin resistencia del aire, ¿qué altura máxima alcanza respecto del punto de lanzamiento?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.6",
+    "correctIndex": 1,
+    "explanation": "1. El punto más alto separa la subida de la bajada.\n2. En ese instante la componente vertical de la velocidad es cero.\n3. La gravedad continúa actuando hacia abajo; si existe velocidad horizontal, esta no se anula.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s02_c06",
+    "options": [
+      "Toda la velocidad se anula siempre",
+      "La componente vertical de la velocidad es cero y la aceleración sigue hacia abajo",
+      "La gravedad se anula",
+      "La componente horizontal aumenta por la gravedad"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "En un lanzamiento parabólico sin resistencia del aire, ¿qué ocurre en el punto más alto?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.7",
+    "correctIndex": 2,
+    "explanation": "1. En MCU, $\\Delta\\theta=\\omega t$.\n2. Sustituimos $\\Delta\\theta=3\\cdot4$.\n3. El desplazamiento angular es 12 rad; puede ser mayor que una vuelta.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s02_c07",
+    "options": [
+      "7 rad",
+      "0.75 rad",
+      "12 rad",
+      "24 rad"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Una partícula gira con rapidez angular constante de 3 rad/s durante 4 s. ¿Cuál es su desplazamiento angular?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.8",
+    "correctIndex": 3,
+    "explanation": "1. La relación entre rapidez tangencial y angular es $v=\\omega r$.\n2. Sustituimos $v=3\\cdot2$.\n3. La rapidez tangencial es 6 m/s.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s02_c08",
+    "options": [
+      "1.5 m/s",
+      "5 m/s",
+      "9 m/s",
+      "6 m/s"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Una partícula describe una circunferencia de radio 2 m con rapidez angular de 3 rad/s. ¿Cuál es su rapidez tangencial?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.9",
+    "correctIndex": 0,
+    "explanation": "1. Aunque la rapidez sea constante, cambia la dirección de la velocidad.\n2. Usamos $a_c=v^2/r$.\n3. Sustituimos $a_c=4^2/2=8$ m/s², dirigida hacia el centro.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s02_c09",
+    "options": [
+      "8 m/s²",
+      "2 m/s²",
+      "0 m/s²",
+      "16 m/s²"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Un móvil describe una circunferencia de radio 2 m con rapidez constante de 4 m/s. ¿Cuál es el módulo de su aceleración centrípeta?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.10",
+    "correctIndex": 1,
+    "explanation": "1. El periodo es $T=0.5$ s por vuelta.\n2. La frecuencia es $f=1/T$.\n3. Resulta $f=1/0.5=2$ Hz, dos vueltas por segundo.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s02_c10",
+    "options": [
+      "0.5 Hz",
+      "2 Hz",
+      "0.25 Hz",
+      "5 Hz"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Un movimiento circular completa una vuelta en 0.5 s. ¿Cuál es su frecuencia?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.11",
+    "correctIndex": 2,
+    "explanation": "1. Con aceleración angular constante, $\\omega=\\omega_0+\\alpha t$.\n2. Como parte del reposo, $\\omega_0=0$.\n3. Entonces $\\omega=2\\cdot3=6$ rad/s.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s02_c11",
+    "options": [
+      "1.5 rad/s",
+      "9 rad/s",
+      "6 rad/s",
+      "12 rad/s"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Una rueda parte del reposo con aceleración angular constante de 2 rad/s² durante 3 s. ¿Cuál es su rapidez angular final?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

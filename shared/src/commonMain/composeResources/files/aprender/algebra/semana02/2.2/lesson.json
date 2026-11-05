@@ -6,13 +6,24 @@
   "title": "Sistema de los Números Reales (\\mathbb{R}), Intervalos y Valor Absoluto - Propiedades Avanzadas, Artificios y Aplicaciones",
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana02.kt",
-  "learningObjectives": [],
+  "learningObjectives": [
+    "Resolver ecuaciones de distancia con radios positivos, nulos y negativos",
+    "Distinguir interior y exterior con extremos abiertos o cerrados",
+    "Comparar módulos y analizar signos sin perder el dominio",
+    "Justificar cotas y extremos con sus condiciones de igualdad"
+  ],
   "theory": {
     "id": "th_alg_t02_s02",
     "asignatura": "Álgebra",
     "semana": 2,
     "titulo": "Sistema de los Números Reales (\\mathbb{R}), Intervalos y Valor Absoluto - Propiedades Avanzadas, Artificios y Aplicaciones",
     "resumen": "",
-    "conceptosClave": []
+    "conceptosClave": [
+      "Una distancia negativa no es posible",
+      "El radio cero requiere distinguir las cuatro relaciones",
+      "Al comparar módulos se pueden elevar al cuadrado ambos miembros no negativos",
+      "Multiplicar una desigualdad por un negativo invierte su orientación",
+      "Las cotas de medias y de x más su inverso requieren condiciones de signo"
+    ]
   }
 }

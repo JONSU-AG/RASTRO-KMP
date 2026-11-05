@@ -1,5 +1,7 @@
 # Aprender — Documentación del Módulo
 
+Presentación matemática local y diagramas de Física: ver [Fórmulas y gráficos](../formulas/README.md). Catálogos y progreso conservados.
+
 > Módulo de aprendizaje estructurado por 15 materias, 10 semanas cada una, 4 lecciones por semana (520 lecciones totales).
 
 ---

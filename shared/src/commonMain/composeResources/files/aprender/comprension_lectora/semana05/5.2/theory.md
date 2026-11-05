@@ -97,20 +97,33 @@ E) El argumento de que las máquinas carecen de crueldad biológica es esgrimido
 
 ## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
 
-```
-                        EVALUACIÓN DE LA INFORMACIÓN
-                                     │
-           ┌─────────────────────────┴─────────────────────────┐
-           ▼                                                   ▼
- EVALUACIÓN EPISTEMOLÓGICA                           EVALUACIÓN DE CONSISTENCIA
-(Naturaleza del Enunciado)                           (Relación con el Texto)
-           │                                                   │
-     ┌─────┴─────┐                                       ┌─────┴─────┐
-     ▼           ▼                                       ▼           ▼
-   Hecho      Opinión                               Compatible   Incompatible
-(Fáctico,   (Valorativo,                            (Armoniza    (Choca con
-Objetivo)   Discutible)                              o parafrasea el texto o
-                                                     al texto)    lo niega)
+```mermaid
+graph TD
+ ROOT["Información, respaldo y contradicción"]
+ B1["Naturaleza del enunciado"]
+ B1N1["Distinguir afirmación verificable, valoración y combinación de ambas."]
+ B1N2["Que una frase sea verificable no garantiza que sea verdadera."]
+ B1N3["Una opinión también puede apoyarse en razones y datos."]
+ B2["Relación con el fragmento"]
+ B2N1["Respaldado: se afirma o se sigue de las premisas bajo la interpretación pertinente."]
+ B2N2["Contradicho: entra en conflicto con lo que el texto sostiene."]
+ B2N3["No determinado: el fragmento no basta para afirmarlo ni negarlo; ausencia de información no significa falsedad."]
+ B3["Leer la consigna"]
+ B3N1["Distinguir pide una contradicción de pide lo que no puede inferirse."]
+ B3N2["Compatible en sentido lógico no equivale necesariamente a demostrado por el texto."]
+ B3N3["Conservar restricciones, grados de certeza y cuantificadores al comparar alternativas."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
 
@@ -187,12 +200,21 @@ E) Aplica con fidelidad el principio de reciprocidad cósmica del mundo andino.
 ### 3.1 La Matriz de Compatibilidad e Incompatibilidad en Admisión
 En las preguntas del tipo: *"Resulta **incompatible** con el texto afirmar que..."*, la comisión de admisión evalúa la capacidad del estudiante para identificar la falsedad lógica contextuada:
 
-```
-[ENUNCIADO PROPUESTO] ──▶ ¿Armoniza con las premisas del autor?
-         │
-         ├──────▶ SÍ (Es literal o inferible)  ───▶  COMPATIBLE (No marcar si piden la falsa)
-         │
-         └──────▶ NO (Choca, niega o deforma)  ───▶  INCOMPATIBLE (¡Esta es la clave buscada!)
+```mermaid
+graph TD
+ ROOT["Comprobar una afirmación"]
+ B1["Respaldada"]
+ B1N1["Localizar la frase o el razonamiento que la sostiene."]
+ B2["Contradicha"]
+ B2N1["Mostrar qué afirmación o condición del texto entra en conflicto con ella."]
+ B3["No determinada"]
+ B3N1["Indicar qué dato falta; no presentarla como falsa solo por no estar mencionada."]
+ ROOT --> B1
+ B1 --> B1N1
+ ROOT --> B2
+ B2 --> B2N1
+ ROOT --> B3
+ B3 --> B3N1
 ```
 
 #### Tipos de Incompatibilidad Evaluados en la UNSA
@@ -280,7 +302,7 @@ E) Demostró que los sacerdotes moches poseían control sobrenatural sobre las l
 > **Trampa 2: La Opción "No Mencionada" vs. "Incompatible"**
 > - Incompatible: Choca frontalmente con la lógica del texto.
 > - No mencionada: Es un dato sobre el cual el texto guarda silencio absoluto.
-> En exámenes rigurosos de la UNSA y UNMSM, si no hay una contradicción explícita, la opción que afirma algo categórico sobre lo cual el texto dijo que no se sabe nada es calificada como incompatible por atribuir falsamente una certeza inexistente.
+> **Importante:** no mencionado, no inferible y contradictorio no son equivalentes. Sin evidencia no debe atribuirse a universidades una regla general que convierta toda afirmación no determinada en falsa.
 
 ---
 

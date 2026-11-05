@@ -1,1 +1,200 @@
-[{"concept":"5.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t05_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"5.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t05_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"5.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t05_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"5.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t05_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"5.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t05_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"5.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t05_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"5.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t05_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"5.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t05_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"5.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t05_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"5.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t05_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "5.2.1",
+    "correctIndex": 0,
+    "explanation": "1. Por el teorema del resto se evalúa P en 2.\n2. Sustituimos y operamos: $P(2)=4+8+5$.\n3. El valor pedido es $17$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t05_s02_c01",
+    "options": [
+      "$17$",
+      "$18$",
+      "$16$",
+      "$34$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 5,
+    "statement": "¿Cuál es el resto al dividir P(x)=x²+4x+5 entre x−2?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.2.2",
+    "correctIndex": 3,
+    "explanation": "1. El divisor x+1 se anula en −1.\n2. Sustituimos y operamos: $P(-1)=1-4+5$.\n3. El valor pedido es $2$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t05_s02_c02",
+    "options": [
+      "$3$",
+      "$1$",
+      "$4$",
+      "$2$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 5,
+    "statement": "¿Cuál es el resto al dividir x²+4x+5 entre x+1?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.2.3",
+    "correctIndex": 2,
+    "explanation": "1. Restamos los grados del dividendo y del divisor no nulo.\n2. Sustituimos y operamos: $x^{9-4}=x^5$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t05_s02_c03",
+    "options": [
+      "$4$",
+      "$10$",
+      "$5$",
+      "$6$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 5,
+    "statement": "Al dividir exactamente $x^{9}$ entre $x^{4}$, ¿qué grado tiene el cociente?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.2.4",
+    "correctIndex": 1,
+    "explanation": "1. Una raíz del polinomio produce resto cero.\n2. Sustituimos y operamos: $4^2-16=0$.\n3. El valor pedido es $0$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t05_s02_c04",
+    "options": [
+      "$3$",
+      "$0$",
+      "$1$",
+      "$2$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 5,
+    "statement": "P(x)=x²−16. ¿Cuál es P(4), y por tanto el resto al dividir por x−4?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.2.5",
+    "correctIndex": 0,
+    "explanation": "1. Factorizamos con dos números de suma y producto conocidos.\n2. Sustituimos y operamos: $(x+4)(x+5);\\quad c=5$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t05_s02_c05",
+    "options": [
+      "$5$",
+      "$6$",
+      "$4$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 5,
+    "statement": "Al dividir x²+9x+20 entre x+4, el cociente es x+c. ¿Cuánto vale c?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.2.6",
+    "correctIndex": 3,
+    "explanation": "1. Por el teorema del resto se evalúa P en 2.\n2. Sustituimos y operamos: $P(2)=4+10+6$.\n3. El valor pedido es $20$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t05_s02_c06",
+    "options": [
+      "$21$",
+      "$19$",
+      "$40$",
+      "$20$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 5,
+    "statement": "¿Cuál es el resto al dividir P(x)=x²+5x+6 entre x−2?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.2.7",
+    "correctIndex": 2,
+    "explanation": "1. El divisor x+1 se anula en −1.\n2. Sustituimos y operamos: $P(-1)=1-5+6$.\n3. El valor pedido es $2$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t05_s02_c07",
+    "options": [
+      "$1$",
+      "$4$",
+      "$2$",
+      "$3$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 5,
+    "statement": "¿Cuál es el resto al dividir x²+5x+6 entre x+1?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.2.8",
+    "correctIndex": 1,
+    "explanation": "1. Restamos los grados del dividendo y del divisor no nulo.\n2. Sustituimos y operamos: $x^{11-5}=x^6$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t05_s02_c08",
+    "options": [
+      "$12$",
+      "$6$",
+      "$7$",
+      "$5$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 5,
+    "statement": "Al dividir exactamente $x^{11}$ entre $x^{5}$, ¿qué grado tiene el cociente?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.2.9",
+    "correctIndex": 0,
+    "explanation": "1. Una raíz del polinomio produce resto cero.\n2. Sustituimos y operamos: $5^2-25=0$.\n3. El valor pedido es $0$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t05_s02_c09",
+    "options": [
+      "$0$",
+      "$1$",
+      "$2$",
+      "$3$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 5,
+    "statement": "P(x)=x²−25. ¿Cuál es P(5), y por tanto el resto al dividir por x−5?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.2.10",
+    "correctIndex": 3,
+    "explanation": "1. Factorizamos con dos números de suma y producto conocidos.\n2. Sustituimos y operamos: $(x+5)(x+6);\\quad c=6$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t05_s02_c10",
+    "options": [
+      "$7$",
+      "$5$",
+      "$12$",
+      "$6$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 5,
+    "statement": "Al dividir x²+11x+30 entre x+5, el cociente es x+c. ¿Cuánto vale c?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "5.2.11",
+    "correctIndex": 2,
+    "explanation": "1. Por el teorema del resto se evalúa P en 2.\n2. Sustituimos y operamos: $P(2)=4+12+7$.\n3. El valor pedido es $23$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t05_s02_c11",
+    "options": [
+      "$22$",
+      "$46$",
+      "$23$",
+      "$24$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 5,
+    "statement": "¿Cuál es el resto al dividir P(x)=x²+6x+7 entre x−2?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

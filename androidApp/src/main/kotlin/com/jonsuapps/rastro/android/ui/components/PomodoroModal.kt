@@ -69,6 +69,15 @@ fun PomodoroFullModal(
     val seconds = state.timeLeftSeconds % 60
     val timeFormatted = String.format("%02d:%02d", minutes, seconds)
     var showSettings by remember { mutableStateOf(false) }
+    val timer = remember(context) { com.jonsuapps.rastro.android.pomodoro.PomodoroTimer.get(context) }
+    var exactAllowed by remember { mutableStateOf(timer.exactAlarmsAllowed()) }
+    val alarmPermission = androidx.activity.compose.rememberLauncherForActivityResult(
+        androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult()
+    ) {
+        exactAllowed = timer.exactAlarmsAllowed()
+        timer.refresh()
+        timer.schedule()
+    }
     val activeModes = listOf(PomodoroMode.STUDY, PomodoroMode.SHORT_BREAK, PomodoroMode.LONG_BREAK)
     val cyclesPerBlock = state.customCyclesBeforeLongBreak.coerceAtLeast(1)
     val currentCycle = (state.completedCycles % cyclesPerBlock) + 1
@@ -165,6 +174,20 @@ fun PomodoroFullModal(
                         colors = colors,
                         onClick = onDismiss
                     )
+                }
+
+                if (!exactAllowed) {
+                    TextButton(onClick = {
+                        runCatching {
+                            alarmPermission.launch(android.content.Intent(
+                                android.provider.Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM,
+                                android.net.Uri.parse("package:${context.packageName}")
+                            ))
+                        }
+                    }) {
+                        Text("Permitir alarma puntual con pantalla apagada. Sin permiso puede retrasarse.",
+                            fontSize = 11.sp, color = colors.accent)
+                    }
                 }
 
                 // Selector de modo tipo Keycaps 3D físicos con bisel y relieve (altura 56dp anti-cortes)

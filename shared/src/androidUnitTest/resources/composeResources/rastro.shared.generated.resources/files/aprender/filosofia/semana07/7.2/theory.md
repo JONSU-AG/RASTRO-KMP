@@ -1,22 +1,40 @@
 ## 2. MAPA CONCEPTUAL Y LÍNEA EVOLUTIVA DEL PENSAMIENTO PERUANO
 
-```
-                           FILOSOFÍA EN EL PERÚ Y LATINOAMÉRICA
-                                            │
-         ┌──────────────────┬───────────────┴───────────────┬──────────────────┐
-         ▼                  ▼                               ▼                  ▼
-    EL GRAN DEBATE      COLONIA E                   SIGLO XIX: DEBATES     SIGLO XX: IDEOLOGÍAS
-   LATINOAMERICANO     ILUSTRACIÓN                 Y POSITIVISMO           Y CONTEMPORÁNEA
-         │                  │                               │                  │
-• Augusto Salazar     • Debate de Valladolid        • Liberales (Laso,     • Espiritualismo:
-  Bondy: Tesis de       (Las Casas vs. Sepúlveda)     Gálvez: Soberanía      Alejandro Deustua
-  la inautenticidad   • Escolástica colonial          popular) vs.         • Debate Social:
-  por dependencia.    • Ilustración:                • Conservadores          - Mariátegui (Marxismo)
-• Leopoldo Zea:         Mercurio Peruano,             (Herrera: Soberanía    - Haya de la Torre (APRA)
-  Tesis afirmativa      Rodríguez de Mendoza          de la inteligencia)  • Francisco Miró Quesada
-  de asimilación.       y Unanue                    • Positivismo:           (Humanismo y Lógica)
-• Filosofía de la                                     González Prada y
-  Liberación (Dussel)                                 M. V. Villarán
+```mermaid
+graph TD
+ ROOT["Filosofía en Perú y América Latina"]
+ B1["Autenticidad y dependencia"]
+ B1N1["Salazar Bondy: relacionar la pregunta por autenticidad con las condiciones de dependencia y dominación."]
+ B1N2["Leopoldo Zea: atender a la historicidad y a la apropiación de ideas desde circunstancias latinoamericanas."]
+ B1N3["Filosofía de la liberación: proyectos diversos; no reducirlos a una sola respuesta ni confundirlos con cualquier uso del término liberación."]
+ B2["Contextos coloniales e ilustrados"]
+ B2N1["El debate de Valladolid forma parte del contexto transatlántico sobre conquista y dominación; no tuvo lugar en Perú."]
+ B2N2["La escolástica colonial incluye debates y prácticas intelectuales que deben situarse históricamente."]
+ B2N3["Mercurio Peruano, Rodríguez de Mendoza e Hipólito Unanue: reconocer proyectos ilustrados y diferencias entre sus actividades."]
+ B3["Debates peruanos del siglo XIX"]
+ B3N1["Laso, Gálvez y Herrera intervienen en controversias sobre representación, soberanía y educación."]
+ B3N2["Liberal y conservador son clasificaciones que requieren precisar el problema y el momento."]
+ B3N3["González Prada y Manuel Vicente Villarán: no tratar sus posiciones como idénticas por relacionarlas con el positivismo."]
+ B4["Diversidad del siglo XX"]
+ B4N1["Alejandro Deustua: reconocer la orientación espiritualista y su contexto."]
+ B4N2["Mariátegui y Haya de la Torre: distinguir sus proyectos y sus desacuerdos, no una doctrina conjunta."]
+ B4N3["Francisco Miró Quesada: trabajo filosófico sobre lógica, razón y humanismo."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---

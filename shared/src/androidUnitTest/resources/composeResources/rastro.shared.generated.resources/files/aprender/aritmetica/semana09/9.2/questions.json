@@ -1,1 +1,200 @@
-[{"concept":"9.2.1","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. Analizamos la naturaleza de la serie: - Primer término: t_1 = \\frac{3}{4}. - Segundo término: t_2 = \\frac{3}{16}. 2. Verificamos la razón geométrica constante dividiendo términos consecutivos: q = \\frac{t_2}{t_1} = \\frac{\\frac{3}{16}}{\\frac{3}{4}} = \\frac{4}{16} = \\frac{1}{4} 3. Comprobamos la condición de convergencia: |q| = \\left|\\frac{1}{4}\\right| < 1 \\quad \\text{(Es una P.G. decreciente infinita convexa)} 4. Aplicamos la fórmula de la Suma Límite: S_\\infty = \\frac{t_1}{1 - q} S_\\infty = \\frac{\\frac{3}{4}}{1 - \\frac{1}{4}} = \\frac{\\frac{3}{4}}{\\frac{3}{4}} = 1 **Respuesta Correcta:** **B) 1** ---","fuente":"temario","id":"arit_t09_s02_c01","options":["\\frac{3}{2}","1","\\frac{4}{3}","\\frac{5}{4}"],"pedagogicalTier":"concepto","semana":9,"statement":"**Enunciado:** Calcule el valor de la siguiente suma infinita de infinitos términos:","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.2","correctIndex":1,"explanation":"**Resolución Paso a Paso:** 1. **Artificio de Términos Simétricos en la P.A.:** Sean los tres términos originales de la P.A. creciente (r > 0): a - r, \\quad a, \\quad a + r 2. Usamos el dato de la suma de los tres términos: (a - r) + a + (a + r) = 21 \\implies 3a = 21 \\implies a = 7 Por ende, los términos de la P.A. son: 7 - r, \\quad 7, \\quad 7 + r 3. Modificamos los términos según el enunciado para formar la P.G.: - Término 1: t_1 = 7 - r - Término 2: t_2 = 7 + 2 = 9 - Término 3: t_3 = (7 + r) + 9 = 16 + r 4. Por la propiedad fundamental de una terna en P.G., el término medio al cuadrado es igual al producto de los extremos: (t_2)^2 = t_1 \\cdot t_3 9^2 = (7 - r)(16 + r) 81 = 112 + 7r - 16r - r^2 81 = 112 - 9r - r^2 5. Transponemos todos los términos para formar una ecuación cuadrática en r: r^2 + 9r - (112 - 81) = 0 r^2 + 9r - 31 = 0 \\dots Revisemos si al segundo término se le suma 1 y al tercero 7: Si t_2 = 8, t_3 = 14 + r \\implies 64 = (7 - r)(14 + r) = 98 - 7r - r^2 \\implies r^2 + 7r - 34 = 0. Si al segundo término se le suma 2 y al tercero se le suma 17: 9^2 = (7 - r)(24 + r) \\implies 81 = 168 - 17r - r^2 \\implies r^2 + 17r - 87 = 0. Si al primer término se le resta 1, o los términos son a_1, a_2, a_3: Con la terna 3, 7, 11 (donde r = 4): t_1 = 3, t_2 = 7+2 = 9, t_3 = 11 + 16 = 27 \\implies 3, 9, 27 (¡P.G. perfecta de razón q = 3!). Para que t_3 = 27 con a_3 = 11, se le debió sumar 16: (7 - r) \\cdot (7 + r + 16) = (7 - r)(23 + r) = 81 161 + 7r - 23r - r^2 = 81 \\implies r^2 + 16r - 80 = 0 (r + 20)(r - 4) = 0 \\implies r = 4 6. Con r = 4, los tres números originales de la P.A. son: a_1 = 7 - 4 = 3 a_2 = 7 a_3 = 7 + 4 = 11 - Suma: 3 + 7 + 11 = 21 (Cumple). - Nueva terna: 3, 7+2=9, 11+16=27 (P.G. con q = 3, cumple). 7. Calculamos el producto solicitado de los tres números originales: \\text{Producto} = 3 \\times 7 \\times 11 = 21 \\times 11 = 231 **Respuesta Correcta:** **D) 231** ---","fuente":"temario","id":"arit_t09_s02_c02","options":["231","105","168","210"],"pedagogicalTier":"concepto","semana":9,"statement":"**Enunciado:** Tres números enteros positivos forman una progresión aritmética creciente. Si al segundo término se le suma 2 y al tercer término se le suma 9, la nueva terna resultante forma una progresión geométrica. Si la suma de los tres términos originales de la P.A. es 21, determine el producto de dichos tres términos originales.","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: r = \\frac{B - A}{m + 1}.","fuente":"temario","id":"arit_t09_s02_c03","options":["P_n = \\sqrt{(t_1 \\cdot t_n)^n}.","Asignar los términos (x - r), x, (x + r), de modo que su suma inmediata sea 3x.","r = \\frac{B - A}{m + 1}.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":9,"statement":"¿Cómo se define la razón de interpolación r al insertar m medios aritméticos entre A y B?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: P_n = \\sqrt{(t_1 \\cdot t_n)^n}.","fuente":"temario","id":"arit_t09_s02_c04","options":["r = \\frac{B - A}{m + 1}.","Asignar los términos (x - r), x, (x + r), de modo que su suma inmediata sea 3x.","Valor o condición no aplicable al caso planteado","P_n = \\sqrt{(t_1 \\cdot t_n)^n}."],"pedagogicalTier":"concepto","semana":9,"statement":"¿Cuál es la fórmula del producto de los n primeros términos de una progresión geométrica?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Asignar los términos (x - r), x, (x + r), de modo que su suma inmediata sea 3x.","fuente":"temario","id":"arit_t09_s02_c05","options":["Asignar los términos (x - r), x, (x + r), de modo que su suma inmediata sea 3x.","r = \\frac{B - A}{m + 1}.","P_n = \\sqrt{(t_1 \\cdot t_n)^n}.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":9,"statement":"¿Qué artificio de simetría se recomienda para representar tres números en P.A. cuya suma es conocida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t09_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t09_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t09_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t09_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t09_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "arit_t09_s02_c01",
+    "concept": "9.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 9,
+    "statement": "La progresión geométrica 2,6,18,… tiene razón 3. ¿Cuál es el quinto término?",
+    "options": [
+      "$162$",
+      "$324$",
+      "$81$",
+      "$486$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El término n multiplica el primero por r elevado a n−1.\n2. Desarrollamos con los datos: $a_5=2(3^4)$.\n3. El resultado es $162$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t09_s02_c02",
+    "concept": "9.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 9,
+    "statement": "Suma los cuatro primeros términos de la progresión geométrica de primer término 2 y razón 2.",
+    "options": [
+      "$60$",
+      "$15$",
+      "$90$",
+      "$30$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Escribimos los cuatro términos antes de sumar.\n2. Desarrollamos con los datos: $S_4=2+4+8+16$.\n3. El resultado es $30$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t09_s02_c03",
+    "concept": "9.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 9,
+    "statement": "¿Cuál es la razón común de la progresión geométrica 3,−6,12,−24,…?",
+    "options": [
+      "$-1$",
+      "$-6$",
+      "$-2$",
+      "$-4$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Dividimos un término entre el anterior no nulo.\n2. Desarrollamos con los datos: $r=-6/3$.\n3. El resultado es $-2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t09_s02_c04",
+    "concept": "9.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 9,
+    "statement": "¿Cuántos términos hay en la progresión geométrica 1,2,4,…,32?",
+    "options": [
+      "$18$",
+      "$6$",
+      "$12$",
+      "$3$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los términos son potencias de dos desde exponente cero.\n2. Desarrollamos con los datos: $1=2^0;\\quad32=2^5\\Rightarrow n=6$.\n3. El resultado es $6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t09_s02_c05",
+    "concept": "9.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 9,
+    "statement": "Una progresión geométrica infinita empieza en 3 y tiene razón 1/2. ¿Cuál es su suma?",
+    "options": [
+      "$6$",
+      "$12$",
+      "$3$",
+      "$18$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El módulo de la razón es menor que uno.\n2. Desarrollamos con los datos: $S=3/(1-1/2)$.\n3. El resultado es $6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t09_s02_c06",
+    "concept": "9.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 9,
+    "statement": "Una progresión geométrica tiene primer término 5 y razón 1/5. ¿Cuál es su tercer término?",
+    "options": [
+      "$\\frac{2}{5}$",
+      "$\\frac{1}{10}$",
+      "$\\frac{3}{5}$",
+      "$\\frac{1}{5}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Aplicamos dos multiplicaciones por la razón.\n2. Desarrollamos con los datos: $a_3=5(1/5)^2$.\n3. El resultado es $\\frac{1}{5}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t09_s02_c07",
+    "concept": "9.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 9,
+    "statement": "Una progresión geométrica tiene primer término 3, tercer término 27 y razón positiva. ¿Cuál es la razón?",
+    "options": [
+      "$9$",
+      "$1$",
+      "$3$",
+      "$6$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El signo positivo selecciona la raíz indicada.\n2. Desarrollamos con los datos: $3r^2=27\\Rightarrow r=3$.\n3. El resultado es $3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t09_s02_c08",
+    "concept": "9.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 9,
+    "statement": "Una progresión geométrica tiene primer término 4 y razón 1/2. ¿Cuál es su cuarto término?",
+    "options": [
+      "$\\frac{3}{2}$",
+      "$\\frac{1}{2}$",
+      "$1$",
+      "$\\frac{1}{4}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Del primero al cuarto se multiplica tres veces por la razón.\n2. Desarrollamos con los datos: $a_4=4(1/2)^3$.\n3. El resultado es $\\frac{1}{2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t09_s02_c09",
+    "concept": "9.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 9,
+    "statement": "Suma los cinco primeros términos de 1,3,9,27,…, una progresión geométrica de razón 3.",
+    "options": [
+      "$121$",
+      "$242$",
+      "$363$",
+      "$122$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La suma finita acumula los cinco términos indicados.\n2. Desarrollamos con los datos: $S_5=1+3+9+27+81$.\n3. El resultado es $121$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t09_s02_c10",
+    "concept": "9.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 9,
+    "statement": "La suma infinita de una progresión geométrica con primer término no nulo converge si…",
+    "options": [
+      "$|r|<1$",
+      "$r>1$ siempre.",
+      "$r=1$ siempre.",
+      "$|r|>1$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La suma parcial contiene una potencia r^n.\n2. Esa potencia tiende a cero cuando |r|<1.\n3. Entonces se obtiene la suma a1/(1−r).",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t09_s02_c11",
+    "concept": "9.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 9,
+    "statement": "En una progresión geométrica de razón negativa y primer término no nulo, los signos…",
+    "options": [
+      "Son siempre positivos.",
+      "Alternan entre términos consecutivos.",
+      "Son siempre cero.",
+      "Solo cambian en el primer término."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Cada término se multiplica por un número negativo.\n2. Cada multiplicación invierte el signo.\n3. Por eso los signos alternan mientras los términos sean no nulos.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

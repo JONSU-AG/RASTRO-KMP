@@ -1,1 +1,182 @@
-[{"concept":"2.2.1","correctIndex":2,"explanation":"El archipiélago es el sustantivo colectivo que designa un conjunto geográfico de islas (sustantivo individual).","fuente":"temario","id":"rv_t02_s02_c01","options":["Causa a Efecto natural.","Parte a Todo individual.","Sustantivo Colectivo a Sustantivo Individual.","Materia prima a Derivado químico."],"pedagogicalTier":"concepto","semana":2,"statement":"En la analogía 'ARCHIPIÉLAGO : ISLA ::', ¿qué tipo de vínculo analógico específico une a ambos términos?","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"2.2.2","correctIndex":3,"explanation":"La relación es de Intensidad de menor a mayor: la lluvia incrementada en grado desmesurado es diluvio, así como el viento aumentado exponencialmente en fuerza es huracán.","fuente":"temario","id":"rv_t02_s02_c02","options":["Río : Lago.","Nieve : Hielo.","Ola : Playa.","Viento : Huracán."],"pedagogicalTier":"concepto","semana":2,"statement":"Resuelva la siguiente analogía de admisión: 'LLUVIA : DILUVIO ::'","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"2.2.3","correctIndex":2,"explanation":"El petróleo es la materia prima natural de la cual se obtiene mediante refinación la gasolina, del mismo modo que la leche es la materia prima para elaborar el queso.","fuente":"temario","id":"rv_t02_s02_c03","options":["Hierro : Mina.","Madera : Selva.","Leche : Queso.","Agua : Sed."],"pedagogicalTier":"concepto","semana":2,"statement":"Dada la premisa: 'PETRÓLEO : GASOLINA ::', ¿cuál es el par análogo que cumple con la relación de materia prima a derivado elaborado?","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"2.2.4","correctIndex":1,"explanation":"La fiebre es un signo fisiológico (efecto) desencadenado por una infección orgánica (causa).","fuente":"temario","id":"rv_t02_s02_c04","options":["Instrumento a sujeto profesional.","Efecto (o signo clínico) a Causa etiológica.","Especie a género taxonómico.","Parte a todo integral."],"pedagogicalTier":"concepto","semana":2,"statement":"En la analogía: 'FIEBRE : INFECCIÓN ::', la relación lógica que se establece entre el primer y segundo término es de:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"2.2.5","correctIndex":1,"explanation":"La relación es de Sujeto a Característica taxonómica de régimen alimenticio: el león es carnívoro, como la oveja es herbívora.","fuente":"temario","id":"rv_t02_s02_c05","options":["Tigre : Jaula.","Oveja : Herbívoro.","Águila : Pluma.","Vaca : Pradera."],"pedagogicalTier":"concepto","semana":2,"statement":"Resuelva la siguiente analogía: 'LEÓN : CARNÍVORO ::'","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"2.2.6","correctIndex":3,"explanation":"La relación es de Profesional a su Función teleológica primordial: el abogado procura la defensa del patrocinado, así como el médico procura la curación del paciente.","fuente":"temario","id":"rv_t02_s02_c06","options":["Juez : Cárcel.","Policía : Delincuente.","Reo : Condena.","Médico : Curación."],"pedagogicalTier":"concepto","semana":2,"statement":"Dada la premisa: 'ABOGADO : DEFENSA ::', ¿cuál es el par análogo más consistente?","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"2.2.7","correctIndex":0,"explanation":"El álgebra es una rama o especie particular perteneciente al género superior de la matemática.","fuente":"temario","id":"rv_t02_s02_c07","options":["Especie a Género (o disciplina particular a ciencia general).","Efecto a Causa productora.","Oposición semántica excluyente.","Símbolo a significado cultural."],"pedagogicalTier":"concepto","semana":2,"statement":"En la relación analógica 'ÁLGEBRA : MATEMÁTICA ::', el vínculo analógico corresponde a:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"2.2.8","correctIndex":2,"explanation":"La relación es de Evolución instrumental histórica: la antorcha fue el medio ancestral de iluminación sustituido por la bombilla eléctrica, así como la carreta fue el medio de transporte primitivo sustituido por el automóvil.","fuente":"temario","id":"rv_t02_s02_c08","options":["Rueda : Camino.","Barco : Océano.","Carreta : Automóvil.","Vela : Fuego."],"pedagogicalTier":"concepto","semana":2,"statement":"Resuelva la analogía de evolución cronológica: 'ANTORCHA : BOMBILLA ::'","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"2.2.9","correctIndex":0,"explanation":"El médico es el profesional y el hospital es el recinto o centro institucional habitual donde desempeña su labor.","fuente":"temario","id":"rv_t02_s02_c09","options":["Sujeto a su Lugar de trabajo típico (ambiente institucional).","Causa a consecuencia necesaria.","Materia prima a producto manufacturado.","Instrumento a objeto manipulado."],"pedagogicalTier":"concepto","semana":2,"statement":"Dada la premisa: 'MÉDICO : HOSPITAL ::', la relación analógica predominante es de:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"2.2.10","correctIndex":1,"explanation":"La relación de la premisa es de Antonimia (lo que dura poco frente a lo que no tiene fin); su par idéntico en relación y grado es 'transitorio : eterno'.","fuente":"temario","id":"rv_t02_s02_c10","options":["Inmortal : Vitalicio.","Transitorio : Eterno.","Fugaz : Pasajero.","Sempiterno : Duradero."],"pedagogicalTier":"concepto","semana":2,"statement":"Resuelva la siguiente analogía de antonimia: 'EFÍMERO : PERPETUO ::'","subject":"raz_verbal","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "2.2.1",
+    "correctIndex": 2,
+    "explanation": "Relación: conjunto y unidad integrante.\nAplicación: Un archipiélago es un conjunto de islas; isla nombra una de sus unidades. En estos términos, se expresa colectivo–individual.\nRespuesta: Colectivo a individual.",
+    "fuente": "temario",
+    "id": "rv_t02_s02_c01",
+    "options": [
+      "Causa a Efecto natural.",
+      "Parte a Todo individual.",
+      "Sustantivo Colectivo a Sustantivo Individual.",
+      "Materia prima a Derivado químico."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "En «archipiélago–isla», se vincula un conjunto con una de las unidades que lo componen. ¿Qué tipo de relación se está usando?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.2",
+    "correctIndex": 3,
+    "explanation": "Relación: aumento de intensidad en el sentido verbal indicado.\nAplicación: Viento–huracán cumple el contraste pedido entre viento y viento intenso. Río–lago, nieve–hielo y ola–playa cambian de tipo de relación. La consigna no afirma que todos los vientos evolucionen en huracanes.\nRespuesta: Viento : Huracán.",
+    "fuente": "temario",
+    "id": "rv_t02_s02_c02",
+    "options": [
+      "Río : Lago.",
+      "Nieve : Hielo.",
+      "Ola : Playa.",
+      "Viento : Huracán."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Toma «diluvio» en el sentido cotidiano de lluvia muy abundante y «huracán» como viento muy intenso, sin construir una escala meteorológica. ¿Qué pareja mantiene el aumento de intensidad de «lluvia–diluvio»?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.3",
+    "correctIndex": 2,
+    "explanation": "Relación: materia prima y producto elaborado.\nAplicación: El queso se elabora a partir de leche. Hierro–mina invierte material y procedencia; madera–selva relaciona material y lugar; agua–sed no es materia prima–producto.\nRespuesta: Leche : Queso.",
+    "fuente": "temario",
+    "id": "rv_t02_s02_c03",
+    "options": [
+      "Hierro : Mina.",
+      "Madera : Selva.",
+      "Leche : Queso.",
+      "Agua : Sed."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "En «petróleo–gasolina» se relaciona una materia prima con un producto elaborado a partir de ella. ¿Qué pareja mantiene ese orden?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.4",
+    "correctIndex": 1,
+    "explanation": "Relación: efecto y causa en el caso descrito.\nAplicación: Primero se menciona la fiebre producida y luego la infección que la causa en ese ejemplo. La relación del ejercicio no permite concluir que cualquier fiebre demuestre por sí sola una infección.\nRespuesta: Efecto o signo a causa, en ese caso.",
+    "fuente": "temario",
+    "id": "rv_t02_s02_c04",
+    "options": [
+      "Instrumento a sujeto profesional.",
+      "Efecto (o signo clínico) a Causa etiológica.",
+      "Especie a género taxonómico.",
+      "Parte a todo integral."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "En un caso de práctica, una infección provoca fiebre. Si se escribe «fiebre–infección», ¿qué relación corresponde al orden de ese ejemplo?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.5",
+    "correctIndex": 1,
+    "explanation": "Relación: animal y tipo de alimentación.\nAplicación: Oveja–herbívoro mantiene la relación. Las otras parejas nombran un encierro, una parte o un lugar, no un tipo de alimentación.\nRespuesta: Oveja : Herbívoro.",
+    "fuente": "temario",
+    "id": "rv_t02_s02_c05",
+    "options": [
+      "Tigre : Jaula.",
+      "Oveja : Herbívoro.",
+      "Águila : Pluma.",
+      "Vaca : Pradera."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Se relaciona cada animal con un tipo de alimentación: «león–carnívoro». ¿Qué pareja mantiene ese criterio?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.6",
+    "correctIndex": 3,
+    "explanation": "Relación: profesión y finalidad de su actividad.\nAplicación: Médico–curación encaja en el criterio propuesto. Las demás opciones relacionan personas con lugares, personas atendidas o consecuencias; no siguen profesión–finalidad.\nRespuesta: Médico : Curación.",
+    "fuente": "temario",
+    "id": "rv_t02_s02_c06",
+    "options": [
+      "Juez : Cárcel.",
+      "Policía : Delincuente.",
+      "Reo : Condena.",
+      "Médico : Curación."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Si «abogado–defensa» relaciona una profesión con una finalidad de su actividad, ¿qué opción reproduce esa relación, sin afirmar que el resultado esté garantizado?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.7",
+    "correctIndex": 0,
+    "explanation": "Relación: una rama particular y el campo que la incluye.\nAplicación: El álgebra pertenece a la matemática. No se afirma que sea una causa, un símbolo o el opuesto de ella.\nRespuesta: Disciplina particular a campo general.",
+    "fuente": "temario",
+    "id": "rv_t02_s02_c07",
+    "options": [
+      "Especie a Género (o disciplina particular a ciencia general).",
+      "Efecto a Causa productora.",
+      "Oposición semántica excluyente.",
+      "Símbolo a significado cultural."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "En «álgebra–matemática», ¿cómo se relacionan los dos campos?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.8",
+    "correctIndex": 2,
+    "explanation": "Relación: comparación temporal entre recursos de función semejante.\nAplicación: Carreta–automóvil compara medios de transporte de épocas distintas. La relación no exige que un recurso reemplace por completo al otro ni que uno sea el origen directo del otro.\nRespuesta: Carreta : Automóvil.",
+    "fuente": "temario",
+    "id": "rv_t02_s02_c08",
+    "options": [
+      "Rueda : Camino.",
+      "Barco : Océano.",
+      "Carreta : Automóvil.",
+      "Vela : Fuego."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Se comparan medios de iluminación usados en épocas distintas mediante «antorcha–bombilla». ¿Qué pareja permite una comparación temporal semejante en medios de transporte, sin suponer que el anterior haya desaparecido?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.9",
+    "correctIndex": 0,
+    "explanation": "Relación: persona y lugar habitual de actividad.\nAplicación: El hospital es uno de los lugares donde puede trabajar un médico; no es su único lugar posible. El criterio del ejemplo es profesional–lugar de trabajo.\nRespuesta: Sujeto a lugar de trabajo habitual.",
+    "fuente": "temario",
+    "id": "rv_t02_s02_c09",
+    "options": [
+      "Sujeto a su Lugar de trabajo típico (ambiente institucional).",
+      "Causa a consecuencia necesaria.",
+      "Materia prima a producto manufacturado.",
+      "Instrumento a objeto manipulado."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "En «médico–hospital», tomado como ejemplo de un lugar habitual de trabajo, ¿qué relación se expresa?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.10",
+    "correctIndex": 1,
+    "explanation": "Relación: oposición de duración en el sentido indicado.\nAplicación: Transitorio–eterno mantiene el contraste. Fugaz–pasajero aproxima significados; las otras parejas no reproducen la oposición breve–sin fin pedida.\nRespuesta: Transitorio : Eterno.",
+    "fuente": "temario",
+    "id": "rv_t02_s02_c10",
+    "options": [
+      "Inmortal : Vitalicio.",
+      "Transitorio : Eterno.",
+      "Fugaz : Pasajero.",
+      "Sempiterno : Duradero."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "En el sentido de duración, «efímero–perpetuo» opone lo breve a lo que no tiene fin. ¿Qué pareja mantiene ese contraste?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

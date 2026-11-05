@@ -1,1 +1,200 @@
-[{"concept":"7.1.1","correctIndex":0,"explanation":"**Resolución:** El texto aborda cómo las dietas basadas en plantas se han popularizado entre jóvenes, enumera sus beneficios clínicos comprobados (menor riesgo cardiovascular, fibra, antioxidantes) y advierte sobre los cuidados necesarios para evitar deficiencias (vitamina B12). La opción que sintetiza cabalmente todo el texto es la **B**. **Respuesta:** **B** ---","fuente":"temario","id":"ing_t07_s01_c01","options":["The economic cost of organic agriculture in developing nations.","The growing popularity of plant-based diets, their health benefits, and the need for nutritional balance.","How to treat severe cases of type 2 diabetes through surgical interventions.","The daily laboratory routine of medical students in university hospitals."],"pedagogicalTier":"concepto","semana":7,"statement":"What is the primary topic of the passage?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.1.2","correctIndex":0,"explanation":"**Resolución:** Localizando en el párrafo 2: *\"It is associated with a significantly reduced risk of cardiovascular disease, lower blood pressure, and better management of type 2 diabetes\"*. Esto coincide textualmente con la opción B. **Respuesta:** **B** ---","fuente":"temario","id":"ing_t07_s01_c02","options":["Permanent immunity against viral infections.","A lower likelihood of suffering from cardiovascular diseases and high blood pressure.","Instant weight loss without any physical exercise.","Higher levels of animal protein in the bloodstream."],"pedagogicalTier":"concepto","semana":7,"statement":"According to paragraph 2, which of the following is a proven benefit of plant-based diets?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.1.3","correctIndex":2,"explanation":"**Resolución:** El autor contrasta *fringe trend* con *mainstream culture* (cultura mayoritaria y aceptada). *Fringe* alude a algo secundario, periférico, marginal o que solo sigue un grupo muy reducido de personas. La palabra equivalente es *Marginal or non-traditional*. **Respuesta:** **A** ---","fuente":"temario","id":"ing_t07_s01_c03","options":["Ancient and forgotten","Mandatory for all citizens","Marginal or non-traditional","Very expensive"],"pedagogicalTier":"concepto","semana":7,"statement":"In paragraph 1, the word **\"fringe\"** in the phrase *\"are no longer considered a fringe trend; they have entered mainstream lifestyle culture\"* is closest in meaning to:","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.1.4","correctIndex":3,"explanation":"According to the lesson theory: It means to **reduce the quantity or consumption** of something (*e.g., cut down on sugar*).","fuente":"temario","id":"ing_t07_s01_c04","options":["It requires an irregular past participle form without auxiliary verbs.","It is only used in colloquial informal contexts with plural nouns.","It follows an inverted word order with obligatory double negation.","It means to **reduce the quantity or consumption** of something (*e.g., cut down on sugar*)."],"pedagogicalTier":"concepto","semana":7,"statement":"What does the phrasal verb *\"cut down on\"* mean?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.1.5","correctIndex":0,"explanation":"According to the lesson theory: A **degree** is the university qualification/major you study; a **career** is your entire professional working life.","fuente":"temario","id":"ing_t07_s01_c05","options":["A **degree** is the university qualification/major you study; a **career** is your entire professional working life.","It requires an irregular past participle form without auxiliary verbs.","It is only used in colloquial informal contexts with plural nouns.","It follows an inverted word order with obligatory double negation."],"pedagogicalTier":"concepto","semana":7,"statement":"What is the difference between *\"career\"* and *\"degree\"* in English?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.1.6","correctIndex":1,"explanation":"According to the lesson theory: Because it is **essential for red blood cells and nerve function**, but naturally absent in unfortified plant foods.","fuente":"temario","id":"ing_t07_s01_c06","options":["It requires an irregular past participle form without auxiliary verbs.","Because it is **essential for red blood cells and nerve function**, but naturally absent in unfortified plant foods.","It is only used in colloquial informal contexts with plural nouns.","It follows an inverted word order with obligatory double negation."],"pedagogicalTier":"concepto","semana":7,"statement":"Why is vitamin B12 critical in plant-based diets?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.1.7","correctIndex":2,"explanation":"(*Work out* = ejercitarse físicamente).","fuente":"temario","id":"ing_t07_s01_c07","options":["To stop eating vegetables","To study longer hours in the library","To engage in physical exercise","To take extra sleeping pills"],"pedagogicalTier":"concepto","semana":7,"statement":"If a doctor tells a patient to *\"work out three times a week\"*, the doctor is recommending:","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.1.8","correctIndex":3,"explanation":"(Tener capacidad económica para costear algo).","fuente":"temario","id":"ing_t07_s01_c08","options":["To cook fresh ingredients","To dislike certain tastes","To forget where a restaurant is","To have enough money to pay for something"],"pedagogicalTier":"concepto","semana":7,"statement":"The word *\"afford\"* in *\"Students cannot afford expensive meals\"* means:","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.1.9","correctIndex":0,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t07_s01_c09","options":["The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson.","The sentence violates subject-verb agreement in standard English.","The tense used is incompatible with the stated adverbial time marker.","The word order incorrectly positions the modifier after the direct object."],"pedagogicalTier":"concepto","semana":7,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.1.10","correctIndex":1,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t07_s01_c10","options":["The sentence violates subject-verb agreement in standard English.","The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson.","The tense used is incompatible with the stated adverbial time marker.","The word order incorrectly positions the modifier after the direct object."],"pedagogicalTier":"concepto","semana":7,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "ing_t07_s01_c01",
+    "concept": "7.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“Leo is a first-year student. He lives with his aunt and takes the bus to class. On weekdays he reviews his notes for twenty minutes after dinner. On Saturdays he meets a study group at the library. He wants to study engineering, but he has not chosen a university yet.”\n\nWho does Leo live with?",
+    "options": [
+      "His aunt.",
+      "His coach.",
+      "His sister alone.",
+      "All his classmates."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La evidencia pertinente es: “He lives with his aunt”.\n2. El parentesco y la convivencia aparecen explícitamente.\n3. La respuesta respaldada por el texto es: His aunt.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s01_c02",
+    "concept": "7.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“Leo is a first-year student. He lives with his aunt and takes the bus to class. On weekdays he reviews his notes for twenty minutes after dinner. On Saturdays he meets a study group at the library. He wants to study engineering, but he has not chosen a university yet.”\n\nHow does Leo travel to class?",
+    "options": [
+      "By train.",
+      "On foot only.",
+      "By bicycle.",
+      "By bus."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La evidencia pertinente es: “takes the bus to class”.\n2. La expresión indica el medio de transporte.\n3. La respuesta respaldada por el texto es: By bus.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s01_c03",
+    "concept": "7.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“Leo is a first-year student. He lives with his aunt and takes the bus to class. On weekdays he reviews his notes for twenty minutes after dinner. On Saturdays he meets a study group at the library. He wants to study engineering, but he has not chosen a university yet.”\n\nWhen does he review his notes on weekdays?",
+    "options": [
+      "Only on Saturdays.",
+      "At midnight exactly.",
+      "After dinner.",
+      "Before breakfast."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La evidencia pertinente es: “after dinner”.\n2. Se indica una relación temporal, no una hora exacta.\n3. La respuesta respaldada por el texto es: After dinner.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s01_c04",
+    "concept": "7.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“Leo is a first-year student. He lives with his aunt and takes the bus to class. On weekdays he reviews his notes for twenty minutes after dinner. On Saturdays he meets a study group at the library. He wants to study engineering, but he has not chosen a university yet.”\n\nHow long does he review his notes?",
+    "options": [
+      "Forty minutes.",
+      "Twenty minutes.",
+      "Two hours.",
+      "Ten seconds."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La evidencia pertinente es: “for twenty minutes”.\n2. For indica la duración de esa actividad.\n3. La respuesta respaldada por el texto es: Twenty minutes.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s01_c05",
+    "concept": "7.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“Leo is a first-year student. He lives with his aunt and takes the bus to class. On weekdays he reviews his notes for twenty minutes after dinner. On Saturdays he meets a study group at the library. He wants to study engineering, but he has not chosen a university yet.”\n\nWhere does the Saturday study group meet?",
+    "options": [
+      "At the library.",
+      "At the sports field.",
+      "At his aunt’s workplace.",
+      "At a restaurant."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La evidencia pertinente es: “On Saturdays he meets a study group at the library.”.\n2. La oración fija el lugar de reunión.\n3. La respuesta respaldada por el texto es: At the library.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s01_c06",
+    "concept": "7.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“Leo is a first-year student. He lives with his aunt and takes the bus to class. On weekdays he reviews his notes for twenty minutes after dinner. On Saturdays he meets a study group at the library. He wants to study engineering, but he has not chosen a university yet.”\n\nHas Leo chosen a university?",
+    "options": [
+      "Yes, two universities.",
+      "Yes, his aunt’s university.",
+      "The text gives its exact name.",
+      "Not yet."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La evidencia pertinente es: “he has not chosen a university yet”.\n2. La negación y yet indican que la decisión sigue pendiente.\n3. La respuesta respaldada por el texto es: Not yet.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s01_c07",
+    "concept": "7.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“For a classroom diary, Mara wrote: “I packed rice, beans and fruit for lunch. I brought water in a reusable bottle. My friend bought a sandwich. We ate after our morning classes.” The diary describes one school day; it does not give medical advice.”\n\nWhat did Mara pack for lunch?",
+    "options": [
+      "A sandwich bought by her friend.",
+      "Only water, with no food.",
+      "Rice, beans and fruit.",
+      "Only soup."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La evidencia pertinente es: “I packed rice, beans and fruit for lunch.”.\n2. La lista pertenece al almuerzo de Mara, no al de su amiga.\n3. La respuesta respaldada por el texto es: Rice, beans and fruit.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s01_c08",
+    "concept": "7.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“For a classroom diary, Mara wrote: “I packed rice, beans and fruit for lunch. I brought water in a reusable bottle. My friend bought a sandwich. We ate after our morning classes.” The diary describes one school day; it does not give medical advice.”\n\nWho bought a sandwich?",
+    "options": [
+      "Leo.",
+      "Mara’s friend.",
+      "Mara’s aunt.",
+      "The coach."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La evidencia pertinente es: “My friend bought a sandwich.”.\n2. El sujeto de bought es my friend.\n3. La respuesta respaldada por el texto es: Mara’s friend.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s01_c09",
+    "concept": "7.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“For a classroom diary, Mara wrote: “I packed rice, beans and fruit for lunch. I brought water in a reusable bottle. My friend bought a sandwich. We ate after our morning classes.” The diary describes one school day; it does not give medical advice.”\n\nWhen did they eat?",
+    "options": [
+      "After their morning classes.",
+      "Before all their classes.",
+      "During a midnight trip.",
+      "Only on Sunday."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La evidencia pertinente es: “We ate after our morning classes.”.\n2. After indica que las clases de la mañana ocurrieron primero.\n3. La respuesta respaldada por el texto es: After their morning classes.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s01_c10",
+    "concept": "7.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“For a classroom diary, Mara wrote: “I packed rice, beans and fruit for lunch. I brought water in a reusable bottle. My friend bought a sandwich. We ate after our morning classes.” The diary describes one school day; it does not give medical advice.”\n\nDoes the text prescribe the same lunch for every person?",
+    "options": [
+      "Yes; it gives a universal medical prescription.",
+      "Yes; it says every person must eat rice.",
+      "No; it says nobody may eat beans.",
+      "No; it describes one school day."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La evidencia pertinente es: “The diary describes one school day; it does not give medical advice.”.\n2. No se convierte un ejemplo narrativo en una recomendación clínica universal.\n3. La respuesta respaldada por el texto es: No; it describes one school day.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s01_c11",
+    "concept": "7.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“Leo is a first-year student. He lives with his aunt and takes the bus to class. On weekdays he reviews his notes for twenty minutes after dinner. On Saturdays he meets a study group at the library. He wants to study engineering, but he has not chosen a university yet.”\n\nWhat field does Leo want to study?",
+    "options": [
+      "Law.",
+      "Literature.",
+      "Engineering.",
+      "Medicine."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La evidencia pertinente es: “He wants to study engineering”.\n2. El deseo de estudiar ingeniería está expreso, aunque la universidad no esté elegida.\n3. La respuesta respaldada por el texto es: Engineering.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

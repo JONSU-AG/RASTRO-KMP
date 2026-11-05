@@ -1,1 +1,200 @@
-[{"concept":"10.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t10_s01_c01","options":["96\\pi\\text{ cm}^3","48\\pi\\text{ cm}^3","72\\pi\\text{ cm}^3","108\\pi\\text{ cm}^3"],"pedagogicalTier":"concepto","semana":10,"statement":"**Enunciado:** Calcule el volumen de un cono circular recto cuya generatriz mide 10\\text{ cm} y cuyo radio de la base mide 6\\text{ cm}.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t10_s01_c02","options":["1.75\\text{ cm}","2.25\\text{ cm}","2.5\\text{ cm}","3.0\\text{ cm}"],"pedagogicalTier":"concepto","semana":10,"statement":"**Enunciado:** Un cilindro circular recto de radio R = 4\\text{ cm} contiene agua hasta cierta altura. Se sumerge completamente en él una esfera metálica maciza de radio r = 3\\text{ cm}. ¿Cuántos centímetros se elevará el nivel del agua en el cilindro?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t10_s01_c03","options":["180\\pi\\text{ cm}^2","240\\pi\\text{ cm}^2","216\\pi\\text{ cm}^2","135\\pi\\text{ cm}^2"],"pedagogicalTier":"concepto","semana":10,"statement":"**Enunciado:** Al desarrollar la superficie lateral de un cono de revolución sobre un plano, se obtiene un sector circular cuyo ángulo central mide 216^\\circ. Si la generatriz del cono mide 15\\text{ cm}, calcule el área total del cono.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"10.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t10_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "geom_t10_s01_c01",
+    "concept": "10.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Un cilindro circular recto tiene radio 2 cm y altura 5 cm. ¿Qué volumen tiene?",
+    "options": [
+      "$20 \\pi\\,\\mathrm{cm^3}$",
+      "$40 \\pi\\,\\mathrm{cm^3}$",
+      "$10 \\pi\\,\\mathrm{cm^3}$",
+      "$60 \\pi\\,\\mathrm{cm^3}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El volumen es área circular de base por altura.\n2. Usamos los datos indicados: $V=\\pi r^2h=\\pi2^2(5)$.\n3. El resultado es $20 \\pi\\,\\mathrm{cm^3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s01_c02",
+    "concept": "10.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Un cilindro circular recto tiene radio 2 cm y altura 5 cm. ¿Qué área lateral tiene?",
+    "options": [
+      "$40 \\pi\\,\\mathrm{cm^2}$",
+      "$10 \\pi\\,\\mathrm{cm^2}$",
+      "$60 \\pi\\,\\mathrm{cm^2}$",
+      "$20 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El desarrollo lateral es un rectángulo de ancho igual a la circunferencia.\n2. Usamos los datos indicados: $S_L=2\\pi rh=2\\pi(2)(5)$.\n3. El resultado es $20 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s01_c03",
+    "concept": "10.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Un cilindro cerrado de radio 2 cm y altura 5 cm tiene ambas bases. ¿Qué área total tiene?",
+    "options": [
+      "$14 \\pi\\,\\mathrm{cm^2}$",
+      "$84 \\pi\\,\\mathrm{cm^2}$",
+      "$28 \\pi\\,\\mathrm{cm^2}$",
+      "$56 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Se añaden las dos bases al área lateral.\n2. Usamos los datos indicados: $S_T=2\\pi rh+2\\pi r^2=20\\pi+8\\pi$.\n3. El resultado es $28 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s01_c04",
+    "concept": "10.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Un cono circular recto tiene radio 3 cm y altura 4 cm. ¿Cuánto mide su generatriz?",
+    "options": [
+      "$15\\,\\mathrm{cm}$",
+      "$5\\,\\mathrm{cm}$",
+      "$10\\,\\mathrm{cm}$",
+      "$2.5\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Radio, altura y generatriz forman un triángulo rectángulo.\n2. Usamos los datos indicados: $g=\\sqrt{3^2+4^2}$.\n3. El resultado es $5\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s01_c05",
+    "concept": "10.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Un cono circular recto tiene radio 3 cm y altura 4 cm. ¿Qué volumen tiene?",
+    "options": [
+      "$12 \\pi\\,\\mathrm{cm^3}$",
+      "$24 \\pi\\,\\mathrm{cm^3}$",
+      "$6 \\pi\\,\\mathrm{cm^3}$",
+      "$36 \\pi\\,\\mathrm{cm^3}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El cono tiene un tercio del volumen del cilindro de igual base y altura.\n2. Usamos los datos indicados: $V=\\pi3^2(4)/3$.\n3. El resultado es $12 \\pi\\,\\mathrm{cm^3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s01_c06",
+    "concept": "10.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Un cono circular recto tiene radio 3 cm y generatriz 5 cm. ¿Qué área lateral tiene?",
+    "options": [
+      "$30 \\pi\\,\\mathrm{cm^2}$",
+      "$\\frac{15 \\pi}{2}\\,\\mathrm{cm^2}$",
+      "$45 \\pi\\,\\mathrm{cm^2}$",
+      "$15 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El desarrollo lateral es un sector circular.\n2. Usamos los datos indicados: $S_L=\\pi rg=\\pi(3)(5)$.\n3. El resultado es $15 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s01_c07",
+    "concept": "10.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Un cono cerrado tiene radio 3 cm y generatriz 5 cm. ¿Qué área total tiene contando su base?",
+    "options": [
+      "$12 \\pi\\,\\mathrm{cm^2}$",
+      "$72 \\pi\\,\\mathrm{cm^2}$",
+      "$24 \\pi\\,\\mathrm{cm^2}$",
+      "$48 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Se añade el círculo de base al sector lateral.\n2. Usamos los datos indicados: $S_T=\\pi rg+\\pi r^2=15\\pi+9\\pi$.\n3. El resultado es $24 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s01_c08",
+    "concept": "10.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Un rectángulo se enrolla como superficie lateral de un cilindro. Su ancho de 10π cm se convierte en la circunferencia y su altura es 4 cm. ¿Qué volumen encierra?",
+    "options": [
+      "$300 \\pi\\,\\mathrm{cm^3}$",
+      "$100 \\pi\\,\\mathrm{cm^3}$",
+      "$200 \\pi\\,\\mathrm{cm^3}$",
+      "$50 \\pi\\,\\mathrm{cm^3}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El ancho permite hallar el radio antes del volumen.\n2. Usamos los datos indicados: $r=10\\pi/(2\\pi)=5;\\quad V=\\pi5^2(4)$.\n3. El resultado es $100 \\pi\\,\\mathrm{cm^3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s01_c09",
+    "concept": "10.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "Un cono y un cilindro tienen igual área de base y altura. ¿Cuánto vale Vcono/Vcilindro?",
+    "options": [
+      "$\\frac{1}{3}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{1}{6}$",
+      "$1$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Comparamos las fórmulas con la misma base y altura.\n2. Usamos los datos indicados: $\\frac{Bh/3}{Bh}=1/3$.\n3. El resultado es $\\frac{1}{3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s01_c10",
+    "concept": "10.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "La generatriz de un cono circular recto…",
+    "options": [
+      "Siempre coincide con su altura.",
+      "Es la distancia inclinada entre la cúspide y un punto de la circunferencia de base.",
+      "Es el diámetro de la base.",
+      "Se mide perpendicular al plano de base en todo caso."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La altura es perpendicular al plano de base.\n2. La generatriz recorre la superficie desde la cúspide al borde circular.\n3. Con radio y altura forma el triángulo rectángulo g²=r²+h².",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t10_s01_c11",
+    "concept": "10.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 10,
+    "statement": "El área lateral de un cilindro excluye…",
+    "options": [
+      "Toda la superficie curva.",
+      "Las dos bases circulares.",
+      "La altura.",
+      "La circunferencia."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Lateral se refiere a la superficie curva.\n2. Las bases son regiones planas separadas.\n3. El área total añade ambas bases si el cilindro está cerrado.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

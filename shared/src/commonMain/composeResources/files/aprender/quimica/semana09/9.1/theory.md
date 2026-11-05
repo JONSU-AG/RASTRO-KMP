@@ -13,32 +13,45 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                              ESTADO GASEOSO
-                                     │
-         ┌───────────────────────────┴───────────────────────────┐
-         ▼                                                       ▼
-TEORÍA CINÉTICO-MOLECULAR (TCM)                         LEYES DE LOS GASES IDEALES
-• Choques perfectamente elásticos                       • Ley de Boyle-Mariotte (T = \text{cte}, Isotérmico)
-• Volumen molecular despreciable                        • Ley de Charles (P = \text{cte}, Isobárico)
-• Sin fuerzas intermoleculares (F_a = F_r = 0)        • Ley de Gay-Lussac (V = \text{cte}, Isocórico)
-• E_k \propto T (Kelvin)                               • Ecuación Combinada: \frac{P_1 V_1}{T_1} = \frac{P_2 V_2}{T_2}
-                                                                 │
-         ┌───────────────────────────────────────────────────────┘
-         ▼
-ECUACIÓN UNIVERSAL DE LOS GASES:  P \cdot V = n \cdot R \cdot T
-• Densidad de un gas:  P \cdot \overline{M} = \rho \cdot R \cdot T
-• Constante Universal (R):
-  - R = 0.082\text{ atm}\cdot\text{L}/(\text{mol}\cdot\text{K})
-  - R = 62.4\text{ mmHg}\cdot\text{L}/(\text{mol}\cdot\text{K})
-  - R = 8.314\text{ J}/(\text{mol}\cdot\text{K})
-         │
-         ▼
-MEZCLAS DE GASES Y DIFUSIÓN
-• Ley de las Presiones Parciales de Dalton:  P_{\text{total}} = \sum P_i  ;  P_i = x_i \cdot P_{\text{total}}
-• Ley de los Volúmenes Parciales de Amagat:  V_{\text{total}} = \sum V_i  ;  V_i = x_i \cdot V_{\text{total}}
-• Masa Molar Aparente de la Mezcla:  \overline{M}_{\text{mezcla}} = \sum (x_i \cdot \overline{M}_i)
-• Ley de Efusión y Difusión de Graham:  \frac{v_1}{v_2} = \sqrt{\frac{\overline{M}_2}{\overline{M}_1}}
+```mermaid
+graph TD
+ ROOT["Gases: modelo y condiciones"]
+ B1["Modelo cinético ideal"]
+ B1N1["Partículas con volumen despreciable frente al recipiente y sin interacciones salvo durante los choques."]
+ B1N2["Choques elásticos; energía cinética traslacional media proporcional a la temperatura absoluta."]
+ B1N3["El modelo aproxima mejor gases de baja densidad alejados de la condensación."]
+ B2["Relaciones entre variables"]
+ B2N1["Boyle: $P_1V_1=P_2V_2$ con temperatura y cantidad de gas constantes."]
+ B2N2["Charles: $V_1/T_1=V_2/T_2$ con presión y cantidad constantes."]
+ B2N3["Gay-Lussac o Amontons: $P_1/T_1=P_2/T_2$ con volumen y cantidad constantes."]
+ B2N4["Ley combinada: $P_1V_1/T_1=P_2V_2/T_2$ con la misma cantidad de gas."]
+ B3["Ecuación de estado"]
+ B3N1["$PV=nRT$: presión absoluta, temperatura en kelvin y unidades compatibles con R."]
+ B3N2["Densidad ideal: $\rho=PM/(RT)$, con masa molar M."]
+ B3N3["Valores aproximados de R: $0{,}08206\ \mathrm{L\,atm/(mol\,K)}$ o $8{,}314\ \mathrm{J/(mol\,K)}$."]
+ B4["Mezclas y transporte"]
+ B4N1["Dalton para mezcla ideal: $P=\sum_i P_i$ y $P_i=x_iP$."]
+ B4N2["Amagat: volúmenes parciales ideales a la misma presión y temperatura; $V_i=x_iV$."]
+ B4N3["Masa molar media: $M_{\mathrm{mezcla}}=\sum_i x_iM_i$."]
+ B4N4["Graham para efusión comparable: $r_1/r_2=\sqrt{M_2/M_1}$. No describe sin condiciones cualquier difusión macroscópica."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ B4 --> B4N4
 ```
 
 ---
@@ -100,3 +113,15 @@ Z = \frac{P \cdot V}{n \cdot R \cdot T}
 * Si Z = 1: El gas se comporta como estrictamente ideal.
 * Si Z > 1: Predominan las fuerzas de repulsión volumétrica (gas difícil de comprimir).
 * Si Z < 1: Predominan las fuerzas de atracción intermolecular (gas fácilmente licuable).
+
+
+### Elegir la ley por lo que permanece constante
+
+| Condiciones | Relación | Antes de calcular |
+|---|---|---|
+| n y T constantes | $P_1V_1=P_2V_2$ | Presiones absolutas |
+| n y P constantes | $V_1/T_1=V_2/T_2$ | Temperaturas en kelvin |
+| n y V constantes | $P_1/T_1=P_2/T_2$ | Temperaturas en kelvin |
+| n constante | $P_1V_1/T_1=P_2V_2/T_2$ | Comprobar las tres variables |
+
+**Ejemplo:** si un gas ideal ocupa 2 L a 1 atm y se comprime a 1 L sin cambiar n ni T, su presión final es 2 atm. Se conserva $PV=2\ \mathrm{L\,atm}$; no se trata de una regla para cualquier calentamiento.

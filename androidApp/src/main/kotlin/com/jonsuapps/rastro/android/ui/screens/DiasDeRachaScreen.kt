@@ -67,7 +67,7 @@ fun DiasDeRachaScreen(
     val theme = ThemeManager.currentTheme
     val streakState by GamificationManager.streakState.collectAsState()
     val context = LocalContext.current
-    val todayString = remember { GamificationManager.getLocalDayString() }
+    val todayString = GamificationManager.getLocalDayString()
     val remainingStudy = remember(streakState) { GamificationManager.remainingStudySecondsToday() }
 
     val isTodayProtected = remember(streakState, todayString, remainingStudy) {
@@ -77,17 +77,15 @@ fun DiasDeRachaScreen(
     }
 
     // Calendario: parte del mes y año REAL actual del sistema
-    val initialCal = remember { Calendar.getInstance() }
+    val initialCal = remember { Calendar.getInstance(java.util.TimeZone.getTimeZone("America/Lima")) }
     var viewingYear by remember { mutableIntStateOf(initialCal.get(Calendar.YEAR)) }
     var viewingMonth by remember { mutableIntStateOf(initialCal.get(Calendar.MONTH) + 1) } // 1 a 12
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(theme.background)
-            .statusBarsPadding()
-            .navigationBarsPadding()
-    ) {
+    // Scaffold already supplies status/navigation insets to this destination.
+    BoxWithConstraints(Modifier.fillMaxSize().background(theme.background)) {
+    val dense = maxHeight < 740.dp
+    val needsScroll = maxHeight < 680.dp || androidx.compose.ui.platform.LocalDensity.current.fontScale > 1.25f
+    Column(Modifier.fillMaxSize()) {
         // ── 1. HEADER LIMPIO [volver]  Días de racha  [compartir] ─────────
         Row(
             modifier = Modifier
@@ -99,7 +97,7 @@ fun DiasDeRachaScreen(
             // Botón Volver
             Box(
                 modifier = Modifier
-                    .size(42.dp)
+                    .size(48.dp)
                     .clip(RoundedCornerShape(14.dp))
                     .background(theme.surface)
                     .border(1.6.dp, theme.strokeBorder, RoundedCornerShape(14.dp))
@@ -125,7 +123,7 @@ fun DiasDeRachaScreen(
             // Botón Compartir
             Box(
                 modifier = Modifier
-                    .size(42.dp)
+                    .size(48.dp)
                     .clip(RoundedCornerShape(14.dp))
                     .background(theme.surface)
                     .border(1.6.dp, theme.strokeBorder, RoundedCornerShape(14.dp))
@@ -152,251 +150,45 @@ fun DiasDeRachaScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-            verticalArrangement = Arrangement.spacedBy(14.dp)
+                .then(if (needsScroll) Modifier.verticalScroll(rememberScrollState()) else Modifier)
+                .padding(horizontal = 16.dp, vertical = 4.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            // ── 2. TARJETA PRINCIPAL DE RACHA (Fuego Grande + Racha + Orstty) ───
-            Sticker3dCard(
-                modifier = Modifier.fillMaxWidth(),
-                containerColor = theme.surface,
-                strokeColor = theme.strokeBorder,
-                bevelColor = theme.cardBevel,
-                bevelHeight = 3.5.dp,
-                shape = RoundedCornerShape(24.dp)
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp, vertical = 18.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-                    // Fuego grande SVG/Vector (SIN cara, SIN ojos)
-                    PreparedAnimation("R-MEDIO", Modifier.size(width = 72.dp, height = 84.dp), loop = true)
-
-                    // Racha real central con plural/singular correcto
-                    Column(
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.spacedBy(2.dp)
-                    ) {
-                        Text(
-                            text = "${streakState.currentStreak}",
-                            fontSize = 44.sp,
-                            fontWeight = FontWeight.Black,
-                            color = Color(0xFFEA580C),
-                            lineHeight = 44.sp
-                        )
-                        Text(
-                            text = if (streakState.currentStreak == 1) "día de racha" else "días de racha",
-                            fontSize = 14.5.sp,
-                            fontWeight = FontWeight.Black,
-                            color = theme.textPrimary,
-                            letterSpacing = (-0.2).sp
-                        )
-                        Spacer(modifier = Modifier.height(2.dp))
-                        // Badge motivacional
-                        Box(
-                            modifier = Modifier
-                                .clip(RoundedCornerShape(10.dp))
-                                .background(Color(0xFFFED7AA))
-                                .border(1.2.dp, Color(0xFFF97316), RoundedCornerShape(10.dp))
-                                .padding(horizontal = 9.dp, vertical = 2.dp)
-                        ) {
-                            Text(
-                                text = if (streakState.currentStreak >= 7) "¡Vas imparable!" else "¡Vas muy bien!",
-                                fontSize = 11.5.sp,
-                                fontWeight = FontWeight.Black,
-                                color = Color(0xFF9A3412)
-                            )
+            Sticker3dCard(Modifier.fillMaxWidth(), containerColor = theme.surface,
+                strokeColor = theme.strokeBorder, bevelColor = theme.cardBevel, bevelHeight = 3.dp,
+                shape = RoundedCornerShape(22.dp)) {
+                Column(Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        PreparedAnimation("R-MEDIO", Modifier.size(88.dp), loop = true)
+                        Column(Modifier.weight(1f)) {
+                            Text("${streakState.currentStreak}", fontSize = 36.sp, lineHeight = 38.sp,
+                                fontWeight = FontWeight.Black, color = Color(0xFFEA580C))
+                            Text(if (streakState.currentStreak == 1) "día de racha" else "días de racha",
+                                color = theme.textPrimary, fontWeight = FontWeight.Black, fontSize = 14.sp)
+                        }
+                        ClassicArtwork(ClassicAppearance.STREAK, Modifier.size(76.dp), speed = 2f)
+                    }
+                    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        if (isTodayProtected) StreakCheckVector(Modifier.size(24.dp), theme.strokeBorder)
+                        else StreakTargetVector(Modifier.size(24.dp), theme.strokeBorder)
+                        Column(Modifier.weight(1f)) {
+                            Text(if (isTodayProtected) "¡Hoy ya cumpliste!" else "Tu siguiente paso es hoy",
+                                color = if (isTodayProtected) theme.answerText(true) else theme.textPrimary,
+                                fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                            Text(if (isTodayProtected) "Tu actividad de hoy ya está registrada." else
+                                "Completa una lección o estudia ${(remainingStudy + 59) / 60} min más.",
+                                color = theme.textSecondary, fontSize = 11.sp, lineHeight = 15.sp)
+                        }
+                        if (!isTodayProtected) androidx.compose.material3.TextButton(onClick = onNavigateToAprender) {
+                            Text("Estudiar", color = theme.textPrimary, fontWeight = FontWeight.Bold)
                         }
                     }
-
-                    // Mascota oficial ORSTTY de RASTRO
-                    ClassicArtwork(ClassicAppearance.STREAK, Modifier.size(100.dp), speed = 2f)
-                }
-            }
-
-            // ── 3. ESTADO DE HOY (Contextual) ──────────────────────────────
-            Sticker3dCard(
-                modifier = Modifier.fillMaxWidth(),
-                containerColor = theme.surface,
-                strokeColor = theme.strokeBorder,
-                bevelColor = theme.cardBevel,
-                bevelHeight = 2.5.dp,
-                shape = RoundedCornerShape(20.dp)
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 14.dp, vertical = 12.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(12.dp)
-                ) {
-                    if (isTodayProtected) {
-                        // Estado: Racha protegida
-                        StreakCheckVector(
-                            modifier = Modifier.size(40.dp),
-                            strokeColor = theme.strokeBorder
-                        )
-
-                        Column(modifier = Modifier.weight(1f)) {
-                            Text(
-                                text = "Racha protegida por hoy",
-                                fontSize = 13.5.sp,
-                                fontWeight = FontWeight.Black,
-                                color = theme.answerText(true)
-                            )
-                            Text(
-                                text = "¡Completaste tu actividad diaria! Tu racha está a salvo.",
-                                fontSize = 11.sp,
-                                color = theme.textSecondary,
-                                lineHeight = 15.sp
-                            )
-                        }
-
-                        Box(
-                            modifier = Modifier
-                                .clip(RoundedCornerShape(12.dp))
-                                .background(theme.answerSurface(true))
-                                .border(1.2.dp, Color(0xFF16A34A), RoundedCornerShape(12.dp))
-                                .padding(horizontal = 10.dp, vertical = 5.dp)
-                        ) {
-                            Text(
-                                text = "Protegida",
-                                fontSize = 11.sp,
-                                fontWeight = FontWeight.Black,
-                                color = theme.answerText(true)
-                            )
-                        }
-                    } else {
-                        // Estado: Pendiente de proteger hoy
-                        StreakTargetVector(
-                            modifier = Modifier.size(40.dp),
-                            strokeColor = theme.strokeBorder
-                        )
-
-                        Column(modifier = Modifier.weight(1f)) {
-                            Text(
-                                text = "Mantén viva tu racha",
-                                fontSize = 13.5.sp,
-                                fontWeight = FontWeight.Black,
-                                color = theme.textPrimary
-                            )
-                            Text(
-                                text = "Completa una actividad de aprendizaje hoy.",
-                                fontSize = 11.sp,
-                                color = theme.textSecondary,
-                                lineHeight = 15.sp
-                            )
-                        }
-
-                        Sticker3dButton(
-                            onClick = onNavigateToAprender,
-                            containerColor = Color(0xFFEA580C),
-                            bottomBevelColor = Color(0xFF9A3412),
-                            strokeColor = theme.strokeBorder,
-                            shape = RoundedCornerShape(14.dp),
-                            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 7.dp)
-                        ) {
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(3.dp)
-                            ) {
-                                Text(
-                                    text = "Aprender",
-                                    fontSize = 11.5.sp,
-                                    fontWeight = FontWeight.Black,
-                                    color = Color.White
-                                )
-                                Icon(
-                                    imageVector = Icons.AutoMirrored.Rounded.ArrowForward,
-                                    contentDescription = null,
-                                    tint = Color.White,
-                                    modifier = Modifier.size(12.dp)
-                                )
-                            }
-                        }
-                    }
-                }
-            }
-
-            // ── 4. ESTADÍSTICAS (Mejor Racha / Racha Actual) ───────────────
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(10.dp)
-            ) {
-                // Tarjeta Mejor racha
-                Sticker3dCard(
-                    modifier = Modifier.weight(1f),
-                    containerColor = theme.surface,
-                    strokeColor = theme.strokeBorder,
-                    bevelColor = theme.cardBevel,
-                    bevelHeight = 2.5.dp,
-                    shape = RoundedCornerShape(18.dp)
-                ) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 12.dp, vertical = 12.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(10.dp)
-                    ) {
-                        StreakTrophyVector(
-                            modifier = Modifier.size(36.dp),
-                            strokeColor = theme.strokeBorder
-                        )
-                        Column {
-                            Text(
-                                text = "Mejor racha",
-                                fontSize = 11.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = theme.textSecondary
-                            )
-                            Text(
-                                text = "${streakState.bestStreak} ${if (streakState.bestStreak == 1) "día" else "días"}",
-                                fontSize = 15.sp,
-                                fontWeight = FontWeight.Black,
-                                color = theme.accent
-                            )
-                        }
-                    }
-                }
-
-                // Tarjeta Racha actual
-                Sticker3dCard(
-                    modifier = Modifier.weight(1f),
-                    containerColor = theme.surface,
-                    strokeColor = theme.strokeBorder,
-                    bevelColor = theme.cardBevel,
-                    bevelHeight = 2.5.dp,
-                    shape = RoundedCornerShape(18.dp)
-                ) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 12.dp, vertical = 12.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(10.dp)
-                    ) {
-                        StreakBarChartVector(
-                            modifier = Modifier.size(36.dp),
-                            strokeColor = theme.strokeBorder
-                        )
-                        Column {
-                            Text(
-                                text = "Racha actual",
-                                fontSize = 11.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = theme.textSecondary
-                            )
-                            Text(
-                                text = "${streakState.currentStreak} ${if (streakState.currentStreak == 1) "día" else "días"}",
-                                fontSize = 15.sp,
-                                fontWeight = FontWeight.Black,
-                                color = theme.textPrimary
-                            )
-                        }
+                    androidx.compose.material3.HorizontalDivider(color = theme.borderSubtle)
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                        Text("Mejor racha: ${streakState.bestStreak} d", color = theme.textSecondary, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                        Text("Días registrados: ${streakState.activityDates.size}", color = theme.textSecondary, fontSize = 11.sp)
                     }
                 }
             }
@@ -406,6 +198,7 @@ fun DiasDeRachaScreen(
             StreakCalendarCard(
                 viewingYear = viewingYear,
                 viewingMonth = viewingMonth,
+                dayHeight = if (dense) 30.dp else 34.dp,
                 todayString = todayString,
                 activityDates = streakState.activityDates,
                 isTodayProtected = isTodayProtected,
@@ -442,12 +235,12 @@ fun DiasDeRachaScreen(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(14.dp),
+                        .padding(10.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     StreakBookVector(
-                        modifier = Modifier.size(42.dp),
+                        modifier = Modifier.size(32.dp),
                         strokeColor = theme.strokeBorder
                     )
 
@@ -460,7 +253,7 @@ fun DiasDeRachaScreen(
                         )
                         Spacer(modifier = Modifier.height(2.dp))
                         Text(
-                            text = "Mantén tu racha estudiando un poco cada día y sigue más cerca de tu meta.",
+                            text = "Estudia un poco cada día y acércate a tu meta.",
                             fontSize = 11.5.sp,
                             color = theme.textSecondary,
                             lineHeight = 16.sp
@@ -469,8 +262,8 @@ fun DiasDeRachaScreen(
                 }
             }
 
-            Spacer(modifier = Modifier.height(10.dp))
         }
+    }
     }
 }
 
@@ -483,6 +276,7 @@ fun DiasDeRachaScreen(
 private fun StreakCalendarCard(
     viewingYear: Int,
     viewingMonth: Int,
+    dayHeight: androidx.compose.ui.unit.Dp,
     todayString: String,
     activityDates: Set<String>,
     isTodayProtected: Boolean,
@@ -498,19 +292,19 @@ private fun StreakCalendarCard(
         )
     }
     val monthTitle = remember(viewingMonth, viewingYear) {
-        "${monthNames.getOrElse(viewingMonth - 1) { "" }} de $viewingYear"
+        "${monthNames.getOrElse(viewingMonth - 1) { "" }.replaceFirstChar { it.titlecase() }} $viewingYear"
     }
 
     // Cálculos dinámicos reales de días del mes, día de inicio y año bisiesto
     val daysData = remember(viewingYear, viewingMonth) {
-        val cal = Calendar.getInstance().apply {
+        val cal = Calendar.getInstance(java.util.TimeZone.getTimeZone("America/Lima")).apply {
             set(Calendar.YEAR, viewingYear)
             set(Calendar.MONTH, viewingMonth - 1)
             set(Calendar.DAY_OF_MONTH, 1)
         }
         val daysInMonth = cal.getActualMaximum(Calendar.DAY_OF_MONTH)
         val firstDayOfWeek = cal.get(Calendar.DAY_OF_WEEK) // Calendar.SUNDAY = 1, MONDAY = 2, etc.
-        val startOffset = (firstDayOfWeek - Calendar.SUNDAY + 7) % 7 // 0 para Domingo, 1 para Lunes
+        val startOffset = (firstDayOfWeek - Calendar.MONDAY + 7) % 7 // 0 para Domingo, 1 para Lunes
 
         val prevCal = (cal.clone() as Calendar).apply { add(Calendar.MONTH, -1) }
         val daysInPrevMonth = prevCal.getActualMaximum(Calendar.DAY_OF_MONTH)
@@ -523,7 +317,7 @@ private fun StreakCalendarCard(
 
     val (metrics, numRows) = daysData
     val (startOffset, daysInMonth, daysInPrevMonth) = metrics
-    val dayLabels = remember { listOf("D", "L", "Ma", "Mi", "J", "V", "S") }
+    val dayLabels = remember { listOf("L", "Ma", "Mi", "J", "V", "S", "D") }
 
     Sticker3dCard(
         modifier = Modifier.fillMaxWidth(),
@@ -536,14 +330,14 @@ private fun StreakCalendarCard(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(14.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
+                .padding(12.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp)
         ) {
             // El selector pasa a otra línea si no cabe junto al título.
             FlowRow(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
+                verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -563,19 +357,20 @@ private fun StreakCalendarCard(
 
                 // Selector de mes interactivo < septiembre de 2026 >
                 Box(
-                    modifier = Modifier
+                    modifier = Modifier.fillMaxWidth()
                         .clip(RoundedCornerShape(12.dp))
                         .background(theme.surfaceAccent)
                         .border(1.2.dp, strokeColor, RoundedCornerShape(12.dp))
                         .padding(horizontal = 4.dp, vertical = 2.dp)
                 ) {
                     Row(
+                        modifier = Modifier.fillMaxWidth(),
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
                         Box(
                             modifier = Modifier
-                                .size(24.dp)
+                                .size(40.dp)
                                 .bouncyClick(scaleDown = 0.85f, onClick = onPreviousMonth),
                             contentAlignment = Alignment.Center
                         ) {
@@ -583,20 +378,22 @@ private fun StreakCalendarCard(
                                 imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
                                 contentDescription = "Mes anterior",
                                 tint = theme.textPrimary,
-                                modifier = Modifier.size(13.dp)
+                                modifier = Modifier.size(18.dp)
                             )
                         }
 
                         Text(
                             text = monthTitle,
-                            fontSize = 11.5.sp,
+                            modifier = Modifier.weight(1f),
+                            textAlign = TextAlign.Center,
+                            fontSize = 13.sp,
                             fontWeight = FontWeight.Bold,
                             color = theme.textPrimary
                         )
 
                         Box(
                             modifier = Modifier
-                                .size(24.dp)
+                                .size(40.dp)
                                 .bouncyClick(scaleDown = 0.85f, onClick = onNextMonth),
                             contentAlignment = Alignment.Center
                         ) {
@@ -604,7 +401,7 @@ private fun StreakCalendarCard(
                                 imageVector = Icons.AutoMirrored.Rounded.ArrowForward,
                                 contentDescription = "Mes siguiente",
                                 tint = theme.textPrimary,
-                                modifier = Modifier.size(13.dp)
+                                modifier = Modifier.size(18.dp)
                             )
                         }
                     }
@@ -634,7 +431,7 @@ private fun StreakCalendarCard(
             }
 
             // Cuadrícula de días calculada dinámicamente
-            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 for (rowIndex in 0 until numRows) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -645,7 +442,7 @@ private fun StreakCalendarCard(
                             Box(
                                 modifier = Modifier
                                     .weight(1f)
-                                    .height(38.dp)
+                                    .height(dayHeight)
                                     .padding(horizontal = 2.dp, vertical = 2.dp),
                                 contentAlignment = Alignment.Center
                             ) {

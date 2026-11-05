@@ -6,20 +6,33 @@
 
 ## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
 
-```
-                        VOCABULARIO EN CONTEXTO
-                                   │
-         ┌─────────────────────────┴─────────────────────────┐
-         ▼                                                   ▼
-  SENTIDO DENOTATIVO                                  SENTIDO CONNOTATIVO
- (Significado Literal Estable)                       (Significado Figurado / Tropo)
-         │                                                   │
-   ┌─────┴─────┐                                       ┌─────┴─────┐
-   ▼           ▼                                       ▼           ▼
-Acepción    Tecnicismo                              Metáfora    Metonimia /
-Precisa     Especializado                           Viva        Sinécdoque
-(Selección  (Biología,                              (Semejanza  (Contigüidad /
- de la RAE)  Física, Leyes)                          poética)    Parte por Todo)
+```mermaid
+graph TD
+ ROOT["Interpretar palabras en contexto"]
+ B1["Seleccionar el sentido"]
+ B1N1["Leer la oración y el pasaje antes de elegir una acepción."]
+ B1N2["Comprobar el registro y los indicios temáticos; la primera entrada de diccionario no resuelve todos los casos."]
+ B1N3["Si el pasaje admite dos sentidos, reconocer la ambigüedad."]
+ B2["Literalidad y asociaciones"]
+ B2N1["Denotación y connotación no equivalen exactamente a literal y figurado."]
+ B2N2["Metáfora: interpretar la relación pertinente al contexto."]
+ B2N3["Metonimia y sinécdoque: distinguir relaciones de contigüidad y parte-todo según el uso."]
+ B3["Sustitución contextual"]
+ B3N1["Elegir una expresión que encaje en la construcción y conserve el sentido relevante."]
+ B3N2["Revisar los matices y las connotaciones; no prometer equivalencia matemática absoluta."]
+ B3N3["No añadir una explicación técnica que el fragmento no permite sostener."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
 
@@ -37,7 +50,7 @@ En preguntas del tipo: *"En el texto, el vocablo VAPULEAR se entiende como..."*:
 
 > [!WARNING]
 > **Trampa 1: La Primera Acepción del Diccionario**
-> La comisión de admisión elige a propósito palabras cuya **primera acepción** en el diccionario sea famosísima, pero que en el texto estén siendo utilizadas con su **tercera o cuarta acepción secundaria**. Quien responde de memoria cae en la trampa en el 100% de los casos.
+> **Importante:** el contexto orienta la acepción pertinente. No debe suponerse una intención universal de las comisiones de admisión ni que la primera acepción sea siempre incorrecta.
 
 > [!CAUTION]
 > **Trampa 2: La Alternativa de Mayor Nivel Académico Aparente**
@@ -218,7 +231,7 @@ El error más grave de un postulante en las preguntas de vocabulario en contexto
 #### La Regla de Oro de la Sustitución Salva-Verdad (*Salva Veritate*)
 El sinónimo contextual legítimo es aquel que puede insertarse físicamente en el lugar de la palabra original de modo que:
 1. La oración conserve exactamente la misma categoría gramatical (sustantivo por sustantivo, verbo por verbo).
-2. El valor de verdad y la intención del autor permanezcan 100% inalterables.
+2. La sustitución conserve la información y la intención interpretables en ese contexto; revisar los matices antes de aceptar la equivalencia.
 3. No se genere ninguna cacofonía ni discordancia con las palabras adyacentes.
 
 

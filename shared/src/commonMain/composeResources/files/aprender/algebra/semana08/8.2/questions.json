@@ -1,1 +1,200 @@
-[{"concept":"8.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t08_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"8.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t08_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"8.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t08_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"8.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t08_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"8.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t08_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"8.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t08_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"8.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t08_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"8.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t08_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"8.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t08_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"8.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t08_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "8.2.1",
+    "correctIndex": 0,
+    "explanation": "1. Sustituimos u=x² y resolvemos la ecuación cuadrática en u.\n2. Sustituimos y operamos: $(x^2-16)(x^2-25)=0$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t08_s02_c01",
+    "options": [
+      "$5$",
+      "$6$",
+      "$4$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 8,
+    "statement": "¿Cuál es la mayor raíz real positiva de x⁴−41x²+400=0?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.2",
+    "correctIndex": 3,
+    "explanation": "1. Cada cuadrado igualado a una constante positiva da dos signos.\n2. Sustituimos y operamos: $x=\\pm 4,\\quad x=\\pm 5$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t08_s02_c02",
+    "options": [
+      "$5$",
+      "$3$",
+      "$8$",
+      "$4$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 8,
+    "statement": "¿Cuántas raíces reales distintas tiene (x²−16)(x²−25)=0?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.3",
+    "correctIndex": 2,
+    "explanation": "1. Exigimos discriminante cero.\n2. Sustituimos y operamos: $64-4c=0$.\n3. El valor pedido es $16$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t08_s02_c03",
+    "options": [
+      "$15$",
+      "$32$",
+      "$16$",
+      "$17$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 8,
+    "statement": "¿Qué valor de c hace que x²−8x+c=0 tenga raíz doble?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.4",
+    "correctIndex": 1,
+    "explanation": "1. Sumamos fracciones con denominador común.\n2. Sustituimos y operamos: $1/4+1/5=(4+5)/(4\\cdot 5)$.\n3. El valor pedido es $\\frac{9}{20}$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t08_s02_c04",
+    "options": [
+      "$\\frac{9}{40}$",
+      "$\\frac{9}{20}$",
+      "$\\frac{29}{20}$",
+      "$\\frac{9}{10}$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 8,
+    "statement": "Las raíces no nulas de un cuadrático son 4 y 5. ¿Cuánto suman sus recíprocos?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.5",
+    "correctIndex": 0,
+    "explanation": "1. Las raíces aparecen en parejas opuestas.\n2. Sustituimos y operamos: $4+(-4)+5+(-5)$.\n3. El valor pedido es $0$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t08_s02_c05",
+    "options": [
+      "$0$",
+      "$1$",
+      "$2$",
+      "$3$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 8,
+    "statement": "¿Cuál es la suma de las cuatro raíces de (x²−16)(x²−25)=0?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.6",
+    "correctIndex": 3,
+    "explanation": "1. Sustituimos u=x² y resolvemos la ecuación cuadrática en u.\n2. Sustituimos y operamos: $(x^2-25)(x^2-36)=0$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t08_s02_c06",
+    "options": [
+      "$7$",
+      "$5$",
+      "$12$",
+      "$6$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 8,
+    "statement": "¿Cuál es la mayor raíz real positiva de x⁴−61x²+900=0?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.7",
+    "correctIndex": 2,
+    "explanation": "1. Cada cuadrado igualado a una constante positiva da dos signos.\n2. Sustituimos y operamos: $x=\\pm 5,\\quad x=\\pm 6$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t08_s02_c07",
+    "options": [
+      "$3$",
+      "$8$",
+      "$4$",
+      "$5$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 8,
+    "statement": "¿Cuántas raíces reales distintas tiene (x²−25)(x²−36)=0?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.8",
+    "correctIndex": 1,
+    "explanation": "1. Exigimos discriminante cero.\n2. Sustituimos y operamos: $100-4c=0$.\n3. El valor pedido es $25$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t08_s02_c08",
+    "options": [
+      "$50$",
+      "$25$",
+      "$26$",
+      "$24$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 8,
+    "statement": "¿Qué valor de c hace que x²−10x+c=0 tenga raíz doble?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.9",
+    "correctIndex": 0,
+    "explanation": "1. Sumamos fracciones con denominador común.\n2. Sustituimos y operamos: $1/5+1/6=(5+6)/(5\\cdot 6)$.\n3. El valor pedido es $\\frac{11}{30}$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t08_s02_c09",
+    "options": [
+      "$\\frac{11}{30}$",
+      "$\\frac{41}{30}$",
+      "$\\frac{11}{15}$",
+      "$\\frac{11}{60}$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 8,
+    "statement": "Las raíces no nulas de un cuadrático son 5 y 6. ¿Cuánto suman sus recíprocos?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.10",
+    "correctIndex": 3,
+    "explanation": "1. Las raíces aparecen en parejas opuestas.\n2. Sustituimos y operamos: $5+(-5)+6+(-6)$.\n3. El valor pedido es $0$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t08_s02_c10",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$0$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 8,
+    "statement": "¿Cuál es la suma de las cuatro raíces de (x²−25)(x²−36)=0?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.11",
+    "correctIndex": 2,
+    "explanation": "1. Sustituimos u=x² y resolvemos la ecuación cuadrática en u.\n2. Sustituimos y operamos: $(x^2-36)(x^2-49)=0$.\n3. El valor pedido es $7$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t08_s02_c11",
+    "options": [
+      "$6$",
+      "$14$",
+      "$7$",
+      "$8$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 8,
+    "statement": "¿Cuál es la mayor raíz real positiva de x⁴−85x²+1764=0?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

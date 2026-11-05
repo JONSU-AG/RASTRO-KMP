@@ -12,13 +12,12 @@ import kotlin.test.assertTrue
  * Regresión de Álgebra (SALIDA_KOTLIN → RASTRO, mismo sistema genérico
  * que las demás materias): convivencia legacy+nuevo sin duplicar ni contaminar.
  *
- * Nuevo = semanas 1-16 (32 LessonNodes alg_t01_s01..alg_t16_s02, 320 challenges).
+ * Nuevo = semanas 1-16 (32 LessonNodes alg_t01_s01..alg_t16_s02, 352 preguntas revisadas).
  * Legacy alg_t* semanas 1-16 queda excluido (reemplazo total).
  * Usa fixtures espejo de `src/androidUnitTest/resources` (patrón existente).
  *
  * Notas de staging (no se modifica curso-prueba):
  * - subjectId/semana/subtema vacíos o ausentes normalizados en la generación.
- * - Distribución correctIndex real: A=105, B=90, C=61, D=64.
  * - Teorías 3987-8524 chars; umbral de teoría en 3500.
  */
 class MapaAlgebraRegressionTest {
@@ -49,13 +48,13 @@ class MapaAlgebraRegressionTest {
     @Test
     fun mapaAlgebra_nuevoSemanas1a16_sinLegacy() {
         val mapa = mapaAlgebra()
-        // Reemplazo total: todo nodo tiene 10 challenges (legacy = 1 challenge).
+        // Reemplazo total: todo nodo tiene 11 preguntas revisadas (legacy = 1 challenge).
         assertEquals(32, mapa.size, "Solo los 32 nodos nuevos, sin legacy")
-        assertTrue(mapa.all { it.challenges.size == 10 }, "Sin nodos legacy de 1 challenge")
+        assertTrue(mapa.all { it.challenges.size == 11 }, "Sin nodos legacy de 1 challenge")
 
         val nuevas = mapa.filter { it.id.startsWith("alg_t") }
         assertEquals(32, nuevas.size, "16 semanas nuevas = 32 LessonNodes")
-        assertEquals(320, nuevas.sumOf { it.challenges.size }, "320 challenges staging")
+        assertEquals(352, nuevas.sumOf { it.challenges.size }, "352 preguntas revisadas")
 
         val semanas = nuevas.map { it.semana }.distinct().sorted()
         assertEquals((1..16).toList(), semanas, "Nuevo semanas 1-16: $semanas")
@@ -66,8 +65,8 @@ class MapaAlgebraRegressionTest {
         val mapa = mapaAlgebra()
         // (semana, subtema, challenges) por nodo.
         val esperadas = (1..16).flatMap { w ->
-            listOf("alg_t%02d_s01".format(w) to Triple(w, "$w.1", 10),
-                "alg_t%02d_s02".format(w) to Triple(w, "$w.2", 10))
+            listOf("alg_t%02d_s01".format(w) to Triple(w, "$w.1", 11),
+                "alg_t%02d_s02".format(w) to Triple(w, "$w.2", 11))
         }.toMap()
         for ((id, esp) in esperadas) {
             val l = mapa.filter { it.id == id && it.challenges.size == esp.third }
@@ -91,7 +90,7 @@ class MapaAlgebraRegressionTest {
         // Spot-check anti-corrupción: título staging verbatim.
         assertEquals(
             "Álgebra de Conjuntos, Cuantificadores y Operaciones - Fundamentos y Leyes Principales",
-            mapa.first { it.id == "alg_t01_s01" && it.challenges.size == 10 }.title
+            mapa.first { it.id == "alg_t01_s01" && it.challenges.size == 11 }.title
         )
     }
 
@@ -101,7 +100,7 @@ class MapaAlgebraRegressionTest {
         try {
             val nueva = AprenderRepository.getLessonByIdSync("alg_t01_s01")
             assertTrue(nueva != null, "alg_t01_s01 debe resolverse")
-            assertEquals(10, nueva.challenges.size, "Nuevo con 10 challenges staging")
+            assertEquals(11, nueva.challenges.size, "Nuevo con 11 preguntas revisadas")
             assertEquals("algebra", nueva.subjectId)
 
             // Fallback legacy: alg_t01_s03 no tiene equivalente nuevo → legacy (1 challenge).

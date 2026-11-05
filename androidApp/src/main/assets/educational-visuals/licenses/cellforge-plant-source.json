@@ -1,0 +1,16 @@
+{
+  "commit": "df569572b2eb88c31da89913dc269d816d226e5e",
+  "source": "https://raw.githubusercontent.com/huangserva/3DCellForge/df569572b2eb88c31da89913dc269d816d226e5e/public/generated-models/tripo-plant-cell-test.glb",
+  "sourceSha256": "a7d1dbc0825a5b0c71dd789a6c314f092321774a480ddd356315fa72e4759000",
+  "sourceBytes": 60656016,
+  "sourceTriangles": 1962326,
+  "triangles": 58868,
+  "modelBytes": 1928280,
+  "modelSha256": "10941243556b1c75d98946545c9f934253e54e768dc94a0086441a5027d6d3e4",
+  "posterBytes": 153401,
+  "posterSha256": "05d42e53102df51baa32088c5ed481bcddc954dc5e5d28e7b0ca456211f33cb1",
+  "license": "MIT",
+  "attribution": "huangserva / 3DCellForge. Modelo generado con Tripo y compartido en el repositorio.",
+  "changes": "ReducciÃ³n geomÃ©trica conservando UV y textura de color a 1024 px; se omiten mapas de normal/rugosidad; poster JPEG del recurso original. No se regenera el modelo.",
+  "interactiveParts": "Segmentación visual de la superficie en núcleo, nucléolo, vacuola, cloroplastos, mitocondrias, Golgi, pared y resto; ver cellforge-plant-parts.json/bin. No se generan volúmenes interiores independientes."
+}

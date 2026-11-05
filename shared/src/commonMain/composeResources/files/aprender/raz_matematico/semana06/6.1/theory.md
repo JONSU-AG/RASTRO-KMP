@@ -19,23 +19,45 @@
 
 ## 2. 🗺️ MAPA TAXONÓMICO Y ONTOLOGÍA DEL TEMA
 
-```text
-                               ┌─ Experimento Determinístico (Resultado predecible)
-        ┌─ 1. Conceptos ───────┼─ Experimento Aleatorio (Regido por el azar)
-        │      Fundamentales   ├─ Espacio Muestral (Omega: Conjunto de todos los resultados)
-        │                      └─ Suceso o Evento (Subconjunto de Omega: Seguro, Imposible)
-        │
-PROBABILIDAD                   ┌─ Regla Clásica de Laplace: P(A) = Casos Favorables / Casos Totales
-INTUITIVA ──────┼─ 2. Cálculo de ──────┼─ Propiedades Axiomáticas: 0 <= P(A) <= 1
-        │      Probabilidades  └─ Probabilidad del Suceso Contrario (Complemento): P(A') = 1 - P(A)
-        │
-        │                      ┌─ Eventos Mutuamente Excluyentes (P(A U B) = P(A) + P(B))
-        ├─ 3. Álgebra de ──────┼─ Eventos No Excluyentes (P(A U B) = P(A) + P(B) - P(A n B))
-        │      Sucesos         └─ Eventos Independientes (P(A n B) = P(A) * P(B))
-        │
-        └─ 4. Probabilidad ────┌─ Probabilidad Condicional: P(A|B) = P(A n B) / P(B)
-               Avanzada        ├─ Extracciones en Urnas: Con Reposición vs. Sin Reposición
-               y Bayes         └─ Teorema de Probabilidad Total y Teorema de Bayes
+```mermaid
+graph TD
+ ROOT["Probabilidad y eventos"]
+ B1["Conceptos"]
+ B1N1["Experimento aleatorio: resultado no fijado por el modelo antes de realizarlo."]
+ B1N2["Espacio muestral $\Omega$: resultados posibles."]
+ B1N3["Evento A: subconjunto de $\Omega$."]
+ B1N4["Seguro e imposible: todo el espacio o el conjunto vacío, respectivamente."]
+ B2["Cálculo"]
+ B2N1["Laplace: favorables entre posibles, solo con resultados elementales equiprobables."]
+ B2N2["Acotación: $0\le P(A)\le1$."]
+ B2N3["Complemento: $P(A^c)=1-P(A)$."]
+ B3["Relaciones entre eventos"]
+ B3N1["Unión: $P(A\cup B)=P(A)+P(B)-P(A\cap B)$."]
+ B3N2["Incompatibles: intersección vacía; no equivalen a independientes."]
+ B3N3["Independencia: $P(A\cap B)=P(A)P(B)$."]
+ B4["Condicionamiento"]
+ B4N1["$P(A\mid B)=P(A\cap B)/P(B)$, con $P(B)>0$."]
+ B4N2["Extracciones: precisar reemplazo y cómo se selecciona cada objeto."]
+ B4N3["Probabilidad total: combinar una partición y sus pesos."]
+ B4N4["Bayes: actualizar el peso de una causa al conocer un resultado."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ B4 --> B4N4
 ```
 
 ---

@@ -94,3 +94,4 @@ Sea el universo particionado en tres conjuntos A, B y C:
 n(A) + n(B) + n(C) = (x + y + z) + 2(m + n + p) + 3w \\
 n(A \cup B \cup C) = (x + y + z) + (m + n + p) + w \\
 n(\text{exactamente a dos conjuntos}) = m + n + p = [n(A \cap B) + n(B \cap C) + n(A \cap C)] - 3w
+\end{cases}

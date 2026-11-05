@@ -12,13 +12,12 @@ import kotlin.test.assertTrue
  * Regresión de Aritmética (SALIDA_KOTLIN → RASTRO, mismo sistema genérico
  * que las demás materias): convivencia legacy+nuevo sin duplicar ni contaminar.
  *
- * Nuevo = semanas 1-13 (26 LessonNodes arit_t01_s01..arit_t13_s02, 260 challenges).
+ * Nuevo = semanas 1-13 (26 LessonNodes arit_t01_s01..arit_t13_s02, 286 preguntas revisadas).
  * Legacy ari_t* semanas 1-13 queda excluido (reemplazo total).
  * Usa fixtures espejo de `src/androidUnitTest/resources` (patrón existente).
  *
  * Notas de staging (no se modifica curso-prueba):
  * - subjectId/semana/subtema vacíos o ausentes normalizados en la generación.
- * - Distribución correctIndex real: A=118, B=52, C=39, D=51 (sesgada a A).
  * - Teorías 5173-6888 chars; umbral de teoría en 5000.
  */
 class MapaAritmeticaRegressionTest {
@@ -49,13 +48,13 @@ class MapaAritmeticaRegressionTest {
     @Test
     fun mapaAritmetica_nuevoSemanas1a13_sinLegacy() {
         val mapa = mapaAritmetica()
-        // Reemplazo total: todo nodo tiene 10 challenges (legacy = 1 challenge).
+        // Reemplazo total: todo nodo tiene 11 preguntas revisadas (legacy = 1 challenge).
         assertEquals(26, mapa.size, "Solo los 26 nodos nuevos, sin legacy")
-        assertTrue(mapa.all { it.challenges.size == 10 }, "Sin nodos legacy de 1 challenge")
+        assertTrue(mapa.all { it.challenges.size == 11 }, "Sin nodos legacy de 1 challenge")
 
         val nuevas = mapa.filter { it.id.startsWith("arit_t") }
         assertEquals(26, nuevas.size, "13 semanas nuevas = 26 LessonNodes")
-        assertEquals(260, nuevas.sumOf { it.challenges.size }, "260 challenges staging")
+        assertEquals(286, nuevas.sumOf { it.challenges.size }, "286 preguntas revisadas")
 
         val semanas = nuevas.map { it.semana }.distinct().sorted()
         assertEquals((1..13).toList(), semanas, "Nuevo semanas 1-13: $semanas")
@@ -66,8 +65,8 @@ class MapaAritmeticaRegressionTest {
         val mapa = mapaAritmetica()
         // (semana, subtema, challenges) por nodo.
         val esperadas = (1..13).flatMap { w ->
-            listOf("arit_t%02d_s01".format(w) to Triple(w, "$w.1", 10),
-                "arit_t%02d_s02".format(w) to Triple(w, "$w.2", 10))
+            listOf("arit_t%02d_s01".format(w) to Triple(w, "$w.1", 11),
+                "arit_t%02d_s02".format(w) to Triple(w, "$w.2", 11))
         }.toMap()
         for ((id, esp) in esperadas) {
             val l = mapa.filter { it.id == id && it.challenges.size == esp.third }
@@ -91,7 +90,7 @@ class MapaAritmeticaRegressionTest {
         // Spot-check anti-corrupción: título staging verbatim.
         assertEquals(
             "Relaciones Lógicas y Conjuntos - Fundamentos y Leyes Principales",
-            mapa.first { it.id == "arit_t01_s01" && it.challenges.size == 10 }.title
+            mapa.first { it.id == "arit_t01_s01" && it.challenges.size == 11 }.title
         )
     }
 
@@ -101,7 +100,7 @@ class MapaAritmeticaRegressionTest {
         try {
             val nueva = AprenderRepository.getLessonByIdSync("arit_t01_s01")
             assertTrue(nueva != null, "arit_t01_s01 debe resolverse")
-            assertEquals(10, nueva.challenges.size, "Nuevo con 10 challenges staging")
+            assertEquals(11, nueva.challenges.size, "Nuevo con 11 preguntas revisadas")
             assertEquals("aritmetica", nueva.subjectId)
 
             // Fallback legacy: ari_t01_s03 no tiene equivalente nuevo → legacy (1 challenge).

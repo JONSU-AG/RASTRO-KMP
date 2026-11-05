@@ -1,316 +1,162 @@
-### Matriz de Indicadores de Logro Evaluados
-1. **Detección de incoherencias semánticas:** Localizar colisiones de significado, contradicciones internas o falsos sentidos en enunciados breves.
-2. **Erradicación de redundancias y pleonasmos:** Identificar y suprimir términos que repiten innecesariamente un sema ya expresado en el núcleo oracional (*lapso de tiempo, subir arriba*).
-3. **Selección de la palabra exacta (Propiedad léxica):** Sustituir vocablos coloquiales o vagos por términos técnicos precisos adecuados al registro académico.
-4. **Corrección de discordancias lógico-sintácticas:** Subsanar falsas concordancias de sentido, anfibologías y solecismos que distorsionan el mensaje.
+# Claridad y precisión al redactar
 
----
+Una revisión mejora un texto cuando permite comprender lo mismo con menos ambigüedad o con palabras más adecuadas. No consiste en sustituir cada palabra cotidiana por otra de apariencia técnica. Antes de corregir, identifica qué quiere comunicar el autor, a quién se dirige y para qué escribe.
 
+En esta lección distinguirás ambigüedad, repetición innecesaria, impropiedad léxica e incoherencia. También revisarás algunos problemas de referencia y de construcción. Los ejemplos son casos de práctica, no preguntas atribuidas a un examen oficial.
 
+## Mapa de conceptos
 
-## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
-
+```mermaid
+graph TD
+ ROOT["Claridad, ambigüedad y precisión"]
+ B1["Revisar el sentido"]
+ B1N1["Contradicción: incompatibilidad bajo la misma interpretación y condiciones."]
+ B1N2["Ambigüedad: dos o más interpretaciones posibles; no es siempre una contradicción."]
+ B1N3["Una expresión figurada puede ser deliberada; comprobar el género y la intención antes de corregirla."]
+ B2["Repetición y función"]
+ B2N1["La redundancia puede ser innecesaria o cumplir una función enfática y aclaratoria."]
+ B2N2["No eliminar automáticamente una repetición si se pierde información, referencia o intención."]
+ B2N3["Preferir concisión cuando la repetición no aporta nada al propósito del texto."]
+ B3["Elegir vocabulario"]
+ B3N1["Reemplazar términos vagos cuando sea posible precisar sin cambiar el significado."]
+ B3N2["Conservar hacer, tener o cosa cuando sean adecuados y claros en su contexto."]
+ B3N3["Una revisión debe preservar la voz y el registro del autor."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
-                         CORRECCIÓN POR SENTIDO
-                                   │
-         ┌─────────────────────────┼─────────────────────────┐
-         ▼                         ▼                         ▼
-INCOHERENCIA SEMÁNTICA       REDUNDANCIA VICIOSA       IMPRECISIÓN LÉXICA
-(Colisión de Sentido)         (Semas Duplicados)       (Pobreza de Vocabulario)
-         │                         │                         │
-   ┌─────┴─────┐             ┌─────┴─────┐             ┌─────┴─────┐
-   ▼           ▼             ▼           ▼             ▼           ▼
-Contradicción  Anfibología   Pleonasmo   Tautología    Verbos      Términos
-Interna        Sintáctica    Vicioso     Léxica        Comodín     Baúl
-("Gélido       ("Vio al      ("Volver a  ("Mendrugo    (Tener,     (Cosa,
- ardor")       perro...")    repetir")   de pan")      Hacer)      Algo)
-```
 
+## 1. Revisar sin cambiar el significado
 
+Una palabra específica resulta útil si describe la acción que realmente se quiere comunicar. «Hizo una propuesta» es una construcción válida. "Hacer un plan" es una construcción válida también; la revisión debe justificarse por el contexto. Si el texto informa de que una persona escribió su contenido, «redactó una propuesta» concreta esa acción. Pero si solo sabemos que la presentó durante una reunión, cambiarla por «redactó» añade un dato que no tenemos.
 
-### Ontología de la Norma Lingüística y la Semántica
-- **Propiedad Léxica:** Uso de cada palabra con su significado exacto y castizo, conforme a las definiciones académicas de la RAE y la ASALE.
-- **Incoherencia Semántica:** Defecto por el cual dos o más vocablos de un enunciado se anulan mutuamente en sus rasgos distintivos (Sema_1 \land \neg Sema_1).
-- **Pleonasmo Vicioso:** Repetición injustificada y viciosa de una misma idea con palabras distintas que no aportan ningún matiz expresivo legítimo.
-- **Tautología:** Definición o explicación viciosa que reitera lo mismo con vocablos equivalentes sin añadir contenido cognitivo.
-- **Monotonía o Pobreza Léxica:** Empleo reiterado de un repertorio léxico reducido y rudimentario que empobrece la comunicación.
+| Expresión inicial | Revisión posible si el contexto la respalda | Precaución |
+|---|---|---|
+| Hizo una propuesta | Redactó una propuesta | Solo si se habla de escribirla |
+| Puso el informe en la mesa | Dejó el informe en la mesa | La primera ya puede ser clara |
+| Tiene dudas sobre el resultado | Duda del resultado | No exige reemplazar «tener» |
+| Dio una explicación | Explicó lo ocurrido | Puede simplificarse si se conserva el contenido |
+| Hizo un túnel | Excavó un túnel | No todos los procedimientos constructivos son equivalentes |
 
----
+Una revisión no debe introducir intensidad. «Dar miedo» y «provocar pavor» no expresan necesariamente el mismo grado de temor. Tampoco «despedir» y «destituir» son reemplazos automáticos: el segundo suele referirse a separar a alguien de un cargo. Elegir una palabra por sonar formal puede empeorar la precisión.
 
+La concordancia y el régimen también cuentan. Una alternativa debe encajar en la oración completa. No basta con que un verbo se relacione con la idea general si exige otra construcción o modifica quién realiza la acción.
 
+## 2. Ambigüedad y referencia
 
-### 3.1 Los Principales Vicios de Sentido en el Examen de Admisión
+Hay ambigüedad cuando una expresión admite distintas interpretaciones. Puede deberse a la estructura, a una palabra con varios sentidos o a un referente no identificado. En una tarea de revisión interesa comprobar si esa pluralidad de lecturas impide entender el mensaje pretendido.
 
-#### A. Redundancias Léxicas y Pleonasmos Comunes
-En el examen de la UNSA, la comisión evalúa sistemáticamente expresiones viciosas enquistadas en el habla cotidiana:
+«La jueza interrogó al testigo en su oficina» permite preguntar de quién era la oficina. Si el contexto ya identificó a la propietaria, quizá no haya un problema práctico. En una oración aislada conviene precisar: «en la oficina de la jueza» o «en la oficina del testigo». No elijas una de ellas sin saber qué quiso decir el autor.
 
-| Expresión Viciosa Popular | Por qué es Redundante | Corrección Culta Formal |
-| :--- | :--- | :--- |
-| *Lapso de tiempo* | Un *lapso* es por definición un período de tiempo. | **Lapso** o **período** |
-| *Volver a repetir* | *Repetir* ya significa volver a hacer o decir algo. | **Repetir** |
-| *Hemorragia de sangre* | Toda *hemorragia* es flujo copioso de sangre. | **Hemorragia** |
-| *Erario público* | El *erario* es el tesoro o patrimonio público del Estado. | **Erario** |
-| *Jauría de perros* | Una *jauría* es por definición un conjunto de perros o lobos. | **Jauría** |
-| *Completamente gratis* | La condición de *gratis* no admite gradación: se paga o no. | **Gratis** |
-| *Previsto de antemano* | *Prever* implica etimológicamente ver antes. | **Previsto** |
-| *Bifurcarse en dos caminos* | *Bifurcarse* significa dividirse en dos ramales (*bi-*). | **Bifurcarse** |
+| Oración | Lecturas posibles | Cómo aclarar la relación |
+|---|---|---|
+| Vi a Elena con los prismáticos | Yo usaba el instrumento o Elena lo llevaba | «Con los prismáticos, observé a Elena» o «Vi a Elena, que llevaba los prismáticos» |
+| El profesor dijo a su colega que él corregiría | Corregiría el profesor o su colega | Repetir el nombre o el cargo de quien corregirá |
+| Ana habló con Rosa sobre su proyecto | El proyecto puede pertenecer a una u otra | Nombrar a la autora del proyecto |
 
-#### B. La Incoherencia Semántica (Colisión Lógica)
-Se produce cuando los atributos asignados a un sujeto son incompatibles con su naturaleza:
-- *Enunciado incoherente:* *"El testigo permaneció en un **absoluto mutismo**, expresando con voz firme su inocencia"*.
-  - Colisión: El *mutismo* es el silencio voluntario o involuntario. No se puede estar en mutismo y hablar con voz firme al mismo tiempo.
-  - *Corrección:* *"El testigo rompió su mutismo y proclamó con voz firme su inocencia"*.
+Repetir un nombre no siempre empobrece el estilo. Puede evitar un pronombre ambiguo. La cercanía de una palabra tampoco garantiza por sí sola que sea el referente: al corregir, comprueba la lectura de toda la oración.
 
-#### C. La Imprecisión Léxica y los "Verbos Comodín"
-El enriquecimiento del vocabulario universitario radica en sustituir los cuatro verbos universales del habla descuidada (*dar, tener, poner, hacer*):
+**Ejemplo resuelto:** Se sabe que el proyecto pertenece a Rosa. Para aclarar «Ana habló con Rosa sobre su proyecto», escribe «Ana habló con Rosa sobre el proyecto de Rosa». Se conserva la información conocida y se elimina la duda sobre la posesión. Sustituirlo por «el proyecto de Ana» sería una alteración, aunque la frase resultante fuese gramatical.
 
-\begin{array}{rcl}
-\text{Tener} \text{ síntomas} & \implies & \textbf{Manifestar / Presentar} \text{ síntomas} \\
-\text{Dar} \text{ miedo} & \implies & \textbf{Infundir / Provocar} \text{ pavor} \\
-\text{Hacer} \text{ un túnel} & \implies & \textbf{Excavar / Perforar} \text{ un túnel} \\
-\text{Poner} \text{ una queja} & \implies & \textbf{Interponer / Formular} \text{ una queja} \\
-\text{Tener} \text{ dudas} & \implies & \textbf{Albergar / Abrigarse de} \text{ dudas} \\
-\text{Echar} \text{ a un trabajador} & \implies & \textbf{Despedir / Destituir} \text{ a un trabajador}
-\end{array}
+## 3. Repetición: cuándo recortar y cuándo conservar
 
+Una repetición puede ser innecesaria en un aviso breve y adecuada en una explicación, un testimonio o un poema. No todas las expresiones con información reiterada son faltas gramaticales. La revisión debe atender a la función que cumplen.
 
+En un aviso sin énfasis especial, «La reunión será mañana, el día después de hoy» puede reducirse a «La reunión será mañana». Si se explica a un niño qué significa «mañana», la segunda expresión sí cumple una función aclaratoria. El significado compartido no basta para decidir que una parte sobra.
 
-## 4. FORMULARIO MAESTRO DE CORRECCIÓN ESTILÍSTICA
+«Lo vi con mis propios ojos» puede reforzar que alguien fue testigo directo. «Volvió a repetir la explicación» puede indicar una repetición adicional después de una anterior. «Jauría de perros» puede precisar a qué animales se refiere el hablante, dado que algunas palabras colectivas tienen usos extendidos. No conviene aprender listas de recortes obligatorios sin contexto.
 
-| Defecto de Sentido | Prueba Diagnóstica Inmediata | Algoritmo de Corrección |
-| :--- | :--- | :--- |
-| **Pleonasmo** | ¿Si elimino la palabra, se pierde alguna información esencial? | Si la respuesta es NO, elimina la palabra redundante de inmediato. |
-| **Imprecisión** | ¿El verbo empleado describe la técnica exacta de la acción? | Sustituye el verbo por el término científico o específico de la disciplina. |
-| **Anfibología** | ¿El pronombre posesivo (*su*) o el modificador admite dos dueños? | Reordena la sintaxis o especifica el nombre (*"el auto de Juan"*). |
-| **Incoherencia** | ¿Existe un choque formal entre el sustantivo y su adjetivo? | Modifica el adjetivo por uno compatible con el semema nuclear. |
+| Pregunta de revisión | Si la respuesta es afirmativa |
+|---|---|
+| ¿La repetición identifica un referente que podía confundirse? | Puede ser necesaria para la claridad |
+| ¿Explica una palabra a quien no la conoce? | Cumple una función didáctica |
+| ¿Refuerza deliberadamente un testimonio o una emoción? | Valorar ese énfasis antes de eliminarla |
+| ¿Solo reitera un dato en un aviso que debe ser breve? | Puede simplificarse sin pérdida |
 
----
+**Ejemplo resuelto:** En una ficha de instrucciones se lee «Regresa otra vez de nuevo al menú inicial». Si se describe un único regreso y no se busca énfasis, basta «Regresa al menú inicial». La corrección se justifica por ese propósito concreto; no declara incorrecta cualquier aparición de «otra vez».
 
+## 4. Propiedad léxica y palabras parecidas
 
+Una impropiedad aparece cuando la palabra elegida no expresa la idea pretendida. Para detectarla, compara sus sentidos con el contexto. Las semejanzas de sonido pueden inducir errores, pero no toda palabra poco habitual está mal usada.
 
-## 5. MNEMOTECNIAS DE COMBATE PREUNIVERSITARIO
+| Palabra | Distinción útil | Ejemplo de práctica |
+|---|---|---|
+| Infligir | Causar daño o imponer un castigo | El golpe infligió daños al equipo |
+| Infringir | Quebrantar una norma | La conductora infringió el reglamento |
+| Redactar | Escribir un texto con una formulación determinada | El equipo redactó la propuesta |
+| Promulgar | En el ámbito de las leyes, su publicación formal para su cumplimiento obligatorio | No equivale a escribir un borrador |
 
+**Ejemplo resuelto:** «La conductora infligió una norma». La intención es informar de una infracción. La norma se quebranta, no se causa como si fuera un daño. Se corrige «La conductora infringió una norma». En cambio, «El golpe infligió un daño» es coherente con el sentido indicado.
 
+«Ostentar» no significa exclusivamente presumir de algo favorable: también puede referirse a mostrar o hacer patente algo. Por eso no se descarta automáticamente «ostentar ignorancia» con el argumento de que un defecto nunca puede mostrarse. Hay que interpretar el uso concreto. Esto tampoco autoriza a reemplazar cualquier aparición de «tener» por «ostentar».
 
-### Mnemotecnia 1: "La Tijera de Ockham Léxica"
-*"Si dos palabras dicen exactamente lo mismo, una de ellas sobra por mandato de la elegancia"*:
-- *Subir arriba* \to ¡Corta *arriba*!
-- *Entrar adentro* \to ¡Corta *adentro*!
-- *Mendrugo de pan* \to ¡Corta *de pan* (el mendrugo siempre es de pan)!
-- *Persona humana* \to ¡Corta *humana* (en derecho natural y lenguaje cotidiano la persona es humana)!
+«Adolecer» puede expresar que se padece un defecto o una enfermedad. No se usa como sustituto automático de «carecer». Si se quiere afirmar que un informe no tiene fundamento, «carece de fundamento» comunica esa ausencia. «Adolece de errores» presenta los errores como un defecto. El complemento cambia la relación de sentido; no se corrige atendiendo solo al verbo.
 
+## 5. Incoherencia: mismas condiciones y mismo momento
 
+Dos contenidos son contradictorios si afirman y niegan algo bajo la misma interpretación y las mismas condiciones. No basta con que una oración reúna acciones diferentes o valoraciones en tensión.
 
-### Mnemotecnia 2: "El Semáforo de la Precisión"
-- 🔴 **Rojo (Peligro):** Usar *cosa, algo, hacer, tener, poner*.
-- 🟡 **Amarillo (Neutro):** Usar *realizar, fabricar, poseer*.
-- 🟢 **Verde (Nivel Universidad de Élite):** Usar *redactar, cincelar, perpetrar, compilar, ostentar, conjeturar*.
+«Guardó silencio y después explicó su propuesta» describe una secuencia posible. «Guardó silencio mientras explicaba su propuesta por escrito» también puede ser coherente. Para plantear una contradicción inequívoca, el ejercicio debe precisar que se trata del mismo intervalo y de hablar en voz alta: «Durante ese mismo minuto no emitió ninguna palabra y explicó en voz alta todo el argumento».
 
----
+Votar a favor de una propuesta y mantener dudas sobre sus resultados tampoco es una contradicción necesaria. Una persona puede aprobar una medida por considerarla preferible a las alternativas, aunque no tenga plena confianza en su éxito. La unanimidad informa del voto, no demuestra entusiasmo ni certeza compartidos.
 
+**Ejemplo resuelto:** ¿Es incoherente «Todos votaron a favor, aunque seguían dudando de los resultados»? No necesariamente. Las dos partes se refieren a dimensiones distintas: decisión y confianza. Sería diferente afirmar que, en esa misma votación, todos votaron a favor y ninguno votó a favor. Ahí sí se contradice la misma propiedad del mismo grupo y acto.
 
+Tampoco una confesión determina por sí sola toda decisión judicial. En ejercicios de lenguaje no añadas reglas jurídicas que el texto no aporta para declarar incoherente una frase. Si el objetivo es evaluar significado, el enunciado debe ofrecer la información suficiente para hacerlo sin resolver un caso legal.
 
-## 6. TÉCNICAS Y ARTIFICIOS DE CÁLCULO (HACKING PREUNIVERSITARIO)
+## 6. Construcción y estilo
 
+«Pienso que vendrá» no requiere «de». En «Me acordé de que vendría», la preposición forma parte de la construcción de «acordarse de». Una ayuda es sustituir la subordinada por «eso»: «Pienso eso» y «Me acordé de eso». Comprueba el uso concreto del verbo; no existe una prohibición general contra «de que».
 
+«Se quejaron de que faltaba agua» es una construcción válida: quejarse admite un complemento con de. Eliminar «de» solo porque aparece antes de «que» puede crear un error. Los ejercicios deben distinguir queísmo y dequeísmo de otros problemas de referencia o concisión que haya en el mismo texto.
 
-## 7. ZONA DE TRAMPAS Y DISTRACTORES ("¡PELIGRO EXAMEN!")
+El uso de «el mismo» como simple sustituto de un elemento anterior suele resultar innecesario y estilísticamente desaconsejable. En «Se aprobó el proyecto y se ordenó la publicación del mismo», puede preferirse «su publicación». Esta recomendación de estilo no convierte todos los usos de «mismo» en errores: «el mismo proyecto» puede indicar identidad y ser adecuado.
 
-> [!WARNING]
-> **Trampa 1: El Pleonasmo Retórico Literario Aceptado vs. El Vicioso**
-> En poesía o literatura, la RAE tolera pleonasmos enfáticos con valor estético: *"Lo vi con mis propios ojos"*, *"Lloró con amargo llanto"*. Sin embargo, en el examen de admisión de Aptitud Académica, salvo que te especifiquen que se analiza una figura poética, todo pleonasmo es clasificado como **vicio de redacción y redundancia a eliminar**.
+Con expresiones como «la mayoría de los estudiantes», este tipo de estructura admite concordancia en singular o plural, según la construcción. No rechaces una alternativa solo por encontrar «la mayoría ... aprobaron». Si una pregunta busca un error de concordancia, debe plantear una estructura que permita identificarlo sin ignorar las variantes admitidas.
 
-> [!CAUTION]
-> **Trampa 2: La Falsa Sinonimia entre "Ostentar" y "Detentar"**
-> - **Ostentar:** Exhibir con orgullo, legítimamente o con lucimiento algo que se posee (*"El catedrático ostenta el grado de doctor"*).
-> - **Detentar:** Retener o ejercer un poder o cargo de manera **ilegítima o usurpadora** (*"El dictador detenta el poder tras el golpe militar"*).
-> En preguntas de precisión léxica, usar *detentar* como simple sinónimo neutral de *ocupar un cargo* es un distractor de alta mortalidad.
+## 7. Sonido y registro
 
----
+La cacofonía se refiere a un efecto poco armónico producido por una combinación o repetición de sonidos. Se aprecia mejor al leer el pasaje en voz alta y considerar el registro. Una aliteración deliberada en un poema puede perseguir precisamente esa repetición sonora.
 
+No se define la cacofonía por el origen de una palabra ni por la presencia de una lengua indígena. Tampoco toda oración larga es cacofónica. Para corregir un pasaje, identifica qué combinación dificulta la lectura y busca otra formulación que conserve el sentido. Cambiar por sinónimos al azar puede alterar información o producir una frase menos natural.
 
+## 8. Importante
 
-## 9. BANCO DE EJERCICIOS RESUELTOS GRADUADOS
+> **Importante:** Conserva el significado antes de embellecer una frase. No prohíbas verbos frecuentes, no elimines toda repetición y no declares una contradicción sin comprobar el tiempo, el referente y el sentido. Una opción más formal puede ser menos precisa si cambia la acción o añade un dato.
 
+## 9. Procedimiento de revisión
 
+1. Resume en una frase qué comunica el texto. Si no puedes hacerlo, localiza primero la parte ambigua.
+2. Identifica los referentes: quién actúa, a quién afecta y de quién se habla. Revisa posesivos y pronombres.
+3. Comprueba si la repetición tiene una función. Recorta solo cuando no se pierde información ni un efecto pertinente.
+4. Consulta el sentido y la construcción de las palabras que generan dudas. No las evalúes únicamente por su sonido.
+5. Lee la alternativa completa. Verifica que no cambie el tiempo, el agente, la intensidad o la fase de una acción.
+6. Explica la revisión con el fragmento concreto que la justifica. Si hay dos alternativas admisibles, hace falta precisar la consigna o reconocer la ambigüedad.
 
-### Ejercicio 1 (Nivel Básico: Detección de Pleonasmo Vicioso)
-**Enunciado:** Identifique la oración que contiene una redundancia viciosa que afecta la corrección por sentido:
-A) El testigo relató los hechos con admirable serenidad.  
-B) El arqueólogo descubrió una osamenta de huesos en la tumba real.  
-C) La comisión evaluadora publicó los resultados oficiales del concurso.  
-D) Los científicos examinaron las muestras recolectadas en la Antártida.  
-E) El conferencista disertó sobre los desafíos de la inteligencia artificial.  
+## 10. Aplicación completa
 
-**Resolución Paso a Paso:**
-1. Analizamos minuciosamente el léxico de cada alternativa:
-   - En la opción B: *"descubrió una osamenta de huesos"*.
-   - Definición lexicográfica de **osamenta** según la RAE: "Conjunto de los huesos que forman el esqueleto de un ser humano o animal".
-   - Por definición semántica intrínseca, una osamenta está compuesta necesariamente por huesos; no existe una osamenta de madera o metal.
-   - Añadir *"de huesos"* es un pleonasmo vicioso y redundante que no aporta ningún dato semántico nuevo.
-2. Las restantes opciones muestran un uso pulcro, sobrio y normativo del vocabulario.
-**Respuesta:** B
+**Caso de práctica:** El equipo aún está escribiendo una propuesta. Un informe dice: «El equipo va a hacer una propuesta y el mismo entregará la misma a la dirección».
 
----
+Una revisión posible es «El equipo redactará una propuesta y la entregará a la dirección». «Redactará» se justifica porque el caso informa de que se está escribiendo el texto. El sujeto sigue siendo el equipo y el pronombre «la» remite a la propuesta. No se afirma que la dirección ya la haya aprobado.
 
+Cambiar el enunciado por «El equipo promulgará una ley» altera la clase de documento, la acción y la fase descrita. No es una mejora estilística: introduce hechos distintos. La revisión correcta necesita conservar esas relaciones, aunque el resultado sea menos solemne.
 
+**Comprueba lo aprendido:** Si solo supieras que el equipo prepara una propuesta, sin saber cómo lo hace, «preparará» podría ser más prudente que «redactará». La elección depende de la información disponible. La precisión no consiste en añadir detalles, sino en expresar exactamente los que el contexto permite.
 
-### Ejercicio 2 (Nivel Intermedio: Precisión Léxica y Verbos Comodín)
-**Enunciado (Modelo Admisión UNSA):** Seleccione la opción que corrige el enunciado con la mayor precisión léxica:
-*"El cabecilla de la banda delictiva LOGRÓ HACER un plan maestro para fugar de la prisión de máxima seguridad."*
-A) consiguió tramar  
-B) ideó un plan maestro  
-C) ejecutó un proyecto  
-D) hizo la estructura  
-E) pensó un croquis  
+## Comparación final de revisiones
 
-**Resolución Paso a Paso:**
-1. Analizamos la expresión coloquial *"logró hacer un plan maestro"*:
-   - "Hacer un plan" recurre al verbo comodín baúl *hacer*.
-   - En el plano intelectual y estratégico, concebir mentalmente un plan o proyecto complejo se expresa con verbos como *idear, concebir, urdir, diseñar o trazar*.
-2. Evaluamos la elegancia sintáctica y concisión:
-   - *"Ideó un plan maestro"* sintetiza la operación mental en un solo verbo culto, exacto y vigoroso.
-   - *Idear* significa: "Formar y disponer en la mente un plan para conseguir un fin".
-3. Por tanto, la opción B es la fórmula óptima de precisión léxica.
-**Respuesta:** B
-
----
-
-
-
-### Ejercicio 4 (Nivel Avanzado DECO: Corrección Integral de Párrafo Periodístico)
-**Enunciado (Tipo San Marcos DECO / UNSA):** Lea el siguiente texto con vicios de redacción:
-*"El alcalde provincial inauguró una obra que la misma costó millones del erario público del Estado, donde los vecinos se quejaron de que no había agua potable en sus casas de ellos."*
-¿Cuál es la versión debidamente corregida, libre de queísmo, redundancias y ambigüedades?
-A) El alcalde provincial inauguró una obra que costó millones del erario, en la cual los vecinos se quejaron porque no tenían agua potable en sus casas.  
-B) El alcalde provincial inauguró una obra de la cual la misma costó millones del erario público, donde los vecinos reclamaron por el agua.  
-C) El burgomaestre inauguró una obra costosa del erario del Estado en donde los vecinos de ellos no tenían agua en sus domicilios.  
-D) Habiendo inaugurado la obra que costó millones del erario público, el alcalde vio que los vecinos no tenían agua en sus casas de ellos.  
-E) El alcalde inauguró la obra costosa del erario, donde los mismos vecinos se quejaron de la falta de agua en las casas de ellos.  
-
-**Resolución Paso a Paso:**
-1. Identificamos los vicios del texto original:
-   - Uso vicioso de *la misma* como pronombre anafórico.
-   - Redundancia pleonástica en *"erario público del Estado"* (*erario* ya es el tesoro público del Estado).
-   - Empleo incorrecto del adverbio relativo de lugar *donde* para introducir una circunstancia oracional que no es un espacio físico medible.
-   - Dequeísmo vicioso en *"se quejaron de que"* (o construcción defectuosa) y pleonasmo redundante vulgar en *"sus casas de ellos"*.
-2. Evaluamos la opción A:
-   - Sustituye *"la misma"* por el pronombre relativo simple *que*.
-   - Corrige *"erario público del Estado"* dejándolo con sobriedad en **el erario**.
-   - Reemplaza el vicioso *donde* por el conector relativo adecuado **en la cual**.
-   - Elimina la duplicación posesiva vulgar *"de ellos"* dejando simplemente **sus casas**.
-3. La alternativa A restituye la impecabilidad gramatical y semántica total.
-**Respuesta:** A
-
----
-
-
-
-### Ejercicio 5 (Nivel 5: Boss Challenge - Discriminación de Términos Parónimos y de Registro Culto)
-**Enunciado (Nivel UNI / Máxima Exigencia):** Seleccione el enunciado que utiliza los vocablos con absoluta **propiedad léxica y adecuación semántica**, libre de cualquier error de sentido o confusión paronímica:
-A) El juez penal absolvió al reo confeso porque las pruebas presentadas por la fiscalía adolecían de total validez.  
-B) Tras el golpe militar, el dictador procedió a detentar ilegítimamente la presidencia de la república, conculcando las libertades civiles.  
-C) El ministro de Salud advirtió que el virus presentaba un carácter inocuo sumamente mortífero para los ancianos.  
-D) El fiscal provincial procedió a incautar los documentos que infringían un daño económico irreparable a la empresa.  
-E) La asamblea universitaria aprobó por unanimidad la iniciativa, a pesar del escepticismo de la totalidad de sus miembros.  
-
-**Resolución Paso a Paso:**
-1. Analizamos la opción A: *"adolecían de total validez"*. El verbo *adolecer* significa "tener o padecer un defecto o enfermedad", no equivale a "carecer". Si una prueba "adolece de validez", significa erróneamente que tener validez es un defecto. Además, absolver a un "reo confeso" presenta inconsistencia de motivación judicial.
-2. Analizamos la opción C: *"carácter inocuo sumamente mortífero"*. *Inocuo* significa que no hace daño; calificarlo de "sumamente mortífero" es una contradicción semántica directa.
-3. Analizamos la opción D: *"infringían un daño"*. Se dice *infligir* daño (causar un daño o castigo), mientras que *infringir* significa quebrantar una ley o norma jurídica.
-4. Analizamos la opción E: *"aprobó por unanimidad [...], a pesar del escepticismo de la totalidad"*. Si hubo escepticismo de la totalidad, no pudo aprobarse por unanimidad (colisión lógica).
-5. Analizamos la opción B:
-   - *Detentar:* Retener o ejercer un poder o cargo de manera usurpadora o sin título legítimo. El texto dice: *"el dictador procedió a detentar ilegítimamente la presidencia tras un golpe militar"*. El uso es impecable.
-   - *Conculcar:* Quebrantar, vulnerar o atropellar una ley, fuero o derecho. Se usa con rigor formal insuperable.
-**Respuesta:** B
-
----
-
-
-
-## 10. GLOSARIO DE TÉRMINOS CLAVE
-
-1. **Propiedad Léxica:** Uso de las palabras con el significado exacto y preciso asignado por la norma culta.
-2. **Pleonasmo Vicioso:** Repetición innecesaria de ideas o semas que no aportan valor expresivo ni poético.
-3. **Incoherencia Semántica:** Contradicción lógica interna que anula el sentido de un enunciado.
-4. **Anfibología:** Ambigüedad generada por un orden sintáctico defectuoso que admite dos interpretaciones.
-5. **Solecismo:** Error que atenta contra las reglas de concordancia, régimen preposicional o sintaxis.
-6. **Dequeísmo:** Inserción indebida de la preposición "de" antes de la conjunción "que" en oraciones subordinadas sustantivas.
-7. **Queísmo:** Supresión incorrecta de la preposición "de" (u otra) cuando es exigida por el verbo de régimen.
-8. **Detentar:** Ejercer ilegítimamente un cargo, mando o poder público sin derecho legal.
-9. **Ostentar:** Exhibir con legitimo derecho, orgullo o prestancia un título o cargo público.
-10. **Infligir:** Causar o imponer un daño físico, castigo o pena a alguien.
-
----
-
-
-
-### 3.2 Discordancias Gramaticales que Alteran el Sentido
-1. **Discordancia de Número o Género Colectivo:**
-   - *Incorrecto:* *"La mayoría de estudiantes desaprobaron el examen"*.
-   - *Correcto con sentido singular estricto:* *"La mayoría de estudiantes desaprobó el examen"*.
-2. **El "Dequeísmo" y "Queísmo":**
-   - *Dequeísmo vicioso:* *"Pienso de que la economía mejorará"* (Lo correcto es: *"Pienso que..."*).
-   - *Queísmo por supresión indebida:* *"Me convencí que tenía razón"* (Lo correcto es: *"Me convencí de que..."*).
-3. **El Mal Uso del Adjetivo "Mismo":**
-   - No debe emplearse *mismo* como pronombre anafórico sustituto de persona o cosa:
-   - *Incorrecto:* *"Se aprobó el proyecto de ley y se ordenó la promulgación del mismo"*.
-   - *Correcto:* *"Se aprobó el proyecto de ley y se ordenó su promulgación"*.
-
----
-
-
-
-### Hack 1: La Prueba de la Doble Negación en el "Dequeísmo"
-¿Dudas si una oración lleva "de que" o solo "que"?:
-1. Transforma toda la proposición subordinada en la pregunta: **¿DE QUÉ...?** o **¿QUÉ...?**:
-   - Oración: *"Él me dijo [de que vendría / que vendría]"*.
-   - Pregunta de prueba: *¿Qué me dijo?* (Correcto) vs. *¿De qué me dijo?* (Absurdo).
-   - Como la pregunta natural es *¿Qué me dijo?*, la respuesta correcta es: *"Él me dijo **que** vendría"*.
-   - Caso contrario: *"Él se acordó [de que vendría]"* \to Pregunta: *¿De qué se acordó?* \to Lleva **de que** obligatoriamente.
-
-
-
-## 11. BANCO DE FLASHCARDS (Q/A)
-
-- **Q: ¿Por qué la frase "un lapso de dos horas de tiempo" es un pleonasmo vicioso?**  
-  **A:** Porque "lapso" significa por definición período de tiempo; añadir "de tiempo" es una reiteración inútil.
-- **Q: ¿Qué diferencia existe entre "infligir" e "infringir"?**  
-  **A:** "Infligir" es causar daño o castigo; "infringir" es violar o quebrantar una norma o ley.
-- **Q: ¿Cómo se comprueba si una oración contiene dequeísmo?**  
-  **A:** Reemplazando la proposición por una pregunta: si la pregunta natural es "¿Qué?" (y no "¿De qué?"), el "de" es un dequeísmo que debe eliminarse.
-- **Q: ¿Por qué es un error decir "Se reunió el comité y el mismo acordó suspender la huelga"?**  
-  **A:** Porque la RAE desaconseja terminantemente usar "el mismo" como pronombre anafórico; debe sustituirse por un pronombre personal o posesivo ("y este acordó...").
-- **Q: ¿Qué significa el verbo "adolecer" en el registro culto formal?**  
-  **A:** Significa tener un defecto, vicio o padecer una enfermedad; no es sinónimo de "carecer".
-
----
-
-
-
-### Hack 2: Rastreo del "Sujeto Fantasma" en Anfibologías
-En oraciones como *"El perro mordió al cazador en su casa"*:
-- ¿En la casa de quién? ¿Del perro o del cazador?
-- Para desambiguar en el examen, busca la alternativa que coloque el complemento circunstancial de lugar pegado directamente al sustantivo que modifica: *"En su propia casa, el cazador fue mordido por el perro"*.
-
----
-
-
-
-### Ejercicio 3 (Nivel Intermedio-Avanzado: Incoherencia Semántica Interna)
-**Enunciado:** ¿Cuál de los siguientes enunciados incurre en una flagrante **incoherencia semántica**?
-A) A pesar de su juventud inexperta, demostró una madurez sobresaliente en la toma de decisiones.  
-B) El anciano filósofo guardó un riguroso silencio y explicó detalladamente las premisas del silogismo.  
-C) El caudal del río Chili creció intempestivamente debido a las lluvias estivales en la cordillera.  
-D) La economía regional experimentó un crecimiento sostenido durante el último quinquenio.  
-E) El congresista declinó la invitación por razones estrictamente personales.  
-
-**Resolución Paso a Paso:**
-1. Analizamos el sentido lógico interno de la opción B:
-   - Proposición 1: *"El anciano filósofo guardó un riguroso silencio"*. (Estado de mutismo absoluto sin emitir palabra alguna).
-   - Proposición 2 vinculada por copulativa *"y"*: *"explicó detalladamente las premisas del silogismo"*. (Acción verbal discursiva que exige hablar de forma continua y prolongada).
-2. Es física y lógicamente imposible guardar un riguroso silencio y al mismo tiempo explicar detalladamente un argumento mediante palabras sonoras.
-3. Se produce una colisión semántica insalvable (P \land \neg P fáctico) que convierte al enunciado en un absurdo comunicativo.
-**Respuesta:** B
-
----
+| Caso | Problema o función | Cómo comprobarlo |
+|---|---|---|
+| Vi a Elena con los prismáticos | Dos lecturas sobre quién tenía el instrumento | Precisar la relación si el contexto no la aclara |
+| Lo vi con mis propios ojos | Puede enfatizar el testimonio directo | Valorar propósito y registro antes de recortar |
+| Hizo una propuesta | Construcción adecuada | No cambiarla solo porque contiene hacer |
+| Puso el informe en la mesa | Acción clara en el contexto | Sustituir solo si se necesita mayor precisión |

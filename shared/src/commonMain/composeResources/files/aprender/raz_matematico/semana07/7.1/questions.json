@@ -1,1 +1,200 @@
-[{"concept":"7.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t07_s01_c01","options":["120","150","180","200"],"pedagogicalTier":"concepto","semana":7,"statement":"El siguiente gráfico circular muestra la preferencia de 1,200 estudiantes universitarios por diferentes lenguajes de programación. Si el sector correspondiente a Kotlin abarca un ángulo central de 54^\\circ, ¿cuántos estudiantes prefieren Kotlin?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t07_s01_c02","options":["20","17","18","19"],"pedagogicalTier":"concepto","semana":7,"statement":"Las notas de un postulante en 5 simulacros de admisión fueron: 13, 16, 14, 18 y x. Si la media aritmética de sus 5 notas fue de 16.0, ¿cuál fue la nota x obtenida en el último simulacro?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t07_s01_c03","options":["Me = 68, Unimodal","Me = 66, Amodal","Me = 65, Bimodal","Me = 66, Unimodal con Mo = 62"],"pedagogicalTier":"concepto","semana":7,"statement":"Se tienen los pesos en kilogramos de 9 pacientes que asisten a una consulta nutricional:","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Siempre equivale exactamente a 1 (o al 100\\% si se expresan en porcentaje).","fuente":"temario","id":"rm_t07_s01_c04","options":["\\alpha_i = h_i \\cdot 360^\\circ (o \\alpha_i = \\frac{f_i}{n} \\cdot 360^\\circ).","La **Mediana (Me)**, porque no se ve afectada por valores extremos atípicos como la media.","Valor o condición no aplicable al caso planteado","Siempre equivale exactamente a 1 (o al 100\\% si se expresan en porcentaje)."],"pedagogicalTier":"concepto","semana":7,"statement":"¿A qué equivale la suma total de las frecuencias relativas (h_i) de una muestra?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: \\alpha_i = h_i \\cdot 360^\\circ (o \\alpha_i = \\frac{f_i}{n} \\cdot 360^\\circ).","fuente":"temario","id":"rm_t07_s01_c05","options":["\\alpha_i = h_i \\cdot 360^\\circ (o \\alpha_i = \\frac{f_i}{n} \\cdot 360^\\circ).","Siempre equivale exactamente a 1 (o al 100\\% si se expresan en porcentaje).","La **Mediana (Me)**, porque no se ve afectada por valores extremos atípicos como la media.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":7,"statement":"¿Cuál es la relación matemática entre el ángulo de un sector circular y su frecuencia relativa?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: La **Mediana (Me)**, porque no se ve afectada por valores extremos atípicos como la media.","fuente":"temario","id":"rm_t07_s01_c06","options":["Siempre equivale exactamente a 1 (o al 100\\% si se expresan en porcentaje).","La **Mediana (Me)**, porque no se ve afectada por valores extremos atípicos como la media.","\\alpha_i = h_i \\cdot 360^\\circ (o \\alpha_i = \\frac{f_i}{n} \\cdot 360^\\circ).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":7,"statement":"¿Qué medida de tendencia central es la más adecuada cuando existen datos atípicos o extremos muy alejados?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.7","correctIndex":2,"explanation":"54° / 360° = 3/20 = 15%. El 15% de 1,200 alumnos es (15 * 1200) / 100 = 180 alumnos.","fuente":"temario","id":"rm_t07_s01_c07","options":["120","150","180","240"],"pedagogicalTier":"concepto","semana":7,"statement":"En un gráfico circular de 1,200 postulantes, el sector de Medicina abarca 54°. ¿Cuántos postulantes representa dicho sector?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t07_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t07_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t07_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rm_t07_s01_c01",
+    "concept": "7.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Para los datos 3, 5, 7 y 9, ¿cuál es la media aritmética?",
+    "options": [
+      "$6$",
+      "$12$",
+      "$3$",
+      "$18$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Sumamos todos y dividimos entre el número de datos.\n2. Desarrollamos: $\\bar x=(3+5+7+9)/4$.\n3. El resultado es $6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s01_c02",
+    "concept": "7.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Para los datos ordenados 2, 4, 8, 10 y 13, ¿cuál es la mediana?",
+    "options": [
+      "$16$",
+      "$4$",
+      "$24$",
+      "$8$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Con cinco datos, el central es el tercero.\n2. Desarrollamos: $Me=x_{(3)}=8$.\n3. El resultado es $8$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s01_c03",
+    "concept": "7.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Para 1, 3, 3, 4 y 7, ¿cuál es la moda?",
+    "options": [
+      "$9$",
+      "$1$",
+      "$3$",
+      "$6$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Buscamos el valor de mayor frecuencia.\n2. Desarrollamos: $f(3)=2>f(1)=f(4)=f(7)=1$.\n3. El resultado es $3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s01_c04",
+    "concept": "7.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Para los datos 4, 6, 11 y 15, ¿cuál es el rango?",
+    "options": [
+      "$12$",
+      "$11$",
+      "$22$",
+      "$33$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Restamos el mínimo al máximo.\n2. Desarrollamos: $R=15-4$.\n3. El resultado es $11$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s01_c05",
+    "concept": "7.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Cuatro datos tienen media 7. ¿Cuál es su suma?",
+    "options": [
+      "$28$",
+      "$56$",
+      "$14$",
+      "$84$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Despejamos suma a partir de la definición de media.\n2. Desarrollamos: $S=4(7)$.\n3. El resultado es $28$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s01_c06",
+    "concept": "7.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "En un grupo de 40, 10 eligen la opción A. ¿Cuál es la frecuencia relativa de A como fracción?",
+    "options": [
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{8}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{1}{4}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La frecuencia relativa divide casos de la categoría entre total.\n2. Desarrollamos: $h_A=10/40$.\n3. El resultado es $\\frac{1}{4}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s01_c07",
+    "concept": "7.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Una nota 12 pesa 1 y otra 18 pesa 2. ¿Cuál es la media ponderada?",
+    "options": [
+      "$8$",
+      "$48$",
+      "$16$",
+      "$32$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Se divide la suma ponderada entre la suma de pesos.\n2. Desarrollamos: $\\bar x=(12+2(18))/(1+2)$.\n3. El resultado es $16$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s01_c08",
+    "concept": "7.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Para los datos ordenados 2, 4, 8 y 14, ¿cuál es la mediana?",
+    "options": [
+      "$18$",
+      "$6$",
+      "$12$",
+      "$3$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Con cuatro datos promediamos los dos centrales.\n2. Desarrollamos: $Me=(4+8)/2$.\n3. El resultado es $6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s01_c09",
+    "concept": "7.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Una tabla registra los valores 1, 2 y 3 con frecuencias 2, 3 y 5. ¿Cuántos datos registra?",
+    "options": [
+      "$10$",
+      "$20$",
+      "$5$",
+      "$30$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El total es la suma de frecuencias absolutas.\n2. Desarrollamos: $N=2+3+5$.\n3. El resultado es $10$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s01_c10",
+    "concept": "7.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Una media de un conjunto numérico finito no vacío siempre está…",
+    "options": [
+      "Por encima de todo dato.",
+      "Por debajo de todo dato.",
+      "Exactamente en uno de los datos por obligación.",
+      "Entre el mínimo y el máximo, incluidos."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Cada dato está entre los extremos.\n2. Sumar y dividir entre la cantidad positiva conserva ese intervalo.\n3. La media puede no coincidir con ningún dato.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s01_c11",
+    "concept": "7.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Si un conjunto tiene dos valores con la misma frecuencia máxima, se describe como…",
+    "options": [
+      "De varianza obligatoriamente cero.",
+      "De media necesariamente cero.",
+      "Bimodal.",
+      "Sin datos."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La moda corresponde a la frecuencia máxima.\n2. Dos valores comparten esa frecuencia.\n3. La cantidad de modas no fija media ni dispersión.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

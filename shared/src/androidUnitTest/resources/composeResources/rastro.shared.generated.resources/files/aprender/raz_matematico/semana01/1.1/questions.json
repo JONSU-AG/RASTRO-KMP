@@ -1,1 +1,200 @@
-[{"concept":"1.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t01_s01_c01","options":["37","39","41","38"],"pedagogicalTier":"concepto","semana":1,"statement":"Halle el término que continúa en la sucesión:","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t01_s01_c02","options":["40","33","35","39"],"pedagogicalTier":"concepto","semana":1,"statement":"Determine el valor de x en el siguiente arreglo:","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t01_s01_c03","options":["825","900","840","861"],"pedagogicalTier":"concepto","semana":1,"statement":"Un laboratorio farmacéutico en Cayma evalúa la proliferación de un cultivo celular de control. El primer día se registran 6 colonias, el segundo día 15, el tercer día 28, el cuarto día 45, y así sucesivamente. ¿Cuántas colonias se registrarán exactamente en el vigésimo (20.°) día?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: S_n = n^2, donde n es la cantidad de términos (obtenida igualando el último término a 2n - 1).","fuente":"temario","id":"rm_t01_s01_c04","options":["Equivale exactamente a 2a, por lo que a = \\frac{\\text{segunda diferencia}}{2}.","S = \\frac{t_1}{1 - q}.","Valor o condición no aplicable al caso planteado","S_n = n^2, donde n es la cantidad de términos (obtenida igualando el último término a 2n - 1)."],"pedagogicalTier":"concepto","semana":1,"statement":"¿Cuál es la fórmula para la suma de los primeros n números impares consecutivos?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Equivale exactamente a 2a, por lo que a = \\frac{\\text{segunda diferencia}}{2}.","fuente":"temario","id":"rm_t01_s01_c05","options":["Equivale exactamente a 2a, por lo que a = \\frac{\\text{segunda diferencia}}{2}.","S_n = n^2, donde n es la cantidad de términos (obtenida igualando el último término a 2n - 1).","S = \\frac{t_1}{1 - q}.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":1,"statement":"En una sucesión cuadrática t_n = an^2 + bn + c, ¿a qué equivale la segunda diferencia constante?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: S = \\frac{t_1}{1 - q}.","fuente":"temario","id":"rm_t01_s01_c06","options":["S_n = n^2, donde n es la cantidad de términos (obtenida igualando el último término a 2n - 1).","S = \\frac{t_1}{1 - q}.","Equivale exactamente a 2a, por lo que a = \\frac{\\text{segunda diferencia}}{2}.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":1,"statement":"¿A qué equivale la suma límite de una serie geométrica decreciente infinita (|q| < 1)?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.7","correctIndex":2,"explanation":"Al resolver L = sqrt(6 + L) elevando al cuadrado se obtiene L^2 - L - 6 = 0, cuya solución positiva es L = 3.","fuente":"temario","id":"rm_t01_s01_c07","options":["sqrt(6)","2","3","6"],"pedagogicalTier":"concepto","semana":1,"statement":"Dada la sucesión an+1 = sqrt(6 + an) con a1 = sqrt(6), ¿cuál es el valor del límite L?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t01_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t01_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t01_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rm_t01_s01_c01",
+    "concept": "1.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 1,
+    "statement": "Una sucesión aritmética empieza en 4 y aumenta 5 por paso. ¿Cuál es su sexto término?",
+    "options": [
+      "$29$",
+      "$58$",
+      "$87$",
+      "$30$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Desde el primero hasta el sexto hay cinco incrementos.\n2. Desarrollamos: $a_6=4+(6-1)5$.\n3. El resultado es $29$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t01_s01_c02",
+    "concept": "1.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 1,
+    "statement": "Una sucesión geométrica empieza en 3 y duplica cada término. ¿Cuál es el quinto?",
+    "options": [
+      "$96$",
+      "$24$",
+      "$144$",
+      "$48$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Aplicamos cuatro multiplicaciones por la razón.\n2. Desarrollamos: $a_5=3(2)^{4}$.\n3. El resultado es $48$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t01_s01_c03",
+    "concept": "1.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 1,
+    "statement": "La sucesión se define por $a_n=n^2+2n$, para n≥1. ¿Cuánto vale el cuarto término?",
+    "options": [
+      "$12$",
+      "$72$",
+      "$24$",
+      "$48$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La regla está dada, por lo que sustituimos n=4.\n2. Desarrollamos: $a_4=4^2+2(4)$.\n3. El resultado es $24$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t01_s01_c04",
+    "concept": "1.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 1,
+    "statement": "Se define $a_1=2$, $a_2=3$ y $a_{n+2}=a_{n+1}+a_n$. ¿Cuál es el sexto término?",
+    "options": [
+      "$7$",
+      "$21$",
+      "$42$",
+      "$63$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Construimos cada término con los dos anteriores.\n2. Desarrollamos: $2,3,5,8,13,21$.\n3. El resultado es $21$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t01_s01_c05",
+    "concept": "1.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 1,
+    "statement": "En la sucesión de cuadrados positivos 1, 4, 9, 16,…, definida por el cuadrado del índice, ¿cuál es el décimo término?",
+    "options": [
+      "$100$",
+      "$200$",
+      "$50$",
+      "$300$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Usamos la regla explícita de cuadrados.\n2. Desarrollamos: $a_{10}=10^2$.\n3. El resultado es $100$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t01_s01_c06",
+    "concept": "1.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 1,
+    "statement": "Se numeran doce casilleros del 1 al 12. ¿Cuántos dígitos se escriben en total?",
+    "options": [
+      "$30$",
+      "$45$",
+      "$5$",
+      "$15$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Separamos nueve números de una cifra y tres de dos.\n2. Desarrollamos: $D=9+3(2)$.\n3. El resultado es $15$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t01_s01_c07",
+    "concept": "1.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 1,
+    "statement": "Un operador se define por a★b=2a+3b. ¿Cuánto vale 4★5?",
+    "options": [
+      "$69$",
+      "$24$",
+      "$23$",
+      "$46$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El símbolo tiene la definición indicada, no la multiplicación usual.\n2. Desarrollamos: $4\\star5=2(4)+3(5)$.\n3. El resultado es $23$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t01_s01_c08",
+    "concept": "1.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 1,
+    "statement": "En una progresión aritmética, el tercer término es 11 y la diferencia es 4. ¿Cuál es el primero?",
+    "options": [
+      "$1$",
+      "$3$",
+      "$6$",
+      "$9$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Retrocedemos dos incrementos.\n2. Desarrollamos: $a_1=11-2(4)$.\n3. El resultado es $3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t01_s01_c09",
+    "concept": "1.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 1,
+    "statement": "Las diferencias sucesivas de una sucesión se fijan en 3, 5, 7, 9,… . Si el primer término es 2, ¿cuál es el quinto?",
+    "options": [
+      "$26$",
+      "$52$",
+      "$13$",
+      "$78$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Para llegar al quinto sumamos las cuatro primeras diferencias.\n2. Desarrollamos: $a_5=2+3+5+7+9$.\n3. El resultado es $26$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t01_s01_c10",
+    "concept": "1.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 1,
+    "statement": "Conocer solo unos primeros términos, sin regla adicional,…",
+    "options": [
+      "Demuestra siempre una única ley infinita.",
+      "Obliga a que la sucesión sea aritmética.",
+      "Obliga a que todos los términos siguientes sean cero.",
+      "No determina una única continuación entre todas las sucesiones posibles."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Una lista finita admite distintas reglas compatibles.\n2. Una conclusión única requiere restringir la familia o dar una recurrencia.\n3. No se confunde un patrón plausible con una demostración de unicidad.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t01_s01_c11",
+    "concept": "1.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 1,
+    "statement": "En una progresión geométrica con primer término no nulo, la razón se obtiene…",
+    "options": [
+      "Sumando los dos primeros.",
+      "Dividiendo el índice entre el término.",
+      "Dividiendo un término por su anterior, cuando este no es cero.",
+      "Restando siempre dos términos sucesivos."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Cada término es el anterior multiplicado por la razón.\n2. Si el anterior no es cero, despejamos mediante división.\n3. La diferencia constante corresponde a otra familia: la aritmética.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

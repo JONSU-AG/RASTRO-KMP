@@ -1,126 +1,180 @@
 # Estructura de la Frase Nominal (FN), Frase Verbal (FV) y sus Complementos
 
-## INTRODUCCIÓN
+## Introducción
 
-La frase es la unidad intermedia donde cada palabra ocupa un puesto con pruebas que no admiten intuición. En admisión UNSA la pregunta no es qué significa ganadora o contentos o les, sino qué función cumplen y cómo se demuestra con conmutación y pasiva. Por eso el jurado declaró ganadora no es objeto directo, los niños caminaban contentos no es circunstancial y les otorgó no es objeto directo aunque aparezca pegado al verbo.
+En **Los estudiantes revisaron el informe**, los estudiantes es un grupo nominal que funciona como sujeto, y el informe es otro grupo nominal que funciona como complemento directo. Tener la misma clase de grupo no implica desempeñar la misma función. El análisis debe indicar de qué unidad se habla y con qué elementos se relaciona.
 
-En esta lección desarmarás las dos frases mayores del español. Verás la frase nominal con núcleo, modificadores directos e indirectos y aposición, y la frase verbal con núcleo verbal más objeto directo, indirecto, atributo, predicativo, agente y circunstanciales. Aprenderás la doble prueba del objeto directo con clíticos acusativos y voz pasiva, la prueba del atributo con lo neutro y la prueba del predicativo con concordancia sin lo. Todo el análisis de las diez preguntas quedará respaldado en el desarrollo y en los ejemplos.
+Esta lección utiliza las denominaciones **frase** y **sintagma** como equivalentes en los ejemplos. Para los componentes de la frase nominal se conserva la nomenclatura escolar de núcleo, modificador directo, modificador indirecto y aposición, explicando su alcance. Para los complementos del verbo se usan objeto/complemento directo e indirecto, atributo, predicativo, agente y circunstancial.
 
-Al final resolverás el reto titán sin dudar. Si conmuta por lo y pasa a sujeto paciente es objeto directo. Si conmuta por le y se duplica con a más sintagma es indirecto. Si va con ser, estar o parecer y admite lo es atributo. Si es adjetivo variable que concuerda con sujeto u objeto en verbo pleno es predicativo. Si va con por en pasiva es agente.
+## Mapa del tema
 
-## DESARROLLO DEL TEMA
+```mermaid
+graph TD
+ A[Analizar grupos y funciones] --> B[Frase nominal]
+ A --> C[Relaciones del predicado]
+ A --> D[Pasiva y contexto]
+ B --> B1[Núcleo y dependencias]
+ B --> B2[Modificadores del nombre]
+ B --> B3[Aposición]
+ C --> C1[Complemento directo]
+ C --> C2[Complemento indirecto]
+ C --> C3[Atributo y predicativo]
+ D --> D1[Complemento agente]
+ D --> D2[Circunstancias y argumentos]
+ D --> D3[Límites de las pruebas]
+```
 
-# 5.2.1 — La frase nominal con núcleo, modificadores y aposición
+# 5.2.1 — Frase nominal y dependencias internas
 
-**¿Qué es?** La frase nominal es el sintagma articulado en torno a un núcleo nominal con modificadores dependientes. Su estructura canónica es modificador directo más núcleo más modificador directo más modificador indirecto más aposición, donde los modificadores directos pueden repetirse y los indirectos también. El núcleo es sustantivo, pronombre o elemento sustantivado. El modificador directo es artículo, determinante demostrativo, posesivo o numeral, y adjetivo sin preposición de por medio. El modificador indirecto es frase preposicional encabezada por preposición o construcción comparativa con como o cual. La aposición es modificador nominal sin enlace obligatorio que especifica o explica al núcleo.
+La **frase nominal** se organiza en torno a un núcleo nominal. Puede incluir determinantes, adjetivos y complementos, pero no exige que todos aparezcan ni que sigan una fórmula única. En **libros**, el sustantivo puede constituir por sí solo un grupo; en **los libros nuevos de la biblioteca**, aparecen varias dependencias.
 
-**¿Cómo funciona?** En la fascinante novela de misterio que leí ayer, la es determinante artículo como modificador directo, fascinante es adjetivo calificativo como modificador directo, novela es sustantivo común como núcleo, de misterio es frase preposicional como modificador indirecto y que leí ayer es proposición subordinada adjetiva que funciona como modificador indirecto oracional. La secuencia es modificador directo más modificador directo más núcleo más modificador indirecto más modificador indirecto. En el reloj de oro de mi abuelo, el es modificador directo, reloj es núcleo, de oro es modificador indirecto preposicional y de mi abuelo es modificador indirecto preposicional. En el río Chili, el es modificador directo, río es núcleo y Chili es aposición especificativa sin comas que delimita de qué río se habla. En César Vallejo, el poeta del dolor humano, nació en Santiago de Chuco, César Vallejo es núcleo y el poeta del dolor humano entre comas es aposición explicativa intercambiable con el núcleo. En Arequipa, la Ciudad Blanca, resistió, la Ciudad Blanca es aposición explicativa entre comas. En el volcán Misti despertó, Misti es aposición especificativa sin comas. En el libro de gramática, de gramática es modificador indirecto. En mujeres como tú, como tú es modificador indirecto comparativo.
+En el análisis escolar empleado aquí, los determinantes y adjetivos unidos al nombre sin preposición se estudian como **modificadores directos**. Un complemento preposicional del nombre, como de la biblioteca, se denomina **modificador indirecto**. Estas etiquetas describen dependencias internas: no son objeto directo u objeto indirecto del verbo.
 
-**¿Por qué?** Porque la frase nominal condensa la referencia con capas de precisión. El modificador directo actualiza o califica sin mediación, el indirecto subordina con preposición y la aposición equivale o delimita. Sin esta arquitectura no se podría distinguir qué depende directamente del núcleo y qué depende a través de nexo.
+| Expresión | Segmento analizado | Análisis escolar utilizado |
+| --- | --- | --- |
+| el reloj | el | Determinante: modificador directo de reloj. |
+| el reloj antiguo | antiguo | Adjetivo: modificador directo de reloj. |
+| el reloj de oro | de oro | Modificador indirecto preposicional de reloj. |
+| el río Chili | río | Sustantivo que se toma como núcleo en este análisis. |
+| el río Chili | Chili | Aposición especificativa del nombre río. |
 
-**¿Cómo se diferencia?** El modificador directo se diferencia del indirecto porque el directo no lleva preposición y el indirecto sí la lleva. La y fascinante son directos, de oro y de mi abuelo son indirectos. La aposición explicativa se diferencia de la especificativa porque la explicativa va entre comas y es intercambiable, como el poeta del dolor humano, mientras que la especificativa va sin comas y delimita, como Chili en el río Chili y Misti en el volcán Misti.
+### Explicar la relación, no solo la preposición
 
-# 5.2.2 — Objeto directo, objeto indirecto y sus pruebas infalibles
+En **el reloj de oro de mi abuelo**, el análisis depende de cómo se entiendan los complementos. Si se indica que el reloj está hecho de oro y que pertenece al abuelo, ambos grupos modifican reloj. Sin esa interpretación, una secuencia puede admitir otras agrupaciones internas. Por eso la consigna debe aclarar la relación que se evalúa.
 
-**¿Qué es?** El objeto directo es la entidad que recibe directamente la acción transitiva y si es persona o ser animado lleva la preposición a. El objeto indirecto es el destinatario, beneficiario o perjudicado de la acción verbal, siempre encabezado por a o para. Ambos pertenecen a la frase verbal junto al núcleo verbal que puede ser verbo simple, compuesto o perífrasis. La frase verbal admite además atributo, predicativo, agente y circunstanciales, pero el par directo e indirecto se define por pruebas exclusivas de sustitución pronominal y pasiva.
+No se deduce una función verbal por ver de, a o por. En **entregó el reloj de oro**, de oro sigue dentro del grupo nominal y modifica reloj; el grupo el reloj de oro completo desempeña la función de complemento directo de entregó. Un mismo análisis puede contener niveles de dependencia distintos.
 
-**¿Cómo funciona?** El objeto directo se sustituye por lo, la, los y las y en voz pasiva se convierte en sujeto paciente. En el jurado premió a la científica, a la científica se sustituye por la en el jurado la premió y en pasiva da la científica fue premiada por el jurado, por eso es objeto directo y no indirecto. En las medallas de honor de entregó las medallas, las medallas se sustituye por las en se las entregó y en pasiva da las medallas fueron entregadas, por eso es objeto directo cuyo núcleo medallas lleva modificador indirecto de honor. El objeto indirecto se sustituye por le y les, con forma se ante lo o la, y nunca pasa a sujeto en pasiva. En el arqueólogo entregó las piezas al director del museo, al director se sustituye por le en le entregó las piezas y no admite pasiva como director fue entregado, por eso es indirecto. En a los más destacados alumnos les entregó, a los alumnos se duplica con les y es indirecto duplicado. En les otorgó diplomas a los mejores ingresantes, les reitera a a los ingresantes y es indirecto reiterativo. En escribió a su madre, a su madre da le escribió y no admite su madre fue escrita, por eso es indirecto. La fórmula de memoria en negrita resume el contraste. **Solo directo admite lo, la, los y las más pasiva a sujeto paciente, solo indirecto admite le y les sin pasiva posible.**
+### Aposición explicativa y especificativa
 
-**¿Por qué?** Porque el español marca con clíticos distintos el paciente directo y el destinatario. La pasiva solo puede promocionar al paciente, nunca al destinatario. Por eso la doble prueba es infalible y desmonta la trampa de la preposición a, que aparece en ambos pero con valor distinto.
+En **Elena, la coordinadora del equipo, entregó el informe**, la coordinadora del equipo añade una identificación explicativa de Elena. Las comas delimitan esa unidad nominal. En **el río Chili**, Chili especifica qué río se menciona sin quedar separado por comas.
 
-**¿Cómo se diferencia?** El directo se diferencia del indirecto porque el directo acepta acusativos y pasiva y el indirecto acepta dativos y los rechaza. A la científica con pasiva posible es directo, a su madre sin pasiva posible es indirecto. El pronombre les duplicado se diferencia del directo enclítico porque les siempre reitera a un sintagma con a o para de destinatario, como les a los ingresantes, mientras que lo reitera al paciente.
+Para reconocer una aposición se considera la relación entre expresiones nominales, no solamente la presencia de comas. Un inciso adverbial también puede ir entre comas y no por ello es aposición. Del mismo modo, no toda expresión explicativa puede sustituirse por otra palabra sin modificar el sentido o la organización de la oración.
 
-# 5.2.3 — Atributo frente a predicativo subjetivo y objetivo
+En este nivel se emplean casos claros de aposición nominal. Otras construcciones y algunos nombres propios admiten análisis más detallados; la nomenclatura escolar se declara para que el ejercicio no dependa de adivinar qué modelo está usando quien pregunta.
 
-**¿Qué es?** El atributo modifica al sujeto a través de un verbo copulativo como ser, estar, parecer, yacer y permanecer. Es obligatorio, concuerda en género y número con el sujeto y se sustituye por el pronombre neutro lo invariable. El complemento predicativo modifica simultáneamente al verbo no copulativo y al núcleo del sujeto en su variante subjetiva, o al objeto directo en su variante objetiva. Concuerda con el sustantivo al que califica y no se sustituye por lo. La diferencia de verbo copulativo frente a verbo pleno decide todo.
+# 5.2.2 — Complemento directo e indirecto
 
-**¿Cómo funciona?** En aquellos médicos son sumamente competentes, sumamente competentes va con son copulativo, califica al sujeto aquellos médicos y se sustituye por lo en lo son, por eso es atributo. En los atletas llegaron exhaustos, exhaustos es adjetivo que concuerda con atletas pero va con llegaron predicativo, no admite lo y por eso es predicativo subjetivo. En las niñas caminaban tranquilas, tranquilas concuerda con niñas en femenino plural y va con caminaban predicativo, por eso es predicativo subjetivo y no circunstancial de modo, porque el circunstancial sería adverbio invariable. En los niños caminaban contentos hacia la escuela, contentos concuerda con niños y va con caminaban predicativo, por eso es predicativo subjetivo. En entusiasmado les entregó de el profesor les entregó entusiasmado, entusiasmado concuerda con profesor masculino singular y no responde a cómo como adverbio, por eso es predicativo subjetivo y no circunstancial. En los jueces declararon culpable al acusado, culpable califica a al acusado que es objeto directo con lo en lo declararon culpable, va con declararon predicativo y concuerda con el objeto, por eso es predicativo objetivo. En el jurado declaró ganadora a la delegación, ganadora califica a la delegación objeto directo a través de declaró transitivo, por eso es predicativo objetivo y no objeto directo ni atributo ni modificador indirecto.
+El **complemento directo**, también llamado **objeto directo**, mantiene una relación argumental con un verbo transitivo. No se define simplemente como quien recibe una acción: en **La estudiante siente alegría**, alegría es complemento directo, aunque no se describa un objeto golpeado o transformado físicamente.
 
-**¿Por qué?** Porque el verbo copulativo vacía su significado y transfiere la carga al atributo, mientras que el verbo pleno conserva su acción y admite un calificativo secundario que mira a dos polos a la vez. La conmutación por lo delata al atributo y la concordancia sin lo delata al predicativo.
+En **La investigadora redactó el informe**, el informe puede sustituirse por lo: La investigadora lo redactó. En la pasiva correspondiente aparece como sujeto: El informe fue redactado por la investigadora. Las dos observaciones apoyan el análisis de este ejemplo, pero no se convierten en requisitos automáticos para cualquier complemento directo.
 
-**¿Cómo se diferencia?** El atributo se diferencia del predicativo porque el atributo exige verbo copulativo y admite lo, mientras que el predicativo exige verbo pleno y lo rechaza. Son competentes con son y lo son es atributo, llegaron exhaustos sin lo posible es predicativo. El predicativo subjetivo se diferencia del objetivo porque el subjetivo concuerda con el sujeto como contentos con niños, y el objetivo concuerda con el objeto directo como culpable con acusado y ganadora con delegación. El predicativo se diferencia del circunstancial de modo porque el predicativo es adjetivo variable que concuerda y el circunstancial es adverbio o frase invariable y prescindible. Tranquilas variable es predicativo, velozmente invariable es circunstancial.
+### Alcance de las pruebas
 
-# 5.2.4 — Agente, circunstancial y análisis integral de la oración
+Las formas **lo, la, los y las** ayudan a reconocer complementos directos en los ejemplos del nivel. Hay que conservar el significado y la estructura de la oración. Lo también puede sustituir un atributo y existen fenómenos de variación en el uso de los pronombres; verlo escrito no resuelve por sí solo toda función.
 
-**¿Qué es?** El complemento agente realiza la acción en la voz pasiva, va encabezado por por y raramente por de, y en voz activa se transforma en sujeto agente. El complemento circunstancial expresa circunstancias de tiempo, lugar, modo, causa, finalidad, instrumento, compañía y cantidad, va encabezado por frase preposicional o constituido por frase adverbial, y es prescindible estructuralmente. El análisis integral identifica sujeto con su frase nominal, verbo con su frase verbal y cada complemento con su prueba.
+La transformación pasiva es útil cuando la construcción la permite de forma natural. **No todo verbo transitivo admite con igual facilidad una pasiva equivalente**. La ausencia de una pasiva natural no demuestra por sí sola que falte complemento directo. En **Tengo dos hermanos**, se reconoce el complemento de tener sin forzar una pasiva artificial para cumplir una supuesta regla infalible.
 
-**¿Cómo funciona?** En el tratado fue suscrito por los cancilleres, por los cancilleres realiza la acción en pasiva y en activa da los cancilleres suscribieron el tratado como sujeto agente, por eso es agente y no indirecto ni circunstancial. En en el auditorio de entregó en el auditorio, en el auditorio es circunstancial de lugar prescindible. En para su madre de compró flores para su madre, para su madre es destinatario que conmuta por le en le compró flores y funciona como indirecto, a diferencia del circunstancial de finalidad. En el análisis titán a los más destacados alumnos les entregó entusiasmado las medallas de honor en el auditorio, el sujeto es el profesor de física con el como modificador directo, profesor como núcleo y de física como modificador indirecto, el objeto directo es las medallas de honor con las como modificador directo, medallas como núcleo y de honor como modificador indirecto, el indirecto es a los más destacados alumnos duplicado por les, y entusiasmado es predicativo subjetivo por concordar con profesor. La secuencia de verdad es verdadero para indirecto duplicado, falso para entusiasmado como modo, verdadero para de física como indirecto del sujeto y verdadero para medallas como directo con indirecto interno.
+La preposición a tampoco separa automáticamente directo e indirecto. **El jurado premió a la investigadora** permite El jurado la premió: a la investigadora es complemento directo. Es un caso de complemento directo de persona, no una prueba de que cualquier grupo con a sea indirecto.
 
-**¿Por qué?** Porque la pasiva y la prescindibilidad ordenan lo obligatorio frente a lo accesorio. El agente es obligatorio en pasiva para saber quién actúa, el circunstancial es accesorio que enriquece sin sostener la estructura. El análisis integral evita marcar como modo lo que es predicativo y como directo lo que es indirecto.
+### El complemento indirecto
 
-**¿Cómo se diferencia?** El agente se diferencia del circunstancial de causa porque el agente con por en pasiva se vuelve sujeto en activa, mientras que el circunstancial nunca se vuelve sujeto. Por los cancilleres en pasiva es agente, en el auditorio nunca es sujeto y es circunstancial. El circunstancial se diferencia del predicativo porque el circunstancial es invariable y prescindible y el predicativo es variable y concuerda. En el auditorio invariable es circunstancial, entusiasmado variable que concuerda con profesor es predicativo. Como refuerzo final memoriza en negrita la trampa más rentable. **Si la palabra es adjetivo variable que concuerda es predicativo, si es adverbio invariable es circunstancial.**
+En **El arqueólogo entregó las piezas al director del museo**, las piezas es complemento directo y al director del museo es **complemento indirecto**. El segundo grupo identifica al destinatario de la entrega y se relaciona con le: El arqueólogo le entregó las piezas.
 
-## CONCEPTOS IMPORTANTES
+| Construcción | Segmento analizado | Función justificada |
+| --- | --- | --- |
+| El jurado la premió. | la | Complemento directo referido a la investigadora. |
+| Entregó las piezas al director. | las piezas | Complemento directo. |
+| Le entregó las piezas. | le | Complemento indirecto. |
+| Les otorgó diplomas a los estudiantes. | les / a los estudiantes | Dos expresiones correferentes en una duplicación del indirecto. |
+| Es muy clara: lo es. | lo | Sustituto del atributo, no objeto directo. |
 
-- Frase nominal con modificador directo más núcleo más modificador directo más modificador indirecto más aposición.
-- Núcleo como sustantivo, pronombre o sustantivado en novela, medallas, profesor, río y Vallejo.
-- Modificador directo sin preposición en la, esos, fascinante, competente y el.
-- Modificador indirecto con preposición en de misterio, de gramática, de oro, de mi abuelo, de física y de honor, y comparativo en como tú.
-- Aposición explicativa entre comas e intercambiable en el poeta del dolor humano y la Ciudad Blanca, frente a especificativa sin comas en Chili y Misti.
-- Frase verbal con núcleo verbal simple, compuesto o perífrasis más complementos de objeto directo, indirecto, atributo, predicativo, agente y circunstanciales.
-- Objeto directo con sustitución por lo, la, los y las y conversión a sujeto paciente en pasiva.
-- Objeto indirecto con sustitución por le y les y forma se ante lo o la, sin conversión a sujeto.
-- Atributo con verbo copulativo ser, estar, parecer, yacer y permanecer, obligatorio, concordado y conmutable por lo neutro.
-- Predicativo subjetivo que concuerda con el sujeto en verbo pleno en exhaustos, tranquilas, contentos y entusiasmado.
-- Predicativo objetivo que concuerda con el objeto directo en verbo transitivo en culpable y ganadora.
-- Agente con por en pasiva que pasa a sujeto agente en activa en por los cancilleres.
-- Circunstancial de tiempo, lugar, modo y causa con frase preposicional o adverbial, prescindible, como en el auditorio.
+El indirecto no se limita en cualquier oración a un destinatario de entrega. También puede relacionarse con un experimentante: en **A Marta le gusta la música**, a Marta y le se refieren a quien experimenta el gusto; la música es el sujeto que concuerda con gusta. La función se determina con la construcción completa.
 
-## DIFERENCIAS QUE CONFUNDEN
+### Duplicación, no coordinación
 
-- Directo frente a indirecto. A la científica con la y pasiva posible es directo. A su madre con le y sin pasiva es indirecto. Al director con le es indirecto. Las medallas con las y pasiva es directo.
-- Les duplicado frente a directo. Les en les otorgó a los ingresantes reitera al destinatario y es indirecto. Lo en lo declararon reitera al paciente y es directo.
-- Atributo frente a predicativo. Son competentes con son y lo son es atributo. Llegaron exhaustos sin lo es predicativo. Caminaban contentos sin lo es predicativo. Declararon culpable sin lo es predicativo objetivo.
-- Predicativo subjetivo frente a objetivo. Contentos y entusiasmado concuerdan con el sujeto y son subjetivos. Culpable y ganadora concuerdan con el objeto directo y son objetivos.
-- Predicativo frente a circunstancial de modo. Tranquilas, contentos y entusiasmado como adjetivos variables que concuerdan son predicativos. Velozmente y muy temprano como formas invariables son circunstanciales o intensificadores.
-- Aposición explicativa frente a especificativa. El poeta del dolor humano entre comas es explicativa. Chili en el río Chili sin comas es especificativa. Misti sin comas es especificativa.
-- Directo frente a modificador del sustantivo. De oro y de mi abuelo con preposición dependen del sustantivo reloj y son modificadores indirectos, no objetos directos del verbo.
-- Agente frente a circunstancial. Por los cancilleres en pasiva que se vuelve sujeto es agente. En el auditorio que se suprime sin romper la oración es circunstancial.
-- Para su madre como indirecto frente a finalidad. Con destinatario que admite le en le compró flores es indirecto, no circunstancial puro.
+En **Les otorgó diplomas a los mejores ingresantes**, les y a los mejores ingresantes se refieren al mismo grupo. Se trata de **duplicación pronominal** del complemento indirecto, no de coordinación entre dos destinatarios. No aparece una conjunción que sume dos participantes diferentes.
 
-## DATOS IMPORTANTES
+Si se sustituyen simultáneamente ambos complementos en le entregó las piezas, se obtiene **se las entregó**. En esta combinación, se corresponde al indirecto y las al directo. No se deduce que todo se de cualquier oración tenga esa función: hay que identificar la construcción de partida.
 
-- Secuencia modelo en la fascinante novela de misterio que leí ayer como modificador directo más modificador directo más núcleo más modificador indirecto más modificador indirecto.
-- Secuencia en el reloj de oro de mi abuelo con dos modificadores indirectos preposicionales sobre reloj.
-- Secuencia en el río Chili como modificador directo más núcleo más aposición especificativa.
-- Caso César Vallejo con aposición explicativa entre comas.
-- Prueba doble del directo con lo, la, los y las más pasiva a sujeto paciente, con ejemplos en a la científica y las medallas.
-- Prueba del indirecto con le y les sin pasiva, con ejemplos en al director, a los alumnos y a los ingresantes con duplicación.
-- Prueba del atributo con lo neutro invariable y concordancia, con ejemplo en son competentes.
-- Marcas del predicativo con concordancia sin lo en exhaustos, tranquilas, contentos, entusiasmado, culpable y ganadora.
-- Verbos copulativos cerrados en ser, estar, parecer, yacer y permanecer frente a verbos predicativos plenos como llegar, caminar, declarar y entregar.
-- Agente con por en pasiva en por los cancilleres y su conversión a sujeto agente.
-- Circunstanciales prescindibles de lugar como en el auditorio y de tiempo, modo y causa.
-- Análisis titán con secuencia verdadero, falso, verdadero y verdadero para indirecto duplicado, entusiasmado predicativo, de física como indirecto y medallas como directo.
-- Como refuerzo recuerda el par leísmo y laísmo, donde a María la vi como directo corrige el leísmo con le, y la prueba de eso para dequeísmo y queísmo en pienso que y me alegro de que.
+### No todo para introduce un indirecto
 
-## EJEMPLOS
+Un grupo con para puede expresar destino o beneficio sin ser complemento indirecto en el análisis actual. En **Entregó a Ana un paquete para Luis**, a Ana identifica a la receptora de la entrega y para Luis al destinatario final del paquete. No conviene fusionar las dos relaciones en una única regla basada en la idea general de beneficiario.
 
-- Ganadora como predicativo objetivo. En el jurado declaró ganadora a la delegación, ganadora califica al objeto directo a través de declaró transitivo y es predicativo objetivo, no objeto directo ni modificador indirecto ni atributo.
-- Doble prueba del directo. Para comprobar si un sintagma es objeto directo se sustituye por lo, la, los y las y se convierte a sujeto en pasiva, a diferencia de la conmutación por adverbio, por le o por se impersonal.
-- Poeta como aposición explicativa. En César Vallejo, el poeta del dolor humano, el elemento entre comas aclara y equivale al núcleo y es aposición explicativa, no modificador indirecto ni predicativo ni atributo.
-- Competentes como atributo. En aquellos médicos son sumamente competentes, el sintagma va con son copulativo y califica al sujeto con conmutación por lo, por eso es atributo y no predicativo ni directo ni circunstancial.
-- Al director como indirecto. En entregó las piezas al director, al director es destinatario sustituible por le y es objeto indirecto, no directo ni agente ni lugar.
-- Por los cancilleres como agente. En fue suscrito por los cancilleres, el sintagma con por en pasiva realiza la acción y es complemento agente, no indirecto ni circunstancial ni atributo.
-- De oro como indirectos. En el reloj de oro de mi abuelo, ambos sintagmas con de dependen del núcleo reloj y son modificadores indirectos preposicionales, no aposiciones ni directos ni modificadores directos.
-- Contentos como predicativo subjetivo. En caminaban contentos, contentos es adjetivo que concuerda con niños en verbo predicativo y es predicativo subjetivo, no circunstancial adverbial ni atributo ni modificador directo.
-- Río Chili como MD más núcleo más aposición. En el río Chili, el es modificador directo, río es núcleo y Chili es aposición especificativa sin comas, a diferencia de las lecturas con núcleo en Chili o sujeto tácito.
-- Les como indirecto reiterativo. En les otorgó diplomas a los mejores ingresantes, les reduplica a a los ingresantes y es objeto indirecto reiterativo, no directo enclítico ni modificador ni agente.
-- Caso fascinante novela. La secuencia la más fascinante más novela más de misterio más que leí ayer es modificador directo más modificador directo más núcleo más modificador indirecto más modificador indirecto.
-- Caso jueces y culpable. En declararon culpable al acusado, declararon es predicativo, al acusado es directo con lo y culpable es predicativo objetivo por concordar con el objeto.
-- Caso titán con entusiasmado. En les entregó entusiasmado, entusiasmado concuerda con profesor y es predicativo subjetivo, por eso la afirmación que lo llama circunstancial de modo es falsa y la secuencia es verdadero, falso, verdadero y verdadero.
+Cambiar para por a o añadir le puede modificar la estructura. Esa modificación no equivale a una sustitución que demuestre la función original. Para clasificar se examinan las relaciones sintácticas y el sentido que realmente tiene la oración.
 
-## IDEA CLAVE
+# 5.2.3 — Atributo y complemento predicativo
 
-La frase nominal precisa al nombre con directos sin preposición, indirectos con preposición y aposiciones con o sin comas, y la frase verbal completa al verbo con directo que admite lo y pasiva, indirecto que admite le y duplicación, atributo que admite lo con copulativo, predicativo que concuerda sin lo en verbo pleno, agente que se vuelve sujeto en activa y circunstancial prescindible que sitúa en tiempo y lugar.
+El **atributo** expresa una predicación en construcciones como **Los médicos son competentes**. El grupo sumamente competentes de **Aquellos médicos son sumamente competentes** atribuye una propiedad al sujeto mediante son y puede sustituirse por lo: Aquellos médicos lo son.
 
-## CLAVE DE ADMISIÓN
+La presencia de lo aquí no señala complemento directo. La construcción es copulativa y el sustituto es neutro: se dice lo son con médicos y lo es con médica. La forma no copia el género y el número de las personas, aunque el adjetivo competentes sí concuerde en número con el sujeto.
 
-Aplica pruebas en este orden. Pregunta si admite lo más pasiva, si la admite es directo como a la científica y las medallas. Pregunta si admite le y duplicado con a, si lo admite es indirecto como al director y les a los ingresantes. Pregunta si va con ser, estar o parecer y admite lo, si lo admite es atributo como son competentes. Pregunta si es adjetivo variable que concuerda en verbo pleno, si concuerda es predicativo como contentos con niños, entusiasmado con profesor, culpable con acusado y ganadora con delegación. Pregunta si va con por en pasiva, si se vuelve sujeto es agente como por los cancilleres. **Si concuerda y es variable es predicativo, si es invariable y se suprime es circunstancial, si lleva por en pasiva es agente.**
+### No reducir el atributo a una lista cerrada de adjetivos
 
-## RESUMEN
+En **La alumna es investigadora**, el atributo es nominal. En otros ejemplos puede ser un grupo preposicional o adverbial. Por tanto, no se identifica automáticamente atributo con adjetivo ni se exige que todo atributo muestre una terminación de género y número idéntica a la del sujeto.
 
-Frase nominal con núcleo más directos, indirectos y aposición en la fascinante novela, el reloj de oro, el río Chili y César Vallejo poeta. Objeto directo con lo y pasiva y objeto indirecto con le y duplicación en a la científica, las medallas, al director y les a los ingresantes. Atributo con copulativo y lo en son competentes frente a predicativo subjetivo en contentos y entusiasmado y objetivo en culpable y ganadora. Agente con por en pasiva en por los cancilleres y circunstancial prescindible en en el auditorio, base verificada de las diez preguntas de la lección.
+Ser, estar y parecer ofrecen los ejemplos copulativos básicos del nivel. Hay otras construcciones semicopulativas que requieren análisis propio. No se presenta yacer o permanecer como una lista intercambiable sin explicar su uso, ni se exige que la prueba con lo funcione del mismo modo en todas esas construcciones.
+
+### Predicativo referido al sujeto
+
+En **Los niños caminaban contentos**, contentos expresa un estado de los niños durante la acción de caminar. El adjetivo concuerda con niños, pero el verbo conserva su contenido de movimiento. En este ejemplo se identifica un **complemento predicativo del sujeto**, llamado subjetivo en la nomenclatura escolar.
+
+Comparar **Las niñas caminaban contentas** muestra la concordancia del predicativo. Comparar **Las niñas caminaban despacio** muestra una expresión adverbial de modo que no cambia a despacias. La pregunta cómo caminaban puede resultar útil para conversar sobre el significado, pero no distingue por sí sola las dos estructuras.
+
+### Predicativo referido al directo
+
+En **El jurado declaró ganadora a la delegación**, a la delegación es complemento directo y ganadora se predica de él. Se comprueba la referencia con **El jurado la declaró ganadora**: la sustituye al directo y ganadora permanece. Se identifica así un **predicativo del complemento directo**, llamado objetivo en el análisis escolar.
+
+No debe confundirse la sustitución del objeto con la del predicativo. En la declaró ganadora, la no reemplaza ganadora. El análisis necesita indicar qué segmento se sustituye y cuál permanece; de lo contrario una prueba aparentemente correcta conduce a una conclusión equivocada.
+
+| Ejemplo | Expresión estudiada | Relación que se reconoce |
+| --- | --- | --- |
+| Los médicos son competentes. | competentes | Atributo referido al sujeto. |
+| Los niños caminaban contentos. | contentos | Predicativo referido al sujeto. |
+| El jurado la declaró ganadora. | ganadora | Predicativo referido al complemento directo. |
+| Los niños caminaban despacio. | despacio | Adverbio en función circunstancial de modo en este ejemplo. |
+
+No todos los predicativos tienen que ser adjetivos de la misma forma que contentos. Los ejemplos de concordancia sirven para justificar esos casos, no para establecer que toda expresión invariable sea necesariamente circunstancial. La categoría de un grupo y su función se analizan de forma relacionada, pero no se confunden.
+
+# 5.2.4 — Agente, circunstancias y análisis por niveles
+
+En **El tratado fue suscrito por los cancilleres**, por los cancilleres identifica al agente de la pasiva. La activa correspondiente es **Los cancilleres suscribieron el tratado**. El segmento que en la pasiva aparece introducido por por se relaciona aquí con el sujeto de la activa.
+
+El **complemento agente puede omitirse**: El tratado fue suscrito sigue siendo una oración pasiva. La omisión deja sin expresar quién lo suscribió; no destruye necesariamente la estructura. Tampoco todo grupo con por es agente: por el retraso puede expresar causa en una construcción apropiada.
+
+### Circunstancias y selección del verbo
+
+En **Revisaron el informe ayer**, ayer sitúa temporalmente la revisión. En **Revisaron el informe en el aula**, en el aula añade una localización. Son complementos circunstanciales en esos ejemplos; no dependen de que quien escucha los considere poco importantes.
+
+Su identificación no permite afirmar que todo lugar o toda expresión de modo sea prescindible con cualquier verbo. Hay complementos de lugar seleccionados por determinados predicados y otros complementos argumentales introducidos por preposición. Se estudia la relación con el verbo, no únicamente el significado de lugar, causa o modo.
+
+| Construcción | Qué aporta el segmento señalado | Precaución de análisis |
+| --- | --- | --- |
+| El tratado fue suscrito por los cancilleres. | por los cancilleres identifica al agente. | La pasiva también puede omitirlo. |
+| Revisaron el informe ayer. | ayer localiza temporalmente. | Ser importante para el relato no lo convierte en objeto. |
+| Revisaron el informe en el aula. | en el aula localiza la revisión. | No generalizar a cualquier complemento de lugar. |
+| Entregó el reloj de oro. | de oro modifica reloj. | Es dependencia nominal, no objeto indirecto del verbo. |
+
+### Un análisis completo
+
+En **La coordinadora les entregó los materiales a los estudiantes ayer**, el grupo la coordinadora funciona como sujeto. El verbo es entregó. Los materiales es complemento directo; a los estudiantes es complemento indirecto, duplicado por les. Ayer funciona como circunstancial de tiempo.
+
+Si se amplía el directo a **los materiales de Biología**, de Biología depende de materiales dentro del grupo nominal. El grupo completo sigue siendo complemento directo. Añadir una dependencia interna no convierte de Biología en complemento indirecto de entregó.
+
+Para justificar cada respuesta se conserva la oración, se identifica el segmento y se indica la relación con el verbo o con otro núcleo. Las abreviaturas OD, OI, MD y MI se usan después de explicar esas funciones, evitando confundir una dependencia nominal con un complemento verbal.
+
+## Importante
+
+Las pruebas de sustitución, concordancia y cambio de voz **se interpretan dentro de una construcción concreta**. No son reglas infalibles que permitan ignorar el verbo, el significado o la estructura. Lo puede sustituir un atributo, y a puede introducir un complemento directo de persona.
+
+Un análisis claro precisa qué grupo se estudia, de qué depende y qué función desempeña. Las categorías de las palabras y los nombres escolares de las funciones no reemplazan esa explicación.
+
+## Ejemplos resueltos
+
+### Dos expresiones con a
+
+En **El jurado premió a la delegación**, a la delegación se relaciona con la en la premió y funciona como directo. En **El jurado entregó el premio a la delegación**, el premio es directo y a la delegación es indirecto, relacionado con le. La preposición compartida no iguala las funciones.
+
+### Un atributo y un directo
+
+En **La explicación es clara**, clara es atributo: La explicación lo es. En **La alumna comprendió la explicación**, la explicación es directo: La alumna la comprendió. Las sustituciones se justifican por construcciones diferentes; no se concluye que cualquier pronombre átono señale una misma función.
+
+### Un estado durante una acción
+
+En **Las alumnas regresaron cansadas**, cansadas expresa el estado de las alumnas al regresar. La concordancia en femenino plural y la referencia al sujeto apoyan el análisis de predicativo. La oración no se resuelve mediante la pregunta cómo regresaron sin explicar qué relación mantiene ese adjetivo con alumnas.
+
+### Una pasiva sin agente expreso
+
+**El informe fue revisado** presenta una pasiva sin indicar quién efectuó la revisión. Si se añade **por la coordinadora**, aparece un complemento agente. La diferencia muestra una información que puede quedar sin expresar; no un requisito de nombrar siempre al agente para que exista pasiva.
 
 ## Frases: clase, núcleo y función
 

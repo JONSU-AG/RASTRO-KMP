@@ -1,1 +1,200 @@
-[{"concept":"16.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"16.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t16_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":16,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "16.2.1",
+    "correctIndex": 0,
+    "explanation": "1. La parábola abre hacia abajo y alcanza su máximo en el vértice.\n2. Sustituimos y operamos: $q=-b/(2a)=-8/(-2)$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s02_c01",
+    "options": [
+      "$4$",
+      "$5$",
+      "$3$",
+      "$8$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "La utilidad está modelada por U(q)=−q²+8q para 0≤q≤8. ¿En qué cantidad q se alcanza el máximo?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.2.2",
+    "correctIndex": 3,
+    "explanation": "1. Con suma fija de lados, el producto se maximiza cuando son iguales.\n2. Sustituimos y operamos: $largo+ancho=8;\\quad largo=ancho=4$.\n3. El valor pedido es $16$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s02_c02",
+    "options": [
+      "$17$",
+      "$15$",
+      "$32$",
+      "$16$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "Un rectángulo tiene perímetro 16. ¿Cuál es el área máxima posible?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.2.3",
+    "correctIndex": 2,
+    "explanation": "1. Se multiplica por dos una vez por cada periodo completo.\n2. Sustituimos y operamos: $P(3)=4\\cdot 2^3$.\n3. El valor pedido es $32$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s02_c03",
+    "options": [
+      "$31$",
+      "$64$",
+      "$32$",
+      "$33$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "Una población inicial de 4 unidades se duplica en cada periodo según el modelo. ¿Cuántas unidades hay tras tres periodos?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.2.4",
+    "correctIndex": 1,
+    "explanation": "1. Cada vida media multiplica la cantidad de sustancia original aún sin desintegrar por 1/2.\n2. Sustituimos y operamos: $m=32\\cdot (1/2)^3$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s02_c04",
+    "options": [
+      "$8$",
+      "$4$",
+      "$5$",
+      "$3$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "La masa de una sustancia radiactiva aún sin desintegrar es 32 gramos. Se reduce a la mitad cada vida media. ¿Cuántos gramos de esa sustancia quedan sin desintegrar tras tres vidas medias?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.2.5",
+    "correctIndex": 0,
+    "explanation": "1. Con rapidez constante, el tiempo es distancia dividida entre rapidez.\n2. Sustituimos y operamos: $t=20/4$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s02_c05",
+    "options": [
+      "$5$",
+      "$6$",
+      "$4$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "Un viaje de 20 km se realiza a velocidad constante de 4 km/h. ¿Cuántas horas dura?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.2.6",
+    "correctIndex": 3,
+    "explanation": "1. La parábola abre hacia abajo y alcanza su máximo en el vértice.\n2. Sustituimos y operamos: $q=-b/(2a)=-10/(-2)$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s02_c06",
+    "options": [
+      "$6$",
+      "$4$",
+      "$10$",
+      "$5$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "La utilidad está modelada por U(q)=−q²+10q para 0≤q≤10. ¿En qué cantidad q se alcanza el máximo?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.2.7",
+    "correctIndex": 2,
+    "explanation": "1. Con suma fija de lados, el producto se maximiza cuando son iguales.\n2. Sustituimos y operamos: $largo+ancho=10;\\quad largo=ancho=5$.\n3. El valor pedido es $25$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s02_c07",
+    "options": [
+      "$24$",
+      "$50$",
+      "$25$",
+      "$26$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "Un rectángulo tiene perímetro 20. ¿Cuál es el área máxima posible?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.2.8",
+    "correctIndex": 1,
+    "explanation": "1. Se multiplica por dos una vez por cada periodo completo.\n2. Sustituimos y operamos: $P(3)=5\\cdot 2^3$.\n3. El valor pedido es $40$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s02_c08",
+    "options": [
+      "$80$",
+      "$40$",
+      "$41$",
+      "$39$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "Una población inicial de 5 unidades se duplica en cada periodo según el modelo. ¿Cuántas unidades hay tras tres periodos?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.2.9",
+    "correctIndex": 0,
+    "explanation": "1. Cada vida media multiplica la cantidad de sustancia original aún sin desintegrar por 1/2.\n2. Sustituimos y operamos: $m=40\\cdot (1/2)^3$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s02_c09",
+    "options": [
+      "$5$",
+      "$6$",
+      "$4$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "La masa de una sustancia radiactiva aún sin desintegrar es 40 gramos. Se reduce a la mitad cada vida media. ¿Cuántos gramos de esa sustancia quedan sin desintegrar tras tres vidas medias?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.2.10",
+    "correctIndex": 3,
+    "explanation": "1. Con rapidez constante, el tiempo es distancia dividida entre rapidez.\n2. Sustituimos y operamos: $t=30/5$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s02_c10",
+    "options": [
+      "$7$",
+      "$5$",
+      "$12$",
+      "$6$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "Un viaje de 30 km se realiza a velocidad constante de 5 km/h. ¿Cuántas horas dura?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "16.2.11",
+    "correctIndex": 2,
+    "explanation": "1. La parábola abre hacia abajo y alcanza su máximo en el vértice.\n2. Sustituimos y operamos: $q=-b/(2a)=-12/(-2)$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t16_s02_c11",
+    "options": [
+      "$5$",
+      "$12$",
+      "$6$",
+      "$7$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 16,
+    "statement": "La utilidad está modelada por U(q)=−q²+12q para 0≤q≤12. ¿En qué cantidad q se alcanza el máximo?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

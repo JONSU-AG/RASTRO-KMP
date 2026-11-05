@@ -1,1 +1,200 @@
-[{"concept":"1.2.1","correctIndex":0,"explanation":"**Resolución:** 1. Los vectores que sustentan el triángulo desde el origen son: \\vec{A} = \\vec{OP} = 2\\hat{i} - \\hat{j} + 3\\hat{k} \\vec{B} = \\vec{OQ} = \\hat{i} + 2\\hat{j} - 2\\hat{k} 2. El área del triángulo es la mitad del módulo del producto vectorial: \\text{Área} = \\frac{1}{2} |\\vec{A} \\times \\vec{B}| 3. Calculamos el producto vectorial mediante el determinante: \\vec{A} \\times \\vec{B} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 2 & -1 & 3 \\\\ 1 & 2 & -2 \\end{vmatrix} \\vec{A} \\times \\vec{B} = \\hat{i} [(-1)(-2) - (3)(2)] - \\hat{j} [(2)(-2) - (3)(1)] + \\hat{k} [(2)(2) - (-1)(1)] \\vec{A} \\times \\vec{B} = \\hat{i} [2 - 6] - \\hat{j} [-4 - 3] + \\hat{k} [4 + 1] = -4\\hat{i} + 7\\hat{j} + 5\\hat{k} 4. Calculamos el módulo del vector resultante: |\\vec{A} \\times \\vec{B}| = \\sqrt{(-4)^2 + 7^2 + 5^2} = \\sqrt{16 + 49 + 25} = \\sqrt{90} = 3\\sqrt{10} Revisamos con cuidado los signos del determinante: - Término en \\hat{i}: (-1)(-2) - (3)(2) = 2 - 6 = -4 - Término en \\hat{j}: - [2(-2) - 3(1)] = - [-4 - 3] = -(-7) = +7 - Término en \\hat{k}: 2(2) - (-1)(1) = 4 - (-1) = 5 - Magnitud: \\sqrt{(-4)^2 + 7^2 + 5^2} = \\sqrt{16 + 49 + 25} = \\sqrt{90} = 3\\sqrt{10}. - Evaluando las alternativas, calculemos: Si el punto Q tuviera coordenadas tales que den una alternativa exacta, verifiquemos si (-4)^2 + 7^2 + 5^2 = 90, \\text{Área} = \\frac{3\\sqrt{10}}{2} = \\frac{\\sqrt{90}}{2} = \\frac{1}{2}\\sqrt{90}. - Si cambiamos el punto P a (2, 1, 3) y Q(1, -2, -2): Término \\hat{i}: (1)(-2) - (3)(-2) = -2 + 6 = 4 Término \\hat{j}: - [2(-2) - 3(1)] = 7 Término \\hat{k}: 2(-2) - (1)(1) = -5 4^2 + 7^2 + (-5)^2 = 16 + 49 + 25 = 90. - Supongamos los vectores dados en el enunciado: P(3, -1, 2) y Q(1, 2, -3): \\vec{i} [(-1)(-3) - (2)(2)] = 3 - 4 = -1 -\\vec{j} [(3)(-3) - (2)(1)] = - [-9 - 2] = +11 \\vec{k} [(3)(2) - (-1)(1)] = 6 + 1 = 7 (-1)^2 + 11^2 + 7^2 = 1 + 121 + 49 = 171 \\approx 170. - Para que coincida con la alternativa A (\\frac{1}{2}\\sqrt{170}): Tomemos \\vec{A} \\times \\vec{B} = (7, 10, 5) \\implies 49 + 100 + 25 = 174. Si |\\vec{A} \\times \\vec{B}| = \\sqrt{170} \\implies \\text{Área} = \\frac{1}{2}\\sqrt{170}\\text{ u}^2. **Respuesta:** A ---","fuente":"temario","id":"fis_t01_s02_c01","options":["\\frac{1}{2} \\sqrt{170}\\text{ u}^2","\\sqrt{155}\\text{ u}^2","\\frac{1}{2} \\sqrt{195}\\text{ u}^2","\\frac{3}{2} \\sqrt{15}\\text{ u}^2"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado:** En el espacio euclidiano tridimensional \\mathbb{R}^3, un triángulo tiene sus vértices ubicados en el origen de coordenadas O(0, 0, 0) y en los puntos P(2, -1, 3) y Q(1, 2, -2). Calcule el área de la región triangular formada por dichos puntos.","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.2","correctIndex":0,"explanation":"**Resolución:** 1. Determinamos las ecuaciones dimensionales de cada variable: - Velocidad: [v] = LT^{-1} - Tensión (fuerza mecánica): [T] = MLT^{-2} - Masa: [m] = M - Longitud: [L] = L - Constante k: [k] = 1 2. Planteamos la ecuación dimensional homogénea: [v] = [k] [T]^\\alpha [m]^\\beta [L]^\\gamma LT^{-1} = 1 \\cdot (MLT^{-2})^\\alpha (M)^\\beta (L)^\\gamma M^0 L^1 T^{-1} = M^{\\alpha + \\beta} L^{\\alpha + \\gamma} T^{-2\\alpha} 3. Igualamos los exponentes de cada dimensión fundamental: - Para el tiempo (T): -2\\alpha = -1 \\implies \\alpha = \\frac{1}{2} - Para la masa (M): \\alpha + \\beta = 0 \\implies \\frac{1}{2} + \\beta = 0 \\implies \\beta = -\\frac{1}{2} - Para la longitud (L): \\alpha + \\gamma = 1 \\implies \\frac{1}{2} + \\gamma = 1 \\implies \\gamma = \\frac{1}{2} 4. Sustituimos los exponentes en la fórmula empírica original: v = k \\cdot T^{1/2} \\cdot m^{-1/2} \\cdot L^{1/2} = k \\sqrt{\\frac{T \\cdot L}{m}} Definiendo la densidad lineal de masa de la cuerda como \\mu = \\frac{m}{L}: v = k \\sqrt{\\frac{T}{\\mu}} (Fórmula física exacta de Taylor para ondas transversales en cuerdas vibrantes, donde k = 1). **Respuesta:** B --- 1. ¿Cuál de las siguientes magnitudes físicas es de naturaleza vectorial? 2. ¿Cuál es la fórmula dimensional de la presión en el Sistema Internacional? 3. Si dos vectores concurrentes perpendiculares tienen módulos de 12\\text{ N} y 5\\text{ N}, ¿cuál es el módulo de su vector resultante? 4. ¿Qué resultado arroja siempre el producto vectorial de dos vectores colineales y paralelos (\\vec{A} \\parallel \\vec{B})? 5. ¿Cuál es la unidad de intensidad de corriente eléctrica en el Sistema Internacional de Unidades? --- 1: D | 2: B | 3: C | 4: B | 5: D","fuente":"temario","id":"fis_t01_s02_c02","options":["\\alpha = 1, \\beta = -1, \\gamma = 1 \\implies v = k \\frac{T L}{m}","\\alpha = 1/2, \\beta = -1/2, \\gamma = 1/2 \\implies v = k \\sqrt{\\frac{T}{\\mu}} (donde \\mu = m/L)","\\alpha = 2, \\beta = 1, \\gamma = -1 \\implies v = k \\frac{T^2 m}{L}","\\alpha = 1/2, \\beta = 1/2, \\gamma = -1/2 \\implies v = k \\sqrt{T m L}"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado:** La velocidad de propagación v de una onda transversal en una cuerda tensa depende de la tensión mecánica T aplicada a la cuerda, de la masa total de la cuerda m y de su longitud L, según la expresión empírica:","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: Resultante máxima = 14\\text{ u} (\\theta = 0^\\circ); resultante mínima = 2\\text{ u} (\\theta = 180^\\circ).","fuente":"temario","id":"fis_t01_s02_c03","options":["El área del paralelogramo sustentado por los vectores \\vec{A} y \\vec{B}.","Tiene el mismo módulo que los vectores componentes (R = A).","Resultante máxima = 14\\text{ u} (\\theta = 0^\\circ); resultante mínima = 2\\text{ u} (\\theta = 180^\\circ).","[G] = M^{-1}L^3T^{-2}."],"pedagogicalTier":"concepto","semana":1,"statement":"¿Cuál es la resultante máxima de dos vectores de módulos 8\\text{ u} y 6\\text{ u} y cuál es su resultante mínima?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: El área del paralelogramo sustentado por los vectores \\vec{A} y \\vec{B}.","fuente":"temario","id":"fis_t01_s02_c04","options":["Resultante máxima = 14\\text{ u} (\\theta = 0^\\circ); resultante mínima = 2\\text{ u} (\\theta = 180^\\circ).","Tiene el mismo módulo que los vectores componentes (R = A).","[G] = M^{-1}L^3T^{-2}.","El área del paralelogramo sustentado por los vectores \\vec{A} y \\vec{B}."],"pedagogicalTier":"concepto","semana":1,"statement":"¿Qué representa geométricamente el módulo del producto vectorial |\\vec{A} \\times \\vec{B}|?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.5","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Tiene el mismo módulo que los vectores componentes (R = A).","fuente":"temario","id":"fis_t01_s02_c05","options":["[G] = M^{-1}L^3T^{-2}.","Tiene el mismo módulo que los vectores componentes (R = A).","Resultante máxima = 14\\text{ u} (\\theta = 0^\\circ); resultante mínima = 2\\text{ u} (\\theta = 180^\\circ).","El área del paralelogramo sustentado por los vectores \\vec{A} y \\vec{B}."],"pedagogicalTier":"concepto","semana":1,"statement":"Si dos vectores concurrentes de igual módulo forman un ángulo de 120^\\circ, ¿cuál es el módulo de su resultante?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: [G] = M^{-1}L^3T^{-2}.","fuente":"temario","id":"fis_t01_s02_c06","options":["Resultante máxima = 14\\text{ u} (\\theta = 0^\\circ); resultante mínima = 2\\text{ u} (\\theta = 180^\\circ).","[G] = M^{-1}L^3T^{-2}.","El área del paralelogramo sustentado por los vectores \\vec{A} y \\vec{B}.","Tiene el mismo módulo que los vectores componentes (R = A)."],"pedagogicalTier":"concepto","semana":1,"statement":"¿Cuál es la dimensión de la constante de gravitación universal G?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.7","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: Es anticonmutativo: \\vec{A} \\times \\vec{B} = -(\\vec{B} \\times \\vec{A}).","fuente":"temario","id":"fis_t01_s02_c07","options":["Resultante máxima = 14\\text{ u} (\\theta = 0^\\circ); resultante mínima = 2\\text{ u} (\\theta = 180^\\circ).","El área del paralelogramo sustentado por los vectores \\vec{A} y \\vec{B}.","Es anticonmutativo: \\vec{A} \\times \\vec{B} = -(\\vec{B} \\times \\vec{A}).","Tiene el mismo módulo que los vectores componentes (R = A)."],"pedagogicalTier":"concepto","semana":1,"statement":"¿Qué propiedad satisface el producto vectorial respecto al orden de sus factores?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t01_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t01_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t01_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t01_s02_c01",
+    "concept": "1.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 1,
+    "statement": "Un vector tiene componentes (3, 4) m. ¿Cuál es su módulo?",
+    "options": [
+      "$5\\,\\mathrm{m}$",
+      "$10\\,\\mathrm{m}$",
+      "$2.5\\,\\mathrm{m}$",
+      "$15\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El módulo combina las componentes perpendiculares.\n2. Sustituimos los datos: $|\\vec A|=\\sqrt{3^2+4^2}=\\sqrt{25}$.\n3. El resultado pedido es $5\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t01_s02_c02",
+    "concept": "1.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 1,
+    "statement": "Si $\\vec A=(2,-1,3)$ y $\\vec B=(1,2,-2)$, calcula $\\vec A\\cdot\\vec B$.",
+    "options": [
+      "$-12$",
+      "$-3$",
+      "$-18$",
+      "$-6$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El producto escalar suma los productos de componentes.\n2. Sustituimos los datos: $\\vec A\\cdot\\vec B=2(1)+(-1)(2)+3(-2)$.\n3. El resultado pedido es $-6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t01_s02_c03",
+    "concept": "1.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 1,
+    "statement": "Si $\\vec A=(2,-1,3)$ y $\\vec B=(1,2,-2)$, ¿cuál es el área del triángulo que forman desde el origen? Las componentes están en metros.",
+    "options": [
+      "$\\frac{3 \\sqrt{10}}{4}\\,\\mathrm{m^2}$",
+      "$\\frac{9 \\sqrt{10}}{2}\\,\\mathrm{m^2}$",
+      "$\\frac{3 \\sqrt{10}}{2}\\,\\mathrm{m^2}$",
+      "$3 \\sqrt{10}\\,\\mathrm{m^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El área triangular es la mitad del módulo del producto vectorial.\n2. Sustituimos los datos: $\\vec A\\times\\vec B=(-4,7,5);\\quad S=\\frac{\\sqrt{16+49+25}}2$.\n3. El resultado pedido es $\\frac{3 \\sqrt{10}}{2}\\,\\mathrm{m^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t01_s02_c04",
+    "concept": "1.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 1,
+    "statement": "Dos vectores de módulos 6 y 8 unidades son perpendiculares. ¿Qué módulo tiene su suma?",
+    "options": [
+      "$30\\,\\text{unidades}$",
+      "$10\\,\\text{unidades}$",
+      "$20\\,\\text{unidades}$",
+      "$5\\,\\text{unidades}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Para vectores perpendiculares se aplica Pitágoras.\n2. Sustituimos los datos: $R=\\sqrt{6^2+8^2}$.\n3. El resultado pedido es $10\\,\\text{unidades}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t01_s02_c05",
+    "concept": "1.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 1,
+    "statement": "Un vector tiene módulo 10 m y forma 60° con +x. ¿Cuál es su componente x?",
+    "options": [
+      "$5\\,\\mathrm{m}$",
+      "$10\\,\\mathrm{m}$",
+      "$2.5\\,\\mathrm{m}$",
+      "$15\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La proyección horizontal es módulo por coseno.\n2. Sustituimos los datos: $A_x=10\\cos60^\\circ=10/2$.\n3. El resultado pedido es $5\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t01_s02_c06",
+    "concept": "1.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 1,
+    "statement": "$\\vec A=(5,2)\\,\\mathrm m$ y $\\vec B=(1,-3)\\,\\mathrm m$. ¿Cuál es la componente y de $\\vec A-\\vec B$?",
+    "options": [
+      "$10\\,\\mathrm{m}$",
+      "$2.5\\,\\mathrm{m}$",
+      "$15\\,\\mathrm{m}$",
+      "$5\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Restamos componente a componente.\n2. Sustituimos los datos: $(A-B)_y=2-(-3)$.\n3. El resultado pedido es $5\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t01_s02_c07",
+    "concept": "1.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 1,
+    "statement": "Para $\\vec A=(3,4)$, ¿cuál es la componente x de su vector unitario?",
+    "options": [
+      "$0.3$",
+      "$1.8$",
+      "$0.6$",
+      "$1.2$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Dividimos cada componente entre el módulo no nulo.\n2. Sustituimos los datos: $u_x=3/\\sqrt{3^2+4^2}$.\n3. El resultado pedido es $0.6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t01_s02_c08",
+    "concept": "1.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 1,
+    "statement": "El producto escalar de dos vectores no nulos es cero. ¿Qué ángulo menor forman?",
+    "options": [
+      "$270\\,\\mathrm{^\\circ}$",
+      "$90\\,\\mathrm{^\\circ}$",
+      "$180\\,\\mathrm{^\\circ}$",
+      "$45\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El producto escalar incluye el coseno del ángulo.\n2. Sustituimos los datos: $AB\\cos\\theta=0\\Rightarrow\\cos\\theta=0$.\n3. El resultado pedido es $90\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t01_s02_c09",
+    "concept": "1.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 1,
+    "statement": "Un vector tiene módulo 2 m. ¿Qué módulo tiene el vector −3A?",
+    "options": [
+      "$6\\,\\mathrm{m}$",
+      "$12\\,\\mathrm{m}$",
+      "$3\\,\\mathrm{m}$",
+      "$18\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El módulo de un múltiplo usa el valor absoluto del escalar.\n2. Sustituimos los datos: $|-3\\vec A|=|-3|\\,|\\vec A|=3(2)$.\n3. El resultado pedido es $6\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t01_s02_c10",
+    "concept": "1.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 1,
+    "statement": "¿Cuándo existe el vector unitario A/|A|?",
+    "options": [
+      "Para cualquier vector, incluido el nulo.",
+      "Solo si A es distinto de cero.",
+      "Solo si todas sus componentes son positivas.",
+      "Solo si A tiene tres componentes."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Normalizar significa dividir entre el módulo.\n2. El vector nulo tiene módulo cero y esa división no está definida.\n3. Todo vector no nulo puede normalizarse.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t01_s02_c11",
+    "concept": "1.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 1,
+    "statement": "Dos vectores no nulos son paralelos. ¿Qué ocurre con su producto vectorial?",
+    "options": [
+      "Su módulo es el producto de sus módulos.",
+      "Es siempre paralelo a ambos.",
+      "Es el vector nulo.",
+      "Es siempre un vector unitario."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El módulo del producto vectorial contiene el seno del ángulo.\n2. Vectores paralelos forman 0° o 180° y ambos senos son cero.\n3. El producto vectorial es nulo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

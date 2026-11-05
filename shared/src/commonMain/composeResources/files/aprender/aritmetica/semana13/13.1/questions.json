@@ -1,1 +1,200 @@
-[{"concept":"13.1.1","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. **Espacio muestral (\\Omega):** Al lanzar dos dados de 6 caras numeradas del 1 al 6: n(\\Omega) = 6 \\times 6 = 36 \\text{ resultados posibles equiprobables} 2. Las sumas posibles van desde 1+1 = 2 hasta 6+6 = 12. Los números primos en este rango son: \\{2, 3, 5, 7, 11\\}. 3. Identificamos los casos favorables para cada suma prima: - Suma = 2: (1, 1) \\implies 1 caso. - Suma = 3: (1, 2), (2, 1) \\implies 2 casos. - Suma = 5: (1, 4), (2, 3), (3, 2), (4, 1) \\implies 4 casos. - Suma = 7: (1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1) \\implies 6 casos. - Suma = 11: (5, 6), (6, 5) \\implies 2 casos. 4. Total de casos favorables: n(A) = 1 + 2 + 4 + 6 + 2 = 15 \\text{ casos favorables} 5. Calculamos la probabilidad clásica de Laplace: P(A) = \\frac{n(A)}{n(\\Omega)} = \\frac{15}{36} = \\frac{5}{12} **Respuesta Correcta:** **B) \\frac{5}{12}** ---","fuente":"temario","id":"arit_t13_s01_c01","options":["\\frac{13}{36}","\\frac{5}{12}","\\frac{7}{18}","\\frac{1}{2}"],"pedagogicalTier":"concepto","semana":13,"statement":"**Enunciado:** Al lanzar dos dados comunes equilibrados sobre una mesa, ¿cuál es la probabilidad de que la suma de los puntos obtenidos sea un número primo?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.1.2","correctIndex":1,"explanation":"**Resolución Paso a Paso:** 1. **Composición de la urna:** - Total de esferas: n = 6 + 4 + 5 = 15 esferas. - Esferas rojas: 6. - Esferas no rojas (azules o verdes): 4 + 5 = 9. 2. **Espacio muestral (n(\\Omega)):** Selección sin orden de 3 esferas de un total de 15: n(\\Omega) = C_3^{15} = \\frac{15 \\times 14 \\times 13}{3 \\times 2 \\times 1} = 5 \\times 7 \\times 13 = 455 3. **Casos favorables (n(A)):** Debemos extraer exactamente 2 rojas (de las 6) Y 1 no roja (de las 9): n(A) = C_2^6 \\times C_1^9 C_2^6 = \\frac{6 \\times 5}{2 \\times 1} = 15 C_1^9 = 9 n(A) = 15 \\times 9 = 135 4. **Cálculo de la probabilidad:** P(A) = \\frac{135}{455} Simplificamos sacando quinta a ambos términos: \\frac{135 \\div 5}{455 \\div 5} = \\frac{27}{91} **Respuesta Correcta:** **A) \\frac{27}{91}** ---","fuente":"temario","id":"arit_t13_s01_c02","options":["\\frac{45}{91}","\\frac{27}{91}","\\frac{30}{91}","\\frac{36}{91}"],"pedagogicalTier":"concepto","semana":13,"statement":"**Enunciado:** Una urna contiene 6 esferas rojas, 4 esferas azules y 5 esferas verdes. Si se extraen simultáneamente 3 esferas al azar, ¿cuál es la probabilidad de que exactamente dos de ellas sean de color rojo?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.1.3","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Definimos las probabilidades para un examen individual: - Probabilidad de aprobar: P(\\text{aprobar}) = p = \\frac{3}{5}. - Probabilidad de desaprobar: P(\\text{desaprobar}) = q = 1 - \\frac{3}{5} = \\frac{2}{5}. 2. Aplicamos la regla mnemotécnica del suceso contrario: P(\\text{aprobar al menos uno}) = 1 - P(\\text{desaprobar los 4 exámenes}) 3. Dado que los exámenes son estocásticamente independientes: P(\\text{desaprobar los 4}) = \\left(\\frac{2}{5}\\right)^4 = \\frac{16}{625} 4. Restamos de la certeza total (1): P(\\text{al menos uno}) = 1 - \\frac{16}{625} = \\frac{625 - 16}{625} = \\frac{609}{625} **Respuesta Correcta:** **A) \\frac{609}{625}** ---","fuente":"temario","id":"arit_t13_s01_c03","options":["\\frac{621}{625}","\\frac{623}{625}","\\frac{609}{625}","\\frac{616}{625}"],"pedagogicalTier":"concepto","semana":13,"statement":"**Enunciado:** La probabilidad de que un estudiante de Ingeniería de la UNSA apruebe un examen de Física es \\frac{3}{5}. Si el estudiante se presenta a rendir 4 exámenes independientes durante el ciclo, ¿cuál es la probabilidad de que apruebe al menos uno de ellos?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Que el espacio muestral sea finito y todos sus sucesos elementales sean estrictamente equiprobables.","fuente":"temario","id":"arit_t13_s01_c04","options":["La suma simple de sus probabilidades individuales: P(A \\cup B) = P(A) + P(B).","P(\\text{al menos uno}) = 1 - P(\\text{ninguno}).","Valor o condición no aplicable al caso planteado","Que el espacio muestral sea finito y todos sus sucesos elementales sean estrictamente equiprobables."],"pedagogicalTier":"concepto","semana":13,"statement":"¿Cuál es la condición indispensable para aplicar la fórmula clásica de probabilidad de Laplace (P(A) = \\frac{n(A)}{n(\\Omega)})?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: La suma simple de sus probabilidades individuales: P(A \\cup B) = P(A) + P(B).","fuente":"temario","id":"arit_t13_s01_c05","options":["La suma simple de sus probabilidades individuales: P(A \\cup B) = P(A) + P(B).","Que el espacio muestral sea finito y todos sus sucesos elementales sean estrictamente equiprobables.","P(\\text{al menos uno}) = 1 - P(\\text{ninguno}).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":13,"statement":"¿Qué valor adopta la probabilidad de la unión de dos sucesos mutuamente excluyentes?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: P(\\text{al menos uno}) = 1 - P(\\text{ninguno}).","fuente":"temario","id":"arit_t13_s01_c06","options":["Que el espacio muestral sea finito y todos sus sucesos elementales sean estrictamente equiprobables.","P(\\text{al menos uno}) = 1 - P(\\text{ninguno}).","La suma simple de sus probabilidades individuales: P(A \\cup B) = P(A) + P(B).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":13,"statement":"¿Cuál es la fórmula para calcular la probabilidad de que ocurra \"al menos uno\" de varios eventos independientes?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t13_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":13,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t13_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":13,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t13_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":13,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t13_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":13,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "arit_t13_s01_c01",
+    "concept": "13.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Se lanza un dado justo de seis caras numeradas 1 a 6. ¿Cuál es la probabilidad de obtener un par?",
+    "options": [
+      "$\\frac{1}{2}$",
+      "$1$",
+      "$\\frac{1}{4}$",
+      "$\\frac{1}{6}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Las seis caras son equiprobables.\n2. Desarrollamos con los datos: $P=3/6$.\n3. El resultado es $\\frac{1}{2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s01_c02",
+    "concept": "13.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Se lanzan dos monedas justas e independientes. ¿Cuál es la probabilidad de exactamente una cara?",
+    "options": [
+      "$1$",
+      "$\\frac{1}{4}$",
+      "$\\frac{1}{6}$",
+      "$\\frac{1}{2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Los cuatro pares ordenados son equiprobables.\n2. Desarrollamos con los datos: $P=2/4$.\n3. El resultado es $\\frac{1}{2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s01_c03",
+    "concept": "13.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Se lanzan dos dados justos independientes de seis caras. ¿Cuál es la probabilidad de suma 7?",
+    "options": [
+      "$\\frac{1}{12}$",
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{6}$",
+      "$\\frac{1}{3}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Los pares ordenados tienen 36 posibilidades.\n2. Desarrollamos con los datos: $P=6/36$.\n3. El resultado es $\\frac{1}{6}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s01_c04",
+    "concept": "13.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Una bolsa tiene 3 bolas rojas y 2 azules, y se extrae una uniformemente. ¿Cuál es la probabilidad de roja?",
+    "options": [
+      "$\\frac{1}{2}$",
+      "$\\frac{3}{5}$",
+      "$\\frac{3}{10}$",
+      "$\\frac{1}{5}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Contamos casos favorables sobre total equiprobable.\n2. Desarrollamos con los datos: $P(R)=3/(3+2)$.\n3. El resultado es $\\frac{3}{5}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s01_c05",
+    "concept": "13.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Un evento tiene probabilidad 0.3. ¿Cuál es la probabilidad de su complemento?",
+    "options": [
+      "$\\frac{7}{10}$",
+      "$\\frac{7}{20}$",
+      "$\\frac{7}{30}$",
+      "$\\frac{1}{2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Evento y complemento particionan el espacio muestral.\n2. Desarrollamos con los datos: $P(A^c)=1-0.3$.\n3. El resultado es $\\frac{7}{10}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s01_c06",
+    "concept": "13.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "$P(A)=2/5$, $P(B)=1/3$ y $P(A\\cap B)=1/5$. ¿Cuánto vale P(A∪B)?",
+    "options": [
+      "$\\frac{4}{15}$",
+      "$\\frac{8}{45}$",
+      "$\\frac{1}{2}$",
+      "$\\frac{8}{15}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Restamos la intersección que se contaría dos veces.\n2. Desarrollamos con los datos: $P(A\\cup B)=2/5+1/3-1/5$.\n3. El resultado es $\\frac{8}{15}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s01_c07",
+    "concept": "13.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "A y B son mutuamente excluyentes, con probabilidades 3/10 y 1/5. ¿Cuál es la probabilidad de su unión?",
+    "options": [
+      "$\\frac{1}{4}$",
+      "$\\frac{1}{6}$",
+      "$\\frac{1}{2}$",
+      "$1$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La intersección de eventos excluyentes es vacía.\n2. Desarrollamos con los datos: $P(A\\cup B)=3/10+1/5$.\n3. El resultado es $\\frac{1}{2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s01_c08",
+    "concept": "13.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Se lanzan dos monedas justas independientes. ¿Cuál es la probabilidad de al menos una cara?",
+    "options": [
+      "$\\frac{1}{2}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{3}{8}$",
+      "$\\frac{1}{4}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Restamos el caso de ninguna cara al total.\n2. Desarrollamos con los datos: $P=1-(1/2)^2$.\n3. El resultado es $\\frac{3}{4}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s01_c09",
+    "concept": "13.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "En un experimento, el evento coincide con todo el espacio muestral. ¿Qué probabilidad tiene?",
+    "options": [
+      "$1$",
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{3}$",
+      "$0$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El evento seguro tiene probabilidad uno.\n2. Desarrollamos con los datos: $P(\\Omega)=1$.\n3. El resultado es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s01_c10",
+    "concept": "13.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "La regla clásica favorables/posibles se aplica directamente si…",
+    "options": [
+      "Todos los resultados elementales contados son equiprobables.",
+      "Los resultados tienen cualquier probabilidad sin conocerla.",
+      "Solo se conoce el nombre del evento.",
+      "Siempre hay dos resultados."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La división por el número de casos asigna el mismo peso a cada uno.\n2. Eso requiere equiprobabilidad.\n3. Si los pesos difieren, deben sumarse las probabilidades correspondientes.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s01_c11",
+    "concept": "13.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Toda probabilidad real de un evento cumple…",
+    "options": [
+      "$0\\le P\\le1$",
+      "$P>1$ siempre.",
+      "$P<0$ siempre.",
+      "$P=1/2$ siempre."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los axiomas exigen no negatividad.\n2. El evento está contenido en el espacio muestral de probabilidad uno.\n3. Su probabilidad no puede superar uno.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

@@ -6,21 +6,41 @@
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE DISCIPLINAS
 
-```
-                                  CAMPOS DEL SABER FILOSÓFICO
-                                                │
-         ┌──────────────────┬───────────────────┼───────────────────┬──────────────────┐
-         ▼                  ▼                   ▼                   ▼                  ▼
-    DEL SER            DEL CONOCER          DEL OBRAR          DEL VALOR          DEL HOMBRE
-  (Metafísica y       (Gnoseología y      (Ética y Fil.      (Axiología y        (Antropología
-   Ontología)         Epistemología)        Política)          Estética)          Filosófica)
-         │                  │                   │                   │                  │
-• ¿Qué es el ser?    • ¿Qué es la       • ¿Qué es el bien?  • ¿Qué es el        • ¿Cuál es la
-• ¿Cuál es el          verdad?          • ¿Qué es la          valor?              naturaleza o
-  origen y           • ¿Qué es la         justicia?         • ¿Qué es la          esencia del
-  estructura           ciencia?         • ¿Qué es el          belleza?            ser humano?
-  de lo real?        • ¿Cómo se valida?   deber?            • Juicios estéticos • ¿Tiene sentido
-                                                              y artísticos.       la existencia?
+```mermaid
+graph TD
+ ROOT["Campos de investigación filosófica"]
+ B1["Ser y realidad"]
+ B1N1["Metafísica y ontología: examinar qué existe y cómo se estructura lo real."]
+ B1N2["Preguntar por sustancia, identidad, cambio y relaciones; las respuestas dependen de cada propuesta."]
+ B2["Conocimiento y ciencia"]
+ B2N1["Gnoseología o teoría del conocimiento: posibilidad, fuentes, alcance y justificación del conocer."]
+ B2N2["Epistemología tiene usos distintos entre tradiciones; puede abarcar teoría del conocimiento o centrarse en el conocimiento científico."]
+ B2N3["La filosofía de la ciencia examina métodos, explicaciones, evidencia y cambio científico."]
+ B3["Acción y vida común"]
+ B3N1["Ética: examinar razones sobre lo correcto, lo bueno y la responsabilidad."]
+ B3N2["Filosofía política: justicia, legitimidad, poder y organización de la vida colectiva."]
+ B4["Valor y experiencia estética"]
+ B4N1["Axiología: investigar qué se valora, cómo y con qué fundamentos."]
+ B4N2["Estética: estudiar experiencia, juicio y arte; no se reduce a definir lo bello."]
+ B5["Persona y existencia"]
+ B5N1["Antropología filosófica: interpretaciones sobre la condición humana."]
+ B5N2["Preguntas por sentido, libertad, corporalidad y cultura pueden cruzar varias disciplinas."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ ROOT --> B5
+ B5 --> B5N1
+ B5 --> B5N2
 ```
 
 ---

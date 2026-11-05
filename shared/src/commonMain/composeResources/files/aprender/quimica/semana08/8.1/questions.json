@@ -1,1 +1,200 @@
-[{"concept":"8.1.1","correctIndex":0,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t08_s01_c01","options":["Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":8,"statement":"Frente al distractor frecuente de examen: \"Trampa 1: Usar la masa total de la muestra impura en la regla estequiométrica. ERROR FATAL. Antes de armar la regla de tres o factores de conversión, DEBES descontar las impurezas:\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.1.2","correctIndex":1,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t08_s01_c02","options":["Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":8,"statement":"Frente al distractor frecuente de examen: \"Trampa 2: Determinar el reactivo limitante comparando directamente los gramos de reactantes. FALSO. El reactivo de menor masa en gramos no necesariamente es el limitante; el cálcul\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "quim_t08_s01_c01",
+    "concept": "8.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "Usa $H=1$ y $O=16$ g/mol. ¿Cuál es la masa molar de $\\mathrm{H_2O}$?",
+    "options": [
+      "$18\\,\\mathrm{g/mol}$",
+      "$36\\,\\mathrm{g/mol}$",
+      "$9\\,\\mathrm{g/mol}$",
+      "$54\\,\\mathrm{g/mol}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Se suma cada masa atómica por su subíndice.\n2. Aplicamos los datos y conservamos las unidades: $M=2(1)+16$.\n3. El resultado es $18\\,\\mathrm{g/mol}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s01_c02",
+    "concept": "8.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "Usa $C=12$ y $O=16$ g/mol. ¿Cuál es la masa molar de $\\mathrm{CO_2}$?",
+    "options": [
+      "$88\\,\\mathrm{g/mol}$",
+      "$22\\,\\mathrm{g/mol}$",
+      "$132\\,\\mathrm{g/mol}$",
+      "$44\\,\\mathrm{g/mol}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Hay un carbono y dos oxígenos por molécula.\n2. Aplicamos los datos y conservamos las unidades: $M=12+2(16)$.\n3. El resultado es $44\\,\\mathrm{g/mol}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s01_c03",
+    "concept": "8.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "Una sustancia de masa molar 18 g/mol tiene masa 36 g. ¿Cuántos moles hay?",
+    "options": [
+      "$1\\,\\mathrm{mol}$",
+      "$6\\,\\mathrm{mol}$",
+      "$2\\,\\mathrm{mol}$",
+      "$4\\,\\mathrm{mol}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La cantidad de sustancia es masa dividida entre masa molar.\n2. Aplicamos los datos y conservamos las unidades: $n=m/M=36/18$.\n3. El resultado es $2\\,\\mathrm{mol}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s01_c04",
+    "concept": "8.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "Usa NA=6.02×10²³ mol⁻¹. ¿Cuántas moléculas representan 2 mol de una sustancia molecular?",
+    "options": [
+      "$3.612\\times10^{24}\\,\\text{moléculas}$",
+      "$1.204\\times10^{24}\\,\\text{moléculas}$",
+      "$2.408\\times10^{24}\\,\\text{moléculas}$",
+      "$6.02\\times10^{23}\\,\\text{moléculas}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El número de entidades es cantidad por constante de Avogadro.\n2. Aplicamos los datos y conservamos las unidades: $N=2(6.02\\cdot10^{23})$.\n3. El resultado es $1.204\\times10^{24}\\,\\text{moléculas}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s01_c05",
+    "concept": "8.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "Una fórmula empírica tiene masa molar 30 g/mol y la fórmula molecular masa molar 180 g/mol. ¿Qué factor entero las relaciona?",
+    "options": [
+      "$6$",
+      "$12$",
+      "$3$",
+      "$18$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El factor molecular es el cociente de masas molares.\n2. Aplicamos los datos y conservamos las unidades: $k=180/30$.\n3. El resultado es $6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s01_c06",
+    "concept": "8.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "En 2 mol de $\\mathrm{H_2O}$, ¿cuántos moles de átomos de hidrógeno hay?",
+    "options": [
+      "$8\\,\\mathrm{mol}$",
+      "$2\\,\\mathrm{mol}$",
+      "$12\\,\\mathrm{mol}$",
+      "$4\\,\\mathrm{mol}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Cada molécula contiene dos átomos de H.\n2. Aplicamos los datos y conservamos las unidades: $n_H=2(2)$.\n3. El resultado es $4\\,\\mathrm{mol}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s01_c07",
+    "concept": "8.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "Usa Na=23 y Cl=35.5 g/mol. ¿Cuál es la masa molar de NaCl?",
+    "options": [
+      "$29.25\\,\\mathrm{g/mol}$",
+      "$175.5\\,\\mathrm{g/mol}$",
+      "$58.5\\,\\mathrm{g/mol}$",
+      "$117\\,\\mathrm{g/mol}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La unidad fórmula contiene un sodio y un cloro.\n2. Aplicamos los datos y conservamos las unidades: $M=23+35.5$.\n3. El resultado es $58.5\\,\\mathrm{g/mol}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s01_c08",
+    "concept": "8.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "Usa $H=1$ y $O=16$ g/mol. ¿Qué porcentaje de la masa molar de $\\mathrm{H_2O}$ corresponde al oxígeno?",
+    "options": [
+      "$\\frac{800}{3}\\,\\mathrm{\\%}$",
+      "$\\frac{800}{9}\\,\\mathrm{\\%}$",
+      "$\\frac{1600}{9}\\,\\mathrm{\\%}$",
+      "$\\frac{400}{9}\\,\\mathrm{\\%}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Dividimos el aporte de O entre la masa total.\n2. Aplicamos los datos y conservamos las unidades: $p_O=100(16/18)$.\n3. El resultado es $\\frac{800}{9}\\,\\mathrm{\\%}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s01_c09",
+    "concept": "8.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "Un mol de entidades especificadas contiene…",
+    "options": [
+      "NA de esas entidades.",
+      "Siempre un gramo.",
+      "Siempre 22.4 L de cualquier material.",
+      "Una sola molécula."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El mol mide cantidad de sustancia.\n2. Las entidades deben identificarse: átomos, moléculas, iones u otras.\n3. La constante de Avogadro relaciona cantidad y número de entidades.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s01_c10",
+    "concept": "8.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "La fórmula empírica expresa…",
+    "options": [
+      "Siempre el número real de átomos de una molécula.",
+      "La geometría molecular completa.",
+      "Solo el estado de oxidación del oxígeno.",
+      "La razón entera más simple de átomos de cada elemento."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Se reducen los subíndices por sus factores comunes.\n2. Se conserva la proporción elemental.\n3. La fórmula molecular puede ser un múltiplo de esa proporción.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s01_c11",
+    "concept": "8.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "En una reacción química en sistema cerrado, la masa total…",
+    "options": [
+      "Solo se conserva si todos los productos son sólidos.",
+      "Se pierde siempre al formarse un gas.",
+      "Se conserva dentro de la aproximación química habitual.",
+      "Se duplica siempre."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Debe incluirse toda la materia de reactivos y productos.\n2. Un gas no desaparece por no ser visible.\n3. El balance químico usual conserva la masa total del sistema cerrado.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

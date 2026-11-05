@@ -1,1 +1,200 @@
-[{"concept":"13.2.1","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. **Definición de los eventos:** - Evento condición B: La carta extraída es de color negro (espadas \\spadesuit o tréboles \\clubsuit). - Evento de interés A: La carta es un As o una figura (J, Q, K). 2. **Reducción del espacio muestral condicional:** En una baraja de 52 naipes, exactamente la mitad son negras: n(B) = 26 \\text{ cartas negras} 3. **Casos favorables dentro del espacio reducido (A \\cap B):** Buscamos las cartas que son negras Y simultáneamente As o figura: - Ases negros: As de espadas, As de tréboles (2 cartas). - Figuras negras: J, Q, K de espadas y J, Q, K de tréboles (6 cartas). n(A \\cap B) = 2 + 6 = 8 \\text{ cartas favorables} 4. **Cálculo de la probabilidad condicional:** P(A \\mid B) = \\frac{n(A \\cap B)}{n(B)} = \\frac{8}{26} = \\frac{4}{13} **Respuesta Correcta:** **C) \\frac{4}{13}** ---","fuente":"temario","id":"arit_t13_s02_c01","options":["\\frac{4}{13}","\\frac{5}{13}","\\frac{2}{13}","\\frac{3}{13}"],"pedagogicalTier":"concepto","semana":13,"statement":"**Enunciado:** De una baraja estándar de 52 naipes, se extrae una carta y se comprueba que es de color negro. ¿Cuál es la probabilidad de que dicha carta sea un As o una figura (J, Q, K)?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.2.2","correctIndex":3,"explanation":"**Resolución Paso a Paso:** 1. **Definición de la partición y probabilidades a priori:** - Máquina A: P(A) = 0.45 - Máquina B: P(B) = 0.30 - Máquina C: P(C) = 0.25 2. **Verosimilitudes de defecto (D):** - P(D \\mid A) = 4\\% = 0.04 - P(D \\mid B) = 3\\% = 0.03 - P(D \\mid C) = 2\\% = 0.02 3. **Cálculo de la probabilidad total de defecto (P(D)):** P(D) = P(A)P(D \\mid A) + P(B)P(D \\mid B) + P(C)P(D \\mid C) P(D) = (0.45)(0.04) + (0.30)(0.03) + (0.25)(0.02) P(D) = 0.0180 + 0.0090 + 0.0050 = 0.0320 4. **Aplicación del Teorema de Bayes para la Máquina B:** P(B \\mid D) = \\frac{P(B) \\cdot P(D \\mid B)}{P(D)} P(B \\mid D) = \\frac{0.0090}{0.0320} = \\frac{9}{32} 5. Por lo tanto, la probabilidad de que la prenda defectuosa provenga de la máquina B es exactamente **\\frac{9}{32}** (aproximadamente 28.125\\%). **Respuesta Correcta:** **A) \\frac{9}{32}** ---","fuente":"temario","id":"arit_t13_s02_c02","options":["\\frac{10}{32}","\\frac{9}{31}","\\frac{11}{32}","\\frac{9}{32}"],"pedagogicalTier":"concepto","semana":13,"statement":"**Enunciado:** En una fábrica textil de Arequipa, tres máquinas A, B y C producen el 45\\%, 30\\% y 25\\% del total de prendas de exportación, respectivamente. Los porcentajes históricos de prendas defectuosas que produce cada máquina son 4\\%, 3\\% y 2\\%, respectivamente. Si se selecciona al azar una prenda del almacén y resulta estar defectuosa, determine la probabilidad de que dicha prenda haya sido confeccionada por la máquina B.","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: Comprobando que P(A \\cap B) = P(A) \\cdot P(B).","fuente":"temario","id":"arit_t13_s02_c03","options":["Permite calcular la probabilidad de una causa B_j condicionada a la observación de un resultado o efecto A (P(B_j \\mid A)).","No, es imposible. Si son excluyentes P(A \\cap B) = 0, mientras que si son independientes P(A \\cap B) = P(A) \\cdot P(B) > 0.","Comprobando que P(A \\cap B) = P(A) \\cdot P(B).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":13,"statement":"¿Cómo se verifica matemáticamente que dos eventos A y B son estocásticamente independientes?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Permite calcular la probabilidad de una causa B_j condicionada a la observación de un resultado o efecto A (P(B_j \\mid A)).","fuente":"temario","id":"arit_t13_s02_c04","options":["Comprobando que P(A \\cap B) = P(A) \\cdot P(B).","No, es imposible. Si son excluyentes P(A \\cap B) = 0, mientras que si son independientes P(A \\cap B) = P(A) \\cdot P(B) > 0.","Valor o condición no aplicable al caso planteado","Permite calcular la probabilidad de una causa B_j condicionada a la observación de un resultado o efecto A (P(B_j \\mid A))."],"pedagogicalTier":"concepto","semana":13,"statement":"¿Qué establece el Teorema de Bayes?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.2.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: No, es imposible. Si son excluyentes P(A \\cap B) = 0, mientras que si son independientes P(A \\cap B) = P(A) \\cdot P(B) > 0.","fuente":"temario","id":"arit_t13_s02_c05","options":["No, es imposible. Si son excluyentes P(A \\cap B) = 0, mientras que si son independientes P(A \\cap B) = P(A) \\cdot P(B) > 0.","Comprobando que P(A \\cap B) = P(A) \\cdot P(B).","Permite calcular la probabilidad de una causa B_j condicionada a la observación de un resultado o efecto A (P(B_j \\mid A)).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":13,"statement":"¿Pueden dos eventos con probabilidad mayor que cero ser simultáneamente independientes y mutuamente excluyentes?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t13_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":13,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t13_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":13,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t13_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":13,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t13_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":13,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"13.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t13_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":13,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "arit_t13_s02_c01",
+    "concept": "13.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Una bolsa tiene 3 bolas rojas y 2 azules. Se extraen dos uniformemente sin reemplazo. ¿Cuál es la probabilidad de que ambas sean rojas?",
+    "options": [
+      "$\\frac{3}{10}$",
+      "$\\frac{3}{5}$",
+      "$\\frac{3}{20}$",
+      "$\\frac{9}{10}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La composición cambia después de la primera extracción.\n2. Desarrollamos con los datos: $P=3/5\\cdot2/4$.\n3. El resultado es $\\frac{3}{10}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s02_c02",
+    "concept": "13.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Una bolsa tiene 3 bolas rojas y 2 azules. Se hacen dos extracciones uniformes con reemplazo y mezcla. ¿Cuál es la probabilidad de dos rojas?",
+    "options": [
+      "$\\frac{18}{25}$",
+      "$\\frac{9}{50}$",
+      "$\\frac{3}{25}$",
+      "$\\frac{9}{25}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La segunda extracción conserva la probabilidad original.\n2. Desarrollamos con los datos: $P=(3/5)^2$.\n3. El resultado es $\\frac{9}{25}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s02_c03",
+    "concept": "13.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Una bolsa contiene 3 rojas y 2 azules. Tras extraer una roja sin reemplazarla, ¿qué probabilidad de roja tiene la segunda extracción uniforme?",
+    "options": [
+      "$\\frac{1}{4}$",
+      "$\\frac{1}{6}$",
+      "$\\frac{1}{2}$",
+      "$1$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Quedan dos rojas entre cuatro bolas.\n2. Desarrollamos con los datos: $P(R_2\\mid R_1)=2/4$.\n3. El resultado es $\\frac{1}{2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s02_c04",
+    "concept": "13.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "$P(A\\cap B)=1/5$ y $P(B)=1/2$. ¿Cuál es P(A|B)?",
+    "options": [
+      "$\\frac{2}{15}$",
+      "$\\frac{2}{5}$",
+      "$\\frac{4}{5}$",
+      "$\\frac{1}{5}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La probabilidad condicionada divide la intersección entre la condición positiva.\n2. Desarrollamos con los datos: $P(A\\mid B)=(1/5)/(1/2)$.\n3. El resultado es $\\frac{2}{5}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s02_c05",
+    "concept": "13.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "A y B son independientes, con $P(A)=1/2$ y $P(B)=1/3$. ¿Cuánto vale P(A∩B)?",
+    "options": [
+      "$\\frac{1}{6}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{1}{12}$",
+      "$\\frac{1}{2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La independencia permite multiplicar probabilidades marginales.\n2. Desarrollamos con los datos: $P(A\\cap B)=(1/2)(1/3)$.\n3. El resultado es $\\frac{1}{6}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s02_c06",
+    "concept": "13.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Una fábrica recibe 60 % de piezas de A y 40 % de B. A tiene 2 % defectuosas y B 5 %. Se elige una pieza al azar. ¿Qué probabilidad de defecto hay?",
+    "options": [
+      "$\\frac{8}{125}$",
+      "$\\frac{2}{125}$",
+      "$\\frac{12}{125}$",
+      "$\\frac{4}{125}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Los dos proveedores forman una partición de la producción.\n2. Desarrollamos con los datos: $P(D)=0.6(0.02)+0.4(0.05)$.\n3. El resultado es $\\frac{4}{125}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s02_c07",
+    "concept": "13.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Una fábrica recibe 60 % de piezas de A y 40 % de B; las tasas de defecto son 2 % y 5 %. Una pieza elegida al azar es defectuosa. ¿Qué probabilidad hay de que venga de A?",
+    "options": [
+      "$\\frac{3}{16}$",
+      "$\\frac{1}{8}$",
+      "$\\frac{3}{8}$",
+      "$\\frac{3}{4}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Bayes pondera el origen por su contribución al evento observado.\n2. Desarrollamos con los datos: $P(A\\mid D)=\\frac{0.6(0.02)}{0.6(0.02)+0.4(0.05)}$.\n3. El resultado es $\\frac{3}{8}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s02_c08",
+    "concept": "13.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Se lanza un dado justo. Sabiendo que salió par, ¿qué probabilidad hay de que sea mayor que 3?",
+    "options": [
+      "$\\frac{1}{2}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{2}{9}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La condición reduce el espacio a 2,4,6.\n2. Desarrollamos con los datos: $P=|\\{4,6\\}|/|\\{2,4,6\\}|=2/3$.\n3. El resultado es $\\frac{2}{3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s02_c09",
+    "concept": "13.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "A y B son mutuamente excluyentes y $P(B)>0$. ¿Cuál es P(A|B)?",
+    "options": [
+      "$0$",
+      "$1$",
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{4}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La condición B no puede coincidir con A.\n2. Desarrollamos con los datos: $P(A\\mid B)=0/P(B)=0$.\n3. El resultado es $0$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s02_c10",
+    "concept": "13.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Independencia y exclusión mutua con probabilidades positivas…",
+    "options": [
+      "Son exactamente lo mismo.",
+      "Son diferentes: eventos excluyentes positivos no son independientes.",
+      "Exigen siempre probabilidad cero para todo.",
+      "Se deciden solo por el orden de sus nombres."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La exclusión mutua da intersección de probabilidad cero.\n2. La independencia exigiría el producto de dos probabilidades positivas.\n3. Ese producto no es cero, por lo que ambas condiciones no coinciden.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t13_s02_c11",
+    "concept": "13.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 13,
+    "statement": "Para usar P(A|B)=P(A∩B)/P(B) se exige…",
+    "options": [
+      "P(B)>0.",
+      "P(B)=0.",
+      "Que A y B sean iguales.",
+      "Que A y B sean siempre independientes."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La condición restringe la medida a B.\n2. Se normaliza dividiendo entre su probabilidad.\n3. La fórmula requiere denominador positivo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

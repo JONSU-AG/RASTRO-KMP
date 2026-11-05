@@ -6,23 +6,41 @@
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE LA CONVIVENCIA SOCIAL
 
-```
-                           LA PERSONA Y LA VIDA EN SOCIEDAD
-                                          │
-         ┌──────────────────┬─────────────┴─────────────┬──────────────────┐
-         ▼                  ▼                           ▼                  ▼
-    LA PERSONA         DIGNIDAD Y                   SISTEMA DE         VALORES DE
-      HUMANA            DERECHOS                      NORMAS          CONVIVENCIA
-         │                  │                           │                  │
-• Fin supremo de     • Dignidad intrínseca        • Morales:         • Tolerancia y
-  la sociedad y        (Art. 1° Const.)             - Autónomas,       respeto mutuo
-  del Estado         • Sujeto de derecho            incoercibles     • Justicia y equidad
-• Dimensiones:         desde la concepción        • Jurídicas:       • Solidaridad y
-  - Biológica          (Art. 2° inc. 1)             - Heterónomas,     bien común
-  - Psicológica      • Deberes cívicos y            coercibles,      • Cultura de paz y
-  - Social / Cívica    responsabilidad social       estatales          resolución pacífica
-  - Ético-espiritual                              • Sociales y         de conflictos
-                                                    Religiosas
+```mermaid
+graph TD
+ ROOT["Persona, dignidad y convivencia"]
+ B1["La persona en sociedad"]
+ B1N1["Distinguir dimensiones biológicas, psicológicas, sociales y éticas sin reducir a la persona a una sola."]
+ B1N2["La defensa de la persona y el respeto de su dignidad orientan la sociedad y el Estado en el artículo 1."]
+ B1N3["La dignidad no depende de riqueza, productividad, ciudadanía o aprobación de una mayoría."]
+ B2["Derechos y responsabilidad"]
+ B2N1["El artículo 2 reconoce derechos de la persona; no se limita a derechos de quienes pueden votar."]
+ B2N2["Sobre el concebido, el inciso 1 reconoce la condición de sujeto de derecho en todo cuanto le favorece; conservar esa precisión."]
+ B2N3["El ejercicio de derechos y las responsabilidades de convivencia se examinan con sus condiciones, no como permisos ilimitados."]
+ B3["Normas"]
+ B3N1["Distinguir criterios morales, reglas de trato social, normas religiosas y normas jurídicas."]
+ B3N2["Las normas jurídicas pertenecen al ordenamiento; su coercibilidad no significa que toda infracción produzca cárcel."]
+ B3N3["Una regla puede tener relevancia moral y jurídica a la vez; las categorías no son compartimentos sin relación."]
+ B4["Convivencia"]
+ B4N1["Respeto, solidaridad, justicia y resolución pacífica orientan la convivencia."]
+ B4N2["Respetar a una persona no exige aceptar todas sus afirmaciones como verdaderas."]
+ B4N3["Ante un desacuerdo, identificar hechos, reglas y razones antes de responder con una descalificación."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---
@@ -251,3 +269,15 @@ E) Axiológica subjetiva
 - **Clave Correcta**: **D**
 
 ---
+
+
+### Reconocer la regla y su función
+
+| Tipo de norma, como distinción didáctica | Qué examinar | Qué evitar |
+|---|---|---|
+| Moral | Razones sobre lo correcto y lo debido | Confundir toda convicción personal con obligación jurídica |
+| Trato social | Reglas de cortesía y expectativas del grupo | Suponer que una costumbre sea siempre justa |
+| Religiosa | Compromisos de una tradición o comunidad de fe | Suponer que obligan por igual a toda persona |
+| Jurídica | Reconocimiento en el ordenamiento y consecuencias previstas | Equiparar cualquier incumplimiento con un delito |
+
+La comparación distingue funciones. Una misma conducta puede ser relevante para más de un tipo de norma.

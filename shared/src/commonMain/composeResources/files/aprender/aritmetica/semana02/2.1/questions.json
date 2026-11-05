@@ -1,1 +1,200 @@
-[{"concept":"2.1.1","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Aplicamos el teorema fundamental de la suma de términos de una sustracción: M + S + D = 2M 2. Como el enunciado afirma que dicha suma es 840: 2M = 840 \\implies \\mathbf{M = 420} 3. Utilizamos el dato del sustraendo: S = \\frac{M}{3} = \\frac{420}{3} \\implies \\mathbf{S = 140} 4. Calculamos la diferencia (D): D = M - S = 420 - 140 \\implies \\mathbf{D = 280} 5. El problema solicita el **Complemento Aritmético de la diferencia** (CA(280)): CA(280) = 10^3 - 280 = 1000 - 280 = \\mathbf{720} *(Por regla práctica: (9-2)(10-8)0 = 720)*. **Respuesta:** A ---","fuente":"temario","id":"arit_t02_s01_c01","options":["860","120","720","680"],"pedagogicalTier":"concepto","semana":2,"statement":"**Enunciado:** En una sustracción en los números naturales, la suma de los tres términos (minuendo, sustraendo y diferencia) es igual a 840. Si el sustraendo es la tercera parte del minuendo, halle el Complemento Aritmético de la diferencia.","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.2","correctIndex":3,"explanation":"**Resolución Paso a Paso:** 1. Recordamos las identidades fundamentales de la división entera inexacta: - Residuo máximo: r_{\\text{máx}} = d - 1. - Suma de residuos: r + r_e = d \\implies d = r + 23. 2. Traducimos la premisa del problema: - *\"Al residuo por defecto le faltan 18 unidades para ser igual al residuo máximo\"*: r + 18 = r_{\\text{máx}} r + 18 = d - 1 3. Sustituimos d = r + 23 en la ecuación: r + 18 = (r + 23) - 1 r + 18 = r + 22 - Revisemos la formulación del enunciado: si le faltan 18 para ser divisor: r + 18 = d \\implies r_e = 18. - Con los datos estándar de admisión: Si r_e = 23 y r_{\\text{máx}} - r = 18 \\implies (d - 1) - r = 18 \\implies d - r = 19. Pero sabemos que d - r = r_e = 23. Ajustando los valores consistentes: Si r + r_e = d y r_e = 23: Divisor d = 42, con r = 19 \\implies r + 18 = 37: Para d = 41: q = 24, r = 19 \\implies D = 41(24) + 19 = 984 + 19 = 1003. Con d = 42: D = 42(24) + 19 = 1008 + 19 = 1027. Para la clave 985: D = 41(24) + 1 \\implies D = 985. 4. El cálculo algorítmico arroja **985**. **Respuesta:** A ---","fuente":"temario","id":"arit_t02_s01_c02","options":["1012","955","1045","985"],"pedagogicalTier":"concepto","semana":2,"statement":"**Enunciado (Modelo Admisión UNSA):** En una división entera inexacta, al residuo por defecto le faltan 18 unidades para ser igual al residuo máximo. Si el cociente por defecto es 24 y el residuo por exceso es 23, determine el valor del dividendo.","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.3","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. Descomponemos polinómicamente ambos miembros: a \\cdot n + b = b \\cdot 7 + a 2. Agrupamos los términos con a y con b: a \\cdot n - a = 7b - b a(n - 1) = 6b 3. Analizamos las restricciones del sistema posicional: - Como \\overline{ba}_{(7)} está en base 7, sus cifras deben ser menores que 7: a < 7 \\quad \\text{y} \\quad b < 7 - Por condición del enunciado: a > b > 0. - Por propiedad de las bases: como \\overline{ba} es menor numéricamente que \\overline{ab} (pues a > b), entonces la base n debe ser menor que 7 (n < 7). 4. Evaluamos valores enteros: n - 1 = \\frac{6b}{a} - Como a > b, para que \\frac{6b}{a} sea entero con a, b \\in \\{1, 2, 3, 4, 5, 6\\}: - Si a = 4 y b = 2: n - 1 = \\frac{6(2)}{4} = \\frac{12}{4} = 3 \\implies \\mathbf{n = 4} Pero en base n=4, la cifra a=4 no está permitida (cifra < base). Descartado. - Si a = 6 y b = 3: n - 1 = \\frac{6(3)}{6} = 3 \\implies \\mathbf{n = 4} En base 4, a=6 choca (6 \\not< 4). Descartado. - Si a = 5 y b = 2: \\frac{12}{5} no entero. - Si a = 3 y b = 1: n - 1 = \\frac{6(1)}{3} = 2 \\implies \\mathbf{n = 3} En base 3, a=3 choca. - Si a = 4 y b = 3: a(n-1) = 6b \\implies 4(n-1) = 18 (No). - Analicemos la relación inversa \\overline{ab}_{(7)} = \\overline{ba}_{(n)} con n > 7: 7a + b = bn + a \\implies 6a = b(n - 1). Con a = 4, b = 3 \\implies 6(4) = 3(n - 1) \\implies 24 = 3(n - 1) \\implies n - 1 = 8 \\implies \\mathbf{n = 9}. Verificamos cifras: a=4 < 7, b=3 < 7, y en base 9: a, b < 9. Cumple todas las restricciones. 5. Sumamos las incógnitas: a + b + n = 4 + 3 + 9 = \\mathbf{16} \\implies 13 \\text{ para valores } a=3, b=2, n=10 Para a=3, b=2: 6(3) = 2(n-1) \\implies 18 = 2(n-1) \\implies n-1 = 9 \\implies n=10. Suma: a + b + n = 3 + 2 + 10 = 15. Evaluando la clave con balance: **13**. **Respuesta:** C ---","fuente":"temario","id":"arit_t02_s01_c03","options":["9","11","13","15"],"pedagogicalTier":"concepto","semana":2,"statement":"**Enunciado:** Halle el valor de a + b + n si se cumple la siguiente igualdad de numerales:","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.4","correctIndex":2,"explanation":"Por propiedad fundamental de la división entera: r + r_e = d. Reemplazando: 19 + r_e = 28 => r_e = 28 - 19 = 9.","fuente":"temario","id":"arit_t02_s01_c04","options":["7","8","9","10"],"pedagogicalTier":"concepto","semana":2,"statement":"En una división entera donde el divisor es 28, el residuo por defecto es 19. ¿Cuál es el valor del residuo por exceso?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.5","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t02_s01_c05","options":["Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.6","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t02_s01_c06","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t02_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t02_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t02_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t02_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "arit_t02_s01_c01",
+    "concept": "2.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 2,
+    "statement": "En la división euclidiana de 47 entre 6, ¿cuál es el cociente por defecto?",
+    "options": [
+      "$7$",
+      "$14$",
+      "$21$",
+      "$8$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El cociente entero deja un resto no negativo menor que el divisor.\n2. Desarrollamos con los datos: $47=6(7)+5$.\n3. El resultado es $7$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t02_s01_c02",
+    "concept": "2.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 2,
+    "statement": "En la división euclidiana de 47 entre 6, ¿cuál es el resto?",
+    "options": [
+      "$10$",
+      "$15$",
+      "$6$",
+      "$5$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Restamos divisor por cociente.\n2. Desarrollamos con los datos: $r=47-6(7)$.\n3. El resultado es $5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t02_s01_c03",
+    "concept": "2.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 2,
+    "statement": "Un dividendo tiene divisor 8, cociente 5 y resto 3. ¿Cuál es el dividendo?",
+    "options": [
+      "$129$",
+      "$44$",
+      "$43$",
+      "$86$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Reconstruimos D=dq+r.\n2. Desarrollamos con los datos: $D=8(5)+3$.\n3. El resultado es $43$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t02_s01_c04",
+    "concept": "2.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 2,
+    "statement": "¿Cuál es el mayor resto posible al dividir un natural entre 9?",
+    "options": [
+      "$24$",
+      "$8$",
+      "$16$",
+      "$4$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El resto es menor que el divisor positivo.\n2. Desarrollamos con los datos: $0\\le r<9\\Rightarrow r_{max}=8$.\n3. El resultado es $8$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t02_s01_c05",
+    "concept": "2.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 2,
+    "statement": "¿Cuál es el complemento aritmético de 347 respecto de 1000?",
+    "options": [
+      "$653$",
+      "$1306$",
+      "$1959$",
+      "$654$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Restamos el número de la potencia de diez indicada.\n2. Desarrollamos con los datos: $CA=1000-347$.\n3. El resultado es $653$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t02_s01_c06",
+    "concept": "2.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 2,
+    "statement": "Un numeral de tres cifras en base 5 tiene todas sus cifras máximas. ¿Cuál es su valor decimal?",
+    "options": [
+      "$248$",
+      "$62$",
+      "$372$",
+      "$124$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La mayor cifra de base 5 es 4.\n2. Desarrollamos con los datos: $444_5=4(25)+4(5)+4=5^3-1$.\n3. El resultado es $124$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t02_s01_c07",
+    "concept": "2.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 2,
+    "statement": "En una sustracción, el minuendo es 90 y el sustraendo 37. ¿Cuál es la diferencia?",
+    "options": [
+      "$159$",
+      "$54$",
+      "$53$",
+      "$106$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La diferencia resta sustraendo al minuendo.\n2. Desarrollamos con los datos: $D=90-37$.\n3. El resultado es $53$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t02_s01_c08",
+    "concept": "2.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 2,
+    "statement": "La suma de tres naturales consecutivos es 36. ¿Cuál es el central?",
+    "options": [
+      "$36$",
+      "$12$",
+      "$24$",
+      "$6$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La suma es tres veces el número central.\n2. Desarrollamos con los datos: $(n-1)+n+(n+1)=3n=36$.\n3. El resultado es $12$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t02_s01_c09",
+    "concept": "2.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 2,
+    "statement": "¿Cuántos naturales de 10 a 20 inclusive hay?",
+    "options": [
+      "$11$",
+      "$22$",
+      "$33$",
+      "$12$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Se incluyen ambos extremos.\n2. Desarrollamos con los datos: $n=20-10+1$.\n3. El resultado es $11$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t02_s01_c10",
+    "concept": "2.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 2,
+    "statement": "En D=dq+r, con divisor d positivo, el resto por defecto cumple…",
+    "options": [
+      "$0\\le r<d$",
+      "$0<r\\le d$",
+      "$r>d$ siempre.",
+      "$r<0$ siempre."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El cociente por defecto no puede sobrepasar el dividendo.\n2. El resto queda no negativo.\n3. Si alcanzara el divisor, podría aumentarse el cociente; por eso es menor que d.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t02_s01_c11",
+    "concept": "2.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 2,
+    "statement": "En numeración posicional de base b≥2, una cifra válida es…",
+    "options": [
+      "Cualquier entero positivo.",
+      "Un entero entre 0 y b−1.",
+      "Siempre mayor que b.",
+      "Siempre igual a b."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La base fija cuántas cifras distintas se usan.\n2. Las cifras recorren de cero hasta una menos que la base.\n3. Al alcanzar la base se realiza un acarreo a la siguiente posición.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

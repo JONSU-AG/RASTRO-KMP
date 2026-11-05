@@ -18,24 +18,45 @@
 
 ## 2. 🗺️ MAPA TAXONÓMICO Y ONTOLOGÍA DEL TEMA
 
-```text
-                               ┌─ Frecuencia Absoluta (f_i) y Frecuencia Relativa (h_i)
-        ┌─ 1. Organización ────┼─ Frecuencias Acumuladas (F_i, H_i)
-        │      de Datos        ├─ Tablas para Datos No Agrupados
-        │                      └─ Tablas con Intervalos de Clase (Límite inferior, superior, Ancho w)
-        │
-ESTADÍSTICA                    ┌─ Diagrama de Barras (Variables cualitativas o cuantitativas discretas)
-Y ANÁLISIS ─────┼─ 2. Representación ──┼─ Histograma y Polígono de Frecuencias (Variables continuas)
-DE DATOS        │      Gráfica         └─ Diagrama Circular o de Sectores (Ángulos: theta = h_i * 360°)
-        │
-        │                      ┌─ Media Aritmética Simple y Ponderada (Promedio ponderado)
-        ├─ 3. Medidas de ──────┼─ Mediana (Me: El 50% central que divide la distribución)
-        │      Tendencia       └─ Moda (Mo: El valor o intervalo de máxima frecuencia)
-        │      Central
-        │
-        └─ 4. Medidas de ──────┌─ Rango o Recorrido (R = X_max - X_min)
-               Dispersión      ├─ Varianza (sigma^2 o s^2)
-               y Posición      └─ Desviación Estándar (sigma = sqrt(Varianza)) y Cuartiles
+```mermaid
+graph TD
+ ROOT["Estadística y análisis de datos"]
+ B1["Organización"]
+ B1N1["Frecuencia absoluta: número de observaciones de un valor o categoría."]
+ B1N2["Frecuencia relativa: proporción respecto del total."]
+ B1N3["Acumuladas: ordenar la variable antes de sumar frecuencias."]
+ B1N4["Clases: precisar límites y ancho; no confundir marca de clase con un dato exacto."]
+ B2["Gráficos"]
+ B2N1["Barras: comparar categorías o valores discretos."]
+ B2N2["Histograma: intervalos; revisar área frente a altura si los anchos difieren."]
+ B2N3["Sectores: ángulo $\theta=360^\circ h_i$ cuando las proporciones forman el total."]
+ B3["Tendencia central"]
+ B3N1["Media: suma de valores dividida entre su cantidad; con pesos, dividir entre la suma de pesos."]
+ B3N2["Mediana: centro del orden; con cantidad par, promedio de los dos centrales en datos numéricos."]
+ B3N3["Moda: valor de máxima frecuencia; puede haber más de una."]
+ B4["Dispersión y posición"]
+ B4N1["Rango: máximo menos mínimo."]
+ B4N2["Varianza: distinguir denominador N de población y n menos uno de muestra corregida."]
+ B4N3["Desviación estándar: raíz de la varianza; vuelve a las unidades originales."]
+ B4N4["Cuartiles: indicar el método cuando las convenciones cambian el resultado."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ B4 --> B4N4
 ```
 
 ---

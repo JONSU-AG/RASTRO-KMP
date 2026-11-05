@@ -6,23 +6,41 @@
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE LA CIUDADANÍA PERUANA
 
-```
-                                  LA CIUDADANÍA PERUANA
-                                            │
-         ┌──────────────────┬───────────────┴───────────────┬──────────────────┐
-         ▼                  ▼                               ▼                  ▼
-     CONCEPTO Y          DERECHOS Y                      SUSPENSIÓN DE LA    IDENTIDAD Y
-    ADQUISICIÓN           DEBERES                          CIUDADANÍA         SÍMBOLOS
-         │                  │                                   │                  │
-• Art. 30° Const.:   • Derechos Políticos:           • Art. 33° Const.:  • Art. 49° Const.:
-  - Peruanos           - Elegir y ser elegidos         1. Resolución       - Bandera
-  - Mayores de         - Voto: personal, igual,           judicial de      - Escudo
-    18 años              libre, secreto y                 interdicción     - Himno Nacional
-  - Inscritos en el      obligatorio hasta             2. Sentencia con  • Pluriculturalidad
-    RENIEC               los 70 años                      pena privativa   y multilingüismo
-• Miembro activo de  • Deberes Cívicos:                   de la libertad   (Quechua, Aimara
-  la comunidad         - Sufragar y tributar           3. Sentencia con    y lenguas
-  política             - Defender la Constitución         inhabilitación   amazónicas)
+```mermaid
+graph TD
+ ROOT["Ciudadanía y participación"]
+ B1["Conceptos diferentes"]
+ B1N1["Distinguir persona, nacionalidad, ciudadanía y ejercicio de derechos políticos."]
+ B1N2["El artículo 30 vincula la ciudadanía con la condición de peruano y la mayoría de edad de dieciocho años."]
+ B1N3["La inscripción electoral se exige para el ejercicio de la ciudadanía; no confundir ese requisito con la definición de persona."]
+ B2["Participación y sufragio"]
+ B2N1["Elegir y ser elegido se ejerce según condiciones y procedimientos establecidos."]
+ B2N2["La participación pública incluye mecanismos distintos del voto en una elección de representantes."]
+ B2N3["El artículo 31 distingue voto obligatorio y facultativo; las condiciones de un proceso concreto requieren consultar su información oficial."]
+ B3["Ejercicio y suspensión"]
+ B3N1["El artículo 33 regula suspensión del ejercicio de la ciudadanía; no equivale a borrar identidad ni dignidad."]
+ B3N2["No deducir automáticamente la habilitación electoral de poseer un DNI: distinguir identificación e inscripción electoral."]
+ B3N3["No confundir una propuesta de reforma con una disposición ya aprobada y vigente."]
+ B4["Identidad y vida común"]
+ B4N1["Los símbolos nacionales y la diversidad cultural son dimensiones de identidad colectiva."]
+ B4N2["La identidad no exige uniformidad de lengua, costumbres o convicciones."]
+ B4N3["Distinguir obligaciones establecidas por normas de actitudes cívicas que requieren justificación y participación."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---
@@ -245,3 +263,15 @@ E) El sancionado puede apelar ante el Consejo de Seguridad de las Naciones Unida
 - **O**: Obligatorio hasta los 70 años (luego es optativo)
 
 ---
+
+
+### No confundir las categorías
+
+| Categoría | Pregunta orientativa | Precisión |
+|---|---|---|
+| Persona | ¿A quién se reconoce dignidad y derechos? | No se limita al grupo que puede votar |
+| Nacionalidad | ¿Cuál es el vínculo jurídico con un Estado? | No equivale a residencia o afinidad cultural |
+| Ciudadanía | ¿Qué condición política regula el artículo 30? | Distinguir condición de peruano y mayoría de edad |
+| Ejercicio | ¿Qué requisitos se exigen para ejercer derechos políticos? | La inscripción electoral pertenece a este plano |
+
+**Importante:** el mapa no determina la situación electoral individual de alguien. Identificación, inscripción y habilitación son cuestiones que no deben confundirse al estudiar las normas.

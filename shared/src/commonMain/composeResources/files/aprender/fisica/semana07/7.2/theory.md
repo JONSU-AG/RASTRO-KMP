@@ -25,8 +25,8 @@ El aumento de agitación molecular distorsiona el pozo de potencial intermolecul
 ## 2. FORMULARIO MAESTRO, ARTIFICIOS Y HACKING PREUNIVERSITARIO
    C_{\text{cal}} = M_{\text{eq}} \cdot c_{\text{agua}} \implies M_{\text{eq}} = \frac{m_{\text{cal}} c_{\text{cal}}}{c_{\text{agua}}}
 
-4. **Principio de Conservación de la Energía Térmica (Ley Cero):**
-   En un sistema adiabáticamente aislado:
+4. **Balance de energía en calorimetría:**
+   En un sistema aislado, sin trabajo externo ni otras transferencias de energía, el calor que unos cuerpos ceden es el que otros reciben. Es una aplicación de la conservación de la energía, no la ley cero:
    \sum Q_{\text{ganados}} + \sum Q_{\text{perdidos}} = 0 \iff \sum Q_{\text{ganados}} = \sum |Q_{\text{perdidos}}|
 
 ### 4.2. Cambio de Fase y Calor Latente
@@ -46,9 +46,9 @@ Q_L = \pm m L
   Q_{\text{req}} = m_h c_h (0 - T_h) + m_h L_f
   Calcula el calor máximo que el agua caliente puede ceder enfriándose hasta 0^\circ\text{C}:
   Q_{\text{disp}} = m_a c_a (T_a - 0)
-  Si Q_{\text{disp}} < Q_{\text{req}}, la temperatura final es **obligatoriamente 0^\circ\text{C}** y solo se funde una fracción de hielo.
-- **Trampa 2 (Orificios en Placas Metálicas):** Cuando una placa metálica con un orificio central se calienta, **el orificio se expande exactamente con el mismo coeficiente de dilatación que si estuviera lleno del mismo material**. ¡Jamás se encoge!
-- **Trampa 3 (Confundir \Delta T con T):** Una elevación de 20^\circ\text{C} equivale a una elevación de 20 \text{ K}, pero una temperatura de 20^\circ\text{C} equivale a 293 \text{ K}.
+   Si el hielo ya está a 0 °C y el calor disponible no basta para fundirlo por completo, queda una mezcla de hielo y agua en equilibrio a 0 °C, a presión atmosférica. Si el hielo comienza por debajo de 0 °C, no basta comparar con el calor de fusión: primero hay que comprobar si toda la mezcla puede alcanzar 0 °C. El resultado puede ser hielo a temperatura negativa, coexistencia a 0 °C o agua a temperatura positiva. Se decide por balance de energía y por las fases que realmente quedan al final, sin imponer de antemano una temperatura.
+- **Importante: orificios en placas.** Si una placa homogénea e isotrópica se calienta uniformemente, se dilata libremente y su coeficiente es positivo, el orificio aumenta sus dimensiones como si estuviera ocupado por el mismo material. Las restricciones mecánicas o un calentamiento no uniforme requieren otro análisis.
+- **Importante: temperatura e intervalo.** Una elevación de 20 °C equivale a una elevación de 20 K, pero una temperatura de 20 °C equivale a 293.15 K.
 
 ---
 

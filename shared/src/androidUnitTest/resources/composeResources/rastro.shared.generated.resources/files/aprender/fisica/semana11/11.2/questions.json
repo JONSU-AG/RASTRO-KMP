@@ -1,1 +1,200 @@
-[{"concept":"11.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t11_s02_c01",
+    "concept": "11.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Una onda tiene frecuencia 5 Hz y longitud de onda 2 m. ¿Qué rapidez de propagación tiene?",
+    "options": [
+      "$10\\,\\mathrm{m/s}$",
+      "$20\\,\\mathrm{m/s}$",
+      "$5\\,\\mathrm{m/s}$",
+      "$30\\,\\mathrm{m/s}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La rapidez es producto de frecuencia y longitud de onda.\n2. Sustituimos los datos: $v=f\\lambda=5(2)$.\n3. El resultado pedido es $10\\,\\mathrm{m/s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s02_c02",
+    "concept": "11.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Una onda se propaga a 300 m/s con frecuencia 100 Hz. ¿Qué longitud de onda tiene?",
+    "options": [
+      "$6\\,\\mathrm{m}$",
+      "$1.5\\,\\mathrm{m}$",
+      "$9\\,\\mathrm{m}$",
+      "$3\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Despejamos λ en v=fλ.\n2. Sustituimos los datos: $\\lambda=v/f=300/100$.\n3. El resultado pedido es $3\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s02_c03",
+    "concept": "11.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Un eco regresa en 2 s. Usa rapidez del sonido 340 m/s. ¿A qué distancia está la pared?",
+    "options": [
+      "$170\\,\\mathrm{m}$",
+      "$1020\\,\\mathrm{m}$",
+      "$340\\,\\mathrm{m}$",
+      "$680\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El sonido recorre ida y vuelta.\n2. Sustituimos los datos: $d=vt/2=340(2)/2$.\n3. El resultado pedido es $340\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s02_c04",
+    "concept": "11.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Una onda tiene periodo 0.02 s. ¿Cuál es su frecuencia?",
+    "options": [
+      "$150\\,\\mathrm{Hz}$",
+      "$50\\,\\mathrm{Hz}$",
+      "$100\\,\\mathrm{Hz}$",
+      "$25\\,\\mathrm{Hz}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La frecuencia es el inverso del periodo.\n2. Sustituimos los datos: $f=1/0.02$.\n3. El resultado pedido es $50\\,\\mathrm{Hz}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s02_c05",
+    "concept": "11.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Un rayo en vacío viaja a $3\\times10^{8}$ m/s. En un medio con n=1.5, ¿cuál es su rapidez?",
+    "options": [
+      "$2\\times10^{8}\\,\\mathrm{m/s}$",
+      "$4\\times10^{8}\\,\\mathrm{m/s}$",
+      "$1\\times10^{8}\\,\\mathrm{m/s}$",
+      "$6\\times10^{8}\\,\\mathrm{m/s}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El índice de refracción es c dividido entre rapidez en el medio.\n2. Sustituimos los datos: $v=c/n=3\\cdot10^8/1.5$.\n3. El resultado pedido es $2\\times10^{8}\\,\\mathrm{m/s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s02_c06",
+    "concept": "11.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Una cuerda ideal tiene tensión 100 N y densidad lineal 1 kg/m. ¿Qué rapidez tienen sus ondas transversales?",
+    "options": [
+      "$20\\,\\mathrm{m/s}$",
+      "$5\\,\\mathrm{m/s}$",
+      "$30\\,\\mathrm{m/s}$",
+      "$10\\,\\mathrm{m/s}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La rapidez en la cuerda depende de tensión y masa por longitud.\n2. Sustituimos los datos: $v=\\sqrt{F_T/\\mu}=\\sqrt{100/1}$.\n3. El resultado pedido es $10\\,\\mathrm{m/s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s02_c07",
+    "concept": "11.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Una cuerda de 2 m fija en ambos extremos vibra en su modo fundamental. ¿Qué longitud de onda tiene?",
+    "options": [
+      "$2\\,\\mathrm{m}$",
+      "$12\\,\\mathrm{m}$",
+      "$4\\,\\mathrm{m}$",
+      "$8\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. En el modo fundamental cabe media longitud de onda.\n2. Sustituimos los datos: $L=\\lambda/2\\Rightarrow\\lambda=2(2)$.\n3. El resultado pedido es $4\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s02_c08",
+    "concept": "11.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Una onda en una cuerda viaja a 20 m/s. La cuerda mide 2 m y está fija en ambos extremos. ¿Qué frecuencia fundamental tiene?",
+    "options": [
+      "$15\\,\\mathrm{Hz}$",
+      "$5\\,\\mathrm{Hz}$",
+      "$10\\,\\mathrm{Hz}$",
+      "$2.5\\,\\mathrm{Hz}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Combinamos la condición de extremos fijos y la rapidez.\n2. Sustituimos los datos: $f_1=v/(2L)=20/(2\\cdot2)$.\n3. El resultado pedido es $5\\,\\mathrm{Hz}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s02_c09",
+    "concept": "11.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "La luz tiene longitud de onda $6\\times10^{-7}$ m en vacío. Usa $c=3\\times10^8\\,\\mathrm{m/s}$. ¿Cuál es su frecuencia?",
+    "options": [
+      "$5\\times10^{14}\\,\\mathrm{Hz}$",
+      "$1\\times10^{15}\\,\\mathrm{Hz}$",
+      "$2.5\\times10^{14}\\,\\mathrm{Hz}$",
+      "$1.5\\times10^{15}\\,\\mathrm{Hz}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Para la luz también se cumple c=fλ.\n2. Sustituimos los datos: $f=c/\\lambda=(3\\cdot10^8)/(6\\cdot10^{-7})$.\n3. El resultado pedido es $5\\times10^{14}\\,\\mathrm{Hz}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s02_c10",
+    "concept": "11.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "En una onda transversal, la perturbación oscila…",
+    "options": [
+      "Paralela a la propagación.",
+      "Perpendicular a la propagación.",
+      "Siempre hacia el centro de la fuente.",
+      "Sin transportar energía."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Se distinguen dirección de propagación y dirección de oscilación.\n2. Transversal significa que son perpendiculares.\n3. La onda puede transportar energía sin transportar materia de forma neta.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s02_c11",
+    "concept": "11.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Cuando una onda cambia de medio en una frontera estacionaria, su frecuencia…",
+    "options": [
+      "La fija la fuente y se conserva al atravesar la frontera.",
+      "Siempre se duplica.",
+      "Se vuelve cero.",
+      "Es necesariamente igual a su rapidez numérica."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Las oscilaciones deben mantener continuidad temporal en la frontera.\n2. La frecuencia procede de la fuente.\n3. Pueden cambiar rapidez y longitud de onda, manteniendo la frecuencia.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

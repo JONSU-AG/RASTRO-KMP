@@ -1433,7 +1433,7 @@ fun RastroStickerDialog(
                 Spacer(Modifier.height(8.dp))
 
                 // Mensaje
-                Text(
+                AcademicText(
                     text = message,
                     style = MaterialTheme.typography.bodyMedium,
                     color = theme.textSecondary,

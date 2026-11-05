@@ -1,1 +1,200 @@
-[{"concept":"7.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t07_s02_c01","options":["15.0","15.2","14.4","14.8"],"pedagogicalTier":"concepto","semana":7,"statement":"Un estudiante de Ingeniería de Sistemas de la UNSA cursa 4 asignaturas con sus respectivos créditos:","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.2.2","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rm_t07_s02_c02","options":["\\bar{x} = 30, Me = 32.5","\\bar{x} = 35, Me = 36","\\bar{x} = 32.5, Me = 35","\\bar{x} = 35, Me = 35"],"pedagogicalTier":"concepto","semana":7,"statement":"Dada la siguiente tabla simétrica de distribución de frecuencias para 100 empleados con anchos de clase comunes y constantes w:","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: Las tres medidas son idénticas: \\bar{x} = Me = Mo.","fuente":"temario","id":"rm_t07_s02_c03","options":["Es el promedio de sus límites: x_i = \\frac{L_i + L_s}{2}.","Valor o condición no aplicable al caso planteado","Las tres medidas son idénticas: \\bar{x} = Me = Mo.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":7,"statement":"En una distribución unimodal simétrica perfecta, ¿qué relación existe entre Media, Mediana y Moda?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Es el promedio de sus límites: x_i = \\frac{L_i + L_s}{2}.","fuente":"temario","id":"rm_t07_s02_c04","options":["Las tres medidas son idénticas: \\bar{x} = Me = Mo.","Valor o condición no aplicable al caso planteado","Valor o condición no aplicable al caso planteado","Es el promedio de sus límites: x_i = \\frac{L_i + L_s}{2}."],"pedagogicalTier":"concepto","semana":7,"statement":"¿Cómo se calcula la marca de clase (x_i) de un intervalo [L_i, L_s\\rangle?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t07_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t07_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t07_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t07_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t07_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"},{"concept":"7.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rm_t07_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_matematico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rm_t07_s02_c01",
+    "concept": "7.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Los datos 2, 4 y 6 se tratan como población completa. ¿Cuál es su varianza poblacional?",
+    "options": [
+      "$\\frac{8}{3}$",
+      "$\\frac{16}{3}$",
+      "$\\frac{4}{3}$",
+      "$8$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Dividimos la suma de desviaciones cuadradas entre N=3.\n2. Desarrollamos: $\\mu=4;\\quad \\sigma^2=[(2-4)^2+(4-4)^2+(6-4)^2]/3$.\n3. El resultado es $\\frac{8}{3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s02_c02",
+    "concept": "7.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Los datos 2, 4 y 6 se tratan como muestra. ¿Cuál es la varianza muestral corregida?",
+    "options": [
+      "$8$",
+      "$2$",
+      "$12$",
+      "$4$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La corrección usa el denominador n−1=2.\n2. Desarrollamos: $s^2=[(2-4)^2+(4-4)^2+(6-4)^2]/(3-1)$.\n3. El resultado es $4$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "concept": "7.2.3",
+    "correctIndex": 2,
+    "explanation": "1. La media es (1 + 2 + 2 + 2 + 3) / 5 = 10 / 5 = 2.\n2. El dato central del listado ordenado es 2, que es la mediana.\n3. El valor más frecuente también es 2, que es la moda.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "rm_t07_s02_c03",
+    "options": [
+      "2, 1, 3",
+      "1, 2, 2",
+      "2, 2, 2",
+      "3, 2, 1"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Para los datos 1, 2, 2, 2 y 3, ¿cuáles son la media, la mediana y la moda?",
+    "subject": "raz_matematico",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.4",
+    "correctIndex": 3,
+    "explanation": "1. La marca de clase es el punto medio de los límites del intervalo.\n2. Sumamos 10 + 20 = 30.\n3. Dividimos entre dos: 30 / 2 = 15. Que el extremo 20 esté excluido no cambia el punto medio.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "rm_t07_s02_c04",
+    "options": [
+      "10",
+      "20",
+      "30",
+      "15"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "¿Cuál es la marca de clase del intervalo [10, 20)?",
+    "subject": "raz_matematico",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "rm_t07_s02_c05",
+    "concept": "7.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "En una población, todos los valores aumentan 5 unidades. ¿En cuánto aumenta su media?",
+    "options": [
+      "$5$",
+      "$10$",
+      "$15$",
+      "$6$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El mismo desplazamiento se suma al promedio.\n2. Desarrollamos: $\\mu_{nuevo}=\\mu+5$.\n3. El resultado es $5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s02_c06",
+    "concept": "7.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Una población tiene varianza 3. Todos sus datos se multiplican por 2. ¿Cuál es la nueva varianza?",
+    "options": [
+      "$24$",
+      "$6$",
+      "$36$",
+      "$12$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La varianza se multiplica por el cuadrado del factor.\n2. Desarrollamos: $\\sigma_{nuevo}^2=2^2(3)$.\n3. El resultado es $12$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s02_c07",
+    "concept": "7.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Una tabla agrupada tiene marcas de clase 5 y 15, con frecuencias 2 y 6. ¿Cuál es la media estimada mediante esas marcas?",
+    "options": [
+      "$6.25$",
+      "$37.5$",
+      "$12.5$",
+      "$25$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Usamos una media ponderada de los puntos medios; es una estimación.\n2. Desarrollamos: $\\bar x_{est}=[5(2)+15(6)]/(2+6)$.\n3. El resultado es $12.5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s02_c08",
+    "concept": "7.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Para los datos ordenados 1, 3, 5, 7, 9 y 11, define Q1 como la mediana de la mitad inferior de tres datos. ¿Cuánto vale Q1?",
+    "options": [
+      "$1$",
+      "$3$",
+      "$6$",
+      "$9$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La convención indicada toma la mediana de 1, 3 y 5.\n2. Desarrollamos: $Q_1=3$.\n3. El resultado es $3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s02_c09",
+    "concept": "7.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "Una categoría tiene frecuencia 9 en una muestra de 30. ¿Qué porcentaje representa?",
+    "options": [
+      "$30\\,\\mathrm{\\%}$",
+      "$60\\,\\mathrm{\\%}$",
+      "$15\\,\\mathrm{\\%}$",
+      "$90\\,\\mathrm{\\%}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Multiplicamos la frecuencia relativa por cien.\n2. Desarrollamos: $p=(9/30)100$.\n3. El resultado es $30\\,\\mathrm{\\%}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s02_c10",
+    "concept": "7.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "El promedio de 6 datos es 10. Se añade el dato 17. ¿Cuál es la nueva media?",
+    "options": [
+      "$22$",
+      "$33$",
+      "$12$",
+      "$11$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Reconstruimos la suma anterior y actualizamos suma y cantidad.\n2. Desarrollamos: $\\bar x=(6(10)+17)/7$.\n3. El resultado es $11$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rm_t07_s02_c11",
+    "concept": "7.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_matematico",
+    "semana": 7,
+    "statement": "La correlación entre dos variables observadas…",
+    "options": [
+      "Obliga a que sus medias sean iguales.",
+      "Impide la existencia de otras variables relacionadas.",
+      "No demuestra por sí sola una relación causal.",
+      "Prueba siempre que una causa la otra."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La correlación describe una asociación según el modelo.\n2. Podría haber variables comunes u otras explicaciones.\n3. La causalidad exige información adicional.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_matematico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

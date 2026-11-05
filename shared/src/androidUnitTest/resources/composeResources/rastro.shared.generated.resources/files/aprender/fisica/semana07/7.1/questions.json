@@ -1,1 +1,200 @@
-[{"concept":"7.1.1","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s01_c01","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.1.2","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s01_c02","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t07_s01_c01",
+    "concept": "7.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Convierte 25 °C a kelvin usando T(K)=t(°C)+273.15.",
+    "options": [
+      "$298.15\\,\\mathrm{K}$",
+      "$596.3\\,\\mathrm{K}$",
+      "$149.075\\,\\mathrm{K}$",
+      "$894.45\\,\\mathrm{K}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La escala kelvin tiene un desplazamiento fijo respecto de Celsius.\n2. Sustituimos los datos: $T=25+273.15$.\n3. El resultado pedido es $298.15\\,\\mathrm{K}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s01_c02",
+    "concept": "7.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Convierte 20 °C a grados Fahrenheit.",
+    "options": [
+      "$136\\,\\mathrm{^\\circ F}$",
+      "$34\\,\\mathrm{^\\circ F}$",
+      "$204\\,\\mathrm{^\\circ F}$",
+      "$68\\,\\mathrm{^\\circ F}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Usamos la relación entre los dos intervalos y el origen.\n2. Sustituimos los datos: $t_F=9(20)/5+32$.\n3. El resultado pedido es $68\\,\\mathrm{^\\circ F}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s01_c03",
+    "concept": "7.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Una temperatura sube de 10 °C a 35 °C. ¿Cuánto aumenta en kelvin?",
+    "options": [
+      "$12.5\\,\\mathrm{K}$",
+      "$75\\,\\mathrm{K}$",
+      "$25\\,\\mathrm{K}$",
+      "$50\\,\\mathrm{K}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Los intervalos Celsius y kelvin tienen el mismo tamaño.\n2. Sustituimos los datos: $\\Delta T=35-10$.\n3. El resultado pedido es $25\\,\\mathrm{K}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s01_c04",
+    "concept": "7.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Una masa de 2 kg, con calor específico 100 J/(kg·K), aumenta 5 K sin cambiar de fase. ¿Cuánto calor recibe?",
+    "options": [
+      "$3000\\,\\mathrm{J}$",
+      "$1000\\,\\mathrm{J}$",
+      "$2000\\,\\mathrm{J}$",
+      "$500\\,\\mathrm{J}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Sin cambio de fase se usa calor sensible.\n2. Sustituimos los datos: $Q=mc\\Delta T=2(100)(5)$.\n3. El resultado pedido es $1000\\,\\mathrm{J}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s01_c05",
+    "concept": "7.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Un cuerpo recibe 600 J y su temperatura sube 3 K. ¿Cuál es su capacidad calorífica en ese intervalo?",
+    "options": [
+      "$200\\,\\mathrm{J/K}$",
+      "$400\\,\\mathrm{J/K}$",
+      "$100\\,\\mathrm{J/K}$",
+      "$600\\,\\mathrm{J/K}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La capacidad calorífica divide calor entre cambio de temperatura.\n2. Sustituimos los datos: $C=Q/\\Delta T=600/3$.\n3. El resultado pedido es $200\\,\\mathrm{J/K}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s01_c06",
+    "concept": "7.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Una masa de 0.5 kg recibe 1000 J y aumenta 4 K sin cambio de fase. ¿Cuál es su calor específico?",
+    "options": [
+      "$1000\\,\\mathrm{J/(kg\\,K)}$",
+      "$250\\,\\mathrm{J/(kg\\,K)}$",
+      "$1500\\,\\mathrm{J/(kg\\,K)}$",
+      "$500\\,\\mathrm{J/(kg\\,K)}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Despejamos c en la ecuación del calor sensible.\n2. Sustituimos los datos: $c=Q/(m\\Delta T)=1000/(0.5\\cdot4)$.\n3. El resultado pedido es $500\\,\\mathrm{J/(kg\\,K)}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s01_c07",
+    "concept": "7.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Un cuerpo de capacidad calorífica 50 J/K pierde 200 J. ¿Cuál es su cambio de temperatura con signo?",
+    "options": [
+      "$-2\\,\\mathrm{K}$",
+      "$-12\\,\\mathrm{K}$",
+      "$-4\\,\\mathrm{K}$",
+      "$-8\\,\\mathrm{K}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El calor perdido se representa con Q negativo.\n2. Sustituimos los datos: $\\Delta T=Q/C=-200/50$.\n3. El resultado pedido es $-4\\,\\mathrm{K}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s01_c08",
+    "concept": "7.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "¿A cuántos grados Celsius corresponden 300 K usando 273.15 como desplazamiento?",
+    "options": [
+      "$80.55\\,\\mathrm{^\\circ C}$",
+      "$26.85\\,\\mathrm{^\\circ C}$",
+      "$53.7\\,\\mathrm{^\\circ C}$",
+      "$13.425\\,\\mathrm{^\\circ C}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Invertimos la conversión a kelvin.\n2. Sustituimos los datos: $t=300-273.15$.\n3. El resultado pedido es $26.85\\,\\mathrm{^\\circ C}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s01_c09",
+    "concept": "7.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Una diferencia de temperatura es 18 °F. ¿A cuántos kelvin equivale ese intervalo?",
+    "options": [
+      "$10\\,\\mathrm{K}$",
+      "$20\\,\\mathrm{K}$",
+      "$5\\,\\mathrm{K}$",
+      "$30\\,\\mathrm{K}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Para intervalos no se suma ni resta el 32 de los orígenes.\n2. Sustituimos los datos: $\\Delta T_K=5(18)/9$.\n3. El resultado pedido es $10\\,\\mathrm{K}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s01_c10",
+    "concept": "7.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Calor y temperatura se distinguen porque…",
+    "options": [
+      "El calor es energía transferida por diferencia de temperatura; la temperatura caracteriza el estado térmico.",
+      "Son siempre la misma magnitud.",
+      "El calor se mide en kelvin y la temperatura en joule.",
+      "La temperatura depende únicamente de la masa."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La temperatura describe el estado térmico.\n2. El calor es energía que cruza una frontera por diferencia de temperatura.\n3. Por eso sus significados y unidades son diferentes.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s01_c11",
+    "concept": "7.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Dos cuerpos aislados del exterior están en equilibrio térmico cuando…",
+    "options": [
+      "Tienen igual masa.",
+      "Tienen la misma temperatura y no hay transferencia neta de calor entre ellos.",
+      "Contienen la misma cantidad de materia.",
+      "Ambos están a 0 °C."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El contacto térmico permite intercambio de energía.\n2. La transferencia neta cesa al igualarse las temperaturas.\n3. No se exige igualdad de masas ni una temperatura particular.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

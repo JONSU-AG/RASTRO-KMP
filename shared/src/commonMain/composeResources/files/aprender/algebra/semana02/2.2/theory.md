@@ -1,123 +1,100 @@
-## 1. DESARROLLO TEÓRICO AVANZADO - PARTE II
-1. |x| \ge 0, \quad \forall x \in \mathbb{R}; y |x| = 0 \iff x = 0.
-2. |-x| = |x|.
-3. |x \cdot y| = |x| \cdot |y|.
-4. \left|\frac{x}{y}\right| = \frac{|x|}{|y|} \quad (y \neq 0).
-5. |x|^2 = |x^2| = x^2 \iff \sqrt{x^2} = |x| *(¡Atención crucial de examen!)*.
-6. **Desigualdad Triangular:**
-   |a + b| \le |a| + |b|, \quad \forall a, b \in \mathbb{R}
-   La igualdad se verifica si y solo si a \cdot b \ge 0.
-7. |a - b| \ge ||a| - |b||.
+# Ecuaciones, inecuaciones y cotas con valor absoluto
 
----
+## Introducción
+Una expresión con valor absoluto se puede interpretar como una distancia o analizar según el signo de su interior. Ambas vías son válidas. La elección depende del problema: lo importante es conservar las condiciones que hacen equivalente cada transformación.
 
-### 3.4 Ecuaciones e Inecuaciones con Valor Absoluto
+Antes de separar casos, observa el término con el que se compara la distancia. Una distancia no puede ser negativa. El caso cero tampoco se comporta exactamente como una distancia positiva: puede dar un único punto, el conjunto vacío, toda la recta o dos rayos abiertos, según el signo de la relación.
 
-#### 1. Ecuaciones con Valor Absoluto
-* **Forma 1:** |A| = b
-  |A| = b \iff [b \ge 0] \land [A = b \lor A = -b]
-* **Forma 2:** |A| = |B|
-  |A| = |B| \iff A = B \lor A = -B
-  *(Alternativa cuadrática: |A|^2 = |B|^2 \iff A^2 - B^2 = 0 \iff (A - B)(A + B) = 0)*.
+```mermaid
+flowchart TD
+A[Valor absoluto: resolver y comprobar] --> B[Ecuaciones]
+A --> C[Inecuaciones]
+A --> D[Cotas]
+B --> E[Distancia positiva: dos puntos]
+B --> F[Distancia cero: un punto]
+B --> G[Distancia negativa: sin solución]
+C --> H[Interior o exterior del intervalo]
+C --> I[Casos cero y negativos]
+C --> J[Comparar módulos al cuadrado]
+D --> K[Mínimos y máximos]
+D --> L[Desigualdad triangular]
+D --> M[Medias con sus condiciones]
+```
 
-#### 2. Inecuaciones con Valor Absoluto
-* **Forma Menor o Igual:** |A| \le b
-  |A| \le b \iff [b \ge 0] \land [-b \le A \le b]
-* **Forma Mayor o Igual:** |A| \ge b
-  |A| \ge b \iff A \ge b \lor A \le -b
-* **Forma con Dos Valores Absolutos:** |A| \le |B|
-  |A| \le |B| \iff A^2 \le B^2 \iff A^2 - B^2 \le 0 \iff (A - B)(A + B) \le 0
+## 2.2.1 · Ecuaciones de distancia
+La ecuación $\lvert x-a\rvert=r$ pide posiciones que estén exactamente a distancia $r$ del centro $a$. Si $r>0$, hay dos: $x=a-r$ y $x=a+r$. Si $r=0$, ambas expresiones coinciden y solo queda $x=a$. Si $r<0$, no existe una distancia real que cumpla la condición.
 
----
+| Condición de r | Solución de $\lvert x-a\rvert=r$ | Interpretación |
+| --- | --- | --- |
+| $r>0$ | $\{a-r,a+r\}$ | Dos puntos a la misma distancia del centro. |
+| $r=0$ | $\{a\}$ | Un solo punto, el centro. |
+| $r<0$ | $\varnothing$ | Una distancia no puede ser negativa. |
 
-### 3.5 Desigualdades Notables
-1. Para todo número real x \neq 0:
-   x + \frac{1}{x} \ge 2 \quad (\text{si } x > 0)
-   x + \frac{1}{x} \le -2 \quad (\text{si } x < 0)
-2. **Desigualdad de las Medias (Para reales positivos a, b > 0):**
-   MA \ge MG \ge MH \implies \frac{a + b}{2} \ge \sqrt{ab} \ge \frac{2ab}{a + b}
-   La igualdad MA = MG se cumple si y solo si a = b.
-3. Para todo a, b \in \mathbb{R}:
-   a^2 + b^2 \ge 2ab
-   (a + b)^2 \ge 4ab
+**Ejemplo resuelto.** Para $\lvert x-4\rvert=5$, el centro es $4$ y la distancia es $5$. Se obtiene $x=4-5=-1$ o $x=4+5=9$. La mayor solución es $9$, pero el conjunto completo contiene los dos valores. Al comprobar, $\lvert-1-4\rvert=5$ y $\lvert9-4\rvert=5$.
 
----
+Si se tiene $\lvert A(x)\rvert=B(x)$, antes de elegir ramas debe imponerse $B(x)\ge0$ y conservar el dominio de las expresiones. Después se resuelven $A(x)=B(x)$ y $A(x)=-B(x)$, manteniendo solo los resultados que cumplen la condición y el enunciado original.
 
+Por ejemplo, $\lvert3x-5\rvert=2x-10$ exige $x\ge5$. La primera rama da $x=-5$ y la segunda $x=3$. Ninguno cumple esa condición. Por tanto, el conjunto solución es vacío; no corresponde aceptar las dos raíces obtenidas por cálculo sin verificarlas.
 
-## 2. FORMULARIO MAESTRO, ARTIFICIOS Y HACKING PREUNIVERSITARIO
-| **Inecuación |A| \ge B** | |A| \ge B \iff A \ge B \lor A \le -B |
-| **Inecuación Cuadrática Modal** | |A| \le |B| \iff (A - B)(A + B) \le 0 |
-| **Desigualdad Triangular** | |a + b| \le |a| + |b| \quad (\text{Igualdad } \iff ab \ge 0) |
-| **Desigualdad de Medias** | \frac{a+b}{2} \ge \sqrt{ab} \quad (a, b > 0) |
-| **Acotamiento Inverso** | x + \frac{1}{x} \ge 2 \quad (\forall x > 0) |
+La equivalencia $\lvert A\rvert=\lvert B\rvert$ puede expresarse como $A=B$ o $A=-B$, para valores reales definidos. También equivale a $A^2=B^2$. En cambio, quitar directamente ambos valores absolutos dejando solo $A=B$ descartaría una rama posible.
 
----
+## 2.2.2 · Inecuaciones: interior, exterior y extremos
+Para $r>0$, $\lvert x-a\rvert<r$ pide el interior del intervalo $(a-r,a+r)$. Con $\le$ se incluyen los extremos. Las relaciones $>$ y $\ge$ piden puntos exteriores, sin olvidar si la distancia exacta está admitida.
 
+| Relación, con $r>0$ | Forma equivalente | Solución |
+| --- | --- | --- |
+| $\lvert x-a\rvert<r$ | $a-r<x<a+r$ | $(a-r,a+r)$ |
+| $\lvert x-a\rvert\le r$ | $a-r\le x\le a+r$ | $[a-r,a+r]$ |
+| $\lvert x-a\rvert>r$ | $x<a-r$ o $x>a+r$ | $(-\infty,a-r)\cup(a+r,+\infty)$ |
+| $\lvert x-a\rvert\ge r$ | $x\le a-r$ o $x\ge a+r$ | $(-\infty,a-r]\cup[a+r,+\infty)$ |
 
-### 6. TÉCNICAS Y ARTIFICIOS DE CÁLCULO (HACKING PREUNIVERSITARIO)
+**Ejemplo resuelto.** En $\lvert x-4\rvert<5$, se obtiene $-1<x<9$. Los extremos no se incluyen: los enteros posibles son $0,1,2,3,4,5,6,7,8$, nueve en total. Contar desde $-1$ hasta $9$ como si el intervalo fuera cerrado daría una respuesta distinta y equivocada.
 
-### Artificio 1: Elevación al Cuadrado en Comparación de Módulos
-Para resolver inecuaciones del tipo:
-|2x - 3| < |x + 4|
-* **Peligro Común:** Intentar abrir 4 ramas de signos por zonas críticas (largo y propenso a errores).
-* **El Hack Cuadrático Inmediato:** Como ambos miembros son estrictamente no negativos, elevamos al cuadrado:
-  (2x - 3)^2 < (x + 4)^2
-  (2x - 3)^2 - (x + 4)^2 < 0
-* Aplicamos **diferencia de cuadrados** (u - v)(u + v) < 0:
-  [(2x - 3) - (x + 4)] \cdot [(2x - 3) + (x + 4)] < 0
-  (x - 7)(3x + 1) < 0
-* Puntos críticos inmediatos: x = -\frac{1}{3} y x = 7.
-* Como es < 0, tomamos la zona negativa:
-  x \in \left\langle -\frac{1}{3}, 7 \right\rangle
-* ¡Resuelto en menos de 20 segundos sin zonas críticas!
+El caso $r=0$ requiere su propia lectura. $\lvert x-a\rvert<0$ no tiene soluciones; $\lvert x-a\rvert\le0$ solo admite el centro; $\lvert x-a\rvert>0$ admite todos los reales salvo el centro; $\lvert x-a\rvert\ge0$ admite toda la recta. Los dos rayos de esta última relación no deben describirse como disjuntos, pues juntos ya incluyen todo.
 
----
+Si $r<0$, las relaciones $\lvert x-a\rvert<r$ y $\lvert x-a\rvert\le r$ son imposibles. Las relaciones $\lvert x-a\rvert>r$ y $\lvert x-a\rvert\ge r$ son verdaderas para todo $x$ real. La regla gráfica de interior y exterior presupone una distancia no negativa y no debe aplicarse sin revisar ese dato.
 
+| Comparación con cero | Solución | Razón |
+| --- | --- | --- |
+| $\lvert x-a\rvert<0$ | $\varnothing$ | El valor absoluto no es negativo. |
+| $\lvert x-a\rvert\le0$ | $\{a\}$ | Solo una distancia nula cumple. |
+| $\lvert x-a\rvert>0$ | $\mathbb{R}\setminus\{a\}$ | Se excluye únicamente el centro. |
+| $\lvert x-a\rvert\ge0$ | $\mathbb{R}$ | La propiedad vale para cualquier real. |
 
-### 5. MNEMOTECNIAS DE COMBATE PREUNIVERSITARIO
+## 2.2.3 · Comparación de módulos y análisis de signos
+Elevar al cuadrado conserva una comparación entre cantidades **no negativas**: para $u,v\ge0$, $u<v$ equivale a $u^2<v^2$. Esto permite comparar dos valores absolutos, pero no legitima elevar cualquier desigualdad al cuadrado sin examinar los signos.
 
-### 1. Inecuaciones de Valor Absoluto: "El Menor Encierra, el Mayor Separa"
-* **|x| \le b (Menor):** El valor absoluto queda **encerrado en un sándwich**:
-  -b \le x \le b \quad (\text{Intervalo cerrado único})
-* **|x| \ge b (Mayor):** La solución se **separa en dos alas infinitas**:
-  x \le -b \quad \lor \quad x \ge b \quad (\text{Unión de dos rayos disjuntos})
+Resuelve $\lvert2x-3\rvert<\lvert x+4\rvert$. Como ambos miembros son no negativos, se puede escribir $(2x-3)^2<(x+4)^2$. Al pasar todo a la izquierda y factorizar la diferencia de cuadrados, queda $(x-7)(3x+1)<0$.
 
-### 2. Radical Cuadrático: "La Raíz de un Cuadrado no es la Base, es su Módulo"
-* \sqrt{x^2} = |x|
-* ¡Nunca canceles la raíz con el exponente 2 sin colocar valor absoluto! (Si x = -5, \sqrt{(-5)^2} = \sqrt{25} = 5 = |-5| \neq -5).
+Los puntos críticos son $-1/3$ y $7$. Entre ellos el primer factor es negativo y el segundo positivo, por lo que el producto es negativo. Fuera de ese intervalo ambos factores tienen el mismo signo. Como la relación es estricta, no se incluyen los puntos donde el producto se anula: $x\in(-1/3,7)$.
 
----
+Este procedimiento no vuelve incorrecto el análisis por regiones de signo del interior de los módulos. Ambos métodos pueden ser válidos. Debe elegirse el que permita una solución clara y verificable, no descartar un procedimiento correcto por presentarlo como menos rápido.
 
+Una segunda precaución aparece al multiplicar por una variable de signo desconocido. En $1/x<2$, el dominio exige $x\ne0$. No se puede pasar de inmediato a $1<2x$ para todo el dominio. Si $x<0$, el cociente ya es negativo y satisface la relación. Si $x>0$, se obtiene $x>1/2$. La solución es $(-\infty,0)\cup(1/2,+\infty)$.
 
-## 3. ZONA DE TRAMPAS Y DISTRACTORES DE EXAMEN
-### 7. ZONA DE TRAMPAS Y DISTRACTORES ("¡PELIGRO EXAMEN!")
+## 2.2.4 · Cotas, extremos y desigualdades
+Como $\lvert x-a\rvert\ge0$, la expresión $\lvert x-a\rvert+k$ tiene mínimo $k$, alcanzado en $x=a$. A su vez, $k-\lvert x-a\rvert$ tiene máximo $k$, alcanzado en el mismo punto. El signo que acompaña al valor absoluto determina si se busca un mínimo o un máximo.
 
-> [!CAUTION]
-> ### Trampa 1: Olvidar la Condición de Existencia en |A| = B
-> Si te plantean: |3x - 5| = 2x - 10:
-> - **El postulado obligatorio es:** B \ge 0 \implies 2x - 10 \ge 0 \implies x \ge 5.
-> - Si operas ciegamente: 3x - 5 = 2x - 10 \implies x = -5, o 3x - 5 = -(2x - 10) \implies 5x = 15 \implies x = 3.
-> - Ambas soluciones aparentes (-5 y 3) violan la condición x \ge 5.
-> - **Conjunto Solución Real:** S = \emptyset (Vacío).
-> Si no verificas la condición de no negatividad de B, marcarás una opción con raíces espurias.
+| Expresión, con x real | Extremo | Dónde se alcanza |
+| --- | --- | --- |
+| $\lvert x-4\rvert+5$ | Mínimo $5$ | $x=4$ |
+| $5-\lvert x-4\rvert$ | Máximo $5$ | $x=4$ |
+| $\lvert x-5\rvert+6$ | Mínimo $6$ | $x=5$ |
+| $6-\lvert x-5\rvert$ | Máximo $6$ | $x=5$ |
 
-> [!WARNING]
-> ### Trampa 2: Multiplicar Inecuaciones por Variables de Signo Desconocido
-> Si tienes \frac{1}{x} < 2, **NO puedes multiplicar por x** diciendo 1 < 2x, porque desconoces si x es positivo o negativo.
-> **Procedimiento obligatorio:** Pasar todo al primer miembro y aplicar puntos críticos:
-> \frac{1}{x} - 2 < 0 \implies \frac{1 - 2x}{x} < 0 \implies x \in \langle -\infty, 0 \rangle \cup \left\langle \frac{1}{2}, +\infty \right\rangle
+No se afirma que la primera expresión tenga también máximo o que la segunda tenga mínimo en toda la recta. El valor absoluto puede crecer sin cota cuando $x$ se aleja del centro. Una gráfica o un ejemplo numérico ayudan a distinguir qué extremo está garantizado.
 
----
+La **desigualdad triangular** establece $\lvert a+b\rvert\le\lvert a\rvert+\lvert b\rvert$; la igualdad se produce cuando $ab\ge0$. La desigualdad inversa da $\lvert a-b\rvert\ge\bigl\lvert\lvert a\rvert-\lvert b\rvert\bigr\rvert$. Ambas comparan distancias y no justifican reemplazar siempre un módulo de suma por la suma de módulos.
 
+De $(a-b)^2\ge0$ se obtiene $a^2+b^2\ge2ab$. Para $a,b\ge0$ se deduce la desigualdad entre media aritmética y geométrica: $(a+b)/2\ge\sqrt{ab}$, con igualdad cuando $a=b$. Si además se emplea la media armónica $2ab/(a+b)$, conviene trabajar con $a,b>0$ para que toda la cadena quede definida sin casos adicionales.
 
-## 4. MODELOS DE EXAMEN Y APLICACIÓN DECO
-### 8. APLICACIÓN AL MUNDO REAL Y CONTEXTO DECO
+Para $x>0$, $x+1/x\ge2$; para $x<0$, $x+1/x\le-2$. No es válido borrar la condición de signo y usar la primera cota para todo real no nulo. Por ejemplo, $x=-1$ produce $-2$, no una cantidad mayor o igual que $2$.
 
-### Tolerancias Dimensionales en Mecánica de Precisión y Minería
-En la fabricación de pernos de anclaje para molinos de bolas en minera Cerro Verde, el plano exige un diámetro nominal D_0 = 50\text{ mm} con una tolerancia máxima admisible de \pm 0.08\text{ mm}.
-La especificación de control de calidad se formaliza como una inecuación con valor absoluto:
-|D - 50| \le 0.08
--0.08 \le D - 50 \le 0.08 \implies 49.92\text{ mm} \le D \le 50.08\text{ mm}
-Toda pieza cuyo diámetro caiga fuera de este intervalo cerrado [49.92, 50.08] se descarta como merma metalúrgica.
+## Aplicación con datos supuestos
+Supón que una pieza debe medir $50$ mm y se admite una desviación máxima de $0.08$ mm. El modelo es $\lvert D-50\rvert\le0.08$, de donde $49.92\le D\le50.08$. Se incluyen los límites porque la desviación máxima también está permitida. Es un ejemplo construido para estudiar tolerancia; no se atribuye a una empresa o especificación industrial real.
 
----
+## Importante
+Revisa el dominio y el signo del término comparado con el valor absoluto. Cero y los valores negativos merecen casos explícitos. Elevar al cuadrado una comparación exige condiciones; multiplicar una desigualdad por una cantidad negativa invierte su orientación. Comprueba los candidatos en la expresión original y distingue extremos alcanzados de cotas que no pertenecen al conjunto.
+
+## Síntesis
+Interpretar valor absoluto como distancia explica ecuaciones, intervalos y casos límite. La factorización y el análisis de signos permiten comparaciones más complejas, mientras la no negatividad proporciona cotas y extremos. Cada transformación debe conservar su ámbito de validez: una regla aplicada sin sus condiciones puede cambiar el conjunto solución.

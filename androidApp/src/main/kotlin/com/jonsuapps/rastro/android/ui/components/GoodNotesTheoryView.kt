@@ -369,7 +369,7 @@ fun GoodNotesTheoryView(
                             )
                             Spacer(modifier = Modifier.width(6.dp))
                             Text(
-                                text = "¡Fija de Admisión!",
+                                text = "Importante",
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.Bold,
                                 color = if (theme.isDark) Color(0xFFFDBA74) else Color(0xFF9A3412)

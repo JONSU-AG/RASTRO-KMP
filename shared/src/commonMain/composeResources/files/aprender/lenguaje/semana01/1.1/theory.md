@@ -1,115 +1,179 @@
 # El Circuito Comunicativo: Fases, Elementos y Fenómenos Interferentes
 
-## INTRODUCCIÓN
-La comunicación es el proceso social más frecuente de tu vida y, a la vez, el más preguntado del curso de Lenguaje en admisión UNSA. Cada vez que hablas, lees, escribes o interpretas una señal, activas un circuito preciso con fases, elementos y fenómenos que pueden ayudar o sabotear el mensaje. Entender ese circuito es la llave para no confundir nunca más el canal con el código ni el referente con el contexto.
+Cuando una profesora explica una tarea y un estudiante pregunta qué debe entregar, se produce un intercambio de mensajes. Para analizarlo conviene distinguir quién participa, qué signos utiliza, por qué medio se transmite la señal y en qué situación se interpreta. Estas distinciones ayudan a describir el caso; no convierten la comunicación en un mecanismo sin ambigüedades.
 
-En esta lección recorrerás el camino completo de un mensaje. Partirás de la mente del emisor que selecciona signos, pasarás por el cuerpo que los emite, seguirás las ondas que viajan por el medio físico y llegarás a la mente del receptor que los interpreta. Verás además qué pasa cuando aparece ruido, cómo se defiende el mensaje con redundancia y cómo el emisor sabe si fue comprendido gracias a la retroalimentación.
+En esta lección se separa **referente**, aquello de lo que se habla, de **situación comunicativa**, las circunstancias del intercambio. Otros modelos usan contexto con un alcance más amplio e incluyen en él el referente. Al resolver una pregunta, identifica la distinción que establece el caso antes de contar elementos de memoria.
 
-Al final podrás desarmar cualquier caso de examen. Sabrás por qué el papel es canal y el castellano es código en la lectura de una novela, por qué dos idiomas distintos bloquean el código aunque el canal esté perfecto, y por qué la palabra fuego significa cosas opuestas según el contexto donde se grite.
+## Mapa para organizar el análisis
 
-## DESARROLLO DEL TEMA
+El mapa agrupa conceptos. Sus ramas no representan el recorrido físico de una señal ni etapas que deban suceder siempre una después de otra.
 
-# 1.1.1 — La comunicación: concepto y las tres fases
-**¿Qué es?** La comunicación es un proceso social, dinámico e interactivo mediante el cual un emisor transmite intencionalmente información como ideas, emociones, órdenes o datos a un receptor, utilizando un sistema de signos compartido a través de un canal determinado. Es social porque ocurre entre miembros de una comunidad, es dinámica porque los roles cambian, es interactiva porque espera una respuesta, y es intencional porque el emisor quiere producir un efecto.
+```mermaid
+graph TD
+ ROOT["Análisis del intercambio comunicativo"]
+ A["Participantes y mensaje"]
+ A1["Emisor: produce el mensaje; receptor: lo recibe e interpreta"]
+ A2["Mensaje: información organizada en signos"]
+ B["Sistema y transmisión"]
+ B1["Código: signos y reglas; canal: vía o medio de transmisión"]
+ B2["Distinguir soporte material, señal y medio de propagación"]
+ C["Interpretación"]
+ C1["Referente: aquello de lo que se habla"]
+ C2["Situación: circunstancias y conocimientos relevantes"]
+ D["Ajustes y dificultades"]
+ D1["Ruido: interferencia; redundancia: refuerzo informativo"]
+ D2["Retroalimentación: información que vuelve y permite ajustar"]
+ ROOT --> A
+ A --> A1
+ A --> A2
+ ROOT --> B
+ B --> B1
+ B --> B2
+ ROOT --> C
+ C --> C1
+ C --> C2
+ ROOT --> D
+ D --> D1
+ D --> D2
+```
 
-**¿Cómo funciona?** Todo acto comunicativo atraviesa tres fases encadenadas que van de la mente al mundo físico y de vuelta a otra mente.
+## 1.1.1 — Comunicación, codificación y fases
 
-- **Fase psíquica.** Ocurre en el cerebro. En el emisor se produce la ideación, es decir, la formación de la idea, y luego la encodificación, que es la selección y combinación de signos del código para construir el mensaje. En el receptor ocurre el proceso inverso, la decodificación, que es la asociación de cada signo recibido con su significado. Por eso la pregunta sobre dónde ocurre la selección mental de signos se responde con fase psíquica del emisor, y la pregunta sobre el proceso inverso del receptor se responde con decodificación. Es un trabajo puramente mental, anterior a mover labios, manos u ojos.
-- **Fase fisiológica.** Ocurre en el cuerpo. En el emisor, impulsos nerviosos activan los órganos fonadores como pulmones, cuerdas vocales, lengua y labios para hablar, u órganos motores como manos y rostro para escribir o gesticular. En el receptor se activan los órganos receptores como oído y vista. Si esta fase falla por sordera temporal, mala vocalización o letra ilegible, el mensaje se degrada aunque la idea fuese clara.
-- **Fase física.** Ocurre en el ambiente. Es el desplazamiento de ondas sonoras o luminosas a través del medio. La voz viaja como ondas sonoras por el aire, un gesto viaja como luz hasta la vista, una carta viaja como marcas de tinta sobre papel transportado en el espacio. Sin esta fase no hay transporte material del mensaje.
+### Elaborar e interpretar un mensaje
 
-**¿Por qué?** Porque comunicar no es solo pensar ni solo emitir sonidos. Si falta la fase psíquica no hay mensaje estructurado, si falta la fisiológica no hay emisión ni captación corporal, y si falta la física no hay desplazamiento de la señal. Las tres deben encadenarse en orden. Un estudiante que reflexiona en silencio antes de marcar su tarjeta se queda en fase psíquica intrapersonal, mientras que dos amigos que conversan en un parque activan las tres fases completas con aire y ondas sonoras como fase física.
+La comunicación humana comprende intercambios de información mediante signos e interpretación en una situación. Muchos mensajes se producen con una intención reconocible: informar, pedir, explicar o expresar una emoción. Sin embargo, también podemos interpretar una conducta que alguien no realizó para comunicarnos algo. Por eso no se debe afirmar que toda información que recibimos fue enviada deliberadamente.
 
-**¿Cómo se diferencia?** La fase psíquica es mental y maneja signos y significados, con encodificación en el emisor y decodificación en el receptor. La fase fisiológica es corporal y maneja órganos y nervios, con fonadores y motores en el emisor y oído y vista en el receptor. La fase física es ambiental y maneja ondas y soportes, con desplazamiento por el canal. Confundir fase motora o fisiológica con selección mental es un distractor clásico. La selección de signos es siempre psíquica.
+**Codificar**, también llamado encodificar en algunos materiales, es seleccionar y organizar signos para elaborar un mensaje. Ana quiere avisar que la biblioteca cerrará a las seis y elige esas palabras. **Decodificar** es reconocer e interpretar los signos recibidos: Luis lee el aviso y relaciona las palabras con su significado.
 
-# 1.1.2 — Emisor, receptor, mensaje y código
-**¿Qué es?** Son los cuatro polos personales y sígnicos del circuito. El emisor o encodificador es el sujeto, fuente o grupo que concibe, estructura y emite el mensaje codificado con una intención determinada. El receptor o decodificador o destinatario es el sujeto o audiencia que recibe el mensaje por sus sentidos y realiza el proceso inverso de descifrar e interpretar los signos. El mensaje es el contenido cognitivo, afectivo o volitivo transmitido, es decir, la información organizada en signos. El código es el sistema convencional y estructurado de signos con reglas combinatorias que emisor y receptor deben compartir forzosamente para comprenderse, como el idioma castellano, el código Morse, el sistema Braille o las luces del semáforo.
+Interpretar no consiste en recuperar mecánicamente la intención exacta de otra persona. El lector puede reconocer todas las palabras y aun así desconocer a qué biblioteca se refiere el aviso. La situación y los conocimientos disponibles intervienen en esa interpretación. Tampoco es necesario que todos los signos sean palabras: una señal acordada con la mano puede comunicar una instrucción.
 
-**¿Cómo funciona?** El emisor parte de una intención, por ejemplo informar, ordenar o emocionar. Encodifica esa intención eligiendo signos del código que domina. Construye el mensaje y lo lanza. El receptor capta la señal, decodifica signo por signo y reconstruye la intención. Si ambos comparten el código, hay comprensión. Si no lo comparten, hay fracaso aunque el canal sea perfecto. El caso de dos personas donde una habla solo quechua y la otra solo japonés fracasa por falta de concordancia en el código. No es problema de canal natural ni de contexto físico ni de referente, es ausencia de sistema común.
+### Las fases como modelo de estudio
 
-**¿Por qué?** Porque el código es la condición abstracta de la comprensión. Es un contrato social previo. Nadie inventa un idioma en el momento, lo hereda de su comunidad. Por eso el código es abstracto, normativo y compartido. El mensaje, en cambio, es concreto y singular, es lo que se dice esta vez con ese código. El emisor y el receptor son los actores que ponen en marcha el contrato.
+El modelo escolar distingue actividades psíquicas, fisiológicas y físicas. Sirve para identificar qué aspecto se describe en un ejemplo. **No es una secuencia rígida para toda forma de comunicación**: en una conversación escuchamos, interpretamos y preparamos una respuesta con procesos que pueden solaparse.
 
-**¿Cómo se diferencia?** El emisor concibe y encodifica, el receptor recibe y decodifica. El mensaje es el contenido puntual, el código es el sistema permanente que permite construir infinitos mensajes. El idioma español coloquial entre amigos es código, no canal. El tímpano del oyente es órgano receptor de la fase fisiológica, no canal. La voz humana articulada es el producto fisiológico, pero el canal es el medio por donde viaja, el aire con ondas sonoras. Esta distinción sostiene varias preguntas de examen y se refuerza en la sección de diferencias que confunden.
+| Fase | Qué se analiza | Ejemplo acotado |
+|---|---|---|
+| Psíquica | Elaboración e interpretación del mensaje | Elegir mentalmente las palabras de un aviso o interpretar una frase leída |
+| Fisiológica | Actividad corporal que participa en emitir o percibir | Movimientos de articulación al hablar o participación del sistema auditivo al escuchar |
+| Física | Señales, soportes y propagación por un medio | Ondas sonoras que se propagan por el aire |
 
-# 1.1.3 — Canal, referente y contexto
-**¿Qué es?** El canal es el soporte físico o medio material a través del cual viaja el mensaje desde el emisor hacia el receptor. El referente o realidad aludida es el aspecto concreto o abstracto del mundo real o imaginario al que alude el mensaje, es decir, el tema, objeto o hecho del que se habla. El contexto o circunstancia es el entorno socioespacial, temporal, cultural y psicológico donde se produce el acto, y condiciona decisivamente el significado preciso del mensaje.
+Si una pregunta describe la **selección mental de palabras**, corresponde a la codificación en la fase psíquica del emisor. Si describe movimientos de la lengua y los labios al pronunciarlas, se centra en la actividad fisiológica. Si describe ondas que llegan al interlocutor por el aire, se centra en el aspecto físico.
 
-**¿Cómo funciona?** El flujo del circuito puede visualizarse así.
+Las palabras psíquica y fisiológica separan perspectivas de análisis, no una mente independiente del cuerpo. Tampoco todas las personas utilizan los mismos órganos o modalidades: la comunicación puede ser oral, escrita, visual, táctil o apoyada por tecnología. Una dificultad auditiva no significa incapacidad para comunicarse mediante otras vías.
 
-- Punto de partida superior → **Contexto** entendido como espacio, tiempo y situación que envuelve todo
-- Segundo nivel → **Referente** entendido como realidad objetiva aludida por lo que se dice
-- Tercer nivel → **Mensaje** entendido como contenido transmitido que desciende hacia los actores
-- Nivel central → **Emisor** que encodifica → **Canal** como soporte físico → **Receptor** que decodifica
-- Nivel base → **Código** como sistema de signos que une por debajo a emisor y receptor
+## 1.1.2 — Emisor, receptor, mensaje y código
 
-El canal se clasifica en natural y artificial. Natural es el aire con ondas sonoras en la conversación oral directa cara a cara en un parque. Artificial es el papel en una carta o libro, el cable de fibra óptica, las ondas electromagnéticas en la radio, o la pantalla del teléfono celular. Por eso, si un estudiante lee una obra de Mario Vargas Llosa en su habitación, el canal es el papel impreso del libro. El idioma castellano estándar es el código, la novela como obra de arte es una caracterización cultural, y la memoria visual es un proceso interno, ninguno es soporte físico. Del mismo modo, en un mensaje oral cara a cara entre dos amigos en un parque, el canal es el aire y las ondas sonoras. El idioma español coloquial es código, el tímpano es órgano receptor, la voz articulada es emisión fisiológica.
+### Los participantes y sus papeles
 
-El referente responde a la pregunta sobre qué se habla. Si la pregunta pide el elemento que alude a la realidad concreta o abstracta, objeto o tema del mensaje, la respuesta es referente. No es contexto, que es la situación envolvente, ni código, que es el sistema, ni canal, que es el medio.
+El **emisor** produce un mensaje en el intercambio que estamos analizando. El **receptor** lo recibe e interpreta. En una conversación, los papeles se alternan: quien acaba de escuchar puede hacer una pregunta y convertirse en emisor. En un texto escrito, autor y lector pueden estar separados en el tiempo; no se requiere una respuesta inmediata para analizar el mensaje.
 
-El contexto responde a la pregunta sobre por qué el mismo mensaje cambia de sentido. La expresión fuego se interpreta como orden de práctica si se pronuncia en un polígono de tiro militar, y como alarma de incendio si se grita en un auditorio cerrado. La variación depende del contexto o circunstancia. No depende del canal, que sigue siendo el aire en ambos casos, ni del emisor aislado, ni del código, que sigue siendo el castellano.
+El destinatario previsto no coincide necesariamente con toda persona que recibe la señal. Una profesora dirige una instrucción a su grupo y alguien que pasa por el corredor puede oírla. Si la pregunta pide el destinatario, no basta con mencionar cualquier persona que pudo escuchar. Hay que comprobar a quién se dirige el mensaje en el caso.
 
-**¿Por qué?** Porque todo mensaje necesita un vehículo material, un tema y una situación. Sin canal no hay transporte, sin referente no hay de qué hablar, sin contexto no hay sentido exacto. Un mismo enunciado con mismo código y mismo canal puede significar cosas opuestas si cambia el contexto. Esa es la base de la interpretación pragmática que evalúa admisión.
+El **mensaje** es la información organizada en signos que se transmite. En «La biblioteca cerrará a las seis», el aviso informa sobre un cierre y una hora. El mensaje no se identifica con el papel donde está escrito ni con toda la lengua española. El papel es soporte; la lengua proporciona recursos para construir muchos mensajes diferentes.
 
-**¿Cómo se diferencia?** Canal es material y transporta, con ejemplos como aire, papel, cable y ondas electromagnéticas. Código es abstracto y estructura, con ejemplos como castellano, Morse y Braille. Referente es el tema aludido, con ejemplos como el punto de ebullición del agua o la ubicación de Arequipa. Contexto es la situación que fija el sentido, con ejemplos como campo de tiro frente a sala de cine. La trampa más castigada consiste en marcar el idioma como canal. Recuerda la mnemotecnia de refuerzo. **El canal es el puente físico por donde viaja la señal.** Si es voz viva, piensa aire y ondas sonoras. Si es libro, piensa papel impreso. Si es llamada, piensa cable y ondas electromagnéticas.
+### El código compartido y sus límites
 
-# 1.1.4 — Fenómenos interferentes: ruido, redundancia y retroalimentación
-**¿Qué es?** Son los tres fenómenos que rodean al circuito y deciden si el mensaje llega fiel, llega reforzado o necesita corrección. El ruido es cualquier interferencia, perturbación u obstáculo físico, técnico, semántico o psicológico que dificulta, distorsiona o impide la recepción fiel del mensaje. La redundancia es todo recurso verbal o técnico empleado deliberadamente para reforzar el mensaje, combatir el ruido y asegurar su correcta decodificación. La retroalimentación o feedback es la respuesta o reacción observable del receptor que permite al emisor verificar si el mensaje fue comprendido y ajustar su emisión.
+El **código** es un sistema de signos y reglas que permite elaborar e interpretar mensajes. El español y el quechua son lenguas con recursos para ello. Las señales convencionales también pueden formar sistemas, pero no hay que atribuirles automáticamente las mismas propiedades que a una lengua.
 
-**¿Cómo funciona?** El ruido actúa sobre el canal o sobre la decodificación. Ejemplos típicos son manchas de tinta que borran letras, ruido de motores que tapa la voz, mala ortografía que confunde el sentido, o estática telefónica que corta sílabas. Durante una clase universitaria, el zumbido constante de un proyector defectuoso que impide oír con claridad al profesor es un claro ejemplo de ruido. No es redundancia, que es refuerzo intencional, ni contexto asincrónico, ni retroalimentación diferida.
+Compartir suficientemente el código facilita reconocer el mensaje. **No garantiza comprenderlo todo**: dos hablantes de español pueden desconocer un término especializado o interpretar de manera distinta una instrucción ambigua. Conocer las palabras tampoco prueba que el mensaje sea verdadero o que el receptor esté de acuerdo.
 
-La redundancia es la defensa intencional contra el ruido. Ejemplos son repeticiones calculadas, subrayados, mayúsculas para resaltar, gestos enfáticos que acompañan la palabra, reformulaciones como decir lo mismo de otra forma, y apoyos visuales en pizarra. Su función pedagógica principal es neutralizar y combatir los efectos distorsionadores del ruido. No reemplaza al referente cuando es abstracto, no elimina la necesidad de compartir código, y no acelera la fase fisiológica del receptor. Solo asegura que lo esencial sobreviva aunque parte de la señal se pierda.
+Considera a Ana, que solo comprende quechua, y Ken, que solo comprende japonés. Si intentan intercambiar instrucciones exclusivamente habladas en esas lenguas, sin traducción ni otros apoyos compartidos, el problema principal para comprender las palabras es la falta de un código lingüístico común para ese intercambio. Ambos pueden hablar y oírse; el medio físico no tiene por qué fallar.
 
-La retroalimentación cierra el circuito. Es lo que el receptor devuelve de forma observable, como un gesto de duda, una pregunta, un asentimiento, una respuesta correcta en un examen, o un cambio de conducta tras una orden. Si la pregunta describe la respuesta observable que permite comprobar si el mensaje fue comprendido y reajustarlo, la respuesta es retroalimentación o feedback. No es decodificación pasiva, que es interna, ni redundancia contextual, ni ruido semántico.
+La restricción del ejemplo es importante: **no implica que dos personas de distintas lenguas sean incapaces de comunicarse**. Pueden recurrir a traducción, dibujos, gestos o recursos acordados. Esos apoyos cambian las condiciones del caso. No se debe concluir «comprensión nula en cualquier situación» a partir de una dificultad lingüística delimitada.
 
-**¿Por qué?** Porque comunicar en condiciones reales nunca ocurre en laboratorio silencioso. Siempre hay distancia, interferencia y riesgo de malentendido. El buen comunicador anticipa ruido y añade redundancia sin saturar, y luego lee el feedback para corregir. En pedagogía, repetir la idea clave con otras palabras y preguntar si se entendió es aplicar redundancia más feedback.
+## 1.1.3 — Canal, soporte, señal, referente y situación
 
-**¿Cómo se diferencia?** Ruido es involuntario y daña, con origen en lo físico, técnico o ambiental. Redundancia es voluntaria y protege, con origen en la estrategia del emisor. Feedback es posterior y verifica, con origen en la respuesta del receptor. Un caso combinado ayuda. El árbitro que hace sonar enérgicamente su silbato metálico en una final usa como código el sistema acústico de toques preestablecidos y como canal el aire con ondas sonoras. Si el estadio ruge y tapa el pitazo, hay ruido. Si el árbitro repite el toque y levanta los brazos, hay redundancia. Si los jugadores se detienen, hay feedback de comprensión.
+### Separar lo material del sistema de signos
 
-## CONCEPTOS IMPORTANTES
-- Comunicación como proceso social dinámico interactivo e intencional con sistema de signos compartido y canal determinado.
-- Fase psíquica con encodificación en emisor y decodificación en receptor, fase fisiológica con fonadores y receptores corporales, fase física con desplazamiento de ondas por el canal.
-- Emisor que concibe y encodifica, receptor que recibe y decodifica, mensaje como contenido puntual, código como sistema común obligatorio.
-- Canal como soporte físico natural con aire y ondas sonoras o artificial con papel, cable, ondas electromagnéticas y pantalla.
-- Referente como realidad aludida o tema del mensaje, contexto como espacio, tiempo y situación que fija el sentido exacto.
-- Ruido como interferencia que distorsiona, redundancia como refuerzo deliberado que combate el ruido, feedback como respuesta observable que verifica comprensión.
-- Sin código común no hay comunicación aunque el canal sea perfecto, como en quechua frente a japonés.
-- Circuito completo con contexto que envuelve, referente que orienta, mensaje que desciende, emisor que encodifica, canal que transporta, receptor que decodifica y código que sostiene por debajo.
+El **canal** es la vía o medio por el que se transmite un mensaje. En ejemplos escolares puede nombrarse como aire, carta, teléfono o medio escrito, según el grado de detalle del análisis. Para evitar respuestas ambiguas, distingue lo que pide exactamente la consigna.
 
-## DIFERENCIAS QUE CONFUNDEN
-- Canal frente a código. Canal es material y se toca o se mide, como papel impreso, aire, cable y pantalla. Código es abstracto y se comparte mentalmente, como castellano, Morse, Braille y semáforo como sistema. En libro, el canal es papel y el código es castellano. En conversación en parque, el canal es aire y ondas, el código es español coloquial.
-- Referente frente a contexto. Referente es de qué se habla, como la ebullición del agua o un monolito Chavín. Contexto es dónde, cuándo y en qué situación se habla, como tiro militar frente a cine lleno. Fuego cambia por contexto, no por referente aislado.
-- Encodificación frente a decodificación. Encodificación es selección de signos en el emisor durante la fase psíquica inicial. Decodificación es desciframiento y asociación con conceptos en el receptor durante la fase psíquica final. Transmisión física y articulación motora pertenecen a otras fases.
-- Ruido frente a redundancia. Ruido es obstáculo no deseado como zumbido de proyector, manchas y estática. Redundancia es refuerzo deseado como repetición, subrayado y gesto enfático. Uno resta fidelidad, la otra la protege.
-- Retroalimentación frente a decodificación. Decodificación es interna e invisible, ocurre en la mente del receptor. Retroalimentación es externa y observable, regresa al emisor como respuesta que permite reajustar.
-- Órgano receptor frente a canal. Tímpano, oído y vista son fisiología del receptor. Aire, papel y cable son física del canal. Voz articulada es emisión, no medio.
-- Emisor frente a código frente a canal en el caso del silbato. El árbitro es emisor, el sistema de toques es código, el silbato como objeto más el aire son canal en sentido amplio, con el aire como medio de propagación. Marcar árbitro o silbato aislado como código es error típico.
+| Concepto | Qué identifica | Caso de un aviso |
+|---|---|---|
+| Código | Sistema de signos y reglas | La lengua española del aviso |
+| Soporte | Material donde se conserva la inscripción | El papel con marcas impresas |
+| Señal | Manifestación física que porta información | La señal acústica al leer el aviso en voz alta |
+| Medio de propagación | Material o entorno por el que se propaga la señal | El aire por el que llegan las ondas sonoras |
 
-## DATOS IMPORTANTES
-- Tres fases en orden. Psíquica con ideación más encodificación y decodificación, fisiológica con fonadores y motores más oído y vista, física con ondas sonoras o luminosas por el canal.
-- Vocabulario técnico. Encodificación como selección de signos, decodificación como interpretación, canal como medio material, código como sistema normado, referente como realidad aludida.
-- Ruido típico de examen. Zumbido de proyector, ruido de motores, manchas de tinta, mala ortografía y estática telefónica.
-- Redundancia típica. Repeticiones, subrayados, mayúsculas, gestos enfáticos y reformulaciones.
-- Contexto modelo. Fuego en campo de tiro frente a sala de cine, mismo código y canal con sentido opuesto.
-- Caso libro. Lector de Vargas Llosa en habitación con canal en papel impreso y código en castellano estándar.
-- Caso oral directo. Dos amigos en parque con canal en aire y ondas sonoras y código en español coloquial.
-- Caso lenguas distintas. Quechua frente a japonés con falla en código compartido.
-- Caso extremo Chavín para reforzar. Monolito de piedra como canal lítico, iconografía religiosa como código no verbal visual, comunicación humana no verbal indirecta y asincrónica a través de siglos entre sacerdotes emisores y campesinos y luego arqueólogos como receptores. Demuestra que el circuito funciona aunque emisor y receptor estén separados por milenios.
+**En un libro impreso**, el papel es el soporte material de las marcas escritas. Puede llamarse canal escrito en un análisis general, mientras otro análisis distingue la vía visual de lectura. Por eso una pregunta precisa dirá «soporte material escrito» si espera papel como respuesta. La lengua de la novela sigue siendo código; el tema de la novela no es su soporte.
 
-## EJEMPLOS
-- Selección mental de signos. Un orador que piensa qué palabras usar antes de hablar está en fase psíquica de encodificación. Un oyente que asocia sonidos con ideas está en decodificación.
-- Lectura en habitación. Estudiante que lee novela de Vargas Llosa. Emisor mediato es el autor, receptor es el lector, mensaje es la trama, código es castellano, canal es papel impreso, referente es el mundo narrado, contexto es lectura privada contemporánea.
-- Clase con proyector defectuoso. Profesor que explica, zumbido que tapa la voz. El zumbido es ruido físico. Si el profesor repite la idea, escribe en pizarra y pregunta si se entendió, aplica redundancia y luego recoge feedback.
-- Fuego según contexto. Instructor en polígono que grita fuego para iniciar práctica frente a espectador que grita fuego en auditorio para alertar incendio. Mismo significante, sentido fijado por contexto.
-- Quechua frente a japonés. Dos personas con buena voluntad y cercanía física, pero sin código común. El canal natural funciona, el contexto es favorable, pero la comprensión es nula. Prueba de que el código es condición necesaria.
-- Conversación en parque. Dos amigos cara a cara. Canal natural en aire y ondas sonoras, código en español coloquial, feedback inmediato con gestos y réplicas.
-- Silbato arbitral como refuerzo. Código en sistema de toques, canal en aire, ruido en rugido del estadio, redundancia en repetición más brazos en alto, feedback en detención del juego.
-- Monolito Chavín como refuerzo extremo. Piedra tallada que porta iconografía de ser felínico como terror sacerdotal. Canal en bloque lítico, código en sistema iconográfico no verbal, referente en poder religioso y subordinación campesina, contexto ritual de hace tres mil años más contexto arqueológico actual con Tello como receptor tardío. Comunicación indirecta y asincrónica que confirma la potencia del circuito.
+**En una conversación oral cara a cara**, el aire es el medio por el que se propaga la señal acústica. Las ondas sonoras no son el aire: son la señal que se propaga en ese medio. El oído participa en la recepción corporal y las reglas del español pertenecen al código. Esos papeles no se intercambian porque todos intervengan en una misma conversación.
 
-## IDEA CLAVE
-El mensaje nace en la mente que encodifica, viaja por un cuerpo que emite y un medio físico que transporta, y renace en otra mente que decodifica. El código compartido lo hace comprensible, el referente le da tema, el contexto le da sentido exacto, el ruido lo amenaza, la redundancia lo protege y el feedback confirma si llegó.
+**En un teléfono**, no conviene responder siempre «cable» ni siempre «ondas» sin conocer el caso. El recorrido depende de la tecnología y puede incluir distintos tramos. Para esta lección basta con reconocer que el dispositivo o la red no son el idioma utilizado. Si el problema exige identificar un medio físico concreto, debe describir ese tramo de transmisión.
 
-## CLAVE DE ADMISIÓN
-Canal igual a puente físico por donde viaja la señal. Libro igual a papel, voz cara a cara igual a aire y ondas, llamada igual a cable y ondas electromagnéticas. Código igual a sistema abstracto como idioma, Morse, Braille y toques de silbato. Referente igual a tema aludido. Contexto igual a situación que cambia el sentido como fuego en tiro frente a cine. Ruido igual a interferencia como proyector defectuoso. Redundancia igual a refuerzo contra ruido. Feedback igual a respuesta observable que verifica. Encodificación igual a psíquica del emisor, decodificación igual a psíquica del receptor.
+### Referente y situación comunicativa
 
-## RESUMEN
-Comunicación como proceso social intencional con signos compartidos y canal. Tres fases con psíquica mental, fisiológica corporal y física ambiental. Elementos con emisor que encodifica, receptor que decodifica, mensaje como contenido, código como sistema común, canal como soporte natural o artificial, referente como realidad aludida y contexto como situación que fija el sentido. Fenómenos con ruido que distorsiona, redundancia que refuerza y feedback que verifica. Casos modelo con libro en papel, parque en aire, lenguas sin código común, fuego según contexto y silbato con sistema de toques por aire.
+El **referente** es la realidad, entidad, hecho o tema al que alude el mensaje. Puede tratarse de algo real, imaginado o abstracto. En «La biblioteca cerrará a las seis», se alude al cierre de una biblioteca a una hora. No debemos confundir esa realidad aludida con las palabras que la expresan.
+
+La **situación comunicativa** incluye circunstancias relevantes del intercambio: quiénes participan, cuándo y dónde ocurre, qué están haciendo y qué conocimientos comparten. En esta lección se usa contexto para esa información cuando se contrasta con referente. No todos los modelos separan los términos de la misma forma; lo importante es conservar la distinción en el caso analizado.
+
+Una profesora dice «ahora» al comenzar una actividad el lunes y lo repite al comenzar otra el martes. La palabra conserva su forma, pero cada uso se interpreta con relación a su momento de emisión. El contexto temporal permite identificar el momento aludido. No hace falta suponer un cambio de idioma ni que los sonidos sean distintos.
+
+El contexto **orienta** la interpretación, pero no resuelve necesariamente toda duda. Si alguien dice «déjalo ahí» y no sabemos qué objeto señala ni qué lugar indica, la frase puede seguir siendo ambigua. Se necesita información adicional. Un buen análisis distingue lo que el caso permite concluir de lo que habría que preguntar.
+
+### Un caso descompuesto
+
+La encargada escribe en una hoja «La biblioteca cerrará a las seis» y la coloca en la entrada para los lectores.
+
+- **Emisor:** la encargada que elabora el aviso en el caso descrito.
+- **Destinatarios previstos:** los lectores que acuden a la biblioteca.
+- **Mensaje:** la información del cierre y su hora.
+- **Código:** el español utilizado para redactarlo.
+- **Soporte material:** la hoja con las marcas escritas.
+- **Referente:** el hecho del cierre de esa biblioteca a la hora señalada.
+- **Situación:** el aviso colocado en esa entrada y las circunstancias en que se consulta.
+
+Estos elementos pertenecen al mismo análisis. Si una persona fotografía el aviso y lo envía por una aplicación, aparece otro acto de transmisión, con otros participantes inmediatos y otro soporte de consulta. No se debe mezclar el primer aviso y el reenvío como si fueran un único caso sin cambios.
+
+## 1.1.4 — Ruido, redundancia y retroalimentación
+
+### Ruido: interferir en un mensaje
+
+El **ruido** es una perturbación que dificulta recibir o interpretar un mensaje. Puede ser físico o técnico, como un zumbido que tapa palabras o una imagen distorsionada. En un uso más amplio del modelo se incluyen dificultades semánticas o de atención. Conviene indicar el tipo en vez de llamar ruido físico a cualquier malentendido.
+
+Durante una clase, el proyector produce un zumbido que impide oír algunas palabras del profesor. Ese zumbido es ruido físico **en relación con la explicación oral**. No transmite la instrucción ni refuerza sus datos. Se clasifica por su efecto sobre ese mensaje.
+
+El ruido no tiene que ser involuntario. Si una persona produce un sonido deliberadamente para impedir que se oiga a otra, sigue interfiriendo en el mensaje de esta última. Tampoco cualquier sonido ambiental es ruido para el análisis: si no dificulta el intercambio descrito, falta justificar esa clasificación.
+
+### Redundancia: reforzar información
+
+La **redundancia** aporta información reiterada que puede ayudar a recuperar un mensaje cuando parte de él se pierde o resulta poco clara. Por ejemplo, tras una interferencia, alguien repite «a las seis, seis de la tarde». La reiteración permite reconocer mejor la hora. Una reformulación también puede explicar de otro modo un dato.
+
+No toda repetición es útil y no toda redundancia requiere una decisión consciente de repetir. Algunas regularidades del propio lenguaje aportan información previsible. En los ejercicios de esta lección se analizan sobre todo refuerzos deliberados, porque el caso permite identificar qué hace la persona y para qué.
+
+La redundancia puede contrarrestar efectos del ruido, **sin garantizar comprensión ni recuerdo**. Repetir una expresión desconocida quizá no aclare su significado; reformularla puede ser más adecuado. Añadir demasiada información también puede dificultar seguir la explicación. La función se evalúa en el contexto, no por la cantidad de palabras.
+
+### Retroalimentación: información para ajustar el intercambio
+
+La **retroalimentación** es información que vuelve al interlocutor sobre la recepción o interpretación de su mensaje y permite ajustar el intercambio. Puede manifestarse como una pregunta, una respuesta verbal o un gesto. En la conversación puede aparecer mientras la otra persona habla, no únicamente después de que termine toda la explicación.
+
+Después de una instrucción, una estudiante pregunta «¿Debo entregar solo el primer ejercicio?». La profesora reconoce una duda y precisa qué debe entregarse. La pregunta funciona como retroalimentación porque aporta información para ajustar la instrucción. No se confunde con la interpretación interna y no observable de la estudiante.
+
+Un asentimiento puede indicar atención, acuerdo o una señal para que la otra persona continúe. **No demuestra por sí solo comprensión completa**. Para comprobar un aspecto concreto puede pedirse al estudiante que explique con sus palabras qué hará. Su respuesta aporta más información sobre ese aspecto, aunque tampoco permite conocer todos sus pensamientos.
+
+### Comparar los tres fenómenos
+
+| Caso | Clasificación pertinente | Lo que permite concluir |
+|---|---|---|
+| El zumbido tapa la hora que se anuncia | Ruido físico | Hay una interferencia en la recepción de ese dato |
+| La persona repite la hora y la aclara | Redundancia deliberada | Intenta reforzar información; el éxito debe comprobarse |
+| El oyente pregunta si se trata de la tarde | Retroalimentación | Expresa una duda que permite precisar el aviso |
+
+Ruido, redundancia y retroalimentación no son tres participantes adicionales. Son fenómenos o procesos que pueden intervenir en el intercambio. Por eso no conviene sumarlos a una lista de personas, signos y medios y anunciar un número universal de elementos sin aclarar el modelo empleado.
+
+## Importante
+
+**Compartir código no garantiza comprender; recibir una reacción no prueba comprensión completa.** El contexto ayuda a interpretar y la redundancia puede reforzar el mensaje, pero ambos tienen límites. Distingue siempre el sistema de signos, la señal y el medio que la transporta. Usa los datos de la consigna y evita completar el caso con intenciones o resultados que no se han descrito.
+
+## Cómo analizar una situación
+
+1. **Delimita el intercambio.** Decide si se analiza el aviso original, una lectura en voz alta o un reenvío posterior.
+2. **Identifica los papeles.** Señala quién produce ese mensaje y a quién está dirigido. No confundas destinatario previsto con cualquier oyente accidental.
+3. **Separa sistema y transmisión.** Reconoce código, soporte y medio si el caso permite hacerlo. No supongas la tecnología de una llamada.
+4. **Relaciona mensaje y situación.** Distingue aquello de lo que se habla de las circunstancias que ayudan a interpretarlo.
+5. **Comprueba dificultades y ajustes.** Busca una interferencia, un refuerzo o una respuesta observable. Explica qué efecto está descrito y cuál no puede asegurarse.
+
+Por ejemplo, una profesora elige mentalmente una frase, la pronuncia y un alumno pide que repita la hora porque un zumbido la tapó. Elegir palabras es codificación; pronunciarlas implica actividad corporal; el aire permite que se propague la señal. El zumbido es ruido para esa frase, la petición aporta retroalimentación y la repetición puede funcionar como redundancia. Cada clasificación se apoya en una acción distinta del caso.
+
+## Para repasar
+
+La codificación elabora un mensaje y la decodificación interpreta sus signos. Emisor y receptor son papeles que pueden alternarse. El código organiza los signos; el canal permite la transmisión, y las preguntas más precisas distinguen soporte, medio y señal. El referente es aquello de lo que se habla y la situación aporta circunstancias de interpretación. El ruido dificulta, la redundancia puede reforzar y la retroalimentación ofrece información para ajustar. Ninguno de estos recursos garantiza por sí solo entender correctamente todo lo que otra persona quiso comunicar.

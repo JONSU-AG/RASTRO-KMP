@@ -1,139 +1,173 @@
 # Realidad Lingüística del Perú: Multilingüismo, Lenguas Amerindias y Castellano
 
-## INTRODUCCIÓN
+El Perú es multilingüe: en él se utilizan el castellano, lenguas indígenas u originarias y otras lenguas. Para describir esa realidad hay que separar **lengua, familia, variedad, territorio y población**. Una lista de lenguas no cuenta hablantes, y una referencia territorial no encierra a sus hablantes dentro de un departamento.
 
-El Perú es un país multilingüe y pluricultural donde conviven alrededor de 48 lenguas originarias vivas junto al castellano y lenguas de inmigración. Esa realidad no es un dato decorativo, es una de las zonas más preguntadas de admisión UNSA con familias lingüísticas, zonas geográficas, número de hablantes y fenómenos como la diglosia. Quien ordena el mapa de lenguas peruanas convierte en puntos seguros las preguntas sobre quechua, aimara, jacaru, asháninka, shipibo y awajún.
+Este nivel utiliza las fichas y la lista de la Base de Datos de Pueblos Indígenas u Originarios del Ministerio de Cultura consultadas para la revisión. Los datos administrativos pueden actualizarse; los censos y estudios tienen una fecha y una población de referencia. No deben combinarse cifras de fuentes diferentes como si fueran una fotografía exacta del presente.
 
-En esta lección recorrerás el país lengua por lengua. Partirás de las familias andinas Quechua y Aru con la clasificación de Alfredo Torero, pasarás por la Amazonía como zona de mayor diversidad con sus familias Arawak, Pano y Jíbaro, caracterizarás los tres castellanos regionales con el motoseo y la velarización amazónica, y cerrarás con diglosia, bilingüismo y Educación Intercultural Bilingüe. Cada lengua trae su familia, su zona y su marca de examen.
+## 2.2.1 — Lenguas, familias y variedades quechuas
 
-Al final podrás ubicar todo sin dudar. Sabrás por qué el quechua es la originaria más hablada, por qué el jacaru se habla en Lima y no en Puno, por qué la Amazonía concentra las familias, por qué el motoseo nace del trivocalismo, por qué jue por fue es amazónico y por qué la marginación del quechua en trámites se llama diglosia.
+### Qué se está clasificando
 
-## DESARROLLO DEL TEMA
+Una **familia lingüística** agrupa lenguas o variedades por parentesco histórico, no por superioridad ni por compartir obligatoriamente un departamento. La cercanía geográfica puede relacionarse con contacto, pero no demuestra por sí sola parentesco. Tampoco pertenecer a una familia garantiza que todos sus hablantes se comprendan sin aprendizaje.
 
-# 2.2.1 — La familia Quechua con Torero y sus ramas
+La palabra quechua puede emplearse como denominación general en registros y censos. La ficha oficial explica, a la vez, su diversidad como familia de variedades. Por eso una cifra bajo el rótulo quechua no demuestra que todas las personas contadas utilicen una variedad idéntica. El nivel distingue el uso administrativo del nombre y la diversidad lingüística que abarca.
 
-**¿Qué es?** La familia lingüística Quechua o runa simi es la lengua originaria más hablada del Perú y de toda América del Sur, con más de 3.5 millones de quechuahablantes en el país. No es una lengua única homogénea, es una familia con variedades agrupadas por Alfredo Torero en dos ramas. Es la respuesta cuando preguntan por la amerindia mayoritaria y por la clasificación de variedades Chanca, Collao, ancashina o norteña.
+### Quechua I, quechua II y agrupaciones de variedades
 
-**¿Cómo funciona?** El flujo de la familia opera así.
+La ficha del quechua recoge, según la terminología de Torero, dos grandes ramas: **quechua I y quechua II**. Sitúa la primera en la zona central del país y la segunda en zonas del norte y del sur. Es una clasificación general de variedades, no una división entre formas mejores y peores.
 
-- Tronco → **Familia Quechua** entendida como conjunto de variedades con historia común y millones de hablantes
-- Rama arcaica → **Quechua I o Central o Waywash** en Áncash, Huánuco, Pasco, Junín y provincias de Lima, con mayor diversificación dialectal y origen del protoquechua
-- Rama periférica → **Quechua II o Wampuy** con tres subramas que son Quechua Norteño en Cajamarca, Lambayeque con Incahuasi y Cañaris, y Chachapoyas, Quechua Sureño en Cusco, Puno, Ayacucho, Apurímac, Arequipa y Huancavelica con variedades Chanca y Collao de mayor número de hablantes y literatura, y Quechua de la Selva en San Martín con Lamas, Loreto y Madre de Dios
-- Origen científico → **Protoquechua central** demostrado por Torero en la costa y sierra central en valles de Lima, Junín e Ica, expandido al norte y al sur antes del Tahuantinsuyo y adoptado tardíamente por la nobleza cusqueña como lengua imperial
+También presenta agrupaciones geográficas como quechua amazónico, norteño, central y sureño en la información del Ministerio de Educación. Esas agrupaciones sirven para organizar variedades y no deben mezclarse sin explicación con el nivel de clasificación de dos ramas. Una misma tabla puede emplear un criterio de organización diferente de otra.
 
-**¿Por qué?** Porque Torero revolucionó la dialectología con el método histórico comparativo en El quechua y la historia social andina de 1974. Demostró que la rama más antigua y diversificada está en el centro, de modo que el origen no fue el Cusco imperial como dice el mito popular. Por eso Áncash con el callejón de Huaylas y Huánuco son Quechua I Waywash, mientras que Chanca con Ayacucho y Collao con Cusco y Puno son Quechua II Sureño Wampuy con más hablantes.
+En la tabla de variedades se sitúan **Chanka y Collao en quechua sureño**. Entre las referencias territoriales de Chanka se mencionan Ayacucho, Huancavelica y determinadas zonas de Apurímac; para Collao se mencionan, entre otras, Cusco y Puno. No se deduce que cada departamento corresponda de manera exclusiva a una sola variedad ni que las fronteras administrativas coincidan con fronteras lingüísticas exactas.
 
-**¿Cómo se diferencia?** La familia quechua se diferencia por rama y zona. Quechua I es central y arcaico con Áncash y Huánuco, Quechua II Sureño es periférico sureño con Chanca y Collao, Quechua Norteño es periférico norteño con Cajamarca y Chachapoyas. La trampa típica ofrece familia Aru ante un quechua ancashino, pero Áncash es Waywash quechua. Otra trampa sitúa el origen en el Titicaca o en la península ibérica, pero Torero lo fija en la costa y sierra central.
+| Denominación del caso | Qué permite identificar | Límite de la conclusión |
+|---|---|---|
+| Quechua I y II | Dos grandes ramas en la clasificación recogida | No demuestra una jerarquía de calidad |
+| Quechua central | Agrupación geográfica de variedades | No equivale a todos los habitantes de la zona central |
+| Quechua sureño | Agrupación donde se sitúan Chanka y Collao | No hace idénticas todas las variedades incluidas |
+| Quechua en un registro de población | Una categoría utilizada por esa fuente | No prueba homogeneidad ni dominio de todas las variedades |
 
-# 2.2.2 — La familia Aru y las lenguas amazónicas
+No se presenta un único punto de origen del protoquechua como hecho definitivamente demostrado por una clasificación. Reconstruir una historia lingüística y clasificar variedades son tareas relacionadas, pero distintas. Para las preguntas de este nivel basta reconocer qué clasificación utiliza la fuente y cuál es la relación que documenta.
 
-**¿Qué es?** La familia lingüística Aru agrupa lenguas andinas milenarias y la Amazonía concentra la mayor diversidad etnolingüística del país con más de 40 etnias y 44 lenguas en 17 a 19 familias. Es la respuesta cuando preguntan por aimara, jacaru, asháninka, shipibo-konibo, awajún o por la región con más familias. El orden de hablantes amazónicos se fija con refuerzo. **ASH-SHI-AWA con asháninka primero, shipibo-konibo segundo y awajún tercero.**
+Tampoco se usa arcaico como sinónimo de inferior, inmóvil o incapaz de expresar realidades actuales. Las lenguas y variedades cambian; la conservación de un rasgo en una variedad no permite afirmar que toda ella permanezca detenida en el tiempo.
 
-**¿Cómo funciona?** El flujo andino amazónico opera así.
+## 2.2.2 — Familias y referencias territoriales
 
-- Familia andina Aru → **Aimara** como segunda originaria más hablada en el altiplano del Titicaca con Puno, Moquegua, Tacna y Arequipa, y **jacaru con cauqui** en la provincia de Yauyos del departamento de Lima en el distrito de Tupe, con cauqui casi extinto y jacaru vulnerable
-- Región diversa → **Amazonía o Selva** entendida como área de mayor fragmentación con 44 lenguas y hasta 19 familias
-- Familia extensa → **Arawak** la más extensa de Sudamérica con asháninka como amazónica número uno en Junín, Pasco y Ucayali, más machiguenga, yine, nomatsigenga y yanesha
-- Familia fluvial → **Pano** con shipibo-konibo como segunda amazónica en la cuenca del Ucayali, más matsés y kapanawa
-- Familia norteña → **Jíbaro** con awajún o aguaruna como tercera amazónica en Amazonas, San Martín y Loreto, más wampis o huambisa y achuar
-- Familias menores → **Tupi-Guaraní** con cocama-cocamilla y omagua, **Ticuna** en la triple frontera con Brasil y Colombia, y **Cahuapana** con shawi y shiwilu
+### Árbol de relaciones verificadas
 
-**¿Por qué?** Porque la selva fragmentada en cuencas aisló comunidades que conservaron lenguas distintas, mientras que los Andes con estados expansivos homogeneizaron en torno al quechua y al aimara. Por eso una sola región amazónica reúne más familias que toda la sierra y la costa juntas. El jacaru sobrevivió en la altura de Yauyos lejos de la homogeneización, y esa rareza geográfica es exactamente lo que admisión pregunta.
+El esquema siguiente es **clasificatorio, no geográfico**. Las ramas indican las relaciones seleccionadas para este nivel. No muestran distancias, rutas de migración, cantidad de hablantes ni una posición de prestigio. Tampoco incluyen todas las lenguas del país.
 
-**¿Cómo se diferencia?** Cada lengua se diferencia por familia y zona. Asháninka es Arawak de selva central y sur, shipibo-konibo y matsés son Pano de Ucayali, awajún y wampis son Jíbaro de selva norte. Jacaru es Aru de Lima, aimara es Aru de Puno. La trampa clásica ubica al jacaru en Puno o Cusco, pero Yauyos está en Lima. Otra trampa ofrece ticuna o cahuapana ante shipibo, pero shipibo con matsés es Pano.
+```mermaid
+graph TD
+ ROOT["Selección de familias y relaciones lingüísticas"]
+ Q["Quechua: dos grandes ramas recogidas en la ficha"]
+ Q1["Quechua I"]
+ Q2["Quechua II"]
+ A["Aru"]
+ A1["Aimara"]
+ A2["Jaqaru"]
+ A3["Cauqui"]
+ R["Arawak"]
+ R1["Ashaninka"]
+ P["Pano"]
+ P1["Shipibo-konibo"]
+ P2["Matsés"]
+ J["Jíbaro: etiqueta de las fichas oficiales consultadas"]
+ J1["Awajún"]
+ J2["Wampis"]
+ ROOT --> Q
+ Q --> Q1
+ Q --> Q2
+ ROOT --> A
+ A --> A1
+ A --> A2
+ A --> A3
+ ROOT --> R
+ R --> R1
+ ROOT --> P
+ P --> P1
+ P --> P2
+ ROOT --> J
+ J --> J1
+ J --> J2
+```
 
-# 2.2.3 — Los tres castellanos del Perú con motoseo y velarización
+### Aru y jaqaru
 
-**¿Qué es?** El castellano es la lengua materna de más del 80 por ciento de la población peruana y presenta tres variedades dialectales geográficas con marcas fonéticas y sintácticas propias. Es la respuesta cuando preguntan por ribereño, andino o amazónico, por el motoseo o por cambios como jue por fue. Cada castellano trae su zona, su entonación y su interferencia.
+La ficha del **jaqaru** lo sitúa en la familia Aru, junto con aimara y cauqui. Algunos materiales utilizan la grafía jacaru; aquí se prioriza la denominación de la ficha consultada. La referencia territorial del ejercicio es la provincia de **Yauyos, departamento de Lima**, con localidades de los distritos de Tupe y Catahuasi.
 
-**¿Cómo funciona?** El flujo de los castellanos opera así.
+El dato se refiere a localidades documentadas y no permite afirmar que todos los hablantes vivan únicamente allí. Tampoco es correcto ubicar automáticamente cualquier lengua de Aru en Puno: familia y departamento responden a preguntas distintas. Un parentesco histórico no sustituye conocer la distribución territorial de una lengua concreta.
 
-- Costa → **Castellano ribereño o costeño** en Lima y ciudades litorales con entonación neutra, elisión o aspiración de la s final y concordancias estándares
-- Sierra → **Castellano andino** en la sierra y migrantes andinos con motoseo por transferencia del trivocalismo quechua a, i, u que confunde e con i y o con u, más diminutivos reiterados como aquicito y casita, doble posesivo como su casa de mi papá y verbo al final como Manzana comiendo está
-- Selva → **Castellano amazónico** con cambio de la labiodental f por la velar x o j como san juan por San Juan y jue por fue, anteposición del genitivo como De mi tía su loro y entonación melódica ondulante
+### Arawak, Pano y Jíbaro
 
-**¿Por qué?** Porque el castellano impuesto desde la colonia se adaptó a cada sustrato. En la sierra chocó con el quechua trivocálico y heredó el motoseo, los diminutivos afectivos y el orden con verbo final. En la selva desarrolló la velarización de la f y la melodía ondulante. En la costa, sede del poder virreinal y republicano, conservó la forma más cercana al estándar con aspiración de eses finales. Cada marca es historia de contacto lingüístico.
+La ficha del **ashaninka** lo ubica en Arawak. Las de **shipibo-konibo y matsés** los ubican en Pano. Las de **awajún y wampis** emplean la etiqueta familiar Jíbaro. Se conserva esa etiqueta cuando se pregunta por la clasificación de la fuente, sin reemplazar con ella los nombres propios de los pueblos y de sus lenguas.
 
-**¿Cómo se diferencia?** Cada castellano se diferencia por su marca estrella. Aspiración de s final con norma culta es ribereño, motoseo con diminutivos y doble posesivo es andino, f convertida en j con genitivo antepuesto es amazónico. La trampa típica ofrece cambio de velar por sibilante ante jue, pero jue nace de labiodental f hacia velar x. Otra trampa atribuye el motoseo a falta de nasales, pero su causa es el sistema de solo tres vocales del quechua.
+Pertenecer a una misma familia no implica tener idéntica distribución ni la misma situación de uso. Las referencias de shipibo-konibo y matsés no son intercambiables por compartir Pano. Del mismo modo, un nombre familiar no permite deducir de forma automática población, vitalidad o grado de comprensión mutua.
 
-# 2.2.4 — Diglosia, bilingüismo y Educación Intercultural Bilingüe
+En esta lección no se fija el orden «ashaninka, shipibo-konibo, awajún» como una regla demográfica. Las fichas consultadas no respaldan ese orden para sus datos de lengua materna. Si se compara población, hay que indicar fuente, fecha y qué se cuenta. Un recurso para memorizar no puede sustituir esa comprobación.
 
-**¿Qué es?** La diglosia es el fenómeno de desigualdad y asimetría sociopolítica donde dos lenguas coexisten en un mismo territorio pero una goza de prestigio oficial y poder mientras la otra queda marginada a la informalidad doméstica o rural. Se distingue del bilingüismo armónico donde individuo o comunidad dominan dos lenguas sin jerarquía opresiva, y se corrige con la Educación Intercultural Bilingüe o EIB. Es la respuesta cuando el caso describe autoridades que exigen castellano y jóvenes que abandonan el quechua por estigma.
+### La lista de lenguas y la Amazonía
 
-**¿Cómo funciona?** El flujo sociolingüístico opera así.
+La lista del Ministerio de Cultura consultada registra **48 lenguas originarias**, con cuatro de referencia andina y 44 amazónicas. En ese inventario hay más lenguas de referencia amazónica. La conclusión es sobre lenguas de una lista, no sobre cuántas familias existen ni cuántas personas viven en cada región.
 
-- Situación base → **Bilingüismo** entendido como dominio de dos lenguas como castellano y quechua en un hablante o comunidad
-- Jerarquía opresiva → **Diglosia** con lengua alta que monopoliza comisaría, juzgado, posta médica y trámites, frente a lengua baja confinada a faenas agrícolas y vida familiar con estigma y abandono generacional
-- Respuesta estatal → **EIB** que garantiza instrucción inicial y primaria en la lengua originaria materna con castellano como segunda lengua
-- Marco legal → **Constitución artículo 48** con castellano oficial en todo el país y quechua, aimara y aborígenes oficiales en las zonas donde predominen
+Una lengua de referencia amazónica también puede utilizarse en una ciudad de la costa o en otro departamento por migración y otros procesos. La etiqueta no significa que sus hablantes estén ausentes de ámbitos urbanos. Tampoco las cuatro referencias andinas implican que solo cuatro comunidades hablen lenguas originarias en los Andes.
 
-**¿Por qué?** Porque las lenguas viven en relaciones de poder, no en vitrinas neutras. Cuando el Estado atiende solo en castellano, los padres dejan de transmitir el quechua para proteger a sus hijos de la discriminación y la lengua se erosiona en una generación. La EIB rompe ese ciclo al escolarizar en lengua materna. Por eso el caso de la sierra sur con quechua en la chacra y castellano obligatorio en la comisaría es diglosia de manual, no bilingüismo armónico ni variación idiolectal.
+Los recuentos dependen de criterios de identificación y de actualización. Esta lección no convierte los nombres del inventario en una taxonomía inmutable. Para una pregunta concreta se utiliza la lista indicada; si una fuente futura modifica el inventario, habrá que revisar los datos relacionados en vez de memorizar una cifra sin procedencia.
 
-**¿Cómo se diferencia?** La diglosia se diferencia por la asimetría. Bilingüismo describe capacidad sin juzgar poder, diglosia denuncia jerarquía con lengua alta y lengua baja, EIB nombra la política correctiva. Si el enunciado muestra prestigio desigual, rechazo institucional o estigma, la respuesta es diglosia. Si muestra aprendizaje en lengua materna garantizado por el Estado, la respuesta es EIB. Los distractores con interlecto o dialectización no existen como fenómenos de este paradigma.
+## 2.2.3 — Variedades del castellano y contacto de lenguas
 
-## CONCEPTOS IMPORTANTES
+El castellano del Perú presenta diversidad regional, social, situacional e individual. En ciertos estudios se distinguen conjuntos costeños o ribereños, andinos y amazónicos. Son denominaciones de análisis, no tres modos uniformes de hablar que clasifiquen de manera rígida a toda persona.
 
-- Perú multilingüe y pluricultural con 48 lenguas originarias vivas en 19 familias junto al castellano.
-- Quechua como originaria más hablada del Perú y Sudamérica con más de 3.5 millones de hablantes.
-- Quechua I central o Waywash arcaico en Áncash, Huánuco, Pasco, Junín y Lima provincias.
-- Quechua II periférico o Wampuy con norteño, sureño Chanca y Collao, y selvático.
-- Familia Aru con aimara altiplánico y jacaru con cauqui en Yauyos dentro de Lima.
-- Amazonía como mayor diversidad con 44 lenguas y 17 a 19 familias.
-- Orden amazónico ASH-SHI-AWA con asháninka Arawak, shipibo-konibo Pano y awajún Jíbaro.
-- Castellano ribereño costeño, andino con motoseo y amazónico con velarización de f en x.
-- Diglosia como asimetría de poder con lengua alta y baja frente a bilingüismo como dominio doble.
-- EIB como política de instrucción en lengua materna con castellano como segunda lengua.
+No se describe un acento como neutro para todos ni se considera una variedad inherentemente más correcta que las demás. Una norma puede orientar una elección en escritura formal; eso no convierte una pronunciación regional en prueba de capacidad intelectual o de valor personal. La claridad de un mensaje debe evaluarse en su contexto.
 
-## DIFERENCIAS QUE CONFUNDEN
+### Sonidos y escritura
 
-- Quechua lengua frente a supuesto dialecto. Quechua es familia independiente milenaria con gramática propia, jamás variante del español. Llamarlo dialecto es error gravísimo.
-- Quechua I frente a Quechua II Sureño. Quechua I es central arcaico con Áncash y Huánuco, Quechua II Sureño es periférico sureño con Chanca de Ayacucho y Collao de Cusco y Puno. El centro es origen, el sur es expansión con más hablantes.
-- Jacaru frente a aimara. Ambos son Aru, pero jacaru vive en Yauyos de Lima y aimara en el altiplano de Puno. La pregunta recurrente espera Lima, no Puno.
-- Arawak frente a Pano frente a Jíbaro. Arawak trae asháninka primero, Pano trae shipibo-konibo y matsés segundos, Jíbaro trae awajún y wampis terceros. Familia y puesto van juntos.
-- Motoseo frente a simple error. Motoseo es interferencia sistemática del trivocalismo quechua que confunde e con i y o con u, no descuido aislado ni falta de nasales.
-- Diglosia frente a bilingüismo. Bilingüismo es dominio de dos lenguas, diglosia es jerarquía opresiva con prestigio desigual. Estigma y rechazo institucional delatan diglosia.
-- EIB frente a castellanización. EIB educa en lengua materna originaria, castellanización forzosa la erradica. Son políticas opuestas.
-- Ribereño frente a andino frente a amazónico. Ribereño aspira eses con norma estándar, andino motosea con diminutivos y doble posesivo, amazónico velariza la f y antepone el genitivo.
+El plano **fonético** observa realizaciones de sonidos. Si una investigadora compara dos realizaciones sonoras en registros de habla, ese es el plano que está estudiando. Hace falta evidencia de pronunciación para describir la diferencia; una mayúscula en la escritura no proporciona esa evidencia.
 
-## DATOS IMPORTANTES
+«San Juan» y «san juan» muestran una diferencia de mayúsculas. No prueban por sí solos que una consonante se haya pronunciado de otro modo. Tampoco una grafía aproximada como jue por fue permite atribuir un rasgo a todos los habitantes de una región. Si se investiga un cambio articulatorio, se necesita una descripción o un registro apropiado.
 
-- Cifras nacionales con 48 lenguas originarias vivas, 4 andinas, 44 amazónicas y 19 familias.
-- Quechua con más de 3.5 millones de hablantes como marca de mayor número.
-- Torero 1974 con protoquechua en costa y sierra central de Lima, Junín e Ica, no en Cusco.
-- Chanca en Ayacucho, Huancavelica y Apurímac con Collao en Cusco y Puno dentro del Quechua II Sureño.
-- Aimara en Puno, Moquegua, Tacna y Arequipa como segunda originaria.
-- Jacaru en Yauyos de Lima en el distrito de Tupe con cauqui casi extinto.
-- Asháninka en Junín, Pasco y Ucayali como amazónica número uno de la familia Arawak.
-- Shipibo-konibo en el Ucayali como segunda amazónica de la familia Pano con matsés.
-- Awajún con wampis en Amazonas, San Martín y Loreto como tercera amazónica de la familia Jíbaro.
-- Constitución artículo 48 con castellano oficial nacional y originarias oficiales donde predominen.
+El contacto entre lenguas puede relacionarse con rasgos de pronunciación, vocabulario o construcción. No es adecuado presentar una explicación causal única para todo el castellano de una región ni afirmar que una forma aparece necesariamente en cada persona bilingüe. Las trayectorias de aprendizaje y los usos son diversos.
 
-## EJEMPLOS
+### Inventarios vocálicos y aprendizaje
 
-- Quechua mayoritaria. Enunciado con lengua amerindia de mayor número en Perú y Sudamérica. Resolución con familia quechua y sus 3.5 millones de hablantes. Clave con Quechua o runa simi.
-- Jacaru en Lima. Enunciado con lengua Aru conservada en Yauyos. Resolución con jacaru junto al cauqui en la sierra limeña de Tupe. Clave con Lima en Yauyos.
-- Amazonía diversa. Enunciado con región de mayor diversidad de familias. Resolución con Amazonía y sus 17 a 19 familias con 44 lenguas. Clave con Amazonía o Selva.
-- Asháninka primera. Enunciado con amazónica de mayor demografía. Resolución con asháninka Arawak de Junín, Pasco y Ucayali. Clave con Asháninka de la familia Arawak.
-- Diglosia definida. Enunciado con coexistencia asimétrica de prestigio oficial frente a plano doméstico. Resolución con diglosia como dominio público del castellano y marginación privada de la originaria. Clave con Diglosia.
-- Motoseo trivocálico. Enunciado con causa del motoseo en bilingües andinos. Resolución con sistema de solo tres vocales a, i, u que confunde e con i y o con u. Clave con trivocalismo quechua.
-- Chanca y Collao sureños. Enunciado con quechuas de Ayacucho y de Cusco con Puno. Resolución con rama Quechua II Sureña Wampuy de mayor número de hablantes. Clave con Quechua II Sureño.
-- Pano con shipibo y matsés. Enunciado con familia de shipibo-konibo y matsés. Resolución con familia Pano de la cuenca del Ucayali. Clave con Pano.
-- Velarización amazónica. Enunciado con jue por fue y san juan por San Juan. Resolución con cambio de labiodental f por velar x característico amazónico. Clave con labiodental por velar.
-- Jíbaro con awajún y wampis. Enunciado con familia de awajún y wampis. Resolución con familia Jíbaro de Amazonas, Loreto y San Martín. Clave con Jíbaro.
-- Waywash ancashino. Enunciado con quechua de Áncash y Huánuco según Torero. Resolución con Quechua I o Central Waywash arcaico. Clave con Quechua I.
-- EIB estatal. Enunciado con política que garantiza aprendizaje en lengua materna. Resolución con Educación Intercultural Bilingüe del Estado peruano. Clave con EIB.
-- Caso DECO de diglosia. Enunciado con quechua en faenas y castellano exigido en comisaría y juzgado con jóvenes que abandonan su lengua. Resolución con jerarquía asimétrica de lengua alta frente a lengua baja. Clave con diglosia lingüística.
-- Reto Torero. Enunciado con origen del protoquechua según El quechua y la historia social andina. Resolución con costa y sierra central de Lima, Junín e Ica antes del Tahuantinsuyo. Clave con esa opción central.
-- Refuerzo de variaciones. Dialecto geográfico con chibolo y guagua, sociolecto social con haiga y replana, idiolecto individual con tecnolecto médico, porque la casuística combina ramas y el mapa decide cada asignación.
+La práctica plantea un caso delimitado: una persona parte de una variedad con tres fonemas vocálicos y aprende otra lengua con cinco. La diferencia entre sistemas puede ser relevante para estudiar una posible influencia, pero **no determina cómo pronunciarán todos los aprendices** ni basta para explicar cualquier realización concreta.
 
-## IDEA CLAVE
+Fonema no equivale a letra. Contar letras de un alfabeto y contar unidades distintivas de un sistema fonológico son tareas diferentes. También es necesario precisar la variedad y el análisis, en vez de convertir la denominación quechua en una afirmación uniforme sobre cualquier sistema o hablante que lleve ese nombre.
 
-El Perú habla en muchas lenguas con una jerarquía que debes leer con precisión. El quechua lidera en hablantes con centro arcaico y sur expansivo, el Aru resiste en el altiplano y en Yauyos, la Amazonía multiplica familias con asháninka a la cabeza, cada castellano regional canta su marca de contacto y la diglosia explica por qué el quechua retrocede donde el Estado solo atiende en castellano. Mapa, familia, zona y poder responden todo.
+El término motoseo se ha utilizado para referirse a ciertos rasgos del castellano en contacto con lenguas andinas y puede tener carga estigmatizadora. No se utiliza aquí como diagnóstico de identidad ni como sinónimo de incapacidad. Su sola mención no demuestra que una persona confunda siempre dos vocales, ni que una realización particular tenga una causa exclusiva.
 
-## CLAVE DE ADMISIÓN
+Las preguntas del nivel evitan etiquetar la pronunciación de toda una población. Evalúan una distinción observable —sonidos frente a escritura— y la prudencia al inferir causas de un caso de aprendizaje. Una descripción lingüística debe separar los datos, la hipótesis que los explica y lo que aún no se ha comprobado.
 
-Quechua igual a 3.5 millones y primera originaria. Áncash y Huánuco igual a Quechua I Waywash, Chanca y Collao igual a Quechua II Sureño. Aimara igual a Puno, jacaru igual a Lima en Yauyos. Amazonía igual a 44 lenguas y 19 familias. **ASH-SHI-AWA con asháninka Arawak primero, shipibo Pano segundo y awajún Jíbaro tercero.** Motoseo igual a trivocalismo a, i, u. Jue igual a f por x amazónica. Rechazo institucional igual a diglosia, lengua materna garantizada igual a EIB. Torero igual a centro con Lima y Junín, nunca Cusco. Quechua igual a lengua, jamás dialecto del español.
+## 2.2.4 — Bilingüismo, diglosia y educación
 
-## RESUMEN
+### Dos conceptos que pueden coexistir
 
-Realidad peruana multilingüe con 48 lenguas en 19 familias. Quechua mayoritaria con I central arcaico y II sureño Chanca Collao según Torero con origen central. Aru con aimara puneño y jacaru limeño de Yauyos. Amazonía diversa con Arawak y asháninka, Pano con shipibo y matsés, Jíbaro con awajún y wampis. Castellanos ribereño estándar, andino con motoseo y diminutivos, y amazónico con velarización y genitivo antepuesto. Diglosia como asimetría con lengua alta castellana frente a lengua baja originaria, bilingüismo como dominio doble y EIB como política de lengua materna.
+El **bilingüismo** se refiere, según el enfoque, al uso o conocimiento de dos lenguas por una persona o a su presencia en una comunidad. No exige que la persona utilice ambas con idéntico dominio en cualquier actividad. Tampoco implica por sí solo igualdad social o ausencia de discriminación.
+
+La **diglosia** describe una distribución social de variedades o lenguas por ámbitos y funciones. La tradición del término distingue un sentido más estricto, referido a variedades de una lengua, y usos ampliados que incluyen lenguas diferentes. En esta práctica se explicita el sentido amplio para un caso con funciones y valoración social desiguales.
+
+Bilingüismo y diglosia **pueden coexistir**. Que alguien use dos lenguas no permite saber, sin más información, cómo se distribuyen prestigio o acceso a servicios en su comunidad. Y una descripción social de distribución de usos no significa que cada individuo tenga exactamente el mismo repertorio.
+
+En el caso ficticio del ejercicio, una lengua se reserva habitualmente para trámites de prestigio y otra para la vida familiar, con valoración desigual. Dentro del sentido anunciado, se analiza una situación diglósica. El ejemplo no afirma que cualquier uso familiar de una lengua pruebe discriminación ni que todos los ámbitos del país reproduzcan un mismo patrón.
+
+### Educación Intercultural Bilingüe
+
+La **Educación Intercultural Bilingüe (EIB)** es un servicio educativo con atención a la diversidad cultural y lingüística de poblaciones originarias. El modelo consultado distingue formas de **fortalecimiento**, **revitalización cultural y lingüística** y atención en **ámbitos urbanos**. Por eso no se reduce a una única situación donde todo estudiante tiene necesariamente una lengua originaria como primera lengua.
+
+En el fortalecimiento se atiende un escenario en que la lengua originaria tiene un uso predominante. La revitalización considera escenarios de uso más reducido de esa lengua. Los ámbitos urbanos pueden presentar repertorios y contactos diversos. Estas distinciones ayudan a entender por qué la caracterización de una institución y de sus estudiantes es relevante.
+
+Nombrar una política o un servicio no prueba que su implementación esté completa. La disponibilidad de docentes, materiales y atención efectiva requiere verificación en cada ámbito. No se promete que la EIB elimine de inmediato cualquier desigualdad ni que su nombre garantice que toda escuela concreta ya brinde una atención adecuada.
+
+| Concepto | Qué se observa | Qué no se deduce automáticamente |
+|---|---|---|
+| Bilingüismo | Repertorios o usos de dos lenguas | Igual dominio en cualquier tarea o igualdad de prestigio |
+| Diglosia en el caso amplio | Distribución social por funciones y valoración | Idéntica trayectoria de cada persona |
+| EIB | Modelo y formas de atención educativa | Cobertura completa o resultados garantizados |
+
+Este nivel no convierte una síntesis del marco educativo en asesoramiento jurídico ni añade afirmaciones de oficialidad sin revisar su norma y ámbito. Distinguir reconocimiento, derechos, diseño de un servicio y acceso efectivo evita confundir cuestiones diferentes.
+
+## Cómo interpretar fuentes y cifras
+
+| Si una fuente presenta… | Comprueba… | Evita concluir… |
+|---|---|---|
+| Una lista de lenguas | Criterio y fecha de actualización | Que son familias o cifras de hablantes |
+| Una población por lengua materna | Fecha, edad y pregunta utilizadas | Que representa a toda persona que conoce esa lengua |
+| Una ubicación territorial | Tipo de localidad y alcance del dato | Que nadie utiliza la lengua fuera de esa zona |
+| Una agrupación de variedades | El nivel de la clasificación | Que todas las variedades son idénticas |
+| Un servicio educativo | Forma de atención y escenario lingüístico | Que ya se implementa plenamente en cualquier escuela |
+
+Por ejemplo, aprender a hablar en una lengua durante la niñez y conocerla como segunda lengua no son la misma variable. Una tabla que cuenta la primera no debe presentarse como censo completo de todas las personas capaces de usarla. Tampoco una cifra antigua debe anunciarse como conteo exacto actual sin actualización.
+
+## Importante
+
+**Familia, lengua, variedad, territorio y población responden a preguntas distintas.** La clasificación no establece superioridad. La ubicación no limita dónde pueden vivir los hablantes. Una diferencia de sonidos no prueba identidad ni capacidad. Para comparar números o explicar un fenómeno, identifica primero la fuente y el alcance de la evidencia.
+
+## Procedimiento para los ejercicios
+
+1. Determina si se pregunta por una familia, variedad, localización, cantidad o situación de uso.
+2. Usa la relación documentada: jaqaru–Aru, ashaninka–Arawak, shipibo-konibo y matsés–Pano, awajún y wampis–Jíbaro.
+3. Separa la clasificación de dos ramas quechuas de la tabla de agrupaciones geográficas y variedades concretas.
+4. Si hay un dato numérico, comprueba qué cuenta; no sustituyas lenguas por familias o lengua materna por cualquier conocimiento lingüístico.
+5. Si hay una explicación de pronunciación o de uso social, distingue el dato de una hipótesis y evita generalizar a toda una población.
+
+El objetivo es reconocer relaciones claras sin convertirlas en etiquetas para las personas. Los mapas y tablas de esta lección sirven para comparar esas relaciones; no sustituyen una cartografía de distribución ni una investigación sobre cada comunidad.

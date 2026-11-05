@@ -1,5 +1,7 @@
 # Cambios — UI global de Aprender
 
+01/11/2026: presentación matemática y siete gráficos en diez lecciones de Física. Alcance, arquitectura y pruebas en ../formulas/. Catálogos, preguntas, progreso y rutas conservados. Suite Android y assembleDebug correctos; revisión física pendiente.
+
 ## 04/10/2026 — Comparación documental UNSA 2027
 
 Revisadas 45 páginas escaneadas de RCU-0028-Aprobacion-de-TEMARIO-y-MATRIZ-ADMISION-2027 (1).pdf mediante OCR y lectura visual. Nuevo documento raíz `TEMARIO 2027 UNSA ADMISION.md`: siete ejes, veinte componentes, temas/subtemas y comparación por componente. Confirmadas omisiones de Literatura y subtemas, ampliaciones no literales y errores de pesos en el MD anterior (Biología y Geometría de Sociales); registrada diferencia mínima de Física Ingenierías en código, sin editarlo. Los MD anteriores mantienen sus hashes. Cambios exclusivamente documentales; no requiere compilación ni pruebas del motor, que no se modificó.
@@ -163,3 +165,84 @@ Validación: 153 pruebas Android sin fallos/errores/omitidas y lintVitalRelease 
 ## 08/10/2026 — Refinamiento solicitado
 
 Solo Historia Universal, Biología y Física cambian su icono de banner/selector por vectores rellenos opacos. Catálogos, preguntas y SVG del camino no se modificaron.
+
+01/11/2026: muestreo de 60 niveles/20 materias y búsqueda estructural de rellenos. Ver AUDITORIA_MUESTRA_2026-11-01.md. Física 1.1 corregida con fuentes, mismos diez IDs más c11, y fixtures equivalentes. Validador: cero errores/cero advertencias; sanitizador sin contaminación. Presentación matemática extendida a prosa y otras superficies académicas. Los problemas del resto del banco no se declaran resueltos.
+
+01/11/2026: mejorada presentación de tablas y reserva finita de exposición. Solo dos listas de teoría Física 1.1 cambiaron a Markdown tabular; datos, claves y demás catálogos conservados. Ver ../exposicion/.
+
+01/11/2026 — Presentación académica compartida: limpieza visual de emojis decorativos conservando símbolos científicos; rótulos promocionales de examen sustituidos por «Importante», con tarjeta ámbar adaptada a claro/oscuro. Listas homogéneas de 3–8 conceptos con definiciones completas pueden mostrarse en tabla; entradas incompletas o ambiguas conservan su formato. Integrado en teoría, fórmulas y tarjetas de repaso. No se editó contenido fuente ni respuestas en esta intervención. Diagramas existentes conservados; no se inventaron gráficos para materias sin una correspondencia comprobada.
+
+01/11/2026 — Formato enriquecido de teoría: negritas azules para conceptos explícitos, cursivas violetas y subrayado verde azulado mediante <u>texto</u>; paletas propias claro/oscuro. Etiquetas al comienzo de definiciones se destacan sin inferir palabras clave dentro de párrafos. Primera columna de tablas con énfasis; listas existentes conservadas. AcademicText activa theoryStyle solo desde el lector de teoría; las preguntas no reciben estos colores. Motor local usa nodos DOM seguros y conserva fórmulas dentro del énfasis; no interpreta HTML arbitrario. Las seis tablas propuestas por Antigravity siguen como propuestas sin aplicar a las fuentes.
+
+Validación: assembleDebug y 200 pruebas Android correctas, cero fallos/errores (build/theory-rich-style.log). Motor aislado a 360 px claro/oscuro/letra grande: negrita, cursiva, subrayado, fórmulas y tablas correctos, sin errores JS ni peticiones externas (build/scientific-math-browser-report.json); muestras theory-style-light/dark.png. Android no ejecutado: revisión física pendiente.
+
+01/11/2026 — Resoluciones reproducibles y esquemas: ResolutionPlayback en ejemplos, explicación de Aprender y visor compartido de Mis errores/revisión. Controles manuales/automáticos, pausa en segundo plano, texto original conservado. Dos construcciones geométricas por encabezados comprobados (triángulo y radio–tangente), separadas de los ejercicios. Esquemas opcionales solo a partir de listas explícitas. Cobertura y pendientes en ../formulas/REPRODUCCION_Y_COBERTURA.md. No se generaron deducciones ni se tocaron fuentes académicas.
+
+01/11/2026 — Ajuste de prácticas y racha según capturas. RastroApp oculta únicamente la barra inferior en la ruta LessonEngine; cabecera superior y demás destinos conservados. ChallengeQuestionView reserva el alto real del pie de comprobación/feedback mediante Column y área desplazable con weight, en lugar de superponerlo con un margen fijo de 140 dp. Días de racha elimina insets duplicados (Scaffold ya los aplica), aumenta fuego de 52 a 88 dp, compacta calendario/espacios y conserva datos, meses y compartir. Sin scroll con altura disponible >=680 dp y fontScale <=1.25; respaldo desplazable con menos espacio o letra ampliada. Esto requiere validación física de ajuste; app no ejecutada.
+
+01/11/2026 — Bloque académico 01: Trigonometría 1.1 y Geometría 3.1/7.1; 30 IDs conservados, 24 rellenos sustituidos, seis preguntas completadas/corregidas y c11 añadido por nivel (33 en total). Resoluciones completas, fuentes documentadas y siete giros con valor angular explícito. No se reconstruye por suposición la relación perdida de Trigonometría c02: se reemplaza expresamente el ejercicio. Ver REVISION_ACADEMICA_BLOQUE_01.md. Conteo de patrones genéricos restantes: 1.330; revisión completa pendiente.
+
+01/11/2026 — Bloque 02: 22 preguntas de Álgebra 1.1/1.2, con datos completos y resoluciones, y 24 preguntas de razonamiento con alternativas duplicadas corregidas. Diagrama de Venn reproducible para cuatro operaciones. Auditoría estructural del árbol completo: 20 materias, 418 niveles, 4.342 preguntas; 1.453 preguntas con alertas ampliadas, frente a 1.321 coincidencias del patrón histórico. No se consideran conteos equivalentes ni validación académica exhaustiva. Estado y fuentes en REVISION_ACADEMICA_BLOQUE_02.md y estado/AUDITORIA_ESTRUCTURAL_TOTAL.md. Casillas de cierre real en CIERRE_POR_NIVEL.md.
+
+01/11/2026 — Bloque 03: 66 preguntas de Química 1.1/1.2, Física 2.1/2.2 y Aritmética 1.1/1.2. Sesenta IDs anteriores conservados y c11 por nivel. Teoría: cierre local de casos, precisión de Carroll, conversiones de temperatura y cambios físicos/nucleares. Nuevo gráfico de densidad; Venn y proyectil reutilizados solo en secciones pertinentes. Fuentes y cálculos documentados en REVISION_ACADEMICA_BLOQUE_03.md. Auditoría: 4.348 preguntas, 1.419 alertas ampliadas; revisión total pendiente.
+
+01/11/2026 — Claridad de teoría y mapas. Vista de aprendizaje sin fichas administrativas/ponderaciones oficiales; preserva puntajes dentro de ejercicios y medias ponderadas. Nuevo lector gráfico de nodos/conexiones para los 111 Mermaid actuales y un esquema de materia, con fuentes no compatibles conservadas. Títulos y ramas usan notación científica; ya no se separan coordenadas por comas. Corrección del detector que trataba «en +x» como fórmula, y agrupación de matrices con fallo local si falta cierre. Teoría de vectores 1.1/1.2 aclarada con símbolos y ejemplo antes de generalizar; preguntas intactas. Ver ../formulas/CLARIDAD_TEORIA_Y_MAPAS.md.
+
+02/11/2026 — Práctica Álgebra 02–16: 330 ejercicios en 30 niveles, datos completos, cuatro alternativas distintas y tres pasos explícitos. Se conservan 300 IDs y se añaden 30 c11. Cinco modelos por nivel con variantes comprobadas, sin atribución a exámenes oficiales. Teoría y catálogo Kotlin legacy no modificados. Ver algebra/REVISION_PRACTICA_02_A_16.md. Auditoría total: 4.378 preguntas, 1.141 con alertas; no se declara revisión completa.
+
+02/11/2026: práctica de los 21 niveles pendientes, 231 ejercicios distintos (189 cálculos exactos contrastados y 42 conceptuales). Se conservan 210 IDs y se añade c11 por nivel. Sin cambios en los bancos de 1.1 y 2.1/2.2; hashes en build/physics-pending-proofs.json. Fuente y fixtures equivalentes. Corregidas en teoría 7.2 la atribución del balance de calor a la ley cero, las condiciones de mezclas con hielo, la dilatación de agujeros y la conversión exacta de 20 °C a 293.15 K. Sin ejecutar ni publicar Android.
+
+02/11/2026: revisada la práctica pendiente de Física y Trigonometría: 484 ejercicios en 44 niveles, con resoluciones en tres pasos compatibles con el reproductor existente. No se agregan dibujos particulares para cada ejercicio. Detalle y límites en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md y docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md. Conteo vigente global: 4.422 preguntas, 770 con alertas automáticas; no tener alertas tampoco equivale a certificación académica.
+
+02/11/2026: práctica pendiente de Geometría revisada: 220 ejercicios en 20 niveles, sin alterar los pilotos 3.1/7.1. Resoluciones por pasos compatibles con el reproductor, sin gráficos individuales nuevos. Informe en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md. Auditoría global vigente: 4.442 preguntas, 570 con alertas. Sin alertas no equivale a validación académica de todo el contenido.
+
+02/11/2026: práctica pendiente de Aritmética revisada: 264 ejercicios en 24 niveles; 1.1/1.2 conservados. Informe: docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md. Resoluciones reproducibles en tres partes, sin nuevos gráficos individuales. Auditoría global: 4.466 preguntas, 458 con alertas. La teoría y los demás bancos no se declaran certificados por ausencia de alertas.
+
+03/11/2026: acompañantes de teoría corregidos globalmente. Eliminado el fallback de ADN para categorías sin dibujo. Selección por materia y contexto; 22 claves con representación explícita, máximo una por sección y tres distintas por lección, separadas por al menos una sección. Autor y Fundamento no generan imagen por sí solos. Comprobación de las 20 materias y recorrido de las 418 teorías. assembleDebug y 499 pruebas repetidas correctas (302 Android y 197 shared), cero fallos, errores u omitidas. Log: build/academic-companions-validation.log. Informe: docs/formulas/ACOMPANANTES_POR_TEMA_2026-11-03.md. Inspección visual física pendiente; Android no ejecutado ni publicado. Bancos, recursos académicos y progreso sin cambios en este lote.
+
+## 03/11/2026 — Material y revisión local
+
+Material sustituye Guía; consulta las lecciones y preguntas existentes con filtros, índice y lectura continua. Incorpora cuatro SVG y un corazón 3D opcional con licencias por archivo. No modifica contenido académico, respuestas ni gamificación. Ver `docs/material/INFORME_2026-11-03.md`; cambios locales, sin publicación ni modificación de Firebase remoto.
+
+
+## 03/11/2026 — Corrección de las capturas de Material y pizarra
+
+Se corrigió el documento inicial del visor mediante HTTPS local interceptado. Material conserva su curso, usa desplegables y oculta créditos/revisión hasta solicitarlos. La teoría de los niveles incorpora la misma biblioteca; los avisos se reúnen en Importante. La pizarra nativa se integra junto a preguntas/material con resaltado y desplazamiento; herramientas de Pizarra libre visibles encima del lienzo. Se preservan fuentes, bancos, respuestas, recompensas y Firebase. Ver docs/material/CORRECCIONES_CAPTURAS_2026-11-03.md para pruebas y límites físicos.
+
+
+## 03/11/2026 — Preguntas y pizarra de pantalla completa
+
+Cabecera y progreso únicamente durante las preguntas. Pizarra compartida de preguntas con enunciado integrado en el papel, colores/grosor visibles y conservación acotada por pregunta. No se modifican los bancos, reglas, Firebase ni recompensas. Compilación debug y 543 pruebas unitarias correctas; revisión visual/táctil pendiente, sin ejecutar la app. Detalles y límites en `../preguntas/INFORME_2026-11-03.md`. Esta descripción sustituye la distribución partida inicial en preguntas; Material mantiene su rama de consulta.
+
+
+## 03/11/2026 — Ajustes de margen inferior, flecha y teoría
+
+La pizarra calcula el margen seguro del diálogo a partir de los insets completos de su ventana, sin descontar los ya consumidos por el Scaffold de la app. Evita que el control de grosor termine bajo la navegación de Android.
+
+La flecha de lectura se integra en el margen lateral de QuestionScrollArea y deja de ser una fila que resta altura al área desplazable. Solo aparece si quedan más de dos píxeles por recorrer; no ocupa altura adicional ni modifica el criterio al aparecer. Se retiraron los dos avisos externos en Aprender y examen activo.
+
+La cabecera general se oculta durante toda la ruta del nivel, incluida la teoría inicial. No cambian preguntas, respuestas, recompensas ni dibujos.
+
+Validación: assembleDebug y 545 pruebas unitarias (348 Android + 197 shared), sin fallos, errores ni omitidas. Dos pruebas nuevas cubren la indicación al caber todo el contenido, el margen de redondeo y el final del recorrido. Log: build/question-insets-scroll-validation.log. No se ejecutó Android; queda pendiente confirmar los márgenes y el resultado visual en el celular del usuario.
+
+
+## 03/11/2026 — Historia: ilustraciones relacionadas y fotografías ligeras
+
+Cuatro SVG originales, CC0, para cerámica, tejido, templo andino y quipu. Android usa sus equivalentes VectorDrawable, con relleno opaco y contorno. La selección depende del tema, respeta el presupuesto anterior (máximo tres acompañantes distintos por lección, separados entre secciones) y no asigna arquitectura andina a Roma o Egipto. Son símbolos, no reproducciones de piezas arqueológicas.
+
+Se integraron dos fotografías Open Access del Met: botella geométrica Moche (objeto 309442) y vasija de maíz Nasca (316270), cada una de unos 12 KB en WebP. Se verificó el dominio público individual y la política CC0 del museo; las fichas de procedencia están en assets/educational-visuals/licenses. El inventario completo está en ../material/INVENTARIO_HISTORIA_2026-11-03.md. Fotos, SVG y XML nativos suman 31 657 bytes; esa cifra excluye documentación y metadatos.
+
+Las imágenes se colocan después de su sección en Historia del Perú, semana 2, nivel 2.1, usando los títulos reales de Cultura Moche y Cultura Nasca. La misma asociación se utiliza en Material. El campo opcional sectionKeywords conserva el comportamiento de los recursos anteriores. Si un recurso exige una sección inexistente, no se muestra en otra como sustituto. Los identificadores de revisión de imágenes antiguas conservan su huella anterior: el nuevo metadato de ubicación no invalida una revisión sin cambiar la imagen.
+
+Validación: assembleDebug y 551 pruebas (354 Android + 197 shared), sin fallos, errores ni omitidas. Seis pruebas nuevas cubren relevancia, SVG/XML sin recursos externos, licencias individuales, peso, asociación exacta al contenido real, ausencia en modo solo preguntas y estabilidad de la huella. Log build/history-visual-validation.log. Fotografías locales inspeccionadas; SVG/XML validados estructuralmente. No se ejecutó Android; revisión visual/táctil y rendimiento físico pendientes. No se publicaron cambios ni se modificaron bancos, Firebase o recompensas. Esto no constituye cobertura gráfica completa de todas las materias.
+
+
+## 04/11/2026 — Mapas, desplazamiento y resoluciones de texto
+
+Se retiraron los controles que solo revelaban frases con un temporizador: la resolución textual se muestra completa, conservando sus pasos y fórmulas. Las construcciones visuales reales mantienen sus controles propios. No se usa la cantidad de frases para decidir si existe una animación.
+
+El bloque matemático/tabular cancela su gesto interno al detectar intención vertical, desactiva el desplazamiento anidado y mantiene su posición vertical en cero; conserva el recorrido horizontal. La altura medida ya no se descarta al superar 12 000 píxeles, lo que podía dejar un bloque largo con altura insuficiente.
+
+El mapa confirma su dibujo después de recibir dimensiones y notifica errores de ejecución. Se permite cargar el origen HTTPS local interceptado; las direcciones ajenas siguen bloqueadas por el interceptor y la política CSP. Si no confirma el dibujo en ocho segundos o falla, se usa una vista nativa con los nodos y conexiones originales, zoom y desplazamiento en la vista ampliada. Esa alternativa básica conserva el texto de las fórmulas, sin el acabado de KaTeX; no se presenta como equivalente tipográfico. No se pudo identificar en un dispositivo la causa única del recuadro vacío: las capturas prueban el síntoma, no su origen.
+
+Comprobado: assembleDebug y 664 pruebas (467 Android + 197 shared), sin fallos, errores u omisiones; build/theory-scroll-map-resolution-final-validation.log. Visor local: 246 mapas, 386 tablas en tres configuraciones, sin errores; incluye confirmación de dibujo, medición retrasada y aviso de fallo. Vista previa del mapa de Oscilaciones y ondas inspeccionada. No se ejecutó Android: pendiente comprobar mapa, gestos y márgenes en el teléfono. No se publicaron cambios ni se tocaron Firebase o recompensas.

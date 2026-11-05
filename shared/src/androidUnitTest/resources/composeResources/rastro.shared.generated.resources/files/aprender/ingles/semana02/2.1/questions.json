@@ -1,1 +1,200 @@
-[{"concept":"2.1.1","correctIndex":2,"explanation":"**Resolución:** 1. El primer verbo es *travel* (regular): al añadir *-ed*, en inglés británico se duplica la 'l' (*travelled*) y en americano se admite *traveled*. 2. El segundo verbo es *bring* (irregular): su pasado simple es una forma supletiva irregular indiscutible: **brought** (nunca *bringed* ni *brang*). La combinación formalmente válida es *travelled - brought*. **Respuesta:** **B** ---","fuente":"temario","id":"ing_t02_s01_c01","options":["travel - brought","was traveling - brought","traveled - bringed","travelled - brought"],"pedagogicalTier":"concepto","semana":2,"statement":"Choose the correct past form of the verbs in parentheses to complete the historical statement:","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"2.1.2","correctIndex":3,"explanation":"**Resolución:** La desinencia *-ed* solo se pronuncia como sílaba plena **/ɪd/** cuando el verbo base finaliza en los fonemas alveolares **/t/** o **/d/**: - *Play* termina en vocal \\rightarrow /d/ - *Work* termina en /k/ sorda \\rightarrow /t/ - *Clean* termina en /n/ sonora \\rightarrow /d/ - *Watch* termina en /tʃ/ sorda \\rightarrow /t/ - *Decide* termina en el sonido **/d/** (/dɪˈsaɪd/) \\rightarrow **decided** (/dɪˈsaɪdɪd/ = **/ɪd/**). **Respuesta:** **C** ---","fuente":"temario","id":"ing_t02_s01_c02","options":["Worked","Decided","Cleaned","Played"],"pedagogicalTier":"concepto","semana":2,"statement":"In which of the following verbs is the past ending **\"-ed\"** pronounced as the distinct additional syllable **/ɪd/**?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"2.1.3","correctIndex":0,"explanation":"**Resolución:** En la alternativa **C**, la oración formula una pregunta en Past Simple utilizando el auxiliar *did*: *\"Why did the professor postponed...\"*. La presencia del operador *did* exige que el verbo principal se mantenga en su **forma base**. Emplear *postponed* incurre en la trampa de la doble marca de pasado. La forma correcta es: *\"Why did the professor **postpone** the laboratory examination?\"*. **Respuesta:** **C** ---","fuente":"temario","id":"ing_t02_s01_c03","options":["Did you attend the university seminar on renewable energy last week?","They didn't find any relevant sources for their history essay.","Why did the professor postponed the laboratory examination?","She didn't have enough time to complete the geometry test."],"pedagogicalTier":"concepto","semana":2,"statement":"Identify the sentence that contains a **GRAMMATICAL ERROR**:","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"2.1.4","correctIndex":3,"explanation":"According to the lesson theory: As a separate extra syllable pronounced **/ɪd/** (*e.g., wanted, needed*).","fuente":"temario","id":"ing_t02_s01_c04","options":["It requires an irregular past participle form without auxiliary verbs.","It is only used in colloquial informal contexts with plural nouns.","It follows an inverted word order with obligatory double negation.","As a separate extra syllable pronounced **/ɪd/** (*e.g., wanted, needed*)."],"pedagogicalTier":"concepto","semana":2,"statement":"How do you pronounce *-ed* when the base verb ends in /t/ or /d/?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"2.1.5","correctIndex":1,"explanation":"According to the lesson theory: The verb **loses its past form** and returns to the **base infinitive** (*She didn't write, NOT: didn't wrote*).","fuente":"temario","id":"ing_t02_s01_c05","options":["It follows an inverted word order with obligatory double negation.","The verb **loses its past form** and returns to the **base infinitive** (*She didn't write, NOT: didn't wrote*).","It requires an irregular past participle form without auxiliary verbs.","It is only used in colloquial informal contexts with plural nouns."],"pedagogicalTier":"concepto","semana":2,"statement":"What happens to the past verb when *didn't* is used?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"2.1.6","correctIndex":2,"explanation":"According to the lesson theory: 1. For **premeditated plans / intentions** made before speaking. 2. For predictions with **visible physical evidence** right now.","fuente":"temario","id":"ing_t02_s01_c06","options":["It follows an inverted word order with obligatory double negation.","It requires an irregular past participle form without auxiliary verbs.","1. For **premeditated plans / intentions** made before speaking. 2. For predictions with **visible physical evidence** right now.","It is only used in colloquial informal contexts with plural nouns."],"pedagogicalTier":"concepto","semana":2,"statement":"When MUST you use *Be going to* instead of *Will*?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"2.1.7","correctIndex":1,"explanation":"(Pasado simple irregular de *see*).","fuente":"temario","id":"ing_t02_s01_c07","options":["seed","saw","am seeing","have saw"],"pedagogicalTier":"concepto","semana":2,"statement":"*\"I _______ (see) a documentary about astronomy on television last night.\"*","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"2.1.8","correctIndex":0,"explanation":"(Evidencia física inminente observable).","fuente":"temario","id":"ing_t02_s01_c08","options":["is going to","did","would","will"],"pedagogicalTier":"concepto","semana":2,"statement":"Look at that glass on the edge of the desk! It _______ fall!","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"2.1.9","correctIndex":2,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t02_s01_c09","options":["The tense used is incompatible with the stated adverbial time marker.","The word order incorrectly positions the modifier after the direct object.","The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson.","The sentence violates subject-verb agreement in standard English."],"pedagogicalTier":"concepto","semana":2,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"2.1.10","correctIndex":3,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t02_s01_c10","options":["The tense used is incompatible with the stated adverbial time marker.","The word order incorrectly positions the modifier after the direct object.","The sentence violates subject-verb agreement in standard English.","The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson."],"pedagogicalTier":"concepto","semana":2,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "ing_t02_s01_c01",
+    "concept": "2.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 2,
+    "statement": "Completa la oración en inglés estándar:\nYesterday, Paula ___ her grandmother.",
+    "options": [
+      "visited",
+      "visit",
+      "visits",
+      "visiting"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Yesterday ubica el hecho en un pasado terminado.\n2. El pasado regular de visit añade -ed.\n3. La oración completa es: Yesterday, Paula visited her grandmother.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t02_s01_c02",
+    "concept": "2.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 2,
+    "statement": "Completa la oración en inglés estándar:\nLast night, we ___ to the theatre.",
+    "options": [
+      "goed",
+      "go",
+      "going",
+      "went"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El contexto pide pasado simple.\n2. Go es irregular: su pasado es went.\n3. La oración completa es: Last night, we went to the theatre.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t02_s01_c03",
+    "concept": "2.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 2,
+    "statement": "Completa la oración en inglés estándar:\nHe did not ___ the message.",
+    "options": [
+      "reading",
+      "readed",
+      "read",
+      "reads"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Después de did not se usa la forma base.\n2. Read es la forma escrita base; el pasado ya lo marca did.\n3. La oración completa es: He did not read the message.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t02_s01_c04",
+    "concept": "2.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 2,
+    "statement": "Completa la oración en inglés estándar:\n___ you finish the task yesterday?",
+    "options": [
+      "Were",
+      "Did",
+      "Do",
+      "Does"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Una pregunta sobre la acción pasada usa did.\n2. El verbo principal finish permanece en su forma base.\n3. La oración completa es: Did you finish the task yesterday?",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t02_s01_c05",
+    "concept": "2.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 2,
+    "statement": "Completa la oración en inglés estándar:\nThey ___ at home yesterday evening.",
+    "options": [
+      "were",
+      "was",
+      "are",
+      "be"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El pasado de be cambia según el sujeto.\n2. They requiere were.\n3. La oración completa es: They were at home yesterday evening.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t02_s01_c06",
+    "concept": "2.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 2,
+    "statement": "Completa la oración en inglés estándar:\nI ___ tired after the trip yesterday.",
+    "options": [
+      "were",
+      "am",
+      "being",
+      "was"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El estado se sitúa en el pasado.\n2. I concuerda con was en esta afirmación.\n3. La oración completa es: I was tired after the trip yesterday.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t02_s01_c07",
+    "concept": "2.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 2,
+    "statement": "Completa la oración en inglés estándar:\nSara ___ a letter last week.",
+    "options": [
+      "written",
+      "writing",
+      "wrote",
+      "write"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La acción terminada pide pasado simple.\n2. El pasado de write es wrote; written es participio.\n3. La oración completa es: Sara wrote a letter last week.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t02_s01_c08",
+    "concept": "2.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 2,
+    "statement": "Completa la oración en inglés estándar:\nWe ___ the museum two days ago.",
+    "options": [
+      "seeing",
+      "saw",
+      "see",
+      "seen"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Ago señala un momento pasado terminado.\n2. See tiene pasado irregular saw.\n3. La oración completa es: We saw the museum two days ago.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t02_s01_c09",
+    "concept": "2.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 2,
+    "statement": "Completa la oración en inglés estándar:\nShe ___ not buy the book yesterday.",
+    "options": [
+      "did",
+      "does",
+      "is",
+      "was"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La negación de buy en pasado usa did not.\n2. Buy permanece en base después del auxiliar.\n3. La oración completa es: She did not buy the book yesterday.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t02_s01_c10",
+    "concept": "2.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 2,
+    "statement": "¿Cuál es el pasado simple de study?",
+    "options": [
+      "studyed",
+      "studying",
+      "studies",
+      "studied"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. En una consonante seguida de y se cambia y por i antes de -ed.\n2. Study termina en consonante más y; se escribe studied.\n3. La respuesta es: studied",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t02_s01_c11",
+    "concept": "2.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 2,
+    "statement": "¿Qué pregunta corresponde a «Luis lived in Lima last year»?",
+    "options": [
+      "Where does Luis lived last year?",
+      "Where was Luis live last year?",
+      "Where did Luis live last year?",
+      "Where did Luis lived last year?"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La pregunta usa did más verbo base.\n2. Se pregunta el lugar y se conserva la referencia temporal pasada.\n3. La respuesta es: Where did Luis live last year?",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

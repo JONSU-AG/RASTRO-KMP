@@ -1,1 +1,200 @@
-[{"concept":"6.1.1","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. Una proporción geométrica continua tiene la forma: \\frac{a}{b} = \\frac{b}{c} \\implies b^2 = a \\cdot c \\implies b = \\sqrt{a \\cdot c} donde los extremos son a y c, y la media proporcional es b. 2. Por dato, los extremos están en relación de 4 a 9: \\frac{a}{c} = \\frac{4}{9} \\implies a = 4k, \\quad c = 9k 3. La suma de los términos extremos es 65: a + c = 65 \\implies 4k + 9k = 65 \\implies 13k = 65 \\implies k = 5 4. Calculamos el valor de cada extremo: a = 4(5) = 20 c = 9(5) = 45 5. Calculamos la media proporcional b: b = \\sqrt{a \\cdot c} = \\sqrt{20 \\cdot 45} = \\sqrt{900} = 30 **Respuesta Correcta:** **C) 30** ---","fuente":"temario","id":"arit_t06_s01_c01","options":["24","28","30","32"],"pedagogicalTier":"concepto","semana":6,"statement":"**Enunciado:** En una proporción geométrica continua, los términos extremos están en la relación de 4 a 9. Si la suma de los términos extremos es 65, determine el valor de la media proporcional.","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.2","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Igualamos la serie a una constante de proporcionalidad k: \\frac{a}{3} = \\frac{b}{5} = \\frac{c}{8} = k \\implies a = 3k, \\quad b = 5k, \\quad c = 8k 2. Reemplazamos las expresiones en la condición dada: 2a + 3b - c = 91 2(3k) + 3(5k) - (8k) = 91 6k + 15k - 8k = 91 \\implies 13k = 91 \\implies k = 7 3. Hallamos la suma total solicitada: a + b + c = 3k + 5k + 8k = 16k \\text{Suma} = 16 \\cdot 7 = 112 **Respuesta Correcta:** **B) 112** ---","fuente":"temario","id":"arit_t06_s01_c02","options":["120","128","104","112"],"pedagogicalTier":"concepto","semana":6,"statement":"**Enunciado:** En la siguiente serie de razones geométricas equivalentes:","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.3","correctIndex":3,"explanation":"**Resolución Paso a Paso:** 1. Sea la serie de 4 razones continuas: \\frac{a}{b} = \\frac{b}{c} = \\frac{c}{d} = \\frac{d}{e} = k 2. Por la propiedad fundamental de la suma en una SRGE: k = \\frac{\\text{Suma de Antecedentes}}{\\text{Suma de Consecuentes}} = \\frac{120}{360} = \\frac{1}{3} 3. Por la propiedad de los extremos en razones continuas de n = 4 razones: \\frac{\\text{Primer antecedente}}{\\text{Último consecuente}} = \\frac{a}{e} = k^4 4. Reemplazamos los valores conocidos: a = 8 y k = \\frac{1}{3}: \\frac{8}{e} = \\left(\\frac{1}{3}\\right)^4 = \\frac{1}{81} 5. Despejamos el último consecuente e: e = 8 \\cdot 81 = 648 **Respuesta Correcta:** **B) 648** ---","fuente":"temario","id":"arit_t06_s01_c03","options":["648","729","810","486"],"pedagogicalTier":"concepto","semana":6,"statement":"**Enunciado:** En una serie de cuatro razones geométricas equivalentes continuas, la suma de los antecedentes es 120 y la suma de los consecuentes es 360. Si el primer antecedente es 8, determine el valor del último consecuente.","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: La suma de los términos extremos es igual a la suma de los términos medios (a + d = b + c).","fuente":"temario","id":"arit_t06_s01_c04","options":["Mediante su promedio o media aritmética: b = \\frac{a + c}{2}.","Cuarta proporcional de a, b y c.","Valor o condición no aplicable al caso planteado","La suma de los términos extremos es igual a la suma de los términos medios (a + d = b + c)."],"pedagogicalTier":"concepto","semana":6,"statement":"¿Cuál es la propiedad fundamental de una proporción aritmética a - b = c - d?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Mediante su promedio o media aritmética: b = \\frac{a + c}{2}.","fuente":"temario","id":"arit_t06_s01_c05","options":["Mediante su promedio o media aritmética: b = \\frac{a + c}{2}.","La suma de los términos extremos es igual a la suma de los términos medios (a + d = b + c).","Cuarta proporcional de a, b y c.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":6,"statement":"¿Cómo se calcula la media diferencial de dos números a y c?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Cuarta proporcional de a, b y c.","fuente":"temario","id":"arit_t06_s01_c06","options":["La suma de los términos extremos es igual a la suma de los términos medios (a + d = b + c).","Cuarta proporcional de a, b y c.","Mediante su promedio o media aritmética: b = \\frac{a + c}{2}.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":6,"statement":"En una proporción geométrica discreta, ¿cómo se llama el cuarto término d?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t06_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t06_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t06_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t06_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "arit_t06_s01_c01",
+    "concept": "6.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 6,
+    "statement": "La razón geométrica de 8 a 12 es…",
+    "options": [
+      "$\\frac{2}{3}$",
+      "$\\frac{4}{3}$",
+      "$\\frac{1}{3}$",
+      "$2$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Una razón geométrica es un cociente con denominador no nulo.\n2. Desarrollamos con los datos: $8/12=2/3$.\n3. El resultado es $\\frac{2}{3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t06_s01_c02",
+    "concept": "6.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 6,
+    "statement": "En 3/5=x/20, ¿cuánto vale x?",
+    "options": [
+      "$24$",
+      "$6$",
+      "$36$",
+      "$12$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Igualamos productos cruzados.\n2. Desarrollamos con los datos: $5x=3(20)\\Rightarrow x=12$.\n3. El resultado es $12$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t06_s01_c03",
+    "concept": "6.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 6,
+    "statement": "Dos cantidades están en razón 2:3 y suman 25. ¿Cuál es la menor?",
+    "options": [
+      "$5$",
+      "$30$",
+      "$10$",
+      "$20$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Representamos las cantidades como 2k y 3k.\n2. Desarrollamos con los datos: $5k=25\\Rightarrow2k=10$.\n3. El resultado es $10$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t06_s01_c04",
+    "concept": "6.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 6,
+    "statement": "Dos cantidades están en razón 4:7 y difieren en 18. ¿Cuál es la mayor?",
+    "options": [
+      "$126$",
+      "$42$",
+      "$84$",
+      "$21$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La diferencia corresponde a tres partes.\n2. Desarrollamos con los datos: $3k=18\\Rightarrow7k=42$.\n3. El resultado es $42$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t06_s01_c05",
+    "concept": "6.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 6,
+    "statement": "En una proporción, los extremos son 3 y 8. Un medio es 4. ¿Cuánto vale el otro?",
+    "options": [
+      "$6$",
+      "$12$",
+      "$3$",
+      "$18$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El producto de medios equivale al de extremos.\n2. Desarrollamos con los datos: $4x=3(8)\\Rightarrow x=6$.\n3. El resultado es $6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t06_s01_c06",
+    "concept": "6.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 6,
+    "statement": "La media geométrica positiva entre 4 y 9 es…",
+    "options": [
+      "$12$",
+      "$3$",
+      "$18$",
+      "$6$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La media geométrica es la raíz del producto.\n2. Desarrollamos con los datos: $g=\\sqrt{4(9)}$.\n3. El resultado es $6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t06_s01_c07",
+    "concept": "6.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 6,
+    "statement": "La media aritmética entre 4 y 10 es…",
+    "options": [
+      "$21$",
+      "$8$",
+      "$7$",
+      "$14$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La media aritmética divide la suma entre dos.\n2. Desarrollamos con los datos: $a=(4+10)/2$.\n3. El resultado es $7$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t06_s01_c08",
+    "concept": "6.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 6,
+    "statement": "En una proporción continua 2/x=x/8, con x positivo, ¿cuánto vale x?",
+    "options": [
+      "$12$",
+      "$4$",
+      "$8$",
+      "$2$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El medio proporcional cumple x²=2·8.\n2. Desarrollamos con los datos: $x=\\sqrt{16}$.\n3. El resultado es $4$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t06_s01_c09",
+    "concept": "6.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 6,
+    "statement": "Una razón a/b es 3/4. Si a=15, ¿cuánto vale b?",
+    "options": [
+      "$20$",
+      "$40$",
+      "$10$",
+      "$60$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El antecedente corresponde a tres partes.\n2. Desarrollamos con los datos: $15/b=3/4\\Rightarrow b=20$.\n3. El resultado es $20$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t06_s01_c10",
+    "concept": "6.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 6,
+    "statement": "En una proporción a/b=c/d con denominadores no nulos…",
+    "options": [
+      "Se cumple ad=bc.",
+      "Se cumple a+b=c+d necesariamente.",
+      "Cada término debe ser uno.",
+      "Los numeradores deben ser iguales."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La igualdad de cocientes puede multiplicarse por bd.\n2. Queda ad=bc.\n3. La equivalencia requiere conservar los denominadores no nulos.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t06_s01_c11",
+    "concept": "6.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 6,
+    "statement": "La media geométrica positiva de dos positivos a y b es…",
+    "options": [
+      "$(a+b)/2$",
+      "$\\sqrt{ab}$",
+      "$a-b$",
+      "$a+b$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El medio proporcional g satisface a/g=g/b.\n2. De ahí g²=ab.\n3. Se toma la raíz positiva porque se pide la media positiva.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

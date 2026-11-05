@@ -19,7 +19,6 @@ import kotlin.test.assertTrue
  * Notas de staging (no se modifica curso-prueba):
  * - Los 16 nodos traen subjectId/semana/subtema vacíos o ausentes;
  *   normalizados a ("comprension_lectora", semana, "w.k") en la generación.
- * - Distribución correctIndex real: 40/40/40/40 exacto.
  */
 class MapaComprensionLectoraRegressionTest {
 
@@ -49,13 +48,13 @@ class MapaComprensionLectoraRegressionTest {
     @Test
     fun mapaComprensionLectora_nuevoSemanas1a8_sinLegacy() {
         val mapa = mapaComprensionLectora()
-        // Reemplazo total: todo nodo tiene 10 challenges (legacy = 2 challenges).
+        // Reemplazo total: todo nodo tiene 11 preguntas revisadas (legacy = 2 challenges).
         assertEquals(16, mapa.size, "Solo los 16 nodos nuevos, sin legacy")
-        assertTrue(mapa.all { it.challenges.size == 10 }, "Sin nodos legacy de 2 challenges")
+        assertTrue(mapa.all { it.challenges.size == 11 }, "Sin nodos legacy de 2 challenges")
 
         val nuevas = mapa.filter { it.id.startsWith("cl_t") }
         assertEquals(16, nuevas.size, "8 semanas nuevas = 16 LessonNodes")
-        assertEquals(160, nuevas.sumOf { it.challenges.size }, "160 challenges staging")
+        assertEquals(176, nuevas.sumOf { it.challenges.size }, "176 preguntas revisadas")
 
         val semanas = nuevas.map { it.semana }.distinct().sorted()
         assertEquals((1..8).toList(), semanas, "Nuevo semanas 1-8: $semanas")
@@ -66,8 +65,8 @@ class MapaComprensionLectoraRegressionTest {
         val mapa = mapaComprensionLectora()
         // (semana, subtema, challenges) por nodo.
         val esperadas = (1..8).flatMap { w ->
-            listOf("cl_t%02d_s01".format(w) to Triple(w, "$w.1", 10),
-                "cl_t%02d_s02".format(w) to Triple(w, "$w.2", 10))
+            listOf("cl_t%02d_s01".format(w) to Triple(w, "$w.1", 11),
+                "cl_t%02d_s02".format(w) to Triple(w, "$w.2", 11))
         }.toMap()
         for ((id, esp) in esperadas) {
             val l = mapa.filter { it.id == id && it.challenges.size == esp.third }
@@ -91,7 +90,7 @@ class MapaComprensionLectoraRegressionTest {
         // Spot-check anti-corrupción: título staging verbatim.
         assertEquals(
             "Comprensión Literal: Fundamentos y Conceptos Clave",
-            mapa.first { it.id == "cl_t01_s01" && it.challenges.size == 10 }.title
+            mapa.first { it.id == "cl_t01_s01" && it.challenges.size == 11 }.title
         )
     }
 
@@ -101,7 +100,7 @@ class MapaComprensionLectoraRegressionTest {
         try {
             val nueva = AprenderRepository.getLessonByIdSync("cl_t01_s01")
             assertTrue(nueva != null, "cl_t01_s01 debe resolverse")
-            assertEquals(10, nueva.challenges.size, "Nuevo con 10 challenges staging")
+            assertEquals(11, nueva.challenges.size, "Nuevo con 11 preguntas revisadas")
             assertEquals("comprension_lectora", nueva.subjectId)
 
             // Fallback legacy: cl_t01_s03 no tiene equivalente nuevo → legacy (2 challenges).

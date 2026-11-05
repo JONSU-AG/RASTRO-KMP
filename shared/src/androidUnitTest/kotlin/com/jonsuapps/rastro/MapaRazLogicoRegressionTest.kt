@@ -12,13 +12,12 @@ import kotlin.test.assertTrue
  * Regresión de Raz. Lógico (SALIDA_KOTLIN → RASTRO, mismo sistema genérico
  * que las demás materias): convivencia legacy+nuevo sin duplicar ni contaminar.
  *
- * Nuevo = semanas 1-9 (18 LessonNodes rl_t01_s01..rl_t09_s02, 180 challenges).
+ * Nuevo = semanas 1-9 (18 LessonNodes rl_t01_s01..rl_t09_s02, 198 preguntas revisadas).
  * Legacy rl_t* semanas 1-9 queda excluido (reemplazo total).
  * Usa fixtures espejo de `src/androidUnitTest/resources` (patrón existente).
  *
  * Notas de staging (no se modifica curso-prueba):
  * - subjectId/semana/subtema vacíos o ausentes normalizados en la generación.
- * - Distribución correctIndex real: A=84, B=44, C=20, D=32 (sesgada a A).
  * - Teorías 4509-6069 chars; umbral de teoría en 4000.
  */
 class MapaRazLogicoRegressionTest {
@@ -49,13 +48,13 @@ class MapaRazLogicoRegressionTest {
     @Test
     fun mapaRazLogico_nuevoSemanas1a9_sinLegacy() {
         val mapa = mapaRazLogico()
-        // Reemplazo total: todo nodo tiene 10 challenges (legacy = 2 challenges).
+        // Reemplazo total: todo nodo tiene 11 preguntas revisadas (legacy = 2 challenges).
         assertEquals(18, mapa.size, "Solo los 18 nodos nuevos, sin legacy")
-        assertTrue(mapa.all { it.challenges.size == 10 }, "Sin nodos legacy de 2 challenges")
+        assertTrue(mapa.all { it.challenges.size == 11 }, "Sin nodos legacy de 2 challenges")
 
         val nuevas = mapa.filter { it.id.startsWith("rl_t") }
         assertEquals(18, nuevas.size, "9 semanas nuevas = 18 LessonNodes")
-        assertEquals(180, nuevas.sumOf { it.challenges.size }, "180 challenges staging")
+        assertEquals(198, nuevas.sumOf { it.challenges.size }, "198 preguntas revisadas")
 
         val semanas = nuevas.map { it.semana }.distinct().sorted()
         assertEquals((1..9).toList(), semanas, "Nuevo semanas 1-9: $semanas")
@@ -66,8 +65,8 @@ class MapaRazLogicoRegressionTest {
         val mapa = mapaRazLogico()
         // (semana, subtema, challenges) por nodo.
         val esperadas = (1..9).flatMap { w ->
-            listOf("rl_t%02d_s01".format(w) to Triple(w, "$w.1", 10),
-                "rl_t%02d_s02".format(w) to Triple(w, "$w.2", 10))
+            listOf("rl_t%02d_s01".format(w) to Triple(w, "$w.1", 11),
+                "rl_t%02d_s02".format(w) to Triple(w, "$w.2", 11))
         }.toMap()
         for ((id, esp) in esperadas) {
             val l = mapa.filter { it.id == id && it.challenges.size == esp.third }
@@ -91,7 +90,7 @@ class MapaRazLogicoRegressionTest {
         // Spot-check anti-corrupción: título staging verbatim.
         assertEquals(
             "PROPOSICIONES Y ENUNCIADOS LÓGICOS - Fundamentos y Leyes Principales",
-            mapa.first { it.id == "rl_t01_s01" && it.challenges.size == 10 }.title
+            mapa.first { it.id == "rl_t01_s01" && it.challenges.size == 11 }.title
         )
     }
 
@@ -101,7 +100,7 @@ class MapaRazLogicoRegressionTest {
         try {
             val nueva = AprenderRepository.getLessonByIdSync("rl_t01_s01")
             assertTrue(nueva != null, "rl_t01_s01 debe resolverse")
-            assertEquals(10, nueva.challenges.size, "Nuevo con 10 challenges staging")
+            assertEquals(11, nueva.challenges.size, "Nuevo con 11 preguntas revisadas")
             assertEquals("raz_logico", nueva.subjectId)
 
             // Fallback legacy: rl_t01_s03 no tiene equivalente nuevo → legacy (2 challenges).

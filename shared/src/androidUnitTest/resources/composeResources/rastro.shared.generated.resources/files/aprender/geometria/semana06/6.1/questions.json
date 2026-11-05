@@ -1,1 +1,200 @@
-[{"concept":"6.1.1","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s01_c01","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.2","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s01_c02","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t06_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "geom_t06_s01_c01",
+    "concept": "6.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "¿Cuánto suman los ángulos interiores de un pentágono simple?",
+    "options": [
+      "$540\\,\\mathrm{^\\circ}$",
+      "$1080\\,\\mathrm{^\\circ}$",
+      "$270\\,\\mathrm{^\\circ}$",
+      "$1620\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Un polígono simple de n lados se triangula en n−2 triángulos.\n2. Usamos los datos indicados: $S=(5-2)180^\\circ$.\n3. El resultado es $540\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s01_c02",
+    "concept": "6.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "¿Cuánto mide cada ángulo interior de un hexágono regular?",
+    "options": [
+      "$240\\,\\mathrm{^\\circ}$",
+      "$60\\,\\mathrm{^\\circ}$",
+      "$360\\,\\mathrm{^\\circ}$",
+      "$120\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Dividimos la suma interior entre los seis ángulos iguales.\n2. Usamos los datos indicados: $\\alpha=(6-2)180^\\circ/6$.\n3. El resultado es $120\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s01_c03",
+    "concept": "6.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "¿Cuánto mide cada ángulo exterior de un octágono regular convexo?",
+    "options": [
+      "$22.5\\,\\mathrm{^\\circ}$",
+      "$135\\,\\mathrm{^\\circ}$",
+      "$45\\,\\mathrm{^\\circ}$",
+      "$90\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Los giros exteriores completan una vuelta.\n2. Usamos los datos indicados: $\\beta=360^\\circ/8$.\n3. El resultado es $45\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s01_c04",
+    "concept": "6.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "¿Cuántas diagonales tiene un pentágono?",
+    "options": [
+      "$6$",
+      "$5$",
+      "$10$",
+      "$15$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Cada vértice se une a n−3 no adyacentes y cada diagonal se cuenta dos veces.\n2. Usamos los datos indicados: $D=5(5-3)/2$.\n3. El resultado es $5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s01_c05",
+    "concept": "6.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "¿Cuántas diagonales salen de un vértice de un heptágono?",
+    "options": [
+      "$4$",
+      "$8$",
+      "$2$",
+      "$12$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Se excluyen el propio vértice y los dos vecinos.\n2. Usamos los datos indicados: $d=7-3$.\n3. El resultado es $4$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s01_c06",
+    "concept": "6.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "Un polígono regular tiene ángulo exterior de 30°. ¿Cuántos lados tiene?",
+    "options": [
+      "$24$",
+      "$6$",
+      "$36$",
+      "$12$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El giro completo se reparte en ángulos exteriores iguales.\n2. Usamos los datos indicados: $n=360/30$.\n3. El resultado es $12$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s01_c07",
+    "concept": "6.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "La suma de ángulos interiores de un polígono simple es 720°. ¿Cuántos lados tiene?",
+    "options": [
+      "$3$",
+      "$18$",
+      "$6$",
+      "$12$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Despejamos n en la suma interior.\n2. Usamos los datos indicados: $(n-2)180=720\\Rightarrow n=6$.\n3. El resultado es $6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s01_c08",
+    "concept": "6.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "Un decágono regular tiene lado 3 cm. ¿Qué perímetro tiene?",
+    "options": [
+      "$90\\,\\mathrm{cm}$",
+      "$30\\,\\mathrm{cm}$",
+      "$60\\,\\mathrm{cm}$",
+      "$15\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El perímetro suma diez lados iguales.\n2. Usamos los datos indicados: $P=10(3)$.\n3. El resultado es $30\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s01_c09",
+    "concept": "6.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "¿Cuánto mide el ángulo central entre vértices consecutivos de un polígono regular de nueve lados?",
+    "options": [
+      "$40\\,\\mathrm{^\\circ}$",
+      "$80\\,\\mathrm{^\\circ}$",
+      "$20\\,\\mathrm{^\\circ}$",
+      "$120\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El centro reparte la vuelta en nueve sectores iguales.\n2. Usamos los datos indicados: $\\theta=360^\\circ/9$.\n3. El resultado es $40\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s01_c10",
+    "concept": "6.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "Un polígono regular tiene…",
+    "options": [
+      "Solo todos sus lados iguales, sin condición angular.",
+      "Todos sus lados y todos sus ángulos interiores iguales.",
+      "Siempre cuatro lados.",
+      "Solo todos sus ángulos iguales, sin condición sobre lados."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La regularidad exige dos condiciones simultáneas.\n2. Igualdad de lados e igualdad de ángulos.\n3. Una sola de ellas no basta en un polígono general.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t06_s01_c11",
+    "concept": "6.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 6,
+    "statement": "La suma de un ángulo exterior de giro por vértice en un polígono convexo recorrido en un sentido es…",
+    "options": [
+      "180°.",
+      "360°.",
+      "Depende solo del tamaño de los lados.",
+      "90°."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Al completar el recorrido se recupera la dirección inicial.\n2. El giro acumulado es una vuelta.\n3. Su medida es 360°.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

@@ -1,1 +1,200 @@
-[{"concept":"9.1.1","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. Analizamos la premisa y la conclusión: - Premisa: Dos teléfonos particulares de la marca X presentaron fallas mecánicas. - Conclusión: La totalidad universal de los productos elaborados por dicha marca carece de calidad. 2. La muestra observada consta de solo dos unidades frente a una producción masiva de miles o millones de terminales tecnológicos. 3. Se extrapola una propiedad observada en una muestra minúscula y no representativa hacia el universo completo de la población. 4. Esta estructura corresponde formalmente a la falacia de **Generalización Indebida**. **Respuesta:** B ---","fuente":"temario","id":"rl_t09_s01_c01","options":["Falacia de apelación a la autoridad","Generalización indebida (*Secundum quid*)","Falacia de falsa causa","Argumento Ad Ignorantiam"],"pedagogicalTier":"concepto","semana":9,"statement":"**Enunciado:** Identifique la falacia presente en el siguiente texto:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"9.1.2","correctIndex":1,"explanation":"**Resolución Paso a Paso:** 1. Analizamos los hechos expuestos: - Evento A: Tocar los tambores durante el eclipse. - Evento B: Retorno de la luz solar. 2. Relación temporal: El evento B ocurre cronológicamente después del evento A. 3. El emisor infiere una relación causa-efecto exclusivamente a partir de la sucesión cronológica. 4. El eclipse culmina debido a la mecánica celeste orbital entre la Luna, la Tierra y el Sol, con absoluta independencia de las ondas sonoras generadas por los tambores terrestres. 5. Incurre de manera paradigmática en la falacia de **Falsa Causa** (*Post hoc ergo propter hoc*). **Respuesta:** C ---","fuente":"temario","id":"rl_t09_s01_c02","options":["Falacia de afirmación del consecuente","Falacia del equívoco","Falacia de apelación a la masa (*Ad populum*)","Falacia de falsa causa (*Post hoc ergo propter hoc*)"],"pedagogicalTier":"concepto","semana":9,"statement":"**Enunciado (Modelo UNSA Ordinario):** Lea atentamente el siguiente fragmento:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"9.1.3","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Examinamos los términos que intervienen en el silogismo: - Término 1: \"Justicia\" en la Premisa 1 designa el concepto abstracto ético-filosófico de dar a cada quien lo que le corresponde. - Término 2: \"Justicia\" en la Premisa 2 designa a la institución burocrática del Poder Judicial (jueces y magistrados). 2. El término puente (\"justicia\") cambia de significado radicalmente entre la premisa 1 y la premisa 2. 3. Aparenta tener 3 términos cuando en realidad posee 4 términos conceptuales disjuntos. 4. Este desplazamiento de significado dentro de una misma cadena deductiva constituye la falacia de **Equívoco** (ambigüedad semántica). **Respuesta:** C ---","fuente":"temario","id":"rl_t09_s01_c03","options":["Comete la falacia de ambigüedad denominada equívoco.","Presenta un término medio universalmente distribuido.","Contradice el principio de transitividad.","Comete la falacia de negación del antecedente."],"pedagogicalTier":"concepto","semana":9,"statement":"**Enunciado:** Analice el siguiente silogismo:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"9.1.4","correctIndex":3,"explanation":"Se descalifica la propuesta atacando directamente la condición personal del emisor en lugar de evaluar el impacto macroeconómico de la medida tributaria.","fuente":"temario","id":"rl_t09_s01_c04","options":["Generalización indebida","Anfibología","Falsa causa","Argumentum Ad Hominem"],"pedagogicalTier":"concepto","semana":9,"statement":"Un candidato afirma: 'Mi rival propone reducir impuestos, pero no le crean porque él jamás ha administrado una empresa privada'. Esta intervención constituye una falacia de:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"9.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t09_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"9.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t09_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"9.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t09_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"9.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t09_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"9.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t09_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"9.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t09_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rl_t09_s01_c01",
+    "concept": "9.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 9,
+    "statement": "«Tu propuesta es falsa porque eres antipático». ¿Qué defecto presenta?",
+    "options": [
+      "Ataque personal en lugar de evaluar la propuesta.",
+      "Modus ponens válido.",
+      "Una definición matemática.",
+      "Un contraejemplo al contenido de la propuesta."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Identificamos las razones realmente ofrecidas para la conclusión.\n2. La antipatía no demuestra que la afirmación sea falsa.\n3. Debe examinarse la propuesta y sus pruebas.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t09_s01_c02",
+    "concept": "9.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 9,
+    "statement": "«Todos lo creen, así que necesariamente es verdadero». ¿Qué se usa indebidamente como prueba?",
+    "options": [
+      "Una contradicción formal.",
+      "Una medición independiente.",
+      "Una deducción a partir de una definición.",
+      "La popularidad de la creencia."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Identificamos las razones realmente ofrecidas para la conclusión.\n2. Que una idea sea compartida no garantiza su verdad.\n3. Hace falta evidencia pertinente al contenido.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t09_s01_c03",
+    "concept": "9.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 9,
+    "statement": "«Vi dos buses retrasados; todos los buses del país llegan tarde». ¿Cuál es el salto injustificado?",
+    "options": [
+      "Mostrar un censo completo.",
+      "Demostrar que ningún bus se retrasa.",
+      "Generalizar desde una muestra insuficiente.",
+      "Aplicar una equivalencia lógica."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Identificamos las razones realmente ofrecidas para la conclusión.\n2. Dos casos no representan por sí solos a todos los buses del país.\n3. La conclusión necesita información sobre una muestra adecuada y sus límites.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t09_s01_c04",
+    "concept": "9.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 9,
+    "statement": "«Usé un lápiz nuevo y aprobé; el lápiz fue la causa». ¿Qué falta?",
+    "options": [
+      "Una repetición literal de la conclusión.",
+      "Evidencia que establezca causalidad.",
+      "Que un hecho haya ocurrido después del otro.",
+      "La mera existencia del lápiz."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Identificamos las razones realmente ofrecidas para la conclusión.\n2. La secuencia temporal no prueba que el primer hecho produzca el segundo.\n3. Habría que descartar otras explicaciones y aportar evidencia causal.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t09_s01_c05",
+    "concept": "9.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 9,
+    "statement": "«O apoyas este plan exacto o no te importa estudiar». ¿Qué recurso defectuoso aparece?",
+    "options": [
+      "Un falso dilema.",
+      "Una enumeración probada de todas las opciones.",
+      "Una conjunción verdadera por definición.",
+      "Una ley de equivalencia."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Identificamos las razones realmente ofrecidas para la conclusión.\n2. Se excluyen otras posturas posibles sin justificarlas.\n3. Puede importar estudiar y preferirse otro plan.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t09_s01_c06",
+    "concept": "9.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 9,
+    "statement": "«Hay que aceptar la regla porque es correcta; es correcta porque hay que aceptarla». ¿Qué defecto hay?",
+    "options": [
+      "Un contraejemplo válido.",
+      "Una prueba experimental independiente.",
+      "Una negación por De Morgan.",
+      "Razonamiento circular."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Identificamos las razones realmente ofrecidas para la conclusión.\n2. La razón repite lo que debía demostrar con otras palabras.\n3. Se requiere una justificación independiente de la conclusión.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t09_s01_c07",
+    "concept": "9.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 9,
+    "statement": "«Nadie demostró que la caja tenga una moneda; por tanto está vacía». ¿Qué se confunde?",
+    "options": [
+      "Una disyunción exclusiva demostrada.",
+      "Una conclusión basada en un inventario completo.",
+      "Ausencia de prueba con prueba de ausencia.",
+      "Una observación directa del interior."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Identificamos las razones realmente ofrecidas para la conclusión.\n2. No haber demostrado presencia no demuestra por sí solo ausencia.\n3. Debe revisarse qué evidencia existe sobre el contenido.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t09_s01_c08",
+    "concept": "9.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 9,
+    "statement": "«Si no aceptas mi argumento, te castigaré». ¿Qué sustituye a la justificación?",
+    "options": [
+      "Un dato que refuta sus premisas.",
+      "Una amenaza.",
+      "Una inferencia válida.",
+      "Una definición del argumento."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Identificamos las razones realmente ofrecidas para la conclusión.\n2. El posible castigo no hace verdaderas las premisas.\n3. La fuerza no reemplaza razones pertinentes.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t09_s01_c09",
+    "concept": "9.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 9,
+    "statement": "Una persona pide reducir tareas repetidas. Le responden: «Quieres eliminar todo estudio». ¿Qué distorsión ocurre?",
+    "options": [
+      "Se caricaturiza la postura para atacarla.",
+      "Se cita fielmente la petición.",
+      "Se demuestra una contradicción de la petición.",
+      "Se aplica modus tollens."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Identificamos las razones realmente ofrecidas para la conclusión.\n2. Reducir una parte no equivale a eliminar todo.\n3. La respuesta debe evaluar lo que realmente se propuso.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t09_s01_c10",
+    "concept": "9.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 9,
+    "statement": "«Un actor famoso afirma que esta demostración matemática es correcta; eso basta». ¿Qué falla?",
+    "options": [
+      "Se comprobaron todos los pasos.",
+      "Se aportó un contraejemplo numérico.",
+      "La validez depende de cuántos conocen al actor.",
+      "La fama se usa como autoridad suficiente sin revisar la demostración."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Identificamos las razones realmente ofrecidas para la conclusión.\n2. La celebridad por sí sola no acredita competencia ni corrección del argumento.\n3. La demostración se evalúa por sus pasos y supuestos.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t09_s01_c11",
+    "concept": "9.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 9,
+    "statement": "«Este banco es de madera; deposita dinero en él», usando primero banco como asiento. ¿Qué ambigüedad se aprovecha?",
+    "options": [
+      "Una deducción válida sobre entidades iguales.",
+      "Una conjunción sin ambigüedad.",
+      "Cambio de significado de una misma palabra.",
+      "Una equivalencia entre clases demostrada."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Identificamos las razones realmente ofrecidas para la conclusión.\n2. «Banco» cambia de asiento a entidad financiera.\n3. La inferencia no conserva el mismo significado.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

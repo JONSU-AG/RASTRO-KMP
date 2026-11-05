@@ -241,10 +241,10 @@ fun ProfileSettingsDialog(
                             Text("Sin respaldo, desinstalar la app o perder el celular puede hacer perder el avance local.", color = colors.textSecondary, fontSize = 12.sp)
                         } else Text("Estudias sin cuenta. Inicia sesión para respaldar y recuperar tu avance en otro dispositivo.", color = colors.textSecondary)
                     }
-                    SettingsSectionCard(title = if (proGrant.active(System.currentTimeMillis())) "RASTRO Pro" else "Monedas y vidas", icon = Icons.Rounded.Star,
+                    SettingsSectionCard(title = if (!com.jonsuapps.rastro.monetization.PresentationMode.enabled && proGrant.active(System.currentTimeMillis())) "RASTRO Pro" else "Monedas y vidas", icon = Icons.Rounded.Star,
                         iconColor = colors.accent, colors = colors) {
-                        Text(if (proGrant.active(System.currentTimeMillis())) "Pro activo" else "Recupera vidas y completa misiones de monedas", color = colors.textPrimary)
-                        if (proGrant.active(System.currentTimeMillis()) || com.jonsuapps.rastro.android.data.PlayBillingConfig.checkoutEnabled)
+                        Text(if (com.jonsuapps.rastro.monetization.PresentationMode.enabled) "Consulta tu saldo y recupera vidas con tus monedas." else if (proGrant.active(System.currentTimeMillis())) "Pro activo" else "Recupera vidas y completa misiones de monedas", color = colors.textPrimary)
+                        if (!com.jonsuapps.rastro.monetization.PresentationMode.enabled && (proGrant.active(System.currentTimeMillis()) || com.jonsuapps.rastro.android.data.PlayBillingConfig.checkoutEnabled))
                             TextButton(onClick = { showProDialog = true }) { Text("Ver beneficios Pro") }
                         TextButton(onClick = { showCoinsDialog = true }) { Text("Monedas y vidas") }
                     }

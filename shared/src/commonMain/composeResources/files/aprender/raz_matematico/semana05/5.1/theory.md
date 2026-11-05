@@ -19,23 +19,41 @@
 
 ## 2. 🗺️ MAPA TAXONÓMICO Y ONTOLOGÍA DEL TEMA
 
-```text
-                               ┌─ Principio de Adición (Eventos mutuamente excluyentes: "O")
-        ┌─ 1. Principios ──────┴─ Principio de Multiplicación (Eventos simultáneos/sucesivos: "Y")
-        │      de Conteo
-        │
-ANÁLISIS                       ┌─ Principio del Árbol y Diagramas de Flujo
-COMBINATORIO ───┼─ 2. Rutas y ─────────┼─ Redes Viales Simples (Ciudades en serie y paralelo)
-INTUITIVO       │      Caminos         ├─ Caminos en Cuadrículas Urbanas (Método de Pascal)
-        │                      └─ Rutas con Puntos de Paso Obligado o Bloqueados
-        │
-        │                      ┌─ Permutación Lineal (Importa el orden, intervienen todos)
-        ├─ 3. Agrupaciones ────┼─ Permutación Circular (P_c = (n - 1)!)
-        │      con Orden       ├─ Permutación con Repetición (Elementos indistinguibles)
-        │                      └─ Variación (Importa el orden, se toma un subconjunto)
-        │
-        └─ 4. Agrupaciones ────┌─ Combinación Simple (NO importa el orden: C(n, k))
-               sin Orden       └─ Formación de Equipos y Comisiones con Restricciones
+```mermaid
+graph TD
+ ROOT["Conteo y agrupaciones"]
+ B1["Principios de conteo"]
+ B1N1["Suma: alternativas disjuntas; si se solapan, corregir las intersecciones."]
+ B1N2["Producto: contar las opciones de cada etapa bajo las restricciones dadas."]
+ B2["Rutas y caminos"]
+ B2N1["Árbol: una rama por elección admitida."]
+ B2N2["Red vial: distinguir recorridos sucesivos de alternativas."]
+ B2N3["Cuadrícula: precisar direcciones permitidas y puntos de paso."]
+ B2N4["Bloqueos: excluir solo las rutas que usan la zona prohibida."]
+ B3["Importa el orden"]
+ B3N1["Permutación lineal de n objetos distintos: $n!$."]
+ B3N2["Circular: $(n-1)!$ para objetos distintos si se identifican giros, pero no reflejos."]
+ B3N3["Repeticiones: dividir por las multiplicidades de los objetos indistinguibles."]
+ B3N4["Variación: elegir y ordenar un subconjunto, con o sin repetición según se indique."]
+ B4["No importa el orden"]
+ B4N1["Combinación simple: $\binom{n}{k}$ para elegir k objetos entre n distintos."]
+ B4N2["Equipos y comisiones: aplicar restricciones sin asignar cargos inexistentes."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
 ```
 
 ---

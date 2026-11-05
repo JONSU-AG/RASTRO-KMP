@@ -1,1 +1,200 @@
-[{"concept":"7.2.1","correctIndex":2,"explanation":"**Resolución:** El párrafo 3 afirma: *\"Vitamin B12... is virtually absent in unfortified plant foods. Consequently, doctors strongly advise... proper supplementation\"*. Si los alimentos vegetales no la contienen de forma natural, una persona con dieta estrictamente vegetal debe necesariamente recurrir a alimentos fortificados o suplementos para no enfermar. **Respuesta:** **B** ---","fuente":"temario","id":"ing_t07_s02_c01","options":["It is completely unnecessary for neurological health and cognitive performance.","It can be easily synthesized by human cells exposed to sunlight.","It is produced in large quantities by green leafy vegetables like spinach.","Strict vegans must consume fortified foods or dietary supplements to avoid deficiency."],"pedagogicalTier":"concepto","semana":7,"statement":"Based on paragraph 3, what can be inferred about vitamin B12?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.2.2","correctIndex":3,"explanation":"**Resolución Paso a Paso:** - **I (Falsa):** El texto dice exactamente lo opuesto: *\"emphasize vegetables, legumes, whole grains, nuts, and seeds\"*. - **II (Verdadera):** Párrafo 2: *\"rich in dietary fiber and essential antioxidants, which help reduce cellular inflammation\"*. - **III (Falsa):** El texto advierte que sin planificación puede haber carencias graves y aconseja consultar a un nutricionista certificado. - **IV (Verdadera):** Párrafo 3: *\"individuals may develop deficiencies in micronutrients such as vitamin B12, iron, zinc, and omega-3\"*. Las proposiciones rigurosamente ciertas son **II y IV**. **Respuesta:** **B** ---","fuente":"temario","id":"ing_t07_s02_c02","options":["II and IV","I, II and IV","II, III and IV","I and III"],"pedagogicalTier":"concepto","semana":7,"statement":"Evaluate the following statements based on the entire reading passage:","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.2.3","correctIndex":2,"explanation":"According to the lesson theory: It adds a **negative or opposite meaning** (*unhealthy = not healthy; unplanned = without planning*).","fuente":"temario","id":"ing_t07_s02_c03","options":["It requires an irregular past participle form without auxiliary verbs.","It is only used in colloquial informal contexts with plural nouns.","It adds a **negative or opposite meaning** (*unhealthy = not healthy; unplanned = without planning*).","It follows an inverted word order with obligatory double negation."],"pedagogicalTier":"concepto","semana":7,"statement":"What does the prefix *\"un-\"* do to words like *\"healthy\"* or *\"planned\"*?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.2.4","correctIndex":3,"explanation":"According to the lesson theory: It indicates a **logical result, consequence, or effect** (*therefore, as a result*).","fuente":"temario","id":"ing_t07_s02_c04","options":["It requires an irregular past participle form without auxiliary verbs.","It is only used in colloquial informal contexts with plural nouns.","It follows an inverted word order with obligatory double negation.","It indicates a **logical result, consequence, or effect** (*therefore, as a result*)."],"pedagogicalTier":"concepto","semana":7,"statement":"What does the transition word *\"Consequently\"* indicate?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.2.5","correctIndex":1,"explanation":"(Título universitario de pregrado).","fuente":"temario","id":"ing_t07_s02_c05","options":["A primary school diploma","A Bachelor's degree in Civil Engineering","A certificate of attendance at a workshop","A receipt for university tuition fees"],"pedagogicalTier":"concepto","semana":7,"statement":"Which of the following is considered an undergraduate degree?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.2.6","correctIndex":0,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t07_s02_c06","options":["The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson.","The tense used is incompatible with the stated adverbial time marker.","The word order incorrectly positions the modifier after the direct object.","The sentence violates subject-verb agreement in standard English."],"pedagogicalTier":"concepto","semana":7,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.2.7","correctIndex":2,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t07_s02_c07","options":["The sentence violates subject-verb agreement in standard English.","The tense used is incompatible with the stated adverbial time marker.","The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson.","The word order incorrectly positions the modifier after the direct object."],"pedagogicalTier":"concepto","semana":7,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.2.8","correctIndex":3,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t07_s02_c08","options":["The sentence violates subject-verb agreement in standard English.","The tense used is incompatible with the stated adverbial time marker.","The word order incorrectly positions the modifier after the direct object.","The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson."],"pedagogicalTier":"concepto","semana":7,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.2.9","correctIndex":0,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t07_s02_c09","options":["The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson.","The sentence violates subject-verb agreement in standard English.","The tense used is incompatible with the stated adverbial time marker.","The word order incorrectly positions the modifier after the direct object."],"pedagogicalTier":"concepto","semana":7,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"7.2.10","correctIndex":1,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t07_s02_c10","options":["The sentence violates subject-verb agreement in standard English.","The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson.","The tense used is incompatible with the stated adverbial time marker.","The word order incorrectly positions the modifier after the direct object."],"pedagogicalTier":"concepto","semana":7,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "ing_t07_s02_c01",
+    "concept": "7.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“The study club used to meet on Fridays. This term it meets on Wednesdays because the library room is free then. Members may also join online. The new schedule was announced on Monday, and the first Wednesday meeting starts at four.”\n\nOn which day does the club meet this term?",
+    "options": [
+      "Wednesday.",
+      "Friday.",
+      "Monday.",
+      "Sunday."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La evidencia pertinente es: “This term it meets on Wednesdays”.\n2. La pregunta pide el horario actual, no el anterior.\n3. La respuesta respaldada por el texto es: Wednesday.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s02_c02",
+    "concept": "7.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“The study club used to meet on Fridays. This term it meets on Wednesdays because the library room is free then. Members may also join online. The new schedule was announced on Monday, and the first Wednesday meeting starts at four.”\n\nWhy was Wednesday chosen?",
+    "options": [
+      "The club stopped studying.",
+      "Every member moved away.",
+      "The library closes every Wednesday.",
+      "The library room is free then."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La evidencia pertinente es: “because the library room is free then”.\n2. Because introduce la razón mencionada.\n3. La respuesta respaldada por el texto es: The library room is free then.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s02_c03",
+    "concept": "7.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“The study club used to meet on Fridays. This term it meets on Wednesdays because the library room is free then. Members may also join online. The new schedule was announced on Monday, and the first Wednesday meeting starts at four.”\n\nWhat alternative is offered to members?",
+    "options": [
+      "Meeting only at midnight.",
+      "Skipping every meeting.",
+      "Joining online.",
+      "Buying the library."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La evidencia pertinente es: “Members may also join online.”.\n2. Also añade una modalidad de participación.\n3. La respuesta respaldada por el texto es: Joining online.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s02_c04",
+    "concept": "7.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“The study club used to meet on Fridays. This term it meets on Wednesdays because the library room is free then. Members may also join online. The new schedule was announced on Monday, and the first Wednesday meeting starts at four.”\n\nWhen was the schedule announced?",
+    "options": [
+      "In April, according to the text.",
+      "On Monday.",
+      "On Friday.",
+      "On Sunday."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La evidencia pertinente es: “The new schedule was announced on Monday”.\n2. El anuncio y la reunión son eventos diferentes.\n3. La respuesta respaldada por el texto es: On Monday.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s02_c05",
+    "concept": "7.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“The study club used to meet on Fridays. This term it meets on Wednesdays because the library room is free then. Members may also join online. The new schedule was announced on Monday, and the first Wednesday meeting starts at four.”\n\nWhat time does the first Wednesday meeting start?",
+    "options": [
+      "At four.",
+      "At nine.",
+      "At two.",
+      "At seven."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La evidencia pertinente es: “the first Wednesday meeting starts at four”.\n2. La pregunta requiere scanning para esa hora concreta.\n3. La respuesta respaldada por el texto es: At four.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s02_c06",
+    "concept": "7.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“The study club used to meet on Fridays. This term it meets on Wednesdays because the library room is free then. Members may also join online. The new schedule was announced on Monday, and the first Wednesday meeting starts at four.”\n\nIn this context, used to meet refers to…",
+    "options": [
+      "A command to buy equipment.",
+      "A meeting that is happening at this second.",
+      "A future medical treatment.",
+      "A past routine that differs from the current schedule."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La evidencia pertinente es: “used to meet on Fridays. This term it meets on Wednesdays.”.\n2. El contraste entre el hábito anterior y el horario actual aclara el sentido.\n3. La respuesta respaldada por el texto es: A past routine that differs from the current schedule.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s02_c07",
+    "concept": "7.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“After a school sports session, the coach asked students to report any discomfort to the responsible adult. Dani said his ankle hurt and sat down while the teacher called his family. The text does not describe a diagnosis or a treatment.”\n\nWhat did Dani report?",
+    "options": [
+      "An exact medical diagnosis.",
+      "A timetable change.",
+      "Pain in his ankle.",
+      "A lost book."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La evidencia pertinente es: “Dani said his ankle hurt”.\n2. El texto describe una molestia, sin identificar su causa médica.\n3. La respuesta respaldada por el texto es: Pain in his ankle.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s02_c08",
+    "concept": "7.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“After a school sports session, the coach asked students to report any discomfort to the responsible adult. Dani said his ankle hurt and sat down while the teacher called his family. The text does not describe a diagnosis or a treatment.”\n\nWhat did Dani do while the teacher called his family?",
+    "options": [
+      "He left alone immediately.",
+      "He sat down.",
+      "He ran another race.",
+      "He prescribed medicine."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La evidencia pertinente es: “sat down while the teacher called his family”.\n2. While relaciona las dos acciones que ocurren en ese intervalo.\n3. La respuesta respaldada por el texto es: He sat down.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s02_c09",
+    "concept": "7.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“After a school sports session, the coach asked students to report any discomfort to the responsible adult. Dani said his ankle hurt and sat down while the teacher called his family. The text does not describe a diagnosis or a treatment.”\n\nWhat information is explicitly not supplied?",
+    "options": [
+      "A diagnosis or treatment.",
+      "That the session was at school.",
+      "That a teacher called the family.",
+      "That Dani mentioned discomfort."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La evidencia pertinente es: “The text does not describe a diagnosis or a treatment.”.\n2. La ausencia se declara; no se inventa una lesión específica.\n3. La respuesta respaldada por el texto es: A diagnosis or treatment.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s02_c10",
+    "concept": "7.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“After a school sports session, the coach asked students to report any discomfort to the responsible adult. Dani said his ankle hurt and sat down while the teacher called his family. The text does not describe a diagnosis or a treatment.”\n\nWho called Dani’s family?",
+    "options": [
+      "The librarian.",
+      "His aunt in the text.",
+      "Every club member.",
+      "The teacher."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La evidencia pertinente es: “the teacher called his family”.\n2. El sujeto de called es the teacher.\n3. La respuesta respaldada por el texto es: The teacher.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t07_s02_c11",
+    "concept": "7.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 7,
+    "statement": "Lee el texto original de práctica:\n“The study club used to meet on Fridays. This term it meets on Wednesdays because the library room is free then. Members may also join online. The new schedule was announced on Monday, and the first Wednesday meeting starts at four.”\n\nWhich statement is unsupported by the text?",
+    "options": [
+      "Online participation is possible.",
+      "The room is free on Wednesdays.",
+      "Every member prefers Wednesday to Friday.",
+      "The club previously met on Fridays."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La evidencia pertinente es: “This term it meets on Wednesdays because the library room is free then.”.\n2. La disponibilidad del lugar no informa la preferencia de cada integrante.\n3. La respuesta respaldada por el texto es: Every member prefers Wednesday to Friday.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

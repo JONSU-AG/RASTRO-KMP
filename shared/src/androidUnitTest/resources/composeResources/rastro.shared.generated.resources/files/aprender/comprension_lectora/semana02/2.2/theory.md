@@ -306,21 +306,33 @@ E) Una proposición que resulta falsada por la evidencia empírica debe ser proc
 
 ## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
 
-```
-                          COMPRENSIÓN INFERENCIAL
-                                     │
-           ┌─────────────────────────┴─────────────────────────┐
-           ▼                                                   ▼
-  INFERENCIA DEDUCTIVA                                INFERENCIA INDUCTIVA
-(De principios generales a                          (De indicios particulares
-  conclusiones necesarias)                           a regularidades probables)
-           │                                                   │
-     ┌─────┴─────┐                                       ┌─────┴─────┐
-     ▼           ▼                                       ▼           ▼
-Inferencia   Inferencia                              Inferencia  Inferencia
-Holística    Local                                   Prospectiva Retrospectiva
-(Totalidad   (De un pasaje                           (Predicción (Reconstrucción
-del texto)   o enunciado)                             de futuro)  del pasado)
+```mermaid
+graph TD
+ ROOT["Inferir con apoyo textual"]
+ B1["Tipo de conclusión"]
+ B1N1["Deducción: si las premisas y la inferencia son válidas, la conclusión es necesaria."]
+ B1N2["Inducción o hipótesis explicativa: apoyo probable que puede revisarse con nuevos datos."]
+ B2["Alcance de los indicios"]
+ B2N1["Local: conectar pistas de un pasaje."]
+ B2N2["Global: integrar información relevante del conjunto; no equivale automáticamente a deducir."]
+ B3["Relación temporal"]
+ B3N1["Prospectiva: proponer una continuación plausible con los indicios disponibles."]
+ B3N2["Retrospectiva: reconstruir antecedentes; no convierte cualquier explicación posible en un hecho."]
+ B4["Control de la inferencia"]
+ B4N1["Distinguir lo necesario de lo probable y de lo meramente posible."]
+ B4N2["Revisar alternativas y no rellenar vacíos con creencias personales."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
 ```
 
 ---

@@ -1,1 +1,182 @@
-[{"concept":"8.2.1","correctIndex":3,"explanation":"La extrapolación es el nivel cognitivo más elevado de la lectura crítica: plantea un escenario contrafáctico ('si ocurriera X en lugar de Y, entonces...') y deduce su desenlace lógico coherente con la teoría del texto.","fuente":"temario","id":"rv_t08_s02_c01","options":["Copiar el texto invirtiendo el orden de los renglones.","Buscar errores tipográficos cometidos por la imprenta.","Memorizar el número exacto de palabras del texto leído.","Deducir válidamente qué sucedería o qué consecuencia se derivaría si se modificaran de manera hipotética ciertas premisas o circunstancias esenciales del texto original."],"pedagogicalTier":"concepto","semana":8,"statement":"En las preguntas complejas de comprensión y razonamiento verbal (estándar DECO), la habilidad de 'Extrapolación' evalúa la capacidad del postulante para:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"8.2.2","correctIndex":2,"explanation":"La inferencia rigurosa está anclada objetivamente en las premisas del texto; la extrapolación indebida o sobreinterpretación introduce prejuicios o suposiciones que desbordan el marco textual.","fuente":"temario","id":"rv_t08_s02_c02","options":["Contradice abiertamente los hechos señalados en el texto.","Es siempre una cita literal textual copiada entre comillas.","Se desprende de forma necesaria o altamente probable a partir de los datos, premisas y relaciones semánticas efectivamente planteadas en el texto sin añadir sesgos ajenos.","Depende exclusivamente de los juicios de valor o prejuicios subjetivos de quien realiza la lectura."],"pedagogicalTier":"concepto","semana":8,"statement":"La diferencia fundamental entre una 'Inferencia Válida' y una 'Extrapolación Indebida' o especulación falsa radica en que la inferencia válida:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"8.2.3","correctIndex":0,"explanation":"Se elimina una oración por: 1) Impertinencia (incoherencia o hablar de otro tema ajeno al núcleo discursivo) o 2) Redundancia (repite con otras palabras una idea ya explicada con mayor amplitud).","fuente":"temario","id":"rv_t08_s02_c03","options":["Impertinencia (alejamiento temático del eje central) y Redundancia (reiteración innecesaria de información ya expresada en otra oración).","Presencia de números arábigos y signos de admiración.","Uso de mayúsculas y fecha de publicación.","Rima asonante y extensión silábica."],"pedagogicalTier":"concepto","semana":8,"statement":"Al resolver un ejercicio de 'Eliminación de Oraciones' (o Información Prescindible) en una prueba de admisión, los dos criterios canónicos rectores para suprimir un enunciado son:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"8.2.4","correctIndex":1,"explanation":"El orden deductivo clásico avanza de lo general a lo particular: Introducción/definición -> Antecedentes/origen -> Características principales -> Clasificación/casos -> Ejemplos concretos.","fuente":"temario","id":"rv_t08_s02_c04","options":["Los ejemplos particulares más específicos hacia la definición más abstracta.","Lo general y abstracto (definición, origen, causas) hacia lo particular y concreto (características específicas, aplicaciones, ejemplos y perspectivas).","El último acontecimiento del futuro hacia el pasado prehistórico.","Las anécdotas cómicas hacia los datos matemáticos."],"pedagogicalTier":"concepto","semana":8,"statement":"En un ejercicio de 'Plan de Redacción', el principio de ordenamiento deductivo universal establece que el texto debe estructurarse desde:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"8.2.5","correctIndex":1,"explanation":"La anáfora es el mecanismo de referencia retrospectiva: remite a un elemento antecedente ya explícito en el texto (ej. 'Visité Arequipa; allí pasé unas hermosas vacaciones').","fuente":"temario","id":"rv_t08_s02_c05","options":["Una palabra que anticipa a otra que se mencionará más adelante en el texto.","El empleo de un pronombre, adverbio o sinónimo que hace referencia a una palabra o concepto que ya fue mencionado previamente en el discurso para evitar su repetición.","La supresión total de los verbos conjugados.","La inversión poética del orden habitual de las palabras."],"pedagogicalTier":"concepto","semana":8,"statement":"La 'Cohesión Textual' se logra mediante mecanismos sintácticos y léxicos como la anáfora, la catáfora y la elipsis. La 'Anáfora' consiste en:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"8.2.6","correctIndex":0,"explanation":"La catáfora anticipa una información que se desvelará después en el curso del enunciado ('esto', 'los siguientes', 'a ellos').","fuente":"temario","id":"rv_t08_s02_c06","options":["Una palabra remite a un elemento que será presentado o explicitado posteriormente en el enunciado (ej. 'Solo le dije esto: no te rindas').","Se eliminan los puntos y comas de una carta formal.","Se repite la misma palabra en todos los párrafos de un libro.","Se traduce un párrafo del inglés al francés sin permiso del autor."],"pedagogicalTier":"concepto","semana":8,"statement":"Por el contrario, la 'Catáfora' es un mecanismo cohesivo que opera cuando:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"8.2.7","correctIndex":3,"explanation":"La elipsis es la supresión económica de elementos sintácticos fácilmente recuperables por el receptor a partir del contexto discursivo anterior.","fuente":"temario","id":"rv_t08_s02_c07","options":["La invención de nuevas palabras compuestas.","La colocación de tres signos de interrogación al final de una cita.","El trazado geométrico de curvas orbitales en una pizarra.","La omisión deliberada de una palabra o frase que se sobreentiende con facilidad gracias al contexto previo, evitando repeticiones innecesarias (ej. 'Pedro lee novelas; María, poemas')."],"pedagogicalTier":"concepto","semana":8,"statement":"El mecanismo de 'Elipsis' en la cohesión de un texto consiste en:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"8.2.8","correctIndex":3,"explanation":"El punto de discrepancia es el eje de la controversia dialéctica: la cuestión específica frente a la cual uno afirma lo que el otro niega taxativamente.","fuente":"temario","id":"rv_t08_s02_c08","options":["El año de nacimiento compartido por los expositores.","La cantidad de páginas escritas por cada autor.","El saludo cordial de apertura de la mesa redonda.","El núcleo o meollo conceptual específico donde colisionan frontalmente las opiniones o tesis opuestas de ambos polemistas."],"pedagogicalTier":"concepto","semana":8,"statement":"En un texto argumentativo complejo, el 'Punto de Discrepancia' entre dos autores en debate representa:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"8.2.9","correctIndex":0,"explanation":"La Idea Principal encabeza la jerarquía semántica: si se elimina, el texto pierde coherencia orgánica y se desmorona en fragmentos inconexos.","fuente":"temario","id":"rv_t08_s02_c09","options":["La Idea Principal o Tesis medular del texto.","El título de una canción mencionada al pasar.","La definición del término menos importante del glosario.","Una anécdota biográfica marginal colocada como nota al pie."],"pedagogicalTier":"concepto","semana":8,"statement":"Al evaluar la 'Jerarquía Textual', el enunciado que sintetiza de modo más integral y representativo la totalidad de la información relevante expuesta por el autor es:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"8.2.10","correctIndex":2,"explanation":"La generalización precipitada universaliza indebidamente una muestra microscópica o particular sin suficiente representatividad empírica ni estadística.","fuente":"temario","id":"rv_t08_s02_c10","options":["Define con rigor estadístico las propiedades de una población entera.","Utiliza tablas logarítmicas contrastadas empíricamente.","Extrae una conclusión universal categórica e infalible a partir del examen de unos pocos casos aislados, anecdóticos o insuficientes.","Menciona hechos históricos ocurridos en el siglo pasado."],"pedagogicalTier":"concepto","semana":8,"statement":"En la lectura crítica de enunciados de admisión, la falacia de 'Generalización Precipitada' se detecta cuando el texto o una alternativa:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "8.2.1",
+    "correctIndex": 3,
+    "explanation": "Criterio: Aplica la regla a la condición que la consigna fija.\nAplicación: El cambio de aula activa el aviso a todos; no se mencionan cancelación ni cambio de hora.\nRespuesta: La consecuencia está justificada dentro del escenario hipotético. No se predice que toda organización real cumpla siempre sus reglas.",
+    "fuente": "temario",
+    "id": "rv_t08_s02_c01",
+    "options": [
+      "El taller queda cancelado.",
+      "Se avisa únicamente a los nuevos participantes.",
+      "Se modifica necesariamente la hora de inicio.",
+      "Se avisa a todos los inscritos."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 8,
+    "statement": "Regla de un taller ficticio: «Si cambia el aula, se avisa a todos los inscritos». Para un caso hipotético se establece que el aula cambia y que la regla se cumple. ¿Qué consecuencia se obtiene?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.2",
+    "correctIndex": 2,
+    "explanation": "Criterio: Distingue el grado de apoyo de una conclusión.\nAplicación: Una explicación puede resultar razonable sin ser la única permitida por la información.\nRespuesta: No se debe presentar una hipótesis probable como una consecuencia necesaria.",
+    "fuente": "temario",
+    "id": "rv_t08_s02_c02",
+    "options": [
+      "La necesaria siempre está copiada literalmente entre comillas.",
+      "La plausible puede afirmarse con certeza si resulta familiar.",
+      "La necesaria no puede ser falsa si las premisas son verdaderas; la plausible admite otras posibilidades compatibles con los datos.",
+      "No existe ninguna diferencia entre ambas."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 8,
+    "statement": "¿Qué diferencia una consecuencia necesaria de una interpretación solo plausible?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.3",
+    "correctIndex": 0,
+    "explanation": "Criterio: Evalúa la contribución al propósito del párrafo.\nAplicación: Una oración puede ser verdadera y aun así no aportar al aviso; una repetición puede conservarse si aclara un dato necesario.\nRespuesta: Se decide por pertinencia y función, no por longitud o aspecto gráfico.",
+    "fuente": "temario",
+    "id": "rv_t08_s02_c03",
+    "options": [
+      "Que no contribuya a ese propósito o repita información sin una función pertinente.",
+      "Que incluya un número escrito con cifras.",
+      "Que sea la oración más breve.",
+      "Que contenga un nombre propio."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 8,
+    "statement": "Un párrafo tiene como único propósito informar del lugar y la hora de un taller. ¿Qué criterio justifica retirar una oración de ese párrafo?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.4",
+    "correctIndex": 1,
+    "explanation": "Criterio: Usa el orden solicitado en el ejercicio.\nAplicación: La consigna indica expresamente que se va de una definición a sus ejemplos.\nRespuesta: Ese orden cumple esta tarea; no es una estructura obligatoria para todos los textos.",
+    "fuente": "temario",
+    "id": "rv_t08_s02_c04",
+    "options": [
+      "Ejemplos antes de la definición.",
+      "Definición general seguida de ejemplos particulares.",
+      "Ejemplos sin ninguna relación con el término definido.",
+      "Conclusión antes de mencionar el asunto."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 8,
+    "statement": "Se pide un párrafo expositivo que presente primero una definición y después ejemplos que la ilustren. ¿Qué orden cumple esa consigna?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.5",
+    "correctIndex": 1,
+    "explanation": "Criterio: Busca el antecedente compatible con el pronombre.\nAplicación: El informe es aquello que Lucía revisó y luego envió.\nRespuesta: La referencia es anafórica: remite hacia atrás en el texto.",
+    "fuente": "temario",
+    "id": "rv_t08_s02_c05",
+    "options": [
+      "A una persona que todavía no ha sido presentada.",
+      "Al informe, mencionado antes.",
+      "A una acción futura que no aparece en el texto.",
+      "A la coordinación como sujeto de revisó."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 8,
+    "statement": "En «Lucía revisó el informe y lo envió a la coordinación», ¿a qué remite «lo»?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.6",
+    "correctIndex": 0,
+    "explanation": "Criterio: Comprueba dónde se encuentra la información a la que remite la expresión.\nAplicación: Los elementos solicitados se enumeran después: un cuaderno y un lápiz.\nRespuesta: La referencia es catafórica porque anticipa lo que se explicita a continuación.",
+    "fuente": "temario",
+    "id": "rv_t08_s02_c06",
+    "options": [
+      "Anticipa la información que se especifica después de los dos puntos.",
+      "Remite a un objeto mencionado en una oración anterior que no se muestra.",
+      "Suprime el verbo traer.",
+      "Afirma que cualquier objeto sirve para la actividad."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 8,
+    "statement": "En «Debes traer lo siguiente: un cuaderno y un lápiz», ¿qué función cumple «lo siguiente»?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.7",
+    "correctIndex": 3,
+    "explanation": "Criterio: Recupera el elemento omitido a partir de la estructura y del contexto.\nAplicación: La segunda parte contrasta la elección de Luis con la de Ana.\nRespuesta: Se entiende «Luis eligió el taller de música». La elipsis no permite inventar otra acción.",
+    "fuente": "temario",
+    "id": "rv_t08_s02_c07",
+    "options": [
+      "Canceló.",
+      "Dictó.",
+      "Terminó.",
+      "Eligió."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 8,
+    "statement": "En «Ana eligió el taller de dibujo; Luis, el de música», ¿qué verbo se recupera en la segunda parte?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.8",
+    "correctIndex": 3,
+    "explanation": "Criterio: Compara las posiciones sobre el mismo asunto y separa lo compartido de lo discutido.\nAplicación: Ambos aceptan la ampliación; la diferencia está en la condición de personal.\nRespuesta: El punto de discrepancia es esa condición, no una oposición total sobre el servicio.",
+    "fuente": "temario",
+    "id": "rv_t08_s02_c08",
+    "options": [
+      "En si la biblioteca presta libros.",
+      "En el nombre de la biblioteca.",
+      "En si se debe eliminar el préstamo.",
+      "En la necesidad de agregar personal para ampliar el horario."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 8,
+    "statement": "Elena propone ampliar el horario de préstamo sin agregar personal. Marco acepta ampliarlo, pero solo si se agrega personal. ¿En qué discrepan?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.9",
+    "correctIndex": 0,
+    "explanation": "Criterio: La síntesis debe reunir los datos relevantes sin añadir otros.\nAplicación: El texto informa de un cambio y precisa dos aspectos que se mantienen.\nRespuesta: La primera opción integra el contenido. Es una idea principal informativa, no necesariamente una tesis argumentativa.",
+    "fuente": "temario",
+    "id": "rv_t08_s02_c09",
+    "options": [
+      "El taller cambia de lugar, pero conserva su horario y las inscripciones vigentes.",
+      "La biblioteca compró nuevos libros.",
+      "Se cancelaron todas las inscripciones.",
+      "El taller empezará dos horas más tarde."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 8,
+    "statement": "Texto de práctica: «El taller cambió a la biblioteca. La sesión mantiene la hora prevista. Las inscripciones realizadas siguen vigentes». ¿Qué opción resume mejor la información central?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "8.2.10",
+    "correctIndex": 2,
+    "explanation": "Criterio: Revisa a quiénes se observó, qué se preguntó y qué se concluye.\nAplicación: Hay dos opiniones de utilidad; no una medición de aprendizaje ni información representativa de todos los estudiantes.\nRespuesta: La generalización carece de apoyo suficiente. Eso no demuestra que el taller sea inútil ni que toda conclusión basada en pocos casos sea inválida por definición.",
+    "fuente": "temario",
+    "id": "rv_t08_s02_c10",
+    "options": [
+      "Se limita expresamente a describir lo que dijeron esas dos personas.",
+      "Demuestra mediante una medición el aprendizaje de toda la población.",
+      "Generaliza a todos y al aprendizaje a partir de dos opiniones sobre utilidad, sin apoyo suficiente.",
+      "Solo informa de la fecha del taller."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 8,
+    "statement": "Dos asistentes a un taller ficticio comentan que les resultó útil. Con ese único dato, alguien afirma «Todos los estudiantes aprenderán mejor con este taller». ¿Qué problema presenta la conclusión?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

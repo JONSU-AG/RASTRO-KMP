@@ -13,22 +13,39 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                         CINÉTICA Y EQUILIBRIO QUÍMICO
-                                       │
-         ┌─────────────────────────────┴─────────────────────────────┐
-         ▼                                                           ▼
-  CINÉTICA QUÍMICA                                          EQUILIBRIO QUÍMICO
-• Teoría de las Colisiones Efectivas                        • Reacciones Reversibles: v_{\text{directa}} = v_{\text{inversa}}
-• Energía de Activación (E_a)                             • Constante de Equilibrio en Concentraciones (K_c)
-• Complejo Activado                                         • Constante en Presiones (K_p): K_p = K_c (RT)^{\Delta n}
-• Ley de Acción de Masas (Guldberg y Waage):               • Cociente de Reacción (Q vs K)
-  v_r = k [A]^\alpha [B]^\beta                             • Principio de Henry Le Chatelier:
-• Factores que modifican la velocidad:                        - Efecto de la Concentración
-  - Concentración de reactivos                                - Efecto de la Presión y Volumen (fase gas)
-  - Temperatura (T \uparrow \implies v \uparrow)            - Efecto de la Temperatura (\Delta H)
-  - Grado de división / Superficie                            - Inercia del Catalizador (NO altera K)
-  - Catalizadores (disminuyen E_a)
+```mermaid
+graph TD
+ ROOT["Velocidad y equilibrio químico"]
+ B1["Cinética"]
+ B1N1["Colisiones eficaces: energía y orientación apropiadas para el mecanismo considerado."]
+ B1N2["Energía de activación y estado de transición describen la barrera de una ruta de reacción."]
+ B1N3["Ley de velocidad: $v=k[A]^\alpha[B]^\beta$; los órdenes se determinan experimentalmente y no se copian en general de los coeficientes."]
+ B1N4["Concentración, temperatura, superficie y catalizadores pueden modificar la rapidez según el sistema."]
+ B2["Equilibrio dinámico"]
+ B2N1["Las velocidades directa e inversa son iguales; las concentraciones son constantes, no necesariamente iguales."]
+ B2N2["K corresponde a una ecuación, temperatura y convención dadas; omitir sólidos y líquidos puros en las expresiones habituales."]
+ B2N3["Comparar Q con K permite determinar hacia qué sentido debe evolucionar el sistema para alcanzar equilibrio."]
+ B2N4["Para gases ideales y las convenciones habituales: $K_p=K_c(RT)^{\Delta n_g}$; contar solo especies gaseosas."]
+ B3["Perturbaciones"]
+ B3N1["Cambios de concentración pueden modificar la composición de equilibrio."]
+ B3N2["La respuesta a compresión depende de los moles gaseosos; un gas inerte no tiene el mismo efecto a volumen y presión constantes."]
+ B3N3["Cambiar la temperatura puede cambiar K; considerar el signo de la entalpía de reacción."]
+ B3N4["Un catalizador acelera ambos sentidos y la llegada al equilibrio; no cambia K ni la composición de equilibrio."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
 ```
 
 ---

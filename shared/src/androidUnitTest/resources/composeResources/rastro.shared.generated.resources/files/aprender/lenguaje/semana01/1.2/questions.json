@@ -2,15 +2,15 @@
   {
     "id": "leng_t01_s02_c01",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El sonido estridente de la sirena de una ambulancia que solicita paso en una avenida principal constituye una comunicación:",
+    "statement": "Un conductor de ambulancia activa una sirena convencional para advertir su presencia. Si se analiza únicamente la señal de la sirena, sin palabras habladas, ¿cómo se clasifica?",
     "options": [
-      "No humana sensorial",
-      "Verbal visuográfica",
-      "Lingüística acústica",
-      "Humana no verbal acústica"
+      "Señal emitida entre animales no humanos",
+      "Texto lingüístico leído visualmente",
+      "Mensaje lingüístico oral",
+      "Comunicación humana no lingüística y acústica"
     ],
     "correctIndex": 3,
-    "explanation": "La sirena de ambulancia es una señal sonora artificial no verbal producida por el ser humano para transmitir un mensaje de emergencia.",
+    "explanation": "Criterio: distinguir quién utiliza la señal, si representa una lengua y por qué vía se percibe. Aplicación: la sirena activada por el conductor comunica mediante un sonido convencional sin palabras. Respuesta: comunicación humana no lingüística y acústica. Un dispositivo artificial no convierte por sí solo el intercambio en comunicación entre animales.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.2.1",
@@ -20,15 +20,15 @@
   {
     "id": "leng_t01_s02_c02",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Cuando un postulante reflexiona en silencio sobre las alternativas antes de marcar su tarjeta de respuestas, se manifiesta una comunicación:",
+    "statement": "Un estudiante se dice mentalmente «primero leeré todas las opciones y después compararé las dos más cercanas». En el modelo que incluye el diálogo interior como comunicación, este caso es:",
     "options": [
       "Intrapersonal",
-      "Interpersonal indirecta",
-      "Unidireccional de masas",
-      "Bilateral pública"
+      "Interpersonal a distancia",
+      "Difusión pública de masas",
+      "Diálogo presencial entre dos personas"
     ],
     "correctIndex": 0,
-    "explanation": "La comunicación intrapersonal es aquella donde emisor y receptor coinciden en el mismo individuo mediante el pensamiento o monólogo interior.",
+    "explanation": "Criterio: el modelo intrapersonal describe mensajes que una persona formula para sí. Aplicación: el estudiante desarrolla un diálogo interior sin dirigirse a otro participante. Respuesta: intrapersonal. Se especifica el modelo; no se afirma que cualquier pensamiento o actividad mental sea necesariamente comunicación.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.2.2",
@@ -38,15 +38,15 @@
   {
     "id": "leng_t01_s02_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Qué tipo de comunicación se produce durante un encarnizado debate electoral televisado entre dos candidatos presidenciales?",
+    "statement": "Dos candidatos están en el mismo estudio y se responden por turnos durante un debate televisado. Analiza solo el intercambio entre ellos, no la transmisión a los televidentes. ¿Cómo se clasifica?",
     "options": [
       "Unidireccional e intrapersonal",
-      "No lingüística y unidireccional",
-      "Privada y no verbal",
-      "Bidireccional, interpersonal y directa"
+      "No lingüístico y sin respuesta entre los participantes",
+      "Privado y exclusivamente gestual",
+      "Bidireccional, interpersonal y presencial"
     ],
     "correctIndex": 3,
-    "explanation": "En un debate presencial, los interlocutores comparten espacio y alternan roles de emisor y receptor en diálogo recíproco (bidireccional, interpersonal y directa).",
+    "explanation": "Criterio: delimitar participantes y comprobar alternancia de mensajes y copresencia. Aplicación: los candidatos son personas distintas, comparten el estudio y se responden. Respuesta: bidireccional, interpersonal y presencial. La transmisión televisiva hacia la audiencia es otro nivel del análisis; no se atribuye copresencia a quienes ven el programa a distancia.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.2.3",
@@ -56,15 +56,15 @@
   {
     "id": "leng_t01_s02_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La lectura de un cartel publicitario colocado en la carretera Panamericana Sur corresponde a una comunicación:",
+    "statement": "Una empresa coloca un cartel con texto e imagen junto a una carretera para cualquier persona que pase. Analiza la emisión del cartel hacia sus lectores, sin otro canal de respuesta descrito. ¿Qué combinación corresponde?",
     "options": [
-      "Directa y no lingüística",
-      "Unidireccional, pública e indirecta",
-      "Intrapersonal y acústica",
-      "Bidireccional y privada"
+      "Presencial y exclusivamente no lingüística",
+      "Unidireccional en ese tramo, pública y mediada por un soporte",
+      "Intrapersonal y exclusivamente acústica",
+      "Bidireccional y reservada a un destinatario personal"
     ],
     "correctIndex": 1,
-    "explanation": "Un cartel publicitario no permite réplica inmediata (unidireccional), se dirige a una masa indeterminada (pública) y el emisor no está presente físicamente ante el conductor (indirecta).",
+    "explanation": "Criterio: separar direccionalidad, acceso y mediación. Aplicación: el cartel se dirige públicamente a quienes pasan y se consulta mediante su soporte; el caso no describe una respuesta al anunciante. Respuesta: unidireccional en ese tramo, pública y mediada. Una respuesta posterior por otro medio ampliaría el intercambio. El cartel combina recursos lingüísticos y gráficos.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.2.3",
@@ -74,15 +74,15 @@
   {
     "id": "leng_t01_s02_c05",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El sistema de lectura y escritura táctil para invidentes ideado por Louis Braille se clasifica como comunicación:",
+    "statement": "Una persona lee con los dedos una oración en español transcrita a braille. ¿Qué descripción distingue correctamente el contenido lingüístico de la vía de lectura?",
     "options": [
-      "Humana no lingüística táctil",
-      "Proxémica espacial",
-      "No humana biológica",
-      "Exclusivamente oral acústica"
+      "Comunicación lingüística escrita con lectura táctil",
+      "Comunicación necesariamente no lingüística por usar el tacto",
+      "Comunicación entre animales no humanos",
+      "Comunicación exclusivamente oral y acústica"
     ],
     "correctIndex": 0,
-    "explanation": "El sistema Braille utiliza puntos en relieve percibidos mediante el sentido del tacto (comunicación no lingüística / no verbal táctil).",
+    "explanation": "Criterio: no confundir el sistema de representación y la modalidad sensorial con la lengua representada. Aplicación: la oración sigue estando en español; los puntos del braille permiten leerla mediante el tacto. Respuesta: comunicación lingüística escrita con lectura táctil. El braille es un sistema de lectoescritura, no una lengua independiente ni una razón para clasificar todo su contenido como no lingüístico.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.2.1",
@@ -92,15 +92,15 @@
   {
     "id": "leng_t01_s02_c06",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La danza en forma de ocho que realiza una abeja exploradora para informar a la colmena la ubicación y distancia del néctar es un ejemplo de:",
+    "statement": "En el caso descrito, una abeja melífera realiza una danza que proporciona a otras abejas información sobre una fuente de alimento. Según quiénes participan, se trata de:",
     "options": [
-      "Comunicación no humana",
-      "Comunicación intrapersonal",
-      "Comunicación verbal no idiomática",
-      "Comunicación indirecta visuográfica"
+      "Comunicación entre animales no humanos",
+      "Diálogo interior de una persona",
+      "Conversación en una lengua humana escrita",
+      "Lectura de un cartel por una audiencia humana"
     ],
     "correctIndex": 0,
-    "explanation": "Las señales instintivas y biológicas transmitidas entre animales forman parte de los sistemas de comunicación no humana.",
+    "explanation": "Criterio: la clasificación humana o no humana atiende aquí a los participantes, no al sonido o a la escritura. Aplicación: la señal se produce entre abejas. Respuesta: comunicación entre animales no humanos. Esta categoría no demuestra que toda conducta animal sea exclusivamente innata o carezca de aprendizaje.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.2.1",
@@ -110,15 +110,15 @@
   {
     "id": "leng_t01_s02_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Si un joven envía una carta manuscrita a su abuelo que reside en otra provincia, por el espacio temporal y geográfico la comunicación es:",
+    "statement": "Una joven escribe una carta personal a su abuelo en otra provincia. Él la lee tres días después. Según la mediación y el tiempo de recepción, el intercambio descrito es:",
     "options": [
-      "Directa o próxima",
-      "Indirecta o a distancia",
-      "Intrapersonal acústica",
-      "Pública o de masas"
+      "Presencial y simultáneo",
+      "Mediado a distancia y asincrónico",
+      "Diálogo interior exclusivamente acústico",
+      "Necesariamente público y de masas"
     ],
     "correctIndex": 1,
-    "explanation": "Cuando el emisor y el receptor se hallan separados por la distancia física o el tiempo, la comunicación es indirecta o a distancia.",
+    "explanation": "Criterio: distinguir separación espacial, uso de un soporte y coincidencia temporal. Aplicación: la carta llega a otra provincia y se lee días después de escribirse. Respuesta: mediado a distancia y asincrónico. Puede clasificarse además como privado por su destinatario, pero la distancia no determina por sí sola el alcance público o privado.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.2.2",
@@ -128,15 +128,15 @@
   {
     "id": "leng_t01_s02_c08",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes situaciones ejemplifica una comunicación humana no verbal gestual o mímica?",
+    "statement": "En un juego, dos compañeros han acordado que un guiño aislado significa «es tu turno». Uno hace ese guiño sin palabras y sin usar una lengua de señas. La señal descrita es:",
     "options": [
-      "Un mensaje de correo electrónico con acuse de recibo",
-      "El silbato del réferi al cobrar penal",
-      "La lectura de las noticias del periódico matutino",
-      "Un guiño de complicidad entre dos compañeros en el aula"
+      "Un texto de correo electrónico",
+      "Un sonido de silbato",
+      "Una noticia escrita en un periódico",
+      "Un gesto facial no lingüístico"
     ],
     "correctIndex": 3,
-    "explanation": "El guiño es un movimiento ocular intencional que transmite un mensaje mediante la expresión facial (comunicación no verbal gestual).",
+    "explanation": "Criterio: identificar el recurso que porta el mensaje en el caso. Aplicación: el guiño es un movimiento facial con un significado acordado para ese juego. Respuesta: gesto facial no lingüístico. No se generaliza a todas las expresiones manuales o faciales: las lenguas de señas son lenguas, no simples colecciones de gestos no lingüísticos.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.2.1",
@@ -146,15 +146,15 @@
   {
     "id": "leng_t01_s02_c09",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La luz roja de un semáforo que ordena detenerse a los conductores en una intersección es un signo comunicativo de tipo:",
+    "statement": "En un semáforo, analiza solo la señal luminosa roja convencional dirigida a los conductores, sin textos ni avisos sonoros. Por la vía de percepción y el recurso empleado, es:",
     "options": [
-      "Verbal articulado",
-      "Visual o cromático",
-      "Acústico",
-      "Proxémico"
+      "Una oración hablada",
+      "Una señal visual y cromática no lingüística",
+      "Una señal exclusivamente acústica",
+      "Una señal basada en la distancia entre interlocutores"
     ],
     "correctIndex": 1,
-    "explanation": "Las luces del semáforo emplean el color como código visual convencional para regular el tránsito vehicular (comunicación no verbal visual/cromática).",
+    "explanation": "Criterio: observar cómo se percibe la señal y qué recurso se utiliza. Aplicación: se percibe luz y color, sin una oración escrita o hablada en el caso delimitado. Respuesta: señal visual y cromática no lingüística. Que sea convencional no la convierte automáticamente en una lengua.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.2.1",
@@ -164,15 +164,15 @@
   {
     "id": "leng_t01_s02_c10",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Cuando escuchamos la transmisión de un programa informativo por la radio sin participar como locutores, la comunicación es clasificada como:",
+    "statement": "Durante un tramo informativo, una emisora transmite noticias a sus oyentes y no recibe llamadas ni mensajes de ellos. Si se analiza solo ese tramo de emisión, la dirección del flujo es:",
     "options": [
-      "Bidireccional",
-      "Intrapersonal",
-      "Directa y recíproca",
+      "Bidireccional porque cualquier oyente podría llamar en otro momento",
+      "Intrapersonal porque cada oyente escucha por separado",
+      "Presencial y recíproca entre locutor y cada oyente",
       "Unidireccional"
     ],
     "correctIndex": 3,
-    "explanation": "Es unidireccional porque el oyente actúa como receptor pasivo sin intercambiar roles comunicativos de inmediato con el emisor radial.",
+    "explanation": "Criterio: clasificar el flujo efectivamente descrito, no respuestas posibles fuera de ese tramo. Aplicación: las noticias van de la emisora a los oyentes sin mensajes de retorno en el caso. Respuesta: unidireccional. Los oyentes pueden interpretar activamente la información; unidireccional no significa ausencia de actividad mental ni imposibilidad de responder después.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.2.3",

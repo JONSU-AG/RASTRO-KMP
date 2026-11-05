@@ -12,13 +12,12 @@ import kotlin.test.assertTrue
  * Regresión de Física (SALIDA_KOTLIN → RASTRO, mismo sistema genérico
  * que las demás materias): convivencia legacy+nuevo sin duplicar ni contaminar.
  *
- * Nuevo = semanas 1-12 (24 LessonNodes fis_t01_s01..fis_t12_s02, 240 challenges).
+ * Nuevo = semanas 1-12 (24 LessonNodes fis_t01_s01..fis_t12_s02, 264 preguntas revisadas).
  * Legacy fis_t* semanas 1-12 queda excluido (reemplazo total).
  * Usa fixtures espejo de `src/androidUnitTest/resources` (patrón existente).
  *
  * Notas de staging (no se modifica curso-prueba):
  * - subjectId/semana/subtema vacíos o ausentes normalizados en la generación.
- * - Distribución correctIndex real: A=90, B=60, C=42, D=48.
  * - Teorías 4057-13243 chars; umbral de teoría en 4000.
  */
 class MapaFisicaRegressionTest {
@@ -49,13 +48,13 @@ class MapaFisicaRegressionTest {
     @Test
     fun mapaFisica_nuevoSemanas1a12_sinLegacy() {
         val mapa = mapaFisica()
-        // Reemplazo total: todo nodo tiene 10 challenges (legacy = 1 challenge).
+        // Reemplazo total: todo nodo tiene 11 preguntas revisadas (legacy = 1 challenge).
         assertEquals(24, mapa.size, "Solo los 24 nodos nuevos, sin legacy")
-        assertTrue(mapa.all { it.challenges.size == 10 }, "Sin nodos legacy de 1 challenge")
+        assertTrue(mapa.all { it.challenges.size == 11 }, "Sin nodos legacy de 1 challenge")
 
         val nuevas = mapa.filter { it.id.startsWith("fis_t") }
         assertEquals(24, nuevas.size, "12 semanas nuevas = 24 LessonNodes")
-        assertEquals(240, nuevas.sumOf { it.challenges.size }, "240 challenges staging")
+        assertEquals(264, nuevas.sumOf { it.challenges.size }, "264 preguntas revisadas")
 
         val semanas = nuevas.map { it.semana }.distinct().sorted()
         assertEquals((1..12).toList(), semanas, "Nuevo semanas 1-12: $semanas")
@@ -66,8 +65,8 @@ class MapaFisicaRegressionTest {
         val mapa = mapaFisica()
         // (semana, subtema, challenges) por nodo.
         val esperadas = (1..12).flatMap { w ->
-            listOf("fis_t%02d_s01".format(w) to Triple(w, "$w.1", 10),
-                "fis_t%02d_s02".format(w) to Triple(w, "$w.2", 10))
+            listOf("fis_t%02d_s01".format(w) to Triple(w, "$w.1", 11),
+                "fis_t%02d_s02".format(w) to Triple(w, "$w.2", 11))
         }.toMap()
         for ((id, esp) in esperadas) {
             val l = mapa.filter { it.id == id && it.challenges.size == esp.third }
@@ -91,7 +90,7 @@ class MapaFisicaRegressionTest {
         // Spot-check anti-corrupción: título staging verbatim.
         assertEquals(
             "LA FÍSICA, MAGNITUDES Y VECTORES - Fundamentos y Leyes Principales",
-            mapa.first { it.id == "fis_t01_s01" && it.challenges.size == 10 }.title
+            mapa.first { it.id == "fis_t01_s01" && it.challenges.size == 11 }.title
         )
     }
 
@@ -101,7 +100,7 @@ class MapaFisicaRegressionTest {
         try {
             val nueva = AprenderRepository.getLessonByIdSync("fis_t01_s01")
             assertTrue(nueva != null, "fis_t01_s01 debe resolverse")
-            assertEquals(10, nueva.challenges.size, "Nuevo con 10 challenges staging")
+            assertEquals(11, nueva.challenges.size, "Nuevo con 11 preguntas revisadas")
             assertEquals("fisica", nueva.subjectId)
 
             // Fallback legacy: fis_t01_s03 no tiene equivalente nuevo → legacy (1 challenge).

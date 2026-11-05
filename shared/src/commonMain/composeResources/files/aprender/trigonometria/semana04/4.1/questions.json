@@ -1,1 +1,200 @@
-[{"concept":"4.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t04_s01_c01","options":["7","1","-1","8"],"pedagogicalTier":"concepto","semana":4,"statement":"**Enunciado:** El punto P(-3, 4) pertenece al lado final de un ángulo \\alpha en posición normal. Calcule el valor de:","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"4.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t04_s01_c02","options":["0","-1","-\\dfrac{3\\sqrt{5}}{5}","1"],"pedagogicalTier":"concepto","semana":4,"statement":"**Enunciado:** Si \\tan(\\theta) = -2 y se sabe que \\theta \\in \\text{IV C}, calcule el valor numérico de:","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"4.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t04_s01_c03","options":["-1","2","3","1"],"pedagogicalTier":"concepto","semana":4,"statement":"**Enunciado:** Reduzca al primer cuadrante y simplifique la siguiente expresión trigonométrica:","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"4.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t04_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"4.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t04_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"4.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t04_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"4.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t04_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"4.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t04_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"4.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t04_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"4.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t04_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "trig_t04_s01_c01",
+    "concept": "4.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 4,
+    "statement": "Calcula $\\sin(150^\\circ)$.",
+    "options": [
+      "$0.5$",
+      "$1$",
+      "$0.25$",
+      "$1.5$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El segundo cuadrante conserva positivo el seno.\n2. Aplicamos la relación: $\\sin150^\\circ=\\sin30^\\circ$.\n3. El valor pedido es $0.5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t04_s01_c02",
+    "concept": "4.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 4,
+    "statement": "Calcula $\\cos(120^\\circ)$.",
+    "options": [
+      "$-1$",
+      "$-0.25$",
+      "$-1.5$",
+      "$-0.5$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. En el segundo cuadrante el coseno es negativo.\n2. Aplicamos la relación: $\\cos120^\\circ=-\\cos60^\\circ$.\n3. El valor pedido es $-0.5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t04_s01_c03",
+    "concept": "4.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 4,
+    "statement": "Calcula $\\tan(225^\\circ)$.",
+    "options": [
+      "$0.5$",
+      "$3$",
+      "$1$",
+      "$2$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La tangente tiene periodo 180°.\n2. Aplicamos la relación: $\\tan225^\\circ=\\tan45^\\circ$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t04_s01_c04",
+    "concept": "4.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 4,
+    "statement": "Calcula $\\sin(270^\\circ)$.",
+    "options": [
+      "$-3$",
+      "$-1$",
+      "$-2$",
+      "$-0.5$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La coordenada vertical del extremo en el círculo unitario es −1.\n2. Aplicamos la relación: $\\sin270^\\circ=-1$.\n3. El valor pedido es $-1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t04_s01_c05",
+    "concept": "4.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 4,
+    "statement": "Calcula $\\cos(360^\\circ)$.",
+    "options": [
+      "$1$",
+      "$2$",
+      "$0.5$",
+      "$3$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Una vuelta vuelve al punto (1,0).\n2. Aplicamos la relación: $\\cos360^\\circ=1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t04_s01_c06",
+    "concept": "4.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 4,
+    "statement": "Calcula $\\sin(−30^\\circ)$.",
+    "options": [
+      "$-1$",
+      "$-0.25$",
+      "$-1.5$",
+      "$-0.5$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El seno es una función impar.\n2. Aplicamos la relación: $\\sin(-30^\\circ)=-\\sin30^\\circ$.\n3. El valor pedido es $-0.5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t04_s01_c07",
+    "concept": "4.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 4,
+    "statement": "Calcula $\\cos(−60^\\circ)$.",
+    "options": [
+      "$0.25$",
+      "$1.5$",
+      "$0.5$",
+      "$1$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El coseno es una función par.\n2. Aplicamos la relación: $\\cos(-60^\\circ)=\\cos60^\\circ$.\n3. El valor pedido es $0.5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t04_s01_c08",
+    "concept": "4.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 4,
+    "statement": "¿Qué ángulo de [0°,360°) es coterminal con 750°?",
+    "options": [
+      "$90\\,\\mathrm{^\\circ}$",
+      "$30\\,\\mathrm{^\\circ}$",
+      "$60\\,\\mathrm{^\\circ}$",
+      "$15\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Restamos vueltas completas.\n2. Aplicamos la relación: $750^\\circ-2(360^\\circ)=30^\\circ$.\n3. El valor pedido es $30\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t04_s01_c09",
+    "concept": "4.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 4,
+    "statement": "El lado terminal de α pasa por (−3,4). Calcula $\\sin(\\alpha )$.",
+    "options": [
+      "$0.8$",
+      "$1.6$",
+      "$0.4$",
+      "$2.4$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Usamos y/r con radio positivo.\n2. Aplicamos la relación: $r=\\sqrt{(-3)^2+4^2}=5;\\quad\\sin\\alpha=4/5$.\n3. El valor pedido es $0.8$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t04_s01_c10",
+    "concept": "4.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 4,
+    "statement": "La tangente no está definida en…",
+    "options": [
+      "0°.",
+      "45°.",
+      "90°.",
+      "180°."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La tangente es seno dividido entre coseno.\n2. En 90° el coseno es cero.\n3. La división por cero no define una tangente real finita.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t04_s01_c11",
+    "concept": "4.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 4,
+    "statement": "En el tercer cuadrante, seno y coseno son…",
+    "options": [
+      "Ambos positivos.",
+      "Seno positivo y coseno negativo.",
+      "Ambos negativos.",
+      "Seno negativo y coseno positivo."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. En el tercer cuadrante x e y son negativos.\n2. El radio es positivo.\n3. Seno=y/r y coseno=x/r son negativos.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

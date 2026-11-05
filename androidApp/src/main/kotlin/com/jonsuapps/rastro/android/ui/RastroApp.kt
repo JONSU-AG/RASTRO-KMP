@@ -9,8 +9,6 @@ import com.jonsuapps.rastro.android.ui.components.XpDeliveryOverlay
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
-import android.media.AudioManager
-import android.media.ToneGenerator
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -19,6 +17,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.*
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -42,7 +42,6 @@ import com.jonsuapps.rastro.android.ui.components.MoreAction
 import com.jonsuapps.rastro.android.ui.components.ThemeSelectorDialog
 import com.jonsuapps.rastro.android.ui.components.ProfileSettingsDialog
 import com.jonsuapps.rastro.android.ui.components.TermsAndPrivacyDialog
-import com.jonsuapps.rastro.android.ui.components.TermsConsentDialog
 import com.jonsuapps.rastro.android.ui.components.EntryAnnouncementDialog
 import com.jonsuapps.rastro.android.ui.components.ExitStreakPromptDialog
 import com.jonsuapps.rastro.android.ui.components.MascotMood
@@ -102,8 +101,11 @@ fun RastroApp(
     val rastroPrefs = remember(context) {
         context.getSharedPreferences("rastro_preferences", Context.MODE_PRIVATE)
     }
-    var showTermsConsent by remember {
-        mutableStateOf(!rastroPrefs.getBoolean("terms_accepted", false))
+    var entryChoiceCompleted by remember { mutableStateOf(rastroPrefs.getBoolean("entry_choice_completed", false)) }
+    LaunchedEffect(authStateResolved, entryChoiceCompleted) {
+        if (authStateResolved && !entryChoiceCompleted && !currentUser.isAuthenticated) {
+            navController.navigate(RastroScreen.Auth.route) { launchSingleTop = true }
+        }
     }
     var activeEntryAnnouncement by remember { mutableStateOf<RastroNotification?>(null) }
 
@@ -315,55 +317,22 @@ fun RastroApp(
         }
     }
 
-    // Las preferencias del Pomodoro se conservan al cerrar y volver a abrir la app.
-    val pomodoroPreferences = remember(context) {
-        context.getSharedPreferences("rastro_pomodoro", Context.MODE_PRIVATE)
+    val pomodoroController = remember(context) {
+        com.jonsuapps.rastro.android.pomodoro.PomodoroTimer.get(context)
     }
-    var pomodoroState by remember(pomodoroPreferences) {
-        val studyMinutes = pomodoroPreferences.getInt("study_minutes", 25).coerceIn(1, 120)
-        mutableStateOf(
-            PomodoroState(
-                timeLeftSeconds = studyMinutes * 60,
-                customStudyMinutes = studyMinutes,
-                customShortBreakMinutes = pomodoroPreferences.getInt("short_break_minutes", 5).coerceIn(1, 120),
-                customLongBreakMinutes = pomodoroPreferences.getInt("long_break_minutes", 15).coerceIn(1, 120),
-                customCyclesBeforeLongBreak = pomodoroPreferences.getInt("cycles_before_long", 4).coerceIn(1, 12),
-                autoCycle = pomodoroPreferences.getBoolean("auto_cycle", true),
-                soundEnabled = pomodoroPreferences.getBoolean("sound_enabled", true),
-                studyAlertSound = PomodoroAlertSound.values().firstOrNull { it.id == pomodoroPreferences.getString("study_alert", "beep") }
-                    ?: PomodoroAlertSound.BEEP,
-                shortBreakAlertSound = PomodoroAlertSound.values().firstOrNull { it.id == pomodoroPreferences.getString("short_break_alert", "confirm") }
-                    ?: PomodoroAlertSound.CONFIRM,
-                longBreakAlertSound = PomodoroAlertSound.values().firstOrNull { it.id == pomodoroPreferences.getString("long_break_alert", "double") }
-                    ?: PomodoroAlertSound.DOUBLE_BEEP
-            )
-        )
+    val pomodoroState = pomodoroController.state
+    // Solo refresca la vista; la alarma y la fecha límite viven fuera de Compose.
+    val pomodoroLifecycle = LocalLifecycleOwner.current.lifecycle
+    LaunchedEffect(pomodoroController, pomodoroLifecycle) {
+        pomodoroLifecycle.repeatOnLifecycle(androidx.lifecycle.Lifecycle.State.STARTED) {
+            pomodoroController.refresh()
+            pomodoroController.schedule()
+            while (true) {
+                pomodoroController.refresh()
+                delay(250L)
+            }
+        }
     }
-    LaunchedEffect(
-        pomodoroState.customStudyMinutes,
-        pomodoroState.customShortBreakMinutes,
-        pomodoroState.customLongBreakMinutes,
-        pomodoroState.customCyclesBeforeLongBreak,
-        pomodoroState.autoCycle,
-        pomodoroState.soundEnabled,
-        pomodoroState.studyAlertSound,
-        pomodoroState.shortBreakAlertSound,
-        pomodoroState.longBreakAlertSound
-    ) {
-        pomodoroPreferences.edit()
-            .putInt("study_minutes", pomodoroState.customStudyMinutes)
-            .putInt("short_break_minutes", pomodoroState.customShortBreakMinutes)
-            .putInt("long_break_minutes", pomodoroState.customLongBreakMinutes)
-            .putInt("cycles_before_long", pomodoroState.customCyclesBeforeLongBreak)
-            .putBoolean("auto_cycle", pomodoroState.autoCycle)
-            .putBoolean("sound_enabled", pomodoroState.soundEnabled)
-            .putString("study_alert", pomodoroState.studyAlertSound.id)
-            .putString("short_break_alert", pomodoroState.shortBreakAlertSound.id)
-            .putString("long_break_alert", pomodoroState.longBreakAlertSound.id)
-            .apply()
-    }
-    val pomodoroTone = remember { ToneGenerator(AudioManager.STREAM_ALARM, 75) }
-    DisposableEffect(pomodoroTone) { onDispose { pomodoroTone.release() } }
     var isThemeDialogVisible by remember { mutableStateOf(false) }
     var isProfileSettingsVisible by remember { mutableStateOf(false) }
     var termsDialogInitialTab by remember { mutableStateOf<Int?>(null) }
@@ -372,60 +341,6 @@ fun RastroApp(
     var showWidgetsHub by remember { mutableStateOf(false) }
     var showExitStreakPrompt by remember { mutableStateOf(false) }
     val currentStreakState by GamificationManager.streakState.collectAsState()
-
-    // ── Countdown real del Pomodoro (tick cada segundo) ──────────────────────
-    LaunchedEffect(pomodoroState.isRunning, pomodoroState.timeLeftSeconds) {
-        if (pomodoroState.isRunning && pomodoroState.timeLeftSeconds > 0) {
-            delay(1_000L)
-            pomodoroState = pomodoroState.copy(
-                timeLeftSeconds = pomodoroState.timeLeftSeconds - 1
-            )
-        } else if (pomodoroState.isRunning && pomodoroState.timeLeftSeconds <= 0) {
-            val alert = pomodoroState.alertSound()
-            if (pomodoroState.soundEnabled && alert != PomodoroAlertSound.SILENT) {
-                val tone = when (alert) {
-                    PomodoroAlertSound.BEEP -> ToneGenerator.TONE_PROP_BEEP
-                    PomodoroAlertSound.DOUBLE_BEEP -> ToneGenerator.TONE_PROP_BEEP2
-                    PomodoroAlertSound.CONFIRM -> ToneGenerator.TONE_PROP_ACK
-                    PomodoroAlertSound.SILENT -> ToneGenerator.TONE_PROP_BEEP
-                }
-                pomodoroTone.startTone(tone, 700)
-            }
-            // Auto-ciclo: Estudio → Descanso Corto (cada 4 ciclos → Largo)
-            val nextMode = when (pomodoroState.mode) {
-                com.jonsuapps.rastro.pomodoro.PomodoroMode.STUDY,
-                com.jonsuapps.rastro.pomodoro.PomodoroMode.CUSTOM ->
-                    if ((pomodoroState.completedCycles + 1) % pomodoroState.customCyclesBeforeLongBreak.coerceAtLeast(1) == 0)
-                        com.jonsuapps.rastro.pomodoro.PomodoroMode.LONG_BREAK
-                    else
-                        com.jonsuapps.rastro.pomodoro.PomodoroMode.SHORT_BREAK
-                else -> com.jonsuapps.rastro.pomodoro.PomodoroMode.STUDY
-            }
-            val isStudyMode = pomodoroState.mode == com.jonsuapps.rastro.pomodoro.PomodoroMode.STUDY ||
-                pomodoroState.mode == com.jonsuapps.rastro.pomodoro.PomodoroMode.CUSTOM
-            val newCycles = if (isStudyMode)
-                pomodoroState.completedCycles + 1 else pomodoroState.completedCycles
-            val updatedTodayMinutes = pomodoroState.todayStudiedMinutes +
-                if (isStudyMode) pomodoroState.durationMinutes() else 0
-            pomodoroState = if (pomodoroState.autoCycle) {
-                pomodoroState.copy(
-                    mode = nextMode,
-                    timeLeftSeconds = pomodoroState.durationMinutes(nextMode) * 60,
-                    isRunning = true, // Bloques seguidos automáticos
-                    completedCycles = newCycles,
-                    todayStudiedMinutes = updatedTodayMinutes
-                )
-            } else {
-                pomodoroState.copy(
-                    mode = nextMode,
-                    timeLeftSeconds = pomodoroState.durationMinutes(nextMode) * 60,
-                    isRunning = false,
-                    completedCycles = newCycles,
-                    todayStudiedMinutes = updatedTodayMinutes
-                )
-            }
-        }
-    }
 
     // Manejo de BackHandler nativo: navega hacia atrás antes de salir o minimizar
     val canGoBack = navController.previousBackStackEntry != null
@@ -436,7 +351,7 @@ fun RastroApp(
         if (activeEntryAnnouncement != null) {
             activeEntryAnnouncement = null
         } else if (pomodoroState.viewState == PomodoroViewState.FULL_MODAL) {
-            pomodoroState = pomodoroState.copy(viewState = if (pomodoroState.isRunning) PomodoroViewState.MINI_PILL else PomodoroViewState.HIDDEN)
+            pomodoroController.state = pomodoroState.copy(viewState = if (pomodoroState.isRunning) PomodoroViewState.MINI_PILL else PomodoroViewState.HIDDEN)
         } else if (termsDialogInitialTab != null) {
             termsDialogInitialTab = null
         } else if (isProfileSettingsVisible) {
@@ -464,7 +379,7 @@ fun RastroApp(
         Scaffold(
             containerColor = theme.background,
             topBar = {
-                if (currentRoute != RastroScreen.DiasDeRacha.route) {
+                if (!QuestionFocusRegistry.focused && currentRoute != RastroScreen.LessonEngine.route && currentRoute != RastroScreen.DiasDeRacha.route && currentRoute != RastroScreen.Auth.route) {
                     // Barra superior limpia con micro-botones (36px) del §3.16 del mapa
                     Column {
                     TopHeaderActions(
@@ -480,7 +395,7 @@ fun RastroApp(
                         onOpenNotifications = { showNotifications = true },
                         unreadNotifications = notifications.count { !it.read },
                         onOpenPomodoro = {
-                            pomodoroState = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL)
+                            pomodoroController.state = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL)
                         },
                         onOpenFormulas = { navController.navigate(RastroScreen.Formulario.route) },
                         onOpenThemeSelector = { isThemeDialogVisible = true }
@@ -493,7 +408,8 @@ fun RastroApp(
                 }
             },
             bottomBar = {
-                if (currentRoute != RastroScreen.DiasDeRacha.route) {
+                if (!QuestionFocusRegistry.focused && currentRoute != RastroScreen.DiasDeRacha.route && currentRoute != RastroScreen.Auth.route &&
+                    currentRoute != RastroScreen.LessonEngine.route) {
                     Column {
                     if (currentRoute in listOf(RastroScreen.Home.route, RastroScreen.Aprender.route,
                         RastroScreen.Cursos.route, RastroScreen.Biblioteca.route, RastroScreen.Perfil.route)) {
@@ -555,6 +471,10 @@ fun RastroApp(
                 composable(RastroScreen.Home.route) {
                     HomeScreen(
                         colors = theme,
+                        allowStudyGoalPrompt = authStateResolved && (entryChoiceCompleted || currentUser.isAuthenticated) &&
+                            !showNotificationPrompt && activeEntryAnnouncement == null &&
+                            !showNotifications && !showMoreActions && !isProfileSettingsVisible &&
+                            !isThemeDialogVisible && !isVocationalDialogVisible,
                         onNavigate = { route -> navController.navigate(route) },
                         onOpenVocationalTest = { isVocationalDialogVisible = true },
                         onOpenPeriodicTable = { isPeriodicTableVisible = true },
@@ -583,7 +503,7 @@ fun RastroApp(
                         },
                         onNavigateToLesson = { lessonId ->
                             GamificationManager.updateHeartRegeneration()
-                            if (GamificationManager.hearts.value > 0 || com.jonsuapps.rastro.monetization.ProAccess.active()) {
+                            if (GamificationManager.hearts.value > 0 || com.jonsuapps.rastro.monetization.PresentationMode.unlimitedLives()) {
                                 navController.navigate(RastroScreen.LessonEngine.createRoute(lessonId)) { launchSingleTop = true }
                             } else showLivesShop = true
                         }
@@ -596,7 +516,7 @@ fun RastroApp(
                         onNavigateBack = { navController.popBackStack() },
                         onNavigateToLesson = { lessonId ->
                             GamificationManager.updateHeartRegeneration()
-                            if (GamificationManager.hearts.value > 0 || com.jonsuapps.rastro.monetization.ProAccess.active()) {
+                            if (GamificationManager.hearts.value > 0 || com.jonsuapps.rastro.monetization.PresentationMode.unlimitedLives()) {
                                 navController.navigate(RastroScreen.LessonEngine.createRoute(lessonId)) { launchSingleTop = true }
                             } else showLivesShop = true
                         }
@@ -697,7 +617,7 @@ fun RastroApp(
                             if (route == RastroScreen.DiasDeRacha.route) openStreakCalendar = true
                             navController.navigate(route)
                         },
-                        onOpenPomodoro = { pomodoroState = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL) }
+                        onOpenPomodoro = { pomodoroController.state = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL) }
                     )
                     }
                 }
@@ -709,18 +629,26 @@ fun RastroApp(
                         targetPublicationId = targetPubId,
                         onOpenSettings = { isProfileSettingsVisible = true },
                         onNavigate = { route -> navController.navigate(route) },
-                        onOpenPomodoro = { pomodoroState = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL) }
+                        onOpenPomodoro = { pomodoroController.state = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL) }
                     )
                 }
 
                 // 10. Auth
                 composable(RastroScreen.Auth.route) {
                     AuthScreen(
-                        onAuthSuccess = { navController.navigate(RastroScreen.Home.route) {
+                        onAuthSuccess = {
+                            rastroPrefs.edit().putBoolean("entry_choice_completed", true)
+                                .putBoolean("terms_accepted", true).apply()
+                            entryChoiceCompleted = true
+                            navController.navigate(RastroScreen.Home.route) {
                             popUpTo(RastroScreen.Auth.route) { inclusive = true }
                             launchSingleTop = true
                         } },
-                        onContinueAsGuest = { navController.navigate(RastroScreen.Home.route) {
+                        onContinueAsGuest = {
+                            rastroPrefs.edit().putBoolean("entry_choice_completed", true)
+                                .putBoolean("terms_accepted", true).apply()
+                            entryChoiceCompleted = true
+                            navController.navigate(RastroScreen.Home.route) {
                             popUpTo(RastroScreen.Auth.route) { inclusive = true }; launchSingleTop = true
                         } }
                     )
@@ -753,18 +681,18 @@ fun RastroApp(
                 state = pomodoroState,
                 colors = theme,
                 onTogglePlay = {
-                    pomodoroState = pomodoroState.copy(isRunning = !pomodoroState.isRunning)
+                    pomodoroController.state = pomodoroState.copy(isRunning = !pomodoroState.isRunning)
                 },
                 onExpandChange = { isExpanded ->
-                    pomodoroState = pomodoroState.copy(
+                    pomodoroController.state = pomodoroState.copy(
                         viewState = if (isExpanded) PomodoroViewState.EXPANDED_PILL else PomodoroViewState.MINI_PILL
                     )
                 },
                 onOpenFullModal = {
-                    pomodoroState = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL)
+                    pomodoroController.state = pomodoroState.copy(viewState = PomodoroViewState.FULL_MODAL)
                 },
                 onAddFiveMinutes = {
-                    pomodoroState = pomodoroState.copy(timeLeftSeconds = pomodoroState.timeLeftSeconds + 300)
+                    pomodoroController.state = pomodoroState.copy(timeLeftSeconds = pomodoroState.timeLeftSeconds + 300)
                 }
             )
         }
@@ -775,17 +703,17 @@ fun RastroApp(
                 state = pomodoroState,
                 colors = theme,
                 onDismiss = {
-                    pomodoroState = pomodoroState.copy(viewState = if (pomodoroState.isRunning) PomodoroViewState.MINI_PILL else PomodoroViewState.HIDDEN)
+                    pomodoroController.state = pomodoroState.copy(viewState = if (pomodoroState.isRunning) PomodoroViewState.MINI_PILL else PomodoroViewState.HIDDEN)
                 },
-                onMinimize = { pomodoroState = pomodoroState.copy(viewState = PomodoroViewState.MINI_PILL) },
-                onToggleSound = { pomodoroState = pomodoroState.copy(soundEnabled = !pomodoroState.soundEnabled) },
-                onAddFiveMinutes = { pomodoroState = pomodoroState.copy(timeLeftSeconds = pomodoroState.timeLeftSeconds + 300) },
-                onSetCyclesBeforeLongBreak = { count -> pomodoroState = pomodoroState.copy(customCyclesBeforeLongBreak = count) },
+                onMinimize = { pomodoroController.state = pomodoroState.copy(viewState = PomodoroViewState.MINI_PILL) },
+                onToggleSound = { pomodoroController.state = pomodoroState.copy(soundEnabled = !pomodoroState.soundEnabled) },
+                onAddFiveMinutes = { pomodoroController.state = pomodoroState.copy(timeLeftSeconds = pomodoroState.timeLeftSeconds + 300) },
+                onSetCyclesBeforeLongBreak = { count -> pomodoroController.state = pomodoroState.copy(customCyclesBeforeLongBreak = count) },
                 onSetDuration = { mode, minutes ->
                     val safeMinutes = minutes.coerceIn(1, 120)
                     val isCurrentMode = pomodoroState.mode == mode ||
                         (mode == PomodoroMode.STUDY && pomodoroState.mode == PomodoroMode.CUSTOM)
-                    pomodoroState = when (mode) {
+                    pomodoroController.state = when (mode) {
                         PomodoroMode.STUDY, PomodoroMode.CUSTOM -> pomodoroState.copy(
                             customStudyMinutes = safeMinutes,
                             timeLeftSeconds = if (isCurrentMode && !pomodoroState.isRunning) safeMinutes * 60 else pomodoroState.timeLeftSeconds
@@ -801,28 +729,28 @@ fun RastroApp(
                     }
                 },
                 onSetAlertSound = { mode, sound ->
-                    pomodoroState = when (mode) {
+                    pomodoroController.state = when (mode) {
                         PomodoroMode.STUDY, PomodoroMode.CUSTOM -> pomodoroState.copy(studyAlertSound = sound)
                         PomodoroMode.SHORT_BREAK -> pomodoroState.copy(shortBreakAlertSound = sound)
                         PomodoroMode.LONG_BREAK -> pomodoroState.copy(longBreakAlertSound = sound)
                     }
                 },
                 onTogglePlay = {
-                    pomodoroState = pomodoroState.copy(isRunning = !pomodoroState.isRunning)
+                    pomodoroController.state = pomodoroState.copy(isRunning = !pomodoroState.isRunning)
                 },
                 onReset = {
                     val defaultSecs = pomodoroState.durationMinutes() * 60
-                    pomodoroState = pomodoroState.copy(timeLeftSeconds = defaultSecs, isRunning = false)
+                    pomodoroController.state = pomodoroState.copy(timeLeftSeconds = defaultSecs, isRunning = false)
                 },
                 onSelectMode = { newMode ->
-                    pomodoroState = pomodoroState.copy(
+                    pomodoroController.state = pomodoroState.copy(
                         mode = newMode,
                         timeLeftSeconds = pomodoroState.durationMinutes(newMode) * 60,
                         isRunning = false
                     )
                 },
                 onApplyPreset = { minutes ->
-                    pomodoroState = pomodoroState.copy(
+                    pomodoroController.state = pomodoroState.copy(
                         mode = com.jonsuapps.rastro.pomodoro.PomodoroMode.CUSTOM,
                         customStudyMinutes = minutes.coerceIn(1, 120),
                         timeLeftSeconds = minutes.coerceIn(1, 120) * 60,
@@ -830,7 +758,7 @@ fun RastroApp(
                     )
                 },
                 onToggleAutoCycle = { enabled ->
-                    pomodoroState = pomodoroState.copy(autoCycle = enabled)
+                    pomodoroController.state = pomodoroState.copy(autoCycle = enabled)
                 }
             )
         }
@@ -1054,18 +982,6 @@ fun RastroApp(
                 currentUserUid = currentUser.uid, currentUserName = currentUser.displayName,
                 theme = theme, onDismiss = { showFriendNotifications = false })
         }
-
-        TermsConsentDialog(
-            isOpen = showTermsConsent,
-            onAccept = {
-                rastroPrefs.edit().putBoolean("terms_accepted", true).apply()
-                showTermsConsent = false
-            },
-            onViewTerms = {
-                termsDialogInitialTab = 1
-            },
-            theme = theme
-        )
 
         activeEntryAnnouncement?.let { announcement ->
             val mood = when {

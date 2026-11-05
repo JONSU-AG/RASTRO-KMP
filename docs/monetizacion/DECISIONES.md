@@ -1,5 +1,7 @@
 # Decisiones — 07/10/2026
 
+01/11/2026: publicidad mínima por solicitud del propietario. Un formato voluntario recompensado; intersticiales desactivados por restricción local que no puede omitir la economía remota ni Admin preview. No se considera una solución demostrada al rechazo de cuenta. No publicar desde esta intervención.
+
 - Todos los planes tienen los mismos beneficios. Precios solo referencia hasta Billing.
 - Tester = concesión Pro permanente revocable; no otro sistema de privilegios.
 - Tres intentos asociados al identificador de concesión, sin renovación diaria; una nueva concesión reinicia sus tres intentos. Confirmar periodo futuro de renovación al integrar suscripciones recurrentes.
@@ -73,3 +75,9 @@ La autorización actual cubre únicamente prueba interna. Las novedades visibles
 
 ## 09/10/2026 — Archivo de autorización web
 Usar línea oficial de la cuenta existente, sin nueva app AdMob. Añadir a web vigente conservando contenido y líneas de otros vendedores; no desplegar un dist histórico para publicar un solo archivo. UMP/legal requieren aprobación previa del propietario. La ficha pública solo bloquea vinculación/rastreo ligados a tienda, no toda la preparación.
+
+10/10/2026: reutilizar el mensaje europeo existente; su editor no carga, no publicar a ciegas ni crear otro. Centro legal y app-ads.txt publicados en Hosting Spark, sin activar Blaze. Vinculación AdMob pendiente de ficha pública y aprobación de cuenta.
+
+01/11/2026: conservar UMP y bloqueos sensibles oficiales al limitar distribución a LATAM. No desactivar privacidad ni filtros suponiendo que causan rechazo de cuenta sin evidencia.
+
+01/11/2026: usar flag local rastro.presentation y recibo de regalo existente; no conceder Pro falso ni borrar compras. Vigente hasta actualización con flag false; no vence por reloj. Ver ../exposicion/DECISIONES.md.

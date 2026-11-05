@@ -1,119 +1,170 @@
 # Procesos Formativos de Palabras en el Español
 
-## INTRODUCCIÓN
+## Introducción
 
-El español no deja de fabricar palabras y lo hace con moldes precisos que el examen UNSA te pide reconocer sin dudar. Cuando ves cortauñas, blanquirrojo, quinceañero, Sedapal, foto o tictac no estás ante caprichos sino ante derivación, composición, parasíntesis, acronimia, acortamiento u onomatopeya. Cada molde tiene una estructura, un requisito distintivo y una prueba de verificación que lo separa de los demás.
+En **cocinero** se reconoce una raíz relacionada con cocina y un sufijo. En **bocacalle** se combinan dos bases. En **foto**, usada por fotografía, se acorta una palabra. Estas diferencias permiten estudiar cómo se forman las unidades del vocabulario sin confundir cualquier palabra larga con una compuesta ni cualquier palabra breve con una sigla.
 
-En esta lección recorrerás la fábrica completa del léxico. Partirás de la derivación como procedimiento más productivo con prefijos y sufijos sobre un lexema base, pasarás por la composición como fusión de dos lexemas con o sin alteración fónica, te detendrás en la parasíntesis como proceso simultáneo e indisoluble y cerrarás con los otros mecanismos de creación que abrevian, fusionan sílabas o imitan sonidos. Verás por qué cocinero es derivada, por qué sacapuntas es yuxtapuesta, por qué blanquirrojo y ciempiés son propias, por qué quinceañero y desalmado son parasintéticas y por qué DNI es sigla y Sedapal es acrónimo.
+Para analizar una formación hay que reconocer sus componentes, explicar cómo se relacionan y comprobar el significado del resultado. No basta con quitar una letra, encontrar una secuencia parecida en otra palabra o contar cuántos afijos parecen visibles. Algunas clasificaciones dependen del modelo; cuando eso ocurre se declara el criterio y se evita construir una pregunta ambigua.
 
-Al final aplicarás la prueba de oro sin fallar. Si quitas un lado y la forma intermedia no existe, es parasíntesis. Si los dos lexemas se unen sin cambio, es yuxtaposición. Si el primer lexema muta, es propia. Si la base intermedia sí existe, es derivada aunque lleve dos afijos.
+## Mapa del tema
 
-## DESARROLLO DEL TEMA
+```mermaid
+graph TD
+ A[Formación de palabras] --> B[Usar bases y afijos]
+ A --> C[Abreviar expresiones]
+ A --> D[Representar sonidos]
+ B --> B1[Derivación: base y afijo]
+ B --> B2[Composición: combinación de bases]
+ B --> B3[Parasíntesis: afijación conjunta]
+ C --> C1[Siglas: iniciales de una expresión]
+ C --> C2[Acrónimos: lectura silábica o unión de fragmentos]
+ C --> C3[Acortamientos: reducción de segmentos]
+ D --> D1[Onomatopeyas: imitación aproximada]
+ D --> D2[Derivados de bases imitativas]
+```
 
-# 4.2.1 — La derivación como procedimiento más productivo del español
+# 4.2.1 — Derivación: formar otra palabra mediante afijos
 
-**¿Qué es?** La derivación es el procedimiento más productivo del español y consiste en añadir uno o más morfemas derivativos, en forma de prefijos o sufijos, a un lexema base para crear una palabra nueva. La estructura general es lexema más sufijo o prefijo más lexema. La palabra resultante pertenece a menudo a una categoría distinta de la base y amplía el diccionario con entradas nuevas.
+**Prefijación y sufijación**
 
-**¿Cómo funciona?** El lexema aporta la base y el afijo aporta el matiz derivativo. En librería se parte del lexema libr de libro más el sufijo ería de establecimiento. En lealtad se parte del adjetivo leal más el sufijo tad que forma sustantivo. En cantante se parte del verbo canta más el sufijo nte que forma sustantivo de agente. En rehacer se antepone re de repetición al lexema hacer. En infiel se antepone in de negación al lexema fiel. En anormal se antepone a de privación al lexema normal. En cocinero se parte de la raíz cocin más el sufijo ero de oficio, ejemplo clásico de sufijación pura. La derivación puede acumular dos afijos sin volverse parasíntesis cuando la base intermedia ya existe, como en inalcanzable donde alcanzable existe, en deslealtad donde lealtad existe y en inmortalidad donde mortalidad existe.
+La **derivación** relaciona una base con una nueva palabra mediante afijos. En **desleal**, el prefijo des- se une a leal; en **lealtad**, un sufijo forma un sustantivo relacionado con ese adjetivo. Los dos procesos modifican el contenido de la base, pero solo el segundo cambia la categoría gramatical.
 
-**¿Por qué?** Porque el español prefiere derivar antes que inventar raíces ex nihilo. Con un conjunto cerrado de prefijos y sufijos genera miles de sustantivos, adjetivos y verbos a partir de bases conocidas. Por eso la sufijación en ero, ería, tad y nte y la prefijación en des, re, in, sub y pre sostienen la expansión del léxico culto, técnico y cotidiano.
+En **cocinero**, el segmento -ero participa en la formación de una palabra relacionada con cocina. En **rehacer**, re- aporta repetición a hacer. La derivación no debe definirse como cualquier adición de letras: una terminación de plural, como -s en casas, pertenece a la flexión de una palabra, no a la creación de otra unidad léxica.
 
-**¿Cómo se diferencia?** La derivación se diferencia de la composición porque la derivación une lexema más afijo, mientras que la composición une lexema más lexema. Cocinero con cocin más ero es derivada, bocacalle con boca más calle es compuesta. La derivación se diferencia de la parasíntesis porque en la derivación la base intermedia existe en la lengua, mientras que en la parasíntesis no existe ninguna forma intermedia. Inalcanzable es derivada porque alcanzable existe, quinceañero es parasintética porque ni quinceaño ni añero existen.
+| Comparación | Proceso observado | Justificación |
+| --- | --- | --- |
+| leal/desleal | Prefijación | des- precede a la base y modifica su significado. |
+| leal/lealtad | Sufijación | Se forma un sustantivo a partir del adjetivo. |
+| cocina/cocinero | Sufijación | -ero participa en la formación de una palabra relacionada. |
+| hacer/rehacer | Prefijación | re- aporta repetición en este ejemplo. |
+| casa/casas | Flexión, no derivación | Cambia el número de la misma palabra léxica. |
 
-# 4.2.2 — La composición por yuxtaposición y propiamente dicha
+### Procesos sucesivos
 
-**¿Qué es?** La composición es la fusión de dos o más lexemas independientes para dar origen a una nueva unidad léxica. Su estructura general es primer lexema más segundo lexema. Se clasifica en dos modalidades. La composición por yuxtaposición, también llamada simple, une los lexemas sin que ninguno sufra alteración fonética ni gráfica. La composición propiamente dicha une los lexemas con modificación fonética u ortográfica en el primer elemento o en ambos.
+Una formación puede contener más de un afijo sin que todos se hayan añadido a la vez. En **deslealtad**, se reconoce la relación con lealtad, que a su vez se relaciona con leal. En **inalcanzable**, alcanzable sirve como base para la negación. La presencia gráfica de un prefijo y un sufijo no demuestra por sí sola parasíntesis.
 
-**¿Cómo funciona?** En la yuxtaposición los lexemas se pegan intactos. Corta más uñas da cortauñas sin cambio. Saca más puntas da sacapuntas sin cambio. Saca más corchos da sacacorchos. Boca más calle da bocacalle. Guarda más costas da guardacostas. Cubre más cama da cubrecama. Para más aguas da paraguas. Pica más flor da picaflor. La prueba es la inalterabilidad total de las bases. En la composición propiamente dicha el primer lexema muta al unirse. Blanco más rojo da blanquirrojo con cambio de o a i y duplicación de r en rr. Mano más obra da maniobra con pérdida vocálica. Agrio más dulce da agridulce con cambio de o a i. Pelo más rojo da pelirrojo con cambio de o a i. Cien más pies da ciempiés con cambio de n a m ante p por regla ortográfica de m antes de p. La prueba es la mutación visible en la juntura.
+La explicación tiene que vincular la base con el sentido de la palabra. No basta con encontrar otra secuencia que también exista, si no participa en esa formación. Del mismo modo, que un estudiante desconozca una base no demuestra que sea inexistente en español. Un diccionario ayuda a comprobar usos, pero la búsqueda debe acompañarse de análisis.
 
-**¿Por qué?** Porque la composición permite nombrar realidades complejas con dos núcleos léxicos en una sola palabra. La yuxtaposición conserva la transparencia de ambos lexemas y la propia marca la fusión con un ajuste fónico que sella la unidad. La distinción es decisiva en admisión porque una sola letra mutada cambia la clasificación.
+### Categoría y significado
 
-**¿Cómo se diferencia?** La yuxtapuesta se diferencia de la propia porque en la yuxtapuesta no hay variación fonética y en la propia sí la hay. Sacapuntas sin cambio es yuxtapuesta, blanquirrojo con o cambiada a i es propia. Picaflor sin cambio es yuxtapuesta, pelirrojo con cambio es propia. La composición en general se diferencia de la derivación porque compone dos raíces, no raíz más afijo. Bocacalle con dos sustantivos es compuesta, cocinero con raíz más sufijo es derivada. Como refuerzo memoriza en negrita la prueba fonética. **Si la unión no altera nada es yuxtaposición, si el primer elemento cambia aunque sea una letra es propiamente dicha.**
+**Desleal** sigue siendo adjetivo, mientras **lealtad** es sustantivo. Ambos son derivados. Por tanto, cambiar de categoría es una posibilidad de la derivación y no un requisito universal. Tampoco todos los afijos tienen un único significado aplicable a cualquier base: el valor se interpreta en el ejemplo analizado.
 
-# 4.2.3 — La parasíntesis en sus dos modalidades estrictas
+Comparar palabras de una familia permite explicar la formación con más precisión que inventar una historia para cada fragmento escrito. Una segmentación debe sostenerse en una relación reconocible y no en que el segmento se parezca casualmente a una palabra independiente.
 
-**¿Qué es?** La parasíntesis es un proceso formativo complejo que opera por aplicación simultánea e indisoluble de dos mecanismos, de modo que al retirar uno de los elementos la forma resultante carece de existencia léxica. Presenta dos modalidades estrictas. La modalidad A une composición más derivación simultánea con estructura de primer lexema más segundo lexema más sufijo derivativo. La modalidad B une prefijo más lexema más sufijo en afijación simultánea, también llamada circunfijación.
+# 4.2.2 — Composición: combinar bases
 
-**¿Cómo funciona?** En la modalidad A se unen dos raíces y un sufijo en bloque. Quince más añ más ero da quinceañero, y no existe ni quinceaño ni añero como palabras independientes con ese sentido. Pica más pedr más ero da picapedrero, y no existe ni picapedra ni pedrero con ese valor. Ropa más vej más ero da ropavejero con la misma condición. Auto más móvil más ista da automovilista como bloque parasintético indivisible en el análisis del examen. En la modalidad B se sueldan prefijo y sufijo a la vez sobre la raíz. A más terr más izar da aterrizar, y no existe ni aterro ni terrizar. Des más alm más ado da desalmado, y no existe ni desalma ni almado. En más vej más ecer da envejecer, y no existe ni enveje ni vejecer. A más niñ más ado da aniñado con la misma prueba. La condición sine qua non es la inexistencia de formas intermedias.
+**Componentes y resultado**
 
-**¿Por qué?** Porque la parasíntesis crea de una sola vez una palabra que no puede explicarse por pasos sucesivos. Si intentas derivar por etapas fallas, porque el paso intermedio no está en el diccionario. Por eso la prueba de supresión es infalible y separa la parasíntesis verdadera de la derivación doble.
+La **composición** combina bases en una unidad léxica. En **bocacalle** se reconocen boca y calle. En **sacapuntas**, una forma verbal se combina con un sustantivo. En **blanquirrojo**, se relacionan blanco y rojo. Los componentes no tienen que pertenecer a la misma categoría ni conservar siempre idéntica apariencia gráfica.
 
-**¿Cómo se diferencia?** La parasíntesis se diferencia de la derivación doble porque en la derivación doble la base intermedia sí existe. Desalmado es parasintética porque ni desalma ni almado existen, mientras que deslealtad es derivada porque lealtad existe, inalcanzable es derivada porque alcanzable existe, inutilizable es derivada porque utilizable existe, submarino es derivada porque marino existe, e inmortalidad es derivada porque mortalidad existe. La parasíntesis se diferencia de la composición simple porque añade un afijo simultáneo además de los dos lexemas. Quinceañero con dos raíces más sufijo es parasintética, bocacalle con dos raíces sin sufijo es compuesta. Como refuerzo guarda la fórmula en negrita. **Si quitas un lado y no existe, es parasíntesis. Si quitas un lado y la palabra restante sí existe, es derivada.**
+En **ciempiés** se reconocen cien y pies, con la adaptación m ante p y la tilde del resultado. La composición se identifica por las bases que se combinan; no nace simplemente de cambiar n por m. En **sacapuntas** no hay esa adaptación y sigue existiendo composición.
 
-# 4.2.4 — Otros mecanismos de creación léxica
+| Compuesto | Bases reconocidas | Relación que se observa |
+| --- | --- | --- |
+| bocacalle | boca + calle | Combinación de dos bases nominales. |
+| sacapuntas | saca + puntas | Forma verbal y sustantivo. |
+| blanquirrojo | blanco + rojo | Dos bases adjetivas con adaptación de la primera. |
+| ciempiés | cien + pies | Numeral y sustantivo con adaptación de la escritura. |
 
-**¿Qué es?** Son cuatro mecanismos que crean palabras sin seguir el molde de derivación ni composición ni parasíntesis. La acronimia forma palabras uniendo fragmentos, sílabas iniciales o finales de varios vocablos y se lee como palabra corriente. La siglación crea unidades uniendo únicamente las letras iniciales mayúsculas de un conjunto de palabras y se pronuncia deletreando. El acortamiento o truncamiento reduce por uso coloquial las sílabas finales o iniciales de una palabra larga. La onomatopeya crea palabras imitando fonéticamente ruidos de la naturaleza o sonidos de animales.
+### No convertir una etiqueta en una regla universal
 
-**¿Cómo funciona?** La acronimia suelda sílabas. Servicio de Agua Potable y Alcantarillado de Lima da Sedapal, que se lee corrido como palabra. Petróleos del Perú da Petroperú. Cámara más aparato da camarógrafo. Sindicato más Único da SUTEP en su lectura corrida. Objeto volador no identificado da ovni, ya lexicalizado como sustantivo común junto a láser, sida y radar. Sunat y Mercosur siguen el mismo patrón silábico. La siglación junta iniciales. Documento Nacional de Identidad da DNI. Organización de las Naciones Unidas da ONU. Organización de Estados Americanos da OEA. Fondo Monetario Internacional da FMI. Banco Central de Reserva del Perú da BCRP. Registro Único de Contribuyentes da RUC. Universidad Nacional de San Agustín da UNSA. Se escriben con mayúsculas, sin puntos intermedios y sin plural con apóstrofo, de modo que se dice los DNI y no los DNIs con marca inglesa. El acortamiento recorta por economía. Fotografía da foto, bicicleta da bici, profesor da profe, televisión da tele, cinematógrafo da cine. El significado se mantiene y el registro se vuelve coloquial. La onomatopeya imita. Tictac imita el reloj, quiquiriquí imita el gallo, miau imita el gato, zas imita el golpe, zumbido y chasquido imitan ruidos, cacarear y croar imitan aves y ranas.
+Algunos materiales escolares llaman yuxtaposición a ciertos compuestos cuyos componentes se mantienen reconocibles y reservan otras etiquetas para los que presentan cambios. Esa terminología no debe elevarse a una oposición universal basada en una sola letra. En otras clasificaciones, composición propia alude a la integración gráfica en una palabra, no exclusivamente a una modificación sonora.
 
-**¿Por qué?** Porque la lengua necesita nombrar instituciones largas con formas breves, agilizar palabras cotidianas y convertir sonidos del mundo en signos lingüísticos. La acronimia y la sigla responden a la burocracia y la técnica modernas, el acortamiento a la economía coloquial y la onomatopeya a la motivación fónica directa.
+Aquí se pregunta primero si hay **combinación de bases**, y después se describe cómo se han integrado. Así se explica sacapuntas sin contraponerle como categoría incompatible una etiqueta que otro manual podría usar con distinto alcance. Si se pide una subclasificación, el enunciado debe indicar el criterio.
 
-**¿Cómo se diferencia?** El acrónimo se diferencia de la sigla porque el acrónimo se lee como palabra corrida con sílabas, como Sedapal y ovni, mientras que la sigla se deletrea letra por letra con iniciales, como DNI y ONU. El acortamiento se diferencia de ambos porque no fusiona varias palabras sino que recorta una sola, como foto de fotografía. La onomatopeya se diferencia de todos porque nace del sonido imitado, como tictac, y no de la combinación de lexemas ni afijos.
+### Composición frente a grupo libre de palabras
 
-## CONCEPTOS IMPORTANTES
+Una unidad léxica compuesta no se identifica solamente contando espacios. Hay formaciones escritas juntas y otras que conservan separación. La relación fija entre componentes y el significado ayudan a distinguirlas de una combinación ocasional. Para empezar conviene trabajar con los casos claros de la tabla.
 
-- Derivación como lexema más afijo con prefijos antepuestos y sufijos pospuestos, procedimiento más productivo con ejemplos en librería, lealtad, cantante, rehacer, infiel y cocinero.
-- Composición como lexema más lexema con dos modalidades según haya o no alteración fónica.
-- Yuxtaposición sin cambio en cortauñas, sacapuntas, sacacorchos, bocacalle, guardacostas, paraguas, cubrecama y picaflor.
-- Composición propiamente dicha con mutación en blanquirrojo, maniobra, agridulce, pelirrojo y ciempiés con n cambiada a m ante p.
-- Parasíntesis como bloque simultáneo e indisoluble con inexistencia de formas intermedias.
-- Parasíntesis por composición más derivación en quinceañero, picapedrero, ropavejero y automovilista.
-- Parasíntesis por circunfijación en aterrizar, desalmado, envejecer y aniñado.
-- Derivadas con doble afijación que no son parasintéticas en inalcanzable, deslealtad, inutilizable, submarino e inmortalidad porque la base intermedia sí existe.
-- Acronimia silábica de lectura corrida en Sedapal, Petroperú, camarógrafo, Sunat, ovni, láser, sida, radar y Mercosur.
-- Siglación con iniciales mayúsculas de deletreo en DNI, ONU, OEA, FMI, BCRP, RUC y UNSA sin puntos ni plural con apóstrofo.
-- Acortamiento por recorte coloquial en foto, bici, profe, tele y cine.
-- Onomatopeya por imitación sonora en tictac, quiquiriquí, miau, zas, zumbido, chasquido, cacarear y croar.
+Tampoco una raíz y un sufijo se convierten en dos bases independientes por ser dos segmentos. En cocinero, -ero no funciona como una palabra autónoma equivalente a boca o calle. Ese contraste explica por qué cocinero se analiza por sufijación y bocacalle por composición.
 
-## DIFERENCIAS QUE CONFUNDEN
+# 4.2.3 — Parasíntesis y análisis por etapas
 
-- Derivación frente a composición. Cocinero con raíz más sufijo ero es derivada. Bocacalle con boca más calle es compuesta. Pregunta si el segundo elemento es afijo o lexema.
-- Yuxtaposición frente a propia. Sacapuntas intacta es yuxtapuesta. Blanquirrojo con o mutada a i es propia. Picaflor intacta es yuxtapuesta. Pelirrojo mutada es propia. Una sola letra decide.
-- Parasíntesis frente a derivada doble. Quinceañero sin quinceaño ni añero es parasintética. Desalmado sin desalma ni almado es parasintética. Aterrizar sin aterro ni terrizar es parasintética. Deslealtad con lealtad existente es derivada. Inalcanzable con alcanzable existente es derivada.
-- Acrónimo frente a sigla. Sedapal con sílabas que se lee corrido es acrónimo. DNI con iniciales que se deletrea es sigla. Ovni lexicalizado que se lee corrido es acrónimo. ONU que se deletrea es sigla.
-- Acortamiento frente a sigla. Foto recortada de fotografía es acortamiento de una sola palabra. DNI formado con iniciales de varias palabras es sigla. No confundir brevedad coloquial con iniciales institucionales.
-- Onomatopeya frente a derivación. Tictac nacida del sonido es onomatopeya. Cocinero nacida de raíz más sufijo es derivación. Si imita ruido es onomatopeya, si añade afijo es derivada.
-- Morfo cero frente a ausencia. En crisis y tórax el plural existe con marca cero aunque no se vea s, a diferencia de la falta de flexión.
+**Afijación conjunta**
 
-## DATOS IMPORTANTES
+La **parasíntesis** puede formar una palabra mediante prefijación y sufijación conjuntas. En **ensombrecer**, la base sombra se integra en la formación en-…-ecer. No se interpreta simplemente como un prefijo añadido a un verbo sombrecer usado como etapa intermedia.
 
-- Estructura de derivación. Lexema más sufijo o prefijo más lexema con ejemplos en panadero, inútil, marino, librería y cantante.
-- Estructuras de composición. Primer lexema más segundo lexema intactos en yuxtaposición, con mutación del primero en propia.
-- Estructuras de parasíntesis. Primer lexema más segundo lexema más sufijo en modalidad A, prefijo más lexema más sufijo simultáneos en modalidad B.
-- Casos modelo de yuxtaposición. Cortauñas, sacapuntas, sacacorchos, bocacalle, guardacostas, paraguas y picaflor sin alteración.
-- Casos modelo de propia. Blanquirrojo con o a i y r duplicada, maniobra, agridulce, pelirrojo y ciempiés con n a m ante p.
-- Casos modelo de parasíntesis. Quinceañero, picapedrero, automovilista, aterrizar, desalmado, envejecer y aniñado con prueba de inexistencia intermedia.
-- Casos de derivadas que parecen parasintéticas. Deslealtad por lealtad, inalcanzable por alcanzable, inutilizable por utilizable, submarino por marino, inmortalidad por mortalidad.
-- Acrónimos modelo. Sedapal, Petroperú, camarógrafo, Sunat, ovni, láser, sida, radar y Mercosur de lectura corrida.
-- Siglas modelo. DNI, ONU, OEA, FMI, BCRP, RUC y UNSA con mayúsculas, sin puntos y con plural invariable en los DNI.
-- Acortamientos modelo. Foto de fotografía, bici de bicicleta, profe de profesor, tele de televisión, cine de cinematógrafo.
-- Onomatopeyas modelo. Tictac, quiquiriquí, miau, zas, zumbido, chasquido, cacarear y croar.
-- Como refuerzo recuerda la prueba de supresión y la prueba fonética antes de marcar, porque el examen premia la verificación y castiga la intuición.
+El criterio es la **relación de formación**, no borrar de manera mecánica los extremos escritos. En **anochecer**, la presencia de la palabra anoche no demuestra que sea su base: el verbo significa hacerse de noche y se relaciona con noche. Una secuencia existente puede no intervenir en el proceso analizado.
 
-## EJEMPLOS
+El término también se ha aplicado a formaciones como quinceañero que combinan composición y derivación. Existen análisis distintos para ese grupo. No se utiliza su clasificación discutida como única respuesta posible sin indicar el modelo, ni se afirma que ninguna secuencia parcial exista jamás en otra acepción.
 
-- Blanquirrojo como propia. Ante la pregunta por el proceso de blanquirrojo, la respuesta es composición propiamente dicha, porque une blanco más rojo con mutación de o a i, a diferencia de la yuxtaposición intacta, la parasíntesis con sufijo simultáneo y la derivación prefijal.
-- Sacapuntas como yuxtapuesta. Entre maniobra, agridulce, desalmado y sacapuntas, la creada por yuxtaposición es sacapuntas con saca más puntas intactas, mientras que maniobra y agridulce son propias con mutación y desalmado es parasintética.
-- Quinceañero como parasíntesis. La palabra quinceañero es parasintética porque une dos lexemas y un sufijo sin formas intermedias, ya que no existen ni quinceaño ni añero, a diferencia de la explicación por solo afijos, por acortamiento o por imitación sonora.
-- Desalmado por circunfijación. La palabra desalmado es parasintética porque prefijo y sufijo se añadieron simultáneamente a la raíz alm sin que existan ni desalma ni almado, a diferencia de la idea de quitar el prefijo y mantener palabra, de la fusión de raíces griegas o de la sigla lexicalizada.
-- Sedapal como acrónimo. La palabra Sedapal es acrónimo porque une fragmentos silábicos de varias palabras en un vocablo de lectura corrida, a diferencia de la sigla deletreada, la onomatopeya imitativa y el acortamiento por recorte.
-- Foto y bici como acortamiento. La reducción de fotografía a foto y de bicicleta a bici es acortamiento o truncamiento por eliminación de sílabas para abreviar sin cambiar el significado, a diferencia de la parasíntesis, la composición propia y la derivación regresiva.
-- Tictac como onomatopeya. Palabras como tictac, quiquiriquí y chasquido son onomatopeyas por reproducción fonética de ruidos y sonidos de animales, a diferencia de la composición, la acronimia y la yuxtaposición.
-- Cocinero por sufijación. Entre ropavejero, bocacalle, cocinero y ciempiés, la formada por derivación con sufijación es cocinero con raíz cocin más sufijo ero de oficio, mientras que ropavejero es parasintética, bocacalle es compuesta y ciempiés es propia.
-- Ciempiés como propia. La unión de cien y pies con mutación de n a m ante p es composición propiamente dicha por alteración formal de la base, a diferencia de la yuxtaposición intacta, la parasíntesis circunfija y la sigla derivada.
-- DNI como sigla. Las siglas como DNI, ONU y FMI se forman con letras iniciales y se deletrean, a diferencia de la lectura corrida por acronimia, la creación por prefijos latinos y la idea de préstamos del quechua.
-- Caso yuxtaposición intacta. El proceso que une dos raíces sin alteración fonética ni gráfica es la composición por yuxtaposición, como corta más plumas en cortaplumas, a diferencia de la parasíntesis, la propia con mutación y la acronimia.
-- Caso serie parasintética. Entre despreocupado con base existente, submarino con marino existente y limpiaparabrisas compuesto, frente a aterrizar, quinceañero y desalmado sin formas intermedias, la serie exclusivamente parasintética es aterrizar, quinceañero y desalmado.
-- Caso automovilista y blanquirrojo. En automovilista con auto más móvil más ista en bloque indivisible y blanquirrojo con blanco más rojo mutado, los mecanismos son parasíntesis y composición propiamente dicha respectivamente.
+### Comparar decisiones justificadas
 
-## IDEA CLAVE
+| Caso | Análisis utilizado | Qué evita el error |
+| --- | --- | --- |
+| ensombrecer | Afijación conjunta sobre sombra. | No inventar un proceso sucesivo sin base pertinente. |
+| anochecer | Formación relacionada con noche. | La palabra anoche existe, pero eso no decide la base. |
+| deslealtad | Derivación que puede relacionarse con lealtad. | No considerar simultáneos todos los afijos visibles. |
+| inalcanzable | Prefijación sobre alcanzable. | Reconocer una base pertinente antes de clasificar. |
 
-Derivar es sumar afijos a una raíz, componer es soldar dos raíces con o sin retoque, parasintetizar es soldar todo a la vez sin piezas intermedias, abreviar con siglas y acrónimos es compactar instituciones, recortar es economizar coloquialmente e imitar sonidos es convertir el ruido del mundo en palabra.
+Cuando una prueba de supresión deja una secuencia, hay que examinar su función y su significado. Tampoco el hecho de que no quede una palabra reconocida por el lector constituye una demostración completa. El análisis debe mostrar la base y explicar la relación con el resultado.
 
-## CLAVE DE ADMISIÓN
+El contraste con deslealtad es especialmente útil: lealtad ofrece una etapa coherente para la formación por negación. El procedimiento es distinto del que se propone para ensombrecer. Las dos palabras tienen varios componentes, pero contar componentes no basta para igualar sus procesos.
 
-Aplica dos pruebas en orden. Primero pregunta si hay dos lexemas. Si hay uno más afijo es derivada como cocinero. Si hay dos sin cambio es yuxtapuesta como sacapuntas. Si hay dos con cambio es propia como blanquirrojo y ciempiés. Después pregunta si hay afijo simultáneo. Si al quitar prefijo o sufijo no queda palabra, es parasíntesis como quinceañero y desalmado. Si queda palabra, es derivada como inalcanzable y deslealtad. Para siglas y acrónimos pregunta cómo se lee. Si se deletrea como DNI es sigla, si se lee corrido como Sedapal es acrónimo. **Si quitas un lado y no existe, es parasíntesis, si no altera nada es yuxtaposición, si muta una letra es propia.**
+# 4.2.4 — Siglas, acrónimos, acortamientos y onomatopeyas
 
-## RESUMEN
+**Siglas: origen y pronunciación**
 
-Derivación productiva con lexema más afijo en cocinero, librería y rehacer. Composición con lexema más lexema intactos en sacapuntas y bocacalle frente a mutados en blanquirrojo, agridulce y ciempiés. Parasíntesis simultánea sin formas intermedias en quinceañero, desalmado, aterrizar y automovilista frente a derivadas dobles con base existente en deslealtad e inalcanzable. Acronimia silábica de lectura corrida en Sedapal y ovni frente a siglación con iniciales deletreadas en DNI y ONU. Acortamiento coloquial en foto y bici y onomatopeya imitativa en tictac que sostienen las diez preguntas de la lección.
+Una **sigla** se forma a partir de iniciales de una expresión. DNI se relaciona con Documento Nacional de Identidad. ONU se relaciona con Organización de las Naciones Unidas. Las dos son siglas, aunque no se pronuncien de la misma manera.
+
+DNI suele leerse por deletreo; ONU se lee silábicamente como una palabra y es también un **acrónimo**. Por tanto, sigla y acrónimo no son categorías siempre excluyentes. Preguntar si ONU es únicamente una u otra, sin precisar qué propiedad se analiza, produciría una pregunta defectuosa.
+
+La escritura en mayúsculas tampoco exige deletreo. Se separa el procedimiento que originó la forma de su modo de lectura. Algunas siglas se lexicalizan como palabras y adoptan las reglas de escritura de esa condición; no se extiende automáticamente ese proceso a cualquier denominación institucional.
+
+### Acrónimos por fragmentos
+
+Acrónimo también designa una palabra creada con fragmentos de otras. **Ofimática** combina segmentos relacionados con oficina e informática. Este mecanismo no consiste en tomar solamente las letras iniciales ni en acortar una única palabra.
+
+El ejemplo muestra por qué hay que leer la definición concreta del ejercicio. Una pregunta sobre la unión de fragmentos puede resolverse con acronimia, mientras otra sobre las iniciales de una expresión se resuelve reconociendo siglación. No se utiliza la oposición leído de corrido/deletreado como una explicación universal del origen.
+
+### Acortamientos
+
+**Foto**, por fotografía, y **bici**, por bicicleta, son acortamientos. En esos usos se reducen segmentos de una unidad y se mantiene la referencia principal. No se combinan las iniciales de varias palabras. El registro o las connotaciones pueden cambiar, y algunos acortamientos son habituales en la lengua general.
+
+No basta con que una palabra sea breve. Mar no se clasifica como un acortamiento de mares, porque esa relación es de número; tampoco el sufijo de cocinero es un recorte. Para identificar el proceso se necesita una unidad de partida y una reducción que explique el uso resultante.
+
+### Representación de sonidos
+
+**Tictac**, **miau** y **quiquiriquí** son ejemplos de onomatopeyas: aproximan sonidos mediante formas lingüísticas. No reproducen exactamente una grabación ni tienen que ser idénticas en todas las lenguas. Se estudian como representaciones convencionales de una experiencia sonora.
+
+Una palabra que nombra un sonido no es automáticamente una onomatopeya simple. **Chasquido** se relaciona con chascar mediante derivación. Confundir el tema del que habla una palabra con su procedimiento de formación impediría distinguir significado y estructura.
+
+| Procedimiento | Punto de partida | Ejemplo explicado |
+| --- | --- | --- |
+| Siglación | Iniciales de una expresión. | DNI: Documento Nacional de Identidad. |
+| Acrónimo de origen siglar | Sigla que puede leerse silábicamente. | ONU es sigla y también acrónimo. |
+| Acronimia por fragmentos | Segmentos de varias palabras. | ofimática: oficina e informática. |
+| Acortamiento | Reducción de una unidad. | foto por fotografía. |
+| Onomatopeya | Representación aproximada de un sonido. | tictac. |
+
+## Importante
+
+Identifica **la base y el procedimiento** antes de elegir una etiqueta. No se demuestra composición por cambiar una letra, ni parasíntesis por borrar un extremo. Las siglas pueden leerse de forma silábica: ONU no deja de ser sigla por pronunciarse como una palabra.
+
+Si una clasificación depende de un modelo escolar, ese criterio debe aparecer explicado. No se sustituyen las relaciones entre las palabras por una lista de reglas supuestamente infalibles.
+
+## Ejemplos resueltos
+
+### Blanquirrojo y sacapuntas
+
+En blanquirrojo se combinan blanco y rojo y se adapta la forma del primer elemento. En sacapuntas se combinan saca y puntas. Ambos presentan composición. La adaptación se describe como una propiedad del ejemplo, sin volverla una prueba universal para separar dos clases incompatibles.
+
+### Ensombrecer y deslealtad
+
+Para ensombrecer se propone afijación conjunta sobre sombra. Para deslealtad puede reconocerse lealtad como base pertinente. La conclusión se obtiene explicando las relaciones, no por el número de letras que se retiran. Si se quisiera usar otra clasificación teórica, habría que indicar sus criterios.
+
+### Ofimática frente a foto
+
+Ofimática combina fragmentos procedentes de dos palabras; foto reduce fotografía. En el primer caso hay acronimia por fragmentos. En el segundo hay acortamiento. Pronunciar ambas con normalidad no hace que compartan el mismo proceso.
+
+### Cocinero frente a bocacalle
+
+Cocinero se relaciona con cocina mediante el sufijo -ero. Bocacalle reúne boca y calle. La comparación distingue un afijo de una base léxica y permite explicar derivación frente a composición sin depender de la longitud del resultado.
+
+### DNI y ONU
+
+DNI y ONU se originan en iniciales. DNI se lee habitualmente por deletreo y ONU por lectura silábica. En ese último uso ONU es también acrónimo. Una respuesta que diga que todas las siglas se deletrean contradice el ejemplo y debe corregirse.
+
+### El sonido nombrado y el origen de la palabra
+
+Tictac representa un sonido mediante imitación aproximada. Chasquido nombra otro sonido, pero su estructura se relaciona con chascar. No se asigna el mismo procedimiento a las dos formas solamente porque ambas se refieran a fenómenos sonoros. El análisis combina significado, forma y relación con otras unidades.

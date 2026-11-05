@@ -6,19 +6,37 @@
 
 ### 3.4. Conectores Lógicos de Cohesión (Linking Words)
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    LOGICAL LINKING CONNECTORS                   │
-└────────────────────────────────┬────────────────────────────────┘
-        ┌────────────────────────┼────────────────────────┐
-        ▼                        ▼                        ▼
- ┌─────────────┐          ┌─────────────┐          ┌─────────────┐
- │  Contrast   │          │Cause & Eff. │          │   Purpose   │
- └──────┬──────┘          └──────┬──────┘          └──────┬──────┘
-        ├─ But (coordinante)     ├─ Because (oración)     ├─ To + verb
-        ├─ However (; however,)  ├─ Because of (+ sust)   ├─ In order to
-        ├─ Although (+ oración)  ├─ So (consecuencia)     └─ So that (+ orac)
-        └─ Despite (+ sustantivo)└─ Therefore / As a result
+```mermaid
+graph TD
+ ROOT["Conectores en inglés"]
+ B1["Contrast: contraste"]
+ B1N1["But une elementos o cláusulas coordinadas."]
+ B1N2["However enlaza ideas contrastantes; revisar la puntuación."]
+ B1N3["Although introduce una cláusula con sujeto y verbo."]
+ B1N4["Despite precede un grupo nominal o una forma -ing; no lleva of."]
+ B2["Cause and result: causa y resultado"]
+ B2N1["Because introduce una cláusula de causa."]
+ B2N2["Because of precede un grupo nominal o una forma -ing."]
+ B2N3["So presenta un resultado en la estructura adecuada."]
+ B2N4["Therefore y as a result presentan una consecuencia; revisar la puntuación."]
+ B3["Purpose: finalidad"]
+ B3N1["To más verbo base puede expresar para qué se hace algo."]
+ B3N2["In order to más verbo base expresa propósito; negativo: in order not to."]
+ B3N3["So that e in order that introducen cláusulas; no se mezclan automáticamente con to más infinitivo."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
 #### A. Conectores de Contraste: *Although* vs. *Despite / In spite of*

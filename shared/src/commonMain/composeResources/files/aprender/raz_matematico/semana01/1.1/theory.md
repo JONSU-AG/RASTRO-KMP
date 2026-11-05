@@ -19,21 +19,41 @@
 
 ## 2. 🗺️ MAPA TAXONÓMICO Y ONTOLOGÍA DEL TEMA
 
-```text
-                               ┌─ Lineal o de 1.er Orden (Razón constante)
-                               ├─ Cuadrática o de 2.° Orden (Método de diferencias)
-        ┌─ 1. Sucesiones ─────┼─ Geométrica (Cociente constante)
-        │      Numéricas       ├─ Polinomial de Orden Superior
-        │                      ├─ Especiales (Fibonacci, Lucas, Tribonacci, Números Primos)
-        │                      └─ Mixtas / Alternadas
-        │
-RAZONAMIENTO                   ┌─ Distribuciones Numéricas Lineales
-NUMÉRICO ───┼─ 2. Arreglos y ──────┼─ Matrices y Cuadros Numéricos (Fila vs. Columna)
-        │      Distribuciones  └─ Distribuciones Gráficas y Figurativas (Homología operativa)
-        │
-        │                      ┌─ Sumatorias Notables (Gauss, pares, impares, cuadrados)
-        └─ 3. Series y Sumas ──┼─ Series Aritméticas y Geométricas Infinitas (Convergentes)
-                               └─ Estimación y Acotamiento Rápido de Resultados
+```mermaid
+graph TD
+ ROOT["Razonamiento numérico"]
+ B1["Sucesiones con regla explícita"]
+ B1N1["Aritmética: diferencia constante entre términos sucesivos."]
+ B1N2["Cuadrática: segunda diferencia constante para índices consecutivos."]
+ B1N3["Geométrica: cociente constante cuando los términos anteriores son no nulos."]
+ B1N4["Polinomiales de mayor grado: precisar la familia antes de extrapolar."]
+ B1N5["Recurrencias: Fibonacci, Lucas o Tribonacci con valores iniciales dados."]
+ B1N6["Alternadas: distinguir las reglas de las posiciones que se intercalan."]
+ B2["Arreglos numéricos"]
+ B2N1["Filas y columnas: escribir la regla que relaciona sus datos."]
+ B2N2["Distribuciones figurativas: conservar los datos y posiciones del dibujo."]
+ B2N3["Una lista finita no determina por sí sola una continuación única."]
+ B3["Series y sumas"]
+ B3N1["Sumas de enteros, pares, impares y cuadrados con cantidad de términos indicada."]
+ B3N2["Suma aritmética finita: primer término, diferencia y número de términos."]
+ B3N3["Serie geométrica infinita: $|q|<1$ para aplicar la suma usual."]
+ B3N4["Estimación: justificar las cotas y comprobar el orden de magnitud."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ B1 --> B1N5
+ B1 --> B1N6
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
 ```
 
 ---
@@ -64,7 +84,7 @@ t_1, \quad t_2 = t_1 + r, \quad t_3 = t_1 + 2r, \quad \dots, \quad t_n = t_1 + (
 ---
 
 ### 3.3 Sucesión de Segundo Orden (Sucesión Cuadrática)
-Es aquella cuya razón se vuelve constante recién en el **segundo nivel de diferencias sucesivas**.
+Es aquella cuya **segunda diferencia** entre términos de índices consecutivos es constante.
 
 **Estructura:**
 \begin{array}{ccccccccc}

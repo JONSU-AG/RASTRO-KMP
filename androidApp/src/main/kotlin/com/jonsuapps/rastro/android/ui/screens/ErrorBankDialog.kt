@@ -110,7 +110,7 @@ import com.jonsuapps.rastro.theme.RastroPalette
             Text(listOf(question.origin, question.subject, question.subtema).filter { it.isNotBlank() }.joinToString(" · "),
                 color = theme.textSecondary, fontSize = 12.sp, lineHeight = 17.sp)
             Text(status, color = theme.textSecondary, fontSize = 12.sp, fontWeight = FontWeight.Bold)
-            Text(question.question, color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 16.sp, lineHeight = 23.sp)
+            com.jonsuapps.rastro.android.ui.components.AcademicText(question.question, color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 16.sp, lineHeight = 23.sp)
             question.imageUrl?.takeIf { it.isNotBlank() }?.let { url ->
                 CachedRemoteImage(url = url, contentDescription = "Imagen de la pregunta", modifier = Modifier.fillMaxWidth().heightIn(max = 240.dp), contentScale = androidx.compose.ui.layout.ContentScale.Fit)
             }
@@ -119,7 +119,7 @@ import com.jonsuapps.rastro.theme.RastroPalette
                 val selected = index == question.selectedAnswerIndex
                 val color = if (correct || selected) theme.answerText(correct) else theme.textPrimary
                 Column(Modifier.fillMaxWidth().background(theme.surfaceAccent, RoundedCornerShape(12.dp)).padding(10.dp)) {
-                    Text("${('A' + index)}. $option", color = color,
+                    com.jonsuapps.rastro.android.ui.components.AcademicText("${('A' + index)}. $option", color = color,
                         fontWeight = if (correct || selected) FontWeight.Bold else FontWeight.Normal, lineHeight = 21.sp)
                     if (correct || selected) Text(when {
                         correct && selected -> "Tu respuesta · Correcta"
@@ -132,7 +132,7 @@ import com.jonsuapps.rastro.theme.RastroPalette
             if (question.explanation.isNotBlank()) {
                 Column(Modifier.fillMaxWidth().background(theme.surfaceAccent, RoundedCornerShape(12.dp)).padding(12.dp)) {
                     Text("Explicación", color = theme.textPrimary, fontWeight = FontWeight.Bold)
-                    Text(question.explanation, color = theme.textPrimary, fontSize = 14.sp, lineHeight = 21.sp)
+                    com.jonsuapps.rastro.android.ui.components.ResolutionPlayback(question.explanation)
                 }
             }
             onSolve?.let { action ->

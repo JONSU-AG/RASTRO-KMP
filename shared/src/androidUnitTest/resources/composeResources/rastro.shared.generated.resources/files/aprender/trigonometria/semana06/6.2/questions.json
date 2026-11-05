@@ -1,1 +1,200 @@
-[{"concept":"6.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t06_s02_c01","options":["\\tan(2x)","\\cos^2(x)","\\cos(2x)","\\sin(2x)"],"pedagogicalTier":"concepto","semana":6,"statement":"**Enunciado:** Simplifique la siguiente expresión trigonométrica en función de razones de ángulo simple:","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.2","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t06_s02_c02","options":["\\dfrac{\\sqrt{3}}{3}","1","2\\sqrt{3}","\\sqrt{3}"],"pedagogicalTier":"concepto","semana":6,"statement":"**Enunciado:** Calcule el valor numérico simplificado del siguiente producto de tangentes:","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "trig_t06_s02_c01",
+    "concept": "6.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "Calcula $\\sin(22.5^\\circ)$.",
+    "options": [
+      "$\\frac{\\sqrt{2 - \\sqrt{2}}}{2}$",
+      "$\\sqrt{2 - \\sqrt{2}}$",
+      "$\\frac{\\sqrt{2 - \\sqrt{2}}}{4}$",
+      "$\\frac{3 \\sqrt{2 - \\sqrt{2}}}{2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El ángulo mitad está en el primer cuadrante.\n2. Aplicamos la relación: $\\sin22.5^\\circ=\\sqrt{(1-\\cos45^\\circ)/2}$.\n3. El valor pedido es $\\frac{\\sqrt{2 - \\sqrt{2}}}{2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s02_c02",
+    "concept": "6.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "Calcula $\\cos(22.5^\\circ)$.",
+    "options": [
+      "$\\sqrt{\\sqrt{2} + 2}$",
+      "$\\frac{\\sqrt{\\sqrt{2} + 2}}{4}$",
+      "$\\frac{3 \\sqrt{\\sqrt{2} + 2}}{2}$",
+      "$\\frac{\\sqrt{\\sqrt{2} + 2}}{2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Elegimos la raíz positiva por el cuadrante.\n2. Aplicamos la relación: $\\cos22.5^\\circ=\\sqrt{(1+\\cos45^\\circ)/2}$.\n3. El valor pedido es $\\frac{\\sqrt{\\sqrt{2} + 2}}{2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s02_c03",
+    "concept": "6.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "Calcula $\\tan(22.5^\\circ)$.",
+    "options": [
+      "$- \\frac{1}{2} + \\frac{\\sqrt{2}}{2}$",
+      "$-3 + 3 \\sqrt{2}$",
+      "$-1 + \\sqrt{2}$",
+      "$-2 + 2 \\sqrt{2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Usamos la forma racional del medio ángulo.\n2. Aplicamos la relación: $\\tan22.5^\\circ=\\sin45^\\circ/(1+\\cos45^\\circ)=\\sqrt2-1$.\n3. El valor pedido es $-1 + \\sqrt{2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s02_c04",
+    "concept": "6.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "α es agudo y $\\sin\\alpha=1/3$. Calcula $\\sin(3\\alpha )$.",
+    "options": [
+      "$\\frac{23}{9}$",
+      "$\\frac{23}{27}$",
+      "$\\frac{46}{27}$",
+      "$\\frac{23}{54}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La fórmula triple depende solo del seno.\n2. Aplicamos la relación: $\\sin3\\alpha=3(1/3)-4(1/3)^3$.\n3. El valor pedido es $\\frac{23}{27}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s02_c05",
+    "concept": "6.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "α es agudo y $\\cos\\alpha=2/3$. Calcula $\\cos(3\\alpha )$.",
+    "options": [
+      "$- \\frac{22}{27}$",
+      "$- \\frac{44}{27}$",
+      "$- \\frac{11}{27}$",
+      "$- \\frac{22}{9}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Aplicamos la fórmula triple del coseno.\n2. Aplicamos la relación: $\\cos3\\alpha=4(2/3)^3-3(2/3)$.\n3. El valor pedido es $- \\frac{22}{27}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s02_c06",
+    "concept": "6.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "α es agudo y $\\cos\\alpha=7/25$. Calcula $\\sin(\\alpha /2)$.",
+    "options": [
+      "$1.2$",
+      "$0.3$",
+      "$1.8$",
+      "$0.6$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El medio ángulo agudo tiene seno positivo.\n2. Aplicamos la relación: $\\sin(\\alpha/2)=\\sqrt{(1-7/25)/2}$.\n3. El valor pedido es $0.6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s02_c07",
+    "concept": "6.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "α es agudo y $\\cos\\alpha=7/25$. Calcula $\\cos(\\alpha /2)$.",
+    "options": [
+      "$0.4$",
+      "$2.4$",
+      "$0.8$",
+      "$1.6$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El medio ángulo agudo tiene coseno positivo.\n2. Aplicamos la relación: $\\cos(\\alpha/2)=\\sqrt{(1+7/25)/2}$.\n3. El valor pedido es $0.8$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s02_c08",
+    "concept": "6.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "¿Cuál es el máximo de $3\\sin x+4\\cos x$ para x real?",
+    "options": [
+      "$15$",
+      "$5$",
+      "$10$",
+      "$2.5$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Una combinación seno–coseno tiene amplitud raíz de la suma de cuadrados.\n2. Aplicamos la relación: $R=\\sqrt{3^2+4^2}=5$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s02_c09",
+    "concept": "6.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "Calcula $2\\sin(15^\\circ)\\cos(15^\\circ)$.",
+    "options": [
+      "$0.5$",
+      "$1$",
+      "$0.25$",
+      "$1.5$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El doble producto es seno del ángulo doble.\n2. Aplicamos la relación: $2\\sin15^\\circ\\cos15^\\circ=\\sin30^\\circ$.\n3. El valor pedido es $0.5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s02_c10",
+    "concept": "6.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "En una fórmula de medio ángulo con raíz cuadrada, el signo se decide…",
+    "options": [
+      "Siempre positivo.",
+      "Por el cuadrante del medio ángulo.",
+      "Por el tamaño del radio de la circunferencia.",
+      "Siempre negativo."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El cuadrado no determina el signo de la función.\n2. La raíz principal es no negativa.\n3. El cuadrante del ángulo que se está evaluando determina el signo necesario.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s02_c11",
+    "concept": "6.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "Para $A\\sin x+B\\cos x$, con A y B no ambos nulos, la amplitud es…",
+    "options": [
+      "$A+B$",
+      "$A-B$",
+      "$\\sqrt{A^2+B^2}$",
+      "$AB$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Se representa la combinación como R sin(x+φ).\n2. Al comparar coeficientes se obtiene R²=A²+B².\n3. La amplitud es la raíz positiva.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

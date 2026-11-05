@@ -1,1 +1,200 @@
-[{"concept":"15.1.1","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t15_s01_c01","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":15,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"15.1.2","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t15_s01_c02","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":15,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"15.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t15_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":15,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"15.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t15_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":15,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"15.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t15_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":15,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"15.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t15_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":15,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"15.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t15_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":15,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"15.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t15_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":15,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"15.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t15_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":15,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"15.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t15_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":15,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "15.1.1",
+    "correctIndex": 0,
+    "explanation": "1. El término n suma n−1 incrementos al primero.\n2. Sustituimos y operamos: $a_n=4+(6-1)\\cdot 3$.\n3. El valor pedido es $19$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t15_s01_c01",
+    "options": [
+      "$19$",
+      "$20$",
+      "$18$",
+      "$38$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 15,
+    "statement": "Una progresión aritmética empieza en 4 y tiene diferencia 3. ¿Cuál es el término 6?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "15.1.2",
+    "correctIndex": 3,
+    "explanation": "1. Promediamos primero y último y multiplicamos por la cantidad.\n2. Sustituimos y operamos: $S_n=6\\cdot (4+14)/2$.\n3. El valor pedido es $54$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t15_s01_c02",
+    "options": [
+      "$55$",
+      "$53$",
+      "$108$",
+      "$54$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 15,
+    "statement": "Suma los primeros 6 términos de la progresión aritmética 4, 6, 8, …",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "15.1.3",
+    "correctIndex": 2,
+    "explanation": "1. La diferencia se obtiene restando el anterior al siguiente.\n2. Sustituimos y operamos: $5-4$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t15_s01_c03",
+    "options": [
+      "$0$",
+      "$3$",
+      "$1$",
+      "$2$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 15,
+    "statement": "Dos términos consecutivos de una progresión aritmética son 4 y 5. ¿Cuál es la diferencia común?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "15.1.4",
+    "correctIndex": 1,
+    "explanation": "1. Despejamos n en el término general.\n2. Sustituimos y operamos: $14=4+2(n-1)$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t15_s01_c04",
+    "options": [
+      "$12$",
+      "$6$",
+      "$7$",
+      "$5$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 15,
+    "statement": "¿Cuántos términos tiene la progresión aritmética 4, 6, …, 14?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "15.1.5",
+    "correctIndex": 0,
+    "explanation": "1. El término central es el promedio de los extremos.\n2. Sustituimos y operamos: $x=(4+10)/2$.\n3. El valor pedido es $7$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t15_s01_c05",
+    "options": [
+      "$7$",
+      "$8$",
+      "$6$",
+      "$14$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 15,
+    "statement": "Tres números consecutivos en progresión aritmética son 4, x y 10. ¿Cuánto vale x?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "15.1.6",
+    "correctIndex": 3,
+    "explanation": "1. El término n suma n−1 incrementos al primero.\n2. Sustituimos y operamos: $a_n=5+(7-1)\\cdot 3$.\n3. El valor pedido es $23$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t15_s01_c06",
+    "options": [
+      "$24$",
+      "$22$",
+      "$46$",
+      "$23$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 15,
+    "statement": "Una progresión aritmética empieza en 5 y tiene diferencia 3. ¿Cuál es el término 7?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "15.1.7",
+    "correctIndex": 2,
+    "explanation": "1. Promediamos primero y último y multiplicamos por la cantidad.\n2. Sustituimos y operamos: $S_n=7\\cdot (5+17)/2$.\n3. El valor pedido es $77$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t15_s01_c07",
+    "options": [
+      "$76$",
+      "$154$",
+      "$77$",
+      "$78$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 15,
+    "statement": "Suma los primeros 7 términos de la progresión aritmética 5, 7, 9, …",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "15.1.8",
+    "correctIndex": 1,
+    "explanation": "1. La diferencia se obtiene restando el anterior al siguiente.\n2. Sustituimos y operamos: $6-5$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t15_s01_c08",
+    "options": [
+      "$3$",
+      "$1$",
+      "$2$",
+      "$0$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 15,
+    "statement": "Dos términos consecutivos de una progresión aritmética son 5 y 6. ¿Cuál es la diferencia común?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "15.1.9",
+    "correctIndex": 0,
+    "explanation": "1. Despejamos n en el término general.\n2. Sustituimos y operamos: $17=5+2(n-1)$.\n3. El valor pedido es $7$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t15_s01_c09",
+    "options": [
+      "$7$",
+      "$8$",
+      "$6$",
+      "$14$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 15,
+    "statement": "¿Cuántos términos tiene la progresión aritmética 5, 7, …, 17?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "15.1.10",
+    "correctIndex": 3,
+    "explanation": "1. El término central es el promedio de los extremos.\n2. Sustituimos y operamos: $x=(5+11)/2$.\n3. El valor pedido es $8$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t15_s01_c10",
+    "options": [
+      "$9$",
+      "$7$",
+      "$16$",
+      "$8$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 15,
+    "statement": "Tres números consecutivos en progresión aritmética son 5, x y 11. ¿Cuánto vale x?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "15.1.11",
+    "correctIndex": 2,
+    "explanation": "1. El término n suma n−1 incrementos al primero.\n2. Sustituimos y operamos: $a_n=6+(8-1)\\cdot 3$.\n3. El valor pedido es $27$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t15_s01_c11",
+    "options": [
+      "$26$",
+      "$54$",
+      "$27$",
+      "$28$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 15,
+    "statement": "Una progresión aritmética empieza en 6 y tiene diferencia 3. ¿Cuál es el término 8?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

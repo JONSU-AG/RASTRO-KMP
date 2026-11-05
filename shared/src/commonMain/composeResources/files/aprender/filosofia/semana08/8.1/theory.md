@@ -6,23 +6,41 @@
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE LA FILOSOFÍA CONTEMPORÁNEA RECIENTE
 
-```
-                       PENSAMIENTO FILOSÓFICO CONTEMPORÁNEO
-                                        │
-         ┌──────────────────┬───────────┴───────────┬──────────────────┐
-         ▼                  ▼                       ▼                  ▼
-   ÉTICA DE LA          TEORÍAS DEL             LA CONDICIÓN         CRÍTICA A LA
-    ALTERIDAD              PODER                POSMODERNA         HIPERMODERNIDAD
-         │                  │                       │                  │
-• Emmanuel Levinas:  • Michel Foucault:      • J.-F. Lyotard:    • Byung-Chul Han:
-  - El Rostro del      - Microfísica del       - Crisis de los     - Sociedad del
-    Otro como            poder                   metarrelatos        cansancio
-    mandato ético      - Dispositivo           - Pluralidad de     - Autoexplotación
-  - Responsabilidad      panóptico               juegos del        - La sociedad de
-    infinita           - Biopolítica e           lenguaje            la transparencia
-• Hermenéutica:          instituciones de    • Zygmunt Bauman:   • Habermas:
-  - Gadamer: Fusión      disciplinamiento      - Modernidad        - Acción
-    de horizontes                              líquida             comunicativa
+```mermaid
+graph TD
+ ROOT["Problemas contemporáneos y autores"]
+ B1["Ética e interpretación"]
+ B1N1["Levinas: la alteridad y la responsabilidad ante el otro ocupan un lugar central en su propuesta ética."]
+ B1N2["Gadamer: comprender implica tradición, interpretación y relación de horizontes."]
+ B1N3["Son proyectos distintos; la hermenéutica de Gadamer no es una subdivisión de la ética de Levinas."]
+ B2["Poder y subjetivación"]
+ B2N1["Foucault: examinar relaciones de poder, saber e instituciones."]
+ B2N2["Disciplina, dispositivo y biopolítica requieren situarse en problemas y obras concretos."]
+ B2N3["El panóptico funciona como modelo de una tecnología de poder; no como descripción literal de toda institución."]
+ B3["Diagnósticos de la modernidad"]
+ B3N1["Lyotard: discutir la legitimación del saber y los grandes relatos."]
+ B3N2["Bauman: modernidad líquida como diagnóstico de transformaciones de vínculos e instituciones."]
+ B3N3["La etiqueta posmodernidad no implica que todos estos autores formen una escuela homogénea."]
+ B4["Contrastes y debates"]
+ B4N1["Byung-Chul Han: examinar sus argumentos sobre rendimiento, autoexplotación y transparencia."]
+ B4N2["Habermas: acción comunicativa, racionalidad y crítica social; no presentarlo como defensor de cualquier posición posmoderna."]
+ B4N3["Comparar el problema, los conceptos y las razones de cada propuesta antes de afirmar acuerdos o incompatibilidades."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---
@@ -246,3 +264,16 @@ E) La alegoría de la caverna platónica
 - **Clave Correcta**: **B**
 
 ---
+
+
+### Distinguir el concepto y la pregunta
+
+| Autor | Concepto de orientación | Pregunta de lectura |
+|---|---|---|
+| Levinas | Responsabilidad ante el otro | ¿Cómo se fundamenta la exigencia ética? |
+| Gadamer | Horizontes e interpretación | ¿Qué papel tiene la tradición al comprender? |
+| Foucault | Relaciones de poder y saber | ¿Cómo intervienen prácticas e instituciones? |
+| Lyotard | Legitimación del saber | ¿Qué se cuestiona en los grandes relatos? |
+| Habermas | Acción comunicativa | ¿Qué condiciones tiene el entendimiento entre participantes? |
+
+Estas preguntas ayudan a estudiar; no sustituyen las obras ni convierten cada concepto en una explicación completa de su autor.

@@ -2,7 +2,7 @@
   {
     "id": "leng_t03_s03_c01",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿En cuál de las siguientes opciones el monosílabo 'si' debe llevar tilde diacrítica?",
+    "statement": "En las opciones se ha escrito «si» sin tilde. ¿En qué oración debe corregirse a «sí»?",
     "options": [
       "Si vienes temprano, almorzaremos juntos.",
       "Él dio el si definitivo ante el altar.",
@@ -10,7 +10,7 @@
       "Pregúntale si vendrá a la reunión de estudio."
     ],
     "correctIndex": 1,
-    "explanation": "En 'Él dio el sí definitivo', la palabra 'sí' funciona como sustantivo de afirmación o consentimiento; por tanto, lleva tilde diacrítica obligatoria.",
+    "explanation": "Criterio: sí lleva tilde cuando nombra el consentimiento. Aplicación: en «dio el sí definitivo», el artículo introduce un sustantivo que significa aceptación. Respuesta: «Él dio el sí definitivo ante el altar». Los otros usos son conjunciones o una nota musical.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.3.2",
@@ -20,15 +20,15 @@
   {
     "id": "leng_t03_s03_c02",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La palabra 'bíceps' es grave pero lleva tilde gráfica obligatoria porque:",
+    "statement": "«Bíceps» es una palabra llana. ¿Qué característica de su terminación explica que lleve tilde?",
     "options": [
-      "Es una excepción RAE para palabras graves terminadas en grupo consonántico",
-      "Termina en vocal acentuada",
-      "Posee hiato acentual disolvente",
+      "Termina en el grupo de dos consonantes ps",
+      "Termina en vocal",
+      "Contiene un hiato con vocal cerrada tónica",
       "Es un monosílabo con tilde diacrítica"
     ],
     "correctIndex": 0,
-    "explanation": "Las palabras graves terminadas en doble consonante se tildan por norma RAE, aunque la última letra sea 's' (bíceps, fórceps, cómics).",
+    "explanation": "Criterio: las llanas terminadas en más de una consonante llevan tilde. Aplicación: bíceps termina en ps; no se analiza como una terminación formada solamente por s. Respuesta: el grupo de dos consonantes ps.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.3.1",
@@ -38,15 +38,15 @@
   {
     "id": "leng_t03_s03_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El monosílabo 'de' lleva tilde diacrítica cuando funciona gramaticalmente como:",
+    "statement": "En «Espero que me dé permiso», ¿a qué categoría pertenece «dé»?",
     "options": [
-      "Preposición que indica posesión",
-      "Conjunción adversativa subordinada",
+      "Preposición que introduce un complemento",
+      "Conjunción adversativa",
       "Forma conjugada del verbo dar",
       "Pronombre personal átono"
     ],
     "correctIndex": 2,
-    "explanation": "El monosílabo 'dé' lleva tilde diacrítica cuando corresponde a una forma conjugada del verbo dar ('Ojalá me dé permiso').",
+    "explanation": "Criterio: dé se tilda cuando es una forma del verbo dar. Aplicación: en la oración expresa la acción de conceder permiso; de, sin tilde, sería una preposición en una construcción como «permiso de salida». Respuesta: forma conjugada del verbo dar.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.3.2",
@@ -56,7 +56,7 @@
   {
     "id": "leng_t03_s03_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes palabras jamás debe tildarse bajo ninguna circunstancia según la RAE?",
+    "statement": "¿Qué pronombre se escribe sin tilde en «Esta explicación es para ___»?",
     "options": [
       "Té",
       "Dé",
@@ -64,7 +64,7 @@
       "Ti"
     ],
     "correctIndex": 3,
-    "explanation": "El pronombre 'ti' es siempre tónico y nunca se confunde con otra categoría gramatical; la RAE prohíbe tildarlo en cualquier caso.",
+    "explanation": "Criterio: el pronombre ti no lleva tilde diacrítica. Aplicación: el complemento «para ti» se escribe así, aunque ti sea tónico. Respuesta: Ti. No se extiende por analogía la tilde que lleva mí en «para mí».",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.3.2",
@@ -82,7 +82,7 @@
       "Es una conjunción adversativa equivalente a 'pero'"
     ],
     "correctIndex": 3,
-    "explanation": "El monosílabo 'mas' se escribe sin tilde cuando funciona como conjunción adversativa equivalente a 'pero'.",
+    "explanation": "Criterio: mas es una conjunción adversativa que se escribe sin tilde; más expresa cantidad, entre otros usos. Aplicación: «Estudió con gran dedicación, pero no logró la vacante» conserva aquí el sentido de la oración. Respuesta: conjunción adversativa equivalente a pero.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.3.2",
@@ -92,7 +92,7 @@
   {
     "id": "leng_t03_s03_c06",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La palabra 'aún' debe tildarse obligatoriamente cuando puede sustituirse por el adverbio:",
+    "statement": "En «Aún no ha llegado el docente», ¿por qué adverbio puede sustituirse «aún» sin cambiar el sentido?",
     "options": [
       "Todavía",
       "Incluso",
@@ -100,7 +100,7 @@
       "Siquiera"
     ],
     "correctIndex": 0,
-    "explanation": "'Aún' lleva tilde cuando es palabra bisílaba tónica equivalente al adverbio 'todavía' ('Aún no ha llegado el docente').",
+    "explanation": "Criterio: en este contexto aún equivale a todavía. Aplicación: «Todavía no ha llegado el docente» mantiene la información de la oración. Respuesta: Todavía. Aún tiene hiato con u tónica; no debe confundirse con aun equivalente a incluso.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.3.2",
@@ -110,15 +110,15 @@
   {
     "id": "leng_t03_s03_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál es la regla ortográfica que rige a las palabras esdrújulas y sobresdrújulas en el idioma español?",
+    "statement": "En las palabras con una única sílaba tónica, ¿qué regla corresponde a las esdrújulas y sobresdrújulas?",
     "options": [
-      "Solo se tildan cuando terminan en N, S o vocal",
-      "Nunca llevan tilde gráfica",
-      "Se tildan todas obligatoriamente sin excepción alguna",
-      "Solo se tildan si no contienen hiato"
+      "Solo llevan tilde si terminan en n, s o vocal",
+      "No llevan tilde en ningún caso",
+      "Llevan tilde con independencia de su terminación",
+      "Solo llevan tilde cuando contienen un hiato"
     ],
     "correctIndex": 2,
-    "explanation": "Todas las palabras esdrújulas y sobresdrújulas se tildan obligatoriamente en el idioma castellano sin ninguna excepción.",
+    "explanation": "Criterio: las esdrújulas y sobresdrújulas llevan tilde sin depender de la letra final. Aplicación: médico y dígamelo conservan la tilde por la posición de su sílaba tónica. Respuesta: llevan tilde con independencia de su terminación. Los adverbios en -mente tienen una regla específica basada en el adjetivo.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.3.1",
@@ -128,15 +128,15 @@
   {
     "id": "leng_t03_s03_c08",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la frase interrogativa indirecta 'Dime con quién andas y te diré quién eres', los vocablos 'quién' se tildan por:",
+    "statement": "En «Dime con quién andas», ¿qué función tiene «quién»?",
     "options": [
-      "Tildación diacrítica",
-      "Tildación enfática",
-      "Tildación robúrica",
-      "Regla general de palabras agudas"
+      "Introduce una relativa equivalente a «la persona que»",
+      "Introduce una interrogativa indirecta sobre la identidad de una persona",
+      "Es una conjunción que expresa una condición",
+      "Es un artículo que acompaña a un sustantivo"
     ],
     "correctIndex": 1,
-    "explanation": "La tilde enfática se coloca sobre pronombres interrogativos en oraciones interrogativas indirectas para preservar su fuerza expresiva.",
+    "explanation": "Criterio: quién se tilda cuando tiene valor interrogativo, también en interrogativas indirectas. Aplicación: «Dime con quién andas» pide identificar a la persona. Respuesta: introduce una interrogativa indirecta. Su tilde es diacrítica; la denominación escolar enfática no es una categoría incompatible con ella.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.3.3",
@@ -146,7 +146,7 @@
   {
     "id": "leng_t03_s03_c09",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de los siguientes grupos de monosílabos carece por completo de tilde según la normativa vigente de la RAE?",
+    "statement": "¿Qué grupo está formado únicamente por palabras que se escriben sin tilde en sus usos ordinarios?",
     "options": [
       "Él, tú, mí, sí",
       "Té, dé, sé, más",
@@ -154,7 +154,7 @@
       "Fe, fue, dio, vio"
     ],
     "correctIndex": 3,
-    "explanation": "Los monosílabos 'fe', 'fue', 'dio', 'vio', 'fui' no tienen pareja átona formalmente ambigua y jamás llevan tilde.",
+    "explanation": "Criterio: los monosílabos se escriben sin tilde salvo los casos diacríticos previstos. Aplicación: fe, fue, dio y vio no llevan tilde. Respuesta: Fe, fue, dio, vio. Las demás series incluyen formas correctamente tildadas en ciertos usos; cómo, además, tiene dos sílabas.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.3.2",
@@ -172,7 +172,7 @@
       "Sufre hiato acentual"
     ],
     "correctIndex": 1,
-    "explanation": "Al pluralizarse, el acento se mantiene en la misma sílaba y la palabra pasa a ser esdrújula (exá-me-nes), tildándose sin excepción.",
+    "explanation": "Criterio: la posición tónica se cuenta desde el final de cada forma completa. Aplicación: e-xa-men es llana terminada en n; e-xá-me-nes tiene la tónica en la antepenúltima sílaba. Respuesta: el plural es esdrújulo y lleva tilde. No se divide como «exá-me-nes».",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.3.1",

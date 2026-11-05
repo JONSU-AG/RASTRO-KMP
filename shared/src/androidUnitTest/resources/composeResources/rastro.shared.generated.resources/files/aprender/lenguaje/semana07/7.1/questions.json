@@ -10,7 +10,7 @@
       "Adecuación"
     ],
     "correctIndex": 0,
-    "explanation": "La coherencia es la propiedad semántica que dota al texto de sentido global y lógico, asegurando que las ideas no se contradigan.",
+    "explanation": "Criterio: La coherencia permite construir una unidad de sentido. Aplicación: La unidad temática y la compatibilidad de las ideas describen el sentido global, no una omisión ni un enlace aislado. Respuesta: Coherencia.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.1.1",
@@ -28,7 +28,7 @@
       "Elipsis verbal"
     ],
     "correctIndex": 0,
-    "explanation": "'Esto' anticipa catafóricamente los elementos que serán explicitados a continuación ('su mochila y sus libros de estudio').",
+    "explanation": "Criterio: La catáfora anticipa información que se precisa después. Aplicación: Esto se concreta después como su mochila y sus libros de estudio. Respuesta: Catáfora.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.1.2",
@@ -38,15 +38,15 @@
   {
     "id": "leng_t07_s01_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En 'César Vallejo nació en Santiago de Chuco. El ilustre vate liberteño escribió Los heraldos negros', la expresión destacada constituye un caso de:",
+    "statement": "En «César Vallejo nació en Santiago de Chuco. El poeta peruano escribió Los heraldos negros», la expresión «el poeta peruano» recupera al referente mediante:",
     "options": [
       "Catáfora pronominal",
       "Elipsis nominal",
       "Conjunción adversativa",
-      "Sustitución léxica por perífrasis sinonímica"
+      "Sustitución léxica por una expresión descriptiva"
     ],
     "correctIndex": 3,
-    "explanation": "Se sustituye el nombre propio 'César Vallejo' por la frase equivalente 'el ilustre vate liberteño' para evitar la repetición léxica.",
+    "explanation": "Criterio: Una expresión léxica puede recuperar un referente previamente identificado. Aplicación: El poeta peruano remite a César Vallejo en este contexto; no es un sinónimo léxico de su nombre válido fuera del fragmento. Respuesta: Sustitución léxica por una expresión descriptiva.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.1.3",
@@ -56,7 +56,7 @@
   {
     "id": "leng_t07_s01_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En 'Los estudiantes llegaron temprano a la academia; luego, ingresaron a sus respectivas aulas', la omisión del sujeto en la segunda proposición es un mecanismo de:",
+    "statement": "En el análisis escolar de cohesión, la omisión del sujeto repetido en «Los estudiantes llegaron temprano; luego, ingresaron a sus aulas» se reconoce como:",
     "options": [
       "Diglosia",
       "Catáfora",
@@ -64,7 +64,7 @@
       "Anáfora adverbial"
     ],
     "correctIndex": 2,
-    "explanation": "La elipsis consiste en suprimir un elemento oracional (en este caso el sujeto 'los estudiantes') que se sobreentiende por el contexto anterior.",
+    "explanation": "Criterio: En el análisis escolar de cohesión puede reconocerse la omisión de un sujeto recuperable. Aplicación: Ingresaron mantiene como referente a los estudiantes sin repetir el grupo nominal. Gramaticalmente es sujeto tácito; en la categoría escolar propuesta se analiza como elipsis. Respuesta: Elipsis.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.1.3",
@@ -82,7 +82,7 @@
       "Catáfora temporal"
     ],
     "correctIndex": 2,
-    "explanation": "El adverbio 'allí' remite anafóricamente a un lugar mencionado con anterioridad en el texto ('Arequipa').",
+    "explanation": "Criterio: La anáfora recupera información anterior. Aplicación: Allí recupera Arequipa, un lugar ya mencionado, y no anticipa un tiempo posterior. Respuesta: Anáfora locativa.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.1.2",
@@ -100,7 +100,7 @@
       "Adecuación textual"
     ],
     "correctIndex": 3,
-    "explanation": "La adecuación es la propiedad pragmática que exige adaptar el registro y tono lingüístico al destinatario y a la situación comunicativa.",
+    "explanation": "Criterio: La adecuación considera a quién se dirige el texto y para qué. Aplicación: La explicación necesita ajustarse a la formación y necesidades de su destinatario sin perder precisión. Respuesta: Adecuación textual.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.1.1",
@@ -110,7 +110,7 @@
   {
     "id": "leng_t07_s01_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El balance continuo entre la información conocida o previa (tema) y la información nueva que se añade (rema) corresponde al principio de:",
+    "statement": "La organización por la que un texto retoma información y añade aportes relacionados se denomina:",
     "options": [
       "Progresión temática (coherencia)",
       "Elipsis gramatical",
@@ -118,7 +118,7 @@
       "Catáfora absoluta"
     ],
     "correctIndex": 0,
-    "explanation": "La progresión temática asegura que el texto avance articulando datos conocidos (tema) con aportes informativos nuevos (rema).",
+    "explanation": "Criterio: La progresión temática organiza el avance de lo dicho. Aplicación: El texto retoma información y añade aportes relacionados; no exige que todo tema sea ya conocido ni que todo rema sea desconocido. Respuesta: Progresión temática (coherencia).",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.1.4",
@@ -136,7 +136,7 @@
       "Elípticos"
     ],
     "correctIndex": 1,
-    "explanation": "'Ella' remite anafóricamente a 'mi madre' y 'las' refiere anafóricamente a 'flores', recuperando antecedentes previos.",
+    "explanation": "Criterio: La referencia se determina por los antecedentes del fragmento. Aplicación: Ella retoma a mi madre y las retoma a flores. Ambos antecedentes aparecen antes de los pronombres. Respuesta: Anafóricos.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.1.2",
@@ -146,7 +146,7 @@
   {
     "id": "leng_t07_s01_c09",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La contradicción explícita entre párrafos de un mismo ensayo vulnera de forma directa la propiedad de la:",
+    "statement": "Una contradicción explícita entre dos párrafos acerca del mismo hecho, tiempo y perspectiva afecta directamente a la:",
     "options": [
       "Coherencia",
       "Cohesión",
@@ -154,7 +154,7 @@
       "Adecuación"
     ],
     "correctIndex": 0,
-    "explanation": "La coherencia se rige por el principio de no contradicción lógica; sostener ideas contradictorias destruye la coherencia del texto.",
+    "explanation": "Criterio: La contradicción debe afectar al mismo referente, tiempo y perspectiva. Aplicación: Afirmar y negar lo mismo bajo las mismas condiciones produce una incompatibilidad de sentido, aunque existan enlaces gramaticales. Respuesta: Coherencia.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.1.4",
@@ -172,7 +172,7 @@
       "Ingresantes"
     ],
     "correctIndex": 0,
-    "explanation": "La frase pronominal 'lo mismo' anticipa catafóricamente el concepto que se precisará a continuación tras los dos puntos.",
+    "explanation": "Criterio: La catáfora dirige la interpretación hacia una precisión posterior. Aplicación: Lo mismo anuncia la publicación del padrón de ingresantes que se precisa a continuación. Respuesta: Lo mismo.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.1.2",

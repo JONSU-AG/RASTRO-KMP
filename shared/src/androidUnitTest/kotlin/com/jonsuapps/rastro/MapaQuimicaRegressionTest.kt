@@ -18,7 +18,6 @@ import kotlin.test.assertTrue
  *
  * Notas de staging (no se modifica curso-prueba):
  * - subjectId/semana/subtema vacíos o ausentes normalizados en la generación.
- * - Distribución correctIndex real: A=90, B=90, C=60, D=60.
  * - Teorías 3355-7317 chars; umbral de teoría en 3000.
  */
 class MapaQuimicaRegressionTest {
@@ -49,15 +48,15 @@ class MapaQuimicaRegressionTest {
     @Test
     fun mapaQuimica_nuevoSemanas1a16_sinLegacy() {
         val mapa = mapaQuimica()
-        // 28 nodos con 10 + 4 nodos complementados oficiales con 12 (legacy = 1).
+        // 28 nodos revisados con 11 + 4 nodos con 12 (legacy = 1).
         assertEquals(32, mapa.size, "Solo los 32 nodos nuevos, sin legacy")
-        assertTrue(mapa.all { it.challenges.size == 10 || it.challenges.size == 12 },
-            "Nodos base de 10 o complementados de 12")
+        assertTrue(mapa.all { it.challenges.size == 11 || it.challenges.size == 12 },
+            "Nodos revisados de 11 o complementados de 12")
         assertEquals(4, mapa.count { it.challenges.size == 12 }, "4 nodos complementados")
 
         val nuevas = mapa.filter { it.id.startsWith("quim_t") }
         assertEquals(32, nuevas.size, "16 semanas nuevas = 32 LessonNodes")
-        assertEquals(328, nuevas.sumOf { it.challenges.size }, "320 + 8 complemento oficial")
+        assertEquals(356, nuevas.sumOf { it.challenges.size }, "28 por 11 y 4 por 12")
 
         val semanas = nuevas.map { it.semana }.distinct().sorted()
         assertEquals((1..16).toList(), semanas, "Nuevo semanas 1-16: $semanas")
@@ -66,11 +65,10 @@ class MapaQuimicaRegressionTest {
     @Test
     fun mapaQuimica_nuevasUnaVez_conTeoria() {
         val mapa = mapaQuimica()
-        // (semana, subtema, challenges) por nodo (1-15 staging + 16 tema XV propio;
-        // 4 nodos con +2 de complemento oficial).
+        // Conteos revisados por nivel; cuatro bancos conservan doce preguntas.
         val esperadas = ((1..16).flatMap { w ->
-            listOf("quim_t%02d_s01".format(w) to Triple(w, "$w.1", 10),
-                "quim_t%02d_s02".format(w) to Triple(w, "$w.2", 10))
+            listOf("quim_t%02d_s01".format(w) to Triple(w, "$w.1", 11),
+                "quim_t%02d_s02".format(w) to Triple(w, "$w.2", 11))
         }.toMap() + mapOf(
             "quim_t07_s02" to Triple(7, "7.2", 12),
             "quim_t10_s01" to Triple(10, "10.1", 12),
@@ -99,7 +97,7 @@ class MapaQuimicaRegressionTest {
         // Spot-check anti-corrupción: título staging verbatim.
         assertEquals(
             "Química, Materia, Sustancias y Transformaciones - Fundamentos y Leyes Principales",
-            mapa.first { it.id == "quim_t01_s01" && it.challenges.size == 10 }.title
+            mapa.first { it.id == "quim_t01_s01" && it.challenges.size == 11 }.title
         )
     }
 
@@ -109,7 +107,7 @@ class MapaQuimicaRegressionTest {
         try {
             val nueva = AprenderRepository.getLessonByIdSync("quim_t01_s01")
             assertTrue(nueva != null, "quim_t01_s01 debe resolverse")
-            assertEquals(10, nueva.challenges.size, "Nuevo con 10 challenges staging")
+            assertEquals(11, nueva.challenges.size, "Nuevo con 11 preguntas revisadas")
             assertEquals("quimica", nueva.subjectId)
 
             // Fallback legacy: qui_t01_s03 no tiene equivalente nuevo → legacy (1 challenge).

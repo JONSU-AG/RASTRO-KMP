@@ -1,1 +1,182 @@
-[{"concept":"3.2.1","correctIndex":1,"explanation":"El término excluido mide la capacidad de abstracción y delimitación semántica: se debe aislar el término que carece del sema común indispensable que une a la premisa con las otras opciones.","fuente":"temario","id":"rv_t03_s02_c01","options":["Identificar qué palabra presenta una falta de tildación diacrítica.","Discriminar y apartar el vocablo que no comparte el campo semántico común o el principio de asociación lógica que agrupa a los demás miembros del grupo.","Contar los sinónimos arcaicos de una palabra.","Traducir un vocablo al quechua o aimara."],"pedagogicalTier":"concepto","semana":3,"statement":"En el examen de razonamiento verbal, el ejercicio de 'Término Excluido' evalúa fundamentalmente la habilidad para:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.2.2","correctIndex":3,"explanation":"Novela, cuento, fábula y mito pertenecen al género narrativo de ficción ficcional; el ensayo pertenece al género argumentativo expositivo y reflexivo.","fuente":"temario","id":"rv_t03_s02_c02","options":["Mito.","Fábula.","Cuento.","Ensayo."],"pedagogicalTier":"concepto","semana":3,"statement":"Identifique el TÉRMINO EXCLUIDO en el siguiente campo semántico: NOVELA","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.2.3","correctIndex":1,"explanation":"La guitarra, el violín, el arpa y el laúd son instrumentos de cuerda (cordófonos); la trompeta es un instrumento de viento metal (aerófono).","fuente":"temario","id":"rv_t03_s02_c03","options":["Violín.","Trompeta.","Arpa.","Laúd."],"pedagogicalTier":"concepto","semana":3,"statement":"Identifique el TÉRMINO EXCLUIDO en el grupo de instrumentos musicales de cuerda: GUITARRA","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.2.4","correctIndex":2,"explanation":"Júpiter, Marte, Saturno y Venus son planetas del sistema solar; la Luna es un satélite natural que orbita la Tierra.","fuente":"temario","id":"rv_t03_s02_c04","options":["Marte.","Saturno.","Luna.","Venus."],"pedagogicalTier":"concepto","semana":3,"statement":"Determine el TÉRMINO EXCLUIDO en el campo semántico de los planetas del Sistema Solar: JÚPITER","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.2.5","correctIndex":0,"explanation":"Indigencia, pobreza, miseria y penuria son vocablos sinónimos que aluden a la carencia de bienes materiales; opulencia es su antónimo exacto (riqueza o abundancia).","fuente":"temario","id":"rv_t03_s02_c05","options":["Opulencia.","Pobreza.","Miseria.","Penuria."],"pedagogicalTier":"concepto","semana":3,"statement":"Identifique el TÉRMINO EXCLUIDO por sinonimia: INDIGENCIA","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.2.6","correctIndex":3,"explanation":"El estómago, esófago, intestino e hígado forman parte integral del aparato digestivo; la tráquea es un conducto tubular perteneciente al aparato respiratorio.","fuente":"temario","id":"rv_t03_s02_c06","options":["Esófago.","Intestino.","Hígado.","Tráquea."],"pedagogicalTier":"concepto","semana":3,"statement":"Identifique el TÉRMINO EXCLUIDO en la serie de órganos del aparato digestivo: ESTÓMAGO","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.2.7","correctIndex":3,"explanation":"Pincel, lienzo, óleo y caballete son útiles y elementos del campo de la pintura artística; el bisturí es un instrumento quirúrgico de la medicina.","fuente":"temario","id":"rv_t03_s02_c07","options":["Óleo.","Lienzo.","Caballete.","Bisturí."],"pedagogicalTier":"concepto","semana":3,"statement":"Determine el TÉRMINO EXCLUIDO en el siguiente grupo: PINCEL","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.2.8","correctIndex":3,"explanation":"Veloz, feroz, sagaz y audaz son adjetivos calificativos; 'rapidez' es un sustantivo abstracto, por lo que queda excluida por discordancia de categoría gramatical.","fuente":"temario","id":"rv_t03_s02_c08","options":["Feroz.","Sagaz.","Audaz.","Rapidez."],"pedagogicalTier":"concepto","semana":3,"statement":"Identifique el TÉRMINO EXCLUIDO por categoría gramatical en el siguiente grupo: VELOZ","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.2.9","correctIndex":2,"explanation":"Veracidad, honestidad, lealtad y justicia son valores o virtudes morales positivas; el egoísmo es un disvalor moral negativo.","fuente":"temario","id":"rv_t03_s02_c09","options":["Honestidad.","Lealtad.","Egoísmo.","Justicia."],"pedagogicalTier":"concepto","semana":3,"statement":"Identifique el TÉRMINO EXCLUIDO en el campo de virtudes morales: VERACIDAD","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.2.10","correctIndex":1,"explanation":"El primer paso consiste en determinar el significado de la palabra base y abstraer el campo semántico rector para confrontar qué opción se aleja o contradice los semas nucleares compartidos.","fuente":"temario","id":"rv_t03_s02_c10","options":["Marcar la palabra que tenga el significado más complejo.","Definir con precisión el significado de la palabra premisa e identificar el campo semántico estricto que agrupa a la mayoría de opciones.","Buscar palabras que rimen entre sí.","Eliminar la primera alternativa de la lista sin leer las demás."],"pedagogicalTier":"concepto","semana":3,"statement":"¿Cuál es el primer paso metodológico obligatorio que debe realizarse al resolver un ejercicio de término excluido?","subject":"raz_verbal","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "3.2.1",
+    "correctIndex": 1,
+    "explanation": "Criterio: la exclusión debe basarse en una relación compartida. Aplicación: identificarla permite comprobar las alternativas de la misma manera. Respuesta: identificar un criterio común y explicar qué opción no lo cumple.",
+    "fuente": "temario",
+    "id": "rv_t03_s02_c01",
+    "options": [
+      "Elegir la palabra menos conocida, aunque comparta la relación del grupo.",
+      "Identificar un criterio común y explicar qué opción no lo cumple.",
+      "Cambiar de criterio al revisar cada alternativa.",
+      "Escoger la palabra más larga sin analizar su significado."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "En un ejercicio de término excluido, ¿qué acción permite justificar la respuesta?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.2",
+    "correctIndex": 3,
+    "explanation": "Criterio: formas predominantemente narrativas. Aplicación: novela, mito, fábula y cuento se organizan como relatos; el ensayo desarrolla principalmente una reflexión o exposición argumentada, aunque puede incluir anécdotas. Respuesta: ensayo.",
+    "fuente": "temario",
+    "id": "rv_t03_s02_c02",
+    "options": [
+      "Mito.",
+      "Fábula.",
+      "Cuento.",
+      "Ensayo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Considera el grupo novela, mito, fábula, cuento y ensayo. Según su modalidad literaria habitual, ¿qué opción se aparta del predominio narrativo de los otros cuatro?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.3",
+    "correctIndex": 1,
+    "explanation": "Criterio: instrumentos cuyo sonido procede principalmente de cuerdas en vibración. Aplicación: guitarra, violín, arpa y laúd cumplen esa condición. La trompeta es un instrumento de viento. Respuesta: trompeta.",
+    "fuente": "temario",
+    "id": "rv_t03_s02_c03",
+    "options": [
+      "Violín.",
+      "Trompeta.",
+      "Arpa.",
+      "Laúd."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Considera guitarra, violín, arpa, laúd y trompeta. ¿Qué opción no es un instrumento de cuerda?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.4",
+    "correctIndex": 2,
+    "explanation": "Criterio: planetas del Sistema Solar. Aplicación: Júpiter, Marte, Saturno y Venus son planetas. La Luna es un satélite natural de la Tierra. Respuesta: Luna.",
+    "fuente": "temario",
+    "id": "rv_t03_s02_c04",
+    "options": [
+      "Marte.",
+      "Saturno.",
+      "Luna.",
+      "Venus."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Considera Júpiter, Marte, Saturno, Venus y la Luna. ¿Qué opción no es un planeta del Sistema Solar?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.5",
+    "correctIndex": 0,
+    "explanation": "Criterio: carencia o escasez de recursos materiales. Aplicación: indigencia, pobreza, miseria y penuria expresan carencia con matices y grados distintos; opulencia expresa abundancia o riqueza. No se afirma que los cuatro primeros sean equivalentes en todo contexto. Respuesta: opulencia.",
+    "fuente": "temario",
+    "id": "rv_t03_s02_c05",
+    "options": [
+      "Opulencia.",
+      "Pobreza.",
+      "Miseria.",
+      "Penuria."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Considera indigencia, pobreza, miseria, penuria y opulencia. En el sentido de disponibilidad de recursos materiales, ¿qué opción no expresa carencia o escasez?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.6",
+    "correctIndex": 3,
+    "explanation": "Criterio: pertenencia al aparato digestivo, incluidos los órganos anexos. Aplicación: estómago, esófago e intestino forman parte del tubo digestivo; el hígado es un órgano anexo. La tráquea pertenece al aparato respiratorio. Respuesta: tráquea.",
+    "fuente": "temario",
+    "id": "rv_t03_s02_c06",
+    "options": [
+      "Esófago.",
+      "Intestino.",
+      "Hígado.",
+      "Tráquea."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Considera estómago, esófago, intestino, hígado y tráquea. ¿Qué opción no forma parte del aparato digestivo, incluidos sus órganos anexos?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.7",
+    "correctIndex": 3,
+    "explanation": "Criterio: asociación funcional con la pintura. Aplicación: pincel es un instrumento; óleo, un material; lienzo, un soporte; caballete, una estructura de apoyo. No son sinónimos ni desempeñan la misma función. Bisturí se utiliza para realizar incisiones. Respuesta: bisturí.",
+    "fuente": "temario",
+    "id": "rv_t03_s02_c07",
+    "options": [
+      "Óleo.",
+      "Lienzo.",
+      "Caballete.",
+      "Bisturí."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Considera pincel, óleo, lienzo, caballete y bisturí. ¿Qué opción no se relaciona directamente con la actividad de pintar un cuadro?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.8",
+    "correctIndex": 3,
+    "explanation": "Criterio: categoría gramatical en el uso indicado. Aplicación: veloz, feroz, sagaz y audaz funcionan como adjetivos; rapidez es un sustantivo que nombra una cualidad. La terminación de la palabra no determina por sí sola la categoría. Respuesta: rapidez.",
+    "fuente": "temario",
+    "id": "rv_t03_s02_c08",
+    "options": [
+      "Feroz.",
+      "Sagaz.",
+      "Audaz.",
+      "Rapidez."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Considera veloz, feroz, sagaz, audaz y rapidez en sus usos habituales, sin sustantivación de adjetivos. ¿Qué opción tiene una categoría gramatical distinta de la de los otros cuatro?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.9",
+    "correctIndex": 2,
+    "explanation": "Criterio: valores de convivencia que consideran a los demás. Aplicación: veracidad, honestidad, lealtad y justicia se agrupan bajo esa condición; egoísmo designa una atención excesiva al interés propio frente al de los otros. Respuesta: egoísmo.",
+    "fuente": "temario",
+    "id": "rv_t03_s02_c09",
+    "options": [
+      "Honestidad.",
+      "Lealtad.",
+      "Egoísmo.",
+      "Justicia."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Considera veracidad, honestidad, lealtad, justicia y egoísmo. Si se agrupan valores orientados a la convivencia con los demás, ¿qué opción no cumple ese criterio?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.10",
+    "correctIndex": 1,
+    "explanation": "Criterio: usar una clasificación pertinente y constante. Aplicación: precisar el sentido y comprobar el rasgo común permite distinguir una exclusión justificada de una diferencia accidental. Es una estrategia de resolución, no la afirmación de que exista un único orden mental obligatorio. Respuesta: precisar el sentido de las palabras y comprobar un criterio común en el grupo.",
+    "fuente": "temario",
+    "id": "rv_t03_s02_c10",
+    "options": [
+      "Escoger la palabra que resulte menos familiar.",
+      "Precisar el sentido de las palabras y comprobar un criterio común en el grupo.",
+      "Seleccionar cualquier diferencia de longitud o terminación.",
+      "Buscar una regla distinta para cada alternativa."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Para resolver un término excluido sin elegir por una diferencia accidental, ¿qué conviene hacer antes de marcar?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

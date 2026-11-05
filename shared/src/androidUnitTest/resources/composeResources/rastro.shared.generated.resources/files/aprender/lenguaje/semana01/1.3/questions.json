@@ -2,7 +2,7 @@
   {
     "id": "leng_t01_s03_c01",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La función del lenguaje en la cual el emisor busca influir en el comportamiento del receptor para que realice una acción se denomina:",
+    "statement": "Una persona pide a su interlocutor que cierre la ventana. Si se analiza la orientación del mensaje hacia la acción esperada del destinatario, ¿qué función se destaca?",
     "options": [
       "Expresiva",
       "Fática",
@@ -10,7 +10,7 @@
       "Metalingüística"
     ],
     "correctIndex": 2,
-    "explanation": "La función apelativa o conativa está centrada en el receptor y tiene como objetivo ordenar, pedir o modificar su conducta.",
+    "explanation": "Criterio: la función apelativa orienta el mensaje al destinatario para solicitar una respuesta o acción. Aplicación: se pide cerrar la ventana. Respuesta: apelativa o conativa. La función describe la orientación del mensaje; no demuestra que la persona cierre efectivamente la ventana.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.3.2",
@@ -20,15 +20,15 @@
   {
     "id": "leng_t01_s03_c02",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la frase 'El punto de ebullición del agua a nivel del mar es 100 grados Celsius', la función del lenguaje predominante es:",
+    "statement": "En un informe ficticio se escribe «La biblioteca abre a las nueve» para comunicar su horario. Con ese propósito descrito, ¿qué función predomina?",
     "options": [
-      "Poética o estética",
+      "Poética",
       "Emotiva",
       "Representativa o referencial",
-      "Fática de contacto"
+      "Fática"
     ],
     "correctIndex": 2,
-    "explanation": "El enunciado informa de manera objetiva, científica y verificable sobre un hecho de la realidad sin emociones del emisor, cumpliendo función referencial.",
+    "explanation": "Criterio: la función referencial orienta el mensaje hacia aquello de lo que se informa. Aplicación: el informe comunica un horario, sin que el caso destaque un pedido, una emoción o la forma del texto. Respuesta: representativa o referencial. La clasificación no certifica que el horario sea verdadero; es un dato del ejemplo ficticio.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.3.2",
@@ -38,15 +38,15 @@
   {
     "id": "leng_t01_s03_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿A qué elemento focal del circuito comunicativo corresponde la función metalingüística del lenguaje?",
+    "statement": "En el modelo de seis funciones de Jakobson, ¿hacia qué factor se orienta la función metalingüística?",
     "options": [
-      "Al canal",
-      "Al referente",
-      "Al emisor",
-      "Al código"
+      "El contacto",
+      "El contexto o referente",
+      "El emisor",
+      "El código"
     ],
     "correctIndex": 3,
-    "explanation": "La función metalingüística se centra en el código, pues utiliza la lengua para explicar las reglas y conceptos del propio idioma.",
+    "explanation": "Criterio: la función metalingüística aparece al explicar, aclarar o examinar el código usado. Aplicación: las preguntas sobre significados o construcciones lingüísticas se orientan hacia ese código. Respuesta: el código. Puede coexistir con otras funciones en un mismo intercambio.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.3.3",
@@ -56,15 +56,15 @@
   {
     "id": "leng_t01_s03_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Cuando en una llamada decimos '¿Aló? ¿Me escuchas? Sí, ajá...', la función lingüística que se activa primordialmente es:",
+    "statement": "Al comenzar una llamada y comprobar si la otra persona sigue en línea, Ana pregunta «¿Aló? ¿Me escuchas?». Según el propósito indicado, predomina la función:",
     "options": [
       "Representativa",
       "Conativa",
       "Fática o de contacto",
-      "Estética"
+      "Poética"
     ],
     "correctIndex": 2,
-    "explanation": "La función fática verifica, abre o mantiene el canal físico de comunicación para comprobar que la señal fluye adecuadamente.",
+    "explanation": "Criterio: la función fática se orienta a establecer, mantener o comprobar el contacto. Aplicación: Ana verifica que puede continuar el intercambio. Respuesta: fática o de contacto. La comprobación no demuestra comprensión del contenido y el contacto no se reduce solo al estado de un cable.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.3.3",
@@ -74,15 +74,15 @@
   {
     "id": "leng_t01_s03_c05",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En el verso 'Hay golpes en la vida tan fuertes... ¡Yo no sé!' de César Vallejo, el lenguaje cumple predominantemente la función:",
+    "statement": "En un ejercicio de escritura se compone la línea «La luna lava la loma». La consigna pide destacar la repetición de sonidos y la organización de las palabras, por encima de informar un hecho. ¿Qué función se pone en primer plano?",
     "options": [
       "Metalingüística",
-      "Referencial pura",
-      "Poética o estética",
+      "Referencial exclusiva",
+      "Poética",
       "Fática"
     ],
     "correctIndex": 2,
-    "explanation": "La función poética o estética se enfoca en el mensaje mismo, empleando recursos estilísticos, cadencia y belleza literaria.",
+    "explanation": "Criterio: la función poética orienta la atención a la forma del mensaje. Aplicación: el ejercicio destaca la repetición sonora y la elección de palabras. Respuesta: poética. El ejemplo es propio y no se atribuye a un autor. No se concluye que todo verso o metáfora tenga necesariamente una única función dominante.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.3.3",
@@ -92,7 +92,7 @@
   {
     "id": "leng_t01_s03_c06",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La afirmación 'Los verbos transitivos exigen obligatoriamente la presencia de un objeto directo' cumple una función:",
+    "statement": "En clase se explica «En Ana leyó el cuento, el grupo el cuento funciona como complemento directo». Al analizar qué se explica, predomina la función:",
     "options": [
       "Apelativa",
       "Metalingüística",
@@ -100,7 +100,7 @@
       "Poética"
     ],
     "correctIndex": 1,
-    "explanation": "El mensaje aborda y explica una regla gramatical del idioma español; cuando el lenguaje habla del lenguaje, la función es metalingüística.",
+    "explanation": "Criterio: la función metalingüística permite examinar unidades y construcciones de la lengua. Aplicación: se analiza la función sintáctica de un grupo de palabras dentro de una oración. Respuesta: metalingüística. No se enseña que todos los verbos transitivos deban llevar siempre complemento directo expreso; existen usos sin él.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.3.3",
@@ -110,15 +110,15 @@
   {
     "id": "leng_t01_s03_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Según Ferdinand de Saussure, la lengua se diferencia esencialmente del habla por ser:",
+    "statement": "En la distinción saussureana entre lengua y habla, ¿qué descripción corresponde a la lengua?",
     "options": [
-      "Social, psíquica y un código abstracto compartido",
-      "Un acto puramente motor",
-      "Individual y momentánea",
-      "Psicofísica y efímera"
+      "El sistema social de signos compartido por una comunidad",
+      "Un movimiento de los órganos de articulación aislado del sistema",
+      "Una sola emisión concreta de una persona",
+      "Una frase particular pronunciada en un momento"
     ],
     "correctIndex": 0,
-    "explanation": "La lengua es el sistema social, virtual y psíquico compartido por la comunidad, mientras que el habla es su realización individual y concreta.",
+    "explanation": "Criterio: la lengua se estudia como sistema social de signos, frente al habla como realización individual concreta en esa distinción. Aplicación: la opción del sistema compartido describe la lengua y las emisiones particulares describen usos. Respuesta: el sistema social de signos compartido. Social no significa inmutable ni idéntico en todos los hablantes.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.3.1",
@@ -128,7 +128,7 @@
   {
     "id": "leng_t01_s03_c08",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La expresión '¡Qué alegría tan inmensa siento por tu ingreso a Medicina!' cumple preponderantemente la función:",
+    "statement": "Al recibir una buena noticia, una persona dice «¡Qué alegría siento!». El caso destaca que está manifestando su estado de ánimo, no pidiendo una acción. ¿Qué función predomina?",
     "options": [
       "Referencial",
       "Expresiva o emotiva",
@@ -136,7 +136,7 @@
       "Fática"
     ],
     "correctIndex": 1,
-    "explanation": "La función expresiva o emotiva se centra en el emisor para manifestar sus emociones, sentimientos o estados de ánimo subjetivos.",
+    "explanation": "Criterio: la función expresiva orienta el mensaje hacia la actitud o el estado del emisor. Aplicación: la persona manifiesta alegría según la situación descrita. Respuesta: expresiva o emotiva. Los signos de exclamación son una pista de forma, pero no bastan por sí solos para clasificar cualquier mensaje.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.3.2",
@@ -146,7 +146,7 @@
   {
     "id": "leng_t01_s03_c09",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Quién formuló el principio de la doble articulación del lenguaje humano (morfemas y fonemas)?",
+    "statement": "¿Con qué lingüista se asocia la formulación de la doble articulación: unidades significativas en un nivel y fonemas distintivos sin significado propio en otro?",
     "options": [
       "Karl Bühler",
       "Roman Jakobson",
@@ -154,7 +154,7 @@
       "Noam Chomsky"
     ],
     "correctIndex": 2,
-    "explanation": "André Martinet postuló que el lenguaje humano se articula en dos niveles: primera articulación en monemas (significado) y segunda articulación en fonemas (distintivos).",
+    "explanation": "Criterio: identificar el autor y el contenido del modelo de doble articulación. Aplicación: la primera articulación se refiere a unidades significativas o monemas y la segunda a fonemas. Respuesta: André Martinet. La segunda articulación no se identifica con letras ni con separar sílabas.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.3.4",
@@ -164,15 +164,15 @@
   {
     "id": "leng_t01_s03_c10",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La orden 'Postulantes, guarden sus mochilas y muestren su carné de inscripción' cumple la función del lenguaje centrada en el:",
+    "statement": "La encargada pide «Por favor, guarden sus mochilas y muestren el carné». Si se analiza la orientación apelativa de ese pedido, ¿qué factor se destaca?",
     "options": [
-      "Receptor",
-      "Mensaje",
-      "Emisor",
-      "Canal"
+      "El receptor o destinatario",
+      "La forma del mensaje por sí misma",
+      "El estado emocional del emisor",
+      "El contacto como comprobación de la conexión"
     ],
     "correctIndex": 0,
-    "explanation": "Cumple la función apelativa o conativa, la cual está centrada en el receptor para guiar o mandar sobre su conducta.",
+    "explanation": "Criterio: la función apelativa se orienta al destinatario y a una respuesta esperada. Aplicación: se solicita guardar mochilas y mostrar un documento. Respuesta: el receptor o destinatario. La cortesía no elimina esa orientación y el pedido no prueba obediencia efectiva.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.3.2",
@@ -182,7 +182,7 @@
   {
     "id": "leng_t01_s03_c11",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El carácter innato del lenguaje, como facultad biológica heredada e inscrita genéticamente en el cerebro humano, fue sostenido fundamentalmente por:",
+    "statement": "¿Qué autor se asocia con la propuesta generativista de una base innata para la facultad del lenguaje, presentada aquí como una posición teórica y no como saber un idioma completo desde el nacimiento?",
     "options": [
       "Ferdinand de Saussure",
       "Noam Chomsky",
@@ -190,7 +190,7 @@
       "Karl Bühler"
     ],
     "correctIndex": 1,
-    "explanation": "Noam Chomsky desarrolló la teoría generativa que postula el carácter innato y universal de la facultad del lenguaje humano.",
+    "explanation": "Criterio: distinguir la atribución de una propuesta teórica de una afirmación de consenso universal. Aplicación: el innatismo vinculado al enfoque generativista se asocia con Chomsky. Respuesta: Noam Chomsky. La propuesta no significa nacer hablando una lengua particular ni vuelve innecesaria la experiencia lingüística.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.3.4",
@@ -200,7 +200,7 @@
   {
     "id": "leng_t01_s03_c12",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la frase 'La palabra árbol es grave y se tilda porque termina en consonante l', la función predominante es:",
+    "statement": "Una profesora explica «Árbol es una palabra llana y lleva tilde por terminar en l». Si el objetivo es analizar la acentuación de la palabra, ¿qué función predomina?",
     "options": [
       "Apelativa",
       "Representativa",
@@ -208,7 +208,7 @@
       "Fática"
     ],
     "correctIndex": 2,
-    "explanation": "Explica la regla de acentuación de una palabra del idioma; por tanto, el código habla de sí mismo en función metalingüística.",
+    "explanation": "Criterio: la función metalingüística se orienta al código, por ejemplo al analizar una palabra y su escritura. Aplicación: la explicación trata de la acentuación de árbol. Respuesta: metalingüística. Las palabras llanas se tildan normalmente cuando terminan en consonante distinta de n o s; l cumple esa condición. No se confunde nombrar un árbol con analizar la palabra árbol.",
     "subject": "lenguaje",
     "semana": 1,
     "concept": "1.3.3",

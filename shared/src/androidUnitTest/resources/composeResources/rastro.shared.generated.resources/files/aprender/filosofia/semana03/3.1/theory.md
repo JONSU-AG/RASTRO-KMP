@@ -78,26 +78,49 @@ E) Toda acción humana está regida por la causalidad divina según el principio
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE PROBLEMAS FUNDAMENTALES
 
-```
-                           PROBLEMAS FUNDAMENTALES DE LA FILOSOFÍA
-                                              │
-         ┌──────────────────┬─────────────────┼─────────────────┬──────────────────┐
-         ▼                  ▼                 ▼                 ▼                  ▼
-    PROBLEMA DEL      PROBLEMA DEL       PROBLEMA DE       PROBLEMA DEL       PROBLEMA DE
-        SER           CONOCIMIENTO        LA VERDAD           VALOR           LA LIBERTAD
-         │                  │                 │                 │                  │
-• ¿Qué es lo real?   • Posibilidad:     • Correspondencia • Subjetivismo:    • Determinismo:
-  - Monismo vs.        - Dogmatismo       (Aristóteles,     - Hedonismo        - Causalidad
-    Pluralismo         - Escepticismo     Tarski)           - Utilitarismo       universal
-  - Materialismo vs.   - Criticismo     • Coherencia      • Objetivismo:     • Indeterminismo:
-    Idealismo        • Origen:          • Pragmatismo       - Idealismo        - Azar / Libre
-  - Trascendencia vs.  - Racionalismo     (James)             platónico          albedrío
-    Inmanencia         - Empirismo      • Consenso          - Materialismo   • Autodetermi-
-                       - Criticismo       (Habermas)          axiológico       nismo (Sartre,
-                     • Esencia:                                                Kant)
-                       - Realismo
-                       - Idealismo
-                       - Fenomenalismo
+```mermaid
+graph TD
+ ROOT["Problemas filosóficos y distinciones"]
+ B1["Ser y realidad"]
+ B1N1["Monismo, dualismo y pluralismo: distinguir propuestas sobre principios o tipos de realidad."]
+ B1N2["Materialismo e idealismo son familias de posiciones; no forman una lista idéntica a monismo y pluralismo."]
+ B1N3["Trascendencia e inmanencia requieren precisar respecto de qué se afirma la relación."]
+ B2["Conocimiento"]
+ B2N1["Preguntar por posibilidad, fuentes y alcance; distinguir las preguntas de las respuestas de cada autor."]
+ B2N2["Racionalismo y empirismo destacan diferentes papeles de razón y experiencia; no describen una oposición absoluta entre pensar y observar."]
+ B2N3["Realismo, idealismo y fenomenalismo tienen formulaciones diversas; identificar el sentido usado."]
+ B3["Verdad y justificación"]
+ B3N1["Correspondencia, coherencia y enfoques pragmatistas responden de maneras distintas al problema de la verdad."]
+ B3N2["Distinguir una teoría de la verdad de un criterio para reconocerla o justificar una creencia."]
+ B3N3["Un acuerdo o consenso no convierte automáticamente cualquier afirmación en verdadera."]
+ B4["Valor"]
+ B4N1["Subjetivismo y objetivismo discuten la dependencia del valor respecto del sujeto."]
+ B4N2["Hedonismo y utilitarismo no son por definición subtipos obligatorios de subjetivismo axiológico."]
+ B4N3["Separar qué se considera valioso de cómo se entiende la existencia de los valores."]
+ B5["Libertad"]
+ B5N1["Determinismo e indeterminismo no equivalen sin más a ausencia o presencia de libertad."]
+ B5N2["El azar por sí solo no demuestra control sobre las propias acciones."]
+ B5N3["Compatibilismo e incompatibilismo difieren sobre la posibilidad de libertad bajo determinismo."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ ROOT --> B5
+ B5 --> B5N1
+ B5 --> B5N2
+ B5 --> B5N3
 ```
 
 ---
@@ -249,3 +272,14 @@ E) Postula que el conocimiento se reduce exclusivamente al recuerdo de ideas inn
 - **I**ntelectualismo (Aristóteles / Tomás de Aquino)
 
 ---
+
+
+### Tres preguntas distintas sobre la libertad
+
+| Pregunta | Qué se está discutiendo | Qué no se deduce automáticamente |
+|---|---|---|
+| ¿Los acontecimientos están determinados? | Relación entre condiciones, leyes y acontecimientos | Que toda teoría de la libertad sea imposible |
+| ¿Hay acontecimientos indeterminados? | Si algunos resultados no quedan fijados del mismo modo | Que el azar otorgue control personal |
+| ¿Qué hace libre una acción? | Control, razones, alternativas y responsabilidad | Una respuesta única compartida por todas las corrientes |
+
+> **Importante:** identificar una posición no obliga a aceptarla como un hecho. Comparar argumentos y supuestos sin convertir azar y libertad en sinónimos.

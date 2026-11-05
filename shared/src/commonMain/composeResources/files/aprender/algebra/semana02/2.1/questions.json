@@ -1,1 +1,200 @@
-[{"concept":"2.1.1","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. Determinamos la intersección A \\cap B: A \\cap B = [-4, 5\\rangle \\cap \\langle 1, 8] = \\langle 1, 5\\rangle 2. Aplicamos la propiedad de diferencia: (A \\cap B)' \\cap A = A - (A \\cap B) = A - B. A - B = [-4, 5\\rangle - \\langle 1, 8] = [-4, 1] 3. Identificamos los números enteros contenidos en el intervalo cerrado [-4, 1]: \\text{Enteros} \\in \\{-4, -3, -2, -1, 0, 1\\} 4. Calculamos la suma solicitada: \\Sigma = (-4) + (-3) + (-2) + (-1) + 0 + 1 = -9 **Respuesta Correcta:** **B) -9** ---","fuente":"temario","id":"alg_t02_s01_c01","options":["-10","-9","-7","-5"],"pedagogicalTier":"concepto","semana":2,"statement":"**Enunciado:** Dados los intervalos en la recta real:","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.1.2","correctIndex":1,"explanation":"**Resolución Paso a Paso:** 1. Aplicamos el teorema: |A| = B \\iff B \\ge 0 \\land (A = B \\lor A = -B). 2. **Condición de existencia (Universo admisible):** x + 6 \\ge 0 \\implies x \\ge -6 \\implies \\mathcal{U} = [-6, +\\infty\\rangle 3. **Caso 1 (A = B):** 2x - 3 = x + 6 \\implies 2x - x = 6 + 3 \\implies x_1 = 9 Verificamos: 9 \\ge -6 (Pertenece al universo \\mathcal{U}, solución válida). 4. **Caso 2 (A = -B):** 2x - 3 = -(x + 6) = -x - 6 2x + x = -6 + 3 \\implies 3x = -3 \\implies x_2 = -1 Verificamos: -1 \\ge -6 (Pertenece al universo \\mathcal{U}, solución válida). 5. Conjunto solución: S = \\{-1, 9\\}. 6. Calculamos la suma de soluciones: \\Sigma = 9 + (-1) = 8 **Respuesta Correcta:** **B) 8** ---","fuente":"temario","id":"alg_t02_s01_c02","options":["12","6","8","10"],"pedagogicalTier":"concepto","semana":2,"statement":"**Enunciado:** Resuelva la siguiente ecuación en \\mathbb{R}:","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.1.3","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Aplicamos el artificio de elevación al cuadrado (propiedad: |A| \\le |B| \\iff (A - B)(A + B) \\le 0): [(3x - 4) - (x + 8)] \\cdot [(3x - 4) + (x + 8)] \\le 0 2. Simplificamos los factores algebraicos: [3x - 4 - x - 8] \\cdot [3x - 4 + x + 8] \\le 0 (2x - 12) \\cdot (4x + 4) \\le 0 3. Factorizamos los coeficientes numéricos: 2(x - 6) \\cdot 4(x + 1) \\le 0 8(x - 6)(x + 1) \\le 0 \\implies (x + 1)(x - 6) \\le 0 4. Ubicamos los puntos críticos sobre la recta real: - Puntos críticos: x = -1 y x = 6. - Como la desigualdad es \\le 0, tomamos la zona negativa central (cerrada): x \\in [-1, 6] **Respuesta Correcta:** **A) [-1, 6]** ---","fuente":"temario","id":"alg_t02_s01_c03","options":["[-2, 6]","[0, 6]","[-1, 6]","\\langle -1, 6 \\rangle"],"pedagogicalTier":"concepto","semana":2,"statement":"**Enunciado:** Determine el conjunto solución de la inecuación:","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Equivale a |x - 3| (con valor absoluto obligatorio).","fuente":"temario","id":"alg_t02_s01_c04","options":["Que el segundo miembro sea mayor o igual a cero (B \\ge 0).","El conjunto vacío (S = \\emptyset), ya que el valor absoluto nunca puede ser negativo.","Valor o condición no aplicable al caso planteado","Equivale a |x - 3| (con valor absoluto obligatorio)."],"pedagogicalTier":"concepto","semana":2,"statement":"¿A qué equivale simplificar la expresión \\sqrt{(x - 3)^2} en los números reales?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Que el segundo miembro sea mayor o igual a cero (B \\ge 0).","fuente":"temario","id":"alg_t02_s01_c05","options":["Que el segundo miembro sea mayor o igual a cero (B \\ge 0).","Equivale a |x - 3| (con valor absoluto obligatorio).","El conjunto vacío (S = \\emptyset), ya que el valor absoluto nunca puede ser negativo.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":2,"statement":"¿Cuál es la condición obligatoria para que la ecuación |A| = B admita soluciones reales?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: El conjunto vacío (S = \\emptyset), ya que el valor absoluto nunca puede ser negativo.","fuente":"temario","id":"alg_t02_s01_c06","options":["Equivale a |x - 3| (con valor absoluto obligatorio).","El conjunto vacío (S = \\emptyset), ya que el valor absoluto nunca puede ser negativo.","Que el segundo miembro sea mayor o igual a cero (B \\ge 0).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":2,"statement":"¿Cuál es el conjunto solución de la inecuación |x| < -4?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t02_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t02_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t02_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t02_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "2.1.1",
+    "correctIndex": 0,
+    "explanation": "1. Sumamos fracciones con denominador común.\n2. Sustituimos y operamos: $4/3+5/6=(8+5)/6$.\n3. El valor pedido es $\\frac{13}{6}$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s01_c01",
+    "options": [
+      "$\\frac{13}{6}$",
+      "$\\frac{19}{6}$",
+      "$\\frac{7}{6}$",
+      "$\\frac{13}{3}$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "Calcula $\\frac{4}{3}$ + $\\frac{5}{6}$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.2",
+    "correctIndex": 3,
+    "explanation": "1. La distancia es el valor absoluto de la diferencia.\n2. Sustituimos y operamos: $|5-(-4)|=|9|$.\n3. El valor pedido es $9$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s01_c02",
+    "options": [
+      "$10$",
+      "$8$",
+      "$18$",
+      "$9$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "¿Cuál es la distancia entre −4 y 5 en la recta real?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.3",
+    "correctIndex": 2,
+    "explanation": "1. El valor absoluto mide distancia a cero.\n2. Sustituimos y operamos: $|-4|-|5|=4-5$.\n3. El valor pedido es $-1$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s01_c03",
+    "options": [
+      "$-2$",
+      "$1$",
+      "$-1$",
+      "$0$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "Calcula |−4| − |5|.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.4",
+    "correctIndex": 1,
+    "explanation": "1. Un número no nulo por su inverso da uno.\n2. Sustituimos y operamos: $(4/5)(5/4)=1$.\n3. El valor pedido es $\\frac{5}{4}$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s01_c04",
+    "options": [
+      "$\\frac{5}{2}$",
+      "$\\frac{5}{4}$",
+      "$\\frac{9}{4}$",
+      "$\\frac{1}{4}$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "¿Cuál es el inverso multiplicativo de $\\frac{4}{5}$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.5",
+    "correctIndex": 0,
+    "explanation": "1. Restar un negativo equivale a sumar su opuesto.\n2. Sustituimos y operamos: $6-(-4)=6+4$.\n3. El valor pedido es $10$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s01_c05",
+    "options": [
+      "$10$",
+      "$11$",
+      "$9$",
+      "$20$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "Calcula $6$ − ($-4$) respetando los signos.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.6",
+    "correctIndex": 3,
+    "explanation": "1. Sumamos fracciones con denominador común.\n2. Sustituimos y operamos: $5/3+6/6=(10+6)/6$.\n3. El valor pedido es $\\frac{8}{3}$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s01_c06",
+    "options": [
+      "$\\frac{11}{3}$",
+      "$\\frac{5}{3}$",
+      "$\\frac{16}{3}$",
+      "$\\frac{8}{3}$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "Calcula $\\frac{5}{3}$ + $1$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.7",
+    "correctIndex": 2,
+    "explanation": "1. La distancia es el valor absoluto de la diferencia.\n2. Sustituimos y operamos: $|6-(-5)|=|11|$.\n3. El valor pedido es $11$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s01_c07",
+    "options": [
+      "$10$",
+      "$22$",
+      "$11$",
+      "$12$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "¿Cuál es la distancia entre −5 y 6 en la recta real?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.8",
+    "correctIndex": 1,
+    "explanation": "1. El valor absoluto mide distancia a cero.\n2. Sustituimos y operamos: $|-5|-|6|=5-6$.\n3. El valor pedido es $-1$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s01_c08",
+    "options": [
+      "$1$",
+      "$-1$",
+      "$0$",
+      "$-2$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "Calcula |−5| − |6|.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.9",
+    "correctIndex": 0,
+    "explanation": "1. Un número no nulo por su inverso da uno.\n2. Sustituimos y operamos: $(5/6)(6/5)=1$.\n3. El valor pedido es $\\frac{6}{5}$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s01_c09",
+    "options": [
+      "$\\frac{6}{5}$",
+      "$\\frac{11}{5}$",
+      "$\\frac{1}{5}$",
+      "$\\frac{12}{5}$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "¿Cuál es el inverso multiplicativo de $\\frac{5}{6}$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.10",
+    "correctIndex": 3,
+    "explanation": "1. Restar un negativo equivale a sumar su opuesto.\n2. Sustituimos y operamos: $7-(-5)=7+5$.\n3. El valor pedido es $12$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s01_c10",
+    "options": [
+      "$13$",
+      "$11$",
+      "$24$",
+      "$12$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "Calcula $7$ − ($-5$) respetando los signos.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.11",
+    "correctIndex": 2,
+    "explanation": "1. Sumamos fracciones con denominador común.\n2. Sustituimos y operamos: $6/3+7/6=(12+7)/6$.\n3. El valor pedido es $\\frac{19}{6}$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s01_c11",
+    "options": [
+      "$\\frac{13}{6}$",
+      "$\\frac{19}{3}$",
+      "$\\frac{19}{6}$",
+      "$\\frac{25}{6}$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "Calcula $2$ + $\\frac{7}{6}$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

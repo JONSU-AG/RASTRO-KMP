@@ -1,1 +1,200 @@
-[{"concept":"4.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"4.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t04_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "4.2.1",
+    "correctIndex": 0,
+    "explanation": "1. El grado absoluto suma los exponentes.\n2. Sustituimos y operamos: $m+4=9;\\quad m=5$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s02_c01",
+    "options": [
+      "$5$",
+      "$6$",
+      "$4$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "El monomio $x^{m}$ $y^{4}$ tiene grado absoluto 9. ¿Cuánto vale m?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.2",
+    "correctIndex": 3,
+    "explanation": "1. Aparecen las potencias desde cero hasta el grado.\n2. Sustituimos y operamos: $0,1,\\ldots,4:\\quad 4+1$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s02_c02",
+    "options": [
+      "$6$",
+      "$4$",
+      "$10$",
+      "$5$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "Un polinomio completo de una variable y grado 4 tiene todos sus coeficientes no nulos. ¿Cuántos términos tiene?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.3",
+    "correctIndex": 2,
+    "explanation": "1. Los términos principales se multiplican y sus coeficientes no se anulan.\n2. Sustituimos y operamos: $gr(PQ)=4+5$.\n3. El valor pedido es $9$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s02_c03",
+    "options": [
+      "$8$",
+      "$18$",
+      "$9$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "P y Q son polinomios no nulos de grados 4 y 5. ¿Qué grado tiene su producto?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.4",
+    "correctIndex": 1,
+    "explanation": "1. En una identidad polinómica coinciden los coeficientes de cada potencia.\n2. Sustituimos y operamos: $m=4$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s02_c04",
+    "options": [
+      "$8$",
+      "$4$",
+      "$5$",
+      "$3$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "En la identidad mx² + 3 = 4x² + 3, válida para todo x, ¿cuánto vale m?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.5",
+    "correctIndex": 0,
+    "explanation": "1. Todos los términos de un polinomio homogéneo tienen el mismo grado absoluto.\n2. Sustituimos y operamos: $4+m=5;\\quad m=1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s02_c05",
+    "options": [
+      "$1$",
+      "$2$",
+      "$0$",
+      "$3$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "Para que $x^{4}$$y^{m}$ + $x^{5}$ sea homogéneo, ¿cuánto debe valer m?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.6",
+    "correctIndex": 3,
+    "explanation": "1. El grado absoluto suma los exponentes.\n2. Sustituimos y operamos: $m+5=11;\\quad m=6$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s02_c06",
+    "options": [
+      "$7$",
+      "$5$",
+      "$12$",
+      "$6$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "El monomio $x^{m}$ $y^{5}$ tiene grado absoluto 11. ¿Cuánto vale m?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.7",
+    "correctIndex": 2,
+    "explanation": "1. Aparecen las potencias desde cero hasta el grado.\n2. Sustituimos y operamos: $0,1,\\ldots,5:\\quad 5+1$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s02_c07",
+    "options": [
+      "$5$",
+      "$12$",
+      "$6$",
+      "$7$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "Un polinomio completo de una variable y grado 5 tiene todos sus coeficientes no nulos. ¿Cuántos términos tiene?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.8",
+    "correctIndex": 1,
+    "explanation": "1. Los términos principales se multiplican y sus coeficientes no se anulan.\n2. Sustituimos y operamos: $gr(PQ)=5+6$.\n3. El valor pedido es $11$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s02_c08",
+    "options": [
+      "$22$",
+      "$11$",
+      "$12$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "P y Q son polinomios no nulos de grados 5 y 6. ¿Qué grado tiene su producto?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.9",
+    "correctIndex": 0,
+    "explanation": "1. En una identidad polinómica coinciden los coeficientes de cada potencia.\n2. Sustituimos y operamos: $m=5$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s02_c09",
+    "options": [
+      "$5$",
+      "$6$",
+      "$4$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "En la identidad mx² + 3 = 5x² + 3, válida para todo x, ¿cuánto vale m?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.10",
+    "correctIndex": 3,
+    "explanation": "1. Todos los términos de un polinomio homogéneo tienen el mismo grado absoluto.\n2. Sustituimos y operamos: $5+m=6;\\quad m=1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s02_c10",
+    "options": [
+      "$2$",
+      "$0$",
+      "$3$",
+      "$1$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "Para que $x^{5}$$y^{m}$ + $x^{6}$ sea homogéneo, ¿cuánto debe valer m?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.11",
+    "correctIndex": 2,
+    "explanation": "1. El grado absoluto suma los exponentes.\n2. Sustituimos y operamos: $m+6=13;\\quad m=7$.\n3. El valor pedido es $7$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t04_s02_c11",
+    "options": [
+      "$6$",
+      "$14$",
+      "$7$",
+      "$8$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 4,
+    "statement": "El monomio $x^{m}$ $y^{6}$ tiene grado absoluto 13. ¿Cuánto vale m?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

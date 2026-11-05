@@ -9,7 +9,7 @@
 | **Tiempo de Estudio Recomendado** | 4.5 horas |
 | **Resolución Curricular** | R.C.U. N.° 0028-2026 (Admisión 2027) |
 | **Prerrequisitos** | Pronombres personales, vocabulario verbal elemental |
-| **Objetivo Pedagógico** | Dominar con exactitud la morfología, sintaxis y contraste pragmático entre el **Present Simple** (rutinas, hechos científicos, estados permanentes) y el **Present Continuous** (acciones en progreso, situaciones temporales y planes cercanos); aplicar las reglas de adición de *-s/-es/-ies* e *-ing*; y reconocer los **Stative Verbs** no susceptibles de aspecto continuo. |
+| **Objetivo Pedagógico** | Dominar con exactitud la morfología, sintaxis y contraste pragmático entre el **Present Simple** (rutinas, hechos científicos, estados permanentes) y el **Present Continuous** (acciones en progreso, situaciones temporales y planes cercanos); aplicar las reglas de adición de *-s/-es/-ies* e *-ing*; y reconocer los **Stative Verbs**, que normalmente usan formas simples cuando expresan estados. |
 
 ---
 
@@ -37,11 +37,10 @@ graph TD
 ---
 
 
-## 2. FORMAL THEORETICAL FOUNDATIONS - PART I
 ## 3. FUNDAMENTACIÓN TEÓRICA RIGUROSA
 
 ### 3.1. The Present Simple Tense
-El **Present Simple** se utiliza para expresar acciones habituales, rutinas cotidianas, leyes científicas universales, verdades absolutas y estados permanentes en el tiempo.
+El **Present Simple** se utiliza para expresar acciones habituales, rutinas cotidianas, hechos generales y estados que se presentan como habituales o estables; no es necesario que sean eternos o invariables.
 
 #### A. Morfología y Reglas Ortográficas de la Tercera Persona Singular (*He, She, It*)
 En oraciones afirmativas, los sujetos singulares de tercera persona exigen la modificación del verbo base:
@@ -63,7 +62,7 @@ En oraciones afirmativas, los sujetos singulares de tercera persona exigen la mo
   ***Does** he **study** civil engineering? \rightarrow Yes, he does. / No, he doesn't.*
 
 #### C. Adverbios de Frecuencia y Posición Sintáctica
-Indican con qué periodicidad se realiza una acción (*always 100%, usually 80%, often 60%, sometimes 40%, hardly ever 10%, never 0%*).
+Indican con qué frecuencia se realiza una acción: *always* (siempre), *usually* (normalmente), *often* (a menudo), *sometimes* (a veces), *hardly ever* (casi nunca) y *never* (nunca). No equivalen a porcentajes fijos: su interpretación depende de la actividad y del contexto. Los porcentajes de algunas tablas son ayudas orientativas, no una regla de significado.
 - **Regla de Posición 1:** Se colocan **antes del verbo principal**:
   \text{Subject} + \mathbf{Adverb \ of \ Frequency} + \text{Main Verb} + \text{Complement}
   *Carlos **always arrives** on time for lectures.*

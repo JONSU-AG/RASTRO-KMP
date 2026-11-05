@@ -2,15 +2,15 @@
   {
     "id": "leng_t03_s02_c01",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La separación silábica de dos vocales contiguas en sílabas distintas se denomina formalmente:",
+    "statement": "Cuando dos vocales de una palabra pertenecen a sílabas distintas en el análisis indicado, ¿qué relación presentan?",
     "options": [
       "Hiato",
       "Diptongo",
       "Triptongo",
-      "Sinalefa"
+      "Unión métrica entre palabras"
     ],
     "correctIndex": 0,
-    "explanation": "El hiato es el fenómeno heterosilábico por el cual dos vocales consecutivas se pronuncian en sílabas diferentes.",
+    "explanation": "Criterio: distinguir vocales de una misma sílaba de vocales de sílabas diferentes. Aplicación: la consigna indica separación silábica dentro de una palabra. Respuesta: hiato. La clasificación debe precisar si se refiere a pronunciación observada o a la convención ortográfica del ejercicio.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.2.3",
@@ -20,15 +20,15 @@
   {
     "id": "leng_t03_s02_c02",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la palabra 'bú-ho', la presencia de la 'h' intercalada produce:",
+    "statement": "En búho, analizada como bú-ho, ¿qué explicación justifica el hiato y la tilde?",
     "options": [
-      "La ruptura de la sílaba en hiato acentual",
-      "Un diptongo decreciente",
-      "Un triptongo irregular",
-      "Una sílaba trabada"
+      "La ú es cerrada tónica junto a una abierta; la h no causa la separación",
+      "La h convierte necesariamente cualquier grupo de vocales en diptongo",
+      "La h vuelve tónica la o",
+      "La h hace cerrada la primera sílaba"
     ],
     "correctIndex": 0,
-    "explanation": "La 'h' no impide el hiato; al recaer la mayor fuerza de voz en la vocal cerrada 'ú', se produce hiato acentual con tilde robúrica.",
+    "explanation": "Criterio: aplicar la regla de vocal cerrada tónica junto a abierta, también con h intercalada. Aplicación: ú y o pertenecen a sílabas distintas en bú-ho y se escribe tilde sobre ú. Respuesta: cerrada tónica junto a abierta; la h no causa el hiato ni constituye una coda pronunciada en ese caso.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.2.3",
@@ -38,7 +38,7 @@
   {
     "id": "leng_t03_s02_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes palabras presenta exclusivamente un diptongo creciente?",
+    "statement": "En la división silábica escolar indicada para cada opción, ¿qué palabra presenta un diptongo creciente, de cerrada átona seguida de abierta?",
     "options": [
       "Pai-sa-je",
       "Ciu-dad",
@@ -46,7 +46,7 @@
       "Pei-ne"
     ],
     "correctIndex": 2,
-    "explanation": "En 'via-je', la sílaba 'via' une una vocal cerrada átona (/i/) con una vocal abierta (/a/), formando un diptongo creciente.",
+    "explanation": "Criterio: comparar el orden de las vocales en la secuencia del análisis indicado. Aplicación: via une i átona antes de a. Respuesta: via-je. Paisaje y peine muestran el orden inverso en esos análisis; ciudad contiene dos cerradas distintas. No se usa la etiqueta como predicción absoluta de todas las realizaciones del habla.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.2.1",
@@ -56,15 +56,15 @@
   {
     "id": "leng_t03_s02_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La regla que exige colocar tilde sobre la vocal cerrada tónica cuando está junto a una vocal abierta recibe el nombre de:",
+    "statement": "¿En qué palabra la tilde responde a un hiato de vocal cerrada tónica junto a vocal abierta, y no a la regla general de una esdrújula?",
     "options": [
-      "Tilde diacrítica",
-      "Tilde enfática",
-      "Tilde robúrica o disolvente",
-      "Tilde paroxítona"
+      "Casa",
+      "Mesa",
+      "País",
+      "Pájaro"
     ],
     "correctIndex": 2,
-    "explanation": "La tilde robúrica o disolvente se coloca de manera obligatoria sobre la vocal cerrada que destruye el diptongo para formar hiato acentual.",
+    "explanation": "Criterio: distinguir el motivo ortográfico de la tilde. Aplicación: país contiene a e í en sílabas distintas y la regla exige tilde sobre la cerrada tónica. Respuesta: país. Pájaro se tilda por ser esdrújula. La tilde representa la regla aplicada, no una fuerza física que rompa una sílaba.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.2.3",
@@ -74,15 +74,15 @@
   {
     "id": "leng_t03_s02_c05",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La palabra 'Paraguay' contiene un triptongo porque cumple la estructura vocálica:",
+    "statement": "En el análisis Pa-ra-guay, la sílaba final contiene un triptongo. ¿Qué secuencia vocálica corresponde a ese caso?",
     "options": [
-      "VC átona + VA tónica + VC átona (representada por 'y')",
-      "VA + VC + VA",
-      "VC + VC + VA",
-      "Tres vocales abiertas en la misma sílaba"
+      "Cerrada átona + abierta tónica + cerrada átona, representada al final por y",
+      "Tres vocales abiertas",
+      "Abierta + cerrada tónica + abierta",
+      "Tres núcleos silábicos independientes"
     ],
     "correctIndex": 0,
-    "explanation": "En 'Pa-ra-guay', la sílaba final 'guay' une /u/ (VC) + /a/ (VA tónica) + /i/ (VC representada por la grafía 'y').",
+    "explanation": "Criterio: identificar tres vocales dentro de una misma sílaba en el análisis propuesto. Aplicación: la secuencia final reúne u, a e i, esta última representada por y. Respuesta: cerrada átona, abierta tónica y cerrada átona. Que la abierta sea tónica en Paraguay no significa que todo triptongo tenga que ocupar una sílaba tónica.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.2.2",
@@ -92,7 +92,7 @@
   {
     "id": "leng_t03_s02_c06",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes palabras presenta un hiato simple por concurrencia de dos vocales abiertas?",
+    "statement": "¿Qué opción contiene un hiato de dos vocales abiertas distintas en la división indicada?",
     "options": [
       "Tí-o",
       "Rui-do",
@@ -100,7 +100,7 @@
       "Ca-os"
     ],
     "correctIndex": 3,
-    "explanation": "En 'ca-os', las vocales /a/ y /o/ son abiertas; dos vocales abiertas contiguas se separan siempre en hiato simple.",
+    "explanation": "Criterio: identificar tanto la separación silábica como el tipo de vocales. Aplicación: ca-os separa a y o, dos abiertas distintas. Respuesta: ca-os. Tío tiene hiato de cerrada tónica y abierta; ruido y fuego se tratan con diptongo en los análisis indicados.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.2.3",
@@ -110,15 +110,15 @@
   {
     "id": "leng_t03_s02_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la palabra 'cui-da-do', la secuencia vocálica 'ui' forma un:",
+    "statement": "A efectos de acentuación gráfica, la secuencia ui de cuidado se considera:",
     "options": [
-      "Hiato simple",
-      "Diptongo homogéneo",
-      "Hiato acentual",
-      "Diptongo decreciente"
+      "Hiato de dos abiertas",
+      "Diptongo de dos cerradas distintas",
+      "Hiato de dos vocales iguales",
+      "Diptongo de abierta y cerrada"
     ],
     "correctIndex": 1,
-    "explanation": "La combinación de dos vocales cerradas distintas (/i/ y /u/) constituye un diptongo homogéneo.",
+    "explanation": "Criterio: aplicar la convención ortográfica para dos cerradas distintas. Aplicación: cuidado contiene ui. Respuesta: diptongo de dos cerradas distintas. Este tipo de secuencia puede llevar tilde cuando corresponde por las reglas generales, como en cuídate; no se afirma que ui e iu estén siempre libres de tilde.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.2.1",
@@ -128,15 +128,15 @@
   {
     "id": "leng_t03_s02_c08",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la palabra 'ahijado' (ahi-ja-do), la concurrencia vocálica corresponde a un:",
+    "statement": "En el análisis ahi-ja-do de ahijado, ¿cómo se clasifica la secuencia a-i a pesar de la h intercalada?",
     "options": [
-      "Hiato acentual con tilde",
-      "Diptongo decreciente",
+      "Hiato de cerrada tónica",
+      "Diptongo decreciente de abierta y cerrada átona",
       "Triptongo",
-      "Hiato simple de vocales abiertas"
+      "Hiato de dos abiertas"
     ],
     "correctIndex": 1,
-    "explanation": "En 'ahi-ja-do', la vocal abierta 'a' y la vocal cerrada átona 'i' forman un diptongo decreciente a pesar de la 'h' intermedia.",
+    "explanation": "Criterio: analizar la pertenencia silábica y el orden vocálico del ejemplo. Aplicación: a e i átona comparten la primera sílaba del análisis indicado. Respuesta: diptongo decreciente. La h intercalada no determina por sí sola que haya diptongo o hiato.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.2.1",
@@ -146,7 +146,7 @@
   {
     "id": "leng_t03_s02_c09",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuántos hiatos acentuales contiene la oración 'Raúl tenía un baúl de recuerdos en su habitación'?",
+    "statement": "Cuenta solo los hiatos de cerrada tónica junto a abierta dentro de cada palabra de «Raúl tenía un baúl de recuerdos en su habitación», sin unir vocales entre palabras. ¿Cuántos hay?",
     "options": [
       "4",
       "3",
@@ -154,7 +154,7 @@
       "2"
     ],
     "correctIndex": 1,
-    "explanation": "Los hiatos acentuales son tres: Ra-úl, te-ní-a y ba-úl. ('habitación' tiene diptongo creciente ión).",
+    "explanation": "Criterio: revisar cada palabra y registrar únicamente la clase de hiato solicitada. Aplicación: Ra-úl, te-ní-a y ba-úl aportan uno cada una; habitación contiene el diptongo de ción en el análisis escolar. Respuesta: tres. No se cuentan encuentros entre palabras ni todos los hiatos de cualquier clase.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.2.3",
@@ -164,15 +164,15 @@
   {
     "id": "leng_t03_s02_c10",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La separación de dos vocales cerradas idénticas en palabras como 'chi-i-ta' o 'o-dri-is-ta' constituye un:",
+    "statement": "En el análisis le-er, ¿cómo se clasifica la secuencia de dos vocales iguales?",
     "options": [
-      "Diptongo homogéneo",
-      "Hiato acentual obligatorio",
-      "Hiato simple",
-      "Triptongo duplicado"
+      "Diptongo de cerradas distintas",
+      "Hiato de cerrada tónica junto a abierta",
+      "Hiato de dos vocales iguales",
+      "Triptongo"
     ],
     "correctIndex": 2,
-    "explanation": "Dos vocales cerradas exactamente idénticas contiguas (ii, uu) se pronuncian en sílabas distintas formando un hiato simple.",
+    "explanation": "Criterio: distinguir vocales iguales en sílabas diferentes de dos cerradas distintas. Aplicación: le-er separa dos e. Respuesta: hiato de dos vocales iguales. Su tildación sigue las reglas generales; la presencia de un hiato no obliga por sí sola a escribir una tilde.",
     "subject": "lenguaje",
     "semana": 3,
     "concept": "3.2.3",

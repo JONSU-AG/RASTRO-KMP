@@ -16,7 +16,7 @@ graph TD
     ATM --> CLIM_PERU["Climatología del Perú y Eventos Extremos"]
 
     COMP_ESTR --> GASES["Composición Química:<br/>Permanentes (N2: 78%, O2: 21%) y Variables (H2O, CO2, O3)"]
-    COMP_ESTR --> CAPAS["Capas Térmicas:<br/>Tropósfera, Estratósfera (Ozono), Mesósfera, Termósfera (Ionósfera), Exósfera"]
+    COMP_ESTR --> CAPAS["Capas Térmicas:<br/>Tropósfera, Estratósfera (Ozono), Mesósfera, Termósfera; ionósfera superpuesta a varias capas, Exósfera"]
 
     ELEM_FACT --> ELEM["Elementos del Clima:<br/>Radiación, Temperatura, Presión, Viento, Humedad, Precipitación"]
     ELEM_FACT --> FACT["Factores del Clima:<br/>Cósmicos (Latitud, Insolación) y Geográficos (Altitud, Relieve, Corrientes)"]
@@ -298,7 +298,7 @@ IV. Durante la fase opuesta (La Niña), los vientos alisios se extinguen por com
 * **PREGUNTA:** ¿Cuál es la capa atmosférica donde se desintegran los meteoroides y se registra la menor temperatura del planeta?
   * **RESPUESTA:** La Mesósfera (en la mesopausa se alcanzan de -90^\circ\text{C} a -100^\circ\text{C}).
 * **PREGUNTA:** ¿Qué capa de la atmósfera refleja las ondas de radio AM permitiendo las telecomunicaciones a larga distancia?
-  * **RESPUESTA:** La Termósfera o Ionósfera (capas de Kennelly-Heaviside y Appleton).
+  * **RESPUESTA:** La ionósfera, región ionizada superpuesta a varias capas térmicas; el comportamiento de la señal depende de su frecuencia.
 * **PREGUNTA:** ¿Cuál es el valor del gradiente térmico vertical estándar en la tropósfera?
   * **RESPUESTA:** Disminución de 6.5^\circ\text{C} por cada 1\,000\text{ metros} de ascenso (0.65^\circ\text{C} / 100\text{ m}).
 * **PREGUNTA:** ¿Qué instrumento mide la presión atmosférica y cuál mide la humedad relativa?
@@ -318,45 +318,31 @@ IV. Durante la fase opuesta (La Niña), los vientos alisios se extinguen por com
 
 
 
-### 3.2. Estructura Vertical Térmica de la Atmósfera
+### 3.2. Estructura vertical de la atmósfera
 
-La atmósfera se subdivide en capas concéntricas basándose en la variación de la temperatura con la altitud:
+### Capas atmosféricas: leer de abajo hacia arriba
 
-```
-Altitud (km)
- ↑
-1000 +-----------------------------------------+  Exósfera / Magnetósfera (Cinturones de Van Allen)
-     |                                         |
- 500 +-----------------------------------------+  Termopausa
-     |   TERMÓSFERA / IONÓSFERA                |  T asciende hasta 1 500 °C. Auroras y Telecomunicaciones
-  85 +-----------------------------------------+  Mesopausa (-100 °C, capa más fría)
-     |   MESÓSFERA                             |  Desintegración de meteoros. Sodiosfera
-  50 +-----------------------------------------+  Estratopausa
-     |   ESTRATÓSFERA (Ozonósfera a 25-30 km)  |  T asciende por absorción UV. Vuelos supersónicos
-  12 +-----------------------------------------+  Tropopausa (-56 °C, "techo del tiempo")
-     |   TROPÓSFERA                            |  Gradiente vertical: -6.5 °C / 1 000 m. Fenómenos climáticos
-   0 +=========================================+  Superficie Terrestre (Nivel del Mar)
-```
+| Capa | Extensión orientativa | Comportamiento térmico y rasgo principal |
+|---|---|---|
+| Tropósfera | Desde la superficie hasta una tropopausa variable | La temperatura suele disminuir con la altura; concentra la mayor parte del tiempo meteorológico |
+| Estratósfera | Desde la tropopausa hasta unos 50 km | La absorción de radiación ultravioleta por el ozono contribuye al aumento de temperatura |
+| Mesósfera | Aproximadamente 50–85 km | La temperatura vuelve a disminuir; muchos meteoroides se desintegran en esta región |
+| Termósfera | Desde unos 85 km hasta varios cientos de kilómetros | Aumenta la temperatura cinética del gas, que es muy poco denso |
+| Exósfera | Transición exterior por encima de la termósfera | Partículas muy separadas; no es una frontera rígida con el espacio |
 
-1. **Tropósfera ("Esfera de cambios"):**
-   * Espesor variable: \approx 18\text{ km} en el ecuador (por mayor fuerza centrífuga y calor) y \approx 9\text{ km} en los polos.
-   * Contiene el **80\% del peso total de la atmósfera** y prácticamente la totalidad del vapor de agua y polvo atmosférico.
-   * Ocurren todos los **fenómenos meteorológicos** (nubes, lluvias, vientos, tormentas).
-   * **Gradiente Térmico Vertical:** La temperatura disminuye a razón de **6.5^\circ\text{C} por cada 1\,000\text{ metros}** de ascenso (0.65^\circ\text{C} / 100\text{ m}).
-   * Límite superior: **Tropopausa** (\approx -56^\circ\text{C}), zona de calma térmica.
-2. **Estratósfera ("Esfera de capas"):**
-   * Se extiende desde la tropopausa hasta los 50\text{ km}. Aire en calma sin turbulencias verticales (vuelo de aeronaves comerciales supersónicas).
-   * Alberga la **Capa de Ozono u Ozonósfera** entre los 25 y 35\text{ km}. La absorción de rayos UV por el ciclo de Chapman (O_2 + h\nu \to 2O; O + O_2 \to O_3) provoca una **inversión térmica**: la temperatura asciende desde -56^\circ\text{C} hasta cerca de los 0^\circ\text{C} en la **Estratopausa**.
-3. **Mesósfera ("Esfera media"):**
-   * Se extiende de los 50 a los 85\text{ km}. La temperatura desciende bruscamente hasta alcanzar la zona más gélida de la atmósfera: **-90^\circ\text{C} a -100^\circ\text{C}** en la **Mesopausa**.
-   * Capa donde la fricción atmosférica desintegra a la inmensa mayoría de los meteoroides, produciendo los bólidos y "estrellas fugaces". Se observa el vapor de sodio (sodiosfera) y nubes noctilucentes.
-4. **Termósfera o Ionósfera ("Esfera de calor"):**
-   * De los 85 hasta aproximadamente 500 - 600\text{ km}. El aire está extremadamente enrarecido y fuertemente ionizado por la radiación solar extrema (rayos gamma y X).
-   * La temperatura cinética asciende por encima de los **1\,500^\circ\text{C}**.
-   * Alberga las subcapas ionizadas (Kennelly-Heaviside y Appleton) que **reflejan las ondas electromagnéticas de radio AM y TV**, permitiendo las telecomunicaciones transoceánicas terrestres antes de los satélites.
-   * En ella orbitan la Estación Espacial Internacional (ISS) y se producen las **auroras boreales y australes**.
-5. **Exósfera ("Esfera exterior"):**
-   * Más allá de los 600\text{ km}. Transición gradual hacia el vacío del espacio interplanetario. Predominan átomos ligeros de hidrógeno y helio a velocidades de escape. Alberga la **Magnetósfera** y los **Cinturones de Radiación de Van Allen**, que escudan a la biósfera de las partículas letales del viento solar.
+**Importante:** las alturas son aproximadas. La tropopausa varía con la latitud y las condiciones atmosféricas; no está siempre a 12 km. La tabla representa un perfil general, no una medición meteorológica del día.
+
+La **ionósfera** se define por la presencia de partículas ionizadas, no por el mismo criterio térmico de la tabla. Se superpone a partes de distintas capas; no es otro nombre de la termósfera. Su interacción con ondas de radio depende de la frecuencia y del estado de ionización: no todas las señales se reflejan igual.
+
+La **magnetósfera** se relaciona con el campo magnético terrestre y las partículas cargadas. No se usa como sinónimo de exósfera ni como una sexta capa térmica.
+
+### Aplicar el modelo sin confundirlo con una observación
+
+En ejercicios que lo indiquen, puede suponerse un descenso medio de **6,5 °C por kilómetro**. Ese supuesto permite estimar una variación térmica; no significa que toda columna real de aire tenga siempre ese gradiente. Una inversión térmica es un caso en que la temperatura aumenta con la altura en cierto intervalo.
+
+1. Identifica la diferencia de altura y sus unidades.
+2. Aplica el gradiente que proporciona el problema.
+3. Explica que el resultado corresponde al modelo adoptado, no a un pronóstico local.
 
 ---
 

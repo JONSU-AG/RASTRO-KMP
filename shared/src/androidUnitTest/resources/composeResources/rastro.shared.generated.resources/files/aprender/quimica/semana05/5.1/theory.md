@@ -13,26 +13,37 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                              ENLACE QUÍMICO
-                                     │
-         ┌───────────────────────────┴───────────────────────────┐
-         ▼                                                       ▼
-FUERZAS INTRAMOLECULARES                                FUERZAS INTERMOLECULARES
-(Unen átomos o iones / Fuertes)                         (Unen moléculas entre sí / Débiles)
-         │                                                       │
- ┌───────┼───────┐                                       ┌───────┼───────┐
- ▼       ▼       ▼                                       ▼       ▼       ▼
-IÓNICO  COVALENTE METÁLICO                         PUENTE DE   DIPOLO-  DISPERSIÓN
-(Electro- (Compar- (Mar de                        HIDRÓGENO   DIPOLO   DE LONDON
-valente)  tición)   electrones)                   (F, O, N)   (Keesom) (Moléculas
-                                                                        apolares)
-         │
- ┌───────┴───────┐
- ▼               ▼
-APOLAR         POLAR
-(\Delta EN = 0) (\Delta EN > 0)
-(Normal / Coordinado o Dativo)
+```mermaid
+graph TD
+ ROOT["Enlaces e interacciones"]
+ B1["Enlaces químicos"]
+ B1N1["Iónico: atracción electrostática entre iones de signo opuesto, habitualmente en una red."]
+ B1N2["Covalente: compartición de densidad electrónica entre átomos."]
+ B1N3["Metálico: electrones deslocalizados asociados a la estructura metálica."]
+ B2["Enlace covalente y polaridad"]
+ B2N1["Enlace apolar: compartición aproximadamente simétrica."]
+ B2N2["Enlace polar: distribución desigual de densidad electrónica."]
+ B2N3["Coordinado o dativo: el par compartido procede inicialmente de un mismo donante."]
+ B2N4["La polaridad molecular también depende de la geometría; enlaces polares pueden compensarse."]
+ B3["Interacciones entre partículas"]
+ B3N1["Dispersión de London: existe en átomos y moléculas, tanto polares como apolares."]
+ B3N2["Dipolo-dipolo: interacción entre dipolos permanentes."]
+ B3N3["Puente de hidrógeno: en los casos introductorios, H unido a N, O o F interactúa con un par libre adecuado."]
+ B3N4["No todas las sustancias forman moléculas discretas; distinguir interacción intermolecular de red iónica o metálica."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
 ```
 
 ---

@@ -19,20 +19,39 @@
 
 ## 2. 🗺️ MAPA TAXONÓMICO Y ONTOLOGÍA DEL TEMA
 
-```text
-                               ┌─ Términos Clave de Traducción (Es a, excede, tanto como)
-        ┌─ 1. Planteo de ──────┼─ Fracciones de Incógnitas (Parte de un todo algebraico)
-        │      Ecuaciones      ├─ Ecuaciones Lineales y Cuadráticas Intuitivas
-        │                      └─ Ecuaciones Diofánticas Simples (Soluciones enteras)
-        │
-RAZONAMIENTO                   ┌─ Para un Solo Sujeto (Línea de tiempo unidireccional)
-ALGEBRAICO ─────┼─ 2. Problemas de ────┼─ Para Dos o Más Sujetos (Cuadros de Doble Entrada)
-INTUITIVO       │      Edades          ├─ Principio Fundamental de la Diferencia Constante
-        │                      └─ Relación entre Año de Nacimiento y Año Actual
-        │
-        └─ 3. Equivalencias ───┌─ Balanzas en Equilibrio (Sistemas lineales intuitivos)
-               Lógicas         ├─ Regla de Conjunta (Método de reducción en cadena)
-               y Balanzas      └─ Falsa Suposición y Rombo Algebraico
+```mermaid
+graph TD
+ ROOT["Ecuaciones y edades"]
+ B1["Traducción a ecuaciones"]
+ B1N1["Definir la incógnita y sus unidades."]
+ B1N2["Precisar el alcance de doble, triple, excede y tanto como."]
+ B1N3["Fracciones de una cantidad: identificar el todo."]
+ B1N4["Soluciones enteras: comprobar restricciones del problema, no solo la ecuación."]
+ B2["Edades"]
+ B2N1["Una persona: organizar pasado, presente y futuro en una línea temporal."]
+ B2N2["Varias personas: sumar o restar el mismo tiempo a todas."]
+ B2N3["Diferencia constante: $(a+t)-(b+t)=a-b$."]
+ B2N4["Año de nacimiento: considerar si ya ocurrió el cumpleaños; no asumir una igualdad entera sin ese dato."]
+ B3["Equivalencias y balanzas"]
+ B3N1["Equilibrio: aplicar operaciones equivalentes a ambos lados."]
+ B3N2["Reducción en cadena: sustituir igualdades sin cambiar las unidades."]
+ B3N3["Falsa suposición: comparar con un caso base y justificar cada ajuste."]
+ B3N4["Comprobar el resultado en el enunciado original."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
 ```
 
 ---

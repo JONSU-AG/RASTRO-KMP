@@ -23,20 +23,33 @@
 
 ## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
 
-```
-                            SISTEMAS DE PROPOSICIONES
-                                        │
-                 ┌──────────────────────┴──────────────────────┐
-                 ▼                                             ▼
-       SISTEMAS CONSISTENTES                         SISTEMAS INCONSISTENTES
-      (Satisfacibles / Coherentes)                  (Insatisfacibles / Absurdos)
-                 │                                             │
-      ┌──────────┴──────────┐                       ┌──────────┴──────────┐
-      ▼                     ▼                       ▼                     ▼
-Tautológicos          Contingentes            Contradicción         Incompatibilidad
-(Siempre V)        (Al menos un caso V)        Formal Directa       Contextual Cruzada
-                                                (p \land \neg p)   (Relaciones mutuamente
-                                                                      excluyentes)
+```mermaid
+graph TD
+ ROOT["Sistemas de proposiciones"]
+ B1["Sistemas consistentes"]
+ B1N1["Existe al menos una asignación que satisface todas las premisas."]
+ B1N2["Una fórmula tautológica es satisfacible en todas las asignaciones."]
+ B1N3["Una fórmula contingente es satisfacible, pero también tiene asignaciones falsas."]
+ B2["Sistemas inconsistentes"]
+ B2N1["Ninguna asignación satisface simultáneamente todas las premisas."]
+ B2N2["Contradicción explícita: $p\land\neg p$."]
+ B2N3["Las restricciones pueden ser incompatibles aun sin una negación literal inmediata."]
+ B3["Cómo comprobarlo"]
+ B3N1["Fijar todas las variables y considerar las combinaciones posibles."]
+ B3N2["Conservar solo las filas donde todas las premisas sean verdaderas."]
+ B3N3["Una fila compatible demuestra consistencia; no convierte cada premisa en tautología."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
 ### Ontología de Conceptos Fundamentales

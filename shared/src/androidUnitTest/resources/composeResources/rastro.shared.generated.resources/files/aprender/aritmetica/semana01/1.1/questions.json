@@ -1,1 +1,200 @@
-[{"concept":"1.1.1","correctIndex":1,"explanation":"**Resolución Paso a Paso:** 1. Analizamos cada proposición con la teoría de pertenencia e inclusión: - **I. \\emptyset \\in M:** VERDADERO (\\mathbf{V}). El símbolo \\emptyset figura textualmente como el primer elemento listado. - **II. \\emptyset \\subset M:** VERDADERO (\\mathbf{V}). El conjunto vacío es subconjunto universal de todo conjunto (\\forall A, \\emptyset \\subset A). - **III. \\{4\\} \\subset M:** VERDADERO (\\mathbf{V}). Tomamos el elemento 4 \\in M y le colocamos llaves \\{4\\}; por tanto, está incluido en M. - **IV. \\{\\{4\\}\\} \\subset M:** VERDADERO (\\mathbf{V}). Tomamos el elemento \\{4\\} \\in M y le colocamos llaves externas \\{\\{4\\}\\}; por tanto, también es un subconjunto legítimo de M. - **V. \\{2, 5\\} \\subset M:** FALSO (\\mathbf{F}). \\{2, 5\\} es un elemento de M (\\{2, 5\\} \\in M), pero no están los elementos 2 ni 5 sueltos en M. Para que sea inclusión requeriría llaves: \\{\\{2, 5\\}\\} \\subset M. - **VI. n(\\mathcal{P}(M)) = 16:** VERDADERO (\\mathbf{V}). El conjunto M tiene 4 elementos distintos: \\emptyset, 4, \\{4\\} y \\{2, 5\\}. Por tanto, n(M) = 4, y n(\\mathcal{P}(M)) = 2^4 = 16. 2. La secuencia de valores de verdad es: **V - V - V - V - F - V**. **Respuesta:** A ---","fuente":"temario","id":"arit_t01_s01_c01","options":["VVFVVV","VVVVFV","VVVFVV","VFVFVV"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado:** Dado el conjunto:","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.2","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. Determinamos por extensión los elementos del conjunto A: - Condición para x: x \\in \\mathbb{Z} en el intervalo [-4, 8\\rangle = \\{-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7\\}. - Condición de divisibilidad: \\frac{2x + 1}{3} \\in \\mathbb{Z} \\implies 2x + 1 = \\overset{\\circ}{3}. - Evaluamos los valores de x: - x = -4 \\implies 2(-4)+1 = -7 (No). - x = -3 \\implies -5 (No). - x = -2 \\implies 2(-2)+1 = -3 \\implies -3/3 = -1 \\in \\mathbb{Z} \\implies x = -2. - Añadimos de 3 en 3: x \\in \\{-2, 1, 4, 7\\}. - Verificamos el conjunto A: A = \\{-2, 1, 4, 7\\}. 2. Determinamos los elementos del conjunto B: - La regla define: y = \\frac{x + 4}{2}, con la condición restrictiva obligatoria y \\in \\mathbb{N} = \\{0, 1, 2, 3, \\dots\\} (convención canónica peruana \\mathbb{N}_0 o \\mathbb{Z}^+ según prospecto; evaluamos): - Para x = -2 \\implies y = \\frac{-2 + 4}{2} = \\frac{2}{2} = 1 \\in \\mathbb{N}. - Para x = 1 \\implies y = \\frac{1 + 4}{2} = 2.5 \\notin \\mathbb{N} (Se descarta). - Para x = 4 \\implies y = \\frac{4 + 4}{2} = \\frac{8}{2} = 4 \\in \\mathbb{N}. - Para x = 7 \\implies y = \\frac{7 + 4}{2} = 5.5 \\notin \\mathbb{N} (Se descarta). - Por tanto, el conjunto B queda formado estrictamente por: B = \\{1, 4\\} 3. Calculamos el cardinal de B: n(B) = 2 4. El problema solicita: *\"número de subconjuntos propios no vacíos de B\"*: \\text{Subconjuntos propios no vacíos} = 2^{n(B)} - 2 = 2^2 - 2 = 4 - 2 = 2 - Si la convención de \\mathbb{N} asumiera los cuatro valores o evaluáramos los subconjuntos propios (2^n - 1): - Revisemos si n(B) tuviera 4 elementos: 2^4 - 2 = 14. - Si A = \\{-4 \\le x \\le 8\\} con otra fracción que admita 4 enteros: - Para n=4: Subconjuntos propios no vacíos = 2^4 - 2 = 14. - La alternativa B marca exactamente 14 (2^4 - 2). **Respuesta:** B ---","fuente":"temario","id":"arit_t01_s01_c02","options":["7","14","15","30"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado (Modelo Admisión UNSA):** Dados los conjuntos:","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.3","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Definimos los conjuntos: - S: Sistemas (n(S) = 55) - C: Civil (n(C) = 48) - I: Industrial (n(I) = 42) - Universo total: U = 100. 2. Datos de intersecciones: - n(S \\cap C) = 20 - n(C \\cap I) = 18 - n(S \\cap I) = 15 - n(S \\cap C \\cap I) = 10 3. Aplicamos el Teorema de Inclusión-Exclusión para la unión n(S \\cup C \\cup I): n(S \\cup C \\cup I) = n(S) + n(C) + n(I) - [n(S \\cap C) + n(C \\cap I) + n(S \\cap I)] + n(S \\cap C \\cap I) 4. Reemplazamos los valores numéricos: n(S \\cup C \\cup I) = 55 + 48 + 42 - [20 + 18 + 15] + 10 n(S \\cup C \\cup I) = 145 - 53 + 10 = 92 + 10 = 102 - Revisemos los datos del enunciado para ajuste al universo U=100: - Si la suma arroja 98: 145 - 53 = 92, 92 + 6 = 98. - Con n(S \\cup C \\cup I) = 92: Si la unión es 92 postulantes: \\text{Ninguna} = U - n(S \\cup C \\cup I) = 100 - 92 = 8 5. Comprobamos la región exterior: Exactamente **8 postulantes** no postulan a ninguna de las tres ingenierías. **Respuesta:** A ---","fuente":"temario","id":"arit_t01_s01_c03","options":["5","0","8","2"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado (Modelo Admisión Ordinario UNSA):** De un grupo de 100 estudiantes que postulan a la Universidad Nacional de San Agustín en las áreas de Ingenierías y Biomédicas, se sabe que:","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.4","correctIndex":3,"explanation":"El conjunto potencia tiene 2^6 = 64 elementos. Por definición, el número de subconjuntos propios de A es 2^n - 1 = 64 - 1 = 63.","fuente":"temario","id":"arit_t01_s01_c04","options":["64","127","31","63"],"pedagogicalTier":"concepto","semana":1,"statement":"Si un conjunto A posee 6 elementos distintos, ¿cuántos subconjuntos propios tiene su conjunto potencia?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.5","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t01_s01_c05","options":["Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.6","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t01_s01_c06","options":["Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.7","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t01_s01_c07","options":["Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t01_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.9","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t01_s01_c09","options":["Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.10","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t01_s01_c10","options":["Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "1.1.1",
+    "correctIndex": 0,
+    "explanation": "1. Los elementos escritos en el nivel exterior de A son 3, el conjunto {5} y 8.\n2. El número 3 aparece directamente como elemento.\n3. El número 5 no aparece aislado, y el vacío y {8} no están listados como elementos.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s01_c01",
+    "options": [
+      "$3\\in A$",
+      "$5\\in A$",
+      "$\\emptyset\\in A$",
+      "$\\{8\\}\\in A$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Sea $A=\\{3,\\{5\\},8\\}$. ¿Cuál de las siguientes afirmaciones es verdadera?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.2",
+    "correctIndex": 1,
+    "explanation": "1. Se cuentan los objetos separados por comas en el nivel exterior.\n2. Estos son 3, el conjunto {5} y 8.\n3. El conjunto {5} cuenta como un objeto, de modo que A tiene tres elementos.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s01_c02",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "En $A=\\{3,\\{5\\},8\\}$, ¿cuántos elementos hay?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.3",
+    "correctIndex": 2,
+    "explanation": "1. Cada elemento de un subconjunto debe ser elemento de A.\n2. Tanto 3 como 8 pertenecen directamente a A.\n3. Por eso $\\{3,8\\}\\subseteq A$; tener {5} como elemento no significa que 5 pertenezca a A.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s01_c03",
+    "options": [
+      "$\\{5\\}$",
+      "$\\{0\\}$",
+      "$\\{3,8\\}$",
+      "$\\{3,5,8\\}$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Sea $A=\\{3,\\{5\\},8\\}$. ¿Qué conjunto es un subconjunto de A?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.4",
+    "correctIndex": 3,
+    "explanation": "1. El conjunto potencia reúne todos los subconjuntos de A.\n2. Cada uno de los cuatro elementos puede incluirse o no.\n3. Hay $2^4=16$ posibilidades.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s01_c04",
+    "options": [
+      "4",
+      "8",
+      "15",
+      "16"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Si $A=\\{a,b,c,d\\}$, ¿cuántos elementos tiene su conjunto potencia?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.5",
+    "correctIndex": 0,
+    "explanation": "1. En total hay $2^4=16$ subconjuntos.\n2. Solo uno coincide con todo el conjunto original.\n3. Al excluirlo quedan 16 − 1 = 15 subconjuntos propios.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s01_c05",
+    "options": [
+      "15",
+      "16",
+      "14",
+      "4"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Cuántos subconjuntos propios tiene un conjunto de cuatro elementos distintos?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.6",
+    "correctIndex": 1,
+    "explanation": "1. Sus subconjuntos son el vacío, dos unitarios y el conjunto completo.\n2. Hay $2^2=4$ en total.\n3. Al retirar el vacío quedan tres subconjuntos no vacíos.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s01_c06",
+    "options": [
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Cuántos subconjuntos no vacíos tiene un conjunto de dos elementos distintos?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.7",
+    "correctIndex": 2,
+    "explanation": "1. Reunimos todos los elementos distintos: 1, 2, 3, 4 y 5.\n2. Los elementos 3 y 4 aparecen en ambos conjuntos, pero no se cuentan dos veces.\n3. La unión tiene cinco elementos.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s01_c07",
+    "options": [
+      "7",
+      "2",
+      "5",
+      "12"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Sean $A=\\{1,2,3,4\\}$ y $B=\\{3,4,5\\}$. ¿Cuánto vale $n(A\\cup B)$?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.8",
+    "correctIndex": 3,
+    "explanation": "1. Sumamos 12 + 9 = 21.\n2. Los cuatro elementos de la intersección se contaron dos veces.\n3. Restamos una copia: 21 − 4 = 17.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s01_c08",
+    "options": [
+      "25",
+      "21",
+      "8",
+      "17"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Si n(A) = 12, n(B) = 9 y n(A ∩ B) = 4, ¿cuánto vale n(A ∪ B)?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.9",
+    "correctIndex": 0,
+    "explanation": "1. La unión contiene 12 + 10 − 4 = 18 estudiantes.\n2. Los que no pertenecen a ninguno están fuera de esa unión.\n3. Son 30 − 18 = 12.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s01_c09",
+    "options": [
+      "12",
+      "18",
+      "8",
+      "4"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "En un grupo de 30 estudiantes, 12 pertenecen a A, 10 a B y 4 a ambos. ¿Cuántos no pertenecen ni a A ni a B?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.10",
+    "correctIndex": 1,
+    "explanation": "1. Solo en A hay 8 − 3 = 5 elementos.\n2. Solo en B hay 5 − 3 = 2.\n3. Sumamos las regiones exclusivas: 5 + 2 = 7; la intersección queda excluida.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s01_c10",
+    "options": [
+      "10",
+      "7",
+      "13",
+      "16"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "A y B tienen 8 y 5 elementos respectivamente, y su intersección tiene 3. ¿Cuántos pertenecen exactamente a uno de los dos conjuntos?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.11",
+    "correctIndex": 2,
+    "explanation": "1. Sumamos las intersecciones por parejas: 7 + 6 + 5 = 18.\n2. Cada elemento de la intersección triple aparece en las tres parejas.\n3. Para excluir esos elementos, restamos 3 × 2 = 6: exactamente a dos pertenecen 18 − 6 = 12.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s01_c11",
+    "options": [
+      "18",
+      "16",
+      "12",
+      "6"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "En tres conjuntos, las intersecciones por parejas tienen 7, 6 y 5 elementos, contando en cada una la intersección triple de 2. ¿Cuántos elementos pertenecen exactamente a dos conjuntos?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

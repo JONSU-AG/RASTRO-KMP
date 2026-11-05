@@ -1,1 +1,218 @@
-[{"concept":"10.1.1","correctIndex":0,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t10_s01_c01","options":["Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":10,"statement":"Frente al distractor frecuente de examen: \"Trampa 1: Confundir masa de la solución con masa del solvente en la Molalidad (m). En la molalidad el denominador es EXCLUSIVAMENTE los kilogramos del solvente puro (ste), jamá\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.2","correctIndex":1,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t10_s01_c02","options":["Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":10,"statement":"Frente al distractor frecuente de examen: \"Trampa 2: Sumar volúmenes asumiendo aditividad cuando se da la densidad final. Si el problema proporciona la densidad de la solución final resultante, la masa total es siempre adit\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.11","correctIndex":0,"explanation":"La tensión superficial nace de la cohesión entre moléculas del líquido en su superficie.","fuente":"temario","id":"quim_t10_s01_c11","options":["La tensión superficial por cohesión molecular","La dureza del recipiente","La presión atmosférica","El color del líquido"],"pedagogicalTier":"concepto","semana":10,"statement":"Que un insecto camine sobre el agua se explica por:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.1.12","correctIndex":1,"explanation":"Disolver rodea al soluto con solvente sin fundirlo ni reaccionar: polar disuelve polar.","fuente":"temario","id":"quim_t10_s01_c12","options":["Fundir el soluto con calor","Solvatar al soluto sin cambiar su composición","Quemar el solvente","Precipitar todo el soluto"],"pedagogicalTier":"concepto","semana":10,"statement":"Disolver sal en agua consiste en:","subject":"quimica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "quim_t10_s01_c01",
+    "concept": "10.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Una solución contiene 0.5 mol de soluto en un volumen final de 2 L. ¿Cuál es su molaridad?",
+    "options": [
+      "$0.25\\,\\mathrm{mol/L}$",
+      "$0.5\\,\\mathrm{mol/L}$",
+      "$0.125\\,\\mathrm{mol/L}$",
+      "$0.75\\,\\mathrm{mol/L}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La molaridad usa volumen de solución, no solo de disolvente.\n2. Aplicamos los datos y conservamos las unidades: $M=n/V=0.5/2$.\n3. El resultado es $0.25\\,\\mathrm{mol/L}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s01_c02",
+    "concept": "10.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Se disuelven 10 g de soluto y se completa una solución de masa total 200 g. ¿Qué porcentaje en masa tiene?",
+    "options": [
+      "$10\\,\\mathrm{\\%}$",
+      "$2.5\\,\\mathrm{\\%}$",
+      "$15\\,\\mathrm{\\%}$",
+      "$5\\,\\mathrm{\\%}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La base es la masa de solución completa.\n2. Aplicamos los datos y conservamos las unidades: $p=100(10/200)$.\n3. El resultado es $5\\,\\mathrm{\\%}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s01_c03",
+    "concept": "10.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Una solución tiene 5 g de soluto en 100 mL de volumen final. ¿Cuál es su porcentaje masa/volumen, en g por 100 mL?",
+    "options": [
+      "$2.5\\,\\mathrm{g/100\\,mL}$",
+      "$15\\,\\mathrm{g/100\\,mL}$",
+      "$5\\,\\mathrm{g/100\\,mL}$",
+      "$10\\,\\mathrm{g/100\\,mL}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Esta unidad compara gramos con cien mililitros finales.\n2. Aplicamos los datos y conservamos las unidades: $c=5\\,g/(100\\,mL)$.\n3. El resultado es $5\\,\\mathrm{g/100\\,mL}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s01_c04",
+    "concept": "10.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Una solución contiene 0.2 mol de soluto en 0.5 kg de disolvente. ¿Cuál es su molalidad?",
+    "options": [
+      "$1.2\\,\\mathrm{mol/kg}$",
+      "$0.4\\,\\mathrm{mol/kg}$",
+      "$0.8\\,\\mathrm{mol/kg}$",
+      "$0.2\\,\\mathrm{mol/kg}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La molalidad usa masa de disolvente en kg.\n2. Aplicamos los datos y conservamos las unidades: $m=0.2/0.5$.\n3. El resultado es $0.4\\,\\mathrm{mol/kg}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s01_c05",
+    "concept": "10.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Una mezcla tiene 1 mol de A y 3 mol de B. ¿Cuál es la fracción molar de A?",
+    "options": [
+      "$0.25$",
+      "$0.5$",
+      "$0.125$",
+      "$0.75$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Dividimos moles del componente entre moles totales.\n2. Aplicamos los datos y conservamos las unidades: $x_A=1/(1+3)$.\n3. El resultado es $0.25$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s01_c06",
+    "concept": "10.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Una solución tiene densidad 1.2 g/mL y volumen 50 mL. ¿Cuál es su masa?",
+    "options": [
+      "$120\\,\\mathrm{g}$",
+      "$30\\,\\mathrm{g}$",
+      "$180\\,\\mathrm{g}$",
+      "$60\\,\\mathrm{g}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La densidad convierte volumen de solución en masa de solución.\n2. Aplicamos los datos y conservamos las unidades: $m=\\rho V=1.2(50)$.\n3. El resultado es $60\\,\\mathrm{g}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s01_c07",
+    "concept": "10.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Una solución verdadera es…",
+    "options": [
+      "Una mezcla con partículas grandes que sedimentan de inmediato.",
+      "Siempre un gas.",
+      "Una mezcla homogénea a escala molecular o iónica.",
+      "Siempre una sustancia pura."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Contiene componentes distribuidos homogéneamente a esa escala.\n2. No se convierte por eso en sustancia pura.\n3. Puede ser líquida, gaseosa o sólida según el sistema.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s01_c08",
+    "concept": "10.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "En molaridad, el denominador es…",
+    "options": [
+      "El número de neutrones.",
+      "Litros de solución.",
+      "Kilogramos de disolvente.",
+      "Solo el volumen del soluto puro."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Molaridad se define como cantidad de soluto por volumen de solución.\n2. La unidad común es mol/L.\n3. Usar solo disolvente confunde su definición.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s01_c09",
+    "concept": "10.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "En molalidad, el denominador es…",
+    "options": [
+      "Litros de solución.",
+      "Kilogramos de disolvente.",
+      "Gramos de solución sin convertir.",
+      "Número de moléculas de soluto."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Molalidad divide moles de soluto entre masa de disolvente.\n2. La masa se expresa en kg.\n3. No se usa el volumen final de solución.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s01_c10",
+    "concept": "10.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "El efecto Tyndall se asocia con…",
+    "options": [
+      "Cambio de núcleo por ionización.",
+      "Que toda solución sea siempre opaca.",
+      "Formación obligatoria de una sustancia pura.",
+      "Dispersión visible de luz por partículas de un coloide."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Las partículas dispersas pueden dispersar la luz.\n2. El haz puede hacerse visible en un coloide adecuado.\n3. No es prueba de una reacción nuclear.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s01_c11",
+    "concept": "10.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Una solución saturada a temperatura y presión definidas…",
+    "options": [
+      "No depende del disolvente.",
+      "No puede cambiar al variar temperatura.",
+      "Está en equilibrio con la cantidad máxima disuelta bajo esas condiciones.",
+      "Debe tener siempre exactamente 50 % de soluto."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La saturación se refiere a la solubilidad en condiciones dadas.\n2. No representa un porcentaje universal.\n3. Cambiar condiciones puede cambiar la solubilidad.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s01_c12",
+    "concept": "10.1.12",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "La solubilidad de un gas en un líquido…",
+    "options": [
+      "Es igual para todos los gases.",
+      "No depende nunca de la presión.",
+      "Puede depender de su presión parcial y de la temperatura.",
+      "Siempre aumenta sin límite con temperatura."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El equilibrio gas–líquido depende del gas y del disolvente.\n2. Presión parcial y temperatura son variables relevantes.\n3. No existe una solubilidad única para todos los gases y condiciones.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

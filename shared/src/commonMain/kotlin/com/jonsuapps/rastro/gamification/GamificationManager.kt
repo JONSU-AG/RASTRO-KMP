@@ -58,7 +58,8 @@ object GamificationManager {
     }
 
     fun setMaxHearts(newMax: Int, nowMillis: Long = Clock.System.now().toEpochMilliseconds()) {
-        val safeMax = newMax.coerceIn(1, 1_000_000)
+        val safeMax = (if (com.jonsuapps.rastro.monetization.PresentationMode.enabled)
+            maxOf(newMax, com.jonsuapps.rastro.monetization.PresentationMode.allowanceLives) else newMax).coerceIn(1, 1_000_000)
         val oldMax = _maxHearts.value
         if (safeMax == oldMax) return
 
@@ -194,7 +195,7 @@ object GamificationManager {
         if (key in _state.value.claimedTopicRewards || lessons.isEmpty() || lessons.any {
             _state.value.completedLessons[it.id]?.skipped != false
         }) return 0
-        val topicReward = TOPIC_REWARD_XP * if (com.jonsuapps.rastro.monetization.ProAccess.active()) 2 else 1
+        val topicReward = TOPIC_REWARD_XP * if (com.jonsuapps.rastro.monetization.PresentationMode.proBenefits()) 2 else 1
         _totalXp.value += topicReward
         _state.value = _state.value.copy(xp = _totalXp.value,
             claimedTopicRewards = _state.value.claimedTopicRewards + key)
@@ -223,7 +224,7 @@ object GamificationManager {
     }
     fun quoteLessonReward(lessonId: String, xp: Int, stars: Int): LessonReward {
         val base = LessonRewardPolicy.quote(_state.value.completedLessons[lessonId], xp, stars)
-        return if (com.jonsuapps.rastro.monetization.ProAccess.active()) base.copy(xp = base.xp * 2, coins = base.coins * 2) else base
+        return if (com.jonsuapps.rastro.monetization.PresentationMode.proBenefits()) base.copy(xp = base.xp * 2, coins = base.coins * 2) else base
     }
     fun buyLives(amount: Int, price: Int): Boolean {
         updateHeartRegeneration()
@@ -235,7 +236,8 @@ object GamificationManager {
     fun reserveEconomyAttempt(id: String, kind: String): Boolean {
         if (id.isBlank()) return false
         if (_state.value.economyAttempts.any { it.id == id }) return true
-        val grant = com.jonsuapps.rastro.monetization.ProAccess.grant.value
+        val grant = if (com.jonsuapps.rastro.monetization.PresentationMode.enabled) com.jonsuapps.rastro.monetization.ProGrant()
+            else com.jonsuapps.rastro.monetization.ProAccess.grant.value
         val cost = com.jonsuapps.rastro.monetization.EconomyPolicy.cost(kind, _state.value.economyAttempts, grant,
             Clock.System.now().toEpochMilliseconds(), com.jonsuapps.rastro.monetization.EconomySettings.config.value)
         if (_state.value.coins < cost) return false
@@ -285,7 +287,7 @@ object GamificationManager {
     /** Both learning sources feed the same XP balance; an attempt is paid only once. */
     fun claimExamReward(attemptId: String, correctCount: Int): Int {
         if (attemptId.isBlank() || correctCount <= 0 || attemptId in _state.value.claimedExamRewards) return 0
-        val awarded = correctCount.coerceAtMost(1000) * EXAM_CORRECT_XP * if (com.jonsuapps.rastro.monetization.ProAccess.active()) 2 else 1
+        val awarded = correctCount.coerceAtMost(1000) * EXAM_CORRECT_XP * if (com.jonsuapps.rastro.monetization.PresentationMode.proBenefits()) 2 else 1
         _totalXp.value += awarded
         _state.value = _state.value.copy(xp = _totalXp.value,
             claimedExamRewards = _state.value.claimedExamRewards + attemptId)
@@ -358,12 +360,18 @@ object GamificationManager {
         _journeyFrom.value = null
         _state.value = state
         _totalXp.value = state.xp.coerceAtLeast(0)
-        val restoredMax = state.maxHearts.coerceIn(1, 1_000_000)
+        val restoredMax = (if (com.jonsuapps.rastro.monetization.PresentationMode.enabled)
+            maxOf(state.maxHearts, com.jonsuapps.rastro.monetization.PresentationMode.allowanceLives) else state.maxHearts).coerceIn(1, 1_000_000)
         _maxHearts.value = restoredMax
         _hearts.value = state.hearts.coerceIn(0, restoredMax)
         _lastHeartLostTimestamp.value = state.lastHeartLostTimestamp
         _recoveryAmount.value = state.lifeRecoveryAmount.coerceAtLeast(1L)
         _recoveryUnit.value = LifeRecoveryUnit.fromString(state.lifeRecoveryUnit)
+        if (com.jonsuapps.rastro.monetization.PresentationMode.enabled &&
+            claimCoinGift(com.jonsuapps.rastro.monetization.PresentationMode.allowanceReceipt,
+                com.jonsuapps.rastro.monetization.PresentationMode.allowanceCoins) > 0) {
+            _hearts.value = restoredMax
+        }
         updateHeartRegeneration()
 
         val derivedActivity = buildSet {
@@ -458,7 +466,7 @@ object GamificationManager {
     }
 
     fun loseHeart(nowMillis: Long = Clock.System.now().toEpochMilliseconds()) {
-        if (com.jonsuapps.rastro.monetization.ProAccess.active()) return
+        if (com.jonsuapps.rastro.monetization.PresentationMode.unlimitedLives()) return
         if (_hearts.value > 0) {
             val wasFull = _hearts.value >= _maxHearts.value
             _hearts.value -= 1

@@ -7,11 +7,11 @@
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana03.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_03_Fonologia_y_Ortografia.md",
   "learningObjectives": [
-    "Aplicar las reglas de agudas, graves, esdrújulas y sobresdrújulas con bíceps y exámenes",
-    "Dominar los ocho monosílabos diacríticos con él, tú, mí, sí, té, dé, sé y más",
-    "Diferenciar aún con tilde de aun sin tilde y mas sin tilde de más adverbio",
-    "Usar la tilde enfática en interrogación y exclamación directa e indirecta",
-    "Tildar compuestas con guion, fusionadas y adverbios en mente según el adjetivo base"
+    "Aplicar las reglas generales considerando posición tónica, terminación y secuencias vocálicas",
+    "Distinguir los pares diacríticos mediante la función de cada palabra en una oración",
+    "Interpretar aún y aun y reconocer la escritura actual de solo y los demostrativos",
+    "Reconocer interrogativas directas e indirectas sin separar artificialmente tilde enfática y diacrítica",
+    "Acentuar compuestos y adverbios en -mente mediante la regla que corresponde a cada formación"
   ],
   "theory": {
     "id": "th_leng_t03_s03",
@@ -20,15 +20,15 @@
     "titulo": "Normativa de Acentuación General, Diacrítica y Enfática",
     "resumen": "",
     "conceptosClave": [
-      "Agudas con n, s o vocal y graves al revés con esdrújulas siempre tildadas",
-      "Graves con doble consonante como bíceps y plural esdrújula como exámenes",
-      "Ocho diacríticos con él, tú, mí, sí, té, dé, sé y más frente a sus gemelos átonos",
-      "Ti, fue, dio, vio, fe y fui que jamás llevan tilde por carecer de gemelo",
-      "Aún como todavía con tilde frente a aun como incluso sin tilde",
-      "Enfática en qué, quién y dónde con sentido inquisitivo frente a relativo sin tilde",
-      "Adverbios en mente que conservan la tilde del adjetivo base como fácilmente"
+      "Acento prosódico y tilde: la prominencia hablada no exige siempre una marca gráfica",
+      "Agudas y llanas: revisar también consonantes agrupadas y la y final",
+      "Bíceps termina en ps; e-xá-me-nes es esdrújula",
+      "El uso gramatical distingue sí/si, dé/de, sé/se y más/mas",
+      "Quién interrogativo lleva tilde diacrítica también sin signos de interrogación",
+      "Aún equivale aquí a todavía y contiene hiato; aun puede equivaler a incluso",
+      "Fácilmente conserva la tilde de fácil; velozmente conserva la ausencia de tilde de veloz"
     ],
-    "admissionTip": "Ti, fue, dio, vio y fe jamás se tildan; solo y demostrativos van sin tilde desde 2010; velozmente no lleva tilde porque veloz termina en z.",
-    "admissionExplanation": "La diacrítica solo distingue gemelos con distinta función; sin gemelo átono no hay tilde posible y la enfática solo aparece con fuerza interrogativa o exclamativa."
+    "admissionTip": "Lee la oración, identifica la palabra y justifica la tilde mediante su regla; la categoría de pronombre o verbo no basta.",
+    "admissionExplanation": "La posición y la terminación orientan las reglas generales; los contrastes gramaticales, los hiatos y las formaciones complejas requieren comprobar el caso concreto."
   }
 }

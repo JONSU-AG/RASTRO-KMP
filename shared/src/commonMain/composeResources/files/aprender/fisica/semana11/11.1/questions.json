@@ -1,1 +1,200 @@
-[{"concept":"11.1.1","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s01_c01","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.1.2","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s01_c02","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"11.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t11_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t11_s01_c01",
+    "concept": "11.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Un oscilador ideal tiene periodo 0.5 s. ¿Cuál es su frecuencia?",
+    "options": [
+      "$2\\,\\mathrm{Hz}$",
+      "$4\\,\\mathrm{Hz}$",
+      "$1\\,\\mathrm{Hz}$",
+      "$6\\,\\mathrm{Hz}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Frecuencia y periodo son recíprocos.\n2. Sustituimos los datos: $f=1/T=1/0.5$.\n3. El resultado pedido es $2\\,\\mathrm{Hz}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s01_c02",
+    "concept": "11.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Un resorte ideal de k=100 N/m sostiene una masa de 1 kg en un oscilador horizontal sin rozamiento. ¿Cuál es su frecuencia angular?",
+    "options": [
+      "$20\\,\\mathrm{rad/s}$",
+      "$5\\,\\mathrm{rad/s}$",
+      "$30\\,\\mathrm{rad/s}$",
+      "$10\\,\\mathrm{rad/s}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La frecuencia angular del sistema masa–resorte es raíz de k/m.\n2. Sustituimos los datos: $\\omega=\\sqrt{k/m}=\\sqrt{100/1}$.\n3. El resultado pedido es $10\\,\\mathrm{rad/s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s01_c03",
+    "concept": "11.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "En MAS, $A=0.2\\,\\mathrm m$ y $\\omega=5\\,\\mathrm{rad/s}$. ¿Cuál es la rapidez máxima?",
+    "options": [
+      "$0.5\\,\\mathrm{m/s}$",
+      "$3\\,\\mathrm{m/s}$",
+      "$1\\,\\mathrm{m/s}$",
+      "$2\\,\\mathrm{m/s}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La rapidez máxima se alcanza en el equilibrio.\n2. Sustituimos los datos: $v_{max}=\\omega A=5(0.2)$.\n3. El resultado pedido es $1\\,\\mathrm{m/s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s01_c04",
+    "concept": "11.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "En MAS, $A=0.1\\,\\mathrm m$ y $\\omega=4\\,\\mathrm{rad/s}$. ¿Qué módulo máximo de aceleración hay?",
+    "options": [
+      "$4.8\\,\\mathrm{m/s^2}$",
+      "$1.6\\,\\mathrm{m/s^2}$",
+      "$3.2\\,\\mathrm{m/s^2}$",
+      "$0.8\\,\\mathrm{m/s^2}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La aceleración es proporcional al desplazamiento respecto del equilibrio.\n2. Sustituimos los datos: $a_{max}=\\omega^2A=4^2(0.1)$.\n3. El resultado pedido es $1.6\\,\\mathrm{m/s^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s01_c05",
+    "concept": "11.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Un oscilador masa–resorte tiene $k=50\\,\\mathrm{N/m}$ y $A=0.2\\,\\mathrm m$. ¿Qué energía mecánica conserva?",
+    "options": [
+      "$1\\,\\mathrm{J}$",
+      "$2\\,\\mathrm{J}$",
+      "$0.5\\,\\mathrm{J}$",
+      "$3\\,\\mathrm{J}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. En los extremos toda la energía es elástica.\n2. Sustituimos los datos: $E=kA^2/2=50(0.2)^2/2$.\n3. El resultado pedido es $1\\,\\mathrm{J}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s01_c06",
+    "concept": "11.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Un péndulo simple tiene $L=1\\,\\mathrm m$ y $g=10\\,\\mathrm{m/s^2}$. Para oscilaciones pequeñas, ¿cuánto vale T/π?",
+    "options": [
+      "$\\frac{2 \\sqrt{10}}{5}\\,\\mathrm{s}$",
+      "$\\frac{\\sqrt{10}}{10}\\,\\mathrm{s}$",
+      "$\\frac{3 \\sqrt{10}}{5}\\,\\mathrm{s}$",
+      "$\\frac{\\sqrt{10}}{5}\\,\\mathrm{s}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El periodo aproximado depende de L y g.\n2. Sustituimos los datos: $T/\\pi=2\\sqrt{L/g}=2\\sqrt{1/10}$.\n3. El resultado pedido es $\\frac{\\sqrt{10}}{5}\\,\\mathrm{s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s01_c07",
+    "concept": "11.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Un espejo cóncavo tiene distancia focal 10 cm. ¿Qué radio de curvatura tiene en el modelo paraxial?",
+    "options": [
+      "$10\\,\\mathrm{cm}$",
+      "$60\\,\\mathrm{cm}$",
+      "$20\\,\\mathrm{cm}$",
+      "$40\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La distancia focal es la mitad del radio.\n2. Sustituimos los datos: $R=2f=2(10)$.\n3. El resultado pedido es $20\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s01_c08",
+    "concept": "11.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Una lente convergente delgada tiene f=10 cm y objeto real a 30 cm. Con $\\frac1f=\\frac1{d_o}+\\frac1{d_i}$, ¿a qué distancia positiva se forma la imagen?",
+    "options": [
+      "$45\\,\\mathrm{cm}$",
+      "$15\\,\\mathrm{cm}$",
+      "$30\\,\\mathrm{cm}$",
+      "$7.5\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Despejamos la distancia imagen de la ecuación de lente.\n2. Sustituimos los datos: $1/d_i=1/10-1/30\\Rightarrow d_i=15$.\n3. El resultado pedido es $15\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s01_c09",
+    "concept": "11.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Una lente forma imagen real a 20 cm de un objeto situado a 40 cm. ¿Cuál es el aumento transversal con signo $m=-d_i/d_o$?",
+    "options": [
+      "$-0.5$",
+      "$-1$",
+      "$-0.25$",
+      "$-1.5$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El signo negativo representa inversión en esta convención.\n2. Sustituimos los datos: $m=-20/40$.\n3. El resultado pedido es $-0.5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s01_c10",
+    "concept": "11.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "En MAS ideal, la fuerza recuperadora es…",
+    "options": [
+      "Proporcional al desplazamiento y dirigida hacia el equilibrio.",
+      "Constante en todo el recorrido.",
+      "Nula en los extremos.",
+      "Siempre paralela a la velocidad y con su sentido."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La fuerza del MAS se opone al desplazamiento desde el equilibrio.\n2. Su módulo aumenta proporcionalmente con la separación.\n3. Por eso la aceleración también apunta al equilibrio.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t11_s01_c11",
+    "concept": "11.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 11,
+    "statement": "Un espejo plano forma, para un objeto real frente a él, una imagen…",
+    "options": [
+      "Real e invertida y del doble de tamaño.",
+      "Virtual, derecha y del mismo tamaño.",
+      "Real, derecha y reducida.",
+      "Siempre sobre la superficie del espejo."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los rayos reflejados divergen como si procedieran de detrás del espejo.\n2. La imagen es virtual y conserva orientación vertical y tamaño.\n3. Su distancia aparente al espejo iguala la del objeto.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

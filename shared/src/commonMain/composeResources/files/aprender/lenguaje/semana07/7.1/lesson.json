@@ -7,10 +7,10 @@
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana07.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_07_Discurso_Escrito_y_Normativa.md",
   "learningObjectives": [
-    "Distinguir adecuación, coherencia y cohesión como propiedades constitutivas del texto",
-    "Identificar anáfora, catáfora, elipsis y sustitución léxica en fragmentos discursivos",
-    "Explicar la progresión temática tema-rema y el principio de no contradicción",
-    "Aplicar los mecanismos de cohesión para resolver casos de admisión UNSA"
+    "Distinguir adecuación, coherencia y cohesión en fragmentos contextualizados",
+    "Reconocer anáfora, catáfora, sujeto tácito y elipsis sin confundir sus criterios",
+    "Explicar referencias léxicas y progresión temática sin equivalencias absolutas",
+    "Revisar contradicciones atendiendo al referente, tiempo y perspectiva"
   ],
   "theory": {
     "id": "th_leng_t07_s01",
@@ -19,15 +19,14 @@
     "titulo": "El Discurso Escrito: Adecuación, Coherencia y Mecanismos de Cohesión",
     "resumen": "",
     "conceptosClave": [
-      "Adecuación = registro pertinente al destinatario, canal y género discursivo",
-      "Coherencia = unidad temática, no contradicción y progresión tema-rema",
-      "Anáfora mira atrás al antecedente; catáfora anticipa al consecuente",
-      "Elipsis suprime lo recuperable; sustitución léxica evita repetición",
-      "Sustitución por sinónimo, hiperónimo o perífrasis como el ilustre vate liberteño",
-      "Progresión temática articula información conocida con información nueva",
-      "Cohesión = red explícita que liga oraciones y párrafos"
+      "Adecuación: relación con propósito, destinatario, género y situación",
+      "Coherencia: interpretación global apoyada en el texto y el contexto",
+      "Anáfora retoma; catáfora anticipa; la referencia también puede ser exofórica",
+      "La elipsis recupera información no expresada; el sujeto puede quedar tácito",
+      "Una descripción puede recuperar un referente sin ser su sinónimo de diccionario",
+      "Tema y rema no equivalen automáticamente a información conocida y nueva"
     ],
-    "admissionTip": "Si ves esto, lo mismo o dos cosas antes de dos puntos, marca catáfora; si el pronombre o posesivo retoma algo ya dicho como su, ella o este, marca anáfora.",
-    "admissionExplanation": "La dirección de la referencia lo decide todo: hacia atrás es anáfora, hacia adelante es catáfora; la elipsis es ausencia recuperable y la sustitución es reemplazo con sinónimo o perífrasis."
+    "admissionTip": "Localiza el referente y la dirección de la relación antes de clasificarla.",
+    "admissionExplanation": "Los dos puntos no prueban por sí solos catáfora ni la presencia de conectores garantiza coherencia."
   }
 }

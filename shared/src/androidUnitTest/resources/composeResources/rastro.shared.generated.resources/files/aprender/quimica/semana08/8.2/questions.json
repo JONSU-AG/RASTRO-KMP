@@ -1,1 +1,200 @@
-[{"concept":"8.2.1","correctIndex":2,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t08_s02_c01","options":["Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente.","Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Aplicar de forma mecánica la fórmula sin verificar el dominio de validez."],"pedagogicalTier":"concepto","semana":8,"statement":"Frente al distractor frecuente de examen: \"Trampa 3: Usar el volumen molar de 22.4\\text{ L} a condiciones que no son Normales. El valor de 22.4\\text{ L/mol} SOLO es válido a Condiciones Normales (0^\\circ\\text{C} y 1\\\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t08_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "quim_t08_s02_c01",
+    "concept": "8.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "En $2\\mathrm{H_2}+\\mathrm{O_2}\\to2\\mathrm{H_2O}$, 3 mol de H2 reaccionan con 1 mol de O2 hasta agotar el limitante. ¿Cuántos mol de agua se forman?",
+    "options": [
+      "$2\\,\\mathrm{mol}$",
+      "$4\\,\\mathrm{mol}$",
+      "$1\\,\\mathrm{mol}$",
+      "$6\\,\\mathrm{mol}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Un mol de oxígeno consume dos de hidrógeno.\n2. Aplicamos los datos y conservamos las unidades: $n_{agua}=\\min(3/2,1)\\cdot2$.\n3. El resultado es $2\\,\\mathrm{mol}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s02_c02",
+    "concept": "8.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "En $2\\mathrm{H_2}+\\mathrm{O_2}\\to2\\mathrm{H_2O}$ se parte de 3 mol de H2 y 1 mol de O2. ¿Cuántos mol de H2 sobran al agotarse O2?",
+    "options": [
+      "$2\\,\\mathrm{mol}$",
+      "$0.5\\,\\mathrm{mol}$",
+      "$3\\,\\mathrm{mol}$",
+      "$1\\,\\mathrm{mol}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El oxígeno limita y consume dos moles de hidrógeno.\n2. Aplicamos los datos y conservamos las unidades: $n_{H_2,sobra}=3-2(1)$.\n3. El resultado es $1\\,\\mathrm{mol}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s02_c03",
+    "concept": "8.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "El rendimiento teórico de un producto es 18 g y se obtienen 9 g. ¿Qué rendimiento porcentual resulta?",
+    "options": [
+      "$25\\,\\mathrm{\\%}$",
+      "$150\\,\\mathrm{\\%}$",
+      "$50\\,\\mathrm{\\%}$",
+      "$100\\,\\mathrm{\\%}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Se compara masa obtenida con la teórica.\n2. Aplicamos los datos y conservamos las unidades: $\\eta=100(9/18)$.\n3. El resultado es $50\\,\\mathrm{\\%}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s02_c04",
+    "concept": "8.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "Una muestra de 10 g tiene pureza de 80 % en masa. ¿Cuántos gramos corresponden al reactivo puro?",
+    "options": [
+      "$24\\,\\mathrm{g}$",
+      "$8\\,\\mathrm{g}$",
+      "$16\\,\\mathrm{g}$",
+      "$4\\,\\mathrm{g}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Solo la fracción pura participa en el cálculo dado.\n2. Aplicamos los datos y conservamos las unidades: $m_p=10(0.8)$.\n3. El resultado es $8\\,\\mathrm{g}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s02_c05",
+    "concept": "8.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "En $\\mathrm{CaCO_3\\to CaO+CO_2}$, usa masas molares 100,56,44 g/mol. ¿Cuántos gramos de CO2 produce la descomposición completa de 50 g de CaCO3 puro?",
+    "options": [
+      "$22\\,\\mathrm{g}$",
+      "$44\\,\\mathrm{g}$",
+      "$11\\,\\mathrm{g}$",
+      "$66\\,\\mathrm{g}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La proporción molar es uno a uno.\n2. Aplicamos los datos y conservamos las unidades: $n=50/100=0.5;\\quad m_{CO_2}=0.5(44)$.\n3. El resultado es $22\\,\\mathrm{g}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s02_c06",
+    "concept": "8.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "Para $\\mathrm{N_2}+3\\mathrm{H_2}\\to2\\mathrm{NH_3}$, hay N2 en exceso y reaccionan 6 mol de H2. ¿Cuántos mol de NH3 se forman idealmente?",
+    "options": [
+      "$8\\,\\mathrm{mol}$",
+      "$2\\,\\mathrm{mol}$",
+      "$12\\,\\mathrm{mol}$",
+      "$4\\,\\mathrm{mol}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Usamos la proporción estequiométrica 2/3.\n2. Aplicamos los datos y conservamos las unidades: $n_{NH_3}=6(2/3)$.\n3. El resultado es $4\\,\\mathrm{mol}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s02_c07",
+    "concept": "8.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "Un proceso tiene rendimiento teórico de 40 g y rendimiento real de 75 %. ¿Qué masa de producto se obtiene?",
+    "options": [
+      "$15\\,\\mathrm{g}$",
+      "$90\\,\\mathrm{g}$",
+      "$30\\,\\mathrm{g}$",
+      "$60\\,\\mathrm{g}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Se aplica el porcentaje a la cantidad teórica.\n2. Aplicamos los datos y conservamos las unidades: $m=40(0.75)$.\n3. El resultado es $30\\,\\mathrm{g}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s02_c08",
+    "concept": "8.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "En la combustión completa $\\mathrm{CH_4}+2\\mathrm{O_2}\\to\\mathrm{CO_2}+2\\mathrm{H_2O}$ reaccionan 2 mol de CH4 con O2 suficiente. ¿Cuántos mol de CO2 se forman?",
+    "options": [
+      "$6\\,\\mathrm{mol}$",
+      "$2\\,\\mathrm{mol}$",
+      "$4\\,\\mathrm{mol}$",
+      "$1\\,\\mathrm{mol}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La relación CH4:CO2 es uno a uno.\n2. Aplicamos los datos y conservamos las unidades: $n_{CO_2}=2(1)$.\n3. El resultado es $2\\,\\mathrm{mol}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s02_c09",
+    "concept": "8.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "Una reacción gaseosa ideal requiere volúmenes H2:O2 de 2:1 a iguales T y P. ¿Cuántos litros de O2 requieren 10 L de H2?",
+    "options": [
+      "$5\\,\\mathrm{L}$",
+      "$10\\,\\mathrm{L}$",
+      "$2.5\\,\\mathrm{L}$",
+      "$15\\,\\mathrm{L}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. A iguales temperatura y presión, las relaciones de volumen siguen las molares del modelo.\n2. Aplicamos los datos y conservamos las unidades: $V_{O_2}=10/2$.\n3. El resultado es $5\\,\\mathrm{L}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s02_c10",
+    "concept": "8.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "El reactivo limitante se identifica…",
+    "options": [
+      "Eligiendo siempre la menor masa en gramos.",
+      "Eligiendo siempre el reactivo más caro.",
+      "Tomando el de mayor masa molar sin calcular.",
+      "Comparando cantidades disponibles con sus coeficientes estequiométricos."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Las masas deben convertirse a cantidades coherentes.\n2. Se compara cuánto avance permite cada reactivo según la ecuación balanceada.\n3. El menor avance admisible determina el limitante.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t08_s02_c11",
+    "concept": "8.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 8,
+    "statement": "Un rendimiento experimental mayor que 100 % respecto del producto puro esperado…",
+    "options": [
+      "Es obligatorio en toda reacción.",
+      "Hace innecesario el balance.",
+      "Prueba creación de materia.",
+      "Puede indicar impurezas, humedad o errores y exige revisar qué se pesó y cómo se calculó."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La comparación presupone el mismo producto puro que se calculó teóricamente.\n2. La muestra medida puede contener otras sustancias o errores de medición.\n3. No se interpreta automáticamente como eficiencia física superior al límite teórico.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

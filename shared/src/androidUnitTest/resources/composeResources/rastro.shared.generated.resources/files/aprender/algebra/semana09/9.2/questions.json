@@ -1,1 +1,200 @@
-[{"concept":"9.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t09_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"9.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t09_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"9.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t09_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"9.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t09_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"9.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t09_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"9.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t09_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"9.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t09_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"9.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t09_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"9.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t09_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"9.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t09_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "9.2.1",
+    "correctIndex": 0,
+    "explanation": "1. El radicando de una raíz cuadrada real debe ser no negativo.\n2. Sustituimos y operamos: $x-4\\ge 0\\Rightarrow x\\ge 4$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t09_s02_c01",
+    "options": [
+      "$4$",
+      "$5$",
+      "$3$",
+      "$8$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 9,
+    "statement": "¿Cuál es el menor entero del dominio real de $\\sqrt{x−4}$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "9.2.2",
+    "correctIndex": 3,
+    "explanation": "1. El módulo no mayor que a encierra x entre −a y a.\n2. Sustituimos y operamos: $-4\\le x\\le 4$.\n3. El valor pedido es $9$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t09_s02_c02",
+    "options": [
+      "$10$",
+      "$8$",
+      "$18$",
+      "$9$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 9,
+    "statement": "¿Cuántos enteros cumplen |x| ≤ 4?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "9.2.3",
+    "correctIndex": 2,
+    "explanation": "1. Exigimos radicando no negativo y después elevamos al cuadrado los dos miembros no negativos.\n2. Sustituimos y operamos: $4\\le x\\le 29$.\n3. El valor pedido es $26$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t09_s02_c03",
+    "options": [
+      "$25$",
+      "$52$",
+      "$26$",
+      "$27$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 9,
+    "statement": "¿Cuántos enteros cumplen $\\sqrt{x−4}$ ≤ 5?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "9.2.4",
+    "correctIndex": 1,
+    "explanation": "1. En los positivos el valor absoluto coincide con x.\n2. Sustituimos y operamos: $x>4$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t09_s02_c04",
+    "options": [
+      "$10$",
+      "$5$",
+      "$6$",
+      "$4$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 9,
+    "statement": "¿Cuál es el menor entero positivo que cumple |x| > 4?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "9.2.5",
+    "correctIndex": 0,
+    "explanation": "1. Un cuadrado es no negativo: para ser no mayor que cero debe anularse.\n2. Sustituimos y operamos: $(x-4)^2=0\\Rightarrow x=4$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t09_s02_c05",
+    "options": [
+      "$4$",
+      "$5$",
+      "$3$",
+      "$8$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 9,
+    "statement": "¿Cuál es el mayor entero que cumple (x−4)² ≤ 0?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "9.2.6",
+    "correctIndex": 3,
+    "explanation": "1. El radicando de una raíz cuadrada real debe ser no negativo.\n2. Sustituimos y operamos: $x-5\\ge 0\\Rightarrow x\\ge 5$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t09_s02_c06",
+    "options": [
+      "$6$",
+      "$4$",
+      "$10$",
+      "$5$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 9,
+    "statement": "¿Cuál es el menor entero del dominio real de $\\sqrt{x−5}$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "9.2.7",
+    "correctIndex": 2,
+    "explanation": "1. El módulo no mayor que a encierra x entre −a y a.\n2. Sustituimos y operamos: $-5\\le x\\le 5$.\n3. El valor pedido es $11$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t09_s02_c07",
+    "options": [
+      "$10$",
+      "$22$",
+      "$11$",
+      "$12$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 9,
+    "statement": "¿Cuántos enteros cumplen |x| ≤ 5?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "9.2.8",
+    "correctIndex": 1,
+    "explanation": "1. Exigimos radicando no negativo y después elevamos al cuadrado los dos miembros no negativos.\n2. Sustituimos y operamos: $5\\le x\\le 41$.\n3. El valor pedido es $37$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t09_s02_c08",
+    "options": [
+      "$74$",
+      "$37$",
+      "$38$",
+      "$36$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 9,
+    "statement": "¿Cuántos enteros cumplen $\\sqrt{x−5}$ ≤ 6?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "9.2.9",
+    "correctIndex": 0,
+    "explanation": "1. En los positivos el valor absoluto coincide con x.\n2. Sustituimos y operamos: $x>5$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t09_s02_c09",
+    "options": [
+      "$6$",
+      "$7$",
+      "$5$",
+      "$12$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 9,
+    "statement": "¿Cuál es el menor entero positivo que cumple |x| > 5?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "9.2.10",
+    "correctIndex": 3,
+    "explanation": "1. Un cuadrado es no negativo: para ser no mayor que cero debe anularse.\n2. Sustituimos y operamos: $(x-5)^2=0\\Rightarrow x=5$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t09_s02_c10",
+    "options": [
+      "$6$",
+      "$4$",
+      "$10$",
+      "$5$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 9,
+    "statement": "¿Cuál es el mayor entero que cumple (x−5)² ≤ 0?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "9.2.11",
+    "correctIndex": 2,
+    "explanation": "1. El radicando de una raíz cuadrada real debe ser no negativo.\n2. Sustituimos y operamos: $x-6\\ge 0\\Rightarrow x\\ge 6$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t09_s02_c11",
+    "options": [
+      "$5$",
+      "$12$",
+      "$6$",
+      "$7$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 9,
+    "statement": "¿Cuál es el menor entero del dominio real de $\\sqrt{x−6}$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

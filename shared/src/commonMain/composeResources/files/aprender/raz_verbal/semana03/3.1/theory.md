@@ -1,429 +1,163 @@
-# TEMA III: Series y Clasificaciones Verbales
-
----
-
-
-
-### Matriz de Indicadores de Logro Evaluados
-1. **Completamiento de series verbales:** Deducir el patrón de sucesión semántica lineal, alternada o por parejas compuestas para prolongar la secuencia.
-2. **Discriminación de término excluido:** Identificar y expulsar el vocablo discordante que no comparte el sema común esencial del conjunto.
-3. **Clasificación por criterio implícito:** Descubrir el principio rector no declarado (intensidad, función, origen etimológico, ámbito geográfico) que agrupa a un elenco de palabras.
-4. **Relaciones jerárquicas:** Reorganizar términos siguiendo cadenas de hiperonimia, hiponimia y meronimia.
-
----
-
-
-
-## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
-
-```
-                       SERIES Y CLASIFICACIONES VERBALES
-                                       │
-            ┌──────────────────────────┴──────────────────────────┐
-            ▼                                                     ▼
-     SERIES VERBALES                                      TÉRMINO EXCLUIDO
-  (Continuidad de la Regla)                             (Detección del Intruso)
-            │                                                     │
-  ┌─────────┴─────────┐                                 ┌─────────┴─────────┐
-  ▼                   ▼                                 ▼                   ▼
-Lineales /        Alternadas /                      Por Campo           Por Grado /
-Continuas         Por Parejas                       Semántico           Categoría
-(A, B, C \dots) (A_1, B_1, A_2, B_2 \dots)       (No comparte        (Gramatical o
-                                                     el archisemema)     intensidad dispar)
-```
-
-
-
-### Ontología de la Clasificación Léxica
-- **Campo Semántico:** Conjunto de palabras que comparten un rasgo semántico nuclear común denominado **archisemema**.
-- **Serie Verbal:** Secuencia ordenada de términos cuyos eslabones están vinculados por una ley de formación semántica explícita o implícita.
-- **Término Excluido:** Elemento anómalo que, a pesar de presentar afinidad aparente o asociativa con el grupo, carece del sema definitorio indispensable que aglutina a los demás.
-- **Cohipónimos:** Elementos que pertenecen a la misma especie o subclase dentro de un género rector compartido.
-
----
-
-
-
-## 3. DESARROLLO TEÓRICO FORMAL
-
-
-
-### 3.1 Tipología y Patrones en Series Verbales
-
-#### A. Series Continuas (Lineales Simples)
-Todos los términos de la serie comparten exactamente el mismo vínculo semántico directo de forma ininterrumpida:
-- *Ejemplo:* *Gato, tigre, leopardo, jaguar, ...*
-  - Regla: Todos son félidos (cohipónimos de la familia *Felidae*).
-  - Continuación obligatoria: *Puma* o *Guepardo* (no lobo ni hiena).
-
-#### B. Series Alternadas (Bimembres o Intercaladas)
-La serie presenta dos leyes de formación entrelazadas en posiciones impares (1, 3, 5\dots) y pares (2, 4, 6\dots):
-- *Ejemplo:* *Prólogo, epílogo; inicio, fin; génesis, ...*
-  - Términos 1, 3 y 5 representan el principio; términos 2, 4 y 6 representan el desenlace.
-  - Continuación en posición 6: *Apocalipsis* o *Consumación*.
-
-#### C. Series por Parejas Analógicas (Compuestas)
-Los términos se agrupan de dos en dos guardando una relación interna que se repite:
-- *Ejemplo:* *Médico, bisturí; carpintero, serrucho; pintor, ...*
-  - Estructura: [Sujeto_1 : Herramienta_1], [Sujeto_2 : Herramienta_2], [Sujeto_3 : ?]
-  - Continuación: *Pincel* (no lienzo ni cuadro).
-
-
-
-## 4. FORMULARIO MAESTRO DE SERIES Y CLASIFICACIONES
-
-| Estructura del Ejercicio | Ecuación de Sucesión Semántica | Regla Operativa en Admisión |
-| :--- | :--- | :--- |
-| **Serie Lineal Homogénea** | X_{n+1} \in \text{Clase}(X_n) | Mantener el mismo nivel de jerarquía (especie con especie). |
-| **Serie de Progresión Escalar** | I_1 < I_2 < I_3 < \dots < I_{n+1} | Si la serie crece en intensidad, la clave debe ser el grado máximo. |
-| **Serie Analógica Doble** | (A : B) \sim (C : D) \sim (E : ?) | Identificar primero la relación intrapareja antes de buscar la clave. |
-| **Término Excluido Polar** | \text{Semas}(T_i) \cap \text{Archisemema} = \emptyset | Buscar el término que viola la definición común del conjunto. |
-
----
-
-
-
-## 5. MNEMOTECNIAS DE COMBATE PREUNIVERSITARIO
-
-
-
-### Mnemotecnia 2: "El Semáforo de Series"
-- **Verde (Continua):** Sigue la misma línea recta sin doblar (*Lunes, martes, miércoles...*).
-- **Amarillo (Alternada):** Salta un casillero para encontrar a tu hermano (*A, 1, B, 2, C...*).
-- **Rojo (Compuesta):** Deténte a mirar la pareja completa antes de avanzar (*Perro : ladra ; gato : maúlla...*).
-
----
-
-
-
-## 6. TÉCNICAS Y ARTIFICIOS DE CÁLCULO (HACKING PREUNIVERSITARIO)
-
-
-
-### Hack 2: Descarte por Grado de Especialización Científica
-Si una serie verbal incluye términos técnicos universitarios:
-- *Troposfera, estratosfera, mesosfera, ...*
-- Si en las opciones tienes *atmósfera* e *ionosfera*:
-  - *Atmósfera* es el **hiperónimo** (el todo).
-  - *Ionosfera* es otro **merónimo/cohipónimo** (una capa más del mismo nivel).
-  - **HACK:** En series de admisión se completa con el **mismo nivel jerárquico**. Marca *ionosfera*.
-
----
-
-
-
-### Ejercicio 1 (Nivel Básico: Serie Verbal Continua)
-**Enunciado:** Identifique la palabra que completa correctamente la siguiente serie verbal:
-*Quechua, aimara, shipibo, asháninka, ...*
-A) Castellano  
-B) Awajún  
-C) Latín  
-D) Guaraní  
-E) Náhuatl  
-
-**Resolución Paso a Paso:**
-1. Analizamos el campo semántico de los términos dados:
-   - Quechua y aimara: lenguas originarias amerindias andinas del Perú.
-   - Shipibo y asháninka: lenguas originarias amazónicas del Perú.
-   - Archisemema general: **Lenguas originarias e indígenas vivas habladas en el territorio nacional del Perú**.
-2. Evaluamos las alternativas:
-   - *Castellano:* Lengua romance de origen indoeuropeo traída en la conquista (no originaria prehispánica).
-   - *Latín:* Lengua clásica itálica extinta.
-   - *Guaraní:* Lengua indígena oficial de Paraguay.
-   - *Náhuatl:* Lengua indígena de México.
-   - *Awajún:* Lengua originaria viva de la familia jíbara hablada por las comunidades nativas de la selva peruana (Amazonas, San Martín, Loreto).
-3. Awajún es el cohipónimo exacto que prolonga la serie de lenguas originarias del Perú.
-**Respuesta:** B
-
----
-
-
-
-### Ejercicio 3 (Nivel Intermedio-Avanzado: Serie Verbal Compuesta por Intensidad)
-**Enunciado:** Complete la serie verbal con el término que corresponda según la lógica de intensidad creciente:
-*Susurro, murmullo, voz, grito, ...*
-A) Diálogo  
-B) Bramido  
-C) Canto  
-D) Eco  
-E) Sonido  
-
-**Resolución Paso a Paso:**
-1. Analizamos los términos de la serie:
-   - *Susurro:* Emisión de voz con sonido imperceptible y suave (I_1).
-   - *Murmullo:* Ruido confuso y suave de voces (I_2).
-   - *Voz:* Emisión vocal con intensidad regular y normal (I_3).
-   - *Grito:* Emisión de la voz en tono muy alto y con gran volumen (I_4).
-2. Ley de formación: Escala de emisión acústica humana en progresión de **intensidad sonora estrictamente creciente** (I_1 < I_2 < I_3 < I_4 < I_5).
-3. Buscamos el grado extremo superior (I_5):
-   - *Diálogo / Canto / Eco / Sonido* no representan un nivel de volumen superior al grito.
-   - *Bramido:* Voz muy potente y ensordecedora, grito desgarrador de furia o estrépito acústico emitido con fuerza descomunal.
-4. *Bramido* culmina la escala de intensidad creciente.
-**Respuesta:** B
-
----
-
-
-
-### Ejercicio 4 (Nivel Avanzado DECO: Serie Alternada Mixta)
-**Enunciado (Tipo San Marcos DECO / UNSA):** Determine los dos vocablos que continúan congruentemente la siguiente serie verbal:
-*Iliada, Homero; Eneida, Virgilio; Divina Comedia, Dante; ... , ...*
-A) Metamorfosis, Sófocles  
-B) Jerusalén libertada, Torquato Tasso  
-C) Edipo Rey, Ovidio  
-D) Fausto, Shakespeare  
-E) Decamerón, Petrarca  
-
-**Resolución Paso a Paso:**
-1. Descomponemos la estructura de la serie:
-   - Par 1: *Iliada* (Epopeya clásica griega) \to *Homero* (su autor).
-   - Par 2: *Eneida* (Epopeya clásica latina) \to *Virgilio* (su autor).
-   - Par 3: *Divina Comedia* (Epopeya religiosa medieval/renacentista italiana) \to *Dante Alighieri* (su autor).
-2. Ley de formación estructural:
-   - **Obra maestra del género épico monumental en verso : Autor fundamental consagrado**.
-3. Analizamos las alternativas:
-   - *A) Metamorfosis, Sófocles:* La obra *Metamorfosis* es de Ovidio; Sófocles escribió tragedia. Asociación errónea.
-   - *C) Edipo Rey, Ovidio:* *Edipo Rey* es tragedia de Sófocles. Asociación errónea.
-   - *D) Fausto, Shakespeare:* *Fausto* es el drama poético de Goethe; Shakespeare no escribió Fausto. Asociación errónea.
-   - *E) Decamerón, Petrarca:* El *Decamerón* es de Giovanni Boccaccio; Petrarca escribió el *Cancionero*. Asociación errónea.
-   - *B) Jerusalén libertada, Torquato Tasso:* *Jerusalén libertada* es la gran epopeya del Renacimiento tardío italiano escrita por el poeta Torquato Tasso. Coincidencia exacta de obra épica y autor verídico.
-**Respuesta:** B
-
----
-
-
-
-## 10. GLOSARIO DE TÉRMINOS CLAVE
-
-1. **Archisemema:** Conjunto de semas comunes que define la pertenencia a un campo semántico determinado.
-2. **Serie Verbal:** Secuencia lógica de términos regida por un criterio semántico recurrente.
-3. **Término Excluido:** Ejercicio psicotécnico verbal que consiste en detectar el vocablo que no comparte la esencia del grupo.
-4. **Cohiponimia:** Relación de paridad entre dos o más palabras que comparten el mismo hiperónimo directo.
-5. **Heterogeneidad Categorial:** Disparidad en la función morfosintáctica (sustantivo, adjetivo, verbo) entre términos de una lista.
-6. **Serie Alternada:** Secuencia donde los términos impares responden a un patrón y los pares a otro diferente.
-7. **Holónimo:** Palabra que nombra una totalidad orgánica compuesta por partes integrantes.
-8. **Merónimo:** Palabra que designa una parte componente de un todo mayor.
-9. **Gradación:** Disposición de términos en orden creciente o decreciente de fuerza, tamaño o intensidad.
-10. **Taxonomía:** Clasificación jerárquica y ordenada de elementos en clases, órdenes, familias y géneros.
-
----
-
-
-
-### 3.2 El Método Formal para Resolver Término Excluido
-Para expulsar al término intruso de manera infalible en el examen de admisión, se debe seguir el siguiente protocolo analítico:
-
-```
-[PASO 1] Definir con precisión el significado de la palabra premisa o de los términos base.
-   │
-   ▼
-[PASO 2] Delimitar el ARCHISEMEMA (el rasgo común esencial que comparten casi todos).
-   │
-   ▼
-[PASO 3] Evaluar las opciones verificando cuál NO encaja en el archisemema delimitado.
-   │
-   ▼
-[PASO 4] Si todas comparten el campo, aplicar filtros secundarios:
-         - ¿Tienen la misma categoría gramatical?
-         - ¿Tienen la misma intensidad o grado?
-         - ¿Tienen la misma connotación (positiva/peyorativa)?
+# Series y clasificaciones verbales
+
+## Qué necesitas reconocer
+
+Una **serie verbal** presenta palabras relacionadas por una regla. Resolverla exige identificar esa relación y comprobar las alternativas. Que varias palabras pertenezcan a un mismo grupo no significa que tengan un orden obligatorio.
+
+Por ejemplo, *gato, tigre y jaguar* pertenecen al grupo de los félidos. *Puma* y *leopardo* también podrían incorporarse. Sin una restricción adicional no se puede exigir uno solo como continuación.
+
+## Mapa del tema
+
+```mermaid
+graph TD
+ ROOT["Series y clasificación verbal"]
+ B1["Series con regla explícita"]
+ B1N1["Continuas: aplicar la misma relación a los términos pertinentes."]
+ B1N2["Alternadas o por parejas: separar las posiciones antes de buscar la regla."]
+ B1N3["Pertenecer a un mismo campo no impone por sí solo un orden ni una continuación única."]
+ B2["Término excluido"]
+ B2N1["Precisar el rasgo común que comparten los términos admitidos."]
+ B2N2["Distinguir pertenencia semántica, relación funcional y categoría gramatical."]
+ B2N3["La exclusión debe apoyarse en el criterio de la consigna y no en una diferencia accidental."]
+ B3["Verificar la clasificación"]
+ B3N1["Leer todas las opciones bajo el mismo criterio."]
+ B3N2["Comprobar intensidad y connotación solo cuando sean pertinentes."]
+ B3N3["Si dos criterios razonables dan respuestas distintas, el ejercicio necesita contexto adicional."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
+## Relaciones que conviene distinguir
 
+| Relación | Qué debes comprobar | Ejemplo |
+|---|---|---|
+| Sinonimia contextual | Coincidencia de significado en el sentido indicado | En una descripción del tamaño: grande y enorme comparten una idea, con distinta intensidad. |
+| Antonimia | Oposición dentro de una misma dimensión | Entrada y salida, según la dirección del movimiento. |
+| Hiperonimia e hiponimia | Inclusión de un significado específico en otro más general | Rosa es un tipo de flor. |
+| Cohiponimia | Dos términos comparten un hiperónimo | Rosa y clavel son tipos de flor. |
+| Parte y todo | Un elemento pertenece a la estructura de otro | Pétalo y flor. El pétalo no es un tipo de flor. |
+| Asociación funcional | Los elementos se relacionan por una actividad o uso | Pincel y lienzo se vinculan con la pintura, pero no son sinónimos. |
 
-### Mnemotecnia 1: "El Triángulo del Intruso" (\text{S-C-G})
-Para resolver Término Excluido:
-- **S**ema: ¿Qué rasgo mínimo comparten 4 de las palabras?
-- **C**ampo: ¿En qué cajón temático caben juntas?
-- **G**ramática: ¿Tienen la misma forma morfológica (todas sustantivos, todas verbos)?
-- Si una palabra falla en **S**, **C** o **G**, ¡esa es la que se va!
+Un **campo semántico**, en el sentido escolar empleado aquí, agrupa palabras de la misma categoría gramatical que comparten un rasgo de significado. Un **campo asociativo** reúne palabras vinculadas por un tema; puede incluir categorías y relaciones diferentes. No confundas ninguno de ellos con una **familia léxica**, formada por palabras relacionadas por su raíz.
 
+## Cómo reconocer cada tipo de serie
 
+### Serie de una misma clase
 
-### Hack 1: La Regla del "4 contra 1" (Aislamiento de la Premisa Ficticia)
-En preguntas de término excluido donde no te den premisa en el encabezado (solo 5 alternativas):
-1. No busques qué palabra te gusta menos.
-2. Agrupa mentalmente **cuatro palabras** bajo un título común concreto.
-3. La palabra solitaria que quede afuera sin poder entrar al título es automáticamente la clave de respuesta.
+**Ejemplo:** rosa, clavel, tulipán, ___.
 
+Si se pide añadir otra flor, varias palabras pueden servir. La elección será única únicamente si las alternativas o la consigna dejan una sola posibilidad. La lista no indica por sí misma una secuencia temporal.
 
+### Serie alternada
 
-## 7. ZONA DE TRAMPAS Y DISTRACTORES ("¡PELIGRO EXAMEN!")
+Separa las posiciones impares de las pares y busca la regla de cada conjunto.
 
-> [!WARNING]
-> **Trampa 1: El Hiperónimo o Todo colado en el Término Excluido**
-> En el grupo: *Húmero, fémur, tibia, peroné, esqueleto*. Muchos alumnos excluyen *fémur* porque es del muslo y los otros de la pierna o brazo. **¡ERROR GRAVÍSIMO!** El término excluido es **esqueleto**, porque los cuatro primeros son nombres de huesos específicos (cohipónimos), mientras que el esqueleto es el conjunto total (holónimo).
+**Ejemplo:** enero, lunes, febrero, martes, marzo, ___.
 
-> [!CAUTION]
-> **Trampa 2: La Falsa Asociación Afectiva o Subjetiva**
-> Al buscar el término excluido de *Navidad*: *Pavo, panetón, pesebre, villancico, tristeza*. No excluyas una palabra porque "en tu casa no comen pavo". El campo semántico se fundamenta en rasgos denotativos objetivos de la tradición cultural compartida, no en vivencias personales.
+- Posiciones impares: enero, febrero, marzo; meses consecutivos.
+- Posiciones pares: lunes, martes; días consecutivos.
+- La siguiente posición par corresponde a **miércoles**.
 
----
+La respuesta resulta del orden de los días, no de que todas las palabras pertenezcan a un mismo campo.
 
+### Serie por parejas
 
+Compara la relación dentro de cada par antes de relacionar todos los términos.
 
-## 8. APLICACIÓN AL MUNDO REAL Y CONTEXTO DECO
+**Ejemplo:** médico–estetoscopio; carpintero–serrucho; pintor–___.
 
-En la inteligencia artificial moderna, los sistemas de recomendación (Netflix, Spotify, Amazon) y los motores de búsqueda semántica (Google Vertex AI) utilizan la teoría de **espacios vectoriales de palabras** (*Word Embeddings* como Word2Vec). En estos espacios matemáticos multidimensionales, las palabras que pertenecen a una misma clasificación semántica o serie se agrupan en cúmulos densos (*clusters*). La detección de un término excluido equivale a identificar un valor atípico (*outlier*) en la nube de datos, lo que permite a los sistemas de ciberseguridad detectar fraudes informáticos y transacciones bancarias anómalas.
+Si la relación indicada es **profesional e instrumento de trabajo**, *pincel* es una opción adecuada. *Lienzo* pertenece a la misma actividad, pero es un soporte, y *cuadro* puede ser el producto. Puede haber otros instrumentos posibles: las opciones deben permitir elegir uno sin ambigüedad.
 
----
+### Serie de intensidad
 
+No conviertas en una escala exacta palabras que solo están relacionadas. *Desasosiego* expresa intranquilidad y no es necesariamente un grado leve del mismo miedo que expresan *terror* o *pánico*. Para exigir un orden de intensidad hay que precisar el sentido y evitar alternativas intercambiables.
 
+## Procedimiento
 
-### Ejercicio 2 (Nivel Intermedio: Término Excluido por Archisemema)
-**Enunciado (Modelo Admisión UNSA):** Elija la palabra que no guarda relación semántica con las demás:
-**ABYECTO**
-A) Vil  
-B) Infame  
-C) Ruin  
-D) Indigente  
-E) Despreciable  
-
-**Resolución Paso a Paso:**
-1. Definimos la palabra premisa:
-   - *Abyecto:* Persona despreciable, vil en extremo, con una conducta moral baja y degradada.
-2. Analizamos los términos propuestos:
-   - *Vil:* Bajo, despreciable moralmente.
-   - *Infame:* Que carece de honra, vil y perverso.
-   - *Ruin:* Mezquino, desleal, de malas intenciones.
-   - *Despreciable:* Digno de desprecio por sus bajas acciones.
-   - *Indigente:* Persona que carece de recursos económicos suficientes para satisfacer sus necesidades básicas materiales (pobreza material, no bajeza moral).
-3. El archisemema compartido por las opciones A, B, C y E es la **degradación moral o vileza ética**. *Indigente* describe una condición socioeconómica.
-4. Por ende, *indigente* queda excluida del campo semántico.
-**Respuesta:** D
-
----
-
-
-
-### Ejercicio 5 (Nivel 5: Boss Challenge - Discriminación Jerárquica y Falsos Cohipónimos)
-**Enunciado (Nivel UNI / Máxima Exigencia):** Identifique el término que debe ser excluido del siguiente conjunto de vocablos botánicos:
-A) Sequoia  
-B) Ciprés  
-C) Pino  
-D) Alerce  
-E) Roble  
-
-**Resolución Paso a Paso:**
-1. Analizamos la naturaleza biológico-taxonómica de cada planta leñosa:
-   - *Sequoia (Secuoya):* Árbol perteneciente a la división de las **Gimnospermas** (coníferas).
-   - *Ciprés:* Árbol del género *Cupressus*, perteneciente a las **Gimnospermas** (coníferas con hojas perennes y semillas en conos o piñas).
-   - *Pino:* Árbol del género *Pinus*, perteneciente a las **Gimnospermas** (coníferas).
-   - *Alerce:* Árbol del género *Larix*, perteneciente a las **Gimnospermas** (coníferas).
-   - *Roble:* Árbol del género *Quercus*, perteneciente a la división de las **Angiospermas** (plantas con flores verdaderas y semillas protegidas dentro de un fruto carnoso o seco, como la bellota).
-2. El archisemema que agrupa a cuatro de las alternativas es la condición taxonómica de ser **Gimnospermas / Coníferas**.
-3. El *roble* es una planta **angiosperma dicotiledónea**, rompiendo el criterio biológico fundamental de clasificación.
-4. Por tanto, el término excluido es **Roble**.
-**Respuesta:** E
-
----
-
-
-
-## 11. BANCO DE FLASHCARDS (Q/A)
-
-- **Q: ¿Qué es el archisemema en una pregunta de término excluido?**  
-  **A:** Es el núcleo de significado común que comparten cuatro de las alternativas y del cual carece la palabra intrusa.
-- **Q: Si una serie verbal es "Prado, dehesa, estepa, sabana, ...", ¿qué tipo de serie es?**  
-  **A:** Es una serie de cohipónimos de biomas o llanuras cubiertas de vegetación herbácea.
-- **Q: ¿Por qué en un grupo de sustantivos abstractos se debe expulsar a un adjetivo aunque signifique lo mismo?**  
-  **A:** Por el principio de uniformidad gramatical: los componentes de una serie o campo deben compartir la misma categoría morfológica.
-- **Q: ¿Cómo se distingue una serie lineal de una alternada?**  
-  **A:** Si el segundo término no guarda relación directa con el primero pero sí con el cuarto, la serie es alternada (salta posiciones).
-- **Q: En una lista de instrumentos musicales: guitarra, violín, arpa, piano, flauta, ¿cuál es el término excluido?**  
-  **A:** Flauta, porque es un instrumento de viento, mientras que todos los demás son instrumentos de cuerda (cordófonos).
-
----
-
-
-
-### 3.3 Principales Criterios de Exclusión
-
-1. **Por Falta de Sema Común (Ajenidad Categorial):** El vocablo no pertenece al género o familia semántica de los demás.
-   - *Ejemplo:* *Oftalmología, Cardiología, Neurología, Astrología, Pediatría*.
-   - Excluido: **Astrología** (es una pseudociencia adivinatoria, no una especialidad médica científica).
-2. **Por Diferencia de Intensidad:** Todos los términos expresan un grado extremo salvo uno que es moderado o leve.
-   - *Ejemplo:* *Pavor, Terror, Espanto, Desasosiego, Pánico*.
-   - Excluido: **Desasosiego** (inquietud o desazón leve, mientras que los otros son estados de miedo paralizante extremo).
-3. **Por Incongruencia de Categoría Gramatical:** Cuatro términos son sustantivos y uno es adjetivo, o cuatro son verbos y uno es sustantivo.
-   - *Ejemplo:* *Generosidad, Altruismo, Filantropía, Bondadoso, Solidaridad*.
-   - Excluido: **Bondadoso** (es un adjetivo calificativo; todos los demás son sustantivos abstractos de virtud).
-4. **Por Relación Parte-Todo Distinta:** Cuatro son partes estructurales y uno es un accesorio externo.
-
----
-
----
-
-## 3. DESARROLLO TEÓRICO FORMAL
-
-### 3.1 Tipología y Patrones en Series Verbales
-
-#### A. Series Continuas (Lineales Simples)
-Todos los términos de la serie comparten exactamente el mismo vínculo semántico directo de forma ininterrumpida:
-- *Ejemplo:* *Gato, tigre, leopardo, jaguar, ...*
-  - Regla: Todos son félidos (cohipónimos de la familia *Felidae*).
-  - Continuación obligatoria: *Puma* o *Guepardo* (no lobo ni hiena).
-
-#### B. Series Alternadas (Bimembres o Intercaladas)
-La serie presenta dos leyes de formación entrelazadas en posiciones impares (1, 3, 5\dots) y pares (2, 4, 6\dots):
-- *Ejemplo:* *Prólogo, epílogo; inicio, fin; génesis, ...*
-  - Términos 1, 3 y 5 representan el principio; términos 2, 4 y 6 representan el desenlace.
-  - Continuación en posición 6: *Apocalipsis* o *Consumación*.
-
-#### C. Series por Parejas Analógicas (Compuestas)
-Los términos se agrupan de dos en dos guardando una relación interna que se repite:
-- *Ejemplo:* *Médico, bisturí; carpintero, serrucho; pintor, ...*
-  - Estructura: [Sujeto_1 : Herramienta_1], [Sujeto_2 : Herramienta_2], [Sujeto_3 : ?]
-  - Continuación: *Pincel* (no lienzo ni cuadro).
-
-### 3.2 El Método Formal para Resolver Término Excluido
-Para expulsar al término intruso de manera infalible en el examen de admisión, se debe seguir el siguiente protocolo analítico:
-
-```
-[PASO 1] Definir con precisión el significado de la palabra premisa o de los términos base.
-   │
-   ▼
-[PASO 2] Delimitar el ARCHISEMEMA (el rasgo común esencial que comparten casi todos).
-   │
-   ▼
-[PASO 3] Evaluar las opciones verificando cuál NO encaja en el archisemema delimitado.
-   │
-   ▼
-[PASO 4] Si todas comparten el campo, aplicar filtros secundarios:
-         - ¿Tienen la misma categoría gramatical?
-         - ¿Tienen la misma intensidad o grado?
-         - ¿Tienen la misma connotación (positiva/peyorativa)?
+```mermaid
+graph TD
+ PROOT["Ruta para clasificar y excluir"]
+ P1["Precisar los sentidos de los términos y la consigna."]
+ P2["Formular el rasgo común de la clasificación."]
+ P3["Evaluar todas las opciones con el mismo criterio."]
+ P4["Comprobar si otra clasificación también es razonable; pedir contexto si la respuesta no es única."]
+ PROOT --> P1
+ P1 --> P2
+ P2 --> P3
+ P3 --> P4
 ```
 
-### 3.3 Principales Criterios de Exclusión
+**Procedimiento:** consulta el mapa anterior y aplica el mismo criterio a todas las alternativas. Si aparecen dos respuestas defendibles, revisa la consigna; no inventes una condición para justificar una clave.
 
-1. **Por Falta de Sema Común (Ajenidad Categorial):** El vocablo no pertenece al género o familia semántica de los demás.
-   - *Ejemplo:* *Oftalmología, Cardiología, Neurología, Astrología, Pediatría*.
-   - Excluido: **Astrología** (es una pseudociencia adivinatoria, no una especialidad médica científica).
-2. **Por Diferencia de Intensidad:** Todos los términos expresan un grado extremo salvo uno que es moderado o leve.
-   - *Ejemplo:* *Pavor, Terror, Espanto, Desasosiego, Pánico*.
-   - Excluido: **Desasosiego** (inquietud o desazón leve, mientras que los otros son estados de miedo paralizante extremo).
-3. **Por Incongruencia de Categoría Gramatical:** Cuatro términos son sustantivos y uno es adjetivo, o cuatro son verbos y uno es sustantivo.
-   - *Ejemplo:* *Generosidad, Altruismo, Filantropía, Bondadoso, Solidaridad*.
-   - Excluido: **Bondadoso** (es un adjetivo calificativo; todos los demás son sustantivos abstractos de virtud).
-4. **Por Relación Parte-Todo Distinta:** Cuatro son partes estructurales y uno es un accesorio externo.
+## Ejemplos resueltos
 
----
+### Completar una serie alternada
 
----
+**Enunciado:** completa la secuencia enero, lunes, febrero, martes, marzo, ___.
 
-## 5. MNEMOTECNIAS DE COMBATE PREUNIVERSITARIO
+A) Abril · B) Miércoles · C) Viernes · D) Domingo.
 
-### Mnemotecnia 1: "El Triángulo del Intruso" (\text{S-C-G})
-Para resolver Término Excluido:
-- **S**ema: ¿Qué rasgo mínimo comparten 4 de las palabras?
-- **C**ampo: ¿En qué cajón temático caben juntas?
-- **G**ramática: ¿Tienen la misma forma morfológica (todas sustantivos, todas verbos)?
-- Si una palabra falla en **S**, **C** o **G**, ¡esa es la que se va!
+**Regla:** hay dos secuencias intercaladas. La posición que falta pertenece a los días de la semana.
 
-### Mnemotecnia 2: "El Semáforo de Series"
-- **Verde (Continua):** Sigue la misma línea recta sin doblar (*Lunes, martes, miércoles...*).
-- **Amarillo (Alternada):** Salta un casillero para encontrar a tu hermano (*A, 1, B, 2, C...*).
-- **Rojo (Compuesta):** Deténte a mirar la pareja completa antes de avanzar (*Perro : ladra ; gato : maúlla...*).
+**Aplicación:** después de lunes y martes corresponde miércoles. Abril continuaría los meses, pero ocuparía una posición distinta.
 
----
+**Respuesta:** B) Miércoles.
+
+### Mantener una clasificación
+
+**Enunciado:** elige una palabra para añadir a rosa, clavel y tulipán si se exige otro nombre de flor.
+
+A) Pétalo · B) Jardín · C) Margarita · D) Perfume.
+
+**Regla:** todas las palabras admitidas deben nombrar tipos de flor.
+
+**Aplicación:** margarita cumple la condición. Pétalo nombra una parte; jardín, un lugar; perfume, una sustancia o su olor.
+
+**Respuesta:** C) Margarita.
+
+## Precisar la regla con ejemplos
+
+### Compartir un tema no significa tener la misma relación
+
+En *rosa, clavel, tulipán y margarita*, los elementos son nombres de flores. En *rosa, jardinero, maceta y regar*, todos se vinculan con la jardinería, pero hay una flor, una persona, un recipiente y una acción. El segundo grupo puede formar un campo asociativo; no debe presentarse como una enumeración de tipos de flor.
+
+Si una pregunta pide otro nombre de flor y ofrece *maceta* y *margarita*, solo margarita cumple esa condición. Si pregunta por un elemento vinculado con la jardinería, ambas opciones pueden resultar pertinentes. La diferencia no depende de la palabra aislada, sino de lo que se pide hacer con ella.
+
+### Conservar la dirección de la relación
+
+**Ejemplo:** libro–página; árbol–hoja; piano–___.
+
+La relación propuesta es **todo y una de sus partes**. Entre *tecla*, *melodía*, *pianista* y *concierto*, tecla mantiene esa dirección. Melodía puede ser lo interpretado; pianista, la persona que toca; concierto, una actividad. Todas las palabras guardan alguna relación con el piano, pero no la misma.
+
+Si se invierte el primer par y se escribe *página–libro*, cambia el sentido: ahora se parte del componente para llegar al conjunto. Esa orientación debe conservarse en las otras parejas. No basta encontrar palabras que suenen relacionadas.
+
+### Diferenciar una condición de pertenencia de una secuencia
+
+**Caso A:** «Añade un día de la semana a lunes, martes y miércoles». Jueves, viernes, sábado y domingo cumplen la pertenencia si no se admite repetir. La consigna no pide todavía el siguiente día.
+
+**Caso B:** «Continúa los días consecutivos lunes, martes, miércoles». Ahora corresponde jueves, porque la consigna establece el orden. Elegir viernes saltaría una posición.
+
+Esta distinción evita aprender respuestas de memoria. Ante una serie, formula la regla en una frase: «son flores» expresa una clase; «son días consecutivos» añade un orden; «cada profesional va seguido de un instrumento» añade una relación por parejas.
+
+### Comprobar la respuesta en el conjunto
+
+Después de elegir, reconstruye la serie completa. Revisa que la regla funcione en todos los pasos y que no necesites una excepción inventada al llegar a tu alternativa. Si has separado dos secuencias alternadas, comprueba cada una por su lado antes de volver a unirlas.
+
+Una explicación suficiente puede ser breve: «La posición faltante corresponde a la serie de días; después de martes va miércoles». En cambio, «porque es la opción más lógica» no permite comprobar el razonamiento.
+
+## Importante
+
+- Una relación temática no establece necesariamente un orden.
+- Compara los términos en el sentido de la consigna: una palabra puede tener varios significados.
+- Parte–todo y tipo–clase son relaciones distintas.
+- Una buena explicación debe señalar la regla y mostrar por qué la alternativa la cumple.

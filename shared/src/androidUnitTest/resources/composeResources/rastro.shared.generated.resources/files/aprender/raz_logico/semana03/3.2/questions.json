@@ -1,1 +1,200 @@
-[{"concept":"3.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t03_s02_c01","options":["No implica, porque A \\to B es una Contradicción","Son proposiciones contradictorias","Sí implica, porque A \\to B es una Tautología","No implica, porque A \\to B es una Contingencia"],"pedagogicalTier":"concepto","semana":3,"statement":"Dadas las fórmulas proposicionales:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.2.2","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t03_s02_c02","options":["A es necesariamente verdadera","B es necesariamente verdadera","C es necesariamente verdadera","A es necesariamente falsa"],"pedagogicalTier":"concepto","semana":3,"statement":"Sean A, B y C tres esquemas proposicionales tales que:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: Significa que el condicional A \\to B es una **Tautología** (nunca puede darse que A sea verdadero y B falso).","fuente":"temario","id":"rl_t03_s02_c03","options":["Equivale formalmente a A \\to B (\"B es la condición hacia donde apunta la implicación\").","Valor o condición no aplicable al caso planteado","Significa que el condicional A \\to B es una **Tautología** (nunca puede darse que A sea verdadero y B falso).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":3,"statement":"¿Qué significa que una proposición A implique lógicamente a B (A \\models B)?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Equivale formalmente a A \\to B (\"B es la condición hacia donde apunta la implicación\").","fuente":"temario","id":"rl_t03_s02_c04","options":["Significa que el condicional A \\to B es una **Tautología** (nunca puede darse que A sea verdadero y B falso).","Valor o condición no aplicable al caso planteado","Valor o condición no aplicable al caso planteado","Equivale formalmente a A \\to B (\"B es la condición hacia donde apunta la implicación\")."],"pedagogicalTier":"concepto","semana":3,"statement":"¿Cuál es la expresión equivalente a \"A solo si B\"?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.2.5","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t03_s02_c05","options":["Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t03_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t03_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t03_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t03_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t03_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rl_t03_s02_c01",
+    "concept": "3.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $p \\not\\Leftrightarrow q$?",
+    "options": [
+      "$p \\veebar q$",
+      "$p \\Leftrightarrow q$",
+      "$p \\Rightarrow q$",
+      "$p \\wedge q$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $p \\veebar q$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s02_c02",
+    "concept": "3.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $p \\veebar q$?",
+    "options": [
+      "$p \\vee q$",
+      "$p \\wedge q$",
+      "$p \\Rightarrow q$",
+      "$\\neg \\left(p \\wedge q\\right) \\wedge \\left(p \\vee q\\right)$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $\\neg \\left(p \\wedge q\\right) \\wedge \\left(p \\vee q\\right)$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "concept": "3.2.3",
+    "correctIndex": 2,
+    "explanation": "1. La implicación lógica exige que la verdad de A garantice la de B.\n2. Su único contraejemplo sería A verdadera y B falsa.\n3. Si no existe ese contraejemplo, A implica lógicamente a B.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "rl_t03_s02_c03",
+    "options": [
+      "A y B son falsas para toda asignación",
+      "A y B tienen siempre valores opuestos",
+      "No existe una asignación con A verdadera y B falsa",
+      "Existe una asignación con A verdadera y B falsa"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "¿Qué condición expresa que A implica lógicamente a B?",
+    "subject": "raz_logico",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.2.4",
+    "correctIndex": 3,
+    "explanation": "1. «Solo si B» establece que B es una condición necesaria para A.\n2. Cuando A se cumple, B debe cumplirse.\n3. La formalización es A implica B; no se afirma la recíproca.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "rl_t03_s02_c04",
+    "options": [
+      "$B\\to A$",
+      "$A\\lor B$",
+      "$A\\land B$",
+      "$A\\to B$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "¿Cuál es la forma lógica de «A solo si B»?",
+    "subject": "raz_logico",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "rl_t03_s02_c05",
+    "concept": "3.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $\\neg \\left(p \\vee \\left(q \\wedge r\\right)\\right)$?",
+    "options": [
+      "$\\neg p \\wedge \\left(\\neg q \\vee \\neg r\\right)$",
+      "$\\left(\\neg q \\wedge \\neg r\\right) \\vee \\neg p$",
+      "$p \\wedge q \\wedge r$",
+      "$p \\vee q \\vee r$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 8 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $\\neg p \\wedge \\left(\\neg q \\vee \\neg r\\right)$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s02_c06",
+    "concept": "3.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $\\left(p \\wedge q\\right) \\vee \\left(p \\wedge \\neg q\\right)$?",
+    "options": [
+      "$q$",
+      "$\\neg p$",
+      "$p \\wedge q$",
+      "$p$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $p$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s02_c07",
+    "concept": "3.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $\\left(p \\vee q\\right) \\wedge \\left(p \\vee \\neg q\\right)$?",
+    "options": [
+      "$\\neg p$",
+      "$p \\vee q$",
+      "$p$",
+      "$q$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $p$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s02_c08",
+    "concept": "3.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $\\neg p \\Rightarrow \\neg q$?",
+    "options": [
+      "$p \\vee q$",
+      "$q \\Rightarrow p$",
+      "$p \\Rightarrow q$",
+      "$p \\wedge q$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $q \\Rightarrow p$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s02_c09",
+    "concept": "3.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $q \\not\\Rightarrow p$?",
+    "options": [
+      "$q \\wedge \\neg p$",
+      "$p \\wedge \\neg q$",
+      "$p \\Rightarrow q$",
+      "$p \\Leftrightarrow q$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $q \\wedge \\neg p$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s02_c10",
+    "concept": "3.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $p \\Leftrightarrow \\neg q$?",
+    "options": [
+      "$p \\Leftrightarrow q$",
+      "$p \\Rightarrow q$",
+      "$p \\wedge q$",
+      "$p \\veebar q$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $p \\veebar q$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s02_c11",
+    "concept": "3.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "Para refutar una equivalencia lógica entre A y B basta…",
+    "options": [
+      "Que tengan diferente número de símbolos.",
+      "Que se escriban con letras distintas.",
+      "Una asignación donde sus valores sean distintos.",
+      "Una asignación donde ambas sean verdaderas."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La equivalencia exige coincidencia en todas las filas.\n2. Una sola discrepancia incumple esa exigencia.\n3. Que coincidan en algunas filas no demuestra equivalencia.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

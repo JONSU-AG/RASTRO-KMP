@@ -1,1 +1,200 @@
-[{"concept":"8.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t08_s02_c01","options":["800\\pi\\text{ m}^2","1600\\pi\\text{ m}^2","400\\pi\\text{ m}^2","200\\pi\\text{ m}^2"],"pedagogicalTier":"concepto","semana":8,"statement":"**Enunciado:** Un agricultor de Majes desea construir un reservorio con forma de corona circular. Se sabe que la cuerda más larga de la circunferencia exterior que resulta tangente a la circunferencia interior mide 40\\text{ m}. Calcule la cantidad de lona impermeable requerida para cubrir exactamente el fondo de dicho reservorio (área de la corona circular). (Considere \\pi \\approx 3.1416).","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.2","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t08_s02_c02","options":["50\\text{ m}^2","100\\text{ m}^2","50\\sqrt{3}\\text{ m}^2","25\\text{ m}^2"],"pedagogicalTier":"concepto","semana":8,"statement":"**Enunciado:** En un triángulo rectángulo ABC recto en B, se construyen exteriormente semicircunferencias que tienen como diámetros a los catetos \\overline{AB} y \\overline{BC}, y se traza la semicircunferencia circunscrita con diámetro la hipotenusa \\overline{AC} pasando por el vértice B. Las regiones delimitadas por las semicircunferencias de los catetos y la semicircunferencia de la hipotenusa forman dos lúnulas (Lúnulas de Hipócrates). Si la mediana relativa a la hipotenusa mide 10\\text{ m} y uno de los ángulos agudos del triángulo mide 15^\\circ, calcule la suma de las áreas de dichas dos lúnulas.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "geom_t08_s02_c01",
+    "concept": "8.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un círculo tiene radio 5 cm. ¿Cuál es su área?",
+    "options": [
+      "$25 \\pi\\,\\mathrm{cm^2}$",
+      "$50 \\pi\\,\\mathrm{cm^2}$",
+      "$\\frac{25 \\pi}{2}\\,\\mathrm{cm^2}$",
+      "$75 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El área circular es π por radio al cuadrado.\n2. Usamos los datos indicados: $S=\\pi5^2$.\n3. El resultado es $25 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s02_c02",
+    "concept": "8.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un círculo tiene radio 5 cm. ¿Cuál es la longitud de su circunferencia?",
+    "options": [
+      "$20 \\pi\\,\\mathrm{cm}$",
+      "$5 \\pi\\,\\mathrm{cm}$",
+      "$30 \\pi\\,\\mathrm{cm}$",
+      "$10 \\pi\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La longitud es 2π veces el radio.\n2. Usamos los datos indicados: $L=2\\pi(5)$.\n3. El resultado es $10 \\pi\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s02_c03",
+    "concept": "8.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Una corona circular tiene radios 5 y 3 cm. ¿Qué área tiene?",
+    "options": [
+      "$8 \\pi\\,\\mathrm{cm^2}$",
+      "$48 \\pi\\,\\mathrm{cm^2}$",
+      "$16 \\pi\\,\\mathrm{cm^2}$",
+      "$32 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Restamos las áreas de los círculos.\n2. Usamos los datos indicados: $S=\\pi(5^2-3^2)$.\n3. El resultado es $16 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s02_c04",
+    "concept": "8.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un trapecio tiene bases paralelas de 8 y 14 cm y altura 3 cm. ¿Qué área tiene?",
+    "options": [
+      "$99\\,\\mathrm{cm^2}$",
+      "$33\\,\\mathrm{cm^2}$",
+      "$66\\,\\mathrm{cm^2}$",
+      "$16.5\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El área usa la semisuma de bases por altura.\n2. Usamos los datos indicados: $S=(8+14)3/2$.\n3. El resultado es $33\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s02_c05",
+    "concept": "8.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un rombo tiene diagonales de 10 y 12 cm. ¿Qué área tiene?",
+    "options": [
+      "$60\\,\\mathrm{cm^2}$",
+      "$120\\,\\mathrm{cm^2}$",
+      "$30\\,\\mathrm{cm^2}$",
+      "$180\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Usamos la mitad del producto de diagonales.\n2. Usamos los datos indicados: $S=10(12)/2$.\n3. El resultado es $60\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s02_c06",
+    "concept": "8.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un sector circular de radio 4 cm tiene ángulo central 90°. ¿Qué área tiene?",
+    "options": [
+      "$8 \\pi\\,\\mathrm{cm^2}$",
+      "$2 \\pi\\,\\mathrm{cm^2}$",
+      "$12 \\pi\\,\\mathrm{cm^2}$",
+      "$4 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Representa un cuarto del círculo.\n2. Usamos los datos indicados: $S=\\pi4^2/4$.\n3. El resultado es $4 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s02_c07",
+    "concept": "8.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "En un círculo de radio 4 cm, una cuerda subtiende un ángulo central de 90°. ¿Qué área tiene el segmento circular menor entre la cuerda y el arco?",
+    "options": [
+      "$-4 + 2 \\pi\\,\\mathrm{cm^2}$",
+      "$-24 + 12 \\pi\\,\\mathrm{cm^2}$",
+      "$-8 + 4 \\pi\\,\\mathrm{cm^2}$",
+      "$-16 + 8 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Restamos el triángulo central al sector menor.\n2. Usamos los datos indicados: $S=4\\pi-4(4)/2=4\\pi-8$.\n3. El resultado es $-8 + 4 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s02_c08",
+    "concept": "8.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un rectángulo de 12×8 cm contiene un agujero circular de radio 2 cm por completo en su interior. ¿Qué área queda?",
+    "options": [
+      "$288 - 12 \\pi\\,\\mathrm{cm^2}$",
+      "$96 - 4 \\pi\\,\\mathrm{cm^2}$",
+      "$192 - 8 \\pi\\,\\mathrm{cm^2}$",
+      "$48 - 2 \\pi\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El área restante resta la región retirada.\n2. Usamos los datos indicados: $S=12(8)-\\pi2^2$.\n3. El resultado es $96 - 4 \\pi\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s02_c09",
+    "concept": "8.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un cuadrado tiene área 49 cm². ¿Qué perímetro tiene?",
+    "options": [
+      "$28\\,\\mathrm{cm}$",
+      "$56\\,\\mathrm{cm}$",
+      "$14\\,\\mathrm{cm}$",
+      "$84\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Tomamos la raíz positiva para hallar el lado.\n2. Usamos los datos indicados: $l=\\sqrt{49}=7;\\quad P=4(7)$.\n3. El resultado es $28\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s02_c10",
+    "concept": "8.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Las unidades de un área son…",
+    "options": [
+      "Unidades de longitud simples.",
+      "Unidades de longitud al cuadrado.",
+      "Unidades de longitud al cubo.",
+      "Siempre radianes."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El área combina dos longitudes.\n2. El producto de sus unidades es una unidad cuadrada.\n3. Por ejemplo, cm por cm da cm².",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s02_c11",
+    "concept": "8.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Si se resta el área de un agujero a la de una región exterior, es necesario que…",
+    "options": [
+      "El agujero esté contenido en la región que se toma como exterior.",
+      "Ambas figuras tengan siempre igual perímetro.",
+      "El agujero tenga mayor área.",
+      "La región exterior sea siempre circular."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La resta directa presupone una región retirada sin contar zonas externas.\n2. Debe conocerse la inclusión o la intersección real.\n3. Si el agujero está completamente dentro, se resta su área entera.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

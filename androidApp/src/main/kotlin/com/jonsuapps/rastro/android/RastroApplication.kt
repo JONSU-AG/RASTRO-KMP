@@ -19,6 +19,7 @@ class RastroApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
+        com.jonsuapps.rastro.monetization.PresentationMode.configure(com.jonsuapps.rastro.BuildConfig.PRESENTATION_MODE)
         com.jonsuapps.rastro.android.data.FavoritesRepository.init(this)
         FirebaseApp.initializeApp(this)
         try {

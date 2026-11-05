@@ -2,7 +2,7 @@
   {
     "id": "leng_t04_s01_c01",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La unidad mínima del análisis morfológico que posee significado conceptual o gramatical se denomina:",
+    "statement": "En el análisis escolar de la estructura interna de las palabras, la unidad mínima a la que se atribuye contenido léxico o información gramatical se llama:",
     "options": [
       "Sintagma",
       "Fonema",
@@ -10,7 +10,7 @@
       "Morfema"
     ],
     "correctIndex": 3,
-    "explanation": "El morfema es la unidad mínima con significado de la lengua, a diferencia del fonema que carece de significado propio.",
+    "explanation": "Criterio: el morfema es la unidad mínima del análisis morfológico. Aplicación: una raíz como pan- aporta contenido léxico y una terminación como -s puede aportar plural; no se están contando letras ni sílabas. Respuesta: Morfema.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.1.1",
@@ -28,7 +28,7 @@
       "Alófonos"
     ],
     "correctIndex": 1,
-    "explanation": "Los alomorfos son las distintas manifestaciones formales de un mismo morfema en virtud del entorno fonético.",
+    "explanation": "Criterio: los alomorfos son variantes formales de un mismo morfema. Aplicación: in-, im- e i- se relacionan con el mismo prefijo negativo en inútil, imposible e ilegal. Respuesta: Alomorfos. El condicionamiento de la alomorfía no es exclusivamente fonético en todos los casos.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.1.2",
@@ -38,7 +38,7 @@
   {
     "id": "leng_t04_s01_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la forma verbal conjugada 'escrib-í', la desinencia final '-í' es un morfema clasificado como:",
+    "statement": "En «escrib-í», la terminación «-í» acumula rasgos de persona, número y tiempo de la conjugación. ¿Cómo se clasifica en este análisis?",
     "options": [
       "Flexivo amalgama",
       "Derivativo prefijal",
@@ -46,7 +46,7 @@
       "Infijo eufónico"
     ],
     "correctIndex": 0,
-    "explanation": "En los verbos, el morfema amalgama expresa simultáneamente y en una sola terminación el tiempo, modo, aspecto, persona y número.",
+    "explanation": "Criterio: una amalgama reúne varias informaciones gramaticales en un segmento. Aplicación: -í corresponde aquí a primera persona singular del pretérito perfecto simple de indicativo; no crea un verbo nuevo ni indica únicamente número. Respuesta: Flexivo amalgama. Esto no significa que todas las terminaciones verbales formen un único bloque de cinco rasgos.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.1.3",
@@ -56,7 +56,7 @@
   {
     "id": "leng_t04_s01_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la palabra 'panaderías', el morfema lexical o raíz que porta el significado básico es:",
+    "statement": "Al comparar «panaderías» con «pan» y «panadero», ¿qué raíz aporta el contenido léxico compartido por esa familia?",
     "options": [
       "pan-",
       "-ería",
@@ -64,7 +64,7 @@
       "panad-"
     ],
     "correctIndex": 0,
-    "explanation": "El lexema base es 'pan-', de donde derivan términos de la misma familia como panadero, panadería, panecillo.",
+    "explanation": "Criterio: la raíz aporta el contenido léxico compartido por una familia. Aplicación: pan- aparece en pan, panadero y panadería; -s es una terminación de plural, no la raíz solicitada. Respuesta: pan-. Reconocerla no obliga a segmentar todo el resto de la palabra como un único sufijo.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.1.3",
@@ -74,15 +74,15 @@
   {
     "id": "leng_t04_s01_c05",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El elemento morfológico que se inserta entre la raíz y el sufijo únicamente para facilitar la pronunciación eufónica, sin aportar significado, es el:",
+    "statement": "En el análisis «cancion-c-ita», el segmento «-c-» está entre la base y el sufijo. ¿Qué nombre corresponde a esa posición?",
     "options": [
-      "Flexivo simple",
-      "Infijo o interfijo",
+      "Afijo flexivo de número",
+      "Interfijo",
       "Morfema libre",
       "Prefijo"
     ],
     "correctIndex": 1,
-    "explanation": "El infijo o interfijo (como '-ec-' en 'pan-ec-ito') es un elemento de unión carente de significado propio que enlaza la raíz con el sufijo.",
+    "explanation": "Criterio: un interfijo se sitúa entre la base y un sufijo. Aplicación: en el análisis dado, -c- aparece entre cancion- e -ita. Respuesta: Interfijo. Un infijo se inserta dentro de una base, por lo que las dos denominaciones no son automáticamente equivalentes.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.1.3",
@@ -100,7 +100,7 @@
       "Sol"
     ],
     "correctIndex": 3,
-    "explanation": "La palabra 'sol' es un morfema libre porque tiene significado y autonomía léxica plena sin necesidad de sufijos ni prefijos ligados.",
+    "explanation": "Criterio: una unidad libre puede constituir una palabra sin necesitar un afijo unido a ella. Aplicación: sol es una palabra simple en el análisis propuesto; perrito contiene derivación apreciativa, desleal contiene un prefijo y mares tiene plural. Respuesta: Sol.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.1.4",
@@ -118,7 +118,7 @@
       "Morfemas derivativos (afijos)"
     ],
     "correctIndex": 3,
-    "explanation": "Los morfemas derivativos (prefijos, sufijos) permiten crear palabras nuevas en el léxico modificando el significado de la base.",
+    "explanation": "Criterio: los afijos derivativos participan en la formación de otra palabra léxica. Aplicación: desleal se forma a partir de leal y lealtad también se relaciona con leal. Respuesta: Morfemas derivativos. El cambio de categoría es posible, pero no obligatorio: desleal sigue siendo adjetivo.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.1.3",
@@ -128,7 +128,7 @@
   {
     "id": "leng_t04_s01_c08",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En el vocablo 'alumnas', los morfemas '-a' y '-s' cumplen respectivamente la función de indicar:",
+    "statement": "En el análisis «alumn-a-s», comparado con «alumna» y «alumno», ¿qué expresan respectivamente «-a» y «-s»?",
     "options": [
       "Género femenino y número plural (flexivos simples)",
       "Derivación apreciativa y aumentativa",
@@ -136,7 +136,7 @@
       "Morfemas trabados derivativos"
     ],
     "correctIndex": 0,
-    "explanation": "Los morfemas '-a' y '-s' son flexivos simples que aportan únicamente los accidentes de género femenino y número plural.",
+    "explanation": "Criterio: las terminaciones se interpretan dentro del paradigma comparado. Aplicación: -a contrasta con -o en alumna/alumno; -s distingue alumnas de alumna. Respuesta: Género femenino y número plural. No se concluye que toda palabra acabada en a sea femenina.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.1.3",
@@ -154,7 +154,7 @@
       "Anteponer"
     ],
     "correctIndex": 2,
-    "explanation": "El prefijo derivativo 'des-' aporta la idea de privación, reversión o acción contraria en 'desarmar'.",
+    "explanation": "Criterio: el prefijo des- puede expresar reversión o privación. Aplicación: desarmar se relaciona con armar mediante ese prefijo; en los otros ejemplos, re- expresa repetición, sub- subordinación y ante- anterioridad. Respuesta: Desarmar.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.1.3",
@@ -169,10 +169,10 @@
       "Morfología",
       "Fonología",
       "Sintaxis",
-      "Semiótica pura"
+      "Lexicografía"
     ],
     "correctIndex": 0,
-    "explanation": "La morfología es la rama lingüística dedicada a la estructura interna, composición y variaciones formales de las palabras.",
+    "explanation": "Criterio: la morfología estudia la estructura interna y las variaciones de las palabras. Aplicación: reconocer raíz y afijos en alumnas es un análisis morfológico, distinto de estudiar fonemas o relaciones entre palabras en una oración. Respuesta: Morfología.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.1.1",

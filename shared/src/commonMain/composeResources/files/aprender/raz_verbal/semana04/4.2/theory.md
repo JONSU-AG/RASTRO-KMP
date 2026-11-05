@@ -1,348 +1,192 @@
-# TEMA IV: Lógica de Enunciados
+# Completar oraciones y justificar su orden
 
----
+Una oración incompleta exige reconstruir una expresión que encaje en la gramática y en el sentido del texto. La palabra más rara no es necesariamente la más precisa. Una respuesta bien justificada muestra qué parte del enunciado la respalda y por qué las otras opciones no cumplen las mismas condiciones.
 
+Los casos de esta lección son ficticios y se usan para practicar lectura y redacción. No son diagnósticos psicológicos, conclusiones jurídicas ni resultados de investigaciones reales. Las pistas deben estar en el texto: no se espera que el estudiante complete información que el ejercicio no aporta.
 
+## Mapa de conceptos
 
-### Matriz de Indicadores de Logro Evaluados
-1. **Relaciones lógicas interoracionales:** Discriminar y aplicar adecuadamente los conectores de causa, consecuencia, condición, oposición/concesión y secuencia temporal.
-2. **Completamiento coherente de enunciados (Oraciones Incompletas):** Restituir los núcleos léxicos y gramaticales omitidos respetando la concordancia morfosintáctica y el sentido contextual.
-3. **Ordenamiento de frases (Plan de Redacción):** Disponer una serie de enunciados numerados siguiendo una pauta lógica canónica (criterio deductivo, temporal o causal).
-4. **Detección de rupturas de coherencia:** Identificar saltos lógicos injustificados o contradicciones entre proposiciones adyacentes en un párrafo.
-
----
-
-
-
-## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
-
-```
-                           LÓGICA DE ENUNCIADOS
-                                    │
-          ┌─────────────────────────┼─────────────────────────┐
-          ▼                         ▼                         ▼
-CONECTORES TEXTUALES      ORACIONES INCOMPLETAS      PLAN DE REDACCIÓN
-(Nexo y Articulación)     (Restitución de Sentido)   (Ordenamiento de Ideas)
-          │                         │                         │
-    ┌─────┴─────┐             ┌─────┴─────┐             ┌─────┴─────┐
-    ▼           ▼             ▼           ▼             ▼           ▼
-Causales /   Opositivos /  Consistencia  Precisión   Criterio      Criterio
-Consecut.    Concesivos     Gramatical   Léxica      Deductivo     Cronológico
-(Porque /    (Pero /       (Género,      (Signif.    (General a    (Pasado a
- Por tanto)   Aunque)       Número)      exacto)     Particular)   Futuro)
-```
-
-
-
-### 3.2 Metodología de Resolución: Oraciones Incompletas
-
-```
-[FASE 1: LECTURA GLOBAL]  ───▶  Leer la oración ignorando las alternativas para captar el tema central.
-         │
-         ▼
-[FASE 2: DETECCIÓN DE PISTAS] ──▶  Identificar los "rastros verbales" y conectores rectores.
-         │
-         ▼
-[FASE 3: POSTULACIÓN MENTAL]  ──▶  Completar mentalmente los espacios con palabras propias aproximadas.
-         │
-         ▼
-[FASE 4: VERIFICACIÓN TRIPLE] ──▶  Filtrar por: 1. Gramaticalidad, 2. Coherencia lógica, 3. Precisión léxica.
+```mermaid
+graph TD
+ ROOT["Conectores, completamiento y orden"]
+ B1["Relaciones entre enunciados"]
+ B1N1["Causa y consecuencia: distinguir la razón del resultado."]
+ B1N2["Contraste y concesión: no son intercambiables sin comprobar la construcción."]
+ B1N3["Conectores y puntuación deben conservar la relación realmente expresada por el texto."]
+ B2["Oraciones incompletas"]
+ B2N1["Leer el conjunto y reconocer las pistas que restringen el sentido."]
+ B2N2["Comprobar concordancia y construcción sintáctica, además del vocabulario."]
+ B2N3["Una palabra difícil no mejora una respuesta incoherente con el contexto."]
+ B3["Plan de redacción"]
+ B3N1["El orden puede ser cronológico, de lo general a lo particular o de problema a solución, según el texto."]
+ B3N2["Resolver referencias: identificar a qué remiten pronombres, demostrativos y expresiones anafóricas."]
+ B3N3["No imponer un único esquema de ordenación a cualquier grupo de enunciados."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
+## Ruta para completar una oración
 
+```mermaid
+graph TD
+ PROOT["Ruta para completar una oración"]
+ P1["Leer toda la oración para reconstruir el contexto."]
+ P2["Identificar conectores, referencias y restricciones gramaticales."]
+ P3["Proponer una expresión y comprobarla dentro del enunciado completo."]
+ P4["Revisar sintaxis, sentido y precisión; no elegir solo por una palabra aislada."]
+ PROOT --> P1
+ P1 --> P2
+ P2 --> P3
+ P3 --> P4
+```
 
-## 6. TÉCNICAS Y ARTIFICIOS DE CÁLCULO (HACKING PREUNIVERSITARIO)
+## 1. Leer todo el enunciado
 
+Una aclaración al final puede determinar el sentido de un espacio anterior. Si solo lees hasta el hueco, puedes elegir una palabra gramaticalmente posible que la segunda parte descarta. Primero reconstruye el asunto y la relación entre las partes.
 
+**Ejemplo resuelto:** «La práctica permitió al pianista mejorar su ___ técnica: ahora ejecuta con mayor habilidad los pasajes difíciles». La aclaración después de los dos puntos describe habilidad de ejecución. Entre destreza, tolerancia, audacia y severidad, destreza corresponde a ese significado.
 
-### Hack 1: Anclaje de la Oración Inicial en Plan de Redacción
-En preguntas de ordenamiento:
-1. Revisa los inicios de las 5 alternativas: casi siempre empiezan con solo dos números (ejemplo: tres opciones empiezan con III y dos con I).
-2. Lee únicamente el enunciado I y el enunciado III:
-   - Descarta el que empiece con pronombres anafóricos (*"Este fenómeno...", "Por esa razón...", "Dichos elementos..."*). ¡Un texto jamás empieza con un pronombre que hace referencia a algo previo!
-   - La oración de inicio DEBE ser autónoma e introductoria.
-3. Descartas de un plumazo 2 o 3 opciones en menos de 10 segundos.
+No hace falta afirmar que ninguna otra palabra del idioma podría completar la oración. La tarea compara las alternativas ofrecidas. Si también se incluyera habilidad en una forma igualmente admisible, habría que revisar si la pregunta permite distinguirlas; no bastaría declarar una de ellas más elegante.
 
+| Comprobación | Pregunta concreta |
+|---|---|
+| Construcción | ¿La alternativa encaja con el artículo, la preposición y las palabras que la acompañan? |
+| Concordancia | ¿Coinciden los rasgos requeridos por la estructura? |
+| Coherencia | ¿La frase completa conserva las relaciones que el texto establece? |
+| Precisión | ¿El significado corresponde al matiz descrito, sin añadir otro? |
 
+Estas comprobaciones se complementan. No constituyen una clasificación rígida que obligue a aplicar una sola por vez. A veces una opción falla por gramática y por sentido; en otras, dos opciones comparten construcción y la diferencia está en una aclaración contextual.
 
-### Hack 2: Búsqueda del "Par Inseparable" (Bloque Bloqueado)
-Si detectas que la oración II es la causa inmediata e ineludible de la oración V:
-- Busca en las alternativas aquellas que contengan el bloque contiguo [\text{II} - \text{V}].
-- Casi siempre quedará solo una alternativa que respete esa contigüidad.
+## 2. Usar la definición contenida en el contexto
 
----
+Algunos enunciados describen una cualidad mediante una conducta o una explicación. La respuesta debe nombrar esa propiedad, sin atribuirle características adicionales que no aparecen.
 
+**Caso ficticio:** «La responsable de las compras era reconocida por su ___: rechazaba los sobornos y no permitía que alteraran sus decisiones». El fragmento posterior describe resistencia a la corrupción. Incorruptibilidad encaja con ese contenido.
 
+Ser severa no significa necesariamente rechazar sobornos. Ser intrépida se relaciona con afrontar riesgos y tampoco equivale a la propiedad descrita. El orgullo, por sí solo, no determina ninguna de las dos cosas. La explicación debe comparar esos sentidos, no afirmar que una persona real es moralmente superior.
 
-## 7. ZONA DE TRAMPAS Y DISTRACTORES ("¡PELIGRO EXAMEN!")
+**Segundo caso:** «La explicación resultó ___: acumulaba detalles y digresiones sin una organización clara». Farragosa corresponde a una exposición difícil de seguir por esa acumulación. Fluida, sencilla y diáfana no expresan el defecto que se describe.
 
-> [!WARNING]
-> **Trampa 1: El Conector "SINO" vs. "SI NO"**
-> - **Sino:** Conector adversativo exclusivo escrito en una sola palabra. Se usa tras una negación para contraponer una idea afirmativa (*"No estudia medicina, **sino** ingeniería"*).
-> - **Si no:** Secuencia de conector condicional (*si*) más adverbio de negación (*no*). Equivale a "en caso de no" (*"**Si no** estudias a conciencia, no ingresarás a la universidad"*).
+No toda exposición larga es farragosa. El tamaño no basta para determinar el adjetivo. El ejercicio aporta la falta de organización y las digresiones para delimitar la elección. Tampoco se deduce que quien no entiende una exposición carezca de capacidad: puede faltar contexto, claridad o conocimiento compartido.
 
-> [!CAUTION]
-> **Trampa 2: La Falsa Redundancia en Oraciones Incompletas**
-> Desconfía de las alternativas que insertan palabras que repiten la misma raíz o idea de una palabra vecina de la oración (cacofonía y pleonasmo involuntario). El estilo preuniversitario exige elegancia y variedad léxica.
+## 3. Verbos y objetivos de una acción
 
----
+Para completar un verbo, identifica qué acción realiza el sujeto y para qué. No se elige automáticamente una palabra por pertenecer al vocabulario de una profesión. Un cálculo no se vuelve correcto por describirse con un término técnico.
 
+| Enunciado de práctica | Verbo que encaja entre las opciones | Justificación |
+|---|---|---|
+| Sumó los recibos para obtener el total | Determinar | Busca establecer el dato por la operación descrita |
+| Comparó horarios para buscar la mejor distribución | Optimizar | Busca mejorar la organización según las necesidades |
+| Revisó una cifra para comprobar si era correcta | Verificar | Contrasta el dato con un criterio o una fuente |
+| Expuso con otras palabras una instrucción | Reformular | Cambia la formulación conservando el contenido |
 
+**Ejemplo resuelto:** «La encargada sumó los importes de los recibos para ___ el total registrado». Determinar expresa el objetivo. Adivinar no corresponde al procedimiento indicado; improvisar no nombra aquí la obtención del dato, y alterar significaría modificarlo.
 
-## 9. BANCO DE EJERCICIOS RESUELTOS GRADUADOS
+El objetivo no demuestra el resultado. Que alguien calcule para determinar un total no garantiza que nunca cometa un error. La respuesta completa lo que se propone hacer; no debe convertir ese propósito en una certificación del cálculo.
 
+En el caso de optimizar, la consigna añade «buscaba la mejor distribución posible según las actividades previstas». Esa aclaración evita confundir mejorar la organización con aumentar sin límite el tiempo de uso. Si el texto pidiera reducir un consumo concreto, no se debería inventar una explicación fisiológica sobre todas las especies para justificar el verbo.
 
+## 4. Emociones declaradas e interpretaciones de gestos
 
-### Ejercicio 2 (Nivel Intermedio: Oración Incompleta con Rastro Semántico)
-**Enunciado (Modelo Admisión UNSA):** Complete el enunciado con los términos más adecuados:
-*"El fiscal presentó una acusación sumamente ..............., respaldada por peritajes contables inobjetables; por lo tanto, el abogado defensor no pudo ............... ninguno de los cargos imputados."*
-A) débil - admitir  
-B) confusa - comprender  
-C) sólida - desvirtuar  
-D) extensa - redactar  
-E) precaria - rechazar  
+Un ejercicio puede pedir un término emocional si el relato aporta información suficiente. No debe afirmar que una mirada revela una emoción única ni presentar esa lectura como una regla psicológica.
 
-**Resolución Paso a Paso:**
-1. Identificamos los rastros verbales clave:
-   - *"respaldada por peritajes contables inobjetables"*: Si los peritajes son inobjetables, la acusación debe ser sumamente fuerte, consistente, firme \to *sólida*.
-   - El conector consecutivo *"por lo tanto"* anticipa el efecto de tener una acusación irrefutable: la defensa técnica se encuentra incapacitada de contradecir, anular o demoler la imputación \to *desvirtuar* o *refutar*.
-2. Evaluamos la coherencia de las opciones:
-   - *A) débil - admitir:* Inconsistente con "inobjetables".
-   - *B) confusa - comprender:* Fuera de contexto.
-   - *C) sólida - desvirtuar:* Se ajusta con total perfección semántica y jurídica.
-**Respuesta:** C
+**Caso ficticio:** «Aunque hablaba con calma, reconoció que conservaba ___ por la ofensa y que aún sentía rencor». La emoción está apoyada en lo que el personaje reconoce y en el rencor mencionado. Entre las opciones, resentimiento conserva esa descripción.
 
----
+**Contraste:** «Hablaba con calma y miró hacia la puerta» no permite elegir necesariamente resentimiento. Puede haber muchas razones para mirar hacia allí. Añadir una intención de venganza o un conflicto anterior sin que aparezcan en el texto sería inventar información.
 
+El conector aunque tampoco exige siempre una emoción negativa. Puede relacionar una dificultad con una acción o un aspecto con otro que contrasta con una expectativa. Para resolver la oración se considera el contenido completo, no una lista de emociones supuestamente obligatorias después de cada conector.
 
+## 5. Apoyo de una hipótesis y alcance de una afirmación
 
-### Ejercicio 3 (Nivel Intermedio-Avanzado: Plan de Redacción Deductivo)
-**Enunciado:** Ordene lógicamente los enunciados para estructurar un texto coherente:
-**EL MITISMO Y LA ARQUITECTURA AREQUIPEÑA**
-I. Principales construcciones coloniales edificadas con este material: la Catedral y los claustros de la Compañía.
-II. Características físicas del sillar: roca volcánica porosa, ligera y de fácil labrado.
-III. El sillar como elemento identitario y definitorio de la arquitectura de la Ciudad Blanca.
-IV. Origen geológico del sillar a partir de los flujos piroclásticos del volcán Chachani.
-V. Influencia del terremoto de 1687 en la adopción masiva del sillar por su resistencia sismorresistente.
-A) IV - II - V - III - I  
-B) III - IV - II - V - I  
-C) II - IV - III - I - V  
-D) III - II - IV - I - V  
-E) IV - III - II - V - I  
+«Estas pruebas aportan apoyo adicional a la hipótesis» describe la valoración de quien escribe. Si añade «aunque no la demuestran de manera definitiva», la reserva debe conservarse en la respuesta y en la explicación.
 
-**Resolución Paso a Paso:**
-1. Aplicamos el método del Hack 1 (Oración inicial):
-   - La oración III introduce el tema central desde una perspectiva cultural e identitaria amplia: *"El sillar como elemento identitario y definitorio de la arquitectura de la Ciudad Blanca"*. Es la entrada perfecta.
-2. Criterio de fundamentación científica:
-   - Una vez presentado el elemento cultural, se explica su origen natural primigenio: Oración IV: *"Origen geológico del sillar a partir de flujos piroclásticos..."*.
-3. Características intrínsecas del material:
-   - Oración II: *"Características físicas del sillar: roca volcánica porosa, ligera..."*.
-4. Contexto histórico y causa de adopción arquitectónica:
-   - Oración V: *"Influencia del terremoto de 1687 en la adopción masiva del sillar por su resistencia..."*.
-5. Concreción en ejemplos monumentales específicos (De lo general a lo particular):
-   - Oración I: *"Principales construcciones coloniales edificadas con este material: la Catedral..."*.
-6. Secuencia resultante: **III - IV - II - V - I**.
-**Respuesta:** B
+**Ejemplo resuelto:** «A mi juicio, contribuyen a ___ su respaldo». Robustecer corresponde a fortalecer el apoyo. Disipar, atenuar y destruir expresan debilitamiento o eliminación, que no coincide con la valoración del fragmento.
 
----
+Elegir robustecer no verifica que las pruebas sean buenas. La tarea identifica qué afirma la autora. Para evaluar la calidad del apoyo haría falta revisar las pruebas mismas. Esta distinción evita convertir una actividad de completamiento en una afirmación sobre hechos no comprobados.
 
+Tampoco una contradicción entre testimonios demuestra automáticamente una complicidad. Puede indicar una diferencia que necesita explicación. Para practicar el verbo fortalecer no hace falta atribuir culpabilidad ni introducir consecuencias de un proceso penal.
 
+## 6. Pistas contextuales: restricciones, no garantías
 
-### Ejercicio 5 (Nivel 5: Boss Challenge - Plan de Redacción Científico-Evolutivo)
-**Enunciado (Nivel UNI / Máxima Exigencia):**
-**LA REVOLUCIÓN DE LA EPIGENÉTICA**
-I. Modificaciones químicas del ADN, como la metilación de citocinas y la acetilación de histonas.
-II. El dogma central de la biología molecular clásica: el flujo unidireccional de información genética (ADN \to ARN \to Proteínas).
-III. Implicancias biomédicas: desarrollo de terapias epigenéticas contra el cáncer y enfermedades neurodegenerativas.
-IV. La epigenética como el estudio de los cambios heredables en la expresión génica sin alteración en la secuencia de nucleótidos.
-V. Cuestionamiento del determinismo genético: influencia de la nutrición y el estrés ambiental en la activación génica.
-A) IV - I - II - V - III  
-B) II - IV - I - V - III  
-C) II - V - IV - I - III  
-D) IV - II - I - V - III  
-E) II - I - IV - V - III  
+Las pistas pueden ser aclaraciones, conectores, verbos, referencias o relaciones entre varias partes. Se valoran en conjunto. No existe una regla según la cual una palabra cercana determine siempre la respuesta.
 
-**Resolución Paso a Paso:**
-1. Aplicamos el criterio histórico y epistemológico de la ciencia:
-   - Antes de explicar la nueva disciplina (epigenética), se debe consignar el paradigma anterior que regía la ciencia y que luego fue transformado.
-   - Oración II: *"El dogma central de la biología molecular clásica: el flujo unidireccional de información..."* (Antecedente canónico).
-2. Introducción formal de la nueva disciplina revolucionaria:
-   - Oración IV: *"La epigenética como el estudio de los cambios heredables en la expresión génica sin alteración en la secuencia de nucleótidos"*. (Definición conceptual esencial).
-3. Mecanismos moleculares específicos (Desarrollo interno):
-   - Oración I: *"Modificaciones químicas del ADN, como la metilación de citocinas y la acetilación de histonas"*. (Detalle bioquímico del mecanismo).
-4. Impacto conceptual y ruptura epistemológica:
-   - Oración V: *"Cuestionamiento del determinismo genético: influencia de la nutrición y el estrés ambiental..."*.
-5. Proyección y aplicaciones prácticas futuras (Cierre del texto):
-   - Oración III: *"Implicancias biomédicas: desarrollo de terapias epigenéticas contra el cáncer..."*.
-6. La secuencia rigurosa e insuperable es: **II - IV - I - V - III**.
-**Respuesta:** B
-
----
-
+| Pista | Qué ayuda a comprobar | Qué no autoriza |
+|---|---|---|
+| «Ahora ejecuta con mayor habilidad» | El sentido de destreza en ese ejemplo | Que cualquier término técnico sea equivalente |
+| «Aunque no la demuestra» | El límite de la conclusión | Convertir apoyo en certeza |
+| «Reconoció que aún sentía rencor» | La emoción declarada | Inferir esa emoción de cualquier mirada |
+| «Buscaba la mejor distribución» | El objetivo de optimizar | Afirmar un resultado perfecto ya obtenido |
 
+**Ejemplo de ambigüedad:** «La coordinadora redactó un informe muy ___». Claro, breve, extenso o detallado podrían encajar si no hay más información. Si la pregunta ofrece esas alternativas sin otra restricción, no corresponde inventar una situación para defender una sola.
 
-## 10. GLOSARIO DE TÉRMINOS CLAVE
+Una reparación posible es añadir «ocupaba una sola página y resumía los resultados». Aun entonces hay que comprobar si breve y conciso, por ejemplo, siguen siendo opciones defendibles. El contexto debe diferenciar las alternativas reales que se ofrecen, no solo reducir de manera vaga las posibilidades.
 
-1. **Cohesión Textual:** Propiedad formal que vincula oraciones entre sí mediante enlaces gramaticales y conectores.
-2. **Coherencia Textual:** Unidad de sentido global articulada en torno a un tema sin fisuras lógicas.
-3. **Conector Adversativo:** Nexo que establece una relación de oposición o contraste entre dos asertos.
-4. **Conector Concesivo:** Nexo que introduce una dificultad real o aparente que no anula la acción principal.
-5. **Rastro Verbal:** Pista léxica que orienta inequívocamente la selección de los términos omitidos.
-6. **Plan de Redacción:** Esquema organizativo que recrea el orden lógico natural y progresivo de un texto.
-7. **Criterio Deductivo:** Método que ordena las ideas desde la abstracción general hasta la concreción particular.
-8. **Anáfora:** Mecanismo de cohesión por el cual un término asume el significado de una palabra mencionada previamente.
-9. **Catáfora:** Anticipación de una idea o término que será formulado formalmente en oraciones posteriores.
-10. **Precisión Léxica:** Empleo del vocablo exacto que corresponde con rigor al contexto semántico oracional.
-
----
-
-
-
-### Ontología de la Textualidad
-- **Enunciado:** Unidad mínima de comunicación dotada de sentido completo en un contexto determinado.
-- **Coherencia:** Dimensión semántica y lógica del texto que garantiza que las ideas giren en torno a un eje temático común sin incurrir en contradicciones ni digresiones.
-- **Cohesión:** Dimensión sintáctica y material del texto que une las oraciones mediante conectores lógicos, signos de puntuación y mecanismos anafóricos/catafóricos.
-- **Rastro Verbal (Pista Semántica):** Indicio léxico explícito en el enunciado que condiciona de manera forzosa el tipo de conector o vocablo faltante.
+## 7. Ordenamiento: dependencias y propósito
 
----
+Ordenar enunciados no consiste en aplicar a todo texto una misma secuencia de definición, origen y ejemplos. El orden puede ser temporal, comparativo o explicativo. La consigna debe permitir reconocer la pauta y las relaciones que limitan las posiciones.
 
+**Caso ficticio:** Se pide narrar en orden temporal cómo se avisó de un cambio de aula.
 
+I. Después de elegir esa sala, la coordinadora envió el aviso con su ubicación.
 
-### 3.1 Clasificación y Semántica de los Conectores Lógicos Textuales
+II. El aula prevista quedó ocupada antes de comenzar el taller.
 
-| Tipo de Conector | Función Semántica | Principales Locuciones Conectivas |
-| :--- | :--- | :--- |
-| **Causal** | Señala el motivo, razón o causa de la oración anterior. | *Porque, ya que, puesto que, dado que, en vista de que, a causa de.* |
-| **Consecutivo** | Introduce el efecto, resultado o consecuencia lógica. | *Por lo tanto, por consiguiente, en consecuencia, por ende, de modo que.* |
-| **Adversativo (Oposición)** | Contrapone dos ideas, anulando o restringiendo la primera. | *Pero, mas, sin embargo, no obstante, empero, sino (que).* |
-| **Concesivo** | Introduce una objeción o dificultad que no impide el hecho. | *Aunque, a pesar de que, si bien, aun cuando, por más que.* |
-| **Condicional** | Establece el requisito indispensable para que se cumpla la acción. | *Si, siempre que, con tal de que, a condición de que, solo si.* |
-| **Aditivo** | Suma elementos análogos o refuerza una idea previa. | *Además, asimismo, también, incluso, es más, por otra parte.* |
-| **Secuencial (Temporal)** | Ordena cronológicamente una sucesión de fases o hechos. | *Primero, luego, después, a continuación, posteriormente, finalmente.* |
+III. Al comprobar la ocupación, la coordinadora eligió la biblioteca como nueva sala.
 
-> [!IMPORTANT]
-> **Diferencia Crítica de Admisión: Adversativo vs. Concesivo**
-> - **Adversativo:** Plantea una barrera total o corrección (*"Estudió mucho, **pero** desaprobó"*).
-> - **Concesivo:** Plantea una dificultad superada o tolerada (*"**Aunque** llovió torrencialmente, fuimos al estadio a alentar"*).
+**Resolución:** II presenta la situación que el caso sitúa antes de la elección. III contiene esa elección y remite a la ocupación. I se coloca después porque lo dice expresamente y porque esa sala remite al lugar elegido. El orden II — III — I se justifica por tiempo y referencia.
 
+No hace falta una afirmación sobre una roca, un terremoto o un mecanismo biológico para practicar esa relación. En un ejercicio de lenguaje, los datos necesarios pueden estar dentro del propio caso. Si se emplea contenido de otra materia, su exactitud requiere revisión independiente y no se presume por estar en una pregunta de redacción.
 
+## 8. Anterioridad no significa contigüidad
 
-### 3.3 Criterios de Ordenamiento en Plan de Redacción
-El orden de los enunciados en el examen de admisión sigue una jerarquía epistemológica universal:
+Que una oración deba ir antes que otra no significa que tengan que estar una junto a la otra. Puede haber una explicación intermedia compatible con ambas. Para exigir un bloque contiguo, el texto debe aportar una relación más restrictiva.
 
-1. **Criterio Deductivo (De lo General a lo Particular):**
-   - **Título / Concepto amplio o etimología.**
-   - **Definición formal y características esenciales.**
-   - **Clasificación, tipos o partes componentes.**
-   - **Ejemplos particulares, aplicaciones concretas o casos específicos.**
-2. **Criterio Cronológico o Histórico:**
-   - **Antecedentes o causas lejanas.**
-   - **Orígenes y primeros desarrollos (pasado remoto).**
-   - **Evolución y apogeo (etapa intermedia).**
-   - **Situación contemporánea o proyección futura.**
-3. **Criterio Causal:**
-   - **Causa detonante \to Proceso de desarrollo \to Consecuencia o impacto final.**
+**Caso de práctica:**
 
----
+A. Se aprobó el uso de una sala nueva.
 
+B. La sala dispone de acceso por la calle principal.
 
+C. Después de la aprobación, se comunicó el cambio a los asistentes.
 
-## 8. APLICACIÓN AL MUNDO REAL Y CONTEXTO DECO
+Si solo se sabe que A ocurrió antes que C, B puede aparecer entre ambas en un texto que presenta el lugar antes de informar del aviso. La relación temporal no convierte A — C en un bloque inseparable. La elección final depende del propósito y de las alternativas completas.
 
-En el ámbito de la redacción académica y científica (publicación de *papers* en Scopus y tesis de pregrado), la lógica de enunciados rige la estructura obligatoria del formato IMRyD (Introducción, Metodología, Resultados y Discusión). Un científico que altera el orden lógico o emplea conectores inadecuados entre sus premisas y sus resultados empíricos verá su artículo rechazado de inmediato por los revisores pares, al carecer de ilación causal demostrable.
+Por eso conviene comparar todas las secuencias ofrecidas y explicar qué restricción incumple cada una. Descartar por una pareja supuestamente inseparable sin leer el resto puede ocultar un segundo orden igualmente coherente.
 
----
+## 9. Referencias y comienzos de texto
 
+Una expresión como «esa sala» necesita un referente identificable, pero ese referente no tiene que estar siempre en una oración anterior de la misma lista. Puede ser proporcionado por el título, por una introducción o por la situación comunicativa. No se prohíbe todo demostrativo al comienzo de cualquier texto.
 
+En un ejercicio autocontenido, si no hay contexto anterior y «esa sala» remite a un lugar que solo se presenta más tarde, esa dependencia puede ayudar a ordenar. Debe mostrarse la relación concreta, en lugar de afirmar que ninguna obra puede comenzar nunca con un pronombre.
 
-### Ejercicio 1 (Nivel Básico: Conectores Lógicos Textuales)
-**Enunciado:** Elija los conectores lógicos que restituyen el sentido formal del siguiente texto:
-*"El calentamiento global avanza a un ritmo alarmante; ..............., muchos gobiernos continúan subsidiando los combustibles fósiles, ............... la presión de las corporaciones petroleras es formidable."*
-A) por consiguiente - debido a que  
-B) sin embargo - ya que  
-C) por ello - no obstante  
-D) es decir - aunque  
-E) en cambio - por tanto  
+**Ejemplo resuelto:** La consigna explica que el taller será en la biblioteca y pide redactar un aviso breve. «Ese lugar tiene dos entradas» ya cuenta con un posible referente en la consigna. En cambio, una lista aislada que no identifica ningún lugar necesita resolver la referencia antes de aceptar la misma frase como inicio suficiente.
 
-**Resolución Paso a Paso:**
-1. Analizamos la primera articulación:
-   - Proposición 1: El calentamiento global avanza velozmente (peligro inminente).
-   - Proposición 2: Los gobiernos subsidian combustibles fósiles (acción contradictoria con el peligro).
-   - Existe una **oposición lógica o contraste inesperado** \to Requiere conector adversativo: *sin embargo* o *no obstante*.
-2. Analizamos la segunda articulación:
-   - Proposición 2: Los gobiernos subsidian combustibles fósiles.
-   - Proposición 3: La presión de las corporaciones es formidable.
-   - La proposición 3 explica el **motivo o causa** por el cual los gobiernos toman esa decisión \to Requiere conector causal: *ya que*, *puesto que*, *porque*.
-3. La combinación exacta es: **sin embargo - ya que**.
-**Respuesta:** B
+## 10. Conectores y revisión de la frase completa
 
----
+Sino puede contraponer una alternativa a una negación: «No eligió el aula antigua, sino la nueva». «Si no» puede expresar una condición negativa: «Si no encuentras el aula, consulta el aviso». La presencia de no en una oración no obliga a introducir sino.
 
+Un enlace consecutivo presenta un resultado o una conclusión, pero no lo demuestra. Si se completa «Hay dos opiniones favorables; por lo tanto, todos aprenderán más», el conector no corrige la falta de apoyo para esa generalización. La lectura completa debe detectar ese salto.
 
+La repetición tampoco invalida una opción por sí sola. Repetir un nombre puede aclarar un referente; una reformulación puede explicar un término. Se revisa su función y la construcción, no solo si comparte raíz con otra palabra cercana.
 
-### Ejercicio 4 (Nivel Avanzado DECO: Conectores Múltiples en Discurso Filosófico)
-**Enunciado (Tipo San Marcos DECO / UNSA):**
-*"La libertad humana no radica en la ausencia total de condicionamientos biológicos y sociales, ............... en la capacidad de deliberar racionalmente frente a ellos; ..............., quien crea actuar con absoluta espontaneidad desconoce sus determinaciones psíquicas; ..............., no es verdaderamente libre quien actúa a ciegas, ............... quien reconoce sus límites y decide de forma consciente."*
-A) sino - por ende - por consiguiente - sino  
-B) pero - sin embargo - es decir - pero  
-C) sino - en efecto - por lo tanto - sino  
-D) mas - no obstante - porque - o  
-E) sino que - aunque - pues - ni  
+## 11. Importante
 
-**Resolución Paso a Paso:**
-1. Espacio 1: Viene de una negación explícita (*"no radica en la ausencia..."*). Se contrapone el lugar exacto donde sí radica \to Conector adversativo exclusivo: **sino**.
-2. Espacio 2: Se introduce una consecuencia o deducción explicativa directa de la proposición anterior \to **por ende** / **por consiguiente**.
-3. Espacio 3: Se sintetiza la tesis final derivada de las dos premisas previas \to **por consiguiente** / **por lo tanto**.
-4. Espacio 4: Nueva estructura de corrección tras negación (*"no es verdaderamente libre X, ... quien reconoce sus límites"*) \to **sino**.
-5. La opción A articula de manera armónica, elegante y sin fisuras la totalidad de las relaciones lógicas del texto.
-**Respuesta:** A
+> **Importante:** Justifica la palabra con el contexto y vuelve a leer el conjunto. No atribuyas emociones o culpabilidad por indicios insuficientes, no confundas un objetivo con un resultado y no conviertas una relación de anterioridad en un bloque inseparable. Si varias opciones siguen siendo admisibles, hay que precisar el ejercicio.
 
----
+## Práctica de revisión completa
 
+**Caso ficticio:** «La encargada comprobó los importes de los recibos para ___ el total. Sin embargo, advirtió que faltaba un comprobante, por lo que dejó el resultado como provisional».
 
+Determinar encaja con el objetivo de la suma, pero la última parte impide afirmar que el total esté definitivamente verificado. La encargada reconoce una limitación y conserva el carácter provisional del resultado. Una explicación que diga que el cálculo es infalible contradice esa información.
 
-## 4. FORMULARIO MAESTRO DE LÓGICA TEXTUAL
-
-| Desafío Textual | Ecuación / Regla de Cohesión | Explicación Operativa |
-| :--- | :--- | :--- |
-| **Fórmula de Consecuencia** | [\text{Causa}] + [\text{Conector Consecutivo}] + [\text{Efecto}] | *"La tasa de interés subió; **por ende**, el consumo privado disminuyó"*. |
-| **Fórmula Inversa (Causa)** | [\text{Efecto}] + [\text{Conector Causal}] + [\text{Causa}] | *"El consumo privado disminuyó **porque** la tasa de interés subió"*. |
-| **Puntuación de Conectores** | \text{Punto y coma } (;) + \text{Conector} + \text{Coma } (,) | Los conectores compuestos largos (*sin embargo, por lo tanto*) llevan puntuación fuerte previa y coma posterior. |
-| **Esquema de Redacción** | \text{Idea Más Amplia} \implies \text{Definición} \implies \text{Especies} \implies \text{Casos} | Nunca colocar un ejemplo o consecuencia antes de definir el concepto. |
-
----
-
-
-
-## 11. BANCO DE FLASHCARDS (Q/A)
-
-- **Q: ¿Qué diferencia existe en la puntuación entre conectores breves (pero, mas) y compuestos (sin embargo, por lo tanto)?**  
-  **A:** Los breves van antecedidos generalmente de una sola coma (,); los compuestos van antecedidos de punto y coma (;) y sucedidos por coma (,).
-- **Q: ¿Cuál es la regla de oro para identificar la oración inicial en un plan de redacción?**  
-  **A:** Debe ser una proposición autónoma, definitoria o panorámica; jamás puede iniciar con pronombres demostrativos anafóricos.
-- **Q: ¿Por qué "sino" se escribe junto en la oración "No quiero agua, sino jugo"?**  
-  **A:** Porque actúa como conector adversativo que contrapone un elemento afirmativo frente a una negación previa.
-- **Q: ¿En qué consiste el criterio de jerarquía de general a particular?**  
-  **A:** En colocar primero el concepto abarcador, luego su definición, posteriormente sus componentes y al final los ejemplos concretos.
-- **Q: ¿Qué riesgo se corre al resolver una oración incompleta mirando primero las alternativas?**  
-  **A:** Contaminación mental con distractores fonéticos o palabras complejas que carecen de adecuación sintáctica.
-
----
-
----
-
-## 5. MNEMOTECNIAS DE COMBATE PREUNIVERSITARIO
-
-### Mnemotecnia 1: "La Máquina del Tiempo" (Plan de Redacción)
-Para ordenar un texto histórico o evolutivo:
-- **A**yer: ¿Cómo nació o qué había antes? (Antecedentes).
-- **H**oy: ¿Qué es y cómo funciona en la actualidad? (Definición y estado actual).
-- **M**añana: ¿Hacia dónde va o qué le espera? (Proyecciones o conclusiones).
-
-### Mnemotecnia 2: "El Conector Espejo"
-- Si la idea posterior **suma**: usa conectores que abren brazos (*además, asimismo*).
-- Si la idea posterior **choca**: usa conectores con freno de mano (*pero, no obstante*).
-- Si la idea posterior **explica el porqué**: usa conectores con retrovisor (*ya que, puesto que*).
-- Si la idea posterior **saca la cuenta**: usa conectores de flecha al frente (*por tanto, en consecuencia*).
-
----
+Para revisar tu respuesta, identifica el objetivo, localiza la reserva y comprueba que ambos se mantengan. Las palabras adecuadas no eliminan las condiciones del relato. Una solución completa debe explicar también lo que el texto no permite concluir.

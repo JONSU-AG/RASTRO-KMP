@@ -1,1 +1,200 @@
-[{"concept":"4.2.1","correctIndex":2,"explanation":"**Resolución:** 1. Realizamos el DCL de la escalera: - Extremo inferior en el piso (A): - Fuerza normal vertical hacia arriba: N_A. - Fuerza de rozamiento estático máxima horizontal hacia la derecha (evita el deslizamiento): f_s = \\mu_s N_A. - Extremo superior en la pared lisa (B): - Reacción normal horizontal hacia la izquierda: N_B (pared lisa \\implies no hay rozamiento vertical). - Centro de gravedad en el punto medio (L/2): - Peso vertical hacia abajo: P = 100\\text{ N}. 2. Aplicamos la Primera Condición de Equilibrio: - Eje vertical: \\sum F_y = 0 \\implies N_A = P = 100\\text{ N} - Eje horizontal: \\sum F_x = 0 \\implies N_B = f_s = \\mu_s N_A = 100 \\mu_s \\quad \\text{--- (Ecuación 1)} 3. Aplicamos la Segunda Condición de Equilibrio tomando momentos en el punto de contacto con el suelo A (\\sum \\tau_A = 0): \\sum \\tau_{(\\text{antihorarios})} = \\sum \\tau_{(\\text{horarios})} - Momento antihorario producido por N_B: \\tau_{N_B} = N_B \\times (L \\sin 53^\\circ) = N_B \\times L \\left(\\frac{4}{5}\\right) - Momento horario producido por el peso P: \\tau_P = P \\times \\left(\\frac{L}{2} \\cos 53^\\circ\\right) = 100 \\times \\frac{L}{2} \\left(\\frac{3}{5}\\right) = 30L 4. Igualamos los momentos: N_B \\times L \\left(\\frac{4}{5}\\right) = 30L \\implies \\frac{4}{5} N_B = 30 \\implies N_B = \\frac{150}{4} = 37.5\\text{ N} 5. Igualamos con la Ecuación 1: 100 \\mu_s = 37.5 \\implies \\mu_s = \\frac{37.5}{100} = 0.375 *(Nota: de forma general, para una barra apoyada en pared lisa a punto de deslizar: \\mu_s = \\frac{1}{2\\tan\\theta} = \\frac{1}{2 \\times (4/3)} = \\frac{3}{8} = 0.375).* **Respuesta:** B ---","fuente":"temario","id":"fis_t04_s02_c01","options":["0.500","0.625","0.250","0.375"],"pedagogicalTier":"concepto","semana":4,"statement":"**Enunciado:** Una escalera homogénea y uniforme de longitud L y peso P = 100\\text{ N} descansa apoyada contra una pared vertical perfectamente lisa y sobre un piso horizontal rugoso. La escalera forma un ángulo de 53^\\circ con el piso horizontal. Si la escalera se encuentra a punto de resbalar (movimiento inminente), determine el coeficiente de rozamiento estático \\mu_s entre la escalera y el piso. (\\sin 53^\\circ \\approx 4/5, \\cos 53^\\circ \\approx 3/5).","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.2.2","correctIndex":3,"explanation":"**Resolución:** 1. Establecemos un sistema de coordenadas cartesianas con el origen (0, 0) en el centro geométrico del disco completo original. 2. Ubicamos el orificio circular sobre el semieje positivo de las abscisas (+X), por lo que su centro de masa se encuentra en (x_1, y_1) = (6\\text{ cm}, 0). 3. Para placas planas homogéneas, la masa es directamente proporcional al área superficial: - Área del disco completo original: A_{\\text{total}} = \\pi R^2 = \\pi (12)^2 = 144\\pi\\text{ cm}^2 - Área de la porción retirada (masa negativa ficticia): A_{\\text{hueco}} = \\pi r^2 = \\pi (4)^2 = 16\\pi\\text{ cm}^2 - Área del cuerpo remanente: A_{\\text{remanente}} = A_{\\text{total}} - A_{\\text{hueco}} = 144\\pi - 16\\pi = 128\\pi\\text{ cm}^2 4. Aplicamos el principio de superposición para centros de masa (tratando a la porción retirada como un área con masa negativa): x_{CM} = \\frac{A_{\\text{total}} x_0 - A_{\\text{hueco}} x_1}{A_{\\text{total}} - A_{\\text{hueco}}} Como x_0 = 0 (centro del disco original): x_{CM} = \\frac{(144\\pi)(0) - (16\\pi)(6\\text{ cm})}{128\\pi\\text{ cm}^2} x_{CM} = \\frac{-96\\pi}{128\\pi} = -\\frac{96}{128} = -\\frac{3}{4} = -0.75\\text{ cm} 5. El signo negativo indica que el nuevo centro de masa se desplaza a lo largo del eje X en **sentido opuesto al orificio**, exactamente a una distancia de **0.75\\text{ cm}** del centro original. **Respuesta:** B --- 1. ¿Qué magnitud física vectorial mide la tendencia de una fuerza a producir rotación alrededor de un punto pivote? 2. Para que un cuerpo esté en equilibrio de traslación, ¿qué condición vectorial matemática debe cumplirse necesariamente? 3. ¿Cuánto vale el momento de una fuerza de 80\\text{ N} cuya línea de acción pasa exactamente por el punto respecto al cual se calcula el momento? 4. ¿Qué nombre recibe un sistema formado por dos fuerzas paralelas de igual magnitud pero de sentidos opuestos que no comparten la misma línea de acción? 5. En un campo gravitatorio terrestre homogéneo, ¿con qué punto físico coincide exactamente el centro de gravedad de un cuerpo? --- 1: B | 2: A | 3: C | 4: B | 5: B","fuente":"temario","id":"fis_t04_s02_c02","options":["Se desplaza 0.75\\text{ cm} en sentido opuesto al orificio.","Se desplaza 1.00\\text{ cm} hacia el orificio.","Se desplaza 1.25\\text{ cm} en sentido opuesto al orificio.","Se desplaza 0.50\\text{ cm} en sentido opuesto al orificio."],"pedagogicalTier":"concepto","semana":4,"statement":"**Enunciado:** A partir de un disco circular plano y homogéneo de radio R = 12\\text{ cm} y masa M, se perfora y retira una placa circular más pequeña de radio r = 4\\text{ cm}, cuyo centro dista d = 6\\text{ cm} del centro del disco original. Determine la posición del nuevo centro de masa del disco perforado remanente respecto al centro geométrico del disco original.","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: En presencia de un campo gravitatorio constante y uniforme (\\vec{g} = \\text{cte}).","fuente":"temario","id":"fis_t04_s02_c03","options":["Signo positivo (+).","En su punto medio geométrico (L/2).","En presencia de un campo gravitatorio constante y uniforme (\\vec{g} = \\text{cte}).","\\mu_s = \\frac{1}{2\\tan\\theta}."],"pedagogicalTier":"concepto","semana":4,"statement":"¿En qué condición física el Centro de Gravedad de un cuerpo coincide exactamente con su Centro de Masa?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Signo positivo (+).","fuente":"temario","id":"fis_t04_s02_c04","options":["En presencia de un campo gravitatorio constante y uniforme (\\vec{g} = \\text{cte}).","En su punto medio geométrico (L/2).","\\mu_s = \\frac{1}{2\\tan\\theta}.","Signo positivo (+)."],"pedagogicalTier":"concepto","semana":4,"statement":"¿Qué convención de signo escalar se utiliza habitualmente para el momento que produce un giro en sentido antihorario?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.2.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: En su punto medio geométrico (L/2).","fuente":"temario","id":"fis_t04_s02_c05","options":["En su punto medio geométrico (L/2).","En presencia de un campo gravitatorio constante y uniforme (\\vec{g} = \\text{cte}).","Signo positivo (+).","\\mu_s = \\frac{1}{2\\tan\\theta}."],"pedagogicalTier":"concepto","semana":4,"statement":"¿Dónde se ubica el centro de gravedad de una barra cilíndrica homogénea y uniforme de longitud L?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.2.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: \\mu_s = \\frac{1}{2\\tan\\theta}.","fuente":"temario","id":"fis_t04_s02_c06","options":["En presencia de un campo gravitatorio constante y uniforme (\\vec{g} = \\text{cte}).","\\mu_s = \\frac{1}{2\\tan\\theta}.","Signo positivo (+).","En su punto medio geométrico (L/2)."],"pedagogicalTier":"concepto","semana":4,"statement":"Si una escalera de peso P apoyada en pared lisa forma un ángulo \\theta con el piso horizontal rugoso, ¿cuánto vale el coeficiente de fricción estático mínimo para no resbalar?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.2.7","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: Es la distancia perpendicular desde el centro de momentos hasta la línea de acción de la fuerza.","fuente":"temario","id":"fis_t04_s02_c07","options":["En presencia de un campo gravitatorio constante y uniforme (\\vec{g} = \\text{cte}).","Signo positivo (+).","Es la distancia perpendicular desde el centro de momentos hasta la línea de acción de la fuerza.","En su punto medio geométrico (L/2)."],"pedagogicalTier":"concepto","semana":4,"statement":"¿Cómo se define el brazo de palanca de una fuerza?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t04_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t04_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t04_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t04_s02_c01",
+    "concept": "4.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Una escalera uniforme de peso 100 N forma 45° con el piso. La pared es lisa y el piso rugoso; hay equilibrio. ¿Cuál es la reacción horizontal de la pared?",
+    "options": [
+      "$50\\,\\mathrm{N}$",
+      "$100\\,\\mathrm{N}$",
+      "$25\\,\\mathrm{N}$",
+      "$150\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Tomamos momentos respecto del pie de la escalera.\n2. Sustituimos los datos: $N_pL\\sin45^\\circ=100(L/2)\\cos45^\\circ$.\n3. El resultado pedido es $50\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s02_c02",
+    "concept": "4.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Una escalera está en equilibrio bajo su peso y las reacciones del piso y de una pared lisa. La pared ejerce 50 N horizontales. ¿Qué módulo de rozamiento estático ejerce el piso?",
+    "options": [
+      "$100\\,\\mathrm{N}$",
+      "$25\\,\\mathrm{N}$",
+      "$150\\,\\mathrm{N}$",
+      "$50\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El equilibrio horizontal exige fuerzas opuestas iguales.\n2. Sustituimos los datos: $f_s-N_p=0\\Rightarrow f_s=50$.\n3. El resultado pedido es $50\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s02_c03",
+    "concept": "4.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Un bloque de peso 100 N tiene normal 100 N y coeficiente estático 0.4. ¿Cuál es el máximo rozamiento estático posible?",
+    "options": [
+      "$20\\,\\mathrm{N}$",
+      "$120\\,\\mathrm{N}$",
+      "$40\\,\\mathrm{N}$",
+      "$80\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El máximo es coeficiente estático por normal.\n2. Sustituimos los datos: $f_{s,max}=0.4(100)$.\n3. El resultado pedido es $40\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s02_c04",
+    "concept": "4.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Un bloque sobre piso horizontal recibe una fuerza aplicada de 20 N y permanece en reposo. Su límite de rozamiento es 40 N y no hay otras fuerzas horizontales. ¿Qué módulo tiene el rozamiento real?",
+    "options": [
+      "$60\\,\\mathrm{N}$",
+      "$20\\,\\mathrm{N}$",
+      "$40\\,\\mathrm{N}$",
+      "$10\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Mientras no desliza, el rozamiento se ajusta al equilibrio.\n2. Sustituimos los datos: $f_s=20\\le40$.\n3. El resultado pedido es $20\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s02_c05",
+    "concept": "4.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Dos fuerzas paralelas de 10 N y 30 N apuntan hacia abajo en $x=0\\,\\mathrm m$ y $x=4\\,\\mathrm m$. ¿En qué x actúa su resultante?",
+    "options": [
+      "$3\\,\\mathrm{m}$",
+      "$6\\,\\mathrm{m}$",
+      "$1.5\\,\\mathrm{m}$",
+      "$9\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Igualamos el momento de la resultante al momento total.\n2. Sustituimos los datos: $40x=10(0)+30(4)$.\n3. El resultado pedido es $3\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s02_c06",
+    "concept": "4.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Dos masas puntuales de 2 kg y 6 kg están en $x=0\\,\\mathrm m$ y $x=4\\,\\mathrm m$. ¿Dónde está su centro de masa?",
+    "options": [
+      "$6\\,\\mathrm{m}$",
+      "$1.5\\,\\mathrm{m}$",
+      "$9\\,\\mathrm{m}$",
+      "$3\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La posición se pondera por las masas.\n2. Sustituimos los datos: $x_{CM}=(2\\cdot0+6\\cdot4)/(2+6)$.\n3. El resultado pedido es $3\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s02_c07",
+    "concept": "4.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Una fuerza de 12 N equilibra un momento de 36 N·m. ¿Qué brazo perpendicular necesita?",
+    "options": [
+      "$1.5\\,\\mathrm{m}$",
+      "$9\\,\\mathrm{m}$",
+      "$3\\,\\mathrm{m}$",
+      "$6\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Despejamos el brazo del momento.\n2. Sustituimos los datos: $d=\\tau/F=36/12$.\n3. El resultado pedido es $3\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s02_c08",
+    "concept": "4.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Un par de fuerzas de 8 N, opuestas y paralelas, tiene líneas de acción separadas 0.5 m. ¿Qué momento neto produce?",
+    "options": [
+      "$12\\,\\mathrm{N\\,m}$",
+      "$4\\,\\mathrm{N\\,m}$",
+      "$8\\,\\mathrm{N\\,m}$",
+      "$2\\,\\mathrm{N\\,m}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El momento de un par es fuerza por separación perpendicular.\n2. Sustituimos los datos: $\\tau=8(0.5)$.\n3. El resultado pedido es $4\\,\\mathrm{N\\,m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s02_c09",
+    "concept": "4.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Un bloque sobre un plano está al borde de deslizar. Se da tan(θ)=0.3. ¿Cuál es el coeficiente estático mínimo?",
+    "options": [
+      "$0.3$",
+      "$0.6$",
+      "$0.15$",
+      "$0.9$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. En el límite, el peso paralelo iguala al rozamiento máximo.\n2. Sustituimos los datos: $mg\\sin\\theta=\\mu_smg\\cos\\theta\\Rightarrow\\mu_s=\\tan\\theta$.\n3. El resultado pedido es $0.3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s02_c10",
+    "concept": "4.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "El rozamiento estático antes del deslizamiento cumple…",
+    "options": [
+      "Siempre f=μsN.",
+      "0≤f≤μsN, con el valor necesario para el equilibrio.",
+      "Siempre f=0.",
+      "Siempre f>μsN."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El límite superior es μsN.\n2. Antes del límite, la fuerza se ajusta a la tendencia de deslizamiento.\n3. Igualar siempre al máximo daría resultados incorrectos.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s02_c11",
+    "concept": "4.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Para hallar el momento de una fuerza respecto de un punto se necesita…",
+    "options": [
+      "Solo el módulo de la fuerza.",
+      "La distancia recorrida por el cuerpo.",
+      "La distancia perpendicular desde el punto a la línea de acción.",
+      "Solo la masa del cuerpo."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El momento mide la tendencia de giro respecto del punto.\n2. Depende de fuerza y brazo perpendicular.\n3. La longitud hasta el punto de aplicación no basta si no es perpendicular.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

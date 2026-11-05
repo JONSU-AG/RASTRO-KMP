@@ -1,1 +1,182 @@
-[{"concept":"7.1.1","correctIndex":1,"explanation":"La anfibología es el vicio en el cual el ordenamiento de los elementos oracionales genera ambigüedad semántica (ej. 'Vi a tu hermano entrando a la discoteca': ¿quién entraba, yo o tu hermano?).","fuente":"temario","id":"rv_t07_s01_c01","options":["El uso de palabras en idiomas extranjeros sin traducirlas.","Una construcción sintáctica defectuosa que genera un doble sentido involuntario, permitiendo que la oración se interprete de dos o más maneras distintas.","La omisión de todas las preposiciones en un párrafo expositivo.","La repetición desagradable de sonidos idénticos en palabras cercanas."],"pedagogicalTier":"concepto","semana":7,"statement":"El vicio de dicción denominado 'Anfibología' (o ambigüedad sintáctica) se define formalmente como:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.1.2","correctIndex":3,"explanation":"El posesivo 'su' crea anfibología: no queda claro si la oficina pertenecía al juez o al sospechoso interrogado.","fuente":"temario","id":"rv_t07_s01_c02","options":["El médico operó al paciente con gran profesionalismo en el quirófano.","Los estudiantes leyeron atentamente el ensayo filosófico.","El sol iluminaba las cumbres nevadas de la cordillera.","El juez interrogó al sospechoso en su oficina (¿en la oficina de quién?)."],"pedagogicalTier":"concepto","semana":7,"statement":"Identifique la oración que incurre de manera flagrante en el vicio de 'Anfibología':","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.1.3","correctIndex":3,"explanation":"El pleonasmo vicioso añade palabras superfluas cuyo sentido ya está totalmente presupuesto en el verbo o sustantivo núcleo (ej. 'lapso de tiempo', 'erario público', 'hemorragia de sangre').","fuente":"temario","id":"rv_t07_s01_c03","options":["Pronunciar incorrectamente los fonemas consonánticos.","El uso de arcaísmos latinos en conversaciones juveniles.","La alteración del orden de las letras en una palabra.","El empleo innecesario de palabras que reiteran de manera vana conceptos ya contenidos intrínsecamente en el significado del vocablo principal (ej. 'subir arriba', 'entrar adentro')."],"pedagogicalTier":"concepto","semana":7,"statement":"El vicio de dicción conocido como 'Pleonasmo' o redundancia viciosa consiste en:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.1.4","correctIndex":0,"explanation":"'Detención previa antes del juicio': 'previa' y 'antes' son redundantemente reiterativas; bastaba con decir 'detención previa al juicio'.","fuente":"temario","id":"rv_t07_s01_c04","options":["El fiscal solicitó una orden de detención previa antes del juicio oral.","El arqueólogo descubrió una osamenta humana fosilizada.","El testigo narró los sucesos con serenidad.","La temperatura ambiental descendió tres grados al amanecer."],"pedagogicalTier":"concepto","semana":7,"statement":"Identifique la oración que presenta un caso censurable de 'Redundancia Viciosa':","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.1.5","correctIndex":1,"explanation":"La impropiedad léxica ocurre cuando se usa un vocablo con un significado erróneo o impropio (ej. decir 'ostentar un problema' en vez de 'adolecer de un problema', ya que ostentar es exhibir con orgullo).","fuente":"temario","id":"rv_t07_s01_c05","options":["Escribir poemas sin rima consonante.","Emplear palabras asignándoles un significado que no poseen en la norma lingüística culta por confusión conceptual o fonética con otro término.","Utilizar adjetivos calificativos en grado superlativo.","Separar en sílabas una palabra esdrújula."],"pedagogicalTier":"concepto","semana":7,"statement":"El vicio de 'Impropiedad Léxica' consiste formalmente en:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.1.6","correctIndex":2,"explanation":"Incurre en impropiedad: 'ostentar' significa mostrar con orgullo y jactancia algo favorable; de la ignorancia no se ostenta, sino que se adolece o se padece.","fuente":"temario","id":"rv_t07_s01_c06","options":["Los jueces ratificaron la sentencia condenatoria de primera instancia.","El herido adolecía de una severa fractura en el fémur izquierdo.","El político ostentaba una profunda ignorancia sobre la constitución nacional.","El conferencista expuso con notable lucidez conceptual."],"pedagogicalTier":"concepto","semana":7,"statement":"Identifique la oración que contiene una 'Impropiedad Léxica':","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.1.7","correctIndex":3,"explanation":"La monotonía o pobreza de léxico se evidencia en la repetición constante de términos baúl o comodines vacíos en lugar de recurrir al vocabulario específico correspondiente.","fuente":"temario","id":"rv_t07_s01_c07","options":["Utiliza un léxico abundante, variado y lleno de sinónimos precisos.","Escribe únicamente en oraciones compuestas subordinadas.","Consulta diccionarios especializados de filosofía.","Reitera continuamente las mismas palabras comodín (como 'cosa', 'hacer', 'tener', 'poner') por carencia de recursos léxicos y precisión semántica."],"pedagogicalTier":"concepto","semana":7,"statement":"El vicio de 'Monotonía' o pobreza de vocabulario se manifiesta cuando el redactor:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.1.8","correctIndex":1,"explanation":"La cacofonía es la disonancia acústica producida por la proximidad de sonidos idénticos (ej. 'Trata tanto de traerlo temprano').","fuente":"temario","id":"rv_t07_s01_c08","options":["El uso de oraciones excesivamente largas.","El encuentro o repetición desagradable y disonante de las mismas sílabas o sonidos fonéticos en palabras contiguas de una oración.","La falta de concordancia entre sujeto y verbo.","La mala pronunciación de palabras de origen quechua."],"pedagogicalTier":"concepto","semana":7,"statement":"El vicio de 'Cacofonía' consiste en:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.1.9","correctIndex":0,"explanation":"Existe anfibología pronominal: la referencia del pronombre 'él' es indeterminada, pudiendo aludir tanto al sujeto de la oración como al complemento indirecto.","fuente":"temario","id":"rv_t07_s01_c09","options":["Ambigüedad por pronombre de referencia opaca: el pronombre 'él' no aclara si se refiere al profesor o a su colega.","Falta de tildación en el verbo 'dijo'.","Discordancia de número entre sujeto y predicado.","Uso incorrecto de la preposición 'de'."],"pedagogicalTier":"concepto","semana":7,"statement":"En la oración: 'El profesor le dijo a su colega que él debía corregir las pruebas de admisión', ¿cuál es el defecto pragmático-semántico?","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.1.10","correctIndex":3,"explanation":"Sustituir el verbo genérico 'hacer' por el término jurídico técnico y preciso 'promulgar' o 'formular' erradica la pobreza léxica y otorga rigor normativo.","fuente":"temario","id":"rv_t07_s01_c10","options":["Va a fabricar una nueva ley.","Va a construir una nueva ley.","Va a colocar una nueva ley.","Va a promulgar (o formular) una nueva ley."],"pedagogicalTier":"concepto","semana":7,"statement":"Corrija con máxima precisión léxica la expresión descuidada: 'El gobierno va a *hacer* una nueva ley contra la delincuencia'.","subject":"raz_verbal","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "7.1.1",
+    "correctIndex": 1,
+    "explanation": "Criterio: Identifica si una construcción permite más de una lectura relevante.\nAplicación: La ambigüedad resulta problemática cuando impide reconocer el sentido que se quiere comunicar.\nRespuesta: La anfibología no equivale a toda repetición ni a usar tecnicismos.",
+    "fuente": "temario",
+    "id": "rv_t07_s01_c01",
+    "options": [
+      "La presencia de una palabra técnica explicada en el texto.",
+      "Una expresión que admite distintas interpretaciones y cuyo contexto no permite elegir la pretendida.",
+      "La combinación de oraciones breves y largas.",
+      "La repetición deliberada de un sonido en un poema."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "¿Qué problema de claridad se denomina anfibología?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.2",
+    "correctIndex": 3,
+    "explanation": "Criterio: Comprueba el referente del posesivo.\nAplicación: En «su oficina», tanto la jueza como el testigo podrían ser los poseedores.\nRespuesta: La cuarta oración necesita precisar el referente si el contexto no lo resuelve.",
+    "fuente": "temario",
+    "id": "rv_t07_s01_c02",
+    "options": [
+      "La jueza interrogó al testigo en la oficina de la jueza.",
+      "La jueza interrogó al testigo en la oficina del testigo.",
+      "La jueza interrogó al testigo en una sala del juzgado.",
+      "La jueza interrogó al testigo en su oficina."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Sin más contexto, ¿qué oración deja sin aclarar a quién pertenece la oficina?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.3",
+    "correctIndex": 3,
+    "explanation": "Criterio: Valora la función de la repetición en el texto.\nAplicación: Una repetición puede enfatizar o aclarar; no se elimina solo por reiterar parte del significado.\nRespuesta: Se suprime cuando no aporta al propósito del informe y el recorte conserva el sentido.",
+    "fuente": "temario",
+    "id": "rv_t07_s01_c03",
+    "options": [
+      "Siempre que dos palabras compartan alguna parte de su significado.",
+      "Siempre que la oración contenga un verbo de movimiento.",
+      "Cuando la expresión sea frecuente en el habla cotidiana.",
+      "Cuando repita información sin aportar un matiz, una aclaración o una función pertinente."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Al revisar un informe que busca concisión, ¿cuándo conviene suprimir una repetición?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.4",
+    "correctIndex": 0,
+    "explanation": "Criterio: Busca dos expresiones que comuniquen aquí el mismo dato.\nAplicación: «Mañana» y «el día después de hoy» identifican el mismo día en este aviso.\nRespuesta: Basta «La reunión se celebrará mañana». En otro texto, una repetición podría tener una función didáctica o enfática.",
+    "fuente": "temario",
+    "id": "rv_t07_s01_c04",
+    "options": [
+      "La reunión se celebrará mañana, el día después de hoy.",
+      "La reunión durará aproximadamente una hora.",
+      "La reunión comenzará a las nueve de la mañana.",
+      "La reunión se celebrará después de la clase."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "En un aviso informativo sin énfasis especial, ¿qué oración puede abreviarse eliminando una reiteración temporal?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.5",
+    "correctIndex": 1,
+    "explanation": "Criterio: Compara el significado de la palabra con la idea que se desea comunicar.\nAplicación: El problema no depende de la longitud, el prestigio o la frecuencia de la palabra.\nRespuesta: Hay impropiedad cuando la elección léxica altera el sentido pretendido.",
+    "fuente": "temario",
+    "id": "rv_t07_s01_c05",
+    "options": [
+      "Una palabra larga usada con su significado adecuado.",
+      "El uso de una palabra con un sentido que no corresponde a lo que se quiere expresar en ese contexto.",
+      "Una expresión coloquial adecuada en una conversación informal.",
+      "La repetición del nombre de una persona para evitar una ambigüedad."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "¿Qué es una impropiedad léxica?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.6",
+    "correctIndex": 2,
+    "explanation": "Criterio: Determina si se habla de causar un daño o de quebrantar una norma.\nAplicación: La tercera oración menciona una norma quebrantada, no un daño causado ni un castigo impuesto.\nRespuesta: Debe decir «infringió una norma de tránsito»; las otras opciones usan el verbo conforme al sentido indicado.",
+    "fuente": "temario",
+    "id": "rv_t07_s01_c06",
+    "options": [
+      "La conductora infringió el límite de velocidad.",
+      "El golpe infligió un daño considerable al equipo.",
+      "La conductora infligió una norma de tránsito.",
+      "El equipo infringió el reglamento de la competencia."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "¿Qué oración confunde «infligir» (causar daño o imponer un castigo) con «infringir» (quebrantar una norma)?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.7",
+    "correctIndex": 3,
+    "explanation": "Criterio: Una mejora debe conservar la información y los matices.\nAplicación: La especificidad es útil si el contexto la respalda; una palabra más intensa o técnica puede alterar el mensaje.\nRespuesta: No hay una lista de verbos prohibidos por ser frecuentes.",
+    "fuente": "temario",
+    "id": "rv_t07_s01_c07",
+    "options": [
+      "Sustituir «tener dudas» por «abrigarse de dudas».",
+      "Reemplazar «dar miedo» por «provocar pavor» aunque no se quiera expresar un temor intenso.",
+      "Eliminar siempre «hacer» y «tener», aunque el contexto sea claro.",
+      "Precisar una expresión vaga cuando el contexto permite identificar una acción más concreta."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "¿Qué revisión mejora la precisión sin cambiar lo que el autor quiere decir?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.8",
+    "correctIndex": 1,
+    "explanation": "Criterio: La cacofonía se refiere al efecto sonoro de una combinación.\nAplicación: Conviene escuchar el pasaje y considerar su propósito; la repetición sonora puede ser deliberada en otros textos.\nRespuesta: No toda repetición de sonidos es un defecto ni depende del origen de la palabra.",
+    "fuente": "temario",
+    "id": "rv_t07_s01_c08",
+    "options": [
+      "La cantidad total de palabras del documento.",
+      "Una combinación o repetición de sonidos que resulta poco armónica en ese pasaje.",
+      "La presencia de cualquier palabra de origen quechua.",
+      "La concordancia de número entre sujeto y verbo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "¿Qué aspecto se revisa al buscar una cacofonía en un texto destinado a leerse en voz alta?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.9",
+    "correctIndex": 0,
+    "explanation": "Criterio: Revisa los posibles referentes del pronombre.\nAplicación: Ambas personas pueden ser el referente de «él» en la oración aislada.\nRespuesta: Conviene nombrar a la persona responsable de corregir para evitar esa ambigüedad.",
+    "fuente": "temario",
+    "id": "rv_t07_s01_c09",
+    "options": [
+      "Si «él» se refiere al profesor o a su colega.",
+      "Si «dijo» lleva tilde.",
+      "Si el verbo «debía» está en plural.",
+      "Si «pruebas» es un verbo o un adjetivo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Sin más contexto, en «El profesor le dijo a su colega que él debía corregir las pruebas», ¿qué información falta precisar?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.1.10",
+    "correctIndex": 3,
+    "explanation": "Criterio: Elige el verbo correspondiente a la fase descrita.\nAplicación: El equipo escribe un texto; todavía no se afirma que se haya aprobado ni que se publique como ley obligatoria.\nRespuesta: «Redactar» conserva la acción. Promulgar no es un sinónimo intercambiable de redactar una propuesta.",
+    "fuente": "temario",
+    "id": "rv_t07_s01_c10",
+    "options": [
+      "Promulgar una propuesta de ley.",
+      "Derogar una propuesta de ley.",
+      "Aprobar definitivamente una propuesta de ley.",
+      "Redactar una propuesta de ley."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Un equipo está escribiendo el texto de una propuesta de ley que aún no se ha aprobado. ¿Qué verbo precisa «hacer» sin cambiar esa acción?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

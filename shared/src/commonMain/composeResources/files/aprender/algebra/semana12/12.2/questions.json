@@ -1,1 +1,200 @@
-[{"concept":"12.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t12_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"12.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t12_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"12.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t12_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"12.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t12_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"12.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t12_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"12.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t12_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"12.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t12_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"12.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t12_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"12.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t12_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"12.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t12_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "12.2.1",
+    "correctIndex": 0,
+    "explanation": "1. Primero se aplica la función interior y luego la exterior.\n2. Sustituimos y operamos: $g(2)=2+5;\\quad f(g(2))=4(2+5)+1$.\n3. El valor pedido es $29$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t12_s02_c01",
+    "options": [
+      "$29$",
+      "$30$",
+      "$28$",
+      "$58$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 12,
+    "statement": "Si f(x)=4x+1 y g(x)=x+5, calcula f(g(2)).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.2",
+    "correctIndex": 3,
+    "explanation": "1. Invertir la función recupera el argumento a partir de su imagen.\n2. Sustituimos y operamos: $x=(29-5)/4$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t12_s02_c02",
+    "options": [
+      "$7$",
+      "$5$",
+      "$12$",
+      "$6$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 12,
+    "statement": "Si f(x)=4x+5, calcula f⁻¹(29).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.3",
+    "correctIndex": 2,
+    "explanation": "1. El orden de composición se respeta: primero el cuadrado, luego la suma.\n2. Sustituimos y operamos: $f(2)=4;\\quad g(4)=4+4$.\n3. El valor pedido es $8$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t12_s02_c03",
+    "options": [
+      "$7$",
+      "$16$",
+      "$8$",
+      "$9$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 12,
+    "statement": "Si f(x)=x² y g(x)=x+4, calcula g(f(2)).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.4",
+    "correctIndex": 1,
+    "explanation": "1. Ser inyectiva evita repeticiones y ser sobreyectiva cubre todo el codominio.\n2. Sustituimos y operamos: $|\\text{codominio}|=|\\text{dominio}|=4$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t12_s02_c04",
+    "options": [
+      "$8$",
+      "$4$",
+      "$5$",
+      "$3$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 12,
+    "statement": "Una función biyectiva entre dos conjuntos finitos tiene dominio de 4 elementos. ¿Cuántos elementos tiene el codominio?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.5",
+    "correctIndex": 0,
+    "explanation": "1. La suma de funciones suma sus imágenes en el mismo argumento.\n2. Sustituimos y operamos: $f(1)+g(1)=4+(1+5)$.\n3. El valor pedido es $10$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t12_s02_c05",
+    "options": [
+      "$10$",
+      "$11$",
+      "$9$",
+      "$20$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 12,
+    "statement": "Si f(x)=4x y g(x)=x+5, calcula (f+g)(1).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.6",
+    "correctIndex": 3,
+    "explanation": "1. Primero se aplica la función interior y luego la exterior.\n2. Sustituimos y operamos: $g(2)=2+6;\\quad f(g(2))=5(2+6)+1$.\n3. El valor pedido es $41$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t12_s02_c06",
+    "options": [
+      "$42$",
+      "$40$",
+      "$82$",
+      "$41$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 12,
+    "statement": "Si f(x)=5x+1 y g(x)=x+6, calcula f(g(2)).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.7",
+    "correctIndex": 2,
+    "explanation": "1. Invertir la función recupera el argumento a partir de su imagen.\n2. Sustituimos y operamos: $x=(41-6)/5$.\n3. El valor pedido es $7$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t12_s02_c07",
+    "options": [
+      "$6$",
+      "$14$",
+      "$7$",
+      "$8$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 12,
+    "statement": "Si f(x)=5x+6, calcula f⁻¹(41).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.8",
+    "correctIndex": 1,
+    "explanation": "1. El orden de composición se respeta: primero el cuadrado, luego la suma.\n2. Sustituimos y operamos: $f(2)=4;\\quad g(4)=4+5$.\n3. El valor pedido es $9$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t12_s02_c08",
+    "options": [
+      "$18$",
+      "$9$",
+      "$10$",
+      "$8$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 12,
+    "statement": "Si f(x)=x² y g(x)=x+5, calcula g(f(2)).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.9",
+    "correctIndex": 0,
+    "explanation": "1. Ser inyectiva evita repeticiones y ser sobreyectiva cubre todo el codominio.\n2. Sustituimos y operamos: $|\\text{codominio}|=|\\text{dominio}|=5$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t12_s02_c09",
+    "options": [
+      "$5$",
+      "$6$",
+      "$4$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 12,
+    "statement": "Una función biyectiva entre dos conjuntos finitos tiene dominio de 5 elementos. ¿Cuántos elementos tiene el codominio?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.10",
+    "correctIndex": 3,
+    "explanation": "1. La suma de funciones suma sus imágenes en el mismo argumento.\n2. Sustituimos y operamos: $f(1)+g(1)=5+(1+6)$.\n3. El valor pedido es $12$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t12_s02_c10",
+    "options": [
+      "$13$",
+      "$11$",
+      "$24$",
+      "$12$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 12,
+    "statement": "Si f(x)=5x y g(x)=x+6, calcula (f+g)(1).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "12.2.11",
+    "correctIndex": 2,
+    "explanation": "1. Primero se aplica la función interior y luego la exterior.\n2. Sustituimos y operamos: $g(2)=2+7;\\quad f(g(2))=6(2+7)+1$.\n3. El valor pedido es $55$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t12_s02_c11",
+    "options": [
+      "$54$",
+      "$110$",
+      "$55$",
+      "$56$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 12,
+    "statement": "Si f(x)=6x+1 y g(x)=x+7, calcula f(g(2)).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

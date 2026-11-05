@@ -1,1 +1,200 @@
-[{"concept":"2.1.1","correctIndex":0,"explanation":"**Resolución:** 1. Dado que ambos móviles se desplazan con velocidad constante en el mismo sentido, aplicamos la fórmula de tiempo de alcance: t_a = \\frac{d_{\\text{separación}}}{v_A - v_B} 2. Reemplazamos los valores conocidos: t_a = \\frac{240\\text{ m}}{25\\text{ m/s} - 15\\text{ m/s}} = \\frac{240}{10} = 24\\text{ s} 3. Calculamos la distancia total recorrida por el auto A (d_A): d_A = v_A \\cdot t_a = (25\\text{ m/s}) \\times (24\\text{ s}) = 600\\text{ m} - El auto A alcanza al auto B a los 24\\text{ s} habiendo recorrido 600\\text{ m}. **Respuesta:** B ---","fuente":"temario","id":"fis_t02_s01_c01","options":["12\\text{ s} y 300\\text{ m}","24\\text{ s} y 600\\text{ m}","16\\text{ s} y 400\\text{ m}","20\\text{ s} y 500\\text{ m}"],"pedagogicalTier":"concepto","semana":2,"statement":"**Enunciado:** Dos automóviles se encuentran en una pista recta horizontal separados por una distancia inicial de 240\\text{ m}. Ambos parten simultáneamente en el mismo sentido con rapideces constantes de v_A = 25\\text{ m/s} y v_B = 15\\text{ m/s}, donde el auto A se encuentra detrás del auto B. ¿Al cabo de cuánto tiempo el auto A alcanza al auto B y qué distancia habrá recorrido el auto A hasta ese instante?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.2","correctIndex":2,"explanation":"**Resolución:** 1. Aplicamos la fórmula para la distancia recorrida en el n-ésimo segundo: d_n = v_0 + \\frac{a}{2}(2n - 1) 2. Datos: parte del reposo \\implies v_0 = 0; en el quinto segundo \\implies n = 5, con d_5 = 36\\text{ m}: 36 = 0 + \\frac{a}{2} [2(5) - 1] 36 = \\frac{a}{2} (9) \\implies 36 = \\frac{9a}{2} \\implies a = \\frac{36 \\times 2}{9} = 8\\text{ m/s}^2 3. Calculamos la distancia total recorrida en los primeros t = 4\\text{ s} usando la ecuación horaria: d = v_0 t + \\frac{1}{2} a t^2 = 0 + \\frac{1}{2}(8\\text{ m/s}^2)(4\\text{ s})^2 d = 4 \\times 16 = 64\\text{ m} **Respuesta:** C ---","fuente":"temario","id":"fis_t02_s01_c02","options":["64\\text{ m}","72\\text{ m}","32\\text{ m}","48\\text{ m}"],"pedagogicalTier":"concepto","semana":2,"statement":"**Enunciado:** Un móvil parte del reposo y se desplaza sobre una línea recta con aceleración constante. Si durante el quinto segundo de su movimiento recorre una distancia de 36\\text{ m}, determine la distancia total que recorrerá durante los primeros 4 segundos de su trayectoria.","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.3","correctIndex":3,"explanation":"**Resolución:** 1. Empleamos la ecuación vectorial de la posición vertical con origen en la base del suelo (y = 0): - Posición inicial: y_0 = +80\\text{ m} - Velocidad inicial: v_{0y} = +30\\text{ m/s} - Aceleración: a_y = -g = -10\\text{ m/s}^2 - Posición final al llegar al suelo: y_f = 0 2. Planteamos la ecuación: y(t) = y_0 + v_{0y} t - \\frac{1}{2} g t^2 0 = 80 + 30t - \\frac{1}{2}(10)t^2 0 = 80 + 30t - 5t^2 3. Dividimos toda la ecuación entre -5: t^2 - 6t - 16 = 0 Factorizando por aspa simple: (t - 8)(t + 2) = 0 Como el tiempo físico debe ser positivo: t = 8\\text{ s} 4. Calculamos la velocidad al momento del impacto: v_y(t) = v_{0y} - gt = 30 - (10)(8) = 30 - 80 = -50\\text{ m/s} El signo negativo indica que la velocidad apunta hacia abajo. La rapidez de impacto (módulo) es: |\\vec{v}| = 50\\text{ m/s} **Respuesta:** A ---","fuente":"temario","id":"fis_t02_s01_c03","options":["6\\text{ s} y 40\\text{ m/s}","10\\text{ s} y 60\\text{ m/s}","7\\text{ s} y 45\\text{ m/s}","8\\text{ s} y 50\\text{ m/s}"],"pedagogicalTier":"concepto","semana":2,"statement":"**Enunciado:** Desde la azotea de un edificio de 80\\text{ m} de altura se lanza verticalmente hacia arriba una piedra con una rapidez inicial de 30\\text{ m/s}. Considerando que la aceleración de la gravedad es constante con g = 10\\text{ m/s}^2 y despreciando la resistencia del aire, determine el tiempo total que tarda la piedra en llegar al suelo y la rapidez con la que impacta contra él.","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: La aceleración centrípeta o normal (a_c = v^2/R).","fuente":"temario","id":"fis_t02_s01_c04","options":["\\tan\\theta = \\frac{4 H_{\\max}}{R}.","A \\theta = 45^\\circ.","\\vec{v} = (v_0 \\cos\\theta)\\hat{i} (la rapidez es horizontal y no se anula).","La aceleración centrípeta o normal (a_c = v^2/R)."],"pedagogicalTier":"concepto","semana":2,"statement":"¿Qué magnitud cinemática mide el cambio en la dirección del vector velocidad en un movimiento curvilíneo?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: \\tan\\theta = \\frac{4 H_{\\max}}{R}.","fuente":"temario","id":"fis_t02_s01_c05","options":["\\tan\\theta = \\frac{4 H_{\\max}}{R}.","La aceleración centrípeta o normal (a_c = v^2/R).","A \\theta = 45^\\circ.","\\vec{v} = (v_0 \\cos\\theta)\\hat{i} (la rapidez es horizontal y no se anula)."],"pedagogicalTier":"concepto","semana":2,"statement":"¿Cuál es la relación matemática entre el alcance horizontal máximo R y la altura máxima H_{\\max} en un disparo parabólico con cualquier ángulo \\theta?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: A \\theta = 45^\\circ.","fuente":"temario","id":"fis_t02_s01_c06","options":["La aceleración centrípeta o normal (a_c = v^2/R).","A \\theta = 45^\\circ.","\\tan\\theta = \\frac{4 H_{\\max}}{R}.","\\vec{v} = (v_0 \\cos\\theta)\\hat{i} (la rapidez es horizontal y no se anula)."],"pedagogicalTier":"concepto","semana":2,"statement":"¿A qué ángulo de disparo se logra el máximo alcance horizontal en un proyectil lanzado sobre un plano horizontal?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.7","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: \\vec{v} = (v_0 \\cos\\theta)\\hat{i} (la rapidez es horizontal y no se anula).","fuente":"temario","id":"fis_t02_s01_c07","options":["La aceleración centrípeta o normal (a_c = v^2/R).","\\tan\\theta = \\frac{4 H_{\\max}}{R}.","\\vec{v} = (v_0 \\cos\\theta)\\hat{i} (la rapidez es horizontal y no se anula).","A \\theta = 45^\\circ."],"pedagogicalTier":"concepto","semana":2,"statement":"¿Cuál es la velocidad vectorial en la cima de la trayectoria de un proyectil lanzado parabólicamente con velocidad inicial (v_0, \\theta)?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.8","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Tienen exactamente el mismo alcance horizontal (R_1 = R_2).","fuente":"temario","id":"fis_t02_s01_c08","options":["La aceleración centrípeta o normal (a_c = v^2/R).","\\tan\\theta = \\frac{4 H_{\\max}}{R}.","A \\theta = 45^\\circ.","Tienen exactamente el mismo alcance horizontal (R_1 = R_2)."],"pedagogicalTier":"concepto","semana":2,"statement":"¿Qué propiedad tienen los alcances horizontales de dos proyectiles lanzados con la misma rapidez a ángulos complementarios (\\theta_1 + \\theta_2 = 90^\\circ)?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t02_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t02_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "2.1.1",
+    "correctIndex": 0,
+    "explanation": "1. El desplazamiento es $\\Delta x=14-2=12$ m.\n2. La velocidad media es $\\Delta x/\\Delta t$.\n3. Dividimos 12 m entre 3 s: 4 m/s, en el sentido positivo del eje.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s01_c01",
+    "options": [
+      "4 m/s",
+      "12 m/s",
+      "16 m/s",
+      "0.25 m/s"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Un móvil pasa de x = 2 m a x = 14 m en 3 s. ¿Cuál es su velocidad media sobre ese eje?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.2",
+    "correctIndex": 1,
+    "explanation": "1. La distancia total recorrida es 30 + 10 = 40 m.\n2. La rapidez media usa distancia total, no desplazamiento.\n3. Calculamos 40 m / 10 s = 4 m/s.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s01_c02",
+    "options": [
+      "2 m/s",
+      "4 m/s",
+      "3 m/s",
+      "0 m/s"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Una persona avanza 30 m y regresa 10 m por la misma recta en un tiempo total de 10 s. ¿Cuál es su rapidez media?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.3",
+    "correctIndex": 2,
+    "explanation": "1. El desplazamiento es 30 − 10 = 20 m.\n2. El tiempo total es 10 s.\n3. La velocidad media es 20 / 10 = 2 m/s en el sentido positivo.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s01_c03",
+    "options": [
+      "4 m/s",
+      "−4 m/s",
+      "2 m/s",
+      "0 m/s"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Una persona avanza 30 m y regresa 10 m por la misma recta en 10 s. Tomando positivo el sentido inicial, ¿cuál es su velocidad media?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.4",
+    "correctIndex": 3,
+    "explanation": "1. El movimiento es rectilíneo uniforme.\n2. Usamos $d=vt$.\n3. Sustituimos $d=5\\cdot8=40$ m.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s01_c04",
+    "options": [
+      "13 m",
+      "1.6 m",
+      "0.625 m",
+      "40 m"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Un móvil lleva velocidad constante de 5 m/s durante 8 s. ¿Qué distancia recorre?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.5",
+    "correctIndex": 0,
+    "explanation": "1. La ecuación es $x=x_0+vt$.\n2. Sustituimos $x=-3+2\\cdot4$.\n3. La posición final es 5 m; el desplazamiento fue 8 m.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s01_c05",
+    "options": [
+      "5 m",
+      "8 m",
+      "11 m",
+      "−11 m"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Un móvil en MRU tiene x₀ = −3 m y v = 2 m/s. ¿Cuál es su posición después de 4 s?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.6",
+    "correctIndex": 1,
+    "explanation": "1. El cambio de velocidad es $\\Delta v=16-4=12$ m/s.\n2. Dividimos por el intervalo de 3 s.\n3. La aceleración media es 4 m/s².",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s01_c06",
+    "options": [
+      "12 m/s²",
+      "4 m/s²",
+      "20 m/s²",
+      "0.25 m/s²"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "La velocidad sobre un eje pasa de 4 m/s a 16 m/s en 3 s. ¿Cuál es la aceleración media?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.7",
+    "correctIndex": 2,
+    "explanation": "1. Usamos $v=v_0+at$.\n2. Como parte del reposo, $v_0=0$.\n3. Entonces $v=0+3\\cdot4=12$ m/s.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s01_c07",
+    "options": [
+      "7 m/s",
+      "48 m/s",
+      "12 m/s",
+      "0.75 m/s"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Un móvil parte del reposo con aceleración constante de 3 m/s². ¿Qué velocidad tiene a los 4 s?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.8",
+    "correctIndex": 3,
+    "explanation": "1. Con aceleración constante, $d=v_0t+\\frac12at^2$.\n2. Al partir del reposo, el primer término es cero.\n3. Se obtiene $d=\\frac12\\cdot2\\cdot5^2=25$ m.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s01_c08",
+    "options": [
+      "10 m",
+      "50 m",
+      "7 m",
+      "25 m"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Un móvil parte del reposo y acelera uniformemente a 2 m/s² durante 5 s. ¿Qué distancia recorre sin cambiar de sentido?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.9",
+    "correctIndex": 0,
+    "explanation": "1. Al detenerse, la velocidad final vale cero.\n2. Planteamos $0=20-4t$.\n3. Despejamos $t=20/4=5$ s; la aceleración se opone al movimiento.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s01_c09",
+    "options": [
+      "5 s",
+      "80 s",
+      "4 s",
+      "0.2 s"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Un vehículo lleva 20 m/s y frena con aceleración constante de −4 m/s². ¿Cuánto tarda en detenerse?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.10",
+    "correctIndex": 1,
+    "explanation": "1. El área bajo una gráfica de velocidad contra tiempo representa desplazamiento.\n2. El rectángulo tiene altura 6 m/s y base 4 s.\n3. Su área es 6 × 4 = 24 m.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s01_c10",
+    "options": [
+      "Una aceleración de 24 m/s²",
+      "Un desplazamiento de 24 m",
+      "Una fuerza de 24 N",
+      "Una velocidad final de 24 m/s"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Una gráfica velocidad–tiempo muestra velocidad constante de 6 m/s durante 4 s. ¿Qué representa el área bajo ese tramo?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.1.11",
+    "correctIndex": 2,
+    "explanation": "1. La caída libre tiene aceleración constante g.\n2. Desde el reposo, $d=\\frac12gt^2$.\n3. Sustituimos $d=\\frac12\\cdot10\\cdot2^2=20$ m.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "fis_t02_s01_c11",
+    "options": [
+      "10 m",
+      "40 m",
+      "20 m",
+      "5 m"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 2,
+    "statement": "Se deja caer un objeto desde el reposo durante 2 s, sin resistencia del aire. Usa g = 10 m/s². ¿Qué distancia cae?",
+    "subject": "fisica",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

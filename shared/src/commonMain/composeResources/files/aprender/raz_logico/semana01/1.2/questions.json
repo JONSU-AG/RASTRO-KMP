@@ -1,1 +1,200 @@
-[{"concept":"1.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t01_s02_c01","options":["(p \\land \\sim q) \\to (r \\lor s)","\\sim(p \\lor \\sim q) \\to (r \\land s)","\\sim(p \\land \\sim q \\to r) \\lor s","\\sim[(p \\land q) \\to r] \\land s"],"pedagogicalTier":"concepto","semana":1,"statement":"Formalice la siguiente expresión del lenguaje natural:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.2.2","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t01_s02_c02","options":["P es V y Q es F","P es F y Q es V","Ambas son V","Ambas son F"],"pedagogicalTier":"concepto","semana":1,"statement":"Considere las siguientes dos afirmaciones escritas en una pizarra de la Facultad de Ciencias:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: Corresponden rigurosamente a una **conjunción (\\land)**.","fuente":"temario","id":"rl_t01_s02_c03","options":["La inclusiva permite que ambas sean verdaderas a la vez; la exclusiva exige que una y solo una sea verdadera (V \\vartriangle V = F).","Valor o condición no aplicable al caso planteado","Corresponden rigurosamente a una **conjunción (\\land)**.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":1,"statement":"¿A qué operador lógico corresponden en el lenguaje ordinario las palabras \"pero\", \"sin embargo\" y \"aunque\"?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: La inclusiva permite que ambas sean verdaderas a la vez; la exclusiva exige que una y solo una sea verdadera (V \\vartriangle V = F).","fuente":"temario","id":"rl_t01_s02_c04","options":["Corresponden rigurosamente a una **conjunción (\\land)**.","Valor o condición no aplicable al caso planteado","Valor o condición no aplicable al caso planteado","La inclusiva permite que ambas sean verdaderas a la vez; la exclusiva exige que una y solo una sea verdadera (V \\vartriangle V = F)."],"pedagogicalTier":"concepto","semana":1,"statement":"¿Cuál es la diferencia entre una disyunción inclusiva (\\lor) y una exclusiva (\\vartriangle)?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.2.5","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t01_s02_c05","options":["Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t01_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t01_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t01_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t01_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t01_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rl_t01_s02_c01",
+    "concept": "1.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "Con p: Ana lee y q: Ana escribe, ¿cómo se formaliza «Ana lee si y solo si escribe»?",
+    "options": [
+      "$p\\leftrightarrow q$",
+      "$p\\lor q$",
+      "$p\\land\\neg q$",
+      "$\\neg p$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. «Si y solo si» impone ambas direcciones.\n2. Se exige que p y q tengan igual valor.\n3. La forma es el bicondicional.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s02_c02",
+    "concept": "1.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "«O p o q, pero no ambas» corresponde a…",
+    "options": [
+      "Conjunción.",
+      "Condicional material.",
+      "Negación de q solamente.",
+      "Disyunción exclusiva."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El enunciado exige una alternativa verdadera.\n2. Además excluye que se cumplan ambas.\n3. Eso distingue la exclusiva de la inclusiva.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "concept": "1.2.3",
+    "correctIndex": 2,
+    "explanation": "1. La frase afirma p y también afirma q.\n2. El matiz de contraste de «pero» no cambia que deban cumplirse ambas proposiciones.\n3. Su forma lógica es la conjunción.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "rl_t01_s02_c03",
+    "options": [
+      "Disyunción inclusiva",
+      "Condicional",
+      "Conjunción",
+      "Negación"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "En lógica proposicional, ¿qué conectivo se utiliza para representar «p, pero q»?",
+    "subject": "raz_logico",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.4",
+    "correctIndex": 3,
+    "explanation": "1. La inclusiva es verdadera si se cumple por lo menos una de las proposiciones.\n2. La exclusiva exige exactamente una verdadera.\n3. Si las dos son verdaderas, la inclusiva vale V y la exclusiva F.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "rl_t01_s02_c04",
+    "options": [
+      "V y V",
+      "F y V",
+      "F y F",
+      "V y F"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Si p y q son ambas verdaderas, ¿qué valores tienen la disyunción inclusiva y la exclusiva, respectivamente?",
+    "subject": "raz_logico",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "rl_t01_s02_c05",
+    "concept": "1.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "Si p: estudio y q: trabajo, «No es cierto que estudio y trabajo» niega…",
+    "options": [
+      "La conjunción completa.",
+      "Solo la palabra estudio por obligación.",
+      "Solo la palabra trabajo por obligación.",
+      "Que exista cualquier persona."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La negación tiene alcance sobre toda la expresión.\n2. No afirma por separado que ambas acciones sean falsas.\n3. Basta que falle al menos una para negar la conjunción.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s02_c06",
+    "concept": "1.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "Con p=V, q=F, ¿qué valor tiene $p \\Rightarrow q$?",
+    "options": [
+      "Falsa.",
+      "No puede determinarse con esos valores.",
+      "La fórmula carece de sintaxis lógica.",
+      "Verdadera."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Sustituimos los valores dados de todas las variables.\n2. Aplicamos los conectores de la fórmula $p \\Rightarrow q$.\n3. Con la asignación p=V, q=F, la fórmula resulta falsa.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s02_c07",
+    "concept": "1.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "Con p=F, q=F, ¿qué valor tiene $q \\Rightarrow p$?",
+    "options": [
+      "No puede determinarse con esos valores.",
+      "La fórmula carece de sintaxis lógica.",
+      "Verdadera.",
+      "Falsa."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Sustituimos los valores dados de todas las variables.\n2. Aplicamos los conectores de la fórmula $q \\Rightarrow p$.\n3. Con la asignación p=F, q=F, la fórmula resulta verdadera.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s02_c08",
+    "concept": "1.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "La oración «p aunque q», tratada por su contenido veritativo básico, afirma…",
+    "options": [
+      "Ni p ni q.",
+      "p y q.",
+      "p y no q.",
+      "Solo q."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. «Aunque» aporta un matiz de contraste.\n2. En esta formalización se afirman p y q.\n3. El contenido básico se modela como conjunción.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s02_c09",
+    "concept": "1.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "Una oración compuesta puede tener valor F porque…",
+    "options": [
+      "El valor depende de sus componentes y de los conectores.",
+      "Toda proposición compuesta es falsa.",
+      "No puede contener negación.",
+      "Solo las preguntas son verdaderas."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Ser compuesta describe su estructura.\n2. Los conectores fijan cómo se combinan los valores.\n3. La estructura compuesta no fija por sí sola V o F.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s02_c10",
+    "concept": "1.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "Al formalizar «si p, entonces q» como condicional material…",
+    "options": [
+      "Se demuestra que p causa físicamente q.",
+      "Se prohíbe que q ocurra sin p.",
+      "Se afirma necesariamente p.",
+      "Se representa una relación veritativa, sin demostrar una causa física."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La tabla del condicional excluye solo V→F.\n2. No incorpora una explicación física del fenómeno.\n3. Causalidad y condicional material no se identifican automáticamente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s02_c11",
+    "concept": "1.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "Con p=F, q=F, ¿qué valor tiene $\\neg \\left(p \\vee q\\right)$?",
+    "options": [
+      "No puede determinarse con esos valores.",
+      "La fórmula carece de sintaxis lógica.",
+      "Verdadera.",
+      "Falsa."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Sustituimos los valores dados de todas las variables.\n2. Aplicamos los conectores de la fórmula $\\neg \\left(p \\vee q\\right)$.\n3. Con la asignación p=F, q=F, la fórmula resulta verdadera.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

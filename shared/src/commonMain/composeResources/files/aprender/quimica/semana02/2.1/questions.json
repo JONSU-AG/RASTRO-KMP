@@ -1,1 +1,200 @@
-[{"concept":"2.1.1","correctIndex":0,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t02_s01_c01","options":["Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":2,"statement":"Frente al distractor frecuente de examen: \"Trampa 1: Confundir evaporación con ebullición. La evaporación ocurre solo en la superficie del líquido y a cualquier temperatura; la ebullición es un fenómeno turbulento de toda l\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.2","correctIndex":1,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t02_s01_c02","options":["Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":2,"statement":"Frente al distractor frecuente de examen: \"Trampa 2: Aplicar Q = m \\cdot c_e \\cdot \\Delta T durante un cambio de fase. ERROR GRAVE. Durante el cambio de fase la temperatura no cambia (\\Delta T = 0); se debe usar Q = m \", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t02_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t02_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t02_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t02_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t02_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t02_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t02_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"2.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t02_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "quim_t02_s01_c01",
+    "concept": "2.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 2,
+    "statement": "Una masa de 2 kg recibe 1000 J sin cambio de fase. Su calor específico es 100 J/(kg·K). ¿Cuánto aumenta su temperatura?",
+    "options": [
+      "$5\\,\\mathrm{K}$",
+      "$10\\,\\mathrm{K}$",
+      "$2.5\\,\\mathrm{K}$",
+      "$15\\,\\mathrm{K}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Despejamos el cambio de temperatura del calor sensible.\n2. Aplicamos los datos y conservamos las unidades: $\\Delta T=Q/(mc)=1000/[2(100)]$.\n3. El resultado es $5\\,\\mathrm{K}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t02_s01_c02",
+    "concept": "2.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 2,
+    "statement": "Una sustancia de 0.5 kg se funde a su temperatura de fusión. Usa Lf=200000 J/kg. ¿Qué calor absorbe?",
+    "options": [
+      "$200000\\,\\mathrm{J}$",
+      "$50000\\,\\mathrm{J}$",
+      "$300000\\,\\mathrm{J}$",
+      "$100000\\,\\mathrm{J}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El cambio de fase utiliza calor latente.\n2. Aplicamos los datos y conservamos las unidades: $Q=mL_f=0.5(200000)$.\n3. El resultado es $100000\\,\\mathrm{J}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t02_s01_c03",
+    "concept": "2.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 2,
+    "statement": "Un cuerpo tiene capacidad calorífica 40 J/K y aumenta 3 K. ¿Qué calor recibe?",
+    "options": [
+      "$60\\,\\mathrm{J}$",
+      "$360\\,\\mathrm{J}$",
+      "$120\\,\\mathrm{J}$",
+      "$240\\,\\mathrm{J}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La capacidad calorífica multiplica la variación térmica.\n2. Aplicamos los datos y conservamos las unidades: $Q=C\\Delta T=40(3)$.\n3. El resultado es $120\\,\\mathrm{J}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t02_s01_c04",
+    "concept": "2.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 2,
+    "statement": "Una masa de 3 kg ocupa 0.002 m³. ¿Cuál es su densidad?",
+    "options": [
+      "$4500\\,\\mathrm{kg/m^3}$",
+      "$1500\\,\\mathrm{kg/m^3}$",
+      "$3000\\,\\mathrm{kg/m^3}$",
+      "$750\\,\\mathrm{kg/m^3}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Dividimos masa entre volumen.\n2. Aplicamos los datos y conservamos las unidades: $\\rho=m/V=3/0.002$.\n3. El resultado es $1500\\,\\mathrm{kg/m^3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t02_s01_c05",
+    "concept": "2.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 2,
+    "statement": "Un material de calor específico 500 J/(kg·K), masa 2 kg, baja 4 K sin cambiar de fase. ¿Cuál es el calor recibido con signo?",
+    "options": [
+      "$-4000\\,\\mathrm{J}$",
+      "$-8000\\,\\mathrm{J}$",
+      "$-2000\\,\\mathrm{J}$",
+      "$-12000\\,\\mathrm{J}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El descenso de temperatura produce calor negativo para el cuerpo.\n2. Aplicamos los datos y conservamos las unidades: $Q=mc\\Delta T=2(500)(-4)$.\n3. El resultado es $-4000\\,\\mathrm{J}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t02_s01_c06",
+    "concept": "2.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 2,
+    "statement": "El paso directo de sólido a gas se llama…",
+    "options": [
+      "Sublimación.",
+      "Condensación.",
+      "Solidificación.",
+      "Fusión."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El estado inicial es sólido y el final gaseoso.\n2. No se pasa por una fase líquida intermedia en ese cambio.\n3. Se denomina sublimación.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t02_s01_c07",
+    "concept": "2.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 2,
+    "statement": "La condensación es el cambio de…",
+    "options": [
+      "Sólido a gas.",
+      "Sólido a líquido.",
+      "Gas a líquido.",
+      "Líquido a sólido."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Se considera una transición de fase.\n2. El estado gaseoso pasa al líquido.\n3. No cambia por sí sola la identidad química de la sustancia.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t02_s01_c08",
+    "concept": "2.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 2,
+    "statement": "Durante la fusión de una sustancia pura en equilibrio a presión fija…",
+    "options": [
+      "Todos los átomos se convierten en otro elemento.",
+      "El calor puede cambiar la fase sin elevar la temperatura.",
+      "La temperatura debe aumentar continuamente.",
+      "No se intercambia energía."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Pueden coexistir sólido y líquido.\n2. La energía transferida participa en el cambio de fase.\n3. En esas condiciones se mantiene la temperatura de fusión.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t02_s01_c09",
+    "concept": "2.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 2,
+    "statement": "Un cambio físico se distingue de una reacción química porque…",
+    "options": [
+      "Siempre es fácil de revertir.",
+      "No exige formar sustancias químicas nuevas.",
+      "Destruye todos los átomos.",
+      "Siempre emite luz."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La identidad de las especies se conserva en el cambio físico.\n2. Pueden cambiar fase, forma o distribución.\n3. Que sea fácil o difícil de revertir no es el criterio definitorio.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t02_s01_c10",
+    "concept": "2.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 2,
+    "statement": "La evaporación de un líquido puede ocurrir…",
+    "options": [
+      "En la superficie y a temperaturas inferiores a su punto de ebullición.",
+      "Solo bajo cero.",
+      "Solo si el líquido cambia de elemento químico.",
+      "Solo al alcanzar toda la masa su ebullición."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Algunas moléculas superficiales tienen energía para escapar.\n2. El proceso puede darse sin ebullición en todo el volumen.\n3. Temperatura y condiciones del entorno afectan su rapidez.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t02_s01_c11",
+    "concept": "2.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 2,
+    "statement": "A presión fija, al condensar un vapor de una sustancia pura…",
+    "options": [
+      "La masa debe desaparecer.",
+      "El gas se convierte necesariamente en un elemento distinto.",
+      "Se libera calor hacia el entorno durante el cambio.",
+      "Siempre se absorbe calor del entorno."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El líquido tiene menor energía que el vapor en esa transición.\n2. El cambio libera el calor latente correspondiente.\n3. La transferencia no implica una reacción química.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

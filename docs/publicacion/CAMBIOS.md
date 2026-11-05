@@ -1,5 +1,8 @@
 # Cambios 04/10
 
+## 10/10/2026 — producción 206 y centro legal
+Ámbito: versionado Android, texto legal existente, centro legal web y configuración de publicación/AdMob. 2.0.4/206 compilada, firmada y validada; 361 pruebas sin fallos. Privacidad/términos aprobados e integrados, Hosting publicado con app-ads.txt y Asset Links. Data Safety guardada; URL de desarrollador publicada. Consulta Auth/perfiles detecta seis candidatos huérfanos, sin borrarlos. Consentimiento AdMob bloqueado por fallo del editor; cuenta aún en verificación. Detalle y estado del envío: RELEASE_2.0.4_206.md. App Android no ejecutada; copia web y Firebase de datos/reglas no modificados en esta intervención.
+
 ### Configuración Firebase y versión real de Play — revisión posterior
 
 Ámbito: configuración Firebase y documentación de publicación; sin cambios de Kotlin, versión local, APK/AAB, subida, ejecución Android, commit ni push. Console confirma un único bundle 1.0/code 1 y lanzamiento 1.0 BETA en Alpha. Registrada SHA-256 Play en la app Android existente; seis huellas en total, sin retirar las anteriores. JSON oficial semánticamente idéntico al local: no se reemplazó. OAuth externo/en producción y cuatro scopes no sensibles comprobados; Drive habilitada. Dos índices de ligas ya correctos.
@@ -43,3 +46,16 @@ Subida del estado actual 2.0.1/code 201 a JONSU-AG/RASTRO-KMP, incluyendo códig
 
 ## 09/10/2026 — Corrección de eliminación de cuenta
 Ámbito: AccountDeletionRepository/Plan, ambos llamadores de confirmación, DriveUploadRepository solo limpieza de imágenes generadas, reglas de cuenta y pruebas/documentación. Auth deja de borrarse antes de la limpieza; marcador privado evita recreación tardía. Sin activar Blaze ni borrar usuarios reales. 20 pruebas de permisos y regresión aprobadas, reglas desplegadas. Flujo y límites: ELIMINACION_CUENTA_2026-10-09.md. Compilación y prueba final móvil se registran por separado.
+
+## Actualización comprobada — 10/10/2026
+
+- [x] Texto legal aprobado por el propietario, integrado en Android 206 y publicado en web.
+- [x] app-ads.txt público con línea oficial y Asset Links conservados.
+- [x] 2.0.4 / 206 aceptada y enviada a producción. Console: «Cambios en la etapa de revisión»; verificaciones rápidas pendientes. Seguridad de datos y disponibilidad enviadas juntas. Evidencia build/play-production-206-enviada.png.
+- [x] 361 pruebas sin fallos; bundle, manifest BILLING y firma verificados. No se ejecutó Android.
+- [ ] Aprobación de Google y ficha pública. No confundir envío con publicación.
+- [ ] AdMob: cuenta en verificación; editor del mensaje europeo falla «No se puede cargar la página». Mensaje sigue en borrador. Vincular ficha pública cuando exista y comprobar anuncios reales.
+- [ ] Seis candidatos de perfiles sin UID en Auth: inventario privado, no borrados. Auditados 218 cuentas Auth y 214 perfiles. Revisión individual pendiente.
+- [ ] Validación académica heredada pendiente.
+
+Firebase continúa Spark. No se eligieron cuentas de pago ni datos bancarios/fiscales. Las listas de tareas anteriores son históricas; este apartado sustituye su estado. Detalle actual: docs/publicacion/RELEASE_2.0.4_206.md. Próximo código mínimo 207, verificar Console antes de cargar.

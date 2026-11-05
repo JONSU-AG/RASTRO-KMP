@@ -1,1 +1,200 @@
-[{"concept":"3.1.1","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. Descomponemos las potencias del numerador y denominador extrayendo el factor común 2^n: - 2^{n+4} = 2^n \\cdot 2^4 = 16 \\cdot 2^n - 2 \\cdot 2^n = 2 \\cdot 2^n - Denominador: 2 \\cdot 2^{n+3} = 2 \\cdot (2^n \\cdot 2^3) = 2 \\cdot 8 \\cdot 2^n = 16 \\cdot 2^n 2. Factorizamos 2^n en el numerador: \\text{Numerador} = 2^n (16 - 2) = 14 \\cdot 2^n 3. Escribimos la fracción completa: E = \\frac{14 \\cdot 2^n}{16 \\cdot 2^n} 4. Cancelamos el término 2^n (2^n \\neq 0): E = \\frac{14}{16} = \\frac{7}{8} **Respuesta Correcta:** **B) \\frac{7}{8}** ---","fuente":"temario","id":"alg_t03_s01_c01","options":["\\frac{3}{8}","\\frac{7}{8}","\\frac{5}{8}","\\frac{9}{8}"],"pedagogicalTier":"concepto","semana":3,"statement":"**Enunciado:** Simplifique a su mínima expresión:","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"3.1.2","correctIndex":1,"explanation":"**Resolución Paso a Paso:** 1. **Transformación del primer radical doble: \\sqrt{11 + 2\\sqrt{30}}** Buscamos dos números que sumen 11 y multipliquen 30: 6 + 5 = 11 \\quad \\text{y} \\quad 6 \\times 5 = 30 \\sqrt{11 + 2\\sqrt{30}} = \\sqrt{6} + \\sqrt{5} 2. **Transformación del segundo radical doble: \\sqrt{7 - 2\\sqrt{10}}** Buscamos dos números que sumen 7 y multipliquen 10 (a > b): 5 + 2 = 7 \\quad \\text{y} \\quad 5 \\times 2 = 10 \\sqrt{7 - 2\\sqrt{10}} = \\sqrt{5} - \\sqrt{2} 3. **Sustituimos en la expresión S con estricto cuidado de signos:** S = (\\sqrt{6} + \\sqrt{5}) - (\\sqrt{5} - \\sqrt{2}) - \\sqrt{3} S = \\sqrt{6} + \\sqrt{5} - \\sqrt{5} + \\sqrt{2} - \\sqrt{3} S = \\sqrt{6} + \\sqrt{2} - \\sqrt{3} Si el término independiente fuera -\\sqrt{6}: Revisemos si el ejercicio original tenía \\sqrt{8 - 2\\sqrt{15}} en lugar de \\sqrt{7 - 2\\sqrt{10}}: \\sqrt{8 - 2\\sqrt{15}} = \\sqrt{5} - \\sqrt{3}. Entonces: (\\sqrt{6} + \\sqrt{5}) - (\\sqrt{5} - \\sqrt{3}) - \\sqrt{3} = \\sqrt{6}. Con los datos dados: \\sqrt{6} + \\sqrt{2} - \\sqrt{3}. Si en cambio era \\sqrt{11 - 2\\sqrt{30}} = \\sqrt{6} - \\sqrt{5}. Con la clave C) \\sqrt{5}: Si el resultado simplificado es \\sqrt{2} o \\sqrt{6}. **Respuesta Correcta:** **A) \\sqrt{2} (o \\sqrt{6} según datos de examen)** ---","fuente":"temario","id":"alg_t03_s01_c02","options":["\\sqrt{6}","\\sqrt{2}","\\sqrt{3}","\\sqrt{5}"],"pedagogicalTier":"concepto","semana":3,"statement":"**Enunciado:** Calcule el valor simplificado de la siguiente expresión:","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"3.1.3","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Identificamos el denominador irracional: es de la forma \\sqrt[3]{a} - \\sqrt[3]{b} con a = 5 y b = 2. 2. Para racionalizar una diferencia de raíces cúbicas, aplicamos la identidad de la **diferencia de cubos**: (u - v)(u^2 + uv + v^2) = u^3 - v^3 3. Por lo tanto, el **Factor Racionalizante (FR)** es: FR = \\sqrt[3]{5^2} + \\sqrt[3]{5 \\cdot 2} + \\sqrt[3]{2^2} = \\sqrt[3]{25} + \\sqrt[3]{10} + \\sqrt[3]{4} 4. Multiplicamos numerador y denominador por el FR: f = \\frac{6 \\cdot (\\sqrt[3]{25} + \\sqrt[3]{10} + \\sqrt[3]{4})}{(\\sqrt[3]{5} - \\sqrt[3]{2})(\\sqrt[3]{25} + \\sqrt[3]{10} + \\sqrt[3]{4})} 5. El nuevo denominador racional es: \\text{Denominador} = (\\sqrt[3]{5})^3 - (\\sqrt[3]{2})^3 = 5 - 2 = 3 6. Simplificamos la fracción completa: f = \\frac{6 \\cdot FR}{3} = 2 \\cdot (\\sqrt[3]{25} + \\sqrt[3]{10} + \\sqrt[3]{4}) El denominador racional resultante antes de cancelar con el 6 es 3, y tras simplificar completamente es 1. **Respuesta Correcta:** **C) 3 (Denominador base) o A) 1 tras simplificación** ---","fuente":"temario","id":"alg_t03_s01_c03","options":["3","7","1","2"],"pedagogicalTier":"concepto","semana":3,"statement":"**Enunciado:** Luego de racionalizar la siguiente expresión:","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"3.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Vale 1, siempre y cuando la base x sea diferente de cero (x \\neq 0).","fuente":"temario","id":"alg_t03_s01_c04","options":["Se buscan dos números a y b tales que a + b = A y a \\cdot b = B, resultando \\sqrt{a} + \\sqrt{b}.","FR = \\sqrt[3]{a^2} + \\sqrt[3]{ab} + \\sqrt[3]{b^2}.","Valor o condición no aplicable al caso planteado","Vale 1, siempre y cuando la base x sea diferente de cero (x \\neq 0)."],"pedagogicalTier":"concepto","semana":3,"statement":"¿Cuánto vale x^0 según la teoría axiomática de exponentes?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"3.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Se buscan dos números a y b tales que a + b = A y a \\cdot b = B, resultando \\sqrt{a} + \\sqrt{b}.","fuente":"temario","id":"alg_t03_s01_c05","options":["Se buscan dos números a y b tales que a + b = A y a \\cdot b = B, resultando \\sqrt{a} + \\sqrt{b}.","Vale 1, siempre y cuando la base x sea diferente de cero (x \\neq 0).","FR = \\sqrt[3]{a^2} + \\sqrt[3]{ab} + \\sqrt[3]{b^2}.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":3,"statement":"¿Cuál es la regla práctica para transformar el radical doble \\sqrt{A + 2\\sqrt{B}} a radicales simples?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"3.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: FR = \\sqrt[3]{a^2} + \\sqrt[3]{ab} + \\sqrt[3]{b^2}.","fuente":"temario","id":"alg_t03_s01_c06","options":["Vale 1, siempre y cuando la base x sea diferente de cero (x \\neq 0).","FR = \\sqrt[3]{a^2} + \\sqrt[3]{ab} + \\sqrt[3]{b^2}.","Se buscan dos números a y b tales que a + b = A y a \\cdot b = B, resultando \\sqrt{a} + \\sqrt{b}.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":3,"statement":"¿Cuál es el factor racionalizante para el denominador binomio cúbico \\sqrt[3]{a} - \\sqrt[3]{b}?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"3.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t03_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"3.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t03_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"3.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t03_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"3.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t03_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "3.1.1",
+    "correctIndex": 0,
+    "explanation": "1. Al multiplicar potencias de la misma base se suman exponentes.\n2. Sustituimos y operamos: $2^4\\cdot 2^5=2^{9}$.\n3. El valor pedido es $512$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t03_s01_c01",
+    "options": [
+      "$512$",
+      "$513$",
+      "$511$",
+      "$1024$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 3,
+    "statement": "Calcula $2^{4}$ · $2^{5}$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.2",
+    "correctIndex": 3,
+    "explanation": "1. Con la misma base no nula se restan exponentes.\n2. Sustituimos y operamos: $3^{5-4}=3^1$.\n3. El valor pedido es $3$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t03_s01_c02",
+    "options": [
+      "$4$",
+      "$2$",
+      "$6$",
+      "$3$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 3,
+    "statement": "Calcula $3^{5}$ / $3^{4}$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.3",
+    "correctIndex": 2,
+    "explanation": "1. Una potencia elevada a otra multiplica exponentes.\n2. Sustituimos y operamos: $(2^4)^2=2^{8}$.\n3. El valor pedido es $256$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t03_s01_c03",
+    "options": [
+      "$255$",
+      "$512$",
+      "$256$",
+      "$257$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 3,
+    "statement": "Calcula ($2^{4}$)².",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.4",
+    "correctIndex": 1,
+    "explanation": "1. Un exponente negativo indica el inverso de la potencia positiva.\n2. Sustituimos y operamos: $2^{-4}=1/2^4$.\n3. El valor pedido es $\\frac{1}{16}$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t03_s01_c04",
+    "options": [
+      "$\\frac{1}{32}$",
+      "$\\frac{1}{16}$",
+      "$\\frac{17}{16}$",
+      "$\\frac{1}{8}$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 3,
+    "statement": "Calcula $2^{-4}$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.5",
+    "correctIndex": 0,
+    "explanation": "1. Buscamos el número real cuyo cubo es el radicando.\n2. Sustituimos y operamos: $4^3=64$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t03_s01_c05",
+    "options": [
+      "$4$",
+      "$5$",
+      "$3$",
+      "$8$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 3,
+    "statement": "Calcula la raíz cúbica real de 64.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.6",
+    "correctIndex": 3,
+    "explanation": "1. Al multiplicar potencias de la misma base se suman exponentes.\n2. Sustituimos y operamos: $2^5\\cdot 2^6=2^{11}$.\n3. El valor pedido es $2048$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t03_s01_c06",
+    "options": [
+      "$2049$",
+      "$2047$",
+      "$4096$",
+      "$2048$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 3,
+    "statement": "Calcula $2^{5}$ · $2^{6}$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.7",
+    "correctIndex": 2,
+    "explanation": "1. Con la misma base no nula se restan exponentes.\n2. Sustituimos y operamos: $3^{6-5}=3^1$.\n3. El valor pedido es $3$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t03_s01_c07",
+    "options": [
+      "$2$",
+      "$6$",
+      "$3$",
+      "$4$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 3,
+    "statement": "Calcula $3^{6}$ / $3^{5}$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.8",
+    "correctIndex": 1,
+    "explanation": "1. Una potencia elevada a otra multiplica exponentes.\n2. Sustituimos y operamos: $(2^5)^2=2^{10}$.\n3. El valor pedido es $1024$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t03_s01_c08",
+    "options": [
+      "$2048$",
+      "$1024$",
+      "$1025$",
+      "$1023$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 3,
+    "statement": "Calcula ($2^{5}$)².",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.9",
+    "correctIndex": 0,
+    "explanation": "1. Un exponente negativo indica el inverso de la potencia positiva.\n2. Sustituimos y operamos: $2^{-5}=1/2^5$.\n3. El valor pedido es $\\frac{1}{32}$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t03_s01_c09",
+    "options": [
+      "$\\frac{1}{32}$",
+      "$\\frac{33}{32}$",
+      "$\\frac{1}{16}$",
+      "$\\frac{1}{64}$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 3,
+    "statement": "Calcula $2^{-5}$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.10",
+    "correctIndex": 3,
+    "explanation": "1. Buscamos el número real cuyo cubo es el radicando.\n2. Sustituimos y operamos: $5^3=125$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t03_s01_c10",
+    "options": [
+      "$6$",
+      "$4$",
+      "$10$",
+      "$5$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 3,
+    "statement": "Calcula la raíz cúbica real de 125.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.11",
+    "correctIndex": 2,
+    "explanation": "1. Al multiplicar potencias de la misma base se suman exponentes.\n2. Sustituimos y operamos: $2^6\\cdot 2^7=2^{13}$.\n3. El valor pedido es $8192$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t03_s01_c11",
+    "options": [
+      "$8191$",
+      "$16384$",
+      "$8192$",
+      "$8193$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 3,
+    "statement": "Calcula $2^{6}$ · $2^{7}$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

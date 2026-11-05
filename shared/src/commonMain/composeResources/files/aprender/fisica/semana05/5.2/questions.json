@@ -1,1 +1,200 @@
-[{"concept":"5.2.1","correctIndex":2,"explanation":"**Resolución:** 1. Aplicamos la Tercera Ley de Kepler para dos satélites que orbitan alrededor del mismo cuerpo central (la Tierra): \\left( \\frac{T_2}{T_1} \\right)^2 = \\left( \\frac{r_2}{r_1} \\right)^3 2. Sustituimos los periodos conocidos: \\frac{T_2}{T_1} = \\frac{3\\text{ h}}{24\\text{ h}} = \\frac{1}{8} \\left( \\frac{1}{8} \\right)^2 = \\left( \\frac{r_2}{r_1} \\right)^3 \\implies \\frac{1}{64} = \\left( \\frac{r_2}{r_1} \\right)^3 3. Extraemos la raíz cúbica a ambos lados de la igualdad: \\frac{r_2}{r_1} = \\sqrt[3]{\\frac{1}{64}} = \\frac{1}{4} 4. Despejamos el radio orbital del satélite 2 (r_2): r_2 = \\frac{r_1}{4} = \\frac{42\\ 000\\text{ km}}{4} = 10\\ 500\\text{ km} **Respuesta:** A ---","fuente":"temario","id":"fis_t05_s02_c01","options":["21\\ 000\\text{ km}","14\\ 000\\text{ km}","10\\ 500\\text{ km}","5\\ 250\\text{ km}"],"pedagogicalTier":"concepto","semana":5,"statement":"**Enunciado:** Un satélite de comunicaciones geoestacionario describe una órbita circular alrededor de la Tierra con un periodo de revolución de T_1 = 24\\text{ horas} a un radio orbital de r_1 = 42\\ 000\\text{ km} medido desde el centro del planeta. Si se desea poner en órbita un segundo satélite espía cuyo periodo de revolución sea de tan solo T_2 = 3\\text{ horas}, ¿cuál debe ser el radio orbital r_2 al que debe situarse dicho satélite?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"5.2.2","correctIndex":3,"explanation":"**Resolución:** 1. La cantidad de movimiento se conserva vectorialmente en ambos ejes cartesianos independientes (X e Y): - Inicialmente: P_{xi} = m_A v_{A0} + m_B (0) = (0.4\\text{ kg})(5\\text{ m/s}) = 2.0\\text{ kg}\\cdot\\text{m/s} P_{yi} = 0 2. Descomponemos la velocidad final del disco A: v_{Ax} = v_{Af} \\cos 53^\\circ = 2.5 \\times 0.6 = 1.5\\text{ m/s} v_{Ay} = v_{Af} \\sin 53^\\circ = 2.5 \\times 0.8 = 2.0\\text{ m/s} 3. Aplicamos la conservación en el eje Y: P_{yi} = P_{yf} \\implies 0 = m_A v_{Ay} + m_B v_{By} 0 = (0.4\\text{ kg})(2.0\\text{ m/s}) + (0.6\\text{ kg}) v_{By} 0 = 0.8 + 0.6 v_{By} \\implies v_{By} = -\\frac{0.8}{0.6} = -\\frac{4}{3} \\approx -1.33\\text{ m/s} 4. Aplicamos la conservación en el eje X: P_{xi} = P_{xf} \\implies 2.0 = m_A v_{Ax} + m_B v_{Bx} 2.0 = (0.4\\text{ kg})(1.5\\text{ m/s}) + (0.6\\text{ kg}) v_{Bx} 2.0 = 0.6 + 0.6 v_{Bx} \\implies 1.4 = 0.6 v_{Bx} \\implies v_{Bx} = \\frac{1.4}{0.6} = \\frac{7}{3} \\approx 2.33\\text{ m/s} 5. Calculamos el módulo de la velocidad final del disco B: v_{Bf} = \\sqrt{v_{Bx}^2 + v_{By}^2} = \\sqrt{\\left(\\frac{7}{3}\\right)^2 + \\left(-\\frac{4}{3}\\right)^2} = \\sqrt{\\frac{49 + 16}{9}} = \\frac{\\sqrt{65}}{3} \\approx \\frac{8.062}{3} \\approx 2.687 \\approx 2.72\\text{ m/s} 6. Determinamos el ángulo de deflexión \\alpha: \\tan\\alpha = \\frac{|v_{By}|}{v_{Bx}} = \\frac{4/3}{7/3} = \\frac{4}{7} \\approx 0.5714 \\implies \\alpha = \\arctan(0.5714) \\approx 29.7^\\circ - La velocidad es \\approx 2.72\\text{ m/s} orientada a \\approx 29.7^\\circ por debajo del eje +X. **Respuesta:** C --- 1. ¿Qué magnitud física vectorial mide la cantidad de movimiento lineal de una partícula? 2. En un choque en el que los cuerpos colisionantes quedan adheridos desplazándose juntos con la misma velocidad final, ¿cuál es el valor del coeficiente de restitución? 3. ¿Cómo varía la aceleración de la gravedad g fuera de un planeta conforme aumenta la distancia r desde su centro? 4. ¿Qué ley de Kepler establece que el radio vector que une el Sol con un planeta barre áreas iguales en intervalos de tiempo iguales? 5. ¿Qué velocidad se conoce como la Primera Velocidad Cósmica en la Tierra (\\approx 7.9\\text{ km/s})? --- 1: B | 2: C | 3: C | 4: B | 5: C","fuente":"temario","id":"fis_t05_s02_c02","options":["v_{Bf} = 2.5\\text{ m/s}; \\alpha = 37^\\circ","v_{Bf} = 2.72\\text{ m/s}; \\alpha \\approx 29.7^\\circ","v_{Bf} = 2.36\\text{ m/s}; \\alpha \\approx 33.7^\\circ","v_{Bf} = 3.0\\text{ m/s}; \\alpha = 30^\\circ"],"pedagogicalTier":"concepto","semana":5,"statement":"**Enunciado:** Sobre una mesa de hockey de aire horizontal sin rozamiento, un disco A de masa m_A = 0.4\\text{ kg} que se desplaza en el sentido del eje +X con una rapidez inicial de v_{A0} = 5\\text{ m/s} choca contra un disco B de masa m_B = 0.6\\text{ kg} que se encuentra inicialmente en reposo. Inmediatamente después de la colisión, se observa que el disco A se desvía formando un ángulo de 53^\\circ respecto a su dirección original con una rapidez de v_{Af} = 2.5\\text{ m/s}. Determine la magnitud de la velocidad del disco B (v_{Bf}) tras el impacto y el ángulo \\alpha que forma su trayectoria respecto a la dirección inicial del eje +X. (\\sin 53^\\circ \\approx 0.8, \\cos 53^\\circ \\approx 0.6).","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"5.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: En el Perihelio (punto más cercano al Sol).","fuente":"temario","id":"fis_t05_s02_c03","options":["Que el cuadrado del periodo orbital es proporcional al cubo del semieje mayor (\\frac{T^2}{a^3} = \\text{cte}).","[G] = M^{-1} L^3 T^{-2}.","En el Perihelio (punto más cercano al Sol).","Se reduce a la cuarta parte (F \\propto 1/r^2 \\implies F' = F/4)."],"pedagogicalTier":"concepto","semana":5,"statement":"¿En qué punto de su órbita elíptica alrededor del Sol un planeta alcanza su máxima rapidez orbital según la Segunda Ley de Kepler?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"5.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Que el cuadrado del periodo orbital es proporcional al cubo del semieje mayor (\\frac{T^2}{a^3} = \\text{cte}).","fuente":"temario","id":"fis_t05_s02_c04","options":["En el Perihelio (punto más cercano al Sol).","[G] = M^{-1} L^3 T^{-2}.","Se reduce a la cuarta parte (F \\propto 1/r^2 \\implies F' = F/4).","Que el cuadrado del periodo orbital es proporcional al cubo del semieje mayor (\\frac{T^2}{a^3} = \\text{cte})."],"pedagogicalTier":"concepto","semana":5,"statement":"¿Qué establece la Tercera Ley de Kepler del movimiento planetario?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"5.2.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: [G] = M^{-1} L^3 T^{-2}.","fuente":"temario","id":"fis_t05_s02_c05","options":["[G] = M^{-1} L^3 T^{-2}.","En el Perihelio (punto más cercano al Sol).","Que el cuadrado del periodo orbital es proporcional al cubo del semieje mayor (\\frac{T^2}{a^3} = \\text{cte}).","Se reduce a la cuarta parte (F \\propto 1/r^2 \\implies F' = F/4)."],"pedagogicalTier":"concepto","semana":5,"statement":"¿Cuál es la fórmula dimensional de la constante de gravitación universal G?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"5.2.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Se reduce a la cuarta parte (F \\propto 1/r^2 \\implies F' = F/4).","fuente":"temario","id":"fis_t05_s02_c06","options":["En el Perihelio (punto más cercano al Sol).","Se reduce a la cuarta parte (F \\propto 1/r^2 \\implies F' = F/4).","Que el cuadrado del periodo orbital es proporcional al cubo del semieje mayor (\\frac{T^2}{a^3} = \\text{cte}).","[G] = M^{-1} L^3 T^{-2}."],"pedagogicalTier":"concepto","semana":5,"statement":"Si la distancia entre dos masas se duplica, ¿en qué factor cambia la fuerza de atracción gravitatoria entre ellas?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"5.2.7","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: |\\Delta \\vec{p}| = 2mv.","fuente":"temario","id":"fis_t05_s02_c07","options":["En el Perihelio (punto más cercano al Sol).","Que el cuadrado del periodo orbital es proporcional al cubo del semieje mayor (\\frac{T^2}{a^3} = \\text{cte}).","|\\Delta \\vec{p}| = 2mv.","[G] = M^{-1} L^3 T^{-2}."],"pedagogicalTier":"concepto","semana":5,"statement":"Si un objeto rebota elásticamente (e = 1) en una pared con rapidez v, ¿cuál es el módulo de la variación de su cantidad de movimiento?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"5.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t05_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"5.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t05_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"5.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t05_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t05_s02_c01",
+    "concept": "5.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 5,
+    "statement": "La fuerza gravitatoria entre dos masas es 80 N a distancia r. ¿Cuánto vale a distancia 2r, con las mismas masas?",
+    "options": [
+      "$20\\,\\mathrm{N}$",
+      "$40\\,\\mathrm{N}$",
+      "$10\\,\\mathrm{N}$",
+      "$60\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La gravitación sigue una ley inversa al cuadrado de la distancia.\n2. Sustituimos los datos: $F_2=80/2^2$.\n3. El resultado pedido es $20\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t05_s02_c02",
+    "concept": "5.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 5,
+    "statement": "Dos cuerpos se atraen con 6 N. Si solo una masa se triplica y la distancia no cambia, ¿qué fuerza resulta?",
+    "options": [
+      "$36\\,\\mathrm{N}$",
+      "$9\\,\\mathrm{N}$",
+      "$54\\,\\mathrm{N}$",
+      "$18\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La fuerza es proporcional a cada una de las masas.\n2. Sustituimos los datos: $F_2=3F_1=3(6)$.\n3. El resultado pedido es $18\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t05_s02_c03",
+    "concept": "5.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 5,
+    "statement": "A radio R de un planeta, $g=12\\,\\mathrm{m/s^2}$. ¿Qué valor tiene g a radio 2R desde su centro?",
+    "options": [
+      "$1.5\\,\\mathrm{m/s^2}$",
+      "$9\\,\\mathrm{m/s^2}$",
+      "$3\\,\\mathrm{m/s^2}$",
+      "$6\\,\\mathrm{m/s^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Fuera de un planeta esférico usamos g=GM/r².\n2. Sustituimos los datos: $g_2=12/2^2$.\n3. El resultado pedido es $3\\,\\mathrm{m/s^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t05_s02_c04",
+    "concept": "5.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 5,
+    "statement": "Dos satélites tienen radios orbitales r y 4r alrededor del mismo planeta. El primero tarda 2 h. ¿Cuánto tarda el segundo?",
+    "options": [
+      "$48\\,\\mathrm{h}$",
+      "$16\\,\\mathrm{h}$",
+      "$32\\,\\mathrm{h}$",
+      "$8\\,\\mathrm{h}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Para órbitas circulares del mismo centro, T² es proporcional a r³.\n2. Sustituimos los datos: $T_2=2\\sqrt{4^3}$.\n3. El resultado pedido es $16\\,\\mathrm{h}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t05_s02_c05",
+    "concept": "5.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 5,
+    "statement": "Un satélite tiene T1=24 h y radio r1. Otro alrededor del mismo planeta tiene T2=3 h. ¿Cuánto vale r2/r1?",
+    "options": [
+      "$0.25$",
+      "$0.5$",
+      "$0.125$",
+      "$0.75$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Aplicamos la tercera ley de Kepler.\n2. Sustituimos los datos: $r_2/r_1=(3/24)^{2/3}$.\n3. El resultado pedido es $0.25$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t05_s02_c06",
+    "concept": "5.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 5,
+    "statement": "En un punto orbital se tiene $GM/r=36\\,\\mathrm{m^2/s^2}$. ¿Qué rapidez circular corresponde?",
+    "options": [
+      "$12\\,\\mathrm{m/s}$",
+      "$3\\,\\mathrm{m/s}$",
+      "$18\\,\\mathrm{m/s}$",
+      "$6\\,\\mathrm{m/s}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La gravedad aporta la aceleración centrípeta.\n2. Sustituimos los datos: $v=\\sqrt{GM/r}=\\sqrt{36}$.\n3. El resultado pedido es $6\\,\\mathrm{m/s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t05_s02_c07",
+    "concept": "5.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 5,
+    "statement": "En un punto se da $GM/r=50\\,\\mathrm{m^2/s^2}$. ¿Qué rapidez de escape clásica se obtiene sin resistencia?",
+    "options": [
+      "$5\\,\\mathrm{m/s}$",
+      "$30\\,\\mathrm{m/s}$",
+      "$10\\,\\mathrm{m/s}$",
+      "$20\\,\\mathrm{m/s}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La energía total mínima para escapar es cero.\n2. Sustituimos los datos: $v_e=\\sqrt{2GM/r}=\\sqrt{100}$.\n3. El resultado pedido es $10\\,\\mathrm{m/s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t05_s02_c08",
+    "concept": "5.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 5,
+    "statement": "Una masa de 5 kg está donde $g=4\\,\\mathrm{m/s^2}$. ¿Cuál es el módulo de su peso?",
+    "options": [
+      "$60\\,\\mathrm{N}$",
+      "$20\\,\\mathrm{N}$",
+      "$40\\,\\mathrm{N}$",
+      "$10\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El peso es la fuerza gravitatoria local.\n2. Sustituimos los datos: $P=mg=5(4)$.\n3. El resultado pedido es $20\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t05_s02_c09",
+    "concept": "5.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 5,
+    "statement": "Si el radio de una órbita circular se multiplica por 4, ¿por qué factor cambia la rapidez orbital alrededor del mismo centro?",
+    "options": [
+      "$0.5\\,\\text{veces}$",
+      "$1\\,\\text{veces}$",
+      "$0.25\\,\\text{veces}$",
+      "$1.5\\,\\text{veces}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La rapidez orbital es inversamente proporcional a la raíz del radio.\n2. Sustituimos los datos: $v_2/v_1=1/\\sqrt4$.\n3. El resultado pedido es $0.5\\,\\text{veces}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t05_s02_c10",
+    "concept": "5.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 5,
+    "statement": "En una órbita circular ideal, la fuerza gravitatoria sobre el satélite apunta…",
+    "options": [
+      "Hacia el centro de la órbita.",
+      "En el sentido de su velocidad.",
+      "Hacia afuera de la órbita.",
+      "En una dirección fija del espacio."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La gravedad es una fuerza atractiva central.\n2. En la órbita circular suministra la aceleración radial.\n3. Por eso apunta al centro y es perpendicular a la velocidad instantánea.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t05_s02_c11",
+    "concept": "5.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 5,
+    "statement": "Para aplicar directamente la tercera ley de Kepler comparando dos satélites se requiere…",
+    "options": [
+      "Que tengan la misma masa.",
+      "Que orbiten el mismo cuerpo central bajo el modelo gravitatorio.",
+      "Que tengan el mismo periodo.",
+      "Que estén a igual altura."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La constante de proporcionalidad depende de la masa central.\n2. Comparar el mismo centro permite cancelarla.\n3. La masa del satélite se considera despreciable frente a la del centro en este modelo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

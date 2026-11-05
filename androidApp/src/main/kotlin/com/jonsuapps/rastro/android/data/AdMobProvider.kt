@@ -43,6 +43,7 @@ object AdMobProvider : RastroAdProvider {
     override val ready get() = initialized && consent?.canRequestAds() == true && activity() != null
 
     fun attach(activity: Activity) {
+        if (com.jonsuapps.rastro.monetization.PresentationMode.enabled) return
         host = WeakReference(activity)
         AdsPlacementController.provider = this
         consent = UserMessagingPlatform.getConsentInformation(activity)
@@ -85,6 +86,7 @@ object AdMobProvider : RastroAdProvider {
         .build()
 
     fun preload() {
+        if (com.jonsuapps.rastro.monetization.PresentationMode.enabled) return
         val preview = AdsPlacementController.adminPreview()
         if (previewMode != preview) {
             previewMode = preview
@@ -113,7 +115,7 @@ object AdMobProvider : RastroAdProvider {
                 }
             })
         }
-        if (interstitialAd == null && !loadingInterstitial) {
+        if (AdServingMode.automaticInterstitialsEnabled && interstitialAd == null && !loadingInterstitial) {
             loadingInterstitial = true
             InterstitialAd.load(context, if (preview) "ca-app-pub-3940256099942544/1033173712" else BuildConfig.ADMOB_INTERSTITIAL_ID, request(), object : InterstitialAdLoadCallback() {
                 override fun onAdLoaded(ad: InterstitialAd) {
@@ -126,6 +128,7 @@ object AdMobProvider : RastroAdProvider {
     }
 
     override fun rewarded(onEarned: (String) -> Unit, onClosed: () -> Unit) {
+        if (com.jonsuapps.rastro.monetization.PresentationMode.enabled) { onClosed(); return }
         if (previewMode != AdsPlacementController.adminPreview()) { preload(); onClosed(); return }
         val activity = activity()
         val ad = rewardedAd?.takeIf { System.currentTimeMillis() - rewardedAt < 3_600_000 }
@@ -144,6 +147,7 @@ object AdMobProvider : RastroAdProvider {
     }
 
     override fun interstitial(onClosed: (Boolean) -> Unit) {
+        if (!AdServingMode.automaticInterstitialsEnabled) { onClosed(false); return }
         if (previewMode != AdsPlacementController.adminPreview()) { preload(); onClosed(false); return }
         val activity = activity()
         val ad = interstitialAd?.takeIf { System.currentTimeMillis() - interstitialAt < 3_600_000 }

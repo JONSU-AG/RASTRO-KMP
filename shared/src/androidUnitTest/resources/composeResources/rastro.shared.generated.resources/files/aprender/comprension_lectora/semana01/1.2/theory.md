@@ -257,20 +257,33 @@ E) La superaleación fue diseñada para operar de forma exclusiva a temperatura 
 
 ## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
 
-```
-                           COMPRENSIÓN LITERAL
-                                    │
-          ┌─────────────────────────┴─────────────────────────┐
-          ▼                                                   ▼
-   NIVEL EXPLÍCITO DIRECTO                             PARÁFRASIS FIEL
- (Palabras textuales del autor)                     (Mismo contenido, otra forma)
-          │                                                   │
-    ┌─────┴─────┐                                       ┌─────┴─────┐
-    ▼           ▼                                       ▼           ▼
-Datos Puros   Hechos y                               Sinonimia    Estructura
-(Cifras,      Detalles                              Contextual   Sintáctica
- Fechas,      (Acciones                             (Sustitución Invertida
- Nombres)      narradas)                             de vocablos) (Voz Pasiva/Activa)
+```mermaid
+graph TD
+ ROOT["Leer información explícita"]
+ B1["Localizar datos"]
+ B1N1["Identificar quién realiza cada acción y a qué momento se refiere."]
+ B1N2["Conservar cifras, fechas, condiciones y referencias que delimitan una afirmación."]
+ B1N3["Distinguir las palabras del narrador de las de un personaje o una fuente citada."]
+ B2["Parafrasear con fidelidad"]
+ B2N1["Reformular sin añadir causas, intenciones o consecuencias no expresadas."]
+ B2N2["Comprobar que un cambio de voz verbal conserve participantes y relaciones."]
+ B2N3["La sustitución por un sinónimo depende del contexto, no solo del diccionario."]
+ B3["Verificar el alcance"]
+ B3N1["Mantener negaciones y cuantificadores: algunos no equivale a todos."]
+ B3N2["Una posibilidad no se convierte en certeza al resumirla."]
+ B3N3["La información explícita también puede estar repartida en varias oraciones."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
 ---

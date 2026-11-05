@@ -37,3 +37,31 @@ Fuentes:
 - https://support.google.com/admob/answer/9363762
 - https://support.google.com/admob/answer/9989980
 
+
+## Actualización comprobada — 10/10/2026
+
+- [x] Texto legal aprobado por el propietario, integrado en Android 206 y publicado en web.
+- [x] app-ads.txt público con línea oficial y Asset Links conservados.
+- [x] 2.0.4 / 206 aceptada y enviada a producción. Console: «Cambios en la etapa de revisión»; verificaciones rápidas pendientes. Seguridad de datos y disponibilidad enviadas juntas. Evidencia build/play-production-206-enviada.png.
+- [x] 361 pruebas sin fallos; bundle, manifest BILLING y firma verificados. No se ejecutó Android.
+- [ ] Aprobación de Google y ficha pública. No confundir envío con publicación.
+- [ ] AdMob: cuenta en verificación; editor del mensaje europeo falla «No se puede cargar la página». Mensaje sigue en borrador. Vincular ficha pública cuando exista y comprobar anuncios reales.
+- [ ] Seis candidatos de perfiles sin UID en Auth: inventario privado, no borrados. Auditados 218 cuentas Auth y 214 perfiles. Revisión individual pendiente.
+- [ ] Validación académica heredada pendiente.
+
+Firebase continúa Spark. No se eligieron cuentas de pago ni datos bancarios/fiscales. Las listas de tareas anteriores son históricas; este apartado sustituye su estado. Detalle actual: docs/publicacion/RELEASE_2.0.4_206.md. Próximo código mínimo 207, verificar Console antes de cargar.
+
+## 12/10/2026 — Verificación actual sin nueva subida
+
+Play Console, Actividad de envío: envío 3 de producción del 10/10/2026 figura Publicado. No se cargó otro bundle ni se enviaron nuevos cambios.
+AdMob con aguilar.jonsu@gmail.com redirige a signup?sac=true: «No se aprobó su cuenta», «Debe corregir algunos problemas para poder usar AdMob». Muestra confirmación de lectura/cumplimiento de Políticas del Programa y botón Reenviar. No se marcó ni reenvió esa declaración. La pantalla no detalla una infracción específica. El propietario debe revisar la declaración antes de autorizar el reenvío. No se pudo acceder a la configuración de la app para vincularla en esta sesión. Evidencia: build/admob-cuenta-no-aprobada-2026-10-12.png.
+El estado anterior «en verificación» queda sustituido por esta observación. No afirmar vinculación completada, consentimiento publicado ni anuncios reales habilitados.
+
+## 12/10/2026 — Cuenta reenviada y vinculación completada
+
+Por autorización explícita del propietario, se leyeron las políticas oficiales AdMob/AdSense, se marcó la declaración existente de lectura/cumplimiento y se pulsó Reenviar. Resultado: «Estamos revisando su información»; acceso al panel recuperado. No se aceptaron nuevos contratos ni se cambiaron datos bancarios.
+Se vinculó la aplicación AdMob EXISTENTE 3422086209 con Google Play com.jonsuapps.rastro, JONSUAPPS, usando la URL pública exacta. AdMob confirmó «Verificaste RASTRO Preuniversitario (Android) correctamente». Tabla: En preparación / Publicación limitada / Revisión en curso. Dos unidades existentes conservadas; sin nueva aplicación ni bundle. Google indica revisión de app normalmente 2–3 días, no garantizados. Evidencia build/admob-rastro-vinculada-2026-10-12.png.
+
+Comprobación adicional 12/10: app-ads.txt aún no muestra solicitudes ni rastreo en AdMob; aviso de detección de dominio hasta 7 días. El archivo público ya publicado no equivale a rastreo aprobado. Mensaje europeo existente continúa Borrador; al abrir el editor quedó cargando y no se pudo revisar/publicar. No se activaron anuncios automáticos ni se subió otra versión.
+
+12/10/2026: propietario autorizó terminar/publicar consentimiento europeo existente. Ámbito: AdMob y documentación, sin código/app nueva. Se abrió editor en pestaña del propietario, se esperó y se recargó/reabrió una vez. En ambos intentos diálogo permaneció cargando sin vista previa/configuración; no fue posible revisar ni publicar. Mensaje aún Borrador, sin duplicación. Evidencia build/admob-editor-consentimiento-2026-10-12.png. UMP canRequestAds y loadAndShowConsentFormIfRequired existentes comprobados en código; no ejecución de Android.

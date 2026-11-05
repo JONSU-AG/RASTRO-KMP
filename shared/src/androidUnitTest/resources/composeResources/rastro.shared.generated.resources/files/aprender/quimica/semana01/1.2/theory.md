@@ -6,11 +6,11 @@
    * *Densidad (\rho = m/V), temperatura de ebullición (T_e), temperatura de fusión (T_f), presión de vapor, viscosidad, dureza, tenacidad, ductilidad, maleabilidad, calor específico (c_e), índice de refracción, reactividad química, electronegatividad.*
 
 ### 3.4. Fenómenos o Cambios de la Materia
-1. **Fenómeno Físico:** Modificación que no altera la estructura molecular ni la identidad química de la sustancia. Son generalmente reversibles y con bajo intercambio energético.
+1. **Fenómeno Físico:** Cambio de estado, forma o distribución que conserva la identidad química de las sustancias. Puede ser reversible o irreversible; la reversibilidad y la cantidad de energía intercambiada no bastan por sí solas para clasificarlo.
    * Cambios de estado físico (ebullición, fusión, condensación), disolución de azúcar en agua, dilatación térmica, fragmentación mecánica.
 2. **Fenómeno Químico (Reacción Química):** Transformación irreversible o en equilibrio que altera la composición íntima y enlaces químicos, originando nuevas sustancias con propiedades distintas.
    * Combustión, corrosión/oxidación de metales, digestión de alimentos, fotosíntesis, fermentación, saponificación.
-3. **Fenómeno Nuclear:** Alteración de los núcleos atómicos con transmutación de elementos y enorme desprendimiento de energía según E = \Delta m \cdot c^2.
+3. **Fenómeno Nuclear:** Cambio en la composición o el estado energético de los núcleos atómicos. Puede liberar o absorber energía; si cambia el número de protones, cambia el elemento. Una emisión gamma puede cambiar la energía nuclear sin cambiar el elemento. La relación entre masa y energía es E = \Delta m \cdot c^2.
    * Fisión nuclear (ruptura de núcleos pesados: U-235) y Fusión nuclear (unión de núcleos livianos: ^2H + ^3H \to ^4He + n).
 
 ---
@@ -20,7 +20,7 @@
 * **Volumen:** Metro cúbico (m^3). 1\text{ m}^3 = 1000\text{ L} = 10^6\text{ mL} = 10^6\text{ cm}^3. 1\text{ L} = 1\text{ dm}^3 = 1000\text{ mL}.
 * **Presión:** Pascal (Pa = N/m^2). 1\text{ atm} = 760\text{ mmHg} = 760\text{ Torr} = 101.325\text{ kPa} \approx 10^5\text{ Pa} = 1.013\text{ bar}.
 * **Temperatura:** Kelvin (K). Escala absoluta.
-  \frac{C}{5} = \frac{F - 32}{9} = \frac{K - 273}{5} = \frac{R - 492}{9}
+  \frac{C}{5} = \frac{F - 32}{9} = \frac{K - 273.15}{5} = \frac{R - 491.67}{9}
   K = C + 273.15 \quad ; \quad \Delta K = \Delta C
 
 ---

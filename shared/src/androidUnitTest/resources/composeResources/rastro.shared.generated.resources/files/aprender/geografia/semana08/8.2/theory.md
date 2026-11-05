@@ -3,8 +3,8 @@
 ```mermaid
 graph TD
     OCHO_REG["Las 8 Regiones Naturales del Perú (Javier Pulgar Vidal, 1940)"] --> CRIT["Criterios de Clasificación"]
-    OCHO_REG --> VER_OCC["Vertiente Occidental y Cumbres"]
-    OCHO_REG --> VER_ORI["Vertiente Oriental y Llanura Amazónica"]
+    OCHO_REG --> VER_OCC["Referencias costeras y andinas; no exclusivas de una vertiente"]
+    OCHO_REG --> VER_ORI["Referencias amazónicas; considerar también la Yunga fluvial"]
 
     CRIT --> ALT["Altitudinal (Factor Principal)"]
     CRIT --> TOP["Toponímico (Etimología Nativa)"]
@@ -14,11 +14,11 @@ graph TD
     CRIT --> ACT["Actividad Humana y Productos"]
 
     VER_OCC --> CHALA["1. Chala o Costa (0 a 500 m)<br/>'Maizal / Amontonamiento'"]
-    VER_OCC --> YUNGA["2. Yunga (500 a 2 300 m)<br/>'Valle cálido' (Marítima y Fluvial)"]
+    VER_OCC --> YUNGA["2. Yunga: marítima 500–2300 m; fluvial 1000–2300 m"]
     VER_OCC --> QUECHUA["3. Quechua (2 300 a 3 500 m)<br/>'Tierra de clima templado'"]
     VER_OCC --> SUNI["4. Suni o Jalca (3 500 a 4 000 m)<br/>'Tierras altas / Heladas'"]
     VER_OCC --> PUNA["5. Puna (4 000 a 4 800 m)<br/>'Soroche / Altiplano'"]
-    VER_OCC --> JANCA["6. Janca o Cordillera (4 800 a 6 768 m)<br/>'Blanco / Nieve'"]
+    VER_OCC --> JANCA["6. Janca o Cordillera: desde 4800 m hacia las cumbres"]
 
     VER_ORI --> RUPA["7. Rupa Rupa o Selva Alta (400 a 1 000 m)<br/>'Ardiente / Muy lluvioso'"]
     VER_ORI --> OMAGUA["8. Omagua o Selva Baja (80 a 400 m)<br/>'Peces de agua dulce / Muy cálido'"]
@@ -30,27 +30,65 @@ graph TD
 
 ### 3.2. Estudio Exhaustivo de las 8 Regiones Naturales
 
+```mermaid
+graph TD
+ ROOT["Ocho regiones: cómo interpretar su distribución"]
+ B1["Clasificación de Pulgar Vidal"]
+ B1N1["Relaciona altitud, clima, relieve, seres vivos, nombres regionales y actividades humanas."]
+ B1N2["Sus ocho regiones no son departamentos ni fronteras administrativas."]
+ B1N3["No confundir este sistema con las once ecorregiones de Brack."]
+ B2["Referencias occidentales y andinas"]
+ B2N1["Chala y Yunga marítima sirven para estudiar el ascenso desde la costa."]
+ B2N2["Quechua, Suni, Puna y Janca organizan pisos andinos; no son exclusivos de una sola ladera."]
+ B2N3["Janca designa el piso más alto del esquema, no una medición actual de cada cumbre."]
+ B3["Referencias orientales"]
+ B3N1["Yunga fluvial: distinguir su intervalo de la Yunga marítima."]
+ B3N2["Rupa Rupa enlaza el estudio del flanco oriental con Omagua en tierras más bajas."]
+ B3N3["No suponer que un descenso desde la cumbre salta todos los pisos intermedios hasta la selva."]
+ B4["Aplicar los rangos con cuidado"]
+ B4N1["Los intervalos son referencias de una clasificación; no paredes físicas en el paisaje."]
+ B4N2["Una ciudad o región administrativa puede abarcar lugares situados a distintas altitudes."]
+ B4N3["Una especie usada como ejemplo no es necesariamente exclusiva de un piso."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
-Altitud (m)
-6 768 |                                  [JANCA O CORDILLERA] (Nieve permanente, cóndor)
-      |                                        /\
-4 800 |---------------------------------------/  \---------------------------------------
-      |                         [PUNA]       /    \
-      |                    (Ichu, camélidos) /      \
-4 000 |-------------------------------------/        \-----------------------------------
-      |                   [SUNI]           /          \
-      |              (Cantuta, heladas)   /            \
-3 500 |----------------------------------/              \---------------------------------
-      |               [QUECHUA]         /                \
-      |          (Maíz, clima benigno) /                  \
-2 300 |-------------------------------/                    \-----------------------------
-      |          [YUNGA]             /                      \        [RUPA RUPA]
-      |     (Frutales, huaycos)     /                        \     (Selva Alta, pongos)
-  500 |----------------------------/                          \-------------------------- (1 000 m)
-      |       [CHALA O COSTA]     /                            \     [OMAGUA]
-    0 +==========================/                              \====(Selva Baja, tahuampas) (80 m)
-         Océano Pacífico (Oeste)                                     Llanura Amazónica (Este)
-```
+
+### Leer los pisos sin dibujar franjas simétricas
+
+| Región | Intervalo de referencia en metros sobre el nivel del mar | Precisión para interpretar |
+|---|---|---|
+| Chala | 0–500 | Referencia costera del esquema |
+| Yunga | Marítima: 500–2300; fluvial: 1000–2300 | No aplicar el mismo inicio a ambas vertientes |
+| Quechua | 2300–3500 | Piso andino; no equivale a un departamento entero |
+| Suni | 3500–4000 | Comparar sus condiciones con los pisos vecinos |
+| Puna | 4000–4800 | Referencia altoandina, con variación local |
+| Janca | Desde 4800 hacia las cumbres | El techo de una montaña no es una frontera de altitud universal |
+| Rupa Rupa | 400–1000 | Referencia de selva alta en esta clasificación |
+| Omagua | Aproximadamente 80–400 | Referencia de selva baja en esta clasificación |
+
+**Importante:** los rangos se presentan como convenciones de estudio de las ocho regiones de Pulgar Vidal. No son un pronóstico del tiempo, un mapa de peligro ni una garantía de que toda la flora o población se ajuste a una franja exacta.
+
+### Resolver una ubicación paso a paso
+
+1. Identifica qué sistema de clasificación pide el ejercicio.
+2. Comprueba la altitud y, en Yunga, la vertiente o modalidad indicada.
+3. Compara el intervalo sin convertir el nombre de una ciudad en la altitud de todos sus distritos.
+4. Si el dato está justo en un límite, conserva la convención de la fuente y consulta los demás rasgos; no inventes una asignación exclusiva.
+
 
 ---
 
@@ -152,11 +190,11 @@ Altitud (m)
 | Región | Altitud (\text{m s.n.m.}) | Significado Toponímico | Clima Predominante | Especie de Flora Típica | Especie de Fauna Típica | Ciudad Emblemática |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Chala** | 0 - 500 | *"Maizal / Nubes amontonadas"* | Subtropical árido / Tropical seco | Algarrobo, Amancaes, Mangle | Anchoveta, Aves guaneras | Lima, Trujillo, Chiclayo |
-| **Yunga** | 500 - 2\,300 | *"Valle cálido / Mujer estéril"* | Desértico cálido (sol permanente) | Molle, Pitajaya, Lúcumo | Chaucato, Taurigaray | Chosica, Moquegua, Tacna |
+| **Yunga** | Marítima: 500–2300; fluvial: 1000–2300 | *"Valle cálido / Mujer estéril"* | Marítima y fluvial con condiciones diferentes | Molle, Pitajaya, Lúcumo | Chaucato, Taurigaray | Chosica, Moquegua, Tacna |
 | **Quechua** | 2\,300 - 3\,500 | *"Tierra de clima templado"* | **Templado seco (el más benigno)**| Aliso, Maíz, Arrayán | Zorzal gris, Oso de anteojos | **Arequipa**, Cusco, Huancayo |
 | **Suni** | 3\,500 - 4\,000 | *"Tierras altas / Heladas"* | Frío y seco (heladas frecuentes) | **Flor de la Cantuta**, Queñual | Allqamari, Zorzal negro | Puno, Huancavelica, Juliaca |
 | **Puna** | 4\,000 - 4\,800 | *"Soroche / Mal de altura"* | Frígido (oscilación extrema) | **Ichu**, **Puya de Raimondi**, Maca | Vicuña, Alpaca, Parihuana | Cerro de Pasco, Junín |
-| **Janca** | 4\,800 - 6\,768 | *"Blanco / Maíz tostado"* | Glaciar (bajo 0^\circ\text{C} siempre) | Líquenes, Yaretilla | **Cóndor andino**, Vizcacha | La Rinconada (campamento) |
+| **Janca** | 4\,800 - 6\,768 | *"Blanco / Maíz tostado"* | Alta montaña; frío intenso y variación local | Líquenes, Yaretilla | **Cóndor andino**, Vizcacha | La Rinconada (campamento) |
 | **Rupa Rupa**| 400 - 1\,000 | *"Ardiente / Caliente"* | Cálido húmedo (**la más lluviosa**) | **Árbol de la Quina**, Cedro | **Gallito de las Rocas**, Otorongo | Tingo María, Bagua, Jaén |
 | **Omagua** | 80 - 400 | *"Peces de agua dulce"* | Tropical cálido (**la más calurosa**)| Caoba, **Lupuna**, Aguaje | **Paiche**, Anaconda, Charapa | Iquitos, Pucallpa, Tarapoto |
 
@@ -164,15 +202,15 @@ Altitud (m)
 
 
 
-### Mnemotecnia 1: Las 8 Regiones en Orden de Ascenso y Descenso
+### Mnemotecnia: recordar nombres, no un perfil idéntico en todo el Perú
 **"CHA-YU-QUE-SU-PU-JAN / RU-O"**
 * **CHA** \rightarrow **CHA**la (0 - 500)
-* **YU** \rightarrow **YU**nga (500 - 2\,300)
+* **YU** \rightarrow **YU**nga (marítima: 500–2300; fluvial: 1000–2300)
 * **QUE** \rightarrow **QUE**chua (2\,300 - 3\,500)
 * **SU** \rightarrow **SU**ni (3\,500 - 4\,000)
 * **PU** \rightarrow **PU**na (4\,000 - 4\,800)
 * **JAN** \rightarrow **JAN**ca (4\,800 - 6\,768)
-* *(Bajando por el flanco oriental hacia la Amazonía:)*
+* *(Otros dos nombres del esquema amazónico; la lista abreviada no dibuja todos los pisos del descenso:)*
 * **RU** \rightarrow **RU**pa Rupa (400 - 1\,000)
 * **O** \rightarrow **O**magua (80 - 400)
 

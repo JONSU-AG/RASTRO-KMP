@@ -1,1 +1,200 @@
-[{"concept":"3.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t03_s01_c01","options":["T \\to D","D \\to T","T \\leftrightarrow D","\\sim T \\to D"],"pedagogicalTier":"concepto","semana":3,"statement":"Identifique la alternativa que exprese formalmente que:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.2","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t03_s01_c02","options":["Si vas a la playa, viajas a Mollendo.","No viajas a Mollendo y vas a la playa.","Si viajas a Mollendo, vas a la playa.","Viajas a Mollendo o no vas a la playa."],"pedagogicalTier":"concepto","semana":3,"statement":"¿Cuál de las siguientes proposiciones es lógicamente equivalente a:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.3","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t03_s01_c03","options":["Solo I y II","Solo II y III","I, II y III","Solo I y III"],"pedagogicalTier":"concepto","semana":3,"statement":"Analice las siguientes tres afirmaciones de política económica regional:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: A \\to B (A es el antecedente y B el consecuente).","fuente":"temario","id":"rl_t03_s01_c04","options":["B \\to A (la condición necesaria siempre se coloca en el consecuente).","Las contradictorias nunca pueden tener el mismo valor de verdad; las contrarias no pueden ser ambas verdaderas, pero **sí pueden ser ambas falsas**.","Valor o condición no aplicable al caso planteado","A \\to B (A es el antecedente y B el consecuente)."],"pedagogicalTier":"concepto","semana":3,"statement":"En la proposición \"A es condición suficiente para B\", ¿cómo se formaliza el condicional?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: B \\to A (la condición necesaria siempre se coloca en el consecuente).","fuente":"temario","id":"rl_t03_s01_c05","options":["B \\to A (la condición necesaria siempre se coloca en el consecuente).","A \\to B (A es el antecedente y B el consecuente).","Las contradictorias nunca pueden tener el mismo valor de verdad; las contrarias no pueden ser ambas verdaderas, pero **sí pueden ser ambas falsas**.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":3,"statement":"En la proposición \"A es condición necesaria para B\", ¿cómo se formaliza el condicional?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Las contradictorias nunca pueden tener el mismo valor de verdad; las contrarias no pueden ser ambas verdaderas, pero **sí pueden ser ambas falsas**.","fuente":"temario","id":"rl_t03_s01_c06","options":["A \\to B (A es el antecedente y B el consecuente).","Las contradictorias nunca pueden tener el mismo valor de verdad; las contrarias no pueden ser ambas verdaderas, pero **sí pueden ser ambas falsas**.","B \\to A (la condición necesaria siempre se coloca en el consecuente).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":3,"statement":"¿Cuál es la diferencia entre dos proposiciones contrarias y dos contradictorias?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.7","correctIndex":2,"explanation":"Como D=F y C es contradictoria con D => C=V. Como B es necesaria para C => C -> B es V. Como C=V => B debe ser necesariamente VERDADERA.","fuente":"temario","id":"rl_t03_s01_c07","options":["B es necesariamente falsa","A es necesariamente verdadera","B es necesariamente verdadera","A es necesariamente falsa"],"pedagogicalTier":"concepto","semana":3,"statement":"Si A es condición suficiente para B, B es necesaria para C, y C es contradictoria con D. Si D es FALSA, ¿qué afirmación es concluyente?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t03_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t03_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"3.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t03_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rl_t03_s01_c01",
+    "concept": "3.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $\\neg \\left(p \\wedge q\\right)$?",
+    "options": [
+      "$\\neg p \\vee \\neg q$",
+      "$\\neg p \\wedge \\neg q$",
+      "$p \\wedge q$",
+      "$p \\vee q$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $\\neg p \\vee \\neg q$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s01_c02",
+    "concept": "3.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $\\neg \\left(p \\vee q\\right)$?",
+    "options": [
+      "$\\neg p \\vee \\neg q$",
+      "$p \\wedge q$",
+      "$p \\vee q$",
+      "$\\neg p \\wedge \\neg q$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $\\neg p \\wedge \\neg q$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s01_c03",
+    "concept": "3.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $p \\Rightarrow q$?",
+    "options": [
+      "$p \\wedge q$",
+      "$p \\Leftrightarrow q$",
+      "$q \\vee \\neg p$",
+      "$p \\vee \\neg q$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $q \\vee \\neg p$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s01_c04",
+    "concept": "3.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $p \\not\\Rightarrow q$?",
+    "options": [
+      "$p \\Rightarrow q$",
+      "$p \\wedge \\neg q$",
+      "$q \\wedge \\neg p$",
+      "$p \\vee q$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $p \\wedge \\neg q$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s01_c05",
+    "concept": "3.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $\\neg \\left(\\neg p\\right)$?",
+    "options": [
+      "$p$",
+      "$\\neg p$",
+      "$p \\wedge q$",
+      "$p \\vee q$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $p$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s01_c06",
+    "concept": "3.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $p \\wedge \\left(p \\vee q\\right)$?",
+    "options": [
+      "$q$",
+      "$p \\wedge q$",
+      "$p \\vee q$",
+      "$p$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $p$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s01_c07",
+    "concept": "3.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $p \\vee \\left(p \\wedge q\\right)$?",
+    "options": [
+      "$p \\wedge q$",
+      "$p \\vee q$",
+      "$p$",
+      "$q$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $p$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s01_c08",
+    "concept": "3.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $p \\wedge \\left(q \\vee r\\right)$?",
+    "options": [
+      "$p \\wedge q \\wedge r$",
+      "$\\left(p \\wedge q\\right) \\vee \\left(p \\wedge r\\right)$",
+      "$r \\wedge \\left(p \\vee q\\right)$",
+      "$p \\vee q \\vee r$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 8 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $\\left(p \\wedge q\\right) \\vee \\left(p \\wedge r\\right)$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s01_c09",
+    "concept": "3.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $p \\vee \\left(q \\wedge r\\right)$?",
+    "options": [
+      "$\\left(p \\vee q\\right) \\wedge \\left(p \\vee r\\right)$",
+      "$r \\vee \\left(p \\wedge q\\right)$",
+      "$p \\wedge q \\wedge r$",
+      "$p \\vee q \\vee r$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 8 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $\\left(p \\vee q\\right) \\wedge \\left(p \\vee r\\right)$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s01_c10",
+    "concept": "3.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "Usa la contraposición. ¿Cuál es lógicamente equivalente a $p \\Rightarrow q$?",
+    "options": [
+      "$q \\Rightarrow p$",
+      "$\\neg p \\Rightarrow \\neg q$",
+      "$p \\wedge q$",
+      "$\\neg q \\Rightarrow \\neg p$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $\\neg q \\Rightarrow \\neg p$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t03_s01_c11",
+    "concept": "3.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 3,
+    "statement": "¿Cuál es lógicamente equivalente a $p \\Leftrightarrow q$?",
+    "options": [
+      "$p \\wedge q$",
+      "$p \\veebar q$",
+      "$\\left(p \\Rightarrow q\\right) \\wedge \\left(q \\Rightarrow p\\right)$",
+      "$p \\vee q$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La equivalencia exige igual valor en todas las asignaciones.\n2. Comparamos las 4 filas de las tablas completas.\n3. La única alternativa que coincide en todas es $\\left(p \\Rightarrow q\\right) \\wedge \\left(q \\Rightarrow p\\right)$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

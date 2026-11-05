@@ -16,21 +16,33 @@
 
 ## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
 
-```
-                       INTENCIÓN Y TONO DEL TEXTO
-                                   │
-         ┌─────────────────────────┴─────────────────────────┐
-         ▼                                                   ▼
-PROPÓSITO COMUNICATIVO                               EL TONO DEL AUTOR
- (Meta / Acción Ilocutiva)                         (Actitud Anímica / Emoción)
-         │                                                   │
-   ┌─────┴─────┐                                       ┌─────┴─────┐
-   ▼           ▼                                       ▼           ▼
-Informar /   Persuadir /                            Racional /   Valorativo /
-Explicar     Polemizar                              Objetivo     Subjetivo
-(Verbos de   (Verbos de                             (Neutro,     (Irónico,
-transmisión  convencimiento:                         Científico,  Sarcástico,
-aséptica)    refutar, denunciar)                     Crítico)     Elegíaco)
+```mermaid
+graph TD
+ ROOT["Propósito y tono textual"]
+ B1["Propósito comunicativo"]
+ B1N1["Informar, explicar, persuadir, narrar u orientar pueden combinarse en un texto."]
+ B1N2["Identificar el propósito dominante mediante contenido, organización y destinatario."]
+ B1N3["Distinguir la acción comunicativa del tema tratado."]
+ B2["Tono"]
+ B2N1["Inferir la actitud expresada a partir de valoraciones, elecciones léxicas y contexto."]
+ B2N2["Crítico no significa necesariamente neutral; un texto puede razonar y valorar a la vez."]
+ B2N3["El tono textual no demuestra por sí solo el estado emocional real del autor."]
+ B3["Pruebas y matices"]
+ B3N1["No decidir por una palabra aislada ni por la forma interrogativa o exclamativa solamente."]
+ B3N2["Ironía y sarcasmo pueden relacionarse, pero no son etiquetas idénticas para toda burla."]
+ B3N3["Justificar la interpretación con indicios y reconocer lecturas alternativas cuando proceda."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
 
@@ -89,7 +101,7 @@ En los exámenes de admisión de la UNSA, UNMSM y UNI, las preguntas de propósi
 
 
 ### Mnemotecnia 1: "El Radar V-I-P" (Propósito)
-- **V**erbo en Infinitivo (Empieza siempre con *ar, er, ir*).
+- **V**erbo en Infinitivo (Termina en *-ar, -er o -ir*).
 - **I**ntención Oculta (¿Qué quiere que yo haga o piense después de leer?).
 - **P**ostura Central (¿A quién ataca o a quién apoya?).
 
@@ -259,7 +271,7 @@ E) Un tono didáctico e instructivo orientado a enseñar cómo escribir novelas 
 
 ## 11. BANCO DE FLASHCARDS (Q/A)
 
-- **Q: ¿Con qué tipo de verbo debe formularse siempre el propósito central de un texto?**  
+- **Q: ¿Qué forma verbal puede ayudar a formular brevemente el propósito central de un texto?**
   **A:** Con un verbo en infinitivo que exprese una acción comunicativa rectora (demostrar, refutar, concientizar, advertir).
 - **Q: ¿Cómo se identifica el tono escéptico en un autor de ciencias?**  
   **A:** Por la presencia de adverbios de duda (quizás, probablemente), exigencia de mayor evidencia empírica y rechazo a conclusiones apresuradas.
@@ -277,15 +289,27 @@ E) Un tono didáctico e instructivo orientado a enseñar cómo escribir novelas 
 ### 3.2 El Tono del Autor: Glosario de Actitudes Discursivas
 El tono es la "música" interior del texto. Saber calificar el tono permite al postulante resolver la pregunta más sutil de la prueba:
 
-```
-[TONO CRÍTICO / SEVERO]   ──▶  Juzga con rigor intelectual señalando deficiencias y errores.
-[TONO ESCÉPTICO / CAUTO]   ──▶  Duda de verdades absolutas, exige pruebas y desconfía de optimismos ingenuos.
-[TONO IRÓNICO / SARCÁSTICO]──▶  Usa el doble sentido burlesco para mofarse de una situación o personaje.
-[TONO SOLEMNE / PROTOCOLAR]──▶  Lenguaje grave, formal, majestuoso y respetuoso propio de actos oficiales.
-[TONO PANEGÍRICO / LAUDATORIO]▶ Alaba con entusiasmo desmedido las virtudes de alguien o algo.
-[TONO ELEGÍACO / NOSTÁLGICO] ──▶  Lamenta con melancolía y tristeza una pérdida irreparable o el pasado ido.
-[TONO BELIGERANTE / AGRESIVO]──▶  Confrontacional, violento en adjetivos, busca la colisión frontal abierta.
-[TONO ASERTIVO / OBJETIVO] ──▶  Tranquilo, firme, fundamentado en hechos empíricos sin apasionamiento ciego.
+```mermaid
+graph TD
+ ROOT["Indicios para describir el tono"]
+ B1["Interpretaciones que requieren contexto"]
+ B1N1["Crítico: examina, cuestiona o valora con razones; no siempre es neutral."]
+ B1N2["Cauto o escéptico: expresa reserva o solicita apoyo para una afirmación."]
+ B1N3["Irónico: la interpretación contextual puede contrastar con lo literalmente dicho."]
+ B1N4["Solemne: expresión formal y grave, sin que eso demuestre veracidad."]
+ B1N5["Laudatorio: elogia; el grado de exageración debe comprobarse."]
+ B1N6["Elegíaco o nostálgico: puede expresar pérdida o evocación del pasado."]
+ B1N7["Confrontativo: se opone de manera marcada; no basta para decidir si su argumento es válido."]
+ B1N8["Asertivo: afirma con claridad; firmeza no equivale por sí sola a objetividad."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ B1 --> B1N5
+ B1 --> B1N6
+ B1 --> B1N7
+ B1 --> B1N8
 ```
 
 

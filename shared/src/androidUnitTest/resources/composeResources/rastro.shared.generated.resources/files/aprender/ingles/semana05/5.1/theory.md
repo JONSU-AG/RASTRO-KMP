@@ -9,7 +9,7 @@
 | **Tiempo de Estudio Recomendado** | 4.5 horas |
 | **Resolución Curricular** | R.C.U. N.° 0028-2026 (Admisión 2027) |
 | **Prerrequisitos** | Tiempos Verbales, Modales y Conectores Lógicos (Temas 01 al 04) |
-| **Objetivo Pedagógico** | Dominar el sistema pronominal completo (subject, object, possessive adjectives/pronouns, reflexive pronouns); aplicar con exactitud matemática las preposiciones esenciales (*at, on, in* de tiempo y lugar, y preposiciones de movimiento); internalizar el orden sintáctico canónico de la oración inglesa (SVO y orden de adjetivos OSASCOMP); y resolver ejercicios de transformación de enunciados, paráfrasis y detección de errores de admisión. |
+| **Objetivo Pedagógico** | Dominar el sistema pronominal completo (subject, object, possessive adjectives/pronouns, reflexive pronouns); aplicar según el contexto las preposiciones esenciales (*at, on, in* de tiempo y lugar, y preposiciones de movimiento); internalizar el orden sintáctico canónico de la oración inglesa (SVO y orden de adjetivos OSASCOMP); y resolver ejercicios de transformación de enunciados, paráfrasis y detección de errores de admisión. |
 
 ---
 
@@ -17,21 +17,39 @@
 
 ```mermaid
 graph TD
-    A[Pronouns, Prepositions & English Syntax] --> B[Pronominal Architecture]
-    B --> B1[Subject Pronouns: I, you, he, she, it, we, they - Syntactic subjects]
-    B --> B2[Object Pronouns: me, you, him, her, it, us, them - Direct/Indirect objects]
-    B --> B3[Possessive Adjectives my, your + NOUN vs Possessive Pronouns mine, yours NO NOUN]
-    B --> B4[Reflexive Pronouns: myself, himself, themselves - Coreferential / Emphatic]
-
-    A --> C[Prepositional Matrix]
-    C --> C1[Time Pyramid: AT specific hour / ON days & dates / IN months, years, parts of day]
-    C --> C2[Place Pyramid: AT specific point / ON surface or street / IN enclosed space or city]
-    C --> C3[Movement: to, into, out of, across, through, towards]
-
-    A --> D[English Sentence Syntax]
-    D --> D1[Canonical Order: Subject + Verb + Object + Place + Time S-V-O-P-T]
-    D --> D2[Adjective Pre-modification: Adjectives precede nouns - OSASCOMP order]
-    D --> D3[Sentence Transformation: Paraphrase, active/passive, error identification]
+ ROOT["Pronombres, preposiciones y orden"]
+ B1["Pronombres y posesión"]
+ B1N1["Sujeto: I, you, he, she, it, we, they. Ejemplo: She studies."]
+ B1N2["Objeto: me, you, him, her, it, us, them. Ejemplo: I called her."]
+ B1N3["Posesivo ante un sustantivo: my book. Posesivo independiente: This book is mine."]
+ B1N4["Reflexivo: el objeto remite al sujeto; también puede dar énfasis. She introduced herself."]
+ B2["Tiempo y lugar"]
+ B2N1["Tiempo: at para horas; on para días y fechas; in para meses, años y algunas partes del día."]
+ B2N2["Lugar: at presenta un punto o actividad; on una superficie; in un interior o área."]
+ B2N3["Son patrones de uso, no una ley de tamaño. Aprender también expresiones como at home y at night."]
+ B3["Movimiento"]
+ B3N1["To indica destino; towards indica dirección, sin afirmar llegada."]
+ B3N2["Into y out of indican entrada y salida; across y through describen recorridos distintos."]
+ B4["Orden y contexto"]
+ B4N1["En una afirmación transitiva neutra suele aparecer sujeto, verbo y objeto. No toda oración lleva objeto."]
+ B4N2["Lugar y tiempo pueden cambiar de posición: Yesterday, John bought a book es una oración válida."]
+ B4N3["Los adjetivos antepuestos siguen tendencias de orden; no toda descripción exige una secuencia de ocho adjetivos."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---
@@ -54,10 +72,10 @@ En la gramática inglesa, los pronombres y determinantes se articulan en un sist
 | **2.ª plural** | **you** | **you** | **your** (*your tasks*) | **yours** (*They are yours*) | **yourselves** |
 | **3.ª plural** | **they** | **them** | **their** (*their lab*) | **theirs** (*It is theirs*) | **themselves** |
 
-#### Reglas de Oro Pronominales:
+#### Contrastes pronominales:
 1. **Possessive Adjective vs. Possessive Pronoun:**
    - El *Possessive Adjective* acompaña **obligatoriamente** a un sustantivo (Adj + N): *This is **my laptop**.*
-   - El *Possessive Pronoun* sustituye al sustantivo y **NUNCA** va seguido de un nombre: *This laptop is **mine**.* (NUNCA: \times *This is mine laptop*).
+   - El *Possessive Pronoun* sustituye al sustantivo y no funciona como determinante ante el sustantivo poseído: *This laptop is **mine**.* (NUNCA: \times *This is mine laptop*).
 2. **Cuidado con "Its" vs. "It's":**
    - *Its:* Adjetivo posesivo neutro sin apóstrofo (*The cat licked **its** paw*).
    - *It's:* Contracción de *it is* o *it has* (*It's raining* / *It's been a long time*).
@@ -65,23 +83,18 @@ En la gramática inglesa, los pronombres y determinantes se articulan en un sist
 
 ---
 
-### 3.2. La Matriz Preposicional: Preposiciones de Tiempo, Lugar y Movimiento
+### 3.2. Preposiciones: usos y contexto
 
-#### A. La Pirámide de Especificidad: *AT, ON, IN*
-Tanto para el tiempo como para el espacio, el inglés opera mediante una pirámide conceptual de lo más general a lo más específico:
+### Elegir una preposición de tiempo
 
-```
-                  ▲
-                 / \
-                /   \     AT (Muy específico: Horas puntuales / Puntos exactos)
-               /  AT \    Time: at 8:30 AM, at noon, at midnight, at night.
-              /───────\   Place: at the bus stop, at the door, at home.
+| Uso habitual | Forma | Ejemplo |
+|---|---|---|
+| Hora o momento puntual | at | at 8:30; at noon |
+| Día o fecha | on | on Monday; on 15 May |
+| Mes, año o estación | in | in July; in 2027; in winter |
+| Partes habituales del día | in the | in the morning; in the evening |
+| Noche, en sentido general | at | at night |
 
-## 3. GRAMMAR PATTERNS & STRUCTURE TAXONOMY
-## 4. FÓRMULAS, TAXONOMÍAS Y LEYES FUNDAMENTALES
+**Importante:** estas asociaciones son una guía, no una regla basada únicamente en el tamaño del intervalo. *On Monday morning* incluye un día concreto. Con *next Monday*, *last year* y *every morning* normalmente no añadimos at, on o in. *In the night* también existe cuando se habla de un momento durante una noche determinada.
 
-### 4.1. Reglas Mnemotécnicas de Selección Preposicional
-
-\begin{array}{|l|l|l|}
-\hline
-\textbf{Categoría} & \textbf{Preposición} & \textbf{Ejemplos Obligatorios} \\ \hline
+Para el lugar, compara **at the bus stop**, **on the table** e **in the classroom**. Son relaciones de punto, superficie e interior; la continuación desarrolla sus usos y el movimiento con ejemplos.

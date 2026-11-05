@@ -13,27 +13,43 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                         QUÍMICA ORGÁNICA E HIDROCARBUROS
-                                        │
-         ┌──────────────────────────────┴──────────────────────────────┐
-         ▼                                                             ▼
-EL ÁTOMO DE CARBONO                                           LOS HIDROCARBUROS
-• Propiedades Químicas:                                       (Compuestos de C e H)
-  - Tetravalencia (4 enlaces)                                          │
-  - Autosaturación (Catenación / Cadenas)                      ┌───────┴───────┐
-  - Hibridación orbital (sp^3, sp^2, sp)                     ▼               ▼
-• Tipos de Carbono: Primario, Secundario, Terciario, Cuaternario  ALIFÁTICOS    AROMÁTICOS
-• Isomería: De cadena, posición, función, geométrica (cis/trans)      │         (Benceno C_6H_6,
-                                                                       │          Resonancia, Hückel)
-         ┌─────────────────────────────────────────────────────────────┘
-         ▼
-HIDROCARBUROS ALIFÁTICOS
-• Alcanos (Parafinas): C_n H_{2n+2} (Saturados, enlaces simples \sigma, hibridación sp^3)
-• Alquenos (Olefinas): C_n H_{2n} (Insaturados, enlaces dobles \sigma + \pi, hibridación sp^2)
-• Alquinos (Acetilénicos): C_n H_{2n-2} (Insaturados, enlaces triples \sigma + 2\pi, hibridación sp)
-• Cicloalcanos: C_n H_{2n} (Anillos saturados)
-• Reglas Sistemáticas de Nomenclatura IUPAC (Cadena principal, numeración, sustituyentes)
+```mermaid
+graph TD
+ ROOT["Carbono e hidrocarburos"]
+ B1["Estructura del carbono"]
+ B1N1["Tetravalencia y catenación explican muchas estructuras del carbono en el modelo introductorio."]
+ B1N2["Hibridaciones $sp^3$, $sp^2$ y sp: distinguir geometría y enlaces sigma y pi."]
+ B1N3["Carbono primario, secundario, terciario o cuaternario: contar carbonos directamente enlazados, no hidrógenos."]
+ B2["Hidrocarburos alifáticos"]
+ B2N1["Alcanos acíclicos saturados: $C_nH_{2n+2}$."]
+ B2N2["Alquenos acíclicos con un solo doble enlace: $C_nH_{2n}$."]
+ B2N3["Alquinos acíclicos con un solo triple enlace: $C_nH_{2n-2}$."]
+ B2N4["Cicloalcanos monocíclicos saturados: $C_nH_{2n}$; esa fórmula por sí sola no demuestra un doble enlace."]
+ B3["Aromaticidad e isomería"]
+ B3N1["Benceno: electrones pi deslocalizados; las formas de resonancia no son moléculas que alternan físicamente."]
+ B3N2["Regla de Hückel: aplicar a sistemas cíclicos, planos y completamente conjugados que cumplan sus condiciones."]
+ B3N3["Isomería de cadena, posición o función: misma fórmula molecular y diferente conectividad."]
+ B3N4["Isomería geométrica: requiere restricción de giro y sustituyentes adecuados; no todo alqueno tiene cis/trans."]
+ B4["Nomenclatura"]
+ B4N1["Elegir la estructura principal según las reglas de la familia, no solo la cadena dibujada más horizontal."]
+ B4N2["Numerar, localizar insaturaciones y sustituyentes, y comprobar la estructura del nombre obtenido."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
 ```
 
 ---
@@ -89,3 +105,15 @@ Fenómeno por el cual dos o más compuestos tienen la **misma fórmula molecular
 * Son compuestos **apolares** o de polaridad casi nula; por tanto, son insolubles en agua e hidrófobos, pero solubles en solventes orgánicos apolares (éter, benceno, cloroformo).
 * Sus moléculas se mantienen unidas exclusivamente por **fuerzas de dispersión de London**.
 * Al aumentar el número de carbonos (masa molar), los puntos de ebullición y fusión **aumentan progresivamente**.
+
+
+### Una fórmula molecular puede admitir familias distintas
+
+| Familia y condición | Fórmula general | Ejemplo |
+|---|---|---|
+| Alcano acíclico saturado | $C_nH_{2n+2}$ | Etano: $C_2H_6$ |
+| Alqueno acíclico con un doble enlace | $C_nH_{2n}$ | Propeno: $C_3H_6$ |
+| Alquino acíclico con un triple enlace | $C_nH_{2n-2}$ | Propino: $C_3H_4$ |
+| Cicloalcano con un anillo saturado | $C_nH_{2n}$ | Ciclopropano: $C_3H_6$ |
+
+**Comprobación:** propeno y ciclopropano comparten fórmula molecular, pero tienen conectividad y enlaces diferentes. La fórmula sola no permite elegir entre ambos.

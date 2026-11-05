@@ -1,1 +1,265 @@
-[{"id":"bio_t13_s03_c01","type":"MULTIPLE_CHOICE","statement":"Orquídeas sobre ramas usando solo soporte lumínico sin dañar floema. Relación:","options":["Parasitismo","Comensalismo (epifitismo)","Mutualismo obligado","Amensalismo","Depredación"],"correctIndex":1,"explanation":"Comensal +/0: orquídea gana altura, árbol neutro.","subject":"biologia","semana":13,"concept":"13.3.1","pedagogicalTier":"aplicación","fuente":"temario"},{"id":"bio_t13_s03_c02","type":"MULTIPLE_CHOICE","statement":"Los líquenes son mutualismo obligado entre:","options":["Virus y bacteria","Dos hongos","Hongo y alga/cianobacteria","Planta y bacteria","Dos animales"],"correctIndex":2,"explanation":"Micobionte (soporte/humedad) + fotobionte (fotosíntesis) inseparables.","subject":"biologia","semana":13,"concept":"13.3.1","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t13_s03_c03","type":"MULTIPLE_CHOICE","statement":"Penicillium que aniquila bacterias con penicilina sin beneficiarse directamente es:","options":["Depredación","Mutualismo","Comensalismo","Amensalismo","Parasitismo"],"correctIndex":3,"explanation":"Amensalismo -/0: inhibe sin ganar ni perder.","subject":"biologia","semana":13,"concept":"13.3.2","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t13_s03_c04","type":"MULTIPLE_CHOICE","statement":"Taenia solium en intestino humano es:","options":["Comensal","Mutualista","Descomponedor","Depredador","Parásito"],"correctIndex":4,"explanation":"Vive a expensas perjudicando sin matar de inmediato (+/-).","subject":"biologia","semana":13,"concept":"13.3.2","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t13_s03_c05","type":"MULTIPLE_CHOICE","statement":"Dos especies por el mismo recurso limitado sufren:","options":["Mutualismo","Comensalismo","Competencia (-/-)","Amensalismo","Neutralismo"],"correctIndex":2,"explanation":"Ambas pierden energía (Gause: exclusión competitiva).","subject":"biologia","semana":13,"concept":"13.3.2","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t13_s03_c06","type":"MULTIPLE_CHOICE","statement":"Pez payaso y anémona que pueden vivir separados es:","options":["Mutualismo obligado","Protocooperación","Parasitismo","Comensalismo","Amensalismo"],"correctIndex":1,"explanation":"Beneficio mutuo facultativo, no vitalicio.","subject":"biologia","semana":13,"concept":"13.3.1","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t13_s03_c07","type":"MULTIPLE_CHOICE","statement":"Puma que caza y devora vicuña al instante es:","options":["Depredación","Comensalismo","Mutualismo","Amensalismo","Parasitismo"],"correctIndex":0,"explanation":"Muerte inmediata de la presa (+/-).","subject":"biologia","semana":13,"concept":"13.3.2","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t13_s03_c08","type":"MULTIPLE_CHOICE","statement":"Eucalipto que impide germinar bajo su copa por toxinas es:","options":["Parasitismo","Comensalismo","Competencia","Alelopatía (amensalismo)","Mutualismo"],"correctIndex":3,"explanation":"Inhibición química sin beneficio directo (-/0).","subject":"biologia","semana":13,"concept":"13.3.2","pedagogicalTier":"aplicación","fuente":"temario"},{"id":"bio_t13_s03_c09","type":"MULTIPLE_CHOICE","statement":"Rémora adherida al tiburón por transporte y restos es:","options":["Mutualista obligado","Depredador","Competidor","Parásito","Comensal"],"correctIndex":4,"explanation":"Gana viaje y comida; tiburón neutro.","subject":"biologia","semana":13,"concept":"13.3.1","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t13_s03_c10","type":"MULTIPLE_CHOICE","statement":"Micorrizas (hongo-raíz) son:","options":["Parasitismo","Mutualismo","Comensalismo","Amensalismo","Competencia"],"correctIndex":1,"explanation":"Hongo amplía absorción; planta da fotosintatos.","subject":"biologia","semana":13,"concept":"13.3.1","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t13_s03_c11","type":"MULTIPLE_CHOICE","statement":"Signo del comensalismo:","options":["+/+","+/-","+/0","-/-","-/0"],"correctIndex":2,"explanation":"Uno gana, otro neutro.","subject":"biologia","semana":13,"concept":"13.3.1","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t13_s03_c12","type":"MULTIPLE_CHOICE","statement":"Relacione: I. Liquen ( ) mutualismo; II. Rémora ( ) comensalismo; III. Tenia ( ) parasitismo; IV. Gause ( ) competencia. Secuencia:","options":["La correspondencia directa descrita","Inversa total","II-I-IV-III","Solo I y II","Ninguna corresponde"],"correctIndex":0,"explanation":"Cuatro casos canónicos con sus signos.","subject":"biologia","semana":13,"concept":"13.3.1","pedagogicalTier":"aplicación","fuente":"temario"}]
+[
+  {
+    "id": "bio_t13_s03_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Orquídeas sobre ramas usando solo soporte lumínico sin dañar floema. Relación:",
+    "options": [
+      "Parasitismo",
+      "Comensalismo (epifitismo)",
+      "Mutualismo obligado",
+      "Amensalismo",
+      "Depredación"
+    ],
+    "correctIndex": 1,
+    "explanation": "Comensal +/0: orquídea gana altura, árbol neutro.",
+    "subject": "biologia",
+    "semana": 13,
+    "concept": "13.3.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t13_s03_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Los líquenes son mutualismo obligado entre:",
+    "options": [
+      "Virus y bacteria",
+      "Dos hongos",
+      "Hongo y alga/cianobacteria",
+      "Planta y bacteria",
+      "Dos animales"
+    ],
+    "correctIndex": 2,
+    "explanation": "Micobionte (soporte/humedad) + fotobionte (fotosíntesis) inseparables.",
+    "subject": "biologia",
+    "semana": 13,
+    "concept": "13.3.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t13_s03_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Penicillium que aniquila bacterias con penicilina sin beneficiarse directamente es:",
+    "options": [
+      "Depredación",
+      "Mutualismo",
+      "Comensalismo",
+      "Amensalismo",
+      "Parasitismo"
+    ],
+    "correctIndex": 3,
+    "explanation": "Amensalismo -/0: inhibe sin ganar ni perder.",
+    "subject": "biologia",
+    "semana": 13,
+    "concept": "13.3.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t13_s03_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Taenia solium en intestino humano es:",
+    "options": [
+      "Comensal",
+      "Mutualista",
+      "Descomponedor",
+      "Depredador",
+      "Parásito"
+    ],
+    "correctIndex": 4,
+    "explanation": "Vive a expensas perjudicando sin matar de inmediato (+/-).",
+    "subject": "biologia",
+    "semana": 13,
+    "concept": "13.3.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t13_s03_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Dos especies por el mismo recurso limitado sufren:",
+    "options": [
+      "Mutualismo",
+      "Comensalismo",
+      "Competencia (-/-)",
+      "Amensalismo",
+      "Neutralismo"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ambas pierden energía (Gause: exclusión competitiva).",
+    "subject": "biologia",
+    "semana": 13,
+    "concept": "13.3.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t13_s03_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Pez payaso y anémona que pueden vivir separados es:",
+    "options": [
+      "Mutualismo obligado",
+      "Protocooperación",
+      "Parasitismo",
+      "Comensalismo",
+      "Amensalismo"
+    ],
+    "correctIndex": 1,
+    "explanation": "Beneficio mutuo facultativo, no vitalicio.",
+    "subject": "biologia",
+    "semana": 13,
+    "concept": "13.3.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t13_s03_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Puma que caza y devora vicuña al instante es:",
+    "options": [
+      "Depredación",
+      "Comensalismo",
+      "Mutualismo",
+      "Amensalismo",
+      "Parasitismo"
+    ],
+    "correctIndex": 0,
+    "explanation": "Muerte inmediata de la presa (+/-).",
+    "subject": "biologia",
+    "semana": 13,
+    "concept": "13.3.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t13_s03_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Eucalipto que impide germinar bajo su copa por toxinas es:",
+    "options": [
+      "Parasitismo",
+      "Comensalismo",
+      "Competencia",
+      "Alelopatía (amensalismo)",
+      "Mutualismo"
+    ],
+    "correctIndex": 3,
+    "explanation": "Inhibición química sin beneficio directo (-/0).",
+    "subject": "biologia",
+    "semana": 13,
+    "concept": "13.3.2",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t13_s03_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Rémora adherida al tiburón por transporte y restos es:",
+    "options": [
+      "Mutualista obligado",
+      "Depredador",
+      "Competidor",
+      "Parásito",
+      "Comensal"
+    ],
+    "correctIndex": 4,
+    "explanation": "Gana viaje y comida; tiburón neutro.",
+    "subject": "biologia",
+    "semana": 13,
+    "concept": "13.3.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t13_s03_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Micorrizas (hongo-raíz) son:",
+    "options": [
+      "Parasitismo",
+      "Mutualismo",
+      "Comensalismo",
+      "Amensalismo",
+      "Competencia"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hongo amplía absorción; planta da fotosintatos.",
+    "subject": "biologia",
+    "semana": 13,
+    "concept": "13.3.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t13_s03_c11",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Signo del comensalismo:",
+    "options": [
+      "+/+",
+      "+/-",
+      "+/0",
+      "-/-",
+      "-/0"
+    ],
+    "correctIndex": 2,
+    "explanation": "Uno gana, otro neutro.",
+    "subject": "biologia",
+    "semana": 13,
+    "concept": "13.3.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t13_s03_c12",
+    "type": "MATCH_PAIRS",
+    "statement": "Relaciona cada interacción ecológica con el efecto descrito.",
+    "options": [],
+    "correctIndex": 0,
+    "explanation": "1. Mutualismo: Ambas especies se benefician en la interacción considerada.\n2. Comensalismo: Una se beneficia y la otra no presenta un efecto apreciable en el modelo descrito.\n3. Parasitismo: El parásito se beneficia y el hospedador resulta perjudicado.\n4. Competencia interespecífica: Especies diferentes disputan un recurso limitante y ambas soportan un costo.",
+    "subject": "biologia",
+    "semana": 13,
+    "concept": "13.3.1",
+    "pedagogicalTier": "aplicación",
+    "fuente": "Revisión RASTRO: docs/aprender/biologia/REVISION_RELACIONES_2026-11-02.md",
+    "instruction": "Selecciona un elemento de cada columna para formar los cuatro pares.",
+    "pairs": [
+      {
+        "id": "p1",
+        "left": "Mutualismo",
+        "right": "Ambas especies se benefician en la interacción considerada."
+      },
+      {
+        "id": "p2",
+        "left": "Comensalismo",
+        "right": "Una se beneficia y la otra no presenta un efecto apreciable en el modelo descrito."
+      },
+      {
+        "id": "p3",
+        "left": "Parasitismo",
+        "right": "El parásito se beneficia y el hospedador resulta perjudicado."
+      },
+      {
+        "id": "p4",
+        "left": "Competencia interespecífica",
+        "right": "Especies diferentes disputan un recurso limitante y ambas soportan un costo."
+      }
+    ],
+    "rightOptions": [
+      {
+        "id": "p3",
+        "text": "El parásito se beneficia y el hospedador resulta perjudicado."
+      },
+      {
+        "id": "p1",
+        "text": "Ambas especies se benefician en la interacción considerada."
+      },
+      {
+        "id": "p4",
+        "text": "Especies diferentes disputan un recurso limitante y ambas soportan un costo."
+      },
+      {
+        "id": "p2",
+        "text": "Una se beneficia y la otra no presenta un efecto apreciable en el modelo descrito."
+      }
+    ]
+  }
+]

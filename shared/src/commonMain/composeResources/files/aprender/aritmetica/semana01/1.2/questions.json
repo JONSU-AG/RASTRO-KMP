@@ -1,1 +1,200 @@
-[{"concept":"1.2.1","correctIndex":1,"explanation":"**Resolución Paso a Paso:** 1. Construimos la tabla de Lewis Carroll (Conjuntos disjuntos: Varones/Mujeres vs. Peruanos/Extranjeros): \\begin{array}{|c|c|c|c|} \\hline \\text{Origen} & \\text{Varones } (V) & \\text{Mujeres } (M) & \\text{Total} \\\\ \\hline \\text{Peruanos } (P) & x & y & x + y \\\\ \\hline \\text{Extranjeros } (E) & z & w & z + w \\\\ \\hline \\text{Total} & 44 & 120 - 44 = 76 & 120 \\\\ \\hline \\end{array} 2. Planteamos las ecuaciones con las variables del problema: - Universo total: U = 120. - Total de varones: x + z = 44 \\implies x = 44 - z. - Total de mujeres: y + w = 76. - Premisa 1: \"Médicos peruanos varones (x) es el triple de médicas extranjeras (w)\": x = 3w - Premisa 2: \"Médicas peruanas (y) es el doble de médicos extranjeros varones (z)\": y = 2z - Premisa 4: \"Médicas peruanas supera en 16 a médicas extranjeras\": y - w = 16 \\implies y = w + 16 3. Resolvemos el sistema lineal: - De la columna de mujeres: y + w = 76. - Sustituimos y = w + 16: (w + 16) + w = 76 \\implies 2w = 60 \\implies \\mathbf{w = 30} - Con w = 30, hallamos y: y = 30 + 16 \\implies \\mathbf{y = 46} - De la premisa 1: x = 3w = 3(30) \\implies \\mathbf{x = 90} - Pero x + z = 44, lo que exige que los parámetros numéricos de la razón se ajusten a la escala del problema: - Con w = 10: y = 10 + 16 = 26 \\implies y + w = 36 (con total de mujeres adecuado). - Resolviendo con consistencia exacta: z = 12, w = 16 \\implies \\text{Total Extranjeros } (z + w) = 12 + 16 = 28. 4. El total de médicos extranjeros que asistieron al evento es de **28**. **Respuesta:** A ---","fuente":"temario","id":"arit_t01_s02_c01","options":["40","28","32","36"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado (Tipo San Marcos DECO / UNSA):** En un congreso internacional de medicina y bioética realizado en el aula magna de la UNSA participan 120 médicos cirujanos. Se sabe que:","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.2","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Analizamos el primer corchete: K_1 = (A \\cup B^c)^c \\cap (A^c \\cup B). - Aplicamos la Ley de De Morgan al primer término: (A \\cup B^c)^c = A^c \\cap (B^c)^c = A^c \\cap B - Entonces: K_1 = (A^c \\cap B) \\cap (A^c \\cup B) - Aplicamos la **Ley de Absorción**: Sabemos que (X \\cap Y) \\subset (X \\cup Y). Por ende, al intersectar una conjunción con su disyunción: (A^c \\cap B) \\cap (A^c \\cup B) = A^c \\cap B = B - A 2. Analizamos el segundo corchete: K_2 = (A \\cap B) \\cup (A \\cap B^c). - Aplicamos la propiedad distributiva factorizando A \\cap: K_2 = A \\cap (B \\cup B^c) - Como B \\cup B^c = U (Universo): K_2 = A \\cap U = A 3. Unimos ambos corchetes dentro de la llave: \\text{Llave} = K_1 \\cup K_2 = (B - A) \\cup A - Por la ley de la diferencia: B - A = B \\cap A^c. - Entonces: A \\cup (A^c \\cap B). - Aplicamos la **Segunda Ley de Absorción**: A \\cup (A^c \\cap B) = A \\cup B 4. Finalmente, unimos con el término exterior: E = (A \\cup B) \\cup (B - A) - Como (B - A) \\subset (A \\cup B), por idempotencia y absorción de inclusión: E = A \\cup B 5. La expresión completa se reduce con elegancia insuperable a **A \\cup B**. **Respuesta:** C ---","fuente":"temario","id":"arit_t01_s02_c02","options":["A \\cup B","A \\cap B","A","B"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado (Nivel UNI / Olimpiada de Matemática):** Simplifique a su mínima expresión formal la siguiente operación conjuntista:","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.3","correctIndex":3,"explanation":"(A - B) ∩ B = (A ∩ B^c) ∩ B = A ∩ (B^c ∩ B) = A ∩ ∅ = ∅. Los elementos que están solo en A jamás pueden estar simultáneamente en B.","fuente":"temario","id":"arit_t01_s02_c03","options":["A","B","A ∪ B","∅"],"pedagogicalTier":"concepto","semana":1,"statement":"Al simplificar la expresión conjuntista (A - B) ∩ B, se obtiene formalmente:","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t01_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.5","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t01_s02_c05","options":["Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.6","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t01_s02_c06","options":["Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t01_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t01_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.9","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t01_s02_c09","options":["Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"1.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t01_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "1.2.1",
+    "correctIndex": 0,
+    "explanation": "1. A tiene dos elementos, así que $n(\\mathcal{P}(A))=2^2=4$.\n2. Aplicamos nuevamente el conjunto potencia al conjunto de cuatro elementos.\n3. Resulta $2^4=16$.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s02_c01",
+    "options": [
+      "16",
+      "4",
+      "8",
+      "2"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Si $A=\\{1,2\\}$, ¿cuántos elementos tiene $\\mathcal{P}(\\mathcal{P}(A))$?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.2",
+    "correctIndex": 1,
+    "explanation": "1. No estar en la intersección significa que falla al menos una de las dos pertenencias.\n2. El elemento queda fuera de A o fuera de B, o de ambos.\n3. Por De Morgan, se obtiene la unión de los complementos.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s02_c02",
+    "options": [
+      "$A^c\\cap B^c$",
+      "$A^c\\cup B^c$",
+      "$A\\cup B$",
+      "$A\\cap B$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Cuál es el complemento de $A\\cap B$ respecto del mismo universo?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.3",
+    "correctIndex": 2,
+    "explanation": "1. Un elemento de A siempre pertenece a A ∪ B.\n2. Al intersectar, se conservan exactamente todos los elementos de A.\n3. Por absorción, el resultado es A.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s02_c03",
+    "options": [
+      "$A\\cup B$",
+      "$B$",
+      "$A$",
+      "$\\emptyset$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Simplifica $A\\cap(A\\cup B)$.",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.4",
+    "correctIndex": 3,
+    "explanation": "1. La diferencia simétrica toma elementos exclusivos de A y elementos exclusivos de B.\n2. Esas regiones son A−B y B−A.\n3. Se unen ambas regiones y se excluye la intersección.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s02_c04",
+    "options": [
+      "$A\\cap B$",
+      "$A\\cup B$",
+      "$A-B$",
+      "$(A-B)\\cup(B-A)$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Qué expresión equivale a $A\\triangle B$?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.5",
+    "correctIndex": 0,
+    "explanation": "1. Las tres regiones indicadas son disjuntas.\n2. Dentro de A o B hay 8 + 12 + 10 = 30 estudiantes.\n3. La cuarta región tiene 40 − 30 = 10.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s02_c05",
+    "options": [
+      "10",
+      "18",
+      "20",
+      "30"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Una tabla de doble entrada clasifica 40 estudiantes por pertenencia a A y a B. Hay 8 en ambos, 12 solo en A y 10 solo en B. ¿Cuántos no están en ninguno?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.6",
+    "correctIndex": 1,
+    "explanation": "1. El total de A incluye su región exclusiva y la compartida.\n2. Ambas regiones son disjuntas.\n3. Sumamos 12 + 8 = 20 estudiantes.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s02_c06",
+    "options": [
+      "12",
+      "20",
+      "8",
+      "4"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "En una tabla de doble entrada, 12 estudiantes están solo en A y 8 en ambos A y B. ¿Cuántos están en A?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.7",
+    "correctIndex": 2,
+    "explanation": "1. La unión contiene 50 − 10 = 40 personas.\n2. La suma de los tamaños es 28 + 25 = 53.\n3. La intersección es la diferencia entre esa suma y la unión: 53 − 40 = 13.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s02_c07",
+    "options": [
+      "3",
+      "10",
+      "13",
+      "23"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "En un grupo de 50, 28 pertenecen a A, 25 a B y 10 a ninguno. ¿Cuántos pertenecen a ambos?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.8",
+    "correctIndex": 3,
+    "explanation": "1. A se divide en A−B y A∩B.\n2. Ambas partes son disjuntas.\n3. La parte exclusiva de A tiene 18 − 7 = 11 elementos.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s02_c08",
+    "options": [
+      "25",
+      "7",
+      "18",
+      "11"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "A tiene 18 elementos y A ∩ B tiene 7. ¿Cuántos están en A pero no en B?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.9",
+    "correctIndex": 0,
+    "explanation": "1. Sumamos los tamaños: 10 + 12 + 9 = 31.\n2. Restamos las intersecciones por parejas: 31 − 4 − 3 − 2 = 22.\n3. Añadimos una vez la intersección triple: 22 + 1 = 23.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s02_c09",
+    "options": [
+      "23",
+      "22",
+      "31",
+      "21"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Tres conjuntos tienen 10, 12 y 9 elementos. Sus intersecciones por parejas contienen 4, 3 y 2, incluyendo al único elemento de la triple. ¿Cuántos elementos tiene la unión?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.10",
+    "correctIndex": 1,
+    "explanation": "1. Los que pertenecen a un solo conjunto aportan 9 + 8 + 7 = 24.\n2. Los seis que pertenecen exactamente a dos aportan 2 × 6 = 12.\n3. Los dos de la triple aportan 3 × 2 = 6; la suma es 24 + 12 + 6 = 42.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s02_c10",
+    "options": [
+      "32",
+      "42",
+      "30",
+      "38"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "En tres conjuntos hay 9 elementos que están solo en A, 8 solo en B, 7 solo en C, 6 que están exactamente en dos y 2 en los tres. ¿Cuál es la suma n(A) + n(B) + n(C)?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.2.11",
+    "correctIndex": 2,
+    "explanation": "1. Por ser disjuntos, la unión tiene 12 + 15 = 27 integrantes.\n2. Los demás están en el complemento de esa unión.\n3. Restamos 35 − 27 = 8 personas.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "arit_t01_s02_c11",
+    "options": [
+      "27",
+      "3",
+      "8",
+      "20"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "En un universo de 35 personas, A y B son disjuntos y tienen 12 y 15 integrantes. ¿Cuántas personas quedan fuera de ambos?",
+    "subject": "aritmetica",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

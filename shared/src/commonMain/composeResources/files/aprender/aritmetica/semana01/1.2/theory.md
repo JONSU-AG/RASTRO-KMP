@@ -1,4 +1,5 @@
 ## 1. DESARROLLO TEÓRICO AVANZADO - PARTE II
+En estas fórmulas, k representa el número de elementos de un conjunto finito A.
 3. **Número de subconjuntos no vacíos:**
    \text{Subconjuntos no vacíos} = 2^k - 1
 4. **Conjunto potencia de la potencia:**
@@ -21,10 +22,9 @@
 
 
 ## 2. FORMULARIO MAESTRO, ARTIFICIOS Y HACKING PREUNIVERSITARIO
-\end{cases}
 
 ### 4.4 Diagramas de Lewis Carroll
-Se utiliza obligatoriamente cuando los conjuntos son **mutuamente excluyentes (disjuntos)** y se cruzan dos variables binarias:
+Organiza datos mediante dos criterios binarios, cada uno dividido en categorías excluyentes y exhaustivas. Las cuatro celdas representan combinaciones disjuntas de esos criterios; los conjuntos definidos por criterios distintos pueden superponerse:
 
 \begin{array}{|c|c|c|c|}
 \hline

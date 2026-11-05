@@ -13,27 +13,47 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                         FUNCIONES QUÍMICAS INORGÁNICAS
-                                       │
-         ┌─────────────────────────────┴─────────────────────────────┐
-         ▼                                                           ▼
-    FUNCIÓN ÓXIDO                                              FUNCIÓN HIDRURO
-         │                                                           │
-   ┌─────┴─────┐                                               ┌─────┴─────┐
-   ▼           ▼                                               ▼           ▼
-ÓXIDO BÁSICO  ÓXIDO ÁCIDO                                   METÁLICO    NO METÁLICO
-(Metal + O)   (No Metal + O /                              (Metal + H)   (No Metal + H)
-      │        Anhídrido)                                                  │
- +H2O │             │ +H2O                                       ┌─────────┴─────────┐
-      ▼             ▼                                            ▼                   ▼
-  HIDRÓXIDO    ÁCIDO OXÁCIDO                              HIDRURO ESPECIAL     ÁCIDO HIDRÁCIDO
- (Base / Álcali)   │                                     (NH_3, PH_3, CH_4)   (Grupos VIA, VIIA)
-      │            │                                                                 │
-      └─────┬──────┘                                                                 │
-            ▼                                                                        │
-       OXISALES  ◄─────────────────────────── REACCIÓN DE NEUTRALIZACIÓN ────────────┴──► SALES HALOIDEAS
- (Base + Ácido Oxácido)                                                          (Base + Ácido Hidrácido)
+```mermaid
+graph TD
+ ROOT["Funciones químicas inorgánicas"]
+ B1["Óxidos"]
+ B1N1["Compuestos binarios de oxígeno con otro elemento; distinguir peróxidos y otras especies especiales."]
+ B1N2["Óxidos básicos: reaccionan con ácidos; muchos son óxidos metálicos."]
+ B1N3["Óxidos ácidos: reaccionan con bases; muchos son óxidos no metálicos."]
+ B1N4["También existen óxidos anfóteros y neutros; metal o no metal no basta como regla universal."]
+ B2["Hidróxidos y ácidos"]
+ B2N1["Hidróxidos: contienen el grupo $\mathrm{OH^-}$; un álcali es una base soluble en agua."]
+ B2N2["Oxoácidos: contienen hidrógeno, oxígeno y un elemento central."]
+ B2N3["Hidrácidos: ácidos sin oxígeno en disolución acuosa; distinguir la especie gaseosa de su disolución ácida."]
+ B2N4["No todo óxido reacciona con agua para formar automáticamente un ácido o un hidróxido."]
+ B3["Hidruros"]
+ B3N1["Compuestos binarios de hidrógeno con otro elemento."]
+ B3N2["En hidruros salinos de metales electropositivos, el hidrógeno tiene estado de oxidación -1."]
+ B3N3["Hidruros covalentes: ejemplos $\mathrm{NH_3}$, $\mathrm{PH_3}$ y $\mathrm{CH_4}$; no todos son ácidos."]
+ B4["Sales y neutralización"]
+ B4N1["Oxisales: contienen un oxoanión; distinguir catión y anión para formular."]
+ B4N2["Sales binarias: contienen aniones sin oxígeno en la clasificación introductoria."]
+ B4N3["En la reacción usual ácido-hidróxido se forman sal y agua; otras reacciones ácido-base no producen necesariamente agua."]
+ B4N4["Stock indica el estado de oxidación cuando corresponde; la fórmula debe conservar la neutralidad eléctrica."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ B4 --> B4N4
 ```
 
 ---
@@ -104,3 +124,17 @@
 * S^{2-}: Sulfuro
 * SO_3^{2-}: Sulfito
 * SO_4^{2-}: Sulfato
+
+
+### Comparar la fórmula antes de nombrar
+
+| Fórmula | Familia | Nombre |
+|---|---|---|
+| $\mathrm{CaO}$ | Óxido | Óxido de calcio |
+| $\mathrm{Ca(OH)_2}$ | Hidróxido | Hidróxido de calcio |
+| $\mathrm{HCl(aq)}$ | Hidrácido | Ácido clorhídrico |
+| $\mathrm{HNO_3}$ | Oxoácido | Ácido nítrico |
+| $\mathrm{NaCl}$ | Sal binaria | Cloruro de sodio |
+| $\mathrm{Na_2SO_4}$ | Oxisal | Sulfato de sodio |
+
+> **Importante:** la clasificación por familia no demuestra que una sustancia se obtenga simplemente añadiendo agua a cualquier óxido. La reacción concreta debe comprobarse.

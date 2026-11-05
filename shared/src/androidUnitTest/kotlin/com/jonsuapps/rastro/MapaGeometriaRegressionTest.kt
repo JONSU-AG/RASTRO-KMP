@@ -12,13 +12,12 @@ import kotlin.test.assertTrue
  * Regresión de Geometría (SALIDA_KOTLIN → RASTRO, mismo sistema genérico
  * que las demás materias): convivencia legacy+nuevo sin duplicar ni contaminar.
  *
- * Nuevo = semanas 1-11 (22 LessonNodes geom_t01_s01..geom_t11_s02, 220 challenges).
+ * Nuevo = semanas 1-11 (22 LessonNodes geom_t01_s01..geom_t11_s02, 242 preguntas revisadas).
  * Legacy geo_t* semanas 1-11 queda excluido (reemplazo total).
  * Usa fixtures espejo de `src/androidUnitTest/resources` (patrón existente).
  *
  * Notas (no se modifica curso-prueba ni otras materias):
  * - subjectId/semana/subtema vacíos o ausentes normalizados en la generación.
- * - Distribución correctIndex real: A=81, B=56, C=39, D=44.
  * - Teorías 4255-8458 chars; umbral de teoría en 4000.
  * - geo_t* también existe en geografía-nuevo, con distinto subjectId:
  *   sin contaminación (cada mapa filtra por subjectId).
@@ -51,13 +50,13 @@ class MapaGeometriaRegressionTest {
     @Test
     fun mapaGeometria_nuevoSemanas1a11_sinLegacy() {
         val mapa = mapaGeometria()
-        // Reemplazo total: todo nodo tiene 10 challenges (legacy = 1 challenge).
+        // Reemplazo total: todo nodo tiene 11 preguntas revisadas (legacy = 1 challenge).
         assertEquals(22, mapa.size, "Solo los 22 nodos nuevos, sin legacy")
-        assertTrue(mapa.all { it.challenges.size == 10 }, "Sin nodos legacy de 1 challenge")
+        assertTrue(mapa.all { it.challenges.size == 11 }, "Sin nodos legacy de 1 challenge")
 
         val nuevas = mapa.filter { it.id.startsWith("geom_t") }
         assertEquals(22, nuevas.size, "11 semanas nuevas = 22 LessonNodes")
-        assertEquals(220, nuevas.sumOf { it.challenges.size }, "220 challenges staging")
+        assertEquals(242, nuevas.sumOf { it.challenges.size }, "242 preguntas revisadas")
 
         val semanas = nuevas.map { it.semana }.distinct().sorted()
         assertEquals((1..11).toList(), semanas, "Nuevo semanas 1-11: $semanas")
@@ -68,8 +67,8 @@ class MapaGeometriaRegressionTest {
         val mapa = mapaGeometria()
         // (semana, subtema, challenges) por nodo.
         val esperadas = (1..11).flatMap { w ->
-            listOf("geom_t%02d_s01".format(w) to Triple(w, "$w.1", 10),
-                "geom_t%02d_s02".format(w) to Triple(w, "$w.2", 10))
+            listOf("geom_t%02d_s01".format(w) to Triple(w, "$w.1", 11),
+                "geom_t%02d_s02".format(w) to Triple(w, "$w.2", 11))
         }.toMap()
         for ((id, esp) in esperadas) {
             val l = mapa.filter { it.id == id && it.challenges.size == esp.third }
@@ -93,7 +92,7 @@ class MapaGeometriaRegressionTest {
         // Spot-check anti-corrupción: título staging verbatim.
         assertEquals(
             "GEOMETRÍA PREUNIVERSITARIA: CURSO COMPLETO Y SISTEMATIZADO - Fundamentos y Leyes Principales",
-            mapa.first { it.id == "geom_t01_s01" && it.challenges.size == 10 }.title
+            mapa.first { it.id == "geom_t01_s01" && it.challenges.size == 11 }.title
         )
     }
 
@@ -103,7 +102,7 @@ class MapaGeometriaRegressionTest {
         try {
             val nueva = AprenderRepository.getLessonByIdSync("geom_t01_s01")
             assertTrue(nueva != null, "geom_t01_s01 debe resolverse")
-            assertEquals(10, nueva.challenges.size, "Nuevo con 10 challenges staging")
+            assertEquals(11, nueva.challenges.size, "Nuevo con 11 preguntas revisadas")
             assertEquals("geometria", nueva.subjectId)
 
             // Fallback legacy: geo_t01_s03 no tiene equivalente nuevo → legacy (1 challenge).

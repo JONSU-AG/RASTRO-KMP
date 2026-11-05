@@ -1,23 +1,42 @@
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE DOCTRINAS ÉTICAS
 
-```
-                                     ÉTICA Y FILOSOFÍA MORAL
-                                                │
-         ┌──────────────────┬───────────────────┴───────────────────┬──────────────────┐
-         ▼                  ▼                                       ▼                  ▼
-    DIFERENCIA          ESTRUCTURA DEL                         DOCTRINAS           BIOÉTICA Y
-   MORAL / ÉTICA          ACTO MORAL                             ÉTICAS             DILEMAS
-         │                  │                                       │                  │
-• Moral:             • Persona Moral:                        • Teleológicas:     • Dilema del
-  - Práctica /         - Conciencia moral                      - Eudemonismo       tranvía:
-    costumbres         - Libertad moral                          (Aristóteles)     Deontología
-  - Particular         - Responsabilidad                       - Hedonismo         vs. Consecuen-
-• Ética:             • Elementos del acto:                       (Epicuro)         cialismo
-  - Teórica /          - Motivo / Intención                    - Utilitarismo    • Principialismo:
-    reflexión          - Conciencia del fin                      (Bentham/Mill)    - Autonomía
-  - Universal y        - Medios empleados                    • Deontológicas:      - Beneficencia
-    filosófica         - Consecuencias                         - Formalismo        - No maleficencia
-                                                                 (Kant: Deber)     - Justicia
+```mermaid
+graph TD
+ ROOT["Ética, acción y responsabilidad"]
+ B1["Moral y reflexión ética"]
+ B1N1["Moral puede referirse a normas, prácticas y valoraciones; ética también tiene usos diversos entre autores."]
+ B1N2["Distinguir describir una costumbre de justificarla moralmente."]
+ B1N3["No definir toda moral como particular y toda ética como un sistema universal ya aceptado."]
+ B2["Analizar una acción"]
+ B2N1["Examinar intención, medios, contexto, consecuencias y alternativas."]
+ B2N2["Distinguir capacidad de decidir, conocimiento de la situación y responsabilidad."]
+ B2N3["Una buena intención no resuelve por sí sola toda evaluación de los medios o resultados."]
+ B3["Enfoques éticos"]
+ B3N1["Aristóteles: virtud, deliberación práctica y vida lograda; no reducirlo al cálculo de consecuencias de cada acto."]
+ B3N2["Epicuro: placer y ausencia de perturbación; no confundir su propuesta con cualquier exceso."]
+ B3N3["Utilitarismo: valorar consecuencias mediante una concepción del bienestar; no equivale simplemente a satisfacer a una mayoría."]
+ B3N4["Kant: deber, máximas y respeto por las personas; no tratar a alguien meramente como medio."]
+ B4["Dilemas y bioética"]
+ B4N1["Un dilema exige explicitar el conflicto y los supuestos, no memorizar una respuesta universal."]
+ B4N2["Autonomía, beneficencia, no maleficencia y justicia orientan un marco de análisis, no un algoritmo que resuelva cualquier caso."]
+ B4N3["Comparar razones y límites de cada enfoque sin convertir un ejemplo hipotético en una indicación clínica."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---

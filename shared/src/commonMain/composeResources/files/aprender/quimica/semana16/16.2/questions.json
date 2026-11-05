@@ -1,1 +1,218 @@
-[{"concept":"16.2.1","correctIndex":2,"explanation":"Cada etapa quita una fracción (sólidos, turbidez, patógenos) y el cloro residual protege la red.","fuente":"temario","id":"quim_t16_s02_c01","options":["Hervir y filtrar con tela","Coagulación, sedimentación, filtración y desinfección","Solo clorar el río","Reposar 24 horas"],"pedagogicalTier":"concepto","semana":16,"statement":"La secuencia correcta de potabilización del agua es:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"16.2.2","correctIndex":3,"explanation":"El agua clara puede llevar patógenos invisibles; solo la desinfección final corta cólera y tifoidea.","fuente":"temario","id":"quim_t16_s02_c02","options":["El color del agua","Su temperatura","El caudal del río","La desinfección final"],"pedagogicalTier":"concepto","semana":16,"statement":"Que el agua se vea clara no garantiza que sea segura; lo que la hace segura es:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"16.2.3","correctIndex":0,"explanation":"Los nutrientes disparan algas cuya descomposición agota el oxígeno y mata peces.","fuente":"temario","id":"quim_t16_s02_c03","options":["Exceso de nutrientes que agota el oxígeno al descomponerse las algas","Falta de peces herbívoros","Exceso de cloro en el agua","Baja temperatura del lago"],"pedagogicalTier":"concepto","semana":16,"statement":"La eutrofización mata la vida acuática porque:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"16.2.4","correctIndex":1,"explanation":"DBO mide oxígeno que piden los microbios (5 días); DQO oxida todo químicamente en horas.","fuente":"temario","id":"quim_t16_s02_c04","options":["Son lo mismo con otro nombre","DBO es biológica y DQO es química total","DBO mide metales y DQO mide sales","DQO solo sirve en mar"],"pedagogicalTier":"concepto","semana":16,"statement":"Entre DBO y DQO como indicadores de contaminación es correcto que:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"16.2.5","correctIndex":2,"explanation":"Los metales no se degradan y se concentran escalón a escalón hasta el tope trófico.","fuente":"temario","id":"quim_t16_s02_c05","options":["Se diluyen hasta desaparecer","Se evaporan con el calor","Se biomagnifican en la cadena trófica","Solo afectan plantas"],"pedagogicalTier":"concepto","semana":16,"statement":"El plomo y el mercurio minero son peligrosos porque:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"16.2.6","correctIndex":3,"explanation":"El drenaje ácido lixivia metales que viajan por agua y se acumulan en organismos.","fuente":"temario","id":"quim_t16_s02_c06","options":["Genera humo tóxico","Acidifica el aire","Calienta los ríos","Lixivia metales al agua y la cadena trófica"],"pedagogicalTier":"concepto","semana":16,"statement":"El drenaje ácido de mina contamina porque:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"16.2.7","correctIndex":0,"explanation":"Sin cobertura vegetal la lluvia arrastra el horizonte fértil, que tarda siglos en formarse.","fuente":"temario","id":"quim_t16_s02_c07","options":["La deforestación acelera la erosión del suelo fértil","El arado siempre mejora el suelo","La lluvia lava los metales pesados","El viento trae nutrientes"],"pedagogicalTier":"concepto","semana":16,"statement":"Sobre erosión del suelo es correcto que:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"16.2.8","correctIndex":1,"explanation":"El relleno controla lixiviados y biogás con ingeniería; el botadero acumula sin control.","fuente":"temario","id":"quim_t16_s02_c08","options":["Son lo mismo","El relleno controla lixiviados y el botadero no","El botadero recicla más","Ninguno contamina"],"pedagogicalTier":"concepto","semana":16,"statement":"La diferencia entre relleno sanitario y botadero es:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"16.2.9","correctIndex":2,"explanation":"El riego sin drenaje sube sales a la superficie y esteriliza los campos costeños.","fuente":"temario","id":"quim_t16_s02_c09","options":["Falta de abono","Exceso de lluvia","Riego sin drenaje que saliniza","Cultivo de arroz"],"pedagogicalTier":"concepto","semana":16,"statement":"La salinización de suelos agrícolas costeños se debe a:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"16.2.10","correctIndex":3,"explanation":"DBO alta significa mucha materia por degradar y poco oxígeno disponible.","fuente":"temario","id":"quim_t16_s02_c10","options":["Agua cristalina","Agua potable","Agua de lluvia","Agua contaminada con materia orgánica"],"pedagogicalTier":"concepto","semana":16,"statement":"Una DBO alta indica:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"16.2.11","correctIndex":0,"explanation":"La flotación con espumas y la lixiviación con cianuro concentran el oro antes de fundirlo.","fuente":"temario","id":"quim_t16_s02_c11","options":["Flotación y lixiviación con cianuro","Destilación del aire","Fotosíntesis minera","Evaporación solar"],"pedagogicalTier":"concepto","semana":16,"statement":"La concentración del mineral de oro usa:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"16.2.12","correctIndex":1,"explanation":"La torre fracciona por puntos de ebullición sin alterar composición: es separación física.","fuente":"temario","id":"quim_t16_s02_c12","options":["Craqueo con hidrógeno","Destilación fraccionada por ebullición","Fermentación del crudo","Electrólisis del petróleo"],"pedagogicalTier":"concepto","semana":16,"statement":"La refinación del petróleo separa gasolina, kerosene y diésel por:","subject":"quimica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "quim_t16_s02_c01",
+    "concept": "16.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 16,
+    "statement": "Una muestra tiene 2 mg de una sustancia por kg. ¿Cuántos mg contiene una porción homogénea de 10 kg?",
+    "options": [
+      "$20\\,\\mathrm{mg}$",
+      "$40\\,\\mathrm{mg}$",
+      "$10\\,\\mathrm{mg}$",
+      "$60\\,\\mathrm{mg}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Multiplicamos la concentración másica dada por la masa de muestra.\n2. Aplicamos los datos y conservamos las unidades: $m=2(10)$.\n3. El resultado es $20\\,\\mathrm{mg}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t16_s02_c02",
+    "concept": "16.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 16,
+    "statement": "Una solución homogénea contiene 3 mg/L de soluto. ¿Qué masa hay en 2 L?",
+    "options": [
+      "$12\\,\\mathrm{mg}$",
+      "$3\\,\\mathrm{mg}$",
+      "$18\\,\\mathrm{mg}$",
+      "$6\\,\\mathrm{mg}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La masa es concentración por volumen.\n2. Aplicamos los datos y conservamos las unidades: $m=3(2)$.\n3. El resultado es $6\\,\\mathrm{mg}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t16_s02_c03",
+    "concept": "16.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 16,
+    "statement": "Un tratamiento destinado a obtener agua potable debe considerar…",
+    "options": [
+      "Solo que el agua sea transparente.",
+      "Únicamente eliminar el olor.",
+      "Los riesgos microbiológicos y químicos de la fuente y las barreras adecuadas.",
+      "Solo clorar cualquier río sin conocer su composición."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La apariencia no identifica todos los contaminantes.\n2. Los peligros pueden ser microbiológicos o químicos.\n3. El tratamiento debe responder a las características de la fuente y verificarse.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t16_s02_c04",
+    "concept": "16.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 16,
+    "statement": "La desinfección final del agua…",
+    "options": [
+      "Garantiza potabilidad solo por producir un olor.",
+      "Controla riesgos microbiológicos, pero no garantiza retirar todos los contaminantes químicos.",
+      "Elimina necesariamente todos los metales disueltos.",
+      "Sustituye cualquier evaluación de la fuente."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La desinfección tiene un objetivo microbiológico.\n2. Las sustancias disueltas pueden requerir otras barreras.\n3. La seguridad no se deduce de una única etapa aislada.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t16_s02_c05",
+    "concept": "16.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 16,
+    "statement": "Que el agua sea transparente indica…",
+    "options": [
+      "Que no se aprecia turbidez a simple vista; no demuestra por sí solo su potabilidad.",
+      "Que no contiene ninguna sustancia disuelta.",
+      "Que está libre de todo microorganismo.",
+      "Que no necesita ningún control de calidad."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Muchas especies químicas disueltas no se ven.\n2. Algunos peligros microbiológicos tampoco son visibles.\n3. El aspecto no sustituye la evaluación de calidad.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t16_s02_c06",
+    "concept": "16.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 16,
+    "statement": "La ebullición del agua, por sí sola,…",
+    "options": [
+      "Elimina todos los metales sin excepción.",
+      "Convierte cualquier agua en una sustancia químicamente pura.",
+      "Retira todas las sales hasta concentración cero.",
+      "No es un método universal para retirar todos los contaminantes químicos disueltos."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El calentamiento puede actuar sobre microorganismos.\n2. No implica separar cualquier especie disuelta.\n3. No se confunde desinfección con purificación química universal.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t16_s02_c07",
+    "concept": "16.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 16,
+    "statement": "Un filtro que retiene partículas visibles…",
+    "options": [
+      "Cambia el número atómico de los metales.",
+      "Demuestra por sí solo que el agua es potable.",
+      "No necesariamente retiene los iones disueltos.",
+      "Elimina obligatoriamente toda sal disuelta."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Los iones disueltos no son equivalentes a partículas suspendidas.\n2. La retención depende del mecanismo y las características del filtro.\n3. No se atribuye a cualquier filtro toda función de tratamiento.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t16_s02_c08",
+    "concept": "16.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 16,
+    "statement": "La dureza del agua se relaciona principalmente con…",
+    "options": [
+      "La velocidad del río exclusivamente.",
+      "Iones de calcio y magnesio disueltos.",
+      "Solo partículas de arena visibles.",
+      "Oxígeno molecular exclusivamente."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La dureza es una propiedad de la composición disuelta.\n2. Calcio y magnesio son sus contribuyentes habituales.\n3. No se identifica con turbidez ni con caudal.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t16_s02_c09",
+    "concept": "16.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 16,
+    "statement": "Un aporte excesivo de nutrientes a un cuerpo de agua puede favorecer…",
+    "options": [
+      "Eutrofización y consumo de oxígeno durante la descomposición de biomasa.",
+      "La desaparición de toda actividad biológica por definición.",
+      "La conversión de todos los elementos en nitrógeno.",
+      "Oxígeno ilimitado en todo momento."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Nutrientes como N y P pueden favorecer producción de biomasa.\n2. Su descomposición consume oxígeno.\n3. El efecto depende del ecosistema y no implica oxígeno siempre creciente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t16_s02_c10",
+    "concept": "16.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 16,
+    "statement": "Los lixiviados de residuos requieren manejo porque…",
+    "options": [
+      "Son siempre agua destilada.",
+      "No pueden desplazarse por gravedad.",
+      "Carecen de toda sustancia química.",
+      "Pueden transportar sustancias disueltas o suspendidas hacia el agua y el suelo."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El agua puede entrar en contacto con residuos.\n2. En ese contacto puede incorporar sustancias.\n3. Se requieren barreras y control; no basta asumir que todo queda inmóvil.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t16_s02_c11",
+    "concept": "16.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 16,
+    "statement": "La demanda bioquímica de oxígeno describe…",
+    "options": [
+      "El oxígeno que produce inevitablemente una muestra.",
+      "Una garantía directa de ausencia de patógenos.",
+      "Consumo de oxígeno asociado a procesos biológicos bajo condiciones de ensayo definidas.",
+      "La masa total exacta de cualquier metal."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El resultado depende del ensayo y sus condiciones.\n2. Se relaciona con materia susceptible de degradación biológica.\n3. No identifica por sí solo todos los contaminantes ni garantiza potabilidad.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t16_s02_c12",
+    "concept": "16.2.12",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 16,
+    "statement": "Un pH cercano a 7 en una muestra de agua…",
+    "options": [
+      "Sustituye todos los controles químicos.",
+      "No basta para demostrar que sea potable.",
+      "Prueba ausencia de microorganismos y metales.",
+      "Demuestra que solo contiene hidrógeno y oxígeno."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El pH caracteriza un aspecto ácido–base.\n2. Otras sustancias o microorganismos pueden estar presentes.\n3. La calidad requiere más información que ese único valor.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

@@ -437,7 +437,7 @@ fun MnemotecniaItemCard(
                             .padding(horizontal = 8.dp, vertical = 4.dp)
                     ) {
                         Text(
-                            text = item.importance,
+                            text = com.jonsuapps.rastro.android.ui.components.AcademicPresentationText.clean(item.importance),
                             style = MaterialTheme.typography.labelSmall,
                             color = Color(0xFFB45309),
                             fontWeight = FontWeight.Bold
@@ -467,13 +467,12 @@ fun MnemotecniaItemCard(
                 color = theme.textPrimary
             )
 
-            Text(
-                text = com.jonsuapps.rastro.android.ui.components.scientificNotation("Fórmula: ${item.shortFormula}"),
-                style = MaterialTheme.typography.bodySmall,
-                color = theme.accent,
-                fontWeight = FontWeight.Bold,
-                fontFamily = androidx.compose.ui.text.font.FontFamily.Serif
+            if (com.jonsuapps.rastro.android.ui.components.ScientificMathSource.isMathSubject(item.subject))
+            com.jonsuapps.rastro.android.ui.components.ScientificMath(
+                listOf(com.jonsuapps.rastro.android.ui.components.ScientificMathSource.normalize(item.shortFormula)),
+                theme.textPrimary, fontSize = 17f
             )
+            else Text(item.shortFormula, color = theme.textPrimary, style = MaterialTheme.typography.bodySmall)
 
             Spacer(modifier = Modifier.height(8.dp))
 
@@ -543,13 +542,7 @@ fun MnemotecniaItemCard(
             // Fija de Examen
             if (item.fijaExamen.isNotBlank()) {
                 Spacer(modifier = Modifier.height(10.dp))
-                Text(
-                    text = "Consejo de Examen: ${item.fijaExamen}",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = Color(0xFFD97706),
-                    fontWeight = FontWeight.Medium,
-                    lineHeight = 16.sp
-                )
+                com.jonsuapps.rastro.android.ui.components.AcademicImportantCard(item.fijaExamen)
             }
         }
     }

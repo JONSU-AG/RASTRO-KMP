@@ -145,3 +145,5 @@ Validación final: 163 pruebas Android y lintVitalRelease correctos; compilar_ap
 ## 08/10/2026 — Accesos y comunidad
 
 Más → RASTRO Pro reutiliza el diálogo de compras existente y corona sticker actual. Inicio muestra Comunidad RASTRO con canal oficial indicado por el propietario, fijo para todas las cuentas/invitados; no utiliza canal personal ni dice Tu canal. Gestión extensa Pro y códigos se mueve a popup Admin sin nueva navegación.
+
+01/11/2026 — Ajuste de prácticas y racha según capturas. RastroApp oculta únicamente la barra inferior en la ruta LessonEngine; cabecera superior y demás destinos conservados. ChallengeQuestionView reserva el alto real del pie de comprobación/feedback mediante Column y área desplazable con weight, en lugar de superponerlo con un margen fijo de 140 dp. Días de racha elimina insets duplicados (Scaffold ya los aplica), aumenta fuego de 52 a 88 dp, compacta calendario/espacios y conserva datos, meses y compartir. Sin scroll con altura disponible >=680 dp y fontScale <=1.25; respaldo desplazable con menos espacio o letra ampliada. Esto requiere validación física de ajuste; app no ejecutada.

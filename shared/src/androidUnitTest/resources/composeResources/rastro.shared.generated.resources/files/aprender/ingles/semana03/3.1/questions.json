@@ -1,1 +1,200 @@
-[{"concept":"3.1.1","correctIndex":2,"explanation":"**Resolución:** El contexto describe a un médico brindando una recomendación o consejo de salud (*\"I will follow your advice\"*). El verbo modal por excelencia para aconsejar o sugerir un curso de acción beneficioso es **should** (+ bare infinitive *reduce*). **Respuesta:** **B** ---","fuente":"temario","id":"ing_t03_s01_c01","options":["couldn't","shouldn't","can","should"],"pedagogicalTier":"concepto","semana":3,"statement":"Choose the correct modal verb to complete the dialogue:","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"3.1.2","correctIndex":3,"explanation":"**Resolución:** - En A: *don't have to* expresa falta de obligación, no prohibición. - En B y D: el uso de *must to* o *should to* es agramatical (los modales no llevan *to*). - En E: *haven't to* es incorrecto (debe ser *don't have to*). - En C: *mustn't touch* expresa con rigurosa exactitud normativa una **prohibición categórica** (*You are not allowed to touch*). **Respuesta:** **C** ---","fuente":"temario","id":"ing_t03_s01_c02","options":["Visitors must to take photos of all paintings.","Visitors mustn't touch the historical sculptures on display.","Visitors should to touch the fragile ceramic exhibits.","Visitors don't have to pay with cash; credit cards are accepted."],"pedagogicalTier":"concepto","semana":3,"statement":"In a public museum, which sentence correctly expresses a strict prohibition?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"3.1.3","correctIndex":0,"explanation":"**Resolución:** El sustantivo nuclear es *rainfall* (precipitación pluvial), el cual es un sustantivo **incontable** (acompañado por el cuantificador *very little*). Los sustantivos incontables concuerdan preceptivamente con la forma existencial singular en presente: **there is**. **Respuesta:** **B** ---","fuente":"temario","id":"ing_t03_s01_c03","options":["there are","there is","are there","is there"],"pedagogicalTier":"concepto","semana":3,"statement":"Complete the scientific sentence correctly:","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"3.1.4","correctIndex":3,"explanation":"According to the lesson theory: ***Mustn't*** means **PROHIBITION** (it is forbidden / illegal). ***Don't have to*** means **NO OBLIGATION** (it is optional / not necessary).","fuente":"temario","id":"ing_t03_s01_c04","options":["It requires an irregular past participle form without auxiliary verbs.","It is only used in colloquial informal contexts with plural nouns.","It follows an inverted word order with obligatory double negation.","***Mustn't*** means **PROHIBITION** (it is forbidden / illegal). ***Don't have to*** means **NO OBLIGATION** (it is optional / not necessary)."],"pedagogicalTier":"concepto","semana":3,"statement":"What is the fundamental difference between *Mustn't* and *Don't have to*?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"3.1.5","correctIndex":1,"explanation":"According to the lesson theory: **NO**, modal verbs never take *-s* and never take *to* (*He can speak, NOT: He cans to speak*).","fuente":"temario","id":"ing_t03_s01_c05","options":["It follows an inverted word order with obligatory double negation.","**NO**, modal verbs never take *-s* and never take *to* (*He can speak, NOT: He cans to speak*).","It requires an irregular past participle form without auxiliary verbs.","It is only used in colloquial informal contexts with plural nouns."],"pedagogicalTier":"concepto","semana":3,"statement":"Do modal verbs like *can, must, should* take *-s* in third person?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"3.1.6","correctIndex":2,"explanation":"According to the lesson theory: Use ***There is*** for singular countable nouns and **uncountable nouns**; use ***There are*** for plural countable nouns.","fuente":"temario","id":"ing_t03_s01_c06","options":["It follows an inverted word order with obligatory double negation.","It requires an irregular past participle form without auxiliary verbs.","Use ***There is*** for singular countable nouns and **uncountable nouns**; use ***There are*** for plural countable nouns.","It is only used in colloquial informal contexts with plural nouns."],"pedagogicalTier":"concepto","semana":3,"statement":"When do you use *There is* vs. *There are*?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"3.1.7","correctIndex":2,"explanation":"(Prohibición estricta de seguridad vital).","fuente":"temario","id":"ing_t03_s01_c07","options":["don't have to","shouldn't to","mustn't","can to"],"pedagogicalTier":"concepto","semana":3,"statement":"*\"You _______ smoke inside the petrol station. It is extremely dangerous!\"*","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"3.1.8","correctIndex":1,"explanation":"(Estructura existencial en pasado para sustantivo plural contable *applicants*).","fuente":"temario","id":"ing_t03_s01_c08","options":["there was","there were","there is","there are"],"pedagogicalTier":"concepto","semana":3,"statement":"*\"Yesterday, _______ many applicants waiting outside the admission office.\"*","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"3.1.9","correctIndex":0,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t03_s01_c09","options":["The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson.","The sentence violates subject-verb agreement in standard English.","The tense used is incompatible with the stated adverbial time marker.","The word order incorrectly positions the modifier after the direct object."],"pedagogicalTier":"concepto","semana":3,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"3.1.10","correctIndex":3,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t03_s01_c10","options":["The tense used is incompatible with the stated adverbial time marker.","The word order incorrectly positions the modifier after the direct object.","The sentence violates subject-verb agreement in standard English.","The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson."],"pedagogicalTier":"concepto","semana":3,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "ing_t03_s01_c01",
+    "concept": "3.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 3,
+    "statement": "Completa la oración en inglés estándar:\nMia can ___ very well.",
+    "options": [
+      "swim",
+      "swims",
+      "to swim",
+      "swimming"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Can es un modal seguido de verbo base sin to.\n2. La forma requerida es swim.\n3. La oración completa es: Mia can swim very well.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t03_s01_c02",
+    "concept": "3.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 3,
+    "statement": "Completa la oración en inglés estándar:\nStudents must ___ their names on the form.",
+    "options": [
+      "writes",
+      "to write",
+      "writing",
+      "write"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Must se combina con el verbo base.\n2. No se añade -s ni to a write.\n3. La oración completa es: Students must write their names on the form.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t03_s01_c03",
+    "concept": "3.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 3,
+    "statement": "Completa la oración en inglés estándar:\nYou should ___ the instructions first.",
+    "options": [
+      "to read",
+      "reading",
+      "read",
+      "reads"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Should precede la forma base.\n2. La oración usa read sin otra terminación.\n3. La oración completa es: You should read the instructions first.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t03_s01_c04",
+    "concept": "3.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 3,
+    "statement": "Completa la oración en inglés estándar:\nThere ___ one notebook on the desk.",
+    "options": [
+      "do",
+      "is",
+      "are",
+      "be"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La construcción existencial concuerda aquí con one notebook.\n2. Ese grupo nominal es singular.\n3. La oración completa es: There is one notebook on the desk.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t03_s01_c05",
+    "concept": "3.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 3,
+    "statement": "Completa la oración en inglés estándar:\nThere ___ three windows in the room.",
+    "options": [
+      "are",
+      "is",
+      "be",
+      "does"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Three windows es plural.\n2. La construcción existencial estándar usa there are.\n3. La oración completa es: There are three windows in the room.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t03_s01_c06",
+    "concept": "3.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 3,
+    "statement": "Completa la oración en inglés estándar:\nThis bag is ___ than that one. Use heavy.",
+    "options": [
+      "heavy",
+      "heaviest",
+      "more heavier",
+      "heavier"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Than introduce la comparación entre dos.\n2. Heavy forma heavier; no se duplica la marca comparativa con more.\n3. La oración completa es: This bag is heavier than that one. Use heavy.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t03_s01_c07",
+    "concept": "3.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 3,
+    "statement": "Completa la oración en inglés estándar:\nOf these three roads, this is the ___. Use short.",
+    "options": [
+      "short",
+      "more short",
+      "shortest",
+      "shorter"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Se compara un elemento con todo el grupo.\n2. Short forma el superlativo shortest después de the.\n3. La oración completa es: Of these three roads, this is the shortest. Use short.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t03_s01_c08",
+    "concept": "3.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 3,
+    "statement": "Completa la oración en inglés estándar:\nThis answer is ___ than the first one. Use good.",
+    "options": [
+      "more better",
+      "better",
+      "gooder",
+      "best"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Good tiene un comparativo irregular.\n2. Ese comparativo es better.\n3. La oración completa es: This answer is better than the first one. Use good.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t03_s01_c09",
+    "concept": "3.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 3,
+    "statement": "¿Qué significa «You must not enter»?",
+    "options": [
+      "Se prohíbe entrar.",
+      "No es necesario entrar, pero está permitido.",
+      "Entraste ayer.",
+      "Puedes entrar sin condiciones."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Must not expresa prohibición.\n2. No equivale a lack of necessity, que puede expresarse con do not have to.\n3. La respuesta es: Se prohíbe entrar.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t03_s01_c10",
+    "concept": "3.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 3,
+    "statement": "¿Qué significa «You do not have to attend»?",
+    "options": [
+      "Tienes prohibido asistir.",
+      "Asististe obligatoriamente.",
+      "Debes asistir sin excepción.",
+      "No tienes obligación de asistir."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Do not have to niega necesidad u obligación.\n2. No impone por sí solo una prohibición.\n3. La respuesta es: No tienes obligación de asistir.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t03_s01_c11",
+    "concept": "3.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 3,
+    "statement": "Completa la oración en inglés estándar:\n___ I ask a question? Use can.",
+    "options": [
+      "Am can",
+      "Does can",
+      "Can",
+      "Do can"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La pregunta con can coloca el modal antes del sujeto.\n2. No necesita do, does ni be como auxiliar adicional.\n3. La oración completa es: Can I ask a question? Use can.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

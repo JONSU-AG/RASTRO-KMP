@@ -1,11 +1,32 @@
-## 1. DESARROLLO TEÓRICO AVANZADO - PARTE II
-Un vector libre \vec{A} en el espacio euclidiano \mathbb{R}^3 se representa como un segmento de recta orientado.
+## Vectores: cómo leer sus componentes
+
+Un **vector** representa una cantidad que tiene tamaño y orientación. Se dibuja con una flecha: su longitud representa el módulo y la punta indica hacia dónde apunta.
+
+### Primero, entiende los símbolos
+
+| Símbolo | Cómo se lee | Qué significa |
+|---|---|---|
+| $\vec A$ | Vector A | La flecha completa, con sus componentes. |
+| $|\vec A|$ | Módulo de A | Su tamaño; es un número no negativo. |
+| $\hat i$ | Vector unitario del eje x | Avanza una unidad hacia el sentido positivo horizontal. |
+| $\hat j$ | Vector unitario del eje y | Avanza una unidad hacia el sentido positivo vertical. |
+| $\hat k$ | Vector unitario del eje z | Se usa cuando el problema tiene tres dimensiones. |
+
+Los vectores unitarios anteriores también se llaman **canónicos**: son las referencias de los ejes, no magnitudes nuevas. En el plano, $\mathbb{R}^2$ significa «dos componentes reales, x e y»; en el espacio, $\mathbb{R}^3$ añade la componente z.
+
+### Un ejemplo antes de las fórmulas generales
+
+Si $\vec A=(3,2)$ m, el desplazamiento tiene una componente de 3 m hacia +x y otra de 2 m hacia +y. También se escribe $\vec A=3\hat i+2\hat j$ m. Las componentes describen el mismo vector; no son dos desplazamientos adicionales que deban sumarse a su módulo.
+
+Su módulo es $|\vec A|=\sqrt{3^2+2^2}=\sqrt{13}$ m. No se obtiene sumando 3+2: las componentes son perpendiculares.
+
+### Elementos y operaciones
 
 #### A. Elementos de un Vector
 - **Módulo o Magnitud (A o |\vec{A}|):** Longitud escalar no negativa del segmento, proporcional al valor medido: |\vec{A}| \ge 0.
 - **Dirección:** Orientación de la recta directriz o línea de acción en el espacio, definida por el ángulo \theta medido en sentido antihorario respecto al eje positivo de las abscisas (+X) en el plano, o por los **cosenos directores** en \mathbb{R}^3.
 - **Sentido:** Orientación indicada por la punta de flecha.
-- **Punto de aplicación (origen):** Posición del punto inicial del vector.
+- **Punto de aplicación:** En una fuerza aplicada a un cuerpo importa dónde actúa. Un vector libre, en cambio, puede trasladarse sin cambiar sus componentes, módulo, dirección ni sentido.
 
 #### B. Operaciones Geométricas con Vectores
 1. **Método del Paralelogramo (Resultante de dos vectores coplanares y concurrentes):**
@@ -37,8 +58,10 @@ Un vector libre \vec{A} en el espacio euclidiano \mathbb{R}^3 se representa como
      \cos\alpha = \frac{A_x}{|\vec{A}|}, \quad \cos\beta = \frac{A_y}{|\vec{A}|}, \quad \cos\gamma = \frac{A_z}{|\vec{A}|}
      \cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1
 3. **Vector Unitario (\hat{u}_A):**
-   Vector de módulo igual a la unidad que señala la dirección y sentido de \vec{A}:
+   Para un vector A no nulo, es el vector de módulo uno que conserva su dirección y sentido:
    \hat{u}_A = \frac{\vec{A}}{|\vec{A}|} \implies |\hat{u}_A| = 1
+
+   El vector nulo no se puede normalizar: su módulo es cero y no tiene dirección definida. Para hallar un ángulo con la tangente, comprueba antes los signos de las componentes y el cuadrante; si la componente x es cero, no se puede dividir entre ella.
 
 #### D. Productos de Vectores
 1. **Producto Escalar o Producto Punto (\vec{A} \cdot \vec{B}):**

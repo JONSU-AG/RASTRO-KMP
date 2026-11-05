@@ -150,7 +150,8 @@ fun LessonPresentationPopup(
                             ClassicArtwork(ClassicAppearance.STUDY, Modifier.size(88.dp).padding(end = 8.dp))
 
                             // Ilustración académica SVG estilizada según la materia/tema de la lección
-                            val conceptKey = "${lesson.subjectId} ${lesson.title} ${lesson.subtema}"
+                            val conceptKey = (academicArtworkFor(lesson.subjectId, "${lesson.title} ${lesson.subtema}")
+                                ?: AcademicArtwork.BOOKS).key
                             AcademicIllustration(
                                 concept = conceptKey,
                                 size = 96.dp,

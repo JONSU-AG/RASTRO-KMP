@@ -1,0 +1,21 @@
+# Arquitectura
+
+StudyGoalCatalog (Android/data) mantiene universidades, fuentes y nombres contrastados, búsqueda sin tildes y validación de pareja universidad/carrera. StudyGoalPreferences usa un único archivo SharedPreferences y claves por identidad (user:UID o guest); no usa Firebase ni modifica UserManager.
+
+HomeScreen contiene StudyGoalEntry debajo del saludo. La tarjeta abre dos pasos: universidad y carrera. Se muestra automáticamente una vez a usuarios sin meta local ni meta heredada, tras resolver autenticación y cerrar los avisos legales/notificaciones. RastroApp solo pasa una condición de disponibilidad para evitar superponer estos diálogos; rutas y listeners se conservan.
+
+Guardar aplica una pareja válida; cambiar universidad vacía la carrera anterior. Escribir otra carrera queda marcado como dato personal. Cancelar/Decidir después marca el recorrido como visto sin borrar la meta previa. Volver de paso 2 vuelve al paso 1. El Home muestra las preferencias locales; no cambia el banco, puntuaciones, calendario ni contenido académico.
+
+Las metas heredadas de UserData se muestran si aún no hay meta local; nunca se sobrescriben los campos del perfil. Invitado no transfiere su selección a una cuenta automáticamente; cada cuenta mantiene su propio ámbito local. Cambio de cuenta recrea el estado de Compose con key(owner), evitando guardar la selección del usuario anterior. Esta preferencia no tiene sincronización en la nube en esta entrega.
+
+Clásicos originales: Loki en universidad, Orstty en carrera, Artyon en tarjeta; ClassicArtwork reutiliza rigs y render actual. Tema actual y botón Sticker3dButton con bisel conservados. Dialog acotado a ventana, lista desplazable, teclado y fuentes escalables. Sin permiso para lanzar emulador/dispositivo: compilación y tests, revisión física pendiente.
+AccountDeletionRepository llama clear de StudyGoalPreferences solo después de user.delete exitoso, conservando el orden de borrado remoto existente y las preferencias de otras identidades.
+
+Entrada visual: WelcomeIdentity centraliza ClassicCharacter.LOKI. WelcomeHero usa ClassicArtwork y ThemeManager; se renderiza en AuthScreen y HomeHeroBanner cuando no hay banner personal activado. UniversityBadge usa marcas locales y ventana proporcional de dibujo para escudos dentro de logotipos horizontales. No carga imágenes de universidades por red.
+
+AuthScreen conserva estado de contraseña solo en remember (no rememberSaveable). El formulario está detrás del botón Usar correo y contraseña; Atrás lo cierra y limpia contraseña. El foco/visibilidad del campo solo decide pose visual. RastroApp dirige la primera entrada sin sesión a Auth y mantiene opcional la cuenta. Después de elegir acceso conserva el recorrido de metas en Home y el guardado por identidad. Barras ocultas únicamente dentro de Auth.
+Aviso legal: AuthLegalNotice abre TermsAndPrivacyDialog en pestaña 1 (términos) o 0 (privacidad) desde AuthScreen. El modal de aceptación inicial ya no se monta en RastroApp; el lector legal sigue disponible. Los callbacks de acceso exitoso/invitado guardan terms_accepted. UMP permanece independiente.
+
+Home aprobado: HomeScreen delega tarjetas compactas a HomeDashboard. La acción de estudio consulta el catálogo local en IO para identificar materia de la última lección completada y abre AprenderSubject; si no hay dato válido conserva Aprender como entrada. No salta validaciones del motor ni inicia lecciones bloqueadas. StudyGoalEntry admite footer para HomeExamCountdown(embedded=true), que conserva editor/fechas y sincronización de widgets existentes. HomeCompactStreak usa actividad real y cálculo semanal explícito America/Lima, con animación de llama R-MEDIO conservada. Quick tools no duplican rutas de barra inferior; los accesos extra quedan bajo Más herramientas. Comunidad/featured/feedback conservados. RastroApp y LiquidNavbar no modificados en esta fase.
+
+StudyCareerAreas clasifica metas válidas del catálogo en los tres grupos internos AreaAdmision; StudyGoal.preparationArea lo deriva también para metas antiguas. StudyGoalPreferences.save guarda el identificador como metadata local; sin UI adicional, UserData ni Firebase. Carreras manuales no clasificadas. No se alteran automáticamente ponderaciones o preguntas de otra universidad.

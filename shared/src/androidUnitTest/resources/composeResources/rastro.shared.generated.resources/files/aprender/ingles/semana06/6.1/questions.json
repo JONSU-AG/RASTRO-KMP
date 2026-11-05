@@ -1,1 +1,200 @@
-[{"concept":"6.1.1","correctIndex":0,"explanation":"**Resolución:** El texto informa sobre un evento académico futuro (*3rd Annual Biotech Summit*), detalla fechas, temas, tarifas de inscripción y canales de contacto. El propósito comunicativo fundamental es invitar y brindar información sobre dicha conferencia científica. **Respuesta:** **B** ---","fuente":"temario","id":"ing_t06_s01_c01","options":["To describe the history of biotechnology in Latin America.","To invite people and provide key details about an upcoming scientific conference.","To warn students about laboratory safety regulations.","To announce the opening of a new hospital in Arequipa."],"pedagogicalTier":"concepto","semana":6,"statement":"What is the primary purpose of this announcement?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"6.1.2","correctIndex":2,"explanation":"**Resolución:** Buscando en la sección *Registration Fees*: *\"UNSA Students (with valid ID card): FREE (prior registration required before October 15th)\"*. La condición para la gratuidad es ser estudiante de la UNSA, poseer carné vigente e inscribirse antes del 15 de octubre. **Respuesta:** **C** ---","fuente":"temario","id":"ing_t06_s01_c02","options":["UNSA students who hold a valid ID and register prior to October 15th.","Any student from Peruvian universities without prior registration.","All international participants from Europe.","Professionals who submit their papers before September 30th."],"pedagogicalTier":"concepto","semana":6,"statement":"According to the text, who is eligible to attend the summit free of charge?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"6.1.3","correctIndex":3,"explanation":"**Resolución:** El término *renowned* es un adjetivo que califica a personalidades ilustres, célebres o de gran prestigio académico (*well-known, famous, highly regarded*). Por tanto, la opción equivalente es *Famous and respected*. **Respuesta:** **C** ---","fuente":"temario","id":"ing_t06_s01_c03","options":["Wealthy","Famous and respected","Inexperienced","Unknown"],"pedagogicalTier":"concepto","semana":6,"statement":"In paragraph 2, the word **\"Renowned\"** in the sentence *\"Renowned speakers from Latin America and Europe will present their latest findings\"* is closest in meaning to:","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"6.1.4","correctIndex":3,"explanation":"According to the lesson theory: **Skimming** is reading quickly for the **general idea (gist)**; **Scanning** is searching for a **specific keyword or datum** (numbers, names, dates).","fuente":"temario","id":"ing_t06_s01_c04","options":["It requires an irregular past participle form without auxiliary verbs.","It is only used in colloquial informal contexts with plural nouns.","It follows an inverted word order with obligatory double negation.","**Skimming** is reading quickly for the **general idea (gist)**; **Scanning** is searching for a **specific keyword or datum** (numbers, names, dates)."],"pedagogicalTier":"concepto","semana":6,"statement":"What is the difference between *Skimming* and *Scanning*?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"6.1.5","correctIndex":0,"explanation":"According to the lesson theory: It means **in fact / really** (en realidad). It does NOT mean \"currently\" (actualmente).","fuente":"temario","id":"ing_t06_s01_c05","options":["It means **in fact / really** (en realidad). It does NOT mean \"currently\" (actualmente).","It requires an irregular past participle form without auxiliary verbs.","It is only used in colloquial informal contexts with plural nouns.","It follows an inverted word order with obligatory double negation."],"pedagogicalTier":"concepto","semana":6,"statement":"What does the false cognate *\"Actually\"* mean?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"6.1.6","correctIndex":1,"explanation":"According to the lesson theory: The sentence (usually the first one in a paragraph) that contains the **main idea** of that paragraph.","fuente":"temario","id":"ing_t06_s01_c06","options":["It requires an irregular past participle form without auxiliary verbs.","The sentence (usually the first one in a paragraph) that contains the **main idea** of that paragraph.","It is only used in colloquial informal contexts with plural nouns.","It follows an inverted word order with obligatory double negation."],"pedagogicalTier":"concepto","semana":6,"statement":"What is a *\"Topic Sentence\"* in English reading?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"6.1.7","correctIndex":2,"explanation":"(Búsqueda veloz de dígitos numéricos).","fuente":"temario","id":"ing_t06_s01_c07","options":["Intensive reading","Skimming","Scanning","Critical argumentation"],"pedagogicalTier":"concepto","semana":6,"statement":"Which reading strategy would you use to find the phone number in a job ad?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"6.1.8","correctIndex":1,"explanation":"(*Out of order* = averiado / fuera de servicio).","fuente":"temario","id":"ing_t06_s01_c08","options":["The machine is working perfectly.","The machine is broken or not functioning.","You must enter your password immediately.","Only university staff can use the machine."],"pedagogicalTier":"concepto","semana":6,"statement":"The sign *\"OUT OF ORDER\"* on an ATM machine means:","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"6.1.9","correctIndex":0,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t06_s01_c09","options":["The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson.","The sentence violates subject-verb agreement in standard English.","The tense used is incompatible with the stated adverbial time marker.","The word order incorrectly positions the modifier after the direct object."],"pedagogicalTier":"concepto","semana":6,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"6.1.10","correctIndex":2,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t06_s01_c10","options":["The word order incorrectly positions the modifier after the direct object.","The sentence violates subject-verb agreement in standard English.","The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson.","The tense used is incompatible with the stated adverbial time marker."],"pedagogicalTier":"concepto","semana":6,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "ing_t06_s01_c01",
+    "concept": "6.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 6,
+    "statement": "Lee el texto original de práctica:\n“Nina studies in the morning. On Fridays she works at a library from two to five. The library is closed on Sundays. She walks there because it is near her home.”\n\nWhen does Nina work at the library?",
+    "options": [
+      "On Fridays.",
+      "On Sundays.",
+      "Every morning.",
+      "Only in April."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La evidencia pertinente es: “On Fridays she works at a library from two to five.”.\n2. La frase identifica explícitamente el día; no se necesita una inferencia externa.\n3. La respuesta respaldada por el texto es: On Fridays.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t06_s01_c02",
+    "concept": "6.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 6,
+    "statement": "Lee el texto original de práctica:\n“Nina studies in the morning. On Fridays she works at a library from two to five. The library is closed on Sundays. She walks there because it is near her home.”\n\nHow long is her Friday shift?",
+    "options": [
+      "Two hours.",
+      "Five hours.",
+      "Seven hours.",
+      "Three hours."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La evidencia pertinente es: “from two to five”.\n2. La duración entre las dos y las cinco es de tres horas.\n3. La respuesta respaldada por el texto es: Three hours.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t06_s01_c03",
+    "concept": "6.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 6,
+    "statement": "Lee el texto original de práctica:\n“Nina studies in the morning. On Fridays she works at a library from two to five. The library is closed on Sundays. She walks there because it is near her home.”\n\nWhy does she walk to the library?",
+    "options": [
+      "She works every Sunday.",
+      "Her school is closed in April.",
+      "It is near her home.",
+      "The library sells bicycles."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La evidencia pertinente es: “because it is near her home”.\n2. Because introduce la razón explícita.\n3. La respuesta respaldada por el texto es: It is near her home.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t06_s01_c04",
+    "concept": "6.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 6,
+    "statement": "Lee el texto original de práctica:\n“Nina studies in the morning. On Fridays she works at a library from two to five. The library is closed on Sundays. She walks there because it is near her home.”\n\nWhat does there refer to in the last sentence?",
+    "options": [
+      "A shop.",
+      "The library.",
+      "A garden.",
+      "A classroom."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La evidencia pertinente es: “She walks there because it is near her home.”.\n2. El lugar al que acaba de referirse el texto es la biblioteca donde trabaja.\n3. La respuesta respaldada por el texto es: The library.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t06_s01_c05",
+    "concept": "6.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 6,
+    "statement": "Lee el texto original de práctica:\n“Nina studies in the morning. On Fridays she works at a library from two to five. The library is closed on Sundays. She walks there because it is near her home.”\n\nWhich statement contradicts the text?",
+    "options": [
+      "The library opens on Sundays.",
+      "Nina studies in the morning.",
+      "Nina works on Fridays.",
+      "The library is near her home."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La evidencia pertinente es: “The library is closed on Sundays.”.\n2. Afirmar que abre los domingos contradice directamente closed on Sundays.\n3. La respuesta respaldada por el texto es: The library opens on Sundays.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t06_s01_c06",
+    "concept": "6.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 6,
+    "statement": "Lee el texto original de práctica:\n“The school garden opened in April. Students water it on Tuesdays and Thursdays. A teacher checks the soil before they add water. The project aims to help students learn about plants, not to sell vegetables.”\n\nWhat is the main purpose of the garden project?",
+    "options": [
+      "To sell vegetables.",
+      "To close the school.",
+      "To replace every classroom.",
+      "To help students learn about plants."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La evidencia pertinente es: “The project aims to help students learn about plants, not to sell vegetables.”.\n2. El propósito se expresa mediante aims to y se descarta explícitamente vender verduras.\n3. La respuesta respaldada por el texto es: To help students learn about plants.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t06_s01_c07",
+    "concept": "6.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 6,
+    "statement": "Lee el texto original de práctica:\n“The school garden opened in April. Students water it on Tuesdays and Thursdays. A teacher checks the soil before they add water. The project aims to help students learn about plants, not to sell vegetables.”\n\nWhen did the garden open?",
+    "options": [
+      "Every Thursday.",
+      "At five o’clock.",
+      "In April.",
+      "In August."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La evidencia pertinente es: “The school garden opened in April.”.\n2. La primera oración da el mes de apertura.\n3. La respuesta respaldada por el texto es: In April.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t06_s01_c08",
+    "concept": "6.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 6,
+    "statement": "Lee el texto original de práctica:\n“The school garden opened in April. Students water it on Tuesdays and Thursdays. A teacher checks the soil before they add water. The project aims to help students learn about plants, not to sell vegetables.”\n\nWhat happens before students add water?",
+    "options": [
+      "They replace the garden.",
+      "A teacher checks the soil.",
+      "They sell vegetables.",
+      "The library closes."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La evidencia pertinente es: “A teacher checks the soil before they add water.”.\n2. Before establece el orden entre las acciones.\n3. La respuesta respaldada por el texto es: A teacher checks the soil.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t06_s01_c09",
+    "concept": "6.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 6,
+    "statement": "Para encontrar rápidamente una hora específica en un aviso, ¿qué estrategia se ajusta mejor?",
+    "options": [
+      "Scanning: buscar el dato concreto.",
+      "Skimming como búsqueda exclusiva de todos los detalles.",
+      "Inventar la hora por el título.",
+      "Leer solo la primera letra de cada palabra."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Scanning busca información específica.\n2. Una hora puede localizarse revisando cifras o expresiones temporales pertinentes.\n3. La respuesta es: Scanning: buscar el dato concreto.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t06_s01_c10",
+    "concept": "6.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 6,
+    "statement": "Para obtener primero la idea general de un texto, ¿qué estrategia se ajusta mejor?",
+    "options": [
+      "Copiar cada palabra sin atender al sentido.",
+      "Buscar únicamente una fecha aislada.",
+      "Traducir una sola preposición.",
+      "Skimming."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Skimming busca una comprensión global inicial.\n2. No sustituye la lectura detallada cuando la pregunta requiere un dato o inferencia concreta.\n3. La respuesta es: Skimming.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t06_s01_c11",
+    "concept": "6.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 6,
+    "statement": "Lee el texto original de práctica:\n“Library notice: The reading room opens at nine. Bring your student card to borrow a book. Each visitor may borrow two books for seven days. Food is not allowed in the reading room, but sealed water bottles are permitted.”\n\nWhat kind of text is this?",
+    "options": [
+      "A recipe for soup.",
+      "A fictional dialogue between two doctors.",
+      "A notice giving library rules and information.",
+      "A personal diary about a trip."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La evidencia pertinente es: “Library notice”.\n2. El encabezado y las instrucciones presentan un aviso institucional, no una narración personal.\n3. La respuesta respaldada por el texto es: A notice giving library rules and information.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

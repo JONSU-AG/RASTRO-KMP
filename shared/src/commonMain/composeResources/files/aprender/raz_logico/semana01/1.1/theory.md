@@ -18,25 +18,47 @@
 
 ## 2. 🗺️ MAPA TAXONÓMICO Y ONTOLOGÍA DEL TEMA
 
-```text
-                               ┌─ Expresiones No Proposicionales (Deseos, órdenes, dudas, preguntas)
-        ┌─ 1. Tipología de ────┼─ Enunciados Abiertos / Funciones Proposicionales (P(x) con variables)
-        │      Enunciados      ├─ Pseudoproposiciones (Sin sentido lógico o metafísicas)
-        │                      └─ Proposiciones Lógicas (Tienen valor bivalente V o F)
-        │
-PROPOSICIONES                  ┌─ Proposiciones Predicativas (Atribuyen una cualidad a un sujeto)
-Y ENUNCIADOS ───┼─ 2. Proposiciones ───┴─ Proposiciones Relacionales (Establecen vínculo entre dos o más entes)
-LÓGICOS         │      Simples
-        │
-        │                      ┌─ Conjuntivas (y, pero, aunque, sin embargo, además)
-        ├─ 3. Proposiciones ───┼─ Disyuntivas Débiles o Inclusivas (o)
-        │      Compuestas      ├─ Disyuntivas Fuertes o Exclusivas (o... o...)
-        │                      ├─ Condicionales (Directa: p -> q; Inversa: q <- p)
-        │                      ├─ Bicondicionales (si y solo si)
-        │                      └─ Negativas (~p)
-        │
-        └─ 4. Criterios de ────┌─ Principio de Tercero Excluido (Solo V o F, no hay tercer estado)
-               Bivalencia      └─ Principio de No Contradicción (~(p ^ ~p))
+```mermaid
+graph TD
+ ROOT["Proposiciones y enunciados lógicos"]
+ B1["Tipos de enunciados"]
+ B1N1["Órdenes, preguntas y deseos: no afirman por sí solos un hecho con valor V o F."]
+ B1N2["Enunciado abierto: su valor depende de una variable sin asignar o cuantificar."]
+ B1N3["Enunciado sin interpretación definida: aclarar el significado antes de evaluarlo."]
+ B1N4["Proposición cerrada: afirma algo evaluable como verdadero o falso."]
+ B2["Proposiciones simples"]
+ B2N1["Predicativa: atribuye una propiedad a un sujeto."]
+ B2N2["Relacional: afirma un vínculo entre entidades."]
+ B3["Proposiciones compuestas"]
+ B3N1["Conjunción: $p\land q$; afirma ambas componentes."]
+ B3N2["Disyunción inclusiva: $p\lor q$; admite ambas verdaderas."]
+ B3N3["Disyunción exclusiva: exige exactamente una componente verdadera."]
+ B3N4["Condicional: $p\to q$; solo es falso con p verdadera y q falsa."]
+ B3N5["Bicondicional: $p\leftrightarrow q$; exige valores iguales."]
+ B3N6["Negación: $\neg p$; invierte el valor."]
+ B4["Lógica clásica bivalente"]
+ B4N1["Bivalencia: cada proposición recibe uno de dos valores, V o F."]
+ B4N2["Tercero excluido: $p\lor\neg p$."]
+ B4N3["No contradicción: $\neg(p\land\neg p)$."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
+ B3 --> B3N5
+ B3 --> B3N6
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---

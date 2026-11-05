@@ -1,1 +1,200 @@
-[{"concept":"6.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t06_s01_c01","options":["\\dfrac{\\sqrt{3}}{2}","\\dfrac{1}{2}","\\dfrac{\\sqrt{2}}{2}","1"],"pedagogicalTier":"concepto","semana":6,"statement":"**Enunciado:** Calcule el valor exacto de:","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t06_s01_c02","options":["30^\\circ","45^\\circ","135^\\circ","60^\\circ"],"pedagogicalTier":"concepto","semana":6,"statement":"**Enunciado:** Si \\tan(\\alpha) = 2 y \\tan(\\beta) = 3, calcule la medida del ángulo agudo (\\alpha + \\beta) en grados sexagesimales.","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t06_s01_c03","options":["\\dfrac{2}{3}","\\dfrac{7}{9}","\\dfrac{8}{9}","\\dfrac{4}{9}"],"pedagogicalTier":"concepto","semana":6,"statement":"**Enunciado:** Si \\sin(x) - \\cos(x) = \\dfrac{1}{3}, determine el valor de \\sin(2x).","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"6.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t06_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "trig_t06_s01_c01",
+    "concept": "6.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "Calcula $\\sin(75^\\circ)$.",
+    "options": [
+      "$\\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$",
+      "$\\frac{\\sqrt{2}}{2} + \\frac{\\sqrt{6}}{2}$",
+      "$\\frac{\\sqrt{2}}{8} + \\frac{\\sqrt{6}}{8}$",
+      "$\\frac{3 \\sqrt{2}}{4} + \\frac{3 \\sqrt{6}}{4}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Usamos el seno de una suma tras descomponer 75° como 45°+30°.\n2. Aplicamos la relación: $\\begin{aligned}\\sin75^\\circ&=\\sin(45^\\circ+30^\\circ)\\\\&=\\frac{\\sqrt6}{4}+\\frac{\\sqrt2}{4}\\end{aligned}$.\n3. El valor pedido es $\\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s01_c02",
+    "concept": "6.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "Calcula $\\cos(15^\\circ)$.",
+    "options": [
+      "$\\frac{\\sqrt{2}}{2} + \\frac{\\sqrt{6}}{2}$",
+      "$\\frac{\\sqrt{2}}{8} + \\frac{\\sqrt{6}}{8}$",
+      "$\\frac{3 \\sqrt{2}}{4} + \\frac{3 \\sqrt{6}}{4}$",
+      "$\\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Usamos el coseno de una diferencia tras escribir 15°=45°−30°.\n2. Aplicamos la relación: $\\begin{aligned}\\cos15^\\circ&=\\cos(45^\\circ-30^\\circ)\\\\&=\\frac{\\sqrt6}{4}+\\frac{\\sqrt2}{4}\\end{aligned}$.\n3. El valor pedido es $\\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s01_c03",
+    "concept": "6.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "Calcula $\\tan(75^\\circ)$.",
+    "options": [
+      "$\\frac{\\sqrt{3}}{2} + 1$",
+      "$3 \\sqrt{3} + 6$",
+      "$\\sqrt{3} + 2$",
+      "$2 \\sqrt{3} + 4$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Aplicamos la tangente de una suma con denominador no nulo.\n2. Aplicamos la relación: $\\begin{aligned}\\tan75^\\circ&=\\frac{1+1/\\sqrt3}{1-1/\\sqrt3}\\\\&=2+\\sqrt3\\end{aligned}$.\n3. El valor pedido es $\\sqrt{3} + 2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s01_c04",
+    "concept": "6.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "Calcula $\\sin(15^\\circ)$.",
+    "options": [
+      "$- \\frac{3 \\sqrt{2}}{4} + \\frac{3 \\sqrt{6}}{4}$",
+      "$- \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$",
+      "$- \\frac{\\sqrt{2}}{2} + \\frac{\\sqrt{6}}{2}$",
+      "$- \\frac{\\sqrt{2}}{8} + \\frac{\\sqrt{6}}{8}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Aplicamos el seno de la diferencia 45°−30°.\n2. Aplicamos la relación: $\\begin{aligned}\\sin15^\\circ&=\\sin(45^\\circ-30^\\circ)\\\\&=\\frac{\\sqrt6}{4}-\\frac{\\sqrt2}{4}\\end{aligned}$.\n3. El valor pedido es $- \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s01_c05",
+    "concept": "6.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "α es agudo y $\\sin\\alpha=3/5$. Calcula $\\sin(2\\alpha )$.",
+    "options": [
+      "$0.96$",
+      "$1.92$",
+      "$0.48$",
+      "$2.88$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El doble ángulo usa seno y coseno; el coseno es positivo.\n2. Aplicamos la relación: $\\sin2\\alpha=2(3/5)(4/5)$.\n3. El valor pedido es $0.96$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s01_c06",
+    "concept": "6.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "α es agudo y $\\cos\\alpha=4/5$. Calcula $\\cos(2\\alpha )$.",
+    "options": [
+      "$0.56$",
+      "$0.14$",
+      "$0.84$",
+      "$0.28$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Usamos el coseno doble en función del coseno.\n2. Aplicamos la relación: $\\cos2\\alpha=2(4/5)^2-1$.\n3. El valor pedido es $0.28$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s01_c07",
+    "concept": "6.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "α es agudo y $\\tan\\alpha=1/2$. Calcula $\\tan(2\\alpha )$.",
+    "options": [
+      "$\\frac{2}{3}$",
+      "$4$",
+      "$\\frac{4}{3}$",
+      "$\\frac{8}{3}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Comprobamos que 1−tan²(α) no sea cero.\n2. Aplicamos la relación: $\\tan2\\alpha=\\frac{2(1/2)}{1-(1/2)^2}$.\n3. El valor pedido es $\\frac{4}{3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s01_c08",
+    "concept": "6.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "α y β son agudos, $\\sin\\alpha=3/5$ y $\\cos\\beta=12/13$. Calcula sin(α+β).",
+    "options": [
+      "$\\frac{168}{65}$",
+      "$\\frac{56}{65}$",
+      "$\\frac{112}{65}$",
+      "$\\frac{28}{65}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Reconstruimos los cosenos y senos positivos antes de sumar.\n2. Aplicamos la relación: $\\sin(\\alpha+\\beta)=(3/5)(12/13)+(4/5)(5/13)$.\n3. El valor pedido es $\\frac{56}{65}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s01_c09",
+    "concept": "6.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "Calcula $\\cos^2(30^\\circ)-\\sin^2(30^\\circ)$.",
+    "options": [
+      "$0.5$",
+      "$1$",
+      "$0.25$",
+      "$1.5$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La diferencia de cuadrados es el coseno del doble ángulo.\n2. Aplicamos la relación: $\\cos60^\\circ=1/2$.\n3. El valor pedido es $0.5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s01_c10",
+    "concept": "6.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "En $\\cos(a+b)$, el signo entre los dos productos es…",
+    "options": [
+      "Positivo.",
+      "Negativo.",
+      "Siempre cero.",
+      "Depende de que a sea agudo."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Se usa cos(a)cos(b)−sin(a)sin(b).\n2. La identidad vale para todos los ángulos reales.\n3. El signo menos pertenece a la fórmula, no se elige según el cuadrante.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t06_s01_c11",
+    "concept": "6.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 6,
+    "statement": "La fórmula $\\tan(a+b)=(\\tan a+\\tan b)/(1-\\tan a\\tan b)$ exige…",
+    "options": [
+      "Que a y b sean enteros.",
+      "Que ambas tangentes estén definidas y el denominador del cociente no sea cero.",
+      "Que ambos ángulos sean iguales.",
+      "Que el denominador sea positivo."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Cada tangente del lado derecho requiere su dominio.\n2. El cociente exige además denominador no nulo.\n3. No se necesita que el denominador sea positivo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

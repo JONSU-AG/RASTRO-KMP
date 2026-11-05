@@ -2,15 +2,15 @@
   {
     "id": "leng_t08_s02_c01",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La diferencia conceptual crucial entre la polisemia y la homonimia radica en que las palabras polisémicas:",
+    "statement": "En el análisis léxico habitual, la polisemia se reconoce porque una expresión:",
     "options": [
       "Se escriben de forma idéntica pero significan siempre lo opuesto",
       "Son préstamos léxicos de lenguas amerindias",
       "Poseen diferente etimología y no comparten ningún sema",
-      "Tienen la misma raíz etimológica y comparten un rasgo sémico común"
+      "Presenta varios sentidos relacionados"
     ],
     "correctIndex": 3,
-    "explanation": "La polisemia se origina en una misma palabra (misma etimología) cuyas acepciones comparten un rasgo sémico común (ej. pico de ave y pico de montaña).",
+    "explanation": "Criterio: La polisemia reúne sentidos relacionados de una expresión. Aplicación: Las acepciones se interpretan como sentidos vinculados de una misma expresión; no basta inventar una etimología ni afirmar que cualquier coincidencia formal es polisemia. Respuesta: Presenta varios sentidos relacionados.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.2.1",
@@ -28,7 +28,7 @@
       "Homónimas homógrafas"
     ],
     "correctIndex": 1,
-    "explanation": "Las palabras homófonas tienen idéntica pronunciación pero se diferencian en su escritura y provienen de orígenes etimológicos distintos.",
+    "explanation": "Criterio: La homofonía considera coincidencia en pronunciación. Aplicación: Tubo, la pieza hueca, y tuvo, la forma de tener, se pronuncian igual y se escriben de manera distinta. Respuesta: Homónimas homófonas.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.2.1",
@@ -38,7 +38,7 @@
   {
     "id": "leng_t08_s02_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La oposición entre los términos 'vivo' y 'muerto' se clasifica rigurosamente como antonimia:",
+    "statement": "En su oposición léxica básica, vivo y muerto se utilizan como ejemplo de antonimia:",
     "options": [
       "Complementaria",
       "Gradual o propia",
@@ -46,7 +46,7 @@
       "Morfológica prefijal"
     ],
     "correctIndex": 0,
-    "explanation": "Es una antonimia complementaria porque la afirmación de uno implica obligatoriamente la exclusión del otro, sin grados intermedios.",
+    "explanation": "Criterio: La oposición complementaria se plantea dentro de un ámbito delimitado. Aplicación: Vivo y muerto ilustran su oposición léxica complementaria básica; no se está resolviendo un diagnóstico ni afirmando que cualquier par opuesto tenga solo dos posibilidades. Respuesta: Complementaria.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.2.3",
@@ -56,7 +56,7 @@
   {
     "id": "leng_t08_s02_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Los términos 'comprador' y 'vendedor' ilustran un tipo de antonimia léxica:",
+    "statement": "En una misma compraventa, comprador y vendedor describen participantes con una relación:",
     "options": [
       "Recíproca o inversa",
       "Complementaria binaria",
@@ -64,7 +64,7 @@
       "Gramatical por prefijación"
     ],
     "correctIndex": 0,
-    "explanation": "Los antónimos recíprocos o inversos implican que la existencia de uno exige necesariamente la existencia del otro en la relación comercial.",
+    "explanation": "Criterio: Los términos inversos describen la misma relación desde papeles diferentes. Aplicación: En una misma compraventa, el comprador compra al vendedor y este vende al comprador. La correlación pertenece a esa transacción concreta. Respuesta: Recíproca o inversa.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.2.3",
@@ -74,7 +74,7 @@
   {
     "id": "leng_t08_s02_c05",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la relación semántica entre 'flor' y 'orquídea', el vocablo 'flor' funciona como:",
+    "statement": "En la relación entre animal y perro, ambos en sentido zoológico, animal funciona como:",
     "options": [
       "Hiperónimo",
       "Hipónimo",
@@ -82,7 +82,7 @@
       "Cohipónimo"
     ],
     "correctIndex": 0,
-    "explanation": "El hiperónimo es el término genérico de mayor amplitud semántica que engloba a especies subordinadas como la orquídea.",
+    "explanation": "Criterio: El hiperónimo tiene un alcance más general que su hipónimo. Aplicación: Animal incluye a perro en el sentido zoológico propuesto; la dirección inversa haría de perro el hipónimo. Respuesta: Hiperónimo.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.2.4",
@@ -92,7 +92,7 @@
   {
     "id": "leng_t08_s02_c06",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Las palabras 'guitarra' y 'cuerda' guardan una relación semántica estricta de:",
+    "statement": "Al hablar de una cuerda como componente de una guitarra, guitarra y cuerda se relacionan, en ese orden, como:",
     "options": [
       "Hiperónimo e hipónimo",
       "Holónimo y merónimo (todo - parte)",
@@ -100,7 +100,7 @@
       "Antonimia inversa"
     ],
     "correctIndex": 1,
-    "explanation": "'Guitarra' es el todo integrado (holónimo) y 'cuerda' es una parte o elemento constitutivo indispensable (merónimo).",
+    "explanation": "Criterio: La relación de parte y todo no equivale a clasificación de especies. Aplicación: En el sentido material del ejemplo, una cuerda integra la guitarra; no es una especie de guitarra. Respuesta: Holónimo y merónimo (todo - parte).",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.2.4",
@@ -110,7 +110,7 @@
   {
     "id": "leng_t08_s02_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Los términos 'aptitud' (capacidad intelectiva) y 'actitud' (disposición de ánimo) constituyen un par de vocablos:",
+    "statement": "Aptitud, capacidad para una actividad, y actitud, disposición o postura, forman en la clasificación escolar un par de vocablos:",
     "options": [
       "Homófonos",
       "Parónimos",
@@ -118,7 +118,7 @@
       "Antónimos graduales"
     ],
     "correctIndex": 1,
-    "explanation": "Los parónimos son palabras que presentan semejanzas fonéticas y gráficas muy cercanas, pero significados totalmente distintos.",
+    "explanation": "Criterio: La paronimia permite reconocer formas semejantes con significados distintos. Aplicación: Aptitud expresa capacidad para una actividad y actitud, una disposición o postura. Sus formas son próximas pero no equivalentes. Respuesta: Parónimos.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.2.2",
@@ -128,7 +128,7 @@
   {
     "id": "leng_t08_s02_c08",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Las palabras 'lima' (fruta), 'lima' (herramienta) y 'Lima' (capital) son ejemplos indiscutibles de:",
+    "statement": "Lima, la fruta, y lima, la herramienta, constituyen un ejemplo de:",
     "options": [
       "Homonimia homógrafa",
       "Polisemia léxica",
@@ -136,7 +136,7 @@
       "Paronimia contextual"
     ],
     "correctIndex": 0,
-    "explanation": "Tienen exactamente la misma grafía y sonido pero orígenes etimológicos totalmente independientes y sin ningún sema común (homografía).",
+    "explanation": "Criterio: La homografía considera unidades distintas que coinciden en escritura. Aplicación: Lima como fruta y lima como herramienta coinciden en escritura y tienen historias léxicas distintas. No se incluye el nombre propio Lima como si no requiriera mayúscula. Respuesta: Homonimia homógrafa.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.2.1",
@@ -146,7 +146,7 @@
   {
     "id": "leng_t08_s02_c09",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Los vocablos 'clavel' y 'jazmín' respecto del término 'flor' mantienen entre sí una relación de:",
+    "statement": "Clavel y jazmín, entendidos como nombres de flores dentro de la clasificación propuesta, son entre sí:",
     "options": [
       "Hiperonimia",
       "Cohiponimia",
@@ -154,7 +154,7 @@
       "Antonimia propia"
     ],
     "correctIndex": 1,
-    "explanation": "Dos hipónimos que pertenecen a la misma categoría o género común (hiperónimo) son cohipónimos entre sí.",
+    "explanation": "Criterio: Los cohipónimos comparten un hiperónimo dentro de una clasificación. Aplicación: Clavel y jazmín, entendidos aquí como nombres de flores, se subordinan al término flor; no se relacionan como una parte y su todo. Respuesta: Cohiponimia.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.2.4",
@@ -164,7 +164,7 @@
   {
     "id": "leng_t08_s02_c10",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La oposición semántica entre 'leal' y 'desleal' o entre 'posible' e 'imposible' corresponde al tipo de:",
+    "statement": "Si se atiende a su formación mediante prefijos, leal/desleal y posible/imposible ilustran la antonimia:",
     "options": [
       "Antonimia léxica gradual",
       "Antonimia gramatical o morfológica",
@@ -172,7 +172,7 @@
       "Homonimia fónica"
     ],
     "correctIndex": 1,
-    "explanation": "La antonimia gramatical o morfológica se forma añadiendo prefijos de oposición o privación (des-, in-, im-, i-, a-) a la misma raíz.",
+    "explanation": "Criterio: La etiqueta morfológica atiende a la formación de la oposición. Aplicación: Des- e im- construyen la oposición en las parejas señaladas. El enunciado analiza la formación y no excluye un análisis semántico adicional. Respuesta: Antonimia gramatical o morfológica.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.2.3",

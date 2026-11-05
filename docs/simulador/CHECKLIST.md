@@ -108,3 +108,23 @@ Revisión de resultados en popup con LazyColumn, X y filtros, en lugar de 80 tar
 - [x] Ocho pruebas de reglas Firestore sin fallos; reglas remotas coinciden.
 - [ ] Recorrido físico y verificación visual en teléfono: app no ejecutada.
 - [x] compilar_app.bat / assembleDebug final correcto; no se lanzó ni instaló la app.
+
+01/11/2026: solo presentación científica compartida de preguntas, opciones, flashcards y revisión de respuestas; AcademicText conserva prosa y renderiza TeX localmente. Selección, puntuación, datos, navegación, recompensas y red sin cambios. Ver ../formulas/ para validación y límites físicos.
+
+Validación final 01/11/2026: assembleDebug y 190 pruebas Android correctas, cero fallos/errores (build/academic-review-complete.log). Física 1.1 cargada desde los archivos de producción con JsonContentLoader: CatalogValidator cero errores/cero advertencias y AcademicSanitizer sin contaminación. Motor aislado en navegador a 360 px: prosa y ocho expresiones inline, énfasis, claro/oscuro/letra grande y sin recursos externos; screenshot academic-theory-inline.png. No se ejecutó Android ni se publicó una versión.
+
+- [x] 01/11/2026: assembleDebug y 205 pruebas Android correctas, cero fallos/errores (build/learning-playback-final.log). Integridad de explicaciones comprobada en una muestra de cada materia con recursos; geometría comprobada contra secciones reales de 3.1 y 7.1; sin fallback a otras materias ni a polígonos genéricos. Suite mantiene CatalogValidator sin errores/advertencias y sanitizador sin contaminación en el piloto de Física 1.1.
+- [ ] Comprobar dibujos Canvas, controles, reproducción, pausa en segundo plano, scroll y accesibilidad en teléfono. No se ejecutó Android.
+
+## 03/11/2026 — Acceso a la pizarra existente
+
+- [x] La cabecera de preparación y el examen activo abren la misma pizarra como superposición. No se cambian preguntas, pagos, anuncios, respuestas ni temporizadores; el tiempo sigue corriendo al dibujar.
+- [x] assembleDebug y 512 pruebas correctas (315 Android + 197 shared), sin fallos/errores/omitidas: `build/material-delivery-validation.log`.
+- [ ] Prueba física Android pendiente; no hay dispositivo conectado.
+
+Ver `docs/material/INFORME_2026-11-03.md` para alcance y límites.
+
+
+## 03/11/2026 — Preguntas y pizarra de pantalla completa
+
+Cabecera y progreso únicamente durante las preguntas. Pizarra compartida de preguntas con enunciado integrado en el papel, colores/grosor visibles y conservación acotada por pregunta. No se modifican los bancos, reglas, Firebase ni recompensas. Compilación debug y 543 pruebas unitarias correctas; revisión visual/táctil pendiente, sin ejecutar la app. Detalles y límites en `../preguntas/INFORME_2026-11-03.md`. Esta descripción sustituye la distribución partida inicial en preguntas; Material mantiene su rama de consulta.

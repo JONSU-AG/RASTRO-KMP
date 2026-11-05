@@ -1,1 +1,200 @@
-[{"concept":"14.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t14_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":14,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"14.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t14_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":14,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"14.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t14_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":14,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"14.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t14_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":14,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"14.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t14_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":14,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"14.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t14_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":14,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"14.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t14_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":14,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"14.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t14_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":14,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"14.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t14_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":14,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"14.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t14_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":14,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "14.2.1",
+    "correctIndex": 0,
+    "explanation": "1. La antilogaritmación invierte el logaritmo de base diez.\n2. Sustituimos y operamos: $10^4$.\n3. El valor pedido es $10000$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t14_s02_c01",
+    "options": [
+      "$10000$",
+      "$10001$",
+      "$9999$",
+      "$20000$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 14,
+    "statement": "Si antilog₁₀(t)=$10^{t}$, calcula antilog₁₀(4).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "14.2.2",
+    "correctIndex": 3,
+    "explanation": "1. Aplicamos la definición y conservamos el signo menos.\n2. Sustituimos y operamos: $-\\log_{10}(10^4)=-4$.\n3. El valor pedido es $-4$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t14_s02_c02",
+    "options": [
+      "$-3$",
+      "$-5$",
+      "$-8$",
+      "$-4$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 14,
+    "statement": "Si colog₁₀(t)=−log₁₀(t), calcula colog₁₀(10000).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "14.2.3",
+    "correctIndex": 2,
+    "explanation": "1. El logaritmo de un producto de positivos suma logaritmos.\n2. Sustituimos y operamos: $\\log_{2}(2^4)+\\log_{2}(2^5)=4+5$.\n3. El valor pedido es $9$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t14_s02_c03",
+    "options": [
+      "$8$",
+      "$18$",
+      "$9$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 14,
+    "statement": "Calcula log₂(16·32).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "14.2.4",
+    "correctIndex": 1,
+    "explanation": "1. El logaritmo de un cociente de positivos resta logaritmos.\n2. Sustituimos y operamos: $5-4$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t14_s02_c04",
+    "options": [
+      "$3$",
+      "$1$",
+      "$2$",
+      "$0$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 14,
+    "statement": "Calcula log₃(243/81).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "14.2.5",
+    "correctIndex": 0,
+    "explanation": "1. Pasamos de forma logarítmica a exponencial.\n2. Sustituimos y operamos: $x=2^4$.\n3. El valor pedido es $16$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t14_s02_c05",
+    "options": [
+      "$16$",
+      "$17$",
+      "$15$",
+      "$32$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 14,
+    "statement": "Si log₂(x)=4, ¿cuánto vale x?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "14.2.6",
+    "correctIndex": 3,
+    "explanation": "1. La antilogaritmación invierte el logaritmo de base diez.\n2. Sustituimos y operamos: $10^5$.\n3. El valor pedido es $100000$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t14_s02_c06",
+    "options": [
+      "$100001$",
+      "$99999$",
+      "$200000$",
+      "$100000$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 14,
+    "statement": "Si antilog₁₀(t)=$10^{t}$, calcula antilog₁₀(5).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "14.2.7",
+    "correctIndex": 2,
+    "explanation": "1. Aplicamos la definición y conservamos el signo menos.\n2. Sustituimos y operamos: $-\\log_{10}(10^5)=-5$.\n3. El valor pedido es $-5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t14_s02_c07",
+    "options": [
+      "$-6$",
+      "$-10$",
+      "$-5$",
+      "$-4$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 14,
+    "statement": "Si colog₁₀(t)=−log₁₀(t), calcula colog₁₀(100000).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "14.2.8",
+    "correctIndex": 1,
+    "explanation": "1. El logaritmo de un producto de positivos suma logaritmos.\n2. Sustituimos y operamos: $\\log_{2}(2^5)+\\log_{2}(2^6)=5+6$.\n3. El valor pedido es $11$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t14_s02_c08",
+    "options": [
+      "$22$",
+      "$11$",
+      "$12$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 14,
+    "statement": "Calcula log₂(32·64).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "14.2.9",
+    "correctIndex": 0,
+    "explanation": "1. El logaritmo de un cociente de positivos resta logaritmos.\n2. Sustituimos y operamos: $6-5$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t14_s02_c09",
+    "options": [
+      "$1$",
+      "$2$",
+      "$0$",
+      "$3$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 14,
+    "statement": "Calcula log₃(729/243).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "14.2.10",
+    "correctIndex": 3,
+    "explanation": "1. Pasamos de forma logarítmica a exponencial.\n2. Sustituimos y operamos: $x=2^5$.\n3. El valor pedido es $32$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t14_s02_c10",
+    "options": [
+      "$33$",
+      "$31$",
+      "$64$",
+      "$32$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 14,
+    "statement": "Si log₂(x)=5, ¿cuánto vale x?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "14.2.11",
+    "correctIndex": 2,
+    "explanation": "1. La antilogaritmación invierte el logaritmo de base diez.\n2. Sustituimos y operamos: $10^6$.\n3. El valor pedido es $1000000$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t14_s02_c11",
+    "options": [
+      "$999999$",
+      "$2000000$",
+      "$1000000$",
+      "$1000001$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 14,
+    "statement": "Si antilog₁₀(t)=$10^{t}$, calcula antilog₁₀(6).",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

@@ -1,1 +1,200 @@
-[{"concept":"5.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t05_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"5.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t05_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"5.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t05_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"5.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t05_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"5.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t05_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"5.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t05_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"5.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t05_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"5.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t05_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"5.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t05_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"5.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t05_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "geom_t05_s02_c01",
+    "concept": "5.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 5,
+    "statement": "En un triángulo no equilátero, O y H son circuncentro y ortocentro. Si OG=4 cm, ¿cuánto mide GH, siendo G el baricentro?",
+    "options": [
+      "$8\\,\\mathrm{cm}$",
+      "$16\\,\\mathrm{cm}$",
+      "$4\\,\\mathrm{cm}$",
+      "$24\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El baricentro divide OH en razón 1:2.\n2. Usamos los datos indicados: $GH=2OG=2(4)$.\n3. El resultado es $8\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t05_s02_c02",
+    "concept": "5.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 5,
+    "statement": "En la recta de Euler de un triángulo no equilátero, OH=18 cm. ¿Cuánto mide OG?",
+    "options": [
+      "$12\\,\\mathrm{cm}$",
+      "$3\\,\\mathrm{cm}$",
+      "$18\\,\\mathrm{cm}$",
+      "$6\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. G está entre O y H y OG es un tercio de OH.\n2. Usamos los datos indicados: $OG=18/3$.\n3. El resultado es $6\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t05_s02_c03",
+    "concept": "5.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 5,
+    "statement": "Una circunferencia circunscrita tiene radio 10 cm. ¿Qué radio tiene la circunferencia de nueve puntos del triángulo?",
+    "options": [
+      "$2.5\\,\\mathrm{cm}$",
+      "$15\\,\\mathrm{cm}$",
+      "$5\\,\\mathrm{cm}$",
+      "$10\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Su radio es la mitad del circunradio.\n2. Usamos los datos indicados: $R_9=R/2=10/2$.\n3. El resultado es $5\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t05_s02_c04",
+    "concept": "5.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 5,
+    "statement": "Un triángulo tiene circunradio 5 cm e inradio 2 cm. ¿Qué distancia OI hay entre sus centros?",
+    "options": [
+      "$3 \\sqrt{5}\\,\\mathrm{cm}$",
+      "$\\sqrt{5}\\,\\mathrm{cm}$",
+      "$2 \\sqrt{5}\\,\\mathrm{cm}$",
+      "$\\frac{\\sqrt{5}}{2}\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La fórmula de Euler relaciona R, r y la distancia entre centros.\n2. Usamos los datos indicados: $OI^2=R(R-2r)=5(5-4)$.\n3. El resultado es $\\sqrt{5}\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t05_s02_c05",
+    "concept": "5.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 5,
+    "statement": "Un triángulo tiene circunradio 6 cm. ¿Cuál es el mayor inradio que permite la desigualdad de Euler?",
+    "options": [
+      "$3\\,\\mathrm{cm}$",
+      "$6\\,\\mathrm{cm}$",
+      "$1.5\\,\\mathrm{cm}$",
+      "$9\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La desigualdad exige R≥2r.\n2. Usamos los datos indicados: $r\\le R/2=6/2$.\n3. El resultado es $3\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t05_s02_c06",
+    "concept": "5.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 5,
+    "statement": "En un triángulo no equilátero, GH=10 cm sobre la recta de Euler. ¿Cuánto mide OG?",
+    "options": [
+      "$10\\,\\mathrm{cm}$",
+      "$2.5\\,\\mathrm{cm}$",
+      "$15\\,\\mathrm{cm}$",
+      "$5\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La razón OG:GH es 1:2.\n2. Usamos los datos indicados: $OG=10/2$.\n3. El resultado es $5\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t05_s02_c07",
+    "concept": "5.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 5,
+    "statement": "En un triángulo rectángulo, los catetos miden 6 y 8 cm. ¿Qué distancia hay del vértice recto al circuncentro?",
+    "options": [
+      "$2.5\\,\\mathrm{cm}$",
+      "$15\\,\\mathrm{cm}$",
+      "$5\\,\\mathrm{cm}$",
+      "$10\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El circuncentro es el punto medio de la hipotenusa.\n2. Usamos los datos indicados: $c=\\sqrt{6^2+8^2}=10;\\quad d=c/2$.\n3. El resultado es $5\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t05_s02_c08",
+    "concept": "5.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 5,
+    "statement": "En un triángulo, N es el punto medio entre O y H. Si OH=12 cm, ¿cuánto mide ON?",
+    "options": [
+      "$18\\,\\mathrm{cm}$",
+      "$6\\,\\mathrm{cm}$",
+      "$12\\,\\mathrm{cm}$",
+      "$3\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El centro de la circunferencia de nueve puntos está en el punto medio de OH.\n2. Usamos los datos indicados: $ON=OH/2=12/2$.\n3. El resultado es $6\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t05_s02_c09",
+    "concept": "5.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 5,
+    "statement": "Un triángulo equilátero tiene inradio 4 cm. ¿Cuál es su circunradio?",
+    "options": [
+      "$8\\,\\mathrm{cm}$",
+      "$16\\,\\mathrm{cm}$",
+      "$4\\,\\mathrm{cm}$",
+      "$24\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. En el equilátero se alcanza R=2r.\n2. Usamos los datos indicados: $R=2(4)$.\n3. El resultado es $8\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t05_s02_c10",
+    "concept": "5.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 5,
+    "statement": "El ortocentro de un triángulo obtusángulo está…",
+    "options": [
+      "Siempre en el interior.",
+      "Fuera del triángulo.",
+      "Siempre en el punto medio de un lado.",
+      "Siempre sobre la circunferencia inscrita."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Las alturas son rectas perpendiculares a los lados opuestos.\n2. En un triángulo obtusángulo se deben prolongar algunas de ellas.\n3. Su intersección queda fuera del triángulo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t05_s02_c11",
+    "concept": "5.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 5,
+    "statement": "En un triángulo equilátero, baricentro, incentro, circuncentro y ortocentro…",
+    "options": [
+      "Son cuatro puntos distintos.",
+      "Coinciden.",
+      "Están todos fuera.",
+      "Coinciden solo dos de ellos."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Las líneas notables coinciden por simetría.\n2. Su intersección define el mismo centro.\n3. No se determina una recta de Euler única mediante dos centros distintos en este caso.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

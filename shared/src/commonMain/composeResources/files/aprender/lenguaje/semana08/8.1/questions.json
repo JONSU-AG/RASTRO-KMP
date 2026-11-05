@@ -10,7 +10,7 @@
       "Emisor y receptor"
     ],
     "correctIndex": 2,
-    "explanation": "Ferdinand de Saussure definió el signo lingüístico como una entidad psíquica de dos caras inseparables: el significado y el significante.",
+    "explanation": "Criterio: El modelo de Saussure distingue dos planos del signo. Aplicación: La asociación es entre un concepto y una forma mental reconocible; el objeto material al que se alude no es una de esas dos caras. Respuesta: Significado (concepto) y Significante (imagen acústica).",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.1.1",
@@ -20,7 +20,7 @@
   {
     "id": "leng_t08_s01_c02",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El hecho de que para el concepto de 'perro' el español use /p-e-r-r-o/, el inglés /d-o-g/ y el quechua /a-l-q-o/ demuestra el principio de:",
+    "statement": "Que el español use perro y el inglés dog para un concepto comparable ilustra el principio de:",
     "options": [
       "Arbitrariedad del signo",
       "Mutabilidad sincrónica",
@@ -28,7 +28,7 @@
       "Linealidad del significante"
     ],
     "correctIndex": 0,
-    "explanation": "La arbitrariedad establece que no existe una relación natural ni necesaria entre el concepto y su imagen acústica, dependiendo de la convención de cada lengua.",
+    "explanation": "Criterio: La arbitrariedad describe una asociación convencional no impuesta por necesidad natural. Aplicación: Perro y dog ofrecen denominaciones convencionales diferentes para un concepto comparable. No se presentan sus letras como una transcripción fonética. Respuesta: Arbitrariedad del signo.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.1.2",
@@ -38,7 +38,7 @@
   {
     "id": "leng_t08_s01_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El principio según el cual los fonemas de un significante se encadenan temporalmente uno detrás de otro de forma unidimensional se denomina:",
+    "statement": "En el modelo clásico del signo acústico, el desarrollo temporal de los segmentos del significante se denomina:",
     "options": [
       "Inmutabilidad",
       "Arbitrariedad fonológica",
@@ -46,7 +46,7 @@
       "Doble articulación"
     ],
     "correctIndex": 2,
-    "explanation": "La linealidad del significante implica que los elementos acústicos se extienden sucesivamente en el tiempo sin poder emitirse al unísono.",
+    "explanation": "Criterio: La linealidad del significante oral considera su desarrollo temporal. Aplicación: Los segmentos de la expresión oral forman una secuencia ordenada. Esto no niega la coarticulación ni se impone como descripción de toda lengua de signos. Respuesta: Linealidad del significante.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.1.2",
@@ -64,7 +64,7 @@
       "Mutabilidad diacrónica"
     ],
     "correctIndex": 3,
-    "explanation": "La mutabilidad diacrónica señala que a través del tiempo histórico los signos de la lengua se transforman en sus planos material o semántico.",
+    "explanation": "Criterio: La diacronía estudia la transformación histórica. Aplicación: Aurum y oro corresponden a estados históricos relacionados; el ejemplo no representa una decisión instantánea de un hablante. Respuesta: Mutabilidad diacrónica.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.1.3",
@@ -74,7 +74,7 @@
   {
     "id": "leng_t08_s01_c05",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la oración 'Ese político fue calificado como una rata por los manifestantes', la palabra 'rata' posee un significado:",
+    "statement": "En «Tiene un corazón de oro», la expresión corazón de oro se emplea con valor:",
     "options": [
       "Denotativo primario",
       "Gramatical flexivo",
@@ -82,7 +82,7 @@
       "Connotativo o figurado"
     ],
     "correctIndex": 3,
-    "explanation": "'Rata' no alude al roedor en sentido zoológico literal, sino a un significado connotativo y despectivo de traición o corrupción.",
+    "explanation": "Criterio: El sentido figurado se identifica a partir del uso. Aplicación: Corazón de oro valora la bondad y no afirma que el órgano esté compuesto por ese metal. Un uso figurado también puede estar recogido en un diccionario. Respuesta: Connotativo o figurado.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.1.4",
@@ -92,7 +92,7 @@
   {
     "id": "leng_t08_s01_c06",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes oraciones presenta exclusivamente un significado denotativo objetivo?",
+    "statement": "¿En qué alternativa se describe el hecho con una lectura literal, sin una expresión figurada manifiesta en ese contexto?",
     "options": [
       "Mi hermano menor tiene ojos de lince para los negocios.",
       "Aquel profesor le echó una mano al estudiante en su proyecto.",
@@ -100,7 +100,7 @@
       "Tus palabras fueron puñales en mi corazón."
     ],
     "correctIndex": 2,
-    "explanation": "En la opción sobre el hielo, todas las palabras se emplean con su significado literal, empírico y objetivo del diccionario (denotación).",
+    "explanation": "Criterio: La lectura literal depende de lo que se describe en el ejemplo. Aplicación: La alternativa sobre el hielo describe un cambio físico sin usar una comparación o expresión figurada manifiesta en ese contexto. Respuesta: El calor del verano derritió el hielo en la cumbre del nevado..",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.1.4",
@@ -110,7 +110,7 @@
   {
     "id": "leng_t08_s01_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El principio que postula que ningún hablante particular puede cambiar a su antojo las palabras de su idioma en un momento histórico dado es la:",
+    "statement": "La idea de que una sola persona no cambia automáticamente la convención lingüística de toda la comunidad corresponde, en este modelo, a la:",
     "options": [
       "Mutabilidad diacrónica",
       "Arbitrariedad absoluta",
@@ -118,7 +118,7 @@
       "Linealidad acústica"
     ],
     "correctIndex": 2,
-    "explanation": "La inmutabilidad sincrónica asegura la estabilidad social del código, impidiendo que un individuo altere caprichosamente la lengua.",
+    "explanation": "Criterio: La estabilidad social de la convención no se altera por simple decisión de una persona. Aplicación: La elección individual no cambia automáticamente el uso de toda la comunidad; sí pueden existir innovación y difusión posterior. Respuesta: Inmutabilidad sincrónica.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.1.3",
@@ -128,15 +128,15 @@
   {
     "id": "leng_t08_s01_c08",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La primera articulación del lenguaje humano postulada por André Martinet tiene como unidades mínimas con significado a los:",
+    "statement": "¿Cómo llama Martinet a las unidades mínimas con significado de la primera articulación?",
     "options": [
       "Alófonos",
       "Grafemas",
       "Fonemas",
-      "Morfemas"
+      "Monemas o unidades significativas"
     ],
     "correctIndex": 3,
-    "explanation": "La primera articulación está formada por unidades significativas (morfemas o monemas), mientras que la segunda está compuesta por fonemas distintivos.",
+    "explanation": "Criterio: Martinet distingue unidades significativas y unidades distintivas. Aplicación: Las unidades significativas se llaman monemas en su terminología. Algunos manuales escolares usan morfemas en sentido amplio; fonemas y grafemas no son lo mismo. Respuesta: Monemas o unidades significativas.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.1.3",
@@ -150,11 +150,11 @@
     "options": [
       "Connotativo literario",
       "Polisémico metafórico",
-      "Antopomórfico",
+      "Antropomórfico",
       "Denotativo o referencial"
     ],
     "correctIndex": 3,
-    "explanation": "El vocablo 'león' transmite su significado objetivo, científico y primario registrado en el léxico académico (denotación).",
+    "explanation": "Criterio: El contexto permite identificar un uso zoológico del nombre. Aplicación: León nombra al animal y no atribuye metafóricamente valentía a una persona. No hace falta declarar que todo el enunciado carezca de cualquier asociación. Respuesta: Denotativo o referencial.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.1.4",
@@ -172,7 +172,7 @@
       "Referente"
     ],
     "correctIndex": 2,
-    "explanation": "El significante es la imagen acústica mental de los sonidos que componen la palabra (plano de la expresión).",
+    "explanation": "Criterio: La imagen acústica corresponde al plano del significante en este modelo. Aplicación: El significante es la forma mental o imagen acústica, no el referente material ni el concepto asociado. Respuesta: Significante.",
     "subject": "lenguaje",
     "semana": 8,
     "concept": "8.1.1",

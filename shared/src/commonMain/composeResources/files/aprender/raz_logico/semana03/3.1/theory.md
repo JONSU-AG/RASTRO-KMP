@@ -19,22 +19,41 @@
 
 ## 2. 🗺️ MAPA TAXONÓMICO Y ONTOLOGÍA DEL TEMA
 
-```text
-                               ┌─ Causa - Efecto (Antecedente -> Consecuente)
-        ┌─ 1. Relaciones de ───┼─ Condición Suficiente (Si ocurre A, necesariamente ocurre B)
-        │      Condición       ├─ Condición Necesaria (B es indispensable para que ocurra A)
-        │                      └─ Condición Necesaria y Suficiente (Bicondicional: A <-> B)
-        │
-RELACIONES                     ┌─ Relación de Equivalencia (Mismo valor de verdad en toda circunstancia)
-LÓGICAS ENTRE ──┼─ 2. Relaciones de ───┼─ Relación de Implicación (A -> B es una Tautología)
-PROPOSICIONES   │      Verdad Formal   └─ Subimplicación y Relaciones Subcontrarias
-        │
-        │                      ┌─ Contradicción (Tienen valores de verdad estrictamente opuestos)
-        ├─ 3. Oposición e ─────┼─ Incompatibilidad (No pueden ser ambas verdaderas a la vez)
-        │      Incompatibilidad└─ Contrariedad (Pueden ser ambas falsas, pero no ambas verdaderas)
-        │
-        └─ 4. Coherencia y ────┌─ Compatibilidad Lógica (Existe al menos una asignación donde ambas son V)
-               Consistencia    └─ Inconsistencia / Contradicción Global (Conjunto insatisfacible)
+```mermaid
+graph TD
+ ROOT["Relaciones entre proposiciones"]
+ B1["Condiciones"]
+ B1N1["Suficiente: si A basta para B, $A\to B$."]
+ B1N2["Necesaria: si B es necesaria para A, $A\to B$."]
+ B1N3["Necesaria y suficiente: $A\leftrightarrow B$."]
+ B1N4["Condicional material: no demuestra por sí solo una causa física."]
+ B2["Equivalencia e implicación"]
+ B2N1["Equivalencia: valores iguales en todas las asignaciones."]
+ B2N2["Implicación lógica: no hay caso con premisa V y conclusión F."]
+ B2N3["Subcontrariedad: no pueden ser ambas falsas; se debe precisar el marco interpretativo."]
+ B3["Oposición"]
+ B3N1["Contradicción entre proposiciones: valores opuestos en todas las asignaciones."]
+ B3N2["Incompatibilidad: no pueden ser ambas verdaderas."]
+ B3N3["Contrariedad: incompatibles que pueden ser ambas falsas."]
+ B4["Consistencia conjunta"]
+ B4N1["Compatibilidad: existe al menos una asignación donde todas las premisas son V."]
+ B4N2["Inconsistencia: ninguna asignación hace verdaderas todas las premisas."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
 ```
 
 ---
@@ -43,16 +62,16 @@ PROPOSICIONES   │      Verdad Formal   └─ Subimplicación y Relaciones Sub
 ## 2. DESARROLLO TEÓRICO FORMAL - PARTE I
 ### 3. 📖 DESARROLLO TEÓRICO FORMAL
 
-### 3.1 Relaciones de Causalidad y Condición
+### 3.1 Condiciones necesarias y suficientes
 
 #### A. Condición Suficiente (p \to q)
 Decimos que p es **condición suficiente** para q cuando la sola presencia o verdad de p garantiza de manera infalible la ocurrencia de q.
-* *Ejemplo:* "Nacer en la provincia de Arequipa (p)" es **suficiente** para "ser peruano de nacimiento (q)".
+* *Ejemplo:* Para un entero, ser divisible por 6 (p) es suficiente para ser divisible por 3 (q). No se usa una condición legal como si fuera una ley lógica universal.
 * **Fórmula:** p \to q.
 
 #### B. Condición Necesaria (q \leftarrow p \equiv p \to q)
 Decimos que q es **condición necesaria** para p cuando la ausencia o falsedad de q hace absolutamente imposible la ocurrencia de p. Es un requisito indispensable, aunque por sí solo no garantiza el resultado.
-* *Ejemplo:* "Tener DNI o documento de identidad (q)" es **necesario** para "votar en las elecciones de la UNSA (p)". (Sin DNI no puedes votar; pero tener DNI no significa obligatoriamente que vayas a votar).
+* *Ejemplo:* Ser divisible por 3 (q) es necesario para ser divisible por 6 (p). No basta: el número 3 satisface q y no p.
 * **Fórmula canónica:** El término "necesario" **siempre es el CONSECUENTE**:
   p \to q \quad (q \text{ es condición necesaria para } p)
 
@@ -75,3 +94,10 @@ Ocurre cuando la relación es bidireccional y de equivalencia estricta. Una ocur
 | Frase del Enunciado | Identificación del Consecuente | Formalización |
 | :--- | :--- | :---: |
 | "A es condición suficiente para B" | B es el consecuente | A \to B |
+
+
+### Cómo distinguir las dos lecturas
+
+Si sabemos $p\to q$, p es suficiente para q y q es necesaria para p. Son dos maneras de leer la misma flecha, no dos flechas opuestas. Por ejemplo, todo múltiplo entero de 6 es múltiplo de 3. En cambio, ser múltiplo de 3 no garantiza ser múltiplo de 6: el entero 9 es un contraejemplo.
+
+Una implicación lógica debe cumplirse en todas las interpretaciones admitidas. Un condicional material puede resultar verdadero en una asignación concreta, incluso si su antecedente es falso. Tampoco demuestra una relación causal: una tabla de verdad no explica cómo un fenómeno produce otro. Para comprobar una equivalencia se comparan todas las filas, y basta una discrepancia para refutarla.

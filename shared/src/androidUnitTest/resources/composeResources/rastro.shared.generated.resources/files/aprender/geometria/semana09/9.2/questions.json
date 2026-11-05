@@ -1,1 +1,200 @@
-[{"concept":"9.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t09_s02_c01","options":["180\\text{ m}^3","240\\text{ m}^3","120\\text{ m}^3","160\\text{ m}^3"],"pedagogicalTier":"concepto","semana":9,"statement":"**Enunciado:** Una empresa de silos para granos diseña un depósito en forma de pirámide hexagonal regular cuya altura total es de 18\\text{ m}. Por cuestiones operativas de descarga, se coloca una compuerta horizontal que corta la pirámide a 6\\text{ m} de la base (formando un tronco de pirámide inferior y una pirámide menor superior). Si el volumen total de almacenamiento de la pirámide original es de 540\\text{ m}^3, determine el volumen de grano que puede almacenar la sección superior (pirámide deficiente).","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"9.2.2","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t09_s02_c02","options":["6\\text{ cm} y 144\\text{ cm}^3","4\\sqrt{3}\\text{ cm} y 72\\text{ cm}^3","6\\sqrt{2}\\text{ cm} y 108\\text{ cm}^3","6\\text{ cm} y 72\\text{ cm}^3"],"pedagogicalTier":"concepto","semana":9,"statement":"**Enunciado:** En un tetraedro regular ABCD de arista a = 6\\sqrt{2}\\text{ cm}, se ubica el punto medio M de la arista \\overline{CD}. Calcule la distancia mínima entre las rectas alabeadas que contienen a la arista \\overline{AB} y a la arista opuesta \\overline{CD}, y determine el volumen del tetraedro regular.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"9.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t09_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"9.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t09_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"9.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t09_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"9.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t09_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"9.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t09_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"9.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t09_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"9.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t09_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"9.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t09_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "geom_t09_s02_c01",
+    "concept": "9.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 9,
+    "statement": "Un prisma tiene área de base 18 cm² y altura 5 cm. ¿Qué volumen tiene?",
+    "options": [
+      "$90\\,\\mathrm{cm^3}$",
+      "$180\\,\\mathrm{cm^3}$",
+      "$45\\,\\mathrm{cm^3}$",
+      "$270\\,\\mathrm{cm^3}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El volumen prismático es base por altura.\n2. Usamos los datos indicados: $V=Bh=18(5)$.\n3. El resultado es $90\\,\\mathrm{cm^3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t09_s02_c02",
+    "concept": "9.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 9,
+    "statement": "Una pirámide tiene área de base 16 cm² y altura 9 cm. ¿Qué volumen tiene?",
+    "options": [
+      "$96\\,\\mathrm{cm^3}$",
+      "$24\\,\\mathrm{cm^3}$",
+      "$144\\,\\mathrm{cm^3}$",
+      "$48\\,\\mathrm{cm^3}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La pirámide ocupa un tercio del prisma de igual base y altura.\n2. Usamos los datos indicados: $V=Bh/3=16(9)/3$.\n3. El resultado es $48\\,\\mathrm{cm^3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t09_s02_c03",
+    "concept": "9.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 9,
+    "statement": "Un ortoedro tiene aristas de 3, 4 y 12 cm. ¿Qué longitud tiene su diagonal espacial?",
+    "options": [
+      "$6.5\\,\\mathrm{cm}$",
+      "$39\\,\\mathrm{cm}$",
+      "$13\\,\\mathrm{cm}$",
+      "$26\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Las tres aristas ortogonales se combinan por Pitágoras.\n2. Usamos los datos indicados: $d=\\sqrt{3^2+4^2+12^2}$.\n3. El resultado es $13\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t09_s02_c04",
+    "concept": "9.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 9,
+    "statement": "Un cubo tiene arista de 4 cm. ¿Qué área total tiene?",
+    "options": [
+      "$288\\,\\mathrm{cm^2}$",
+      "$96\\,\\mathrm{cm^2}$",
+      "$192\\,\\mathrm{cm^2}$",
+      "$48\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Sumamos seis caras cuadradas.\n2. Usamos los datos indicados: $S_T=6a^2=6(4^2)$.\n3. El resultado es $96\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t09_s02_c05",
+    "concept": "9.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 9,
+    "statement": "Un ortoedro tiene aristas de 2, 3 y 4 cm. ¿Qué área total tiene?",
+    "options": [
+      "$52\\,\\mathrm{cm^2}$",
+      "$104\\,\\mathrm{cm^2}$",
+      "$26\\,\\mathrm{cm^2}$",
+      "$156\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Hay dos caras de cada uno de los tres productos de aristas.\n2. Usamos los datos indicados: $S_T=2(2\\cdot3+2\\cdot4+3\\cdot4)$.\n3. El resultado es $52\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t09_s02_c06",
+    "concept": "9.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 9,
+    "statement": "Un tronco de pirámide tiene bases paralelas de áreas 36 y 9 cm² y altura 3 cm. ¿Qué volumen tiene?",
+    "options": [
+      "$126\\,\\mathrm{cm^3}$",
+      "$31.5\\,\\mathrm{cm^3}$",
+      "$189\\,\\mathrm{cm^3}$",
+      "$63\\,\\mathrm{cm^3}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Usamos las áreas de bases semejantes del tronco.\n2. Usamos los datos indicados: $V=\\frac h3(B+b+\\sqrt{Bb})=\\frac33(36+9+18)$.\n3. El resultado es $63\\,\\mathrm{cm^3}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t09_s02_c07",
+    "concept": "9.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 9,
+    "statement": "Un prisma recto tiene perímetro de base 14 cm y altura 6 cm. ¿Qué área lateral tiene?",
+    "options": [
+      "$42\\,\\mathrm{cm^2}$",
+      "$252\\,\\mathrm{cm^2}$",
+      "$84\\,\\mathrm{cm^2}$",
+      "$168\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Las caras laterales desplegadas forman rectángulos de altura común.\n2. Usamos los datos indicados: $S_L=P_bh=14(6)$.\n3. El resultado es $84\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t09_s02_c08",
+    "concept": "9.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 9,
+    "statement": "Una pirámide regular de base cuadrada tiene lado de base 6 cm y apotema lateral 5 cm. ¿Qué área lateral tiene?",
+    "options": [
+      "$180\\,\\mathrm{cm^2}$",
+      "$60\\,\\mathrm{cm^2}$",
+      "$120\\,\\mathrm{cm^2}$",
+      "$30\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Sumamos los cuatro triángulos laterales iguales.\n2. Usamos los datos indicados: $S_L=\\frac{P_b\\cdot a_l}{2}=\\frac{4(6)(5)}2$.\n3. El resultado es $60\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t09_s02_c09",
+    "concept": "9.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 9,
+    "statement": "Un cubo tiene volumen 125 cm³. ¿Cuánto mide su arista?",
+    "options": [
+      "$5\\,\\mathrm{cm}$",
+      "$10\\,\\mathrm{cm}$",
+      "$2.5\\,\\mathrm{cm}$",
+      "$15\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El volumen es el cubo de la arista positiva.\n2. Usamos los datos indicados: $a=\\sqrt[3]{125}$.\n3. El resultado es $5\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t09_s02_c10",
+    "concept": "9.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 9,
+    "statement": "La fórmula V=Bh/3 se usa para una pirámide con h…",
+    "options": [
+      "Igual a cualquier arista lateral.",
+      "Igual a la distancia perpendicular de la cúspide al plano de la base.",
+      "Igual al semiperímetro.",
+      "Igual al radio de la base en todos los casos."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El volumen depende del área de base y del alejamiento perpendicular de la cúspide.\n2. Esa distancia es la altura.\n3. Confundirla con una arista oblicua cambia el volumen.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t09_s02_c11",
+    "concept": "9.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 9,
+    "statement": "En un prisma recto, las aristas laterales…",
+    "options": [
+      "Son perpendiculares a las bases y miden la altura.",
+      "Son siempre menores que la altura.",
+      "Siempre forman 45° con la base.",
+      "Son diagonales de las bases."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Recto indica perpendicularidad de las aristas laterales a los planos de base.\n2. La distancia entre esos planos se mide en esa dirección.\n3. Por eso las aristas laterales tienen la longitud de la altura.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

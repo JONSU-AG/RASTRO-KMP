@@ -1,1 +1,200 @@
-[{"concept":"9.1.1","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s01_c01","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.2","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s01_c02","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"9.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t09_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t09_s01_c01",
+    "concept": "9.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Dos cargas puntuales de 1 μC y 2 μC están separadas 0.3 m en vacío. Usa $k=9\\times10^9\\,\\mathrm{N\\,m^2/C^2}$. ¿Qué módulo de fuerza se ejercen?",
+    "options": [
+      "$0.2\\,\\mathrm{N}$",
+      "$0.4\\,\\mathrm{N}$",
+      "$0.1\\,\\mathrm{N}$",
+      "$0.6\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La ley de Coulomb usa las cargas en coulomb.\n2. Sustituimos los datos: $F=k|q_1q_2|/r^2=9\\cdot10^9(10^{-6})(2\\cdot10^{-6})/0.3^2$.\n3. El resultado pedido es $0.2\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s01_c02",
+    "concept": "9.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Una carga positiva de 2 C recibe una fuerza de 10 N. ¿Qué módulo tiene el campo eléctrico en su posición?",
+    "options": [
+      "$10\\,\\mathrm{N/C}$",
+      "$2.5\\,\\mathrm{N/C}$",
+      "$15\\,\\mathrm{N/C}$",
+      "$5\\,\\mathrm{N/C}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El campo es fuerza por unidad de carga de prueba positiva.\n2. Sustituimos los datos: $E=F/q=10/2$.\n3. El resultado pedido es $5\\,\\mathrm{N/C}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s01_c03",
+    "concept": "9.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Una carga de 3 μC está en un campo uniforme de 2000 N/C. ¿Qué módulo de fuerza recibe?",
+    "options": [
+      "$0.003\\,\\mathrm{N}$",
+      "$0.018\\,\\mathrm{N}$",
+      "$0.006\\,\\mathrm{N}$",
+      "$0.012\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Usamos el módulo de la relación F=qE.\n2. Sustituimos los datos: $F=|q|E=3\\cdot10^{-6}(2000)$.\n3. El resultado pedido es $0.006\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s01_c04",
+    "concept": "9.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Un condensador ideal almacena 12 μC con 4 V entre sus placas. ¿Qué capacidad tiene en μF?",
+    "options": [
+      "$9\\,\\mathrm{\\mu F}$",
+      "$3\\,\\mathrm{\\mu F}$",
+      "$6\\,\\mathrm{\\mu F}$",
+      "$1.5\\,\\mathrm{\\mu F}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La capacidad es carga almacenada dividida entre voltaje.\n2. Sustituimos los datos: $C=Q/V=12/4$.\n3. El resultado pedido es $3\\,\\mathrm{\\mu F}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s01_c05",
+    "concept": "9.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Una carga de 2 C tiene energía potencial eléctrica de 10 J. ¿Cuál es el potencial en esa referencia?",
+    "options": [
+      "$5\\,\\mathrm{V}$",
+      "$10\\,\\mathrm{V}$",
+      "$2.5\\,\\mathrm{V}$",
+      "$15\\,\\mathrm{V}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El potencial es energía potencial por unidad de carga.\n2. Sustituimos los datos: $V=U/q=10/2$.\n3. El resultado pedido es $5\\,\\mathrm{V}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s01_c06",
+    "concept": "9.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Una corriente constante transporta 6 C en 2 s. ¿Qué intensidad tiene?",
+    "options": [
+      "$6\\,\\mathrm{A}$",
+      "$1.5\\,\\mathrm{A}$",
+      "$9\\,\\mathrm{A}$",
+      "$3\\,\\mathrm{A}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La corriente media es carga por tiempo.\n2. Sustituimos los datos: $I=Q/t=6/2$.\n3. El resultado pedido es $3\\,\\mathrm{A}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s01_c07",
+    "concept": "9.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Una resistencia óhmica de 4 Ω tiene 12 V entre sus extremos. ¿Qué corriente circula?",
+    "options": [
+      "$1.5\\,\\mathrm{A}$",
+      "$9\\,\\mathrm{A}$",
+      "$3\\,\\mathrm{A}$",
+      "$6\\,\\mathrm{A}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Aplicamos la ley de Ohm para una resistencia óhmica.\n2. Sustituimos los datos: $I=V/R=12/4$.\n3. El resultado pedido es $3\\,\\mathrm{A}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s01_c08",
+    "concept": "9.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Un resistor conduce 2 A al aplicarle 10 V. ¿Qué resistencia presenta?",
+    "options": [
+      "$15\\,\\mathrm{\\Omega}$",
+      "$5\\,\\mathrm{\\Omega}$",
+      "$10\\,\\mathrm{\\Omega}$",
+      "$2.5\\,\\mathrm{\\Omega}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Despejamos la resistencia.\n2. Sustituimos los datos: $R=V/I=10/2$.\n3. El resultado pedido es $5\\,\\mathrm{\\Omega}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s01_c09",
+    "concept": "9.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Una resistencia de 3 Ω conduce 2 A. ¿Qué potencia disipa?",
+    "options": [
+      "$12\\,\\mathrm{W}$",
+      "$24\\,\\mathrm{W}$",
+      "$6\\,\\mathrm{W}$",
+      "$36\\,\\mathrm{W}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La potencia de Joule es I²R.\n2. Sustituimos los datos: $P=I^2R=2^2(3)$.\n3. El resultado pedido es $12\\,\\mathrm{W}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s01_c10",
+    "concept": "9.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Las líneas de campo eléctrico de una carga puntual positiva aislada apuntan…",
+    "options": [
+      "Hacia la carga.",
+      "Radialmente hacia afuera.",
+      "En círculos cerrados alrededor de ella.",
+      "En una única dirección paralela."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El campo se define por la fuerza sobre una carga de prueba positiva.\n2. Una carga positiva repele a esa carga de prueba.\n3. La dirección es radial hacia afuera.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t09_s01_c11",
+    "concept": "9.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 9,
+    "statement": "Una carga negativa en un campo eléctrico uniforme recibe una fuerza…",
+    "options": [
+      "Con el mismo sentido del campo.",
+      "Perpendicular al campo en todo caso.",
+      "En sentido opuesto al campo.",
+      "Siempre nula."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La fuerza eléctrica es q por el campo vectorial.\n2. Una carga negativa cambia el sentido del vector.\n3. La fuerza apunta en sentido contrario al campo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

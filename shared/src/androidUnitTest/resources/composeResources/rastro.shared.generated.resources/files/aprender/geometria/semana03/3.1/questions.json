@@ -1,1 +1,200 @@
-[{"concept":"3.1.1","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s01_c01","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.1.2","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s01_c02","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"3.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t03_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "3.1.1",
+    "correctIndex": 0,
+    "explanation": "1. Los tres ángulos interiores suman 180°.\n2. Los conocidos suman 50° + 60° = 110°.\n3. Restamos: 180° − 110° = 70°.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t03_s01_c01",
+    "options": [
+      "70°",
+      "80°",
+      "110°",
+      "120°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Dos ángulos interiores de un triángulo miden 50° y 60°. ¿Cuánto mide el tercero?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.2",
+    "correctIndex": 1,
+    "explanation": "1. Un ángulo exterior es igual a la suma de los dos interiores no adyacentes.\n2. Escribimos 125° = 55° + x.\n3. Despejamos: x = 125° − 55° = 70°.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t03_s01_c02",
+    "options": [
+      "55°",
+      "70°",
+      "125°",
+      "180°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Un ángulo exterior de un triángulo mide 125°. Uno de los interiores no adyacentes mide 55°. ¿Cuánto mide el otro interior no adyacente?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.3",
+    "correctIndex": 2,
+    "explanation": "1. La desigualdad triangular exige $|7-4|<x<7+4$.\n2. Por tanto, $3<x<11$.\n3. Entre las alternativas, solo 8 cm está estrictamente dentro del intervalo; los extremos no forman un triángulo.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t03_s01_c03",
+    "options": [
+      "2 cm",
+      "3 cm",
+      "8 cm",
+      "11 cm"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Dos lados de un triángulo miden 4 cm y 7 cm. ¿Cuál de las siguientes medidas puede tener el tercer lado?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.4",
+    "correctIndex": 3,
+    "explanation": "1. Los dos ángulos de la base son iguales.\n2. Juntos suman 180° − 40° = 140°.\n3. Cada uno mide 140° / 2 = 70°.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t03_s01_c04",
+    "options": [
+      "40°",
+      "60°",
+      "80°",
+      "70°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "El ángulo entre los lados iguales de un triángulo isósceles mide 40°. ¿Cuánto mide cada ángulo de la base?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.5",
+    "correctIndex": 0,
+    "explanation": "1. Los tres lados son iguales y sus ángulos opuestos también.\n2. Los tres ángulos iguales suman 180°.\n3. Cada uno mide 180° / 3 = 60°.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t03_s01_c05",
+    "options": [
+      "60°",
+      "90°",
+      "120°",
+      "180°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "¿Cuánto mide cada ángulo interior de un triángulo equilátero?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.6",
+    "correctIndex": 1,
+    "explanation": "1. Planteamos $2x+3x+4x=180$.\n2. Sumamos términos semejantes: $9x=180$.\n3. Despejamos $x=20$. Los ángulos son 40°, 60° y 80°.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t03_s01_c06",
+    "options": [
+      "10",
+      "20",
+      "30",
+      "40"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Los ángulos interiores de un triángulo miden 2x, 3x y 4x. Si x está expresado en grados, ¿cuánto vale x?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.7",
+    "correctIndex": 2,
+    "explanation": "1. El ángulo recto mide 90°.\n2. Los dos agudos deben sumar 180° − 90° = 90°.\n3. El ángulo buscado es 90° − 28° = 62°.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t03_s01_c07",
+    "options": [
+      "28°",
+      "52°",
+      "62°",
+      "152°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "En un triángulo rectángulo, uno de los ángulos agudos mide 28°. ¿Cuánto mide el otro ángulo agudo?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.8",
+    "correctIndex": 3,
+    "explanation": "1. El lado mayor se opone al ángulo mayor.\n2. El ángulo mayor es C = 80°.\n3. El lado opuesto a C es AB.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t03_s01_c08",
+    "options": [
+      "AC",
+      "BC",
+      "Los tres son iguales",
+      "AB"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "En el triángulo ABC, los ángulos A, B y C miden 40°, 60° y 80°, respectivamente. ¿Cuál es el lado de mayor longitud?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.9",
+    "correctIndex": 0,
+    "explanation": "1. Cada exterior suma 180° con su interior.\n2. Los tres exteriores suman $3\\cdot180-180$.\n3. El resultado es 360°, una vuelta completa.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t03_s01_c09",
+    "options": [
+      "360°",
+      "180°",
+      "270°",
+      "540°"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Al recorrer un triángulo se toma un ángulo exterior suplementario al interior en cada vértice. ¿Cuánto suman esos tres ángulos exteriores?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.10",
+    "correctIndex": 1,
+    "explanation": "1. Comparamos las tres longitudes: 3, 4 y 5 son distintas.\n2. Un triángulo con sus tres lados diferentes es escaleno.\n3. La pregunta clasifica por lados; que además sea rectángulo es una clasificación por ángulos.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t03_s01_c10",
+    "options": [
+      "Equilátero",
+      "Escaleno",
+      "Isósceles",
+      "Degenerado"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Según la longitud de sus lados, ¿cómo se clasifica un triángulo de lados 3 cm, 4 cm y 5 cm?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.11",
+    "correctIndex": 2,
+    "explanation": "1. Una mediana une un vértice con el punto medio del lado opuesto.\n2. Por tanto, M divide BC en dos segmentos iguales: BM = MC.\n3. Cada uno mide 12 cm / 2 = 6 cm.",
+    "fuente": "Ejercicio RASTRO revisado: teoría de la lección y fuentes en docs/aprender/REVISION_ACADEMICA_BLOQUE_01.md",
+    "id": "geom_t03_s01_c11",
+    "options": [
+      "12 cm",
+      "3 cm",
+      "6 cm",
+      "24 cm"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "En el triángulo ABC, AM es una mediana y BC mide 12 cm. ¿Cuánto mide BM?",
+    "subject": "geometria",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

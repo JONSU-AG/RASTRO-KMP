@@ -24,6 +24,7 @@ import kotlinx.coroutines.delay
 
 @Composable
 fun ProPromotion(onClick: () -> Unit) {
+    if (com.jonsuapps.rastro.monetization.PresentationMode.enabled) return
     val theme = ThemeManager.currentTheme
     val active by ProAccess.isActive.collectAsState()
     Sticker3dCard(containerColor = theme.surfaceAccent, bottomBevelColor = theme.cardBevel,
@@ -45,6 +46,7 @@ fun ProPromotion(onClick: () -> Unit) {
 
 @Composable
 fun RastroProDialog(onDismiss: () -> Unit) {
+    if (com.jonsuapps.rastro.monetization.PresentationMode.enabled) return
     val theme = ThemeManager.currentTheme
     val context = androidx.compose.ui.platform.LocalContext.current
     val billing = remember { MonetizationRepository.playBilling(context) }
@@ -127,7 +129,8 @@ fun RastroProDialog(onDismiss: () -> Unit) {
 fun CoinAndLivesDialog(onDismiss: () -> Unit) {
     val theme = ThemeManager.currentTheme
     val state by GamificationManager.state.collectAsState()
-    val proActive by ProAccess.isActive.collectAsState()
+    val storedProActive by ProAccess.isActive.collectAsState()
+    val proActive = storedProActive && !com.jonsuapps.rastro.monetization.PresentationMode.enabled
     val config by EconomySettings.config.collectAsState()
     val rewardedReady by com.jonsuapps.rastro.android.data.AdMobProvider.rewardedReady.collectAsState()
     var showPro by remember { mutableStateOf(false) }
@@ -136,7 +139,7 @@ fun CoinAndLivesDialog(onDismiss: () -> Unit) {
         Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             ProPromotion { showPro = true }
             Text("Recupera tus vidas", color = theme.textPrimary, fontWeight = FontWeight.Black, fontSize = 20.sp)
-            Text(if (proActive) "Con Pro tienes vidas ilimitadas." else "Una vida cada ${config.recoveryMinutes} min · máximo ${config.maxLives}", color = theme.textSecondary, fontSize = 12.sp)
+            Text(if (proActive) "Con Pro tienes vidas ilimitadas." else "Una vida cada ${config.recoveryMinutes} min · máximo ${state.maxHearts}", color = theme.textSecondary, fontSize = 12.sp)
             listOf(Triple("5 vidas",5,config.fiveLivesPrice),Triple("10 vidas",10,config.tenLivesPrice),Triple("Recarga completa",state.maxHearts,config.fullLivesPrice)).forEach { (label, amount, price) ->
                 Sticker3dButton(onClick = {
                     message = if(GamificationManager.buyLives(amount, price)) { MonetizationRepository.persistWallet(); "Vidas recargadas" } else "No tienes monedas suficientes o tus vidas ya están completas."
@@ -150,8 +153,8 @@ fun CoinAndLivesDialog(onDismiss: () -> Unit) {
                 }
             }
             CoinRewardUserControls()
-            Text("Misiones de monedas", color = theme.textPrimary, fontWeight = FontWeight.Black, fontSize = 20.sp)
-            config.packs.filter { it.enabled }.forEach { pack ->
+            if (!com.jonsuapps.rastro.monetization.PresentationMode.enabled) Text("Misiones de monedas", color = theme.textPrimary, fontWeight = FontWeight.Black, fontSize = 20.sp)
+            (if (com.jonsuapps.rastro.monetization.PresentationMode.enabled) emptyList() else config.packs).filter { it.enabled }.forEach { pack ->
                 Sticker3dCard(modifier = Modifier.fillMaxWidth(), containerColor = theme.surfaceAccent, bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder) {
                     Column(Modifier.padding(10.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
                         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {

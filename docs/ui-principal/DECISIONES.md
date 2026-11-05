@@ -126,3 +126,5 @@ Prueba de disponibilidad real requiere una instalación y cuenta elegibles en Go
 ## 08/10/2026 — Comunidad fija
 
 Canal oficial común: https://whatsapp.com/channel/0029VbDFAEu7YScyVZBNul0X . Inicio no utiliza redes personales del usuario; esas se conservan en Perfil. Entrada Pro reutiliza el modal existente.
+
+Práctica: el pie de comprobar/continuar ocupa espacio real, fuera del scroll, y no debe superponerse a las opciones. La navegación inferior se oculta en la ruta de lección completa y vuelve al salir. Racha: una pantalla en tamaños habituales, con desplazamiento de respaldo para accesibilidad y pantallas pequeñas; no reducir el calendario eliminando fechas ni alterar las marcas de actividad.

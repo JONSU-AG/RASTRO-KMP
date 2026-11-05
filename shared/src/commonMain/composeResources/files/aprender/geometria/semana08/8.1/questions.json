@@ -1,1 +1,200 @@
-[{"concept":"8.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t08_s01_c01","options":["3\\pi\\text{ cm}^2","6\\pi\\text{ cm}^2","9\\pi\\text{ cm}^2","12\\pi\\text{ cm}^2"],"pedagogicalTier":"concepto","semana":8,"statement":"**Enunciado:** Calcule el área de un sector circular cuyo ángulo central mide 60^\\circ y cuyo radio es 6\\text{ cm}.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t08_s01_c02","options":["3.5\\text{ cm}","3\\text{ cm}","4\\text{ cm}","5\\text{ cm}"],"pedagogicalTier":"concepto","semana":8,"statement":"**Enunciado:** Los lados de un triángulo miden 13\\text{ cm}, 14\\text{ cm} y 15\\text{ cm}. Calcule la longitud de su inradio r.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"geom_t08_s01_c03","options":["54\\text{ m}^2","72\\text{ m}^2","49\\text{ m}^2","64\\text{ m}^2"],"pedagogicalTier":"concepto","semana":8,"statement":"**Enunciado:** En un trapecio ABCD (\\overline{BC} \\parallel \\overline{AD}), las diagonales se cortan en el punto P. Si el área de la región triangular BPC es 9\\text{ m}^2 y el área de la región triangular APD es 25\\text{ m}^2, calcule el área total del trapecio ABCD.","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"8.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t08_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "geom_t08_s01_c01",
+    "concept": "8.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un triángulo tiene base 12 cm y altura perpendicular 5 cm. ¿Qué área tiene?",
+    "options": [
+      "$30\\,\\mathrm{cm^2}$",
+      "$60\\,\\mathrm{cm^2}$",
+      "$15\\,\\mathrm{cm^2}$",
+      "$90\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El área triangular es la mitad del rectángulo de igual base y altura.\n2. Usamos los datos indicados: $S=12(5)/2$.\n3. El resultado es $30\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s01_c02",
+    "concept": "8.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un triángulo tiene lados de 13, 14 y 15 cm. Calcula su área.",
+    "options": [
+      "$168\\,\\mathrm{cm^2}$",
+      "$42\\,\\mathrm{cm^2}$",
+      "$252\\,\\mathrm{cm^2}$",
+      "$84\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Usamos Herón con semiperímetro 21.\n2. Usamos los datos indicados: $S=\\sqrt{21(21-13)(21-14)(21-15)}$.\n3. El resultado es $84\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s01_c03",
+    "concept": "8.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un triángulo equilátero tiene lado 4 cm. ¿Cuál es su área?",
+    "options": [
+      "$2 \\sqrt{3}\\,\\mathrm{cm^2}$",
+      "$12 \\sqrt{3}\\,\\mathrm{cm^2}$",
+      "$4 \\sqrt{3}\\,\\mathrm{cm^2}$",
+      "$8 \\sqrt{3}\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La altura es lado por √3/2.\n2. Usamos los datos indicados: $S=4^2\\sqrt3/4$.\n3. El resultado es $4 \\sqrt{3}\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s01_c04",
+    "concept": "8.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un triángulo tiene área 40 cm² y base 10 cm. ¿Qué altura corresponde a esa base?",
+    "options": [
+      "$24\\,\\mathrm{cm}$",
+      "$8\\,\\mathrm{cm}$",
+      "$16\\,\\mathrm{cm}$",
+      "$4\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Despejamos la altura de S=bh/2.\n2. Usamos los datos indicados: $h=2S/b=2(40)/10$.\n3. El resultado es $8\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s01_c05",
+    "concept": "8.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Dos triángulos comparten la misma altura y tienen bases de 4 y 10 cm. El primero tiene área 12 cm². ¿Qué área tiene el segundo?",
+    "options": [
+      "$30\\,\\mathrm{cm^2}$",
+      "$60\\,\\mathrm{cm^2}$",
+      "$15\\,\\mathrm{cm^2}$",
+      "$90\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Con altura común, las áreas son proporcionales a las bases.\n2. Usamos los datos indicados: $S_2=12(10/4)$.\n3. El resultado es $30\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s01_c06",
+    "concept": "8.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un triángulo de área 36 cm² se divide mediante una mediana. ¿Qué área tiene cada parte?",
+    "options": [
+      "$36\\,\\mathrm{cm^2}$",
+      "$9\\,\\mathrm{cm^2}$",
+      "$54\\,\\mathrm{cm^2}$",
+      "$18\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La mediana produce bases iguales y altura común.\n2. Usamos los datos indicados: $S_1=S_2=36/2$.\n3. El resultado es $18\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s01_c07",
+    "concept": "8.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Las tres medianas de un triángulo de área 30 cm² determinan seis triángulos pequeños. ¿Qué área tiene cada uno?",
+    "options": [
+      "$2.5\\,\\mathrm{cm^2}$",
+      "$15\\,\\mathrm{cm^2}$",
+      "$5\\,\\mathrm{cm^2}$",
+      "$10\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Las medianas forman seis regiones triangulares de igual área.\n2. Usamos los datos indicados: $S_p=30/6$.\n3. El resultado es $5\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s01_c08",
+    "concept": "8.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un triángulo tiene semiperímetro 10 cm e inradio 3 cm. ¿Qué área tiene?",
+    "options": [
+      "$90\\,\\mathrm{cm^2}$",
+      "$30\\,\\mathrm{cm^2}$",
+      "$60\\,\\mathrm{cm^2}$",
+      "$15\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El área se suma desde los tres lados usando el inradio como altura.\n2. Usamos los datos indicados: $S=sr=10(3)$.\n3. El resultado es $30\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s01_c09",
+    "concept": "8.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Un triángulo de lados 5, 6 y 7 cm tiene perímetro P. ¿Cuánto vale P?",
+    "options": [
+      "$18\\,\\mathrm{cm}$",
+      "$36\\,\\mathrm{cm}$",
+      "$9\\,\\mathrm{cm}$",
+      "$54\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El perímetro es suma de las longitudes de sus lados.\n2. Usamos los datos indicados: $P=5+6+7$.\n3. El resultado es $18\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s01_c10",
+    "concept": "8.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "La altura de un triángulo correspondiente a una base es…",
+    "options": [
+      "Cualquier lado vecino de la base.",
+      "La distancia perpendicular del vértice opuesto a la recta que contiene esa base.",
+      "Siempre una mediana.",
+      "Siempre un segmento interior."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La altura depende de la base elegida.\n2. Se mide perpendicularmente a la recta de esa base.\n3. En un triángulo obtusángulo puede quedar fuera de la región triangular.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t08_s01_c11",
+    "concept": "8.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 8,
+    "statement": "Al multiplicar todas las longitudes de una figura plana por k>0, su área se multiplica por…",
+    "options": [
+      "$k$",
+      "$k^2$",
+      "$k^3$",
+      "No cambia."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El área combina dos dimensiones lineales.\n2. Cada una recibe el factor k.\n3. El factor total es k².",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

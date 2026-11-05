@@ -2,7 +2,7 @@
   {
     "id": "leng_t06_s02_c01",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la oración compuesta 'El expositor presentó su investigación; el auditorio escuchó en silencio', las proposiciones se hallan coordinadas por:",
+    "statement": "En «El expositor presentó su investigación; el auditorio escuchó en silencio», ¿qué tipo de enlace formal hay entre las dos oraciones, sin conjunción expresa?",
     "options": [
       "Subordinación adjetiva",
       "Yuxtaposición",
@@ -10,7 +10,7 @@
       "Conjunción adversativa"
     ],
     "correctIndex": 1,
-    "explanation": "La coordinación yuxtapuesta enlaza proposiciones equivalentes e independientes mediante signos de puntuación (en este caso, punto y coma).",
+    "explanation": "Criterio: la yuxtaposición relaciona segmentos sin una conjunción expresa que marque el enlace. Aplicación: se reconocen dos oraciones, presentó y escuchó, separadas por punto y coma. Respuesta: Yuxtaposición. La puntuación se interpreta junto con la estructura; una coma aislada no demuestra coordinación entre oraciones.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.2.1",
@@ -28,7 +28,7 @@
       "Complemento circunstancial"
     ],
     "correctIndex": 2,
-    "explanation": "La proposición 'Quienes alcancen el puntaje requerido' equivale al sintagma 'Ellos' y concuerda con el verbo 'obtendrán', cumpliendo función de Sujeto.",
+    "explanation": "Criterio: se distingue la clase de una construcción de la función exterior que desempeña. Aplicación: quienes alcancen el puntaje requerido es una relativa libre y el conjunto funciona como sujeto de obtendrán. Respuesta: Sujeto de la proposición principal. Su función nominal no la convierte automáticamente en una sustantiva declarativa introducida por una conjunción.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.2.3",
@@ -46,7 +46,7 @@
       "Circunstancial de tiempo"
     ],
     "correctIndex": 2,
-    "explanation": "La proposición subordinada sustantiva se puede sustituir por el pronombre 'lo' ('El decano lo afirmó'), funcionando como Objeto Directo.",
+    "explanation": "Criterio: una subordinada sustantiva puede expresar el contenido que se afirma. Aplicación: que publicarán los resultados a medianoche es el complemento directo de afirmó y permite el decano lo afirmó. Respuesta: Objeto directo. A medianoche queda dentro de la subordinada, pero no convierte todo el segmento en circunstancial de tiempo.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.2.3",
@@ -56,7 +56,7 @@
   {
     "id": "leng_t06_s02_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Qué clase de oración compuesta coordinada conjuntiva se presenta en 'El examen era riguroso, pero no imposible'?",
+    "statement": "En «El examen era riguroso, pero los postulantes mantuvieron la calma», ¿qué relación expresa pero entre las dos oraciones?",
     "options": [
       "Disyuntiva",
       "Distributiva",
@@ -64,7 +64,7 @@
       "Adversativa"
     ],
     "correctIndex": 3,
-    "explanation": "La conjunción 'pero' introduce una proposición coordinada adversativa que expresa objeción o restricción frente a la anterior.",
+    "explanation": "Criterio: pero establece una coordinación adversativa en este ejemplo. Aplicación: enlaza el examen era riguroso y los postulantes mantuvieron la calma con oposición o restricción. Respuesta: Adversativa. Se escriben dos miembros oracionales explícitos para no confundir esta construcción con la coordinación de adjetivos en riguroso, pero no imposible.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.2.1",
@@ -82,7 +82,7 @@
       "Subordinada adjetiva especificativa"
     ],
     "correctIndex": 3,
-    "explanation": "Es una proposición subordinada adjetiva encabezada por el relativo 'que' que delimita a su antecedente 'los postulantes' sin comas (especificativa).",
+    "explanation": "Criterio: una relativa especificativa restringe la referencia del antecedente. Aplicación: que se inscribieron a tiempo delimita qué postulantes se consideran en la oración, sin presentarse como inciso entre comas. Respuesta: Subordinada adjetiva especificativa, también llamada relativa especificativa.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.2.3",
@@ -100,7 +100,7 @@
       "Final"
     ],
     "correctIndex": 0,
-    "explanation": "Las subordinadas concesivas expresan una dificultad, objeción o traba que a pesar de todo no impide la realización de la acción principal.",
+    "explanation": "Criterio: una concesiva presenta un obstáculo que no cancela lo expresado en el otro segmento. Aplicación: aunque llueva torrencialmente se contrapone a la decisión anunciada por iré. Respuesta: Concesiva. La clasificación describe la relación, no garantiza que el hablante cumpla después su intención.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.2.4",
@@ -110,15 +110,15 @@
   {
     "id": "leng_t06_s02_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En 'Pienso, luego existo', la conjunción 'luego' encabeza una proposición coordinada de tipo:",
+    "statement": "En «Pienso, luego existo», ¿qué valor introduce luego, entendido aquí como por lo tanto?",
     "options": [
       "Adversativa",
-      "Ilativa",
+      "Ilativo: presenta una conclusión",
       "Copulativa",
       "Subordinada condicional"
     ],
     "correctIndex": 1,
-    "explanation": "'Luego' funciona aquí como conjunción ilativa que introduce una deducción o consecuencia lógica natural de lo previamente afirmado.",
+    "explanation": "Criterio: el valor ilativo presenta una conclusión o consecuencia según la relación expresada. Aplicación: luego equivale aquí a por lo tanto y no a después. Respuesta: Ilativo. El enlace no garantiza por sí solo la verdad ni la validez de cualquier razonamiento que lo utilice.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.2.2",
@@ -136,7 +136,7 @@
       "Coordinada explicativa"
     ],
     "correctIndex": 2,
-    "explanation": "Aunque 'donde' es un adverbio relativo, al poseer un antecedente sustantivo expreso ('la casa'), la proposición funciona como subordinada adjetiva.",
+    "explanation": "Criterio: una oración de relativo puede modificar un antecedente nominal. Aplicación: donde crecí se relaciona con casa dentro del grupo la casa donde crecí. Respuesta: Adjetiva con antecedente sustantivo expreso, es decir, relativa. Donde aporta lugar, pero la subordinada no modifica directamente al verbo queda.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.2.3",
@@ -146,15 +146,15 @@
   {
     "id": "leng_t06_s02_c09",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes oraciones presenta una proposición subordinada sustantiva en función de Atributo?",
+    "statement": "¿Qué oración contiene una subordinada sustantiva declarativa en función de sujeto?",
     "options": [
-      "Mi meta es alcanzar una vacante en la universidad.",
+      "Me preocupa que llegues tarde.",
       "Dijo que vendría temprano.",
       "Quien busca encuentra.",
       "Compró el libro para que repases."
     ],
     "correctIndex": 0,
-    "explanation": "La proposición 'alcanzar una vacante en la universidad' complementa al sujeto 'mi meta' a través del verbo copulativo 'es' ('Mi meta lo es').",
+    "explanation": "Criterio: una sustantiva declarativa puede ocupar la posición de sujeto. Aplicación: en me preocupa que llegues tarde, lo que preocupa es que llegues tarde; me identifica al experimentante. Respuesta: Me preocupa que llegues tarde. Quien busca encuentra tiene una relativa libre, aunque también pueda desempeñar función de sujeto.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.2.3",
@@ -164,7 +164,7 @@
   {
     "id": "leng_t06_s02_c10",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En 'Bien estudian en la biblioteca, bien practican en sus casas', el tipo de coordinación presente es:",
+    "statement": "En la clasificación escolar tradicional que usa la etiqueta distributiva, ¿cómo se analiza «Bien estudian en la biblioteca, bien practican en sus casas»?",
     "options": [
       "Yuxtapuesta causal",
       "Distributiva",
@@ -172,7 +172,7 @@
       "Subordinada ilativa"
     ],
     "correctIndex": 1,
-    "explanation": "Los nexos correlativos 'bien... bien...' introducen proposiciones coordinadas distributivas que expresan alternancia no excluyente.",
+    "explanation": "Criterio: la nomenclatura escolar indicada denomina distributiva la construcción correlativa bien… bien… del ejemplo. Aplicación: se presentan dos actividades como alternativas o distribuidas. Respuesta: Distributiva. Otras clasificaciones la relacionan con la disyunción correlativa; el contexto determina cómo se entienden las alternativas.",
     "subject": "lenguaje",
     "semana": 6,
     "concept": "6.2.2",

@@ -1,1 +1,200 @@
-[{"concept":"12.2.1","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Analizamos las condiciones del problema: - En un barquillo de helado **no importa el orden** en que se nombren o coloquen los sabores para el cliente. - Se permite **repetir sabores** (por ejemplo, tres porciones de queso helado). - Por tanto, se trata de una **Combinación con Repetición**: - Número de elementos o tipos disponibles: n = 4 sabores. - Número de elementos a elegir: k = 3 porciones. 2. Aplicamos la fórmula canónica de Combinaciones con Repetición: CR_k^n = C_k^{n + k - 1} CR_3^4 = C_3^{4 + 3 - 1} = C_3^6 3. Calculamos el valor del número combinatorio: C_3^6 = \\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1} = 20 \\text{ formas distintas} **Respuesta Correcta:** **B) 20** ---","fuente":"temario","id":"arit_t12_s02_c01","options":["24","30","15","20"],"pedagogicalTier":"concepto","semana":12,"statement":"**Enunciado:** Una heladería artesanal en Characato ofrece 4 sabores diferentes de helado: queso helado, lúcuma, chocolate y fresa. Si un cliente desea comprar un barquillo con 3 porciones de helado, pudiendo repetir sabores, ¿de cuántas formas distintas puede elegir su combinación de helado?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.2","correctIndex":3,"explanation":"**Resolución Paso a Paso:** 1. **Estrategia del Complemento:** Resulta mucho más rápido calcular el total de ordenamientos posibles sin restricción y restarle aquellos ordenamientos donde Carlos y Diana se sientan **juntos**: N_{\\text{separados}} = N_{\\text{totales sin restricción}} - N_{\\text{juntos}} 2. **Cálculo del Total Sin Restricción (N_{\\text{totales}}):** Son 8 personas ordenándose en 8 asientos lineales: N_{\\text{totales}} = P_8 = 8! = 40\\,320 \\text{ maneras} 3. **Cálculo de los Casos donde Carlos y Diana se sientan Juntos (N_{\\text{juntos}}):** - Agrupamos a Carlos y Diana en un solo bloque: (CD). - Elementos a ordenar: el bloque (CD) más las otras 6 personas \\implies 1 + 6 = 7 elementos. - Las 7 entidades se ordenan en la fila de 7! maneras. - Carlos y Diana pueden permutar entre sí dentro del bloque de 2! maneras (CD o DC). N_{\\text{juntos}} = 7! \\times 2! = 5040 \\times 2 = 10\\,080 \\text{ maneras} 4. **Cálculo de los Casos donde están Separados:** N_{\\text{separados}} = 40\\,320 - 10\\,080 = 30\\,240 \\text{ maneras} **Respuesta Correcta:** **C) 30 240** ---","fuente":"temario","id":"arit_t12_s02_c02","options":["28\\,800","30\\,240","32\\,400","25\\,200"],"pedagogicalTier":"concepto","semana":12,"statement":"**Enunciado:** Ocho estudiantes, entre ellos Carlos y Diana, deben ubicarse en una fila de ocho asientos numerados consecutivamente del 1 al 8. ¿De cuántas maneras diferentes pueden sentarse todos ellos de modo que Carlos y Diana **nunca** queden sentados en asientos contiguos?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: Se consideran los elementos juntos como un único bloque ficticio, se permutan todos los elementos resultantes y se multiplica por la permutación interna del bloque.","fuente":"temario","id":"arit_t12_s02_c03","options":["CR_k^n = C_k^{n + k - 1}.","0! = 1.","Se consideran los elementos juntos como un único bloque ficticio, se permutan todos los elementos resultantes y se multiplica por la permutación interna del bloque.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":12,"statement":"¿Cómo se resuelve un problema lineal donde ciertos elementos deben permanecer siempre juntos?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: CR_k^n = C_k^{n + k - 1}.","fuente":"temario","id":"arit_t12_s02_c04","options":["Se consideran los elementos juntos como un único bloque ficticio, se permutan todos los elementos resultantes y se multiplica por la permutación interna del bloque.","0! = 1.","Valor o condición no aplicable al caso planteado","CR_k^n = C_k^{n + k - 1}."],"pedagogicalTier":"concepto","semana":12,"statement":"¿Cuál es la fórmula de combinaciones con repetición CR_k^n?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: 0! = 1.","fuente":"temario","id":"arit_t12_s02_c05","options":["0! = 1.","Se consideran los elementos juntos como un único bloque ficticio, se permutan todos los elementos resultantes y se multiplica por la permutación interna del bloque.","CR_k^n = C_k^{n + k - 1}.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":12,"statement":"¿Cuánto vale por axioma universal 0!?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t12_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t12_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t12_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t12_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"12.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t12_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":12,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "arit_t12_s02_c01",
+    "concept": "12.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "Seis personas distintas se ordenan en fila. A y B deben quedar juntas. ¿Cuántos órdenes hay?",
+    "options": [
+      "$240$",
+      "$480$",
+      "$120$",
+      "$720$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Tratamos A y B como bloque con dos órdenes internos.\n2. Desarrollamos con los datos: $n=2(5!)$.\n3. El resultado es $240$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s02_c02",
+    "concept": "12.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "Seis personas distintas se ordenan en fila. A y B no pueden quedar juntas. ¿Cuántos órdenes hay?",
+    "options": [
+      "$960$",
+      "$240$",
+      "$1440$",
+      "$480$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Restamos al total los casos contiguos.\n2. Desarrollamos con los datos: $n=6!-2(5!)$.\n3. El resultado es $480$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s02_c03",
+    "concept": "12.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "Cinco personas distintas se sientan alrededor de una mesa circular. Se identifican rotaciones pero no reflexiones. ¿Cuántos órdenes hay?",
+    "options": [
+      "$12$",
+      "$72$",
+      "$24$",
+      "$48$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Fijamos una persona para eliminar rotaciones.\n2. Desarrollamos con los datos: $n=(5-1)!$.\n3. El resultado es $24$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s02_c04",
+    "concept": "12.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "¿Cuántas ordenaciones distintas de letras tiene MAMA?",
+    "options": [
+      "$18$",
+      "$6$",
+      "$12$",
+      "$3$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Dividimos por los factoriales de las repeticiones.\n2. Desarrollamos con los datos: $n=4!/(2!2!)$.\n3. El resultado es $6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s02_c05",
+    "concept": "12.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "¿Cuántos números decimales de tres cifras se forman con 0,1,2 usando cada cifra exactamente una vez?",
+    "options": [
+      "$4$",
+      "$8$",
+      "$2$",
+      "$12$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El primer dígito no puede ser cero.\n2. Desarrollamos con los datos: $n=2(2!)$.\n3. El resultado es $4$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s02_c06",
+    "concept": "12.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "Se eligen 3 personas de 6 distintas y A debe estar incluida. ¿Cuántos grupos hay?",
+    "options": [
+      "$20$",
+      "$5$",
+      "$30$",
+      "$10$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Solo falta elegir dos de las otras cinco.\n2. Desarrollamos con los datos: $n=\\binom52$.\n3. El resultado es $10$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s02_c07",
+    "concept": "12.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "Se eligen 2 hombres de 3 y 1 mujer de 4, todos distintos. ¿Cuántos grupos hay?",
+    "options": [
+      "$6$",
+      "$36$",
+      "$12$",
+      "$24$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Multiplicamos las dos elecciones de grupos.\n2. Desarrollamos con los datos: $n=\\binom32\\binom41$.\n3. El resultado es $12$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s02_c08",
+    "concept": "12.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "Tres mujeres y tres hombres, todos distintos, se sientan en fila alternando los dos grupos. ¿Cuántos órdenes hay?",
+    "options": [
+      "$216$",
+      "$72$",
+      "$144$",
+      "$36$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Hay dos patrones de grupos y factoriales dentro de cada uno.\n2. Desarrollamos con los datos: $n=2(3!)(3!)$.\n3. El resultado es $72$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s02_c09",
+    "concept": "12.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "¿Cuántos subconjuntos no vacíos tiene un conjunto de 5 elementos?",
+    "options": [
+      "$31$",
+      "$62$",
+      "$93$",
+      "$32$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Al total de subconjuntos se resta el vacío.\n2. Desarrollamos con los datos: $n=2^5-1$.\n3. El resultado es $31$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s02_c10",
+    "concept": "12.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "En una mesa circular, identificar rotaciones significa…",
+    "options": [
+      "Contar como diferentes todas las posiciones del mismo giro conjunto.",
+      "Considerar el mismo orden relativo tras girar a todos los participantes.",
+      "Identificar obligatoriamente también los reflejos.",
+      "Permitir que dos personas ocupen la misma silla."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Se conserva el orden relativo alrededor del círculo.\n2. Un giro conjunto no cambia ese orden.\n3. Las reflexiones solo se identifican si el enunciado lo dice.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t12_s02_c11",
+    "concept": "12.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 12,
+    "statement": "Para contar ordenaciones con letras repetidas, dividir por factoriales de las repeticiones…",
+    "options": [
+      "Compensa los intercambios entre letras idénticas que no generan una ordenación nueva.",
+      "Hace que todas las palabras tengan una sola ordenación.",
+      "Solo funciona si todas las letras son distintas.",
+      "Permite sumar órdenes sin considerar ninguna repetición."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Un conteo como si todas fueran distintas repite resultados.\n2. Intercambiar copias de una misma letra no cambia la cadena visible.\n3. Los factoriales corrigen esa sobrecuenta.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

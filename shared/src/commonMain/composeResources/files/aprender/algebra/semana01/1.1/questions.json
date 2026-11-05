@@ -1,1 +1,200 @@
-[{"concept":"1.1.1","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. Recordamos la fórmula para el número de subconjuntos de un conjunto finito: n(\\mathcal{P}(A)) = 2^{n(A)} 2. Para el conjunto A: 2^{n(A)} = 16 = 2^4 \\implies n(A) = 4 3. Para el conjunto B, se sabe que tiene 63 subconjuntos propios: \\text{Subconjuntos propios} = 2^{n(B)} - 1 = 63 2^{n(B)} = 64 = 2^6 \\implies n(B) = 6 4. Calculamos el cardinal del producto cartesiano A \\times B: n(A \\times B) = n(A) \\cdot n(B) = 4 \\times 6 = 24 5. Calculamos el número de subconjuntos de A \\times B: n(\\mathcal{P}(A \\times B)) = 2^{n(A \\times B)} = 2^{24} **Respuesta Correcta:** **B) 2^{24}** ---","fuente":"temario","id":"alg_t01_s01_c01","options":["2^{12}","2^{24}","2^{18}","2^{30}"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado:** Si un conjunto A tiene 16 subconjuntos y un conjunto B tiene 63 subconjuntos propios, ¿cuántos subconjuntos tiene el producto cartesiano A \\times B?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.1.2","correctIndex":1,"explanation":"**Resolución Paso a Paso:** 1. **Analizamos el primer corchete:** C_1 = (A - B) \\cup (A \\cap B) Expresamos la diferencia como intersección con el complemento: C_1 = (A \\cap B^c) \\cup (A \\cap B) Aplicamos propiedad distributiva inversa (factor común A \\cap): C_1 = A \\cap (B^c \\cup B) Como B^c \\cup B = \\mathbb{U} (neutro universal): C_1 = A \\cap \\mathbb{U} = A 2. **Analizamos el segundo corchete:** C_2 = B - (B - A) Transformamos la diferencia interior: B - A = B \\cap A^c. C_2 = B - (B \\cap A^c) = B \\cap (B \\cap A^c)^c Aplicamos la Ley de De Morgan al complemento: C_2 = B \\cap (B^c \\cup (A^c)^c) = B \\cap (B^c \\cup A) Aplicamos absorción parcial: C_2 = B \\cap A 3. **Unimos ambos resultados en la expresión E:** E = C_1 \\cup C_2 = A \\cup (B \\cap A) = A \\cup (A \\cap B) 4. Por ley de absorción total: A \\cup (A \\cap B) = A **Respuesta Correcta:** **A) A** ---","fuente":"temario","id":"alg_t01_s01_c02","options":["A \\cap B","A","B","A \\cup B"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado:** Simplifique a su mínima expresión el siguiente conjunto:","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.1.3","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Sea el universo de postulantes n(\\mathbb{U}) = 120. Denotamos: - C: Civil, con n(C) = 65. - S: Sistemas, con n(S) = 55. - I: Industrial, con n(I) = 45. 2. Intersecciones dobles y triple: - n(C \\cap S) = 25 - n(S \\cap I) = 20 - n(C \\cap I) = 15 - n(C \\cap S \\cap I) = 8 3. Aplicamos el **Principio de Inclusión-Exclusión** para calcular la unión n(C \\cup S \\cup I): n(C \\cup S \\cup I) = n(C) + n(S) + n(I) - [n(C \\cap S) + n(S \\cap I) + n(C \\cap I)] + n(C \\cap S \\cap I) n(C \\cup S \\cup I) = 65 + 55 + 45 - [25 + 20 + 15] + 8 n(C \\cup S \\cup I) = 165 - 60 + 8 = 105 + 8 = 113 4. El número de postulantes que no postulan a ninguna de las tres ingenierías es el complemento de la unión: n((C \\cup S \\cup I)^c) = n(\\mathbb{U}) - n(C \\cup S \\cup I) = 120 - 113 = 7 \\text{ postulantes} **Respuesta Correcta:** **B) 7** ---","fuente":"temario","id":"alg_t01_s01_c03","options":["9","11","5","7"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado:** De un grupo de 120 postulantes evaluados en el campus de la UNSA, se determinó que:","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: \\exists x \\in A: \\sim P(x).","fuente":"temario","id":"alg_t01_s01_c04","options":["Equivale exactamente a A \\cup B.","2^{n(A)} - 1.","Valor o condición no aplicable al caso planteado","\\exists x \\in A: \\sim P(x)."],"pedagogicalTier":"concepto","semana":1,"statement":"¿Cómo se niega formalmente la proposición cuantificada \\forall x \\in A: P(x)?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Equivale exactamente a A \\cup B.","fuente":"temario","id":"alg_t01_s01_c05","options":["Equivale exactamente a A \\cup B.","\\exists x \\in A: \\sim P(x).","2^{n(A)} - 1.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":1,"statement":"¿A qué equivale algebraicamente la expresión de absorción parcial A \\cup (A^c \\cap B)?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: 2^{n(A)} - 1.","fuente":"temario","id":"alg_t01_s01_c06","options":["\\exists x \\in A: \\sim P(x).","2^{n(A)} - 1.","Equivale exactamente a A \\cup B.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":1,"statement":"¿Cuál es la fórmula para calcular el número de subconjuntos propios de un conjunto A?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t01_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t01_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t01_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"1.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t01_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "1.1.1",
+    "correctIndex": 0,
+    "explanation": "1. La unión reúne los elementos que pertenecen a A, a B o a ambos.\n2. Reunimos 1, 2, 3, 3 y 4 sin repetir elementos.\n3. Obtenemos $A\\cup B=\\{1,2,3,4\\}$.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s01_c01",
+    "options": [
+      "$\\{1,2,3,4\\}$",
+      "$\\{3\\}$",
+      "$\\{1,2\\}$",
+      "$\\{4\\}$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Sean $A=\\{1,2,3\\}$ y $B=\\{3,4\\}$. ¿Cuál es $A\\cup B$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.2",
+    "correctIndex": 1,
+    "explanation": "1. La intersección contiene solo elementos comunes.\n2. El único elemento presente en los dos conjuntos es 3.\n3. Por tanto, $A\\cap B=\\{3\\}$.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s01_c02",
+    "options": [
+      "$\\{1,2,3,4\\}$",
+      "$\\{3\\}$",
+      "$\\{1,2\\}$",
+      "$\\{4\\}$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Sean $A=\\{1,2,3\\}$ y $B=\\{3,4\\}$. ¿Cuál es $A\\cap B$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.3",
+    "correctIndex": 2,
+    "explanation": "1. En A−B conservamos los elementos de A que no están en B.\n2. Quitamos 3 porque también pertenece a B.\n3. Quedan $\\{1,2\\}$.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s01_c03",
+    "options": [
+      "$\\{3\\}$",
+      "$\\{4\\}$",
+      "$\\{1,2\\}$",
+      "$\\{1,2,3,4\\}$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Sean $A=\\{1,2,3\\}$ y $B=\\{3,4\\}$. ¿Cuál es $A-B$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.4",
+    "correctIndex": 3,
+    "explanation": "1. La diferencia simétrica contiene los elementos que están en exactamente uno de los conjuntos.\n2. De A tomamos 1 y 2; de B tomamos 4.\n3. Excluimos 3, que está en ambos, y resulta $\\{1,2,4\\}$.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s01_c04",
+    "options": [
+      "$\\{3\\}$",
+      "$\\{1,2,3,4\\}$",
+      "$\\{1,2\\}$",
+      "$\\{1,2,4\\}$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Sean $A=\\{1,2,3\\}$ y $B=\\{3,4\\}$. ¿Cuál es la diferencia simétrica $A\\triangle B$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.5",
+    "correctIndex": 0,
+    "explanation": "1. El complemento contiene los elementos del universo que no pertenecen a A.\n2. Retiramos de U los elementos 2, 4 y 6.\n3. Permanecen $\\{1,3,5\\}$.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s01_c05",
+    "options": [
+      "$\\{1,3,5\\}$",
+      "$\\{2,4,6\\}$",
+      "$\\{1,2,3,4,5,6\\}$",
+      "$\\emptyset$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Si $U=\\{1,2,3,4,5,6\\}$ y $A=\\{2,4,6\\}$, ¿cuál es el complemento de A respecto de U?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.6",
+    "correctIndex": 1,
+    "explanation": "1. Para que A sea subconjunto de B, cada elemento de A debe pertenecer a B.\n2. Tanto 2 como 4 están en B.\n3. Así, $A\\subseteq B$; no son iguales porque B tiene además 1 y 3.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s01_c06",
+    "options": [
+      "$B\\subseteq A$",
+      "$A\\subseteq B$",
+      "$A=B$",
+      "$A\\cap B=\\emptyset$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Si $A=\\{2,4\\}$ y $B=\\{1,2,3,4\\}$, ¿qué relación es verdadera?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.7",
+    "correctIndex": 2,
+    "explanation": "1. Cada elemento puede incluirse o excluirse de un subconjunto.\n2. Hay dos elecciones independientes por cada uno de los tres elementos.\n3. El total es $2^3=8$, incluidos el vacío y el propio conjunto.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s01_c07",
+    "options": [
+      "3",
+      "6",
+      "8",
+      "9"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Un conjunto tiene tres elementos distintos. ¿Cuántos subconjuntos tiene?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.8",
+    "correctIndex": 3,
+    "explanation": "1. Un subconjunto propio no es igual al conjunto original.\n2. De los ocho subconjuntos, solo uno es el propio conjunto.\n3. Quedan 8 − 1 = 7 subconjuntos propios; el vacío está incluido.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s01_c08",
+    "options": [
+      "6",
+      "8",
+      "3",
+      "7"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Un conjunto de tres elementos distintos tiene ocho subconjuntos. ¿Cuántos son propios?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.9",
+    "correctIndex": 0,
+    "explanation": "1. Cada elemento de A se puede emparejar con cada elemento de B.\n2. Hay dos pares para cada uno de los tres elementos de A.\n3. El total es 3 × 2 = 6 pares ordenados.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s01_c09",
+    "options": [
+      "6",
+      "5",
+      "8",
+      "9"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Si A tiene tres elementos y B tiene dos, ¿cuántos pares ordenados contiene A × B?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.10",
+    "correctIndex": 1,
+    "explanation": "1. La afirmación original usa un cuantificador universal: todos.\n2. Para negarla basta un contraejemplo, no es necesario que fallen todos.\n3. La negación es que al menos un estudiante del grupo no aprobó.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s01_c10",
+    "options": [
+      "Ningún estudiante del grupo aprobó",
+      "Al menos un estudiante del grupo no aprobó",
+      "Todos los estudiantes del grupo no aprobaron",
+      "Al menos un estudiante del grupo aprobó"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Cuál es la negación de «Todos los estudiantes del grupo aprobaron»?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.11",
+    "correctIndex": 2,
+    "explanation": "1. Ser subconjunto exige que todos sus elementos pertenezcan al otro conjunto.\n2. El vacío no tiene elementos que incumplan esa condición.\n3. Por eso $\\emptyset\\subseteq A$ para cualquier conjunto A; no es lo mismo que $\\{0\\}$.",
+    "fuente": "Ejercicio RASTRO revisado: teoría local y docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "alg_t01_s01_c11",
+    "options": [
+      "Tiene un elemento: el cero",
+      "Es igual a cualquier conjunto",
+      "Es subconjunto de cualquier conjunto",
+      "No puede ser subconjunto de ningún conjunto"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Qué afirmación sobre el conjunto vacío es correcta?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

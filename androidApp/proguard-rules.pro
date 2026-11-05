@@ -14,6 +14,9 @@
 
 # Kotlin Serialization / kotlinx
 -keepattributes *JavascriptInterface*
+-keepclassmembers class com.jonsuapps.rastro.android.ui.components.ScientificMathKt$* {
+    @android.webkit.JavascriptInterface <methods>;
+}
 -keepclassmembers class * {
     @kotlinx.serialization.SerialName <fields>;
 }

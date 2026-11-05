@@ -1,0 +1,12 @@
+{
+  "id": "./",
+  "name": "RASTRO Preuniversitario",
+  "short_name": "RASTRO",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f3e9",
+  "theme_color": "#6750A4",
+  "icons": [{"src":"icon.png","sizes":"any","type":"image/png","purpose":"any"}]
+}

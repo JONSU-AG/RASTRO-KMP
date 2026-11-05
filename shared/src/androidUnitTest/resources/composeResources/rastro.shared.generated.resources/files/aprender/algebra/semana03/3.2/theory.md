@@ -1,123 +1,104 @@
-## 1. DESARROLLO TEÓRICO AVANZADO - PARTE II
-   \sqrt[m]{x^a \sqrt[n]{x^b \sqrt[p]{x^c}}} = x^{\frac{(a \cdot n + b)p + c}{m \cdot n \cdot p}}
+# Radicales dobles, racionalización y ecuaciones exponenciales
 
----
+## Introducción
+Simplificar una expresión no significa cambiar su valor ni ampliar su dominio sin avisar. Una transformación útil debe conservar las condiciones de las raíces, los denominadores y las operaciones que se emplean. Esta idea une la descomposición de radicales dobles, la racionalización y las ecuaciones exponenciales.
 
-### 3.3 Transformación de Radicales Dobles a Radicales Simples
+En este nivel se distingue una identidad válida de una semejanza visual. Un candidato obtenido por inspección puede ser correcto, pero no demuestra que sea la única solución. También se comprueba que el factor usado para racionalizar sea distinto de cero antes de multiplicar numerador y denominador por él.
 
-#### 1. Caso General: \sqrt{A \pm \sqrt{B}}
-Se puede transformar en la suma o diferencia de dos radicales simples \sqrt{x} \pm \sqrt{y} si y solo si la cantidad C = \sqrt{A^2 - B} es un **número racional exacto**:
-\sqrt{A \pm \sqrt{B}} = \sqrt{\frac{A + C}{2}} \pm \sqrt{\frac{A - C}{2}}
-donde:
-C = \sqrt{A^2 - B}
+```mermaid
+flowchart TD
+A[Transformar conservando valor y dominio] --> B[Radicales dobles]
+A --> C[Racionalización y sumas]
+C --> D[Sumas telescópicas]
+A --> E[Ecuaciones exponenciales]
+B --> F[Comparar suma y producto]
+B --> G[Raíz principal no negativa]
+C --> H[Factor no nulo]
+C --> I[Conjugados y cubos]
+D --> J[Escribir un término general]
+D --> K[Conservar los extremos]
+E --> L[Base común positiva distinta de uno]
+E --> M[No deducir unicidad por analogía]
+```
 
-#### 2. Caso Práctico (Forma A \pm 2\sqrt{B}):
-Si el radical doble presenta un coeficiente 2 delante del radical interior:
-\sqrt{(a + b) \pm 2\sqrt{a \cdot b}} = \sqrt{a} \pm \sqrt{b} \quad (a > b)
-* **Estrategia Operativa:** Se buscan dos números positivos a y b cuya suma sea el término independiente (a + b = A) y cuyo producto sea el radicando interior (a \cdot b = B).
+## 3.2.1 · Radicales dobles y signo de la raíz
+Para $a,b\ge0$, al desarrollar el cuadrado se obtiene $(\sqrt{a}+\sqrt{b})^2=a+b+2\sqrt{ab}$. Como la suma de las raíces es no negativa, se deduce $\sqrt{a+b+2\sqrt{ab}}=\sqrt{a}+\sqrt{b}$.
 
----
+Con la resta, la identidad debe conservar el valor absoluto: $\sqrt{a+b-2\sqrt{ab}}=\lvert\sqrt{a}-\sqrt{b}\rvert$. Solo se elimina el valor absoluto como $\sqrt{a}-\sqrt{b}$ cuando $a\ge b$. La igualdad $a=b$ también está permitida y produce cero.
 
-### 3.4 Teoría de la Racionalización
-La **racionalización** es el procedimiento algebraico mediante el cual se transforma una fracción con denominador irracional en otra equivalente cuyo denominador sea completamente **racional**.
-Se logra multiplicando el numerador y denominador por un factor adecuado denominado **Factor Racionalizante (FR)**:
-\text{Fracción} = \frac{N}{\text{Denominador Irracional}} \times \frac{FR}{FR} = \frac{N \cdot FR}{\text{Denominador Racional}}
+| Radical | Identificación | Resultado principal |
+| --- | --- | --- |
+| $\sqrt{10+2\sqrt{21}}$ | $7+3=10$, $7\cdot3=21$ | $\sqrt{7}+\sqrt{3}$ |
+| $\sqrt{5-2\sqrt{6}}$ | $3+2=5$, $3\cdot2=6$ | $\sqrt{3}-\sqrt{2}$ |
+| $\sqrt{2+3-2\sqrt{6}}$ | La diferencia $\sqrt{2}-\sqrt{3}$ es negativa | $\sqrt{3}-\sqrt{2}$ |
+| $\sqrt{4+4-2\sqrt{16}}$ | $a=b=4$ | $0$ |
 
-#### Casos Clásicos de Racionalización:
+Para descomponer $\sqrt{A+2\sqrt{B}}$, se buscan números no negativos $a,b$ con $a+b=A$ y $ab=B$. La condición se puede comprobar desarrollando el cuadrado. No basta con encontrar una suma o un producto por separado: deben cumplirse ambas relaciones.
 
-| Caso | Expresión en el Denominador | Factor Racionalizante (FR) | Denominador Racional Resultante |
-| :--- | :--- | :--- | :--- |
-| **I. Monomio** | \sqrt[n]{a^k} \quad (k < n) | \sqrt[n]{a^{n - k}} | a |
-| **II. Binomio Cuadrático** | \sqrt{a} \pm \sqrt{b} | \sqrt{a} \mp \sqrt{b} *(Conjugada)* | a - b |
-| **III. Binomio Cúbico (\pm)** | \sqrt[3]{a} \pm \sqrt[3]{b} | \sqrt[3]{a^2} \mp \sqrt[3]{ab} + \sqrt[3]{b^2} | a \pm b |
-| **IV. Trinomio Cúbico** | \sqrt[3]{a^2} \pm \sqrt[3]{ab} + \sqrt[3]{b^2} | \sqrt[3]{a} \mp \sqrt[3]{b} | a \pm b |
-| **V. Binomio de Grado n** | \sqrt[n]{a} - \sqrt[n]{b} | \sum_{k=0}^{n-1} \sqrt[n]{a^{n-1-k} b^k} | a - b |
+La forma más general utiliza $C=\sqrt{A^2-B}$. Si $A\ge0$, $B\ge0$ y $A^2\ge B$, define $u=(A+C)/2$ y $v=(A-C)/2$. Entonces $u,v\ge0$, $u+v=A$ y $uv=B/4$. De ahí se obtienen $\sqrt{A+\sqrt{B}}=\sqrt{u}+\sqrt{v}$ y $\sqrt{A-\sqrt{B}}=\sqrt{u}-\sqrt{v}$, pues $u\ge v$.
 
----
+No se exige que $C$ sea racional para que esas identidades sean válidas bajo sus condiciones. Si $A,B$ son racionales y $C$ también lo es, los radicandos $u,v$ resultan racionales y la expresión puede quedar más sencilla. Racionalidad útil para una simplificación y existencia de una identidad no son la misma afirmación.
 
-### 3.5 Ecuaciones Exponenciales
-Son aquellas igualdades donde la incógnita se encuentra ubicada en el exponente o en la base y exponente a la vez.
+Como comprobación independiente, $\sqrt{32}=\sqrt{16\cdot2}=4\sqrt{2}$. La extracción utiliza un factor cuadrado no negativo. En $\sqrt{50}$ se extrae $25$ y en $\sqrt{72}$ se extrae $36$, de modo que se obtienen $5\sqrt{2}$ y $6\sqrt{2}$.
 
-1. **Principio de Bases Iguales:**
-   a^{f(x)} = a^{g(x)} \iff f(x) = g(x) \quad (a > 0, \; a \neq 1)
-2. **Principio de Exponentes Iguales:**
-   (f(x))^n = (g(x))^n \implies \begin{cases} f(x) = g(x), & \text{si } n \text{ es impar} \\ f(x) = \pm g(x), & \text{si } n \text{ es par} \end{cases}
-3. **Principio de Semejanza o Analogía (Simetría):**
-   [f(x)]^{f(x)} = a^a \implies f(x) = a
+## 3.2.2 · Racionalización y denominadores
+**Racionalizar** es reescribir una fracción eliminando radicales del denominador mediante una identidad. La fracción conserva su valor si se multiplica por $F/F$ con $F\ne0$. Un factor cero no representa uno dividido por sí mismo: vuelve inválida la operación.
 
----
+Para un monomio, $1/\sqrt{5}$ se multiplica por $\sqrt{5}/\sqrt{5}$ y queda $\sqrt{5}/5$. Si aparece $1/\sqrt{4}$, puede calcularse directamente $1/2$; escribirla como $\sqrt{4}/4$ es otra expresión equivalente, no una obligación de dejar un radical que ya se puede evaluar.
 
+| Expresión | Factor que se utiliza | Resultado |
+| --- | --- | --- |
+| $1/\sqrt{5}$ | $\sqrt{5}$ | $\sqrt{5}/5$ |
+| $1/(\sqrt{3}+\sqrt{2})$ | $\sqrt{3}-\sqrt{2}$ | $\sqrt{3}-\sqrt{2}$ |
+| $1/(\sqrt{3}-\sqrt{2})$ | $\sqrt{3}+\sqrt{2}$ | $\sqrt{3}+\sqrt{2}$ |
+| $1/(\sqrt[3]{2}+1)$ | $\sqrt[3]{4}-\sqrt[3]{2}+1$ | $(\sqrt[3]{4}-\sqrt[3]{2}+1)/3$ |
 
-## 2. FORMULARIO MAESTRO, ARTIFICIOS Y HACKING PREUNIVERSITARIO
-| **Radicales Dobles (Forma 2)** | \sqrt{(a+b) \pm 2\sqrt{ab}} = \sqrt{a} \pm \sqrt{b} \quad (a > b) |
-| **FR Binomio Cuadrático** | (\sqrt{a} + \sqrt{b})(\sqrt{a} - \sqrt{b}) = a - b |
-| **FR Binomio Cúbico** | (\sqrt[3]{a} \pm \sqrt[3]{b})(\sqrt[3]{a^2} \mp \sqrt[3]{ab} + \sqrt[3]{b^2}) = a \pm b |
-| **Ecuación Exponencial Canónica** | a^{f(x)} = a^{g(x)} \implies f(x) = g(x) \quad (a > 0, a \neq 1) |
-| **Analogía Exponencial** | x^x = a^a \implies x = a |
+El conjugado se apoya en $(p+q)(p-q)=p^2-q^2$. Para raíces cuadradas se toma $p=\sqrt{a}$ y $q=\sqrt{b}$, de modo que el producto es $a-b$. En los reales, esas raíces exigen $a,b\ge0$ y el denominador original debe ser distinto de cero.
 
----
+Si $a=b>0$, la suma $\sqrt{a}+\sqrt{b}$ no es cero, pero su supuesto factor conjugado $\sqrt{a}-\sqrt{b}$ sí lo es. No se puede usar ese factor como si fuera válido. Se simplifica antes la suma a $2\sqrt{a}$ y, si se requiere racionalizar, se trabaja con ese monomio.
 
+Para cubos se utilizan dos identidades: $(p+q)(p^2-pq+q^2)=p^3+q^3$ y $(p-q)(p^2+pq+q^2)=p^3-q^3$. El signo del término mixto cambia con la identidad; no se elige por imitación del caso cuadrático.
 
-### 6. TÉCNICAS Y ARTIFICIOS DE CÁLCULO (HACKING PREUNIVERSITARIO)
+Con $p=\sqrt[3]{a}$ y $q=\sqrt[3]{b}$, los denominadores finales son $a+b$ o $a-b$. Si se desea un denominador racional, $a,b$ deben ser racionales en este uso. Con variables generales, que desaparezca el signo radical no demuestra por sí solo que el valor de cada variable sea racional.
 
-### Artificio 1: Racionalización Encadenada por Diferencia de Cuadrados Telescópica
-Para simplificar sumatorias del tipo:
-E = \frac{1}{\sqrt{2} + 1} + \frac{1}{\sqrt{3} + \sqrt{2}} + \frac{1}{\sqrt{4} + \sqrt{3}} + \dots + \frac{1}{\sqrt{100} + \sqrt{99}}
-* **Paso Rápido:** Multiplicamos cada término por su conjugada:
-  \frac{1}{\sqrt{k+1} + \sqrt{k}} \cdot \frac{\sqrt{k+1} - \sqrt{k}}{\sqrt{k+1} - \sqrt{k}} = \frac{\sqrt{k+1} - \sqrt{k}}{(k+1) - k} = \sqrt{k+1} - \sqrt{k}
-* La serie se colapsa telescópicamente:
-  E = (\sqrt{2} - 1) + (\sqrt{3} - \sqrt{2}) + (\sqrt{4} - \sqrt{3}) + \dots + (\sqrt{100} - \sqrt{99})
-  Todos los términos intermedios se anulan en pares:
-  E = \sqrt{100} - 1 = 10 - 1 = 9
-* ¡Un problema de 100 fracciones resuelto en dos líneas!
+## 3.2.3 · Cancelación telescópica
+Una suma es **telescópica** cuando, después de una transformación válida, sus términos intermedios se cancelan. Primero se obtiene una fórmula para un término y luego se comprueba qué extremos permanecen. No se borra una raíz solo por aparecer cerca de otra.
 
----
+Para $k\ge1$, el término $1/(\sqrt{k+1}+\sqrt{k})$ se racionaliza como $\sqrt{k+1}-\sqrt{k}$, porque $(k+1)-k=1$. El factor utilizado es positivo y, por tanto, no nulo.
 
+En la suma desde $k=1$ hasta $k=99$, se obtiene $(\sqrt{2}-1)+(\sqrt{3}-\sqrt{2})+\cdots+(\sqrt{100}-\sqrt{99})$. Cada raíz intermedia aparece una vez sumando y otra restando. Quedan $\sqrt{100}-1=9$. Hay **99 términos**, no cien: el conteo debe corresponder a los índices escritos.
 
-### 5. MNEMOTECNIAS DE COMBATE PREUNIVERSITARIO
+| Suma parcial | Después de racionalizar | Resultado |
+| --- | --- | --- |
+| Desde $k=1$ hasta $k=1$ | $\sqrt{2}-1$ | $\sqrt{2}-1$ |
+| Desde $k=1$ hasta $k=2$ | $(\sqrt{2}-1)+(\sqrt{3}-\sqrt{2})$ | $\sqrt{3}-1$ |
+| Desde $k=1$ hasta $k=n$ | Cancelan las raíces interiores | $\sqrt{n+1}-1$ |
+| Desde $k=1$ hasta $k=99$ | Permanecen los extremos | $9$ |
 
-### 1. El Radical Doble Rápido: "Suma Afuera, Producto Adentro"
-* \sqrt{\mathbf{S} \pm 2\sqrt{\mathbf{P}}} = \sqrt{a} \pm \sqrt{b}
-* Donde \mathbf{S} = a + b y \mathbf{P} = a \cdot b.
-* *Ejemplo Mental:* \sqrt{10 + 2\sqrt{21}}:
-  - Dos números que sumados den 10 y multiplicados 21: 7 y 3.
-  - Resultado directo: \sqrt{7} + \sqrt{3}.
+La cancelación ocurre entre términos de una suma ya desarrollada. No autoriza a cancelar sumandos de numerador y denominador como si fueran factores. Por ejemplo, en $(a+b)/a$ no se borra directamente la letra $a$ de la suma; si $a\ne0$, se separa como $1+b/a$.
 
-### 2. Fabricar el Número 2 en el Radical Doble: "Meter o Sacar"
-* Si tienes \sqrt{A + \sqrt{B}} sin el dos:
-  - **Sacar un 4 de adentro:** \sqrt{B} = \sqrt{4 \cdot k} = 2\sqrt{k}.
-  - **O multiplicar todo por \frac{\sqrt{2}}{\sqrt{2}}:**
-    \sqrt{A + \sqrt{B}} = \frac{\sqrt{2A + 2\sqrt{B}}}{\sqrt{2}}
+## 3.2.4 · Ecuaciones exponenciales sin analogías falsas
+Si la base común satisface $a>0$ y $a\ne1$, la función $a^t$ toma valores diferentes para exponentes reales diferentes. Por ello, $a^{f(x)}=a^{g(x)}$ equivale a $f(x)=g(x)$ dentro del dominio de las expresiones. Esa propiedad no se aplica con base uno, cuya potencia vale uno para cualquier exponente real.
 
----
+**Ejemplo resuelto.** En $3^{2x-1}=27$, se escribe $27=3^3$. Como la base tres cumple las condiciones, $2x-1=3$ y $x=2$. La comprobación da $3^{2\cdot2-1}=3^3=27$.
 
+Si dos potencias tienen el mismo exponente entero positivo, la paridad importa. Para $u^n=v^n$ con $n$ impar, se obtiene $u=v$. Con $n$ par, se obtiene $u=v$ o $u=-v$. No se traslada esta conclusión sin análisis a exponentes variables, cero o fraccionarios.
 
-## 3. ZONA DE TRAMPAS Y DISTRACTORES DE EXAMEN
-### 7. ZONA DE TRAMPAS Y DISTRACTORES ("¡PELIGRO EXAMEN!")
+La igualdad $x^x=a^a$ no obliga, por su sola apariencia, a que $x=a$. Con bases positivas existe este contraejemplo: $(1/4)^{1/4}=(1/2)^{1/2}$. En efecto, $1/4=(1/2)^2$ y la potencia de base positiva se transforma como $((1/2)^2)^{1/4}=(1/2)^{1/2}$.
 
-> [!CAUTION]
-> ### Trampa 1: El Orden de los Términos en la Resta de Radicales Dobles
-> Al calcular \sqrt{a + b - 2\sqrt{ab}}, el resultado debe ser **estrictamente no negativo**:
-> \sqrt{a + b - 2\sqrt{ab}} = \sqrt{a} - \sqrt{b} \quad \text{con } a > b
-> Si escribes \sqrt{b} - \sqrt{a}, obtendrás un valor negativo, violando la definición de raíz aritmética.
-> *Ejemplo:* \sqrt{5 - 2\sqrt{6}} = \sqrt{3} - \sqrt{2}, nunca \sqrt{2} - \sqrt{3}.
+Por tanto, en $x^x=(1/2)^{1/2}$ se comprueban al menos $x=1/2$ y $x=1/4$. Encontrar una coincidencia visual ofrece un candidato, pero no demuestra que sea el único ni reemplaza el estudio del dominio y de las propiedades de la función.
 
-> [!WARNING]
-> ### Trampa 2: Soluciones Falsas en Ecuaciones Exponenciales
-> En ecuaciones con analogía como x^x = \left(\frac{1}{2}\right)^{1/2}:
-> - Si transformas: \left(\frac{1}{2}\right)^{1/2} = \left(\frac{1}{4}\right)^{1/4}.
-> - Por analogía: x = \frac{1}{4}.
-> ¡Ambas formas deben evaluarse porque las funciones potenciales no siempre son monótonas en el intervalo \langle 0, 1 \rangle!
+| Forma de ecuación | Procedimiento justificado | Precaución |
+| --- | --- | --- |
+| $a^{f(x)}=a^{g(x)}$ | Igualar exponentes | Base positiva y distinta de uno. |
+| $u^{2n}=v^{2n}$ | Considerar $u=v$ y $u=-v$ | No descartar la rama de signo. |
+| $x^x=a^a$ | Verificar candidatos y estudiar el ámbito | La coincidencia $x=a$ no prueba unicidad. |
+| $\sqrt{A(x)}=B(x)$ | Exigir $B(x)\ge0$, transformar y comprobar | Elevar al cuadrado puede introducir candidatos no válidos. |
 
----
+Como ejemplo construido de aplicación, un modelo $Q(t)=500(1/2)^t$ da $Q(3)=500/8=62.5$. El cálculo usa una expresión supuesta para estudiar exponentes. No afirma que todo proceso físico siga esa ley ni se atribuye a un laboratorio real sin evidencia.
 
+## Importante
+Las raíces principales son no negativas, también cuando valen cero. Un factor racionalizante debe ser no nulo. Conserva las condiciones sobre radicandos y denominadores, comprueba el número de términos en una suma y no deduzcas unicidad por analogía. Transformaciones equivalentes y cálculos correctos deben mantenerse dentro del dominio que se está estudiando.
 
-## 4. MODELOS DE EXAMEN Y APLICACIÓN DECO
-### 8. APLICACIÓN AL MUNDO REAL Y CONTEXTO DECO
-
-### Cálculo de Atenuación de Señales en Fibra Óptica e Ingeniería Sísmica
-En la geofísica volcánica del Misti y análisis sísmico del Instituto Geofísico de la UNSA, la propagación de las ondas sísmicas P y S a través de estratos de roca volcánica (sillar, andesita) se amortigua exponencialmente:
-A(x) = A_0 \cdot e^{-\alpha x} = A_0 \cdot \sqrt[n]{b^{-k x}}
-La simplificación de radicales anidados y exponentes fraccionarios permite linealizar las ecuaciones de atenuación para predecir la aceleración del suelo en la ciudad de Arequipa.
-
----
+## Síntesis
+Los radicales dobles se analizan comparando suma, producto y signo principal. La racionalización utiliza identidades y factores no nulos; la cancelación telescópica conserva sus extremos. En las ecuaciones exponenciales se especifican las condiciones de la base y se verifican los candidatos. La forma de una expresión puede sugerir un método, pero la justificación es la que conserva su valor y sus soluciones.

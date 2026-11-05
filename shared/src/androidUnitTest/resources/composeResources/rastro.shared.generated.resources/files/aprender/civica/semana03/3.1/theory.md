@@ -6,24 +6,41 @@
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DEL ESTADO Y NACIÓN
 
-```
-                                      ESTADO Y NACIÓN
-                                             │
-         ┌──────────────────┬────────────────┴────────────────┬──────────────────┐
-         ▼                  ▼                                 ▼                  ▼
-    CONCEPTO Y         ELEMENTOS                         EL ESTADO          DEBERES Y
-    DIFERENCIAS        DEL ESTADO                         PERUANO           DEFENSA DEL
-         │                  │                                 │              ORDEN CONST.
-• Nación:            1. Pueblo / Población              • Art. 43° Const.:       │
-  Comunidad            (Ius soli y Ius sanguinis)         - Democrático,     • Art. 44° Const.:
-  socio-cultural     2. Territorio                        social, soberano     Deberes
-  e histórica          (Suelo, subsuelo, mar,             - Uno e              primordiales
-• Estado:              espacio aéreo: Art. 54°)           indivisible        • Art. 45°:
-  Organización       3. Poder Político / Soberanía        - Unitario,          Poder emana
-  jurídica y           (Capacidad de mando legítimo)      representativo y     del pueblo
-  política soberana  4. Orden Jurídico (Constitución)     descentralizado    • Art. 46°:
-                                                          - Separación         Derecho de
-                                                            de poderes         insurgencia
+```mermaid
+graph TD
+ ROOT["Estado, nación y gobierno"]
+ B1["Distinguir los conceptos"]
+ B1N1["Estado: organización política y jurídica de una población sobre un territorio."]
+ B1N2["Nación: comunidad histórica y cultural; su definición no se reduce a una sola lengua o ascendencia."]
+ B1N3["Gobierno: autoridades y funciones de dirección; no es idéntico al Estado entero."]
+ B2["Elementos y ordenamiento"]
+ B2N1["Población, territorio y poder político son categorías del análisis del Estado."]
+ B2N2["Examinar el orden jurídico y las instituciones sin confundirlos con una persona gobernante."]
+ B2N3["Ius soli e ius sanguinis aluden a criterios de nacionalidad; no son elementos de una población ni pruebas de que exista un Estado."]
+ B3["El Estado peruano"]
+ B3N1["El artículo 43 caracteriza la República y la organización de su gobierno; distinguir esas dimensiones."]
+ B3N2["La unidad estatal no elimina la descentralización ni exige uniformidad cultural."]
+ B3N3["El poder estatal está sujeto a la Constitución; no es una autorización ilimitada para cualquier autoridad."]
+ B4["Deberes y defensa constitucional"]
+ B4N1["El artículo 44 vincula deberes estatales con soberanía, derechos, seguridad y bienestar general."]
+ B4N2["El artículo 45 sitúa el origen del poder y los límites de su ejercicio."]
+ B4N3["La defensa del orden constitucional debe estudiarse bajo sus condiciones, sin presentar cualquier desacuerdo político como usurpación."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---
@@ -264,3 +281,15 @@ E) Establecer y ejecutar la política de fronteras y promover la integración.
 - **FRON**: Desarrollar e integrar las **Fron**teras
 
 ---
+
+
+### Comparar sin identificar conceptos distintos
+
+| Concepto | Referencia principal | Confusión que debe evitarse |
+|---|---|---|
+| Estado | Organización política, jurídica e institucional | Reducirlo al gobernante actual |
+| Gobierno | Autoridades y dirección política | Confundir un cambio de autoridades con desaparición del Estado |
+| Nación | Comunidad histórica y cultural | Exigir una única lengua o costumbre para toda su población |
+| Nacionalidad | Vínculo jurídico de una persona con un Estado | Tratar sus criterios de adquisición como elementos del Estado |
+
+Estos conceptos pueden relacionarse sin ser equivalentes. Identificar primero qué pregunta plantea el ejercicio.

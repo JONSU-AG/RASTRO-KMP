@@ -1,109 +1,103 @@
-## 1. MARCO CONCEPTUAL Y ONTOLOGÍA
-## 1. FICHA TÉCNICA Y MATRIZ DE COMPETENCIAS
+# Potencias y raíces reales: reglas con sus condiciones
 
-| Parámetro | Especificación Oficial |
-| :--- | :--- |
-| **Eje Temático** | EJE II: Matemática |
-| **Asignatura / Componente** | Álgebra |
-| **Tema Oficial N.°** | Tema III: Potenciación y radicación: propiedades, racionalización |
-| **Referencia Prospecto UNSA** | Resolución de Consejo Universitario N.° 0028-2026 (Págs. 9, 44-45) |
-| **Ponderación por Pregunta** | **Ingenierías:** 1.658337400 pts (4 preg. = 6.633350 pts)<br>**Biomédicas:** 1.265447400 pts (3 preg. = 3.796342 pts)<br>**Sociales:** 0.824574000 pts (3 preg. = 2.473722 pts) |
-| **Nivel de Complejidad Cognitiva** | Bloom: Análisis Operativo, Transformación de Estructuras Irracionales y Cálculo Algebraico |
-| **Conexión Interuniversitaria** | **UNSA:** Transformación de radicales dobles a simples, ecuaciones exponenciales con analogía y racionalización con binomios cúbicos.<br>**UNMSM (DECO):** Modelación del decaimiento radiactivo mediante exponentes fraccionarios y simplificación de circuitos de impedancia irracional.<br>**UNI:** Racionalización de denominadores de la forma \sqrt[n]{a} \pm \sqrt[n]{b}, límites algebraicos con indeterminación 0/0 y radicales anidados infinitos. |
+## Introducción
+Las potencias condensan productos y las raíces permiten recuperar cantidades a partir de una potencia conocida. Sin embargo, no todas las reglas se pueden aplicar a cualquier base y exponente. En los reales, las bases negativas y las raíces de índice par requieren atención particular.
 
-### Matriz de Indicadores de Logro Evaluados
-1. **Teoría de Exponentes Rigurosa:** Aplicar con precisión los teoremas de potenciación y radicación en \mathbb{R}, evitando indeterminaciones (0^0) y raíces de índice par de números negativos.
-2. **Transformación de Radicales Dobles a Simples:** Descomponer radicales de la forma \sqrt{A \pm \sqrt{B}} y de la forma práctica \sqrt{(a+b) \pm 2\sqrt{ab}} en sumas o diferencias de radicales simples.
-3. **Técnicas Avanzadas de Racionalización:** Determinar el factor racionalizante (FR) para denominadores monomios, binomios cuadráticos, binomios cúbicos y expresiones de orden superior.
-4. **Resolución de Ecuaciones Exponenciales:** Resolver igualdades trascendentes elementales mediante criterios de bases iguales, exponentes iguales y analogía estructural.
-
----
-
-
-## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
+La notación también importa. El signo de una base negativa debe quedar dentro de paréntesis si forma parte de la potencia. La raíz cuadrada principal no representa simultáneamente dos números: $\sqrt{25}=5$, aunque la ecuación $x^2=25$ tenga las soluciones $5$ y $-5$.
 
 ```mermaid
-graph TD
-    A["TEORÍA DE EXPONENTES Y RADICALES"] --> B["Potenciación y Radicación en ℝ"]
-    A --> C["Radicales Dobles"]
-    A --> D["Racionalización"]
-    A --> E["Ecuaciones Exponenciales"]
-
-    B --> B1["Leyes de Exponentes: xᵃ · xᵇ = xᵃ⁺ᵇ"]
-    B --> B2["Exponente Cero y Negativo: x⁻ⁿ = 1/xⁿ"]
-    B --> B3["Exponente Fraccionario y Raíz de Raíz"]
-
-    C --> C1["Forma General: √(A ± √B) con C = √(A² - B)"]
-    C --> C2["Forma Práctica: √((a + b) ± 2√(ab)) = √a ± √b"]
-    C --> C3["Radicales Dobles de Tres o Cuatro Términos"]
-
-    D --> D1["Caso Monomio: Denominador ⁿ√(aᵏ)"]
-    D --> D2["Caso Binomio Cuadrático: Diferencia de Cuadrados"]
-    D --> D3["Caso Binomio Cúbico: Suma y Diferencia de Cubos"]
-
-    E --> E1["Bases Iguales: aˣ = aʸ ⇒ x = y"]
-    E --> E2["Analogía o Semejanza: xˣ = aᵃ ⇒ x = a"]
+flowchart TD
+A[Potencias y raíces reales] --> B[Potencias]
+B --> C[Reglas de cálculo]
+A --> D[Radicación]
+A --> E[Exponentes racionales]
+B --> F[Cero y negativos: base no nula]
+B --> G[Signos y paréntesis]
+C --> H[Productos y cocientes]
+C --> I[Potencia de potencia: revisar dominio]
+D --> J[Índice par: raíz principal no negativa]
+D --> K[Índice impar: admite radicandos negativos]
+E --> L[Base positiva: reglas generales]
+E --> M[Base negativa: denominador impar y fracción reducida]
 ```
 
----
+## 3.1.1 · Exponentes enteros y signos
+Para un entero positivo $n$, la potencia $a^n$ representa un producto de $n$ factores iguales a $a$. En particular, $a^1=a$. Si la base es distinta de cero, se define $a^0=1$. En el marco de estas operaciones algebraicas no se asigna un valor a $0^0$ por la misma regla.
 
+Un exponente negativo indica un **recíproco**, no un cambio de signo: $a^{-n}=1/a^n$, con $a\ne0$ y $n$ entero positivo. Así, $2^{-4}=1/16$ y no $-16$. El denominador no puede ser cero, de modo que $0^{-n}$ no está definido.
 
-## 2. DESARROLLO TEÓRICO FORMAL - PARTE I
-### 3. DESARROLLO TEÓRICO FORMAL
+| Expresión | Resultado | Justificación |
+| --- | --- | --- |
+| $2^4$ | $16$ | Producto de cuatro factores iguales a dos. |
+| $(-2)^4$ | $16$ | La base negativa está dentro de la potencia par. |
+| $-2^4$ | $-16$ | Primero se calcula la potencia y después el opuesto. |
+| $(-2)^3$ | $-8$ | Producto de un número impar de factores negativos. |
+| $2^{-4}$ | $1/16$ | Recíproco de la cuarta potencia. |
 
-### 3.1 Potenciación en \mathbb{R}
-Operación algebraica que consiste en encontrar una cantidad llamada **potencia** (P), a partir de dos cantidades denominadas **base** (b \in \mathbb{R}) y **exponente** (n):
-P = b^n
+Los paréntesis distinguen $(-2)^4$ de $-2^4$. No se trata de dos modos equivalentes de escribir lo mismo. Para evitar errores, identifica qué parte del enunciado constituye la base antes de aplicar la regla del signo.
 
-#### Definiciones Básicas:
-1. **Exponente Natural (n \in \mathbb{N}, n \ge 2):**
-   b^n = \underbrace{b \cdot b \cdot b \dots b}_{n \text{ factores}}
-2. **Exponente Uno:** b^1 = b.
-3. **Exponente Cero (b \neq 0):**
-   b^0 = 1 \quad (\forall b \in \mathbb{R} \setminus \{0\})
-   > [!IMPORTANT]
-   > La expresión 0^0 es una **indeterminación matemática** (no está definida en \mathbb{R}).
-4. **Exponente Negativo (b \neq 0, n \in \mathbb{Z}^+):**
-   b^{-n} = \frac{1}{b^n} = \left(\frac{1}{b}\right)^n
-   \left(\frac{a}{b}\right)^{-n} = \left(\frac{b}{a}\right)^n \quad (a \neq 0, b \neq 0)
+En una cadena de exponentes, la agrupación también debe estar clara. $2^{3^2}=2^9=512$ mientras $(2^3)^2=2^6=64$. La segunda es una potencia de potencia; la primera tiene como exponente una potencia completa. No se pueden intercambiar esas estructuras por parecerse sus símbolos.
 
-#### Teoremas Fundamentales de la Potenciación:
-1. Multiplicación de bases iguales: x^a \cdot x^b = x^{a+b}
-2. División de bases iguales (x \neq 0): \frac{x^a}{x^b} = x^{a-b}
-3. Potencia de una multiplicación: (x \cdot y)^n = x^n \cdot y^n
-4. Potencia de una división (y \neq 0): \left(\frac{x}{y}\right)^n = \frac{x^n}{y^n}
-5. Potencia de potencia: \left(x^a\right)^b = x^{a \cdot b} = \left(x^b\right)^a
-   > [!CAUTION]
-   > No confundir con la cadena de exponentes: x^{a^b} \neq (x^a)^b. En x^{a^b} se opera de arriba hacia abajo.
+## 3.1.2 · Reglas de potenciación
+Con exponentes enteros, las leyes se justifican por el producto y el recíproco, siempre que las expresiones estén definidas. Si aparece un exponente cero o negativo sobre una base, se conserva la restricción correspondiente. El cociente necesita además denominador distinto de cero.
 
----
+| Operación | Regla | Condición de este uso |
+| --- | --- | --- |
+| Producto de base común | $a^m a^n=a^{m+n}$ | Exponentes enteros y expresiones definidas. |
+| Cociente de base común | $a^m/a^n=a^{m-n}$ | $a\ne0$. |
+| Potencia de producto | $(ab)^n=a^n b^n$ | Entero n y todas las expresiones definidas. |
+| Potencia de cociente | $(a/b)^n=a^n/b^n$ | $b\ne0$ y demás restricciones del exponente. |
+| Potencia de potencia | $(a^m)^n=a^{mn}$ | Enteros m, n y expresiones definidas. |
 
-### 3.2 Radicación en \mathbb{R}
-Operación inversa a la potenciación donde, dados el **radicando o cantidad subradical** (a) y el **índice** (n \in \mathbb{Z}^+, n \ge 2), se halla la **raíz** (b):
-\sqrt[n]{a} = b \iff b^n = a
-* **Regla de Signos en \mathbb{R}:**
-  - \sqrt[\text{par}]{+} = +
-  - \sqrt[\text{par}]{-} \notin \mathbb{R} (pertenece al cuerpo complejo \mathbb{C})
-  - \sqrt[\text{impar}]{+} = +
-  - \sqrt[\text{impar}]{-} = -
+**Ejemplo resuelto.** $2^4\cdot2^5=2^{4+5}=2^9=512$. Solo se suman exponentes porque hay un producto con base común. En $2^4+2^5$ hay una suma, y esa misma regla no permite escribir $2^9$.
 
-#### Teoremas Fundamentales de la Radicación:
-1. **Exponente Fraccionario:**
-   x^{\frac{m}{n}} = \sqrt[n]{x^m} = (\sqrt[n]{x})^m
-2. **Raíz de un Producto:**
-   \sqrt[n]{x \cdot y} = \sqrt[n]{x} \cdot \sqrt[n]{y}
-3. **Raíz de un Cociente (y \neq 0):**
-   \sqrt[n]{\frac{x}{y}} = \frac{\sqrt[n]{x}}{\sqrt[n]{y}}
-4. **Raíz de Raíz:**
-   \sqrt[m]{\sqrt[n]{\sqrt[p]{x}}} = \sqrt[m \cdot n \cdot p]{x}
-5. **Radicales Consecutivos (Regla del "Por-Más-Por-Más"):**
+**Ejemplo resuelto.** $3^5/3^4=3^{5-4}=3$. El denominador es distinto de cero. En $(2^4)^2$, en cambio, se multiplican exponentes: $2^{4\cdot2}=2^8=256$.
 
-## 3. FORMULARIO FUNDAMENTAL Y LEYES BASE
-### 4. FORMULARIO MAESTRO (LATEX ESTRICTO)
+Si los exponentes dejan de ser enteros, no se deben conservar estas reglas sin revisar la base. Para bases **positivas** se dispone de las leyes usuales con exponentes reales. Con bases negativas, algunas transformaciones aparentes cambian el significado o hacen aparecer expresiones no definidas en los reales.
 
-| Ley / Identidad | Expresión Matemática Rigurosa |
-| :--- | :--- |
-| **Exponente Negativo** | x^{-n} = \frac{1}{x^n} \quad (x \neq 0) |
-| **Exponente Fraccionario** | x^{m/n} = \sqrt[n]{x^m} |
-| **Regla del Producto Mixto** | \sqrt[m]{x^a \sqrt[n]{x^b \sqrt[p]{x^c}}} = x^{\frac{(a \cdot n + b)p + c}{mnp}} |
-| **Radicales Dobles (General)** | \sqrt{A \pm \sqrt{B}} = \sqrt{\frac{A+C}{2}} \pm \sqrt{\frac{A-C}{2}} \quad (C = \sqrt{A^2 - B}) |
+Un caso concreto lo muestra: $\bigl((-1)^2\bigr)^{1/2}=\sqrt{1}=1$, pero $(-1)^{2(1/2)}=(-1)^1=-1$. No es una contradicción de la aritmética: se aplicó fuera de sus condiciones una regla generalizada a exponentes fraccionarios sobre base negativa.
+
+## 3.1.3 · Raíces reales y raíz principal
+Para índice **impar**, cada real $a$ tiene una única raíz real $b$ que satisface $b^n=a$. Por ejemplo, $\sqrt[3]{64}=4$ y $\sqrt[3]{-64}=-4$. El signo del radicando no impide la existencia de una raíz real de índice impar.
+
+Para índice **par**, el radical real exige un radicando no negativo y designa su raíz **principal**, también no negativa. En particular, $\sqrt{25}=5$. La ecuación $b^2=25$ sí admite dos soluciones, porque pregunta por todos los números cuyo cuadrado es veinticinco.
+
+| Expresión o ecuación | Resultado real | Diferencia relevante |
+| --- | --- | --- |
+| $\sqrt{25}$ | $5$ | El símbolo radical designa la raíz principal. |
+| $b^2=25$ | $b=5$ o $b=-5$ | Se buscan todas las soluciones de una ecuación. |
+| $\sqrt{0}$ | $0$ | La raíz principal puede ser cero. |
+| $\sqrt{-25}$ | No está definida en los reales | El índice es par y el radicando negativo. |
+| $\sqrt[3]{-125}$ | $-5$ | La raíz de índice impar admite radicando negativo. |
+
+La identidad correcta es $\sqrt{x^2}=\lvert x\rvert$. Si $x=-4$, el cuadrado es $16$ y su raíz principal es $4$. Escribir simplemente $\sqrt{x^2}=x$ descartaría la condición de no negatividad de la raíz. El gráfico de esta sección permite comprobarlo con valores positivos, negativos y cero.
+
+En general, para $n$ par se tiene $\sqrt[n]{x^n}=\lvert x\rvert$ y para $n$ impar se tiene $\sqrt[n]{x^n}=x$. Ambas afirmaciones trabajan en los reales. La distinción de paridad no se elimina cancelando visualmente índice y exponente.
+
+Las reglas de producto y cociente de raíces también requieren condiciones. Con índice par, $\sqrt[n]{ab}=\sqrt[n]{a}\sqrt[n]{b}$ se aplica en los reales si $a,b\ge0$; para el cociente, además, $b>0$. Con índice impar, los factores pueden ser negativos y el denominador sigue necesitando ser no nulo.
+
+Por ejemplo, $\sqrt{(-1)(-1)}=1$ está definida, pero $\sqrt{-1}\sqrt{-1}$ no es una expresión real. Separar el radical en ese caso no es una transformación válida dentro del ámbito de la lección.
+
+## 3.1.4 · Exponentes racionales y radicales anidados
+Para $a>0$, un exponente racional se interpreta mediante raíces: $a^{m/n}=\sqrt[n]{a^m}=(\sqrt[n]{a})^m$, con $n>0$. Se puede trabajar con exponentes negativos porque la base no es cero. Para la base cero, solo se admiten aquí exponentes positivos.
+
+Con base negativa, la definición real de una potencia racional exige escribir la fracción **reducida** y que su denominador sea impar. Esta precaución evita que dos fracciones equivalentes aparenten producir resultados distintos al llevarse a radicales con índices diferentes.
+
+| Base y exponente | Resultado | Condición |
+| --- | --- | --- |
+| $16^{3/4}$ | $8$ | Base positiva: cuarta raíz y después cubo. |
+| $(-8)^{1/3}$ | $-2$ | Denominador impar. |
+| $(-8)^{2/3}$ | $4$ | La fracción está reducida y la raíz cúbica es real. |
+| $(-8)^{1/2}$ | No es real | Denominador par. |
+
+El caso $(-8)^{2/6}$ muestra por qué no se usan reglas sin condiciones: $2/6=1/3$, y la potencia racional reducida vale $-2$. En cambio, $\sqrt[6]{(-8)^2}=\sqrt[6]{64}=2$. Por tanto, la identidad entre esas dos formas no puede extenderse sin restricción a bases negativas.
+
+Para una base positiva, los radicales anidados pueden convertirse a exponentes fraccionarios y combinarse. Por ejemplo, $\sqrt{x^2\sqrt[3]{x^3}}=\sqrt{x^2x}=x^{3/2}$ cuando $x>0$. La condición no es un adorno: garantiza que las conversiones se aplican en un dominio común.
+
+La raíz de una raíz se puede combinar cuando las expresiones están definidas: $\sqrt[m]{\sqrt[n]{x}}=\sqrt[mn]{x}$ en un dominio real compatible con los índices. Para evitar casos ocultos en una fórmula general de varios niveles, puede declararse $x>0$ y explicar por separado los casos de bases negativas que realmente se requieran.
+
+## Importante
+Distingue una raíz principal de todas las soluciones de una ecuación. El cero puede ser raíz; no debe exigirse que toda raíz principal sea estrictamente positiva. Los exponentes cero y negativos necesitan sus restricciones, y las bases negativas no admiten automáticamente todas las leyes de exponentes fraccionarios. Simplificar una expresión requiere conservar el dominio además del valor.
+
+## Síntesis
+Con exponentes enteros se combinan productos, cocientes y potencias bajo sus condiciones de definición. La paridad del índice distingue las raíces reales pares e impares. Una base positiva permite usar las reglas generales de exponentes racionales; con base negativa se revisa la fracción reducida y la paridad. Antes de cancelar símbolos, comprueba qué cantidad está definida y cuál es su signo.

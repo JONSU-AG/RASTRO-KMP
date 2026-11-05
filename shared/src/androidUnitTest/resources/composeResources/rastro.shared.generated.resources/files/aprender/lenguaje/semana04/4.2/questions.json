@@ -2,15 +2,15 @@
   {
     "id": "leng_t04_s02_c01",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La palabra 'blanquirrojo' se ha formado mediante el proceso de:",
+    "statement": "En «blanquirrojo» se reconocen las bases blanco y rojo. ¿Qué proceso general explica su formación?",
     "options": [
-      "Composición por yuxtaposición",
-      "Composición propiamente dicha",
-      "Parasíntesis",
-      "Derivación prefijal"
+      "Sufijación de una sola base",
+      "Composición de dos bases léxicas",
+      "Siglación",
+      "Acortamiento"
     ],
     "correctIndex": 1,
-    "explanation": "En 'blanquirrojo' se unen dos raíces (blanco + rojo) con modificación fonética de la primera (la 'o' muta a 'i'), configurando una composición propiamente dicha.",
+    "explanation": "Criterio: la composición combina bases léxicas. Aplicación: blanquirrojo reúne blanco y rojo, con adaptación del primer componente. Respuesta: Composición de dos bases léxicas. Cambiar una letra no define por sí solo una clase universal llamada composición propia.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.2.2",
@@ -20,7 +20,7 @@
   {
     "id": "leng_t04_s02_c02",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes palabras ha sido creada mediante el mecanismo de composición por yuxtaposición?",
+    "statement": "¿Qué palabra combina una forma verbal y un sustantivo en la estructura «saca + puntas»?",
     "options": [
       "Maniobra",
       "Agridulce",
@@ -28,7 +28,7 @@
       "Sacapuntas"
     ],
     "correctIndex": 3,
-    "explanation": "En 'sacapuntas' se unen dos palabras completas (saca + puntas) sin alteración ortográfica ni fonética en sus bases.",
+    "explanation": "Criterio: un compuesto puede combinar bases de distintas categorías. Aplicación: sacapuntas reúne la forma verbal saca y el sustantivo puntas. Respuesta: Sacapuntas. No se identifica el proceso únicamente por conservar o modificar letras.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.2.2",
@@ -38,15 +38,15 @@
   {
     "id": "leng_t04_s02_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La palabra 'quinceañero' es un ejemplo clásico de parasíntesis porque:",
+    "statement": "En el análisis «en-…-ecer» aplicado a la base sombra para formar «ensombrecer», ¿qué caracteriza la parasíntesis?",
     "options": [
-      "Solo posee prefijos y sufijos",
-      "Proviene de un acortamiento léxico",
-      "Une dos lexemas y un sufijo de forma simultánea sin que existan formas aisladas intermedias",
-      "Se forma por imitación de un sonido natural"
+      "Se acorta una palabra larga eliminando segmentos",
+      "Se seleccionan iniciales de una expresión",
+      "El prefijo y el sufijo participan conjuntamente en la formación sobre la base",
+      "Se imita un sonido mediante una secuencia de sílabas"
     ],
     "correctIndex": 2,
-    "explanation": "En 'quinceañero' concurren dos raíces (quince + año) y un sufijo (-ero) sin que existan independientemente '*quinceaño' ni '*añero'.",
+    "explanation": "Criterio: en este análisis, la parasíntesis consiste en la adjunción conjunta de prefijo y sufijo. Aplicación: ensombrecer se forma sobre sombra, sin tomar sombrecer como etapa intermedia del proceso. Respuesta: participación conjunta de ambos afijos sobre la base.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.2.3",
@@ -56,15 +56,15 @@
   {
     "id": "leng_t04_s02_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La palabra 'desalmado' se considera parasintética por circunfijación debido a que:",
+    "statement": "¿Por qué la presencia de des- y -tad en «deslealtad» no basta para clasificarla como parasintética?",
     "options": [
-      "Se le puede quitar el prefijo y la palabra sigue existiendo",
-      "Proviene de la fusión de dos raíces griegas",
-      "El prefijo y el sufijo se añadieron de forma simultánea a la raíz (no existe '*desalma' ni '*almado')",
-      "Es una sigla lexicalizada"
+      "Porque ninguna palabra con prefijo puede contener un sufijo",
+      "Porque toda palabra que empieza por des- es un compuesto",
+      "Porque lealtad constituye una base pertinente para una derivación por etapas",
+      "Porque se obtiene de las iniciales de una institución"
     ],
     "correctIndex": 2,
-    "explanation": "En 'des-alm-ado', el prefijo 'des-' y el sufijo '-ado' se aplican simultáneamente a la raíz; al retirar cualquiera de ellos no queda una palabra con existencia léxica.",
+    "explanation": "Criterio: tener varios afijos no demuestra su incorporación simultánea. Aplicación: deslealtad puede relacionarse con lealtad mediante des-; lealtad se relaciona a su vez con leal. Respuesta: existe una base pertinente para analizar una derivación por etapas.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.2.3",
@@ -74,15 +74,15 @@
   {
     "id": "leng_t04_s02_c05",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La palabra 'Sedapal' (Servicio de Agua Potable y Alcantarillado de Lima) constituye un claro ejemplo de:",
+    "statement": "«Ofimática» combina fragmentos de oficina e informática. ¿Qué procedimiento describe esa formación?",
     "options": [
-      "Sigla",
+      "Siglación con lectura por deletreo",
       "Onomatopeya",
-      "Acrónimo",
-      "Acortamiento"
+      "Acronimia por unión de fragmentos",
+      "Acortamiento de una única palabra"
     ],
     "correctIndex": 2,
-    "explanation": "Un acrónimo se forma uniendo fragmentos o sílabas iniciales y finales de varias palabras formando un vocablo pronunciable de forma natural.",
+    "explanation": "Criterio: un acrónimo puede formarse combinando segmentos de varias palabras. Aplicación: ofimática reúne fragmentos de oficina e informática, no solo iniciales ni un recorte de una única base. Respuesta: Acronimia por unión de fragmentos.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.2.4",
@@ -100,7 +100,7 @@
       "Acortamiento o truncamiento"
     ],
     "correctIndex": 3,
-    "explanation": "El acortamiento consiste en eliminar sílabas iniciales o finales de una palabra para hacerla más breve y económica sin cambiar su significado.",
+    "explanation": "Criterio: el acortamiento reduce segmentos de una unidad léxica. Aplicación: foto se usa por fotografía y bici por bicicleta; no se combinan iniciales de varias palabras. Respuesta: Acortamiento o truncamiento. El registro o las connotaciones pueden variar aunque se conserve la referencia principal.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.2.4",
@@ -110,7 +110,7 @@
   {
     "id": "leng_t04_s02_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Palabras como 'tictac', 'quiquiriquí' y 'chasquido' se han formado mediante:",
+    "statement": "«Tictac», «miau» y «quiquiriquí» representan sonidos mediante imitación aproximada. ¿A qué procedimiento corresponden?",
     "options": [
       "Onomatopeya",
       "Composición",
@@ -118,7 +118,7 @@
       "Yuxtaposición"
     ],
     "correctIndex": 0,
-    "explanation": "La onomatopeya es la creación de palabras mediante la reproducción fonética aproximada de ruidos, golpes o sonidos de animales.",
+    "explanation": "Criterio: una onomatopeya representa aproximadamente un sonido mediante una forma lingüística. Aplicación: tictac imita el reloj, miau al gato y quiquiriquí al gallo. Respuesta: Onomatopeya. Nombrar un sonido no basta: chasquido, por ejemplo, se relaciona con chascar mediante derivación.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.2.4",
@@ -128,15 +128,15 @@
   {
     "id": "leng_t04_s02_c08",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes palabras se ha formado estrictamente por derivación mediante sufijación?",
+    "statement": "¿Qué palabra presenta sufijación sobre una base simple, a diferencia de los compuestos de las otras opciones?",
     "options": [
-      "Ropavejero",
+      "Sacacorchos",
       "Bocacalle",
       "Cocinero",
       "Ciempiés"
     ],
     "correctIndex": 2,
-    "explanation": "'Cocinero' se forma a partir de la raíz 'cocin-' más el sufijo derivativo de oficio '-ero' (proceso de sufijación pura).",
+    "explanation": "Criterio: la sufijación añade un afijo a una base; la composición combina bases léxicas. Aplicación: cocinero se relaciona con cocina mediante -ero. Respuesta: Cocinero. Sacacorchos, bocacalle y ciempiés presentan combinación de bases.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.2.1",
@@ -146,15 +146,15 @@
   {
     "id": "leng_t04_s02_c09",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En el vocablo 'ciempiés', la unión de 'cien' y 'pies' presenta una mutación ortográfica por la regla que exige escribir 'm' antes de 'p'. Esto constituye una:",
+    "statement": "Al analizar «ciempiés», ¿qué relación explica su formación sin confundir el proceso morfológico con una regla de escritura?",
     "options": [
-      "Composición por yuxtaposición",
-      "Composición propiamente dicha",
-      "Parasíntesis circunfija",
-      "Sigla derivada"
+      "Derivación mediante un sufijo de oficio",
+      "Composición de cien y pies, con adaptación de la escritura",
+      "Parasíntesis por adición simultánea de un prefijo y un sufijo",
+      "Siglación a partir de iniciales"
     ],
     "correctIndex": 1,
-    "explanation": "Al experimentar una alteración formal en su base (cien hacia ciem), la unión de raíces constituye una composición propiamente dicha.",
+    "explanation": "Criterio: se identifican las bases antes de describir su adaptación gráfica. Aplicación: ciempiés combina cien y pies; se escribe m ante p y el resultado lleva tilde. Respuesta: Composición de cien y pies, con adaptación de la escritura. La letra cambiada no es por sí sola el proceso formativo.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.2.2",
@@ -164,15 +164,15 @@
   {
     "id": "leng_t04_s02_c10",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Las siglas como 'DNI', 'ONU' o 'FMI' se caracterizan fundamentalmente porque:",
+    "statement": "DNI, ONU y FMI son siglas. ¿Qué propiedad comparten, aunque no todas se lean de la misma manera?",
     "options": [
-      "Se leen como una palabra corrida mediante acronimia",
-      "Se componen de las letras iniciales de los términos y se deletrean habitualmente",
+      "Proceden siempre del recorte de sílabas de una sola palabra",
+      "Se forman a partir de iniciales de una expresión y pueden tener lectura deletreada o silábica",
       "Se crean exclusivamente mediante prefijos latinos",
-      "Son préstamos del quechua"
+      "Son necesariamente palabras tomadas del quechua"
     ],
     "correctIndex": 1,
-    "explanation": "Las siglas se forman reuniendo las letras iniciales de los vocablos que componen un nombre institucional y suelen pronunciarse deletreándolas.",
+    "explanation": "Criterio: la siglación se relaciona con las iniciales de una expresión, no con una única forma de pronunciación. Aplicación: DNI suele deletrearse y ONU se lee silábicamente; esta última es también acrónimo. Respuesta: formación con iniciales y posibilidad de lectura deletreada o silábica.",
     "subject": "lenguaje",
     "semana": 4,
     "concept": "4.2.4",

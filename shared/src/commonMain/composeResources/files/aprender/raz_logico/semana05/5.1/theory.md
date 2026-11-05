@@ -18,24 +18,45 @@
 
 ## 2. 🗺️ MAPA TAXONÓMICO Y ONTOLOGÍA DEL TEMA
 
-```text
-                               ┌─ Universal Afirmativa (A: Todo S es P -> S n P' = vacío)
-        ┌─ 1. Proposiciones ───┼─ Universal Negativa (E: Ningún S es P -> S n P = vacío)
-        │      Categóricas     ├─ Particular Afirmativa (I: Algún S es P -> S n P =/= vacío)
-        │      (A, E, I, O)    └─ Particular Negativa (O: Algún S no es P -> S n P' =/= vacío)
-        │
-SILOGISMOS                     ┌─ Término Mayor (P: Predicado de la conclusión)
-Y RAZONAMIENTO ─┼─ 2. Estructura del ──┼─ Término Menor (S: Sujeto de la conclusión)
-DEDUCTIVO       │      Silogismo       ├─ Término Medio (M: Conecta las premisas, NO va en conclusión)
-        │                      └─ Premisa Mayor (contiene P) y Premisa Menor (contiene S)
-        │
-        │                      ┌─ Regla del Término Medio (Debe estar distribuido al menos una vez)
-        ├─ 3. Reglas de ───────┼─ Regla de Negatividad (De dos premisas negativas NADA se concluye)
-        │      Validez         ├─ Regla de Particularidad (De dos premisas particulares NADA se concluye)
-        │                      └─ La Conclusión sigue siempre a la parte más débil (Negativa / Particular)
-        │
-        └─ 4. Métodos de ──────┌─ Método de Diagramas de Venn de Tres Conjuntos (S, P, M)
-               Validación      └─ Las 4 Figuras del Silogismo Tradicional (M-P, P-M, etc.)
+```mermaid
+graph TD
+ ROOT["Silogismos y lógica de clases"]
+ B1["Proposiciones categóricas"]
+ B1N1["Universal afirmativa: todo S es P; $S\cap P^c=\varnothing$."]
+ B1N2["Universal negativa: ningún S es P; $S\cap P=\varnothing$."]
+ B1N3["Particular afirmativa: algún S es P; $S\cap P\ne\varnothing$."]
+ B1N4["Particular negativa: algún S no es P; $S\cap P^c\ne\varnothing$."]
+ B2["Términos y premisas"]
+ B2N1["Mayor P: predicado de la conclusión."]
+ B2N2["Menor S: sujeto de la conclusión."]
+ B2N3["Medio M: conecta las premisas y no aparece en la conclusión."]
+ B2N4["Premisa mayor: contiene P; premisa menor: contiene S."]
+ B3["Revisión de validez"]
+ B3N1["El término medio debe estar distribuido al menos una vez en el silogismo categórico válido."]
+ B3N2["Revisar las reglas de cantidad y cualidad dentro del esquema categórico."]
+ B3N3["No concluir existencia de S únicamente desde una universal en la interpretación moderna."]
+ B4["Métodos de comprobación"]
+ B4N1["Diagramas de Venn de tres clases: S, P y M."]
+ B4N2["Figuras: posición del término medio en las dos premisas."]
+ B4N3["Contraejemplo: premisas verdaderas y conclusión falsa."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---
@@ -84,3 +105,8 @@ Un silogismo categórico estándar está compuesto rigurosamente por **tres prop
 M - P & P - M & M - P & P - M \\
 S - M & S - M & M - S & M - S \\
 \hline
+
+
+### Existencia y diagramas de clases
+
+En la interpretación moderna, «todos los S son P» expresa inclusión, pero no asegura que exista algún S. Para obtener «algún S es P» hace falta un testigo o una premisa de existencia. En un diagrama de Venn, sombrear una región vacía no equivale a colocar una marca de existencia. Esta distinción evita trasladar reglas del cuadro tradicional sin aclarar sus supuestos.

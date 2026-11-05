@@ -13,27 +13,47 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                         REACCIONES QUÍMICAS
-                                  │
-         ┌────────────────────────┴────────────────────────┐
-         ▼                                                 ▼
-CLASIFICACIÓN GENERAL                             REACCIONES REDOX (ÓXIDO-REDUCCIÓN)
-• Por el mecanismo o reagrupamiento:               • Transferencia de electrones
-  - Síntesis / Adición                             • Oxidación: Pérdida de e- (Aumenta E.O.)
-  - Descomposición                                   -> Agente Reductor / Forma Oxidada
-  - Desplazamiento Simple                           • Reducción: Ganancia de e- (Disminuye E.O.)
-  - Doble Desplazamiento (Metátesis)                 -> Agente Oxidante / Forma Reducida
-• Por la energía térmica:                         • Dismutación / Desproporción
-  - Exotérmicas (\Delta H < 0)                           │
-  - Endotérmicas (\Delta H > 0)                          ▼
-• Por la reversibilidad:                          MÉTODOS DE BALANCEO
-  - Irreversibles (\to)                          • Método del Tanteo / Simple Inspección
-  - Reversibles (\rightleftharpoons)            • Método Algebraico
-                                                   • Método del Estado de Oxidación (Redox simple)
-                                                   • Método del Ión-Electrón:
-                                                     - Medio Ácido (balance con H^+ y H_2O)
-                                                     - Medio Básico (balance con OH^- y H_2O)
+```mermaid
+graph TD
+ ROOT["Reacciones químicas y balanceo"]
+ B1["Patrones de reacción"]
+ B1N1["Síntesis: varios reactivos forman un producto principal."]
+ B1N2["Descomposición: un reactivo origina varios productos."]
+ B1N3["Desplazamiento simple: una especie sustituye a otra; comprobar si la reacción es posible."]
+ B1N4["Doble desplazamiento: intercambio de especies; revisar precipitado, gas o formación de un electrolito débil."]
+ B2["Energía y reversibilidad"]
+ B2N1["Exotérmica: $\Delta H<0$; endotérmica: $\Delta H>0$, para la reacción y condiciones indicadas."]
+ B2N2["Reversible: puede avanzar en ambos sentidos según las condiciones; no significa velocidades iguales en todo momento."]
+ B2N3["La clasificación por patrón no sustituye la comprobación del cambio de estado de oxidación."]
+ B3["Oxidación y reducción"]
+ B3N1["Oxidación: pérdida formal de electrones y aumento del estado de oxidación."]
+ B3N2["Reducción: ganancia formal de electrones y disminución del estado de oxidación."]
+ B3N3["El agente reductor se oxida; el agente oxidante se reduce."]
+ B3N4["En una desproporción, una misma especie se oxida y se reduce."]
+ B4["Conservar átomos y carga"]
+ B4N1["Tanteo y método algebraico: ajustar coeficientes; nunca modificar subíndices para balancear."]
+ B4N2["Método del estado de oxidación: igualar los cambios electrónicos totales."]
+ B4N3["Ión-electrón en medio ácido: balancear O con $\mathrm{H_2O}$ y H con $\mathrm{H^+}$; ajustar carga con electrones."]
+ B4N4["Medio básico: eliminar $\mathrm{H^+}$ añadiendo $\mathrm{OH^-}$ a ambos lados, simplificar agua y verificar carga."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ B4 --> B4N4
 ```
 
 ---
@@ -86,3 +106,15 @@ Reacción redox exotérmica violenta entre un hidrocarburo (combustible) y el ox
 ### 4. AGENTES REDOX TÍPICOS DE ADMISIÓN
 * **Agentes Oxidantes Fuertes:** Permanganato de potasio (KMnO_4), Dicromato de potasio (K_2Cr_2O_7), Ácido nítrico concentrado (HNO_3), Peróxido de hidrógeno (H_2O_2), Halógenos libres (Cl_2, Br_2).
 * **Agentes Reductores Típicos:** Metales activos (Zn, Fe, Na), Ácido sulfhídrico (H_2S), Monóxido de carbono (CO), Ión yoduro (I^-), Dióxido de azufre (SO_2).
+
+
+### Seguir los electrones sin confundir los agentes
+
+Para $\mathrm{Zn+Cu^{2+}\rightarrow Zn^{2+}+Cu}$:
+
+| Especie inicial | Cambio de estado de oxidación | Proceso | Función |
+|---|---|---|---|
+| $\mathrm{Zn}$ | $0\rightarrow +2$ | Pierde dos electrones: oxidación | Agente reductor |
+| $\mathrm{Cu^{2+}}$ | $+2\rightarrow 0$ | Gana dos electrones: reducción | Agente oxidante |
+
+**Comprobación:** hay un átomo de cada elemento a ambos lados y la carga total es $+2$ en cada miembro. Los electrones perdidos y ganados coinciden; no se cambia la fórmula de las especies para ajustar la ecuación.

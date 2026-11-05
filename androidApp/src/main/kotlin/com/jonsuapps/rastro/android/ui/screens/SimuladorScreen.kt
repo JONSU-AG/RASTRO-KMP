@@ -66,6 +66,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.Surface
 import androidx.activity.compose.BackHandler
+import kotlinx.coroutines.launch
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.key
 import androidx.compose.runtime.DisposableEffect
@@ -250,7 +252,7 @@ fun SimuladorScreen(
     val economy by com.jonsuapps.rastro.monetization.EconomySettings.config.collectAsState()
     val grant by com.jonsuapps.rastro.monetization.ProAccess.grant.collectAsState()
     val entryKind = when (activeSimulatorTab) { 0 -> "SIMULACRO"; 4 -> "RANKING"; 1 -> "RAPIDO"; else -> "" }
-    val entryCost = com.jonsuapps.rastro.monetization.EconomyPolicy.cost(entryKind, wallet.economyAttempts, grant,
+    val entryCost = com.jonsuapps.rastro.monetization.PresentationMode.entryCost(entryKind, wallet.economyAttempts, grant,
         System.currentTimeMillis(), economy)
     fun beginExam() {
                         if (reserving || isExamRunning) return
@@ -385,6 +387,8 @@ fun SimuladorScreen(
             isExamRunning -> {
                 ExamActiveView(
                     questions = examQuestions,
+                    notebookSessionId = examAttemptId,
+                    activityTitle = if(activeRankingConfig != null) "Ranking" else if(activeSimulatorTab==1) "Examen rápido" else "Simulacro",
                     currentIndex = currentQuestionIndex,
                     userAnswers = userAnswers.toMap(),
                     theme = theme,
@@ -508,6 +512,7 @@ fun ExamSetupView(
     ) {
         item {
             Column(Modifier.fillMaxWidth()) {
+                PizarraAccessButton()
                 Text("Simulador Académico", fontSize = 25.sp, lineHeight = 29.sp,
                     fontWeight = FontWeight.Black, color = theme.textPrimary, letterSpacing = (-.5).sp)
                 Box(Modifier.width(36.dp).height(3.dp).background(theme.answerText(false).copy(alpha = .55f), RoundedCornerShape(3.dp)))
@@ -1198,7 +1203,7 @@ private fun FlashcardsQuickDeck(
                             Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).heightIn(min = bodyHeight),
                                 verticalArrangement = if (isBack && parts.explanation != null) Arrangement.spacedBy(14.dp) else Arrangement.Center,
                                 horizontalAlignment = Alignment.CenterHorizontally) {
-                                Text(if (isBack) parts.answer else card.q, color = theme.textPrimary,
+                                com.jonsuapps.rastro.android.ui.components.AcademicText(if (isBack) parts.answer else card.q, color = theme.textPrimary,
                                     fontSize = if (isBack) 16.sp else 17.sp, lineHeight = 24.sp,
                                     fontWeight = FontWeight.SemiBold, textAlign = TextAlign.Center,
                                     modifier = Modifier.fillMaxWidth())
@@ -1209,7 +1214,7 @@ private fun FlashcardsQuickDeck(
                                                 null, tint = Color.Unspecified, modifier = Modifier.size(20.dp))
                                             Text(parts.heading.orEmpty(), color = theme.accentText, fontSize = 12.sp, fontWeight = FontWeight.Bold)
                                         }
-                                        Text(parts.explanation, fontSize = 14.sp, lineHeight = 21.sp, fontWeight = FontWeight.Normal,
+                                        com.jonsuapps.rastro.android.ui.components.AcademicText(parts.explanation, fontSize = 14.sp, lineHeight = 21.sp, fontWeight = FontWeight.Normal,
                                             color = theme.textPrimary, textAlign = TextAlign.Start, modifier = Modifier.fillMaxWidth())
                                     }
                                 }
@@ -1553,6 +1558,8 @@ private fun CreateFlashcardDialog(
 @Composable
 fun ExamActiveView(
     questions: List<com.jonsuapps.rastro.model.ExamQuestion>,
+    notebookSessionId: String,
+    activityTitle: String,
     currentIndex: Int,
     userAnswers: Map<String, Int>,
     theme: com.jonsuapps.rastro.theme.RastroPalette,
@@ -1572,6 +1579,9 @@ fun ExamActiveView(
     onExitNoQuestions: () -> Unit,
     onFinishExam: () -> Unit
 ) {
+    FocusedQuestionMode()
+    val questionScroll=rememberScrollState()
+    var showQuestionTools by remember {mutableStateOf(false)}
     val safeIndex = currentIndex.coerceIn(0, (questions.size - 1).coerceAtLeast(0))
     val q = questions.getOrNull(safeIndex)
     val selectedChoice = q?.let { userAnswers[it.id] }
@@ -1596,44 +1606,22 @@ fun ExamActiveView(
         return
     }
 
-    Column(
+StudyNotebookHost("exam:$notebookSessionId:${q.id}",questionMode=true,drawingContent={
+    com.jonsuapps.rastro.android.ui.components.AcademicText(q.q,color=theme.textPrimary,style=MaterialTheme.typography.titleMedium,fontWeight=FontWeight.Bold)
+    if(!q.imageUrl.isNullOrBlank()) CachedRemoteImage(url=q.imageUrl,contentDescription="Imagen de la pregunta",modifier=Modifier.fillMaxWidth().heightIn(min=120.dp,max=260.dp),contentScale=ContentScale.Fit)
+}) {
+    val drawing=LocalQuestionDrawing.current
+        Column(
         modifier = Modifier
             .fillMaxSize()
             .widthIn(max = 760.dp)
             .padding(16.dp),
         verticalArrangement = Arrangement.SpaceBetween
     ) {
-        Column(Modifier.weight(1f).verticalScroll(rememberScrollState())) {
-            // Barra Superior de Examen
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = "Pregunta ${currentIndex + 1} de ${questions.size}",
-                    style = MaterialTheme.typography.labelMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = theme.accentText
-                )
-
-                Sticker3dButton(
-                    onClick = onFinishExam,
-                    containerColor = Color(0xFFEF4444), bottomBevelColor = theme.cardBevel, strokeColor = theme.strokeBorder,
-                    shape = RastroShapes.Pill,
-                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
-                ) {
-                    Text("Finalizar", style = MaterialTheme.typography.labelSmall, color = Color.White)
-                }
-            }
-
-            Text(
-                text = "Respondidas: ${questions.count { it.id in userAnswers }} de ${questions.size}  ·  En blanco: ${questions.count { it.id !in userAnswers }}",
-                style = MaterialTheme.typography.labelSmall,
-                color = theme.textSecondary,
-                modifier = Modifier.padding(top = 6.dp)
-            )
-
+        QuestionActivityHeader(activityTitle,QuestionProgress(safeIndex+1,questions.size,questions.count { userAnswers[it.id] in it.options.indices }),onFinishExam)
+        if(!drawing) TextButton(onClick={showQuestionTools=!showQuestionTools}) {Text(if(showQuestionTools) "Ocultar índice y filtros" else "Índice y filtros")}
+        QuestionScrollArea(questionScroll,Modifier.weight(1f).fillMaxWidth()) {
+            if(showQuestionTools && !drawing) {
             if (isQuickExam) {
                 OutlinedTextField(
                     value = search,
@@ -1697,6 +1685,7 @@ fun ExamActiveView(
 
             Spacer(modifier = Modifier.height(16.dp))
 
+            }
             // Tarjeta de Enunciado
             Sticker3dCard(
                 modifier = Modifier.fillMaxWidth(),
@@ -1751,7 +1740,7 @@ fun ExamActiveView(
                         color = theme.textSecondary
                     )
                     Spacer(modifier = Modifier.height(8.dp))
-                    Text(
+                    com.jonsuapps.rastro.android.ui.components.AcademicText(
                         text = q.q,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
@@ -1777,7 +1766,7 @@ fun ExamActiveView(
             Spacer(modifier = Modifier.height(16.dp))
 
             // Alternativas
-            q.options.forEachIndexed { optIdx, optText ->
+            if(!drawing) q.options.forEachIndexed { optIdx, optText ->
                 val isSelected = selectedChoice == optIdx
                 Row(
                     modifier = Modifier
@@ -1810,8 +1799,9 @@ fun ExamActiveView(
                         )
                     }
                     Spacer(modifier = Modifier.width(12.dp))
-                    Text(
+                    com.jonsuapps.rastro.android.ui.components.AcademicText(
                         text = optText,
+                        onMathClick = { onSelectAnswer(q.id, optIdx) },
                         style = MaterialTheme.typography.bodyMedium,
                         color = theme.textPrimary
                     )
@@ -1819,8 +1809,9 @@ fun ExamActiveView(
             }
         }
 
+
         // Navegación Anterior / Siguiente
-        Row(
+        if(!drawing) Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
@@ -1851,6 +1842,7 @@ fun ExamActiveView(
                 }
             }
         }
+    }
     }
 }
 

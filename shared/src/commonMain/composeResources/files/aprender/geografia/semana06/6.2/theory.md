@@ -19,8 +19,8 @@ graph TD
     MAR_PERU --> AFLOR["Fenómeno de Afloramiento (Upwelling):<br/>Alisios SE, Coriolis, Transporte de Ekman, Nutrientes"]
     MAR_PERU --> CORR["Sistema de Corrientes:<br/>Corriente Peruana (Humboldt), Corriente de El Niño, Cromwell"]
 
-    AGUAS_CONT --> VERT_PAC["Vertiente del Pacífico (Costa):<br/>Exorreica, 53 ríos, régimen irregular, torrentosos, hidroeléctricas e irrigaciones"]
-    AGUAS_CONT --> VERT_AMZ["Vertiente del Amazonas (Atlántico):<br/>Exorreica, caudalosa, régimen regular, navegable, pongos, origen del río Amazonas"]
+    AGUAS_CONT --> VERT_PAC["Vertiente del Pacífico (Costa):<br/>Drenaje al Pacífico, estacionalidad variable, usos hidroeléctricos e irrigación"]
+    AGUAS_CONT --> VERT_AMZ["Vertiente del Amazonas (Atlántico):<br/>Drenaje amazónico al Atlántico, variación estacional y navegabilidad según el tramo"]
     AGUAS_CONT --> VERT_TIT["Vertiente del Titicaca:<br/>Endorreica, radial, corta longitud, efluente: río Desaguadero"]
     AGUAS_CONT --> LAGOS["Lagos y Glaciares:<br/>Titicaca, Chinchaycocha, Cordillera Blanca"]
 ```
@@ -55,24 +55,59 @@ La **hidrósfera** es el subsistema acuático del geosistema, cubriendo aproxima
 
 El relieve andino divide al territorio peruano en tres macrovertientes hidrográficas con características físicas y regímenes marcadamente contrastantes:
 
+```mermaid
+graph TD
+ ROOT["Vertientes hidrográficas: destino de las aguas"]
+ B1["Pacífico"]
+ B1N1["La red de drenaje conduce sus aguas hacia el océano Pacífico."]
+ B1N2["En muchos ríos costeros hay marcada estacionalidad; no todos tienen idéntico régimen."]
+ B1N3["Una región hidrográfica reúne varias cuencas; no equivale a un único río."]
+ B2["Amazonas"]
+ B2N1["Sus aguas se integran en la red amazónica que alcanza el océano Atlántico."]
+ B2N2["La cuenca incluye cabeceras andinas y llanuras; no todos sus tramos son navegables."]
+ B2N3["Caudal abundante no significa ausencia de variaciones estacionales."]
+ B3["Titicaca"]
+ B3N1["El drenaje forma parte de un sistema interior sin salida al océano."]
+ B3N2["Endorreico no significa que cada lago carezca de un río de salida."]
+ B3N3["El Desaguadero es el efluente del Titicaca y continúa dentro del sistema interior."]
+ B4["Cómo interpretar el esquema"]
+ B4N1["Una divisoria separa áreas de drenaje; una cuenca reúne aguas hacia una salida común."]
+ B4N2["La cordillera influye en las divisorias, pero este mapa es conceptual y no está a escala."]
+ B4N3["Distinguir el conteo de ríos del conteo de cuencas o unidades hidrográficas."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
-                      CORDILLERA DE LOS ANDES
-                             /\
-   Vertiente del            /  \               Vertiente del
-     PACÍFICO              /    \                AMAZONAS
-  (53 ríos cortos,        /      \         (Caudalosos, navegables,
- torrentosos, estiaje)   /        \        meándricos, rampa oriental)
-      ←                 /          \                  →
-   Océano Pacífico     /   Lago     \         Océano Atlántico
-                      /  Titicaca    \
-                     /  (Endorreico)  \
-```
+
+### Comparar el destino del drenaje
+
+| Región hidrográfica | Destino de la red | Precisión necesaria |
+|---|---|---|
+| Pacífico | Océano Pacífico | El régimen varía entre ríos y estaciones |
+| Amazonas | Atlántico, a través de la red amazónica | La navegabilidad depende del tramo y las condiciones |
+| Titicaca | Sistema interior | La salida por el Desaguadero no es una salida al océano |
+
+**Importante:** un inventario de cuencas no cuenta lo mismo que una lista de ríos principales. Antes de usar una cifra, identifica la unidad y la clasificación de la fuente. Este esquema no establece un número universal de ríos.
+
 
 ---
 
 #### A. Vertiente Hidrográfica del Pacífico (Cuenca Occidental)
 * **Generalidades:**
-  * Compuesta por **53 ríos principales** que nacen en la vertiente occidental andina y desembocan en el Océano Pacífico.
+  * Comprende varias cuencas con drenaje hacia el océano Pacífico. Una lista de ríos principales no equivale a un inventario de unidades hidrográficas.
   * Ocupa el **21.7\% del territorio nacional**, alberga a más del **65\% de la población del país**, pero solo dispone del **1.8\% de los recursos hídricos superficiales**.
 * **Características Hidrológicas:**
   * **Cuencas Exorreicas:** Desembocan en el mar (algunos ríos sufren arreísmo en épocas de estiaje severo por infiltración y sobreexplotación agrícola, como el río Ica).
@@ -155,7 +190,7 @@ El relieve andino divide al territorio peruano en tres macrovertientes hidrográ
 | **Desembocadura** | Océano Pacífico | Río Amazonas \to Océano Atlántico | Lago Titicaca |
 | **Porcentaje de Agua** | **1.8\%** | **97.7\%** | **0.5\%** |
 | **Población Servida** | \approx 65\% (estrés hídrico extremo) | \approx 30\% | \approx 5\% |
-| **Régimen Fluvial** | Muy irregular (estiaje prolongado) | Regular (abundante todo el año) | Irregular (crecida en verano) |
+| **Régimen Fluvial** | Muy irregular (estiaje prolongado) | Caudal abundante en muchos ríos, con variación estacional | Irregular (crecida en verano) |
 | **Longitud y Curso** | Cortos, torrentosos, pendientes empinadas | Muy largos, caudalosos, meándricos | Cortos, radiales, baja pendiente |
 | **Navegabilidad** | No navegables (salvo río Tumbes) | **Ampliamente navegables** | No navegables |
 | **Río Más Caudaloso** | **Río Santa** | **Río Amazonas** | **Río Ramis** |

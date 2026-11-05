@@ -1,1 +1,200 @@
-[{"concept":"6.1.1","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. Traducimos al lenguaje de desigualdades matemáticas: - I: E \\ge 18 - II: E \\le 15 - III: E = 16 2. Evaluamos la intersección de conjuntos de valores de verdad para cada par: - Par (I y III): E \\ge 18 \\land E = 16 \\implies \\emptyset (Incompatible). - Par (II y III): E \\le 15 \\land E = 16 \\implies \\emptyset (Incompatible). - Par (I y II): E \\ge 18 \\land E \\le 15 \\implies \\emptyset (Incompatible). 3. Todas las parejas son mutuamente excluyentes; no pueden ser verdaderas simultáneamente. **Respuesta:** D ---","fuente":"temario","id":"rl_t06_s01_c01","options":["I y III","II y III","I y II","Todas las anteriores son parejas incompatibles"],"pedagogicalTier":"concepto","semana":6,"statement":"**Enunciado:** Se tienen las siguientes tres afirmaciones sobre la edad de Carlos:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.2","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Aplicamos el Hack 1 (El Testigo Contradictorio): - Carlos afirma: \"Daniel obtuvo 20\" (D = 20). - Daniel afirma: \"Carlos miente\" (\\neg(D = 20)). 2. Como Carlos y Daniel se contradicen formalmente (P y \\neg P), **exactamente uno de ellos dice la verdad y el otro miente**. 3. El enunciado estipula: *\"Solo uno de ellos dice la verdad\"*. 4. Por ende, la única verdad está entre Carlos y Daniel. 5. **Deducción de consistencia inmediata:** Abel y Beto mienten obligatoriamente. - Abel miente: \\neg(\\text{Carlos obtuvo 20}) \\implies Carlos NO obtuvo 20. - Beto miente: \\neg(\\text{Beto no obtuvo 20}) \\implies ¡Beto obtuvo 20! 6. Verificamos consistencia general: Si Beto obtuvo 20, Daniel no obtuvo 20. Entonces Carlos mintió y Daniel dijo la verdad. Coincide exactamente con el dato de una sola verdad. **Respuesta:** B ---","fuente":"temario","id":"rl_t06_s01_c02","options":["Carlos","Daniel","Abel","Beto"],"pedagogicalTier":"concepto","semana":6,"statement":"**Enunciado (Modelo UNSA Ordinario):** Cuatro alumnos, Abel, Beto, Carlos y Daniel, rinden un examen. Se sabe que solo uno de ellos obtuvo 20 de nota. Al ser consultados, respondieron:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.3","correctIndex":3,"explanation":"**Resolución Paso a Paso:** 1. Tomamos las premisas del sistema: - Premisa 1: A \\to \\neg B - Premisa 2: C \\to B - Premisa 3: C - Premisa 4: A 2. Por Modus Ponens entre Premisa 2 y Premisa 3: C \\to B, \\, C \\implies B 3. Por Modus Ponens entre Premisa 1 y Premisa 4: A \\to \\neg B, \\, A \\implies \\neg B 4. Juntando ambas conclusiones por regla de conjunción: B \\land \\neg B \\equiv \\mathbf{F} 5. El sistema deriva formalmente una contradicción explícita. Por definición de consistencia sintáctica y semántica, el sistema es **insatisfacible (inconsistente)**. **Respuesta:** C ---","fuente":"temario","id":"rl_t06_s01_c03","options":["Sí, porque C y A son independientes.","No, porque se deduce la contradicción formal B \\land \\neg B.","Sí, porque la implicación material tolera antecedentes falsos.","Sí, si todos los sensores fallan."],"pedagogicalTier":"concepto","semana":6,"statement":"**Enunciado:** Un sistema informático de control de acceso tiene cuatro reglas lógicas activas:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.4","correctIndex":1,"explanation":"T1 (> 30) y T3 (= 28) son incompatibles. T2 (< 25) y T3 (= 28) son incompatibles. T1 (> 30) y T2 (< 25) son incompatibles. Por lo tanto, ningún par puede ser verdadero a la vez.","fuente":"temario","id":"rl_t06_s01_c04","options":["T1 y T2","T1 y T3","T2 y T3","Ningún par es compatible"],"pedagogicalTier":"concepto","semana":6,"statement":"Tres testigos declaran sobre un sospechoso. T1: 'Tiene más de 30 años'. T2: 'Tiene menos de 25 años'. T3: 'Tiene 28 años'. ¿Qué par de testimonios resulta compatible?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t06_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.6","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t06_s01_c06","options":["Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.7","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t06_s01_c07","options":["Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t06_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t06_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"6.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t06_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rl_t06_s01_c01",
+    "concept": "6.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 6,
+    "statement": "¿Es conjuntamente satisfacible el conjunto de premisas $p$, $\\neg p$?",
+    "options": [
+      "Sí, existe al menos una asignación que hace verdaderas todas.",
+      "No, ninguna asignación hace verdaderas todas.",
+      "Sí, porque basta que una sola premisa sea verdadera.",
+      "No se puede analizar con tablas de verdad."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La consistencia exige satisfacer todas las premisas a la vez.\n2. La revisión de todas las asignaciones no encuentra un caso compatible.\n3. El conjunto es inconsistente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t06_s01_c02",
+    "concept": "6.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 6,
+    "statement": "¿Es conjuntamente satisfacible el conjunto de premisas $p \\Rightarrow q$, $p$, $q$?",
+    "options": [
+      "No, ninguna asignación hace verdaderas todas.",
+      "Sí, porque basta que una sola premisa sea verdadera.",
+      "No se puede analizar con tablas de verdad.",
+      "Sí, existe al menos una asignación que hace verdaderas todas."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La consistencia exige satisfacer todas las premisas a la vez.\n2. Una asignación compatible es p=V, q=V.\n3. El conjunto es consistente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t06_s01_c03",
+    "concept": "6.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 6,
+    "statement": "¿Es conjuntamente satisfacible el conjunto de premisas $p \\vee q$, $\\neg p$, $\\neg q$?",
+    "options": [
+      "Sí, porque basta que una sola premisa sea verdadera.",
+      "No se puede analizar con tablas de verdad.",
+      "Sí, existe al menos una asignación que hace verdaderas todas.",
+      "No, ninguna asignación hace verdaderas todas."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La consistencia exige satisfacer todas las premisas a la vez.\n2. La revisión de todas las asignaciones no encuentra un caso compatible.\n3. El conjunto es inconsistente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t06_s01_c04",
+    "concept": "6.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 6,
+    "statement": "¿Es conjuntamente satisfacible el conjunto de premisas $p \\Rightarrow q$, $p$, $\\neg q$?",
+    "options": [
+      "No se puede analizar con tablas de verdad.",
+      "Sí, existe al menos una asignación que hace verdaderas todas.",
+      "No, ninguna asignación hace verdaderas todas.",
+      "Sí, porque basta que una sola premisa sea verdadera."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La consistencia exige satisfacer todas las premisas a la vez.\n2. La revisión de todas las asignaciones no encuentra un caso compatible.\n3. El conjunto es inconsistente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t06_s01_c05",
+    "concept": "6.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 6,
+    "statement": "¿Es conjuntamente satisfacible el conjunto de premisas $p \\Leftrightarrow q$, $p$, $\\neg q$?",
+    "options": [
+      "Sí, existe al menos una asignación que hace verdaderas todas.",
+      "No, ninguna asignación hace verdaderas todas.",
+      "Sí, porque basta que una sola premisa sea verdadera.",
+      "No se puede analizar con tablas de verdad."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La consistencia exige satisfacer todas las premisas a la vez.\n2. La revisión de todas las asignaciones no encuentra un caso compatible.\n3. El conjunto es inconsistente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t06_s01_c06",
+    "concept": "6.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 6,
+    "statement": "¿Es conjuntamente satisfacible el conjunto de premisas $p \\Rightarrow q$, $\\neg p$, $q$?",
+    "options": [
+      "No, ninguna asignación hace verdaderas todas.",
+      "Sí, porque basta que una sola premisa sea verdadera.",
+      "No se puede analizar con tablas de verdad.",
+      "Sí, existe al menos una asignación que hace verdaderas todas."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La consistencia exige satisfacer todas las premisas a la vez.\n2. Una asignación compatible es p=F, q=V.\n3. El conjunto es consistente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t06_s01_c07",
+    "concept": "6.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 6,
+    "statement": "¿Es conjuntamente satisfacible el conjunto de premisas $p \\Rightarrow q$, $\\neg p$, $\\neg q$?",
+    "options": [
+      "Sí, porque basta que una sola premisa sea verdadera.",
+      "No se puede analizar con tablas de verdad.",
+      "Sí, existe al menos una asignación que hace verdaderas todas.",
+      "No, ninguna asignación hace verdaderas todas."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La consistencia exige satisfacer todas las premisas a la vez.\n2. Una asignación compatible es p=F, q=F.\n3. El conjunto es consistente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t06_s01_c08",
+    "concept": "6.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 6,
+    "statement": "¿Es conjuntamente satisfacible el conjunto de premisas $p \\vee q$, $\\neg p$?",
+    "options": [
+      "No se puede analizar con tablas de verdad.",
+      "Sí, existe al menos una asignación que hace verdaderas todas.",
+      "No, ninguna asignación hace verdaderas todas.",
+      "Sí, porque basta que una sola premisa sea verdadera."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La consistencia exige satisfacer todas las premisas a la vez.\n2. Una asignación compatible es p=F, q=V.\n3. El conjunto es consistente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t06_s01_c09",
+    "concept": "6.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 6,
+    "statement": "¿Es conjuntamente satisfacible el conjunto de premisas $p \\veebar q$, $p$, $q$?",
+    "options": [
+      "Sí, existe al menos una asignación que hace verdaderas todas.",
+      "No, ninguna asignación hace verdaderas todas.",
+      "Sí, porque basta que una sola premisa sea verdadera.",
+      "No se puede analizar con tablas de verdad."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La consistencia exige satisfacer todas las premisas a la vez.\n2. La revisión de todas las asignaciones no encuentra un caso compatible.\n3. El conjunto es inconsistente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t06_s01_c10",
+    "concept": "6.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 6,
+    "statement": "¿Es conjuntamente satisfacible el conjunto de premisas $\\neg \\left(p \\wedge q\\right)$, $p$, $\\neg q$?",
+    "options": [
+      "No, ninguna asignación hace verdaderas todas.",
+      "Sí, porque basta que una sola premisa sea verdadera.",
+      "No se puede analizar con tablas de verdad.",
+      "Sí, existe al menos una asignación que hace verdaderas todas."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La consistencia exige satisfacer todas las premisas a la vez.\n2. Una asignación compatible es p=V, q=F.\n3. El conjunto es consistente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t06_s01_c11",
+    "concept": "6.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 6,
+    "statement": "¿Es conjuntamente satisfacible el conjunto de premisas $p \\Rightarrow q$, $q \\Rightarrow r$, $p$, $\\neg r$?",
+    "options": [
+      "Sí, porque basta que una sola premisa sea verdadera.",
+      "No se puede analizar con tablas de verdad.",
+      "Sí, existe al menos una asignación que hace verdaderas todas.",
+      "No, ninguna asignación hace verdaderas todas."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La consistencia exige satisfacer todas las premisas a la vez.\n2. La revisión de todas las asignaciones no encuentra un caso compatible.\n3. El conjunto es inconsistente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

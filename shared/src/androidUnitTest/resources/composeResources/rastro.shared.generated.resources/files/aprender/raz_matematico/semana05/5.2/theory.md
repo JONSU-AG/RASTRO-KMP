@@ -12,18 +12,33 @@ Una estructura matemática de grafo arbóreo que modela paso a paso las bifurcac
 
 ### 3.4 Clasificación de Agrupaciones: ¿Importa o NO Importa el Orden?
 
-```text
-                                ¿Importa el orden de los elementos?
-                                               │
-                       ┌───────────────────────┴───────────────────────┐
-                      SÍ                                              NO
-              (Permutaciones)                                   (Combinaciones)
-                       │                                               │
-      ¿Entran TODOS los elementos?                         Formación de grupos,
-            ┌──────────┴──────────┐                        comisiones, parejas,
-           SÍ                    NO                       ensaladas, mezclas.
-      (Permutación)          (Variación)
-           P_n = n!          V(n, k) = n!/(n-k)!           C(n, k) = n! / [k!(n-k)!]
+```mermaid
+graph TD
+ ROOT["Elegir un método de conteo"]
+ B1["El orden distingue resultados"]
+ B1N1["Se usan todos los objetos distintos en fila: $n!$."]
+ B1N2["Se eligen k objetos distintos y se ordenan sin repetir: $n!/(n-k)!$."]
+ B1N3["Si hay repeticiones o simetrías, revisar el modelo antes de usar una fórmula."]
+ B2["El orden no distingue resultados"]
+ B2N1["Grupo de k entre n objetos distintos sin repetir: $\binom{n}{k}=n!/[k!(n-k)!]$."]
+ B2N2["Un equipo sin cargos se identifica por sus integrantes."]
+ B2N3["No confundir elegir ingredientes con contar cantidades de una mezcla."]
+ B3["Comprobación"]
+ B3N1["Definir cuándo dos resultados son iguales."]
+ B3N2["Enumerar un caso pequeño y verificar que no haya repeticiones."]
+ B3N3["Mantener las mismas reglas de conteo desde el inicio hasta la conclusión."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
 ---

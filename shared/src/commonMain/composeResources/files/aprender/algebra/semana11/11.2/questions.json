@@ -1,1 +1,200 @@
-[{"concept":"11.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t11_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"11.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t11_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"11.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t11_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"11.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t11_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"11.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t11_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"11.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t11_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"11.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t11_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"11.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t11_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"11.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t11_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"11.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t11_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":11,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "11.2.1",
+    "correctIndex": 0,
+    "explanation": "1. El módulo es la raíz de la suma de los cuadrados de las componentes.\n2. Sustituimos y operamos: $\\sqrt{12^2+16^2}$.\n3. El valor pedido es $20$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t11_s02_c01",
+    "options": [
+      "$20$",
+      "$21$",
+      "$19$",
+      "$40$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "¿Cuál es el módulo del complejo 12+16i?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.2",
+    "correctIndex": 3,
+    "explanation": "1. El cuadrado del módulo suma los cuadrados de sus componentes.\n2. Sustituimos y operamos: $4^2+5^2$.\n3. El valor pedido es $41$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t11_s02_c02",
+    "options": [
+      "$42$",
+      "$40$",
+      "$82$",
+      "$41$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "¿Cuál es el cuadrado del módulo de 4+5i?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.3",
+    "correctIndex": 2,
+    "explanation": "1. El módulo de un producto es el producto de módulos.\n2. Sustituimos y operamos: $|z^2|=|z|^2=4^2$.\n3. El valor pedido es $16$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t11_s02_c03",
+    "options": [
+      "$15$",
+      "$32$",
+      "$16$",
+      "$17$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "Un complejo z tiene módulo 4. ¿Qué módulo tiene z²?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.4",
+    "correctIndex": 1,
+    "explanation": "1. Las dos componentes positivas e iguales sitúan al vector en la bisectriz del primer cuadrante.\n2. Sustituimos y operamos: $\\tan  \\theta =4/4=1;\\quad \\theta =45^\\circ$.\n3. El valor pedido es $45$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t11_s02_c04",
+    "options": [
+      "$90$",
+      "$45$",
+      "$46$",
+      "$44$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "¿Cuál es el argumento principal, en grados, de 4+4i?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.5",
+    "correctIndex": 0,
+    "explanation": "1. Reducimos el exponente por su residuo módulo cuatro.\n2. Sustituimos y operamos: $i^{17}=(i⁴)^4i=i$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t11_s02_c05",
+    "options": [
+      "$1$",
+      "$2$",
+      "$0$",
+      "$3$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "¿Cuál es la parte imaginaria de $i^{17}$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.6",
+    "correctIndex": 3,
+    "explanation": "1. El módulo es la raíz de la suma de los cuadrados de las componentes.\n2. Sustituimos y operamos: $\\sqrt{15^2+20^2}$.\n3. El valor pedido es $25$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t11_s02_c06",
+    "options": [
+      "$26$",
+      "$24$",
+      "$50$",
+      "$25$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "¿Cuál es el módulo del complejo 15+20i?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.7",
+    "correctIndex": 2,
+    "explanation": "1. El cuadrado del módulo suma los cuadrados de sus componentes.\n2. Sustituimos y operamos: $5^2+6^2$.\n3. El valor pedido es $61$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t11_s02_c07",
+    "options": [
+      "$60$",
+      "$122$",
+      "$61$",
+      "$62$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "¿Cuál es el cuadrado del módulo de 5+6i?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.8",
+    "correctIndex": 1,
+    "explanation": "1. El módulo de un producto es el producto de módulos.\n2. Sustituimos y operamos: $|z^2|=|z|^2=5^2$.\n3. El valor pedido es $25$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t11_s02_c08",
+    "options": [
+      "$50$",
+      "$25$",
+      "$26$",
+      "$24$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "Un complejo z tiene módulo 5. ¿Qué módulo tiene z²?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.9",
+    "correctIndex": 0,
+    "explanation": "1. Las dos componentes positivas e iguales sitúan al vector en la bisectriz del primer cuadrante.\n2. Sustituimos y operamos: $\\tan  \\theta =5/5=1;\\quad \\theta =45^\\circ$.\n3. El valor pedido es $45$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t11_s02_c09",
+    "options": [
+      "$45$",
+      "$46$",
+      "$44$",
+      "$90$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "¿Cuál es el argumento principal, en grados, de 5+5i?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.10",
+    "correctIndex": 3,
+    "explanation": "1. Reducimos el exponente por su residuo módulo cuatro.\n2. Sustituimos y operamos: $i^{21}=(i⁴)^5i=i$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t11_s02_c10",
+    "options": [
+      "$2$",
+      "$0$",
+      "$3$",
+      "$1$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "¿Cuál es la parte imaginaria de $i^{21}$?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "11.2.11",
+    "correctIndex": 2,
+    "explanation": "1. El módulo es la raíz de la suma de los cuadrados de las componentes.\n2. Sustituimos y operamos: $\\sqrt{18^2+24^2}$.\n3. El valor pedido es $30$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t11_s02_c11",
+    "options": [
+      "$29$",
+      "$60$",
+      "$30$",
+      "$31$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 11,
+    "statement": "¿Cuál es el módulo del complejo 18+24i?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

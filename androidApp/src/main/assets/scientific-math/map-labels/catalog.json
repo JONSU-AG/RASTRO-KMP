@@ -1,0 +1,722 @@
+[
+  {
+    "hash": "e0f9d9b7acc5c8eb25461e1968f64e731859db507271fe5d3140a88643b26be4",
+    "text": "Aspa Simple: Ax^2n + Bx^n + C",
+    "bytes": 11553
+  },
+  {
+    "hash": "54930173eabdaeacbf87755dd7a16eb9978ddc18e144c4a99b61995de34779c4",
+    "text": "Aspa Doble: Ax^2 + Bxy + Cy^2 + Dx + Ey + F",
+    "bytes": 13166
+  },
+  {
+    "hash": "f49865a34eb0e12e027ae0f78d3a96f2a8ac7538a4ea82669c63d328b4583ab0",
+    "text": "Aspa Doble Especial: Ax^4 + Bx^3 + Cx^2 + Dx + E",
+    "bytes": 14192
+  },
+  {
+    "hash": "53a131c3adf25ae3aa5434159291ce2db6963eeb883eaefe54573a83657b5672",
+    "text": "Potencias de i: Ciclo cuaternario (i^(4k+r) = i^r)",
+    "bytes": 15878
+  },
+  {
+    "hash": "69522814f70f855770c45410365c013c1752c8cfeef0a81c31a04d8984e631dd",
+    "text": "Forma Exponencial (Euler): z = r e^(iθ)",
+    "bytes": 12332
+  },
+  {
+    "hash": "6002173acc75333fc9b5cfc7199247d37567f58167e3713e95716a63f60b798d",
+    "text": "Teorema de De Moivre: z^n = r^n cis(nθ)",
+    "bytes": 12120
+  },
+  {
+    "hash": "ec99a42196290849b9f97a70b6e8062abb4bcb7894c48c57221ebf32ca649cf7",
+    "text": "Función Logarítmica: g(x) = log_b(x)",
+    "bytes": 11072
+  },
+  {
+    "hash": "3aad46c99f5fe9a7e9b6ed0269f04ac33091ffcde346ca02caf43659a06e86d2",
+    "text": "Definición: log_b N = x ⇔ bˣ = N",
+    "bytes": 9640
+  },
+  {
+    "hash": "35e59b1d4c437367f7b7e8541c43c64c9cfde34dad465f6360446e96863a034b",
+    "text": "Término Enésimo: a_n = a_1 + (n - 1)r",
+    "bytes": 10436
+  },
+  {
+    "hash": "51a0b0b0c43bd291f8d64c4c41c6c95c19b277a43475d3830d2918231fff38d7",
+    "text": "Suma de n términos: S_n = n(a_1 + a_n)/2",
+    "bytes": 14226
+  },
+  {
+    "hash": "c884cf86248f1ceba18adb4d3ec4e59144997312a40cc05141976ad8ff282848",
+    "text": "Término Enésimo: t_n = t_1 · qⁿ⁻¹",
+    "bytes": 8136
+  },
+  {
+    "hash": "cf5263aa25b5ebf540c58cbfa2521eae7c468f2111d7a1bd18fd1f0540992337",
+    "text": "Suma Finita: S_n = t_1(qⁿ - 1)/(q - 1)",
+    "bytes": 10861
+  },
+  {
+    "hash": "5cb453f732c3be51b11b9abe95828607dc4ce821810316755d304b5eea5a4062",
+    "text": "Suma Límite Infinita (|q| < 1): S_∞ = t_1 / (1 - q)",
+    "bytes": 12929
+  },
+  {
+    "hash": "81284e8629f0253bfda663a6619548738a7d1591ec9798822b2beef85e171511",
+    "text": "Recíprocos forman una P.A.: 1/a_n",
+    "bytes": 10176
+  },
+  {
+    "hash": "bbb7e9a544b65da648127be7b0368ffc60a51814155110b3c3a25f13fa309013",
+    "text": "Decimal Exacto: Factores 2^α y 5^β",
+    "bytes": 12436
+  },
+  {
+    "hash": "3be5adffbb5aefb1c4be380bbe739e581db28096934846299978e7e7eb70dd3c",
+    "text": "Identidad proposicional: $p\\to p$; distinguirla de igualdad entre objetos.",
+    "bytes": 20027
+  },
+  {
+    "hash": "26622981dc1cc5bb9437d7572a6f59f4ef192c097dce8949324fa0212df46833",
+    "text": "No contradicción: $\\neg(p\\land\\neg p)$.",
+    "bytes": 10255
+  },
+  {
+    "hash": "7a658089829fa0877571e315f74a4d9865fe4cbdedb074aa1f55fbf6c7c642e4",
+    "text": "Tercero excluido: $p\\lor\\neg p$.",
+    "bytes": 8046
+  },
+  {
+    "hash": "8bf3679564cd0b1bd945443b7e0482d4bceb8af66f2ccfc23df98afa6bdd0324",
+    "text": "Ley Cero y Conservación: ΣQ_ganado + ΣQ_perdido = 0",
+    "bytes": 19438
+  },
+  {
+    "hash": "45f8b5531a641c7534b6cbfbea5982ad3cb1abc186b127ff9d1fb9ded3b5240b",
+    "text": "Fusión y Solidificación del Agua: L_f = 80 cal/g",
+    "bytes": 15788
+  },
+  {
+    "hash": "88c75840a9b164fd60760c8b02083ecf4b8fc870d63a3f4ecc7eb0492ac0e61d",
+    "text": "Vaporización y Condensación: L_v = 540 cal/g",
+    "bytes": 17125
+  },
+  {
+    "hash": "70d118ab808c2b1b2aa27c9d5d3b27aee6a700ed682380abb421f015253918b4",
+    "text": "Presión: P = F_perp / A",
+    "bytes": 8453
+  },
+  {
+    "hash": "52a6e7e6fbf20ac6d3d51a2cba2e10ea7cb295776f4627f26e22c8271cf086b2",
+    "text": "Principio de Arquímedes: E = ρ_liq g V_sum",
+    "bytes": 15723
+  },
+  {
+    "hash": "7ac602dd88e8990eba9dc248337da9f8a6e60691d7c25b11e8c22fbc69534351",
+    "text": "Asociación: Serie 1/C_eq ; Paralelo ΣC_i",
+    "bytes": 13110
+  },
+  {
+    "hash": "a738bdf89b41341bc7a9c8997ad0f9608be2a346dc131947dc8a8f56f97a7504",
+    "text": "Efecto Doppler: f_obs = f_fte (v ± v_o)/(v ∓ v_f)",
+    "bytes": 12576
+  },
+  {
+    "hash": "53c7ecc09a8bf9563d7738e7f96703aa1dc49f272ff3ab35123451f0451aca3f",
+    "text": "Efecto Fotoeléctrico: hf = Φ + Ec_max",
+    "bytes": 10534
+  },
+  {
+    "hash": "fba86d8736add200ad6973b4987733c3fb4dd0133040cfbbed9c5ae9aa387f9e",
+    "text": "Ley de Decaimiento: N(t) = N₀ e^(-λt)",
+    "bytes": 11460
+  },
+  {
+    "hash": "5beb9bb04da96cd5766c60ef4665e31e6744d5438f48431cbf24938e9d070fc2",
+    "text": "Periodo de Semidesintegración: t_1/2 = ln 2 / λ",
+    "bytes": 16369
+  },
+  {
+    "hash": "a8f4aea5b0d2a6d2dd581bda6ca52fb51ec0188298953859868103e229d664a1",
+    "text": "Población en Edad de Trabajar (PET) \\to PEA (Ocupada/Subempleada/Desempleada)",
+    "bytes": 27449
+  },
+  {
+    "hash": "d99315b4be5d5318791e2c70f2bf9bd52d973ec36cd2129e503390a3e6749d3a",
+    "text": "Fórmulas Generales: Sᵢ = 180°(n - 2)  |  N_D = n(n - 3)/2",
+    "bytes": 18402
+  },
+  {
+    "hash": "221e4f58ac6b573188710616bf3383b94813f8812c65165fff8e2f6f4d58404e",
+    "text": "Polígonos Regulares: αᵢ = 180°(n-2)/n  |  αₑ = α_c = 360°/n",
+    "bytes": 19024
+  },
+  {
+    "hash": "ef069c8f05569bc772dd9944b942eb266aecb662b8e6dea471864dc462b48122",
+    "text": "Prisma Oblicuo: V = A_SR · a_L",
+    "bytes": 10922
+  },
+  {
+    "hash": "7aa08289e23a67df2939ab121d83488153991f0e3eae795051c0c9ccfa71109d",
+    "text": "Pirámide Regular: V = 1/3 A_base · h",
+    "bytes": 12448
+  },
+  {
+    "hash": "d058cf1de9d77acb39fdbefb34d0f566539347f15a5de3ced68664b34801a0dc",
+    "text": "Energía en reposo: $E_0=mc^2$, con m como masa invariante.",
+    "bytes": 18559
+  },
+  {
+    "hash": "7b305feb882ca50491beea360cbdb1bdd51f7cf18efbf6a6dec7bce6897ba8ee",
+    "text": "Variación de energía en reposo: $\\Delta E_0=\\Delta m c^2$; conservar una convención de signos.",
+    "bytes": 26351
+  },
+  {
+    "hash": "76cc36846ece077eb715a1a36f2a6162b7c29daee62725889909ef23f68547ea",
+    "text": "Energía total de una partícula libre: $E=\\gamma mc^2$, $\\gamma=1/\\sqrt{1-v^2/c^2}$.",
+    "bytes": 21231
+  },
+  {
+    "hash": "3ad4128850a271ff8ea9a6469ee3e9a7097507cbb482a2573009635735d881fa",
+    "text": "Notación: ${}^{A}_{Z}X^{q}$. Número atómico: $Z=p$.",
+    "bytes": 14840
+  },
+  {
+    "hash": "6518d8d05c961dda8a2d348ee9f19bf56dbe9e5fed51f962a98cdcd7b8417b7d",
+    "text": "Número de masa: $A=p+n$; por tanto, $n=A-Z$.",
+    "bytes": 15360
+  },
+  {
+    "hash": "e076a035b6fc2820b615fb61a125ffe0291e49d5441d35fb2c514c5468bc8e47",
+    "text": "Número de carga: $q=p-e$; la carga física es $q e_0$.",
+    "bytes": 16883
+  },
+  {
+    "hash": "cc5cbd0ad520f88d6d8715c7ba3dbb0174aef2ea2158b59621212d94ea9cc459",
+    "text": "m_l: proyección del momento angular orbital.",
+    "bytes": 15201
+  },
+  {
+    "hash": "e5f76d24a2565822907a7059f8f4abfdd5e929f9671b5649b5432935d1ffa2ab",
+    "text": "Spin: propiedad intrínseca; $m_s=+1/2$ o $-1/2$. No es un giro clásico sobre un eje.",
+    "bytes": 24632
+  },
+  {
+    "hash": "4f45bfaf9c199a6c396e03869b1c86abaa049a41a1b376cf7caad08be1714510",
+    "text": "Hidróxidos: contienen el grupo $\\mathrm{OH^-}$; un álcali es una base soluble en agua.",
+    "bytes": 21521
+  },
+  {
+    "hash": "c9cf19e27fc51239390ace7306d366e889a6920dc6456a7b8893b90a32739fcb",
+    "text": "Hidruros covalentes: ejemplos $\\mathrm{NH_3}$, $\\mathrm{PH_3}$ y $\\mathrm{CH_4}$; no todos son ácidos.",
+    "bytes": 23667
+  },
+  {
+    "hash": "8bfea04beef920cfc4a52e71633c4b0ca47a9612c10baa8b5bb799ee3ea45e2f",
+    "text": "Exotérmica: $\\Delta H<0$; endotérmica: $\\Delta H>0$, para la reacción y condiciones indicadas.",
+    "bytes": 27832
+  },
+  {
+    "hash": "d88e081fbbb8440ee1c8a90fa1e8514b4cecec60b0980d8d6cfec4652f08d98e",
+    "text": "Ión-electrón en medio ácido: balancear O con $\\mathrm{H_2O}$ y H con $\\mathrm{H^+}$; ajustar carga con electrones.",
+    "bytes": 26989
+  },
+  {
+    "hash": "47ae5209e159d0bb76992a592d04da1a7546ab52cb258de89279a718fedda50c",
+    "text": "Medio básico: eliminar $\\mathrm{H^+}$ añadiendo $\\mathrm{OH^-}$ a ambos lados, simplificar agua y verificar carga.",
+    "bytes": 26673
+  },
+  {
+    "hash": "94e547fadef97ce87319d7dd8e1c94bad2baa9f9f2e2d3f247b4290231f5c968",
+    "text": "Masa molar M: masa por mol; $n=m/M$ con unidades compatibles.",
+    "bytes": 22820
+  },
+  {
+    "hash": "9dc727888e0c97fe9783f2c087b80f083d61a79a416923c8d710e1cab4f20e3b",
+    "text": "Número de entidades: $N=nN_A$; indicar si se cuentan átomos, moléculas, iones u otras entidades.",
+    "bytes": 27267
+  },
+  {
+    "hash": "cdddf429ab98f7267ea2f6033ab5629ba52f876417ef603a3c42354b0b30062b",
+    "text": "Porcentaje en masa: $100m_{\\mathrm{componente}}/m_{\\mathrm{total}}$.",
+    "bytes": 15583
+  },
+  {
+    "hash": "542eea36e97e4fbd89d06791e570d11d0e2940e1f3ba353e0eef00f239cede71",
+    "text": "Rendimiento: $100m_{\\mathrm{real}}/m_{\\mathrm{teorica}}$, para el mismo producto y unidad.",
+    "bytes": 23017
+  },
+  {
+    "hash": "af2eb9e92b664c062df96d46f196dc316982f0e2f0b50c1a076f1a83164ef4a2",
+    "text": "Gas ideal: $V_m=RT/P$; $22{,}4\\ \\mathrm{L/mol}$ es aproximado a $273{,}15\\ \\mathrm{K}$ y $1\\ \\mathrm{atm}$, no para cualquier condición.",
+    "bytes": 36582
+  },
+  {
+    "hash": "06d2c774af52534d2c03338ab8ba1ef01d27c93b1a28f250233438f75a388c7f",
+    "text": "Boyle: $P_1V_1=P_2V_2$ con temperatura y cantidad de gas constantes.",
+    "bytes": 22734
+  },
+  {
+    "hash": "e205cef6e7edb1c96d4aec90e734e52553264cf058316bb5fcaa0095433a93e1",
+    "text": "Charles: $V_1/T_1=V_2/T_2$ con presión y cantidad constantes.",
+    "bytes": 21003
+  },
+  {
+    "hash": "6c4e6b4f0c373d72dba3049cc10e665217d295384e48a0d3c1beaaf0e3610fe0",
+    "text": "Gay-Lussac o Amontons: $P_1/T_1=P_2/T_2$ con volumen y cantidad constantes.",
+    "bytes": 25509
+  },
+  {
+    "hash": "1b763586b504ce3cbdd534a4427855ed49572d26f6e0d2c070c6bb469525099d",
+    "text": "Ley combinada: $P_1V_1/T_1=P_2V_2/T_2$ con la misma cantidad de gas.",
+    "bytes": 21787
+  },
+  {
+    "hash": "a279fc18f7e77f28bc7c8b9929400f28c208e3700bb21258ddf5fd8825de1058",
+    "text": "$PV=nRT$: presión absoluta, temperatura en kelvin y unidades compatibles con R.",
+    "bytes": 26387
+  },
+  {
+    "hash": "9e2d0ef28fcb111d294b9abf0911c7d9335ced7f5a18aa4f92fe9d5a3b2c68de",
+    "text": "Densidad ideal: $\\rho=PM/(RT)$, con masa molar M.",
+    "bytes": 17736
+  },
+  {
+    "hash": "27833e27f7307921af0d171356cc79e6028639c8a5c4012d0d3f499df9681ac3",
+    "text": "Valores aproximados de R: $0{,}08206\\ \\mathrm{L\\,atm/(mol\\,K)}$ o $8{,}314\\ \\mathrm{J/(mol\\,K)}$.",
+    "bytes": 26101
+  },
+  {
+    "hash": "2462cf02630ce429f44fcad295419e62d43d1e7d3358ba4984b56b7d46f09a40",
+    "text": "Dalton para mezcla ideal: $P=\\sum_i P_i$ y $P_i=x_iP$.",
+    "bytes": 15994
+  },
+  {
+    "hash": "75c17f33eb956a27705b7d0a4ecb30ce625bd906ea3d0bd62db85e4f87b526f1",
+    "text": "Amagat: volúmenes parciales ideales a la misma presión y temperatura; $V_i=x_iV$.",
+    "bytes": 25658
+  },
+  {
+    "hash": "d185f59858621c502397ad64bc88065b77eae52d942ce9c63c814f825cb21191",
+    "text": "Masa molar media: $M_{\\mathrm{mezcla}}=\\sum_i x_iM_i$.",
+    "bytes": 14419
+  },
+  {
+    "hash": "19d22bb59f7b2900d407a70d5a58864f3981bc4e09c0bdbff96e9937604f1f44",
+    "text": "Graham para efusión comparable: $r_1/r_2=\\sqrt{M_2/M_1}$. No describe sin condiciones cualquier difusión macroscópica.",
+    "bytes": 36004
+  },
+  {
+    "hash": "72adb34ccc339321fcd1a56a1e2bb2ab4326f0f8cbad3418543146a1b75ac70b",
+    "text": "Fracción molar: $x_i=n_i/n_{\\mathrm{total}}$.",
+    "bytes": 9316
+  },
+  {
+    "hash": "ed9f6810ac4e87c1733c9ced40c80bb9404c7859efd8cbf32761cc222206d152",
+    "text": "Dilución sin reacción ni pérdida de soluto: $M_1V_1=M_2V_2$.",
+    "bytes": 15869
+  },
+  {
+    "hash": "3d80aabb9a1389e6f4f237d1feec2ddfefe57c871934b70489747db1ed0f8e40",
+    "text": "Mezcla del mismo soluto sin reacción: $M_fV_f=M_1V_1+M_2V_2$; usar el volumen final real.",
+    "bytes": 24879
+  },
+  {
+    "hash": "f6613d1a3aca36e006e833e2ba5cf3a1dde4d1ab25ab24e2ac1b49d8b15aaabf",
+    "text": "Ley de velocidad: $v=k[A]^\\alpha[B]^\\beta$; los órdenes se determinan experimentalmente y no se copian en general de los coeficientes.",
+    "bytes": 36682
+  },
+  {
+    "hash": "b59687eb6797a5d72b2dddd257400e53432161157ce1be82192b9d61f2528601",
+    "text": "Para gases ideales y las convenciones habituales: $K_p=K_c(RT)^{\\Delta n_g}$; contar solo especies gaseosas.",
+    "bytes": 34430
+  },
+  {
+    "hash": "d2c6ee2acccf23f660a11bfba57fbc3dc85a72c3b770fcd9c72492e0b2c69970",
+    "text": "Autoionización: $2\\mathrm{H_2O}\\rightleftharpoons\\mathrm{H_3O^+}+\\mathrm{OH^-}$.",
+    "bytes": 11235
+  },
+  {
+    "hash": "e5e956cd790478b28306bc3a8087298863cfbae64bb3979c355bb5c78b2e41be",
+    "text": "En disoluciones diluidas, $K_w\\approx[\\mathrm{H_3O^+}][\\mathrm{OH^-}]$; depende de la temperatura.",
+    "bytes": 21688
+  },
+  {
+    "hash": "701a92345672a5a3913985360fa4d589a894914915b97fdd70b86960fd57cc9d",
+    "text": "$\\mathrm{pH}\\approx-\\log_{10}[\\mathrm{H_3O^+}]$ en el tratamiento diluido; rigurosamente se usa actividad.",
+    "bytes": 23995
+  },
+  {
+    "hash": "ba71f67165cb1336d8f7eefd25f714281d8f2042b7151b88652641e0ca808f35",
+    "text": "$\\mathrm{pH+pOH}=pK_w$, aproximadamente 14 a $25\\,^{\\circ}\\mathrm C$; neutral significa igual actividad de ambos iones.",
+    "bytes": 30665
+  },
+  {
+    "hash": "82f21578799b073a9f91b7f3876885d7a5a9913f2f2b4cb2270e50c92d3dfb6f",
+    "text": "Ácido débil monoprótico: $[\\mathrm{H_3O^+}]\\approx\\sqrt{K_aC_0}$ solo si la ionización y la contribución del agua son despreciables frente a las cantidades pertinentes.",
+    "bytes": 44595
+  },
+  {
+    "hash": "83945d0a3aa9ff8573ab449f4d19b2ae45c04820a6ccc7862e1c138305317936",
+    "text": "Buffer: ácido débil y base conjugada en cantidades apreciables; $\\mathrm{pH}\\approx pK_a+\\log([A^-]/[HA])$ dentro de sus supuestos.",
+    "bytes": 36047
+  },
+  {
+    "hash": "f3d0f11371e3595272e599e910e820f5e286d0bbe408ff40dc0f396db9c7c6b8",
+    "text": "Con potenciales tabulados de reducción: $E^\\circ_{\\mathrm{celda}}=E^\\circ_{\\mathrm{catodo}}-E^\\circ_{\\mathrm{anodo}}$; no multiplicar potenciales por coeficientes.",
+    "bytes": 33583
+  },
+  {
+    "hash": "bc9c8a4c5b13e5bff6c6fa9ce1fa75a96a42f5a7afd80b9fe88c789173b1cc99",
+    "text": "$\\Delta G^\\circ=-nFE^\\circ$ relaciona espontaneidad estándar y potencial estándar.",
+    "bytes": 22181
+  },
+  {
+    "hash": "aac573a2f2b8eca81a9ba4542aa2dc85e6cec9afae4cb29fbd5b6d34fcdede17",
+    "text": "Carga transferida: $Q=It$ para corriente constante; I en amperios y t en segundos.",
+    "bytes": 25995
+  },
+  {
+    "hash": "be8a561ef6704264d60a55d16e06c59e9c12a22a9159d54ea7f6458313dcab65",
+    "text": "Masa ideal depositada: $m=MIt/(zF)$, con z electrones por entidad y eficiencia de corriente del 100 %. ",
+    "bytes": 32443
+  },
+  {
+    "hash": "d46e5e83056f4a2165ad8317174ea1d5d0e0cf1b4dccab1b81ae0ad405ad1175",
+    "text": "$F\\approx96485\\ \\mathrm{C/mol}$ de electrones; si se indica otro redondeo, usarlo consistentemente.",
+    "bytes": 27927
+  },
+  {
+    "hash": "883a636b0f15bc81be8e16fbf243be85d23e89ec2dfd78bb3d46e00dfed49f9b",
+    "text": "Hibridaciones $sp^3$, $sp^2$ y sp: distinguir geometría y enlaces sigma y pi.",
+    "bytes": 24181
+  },
+  {
+    "hash": "9961a4e6c52e40934656fc3d94cf58a2b6ebd2973a1f6a1dccba3fc11849a9be",
+    "text": "Alcanos acíclicos saturados: $C_nH_{2n+2}$.",
+    "bytes": 12950
+  },
+  {
+    "hash": "9eb9d44b9e5199708f89e3925aea00035c7359f052bfa9c09e51115a5fb98e81",
+    "text": "Alquenos acíclicos con un solo doble enlace: $C_nH_{2n}$.",
+    "bytes": 15855
+  },
+  {
+    "hash": "ace51ce974ddb19f179df5847253e69bc30902e2af259bbe9abf8b7d374f2d57",
+    "text": "Alquinos acíclicos con un solo triple enlace: $C_nH_{2n-2}$.",
+    "bytes": 15647
+  },
+  {
+    "hash": "81ffc6f74202e928650b49bbad89838f98cf41e47586b0975843841045176f38",
+    "text": "Cicloalcanos monocíclicos saturados: $C_nH_{2n}$; esa fórmula por sí sola no demuestra un doble enlace.",
+    "bytes": 32175
+  },
+  {
+    "hash": "2faef13251653e256625d83703aacce63f86e586a75318c126ac4bf34b6257f0",
+    "text": "Conjunción: $p\\land q$; afirma ambas componentes.",
+    "bytes": 15610
+  },
+  {
+    "hash": "2431a7663f1e3514a9266b4e0bb4710409c0b819a67e6394862e3915b1565dfe",
+    "text": "Disyunción inclusiva: $p\\lor q$; admite ambas verdaderas.",
+    "bytes": 17768
+  },
+  {
+    "hash": "9b0aec2638e1cd98c4b1d0b24e883f3592db51c20b62c558f67e7507b2363ecf",
+    "text": "Condicional: $p\\to q$; solo es falso con p verdadera y q falsa.",
+    "bytes": 18463
+  },
+  {
+    "hash": "d1be233d658fc1d901fb27dbbdf63d10014567b110fdb351c39ac44db3e7d490",
+    "text": "Bicondicional: $p\\leftrightarrow q$; exige valores iguales.",
+    "bytes": 14228
+  },
+  {
+    "hash": "b3d7857f25a126b18ec980eb84616a985ec041ffc6d3cc1fcc35220619b7af05",
+    "text": "Negación: $\\neg p$; invierte el valor.",
+    "bytes": 10040
+  },
+  {
+    "hash": "39079f02f4bbd8b070e4665b6b75b1fd3142a983572da26a3c5f826604b57ae7",
+    "text": "Conjunción: $p\\land q$.",
+    "bytes": 6453
+  },
+  {
+    "hash": "89440ec3557c06e93fb71211e72fff831f0b5a7c097c1ef9d446ce7eda7df77f",
+    "text": "Disyunción inclusiva: $p\\lor q$.",
+    "bytes": 9530
+  },
+  {
+    "hash": "e348e614f9b6342766d4d0aaf94db4edce76ae3c70439978615b7482558c30e1",
+    "text": "Disyunción exclusiva: $(p\\lor q)\\land\\neg(p\\land q)$.",
+    "bytes": 15636
+  },
+  {
+    "hash": "8c832e4f602f69a96913ae3ad2e90c9c3980b9e2242f9af0c6486c2dd31131d0",
+    "text": "Condicional: $p\\to q$, también escrito $q\\leftarrow p$.",
+    "bytes": 14008
+  },
+  {
+    "hash": "f92a8d0b3ba2f98fd861434381b408e7c728a25fb5c5bbc2e0e6e5fdc0ac025d",
+    "text": "Bicondicional: $p\\leftrightarrow q$.",
+    "bytes": 7232
+  },
+  {
+    "hash": "ac6bdf7feff7470934c1507ae562c58a5233fc1122c6ecf19e367a788f68feda",
+    "text": "NAND o Sheffer: $\\neg(p\\land q)$.",
+    "bytes": 10320
+  },
+  {
+    "hash": "4ab7344d318c81cc07e3c7c680c5ae9381f710517d3e1de3217a34f36f4defb9",
+    "text": "NOR o Peirce: $\\neg(p\\lor q)$.",
+    "bytes": 9132
+  },
+  {
+    "hash": "d6a375294d72a37f93fbe6fd23260c207e5fb47c450de5d40d7626f353d77640",
+    "text": "Con n variables distintas: $2^n$ asignaciones.",
+    "bytes": 14933
+  },
+  {
+    "hash": "8448a062738111fda4f5da0e8717b656ff95c16e13669dff54ec478b43e07fe1",
+    "text": "De Morgan: $\\neg(p\\land q)\\equiv\\neg p\\lor\\neg q$.",
+    "bytes": 11847
+  },
+  {
+    "hash": "62c2e94172b0f40f8ba39a5b06b6eea1fd15fb4257bbe9fdcdf005f69e7136d3",
+    "text": "Condicional: $p\\to q\\equiv\\neg p\\lor q$.",
+    "bytes": 10054
+  },
+  {
+    "hash": "129913765bc2f0eaf5537511a1ad071c0b206f7d3f6c3060aeea6378622976fd",
+    "text": "Absorción: $p\\land(p\\lor q)\\equiv p$.",
+    "bytes": 10563
+  },
+  {
+    "hash": "7620f34e9d5809d069749152c8af7c0c98ee74db2d188220bdd3656ddc2bafbf",
+    "text": "Suficiente: si A basta para B, $A\\to B$.",
+    "bytes": 12228
+  },
+  {
+    "hash": "740bdeb2c07834890a48e8ff060015e7b8f65f8d7bbc8e99f79927eeec5d9f44",
+    "text": "Necesaria: si B es necesaria para A, $A\\to B$.",
+    "bytes": 14253
+  },
+  {
+    "hash": "ed52b76908b0b9c32073b42bca1ca597cb6a635865a46b33f34302a07d7d4a59",
+    "text": "Necesaria y suficiente: $A\\leftrightarrow B$.",
+    "bytes": 10321
+  },
+  {
+    "hash": "575f6d90a090c4e3342615bc9ccf10cfae1bb7d10b3a1e50aac5b3cc6bca6db5",
+    "text": "Modus ponens: $p\\to q$, $p$; se concluye $q$.",
+    "bytes": 14284
+  },
+  {
+    "hash": "d027f84c3a9b0cc017ac06e2333e295fc44f3b6eb04e628acaa73c8161b05e35",
+    "text": "Modus tollens: $p\\to q$, $\\neg q$; se concluye $\\neg p$.",
+    "bytes": 13828
+  },
+  {
+    "hash": "0f467da51eb9f735fb95269f3288eee0e072c962e066909b07cc471ccd66143a",
+    "text": "Silogismo hipotético: $p\\to q$, $q\\to r$; se concluye $p\\to r$.",
+    "bytes": 16467
+  },
+  {
+    "hash": "b666478f467690cfb7882e034a7e2b035d24295da6b4323049085e9931c27fe2",
+    "text": "Silogismo disyuntivo: $p\\lor q$, $\\neg p$; se concluye $q$.",
+    "bytes": 16726
+  },
+  {
+    "hash": "ccc5ffd67327e73065036f2ff51a114cddee8cd4b37f14f24681d4ee80068cb7",
+    "text": "Universal afirmativa: todo S es P; $S\\cap P^c=\\varnothing$.",
+    "bytes": 15516
+  },
+  {
+    "hash": "e6ba73292c0a7cc48001dc8740edc8dd4f60b2eea4de00a74b99978b466b786a",
+    "text": "Universal negativa: ningún S es P; $S\\cap P=\\varnothing$.",
+    "bytes": 14641
+  },
+  {
+    "hash": "7f33f8350bbaf8610752e2b341026dbe97f7e36dd4dabfe1914ecf08d5b0a6d0",
+    "text": "Particular afirmativa: algún S es P; $S\\cap P\\ne\\varnothing$.",
+    "bytes": 15079
+  },
+  {
+    "hash": "1db4180eafe98abf73ffe9b5162cb605fe51126106c3ffb39cc8f0dcbe05deee",
+    "text": "Particular negativa: algún S no es P; $S\\cap P^c\\ne\\varnothing$.",
+    "bytes": 16399
+  },
+  {
+    "hash": "04872379b643cf5943b2c971cc74aaa742a54475e0fa7e93d87d43062b5312ef",
+    "text": "Contradicción explícita: $p\\land\\neg p$.",
+    "bytes": 10874
+  },
+  {
+    "hash": "f7b52ffc57e708fdc49365a9162cce273151486998ba00b090a804b4312bdcba",
+    "text": "Modus ponens: de $p\\to q$ y $p$, se obtiene $q$.",
+    "bytes": 14418
+  },
+  {
+    "hash": "422cc40ca812e48911ceea89158f5e03363f601a4b5ddda066302efd8174b4f2",
+    "text": "Modus tollens: de $p\\to q$ y $\\neg q$, se obtiene $\\neg p$.",
+    "bytes": 14969
+  },
+  {
+    "hash": "a3750d34f12b9df340fcc6453f90e8c370edc8d0aba85fc64effe506d2520bc2",
+    "text": "Contraposición: $p\\to q\\equiv\\neg q\\to\\neg p$.",
+    "bytes": 10364
+  },
+  {
+    "hash": "80b6c9423722b5bfdb377f0ddc92db4db4d7d8bcad2d103684fdcc732a14f7e1",
+    "text": "Afirmación del consecuente: de $p\\to q$ y $q$ no se deduce necesariamente $p$.",
+    "bytes": 23762
+  },
+  {
+    "hash": "04d448849a15c20eb0b481a907b8d7358c6d8d30e5154893636bea64a594e993",
+    "text": "Negación del antecedente: de $p\\to q$ y $\\neg p$ no se deduce necesariamente $\\neg q$.",
+    "bytes": 23663
+  },
+  {
+    "hash": "57257ce718371151b3baaa1e1974e07830de19658504c0960356f8110087c890",
+    "text": "Serie geométrica infinita: $|q|<1$ para aplicar la suma usual.",
+    "bytes": 16241
+  },
+  {
+    "hash": "682e151498da037db712bebbb2746ad032366cd0e062c482d1ebc4e2dc639a75",
+    "text": "Diferencia o razón aritmética: $a-b$.",
+    "bytes": 10884
+  },
+  {
+    "hash": "1a84ce90e73329a32e9dd4f6ad3b894ec49936ce9076d057fd07c87baab9f85f",
+    "text": "Cociente o razón geométrica: $a/b$, con b no nulo.",
+    "bytes": 16150
+  },
+  {
+    "hash": "08cdfce8d6f59f27d2da390cc8074c524191176f7396de6759d6e68b65bcc968",
+    "text": "Directa: $y/x=k$, con denominador admisible.",
+    "bytes": 14408
+  },
+  {
+    "hash": "e04a792c6abe03df20907254fff396435836499e2b10c5d32e62a76510211c2f",
+    "text": "Inversa: $xy=k$ bajo las condiciones del modelo.",
+    "bytes": 16379
+  },
+  {
+    "hash": "900a9ef10ec4dd9eb881f5961c9966024a018f8bdd2bfea620f4372481a9efa4",
+    "text": "Diferencia constante: $(a+t)-(b+t)=a-b$.",
+    "bytes": 14044
+  },
+  {
+    "hash": "5cfa72ee851580ab4c0b13679b37425dda3592b4958b5d1663124091a697c9a6",
+    "text": "Permutación lineal de n objetos distintos: $n!$.",
+    "bytes": 12635
+  },
+  {
+    "hash": "91995d7a6977a27d071507cb66a098c1bcbd0c02f1fab0b615da3ee78bd51cd1",
+    "text": "Circular: $(n-1)!$ para objetos distintos si se identifican giros, pero no reflejos.",
+    "bytes": 23164
+  },
+  {
+    "hash": "4cb426c0f87b9a1f5172f00055471a253c26c248689b7e24d596b22e6d1fd354",
+    "text": "Combinación simple: $\\binom{n}{k}$ para elegir k objetos entre n distintos.",
+    "bytes": 22151
+  },
+  {
+    "hash": "ac95b87e071b01804274a772e6848c754dbab40aa1f49ad73be4cda70184b9b3",
+    "text": "Se usan todos los objetos distintos en fila: $n!$.",
+    "bytes": 15599
+  },
+  {
+    "hash": "8b25e8097d475f80fe42f8f50c5a0d79a8e26a40e0adbd636e57016279a7836e",
+    "text": "Se eligen k objetos distintos y se ordenan sin repetir: $n!/(n-k)!$.",
+    "bytes": 22468
+  },
+  {
+    "hash": "046a7348153a63259d2199169bf07bc714beeeafd73f1abe753de5eee3138e96",
+    "text": "Grupo de k entre n objetos distintos sin repetir: $\\binom{n}{k}=n!/[k!(n-k)!]$.",
+    "bytes": 24024
+  },
+  {
+    "hash": "a8a887718f651c2e0465f2a3e359e1cbe8bad2dfc90c7ed7736c1b7e4538e1c6",
+    "text": "Espacio muestral $\\Omega$: resultados posibles.",
+    "bytes": 13131
+  },
+  {
+    "hash": "5f76e435a430a45510628aaf263c2ab03981f358dffbc2f0bc97e1461896663f",
+    "text": "Evento A: subconjunto de $\\Omega$.",
+    "bytes": 9463
+  },
+  {
+    "hash": "efa882216b0cb37ee350ebaa94b250646cc1e9d7043ce7ed6bb6daaed959f6fb",
+    "text": "Acotación: $0\\le P(A)\\le1$.",
+    "bytes": 10322
+  },
+  {
+    "hash": "a809bca71328fbc2fea4103b78e34cc3dc83a3b6968f72d35e77f9b01dd5512c",
+    "text": "Complemento: $P(A^c)=1-P(A)$.",
+    "bytes": 11459
+  },
+  {
+    "hash": "46819578dfedc8ff8b34be848f12a230d4f796ea47307df6cc23f431eefdeec7",
+    "text": "Unión: $P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$.",
+    "bytes": 8652
+  },
+  {
+    "hash": "fd6a829778ff2620c2f04ec396d2263116ff23df437abcc1407f1579bec2f758",
+    "text": "Independencia: $P(A\\cap B)=P(A)P(B)$.",
+    "bytes": 12878
+  },
+  {
+    "hash": "93ab71cbfaed2f530caf6a494b7a7f31de01da9e4190aa7c411257894a6b4fdb",
+    "text": "$P(A\\mid B)=P(A\\cap B)/P(B)$, con $P(B)>0$.",
+    "bytes": 14581
+  },
+  {
+    "hash": "8309893f1d0aff6ca8664a56cfc17113bd0489510d64f1c77ccebd01327f65d1",
+    "text": "Sectores: ángulo $\\theta=360^\\circ h_i$ cuando las proporciones forman el total.",
+    "bytes": 23256
+  },
+  {
+    "hash": "3e8746c1ed608546cb2c17f33a014d1e2afc3fe958b1e8baa9e147663f401caa",
+    "text": "Número de Vueltas: n = d_c / 2πr",
+    "bytes": 11904
+  },
+  {
+    "hash": "42bc2c499f326710d3ba881a54eaddab4a9e1c6c1809df2b415ffb5c6a1a9994",
+    "text": "Seno: x = kπ + -1^k · Vp",
+    "bytes": 8979
+  },
+  {
+    "hash": "a410e9fca6917a4100fd8fc28e081ade8613bb0a26c07c2ce0b442a9aa9670a9",
+    "text": "Mareas oceánicas: h(t) = A\\cos(\\omega t) + D",
+    "bytes": 14796
+  },
+  {
+    "hash": "ce553af0deada5c711411ce931ae714084a0e17040dfafd8f5d9b1bdc105f85e",
+    "text": "Posición: x(t) = A\\operatorname{sen}(\\omega t + \\phi)",
+    "bytes": 12246
+  },
+  {
+    "hash": "e8ffc77a5edfb5e0bbe98d510546e04b0bedd06249a875c5e7fb31caff64ccca",
+    "text": "Velocidad: v(t) = A\\omega\\cos(\\omega t + \\phi)",
+    "bytes": 13618
+  },
+  {
+    "hash": "fdf1d467cc04d513f49aa4161cbebbe6a57b2801a966f2d9d1e36b647b912eec",
+    "text": "Aceleración: a(t) = -\\omega^2 x(t)",
+    "bytes": 11224
+  },
+  {
+    "hash": "b5629781830c339b01c3f7553dd5f52927451e92fc10c4c3db5331e4e04078fd",
+    "text": "Ecuación de onda: y(x,t) = A\\operatorname{sen}(kx - \\omega t)",
+    "bytes": 15155
+  },
+  {
+    "hash": "78e635803672e565aa948065c96850f0306a3525df3a058411a83caec48f88ec",
+    "text": "Voltaje y corriente senoidal: v(t) = V_0\\operatorname{sen}(\\omega t)",
+    "bytes": 17564
+  }
+]

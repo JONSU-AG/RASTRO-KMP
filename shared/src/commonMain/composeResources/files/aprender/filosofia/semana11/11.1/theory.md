@@ -6,25 +6,41 @@
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE LA AXIOLOGÍA
 
-```
-                                  TEORÍA DEL VALOR (AXIOLOGÍA)
-                                                │
-         ┌──────────────────┬───────────────────┴───────────────────┬──────────────────┐
-         ▼                  ▼                                       ▼                  ▼
-    EL ACTO            CARACTERÍSTICAS                        CORRIENTES           JERARQUÍA DE
-   VALORATIVO            DEL VALOR                            AXIOLÓGICAS          MAX SCHELER
-         │                  │                                       │                  │
-• Sujeto valorador   • Polaridad:                            • Subjetivismo:     1. Valores
-• Objeto valorado      Valor vs. Antivalor                     - Meinong            Religiosos
-• Dimensión:         • Jerarquía:                                (Agrado)           (Sagrado /
-  - Cognitiva          Superior vs. Inferior                   - Ehrenfels          Profano)
-  - Afectiva         • Gradualidad:                              (Deseo)         2. Valores
-  - Volitiva           Grados de intensidad                  • Objetivismo:         Espirituales
-• Juicio de valor vs.• Infinitud:                              - Platón (Ideas)     (Estéticos,
-  Juicio de hecho      Ideal inagotable                        - Scheler (Intuición Jurídicos,
-                     • Objetividad / Subjetividad                emocional)         Verdad)
-                                                             • Relacionismo:     3. Valores Vitales
-                                                               - Frondizi        4. De lo Agradable
+```mermaid
+graph TD
+ ROOT["Valoración y teorías del valor"]
+ B1["El acto de valorar"]
+ B1N1["Distinguir sujeto que valora, objeto o situación valorados y criterio de valoración."]
+ B1N2["Una valoración puede integrar conocimiento, afecto y voluntad sin ser idéntica a un dato descriptivo."]
+ B1N3["Examinar cómo se justifican y discuten los juicios de valor."]
+ B2["Problemas axiológicos"]
+ B2N1["Polaridad, grados y jerarquía son categorías de análisis; su interpretación depende de la teoría."]
+ B2N2["No presentar infinitud u objetividad como propiedades indiscutidas de todo valor."]
+ B2N3["Separar qué se considera bueno de la pregunta por la existencia y fundamento de los valores."]
+ B3["Posiciones"]
+ B3N1["Subjetivismo: investigar el papel de deseos, afectos o actitudes del sujeto."]
+ B3N2["Objetivismo: investigar la independencia del valor respecto de esas actitudes."]
+ B3N3["Frondizi: considerar la relación entre sujeto, objeto y situación, sin reducirla a una preferencia aislada."]
+ B4["La propuesta de Scheler"]
+ B4N1["La jerarquía de Scheler distingue lo agradable, valores vitales, espirituales y religiosos."]
+ B4N2["El orden pertenece a su propuesta filosófica; no se presenta como una escala universal demostrada."]
+ B4N3["Reconocer una teoría y sus argumentos no obliga al estudiante a adoptar sus compromisos."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---
@@ -348,3 +364,15 @@ Sostiene que los valores son **independientes del sujeto** cognoscente, de sus a
 - **SA**: **Sa**grados / Religiosos (Santo / Profano) \rightarrow Cúspide suprema.
 
 ---
+
+
+### Leer la jerarquía como propuesta de Scheler
+
+| Nivel, de menor a mayor en su propuesta | Orientación |
+|---|---|
+| Agradable y desagradable | Valores sensibles |
+| Vitales | Valores de la vida |
+| Espirituales | Entre ellos, valores estéticos, jurídicos y del conocimiento |
+| Religiosos | Lo sagrado y lo profano |
+
+**Importante:** se describe una jerarquía filosófica concreta. No es una clasificación impuesta al estudiante ni una medición experimental de superioridad entre creencias.

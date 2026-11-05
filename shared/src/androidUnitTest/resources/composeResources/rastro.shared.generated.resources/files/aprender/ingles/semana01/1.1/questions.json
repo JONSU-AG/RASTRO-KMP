@@ -1,1 +1,200 @@
-[{"concept":"1.1.1","correctIndex":1,"explanation":"**Resolución:** 1. El sujeto es *My sister* (tercera persona singular femenina: *she*). 2. La expresión de tiempo *every month* denota una rutina habitual periódica, lo que exige el uso del **Present Simple**. 3. De acuerdo a las reglas morfológicas, al verbo regular *monitor* se le agrega la desinencia **-s**: *monitors*. **Respuesta:** **B** ---","fuente":"temario","id":"ing_t01_s01_c01","options":["are monitoring","monitor","monitors","is monitoring"],"pedagogicalTier":"concepto","semana":1,"statement":"Complete the sentence correctly:","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"1.1.2","correctIndex":2,"explanation":"**Resolución:** La regla de oro para la sintaxis de los adverbios de frecuencia establece que se colocan **después del verbo to be** (*am, is, are*) y **antes de los demás verbos**. En la oración se utiliza el verbo *is*; por consiguiente, el adverbio *always* debe posicionarse inmediatamente después de *is*: *She is always late...*. **Respuesta:** **D** ---","fuente":"temario","id":"ing_t01_s01_c02","options":["She always is late to the biology laboratory.","She is always late to the biology laboratory.","She is arriving always late to the biology laboratory.","She arrives always late to the biology laboratory."],"pedagogicalTier":"concepto","semana":1,"statement":"Choose the sentence that displays the grammatically correct word order:","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"1.1.3","correctIndex":3,"explanation":"**Resolución:** 1. La exclamación inicial *\"Listen!\"* actúa como marcador pragmático que señala que la acción se está desarrollando en el momento mismo del habla; por lo tanto, el primer verbo requiere **Present Continuous**: *is explaining*. 2. El segundo verbo es *understand* (Proceso cognitivo mental), el cual es un **Stative Verb** que rechaza las formas continuas; por lo tanto, debe conjugarse en **Present Simple**: *nobody understands* (recordando que *nobody* rige verbo en singular con *-s*). Combinación correcta: *is explaining - understands*. **Respuesta:** **C** ---","fuente":"temario","id":"ing_t01_s01_c03","options":["is explaining - is understanding","is explaining - understands","explains - is understanding","explains - understands"],"pedagogicalTier":"concepto","semana":1,"statement":"Fill in the blanks with the most appropriate verb forms:","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"1.1.4","correctIndex":3,"explanation":"According to the lesson theory: When the base verb ends in **-s, -ss, -sh, -ch, -x, -z**, or **-o** (*passes, washes, watches, fixes, goes*).","fuente":"temario","id":"ing_t01_s01_c04","options":["It requires an irregular past participle form without auxiliary verbs.","It is only used in colloquial informal contexts with plural nouns.","It follows an inverted word order with obligatory double negation.","When the base verb ends in **-s, -ss, -sh, -ch, -x, -z**, or **-o** (*passes, washes, watches, fixes, goes*)."],"pedagogicalTier":"concepto","semana":1,"statement":"When do you add *-es* instead of *-s* in Present Simple third person?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"1.1.5","correctIndex":1,"explanation":"According to the lesson theory: The verb **loses the -s** and returns to its **base infinitive form** (*Does he know? He doesn't know*).","fuente":"temario","id":"ing_t01_s01_c05","options":["It follows an inverted word order with obligatory double negation.","The verb **loses the -s** and returns to its **base infinitive form** (*Does he know? He doesn't know*).","It requires an irregular past participle form without auxiliary verbs.","It is only used in colloquial informal contexts with plural nouns."],"pedagogicalTier":"concepto","semana":1,"statement":"What happens to the verb *-s* when *does* or *doesn't* is used?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"1.1.6","correctIndex":2,"explanation":"According to the lesson theory: Adverbs of frequency are placed **AFTER the verb To Be** (*He is always on time*).","fuente":"temario","id":"ing_t01_s01_c06","options":["It follows an inverted word order with obligatory double negation.","It requires an irregular past participle form without auxiliary verbs.","Adverbs of frequency are placed **AFTER the verb To Be** (*He is always on time*).","It is only used in colloquial informal contexts with plural nouns."],"pedagogicalTier":"concepto","semana":1,"statement":"Where do you place adverbs of frequency in a sentence with *To Be*?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"1.1.7","correctIndex":1,"explanation":"(Verdad científica y hecho natural permanente en Present Simple con 3.ª persona *-s*).","fuente":"temario","id":"ing_t01_s01_c07","options":["The sun is rising in the east every morning.","The sun rises in the east every morning.","The sun rise in the east every morning.","The sun does rises in the east every morning."],"pedagogicalTier":"concepto","semana":1,"statement":"Which sentence is grammatically correct?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"1.1.8","correctIndex":0,"explanation":"(Situación temporal transitoria delimitada por *this semester* en Present Continuous).","fuente":"temario","id":"ing_t01_s01_c08","options":["aren't studying","not studying","doesn't study","don't study"],"pedagogicalTier":"concepto","semana":1,"statement":"*\"They _______ computer science this semester because their professor is on sabbatical.\"*","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"1.1.9","correctIndex":2,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t01_s01_c09","options":["The tense used is incompatible with the stated adverbial time marker.","The word order incorrectly positions the modifier after the direct object.","The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson.","The sentence violates subject-verb agreement in standard English."],"pedagogicalTier":"concepto","semana":1,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"},{"concept":"1.1.10","correctIndex":3,"explanation":"Directly deduced from the theoretical foundations and rules presented in this lesson.","fuente":"temario","id":"ing_t01_s01_c10","options":["The tense used is incompatible with the stated adverbial time marker.","The word order incorrectly positions the modifier after the direct object.","The sentence violates subject-verb agreement in standard English.","The grammatical structure strictly follows standard pre-university English syntax rules explained in this lesson."],"pedagogicalTier":"concepto","semana":1,"statement":"Which of the following statements is analytically and grammatically correct regarding the lesson theory?","subject":"ingles","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "ing_t01_s01_c01",
+    "concept": "1.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 1,
+    "statement": "Completa la oración en inglés estándar:\nMy brother ___ the plants every morning.",
+    "options": [
+      "waters",
+      "water",
+      "are watering",
+      "watering"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Una rutina se expresa aquí con present simple.\n2. My brother es tercera persona singular; el verbo lleva -s.\n3. La oración completa es: My brother waters the plants every morning.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t01_s01_c02",
+    "concept": "1.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 1,
+    "statement": "Completa la oración en inglés estándar:\nListen! The children ___ in the next room.",
+    "options": [
+      "is singing",
+      "sings",
+      "singing",
+      "are singing"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La acción está ocurriendo en este momento.\n2. El sujeto plural requiere are seguido de la forma -ing.\n3. La oración completa es: Listen! The children are singing in the next room.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t01_s01_c03",
+    "concept": "1.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 1,
+    "statement": "Completa la oración en inglés estándar:\nI ___ to school on weekdays.",
+    "options": [
+      "am walk",
+      "walking",
+      "walk",
+      "walks"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El present simple describe la rutina indicada por on weekdays.\n2. Con I se usa la forma base walk.\n3. La oración completa es: I walk to school on weekdays.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t01_s01_c04",
+    "concept": "1.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 1,
+    "statement": "Completa la oración en inglés estándar:\nShe ___ coffee. Use the negative present simple.",
+    "options": [
+      "not drinks",
+      "does not drink",
+      "do not drink",
+      "does not drinks"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La negación con she usa does not y verbo base.\n2. El auxiliar lleva la marca de tercera persona; drink no añade -s.\n3. La oración completa es: She does not drink coffee. Use the negative present simple.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t01_s01_c05",
+    "concept": "1.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 1,
+    "statement": "Completa la oración en inglés estándar:\n___ your father work here?",
+    "options": [
+      "Does",
+      "Do",
+      "Is",
+      "Are"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La pregunta en present simple utiliza un auxiliar.\n2. Your father es singular y work queda en forma base.\n3. La oración completa es: Does your father work here?",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t01_s01_c06",
+    "concept": "1.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 1,
+    "statement": "Completa la oración en inglés estándar:\nWe ___ a lesson right now.",
+    "options": [
+      "is having",
+      "has",
+      "having",
+      "are having"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La actividad está en curso ahora.\n2. We concuerda con are; having forma el participio presente.\n3. La oración completa es: We are having a lesson right now.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t01_s01_c07",
+    "concept": "1.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 1,
+    "statement": "Completa la oración en inglés estándar:\nMarta ___ two languages. Use the present simple.",
+    "options": [
+      "is speak",
+      "speaking",
+      "speaks",
+      "speak"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La instrucción pide present simple.\n2. Marta es tercera persona singular: speaks.\n3. La oración completa es: Marta speaks two languages. Use the present simple.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t01_s01_c08",
+    "concept": "1.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 1,
+    "statement": "Completa la oración en inglés estándar:\nThe train ___ at seven according to the timetable. Use the present simple.",
+    "options": [
+      "leaving",
+      "leaves",
+      "leave",
+      "is leave"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los horarios pueden expresarse con present simple.\n2. The train es singular y requiere leaves.\n3. La oración completa es: The train leaves at seven according to the timetable. Use the present simple.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t01_s01_c09",
+    "concept": "1.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 1,
+    "statement": "Completa la oración en inglés estándar:\nThey ___ the answer. Use know to describe their current state.",
+    "options": [
+      "know",
+      "knows",
+      "are know",
+      "knowing"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Know en este sentido expresa un estado de conocimiento.\n2. El sujeto they usa know; no se omite el verbo ni se añade -s.\n3. La oración completa es: They know the answer. Use know to describe their current state.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t01_s01_c10",
+    "concept": "1.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 1,
+    "statement": "¿Cuál es la forma negativa de «He is reading»?",
+    "options": [
+      "He does not reading.",
+      "He not is reading.",
+      "He is not read.",
+      "He is not reading."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. En el continuo, la negación se añade al auxiliar be.\n2. Se conserva reading y se coloca not después de is.\n3. La respuesta es: He is not reading.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "ing_t01_s01_c11",
+    "concept": "1.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "ingles",
+    "semana": 1,
+    "statement": "¿Qué oración describe una rutina con present simple?",
+    "options": [
+      "Eva reading every evening.",
+      "Eva readed every evening.",
+      "Eva reads every evening.",
+      "Eva is read every evening."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El sujeto Eva exige una forma personal del verbo.\n2. Reads tiene la marca de tercera persona; las demás formas no completan esta estructura.\n3. La respuesta es: Eva reads every evening.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/ingles/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

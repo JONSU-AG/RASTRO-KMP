@@ -13,26 +13,49 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                         CÁLCULOS QUÍMICOS Y ESTEQUIOMETRÍA
-                                         │
-         ┌───────────────────────────────┴───────────────────────────────┐
-         ▼                                                               ▼
-UNIDADES QUÍMICAS DE MASA                                        LEYES ESTEQUIOMÉTRICAS
-• Masa Atómica Promedio (\overline{P.A.})                      • Leyes Ponderales:
-• Masa Molar (M en g/mol)                                        - Conservación de la masa (Lavoisier)
-• Concepto de Mol y Número de Avogadro (N_A = 6.022 \times 10^{23}) - Proporciones definidas (Proust)
-• Átomo-gramo (at\text{-}g) y Molécula-gramo (mol)              - Proporciones múltiples (Dalton)
-• Composición Centesimal (\%m)                                   - Proporciones recíprocas (Richter-Wenzel)
-• Fórmula Empírica (FE) y Fórmula Molecular (FM)                 • Ley Volumétrica de Gay-Lussac (Gases)
-                                                                         │
-         ┌───────────────────────────────────────────────────────────────┘
-         ▼
-CÁLCULOS ESTEQUIOMÉTRICOS EN REACCIONES REALES
-• Reactivo Limitante (RL) y Reactivo en Exceso (RE)
-• Pureza de Reactivos (\%P)
-• Rendimiento Porcentual de Reacción (\%R = \frac{\text{Real}}{\text{Teórico}} \times 100\%)
-• Volumen Molar a Condiciones Normales (V_{molar} = 22.4\text{ L/mol})
+```mermaid
+graph TD
+ ROOT["Cantidades químicas y estequiometría"]
+ B1["Masa y cantidad de sustancia"]
+ B1N1["Masa atómica promedio: promedio ponderado según abundancias isotópicas; no es el número de masa A."]
+ B1N2["Masa molar M: masa por mol; $n=m/M$ con unidades compatibles."]
+ B1N3["Número de entidades: $N=nN_A$; indicar si se cuentan átomos, moléculas, iones u otras entidades."]
+ B1N4["Átomo-gramo y molécula-gramo son denominaciones históricas; expresar la cantidad de sustancia en mol."]
+ B2["Composición y fórmulas"]
+ B2N1["Porcentaje en masa: $100m_{\mathrm{componente}}/m_{\mathrm{total}}$."]
+ B2N2["Fórmula empírica: proporción entera más simple de átomos."]
+ B2N3["Fórmula molecular: múltiplo entero de la empírica; requiere información adicional como la masa molar."]
+ B3["Relaciones estequiométricas"]
+ B3N1["Conservar átomos por elemento y carga eléctrica al balancear una reacción química."]
+ B3N2["Proporciones definidas: composición fija de un compuesto; proporciones múltiples: distintos compuestos de los mismos elementos."]
+ B3N3["Proporciones recíprocas: comparar las masas que se combinan con una masa fija de un tercer elemento."]
+ B3N4["Los coeficientes relacionan moles de las especies; no son directamente una razón de masas en gramos."]
+ B3N5["La relación entre volúmenes gaseosos requiere la misma temperatura y presión y un modelo adecuado."]
+ B4["Reacciones con datos reales"]
+ B4N1["Reactivo limitante: comparar cantidad disponible dividida por su coeficiente; el menor cociente determina el avance máximo."]
+ B4N2["Pureza: usar solo la masa reactiva de la muestra."]
+ B4N3["Rendimiento: $100m_{\mathrm{real}}/m_{\mathrm{teorica}}$, para el mismo producto y unidad."]
+ B4N4["Gas ideal: $V_m=RT/P$; $22{,}4\ \mathrm{L/mol}$ es aproximado a $273{,}15\ \mathrm{K}$ y $1\ \mathrm{atm}$, no para cualquier condición."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
+ B3 --> B3N5
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ B4 --> B4N4
 ```
 
 ---
@@ -83,3 +106,21 @@ CÁLCULOS ESTEQUIOMÉTRICOS EN REACCIONES REALES
 * Aluminio (Al): 27\text{ u.m.a.}
 * Fósforo (P): 31\text{ u.m.a.}
 * Azufre (S): 32\text{ u.m.a.}
+
+
+### Resolver con una tabla de cantidades
+
+Se dispone de $6\ \mathrm{mol}$ de $\mathrm{H_2}$ y $2\ \mathrm{mol}$ de $\mathrm{O_2}$. Para la reacción completa idealizada:
+
+$$\mathrm{2H_2+O_2\rightarrow 2H_2O}$$
+
+| Especie | Cantidad inicial | Coeficiente | Inicial dividida por coeficiente |
+|---|---|---|---|
+| $\mathrm{H_2}$ | $6\ \mathrm{mol}$ | 2 | $3\ \mathrm{mol}$ |
+| $\mathrm{O_2}$ | $2\ \mathrm{mol}$ | 1 | $2\ \mathrm{mol}$ |
+
+**Primero, comparar:** el menor cociente es 2; el oxígeno es el limitante.
+
+**Después, aplicar la proporción:** se consumen $4\ \mathrm{mol}$ de hidrógeno y $2\ \mathrm{mol}$ de oxígeno para formar $4\ \mathrm{mol}$ de agua.
+
+**Por último, comprobar:** sobran $2\ \mathrm{mol}$ de hidrógeno. Se conservan los átomos: ocho moles de átomos de H y cuatro de O pasan al producto. Este resultado es teórico; un rendimiento menor modificaría la cantidad recuperada.

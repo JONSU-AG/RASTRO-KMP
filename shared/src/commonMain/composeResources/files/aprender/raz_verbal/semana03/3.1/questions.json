@@ -1,1 +1,182 @@
-[{"concept":"3.1.1","correctIndex":3,"explanation":"La serie verbal evalúa la capacidad de descubrir la regla lógica o rasgo sémico compartido que vincula a un conjunto ordenado de vocablos para determinar qué término debe continuarla.","fuente":"temario","id":"rv_t03_s01_c01","options":["Un poema lírico estructurado en versos alejandrinos.","Una lista de números enteros ordenados de forma descendente.","Un párrafo argumentativo que carece de signos de puntuación.","Una secuencia o conjunto ordenado de palabras que comparten un campo semántico común, regido por un patrón lógico o ley de formación discernible."],"pedagogicalTier":"concepto","semana":3,"statement":"En el razonamiento verbal, una 'Serie Verbal' se define formalmente como:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.1.2","correctIndex":0,"explanation":"La serie opera mediante pares de 'hiperónimo : hipónimo'. El trigo es el hipónimo específico correspondiente a la clase de los cereales.","fuente":"temario","id":"rv_t03_s01_c02","options":["Trigo.","Manzana.","Zanahoria.","Tubérculo."],"pedagogicalTier":"concepto","semana":3,"statement":"Dada la serie verbal: 'Cítrico, mandarina; legumbre, lenteja; cereal, ______', el término que completa correctamente la analogía interna de hiperónimo a hipónimo es:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.1.3","correctIndex":2,"explanation":"Todos los términos de la serie son sinónimos que aluden a la persona parca en el hablar; 'reservado' continúa coherentemente la serie, mientras que las otras son antónimos.","fuente":"temario","id":"rv_t03_s01_c03","options":["Locuaz.","Hablador.","Reservado.","Gárrulo."],"pedagogicalTier":"concepto","semana":3,"statement":"Determine el término que completa lógicamente la serie verbal por sinonimia: 'Taciturno, silencioso, callado, ______'","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.1.4","correctIndex":1,"explanation":"La regla de formación es constante: ciudad capital seguida de su respectivo Estado nacional. 'Madrid, España' satisface exactamente dicha relación.","fuente":"temario","id":"rv_t03_s01_c04","options":["Berlín, Europa.","Madrid, España.","Londres, Támesis.","Lisboa, Océano."],"pedagogicalTier":"concepto","semana":3,"statement":"En la serie verbal alterna: 'Atenas, Grecia; Roma, Italia; París, Francia; ______', la alternativa que sigue el patrón de capital a país es:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.1.5","correctIndex":2,"explanation":"La serie agrupa mamíferos cetáceos marinos; el cachalote es un cetáceo mamífero, a diferencia del tiburón, el atún o la mantarraya que son peces.","fuente":"temario","id":"rv_t03_s01_c05","options":["Tiburón.","Atún.","Cachalote.","Mantarraya."],"pedagogicalTier":"concepto","semana":3,"statement":"Complete la serie de cohiponimia de mamíferos marinos: 'Ballena, delfín, orca, ______'","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.1.6","correctIndex":0,"explanation":"La serie describe fenómenos eólicos ordenados de menor a mayor fuerza destructiva, culminando coherentemente en el grado supremo: 'huracán'.","fuente":"temario","id":"rv_t03_s01_c06","options":["Huracán.","Neblina.","Rocío.","Calma."],"pedagogicalTier":"concepto","semana":3,"statement":"Analice la serie verbal de intensidad creciente: 'Brisa, viento, vendaval, ______'","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.1.7","correctIndex":0,"explanation":"Cada par contiene dos términos opuestos; el antónimo exacto de soberbia es humildad.","fuente":"temario","id":"rv_t03_s01_c07","options":["Humildad.","Altivez.","Arrogancia.","Orgullo."],"pedagogicalTier":"concepto","semana":3,"statement":"Dada la serie por parejas de antónimos: 'Elogio, censura; verdad, falsedad; soberbia, ______', el término que completa la relación de antonimia es:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.1.8","correctIndex":2,"explanation":"La serie reúne ramas específicas de la matemática (ciencia formal); la trigonometría pertenece a este mismo campo formal.","fuente":"temario","id":"rv_t03_s01_c08","options":["Biología.","Sociología.","Trigonometría.","Geología."],"pedagogicalTier":"concepto","semana":3,"statement":"Complete la serie de disciplinas de las ciencias formales: 'Aritmética, geometría, álgebra, ______'","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.1.9","correctIndex":0,"explanation":"La serie agrupa sustantivos que designan vicios o conductas inmorales graves (la felonía es traición); 'pérfida' (o perfidia) comparte la misma condición sémica negativa.","fuente":"temario","id":"rv_t03_s01_c09","options":["Pérfida.","Filantropía.","Probidad.","Lealtad."],"pedagogicalTier":"concepto","semana":3,"statement":"Identifique el término que completa la serie de actitudes morales reprochables: 'Avaricia, crueldad, felonía, ______'","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"3.1.10","correctIndex":1,"explanation":"El método científico exige descubrir el nexo semántico estructurador, identificar si la secuencia es lineal o alternada y asegurar la concordancia categorial gramatical.","fuente":"temario","id":"rv_t03_s01_c10","options":["Elegir al azar el término más corto de las alternativas.","Determinar el campo semántico preciso, analizar la relación entre pares adyacentes o alternos y contrastar la categoría gramatical de los vocablos.","Sumar el número de consonantes de cada palabra.","Buscar en un diccionario durante la rendición del examen."],"pedagogicalTier":"concepto","semana":3,"statement":"¿Cuál es el método idóneo para resolver series verbales complejas en un examen de admisión?","subject":"raz_verbal","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "3.1.1",
+    "correctIndex": 3,
+    "explanation": "Relación: las palabras o parejas se vinculan por una regla pertinente.\nAplicación: La regla puede ser una relación dentro de cada pareja, una alternancia o una clasificación; no tiene que ser solo un campo semántico común.\nRespuesta: Una secuencia vinculada por una regla que permite contrastar las opciones.",
+    "fuente": "temario",
+    "id": "rv_t03_s01_c01",
+    "options": [
+      "La repetición de palabras con igual número de letras, aunque no haya una regla indicada.",
+      "Una lista en la que siempre debe elegirse el término más largo.",
+      "Un conjunto en el que cada alternativa se analiza con una relación diferente.",
+      "Una secuencia de palabras o parejas vinculadas por una regla que permite contrastar las opciones."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "¿Qué caracteriza una serie verbal cuya continuación puede justificarse?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.2",
+    "correctIndex": 0,
+    "explanation": "Relación: clase general y un tipo incluido en ella.\nAplicación: Trigo es un cereal. Manzana y zanahoria no lo son; tubérculo designa otra categoría.\nRespuesta: Trigo.",
+    "fuente": "temario",
+    "id": "rv_t03_s01_c02",
+    "options": [
+      "Trigo.",
+      "Manzana.",
+      "Zanahoria.",
+      "Tubérculo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "En «cítrico–mandarina; legumbre–lenteja; cereal–___», cada pareja va de una clase general a uno de sus tipos. ¿Qué opción completa la última pareja?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.3",
+    "correctIndex": 2,
+    "explanation": "Relación: afinidad de significado en el contexto de una persona poco habladora.\nAplicación: Reservado puede describir a quien comunica poco sus pensamientos. Locuaz, hablador y gárrulo se relacionan con hablar mucho. No se afirma que reservado y taciturno sean intercambiables en cualquier oración.\nRespuesta: Reservado.",
+    "fuente": "temario",
+    "id": "rv_t03_s01_c03",
+    "options": [
+      "Locuaz.",
+      "Hablador.",
+      "Reservado.",
+      "Gárrulo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "En una descripción del carácter de alguien que habla poco, se agrupan «taciturno, silencioso, callado». ¿Qué opción encaja con ese sentido?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.4",
+    "correctIndex": 1,
+    "explanation": "Relación: capital y país, en ese orden.\nAplicación: Madrid es la capital de España. Europa es un continente, Támesis un río y océano una categoría geográfica; esas opciones no mantienen capital–país.\nRespuesta: Madrid, España.",
+    "fuente": "temario",
+    "id": "rv_t03_s01_c04",
+    "options": [
+      "Berlín, Europa.",
+      "Madrid, España.",
+      "Londres, Támesis.",
+      "Lisboa, Océano."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "En la serie por parejas «Atenas–Grecia; Roma–Italia; París–Francia», se relaciona cada capital con su país. ¿Qué pareja mantiene esa relación?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.5",
+    "correctIndex": 2,
+    "explanation": "Relación: pertenencia al grupo de los cetáceos.\nAplicación: El cachalote es un cetáceo. Tiburón, atún y mantarraya son peces. La orca pertenece a la familia de los delfines; por eso no se presenta esta lista como categorías taxonómicas equivalentes y excluyentes.\nRespuesta: Cachalote.",
+    "fuente": "temario",
+    "id": "rv_t03_s01_c05",
+    "options": [
+      "Tiburón.",
+      "Atún.",
+      "Cachalote.",
+      "Mantarraya."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Elige, entre las opciones, otro cetáceo para añadir al grupo «ballena, delfín, orca», sin imponer un orden entre esos nombres.",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.6",
+    "correctIndex": 0,
+    "explanation": "Relación: aumento de intensidad del enojo dentro del contexto indicado.\nAplicación: Furia expresa un estado de ira intensa. Calma, alegría e indiferencia no cumplen esa condición. Es una gradación verbal contextual, no una escala psicológica numérica ni un orden obligatorio en todas las situaciones.\nRespuesta: Furia.",
+    "fuente": "temario",
+    "id": "rv_t03_s01_c06",
+    "options": [
+      "Furia.",
+      "Calma.",
+      "Alegría.",
+      "Indiferencia."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "En una narración se quiere pasar de una molestia leve a un enojo muy intenso: «molestia leve, enfado, ___». ¿Qué opción expresa ese grado intenso de enojo?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.7",
+    "correctIndex": 0,
+    "explanation": "Relación: oposición de significado dentro de cada pareja.\nAplicación: Humildad se opone a soberbia en el sentido indicado. Altivez, arrogancia y orgullo no expresan esa oposición en esta clasificación.\nRespuesta: Humildad.",
+    "fuente": "temario",
+    "id": "rv_t03_s01_c07",
+    "options": [
+      "Humildad.",
+      "Altivez.",
+      "Arrogancia.",
+      "Orgullo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "En «elogio–censura; verdad–falsedad; soberbia–___», cada pareja contrapone sentidos. ¿Qué opción completa la tercera pareja en su sentido habitual?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.8",
+    "correctIndex": 2,
+    "explanation": "Relación: pertenencia a ramas de la matemática.\nAplicación: Trigonometría pertenece a la matemática; biología, sociología y geología estudian otros campos. La lista no establece un orden obligatorio entre las ramas matemáticas.\nRespuesta: Trigonometría.",
+    "fuente": "temario",
+    "id": "rv_t03_s01_c08",
+    "options": [
+      "Biología.",
+      "Sociología.",
+      "Trigonometría.",
+      "Geología."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Si se agrupan ramas de la matemática, ¿qué opción puede añadirse a «aritmética, geometría, álgebra»?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.9",
+    "correctIndex": 0,
+    "explanation": "Relación: sustantivos que nombran conductas reprochables.\nAplicación: Perfidia nombra deslealtad o traición y es un sustantivo. Pérfida, como adjetivo, describe a una persona; no equivale al nombre de la conducta. Las otras opciones no cumplen el criterio de conducta reprochable indicado.\nRespuesta: Perfidia.",
+    "fuente": "temario",
+    "id": "rv_t03_s01_c09",
+    "options": [
+      "Perfidia.",
+      "Filantropía.",
+      "Probidad.",
+      "Lealtad."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "Se agrupan sustantivos que nombran conductas reprochables: «avaricia, crueldad, felonía». ¿Qué opción puede añadirse manteniendo ese criterio y la categoría gramatical?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "3.1.10",
+    "correctIndex": 1,
+    "explanation": "Relación: comprobar una regla de manera constante.\nAplicación: La relación puede estar dentro de parejas, entre posiciones alternas o en una clasificación. Hay que comprobarla en toda la secuencia y revisar si queda una sola opción defendible; no es una garantía automática de acierto.\nRespuesta: Precisar la relación y su dirección y contrastar las opciones con el mismo criterio.",
+    "fuente": "temario",
+    "id": "rv_t03_s01_c10",
+    "options": [
+      "Elegir primero y cambiar después la relación para que encaje.",
+      "Precisar la relación y su dirección, comprobar la secuencia y contrastar todas las opciones con el mismo criterio.",
+      "Exigir que todas las palabras tengan la misma terminación, aunque no se pida.",
+      "Suponer que compartir un tema siempre determina un orden único."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 3,
+    "statement": "¿Qué procedimiento ayuda a resolver una serie verbal sin inventar una regla para justificar la alternativa elegida?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

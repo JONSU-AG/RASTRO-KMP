@@ -1,107 +1,104 @@
-## 1. MARCO CONCEPTUAL Y ONTOLOGÍA
-## 1. FICHA TÉCNICA Y MATRIZ DE COMPETENCIAS
+# Números reales, intervalos y distancia
 
-| Parámetro | Especificación Oficial |
-| :--- | :--- |
-| **Eje Temático** | EJE II: Matemática |
-| **Asignatura / Componente** | Álgebra |
-| **Tema Oficial N.°** | Tema II: Números reales (\mathbb{R}): recta numérica, intervalos, operaciones, valor absoluto |
-| **Referencia Prospecto UNSA** | Resolución de Consejo Universitario N.° 0028-2026 (Págs. 9, 44-45) |
-| **Ponderación por Pregunta** | **Ingenierías:** 1.658337400 pts (4 preg. = 6.633350 pts)<br>**Biomédicas:** 1.265447400 pts (3 preg. = 3.796342 pts)<br>**Sociales:** 0.824574000 pts (3 preg. = 2.473722 pts) |
-| **Nivel de Complejidad Cognitiva** | Bloom: Análisis Topológico, Modelado Desigual y Demostración en Cuerpos Ordenados |
-| **Conexión Interuniversitaria** | **UNSA:** Operaciones con intervalos continuos, ecuaciones e inecuaciones con valor absoluto y axioma del supremo.<br>**UNMSM (DECO):** Tolerancias de manufactura en ingeniería mecánica (|x - x_0| \le \epsilon), rangos de calibración térmica y márgenes de error en metrología.<br>**UNI:** Completitud de Dedekind/Cantor, demostración rigurosa de desigualdades de Cauchy-Schwarz y medias geométrica-aritmética en \mathbb{R}^+. |
+## Introducción
+La recta real permite ordenar números, describir rangos y expresar distancias. Un número negativo puede representar una posición a la izquierda de cero, pero una distancia nunca es negativa. Mantener esa diferencia ayuda a comprender el valor absoluto y a evitar errores al operar con signos.
 
-### Matriz de Indicadores de Logro Evaluados
-1. **Estructura de Cuerpo Ordenado Completo:** Demostrar y aplicar los axiomas de cuerpo conmutativo, axiomas de orden y axioma del supremo (completitud de \mathbb{R}).
-2. **Topología de Intervalos en la Recta Real:** Operar algebraicamente intervalos abiertos, cerrados, semiabiertos y no acotados mediante unión, intersección, diferencia y complemento.
-3. **Ecuaciones e Inecuaciones con Valor Absoluto:** Resolver analíticamente expresiones modales |P(x)| = Q(x) y |P(x)| \le Q(x) utilizando propiedades y partición en zonas críticas.
-4. **Desigualdades Notables:** Aplicar teoremas de positividad, transitividad y la desigualdad de las medias (MA \ge MG) para acotar expresiones algebraicas.
-
----
-
-
-## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
+En este nivel se revisan los números racionales e irracionales, las operaciones de los reales, el orden y los intervalos. Las propiedades se aplican bajo sus condiciones: no existe inverso multiplicativo de cero y los símbolos de infinito no son extremos reales que puedan incluirse en un intervalo.
 
 ```mermaid
-graph TD
-    A["SISTEMA DE LOS NÚMEROS REALES ℝ"] --> B["Axiomática y Recta Real"]
-    A --> C["Teoría de Intervalos"]
-    A --> D["Valor Absoluto"]
-    A --> E["Desigualdades Notables"]
-
-    B --> B1["ℝ = ℚ ∪ 𝕀 (Cuerpo Ordenado Completo)"]
-    B --> B2["Axiomas de Adición y Multiplicación"]
-    B --> B3["Axiomas de Orden: Tricotomía y Transitividad"]
-    B --> B4["Axioma de Completitud: Supremo e Ínfimo"]
-
-    C --> C1["Intervalos Acotados: Abiertos, Cerrados, Mixtos"]
-    C --> C2["Intervalos No Acotados: Hacia ±∞"]
-    C --> C3["Operaciones: ∪, ∩, -, Complemento"]
-
-    D --> D1["Definición por Ramas: |x|"]
-    D --> D2["Teoremas: |x| = b ⇔ b ≥ 0 ∧ (x = b ∨ x = -b)"]
-    D --> D3["Inecuaciones: |x| ≤ b y |x| ≥ b"]
-    D --> D4["Desigualdad Triangular: |a + b| ≤ |a| + |b|"]
-
-    E --> E1["x + 1/x ≥ 2 (para x > 0)"]
-    E --> E2["Media Aritmética ≥ Media Geométrica"]
+flowchart TD
+A[Números reales] --> B[Clasificación]
+A --> C[Operaciones y orden]
+A --> D[Recta: intervalos y distancia]
+D --> E[Distancia]
+B --> F[Racionales]
+B --> G[Irracionales]
+C --> H[Cuerpo: suma y producto]
+C --> I[Orden y completitud]
+D --> J[Extremos incluidos o excluidos]
+D --> K[Unión e intersección]
+E --> L[Valor absoluto]
+E --> M[Distancia entre dos puntos]
 ```
 
----
+## 2.1.1 · Racionales e irracionales en la recta
+Un número **racional** se puede expresar como $p/q$, con $p$ y $q$ enteros y $q\ne0$. Esto incluye enteros, fracciones y decimales finitos o periódicos. El mismo racional admite diferentes escrituras: $1/2=2/4=0.5$. Las escrituras no representan tres puntos diferentes.
 
+Un número **irracional** no admite esa expresión como cociente de enteros. Su desarrollo decimal es infinito y no periódico. Por ejemplo, $\sqrt{2}$ es irracional. Escribir una aproximación como $1.414$ no lo transforma en racional: el decimal finito es un racional próximo, no el valor exacto de la raíz.
 
-## 2. DESARROLLO TEÓRICO FORMAL - PARTE I
-### 3. DESARROLLO TEÓRICO FORMAL
+Los racionales y los irracionales forman, sin superponerse, el conjunto de los reales: $\mathbb{R}=\mathbb{Q}\cup(\mathbb{R}\setminus\mathbb{Q})$. Cada real corresponde a una posición de la recta. Que un número tenga muchas cifras decimales escritas no demuestra que sea irracional; importa la naturaleza del desarrollo completo o una justificación exacta.
 
-### 3.1 Estructura Axiomática de los Números Reales (\mathbb{R})
-El conjunto de los números reales \mathbb{R} es la unión disjunta de los números racionales \mathbb{Q} y los irracionales \mathbb{I} (\mathbb{R} = \mathbb{Q} \cup \mathbb{I}, \mathbb{Q} \cap \mathbb{I} = \emptyset).
-El sistema (\mathbb{R}, +, \cdot, \le) se define formalmente como un **cuerpo conmutativo ordenado y completo**.
+| Número o expresión | Clasificación | Razón |
+| --- | --- | --- |
+| $-4$ | Racional | Se escribe como $-4/1$. |
+| $5/6$ | Racional | Es un cociente de enteros con denominador no nulo. |
+| $0.125$ | Racional | Equivale exactamente a $1/8$. |
+| $\sqrt{2}$ | Irracional | No puede expresarse como cociente de enteros. |
 
-#### 1. Axiomas de Cuerpo Conmutativo
-* **Para la adición (+):** Clausura, conmutatividad, asociatividad, elemento neutro aditivo (0) y opuesto aditivo (-a).
-* **Para la multiplicación (\cdot):** Clausura, conmutatividad, asociatividad, elemento neutro multiplicativo (1 \neq 0) e inverso multiplicativo (a^{-1} = \frac{1}{a} para todo a \neq 0).
-* **Distributividad:** a \cdot (b + c) = a \cdot b + a \cdot c.
+Para sumar fracciones se requiere un denominador común. En $4/3+5/6$, el denominador $6$ permite escribir $4/3=8/6$. Entonces $8/6+5/6=13/6$. Se suman numeradores de fracciones equivalentes, no los denominadores originales.
 
-#### 2. Axiomas de Orden
-Existe un subconjunto no vacío \mathbb{R}^+ \subset \mathbb{R} (reales positivos) tal que:
-* Si a, b \in \mathbb{R}^+ \implies a + b \in \mathbb{R}^+ y a \cdot b \in \mathbb{R}^+.
-* **Ley de Tricotomía:** Para todo a \in \mathbb{R}, se cumple exactamente una de las siguientes proposiciones:
-  a \in \mathbb{R}^+ \quad \lor \quad a = 0 \quad \lor \quad -a \in \mathbb{R}^+
-Se define la relación "a < b" como b - a \in \mathbb{R}^+.
+Otra comprobación útil es $2+7/6=12/6+7/6=19/6$. La parte entera también debe expresarse con el mismo denominador si se quiere combinar todo en una fracción. Una aproximación decimal puede orientar, pero la fracción conserva el resultado exacto.
 
-#### 3. Axioma de Completitud (Axioma del Supremo)
-Todo conjunto no vacío de números reales que esté acotado superiormente posee un **supremo** (mínima cota superior) en \mathbb{R}.
-*Este axioma distingue formalmente a \mathbb{R} de \mathbb{Q} y garantiza que la recta numérica no posea "huecos" o discontinuidades.*
+## 2.1.2 · Operaciones, orden y completitud
+La suma y el producto de reales vuelven a ser reales. Ambas operaciones son asociativas y conmutativas; además, el producto se distribuye respecto de la suma. Cero es el neutro aditivo y uno es el neutro multiplicativo. Cada real tiene un opuesto aditivo; solo los reales distintos de cero tienen inverso multiplicativo.
 
----
+No confundas **opuesto** e **inverso**. El opuesto de $4/5$ es $-4/5$ porque su suma con $4/5$ da cero. Su inverso es $5/4$ porque su producto da uno. Invertir una fracción no consiste en cambiarle el signo.
 
-### 3.2 Intervalos en la Recta Real y Operatoria
-Un intervalo es un subconjunto conexo de \mathbb{R} comprendido entre dos puntos extremos a y b (a \le b):
+| Propiedad | Escritura | Condición o interpretación |
+| --- | --- | --- |
+| Opuesto aditivo | $a+(-a)=0$ | Existe para todo real $a$. |
+| Inverso multiplicativo | $a\cdot(1/a)=1$ | Requiere $a\ne0$. |
+| Distributividad | $a(b+c)=ab+ac$ | Es válida para reales. |
+| Orden al sumar | $a<b\Rightarrow a+c<b+c$ | Se suma la misma cantidad a ambos miembros. |
+| Orden al multiplicar | $a<b,\ c<0\Rightarrow ac>bc$ | Un factor negativo invierte la desigualdad. |
 
-| Tipo de Intervalo | Notación de Conjunto | Notación de Intervalo | Representación Gráfica |
-| :--- | :--- | :---: | :---: |
-| **Abierto** | \{x \in \mathbb{R} \mid a < x < b\} | \langle a, b \rangle o (a, b) | Extremos sin pintar (\circ) |
-| **Cerrado** | \{x \in \mathbb{R} \mid a \le x \le b\} | [a, b] | Extremos pintados (\bullet) |
-| **Semiabierto a la derecha** | \{x \in \mathbb{R} \mid a \le x < b\} | [a, b\rangle | Cerrado en a, abierto en b |
-| **Semiabierto a la izquierda** | \{x \in \mathbb{R} \mid a < x \le b\} | \langle a, b] | Abierto en a, cerrado en b |
-| **No acotado superiormente** | \{x \in \mathbb{R} \mid x \ge a\} | [a, +\infty\rangle | Rayo hacia +\infty |
-| **No acotado inferiormente** | \{x \in \mathbb{R} \mid x < b\} | \langle -\infty, b\rangle | Rayo hacia -\infty |
-| **Toda la recta real** | \{x \in \mathbb{R}\} | \langle -\infty, +\infty\rangle = \mathbb{R} | Recta completa |
+Restar un negativo equivale a sumar su opuesto: $6-(-4)=6+4=10$. No basta con contar signos visibles; hay que reconocer qué operación se aplica. En cambio, $(-6)-4=-10$: aquí se resta un positivo a una cantidad negativa.
 
----
+El orden compara posiciones. Entre dos reales diferentes, uno es menor que el otro; la relación es transitiva. Si $a<b$ y $b<c$, entonces $a<c$. Sobre la recta, multiplicar por una cantidad negativa invierte la orientación y explica por qué cambia el signo de una desigualdad.
 
-### 3.3 Valor Absoluto en \mathbb{R}
-Función denotada por |\cdot|: \mathbb{R} \to \mathbb{R}_0^+ definida formalmente por ramas:
-|x| = \begin{cases} x, & \text{si } x \ge 0 \\ -x, & \text{si } x < 0 \end{cases}
+La **completitud** se expresa mediante el principio del supremo: un conjunto no vacío de reales que tenga una cota superior posee una menor cota superior real. No afirma que todo conjunto tenga máximo. Por ejemplo, $(0,1)$ tiene supremo $1$, pero no contiene ese número y por tanto no tiene máximo.
 
-#### Teoremas y Propiedades Fundamentales
+Conviene distinguir las palabras: una cota superior puede quedar por encima de todo el conjunto sin ser la menor; el supremo es la menor de esas cotas; el máximo, si existe, pertenece al conjunto. Para $[0,1]$, el número $1$ es simultáneamente máximo y supremo. En $(0,1)$ solo es supremo.
 
-## 3. FORMULARIO FUNDAMENTAL Y LEYES BASE
-### 4. FORMULARIO MAESTRO (LATEX ESTRICTO)
+## 2.1.3 · Intervalos y operaciones entre conjuntos
+Un **intervalo** contiene todos los reales situados entre cualesquiera dos de sus puntos. Los extremos finitos pueden pertenecer o no al conjunto. El paréntesis indica exclusión y el corchete, inclusión. En algunos materiales se usan paréntesis angulares para los intervalos abiertos; aquí se mantienen los paréntesis ordinarios.
 
-| Teorema / Identidad | Expresión Matemática Rigurosa |
-| :--- | :--- |
-| **Identidad Fundamental** | \sqrt{x^2} = |x| |
-| **Ecuación |A| = B** | |A| = B \iff B \ge 0 \land (A = B \lor A = -B) |
-| **Ecuación |A| = |B|** | |A| = |B| \iff (A - B)(A + B) = 0 |
-| **Inecuación |A| \le B** | |A| \le B \iff B \ge 0 \land -B \le A \le B |
+| Condición | Intervalo | Lectura |
+| --- | --- | --- |
+| $-2<x<4$ | $(-2,4)$ | No incluye ninguno de los extremos. |
+| $-2\le x\le4$ | $[-2,4]$ | Incluye ambos extremos. |
+| $-2\le x<4$ | $[-2,4)$ | Incluye solo el extremo izquierdo. |
+| $x\ge-2$ | $[-2,+\infty)$ | Se prolonga sin cota superior. |
+| $x<4$ | $(-\infty,4)$ | Se prolonga sin cota inferior. |
+
+Los símbolos $+\infty$ y $-\infty$ indican que el recorrido no está acotado en una dirección. No son números reales ni se encierran con un corchete de inclusión. Toda la recta se escribe $(-\infty,+\infty)=\mathbb{R}$.
+
+La **unión** reúne lo que pertenece a uno u otro conjunto; la **intersección** exige pertenecer a ambos. La **diferencia** retira del primer conjunto los elementos del segundo. Para el complemento se debe indicar el universo; en este tema se utiliza la recta real cuando no se establece otro.
+
+Toma $A=[-2,3)$ y $B=(1,5]$. Entonces $A\cap B=(1,3)$: el extremo $1$ no pertenece a $B$ y $3$ no pertenece a $A$. La unión es $[-2,5]$, porque los conjuntos se superponen y no dejan un hueco intermedio. La diferencia $A\setminus B=[-2,1]$ conserva $1$, ya que ese número no se elimina al no pertenecer a $B$.
+
+Los casos de un solo punto también importan. Se puede escribir $[a,a]=\{a\}$. En cambio, $(a,a)$ es vacío. Dos intervalos pueden tocarse sin superponerse: $(0,1)$ y $(1,2)$ no contienen $1$, de modo que su unión no equivale a $(0,2)$.
+
+## 2.1.4 · Valor absoluto como distancia
+El **valor absoluto** de $x$ es su distancia a cero. Por definición, $\lvert x\rvert=x$ cuando $x\ge0$ y $\lvert x\rvert=-x$ cuando $x<0$. La segunda expresión también es no negativa: si $x=-4$, entonces $-x=4$.
+
+La distancia entre dos reales $a$ y $b$ es $\lvert a-b\rvert$. No depende del orden de los puntos porque $\lvert a-b\rvert=\lvert b-a\rvert$. Entre $-4$ y $5$ hay $\lvert5-(-4)\rvert=9$ unidades, y entre $-5$ y $6$ hay $11$.
+
+| Expresión | Resultado | Interpretación |
+| --- | --- | --- |
+| $\lvert-4\rvert$ | $4$ | Distancia de $-4$ a cero. |
+| $\lvert-4\rvert-\lvert5\rvert$ | $-1$ | Diferencia de dos distancias; puede ser negativa. |
+| $\lvert5-(-4)\rvert$ | $9$ | Distancia entre dos posiciones. |
+| $\sqrt{x^2}$ | $\lvert x\rvert$ | La raíz cuadrada principal es no negativa. |
+
+La expresión $\lvert x-a\rvert$ mide distancia respecto de un **centro** $a$. Pedir $\lvert x-a\rvert\le r$, con $r\ge0$, significa buscar puntos cuya distancia al centro no supere $r$. Los límites son $a-r$ y $a+r$. El gráfico de esta sección permite cambiar el centro, la distancia y la inclusión de esos extremos.
+
+No confundas $\lvert a-b\rvert$ con $\lvert a\rvert-\lvert b\rvert$. Para $a=-4$ y $b=5$, la primera expresión vale $9$ y la segunda vale $-1$. La diferencia de distancias a cero no es la distancia entre los puntos.
+
+La desigualdad triangular establece $\lvert a+b\rvert\le\lvert a\rvert+\lvert b\rvert$. La suma de dos desplazamientos puede compensarse: con $a=-4$ y $b=5$, el módulo de la suma es $1$, mientras la suma de los módulos es $9$. Esta propiedad se utilizará para comparar y acotar expresiones.
+
+## Importante
+El inverso multiplicativo exige un número distinto de cero. Infinito no es un extremo real incluido. Un intervalo que omite su cota puede tener supremo sin máximo. El valor absoluto es no negativo, pero la diferencia de dos valores absolutos puede ser negativa. Para una distancia entre puntos, toma primero la diferencia de sus posiciones y después su valor absoluto.
+
+## Síntesis
+Los reales permiten operar y ordenar posiciones en una recta completa. Los intervalos expresan rangos con extremos incluidos o excluidos, y sus operaciones se justifican por pertenencia. El valor absoluto permite pasar de posiciones con signo a distancias no negativas. Antes de calcular, identifica qué representa cada expresión y bajo qué condiciones es válida la operación.

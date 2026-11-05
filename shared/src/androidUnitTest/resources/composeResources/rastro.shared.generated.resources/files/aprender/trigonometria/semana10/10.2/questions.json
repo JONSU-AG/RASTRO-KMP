@@ -1,1 +1,200 @@
-[{"concept":"10.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t10_s02_c01","options":["8\\text{ mg/L} a las 12:00 horas","11\\text{ mg/L} a las 14:00 horas","11\\text{ mg/L} a las 10:00 horas","11\\text{ mg/L} a las 06:00 horas"],"pedagogicalTier":"concepto","semana":10,"statement":"**Enunciado:** La concentración de oxígeno disuelto en un lago artificial de cultivo hidropónico varía periódicamente durante el día según la función:","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.2","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t10_s02_c02","options":["\\left[\\dfrac{\\pi}{8}, \\dfrac{5\\pi}{8}\\right]","\\left[0, \\dfrac{\\pi}{4}\\right] \\cup \\left[\\dfrac{3\\pi}{4}, \\pi\\right]","\\left[\\dfrac{\\pi}{4}, \\dfrac{3\\pi}{4}\\right]","\\left[0, \\dfrac{\\pi}{8}\\right] \\cup \\left[\\dfrac{5\\pi}{8}, \\pi\\right]"],"pedagogicalTier":"concepto","semana":10,"statement":"**Enunciado:** Determine el dominio de la siguiente función trigonométrica real:","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"10.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t10_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "trig_t10_s02_c01",
+    "concept": "10.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuál es el máximo de $4+3\\sin x$ para x real?",
+    "options": [
+      "$7$",
+      "$14$",
+      "$3.5$",
+      "$21$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El seno puede valer uno.\n2. Aplicamos la relación: $f_{max}=4+3(1)$.\n3. El valor pedido es $7$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s02_c02",
+    "concept": "10.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuál es el mínimo de $4+3\\sin x$ para x real?",
+    "options": [
+      "$2$",
+      "$0.5$",
+      "$3$",
+      "$1$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El seno puede valer menos uno.\n2. Aplicamos la relación: $f_{min}=4+3(-1)$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s02_c03",
+    "concept": "10.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuál es la amplitud de $2-4\\cos x$?",
+    "options": [
+      "$2$",
+      "$12$",
+      "$4$",
+      "$8$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La traslación vertical no cambia la amplitud.\n2. Aplicamos la relación: $A=|-4|$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s02_c04",
+    "concept": "10.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuál es el periodo fundamental de $\\sin(x/2)$, con x en radianes?",
+    "options": [
+      "$12 \\pi\\,\\mathrm{rad}$",
+      "$4 \\pi\\,\\mathrm{rad}$",
+      "$8 \\pi\\,\\mathrm{rad}$",
+      "$2 \\pi\\,\\mathrm{rad}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Dividimos el periodo básico entre el módulo del factor interior.\n2. Aplicamos la relación: $T=2\\pi/(1/2)=4\\pi$.\n3. El valor pedido es $4 \\pi\\,\\mathrm{rad}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s02_c05",
+    "concept": "10.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuánto se desplaza a la derecha la gráfica de $\\sin(x-\\pi/3)$ respecto de $\\sin(x)$?",
+    "options": [
+      "$\\frac{\\pi}{3}\\,\\mathrm{rad}$",
+      "$\\frac{2 \\pi}{3}\\,\\mathrm{rad}$",
+      "$\\frac{\\pi}{6}\\,\\mathrm{rad}$",
+      "$\\pi\\,\\mathrm{rad}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La forma x−h desplaza la gráfica h hacia la derecha.\n2. Aplicamos la relación: $h=\\pi/3$.\n3. El valor pedido es $\\frac{\\pi}{3}\\,\\mathrm{rad}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s02_c06",
+    "concept": "10.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuál es el desplazamiento horizontal con signo de $\\cos(x+\\pi/4)$ respecto de $\\cos(x)$, tomando derecha como positiva?",
+    "options": [
+      "$- \\frac{\\pi}{2}\\,\\mathrm{rad}$",
+      "$- \\frac{\\pi}{8}\\,\\mathrm{rad}$",
+      "$- \\frac{3 \\pi}{4}\\,\\mathrm{rad}$",
+      "$- \\frac{\\pi}{4}\\,\\mathrm{rad}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Escribimos x+π/4 como x−(−π/4).\n2. Aplicamos la relación: $h=-\\pi/4$.\n3. El valor pedido es $- \\frac{\\pi}{4}\\,\\mathrm{rad}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s02_c07",
+    "concept": "10.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuál es el máximo de $\\sin^2x$ para x real?",
+    "options": [
+      "$0.5$",
+      "$3$",
+      "$1$",
+      "$2$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El cuadrado de un número entre −1 y 1 llega a uno.\n2. Aplicamos la relación: $0\\le\\sin^2x\\le1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s02_c08",
+    "concept": "10.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuál es el máximo de $\\sin x\\cos x$ para x real?",
+    "options": [
+      "$1.5$",
+      "$0.5$",
+      "$1$",
+      "$0.25$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El doble producto equivale al seno doble.\n2. Aplicamos la relación: $\\sin x\\cos x=\\tfrac12\\sin2x\\le1/2$.\n3. El valor pedido es $0.5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s02_c09",
+    "concept": "10.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "¿Cuál es el máximo de $(2\\sin x-1)^2$ para x real?",
+    "options": [
+      "$9$",
+      "$18$",
+      "$4.5$",
+      "$27$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Primero hallamos el intervalo de la expresión interior.\n2. Aplicamos la relación: $-3\\le2\\sin x-1\\le1\\Rightarrow\\max y^2=9$.\n3. El valor pedido es $9$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s02_c10",
+    "concept": "10.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "El signo negativo en $-\\sin x$ produce…",
+    "options": [
+      "Una reflexión respecto del eje horizontal.",
+      "Una duplicación del periodo.",
+      "Una traslación vertical de una unidad.",
+      "Un cambio del dominio a los positivos."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Se cambia el signo de cada salida y.\n2. Cada punto (x,y) pasa a (x,−y).\n3. Eso refleja la gráfica respecto del eje horizontal.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t10_s02_c11",
+    "concept": "10.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 10,
+    "statement": "En $A\\sin(B(x-h))+D$, con A y B no nulos, D determina…",
+    "options": [
+      "El desplazamiento vertical o línea media.",
+      "El periodo fundamental.",
+      "El dominio de los números complejos.",
+      "La amplitud por sí sola."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El seno oscila alrededor de cero.\n2. Sumar D mueve todas sus salidas en la misma cantidad.\n3. La línea media queda en y=D.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

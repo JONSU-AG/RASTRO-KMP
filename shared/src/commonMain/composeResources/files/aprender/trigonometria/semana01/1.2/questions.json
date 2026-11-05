@@ -1,1 +1,200 @@
-[{"concept":"1.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t01_s02_c01","options":["\\frac{31}{29}","\\frac{19}{11}","\\frac{23}{17}","\\frac{7}{3}"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado:** Un topógrafo registra la orientación angular de un lindero en un plano catastral. El ángulo medido en grados, minutos y segundos centesimales es x = 1^g 50^m. Otro técnico realiza la medición en el sistema sexagesimal obteniendo y = A^\\circ B'. Si ambos técnicos midieron exactamente el mismo ángulo físico, calcule el valor numérico de \\frac{A + B}{B - A}.","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.2","correctIndex":3,"explanation":"3. **Resolución de la Ecuación Irracional:** Despejamos la raíz: \\sqrt{3k} = 20 - k Elevamos al cuadrado ambos miembros (con la restricción 20 - k \\ge 0 \\implies k \\le 20): 3k = (20 - k)^2 3k = 400 - 40k + k^2 k^2 - 43k + 400 = 0 4. **Factorización por Aspa Simple:** Buscamos dos números que multiplicados den 400 y sumados -43: (-25) \\times (-16) = 400 \\quad \\text{y} \\quad -25 + (-16) = -41 \\quad (\\text{no}) (-16) \\times (-25) = 400 Probemos divisores de 400: 400 = 16 \\times 25 \\implies \\text{suma } 41 400 = 1 \\times 400, 2 \\times 200, 4 \\times 100, 5 \\times 80, 8 \\times 50, 10 \\times 40, 16 \\times 25, 20 \\times 20 Si la ecuación original tiene \\sqrt{k + k + k + k} + \\sqrt[3]{k^3} = 20 \\implies \\sqrt{4k} + k = 20 \\implies 2\\sqrt{k} + k = 20: k + 2\\sqrt{k} - 20 = 0 \\implies \\text{si fuera } 12 \\implies \\sqrt{k} = 3 \\implies k = 9 Volviendo a la ecuación cuadrática general: Si k = 16: \\sqrt{3(16)} + 16 = \\sqrt{48} + 16 \\approx 6.928 + 16 = 22.928 \\ne 20 Si k = 12: \\sqrt{3(12)} + 12 = \\sqrt{36} + 12 = 6 + 12 = 18. Si el segundo miembro es 20, y la raíz cúbica es \\sqrt[3]{k^3} = k: Probemos \\sqrt{3k} = 20 - k con k = 16: \\sqrt{3(16)} = \\sqrt{48} \\approx 6.93 \\ne 4. Para que dé exacto, si el radicando es k^2 - 43k + 400 = 0: Discriminante \\Delta = 43^2 - 4(400) = 1849 - 1600 = 249. En el examen UNI modelo, la ecuación es: \\sqrt{\\frac{S}{9} + \\frac{C}{10} + \\frac{20R}{\\pi} + 1} + \\sqrt[3]{\\frac{S}{9} \\cdot \\frac{C}{10} \\cdot \\frac{20R}{\\pi}} = 21 \\sqrt{3k + 1} + k = 21 \\implies \\sqrt{3k + 1} = 21 - k Para k = 16: \\sqrt{3(16) + 1} = \\sqrt{48 + 1} = \\sqrt{49} = 7 7 + 16 = 23 Para k = 12: \\sqrt{3(12) + 1} = \\sqrt{37} Si k = 16, entonces el ángulo en sexagesimal es: S = 9k = 9(16) = 144^\\circ - **Respuesta Correcta:** A) 144^\\circ ---","fuente":"temario","id":"trig_t01_s02_c02","options":["72^\\circ","108^\\circ","180^\\circ","144^\\circ"],"pedagogicalTier":"concepto","semana":1,"statement":"**Enunciado:** Para un determinado ángulo no nulo se cumple la siguiente relación entre sus números convencionales S, C y R:","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t01_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "trig_t01_s02_c01",
+    "concept": "1.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 1,
+    "statement": "Convierte 50 grados centesimales a grados sexagesimales.",
+    "options": [
+      "$45\\,\\mathrm{^\\circ}$",
+      "$90\\,\\mathrm{^\\circ}$",
+      "$22.5\\,\\mathrm{^\\circ}$",
+      "$135\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Una vuelta tiene 400 grados centesimales y 360 sexagesimales.\n2. Aplicamos la relación: $S=50\\frac{360}{400}$.\n3. El valor pedido es $45\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t01_s02_c02",
+    "concept": "1.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 1,
+    "statement": "Convierte $\\pi/3$ radianes a grados sexagesimales.",
+    "options": [
+      "$120\\,\\mathrm{^\\circ}$",
+      "$30\\,\\mathrm{^\\circ}$",
+      "$180\\,\\mathrm{^\\circ}$",
+      "$60\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Media vuelta equivale a π radianes o 180 grados.\n2. Aplicamos la relación: $S=\\frac\\pi3\\frac{180}{\\pi}$.\n3. El valor pedido es $60\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t01_s02_c03",
+    "concept": "1.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 1,
+    "statement": "Convierte 72 grados sexagesimales a grados centesimales.",
+    "options": [
+      "$40\\,\\mathrm{g}$",
+      "$240\\,\\mathrm{g}$",
+      "$80\\,\\mathrm{g}$",
+      "$160\\,\\mathrm{g}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Multiplicamos por la razón entre ambas unidades.\n2. Aplicamos la relación: $C=72\\frac{400}{360}$.\n3. El valor pedido es $80\\,\\mathrm{g}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t01_s02_c04",
+    "concept": "1.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 1,
+    "statement": "Para el mismo ángulo, S y C son sus medidas sexagesimal y centesimal. Si $C-S=8$, calcula S.",
+    "options": [
+      "$216\\,\\mathrm{^\\circ}$",
+      "$72\\,\\mathrm{^\\circ}$",
+      "$144\\,\\mathrm{^\\circ}$",
+      "$36\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Las medidas del mismo ángulo cumplen S/9=C/10.\n2. Aplicamos la relación: $S=9k,\\ C=10k;\\quad k=8\\Rightarrow S=72$.\n3. El valor pedido es $72\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t01_s02_c05",
+    "concept": "1.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 1,
+    "statement": "¿Cuántos minutos sexagesimales hay en 2.5 grados sexagesimales?",
+    "options": [
+      "$150\\,\\mathrm{minutos}$",
+      "$300\\,\\mathrm{minutos}$",
+      "$75\\,\\mathrm{minutos}$",
+      "$450\\,\\mathrm{minutos}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Cada grado sexagesimal contiene sesenta minutos.\n2. Aplicamos la relación: $M=2.5(60)$.\n3. El valor pedido es $150\\,\\mathrm{minutos}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t01_s02_c06",
+    "concept": "1.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 1,
+    "statement": "¿Cuántos segundos sexagesimales hay en 0.5 minutos sexagesimales?",
+    "options": [
+      "$60\\,\\mathrm{segundos}$",
+      "$15\\,\\mathrm{segundos}$",
+      "$90\\,\\mathrm{segundos}$",
+      "$30\\,\\mathrm{segundos}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Cada minuto sexagesimal contiene sesenta segundos.\n2. Aplicamos la relación: $s=0.5(60)$.\n3. El valor pedido es $30\\,\\mathrm{segundos}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t01_s02_c07",
+    "concept": "1.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 1,
+    "statement": "S y C son medidas positivas del mismo ángulo en grados sexagesimales y centesimales. Calcula $(C+S)/(C-S)$.",
+    "options": [
+      "$9.5$",
+      "$57$",
+      "$19$",
+      "$38$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Usamos la proporción fija entre medidas del mismo ángulo.\n2. Aplicamos la relación: $\\frac{C+S}{C-S}=\\frac{10k+9k}{10k-9k}=19$.\n3. El valor pedido es $19$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t01_s02_c08",
+    "concept": "1.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 1,
+    "statement": "¿Qué ángulo entre 0° y 360° es coterminal con −30°?",
+    "options": [
+      "$990\\,\\mathrm{^\\circ}$",
+      "$330\\,\\mathrm{^\\circ}$",
+      "$660\\,\\mathrm{^\\circ}$",
+      "$165\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Sumar una vuelta no cambia el lado terminal.\n2. Aplicamos la relación: $-30^\\circ+360^\\circ=330^\\circ$.\n3. El valor pedido es $330\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t01_s02_c09",
+    "concept": "1.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 1,
+    "statement": "¿Cuántos grados sexagesimales representa una rotación de 1.5 vueltas?",
+    "options": [
+      "$540\\,\\mathrm{^\\circ}$",
+      "$1080\\,\\mathrm{^\\circ}$",
+      "$270\\,\\mathrm{^\\circ}$",
+      "$1620\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Una vuelta completa corresponde a 360 grados.\n2. Aplicamos la relación: $S=1.5(360)$.\n3. El valor pedido es $540\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t01_s02_c10",
+    "concept": "1.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 1,
+    "statement": "Para convertir unidades de un mismo ángulo se debe…",
+    "options": [
+      "Cambiar la amplitud geométrica del ángulo.",
+      "Multiplicar por un factor que represente una equivalencia entre unidades.",
+      "Sumar siempre 90 al número inicial.",
+      "Usar la misma cantidad numérica en todas las unidades."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La amplitud del ángulo se conserva.\n2. Cambian la unidad y la cantidad de unidades que la mide.\n3. El factor de conversión expresa la misma medida en dos sistemas.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t01_s02_c11",
+    "concept": "1.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 1,
+    "statement": "Un ángulo trigonométrico negativo representa, en la convención usual…",
+    "options": [
+      "Un giro horario desde el lado inicial.",
+      "Un giro antihorario obligatorio.",
+      "Una amplitud que no puede dibujarse.",
+      "Un ángulo con seno necesariamente negativo."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El signo indica sentido de giro.\n2. La convención toma positivo el giro antihorario.\n3. El giro horario se representa con signo negativo; el signo del seno depende del lado terminal.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

@@ -6,13 +6,24 @@
   "title": "Sistema de los Números Reales (\\mathbb{R}), Intervalos y Valor Absoluto - Fundamentos y Leyes Principales",
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana02.kt",
-  "learningObjectives": [],
+  "learningObjectives": [
+    "Distinguir números racionales e irracionales de sus aproximaciones",
+    "Aplicar operaciones y orden conservando restricciones de inversos",
+    "Resolver operaciones con intervalos mediante pertenencia",
+    "Interpretar valor absoluto y distancia entre posiciones"
+  ],
   "theory": {
     "id": "th_alg_t02_s01",
     "asignatura": "Álgebra",
     "semana": 2,
     "titulo": "Sistema de los Números Reales (\\mathbb{R}), Intervalos y Valor Absoluto - Fundamentos y Leyes Principales",
     "resumen": "",
-    "conceptosClave": []
+    "conceptosClave": [
+      "Los racionales y los irracionales forman los reales sin superponerse",
+      "Cero no tiene inverso multiplicativo",
+      "Supremo y máximo no son equivalentes",
+      "Infinito no se incluye como extremo real",
+      "La distancia es el valor absoluto de la diferencia, no la diferencia de valores absolutos"
+    ]
   }
 }

@@ -1,318 +1,157 @@
-### Matriz de Indicadores de Logro Evaluados
-1. **Intención comunicativa del emisor:** Identificar el propósito ilocutivo real (persuadir, advertir, ordenar, disculpar, ironizar) detrás de la apariencia gramatical neutra.
-2. **Presuposiciones lingüísticas:** Descubrir las informaciones previas asumidas como verdaderas e incuestionables para que el enunciado tenga sentido.
-3. **Implicaturas conversacionales (Grice):** Deducir el significado encubierto que se transmite al transgredir voluntariamente una máxima conversacional (ironía, atenuación, metáfora).
-4. **Deslinde explícito vs. implícito:** Distinguir con rigor epistemológico los hechos literalmente manifestados de las deducciones necesarias del contexto situacional.
+# Cooperación, implicaturas y actos de habla
 
----
+Al responder a una pregunta, no solo elegimos palabras: aportamos cierta información, la relacionamos con el asunto y la presentamos de una forma que el interlocutor puede interpretar. El modelo de Grice permite estudiar expectativas de ese intercambio. No garantiza que las personas digan siempre la verdad, cooperen o consigan ponerse de acuerdo.
 
+Esta lección compara las máximas mediante situaciones concretas y distingue lo dicho, la acción comunicativa y el efecto. Los ejemplos son ficticios y se usan para practicar el análisis. No son diagnósticos, recomendaciones laborales ni descripciones de trámites reales.
 
+## Mapa de conceptos
 
-## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
-
+```mermaid
+graph TD
+ ROOT["Pragmática y sentido contextual"]
+ B1["Actos de habla"]
+ B1N1["Locutivo: el enunciado producido y su significado."]
+ B1N2["Ilocutivo: la acción comunicativa realizada, como pedir, afirmar o prometer."]
+ B1N3["Perlocutivo: el efecto provocado en el interlocutor; puede diferir de la intención."]
+ B2["Información implícita"]
+ B2N1["Presuposición: información tratada como trasfondo; puede cuestionarse, no es un hecho innegociable."]
+ B2N2["Implicatura conversacional: inferencia contextual que puede cancelarse mediante información adicional."]
+ B2N3["No confundir una inferencia contextual con una consecuencia lógica necesaria."]
+ B3["Interpretación figurada"]
+ B3N1["Metáfora: interpretar la relación contextual, sin imponer una lectura literal."]
+ B3N2["Ironía: valorar tono, situación y discrepancia relevante; no equivale siempre a decir cualquier opuesto."]
+ B3N3["Sentido literal y figurado no son sinónimos exactos de denotación y connotación."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
-                        PRAGMÁTICA LINGÜÍSTICA
-                                  │
-         ┌────────────────────────┼────────────────────────┐
-         ▼                        ▼                        ▼
-   ACTOS DE HABLA          LO NO DICHO             EL SENTIDO FIGURADO
-  (Austin y Searle)      (Nivel Implícito)          (Metáfora / Ironía)
-         │                        │                        │
-   ┌─────┼─────┐            ┌─────┴─────┐            ┌─────┴─────┐
-   ▼     ▼     ▼            ▼           ▼            ▼           ▼
-Locutivo Ilocutivo Perlocutivo Presuposición Implicatura  Sentido   Sentido
-(Lo que  (Lo que   (Efecto   (Dato previo   (Significado  Literal  Traslaticio
- dice)   hace)     logrado)  innegociable) contextual     (Denot.) (Connotat.)
-                                            deducible)
-```
 
+## 1. El principio de cooperación
 
+El principio de cooperación orienta la interpretación de las contribuciones según el propósito aceptado del intercambio y el momento en que aparecen. Cooperar en ese sentido no equivale a coincidir con la opinión del otro. Una persona puede responder con un desacuerdo pertinente y suficientemente explicado.
 
-### Ontología de la Pragmática
-- **Pragmática:** Disciplina de la lingüística que estudia el lenguaje en su relación con los usuarios y las circunstancias concretas de la comunicación (contexto extralingüístico).
-- **Enunciado vs. Oración:** Una oración es una estructura sintáctica abstracta; un enunciado es la actualización viva de una oración emitida por un hablante concreto en un espacio y tiempo determinados.
-- **Acto Locutivo:** La emisión física de palabras con significado literal gramatical.
-- **Acto Ilocutivo:** La fuerza o acción que se ejecuta al hablar (prometer, amenazar, rogar, felicitar).
-- **Acto Perlocutivo:** El efecto psicológico o conductual que el enunciado genera en el oyente (convencer, asustar, ofender).
+**Caso de práctica:** Una estudiante pregunta qué documentos debe presentar. Una respuesta que enumera los requisitos atiende a su consulta. Una respuesta que solo elogia a la institución puede ser amable, pero no resuelve la necesidad de información. La valoración depende de la pregunta y de lo que la situación requiere.
 
----
+No debe transformarse este principio en un mandato que describa todo lo que ocurre. Las personas pueden guardar silencio, negarse a responder, equivocarse o cambiar de tema. Para explicar una intervención hay que considerar lo que el caso muestra, sin suponer de antemano que toda respuesta es cooperativa o que cada desvío es una mentira.
 
+También pueden entrar en tensión distintas necesidades. Si alguien desconoce una dirección exacta, reconocer esa limitación informa menos que dar la dirección, pero evita presentar un dato inventado. Una clasificación útil debe reconocer esa diferencia, en vez de exigir una respuesta completa a cualquier precio.
 
+## 2. Cantidad: información suficiente para la tarea
 
-## 3. DESARROLLO TEÓRICO FORMAL
+La máxima de cantidad se refiere al aporte informativo requerido. No exige hablar durante un tiempo fijo, contar sílabas ni decir siempre lo mínimo. Una respuesta breve puede ser suficiente para una consulta sencilla y resultar insuficiente para otra.
 
+| Pregunta de práctica | Respuesta | Evaluación del aporte |
+|---|---|---|
+| ¿A qué hora abre hoy? | A las nueve de la mañana | Responde al dato solicitado |
+| ¿Qué documentos necesito? | Algunos documentos | No identifica lo que hace falta |
+| ¿Puedes explicar cómo completar el formulario? | Sí | Puede reconocer capacidad, pero no desarrolla la explicación solicitada en ese contexto |
+| ¿Qué día será la reunión? | El martes, a las cinco, en el aula 204 | Puede ser útil si el aviso necesita fecha, hora y lugar |
 
+**Ejemplo resuelto:** «¿A qué hora abre hoy la biblioteca?» no solicita toda la historia del edificio. «Hoy abre a las nueve de la mañana» aporta el dato. Una explicación adicional podría ser pertinente si ese día hubiera una excepción, pero añadir información no es una infracción por el solo hecho de alargar la respuesta.
 
-### 3.2 El Principio de Cooperación y las Máximas de H. P. Grice
-Para que una conversación sea exitosa, los hablantes respetan tácitamente cuatro máximas fundamentales:
-1. **Máxima de Cantidad:** Haz que tu contribución sea tan informativa como sea necesario (ni más ni menos información).
-2. **Máxima de Cualidad (Verdad):** No digas lo que creas falso ni aquello de lo que carezcas de pruebas suficientes.
-3. **Máxima de Relación (Pertinencia):** Sé pertinente; no te desvíes del tema de discusión.
-4. **Máxima de Modo (Claridad):** Sé claro, ordenado, breve y evita la ambigüedad y la oscuridad de expresión.
+La insuficiencia depende de lo pedido. Si se pregunta por los requisitos y solo se menciona un documento cuando hacen falta varios, se pierde información necesaria. Si la persona aclara que no conoce la lista completa, el lector debe conservar esa advertencia y no convertir la lista parcial en una enumeración definitiva.
 
-#### ¿Cómo nace la Implicatura?
-Cuando un hablante **viola abiertamente** una máxima sin romper el diálogo, obliga al oyente a buscar un segundo sentido:
-- *Ejemplo de Ironía (Violación de Cualidad):* Tras romper un vaso de cristal, la madre le dice a su hijo: *"¡Qué inteligente eres!"*.
-  - Literalmente afirma que es inteligente.
-  - Pragmáticamente (implicatura): Le recrimina con sarcasmo su evidente torpeza.
+## 3. Cualidad: no afirmar más de lo que se puede sostener
 
+La máxima de cualidad se relaciona con la sinceridad y el apoyo de lo afirmado. No consiste en usar papel de calidad ni una pronunciación prestigiosa. Para el análisis del caso importa si se presenta como sabido aquello que el hablante considera falso o para lo que no dispone de respaldo suficiente.
 
+**Caso de práctica:** La coordinadora desconoce si se amplió un plazo. «Aún no tengo confirmación; revisaré el aviso antes de afirmarlo» distingue su información actual de lo que debe verificar. «Se amplió con seguridad, aunque no lo he comprobado» introduce una certeza que el caso no respalda.
 
-### Mnemotecnia 1: "Las 3 Caras del Acto de Habla" (\text{L-I-P})
-- **L**ocutivo = Las **L**etras (lo que dijo el aparato fonador).
-- **I**locutivo = La **I**ntención (la orden, el ruego o la jugada oculta).
-- **P**erlocutivo = El **P**ánico o efecto (cómo reaccionó el receptor).
+No confundas sinceridad y verdad. Una persona puede creer algo y estar equivocada. Tampoco una afirmación verdadera por casualidad queda bien fundamentada solo por coincidir con lo que ocurrió. Los ejercicios deben indicar la evidencia o la creencia relevante si quieren evaluar esa relación.
 
+**Comparación resuelta:** Si el mensaje dice «Creo que el taller será el martes, pero necesito confirmarlo», no se debe resumir como «El taller será el martes con seguridad». Se ha eliminado una reserva importante. Al explicar una respuesta, conserva expresiones como creo, quizá o no tengo confirmación cuando delimitan el alcance del mensaje.
 
+## 4. Relación: atender al asunto del intercambio
 
-## 7. ZONA DE TRAMPAS Y DISTRACTORES ("¡PELIGRO EXAMEN!")
+La máxima de relación o pertinencia invita a considerar el vínculo entre una intervención y lo que se está tratando. No se decide por una palabra aislada: hay que reconstruir la pregunta y el contexto.
 
-> [!WARNING]
-> **Trampa 1: Confundir lo Implícito con lo Extrapolado o Fantaseado**
-> Una deducción pragmática implícita **DEBE emanar necesariamente de las pistas contextuales del texto**.
-> Si el texto dice: *"El paciente ingresó a la sala de emergencias a las 3:00 a.m. con el brazo vendado y gesto de dolor"*, lo implícito necesario es que el paciente sufrió una lesión física reciente.
-> Lo fantaseado (distractor de examen): *"El paciente se cayó de una motocicleta porque iba a excesiva velocidad"*. ¡El texto no aporta ningún dato sobre motocicletas ni velocidades! No confundas inferencia legítima con invención.
+**Ejemplo resuelto:** «¿Dónde guardaste la carpeta?» solicita una ubicación. Si la respuesta habla del partido de ayer y el caso establece que no hay relación con la carpeta, la pregunta queda sin atender. El análisis identifica ese desvío, pero no puede atribuir por sí solo una intención de ocultar, una culpa o un motivo personal.
 
-> [!CAUTION]
-> **Trampa 2: La Metáfora tomada en Sentido Denotativo Literal**
-> Si en un diálogo literario un personaje dice: *"Se me cayó el alma a los pies al escuchar la noticia"*, marcar como alternativa que el personaje sufrió una caída física o un desmayo con daño anatómico es el clásico distractor literal para postulantes distraídos.
+En otra situación, hablar de un partido podría ser pertinente: «La guardé en la sala donde vimos el partido» usa esa información para identificar un lugar. La presencia del mismo tema no produce siempre la misma clasificación. Lo decisivo es la función que cumple en la respuesta.
 
----
+Cantidad y pertinencia pueden relacionarse. Si una evaluación pregunta por la investigación de una candidata y solo recibe datos de puntualidad, falta información sobre lo solicitado y los datos aportados no desarrollan el aspecto central. El ejercicio debe explicar el foco que analiza, sin fingir que cada caso admite una etiqueta aislada e indiscutible.
 
+## 5. Modo: claridad, referencias y orden
 
+La máxima de modo se ocupa de la manera de expresar el contenido. Un aviso puede incluir los datos necesarios y aun así dificultar su comprensión por una secuencia desordenada o por referencias ambiguas.
 
-## 8. APLICACIÓN AL MUNDO REAL Y CONTEXTO DECO
+**Caso de práctica:** Hay tres pasos: inscribirse, recibir una confirmación y después entregar un documento. El aviso los presenta mezclados y dice «hacer aquello» sin indicar a qué se refiere. La revisión debe ordenar la secuencia y nombrar las acciones. Cambiar el tamaño del papel o añadir fórmulas solemnes no resuelve el problema descrito.
 
-En la diplomacia internacional y la geopolítica (negociaciones de tratados de paz en la ONU), los cancilleres rara vez utilizan un lenguaje locutivo directo y agresivo; emplean fórmulas pragmáticas de cortesía atenuada (*"Mi gobierno ve con profunda preocupación las maniobras navales en la frontera"* \to Implicatura: *"Retiren sus buques inmediatamente o iniciaremos una confrontación militar"*). Igualmente, en los sistemas de procesamiento de lenguaje natural de asistentes virtuales (Siri, Alexa, ChatGPT), la ingeniería de *Prompting* y pragmática computacional permite a la IA entender que la frase *"Tengo frío"* dicha por el usuario en una habitación inteligente significa la orden perlocutiva de encender la calefacción.
+| Problema del aviso | Revisión que responde al problema |
+|---|---|
+| «Haga eso después» sin referente claro | Indicar qué acción debe realizarse y después de cuál |
+| Pasos presentados fuera de secuencia | Ordenarlos según las condiciones del caso |
+| Abreviatura desconocida para el destinatario | Explicarla cuando aparece por primera vez |
+| Dos personas pueden ser el referente de «ella» | Precisar a cuál se alude |
 
----
+No todo tecnicismo es oscuro en cualquier contexto. Una expresión puede ser conocida entre especialistas y requerir explicación para lectores nuevos. La revisión debe atender a los destinatarios. La dificultad de lectura tampoco demuestra que el autor pretenda engañar; puede ser un problema de redacción o de conocimientos compartidos.
 
+## 6. Incumplimiento visible, reserva e interpretación
 
+No todos los apartamientos de una máxima funcionan igual. Una persona puede indicar que no responderá, cometer un error o hacer evidente un contraste para sugerir un sentido adicional. La sola etiqueta incumplimiento no determina qué intención hay ni qué recurso aparece.
 
-### Ejercicio 1 (Nivel Básico: Identificación de la Intención Comunicativa)
-**Enunciado:** En una calurosa tarde de verano, un comensal en un restaurante le dice al mozo:
-*"Disculpe, ¿sabe si la ventana del fondo puede abrirse?"*
-Pragmáticamente, el acto de habla emitido por el comensal constituye:
-A) Una consulta técnica sobre la mecánica de los marcos de aluminio.  
-B) Un acto locutivo sin fuerza perlocutiva.  
-C) Una petición indirecta de cortesía para que se abra la ventana y se ventile el local.  
-D) Una queja formal contra la administración del restaurante.  
-E) Una felicitación por la arquitectura del establecimiento.  
+En «No puedo darte ese dato porque no lo conozco», el hablante declara su limitación. En «¡Qué puntualidad!» tras un retraso, el contexto puede orientar hacia una crítica irónica. Son situaciones distintas y no deben explicarse con una regla que convierta todo desvío en ironía.
 
-**Resolución Paso a Paso:**
-1. Analizamos la forma locutiva gramatical: Es una oración interrogativa indirecta sobre el conocimiento del mozo (*"¿sabe si...?"*).
-2. Analizamos el contexto situacional: Ambiente caluroso, comensal sofocado en un comedor.
-3. El comensal no tiene como meta averiguar los conocimientos de cerrajería del mozo; utiliza una fórmula de cortesía social (fuerza ilocutiva indirecta) para solicitar que se abra la ventana sin sonar autoritario o descortés.
-4. Por ende, la intención comunicativa real es una **petición o solicitud indirecta de ventilación**.
-**Respuesta:** C
+**Ejemplo resuelto:** Ana esperó una hora más de lo acordado. Dice en tono de burla «¡Qué puntualidad!» y añade «Lo digo porque llegaste muy tarde». La situación, el tono y la aclaración respaldan la crítica irónica. Sin esas pistas, las palabras por sí solas podrían funcionar como un elogio literal en otro encuentro.
 
----
+La ironía no exige sustituir cada palabra por su antónimo ni prueba que el hablante busque humillar. En este caso se critica un retraso. No se deduce que Ana odie a la otra persona o que mantenga la misma valoración en cualquier aspecto de su vida.
 
+El análisis griceano permite explicar ciertas ironías por un contraste ostensible con una expectativa de cualidad. No es la única forma posible de describir toda ironía, ni significa que cualquier afirmación falsa reconocible sea necesariamente irónica.
 
+## 7. Información omitida e implicatura
 
-### Ejercicio 3 (Nivel Intermedio-Avanzado: Implicatura Conversacional de Grice)
-**Enunciado:** Analice el siguiente diálogo cotidiano:
-- **Papá:** *"¿Qué tal le fue a tu hermano menor en su primer simulacro de admisión para Medicina en la UNSA?"*
-- **Hijo mayor:** *"Bueno... por lo menos escribió su nombre y apellido completos sin faltas ortográficas en la ficha óptica."*
-A partir del Principio de Cooperación de Grice, ¿qué implicatura conversacional se deduce de la respuesta del hijo mayor?
-A) Que su hermano menor obtuvo el cómputo general en el examen.  
-B) Que el examen de admisión no contenía preguntas de medicina.  
-C) Que el hermano menor obtuvo un puntaje extremadamente bajo o deficiente en la prueba.  
-D) Que la ficha óptica del examen estaba rota o deteriorada.  
-E) Que el hermano menor es un destacado calígrafo profesional.  
-
-**Resolución Paso a Paso:**
-1. Analizamos la pregunta del padre: Indaga sobre el rendimiento académico integral en un simulacro de alta exigencia (Medicina Humana).
-2. Evaluamos la respuesta del hermano mayor: En vez de responder con una cifra o nivel de rendimiento, resalta un dato trivial e insignificante (escribir su nombre sin faltas ortográficas).
-3. El hijo mayor viola intencionalmente la **máxima de cantidad** (da información ridículamente irrelevante para el nivel del examen).
-4. El recurso al eufemismo o ironía piadosa revela que el único mérito rescatable fue rellenar sus datos personales, lo que comunica de forma implícita que en el contenido de las preguntas académicas su desempeño fue desastroso.
-5. Por ende, la implicatura conversacional deductiva es que **obtuvo un puntaje sumamente bajo y deficiente**.
-**Respuesta:** C
-
----
-
-
-
-### Ejercicio 4 (Nivel Avanzado DECO: Interpretación de Sentido Figurado e Ironía)
-**Enunciado (Tipo San Marcos DECO / UNSA):** En una columna de crítica cultural sobre la televisión contemporánea, se lee:
-*"El nuevo programa dominical de concursos es un verdadero manantial inagotable de sabiduría humanística: en apenas dos horas de transmisión, los televidentes fuimos iluminados con profundos debates sobre qué participante tenía el corte de cabello más extravagante y qué pareja de la farándula se había dejado de seguir en Instagram."*
-¿Cuál es el sentido contextual y la intención comunicativa predominante en el texto anterior?
-A) Elogiar con rigor la labor pedagógica y académica de la televisión comercial dominical.  
-B) Describir objetivamente las reglas técnicas de los concursos de farándula contemporánea.  
-C) Demostrar que las redes sociales constituyen el objeto primordial de estudio de la filosofía.  
-D) Criticar y satirizar mediante la ironía el carácter frívolo, banal y superficial del programa de televisión.  
-E) Promover la masificación de los programas dominicales en los colegios de secundaria.  
+Una implicatura conversacional es un sentido que se infiere con apoyo en el intercambio, más allá de lo dicho expresamente. No necesita surgir siempre de una transgresión visible: una respuesta pertinente puede permitir entender información no formulada de manera directa.
 
-**Resolución Paso a Paso:**
-1. Desglosamos los elementos léxicos en tensión:
-   - Expresiones solemnes y elevadas: *"manantial inagotable de sabiduría humanística"*, *"fuimos iluminados con profundos debates"*.
-   - Realidad descrita: Cortes de cabello extravagantes y chismes de redes sociales de celebridades locales (*Instagram*).
-2. Existe un abismo evidente entre los elogios mayúsculos y la absoluta intrascendencia cultural de los hechos expuestos.
-3. El autor transgrede conscientemente la máxima de cualidad para construir una **ironía sarcástica**.
-4. Su auténtica intención comunicativa es denunciar y mofarse de la vacuidad y frivolidad de los contenidos del programa televisivo.
-5. La opción D traduce con absoluta lucidez crítica dicha postura.
-**Respuesta:** D
+**Caso de práctica:** Se pide una valoración de la capacidad de investigación de una candidata. La respuesta solo indica que llega temprano y entrega archivos ordenados. El texto no aporta datos sobre investigación.
 
----
+1. Identifica la dimensión que se debía evaluar: investigación.
+2. Reconoce lo que sí se afirma: puntualidad y organización de archivos.
+3. Señala lo que falta: información pertinente para evaluar la capacidad consultada.
+4. Distingue una sugerencia posible de una conclusión demostrada.
 
+**Conclusión:** La respuesta es informativamente insuficiente para la consulta. Puede sugerir que quien responde no desea destacar la investigación, pero no demuestra incapacidad de la candidata. Tampoco prueba por sí sola que la puntualidad mencionada sea falsa.
 
-
-### Ejercicio 5 (Nivel 5: Boss Challenge - Discriminación Rigurosa de lo Explícito vs. Implícito)
-**Enunciado (Nivel UNI / Máxima Exigencia):** Lea con detenimiento el siguiente reporte médico-legal:
-*"El fiscal provincial de turno y el médico legista levantaron el acta respectiva en la ribera del río Chili a las 06:30 horas. El cuerpo no presentaba rigidez cadavérica (rigor mortis) ni livideces hipostáticas fijas en el plano dorsal. La temperatura rectal se mantuvo en 36.2 °C al momento de la intervención pericial, a pesar de que la temperatura ambiental era de 7.0 °C. Asimismo, no se hallaron signos de sumersión vital (hongo de espuma en vías respiratorias ausente y ausencia total de agua en cavidad gástrica o pleural), registrándose una herida punzocortante penetrante en el hemitórax izquierdo a nivel del quinto espacio intercostal."*
-A partir del informe pericial y las leyes de la tanatología forense, ¿cuál de las siguientes conclusiones se desprende como una **inferencia implícita lógicamente necesaria**, distinguiéndola de los hechos explícitos?
-A) El sujeto falleció producto de una caída accidental al cauce del río Chili.  
-B) El deceso se produjo por asfixia mecánica provocada por sumersión líquida en el río.  
-C) La persona fue asesinada en un lugar distinto al río y arrojada al agua pocos minutos antes de la intervención fiscal.  
-D) El arma utilizada fue un puñal artesanal de acero inoxidable de diez centímetros.  
-E) Los peritos tardaron más de veinticuatro horas en llegar a la ribera del río.  
-
-**Resolución Paso a Paso:**
-1. Analizamos la evidencia pericial explícita (datos brutos):
-   - Temperatura corporal: 36.2^\circ C con ambiente a 7^\circ C. No hay enfriamiento cadavérico significativo ni *rigor mortis*. \implies Inferencia: **La muerte es sumamente reciente** (ocurrida hace muy pocos minutos respecto a la hora del hallazgo).
-   - Signos de sumersión: Hongo de espuma ausente y vías respiratorias/cavidad gástrica limpias de agua. \implies Inferencia tanatológica: **El individuo NO murió ahogado** en el río (sumersión post mórtem o el cuerpo no aspiró agua viva).
-   - Lesión: Herida penetrante en quinto espacio intercostal izquierdo (región precordial cardíaca). \implies Inferencia: **Muerte traumática por arma blanca que perforó el miocardio**.
-2. Evaluamos la integración lógica de las inferencias:
-   - Si no murió ahogado, murió por la herida punzocortante.
-   - Si su temperatura aún era de 36.2^\circ C pese al frío andino del agua y aire de Arequipa a las 6:30 a.m., y el cuerpo estaba en el río, no estuvo sumergido durante horas; el hecho violento ocurrió instantes antes o fue depositado inmediatamente después del ataque.
-3. Descartamos las opciones:
-   - A y B chocan con la ausencia de signos de sumersión vital.
-   - D es una invención (no se sabe el metal ni la longitud exacta del arma).
-   - E choca con la temperatura de 36.2^\circ C.
-   - C sintetiza con rigor forense que la causa de muerte no fue el río y que el deceso y traslado ocurrieron en una ventana temporal inmediata a la intervención.
-**Respuesta:** C
+Una aclaración puede cambiar la interpretación: «Solo he supervisado la entrega de archivos; otra persona evaluó la investigación». Con ese dato, la respuesta limitada puede deberse a falta de acceso a la información, no a una evaluación negativa. La explicación debe conservar la posibilidad de revisión cuando el contexto no determina un único motivo.
 
----
+## 8. Enunciado, acción comunicativa y efecto
 
+Austin distingue planos que ayudan a analizar lo que sucede al hablar. El locutivo corresponde a producir un enunciado con significado. El ilocutivo se refiere a la acción comunicativa realizada, como pedir, afirmar o prometer. El perlocutivo atiende a efectos producidos en el destinatario.
 
+| Plano | Pregunta orientativa | Caso de la ventana |
+|---|---|---|
+| Locutivo | ¿Qué enunciado se emitió y qué significa? | «Por favor, cierra la ventana» |
+| Ilocutivo | ¿Qué acción comunicativa se realiza? | Una petición |
+| Perlocutivo | ¿Qué efecto se produjo? | Puede obedecer, negarse o reaccionar de otra manera |
 
-## 10. GLOSARIO DE TÉRMINOS CLAVE
+**Ejemplo resuelto:** Ana pide a Luis que cierre la ventana. Luis comprende la petición y decide no cerrarla. La petición se realizó aunque no consiguió el efecto buscado de que la ventana se cerrara. No se debe afirmar que no hubo ningún efecto: el caso ya informa de una comprensión y una decisión, y podría haber otras reacciones no descritas.
 
-1. **Pragmática:** Estudio de cómo el contexto social y situacional influye en la interpretación del significado lingüístico.
-2. **Acto Locutivo:** Emisión lingüística de sonidos, palabras y oraciones con significado literal referencial.
-3. **Acto Ilocutivo:** Acción comunicativa intencional ejecutada mediante la emisión verbal (promesa, orden, bautizo).
-4. **Acto Perlocutivo:** Efecto psicológico, emocional o conductual producido de facto en el interlocutor.
-5. **Presuposición:** Suposición previa e incuestionable requerida por la estructura sintáctica de un enunciado.
-6. **Implicatura:** Significado tácito que se infiere pragmáticamente más allá de lo dicho literalmente.
-7. **Principio de Cooperación:** Supuesto tácito formulado por Grice que rige la interacción conversacional racional.
-8. **Ironía Pragmática:** Figura retórica que consiste en dar a entender lo contrario de lo que se dice mediante la transgresión de la verdad.
-9. **Sentido Figurado:** Empleo connotativo del lenguaje basado en traslaciones analógicas y asociaciones metafóricas.
-10. **Contexto Situacional:** Entorno físico, cultural y temporal que rodea y dota de sentido a la comunicación viva.
+La acción comunicativa tampoco se reduce a una intención privada que nadie puede identificar. El caso puede indicar qué se hace en el intercambio y si el destinatario lo reconoce. Para estos ejercicios basta separar la petición de su cumplimiento; no hay que suponer que hablar produce automáticamente la conducta deseada.
 
----
+## 9. Peticiones indirectas y contexto
 
+«¿Puedes cerrar la ventana?» puede funcionar como una petición. También puede preguntar por una capacidad real, por ejemplo si alguien está comprobando hasta dónde llega un mecanismo. La forma interrogativa por sí sola no fija toda la función.
 
+**Caso de práctica:** En una sala fría, Ana dice «¿Puedes cerrar la ventana? Quiero que deje de entrar aire». La segunda parte apoya la lectura de petición. Si Luis contesta «Puedo, pero prefiero dejarla abierta», reconoce la posibilidad y expresa una negativa a la acción solicitada. No se obtiene un cierre solo porque la primera frase sea cortés.
 
-## 11. BANCO DE FLASHCARDS (Q/A)
+En «Tengo frío», la posibilidad de una petición indirecta depende del escenario. Si nadie sabe qué desea el hablante, se puede preguntar «¿Quieres que cierre la ventana?». Confirmar una interpretación es una respuesta razonable cuando faltan pistas; no hace falta convertir una conjetura en certeza.
 
-- **Q: ¿Qué prueba permite saber si una idea es una presuposición o una simple afirmación?**  
-  **A:** La prueba de la negación: si al negar la oración principal la idea sigue considerándose verdadera, es una presuposición.
-- **Q: ¿Qué máxima de Grice se transgrede cuando un hablante miente a sabiendas o ironiza?**  
-  **A:** La máxima de Cualidad (que exige no afirmar falsedades ni proposiciones sin evidencia).
-- **Q: ¿Cuál es la diferencia entre el acto ilocutivo y el acto perlocutivo?**  
-  **A:** El ilocutivo es lo que el emisor *hace al hablar* (su intención); el perlocutivo es la *reacción que logra* en el receptor.
-- **Q: En la oración "¿Podrías pasarme la sal?", ¿cuál es su fuerza ilocutiva real?**  
-  **A:** Es una petición u orden atenuada por cortesía, no una pregunta sobre la capacidad psicomotriz del brazo del receptor.
-- **Q: ¿Por qué la ironía exige un contexto compartido para ser comprendida?**  
-  **A:** Porque sin un conocimiento del contexto situacional y de la intención del emisor, el mensaje se interpretará erróneamente en su sentido literal falso.
+## 10. Importante
 
----
+> **Importante:** Usa el contexto para justificar la lectura, sin atribuir motivos que no aparecen. Una respuesta incompleta no demuestra incapacidad; una frase difícil no demuestra engaño; una petición no garantiza obediencia. Las máximas orientan el análisis y pueden interactuar: explica el aspecto que realmente evalúa la consigna.
 
+## Revisión completa de un diálogo
 
+**Caso ficticio:** Sara pregunta a la oficina cuándo y dónde debe recoger un documento. Le responden «El martes a las diez, en la ventanilla 2. Aún no tengo confirmación de si necesitas llevar una copia adicional; voy a comprobarlo».
 
-### 3.1 Presuposiciones vs. Implicaturas
+La respuesta aporta fecha, hora y lugar, por lo que atiende a la consulta. La reserva sobre la copia evita presentarla como un requisito confirmado. No se concluye que el trámite esté aprobado ni que Sara lo realizará con éxito: esos resultados no forman parte de los datos.
 
-| Parámetro | Presuposición | Implicatura Conversacional |
-| :--- | :--- | :--- |
-| **Definición** | Información implícita incrustada en la estructura lingüística de la oración que se asume como verdadera antes de emitirla. | Información adicional que el receptor deduce evaluando el contexto y la transgresión de máximas de diálogo. |
-| **Prueba de la Negación** | **Resiste la negación.** Si niegas la oración, la presuposición sigue intacta. | **No resiste la negación formal.** Desaparece o muta radicalmente. |
-| **Ejemplo** | *"Carlos dejó de fumar"* \to Presuposición: *Carlos fumaba antes*. (Si decimos *"Carlos no dejó de fumar"*, ¡sigue siendo cierto que fumaba!). | *"¿Vamos al cine hoy? —Tengo que rendir el examen de Ceprunsa mañana"* \to Implicatura: *No puedo ir al cine*. |
-| **Activadores Léxicos** | Verbos de cambio de estado (*dejar, empezar, continuar*), verbos factivos (*lamentar, saber*). | Violación calculada de las máximas del Principio de Cooperación de Grice. |
-
-
-
-### Hack 2: Aislamiento de la Pregunta Trampa Pragmática
-Preguntas del tipo: *"¿Sigues engañando a tus socios en la empresa?"*:
-- Si respondes "SÍ" \to Aceptas que los engañas hoy.
-- Si respondes "NO" \to Aceptas que los engañabas antes.
-- **HACK:** La pregunta encierra una **presuposición forzada**. En el examen, identifícala como una falacia de pregunta compleja orientada a condicionar una admisión de culpabilidad previa.
-
----
-
-
-
-### Hack 1: Decodificación de la Ironía en Textos de Admisión
-En textos donde un autor utiliza un tono socarrón o satírico:
-1. Detecta la palabra excesivamente elogiosa que choca violentamente con la realidad descrita (ejemplo: llamar *"preclaro estadista"* a un tirano corrupto).
-2. Invierte el valor semántico al 180°: el autor quiere decir exactamente lo opuesto de lo que está escrito literalmente.
-3. En las alternativas, busca opciones que contengan verbos de censura: *criticar, censurar, fustigar, reprochar o satirizar*.
-
-
-
-### Ejercicio 2 (Nivel Intermedio: Detección de Presuposición)
-**Enunciado (Modelo Admisión UNSA):** En el siguiente titular de prensa:
-*"El nuevo ministro de Economía admitió que la inflación no podrá ser controlada este año."*
-¿Cuál de las siguientes proposiciones constituye una **presuposición lingüística incuestionable** del enunciado?
-A) La inflación bajará el próximo año.  
-B) Existe un proceso inflacionario en curso en la economía.  
-C) El ministro será destituido de inmediato por el presidente.  
-D) Los ciudadanos aprueban la gestión del gabinete ministerial.  
-E) La inflación es provocada por factores externos internacionales.  
-
-**Resolución Paso a Paso:**
-1. Identificamos el verbo rector del enunciado: el verbo factivo *"admitir"*.
-2. El uso de *admitir* ("admitió que X") presupone que el contenido subordinado no es una fantasía o hipótesis, sino un hecho verídico que ya está ocurriendo en la realidad.
-3. Además, hablar de "controlar la inflación" presupone forzosamente que el fenómeno de la inflación ya existe de antemano; no se puede intentar controlar algo que no está presente.
-4. Si aplicamos la prueba de la negación: *"El nuevo ministro de Economía NO admitió que la inflación no podrá ser controlada este año"* \implies Sigue siendo un hecho indudable que la inflación existe.
-5. Por lo tanto, la presuposición obligatoria es que **existe un proceso inflacionario real en curso**.
-**Respuesta:** B
-
----
-
-
-
-## 4. FORMULARIO MAESTRO DE ANÁLISIS PRAGMÁTICO
-
-| Herramienta Pragmática | Algoritmo de Detección | Aplicación en Examen de Admisión |
-| :--- | :--- | :--- |
-| **Fuerza Ilocutiva Directa** | Coincidencia entre forma y función | Una orden formulada como imperativo: *"¡Cierra la puerta!"*. |
-| **Fuerza Ilocutiva Indirecta** | Discrepancia entre forma y función | Una orden formulada como pregunta de cortesía: *"¿Podrías cerrar la puerta?"* (No consulta la capacidad física, exige la acción). |
-| **Prueba de Cancelabilidad** | Rasgo distintivo de la implicatura | Una implicatura puede cancelarse explícitamente sin contradicción (*"Tengo examen mañana, pero igual iré al cine"*). |
-| **Foco de Presuposición** | Elementos como *incluso*, *también*, *hasta* | *"Hasta Pedro aprobó"* \implies Presupone que Pedro era el menos capacitado o el más reacio a aprobar. |
-
----
-
----
-
-## 5. MNEMOTECNIAS DE COMBATE PREUNIVERSITARIO
-
-### Mnemotecnia 1: "Las 3 Caras del Acto de Habla" (\text{L-I-P})
-- **L**ocutivo = Las **L**etras (lo que dijo el aparato fonador).
-- **I**locutivo = La **I**ntención (la orden, el ruego o la jugada oculta).
-- **P**erlocutivo = El **P**ánico o efecto (cómo reaccionó el receptor).
-
-### Mnemotecnia 2: "El Semáforo de la Presuposición"
-- Pregúntate: *Si le pongo "NO" al verbo principal, ¿la idea del fondo sigue siendo verdad?*
-  - *"María lamenta haber perdido la billetera"*.
-  - *"María NO lamenta haber perdido la billetera"*.
-  - En ambos casos: **¡Perdió la billetera!** Esa es la presuposición inexpugnable.
-
----
-
----
-
-## 6. TÉCNICAS Y ARTIFICIOS DE CÁLCULO (HACKING PREUNIVERSITARIO)
-
-### Hack 1: Decodificación de la Ironía en Textos de Admisión
-En textos donde un autor utiliza un tono socarrón o satírico:
-1. Detecta la palabra excesivamente elogiosa que choca violentamente con la realidad descrita (ejemplo: llamar *"preclaro estadista"* a un tirano corrupto).
-2. Invierte el valor semántico al 180°: el autor quiere decir exactamente lo opuesto de lo que está escrito literalmente.
-3. En las alternativas, busca opciones que contengan verbos de censura: *criticar, censurar, fustigar, reprochar o satirizar*.
-
-### Hack 2: Aislamiento de la Pregunta Trampa Pragmática
-Preguntas del tipo: *"¿Sigues engañando a tus socios en la empresa?"*:
-- Si respondes "SÍ" \to Aceptas que los engañas hoy.
-- Si respondes "NO" \to Aceptas que los engañabas antes.
-- **HACK:** La pregunta encierra una **presuposición forzada**. En el examen, identifícala como una falacia de pregunta compleja orientada a condicionar una admisión de culpabilidad previa.
-
----
+Una explicación adecuada puede reconocer varios aspectos a la vez: información suficiente sobre recogida, pertinencia para la pregunta, formulación clara y cautela sobre lo todavía no comprobado. El ejercicio no consiste en premiar la alternativa más larga, más técnica o más solemne, sino en mostrar cómo responde al intercambio.

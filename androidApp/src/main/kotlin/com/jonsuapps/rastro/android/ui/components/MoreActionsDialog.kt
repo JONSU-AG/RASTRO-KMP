@@ -52,7 +52,8 @@ fun MoreActionsDialog(
 
     // Común para todos: Configuración, Widgets y Pizarra
     actions.add(Triple(MoreAction.SETTINGS, Icons.Rounded.Settings, "Configuración"))
-    actions.add(Triple(MoreAction.PRO, Icons.Rounded.AutoAwesome, "RASTRO Pro"))
+    if (!com.jonsuapps.rastro.monetization.PresentationMode.enabled)
+        actions.add(Triple(MoreAction.PRO, Icons.Rounded.AutoAwesome, "RASTRO Pro"))
     actions.add(Triple(MoreAction.WIDGETS, Icons.Rounded.Widgets, "Widgets"))
     actions.add(Triple(MoreAction.PIZARRA, Icons.Rounded.Gesture, "Pizarra"))
 

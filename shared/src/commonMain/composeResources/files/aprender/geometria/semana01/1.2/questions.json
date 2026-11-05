@@ -1,1 +1,200 @@
-[{"concept":"1.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t01_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t01_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t01_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t01_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t01_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t01_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t01_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t01_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t01_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"},{"concept":"1.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"geom_t01_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"geometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "geom_t01_s02_c01",
+    "concept": "1.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 1,
+    "statement": "Dos rectas se cruzan. Un ángulo mide 68°. ¿Cuánto mide su opuesto por el vértice?",
+    "options": [
+      "$68\\,\\mathrm{^\\circ}$",
+      "$136\\,\\mathrm{^\\circ}$",
+      "$34\\,\\mathrm{^\\circ}$",
+      "$204\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los opuestos por el vértice tienen igual medida.\n2. Usamos los datos indicados: $\\beta=68^\\circ$.\n3. El resultado es $68\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t01_s02_c02",
+    "concept": "1.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 1,
+    "statement": "Dos rectas se cruzan. Un ángulo mide 68°. ¿Cuánto mide el adyacente que completa un ángulo llano?",
+    "options": [
+      "$224\\,\\mathrm{^\\circ}$",
+      "$56\\,\\mathrm{^\\circ}$",
+      "$336\\,\\mathrm{^\\circ}$",
+      "$112\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Los adyacentes indicados son suplementarios.\n2. Usamos los datos indicados: $\\beta=180^\\circ-68^\\circ$.\n3. El resultado es $112\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t01_s02_c03",
+    "concept": "1.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 1,
+    "statement": "Dos rectas paralelas son cortadas por una secante. Un ángulo interior mide 73°. ¿Cuánto mide su alterno interno?",
+    "options": [
+      "$36.5\\,\\mathrm{^\\circ}$",
+      "$219\\,\\mathrm{^\\circ}$",
+      "$73\\,\\mathrm{^\\circ}$",
+      "$146\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Los alternos internos son iguales cuando las rectas son paralelas.\n2. Usamos los datos indicados: $\\beta=73^\\circ$.\n3. El resultado es $73\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t01_s02_c04",
+    "concept": "1.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 1,
+    "statement": "Dos paralelas son cortadas por una secante. Un ángulo interior mide 110°. ¿Cuánto mide el interior del mismo lado de la secante?",
+    "options": [
+      "$210\\,\\mathrm{^\\circ}$",
+      "$70\\,\\mathrm{^\\circ}$",
+      "$140\\,\\mathrm{^\\circ}$",
+      "$35\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los interiores del mismo lado son suplementarios.\n2. Usamos los datos indicados: $\\beta=180^\\circ-110^\\circ$.\n3. El resultado es $70\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t01_s02_c05",
+    "concept": "1.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 1,
+    "statement": "Dos paralelas son cortadas por una secante. Un ángulo mide 42°. ¿Cuánto mide el correspondiente?",
+    "options": [
+      "$42\\,\\mathrm{^\\circ}$",
+      "$84\\,\\mathrm{^\\circ}$",
+      "$21\\,\\mathrm{^\\circ}$",
+      "$126\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los correspondientes tienen igual medida.\n2. Usamos los datos indicados: $\\beta=42^\\circ$.\n3. El resultado es $42\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t01_s02_c06",
+    "concept": "1.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 1,
+    "statement": "Dos paralelas son cortadas por una secante. Un par de alternos internos mide 3x y 75°. ¿Cuánto vale x?",
+    "options": [
+      "$50$",
+      "$12.5$",
+      "$75$",
+      "$25$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La condición de paralelismo permite igualar ambos ángulos.\n2. Usamos los datos indicados: $3x=75\\Rightarrow x=25$.\n3. El resultado es $25$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t01_s02_c07",
+    "concept": "1.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 1,
+    "statement": "Los ángulos interiores del mismo lado entre dos paralelas miden 2x y 4x. ¿Cuánto vale x?",
+    "options": [
+      "$15$",
+      "$90$",
+      "$30$",
+      "$60$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Ambos ángulos suman 180°.\n2. Usamos los datos indicados: $2x+4x=180\\Rightarrow x=30$.\n3. El resultado es $30$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t01_s02_c08",
+    "concept": "1.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 1,
+    "statement": "Dos rectas perpendiculares forman cuatro ángulos iguales. ¿Cuánto mide cada uno?",
+    "options": [
+      "$270\\,\\mathrm{^\\circ}$",
+      "$90\\,\\mathrm{^\\circ}$",
+      "$180\\,\\mathrm{^\\circ}$",
+      "$45\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La vuelta completa se reparte en cuatro ángulos.\n2. Usamos los datos indicados: $\\alpha=360^\\circ/4$.\n3. El resultado es $90\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t01_s02_c09",
+    "concept": "1.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 1,
+    "statement": "Un ángulo obtuso mide 130°. ¿Cuánto mide el ángulo agudo que una secante forma con las mismas paralelas?",
+    "options": [
+      "$50\\,\\mathrm{^\\circ}$",
+      "$100\\,\\mathrm{^\\circ}$",
+      "$25\\,\\mathrm{^\\circ}$",
+      "$150\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los valores agudo y obtuso asociados son suplementarios.\n2. Usamos los datos indicados: $\\alpha=180^\\circ-130^\\circ$.\n3. El resultado es $50\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t01_s02_c10",
+    "concept": "1.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 1,
+    "statement": "La igualdad de ángulos alternos internos permite concluir paralelismo cuando…",
+    "options": [
+      "Son los ángulos alternos de una misma secante a las dos rectas.",
+      "Son dos ángulos cualesquiera del dibujo.",
+      "Uno de ellos mide 0°.",
+      "Las rectas ya se cortan en el mismo punto de la secante."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El criterio compara posiciones específicas respecto de una secante.\n2. La igualdad en esa configuración es el recíproco del teorema de paralelas.\n3. La posición de los ángulos importa tanto como sus medidas.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "geom_t01_s02_c11",
+    "concept": "1.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "geometria",
+    "semana": 1,
+    "statement": "Dos rectas distintas del mismo plano son paralelas si…",
+    "options": [
+      "Se cortan en un único punto.",
+      "No tienen puntos en común.",
+      "Son ambas de longitud finita.",
+      "Forman siempre un ángulo recto."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Una recta euclidiana se prolonga indefinidamente.\n2. Dos rectas coplanares paralelas no se encuentran.\n3. No basta que dos segmentos dibujados parezcan no tocarse.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/geometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

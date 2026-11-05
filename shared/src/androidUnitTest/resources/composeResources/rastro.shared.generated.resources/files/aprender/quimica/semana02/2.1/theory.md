@@ -13,24 +13,45 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                         ENERGÍA Y ESTADOS DE LA MATERIA
-                                       │
-         ┌─────────────────────────────┴─────────────────────────────┐
-         ▼                                                           ▼
-ESTADOS DE AGREGACIÓN                                   RELACIÓN MASA - ENERGÍA
-(Sólido, Líquido, Gaseoso, Plasmático)                  (Teoría Especial de la Relatividad)
-         │                                                           │
-   CAMBIOS DE FASE                                             E = mc^2
-(Absorben / Liberan calor)                                     E = \Delta m \cdot c^2
-         │                                                           │
-┌────────┴────────┐                                            Masa Relativista:
-▼                 ▼                                      m_f = \frac{m_0}{\sqrt{1 - (v/c)^2}}
-ENDOTÉRMICOS     EXOTÉRMICOS
-• Fusión         • Solidificación
-• Vaporización   • Condensación/Licuación
-• Sublimación    • Sublimación inversa /
-  directa          Deposición
+```mermaid
+graph TD
+ ROOT["Estados de la materia y energía"]
+ B1["Estados de agregación"]
+ B1N1["Sólido: forma y volumen definidos en condiciones habituales."]
+ B1N2["Líquido: volumen definido y forma del recipiente."]
+ B1N3["Gas: se expande para ocupar el recipiente."]
+ B1N4["Plasma: estado ionizado con electrones libres e iones; no es simplemente un gas caliente cualquiera."]
+ B2["Cambios que absorben calor"]
+ B2N1["Fusión: sólido a líquido."]
+ B2N2["Vaporización: líquido a gas."]
+ B2N3["Sublimación directa: sólido a gas sin pasar por líquido."]
+ B3["Cambios que liberan calor"]
+ B3N1["Solidificación: líquido a sólido."]
+ B3N2["Condensación o licuación: gas a líquido."]
+ B3N3["Deposición o sublimación inversa: gas a sólido."]
+ B4["Relación masa-energía"]
+ B4N1["Energía en reposo: $E_0=mc^2$, con m como masa invariante."]
+ B4N2["Variación de energía en reposo: $\Delta E_0=\Delta m c^2$; conservar una convención de signos."]
+ B4N3["Energía total de una partícula libre: $E=\gamma mc^2$, $\gamma=1/\sqrt{1-v^2/c^2}$."]
+ B4N4["Masa relativista es una denominación histórica; no confundirla con la masa invariante."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ B4 --> B4N4
 ```
 
 ---

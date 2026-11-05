@@ -23,20 +23,33 @@
 
 ## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
 
-```
-                            ORDENAMIENTO LÓGICO
-                                     │
-           ┌─────────────────────────┼─────────────────────────┐
-           ▼                         ▼                         ▼
-   ORDEN LINEAL              ORDEN CIRCULAR            CUADRO DE DECISIONES
-  (Relaciones Poset)      (Simetría Angular)       (Correspondencia Biunívoca)
-           │                         │                         │
-     ┌─────┴─────┐                   │                   ┌─────┴─────┐
-     ▼           ▼                   ▼                   ▼           ▼
-Horizontal    Vertical           Simetría           Tabla Simple  Tabla Corta
-(Eje X)       (Eje Y)            Diametral          (Marcas X/✓)  (Listado
-Izq/Der       Arriba/Abajo       Izq/Der Relativa                  Categorizado)
-Oeste/Este    Pisos/Puntajes
+```mermaid
+graph TD
+ ROOT["Ordenamiento lógico"]
+ B1["Orden lineal"]
+ B1N1["Horizontal: izquierda/derecha u oeste/este, según el eje indicado."]
+ B1N2["Vertical: arriba/abajo, pisos o valores ordenados, sin confundir criterios."]
+ B1N3["Distinguir antes de inmediatamente antes; declarar si se admiten empates."]
+ B2["Orden circular"]
+ B2N1["Precisar si las posiciones se leen en sentido horario o antihorario."]
+ B2N2["Opuestos diametrales: requieren posiciones compatibles, como un número par de asientos equidistantes."]
+ B2N3["Distinguir izquierda/derecha de quien mira al centro y de quien mira hacia fuera."]
+ B3["Cuadro de decisiones"]
+ B3N1["Tabla simple: cruzar categorías y marcar posibilidades o exclusiones."]
+ B3N2["Listado categorizado: registrar atributos sin perder la correspondencia."]
+ B3N3["Una correspondencia biunívoca requiere que cada elemento tenga una pareja única."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
 
 ### Ontología de las Relaciones de Orden

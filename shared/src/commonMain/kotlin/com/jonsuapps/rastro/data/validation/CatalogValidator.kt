@@ -289,7 +289,9 @@ object CatalogValidator {
                     )
                 } else {
                     // Opciones duplicadas dentro de la misma pregunta
-                    val distinctOptions = ch.options.map { it.trim().lowercase() }.distinct()
+                    // Case is academic content: AA/Aa/aa, variables and orthography
+                    // exercises can legitimately differ only by letter case.
+                    val distinctOptions = ch.options.map { it.trim() }.distinct()
                     if (distinctOptions.size < ch.options.size) {
                         issues.add(
                             ValidationIssue(

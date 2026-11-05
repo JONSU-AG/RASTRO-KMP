@@ -2,15 +2,15 @@
   {
     "id": "leng_t05_s01_c01",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La categoría gramatical que tiene como rasgo exclusivo modificar a un verbo, a un adjetivo o a otro adverbio es el:",
+    "statement": "En «La alumna respondió correctamente», ¿a qué categoría gramatical pertenece «correctamente»?",
     "options": [
       "Adverbio",
       "Determinante",
       "Pronombre relativo",
-      "Participio activo"
+      "Participio"
     ],
     "correctIndex": 0,
-    "explanation": "El adverbio es la categoría invariable modificadora por excelencia capaz de calificar o graduar a un verbo, a un adjetivo o a otro adverbio.",
+    "explanation": "Criterio: un adverbio puede modificar el predicado aportando información sobre la manera en que se realiza. Aplicación: correctamente se relaciona aquí con respondió; no acompaña a un sustantivo ni concuerda con alumna. Respuesta: Adverbio. Modificar un verbo, un adjetivo u otro adverbio no agota todos los alcances posibles del adverbio.",
     "subject": "lenguaje",
     "semana": 5,
     "concept": "5.1.4",
@@ -20,15 +20,15 @@
   {
     "id": "leng_t05_s01_c02",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la frase 'Esos jóvenes ingresaron a la universidad, pero aquellos aún esperan sus resultados', las palabras 'esos' y 'aquellos' funcionan respectivamente como:",
+    "statement": "En «Esos jóvenes ingresaron a la universidad y ellos ya recibieron sus resultados», ¿qué categorías tienen «esos» y «ellos», respectivamente?",
     "options": [
-      "Pronombre y determinante",
-      "Determinante demostrativo y pronombre demostrativo",
+      "Pronombre personal y determinante demostrativo",
+      "Determinante demostrativo y pronombre personal",
       "Adjetivos calificativos ambos",
       "Adverbios de lugar"
     ],
     "correctIndex": 1,
-    "explanation": "'Esos' acompaña directamente al sustantivo 'jóvenes' (determinante); 'aquellos' reemplaza al sustantivo y asume el rol de núcleo (pronombre).",
+    "explanation": "Criterio: se identifica cada unidad en su uso concreto. Aplicación: esos acompaña a jóvenes y es determinante demostrativo; ellos constituye una expresión pronominal personal. Respuesta: Determinante demostrativo y pronombre personal. El pronombre no necesita reemplazar siempre un sustantivo dicho antes.",
     "subject": "lenguaje",
     "semana": 5,
     "concept": "5.1.2",
@@ -38,15 +38,15 @@
   {
     "id": "leng_t05_s01_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes formas verbales contiene una auténtica perífrasis verbal?",
+    "statement": "¿Qué opción contiene una perífrasis verbal que expresa obligación?",
     "options": [
-      "Vio a los niños jugar en el parque",
-      "Prometió estudiar para el examen",
-      "Desea comer una fruta fresca",
+      "Le gusta estudiar por las mañanas",
+      "Prometió entregar el informe",
+      "Desea leer ese libro",
       "Tiene que entregar el informe hoy"
     ],
     "correctIndex": 3,
-    "explanation": "En 'tiene que entregar', el verbo auxiliar 'tiene' se fusiona con el nexo 'que' y el infinitivo 'entregar' formando una sola unidad predicativa perifrástica.",
+    "explanation": "Criterio: tener que + infinitivo forma una perífrasis de obligación. Aplicación: en tiene que entregar, tener que aporta ese valor y entregar identifica la acción. Respuesta: Tiene que entregar el informe hoy. No se decide únicamente por contener dos verbos ni por una sustitución aislada con eso.",
     "subject": "lenguaje",
     "semana": 5,
     "concept": "5.1.3",
@@ -56,15 +56,15 @@
   {
     "id": "leng_t05_s01_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Los verboides infinitivo, gerundio y participio se caracterizan formalmente en el plano morfológico porque:",
+    "statement": "¿Qué rasgo comparten el infinitivo, el gerundio y el participio como formas no personales del verbo?",
     "options": [
-      "Funcionan siempre como núcleos exclusivos de predicado sin auxiliar",
-      "Son invariables como las preposiciones",
-      "Carecen de desinencias flexivas de persona, número y tiempo (formas no personales)",
-      "Expresan modo subjuntivo y persona gramatical"
+      "Deben constituir siempre un predicado independiente",
+      "Son invariables en todos sus usos y construcciones",
+      "No expresan persona mediante desinencias propias de las formas conjugadas",
+      "Expresan por sí solos una persona del modo subjuntivo"
     ],
     "correctIndex": 2,
-    "explanation": "Los verboides son formas no personales del verbo porque no poseen morfemas amalgama de persona, número, tiempo ni modo.",
+    "explanation": "Criterio: las formas no personales no expresan persona verbal como las formas conjugadas. Aplicación: estudiar, estudiando y estudiado no equivalen a estudió o estudiaron. Respuesta: no expresan persona mediante esas desinencias. El participio puede concordar en género y número, como estudiadas en las lecciones estudiadas; con haber no concuerda con el objeto.",
     "subject": "lenguaje",
     "semana": 5,
     "concept": "5.1.3",
@@ -74,7 +74,7 @@
   {
     "id": "leng_t05_s01_c05",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de los siguientes grupos está compuesto únicamente por categorías gramaticales invariables?",
+    "statement": "¿Qué grupo reúne únicamente categorías clasificadas como invariables en los ejemplos de este nivel?",
     "options": [
       "Pronombre, determinante, adverbio",
       "Verbo, adverbio, preposición",
@@ -82,7 +82,7 @@
       "Sustantivo, adjetivo, verbo"
     ],
     "correctIndex": 2,
-    "explanation": "El adverbio, la preposición y la conjunción no admiten morfemas flexivos de género ni número; son categorías totalmente invariables.",
+    "explanation": "Criterio: adverbios, preposiciones y conjunciones se estudian como categorías sin flexión de género y número. Aplicación: muy, con y pero no concuerdan como un adjetivo con un sustantivo en estos usos. Respuesta: Adverbio, preposición, conjunción. La lista de la opción no pretende agotar todas las categorías invariables.",
     "subject": "lenguaje",
     "semana": 5,
     "concept": "5.1.4",
@@ -92,15 +92,15 @@
   {
     "id": "leng_t05_s01_c06",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la expresión 'Con extraordinaria rapidez y valor resolvió el enigma', la concordancia del adjetivo 'extraordinaria' antepuesto a dos sustantivos es correcta porque:",
+    "statement": "En «Con extraordinaria rapidez y valor resolvió el enigma», ¿con qué elemento concuerda el adjetivo antepuesto «extraordinaria»?",
     "options": [
-      "Concierta por proximidad con el primer sustantivo femenino singular",
-      "Debe ir obligatoriamente en masculino plural",
-      "El adjetivo antepuesto es neutro",
-      "No se aplica concordancia a sustantivos abstractos"
+      "Con rapidez, el sustantivo femenino singular más próximo",
+      "Con un sujeto tácito masculino plural",
+      "Con una forma neutra del verbo",
+      "No presenta ninguna relación de concordancia"
     ],
     "correctIndex": 0,
-    "explanation": "Cuando un adjetivo califica a varios sustantivos coordinados y se antepone a ellos, la norma culta prescribe concordar en género y número con el más próximo.",
+    "explanation": "Criterio: en esta construcción el adjetivo antepuesto concuerda con el sustantivo más próximo. Aplicación: rapidez es femenino singular y extraordinaria presenta esos rasgos. Respuesta: con rapidez. No se generaliza ese patrón a toda coordinación sin atender a la interpretación y a los referentes.",
     "subject": "lenguaje",
     "semana": 5,
     "concept": "5.1.4",
@@ -110,15 +110,15 @@
   {
     "id": "leng_t05_s01_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la oración 'La jauría huyó despavorida por el valle', la concordancia entre el sujeto colectivo 'la jauría' y el verbo 'huyó' es correcta porque:",
+    "statement": "En «La jauría huyó despavorida por el valle», ¿qué relación justifica la forma singular «huyó»?",
     "options": [
-      "Los colectivos no concuerdan en persona",
-      "Depende del número de animales de la jauría",
-      "El verbo debe estar en singular concertando con la forma gramatical del núcleo singular",
-      "Debe escribirse obligatoriamente en plural: 'huyeron'"
+      "El nombre colectivo carece de número gramatical",
+      "El verbo cuenta los animales mencionados",
+      "El verbo concuerda con jauría, núcleo singular del sujeto",
+      "El verbo está obligado a escribirse en plural en esta oración"
     ],
     "correctIndex": 2,
-    "explanation": "Los sustantivos colectivos en número singular exigen la concordancia del verbo en tercera persona del singular según la norma estándar.",
+    "explanation": "Criterio: la concordancia se establece con el número gramatical del núcleo en esta oración. Aplicación: jauría es singular, aunque designe un conjunto, y huyó concuerda con él. Respuesta: concordancia con el núcleo singular. No se extiende esta conclusión sin análisis a todas las construcciones colectivas o cuantificativas.",
     "subject": "lenguaje",
     "semana": 5,
     "concept": "5.1.4",
@@ -128,7 +128,7 @@
   {
     "id": "leng_t05_s01_c08",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuántas preposiciones contiene la oración 'Bajo la sombra del árbol conversó con sus amigos sobre el examen hasta el anochecer'?",
+    "statement": "Cuenta las preposiciones de «Bajo la sombra del árbol conversó con sus amigos sobre el examen hasta el anochecer», incluyendo la contenida en «del». ¿Cuántas hay?",
     "options": [
       "5",
       "3",
@@ -136,7 +136,7 @@
       "6"
     ],
     "correctIndex": 0,
-    "explanation": "Las preposiciones son 5: 'bajo', 'de' (en la contracción del = de + el), 'con', 'sobre' y 'hasta'.",
+    "explanation": "Criterio: se cuentan usos preposicionales, también los incluidos en contracciones. Aplicación: aparecen bajo, de en del, con, sobre y hasta. Respuesta: 5. Del reúne una preposición, de, y un artículo, el; no cuenta como dos preposiciones.",
     "subject": "lenguaje",
     "semana": 5,
     "concept": "5.1.4",
@@ -149,12 +149,12 @@
     "statement": "En 'Llegaron muy temprano a la ceremonia', la palabra 'muy' funciona morfosintácticamente como:",
     "options": [
       "Adjetivo determinativo cuantitativo",
-      "Adverbio de cantidad que intensifica a otro adverbio ('temprano')",
+      "Adverbio de grado que modifica al adverbio temprano",
       "Conjunción subordinante",
       "Pronombre enfático"
     ],
     "correctIndex": 1,
-    "explanation": "'Muy' es un adverbio de cantidad e intensidad que modifica directamente a otro adverbio ('temprano').",
+    "explanation": "Criterio: un adverbio de grado puede intensificar a otro adverbio. Aplicación: muy modifica temprano en muy temprano; no califica directamente a un sustantivo ni concuerda con él. Respuesta: Adverbio de grado que modifica al adverbio temprano.",
     "subject": "lenguaje",
     "semana": 5,
     "concept": "5.1.4",
@@ -172,7 +172,7 @@
       "Preposición ilativa"
     ],
     "correctIndex": 1,
-    "explanation": "'Pero' es una conjunción coordinante adversativa que expresa oposición, objeción o restricción entre dos proposiciones.",
+    "explanation": "Criterio: pero es una conjunción coordinante adversativa en esta construcción. Aplicación: relaciona estudió con gran empeño y no alcanzó el puntaje con un valor de oposición o restricción. Respuesta: Conjunción coordinante adversativa; no introduce aquí una causa ni una subordinada concesiva.",
     "subject": "lenguaje",
     "semana": 5,
     "concept": "5.1.4",

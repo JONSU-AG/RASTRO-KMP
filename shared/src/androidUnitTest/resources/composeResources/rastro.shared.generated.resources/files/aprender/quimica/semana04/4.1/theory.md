@@ -13,27 +13,47 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                         ESTRUCTURA ELECTRÓNICA Y TABLA PERIÓDICA
-                                            │
-         ┌──────────────────────────────────┴──────────────────────────────────┐
-         ▼                                                                     ▼
-NÚMEROS CUÁNTICOS (4)                                                 CONFIGURACIÓN ELECTRÓNICA
-• n: Nivel principal (tamaño/energía)                               • Principio de Aufbau (Energía Relativa)
-• l: Subnivel (forma: s, p, d, f)                                  • Principio de Exclusión de Pauli
-• m_l: Orbital (orientación espacial)                               • Regla de Máxima Multiplicidad de Hund
-• m_s: Spin (giro del electrón: \pm 1/2)                          • Anomalías / Antiserrucho (d^4 \to d^5, d^9 \to d^{10})
-                                                                               │
-         ┌─────────────────────────────────────────────────────────────────────┘
-         ▼
-TABLA PERIÓDICA MODERNA
-• Ley Periódica Moderna (Henry Moseley): Propiedades en función creciente de Z.
-• Organización: 7 Períodos (filas) y 18 Grupos / 16 Familias (columnas: A y B).
-• Bloques: s, p (Representativos), d (Transición), f (Transición Interna / Tierras Raras).
-• Propiedades Periódicas:
-  - Crecen hacia \leftarrow \downarrow: Radio Atómico (RA), Radio Iónico, Carácter Metálico (CM).
-  - Crecen hacia \rightarrow \uparrow: Electronegatividad (EN), Energía de Ionización (EI),
-                                        Afinidad Electrónica (AE), Carácter No Metálico (CNM).
+```mermaid
+graph TD
+ ROOT["Estructura electrónica y periodicidad"]
+ B1["Números cuánticos"]
+ B1N1["n: número principal; identifica la capa."]
+ B1N2["l: momento angular orbital; distingue subniveles s, p, d y f."]
+ B1N3["m_l: proyección del momento angular orbital."]
+ B1N4["Spin: propiedad intrínseca; $m_s=+1/2$ o $-1/2$. No es un giro clásico sobre un eje."]
+ B2["Configuración electrónica"]
+ B2N1["Aufbau: ocupar primero los orbitales de menor energía en el modelo utilizado."]
+ B2N2["Pauli: dos electrones del mismo átomo no comparten los cuatro números cuánticos."]
+ B2N3["Hund: ocupar orbitales degenerados individualmente y con espines paralelos antes de aparearlos."]
+ B2N4["Las excepciones se comprueban por especie; no aplicar una regla de traslado universal a cualquier d4 o d9."]
+ B3["Tabla periódica"]
+ B3N1["Ordenada por número atómico creciente; las propiedades varían periódicamente."]
+ B3N2["Organización actual: 7 períodos y 18 grupos numerados del 1 al 18."]
+ B3N3["Bloques s y p: elementos representativos; d: transición; f: transición interna."]
+ B4["Tendencias con condiciones"]
+ B4N1["Radio atómico: en general aumenta al bajar en un grupo y al avanzar hacia la izquierda en un período."]
+ B4N2["Primera energía de ionización: tendencia general a aumentar hacia arriba y a la derecha, con excepciones."]
+ B4N3["Electronegatividad: tendencia general a aumentar hacia arriba y a la derecha entre elementos comparables."]
+ B4N4["Afinidad electrónica y radio iónico requieren revisar especie, carga y convención; no siguen una flecha universal sin excepciones."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ B4 --> B4N4
 ```
 
 ---

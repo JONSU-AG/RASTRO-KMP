@@ -13,34 +13,45 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                              ÁCIDOS Y BASES
-                                     │
-         ┌───────────────────────────┴───────────────────────────┐
-         ▼                                                       ▼
-TEORÍAS ÁCIDO-BASE                                      AUTOIONIZACIÓN DEL AGUA
-• Arrhenius: H^+ en agua / OH^- en agua             • 2H_2O \rightleftharpoons H_3O^+ + OH^-
-• Brønsted-Lowry: Dona H^+ / Acepta H^+              • K_w = [H^+][OH^-] = 1.0 \times 10^{-14} (a 25 °C)
-  (Pares Conjugados Ácido-Base)                                  │
-• Lewis: Acepta par e^- / Dona par e^-                       ▼
-                                                        ESCALA DE pH Y pOH (Sørensen)
-                                                        • pH = -\log[H^+]  ;  pOH = -\log[OH^-]
-                                                        • pH + pOH = 14  (a 25 °C)
-                                                                 │
-         ┌───────────────────────────────────────────────────────┴────────────────────────┐
-         ▼                                                                                ▼
-ELECTROLITOS FUERTES (100\% disociación)                              ELECTROLITOS DÉBILES (Equilibrio)
-• Ácidos Fuertes: HCl, HBr, HI, HNO_3, HClO_4, H_2SO_4                • Ácidos Débiles: CH_3COOH, HF, HCN (K_a)
-• Bases Fuertes: Hidróxidos del Grupo IA y IIA                          • Bases Débiles: NH_3, \text{aminas} (K_b)
-  [H^+] = M_{\text{ácido}} \cdot \theta                                 [H^+] = \sqrt{K_a \cdot C_0}
-  [OH^-] = M_{\text{base}} \cdot \theta                                 [OH^-] = \sqrt{K_b \cdot C_0}
-                                                                                          │
-         ┌────────────────────────────────────────────────────────────────────────────────┘
-         ▼
-SISTEMAS BUFFER / AMORTIGUADORES Y TITULACIÓN
-• Ecuación de Henderson-Hasselbalch:  pH = pK_a + \log\left(\frac{[\text{Sal Conjugada}]}{[\text{Ácido Débil}]}\right)
-• Hidrólisis Salina: Sal ácida, básica o neutra
-• Curvas de Titulación y Punto de Equivalencia
+```mermaid
+graph TD
+ ROOT["Ácidos, bases y equilibrio acuoso"]
+ B1["Modelos ácido-base"]
+ B1N1["Arrhenius: aumento de hidronio o hidróxido en disolución acuosa."]
+ B1N2["Brønsted-Lowry: ácido dona un protón y base lo acepta; identificar los pares conjugados."]
+ B1N3["Lewis: ácido acepta un par electrónico y base lo dona."]
+ B2["Agua y escala de pH"]
+ B2N1["Autoionización: $2\mathrm{H_2O}\rightleftharpoons\mathrm{H_3O^+}+\mathrm{OH^-}$."]
+ B2N2["En disoluciones diluidas, $K_w\approx[\mathrm{H_3O^+}][\mathrm{OH^-}]$; depende de la temperatura."]
+ B2N3["$\mathrm{pH}\approx-\log_{10}[\mathrm{H_3O^+}]$ en el tratamiento diluido; rigurosamente se usa actividad."]
+ B2N4["$\mathrm{pH+pOH}=pK_w$, aproximadamente 14 a $25\,^{\circ}\mathrm C$; neutral significa igual actividad de ambos iones."]
+ B3["Fuerza y cálculo"]
+ B3N1["Fuerte o débil describe ionización; concentrado o diluido describe cantidad relativa. No son sinónimos."]
+ B3N2["La concentración de iones de una base fuerte depende también de lo que realmente se disuelve."]
+ B3N3["Para ácidos polipróticos, resolver las etapas; no multiplicar automáticamente la concentración por todos los hidrógenos."]
+ B3N4["Ácido débil monoprótico: $[\mathrm{H_3O^+}]\approx\sqrt{K_aC_0}$ solo si la ionización y la contribución del agua son despreciables frente a las cantidades pertinentes."]
+ B4["Amortiguadores y titulación"]
+ B4N1["Buffer: ácido débil y base conjugada en cantidades apreciables; $\mathrm{pH}\approx pK_a+\log([A^-]/[HA])$ dentro de sus supuestos."]
+ B4N2["Hidrólisis de sales: analizar los iones y sus equilibrios; no clasificar solo por el nombre de la sal."]
+ B4N3["Equivalencia estequiométrica y punto final del indicador son conceptos distintos; el pH de equivalencia no siempre es 7."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---
@@ -102,3 +113,16 @@ pK_w = pH + pOH
 | :--- | :---: | :---: | :---: |
 | **Fenolftaleína** | Incoloro | 8.2 - 10.0 | Rojo grosella / Fucsia |
 | **Tornasol** | Rojo | 5.0 - 8.0 | Azul |
+
+
+### Elegir el modelo antes de usar la fórmula
+
+| Situación | Comprobación necesaria |
+|---|---|
+| Ácido fuerte monoprótico | Concentración y contribución del agua; no confundir fuerza con concentración |
+| Ácido débil monoprótico | Verificar si la ionización es pequeña antes de usar la raíz aproximada |
+| Ácido con varios protones | Examinar cada etapa de ionización |
+| Neutralidad | Igual actividad de hidronio e hidróxido a la temperatura dada |
+| Titulación | Separar equivalencia química de cambio de color del indicador |
+
+**Ejemplo:** para HCl 0,0010 mol/L a 25 °C, en la aproximación de solución ideal diluida y contribución despreciable del agua, $[\mathrm{H_3O^+}]\approx10^{-3}\ \mathrm{mol/L}$ y pH aproximadamente 3. No se usa este atajo para una solución extremadamente diluida sin revisar el agua.

@@ -1,1 +1,265 @@
-[{"id":"bio_t09_s04_c01","type":"MULTIPLE_CHOICE","statement":"Tras un almuerzo copioso (glucosa 160 mg/dL), las células beta pancreáticas liberan la hormona hipoglucemiante:","options":["Glucagón","Somatostatina","Insulina","Cortisol","Adrenalina"],"correctIndex":2,"explanation":"Insulina: capta glucosa (GLUT4) y la guarda como glucógeno hepático-muscular.","subject":"biologia","semana":9,"concept":"9.4.3","pedagogicalTier":"aplicación","fuente":"temario"},{"id":"bio_t09_s04_c02","type":"MULTIPLE_CHOICE","statement":"La eyección de leche durante la succión depende de:","options":["Oxitocina neurohipofisaria","Progesterona lútea","TSH","Calcitonina","Prolactina adenohipofisaria"],"correctIndex":0,"explanation":"Prolactina sintetiza; oxitocina contrae mioepitelio y eyecta (además contrae útero en el parto).","subject":"biologia","semana":9,"concept":"9.4.1","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t09_s04_c03","type":"MULTIPLE_CHOICE","statement":"Hormona hipercalcemiante secretada por paratiroides:","options":["Aldosterona","Calcitonina","Tiroxina","Parathormona (PTH)","Insulina"],"correctIndex":3,"explanation":"PTH sube calcemia (osteoclastos, riñón, vitamina D); calcitonina la baja fijando Ca al hueso.","subject":"biologia","semana":9,"concept":"9.4.2","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t09_s04_c04","type":"MULTIPLE_CHOICE","statement":"El gigantismo infantil y la acromegalia adulta se deben a exceso de:","options":["Prolactina","FSH","TSH","ACTH","GH (somatotropina)"],"correctIndex":4,"explanation":"GH en exceso antes del cierre epifisario = gigantismo; después = acromegalia.","subject":"biologia","semana":9,"concept":"9.4.1","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t09_s04_c05","type":"MULTIPLE_CHOICE","statement":"En ayuno prolongado, el hígado vuelca glucosa por acción de:","options":["Insulina","Glucagón","Calcitonina","Oxitocina","Melatonina"],"correctIndex":1,"explanation":"Glucagón (alfa) activa glucogenólisis y gluconeogénesis hepática ante hipoglucemia.","subject":"biologia","semana":9,"concept":"9.4.3","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t09_s04_c06","type":"MULTIPLE_CHOICE","statement":"La TSH hipofisaria estimula directamente a:","options":["Glándula tiroides","Gónadas","Paratiroides","Páncreas","Corteza suprarrenal"],"correctIndex":0,"explanation":"Eje hipotálamo-hipófisis-tiroides: TSH → T3/T4; ACTH → suprarrenal; FSH/LH → gónadas.","subject":"biologia","semana":9,"concept":"9.4.1","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t09_s04_c07","type":"MULTIPLE_CHOICE","statement":"La neurohipófisis se diferencia de la adenohipófisis porque:","options":["Secreta insulina","Sintetiza todas sus hormonas","Solo almacena y libera hormonas hipotalámicas","Produce TSH y ACTH","Es tejido glandular puro"],"correctIndex":2,"explanation":"Neurohipófisis = terminales hipotalámicos que liberan oxitocina y ADH; no las fabrica.","subject":"biologia","semana":9,"concept":"9.4.1","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t09_s04_c08","type":"MULTIPLE_CHOICE","statement":"Diabetes mellitus por déficit de insulina cursa típicamente con:","options":["Enanismo hipofisario","Mixedema","Hipoglucemia y obesidad","Hiperglucemia, poliuria y polidipsia","Hipocalcemia y tetania"],"correctIndex":3,"explanation":"Sin insulina la glucosa no entra a células: hiperglucemia con diuresis osmótica (poliuria) y sed (polidipsia).","subject":"biologia","semana":9,"concept":"9.4.3","pedagogicalTier":"aplicación","fuente":"temario"},{"id":"bio_t09_s04_c09","type":"MULTIPLE_CHOICE","statement":"Células C parafoliculares tiroideas secretan:","options":["TSH","Tiroglobulina activa","PTH","T4","Calcitonina"],"correctIndex":4,"explanation":"Calcitonina hipocalcemiante; PTH paratiroidea hace lo opuesto.","subject":"biologia","semana":9,"concept":"9.4.2","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t09_s04_c10","type":"MULTIPLE_CHOICE","statement":"FSH y LH en común regulan:","options":["Tiroides","Suprarrenales","Gónadas y ciclo reproductor","Páncreas","Paratiroides"],"correctIndex":2,"explanation":"Gonadotropinas adenohipofisarias: foliculogénesis, ovulación (pico LH) y esteroidogénesis gonadal.","subject":"biologia","semana":9,"concept":"9.4.1","pedagogicalTier":"concepto","fuente":"temario"},{"id":"bio_t09_s04_c11","type":"MULTIPLE_CHOICE","statement":"Relacione: I. Insulina ( ) hipoglucemiante; II. Glucagón ( ) hiperglucemiante; III. Calcitonina ( ) hipocalcemiante; IV. PTH ( ) hipercalcemiante. Secuencia:","options":["La correspondencia directa descrita","Inversa total","I-III-II-IV","Solo I y II","Ninguna corresponde"],"correctIndex":0,"explanation":"Pares antagónicos: glucosa (insulina/glucagón) y calcio (calcitonina/PTH).","subject":"biologia","semana":9,"concept":"9.4.3","pedagogicalTier":"aplicación","fuente":"temario"},{"id":"bio_t09_s04_c12","type":"MULTIPLE_CHOICE","statement":"La somatostatina pancreática (células delta) actúa principalmente:","options":["Estimulando insulina y glucagón","Inhibiendo insulina, glucagón y GH","Contrayendo el útero","Fijando calcio óseo","Secretando HCl gástrico"],"correctIndex":1,"explanation":"Somatostatina = freno endocrino local: inhibe alfa, beta y GH.","subject":"biologia","semana":9,"concept":"9.4.3","pedagogicalTier":"concepto","fuente":"temario"}]
+[
+  {
+    "id": "bio_t09_s04_c01",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Tras un almuerzo copioso (glucosa 160 mg/dL), las células beta pancreáticas liberan la hormona hipoglucemiante:",
+    "options": [
+      "Glucagón",
+      "Somatostatina",
+      "Insulina",
+      "Cortisol",
+      "Adrenalina"
+    ],
+    "correctIndex": 2,
+    "explanation": "Insulina: capta glucosa (GLUT4) y la guarda como glucógeno hepático-muscular.",
+    "subject": "biologia",
+    "semana": 9,
+    "concept": "9.4.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t09_s04_c02",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La eyección de leche durante la succión depende de:",
+    "options": [
+      "Oxitocina neurohipofisaria",
+      "Progesterona lútea",
+      "TSH",
+      "Calcitonina",
+      "Prolactina adenohipofisaria"
+    ],
+    "correctIndex": 0,
+    "explanation": "Prolactina sintetiza; oxitocina contrae mioepitelio y eyecta (además contrae útero en el parto).",
+    "subject": "biologia",
+    "semana": 9,
+    "concept": "9.4.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t09_s04_c03",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Hormona hipercalcemiante secretada por paratiroides:",
+    "options": [
+      "Aldosterona",
+      "Calcitonina",
+      "Tiroxina",
+      "Parathormona (PTH)",
+      "Insulina"
+    ],
+    "correctIndex": 3,
+    "explanation": "PTH sube calcemia (osteoclastos, riñón, vitamina D); calcitonina la baja fijando Ca al hueso.",
+    "subject": "biologia",
+    "semana": 9,
+    "concept": "9.4.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t09_s04_c04",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "El gigantismo infantil y la acromegalia adulta se deben a exceso de:",
+    "options": [
+      "Prolactina",
+      "FSH",
+      "TSH",
+      "ACTH",
+      "GH (somatotropina)"
+    ],
+    "correctIndex": 4,
+    "explanation": "GH en exceso antes del cierre epifisario = gigantismo; después = acromegalia.",
+    "subject": "biologia",
+    "semana": 9,
+    "concept": "9.4.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t09_s04_c05",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "En ayuno prolongado, el hígado vuelca glucosa por acción de:",
+    "options": [
+      "Insulina",
+      "Glucagón",
+      "Calcitonina",
+      "Oxitocina",
+      "Melatonina"
+    ],
+    "correctIndex": 1,
+    "explanation": "Glucagón (alfa) activa glucogenólisis y gluconeogénesis hepática ante hipoglucemia.",
+    "subject": "biologia",
+    "semana": 9,
+    "concept": "9.4.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t09_s04_c06",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La TSH hipofisaria estimula directamente a:",
+    "options": [
+      "Glándula tiroides",
+      "Gónadas",
+      "Paratiroides",
+      "Páncreas",
+      "Corteza suprarrenal"
+    ],
+    "correctIndex": 0,
+    "explanation": "Eje hipotálamo-hipófisis-tiroides: TSH → T3/T4; ACTH → suprarrenal; FSH/LH → gónadas.",
+    "subject": "biologia",
+    "semana": 9,
+    "concept": "9.4.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t09_s04_c07",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La neurohipófisis se diferencia de la adenohipófisis porque:",
+    "options": [
+      "Secreta insulina",
+      "Sintetiza todas sus hormonas",
+      "Solo almacena y libera hormonas hipotalámicas",
+      "Produce TSH y ACTH",
+      "Es tejido glandular puro"
+    ],
+    "correctIndex": 2,
+    "explanation": "Neurohipófisis = terminales hipotalámicos que liberan oxitocina y ADH; no las fabrica.",
+    "subject": "biologia",
+    "semana": 9,
+    "concept": "9.4.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t09_s04_c08",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Diabetes mellitus por déficit de insulina cursa típicamente con:",
+    "options": [
+      "Enanismo hipofisario",
+      "Mixedema",
+      "Hipoglucemia y obesidad",
+      "Hiperglucemia, poliuria y polidipsia",
+      "Hipocalcemia y tetania"
+    ],
+    "correctIndex": 3,
+    "explanation": "Sin insulina la glucosa no entra a células: hiperglucemia con diuresis osmótica (poliuria) y sed (polidipsia).",
+    "subject": "biologia",
+    "semana": 9,
+    "concept": "9.4.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t09_s04_c09",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "Células C parafoliculares tiroideas secretan:",
+    "options": [
+      "TSH",
+      "Tiroglobulina activa",
+      "PTH",
+      "T4",
+      "Calcitonina"
+    ],
+    "correctIndex": 4,
+    "explanation": "Calcitonina hipocalcemiante; PTH paratiroidea hace lo opuesto.",
+    "subject": "biologia",
+    "semana": 9,
+    "concept": "9.4.2",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t09_s04_c10",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "FSH y LH en común regulan:",
+    "options": [
+      "Tiroides",
+      "Suprarrenales",
+      "Gónadas y ciclo reproductor",
+      "Páncreas",
+      "Paratiroides"
+    ],
+    "correctIndex": 2,
+    "explanation": "Gonadotropinas adenohipofisarias: foliculogénesis, ovulación (pico LH) y esteroidogénesis gonadal.",
+    "subject": "biologia",
+    "semana": 9,
+    "concept": "9.4.1",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  },
+  {
+    "id": "bio_t09_s04_c11",
+    "type": "MATCH_PAIRS",
+    "statement": "Relaciona cada hormona con el efecto regulador indicado, en el modelo fisiológico general.",
+    "options": [],
+    "correctIndex": 0,
+    "explanation": "1. Insulina: Favorece la disminución de la glucemia.\n2. Glucagón: Favorece el aumento de la glucemia.\n3. Calcitonina: Puede contribuir a disminuir el calcio sanguíneo al limitar la resorción ósea.\n4. Hormona paratiroidea (PTH): Favorece el aumento del calcio sanguíneo.",
+    "subject": "biologia",
+    "semana": 9,
+    "concept": "9.4.3",
+    "pedagogicalTier": "aplicación",
+    "fuente": "Revisión RASTRO: docs/aprender/biologia/REVISION_RELACIONES_2026-11-02.md",
+    "instruction": "Selecciona un elemento de cada columna para formar los cuatro pares.",
+    "pairs": [
+      {
+        "id": "p1",
+        "left": "Insulina",
+        "right": "Favorece la disminución de la glucemia."
+      },
+      {
+        "id": "p2",
+        "left": "Glucagón",
+        "right": "Favorece el aumento de la glucemia."
+      },
+      {
+        "id": "p3",
+        "left": "Calcitonina",
+        "right": "Puede contribuir a disminuir el calcio sanguíneo al limitar la resorción ósea."
+      },
+      {
+        "id": "p4",
+        "left": "Hormona paratiroidea (PTH)",
+        "right": "Favorece el aumento del calcio sanguíneo."
+      }
+    ],
+    "rightOptions": [
+      {
+        "id": "p3",
+        "text": "Puede contribuir a disminuir el calcio sanguíneo al limitar la resorción ósea."
+      },
+      {
+        "id": "p1",
+        "text": "Favorece la disminución de la glucemia."
+      },
+      {
+        "id": "p4",
+        "text": "Favorece el aumento del calcio sanguíneo."
+      },
+      {
+        "id": "p2",
+        "text": "Favorece el aumento de la glucemia."
+      }
+    ]
+  },
+  {
+    "id": "bio_t09_s04_c12",
+    "type": "MULTIPLE_CHOICE",
+    "statement": "La somatostatina pancreática (células delta) actúa principalmente:",
+    "options": [
+      "Estimulando insulina y glucagón",
+      "Inhibiendo insulina, glucagón y GH",
+      "Contrayendo el útero",
+      "Fijando calcio óseo",
+      "Secretando HCl gástrico"
+    ],
+    "correctIndex": 1,
+    "explanation": "Somatostatina = freno endocrino local: inhibe alfa, beta y GH.",
+    "subject": "biologia",
+    "semana": 9,
+    "concept": "9.4.3",
+    "pedagogicalTier": "concepto",
+    "fuente": "temario"
+  }
+]

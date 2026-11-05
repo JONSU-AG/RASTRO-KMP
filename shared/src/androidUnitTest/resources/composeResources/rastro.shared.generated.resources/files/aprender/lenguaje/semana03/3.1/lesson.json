@@ -7,11 +7,11 @@
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana03.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_03_Fonologia_y_Ortografia.md",
   "learningObjectives": [
-    "Diferenciar fonema abstracto y distintivo de alófono material y de grafema escrito",
-    "Describir el sistema de 24 fonemas con la clasificación de las cinco vocales",
-    "Explicar polifonía, poligrafía y letras mudas en la asimetría fonema y grafema",
-    "Analizar la sílaba en ataque, cima con núcleo y coda con libre frente a trabada",
-    "Aplicar la función distintiva con pares mínimos como masa frente a mesa"
+    "Distinguir fonema, realización fonética, alófono y representación escrita",
+    "Clasificar las cinco vocales según altura y posición sin fijar un inventario consonántico universal",
+    "Explicar correspondencias entre letras, dígrafos y fonemas con ejemplos delimitados",
+    "Analizar ataque, núcleo y coda y diferenciar sílaba abierta y cerrada",
+    "Justificar la función distintiva con pares mínimos y conservar la diferencia entre pronunciación y ortografía"
   ],
   "theory": {
     "id": "th_leng_t03_s01",
@@ -20,15 +20,15 @@
     "titulo": "Fonología, Fonética, Sistema Fonológico y Estructura Silábica",
     "resumen": "",
     "conceptosClave": [
-      "Fonema abstracto entre barras con función distintiva frente a alófono entre corchetes",
-      "24 fonemas segmentales con 5 vocales y 19 consonantes frente a 27 grafías y 5 dígrafos",
-      "Vocales anteriores e y i, central a, posteriores o y u con altas i y u",
-      "Polifonía de c en casa y cena frente a poligrafía de k en cama, kilo y queso",
-      "Letra h muda y u muda en gue, gui, que y qui",
-      "Cima con núcleo vocálico obligatorio frente a ataque prenuclear y coda posnuclear",
-      "Sílaba trabada trans con coda frente a sílaba libre pa con solo vocal"
+      "Fonema: unidad distintiva; alófono: realización de un fonema; grafema: unidad escrita",
+      "Cinco vocales en el modelo básico; contrastes consonánticos según variedad",
+      "Altas i y u; medias e y o; baja a; anteriores i y e, posteriores u y o",
+      "C y k son letras; qu es un dígrafo en queso",
+      "La h de hoja y humo no representa fonema propio; no generalizar a ch o préstamos",
+      "Pan: ataque p, núcleo a, coda n; pa tiene ataque y núcleo, sin coda",
+      "Pares mínimos muestran contraste sin atribuir significado léxico a cada fonema"
     ],
-    "admissionTip": "24 fonemas con 5 vocales y 27 grafías; h siempre muda; trans es trabada por su coda y pan reparte ataque p y coda n.",
-    "admissionExplanation": "El par mínimo demuestra la función distintiva sin significado propio y la estructura ataque más cima más coda resuelve todo silabeo de examen."
+    "admissionTip": "Identifica si se analizan sonidos, unidades distintivas, letras o sílabas. Precisa la variedad antes de fijar contrastes consonánticos.",
+    "admissionExplanation": "Las relaciones entre escritura y pronunciación no son siempre una a una. Un dígrafo tiene dos letras; la clasificación de sílaba abierta o cerrada depende de la coda, no de contar letras."
   }
 }

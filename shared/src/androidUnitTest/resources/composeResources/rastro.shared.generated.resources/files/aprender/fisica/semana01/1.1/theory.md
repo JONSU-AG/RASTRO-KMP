@@ -1,16 +1,14 @@
-## 1. MARCO CONCEPTUAL Y ONTOLOGÍA
-## 1. RESUMEN EJECUTIVO (VISIÓN PANORÁMICA)
+## 1. Magnitudes, dimensiones y vectores
 
 La Física es la ciencia fundamental que estudia las propiedades de la materia, la energía, el espacio y el tiempo, así como las leyes que gobiernan sus interacciones mutuas:
-1. **Magnitudes Físicas y Sistema Internacional (SI):** Clasificación según su origen (fundamentales y derivadas) y según su naturaleza (escalares y vectoriales). Las 7 magnitudes fundamentales del SI: longitud (\text{m}), masa (\text{kg}), tiempo (\text{s}), temperatura termodinámica (\text{K}), intensidad de corriente eléctrica (\text{A}), cantidad de sustancia (\text{mol}) e intensidad luminosa (\text{cd}); más dos suplementarias (ángulo plano en radianes y ángulo sólido en estereorradianes).
+1. **Magnitudes Físicas y Sistema Internacional (SI):** Clasificación según su origen (fundamentales y derivadas) y según su naturaleza (escalares y vectoriales). Las 7 magnitudes fundamentales del SI: longitud (\text{m}), masa (\text{kg}), tiempo (\text{s}), temperatura termodinámica (\text{K}), intensidad de corriente eléctrica (\text{A}), cantidad de sustancia (\text{mol}) e intensidad luminosa (\text{cd}); el radián y el estereorradián son unidades derivadas de dimensión uno, no magnitudes fundamentales adicionales.
 2. **Análisis Dimensional:** Ecuaciones dimensionales fundamentales [M], [L], [T], [\theta], [I], [J], [N]. Principio de Homogeneidad Dimensional (Principio de Fourier) y propiedades algebraicas de los operadores dimensionales. Determinación de fórmulas empíricas mediante el método de potencias de Rayleigh.
 3. **Álgebra Vectorial:** El vector como ente matemático caracterizado por módulo, dirección y sentido. Métodos geométricos (polígono, paralelogramo, triángulo) y métodos analíticos: descomposición rectangular en \mathbb{R}^2 y \mathbb{R}^3, cosenos directores, vectores unitarios canónicos (\hat{i}, \hat{j}, \hat{k}), producto escalar (\vec{A} \cdot \vec{B} = AB \cos\theta) y producto vectorial (\vec{A} \times \vec{B} = AB \sin\theta\,\hat{u}_n).
 
 ---
 
 
-## 2. DESARROLLO TEÓRICO FORMAL - PARTE I
-### 2. BASE TEÓRICA COMPLETA Y RIGUROSA
+## 2. Desarrollo de los conceptos
 
 ### 2.1. MAGNITUDES FÍSICAS Y SISTEMA INTERNACIONAL (SI)
 
@@ -18,25 +16,33 @@ Una **magnitud física** es todo atributo o propiedad de un sistema material o f
 
 #### A. Clasificación por su Origen
 1. **Magnitudes Fundamentales:** Aquellas elegidas por convención internacional como base independiente para definir todas las demás:
-   - **Longitud:** metro (\text{m}), [L] (distancia recorrida por la luz en el vacío en 1/299\ 792\ 458\text{ s}).
-   - **Masa:** kilogramo (\text{kg}), [M] (fijado mediante la constante de Planck h = 6.626\ 070\ 15 \times 10^{-34}\text{ kg}\cdot\text{m}^2\text{s}^{-1}).
-   - **Tiempo:** segundo (\text{s}), [T] (9\ 192\ 631\ 770 periodos de radiación de la transición hiperfina del cesio-133).
-   - **Temperatura Termodinámica:** kelvin (\text{K}), [\theta] (fijado mediante la constante de Boltzmann k).
-   - **Intensidad de Corriente Eléctrica:** ampere (\text{A}), [I] (flujo de carga elemental e).
-   - **Cantidad de Sustancia:** mol (\text{mol}), [N] (6.022\ 140\ 76 \times 10^{23} entidades elementales, constante de Avogadro N_A).
-   - **Intensidad Luminosa:** candela (\text{cd}), [J].
+
+| Magnitud fundamental | Dimensión | Unidad del SI | Referencia |
+|---|---|---|---|
+| Longitud | [L] | metro (\text{m}) | (distancia recorrida por la luz en el vacío en 1/299\ 792\ 458\text{ s}). |
+| Masa | [M] | kilogramo (\text{kg}) | (fijado mediante la constante de Planck h = 6.626\ 070\ 15 \times 10^{-34}\text{ kg}\cdot\text{m}^2\text{s}^{-1}). |
+| Tiempo | [T] | segundo (\text{s}) | (9\ 192\ 631\ 770 periodos de radiación de la transición hiperfina del cesio-133). |
+| Temperatura Termodinámica | [\theta] | kelvin (\text{K}) | (fijado mediante la constante de Boltzmann k). |
+| Intensidad de Corriente Eléctrica | [I] | ampere (\text{A}) | (flujo de carga elemental e). |
+| Cantidad de Sustancia | [N] | mol (\text{mol}) | (6.022\ 140\ 76 \times 10^{23} entidades elementales, constante de Avogadro N_A). |
+| Intensidad Luminosa | [J] | candela (\text{cd}) | — |
+
 2. **Magnitudes Derivadas:** Aquellas expresadas matemáticamente en función de las fundamentales. Ejemplos clásicos:
-   - Velocidad: [v] = LT^{-1} (\text{m/s})
-   - Aceleración: [a] = LT^{-2} (\text{m/s}^2)
-   - Fuerza: [F] = MLT^{-2} (\text{N} = \text{kg}\cdot\text{m/s}^2)
-   - Trabajo / Energía / Calor: [W] = [E] = ML^2T^{-2} (\text{J} = \text{N}\cdot\text{m})
-   - Potencia: [P] = ML^2T^{-3} (\text{W} = \text{J/s})
-   - Presión: [p] = ML^{-1}T^{-2} (\text{Pa} = \text{N/m}^2)
-   - Densidad: [\rho] = ML^{-3} (\text{kg/m}^3)
-   - Frecuencia: [f] = T^{-1} (\text{Hz} = \text{s}^{-1})
-   - Carga Eléctrica: [q] = IT (\text{C} = \text{A}\cdot\text{s})
-   - Potencial Eléctrico: [V] = ML^2T^{-3}I^{-1} (\text{V} = \text{J/C})
-3. **Magnitudes Suplementarias o Adimensionales:**
+
+| Magnitud derivada | Ecuación dimensional | Unidad del SI |
+|---|---|---|
+| Velocidad | [v] = LT^{-1} | \text{m/s} |
+| Aceleración | [a] = LT^{-2} | \text{m/s}^2 |
+| Fuerza | [F] = MLT^{-2} | \text{N} = \text{kg}\cdot\text{m/s}^2 |
+| Trabajo / Energía / Calor | [W] = [E] = ML^2T^{-2} | \text{J} = \text{N}\cdot\text{m} |
+| Potencia | [P] = ML^2T^{-3} | \text{W} = \text{J/s} |
+| Presión | [p] = ML^{-1}T^{-2} | \text{Pa} = \text{N/m}^2 |
+| Densidad | [\rho] = ML^{-3} | \text{kg/m}^3 |
+| Frecuencia | [f] = T^{-1} | \text{Hz} = \text{s}^{-1} |
+| Carga Eléctrica | [q] = IT | \text{C} = \text{A}\cdot\text{s} |
+| Potencial Eléctrico | [V] = ML^2T^{-3}I^{-1} | \text{V} = \text{J/C} |
+
+3. **Ángulos y unidades derivadas de dimensión uno:**
    - Ángulo plano: radián (\text{rad}). Dimensión: [1].
    - Ángulo sólido: estereorradián (\text{sr}). Dimensión: [1].
 
@@ -72,9 +78,25 @@ Técnica físico-matemática que estudia las relaciones entre magnitudes fundame
 
 ### 2.3. ÁLGEBRA VECTORIAL
 
+Una magnitud vectorial necesita módulo, dirección y sentido. Antes de usar una fórmula, fija los ejes y expresa las componentes respecto de ellos.
 
-## 3. FORMULARIO FUNDAMENTAL Y LEYES BASE
-### 3. FÓRMULAS, ECUACIONES Y LEYES FUNDAMENTALES
+En el plano, el eje x es horizontal y el eje y es vertical. Por ejemplo, (3, 2) m indica 3 m en +x y 2 m en +y. Los símbolos $\hat i$ y $\hat j$ son flechas de una unidad que sirven de referencia para esos ejes; por eso se llaman vectores unitarios canónicos. El símbolo $\mathbb{R}^2$ solo indica que trabajamos con dos componentes reales.
+
+Para sumar vectores por componentes se suman por separado sus componentes horizontales y verticales:
+
+$$\vec R=\vec A+\vec B=(A_x+B_x)\hat i+(A_y+B_y)\hat j.$$
+
+Por ejemplo, si un vector es (8, 6) N y otro es (-12, 0) N, su suma es (-4, 6) N. El vector que los equilibra debe ser el opuesto, (4, -6) N. El módulo se calcula con Pitágoras; el cuadrante se determina por los signos de las componentes, no solo por el valor de una tangente.
+
+Para dos vectores no nulos, el producto escalar cumple:
+
+$$\vec A\cdot\vec B=|\vec A||\vec B|\cos\theta.$$
+
+Si el producto escalar es cero, el ángulo entre ellos es de 90°. Un vector nulo también da producto cero, pero no tiene una dirección definida; por eso la condición exige vectores no nulos.
+
+
+
+## 3. Fórmulas de consulta
 
 1. **Ley de Cosenos para Vectores:**
    R = \sqrt{A^2 + B^2 + 2AB \cos\theta}
@@ -88,3 +110,8 @@ Técnica físico-matemática que estudia las relaciones entre magnitudes fundame
 
 4. **Proyección Ortogonal de \vec{A} sobre \vec{B}:**
    \text{Proy}_{\vec{B}} \vec{A} = \left( \frac{\vec{A} \cdot \vec{B}}{|\vec{B}|^2} \right) \vec{B}
+
+## Fuentes de contraste
+NIST, SI, sección 2: https://www.nist.gov/pml/special-publication-330/sp-330-section-2
+BIPM, Resolución 8 de 1995: https://www.bipm.org/en/committees/cg/cgpm/20-1995/resolution-8
+OpenStax, productos de vectores: https://openstax.org/books/university-physics-volume-1/pages/2-4-products-of-vectors

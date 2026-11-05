@@ -1,1 +1,200 @@
-[{"concept":"10.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t10_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"10.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t10_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"10.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t10_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"10.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t10_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"10.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t10_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"10.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t10_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"10.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t10_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"10.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t10_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"10.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t10_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"10.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t10_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "10.2.1",
+    "correctIndex": 0,
+    "explanation": "1. La suma de ecuaciones elimina y.\n2. Sustituimos y operamos: $3x=12$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t10_s02_c01",
+    "options": [
+      "$4$",
+      "$5$",
+      "$3$",
+      "$8$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 10,
+    "statement": "Resuelve 2x+y=13, x−y=-1. ¿Cuánto vale x?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "10.2.2",
+    "correctIndex": 3,
+    "explanation": "1. El determinante de una matriz diagonal es el producto de su diagonal.\n2. Sustituimos y operamos: $4\\cdot 5\\cdot 2$.\n3. El valor pedido es $40$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t10_s02_c02",
+    "options": [
+      "$41$",
+      "$39$",
+      "$80$",
+      "$40$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 10,
+    "statement": "Calcula el determinante de la matriz diagonal 3×3 con diagonal 4, 5, 2.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "10.2.3",
+    "correctIndex": 2,
+    "explanation": "1. Al sumar las tres ecuaciones cada variable aparece dos veces.\n2. Sustituimos y operamos: $2(x+y+z)=30$.\n3. El valor pedido es $15$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t10_s02_c03",
+    "options": [
+      "$14$",
+      "$30$",
+      "$15$",
+      "$16$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 10,
+    "statement": "En x+y=9, y+z=11, z+x=10, calcula x+y+z.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "10.2.4",
+    "correctIndex": 1,
+    "explanation": "1. Un sistema homogéneo con determinante no nulo tiene únicamente la solución trivial.\n2. Sustituimos y operamos: $D=19\\ne 0;\\quad x=y=0$.\n3. El valor pedido es $0$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t10_s02_c04",
+    "options": [
+      "$3$",
+      "$0$",
+      "$1$",
+      "$2$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 10,
+    "statement": "El sistema homogéneo 4x+y=0, x+5y=0 tiene determinante no nulo. ¿Cuánto vale x?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "10.2.5",
+    "correctIndex": 0,
+    "explanation": "1. Restamos la segunda ecuación de la primera.\n2. Sustituimos y operamos: $3y=15$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t10_s02_c05",
+    "options": [
+      "$5$",
+      "$6$",
+      "$4$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 10,
+    "statement": "Resuelve x+2y=14 y x−y=-1. ¿Cuánto vale y?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "10.2.6",
+    "correctIndex": 3,
+    "explanation": "1. La suma de ecuaciones elimina y.\n2. Sustituimos y operamos: $3x=15$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t10_s02_c06",
+    "options": [
+      "$6$",
+      "$4$",
+      "$10$",
+      "$5$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 10,
+    "statement": "Resuelve 2x+y=16, x−y=-1. ¿Cuánto vale x?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "10.2.7",
+    "correctIndex": 2,
+    "explanation": "1. El determinante de una matriz diagonal es el producto de su diagonal.\n2. Sustituimos y operamos: $5\\cdot 6\\cdot 2$.\n3. El valor pedido es $60$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t10_s02_c07",
+    "options": [
+      "$59$",
+      "$120$",
+      "$60$",
+      "$61$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 10,
+    "statement": "Calcula el determinante de la matriz diagonal 3×3 con diagonal 5, 6, 2.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "10.2.8",
+    "correctIndex": 1,
+    "explanation": "1. Al sumar las tres ecuaciones cada variable aparece dos veces.\n2. Sustituimos y operamos: $2(x+y+z)=36$.\n3. El valor pedido es $18$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t10_s02_c08",
+    "options": [
+      "$36$",
+      "$18$",
+      "$19$",
+      "$17$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 10,
+    "statement": "En x+y=11, y+z=13, z+x=12, calcula x+y+z.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "10.2.9",
+    "correctIndex": 0,
+    "explanation": "1. Un sistema homogéneo con determinante no nulo tiene únicamente la solución trivial.\n2. Sustituimos y operamos: $D=29\\ne 0;\\quad x=y=0$.\n3. El valor pedido es $0$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t10_s02_c09",
+    "options": [
+      "$0$",
+      "$1$",
+      "$2$",
+      "$3$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 10,
+    "statement": "El sistema homogéneo 5x+y=0, x+6y=0 tiene determinante no nulo. ¿Cuánto vale x?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "10.2.10",
+    "correctIndex": 3,
+    "explanation": "1. Restamos la segunda ecuación de la primera.\n2. Sustituimos y operamos: $3y=18$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t10_s02_c10",
+    "options": [
+      "$7$",
+      "$5$",
+      "$12$",
+      "$6$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 10,
+    "statement": "Resuelve x+2y=17 y x−y=-1. ¿Cuánto vale y?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "10.2.11",
+    "correctIndex": 2,
+    "explanation": "1. La suma de ecuaciones elimina y.\n2. Sustituimos y operamos: $3x=18$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t10_s02_c11",
+    "options": [
+      "$5$",
+      "$12$",
+      "$6$",
+      "$7$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 10,
+    "statement": "Resuelve 2x+y=19, x−y=-1. ¿Cuánto vale x?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

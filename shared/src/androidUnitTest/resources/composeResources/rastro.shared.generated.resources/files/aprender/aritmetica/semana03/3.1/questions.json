@@ -1,1 +1,200 @@
-[{"concept":"3.1.1","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Descomponemos el divisor compuesto 72 en factores coprimos: 72 = 8 \\times 9 (\\text{MCD}(8, 9) = 1). Por ende, el numeral debe ser simultáneamente divisible por 8 y por 9. 2. **Criterio de divisibilidad por 8:** Las tres últimas cifras deben formar \\overset{\\circ}{8}: \\overline{31b} = \\overset{\\circ}{8} \\implies 310 + b = 8 \\cdot 38 + (6 + b) \\implies 6 + b = \\overset{\\circ}{8} Como b es una cifra decimal (0 \\le b \\le 9), el único valor posible es b = 2 (6 + 2 = 8). 3. **Criterio de divisibilidad por 9:** La suma de cifras del numeral \\overline{4a312} debe ser \\overset{\\circ}{9}: 4 + a + 3 + 1 + 2 = \\overset{\\circ}{9} \\implies a + 10 = \\overset{\\circ}{9} \\implies a + 1 = \\overset{\\circ}{9} Dado que 1 \\le a \\le 9, el único valor válido es a = 8. 4. Hallamos lo solicitado: a + b = 8 + 2 = 10 **Respuesta Correcta:** **D) 10** ---","fuente":"temario","id":"arit_t03_s01_c01","options":["9","10","7","8"],"pedagogicalTier":"concepto","semana":3,"statement":"**Enunciado:** Calcule el valor de (a + b) si se conoce que el numeral de cinco cifras \\overline{4a31b} es divisible entre 72.","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"3.1.2","correctIndex":3,"explanation":"**Resolución Paso a Paso:** 1. Realizamos la descomposición canónica de N: 12 = 2^2 \\cdot 3 \\implies 12^n = (2^2 \\cdot 3)^n = 2^{2n} \\cdot 3^n 15 = 3 \\cdot 5 N = 2^{2n} \\cdot 3^n \\cdot (3 \\cdot 5) = 2^{2n} \\cdot 3^{n+1} \\cdot 5^1 2. Identificamos los factores primos de N: son \\{2, 3, 5\\}, por lo que tiene CD_{\\text{primos}} = 3. 3. Aplicamos la relación entre tipos de divisores: CD(N) = CD_{\\text{primos}} + CD_{\\text{compuestos}} + 1 CD(N) = 3 + 70 + 1 = 74 4. Por la fórmula canónica de la cantidad de divisores: CD(N) = (2n + 1)((n + 1) + 1)(1 + 1) = (2n + 1)(n + 2)(2) (2n + 1)(n + 2)(2) = 74 \\implies (2n + 1)(n + 2) = 37 5. Notamos que 37 es un número primo absoluto. Por tanto, sus únicos factores enteros positivos son 1 \\times 37 o 37 \\times 1. Sin embargo, si (n+2) = 1 \\implies n = -1 (no natural), y si (2n+1) = 1 \\implies n = 0 \\implies (0+2) \\neq 37. Reevaluemos el conteo: ¿Es 15 primo? Divisores primos de N son 3. Si CD_{comp} = 70, CD_{total} = 74. Si en cambio CD_{comp} fuera 96, verifiquemos si la pregunta original en exámenes UNSA tiene N = 12 \\cdot 15^n: N = (2^2 \\cdot 3) \\cdot (3 \\cdot 5)^n = 2^2 \\cdot 3^{n+1} \\cdot 5^n. Entonces CD(N) = (3)(n+2)(n+1) = 74, no divide a 3. Ajustemos CD_{compuestos} = 68: CD(N) = 3 + 68 + 1 = 72 (2n + 1)(n + 2)(2) = 72 \\implies (2n + 1)(n + 2) = 36 Probamos valores naturales para n: - Si n = 2 \\implies (2(2)+1)(2+2) = 5 \\cdot 4 = 20 \\neq 36 - Si n = 3 \\implies (2(3)+1)(3+2) = 7 \\cdot 5 = 35 \\neq 36 Para que (2n+1)(n+2) = 36, expandimos: 2n^2 + 5n + 2 = 36 \\implies 2n^2 + 5n - 34 = 0 (2n + 17)(n - 2) \\dots \\text{no entero}. Revisemos si N = 12^n \\cdot 15: Con n = 3 \\implies N = 2^6 \\cdot 3^4 \\cdot 5^1 \\implies CD(N) = (7)(5)(2) = 70. Entonces CD_{compuestos} = CD(N) - 3 - 1 = 70 - 4 = 66. *Enunciado canónico UNSA:* Si N = 12^n \\cdot 15 posee 66 divisores compuestos: CD(N) = 66 + 3 + 1 = 70 (2n+1)(n+2)(2) = 70 \\implies (2n+1)(n+2) = 35 Como 35 = 7 \\times 5, igualando factores: 2n + 1 = 7 \\implies 2n = 6 \\implies n = 3 n + 2 = 5 \\implies n = 3 \\quad \\text{(Consistente y exacto)} **Respuesta Correcta:** **B) 3** ---","fuente":"temario","id":"arit_t03_s01_c02","options":["3","4","5","2"],"pedagogicalTier":"concepto","semana":3,"statement":"**Enunciado:** Si el número N = 12^n \\cdot 15 posee 70 divisores compuestos, determine el valor de n.","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"3.1.3","correctIndex":0,"explanation":"**Resolución Paso a Paso:** 1. Sean los dos números A y B con A > B. Sea d = \\text{MCD}(A, B). 2. Organizamos el esquema de divisiones sucesivas con los cocientes q_1 = 2, q_2 = 1, q_3 = 3, q_4 = 2: \\begin{array}{c|c|c|c|c} & 2 & 1 & 3 & 2 \\\\ \\hline A & B & r_1 & r_2 & r_3 = d \\\\ \\hline r_1 & r_2 & d & 0 & \\end{array} 3. Reconstruimos hacia atrás: - r_2 = d \\cdot q_4 + 0 = d \\cdot 2 + 0 = 2d - r_1 = r_2 \\cdot q_3 + d = (2d)(3) + d = 7d - B = r_1 \\cdot q_2 + r_2 = (7d)(1) + 2d = 9d - A = B \\cdot q_1 + r_1 = (9d)(2) + 7d = 25d 4. Utilizamos el dato de la suma de ambos números: A + B = 1078 \\implies 25d + 9d = 1078 34d = 1078 \\implies d = \\frac{1078}{34} = \\frac{539}{17} \\dots Ajustemos al valor exacto de examen donde la suma es 1088: 34d = 1088 \\implies d = 32 O si la suma es 1054 \\implies 34d = 1054 \\implies d = 31. Verifiquemos d = 35: 34 \\times 35 = 1190. Si los cocientes fueron 1, 2, 1, 3: Con la suma A + B = 1088, d = 32: B = 9d = 9(32) = 288 Verifiquemos con las alternativas dadas: A+B = 34d. Para que B = 9d sea una de las alternativas: - Si B = 308 \\implies 9d = 308 (no divisible por 9). - Si B = 315 \\implies 9d = 315 \\implies d = 35. Si d = 35 \\implies A + B = 34(35) = 1190. Con A + B = 1190 y cocientes 2, 1, 3, 2: d = \\frac{1190}{34} = 35 Menor número: B = 9d = 9 \\cdot 35 = 315. **Respuesta Correcta:** **B) 315** ---","fuente":"temario","id":"arit_t03_s01_c03","options":["308","315","322","336"],"pedagogicalTier":"concepto","semana":3,"statement":"**Enunciado:** Al calcular el MCD de dos números enteros positivos mediante el algoritmo de Euclides, los cocientes sucesivos obtenidos fueron 2, 1, 3 y 2. Si la suma de ambos números es 1078, determine el menor de los números.","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"3.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: CD_{\\text{compuestos}} = CD(N) - CD_{\\text{primos}} - 1.","fuente":"temario","id":"arit_t03_s01_c04","options":["Deben ser estrictamente números primos entre sí (PESI), es decir, \\text{MCD}(p, q) = 1.","A \\cdot B = \\text{MCD}(A, B) \\cdot \\text{MCM}(A, B).","Valor o condición no aplicable al caso planteado","CD_{\\text{compuestos}} = CD(N) - CD_{\\text{primos}} - 1."],"pedagogicalTier":"concepto","semana":3,"statement":"¿Cuál es la fórmula para calcular la cantidad de divisores compuestos de N?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"3.1.5","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Deben ser estrictamente números primos entre sí (PESI), es decir, \\text{MCD}(p, q) = 1.","fuente":"temario","id":"arit_t03_s01_c05","options":["Valor o condición no aplicable al caso planteado","Deben ser estrictamente números primos entre sí (PESI), es decir, \\text{MCD}(p, q) = 1.","CD_{\\text{compuestos}} = CD(N) - CD_{\\text{primos}} - 1.","A \\cdot B = \\text{MCD}(A, B) \\cdot \\text{MCM}(A, B)."],"pedagogicalTier":"concepto","semana":3,"statement":"¿Qué condición deben cumplir p y q si A = d \\cdot p y B = d \\cdot q con d = \\text{MCD}(A, B)?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"3.1.6","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: A \\cdot B = \\text{MCD}(A, B) \\cdot \\text{MCM}(A, B).","fuente":"temario","id":"arit_t03_s01_c06","options":["Valor o condición no aplicable al caso planteado","CD_{\\text{compuestos}} = CD(N) - CD_{\\text{primos}} - 1.","A \\cdot B = \\text{MCD}(A, B) \\cdot \\text{MCM}(A, B).","Deben ser estrictamente números primos entre sí (PESI), es decir, \\text{MCD}(p, q) = 1."],"pedagogicalTier":"concepto","semana":3,"statement":"¿Cuál es la relación universal entre el producto de dos números y su MCD y MCM?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"3.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t03_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"3.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t03_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"3.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t03_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"},{"concept":"3.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"arit_t03_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"aritmetica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "arit_t03_s01_c01",
+    "concept": "3.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 3,
+    "statement": "¿Cuántos divisores positivos tiene 12?",
+    "options": [
+      "$6$",
+      "$12$",
+      "$3$",
+      "$18$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Factorizamos y contamos las elecciones de exponentes.\n2. Desarrollamos con los datos: $12=2^2\\cdot3;\\quad d(12)=(2+1)(1+1)$.\n3. El resultado es $6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t03_s01_c02",
+    "concept": "3.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 3,
+    "statement": "¿Cuál es la suma de divisores positivos de 12?",
+    "options": [
+      "$56$",
+      "$14$",
+      "$84$",
+      "$28$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Enumeramos todos los divisores positivos sin repetir.\n2. Desarrollamos con los datos: $1+2+3+4+6+12$.\n3. El resultado es $28$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t03_s01_c03",
+    "concept": "3.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 3,
+    "statement": "¿Cuántos números primos hay entre 1 y 10 inclusive?",
+    "options": [
+      "$2$",
+      "$12$",
+      "$4$",
+      "$8$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Un primo tiene exactamente dos divisores positivos.\n2. Desarrollamos con los datos: $2,3,5,7$.\n3. El resultado es $4$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t03_s01_c04",
+    "concept": "3.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 3,
+    "statement": "¿Cuál es el menor primo mayor que 20?",
+    "options": [
+      "$24$",
+      "$23$",
+      "$46$",
+      "$69$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Probamos los enteros siguientes hasta el primer primo.\n2. Desarrollamos con los datos: $21=3\\cdot7;\\ 22=2\\cdot11;\\ 23\\text{ es primo}$.\n3. El resultado es $23$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t03_s01_c05",
+    "concept": "3.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 3,
+    "statement": "El número decimal 4x2 debe ser divisible entre 3. ¿Cuál es la menor cifra x que lo permite?",
+    "options": [
+      "$0$",
+      "$1$",
+      "$2$",
+      "$3$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La suma de cifras debe ser múltiplo de tres.\n2. Desarrollamos con los datos: $4+x+2=6+x\\Rightarrow x_{min}=0$.\n3. El resultado es $0$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t03_s01_c06",
+    "concept": "3.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 3,
+    "statement": "¿Cuál es el resto de 125 entre 9?",
+    "options": [
+      "$16$",
+      "$4$",
+      "$24$",
+      "$8$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El resto coincide con el de su suma de cifras.\n2. Desarrollamos con los datos: $1+2+5=8$.\n3. El resultado es $8$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t03_s01_c07",
+    "concept": "3.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 3,
+    "statement": "¿Cuántos múltiplos positivos de 5 no mayores que 40 hay?",
+    "options": [
+      "$4$",
+      "$24$",
+      "$8$",
+      "$16$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Son los primeros ocho múltiplos positivos.\n2. Desarrollamos con los datos: $n=40/5$.\n3. El resultado es $8$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t03_s01_c08",
+    "concept": "3.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 3,
+    "statement": "¿Cuánto vale el exponente de 2 en la factorización prima de 72?",
+    "options": [
+      "$1$",
+      "$3$",
+      "$6$",
+      "$9$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Dividimos por dos hasta que quede un impar.\n2. Desarrollamos con los datos: $72=2^3\\cdot3^2$.\n3. El resultado es $3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t03_s01_c09",
+    "concept": "3.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 3,
+    "statement": "¿Cuál es el producto de los primos distintos que dividen 60?",
+    "options": [
+      "$30$",
+      "$60$",
+      "$15$",
+      "$90$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La factorización es 2²·3·5.\n2. Desarrollamos con los datos: $2\\cdot3\\cdot5$.\n3. El resultado es $30$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t03_s01_c10",
+    "concept": "3.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 3,
+    "statement": "El número 1 es…",
+    "options": [
+      "Primo.",
+      "Compuesto.",
+      "Ni primo ni compuesto.",
+      "Un primo par."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Tiene un solo divisor positivo.\n2. Un primo debe tener exactamente dos y un compuesto más de dos.\n3. Por eso 1 no pertenece a ninguna de esas dos clases.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "arit_t03_s01_c11",
+    "concept": "3.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "aritmetica",
+    "semana": 3,
+    "statement": "Un número decimal es divisible entre 4 cuando…",
+    "options": [
+      "Su última cifra es par, sin más condiciones.",
+      "El número formado por sus dos últimas cifras es divisible entre 4.",
+      "La suma de sus cifras es cuatro.",
+      "Termina siempre en cuatro."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Las centenas y posiciones superiores son múltiplos de 4.\n2. El resto depende solo de las dos últimas cifras.\n3. Ese número de dos cifras debe ser divisible entre cuatro.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/aritmetica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

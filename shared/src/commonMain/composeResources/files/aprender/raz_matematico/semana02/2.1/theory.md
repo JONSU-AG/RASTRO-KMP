@@ -19,24 +19,45 @@
 
 ## 2. 🗺️ MAPA TAXONÓMICO Y ONTOLOGÍA DEL TEMA
 
-```text
-                               ┌─ Razón Aritmética (Diferencia: a - b = r)
-        ┌─ 1. Razones y ───────┼─ Razón Geométrica (Cociente: a / b = k)
-        │      Proporciones    ├─ Proporción Discreta (Cuatro términos distintos)
-        │                      └─ Proporción Continua (Términos medios iguales)
-        │
-MAGNITUDES                     ┌─ Magnitud Directamente Proporcional (D.P. -> Cociente constante)
-Y PROPORCIONALIDAD ─┼─ 2. Magnitudes ──┼─ Magnitud Inversamente Proporcional (I.P. -> Producto constante)
-        │      Relacionadas    ├─ Propiedades Fundamentales y Engranajes
-        │                      └─ Reparto Proporcional (Simple y Compuesto)
-        │
-        │                      ┌─ Regla de Tres Simple (Directa e Inversa)
-        ├─ 3. Métodos de ──────┼─ Regla de Tres Compuesta (Método Causa-Circunstancia-Efecto)
-        │      Resolución      └─ Escalas Cartográficas (Plano vs. Terreno)
-        │
-        └─ 4. Tanto por ───────┌─ Variaciones Porcentuales y Operaciones Básicas
-               Ciento          ├─ Aumentos y Descuentos Sucesivos
-               Comercial       └─ Aplicaciones Comerciales (Pv, Pc, Ganancia, Pérdida)
+```mermaid
+graph TD
+ ROOT["Magnitudes y proporcionalidad"]
+ B1["Razones y proporciones"]
+ B1N1["Diferencia o razón aritmética: $a-b$."]
+ B1N2["Cociente o razón geométrica: $a/b$, con b no nulo."]
+ B1N3["Proporción discreta: términos medios distintos en la clasificación utilizada."]
+ B1N4["Proporción continua: los términos medios coinciden."]
+ B2["Modelos proporcionales"]
+ B2N1["Directa: $y/x=k$, con denominador admisible."]
+ B2N2["Inversa: $xy=k$ bajo las condiciones del modelo."]
+ B2N3["Engranajes sin deslizamiento: comprobar dientes, radios y sentido de giro."]
+ B2N4["Reparto: indicar si los pesos son directos, inversos o compuestos."]
+ B3["Métodos"]
+ B3N1["Regla de tres simple: identificar qué se mantiene constante."]
+ B3N2["Regla compuesta: separar el efecto de cada magnitud y declarar productividad."]
+ B3N3["Escala: convertir unidades antes de comparar plano y terreno."]
+ B4["Porcentajes"]
+ B4N1["Especificar la base de cada porcentaje."]
+ B4N2["Cambios sucesivos: multiplicar factores, no sumar porcentajes sin revisar."]
+ B4N3["Costo, venta, ganancia y pérdida: identificar cuál es la cantidad de referencia."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---

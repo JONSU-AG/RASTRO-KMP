@@ -2,15 +2,15 @@
   {
     "id": "leng_t07_s03_c01",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Según la Ortografía de la Real Academia Española (2010), los cargos públicos e institucionales (como presidente, ministro, papa o rey) se escriben:",
+    "statement": "En su uso como nombres comunes y sin considerar la posición inicial de oración, los cargos presidente, ministro, papa o rey se escriben:",
     "options": [
       "Siempre con mayúscula inicial por respeto institucional",
-      "Siempre con minúscula inicial, acompañen o no al nombre propio",
+      "Con minúscula, aparezca o no el nombre de la persona",
       "Con mayúscula solo si no aparece el nombre de la persona",
       "Con mayúscula si pertenecen al poder ejecutivo"
     ],
     "correctIndex": 1,
-    "explanation": "La RAE determinó en su reforma del 2010 que todos los cargos (presidente, papa, rey, ministro, decano) son nombres comunes y van siempre en minúscula.",
+    "explanation": "Criterio: Los cargos y dignidades son sustantivos comunes. Aplicación: Presidente, ministro, papa y rey se escriben con minúscula en su uso común, aparezca o no un nombre personal. Esto no elimina la mayúscula de inicio de oración. Respuesta: Con minúscula, aparezca o no el nombre de la persona.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.3.1",
@@ -20,15 +20,15 @@
   {
     "id": "leng_t07_s03_c02",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes oraciones presenta un uso totalmente correcto de mayúsculas y minúsculas?",
+    "statement": "¿Qué oración usa correctamente las mayúsculas en un escrito corriente?",
     "options": [
-      "El presidente de la república visitará Arequipa el próximo lunes.",
-      "El Presidente de la república visitará Arequipa el próximo lunes.",
-      "El presidente de la República visitará Arequipa el próximo Lunes.",
-      "El Presidente de la República visitará Arequipa el próximo Lunes."
+      "La alcaldesa visitará Arequipa el próximo lunes.",
+      "La Alcaldesa visitará Arequipa el próximo lunes.",
+      "La alcaldesa visitará Arequipa el próximo Lunes.",
+      "La Alcaldesa visitará arequipa el próximo lunes."
     ],
     "correctIndex": 0,
-    "explanation": "'presidente' va en minúscula por ser cargo; 'república' en este contexto referencial genérico va en minúscula y los días de la semana ('lunes') van siempre en minúscula.",
+    "explanation": "Criterio: En un escrito corriente el cargo y el día no requieren mayúscula por importancia. Aplicación: La alcaldesa nombra un cargo, Arequipa es nombre propio y lunes es un día usado de manera ordinaria. Respuesta: La alcaldesa visitará Arequipa el próximo lunes..",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.3.1",
@@ -38,7 +38,7 @@
   {
     "id": "leng_t07_s03_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Al escribir nombres de accidentes geográficos como 'el río Chili' o 'el lago Titicaca', el sustantivo genérico (río, lago, volcán) debe escribirse con:",
+    "statement": "En «el río Chili» y «el lago Titicaca», ¿cómo se escriben los genéricos río y lago en esa posición?",
     "options": [
       "Mayúscula obligatoria",
       "Mayúscula solo en mapas",
@@ -46,7 +46,7 @@
       "Cursiva sin mayúscula"
     ],
     "correctIndex": 2,
-    "explanation": "Los sustantivos genéricos (río, lago, cordillera, volcán, océano) son nombres comunes y se escriben en minúscula; solo el nombre propio (Chili, Titicaca) lleva mayúscula.",
+    "explanation": "Criterio: En esos ejemplos el término geográfico genérico es un nombre común. Aplicación: En río Chili y lago Titicaca, río y lago clasifican el accidente, mientras Chili y Titicaca son los nombres propios. No se generaliza a todo topónimo. Respuesta: Minúscula obligatoria.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.3.2",
@@ -64,7 +64,7 @@
       "Solo lleva mayúscula la primera palabra del título y los nombres propios contenidos en él"
     ],
     "correctIndex": 3,
-    "explanation": "En los títulos de libros en español solo lleva mayúscula la palabra inicial y los nombres propios ('Cien años de soledad', 'La ciudad y los perros').",
+    "explanation": "Criterio: La escritura del título de una obra distingue primera palabra y nombres propios. Aplicación: La primera palabra del título lleva mayúscula y los nombres propios internos conservan la suya; el resto no la recibe por pertenecer al título. Respuesta: Solo lleva mayúscula la primera palabra del título y los nombres propios contenidos en él.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.3.3",
@@ -82,7 +82,7 @@
       "Depende del país de edición"
     ],
     "correctIndex": 0,
-    "explanation": "En diarios y revistas llevan mayúscula inicial todas las palabras sustantivas y adjetivas constitutivas: 'El Comercio', 'La República', 'El País'.",
+    "explanation": "Criterio: La cabecera de una publicación periódica tiene su convención de mayúsculas. Aplicación: La regla se aplica al nombre de la publicación, como El Comercio, y no se traslada sin más a cada artículo de su interior. Respuesta: Se escriben con mayúscula inicial todas las palabras significativas (sustantivos, adjetivos, verbos).",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.3.3",
@@ -94,13 +94,13 @@
     "type": "MULTIPLE_CHOICE",
     "statement": "¿Cuál de las siguientes opciones presenta una mayúscula incorrecta según la normativa RAE?",
     "options": [
-      "Estudia Derecho Constitucional en la universidad.",
+      "Se matriculó en la asignatura Derecho Constitucional.",
       "Los vientos provienen del Norte de la provincia.",
       "El Renacimiento transformó el arte europeo.",
       "El Ministerio de Salud emitió una alerta sanitaria."
     ],
     "correctIndex": 1,
-    "explanation": "Los puntos cardinales (norte, sur, este, oeste) cuando designan orientaciones geográficas van obligatoriamente con minúscula ('del norte de la provincia').",
+    "explanation": "Criterio: Una orientación cardinal común no se convierte en topónimo. Aplicación: Norte indica la orientación de la provincia y no es aquí parte de un nombre propio. La asignatura se identifica expresamente como nombre curricular. Respuesta: Los vientos provienen del Norte de la provincia..",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.3.2",
@@ -110,15 +110,15 @@
   {
     "id": "leng_t07_s03_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "Los nombres de los meses del año y de las estaciones climáticas se escriben con minúscula, salvo cuando:",
+    "statement": "Sin considerar el inicio de oración, un nombre de mes puede llevar mayúscula cuando:",
     "options": [
       "Se refieren a meses de verano",
       "Aparecen en documentos notariales",
-      "Forman parte de fechas históricas o festividades oficiales (ej. el 28 de Julio)",
+      "Forma parte de una denominación propia, como plaza del Dos de Mayo",
       "Aparecen al final de una oración"
     ],
     "correctIndex": 2,
-    "explanation": "Los meses van en minúscula salvo en conmemoraciones cívicas o festividades nacionales consolidadas como 'el 28 de Julio' o 'el Primero de Mayo'.",
+    "explanation": "Criterio: Una palabra del calendario puede integrarse en una denominación propia. Aplicación: En plaza del Dos de Mayo, Mayo forma parte de una denominación propia. Mencionar cualquier acontecimiento ocurrido en mayo no produce la misma regla. Respuesta: Forma parte de una denominación propia, como plaza del Dos de Mayo.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.3.2",
@@ -128,15 +128,15 @@
   {
     "id": "leng_t07_s03_c08",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la expresión 'el papa Francisco celebró una misa en Roma', la palabra 'papa' se escribe con minúscula porque:",
+    "statement": "En «El papa participó en la ceremonia», papa se escribe con minúscula porque:",
     "options": [
       "No es una autoridad política",
-      "Es un nombre común de dignidad eclesiástica según la RAE 2010",
+      "Es el nombre común de una dignidad religiosa en ese contexto",
       "Acompaña a un topónimo",
       "Debe escribirse en latín"
     ],
     "correctIndex": 1,
-    "explanation": "Los títulos de dignidades civiles, nobiliarias o religiosas (papa, rey, obispo) son sustantivos comunes y se escriben en minúscula.",
+    "explanation": "Criterio: La dignidad religiosa es un nombre común en este contexto. Aplicación: Papa nombra la dignidad, mientras el nombre de la persona conserva su mayúscula. La letra no se decide por prestigio ni por la naturaleza política de la autoridad. Respuesta: Es el nombre común de una dignidad religiosa en ese contexto.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.3.1",
@@ -146,15 +146,15 @@
   {
     "id": "leng_t07_s03_c09",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de los siguientes acontecimientos históricos está correctamente escrito con mayúsculas institucionales?",
+    "statement": "¿Qué alternativa escribe correctamente el nombre del conflicto bélico dentro de la oración?",
     "options": [
-      "La guerra del pacífico",
-      "La Guerra Del Pacífico",
-      "la guerra Del pacífico",
-      "La Guerra del Pacífico"
+      "El grupo estudia la guerra del pacífico.",
+      "El grupo estudia la Guerra Del Pacífico.",
+      "El grupo estudia la guerra Del Pacífico.",
+      "El grupo estudia la guerra del Pacífico."
     ],
     "correctIndex": 3,
-    "explanation": "Los grandes acontecimientos y guerras históricas llevan mayúscula en los sustantivos y adjetivos que los integran: 'la Guerra del Pacífico'.",
+    "explanation": "Criterio: La pauta general distingue el genérico guerra y la parte específica de su denominación. Aplicación: En medio del enunciado se escribe la guerra del Pacífico: guerra es el genérico y Pacífico conserva su mayúscula. No se trata de una mayúscula institucional. Respuesta: El grupo estudia la guerra del Pacífico..",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.3.4",
@@ -164,7 +164,7 @@
   {
     "id": "leng_t07_s03_c10",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El nombre oficial de asignaturas o cursos académicos dentro de planes curriculares oficiales se escribe con:",
+    "statement": "Si Álgebra Lineal es el nombre de una asignatura del plan de estudios, ¿cómo se escribe esa denominación en el contexto curricular?",
     "options": [
       "Minúscula obligatoria",
       "Mayúscula solo en la primera letra del año",
@@ -172,7 +172,7 @@
       "Cursiva sin mayúsculas"
     ],
     "correctIndex": 2,
-    "explanation": "En contextos formales y académicos, los nombres de asignaturas y carreras llevan mayúscula inicial ('Química General', 'Ingeniería Civil').",
+    "explanation": "Criterio: Una denominación curricular no equivale a una mención genérica de la disciplina. Aplicación: El enunciado especifica que Álgebra Lineal es el nombre de la asignatura; al hablar de álgebra como disciplina general se usaría minúscula. Respuesta: Mayúscula inicial en los sustantivos y adjetivos que las componen (ej. Álgebra Lineal).",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.3.3",

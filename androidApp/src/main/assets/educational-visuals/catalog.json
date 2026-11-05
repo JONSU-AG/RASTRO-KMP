@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "resources": [
+    {
+      "id": "mitochondria",
+      "title": "Mitocondria",
+      "subjectId": "biologia",
+      "lessonIds": [
+        "bio_t05_s03"
+      ],
+      "poster": "mitochondria.svg",
+      "source": "https://raw.githubusercontent.com/duerrsimon/bioicons/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Intracellular_components/jaiganesh/mitochondria.svg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "jaiganesh · Bioicons",
+      "description": "Esquema de una mitocondria. Es una ilustración, no una micrografía ni una representación a escala.",
+      "bytes": 9519,
+      "sha256": "b6c2b31a6db8baa3952c0ebf9efce6cee0dc78e887064f227fa2bf3ee7d5cc0f",
+      "version": "d29e766ea7580b8063c4f47b29e872db40a4d979",
+      "changes": "SVG original sin cambios gráficos."
+    },
+    {
+      "id": "human-heart",
+      "title": "Corazón humano",
+      "subjectId": "biologia",
+      "lessonIds": [
+        "bio_t08_s03"
+      ],
+      "poster": "human-heart.svg",
+      "source": "https://raw.githubusercontent.com/duerrsimon/bioicons/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Tissues/Mariana_RuizVillareal/Human_heart.svg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "Mariana Ruiz Villareal (LadyofHats) · Bioicons",
+      "description": "Ilustración anatómica del corazón humano. La vista y los colores sirven para estudiar; no es diagnóstico médico.",
+      "bytes": 85200,
+      "sha256": "73316375eb78f57cde7f06d237988cb76efdbec51e0a7b3d8b8d63b91618d906",
+      "version": "d29e766ea7580b8063c4f47b29e872db40a4d979",
+      "changes": "SVG original sin cambios gráficos.",
+      "model": "heart-bodyparts.glb",
+      "modelBytes": 2730764,
+      "modelSha256": "ce9d8797ab813d64304f13ee624679927358d266554c6dea8b44f4a1b4c7c5e0",
+      "modelSource": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "modelLicense": "CC-BY-SA-2.1-JP",
+      "modelLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+      "modelAttribution": "BodyParts3D, © The Database Center for Life Science · CC BY-SA 2.1 Japan. Conversión GLB por RASTRO; modelo fuente 4.0 con reducción geométrica del archivo original.",
+      "modelDescription": "Corazón humano FMA7088: 83 componentes de BodyParts3D. Superficies simplificadas para estudio, no diagnóstico. El color es ilustrativo. No representa el bombeo ni el flujo sanguíneo."
+    },
+    {
+      "id": "prokaryote",
+      "title": "Célula procariota",
+      "subjectId": "biologia",
+      "lessonIds": [
+        "bio_t05_s01"
+      ],
+      "poster": "prokaryote.svg",
+      "source": "https://raw.githubusercontent.com/duerrsimon/bioicons/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Intracellular_components/Mariana_RuizVillareal/Average_prokaryote_cell-_unlabled.svg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "Mariana Ruiz Villareal (LadyofHats) · Bioicons",
+      "description": "Esquema de célula procariota sin rótulos. No representa todas las variantes de bacterias ni una célula eucariota.",
+      "bytes": 84800,
+      "sha256": "9b7269c69b7326b5c195783d388fc380068f1bfbd1f873de6cb53cb3854b54a5",
+      "version": "d29e766ea7580b8063c4f47b29e872db40a4d979",
+      "changes": "SVG original sin cambios gráficos."
+    },
+    {
+      "id": "peru-outline",
+      "title": "Perú: contorno general",
+      "subjectId": "geografia",
+      "lessonIds": [
+        "geo_t13_s01",
+        "geo_t13_s02"
+      ],
+      "poster": "peru-outline.svg",
+      "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_admin_0_countries.geojson",
+      "license": "Public domain",
+      "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "attribution": "Made with Natural Earth · Tom Patterson, Nathaniel Vaughn Kelso y colaboradores",
+      "description": "Contorno cartográfico general a partir de Natural Earth 1:50m. No muestra departamentos, cordilleras o cuencas; no es delimitación oficial ni mapa de navegación.",
+      "bytes": 8165,
+      "sha256": "3caaa8e29acb9947b8a97ceffe63d74e3515a904076670b4ddbc8937a92f4ebe",
+      "version": "ca96624a56bd078437bca8184e78163e5039ad19",
+      "changes": "Filtrado de Perú y conversión a SVG con proyección equirectangular ajustada a latitud central."
+    },
+    {
+      "id": "cellforge-plant",
+      "title": "Célula vegetal",
+      "subjectId": "biologia",
+      "lessonIds": [
+        "bio_t05_s04"
+      ],
+      "poster": "cellforge-plant-poster.jpg",
+      "source": "https://raw.githubusercontent.com/huangserva/3DCellForge/df569572b2eb88c31da89913dc269d816d226e5e/src/assets/cell-plant-render.png",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/huangserva/3DCellForge/blob/df569572b2eb88c31da89913dc269d816d226e5e/LICENSE",
+      "attribution": "huangserva / 3DCellForge. Modelo generado con Tripo y compartido en el repositorio.",
+      "description": "Modelo ilustrativo de célula vegetal para observar su forma y sus estructuras.",
+      "bytes": 153401,
+      "sha256": "05d42e53102df51baa32088c5ed481bcddc954dc5e5d28e7b0ca456211f33cb1",
+      "version": "df569572b2eb88c31da89913dc269d816d226e5e",
+      "changes": "Reducción geométrica conservando UV y textura de color a 1024 px; se omiten mapas de normal/rugosidad; poster JPEG del recurso original. No se regenera el modelo.",
+      "model": "cellforge-plant.glb",
+      "modelBytes": 1928280,
+      "modelSha256": "10941243556b1c75d98946545c9f934253e54e768dc94a0086441a5027d6d3e4",
+      "modelSource": "https://raw.githubusercontent.com/huangserva/3DCellForge/df569572b2eb88c31da89913dc269d816d226e5e/public/generated-models/tripo-plant-cell-test.glb",
+      "modelLicense": "MIT",
+      "modelLicenseUrl": "https://github.com/huangserva/3DCellForge/blob/df569572b2eb88c31da89913dc269d816d226e5e/LICENSE",
+      "modelAttribution": "huangserva / 3DCellForge. Modelo generado con Tripo y compartido en el repositorio.",
+      "modelDescription": "Célula vegetal de 3DCellForge, adaptada para Android con sus colores y textura originales. Imagen y modelo ilustrativos para estudiar."
+    },
+    {
+      "id": "moche-geometric-bottle",
+      "title": "Cerámica Moche: botella con asa estribo",
+      "subjectId": "historia_peru",
+      "lessonIds": [
+        "hper_t02_s01"
+      ],
+      "poster": "moche-geometric-bottle.webp",
+      "source": "https://www.metmuseum.org/art/collection/search/309442",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "The Metropolitan Museum of Art · Moche · 67.167.7",
+      "description": "Fotografía de una pieza Moche, de cerámica y pigmento. Observa el asa estribo y el diseño geométrico.",
+      "bytes": 12664,
+      "sha256": "5b3fe266531df0fdf4d285e3f0f544191df7d7085e4ee0002e3aa2e977b4bdb8",
+      "version": "met-open-access-2026-11-03",
+      "changes": "Imagen original redimensionada a 416×624 y comprimida a WebP; sin redibujar ni recolorear la pieza.",
+      "sectionKeywords": [
+        "cultura moche"
+      ]
+    },
+    {
+      "id": "nasca-maize-vessel",
+      "title": "Cerámica Nasca: vasija en forma de maíz",
+      "subjectId": "historia_peru",
+      "lessonIds": [
+        "hper_t02_s01"
+      ],
+      "poster": "nasca-maize-vessel.webp",
+      "source": "https://www.metmuseum.org/art/collection/search/316270",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "The Metropolitan Museum of Art · Nasca · 1989.62.1",
+      "description": "Fotografía de una pieza Nasca que representa una planta de maíz. Observa la forma modelada y los colores.",
+      "bytes": 12712,
+      "sha256": "4cb5c41b4e6151ca91c3d07a434eee6881416c68b90c709d0fa17dc60c78cf46",
+      "version": "met-open-access-2026-11-03",
+      "changes": "Imagen original redimensionada a 468×624 y comprimida a WebP; sin redibujar ni recolorear la pieza.",
+      "sectionKeywords": [
+        "cultura nasca"
+      ]
+    }
+  ]
+}

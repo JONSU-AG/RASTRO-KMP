@@ -1,122 +1,165 @@
 # La Oración Gramatical: Bimembre vs. Unimembre y Actitud del Hablante
 
-## INTRODUCCIÓN
-La oración gramatical es la unidad mínima con independencia sintáctica, sentido completo y entonación propia delimitada por pausas, y es el punto de partida de toda la sintaxis que evalúa el examen de admisión UNSA. Si no distingues con seguridad una oración bimembre de una unimembre, ni reconoces la actitud del hablante que hay detrás de cada enunciado, confundirás sujetos con objetos directos y enunciados informativos con deseos o dudas. Esta lección te entrega el criterio exacto para clasificar sin dudar y para blindarte contra la trampa más famosa del curso, el falso sujeto con el verbo haber.
+## Introducción
 
-En esta lección recorrerás primero la naturaleza de la oración frente a la frase y la proposición, luego la estructura bimembre con sujeto expreso y con sujeto tácito recuperable por la desinencia verbal, y después el universo unimembre verbal impersonal y no verbal interjectivo. Verás por qué Hubo muchas dificultades carece de sujeto, por qué Nevó intensamente es unimembre meteorológica, por qué Caminaron durante tres horas es bimembre con sujeto tácito Ellos, y por qué la expresión Auxilio constituye por sí sola una oración completa sin verbo.
+En **La delegada entregó el informe**, se reconoce un sujeto expreso y un predicado. En **Hubo varias reuniones**, el grupo varias reuniones no funciona como sujeto del haber existencial. En **¡Auxilio!**, el contexto permite interpretar una petición completa sin que aparezca un verbo. Los tres casos comunican, pero no tienen la misma organización sintáctica.
 
-Al final dominarás también las seis actitudes del hablante que aparecen en cada prueba. Sabrás por qué Ojalá obtengas el primer puesto es desiderativa, por qué Tal vez viajemos es dubitativa, por qué Señores postulantes mantengan el orden es exhortativa, y por qué No sé quién fue el autor es interrogativa indirecta parcial. Con ese mapa completo podrás resolver los diez retos de esta unidad con el mismo rigor con que analizarás después las oraciones compuestas.
+Para distinguirlos se separan dos preguntas: **cómo se estructura la expresión** y **qué modalidad o valor comunicativo presenta**. Una pregunta puede contener sujeto y predicado, y un deseo puede escribirse entre signos de exclamación. Los criterios no se excluyen ni se resuelven localizando una palabra aislada.
 
-## DESARROLLO DEL TEMA
+## Mapa del tema
 
-# 6.1.1 — La oración gramatical y la estructura bimembre con sujeto expreso y tácito
-**¿Qué es?** La oración es la unidad sintáctica mínima con independencia sintáctica más sentido completo más entonación propia entre pausas. Se distingue de la frase que carece de verbo conjugado y de sentido oracional completo, como Buenos días o En la biblioteca, y se distingue de la proposición que sí tiene estructura oracional pero vive dependiente o coordinada dentro de una oración compuesta. La oración bimembre es aquella que se organiza formal o tácitamente en dos miembros interdependientes, sujeto y predicado, donde el sujeto es el sintagma de quien se habla y el predicado es lo que se dice del sujeto.
+```mermaid
+graph TD
+ A[Analizar estructura y modalidad] --> B[Reconocer el sujeto]
+ A --> C[Examinar usos impersonales]
+ A --> D[Interpretar la modalidad]
+ B --> B1[Sujeto expreso]
+ B --> B2[Sujeto tácito recuperable en contexto]
+ B --> B3[Enunciados no verbales]
+ C --> C1[Haber existencial]
+ C --> C2[Fenómenos meteorológicos literales]
+ C --> C3[Contraste entre se impersonal y pasiva refleja]
+ D --> D1[Declaración e interrogación]
+ D --> D2[Deseo y exhortación]
+ D --> D3[Duda y exclamación]
+```
 
-**¿Cómo funciona?** El funcionamiento bimembre se reconoce por la presencia real o recuperable del sujeto.
+# 6.1.1 — Oración, enunciado y sujeto
 
-- Sujeto expreso visible → Los científicos arequipeños investigan el volcán, donde Los científicos arequipeños es sujeto expreso y el resto es predicado
-- Sujeto expreso simple → Nosotros resolveremos los ejercicios más complejos, donde Nosotros es sujeto expreso en primera persona plural
-- Sujeto expreso pospuesto → Mañana vendrán todos los delegados de la facultad, donde todos los delegados de la facultad es sujeto expreso aunque aparezca después del verbo
-- Sujeto expreso con verbo transitivo → Los estudiantes leen concentrados en la sala de estudio, donde Los estudiantes es sujeto expreso que realiza la acción de leer
-- Sujeto tácito elíptico → Investigan el volcán, donde el sujeto Ellos se recupera por la desinencia de tercera persona plural del verbo investigan
-- Sujeto tácito en movimiento → Caminaron durante tres horas por la avenida, donde el sujeto Ellos o Ellas se recupera por la terminación aron de tercera persona plural
-- Sujeto tácito en contexto de sismo → Durante el sismo corrieron despavoridos hacia el patio, donde el sujeto Ellos se sobreentiende sin necesidad de escritura
+Un **enunciado** es una unidad comunicativa que puede interpretarse en su contexto. Puede contener una oración, varias o una expresión menor. **Buenos días**, usado como saludo, constituye un enunciado sin necesitar un verbo conjugado. La noción comunicativa de enunciado no se identifica sin más con la estructura gramatical de una oración.
 
-**¿Por qué?** Porque la bipartición sujeto más predicado es la marca ontológica de la bimembración. Si el sujeto existe aunque esté omitido por economía, la oración sigue siendo bimembre, pues la desinencia verbal lo revela. Por eso Caminaron es bimembre, pues esconde un Ellos perfectamente recuperable, mientras que Hubo muchas dificultades no es bimembre, pues no hay sujeto ni siquiera tácito, ya que muchas dificultades es objeto directo comprobable con Las hubo. Esta diferencia sostiene las preguntas sobre Hubo muchos postulantes frente a Caminaron durante tres horas.
+Una **oración** presenta una organización sintáctica que permite analizar una predicación. Puede ser independiente o estar incluida en otra construcción: en **La delegada dijo que volvería**, que volvería está subordinada y conserva estructura oracional. Por eso la independencia comunicativa no es una condición que deba cumplir por sí sola cualquier oración subordinada.
 
-**¿Cómo se diferencia?** La oración bimembre con sujeto expreso muestra el sujeto escrito y concordante con el verbo. La oración bimembre con sujeto tácito omite el sujeto pero lo deja recuperable por número y persona verbal. La oración unimembre, en cambio, carece ontológicamente de sujeto y no admite ni siquiera la recuperación tácita. Recuerda la regla de refuerzo para el examen. Sujeto que se puede reponer con Ellos o Nosotros → bimembre. Sintagma que se reemplaza con Lo, La, Los, Las → objeto directo y pista de unimembre con haber.
+### Bimembre y unimembre en la nomenclatura escolar
 
-# 6.1.2 — La oración unimembre verbal impersonal y no verbal
-**¿Qué es?** La oración unimembre es aquella que no puede dividirse en sujeto y predicado porque carece intrínsecamente de sujeto. Se divide en verbal impersonal, cuando tiene verbo conjugado pero impersonal que bloquea el sujeto, y no verbal, cuando carece de verbo y obtiene valor oracional por la entonación y el contexto. Es la estructura de Hubo muchos postulantes, de Nevó intensamente, de Hace frío, de Se vive bien aquí y de Auxilio.
+La clasificación escolar llama **bimembre** a la estructura que distingue sujeto y predicado. Incluye ejemplos con sujeto escrito y otros donde se recupera un sujeto tácito. Utiliza **unimembre** para expresiones que no presentan esa división, entre ellas las impersonales y ciertos enunciados no verbales. Esta terminología se declara para no mezclar criterios de modelos distintos.
 
-**¿Cómo funciona?** El repertorio unimembre funciona con cinco familias verbales más la familia no verbal.
+| Ejemplo en su contexto | Organización observada | Denominación escolar empleada |
+| --- | --- | --- |
+| Los delegados caminaron. | Sujeto expreso: los delegados. | Bimembre con sujeto expreso. |
+| Hablamos de los delegados: caminaron tres horas. | Se recupera el sujeto de caminaron a partir del contexto. | Bimembre con sujeto tácito. |
+| Hubo varias reuniones. | Haber existencial sin sujeto léxico. | Unimembre verbal impersonal. |
+| ¡Auxilio!, como petición independiente. | Enunciado sin verbo. | Unimembre no verbal en esta nomenclatura. |
 
-- Fenómeno meteorológico o climático → Llovió torrencialmente en Cayma, donde Llovió en tercera persona singular impersonal impide todo sujeto
-- Fenómeno meteorológico andino → Nevó intensamente sobre la cordillera de los Andes, donde Nevó es verbo de naturaleza sin sujeto posible
-- Haber existencial en singular → Hubo muchos postulantes en el examen de admisión, donde Hubo es impersonal y muchos postulantes es objeto directo
-- Haber existencial en pretérito imperfecto → Había un silencio sepulcral en los pasillos universitarios, donde Había es impersonal y un silencio sepulcral es objeto directo comprobable con Lo había
-- Haber existencial con hacer y ser cronológico o climático → Hace frío en Arequipa, donde Hace es impersonal climático, más Es muy tarde, donde Es es impersonal cronológico
-- Se impersonal → Se vive bien aquí, donde Se más tercera persona singular bloquea el sujeto y generaliza la acción
-- No verbal interjectiva → Auxilio, donde la interjección con exclamación vale como oración completa sin verbo ni sujeto
-- No verbal formular → Buenos días más Fuego como aviso, donde la frase nominal contextuada adquiere sentido oracional pleno
+En **Mañana llegarán los delegados**, el sujeto aparece después del verbo. El orden inicial no identifica automáticamente el sujeto. En **A la delegada la felicitaron sus compañeros**, a la delegada no pasa a ser sujeto por estar al comienzo: sus compañeros concuerda con felicitaron y funciona como sujeto.
 
-**¿Por qué?** Porque la impersonalidad es un bloqueo gramatical del sujeto. Los verbos de clima solo conocen la tercera persona singular sin actor. El verbo haber cuando indica existencia renuncia para siempre al sujeto y exige singular, de modo que el sintagma siguiente solo puede ser objeto directo. El verbo hacer y ser en usos cronológicos y climáticos describe estados generales sin portador. La partícula se impersonal borra deliberadamente al agente. Y la interjección condensa una emoción completa sin necesidad de arquitectura bimembre. Por eso la norma culta exige Hubo muchos festejos y prohíbe Hubieron varios accidentes, pues hubieron en plural inventa un sujeto que la gramática impide.
+### Sujeto tácito y referencia indeterminada
 
-**¿Cómo se diferencia?** La unimembre verbal tiene verbo pero sin sujeto posible, mientras que la bimembre con sujeto tácito tiene verbo con sujeto recuperable. La prueba decisiva es la conmutación pronominal. Si el sintagma se reemplaza con Lo, La, Los, Las → es objeto directo y la oración es unimembre con haber, como en Hubo muchas dificultades → Las hubo. Si el hueco se rellena con Ellos o Nosotros y concuerda → es sujeto tácito y la oración es bimembre, como en Caminaron → Ellos caminaron. La unimembre no verbal se diferencia de ambas porque no tiene verbo, como en Auxilio frente a Nevó. Recuerda la regla de refuerzo anti trampa. Haber en existencia siempre en singular → Hubo, Había, Ha habido, Habrá. Plural con hubieron para existencia → error vulgar que debes marcar como incorrecto.
+En un relato sobre **los excursionistas**, la oración **Caminaron durante tres horas** permite recuperar ese grupo como sujeto tácito. La terminación verbal aporta persona y número, mientras el contexto ayuda a identificar a quienes se refiere. No se obtiene toda la referencia solamente de las letras finales del verbo.
 
-# 6.1.3 — Clasificación por la actitud del hablante con seis valores pragmáticos
-**¿Qué es?** La clasificación por la actitud del hablante describe la intención comunicativa con que el emisor pronuncia la oración. No mira la estructura interna sino el propósito, informar, preguntar, emocionar, ordenar, desear o dudar. Comprende enunciativas o declarativas, interrogativas directas e indirectas totales y parciales, exclamativas, exhortativas o imperativas, desiderativas u optativas, y dubitativas. Es la clasificación que decide si Ojalá obtengas el primer puesto es desiderativa, si Tal vez viajemos es dubitativa y si Mantengan el orden es exhortativa.
+Una tercera persona plural no siempre identifica a un grupo conocido. En **Llaman a la puerta**, puede quedar indeterminado quién llama, e incluso puede tratarse de una sola persona. Esa interpretación suele incluirse entre los usos de impersonalidad inespecífica. No se aplica la regla automática de que toda tercera persona plural equivale necesariamente a ellos conocidos.
 
-**¿Cómo funciona?** Cada actitud funciona con marcas formales propias.
+También hay distintas descripciones teóricas de las oraciones impersonales. El análisis escolar de este nivel distingue un sujeto tácito referencial de la ausencia de un sujeto léxico en haber existencial y en los ejemplos meteorológicos. La pregunta debe proporcionar el contexto necesario para no confundir ambos casos.
 
-- Enunciativa afirmativa o negativa → El examen será en marzo, donde se informa un hecho susceptible de verdad o falsedad
-- Interrogativa directa total → Aprobaste el curso entre signos, donde se espera respuesta binaria sí o no
-- Interrogativa directa parcial → Quién resolvió el problema entre signos con pronombre enfático, donde se pregunta por un elemento específico
-- Interrogativa indirecta parcial → No sé quién fue el autor de ese informe, donde no hay signos y la pregunta vive subordinada al verbo de entendimiento sé y usa quién para pedir un elemento
-- Interrogativa indirecta con dicción → Dime dónde vives, donde la pregunta vive subordinada al verbo de dicción dime sin signos
-- Exclamativa emocional → Qué hermosa mañana entre exclamaciones, donde se manifiesta intensidad afectiva
-- Exhortativa mandataria → Presente su documento de identidad, donde se ordena con función apelativa
-- Exhortativa prohibitiva → Señores postulantes mantengan el orden y no abran el cuadernillo, donde se manda y se prohíbe para regular conducta
-- Desiderativa optativa → Ojalá obtengas el primer puesto en el cómputo general, donde ojalá introduce anhelo del emisor
-- Desiderativa con quisiera → Quisiera ingresar a la UNSA, donde quisiera introduce deseo proyectado
-- Dubitativa de incertidumbre → Tal vez viajemos a la costa durante el feriado, donde tal vez introduce posibilidad no asegurada
-- Dubitativa con adverbio → Quizá viaje a Mollendo el fin de semana, donde quizá introduce duda con matiz de probabilidad
+# 6.1.2 — Impersonalidad y construcciones que conviene contrastar
 
-**¿Por qué?** Porque el mismo contenido proposicional cambia de valor según la actitud. El examen será en marzo informa. Será el examen en marzo pregunta. Ojalá sea el examen en marzo desea. Tal vez sea el examen en marzo duda. Presente el examen en marzo ordena. La gramática codifica esa intención con partículas como ojalá para deseo, tal vez y quizá y posiblemente para duda, imperativos y prohibiciones para mandato, y signos o subordinación para pregunta. Por eso Tal vez viajemos nunca puede ser desiderativa, pues no expresa anhelo sino incertidumbre, y Ojalá obtengas nunca puede ser exhortativa, pues no ordena sino desea.
+En **Hubo muchos postulantes**, haber expresa existencia. Según la norma general del español, se mantiene en singular: **hay, había, hubo, habrá**. Muchos postulantes no determina una concordancia verbal plural como la que aparece con un sujeto plural en Los postulantes llegaron.
 
-**¿Cómo se diferencia?** La desiderativa expresa deseo con ojalá, quisiera o así de anhelo. La dubitativa expresa duda con tal vez, quizá o posiblemente. La exhortativa expresa mandato con imperativo o prohibición. La interrogativa directa lleva signos, la indirecta vive sin signos subordinada a verbos como saber, decir o preguntar. La total espera sí o no, la parcial usa quién, qué, dónde o cuál para pedir un dato. La enunciativa solo informa en afirmativo o negativo. Recuerda la regla de refuerzo para admisión. Ojalá → desiderativa segura. Tal vez o Quizá → dubitativa segura. Mantengan o No abran → exhortativa segura. Sin signos más verbo de entendimiento más quién → indirecta parcial segura.
+En el análisis escolar utilizado, el grupo nominal del haber existencial se estudia como **complemento directo**. En **Hubo muchas dificultades**, la sustitución **Las hubo** ayuda a observar esa relación. Se interpreta junto con la construcción existencial; no se convierte cualquier sustitución por las en una prueba de impersonalidad de toda una oración.
 
-## CONCEPTOS IMPORTANTES
-- Oración como unidad con independencia sintáctica más sentido completo más entonación entre pausas frente a frase sin verbo y proposición dependiente dentro de compuesta
-- Bimembre con sujeto expreso visible como Los científicos investigan y con sujeto tácito recuperable como Caminaron → Ellos caminaron
-- Unimembre verbal impersonal con cinco familias, clima con Llovió y Nevó, haber existencial en singular con Hubo y Había, hacer y ser cronológico con Hace frío y Es tarde, se impersonal con Se vive
-- Unimembre no verbal con interjección plena como Auxilio y fórmula contextuada como Buenos días y Fuego
-- Haber existencial siempre en singular con objeto directo comprobable con Las hubo y Lo había, nunca con sujeto
-- Interrogativa directa entre signos frente a indirecta sin signos subordinada a verbos de dicción o entendimiento como No sé quién y Dime dónde
-- Interrogativa total de respuesta sí o no frente a parcial con pronombre enfático quién, qué, dónde para dato específico
-- Desiderativa de deseo con ojalá frente a dubitativa de duda con tal vez y quizá frente a exhortativa de mandato con mantengan y no abran
+| Uso de haber | Ejemplo | Qué se distingue |
+| --- | --- | --- |
+| Existencial en pasado | Hubo varias reuniones. | Haber impersonal en singular. |
+| Existencial en tiempo compuesto | Ha habido varias reuniones. | El auxiliar se mantiene en singular. |
+| Auxiliar de otro verbo | Los delegados habían terminado. | Haber forma parte de un tiempo compuesto y concuerda con el sujeto. |
+| Contraste de verbos | Existían varias soluciones. | Existir tiene otra construcción: varias soluciones es sujeto plural. |
 
-## DIFERENCIAS QUE CONFUNDEN
-- Bimembre con sujeto tácito frente a unimembre con haber. Caminaron esconde Ellos recuperable por aron → bimembre. Hubo muchas dificultades convierte muchas dificultades en Las hubo → objeto directo y unimembre. Si admite Ellos → bimembre. Si admite Las hubo → unimembre.
-- Sujeto expreso frente a objeto directo de haber. Todos los delegados vendrán es sujeto que concuerda en plural con vendrán. Muchos postulantes con Hubo no concuerda ni puede pluralizar el verbo sin error. Pluralizar Hubo en Hubieron para existencia → error que debes marcar.
-- Unimembre verbal frente a unimembre no verbal. Nevó intensamente tiene verbo impersonal sin sujeto → verbal. Auxilio no tiene verbo y vale por entonación → no verbal. Pregunta por verbo para decidir.
-- Interrogativa directa frente a indirecta. Directa lleva signos como Dónde vives entre interrogaciones. Indirecta vive sin signos subordinada como No sé quién fue el autor y Dime dónde vives. Sin signos más sé o dime → indirecta.
-- Interrogativa total frente a parcial. Total espera sí o no como Aprobaste el curso. Parcial pide dato con quién como Quién resolvió el problema y No sé quién fue el autor. Pronombre enfático → parcial.
-- Desiderativa frente a dubitativa. Ojalá obtengas expresa anhelo → desiderativa. Tal vez viajemos expresa incertidumbre → dubitativa. Ojalá nunca es duda y Tal vez nunca es deseo.
-- Exhortativa frente a enunciativa y desiderativa. Mantengan el orden ordena conducta → exhortativa. El examen será en marzo informa → enunciativa. Ojalá ingreses desea → desiderativa. Imperativo o prohibición → exhortativa.
-- Enunciativa frente a exclamativa. El examen será en marzo informa con entonación neutra → enunciativa. Qué hermosa mañana emociona con exclamación → exclamativa.
+### No juzgar una forma fuera de su uso
 
-## DATOS IMPORTANTES
-- Fórmula bimembre → Sujeto expreso o tácito más predicado con concordancia en número y persona
-- Fórmula unimembre con haber → Haber en tercera persona singular más objeto directo sin sujeto posible
-- Lista cerrada de haber correcto → Hubo, Había, Ha habido, Habrá, Haya habido, siempre en singular para existencia
-- Lista de error vulgar → Hubieron muchos, Habían muchas quejas para existencia, siempre incorrectos en norma culta
-- Lista de verbos climáticos → Llover, Nevar, Granizar, Amanecer en uso impersonal, siempre unimembres
-- Lista de fórmulas impersonales → Hace frío, Hace calor, Es tarde, Es temprano, Se vive, Se dice
-- Lista de partículas de deseo → Ojalá, Quisiera, Así con valor optativo, siempre desiderativas
-- Lista de adverbios de duda → Tal vez, Quizá, Quizás, Posiblemente, Acaso, siempre dubitativos
-- Lista de verbos de entendimiento y dicción para indirectas → Saber, Ignorar, Decir, Preguntar, Dime, No sé
-- Caso modelo de sujeto tácito → Caminaron durante tres horas → Ellos caminaron, desinencia aron revela tercera persona plural
+En **Hubieron varios accidentes**, con valor de existencia, la norma general recomienda **Hubo varios accidentes**. La corrección se refiere a esa construcción. **Hubieron** también existe como forma auxiliar del pretérito anterior, de uso poco frecuente, como en **Cuando hubieron terminado, salieron**. Por tanto, no se enseña que la secuencia hubieron sea incorrecta en cualquier oración imaginable.
 
-## EJEMPLOS
-- Ejemplo Hubo muchos postulantes. Enunciado Hubo muchos postulantes en el examen de admisión. Análisis Haber en singular existencial sin sujeto posible → muchos postulantes se reemplaza con Los hubo → objeto directo → oración unimembre verbal impersonal. Por eso la alternativa Bimembre con sujeto tácito es distractor, pues no hay Ellos recuperable.
-- Ejemplo Muchas dificultades como objeto directo. Enunciado Hubo muchas dificultades. Análisis Prueba Las hubo con éxito → objeto directo. Imposible decir Ellas hubieron sin cometer error vulgar. Por eso la respuesta es Objeto Directo y no Sujeto paciente ni Atributo.
-- Ejemplo Nevó como clima. Enunciado Nevó intensamente sobre la cordillera de los Andes. Análisis Verbo nevar en tercera persona impersonal de fenómeno natural → sin sujeto → unimembre meteorológica. Frente a El granizo destruyó, donde El granizo sí es sujeto agente bimembre, y frente a La lluvia caía, donde La lluvia es sujeto expreso.
-- Ejemplo Ojalá como deseo. Enunciado Ojalá obtengas el primer puesto. Análisis Partícula ojalá más subjuntivo de anhelo → desiderativa u optativa. No es exhortativa porque no ordena, no es dubitativa porque no duda, no es enunciativa porque no informa.
-- Ejemplo Interrogativa indirecta parcial. Enunciado No sé quién fue el autor de ese informe. Análisis Sin signos más subordinación al verbo sé más pronombre quién que pide dato → indirecta parcial. No es directa porque faltan signos, no es total porque no espera sí o no, no es enunciativa porque interroga aunque no lleve signos.
-- Ejemplo Auxilio como interjección. Enunciado Auxilio entre exclamaciones. Análisis Interjección con valor oracional pleno sin verbo ni sujeto → unimembre no verbal interjectiva. No es bimembre con sujeto omitido porque no hay verbo que permita recuperar Ellos.
-- Ejemplo Caminaron como tácito. Enunciado Caminaron durante tres horas por la avenida. Análisis Desinencia aron de tercera persona plural → Ellos caminaron → bimembre con sujeto tácito. No es falta de verboide ni doble núcleo, es el sujeto omitido por economía.
-- Ejemplo Tal vez como duda. Enunciado Tal vez viajemos a la costa. Análisis Adverbio tal vez de incertidumbre → dubitativa. No es exhortativa porque no manda, no es desiderativa porque no desea con ojalá, no es enunciativa negativa porque afirma una posibilidad.
-- Ejemplo Mantengan como mandato. Enunciado Señores postulantes mantengan el orden y no abran el cuadernillo. Análisis Imperativos mantengan y no abran dirigidos a regular conducta → exhortativa o imperativa con función apelativa. No es dubitativa ni enunciativa ni interrogativa.
-- Ejemplo Hubieron como error. Alternativas Hubo muchos festejos correcto, Había demasiadas quejas correcto en singular, Ha habido intensas precipitaciones correcto compuesto en singular, Hubieron varios accidentes incorrecto. Análisis Haber existencial exige singular, pluralizar en hubieron es error vulgar. Por eso la incorrecta es Hubieron varios accidentes.
-- Ejemplo de refuerzo Había un silencio. Enunciado Había un silencio sepulcral en los pasillos. Análisis Había impersonal → un silencio es objeto directo con prueba Lo había → unimembre verbal. Frente a Mañana vendrán todos los delegados con sujeto expreso, Corrieron con sujeto tácito Ellos, Nosotros resolveremos con sujeto expreso Nosotros, Los estudiantes leen con sujeto expreso.
-- Ejemplo de refuerzo Se vive y Hace frío. Enunciados Se vive bien aquí y Hace frío en Cayma. Análisis Ambos sin sujeto posible → unimembres verbales, uno con se impersonal y otro climático. Sirven para no marcar sujeto inexistente en examen.
+Corregir un uso conforme al registro formal no requiere descalificar a quien habla. Se explica la construcción, la concordancia que corresponde y la alternativa recomendada. La variación lingüística no se utiliza para inferir capacidad o valor personal.
 
-## IDEA CLAVE
-La oración es bimembre cuando hay sujeto escrito o escondido en la terminación verbal, y es unimembre cuando la gramática impide el sujeto por impersonalidad o por ausencia de verbo. La actitud del hablante pone el propósito, informar con enunciativa, preguntar con interrogativa directa o indirecta total o parcial, emocionar con exclamativa, ordenar con exhortativa, desear con ojalá desiderativa y dudar con tal vez dubitativa. Con esas dos llaves, estructura y actitud, abres cualquier pregunta UNSA sin confundir objeto directo con sujeto ni deseo con duda.
+### Fenómenos meteorológicos y sentidos figurados
 
-## CLAVE DE ADMISIÓN
-Busca primero el verbo. Si es Hubo, Había, Nevó, Llovió, Hace, Es tarde o Se vive sin actor posible → marca unimembre de inmediato. Si el verbo permite reponer Ellos o Nosotros por la terminación → marca bimembre con sujeto tácito. Si ves Hubieron en plural para existencia → marca incorrecto sin dudar, pues la norma exige singular. Para actitud, usa el detector de partículas. Ojalá → desiderativa. Tal vez, Quizá, Posiblemente → dubitativa. Mantengan, Presente, No abran → exhortativa. Signos más quién, qué, dónde → directa parcial. Sin signos más No sé o Dime más quién o dónde → indirecta parcial. Recuerda la regla de refuerzo P para deseo con Ojalá, D para duda con Tal vez, M para mandato con Imperativo, I para interrogación indirecta sin signos. Esa cadena P, D, M, I te ahorra minutos en la prueba.
+En **Nevó intensamente sobre la cordillera**, nevar se emplea con sentido meteorológico literal y no se expresa un sujeto que produzca la nevada. En **La nieve cubrió el camino**, en cambio, la nieve es sujeto del verbo cubrir. Hablar de un fenómeno natural no convierte automáticamente una oración en impersonal.
 
-## RESUMEN
-Oración con independencia, sentido y entonación frente a frase sin verbo y proposición dependiente. Bimembre con sujeto expreso como Los científicos investigan y con sujeto tácito como Caminaron → Ellos. Unimembre verbal impersonal con clima como Nevó, haber existencial en singular como Hubo y Había con objeto directo comprobable con Las hubo, hacer y ser como Hace frío y Es tarde, se impersonal como Se vive. Unimembre no verbal como Auxilio y Buenos días. Actitudes con enunciativa que informa, interrogativa directa con signos e indirecta sin signos subordinada a saber o decir, total de sí o no y parcial con quién, exclamativa que emociona, exhortativa que ordena con mantengan, desiderativa que desea con ojalá, dubitativa que duda con tal vez. Norma de haber siempre en singular y error vulgar hubieron en plural.
+Los verbos meteorológicos admiten además usos figurados. En **Llovieron mensajes de apoyo**, mensajes de apoyo concuerda con llovieron en esa construcción figurada. La forma léxica del verbo no permite trasladar sin análisis la impersonalidad del ejemplo literal.
+
+| Construcción | Relación que se reconoce | Precaución |
+| --- | --- | --- |
+| Nevó sobre la cordillera. | Uso meteorológico impersonal. | Se especifica la interpretación literal. |
+| La lluvia caía sobre el tejado. | La lluvia es sujeto de caía. | El significado meteorológico del nombre no elimina el sujeto. |
+| Hace frío. | Uso impersonal de hacer. | No equivale a Los estudiantes hacen maquetas. |
+| Se vive bien aquí. | Se impersonal. | No se identifica todo se con impersonalidad. |
+| Se venden libros. | Pasiva refleja con libros como sujeto. | La concordancia plural la distingue del ejemplo anterior. |
+
+### Interpretar se en la construcción completa
+
+**Se vive bien aquí** presenta un uso impersonal: se habla de una manera general de vivir sin identificar un sujeto léxico. **Se venden libros** permite reconocer libros como sujeto paciente plural en una pasiva refleja. En **Se atiende a los visitantes**, la a personal y el singular verbal orientan al análisis impersonal del ejemplo.
+
+No basta con localizar se y contar cuántas palabras siguen. También existen usos reflexivos y pronominales que requieren otros análisis. Se compara la concordancia, el tipo de complemento y el significado de la construcción.
+
+### Enunciados no verbales
+
+**¡Auxilio!**, entendido como petición de ayuda, comunica por sí solo en una situación adecuada. En la nomenclatura escolar del nivel se clasifica como unimembre no verbal. Esto no significa que toda expresión sin verbo carezca de estructura ni que toda frase tenga que estar incompleta comunicativamente.
+
+**A las cuatro**, como respuesta a ¿A qué hora comienza?, es un enunciado interpretable gracias al contexto. La misma secuencia, aislada y sin situación, puede no bastar para reconstruir lo que se comunica. Se distinguen así la estructura de una expresión y su uso en un intercambio concreto.
+
+# 6.1.3 — Modalidad y actitud del hablante
+
+La clasificación por **modalidad** y por actitud del hablante atiende a cómo se presenta un contenido: como afirmación, pregunta, deseo, posibilidad u orden, entre otros valores. La clasificación escolar siguiente sirve para organizar ejemplos claros; no exige que todos esos rasgos sean incompatibles en cualquier uso real.
+
+| Valor estudiado | Ejemplo | Lectura que se justifica |
+| --- | --- | --- |
+| Declarativo o enunciativo | La reunión comienza a las cuatro. | Se presenta una información. |
+| Interrogativo | ¿A qué hora comienza la reunión? | Se introduce una incógnita temporal. |
+| Exclamativo | ¡Qué clara quedó la explicación! | Se expresa una valoración exclamativa. |
+| Exhortativo | Mantengan el orden. | Se solicita una conducta mediante una orden. |
+| Desiderativo u optativo | Ojalá termine a tiempo. | Se expresa un deseo. |
+| Dubitativo | Tal vez viajemos mañana. | Se presenta una posibilidad no asegurada. |
+
+Que una oración sea declarativa no demuestra que su contenido sea verdadero. Puede expresar una afirmación errónea o pertenecer a un relato ficticio. Del mismo modo, unos signos de exclamación no eliminan el valor desiderativo de **¡Ojalá salga bien!**. La consigna debe indicar qué aspecto se está clasificando.
+
+### Directa e indirecta no clasifican lo mismo que total y parcial
+
+En **¿Llegaron los delegados?**, la interrogación es directa y total. En **¿Quién llegó?**, es directa y parcial: se deja abierta la identidad de una persona. En **No sé si llegaron los delegados**, si llegaron los delegados es una interrogativa indirecta total incluida en una oración mayor.
+
+En **No sé quién fue el autor de ese informe**, la subordinada **quién fue el autor de ese informe** es interrogativa indirecta parcial. La oración completa presenta declarativamente un desconocimiento. No se atribuye sin más la modalidad de la subordinada al conjunto de la oración.
+
+| Segmento que se clasifica | Dependencia | Estructura interrogativa |
+| --- | --- | --- |
+| ¿Llegaron los delegados? | Directa. | Total en este ejemplo. |
+| ¿Quién llegó? | Directa. | Parcial. |
+| si llegaron los delegados, en No sé si llegaron | Indirecta. | Total. |
+| quién llegó, en No sé quién llegó | Indirecta. | Parcial. |
+
+La ausencia de signos no basta para identificar una interrogativa indirecta. **Sé que llegaron** tampoco lleva signos y contiene una subordinada declarativa. El análisis busca una incógnita y la estructura correspondiente, no simplemente un verbo de saber seguido de cualquier grupo de palabras.
+
+Las interrogativas totales se practican aquí con ejemplos que permiten respuestas como sí o no. Hay también interrogativas que ofrecen alternativas: **¿Vendrán hoy o mañana?**. No se reduce todo el grupo a una obligación de contestar siempre mediante una sola de esas dos palabras.
+
+### Deseo, duda y exhortación en los ejercicios
+
+En **Ojalá obtengas el primer puesto**, el contenido se presenta como deseado. El subjuntivo obtengas contribuye a esa construcción, pero un subjuntivo no señala por sí solo deseo en cualquier oración. En **Tal vez viajemos**, el hablante expresa posibilidad o incertidumbre, aunque además pueda tener ganas de viajar.
+
+En **Señores postulantes, mantengan el orden y no abran el cuadernillo**, aparecen una orden y una prohibición dirigidas a los destinatarios. La clasificación pedida es exhortativa. El vocativo señores postulantes no se convierte por ello en el sujeto gramatical expreso de los verbos.
+
+En la comunicación también puede utilizarse una pregunta para pedir algo: **¿Puedes cerrar la ventana?** tiene forma interrogativa y puede funcionar como petición. Ese uso muestra por qué conviene precisar si se estudia la estructura, la modalidad o el acto comunicativo, en lugar de hacerlos equivalentes.
+
+## Importante
+
+Antes de clasificar, indica **qué segmento y qué criterio** analizas. Un sujeto tácito necesita un contexto de referencia; una interrogativa subordinada no fija automáticamente la modalidad de toda la oración. En haber existencial, la norma singular se explica por el uso, no por una prohibición de cualquier forma plural de haber.
+
+No se evalúa la competencia de una persona por una forma lingüística aislada. Las correcciones del registro formal se justifican con la construcción y con ejemplos comparables.
+
+## Ejemplos resueltos
+
+### Haber y existir
+
+**Hubo varias dificultades** mantiene haber en singular. El grupo varias dificultades se analiza aquí como complemento directo y permite Las hubo. En **Existieron varias dificultades**, el verbo existir concuerda con el sujeto plural. Las dos oraciones pueden comunicar contenidos semejantes sin compartir exactamente el mismo análisis sintáctico.
+
+### Un sujeto que el relato permite recuperar
+
+El texto presenta a **los excursionistas** y continúa: **Caminaron durante tres horas**. En esa lectura, el sujeto tácito de caminaron se refiere al grupo mencionado. No se afirma que toda tercera persona plural identifique necesariamente a varias personas conocidas: hace falta atender al contexto.
+
+### Un fenómeno natural con y sin sujeto
+
+**Nevó durante la noche** presenta un uso meteorológico impersonal. En **La lluvia dañó el camino**, la lluvia es sujeto expreso de dañó. La presencia de vocabulario del clima no sustituye el análisis de la estructura verbal.
+
+### El segmento interrogativo
+
+En **No sé quién escribió el informe**, se delimita quién escribió el informe. Ese segmento presenta una incógnita sobre la persona y depende de sé: es interrogativa indirecta parcial. No se confunde con la oración mayor, que afirma un desconocimiento.
+
+### El alcance de una corrección
+
+En **Hubieron varias reuniones**, usado para expresar existencia, se corrige a **Hubo varias reuniones**. En **Cuando hubieron terminado, salieron**, haber funciona como auxiliar de terminado. Los usos son distintos, y la corrección formal debe explicar cuál de ellos está evaluando.

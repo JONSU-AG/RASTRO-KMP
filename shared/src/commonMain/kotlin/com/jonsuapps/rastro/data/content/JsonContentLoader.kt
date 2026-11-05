@@ -105,6 +105,7 @@ class JsonContentLoader(
                     options = q.options,
                     correctIndex = q.correctIndex,
                     explanation = q.explanation,
+                    angleDegrees = q.angleDegrees,
                     formula = q.formula,
                     subject = q.subject,
                     semana = q.semana,

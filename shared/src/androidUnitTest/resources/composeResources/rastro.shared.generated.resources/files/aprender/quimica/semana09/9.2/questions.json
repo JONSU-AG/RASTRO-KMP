@@ -1,1 +1,200 @@
-[{"concept":"9.2.1","correctIndex":2,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t09_s02_c01","options":["Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente.","Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Aplicar de forma mecánica la fórmula sin verificar el dominio de validez."],"pedagogicalTier":"concepto","semana":9,"statement":"Frente al distractor frecuente de examen: \"Trampa 3: Invertir las masas en la Ley de Graham. Es una proporción inversa: \\frac{v_1}{v_2} = \\sqrt{\\frac{M_2}{M_1}}. En tiempos de efusión se invierte: el gas pesado tarda más \", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"9.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t09_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":9,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "quim_t09_s02_c01",
+    "concept": "9.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Una mezcla ideal no reactiva tiene presión total 4 atm y fracción molar de A igual a 0.25. ¿Qué presión parcial tiene A?",
+    "options": [
+      "$1\\,\\mathrm{atm}$",
+      "$2\\,\\mathrm{atm}$",
+      "$0.5\\,\\mathrm{atm}$",
+      "$3\\,\\mathrm{atm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La ley de Dalton relaciona presión parcial con fracción molar.\n2. Aplicamos los datos y conservamos las unidades: $P_A=x_AP=0.25(4)$.\n3. El resultado es $1\\,\\mathrm{atm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s02_c02",
+    "concept": "9.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Una mezcla ideal tiene presiones parciales de 1,2 y 3 atm. ¿Qué presión total tiene?",
+    "options": [
+      "$12\\,\\mathrm{atm}$",
+      "$3\\,\\mathrm{atm}$",
+      "$18\\,\\mathrm{atm}$",
+      "$6\\,\\mathrm{atm}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Las presiones parciales se suman en la mezcla ideal.\n2. Aplicamos los datos y conservamos las unidades: $P_T=1+2+3$.\n3. El resultado es $6\\,\\mathrm{atm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s02_c03",
+    "concept": "9.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Una mezcla contiene 2 mol de A y 6 mol de B. ¿Cuál es la fracción molar de A?",
+    "options": [
+      "$0.125$",
+      "$0.75$",
+      "$0.25$",
+      "$0.5$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Dividimos la cantidad del componente entre el total.\n2. Aplicamos los datos y conservamos las unidades: $x_A=2/(2+6)$.\n3. El resultado es $0.25$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s02_c04",
+    "concept": "9.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Dos gases efunden en condiciones comparables. Sus masas molares son 4 y 16 g/mol. ¿Cuál es la razón rapidez del ligero/rapidez del pesado según Graham?",
+    "options": [
+      "$6$",
+      "$2$",
+      "$4$",
+      "$1$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La rapidez de efusión es inversa a la raíz de la masa molar.\n2. Aplicamos los datos y conservamos las unidades: $v_l/v_p=\\sqrt{16/4}$.\n3. El resultado es $2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s02_c05",
+    "concept": "9.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Una mezcla ideal tiene fracciones molares 0.5 y 0.5 de gases con masas molares 4 y 16 g/mol. ¿Cuál es la masa molar media?",
+    "options": [
+      "$10\\,\\mathrm{g/mol}$",
+      "$20\\,\\mathrm{g/mol}$",
+      "$5\\,\\mathrm{g/mol}$",
+      "$30\\,\\mathrm{g/mol}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La masa molar media se pondera por fracciones molares.\n2. Aplicamos los datos y conservamos las unidades: $\\bar M=0.5(4)+0.5(16)$.\n3. El resultado es $10\\,\\mathrm{g/mol}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s02_c06",
+    "concept": "9.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Un gas se recoge sobre agua. Su presión total es 101.3 kPa y la del vapor de agua 3.1 kPa. En el modelo ideal, ¿cuál es la presión del gas seco?",
+    "options": [
+      "$196.4\\,\\mathrm{kPa}$",
+      "$49.1\\,\\mathrm{kPa}$",
+      "$294.6\\,\\mathrm{kPa}$",
+      "$98.2\\,\\mathrm{kPa}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Restamos la presión parcial del vapor.\n2. Aplicamos los datos y conservamos las unidades: $P_{seco}=101.3-3.1$.\n3. El resultado es $98.2\\,\\mathrm{kPa}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s02_c07",
+    "concept": "9.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Dos gases efunden en condiciones comparables. A es dos veces más rápido que B y MA=9 g/mol. ¿Cuál es MB según Graham?",
+    "options": [
+      "$18\\,\\mathrm{g/mol}$",
+      "$108\\,\\mathrm{g/mol}$",
+      "$36\\,\\mathrm{g/mol}$",
+      "$72\\,\\mathrm{g/mol}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Elevamos al cuadrado la razón de velocidades.\n2. Aplicamos los datos y conservamos las unidades: $2=\\sqrt{M_B/9}\\Rightarrow M_B=36$.\n3. El resultado es $36\\,\\mathrm{g/mol}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s02_c08",
+    "concept": "9.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Una mezcla contiene 1 mol de A y 3 mol de B. La presión total es 8 atm y el modelo ideal es válido. ¿Qué presión parcial tiene B?",
+    "options": [
+      "$18\\,\\mathrm{atm}$",
+      "$6\\,\\mathrm{atm}$",
+      "$12\\,\\mathrm{atm}$",
+      "$3\\,\\mathrm{atm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La fracción molar de B es tres cuartos.\n2. Aplicamos los datos y conservamos las unidades: $P_B=(3/4)8$.\n3. El resultado es $6\\,\\mathrm{atm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s02_c09",
+    "concept": "9.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Dos gases ideales no reactivos están en recipientes iguales a la misma temperatura y presión. Uno tiene 2 mol. ¿Cuántos moles tiene el otro?",
+    "options": [
+      "$2\\,\\mathrm{mol}$",
+      "$4\\,\\mathrm{mol}$",
+      "$1\\,\\mathrm{mol}$",
+      "$6\\,\\mathrm{mol}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La ecuación PV=nRT fija igual n con iguales P,V,T.\n2. Aplicamos los datos y conservamos las unidades: $n_2=n_1=2$.\n3. El resultado es $2\\,\\mathrm{mol}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s02_c10",
+    "concept": "9.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Las fracciones molares de todos los componentes de una mezcla suman…",
+    "options": [
+      "Uno.",
+      "Cien moles necesariamente.",
+      "La presión total.",
+      "Cero."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Cada fracción divide una cantidad parcial entre el mismo total.\n2. Al sumar numeradores se recupera ese total.\n3. La suma de fracciones es uno.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t09_s02_c11",
+    "concept": "9.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 9,
+    "statement": "Según el modelo cinético ideal, a la misma temperatura los gases tienen…",
+    "options": [
+      "Masa molar igual.",
+      "Volumen molecular igual al recipiente.",
+      "La misma energía cinética traslacional media por molécula, aunque sus masas sean distintas.",
+      "La misma rapidez media obligatoriamente."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La energía cinética traslacional media depende de la temperatura.\n2. Una masa distinta puede corresponder a una rapidez distinta.\n3. Igual temperatura no implica igual rapidez molecular.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

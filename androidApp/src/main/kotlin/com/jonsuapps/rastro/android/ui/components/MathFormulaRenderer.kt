@@ -300,58 +300,11 @@ fun MathFormulaDisplayBox(
             .padding(horizontal = 16.dp, vertical = 14.dp),
         contentAlignment = Alignment.Center
     ) {
-        if (!formula.numerator.isNullOrBlank() && !formula.denominator.isNullOrBlank()) {
-            Row(
-                modifier = Modifier.horizontalScroll(rememberScrollState()),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center
-            ) {
-                if (formula.leftSide.isNotBlank()) {
-                    Text(
-                        text = scientificNotation("${formula.leftSide} = "),
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Black,
-                        color = Color(0xFF60A5FA), // Azul cielo matemático
-                        fontFamily = FontFamily.Serif
-                    )
-                }
-                if (formula.prefix.isNotBlank()) {
-                    Text(
-                        text = scientificNotation(formula.prefix),
-                        fontSize = 19.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = Color(0xFFF8FAFC),
-                        fontFamily = FontFamily.Serif
-                    )
-                }
-                FormattedFraction(
-                    numerator = formula.numerator,
-                    denominator = formula.denominator,
-                    textColor = Color(0xFFF8FAFC),
-                    lineColor = Color(0xFF94A3B8)
-                )
-                if (formula.suffix.isNotBlank()) {
-                    Text(
-                        text = scientificNotation(formula.suffix),
-                        fontSize = 19.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = Color(0xFFF8FAFC),
-                        fontFamily = FontFamily.Serif
-                    )
-                }
-            }
-        } else {
-            // Ecuación completa: el desplazamiento horizontal evita cortar identidades largas.
-            Text(
-                modifier = Modifier.horizontalScroll(rememberScrollState()),
-                text = scientificNotation(formula.mainExpression),
-                fontSize = 21.sp,
-                fontWeight = FontWeight.Black,
-                color = Color(0xFFF8FAFC),
-                fontFamily = FontFamily.Serif,
-                textAlign = androidx.compose.ui.text.style.TextAlign.Center
-            )
-        }
+        if (formula.subject == "Lenguaje") Text(scientificNotation(formula.mainExpression), color = Color(0xFFF8FAFC))
+        else ScientificMath(
+            expressions = listOf(ScientificMathSource.canonical(formula)),
+            color = Color(0xFFF8FAFC)
+        )
     }
 }
 
@@ -420,7 +373,7 @@ fun CanonicalFormulaCard(
                             .padding(horizontal = 8.dp, vertical = 3.dp)
                     ) {
                         Text(
-                            text = formula.level,
+                            text = AcademicPresentationText.clean(formula.level),
                             fontSize = 9.5.sp,
                             fontWeight = FontWeight.Bold,
                             color = if (formula.level.contains("UNSA")) Color(0xFFF59E0B) else theme.textSecondary
@@ -549,6 +502,8 @@ fun CanonicalFormulaCard(
             // ── TABLERO MATEMÁTICO CON FORMATO ESPECIAL ──
             MathFormulaDisplayBox(formula = formula)
 
+            PhysicsLearningDiagram.forFormula(formula.id)?.let { PhysicsDiagramCard(it) }
+
             // Gráfico de demostración geométrica (Teorema de Pitágoras)
             if (formula.graphicType == "pythagoras") {
                 PythagorasGeometricGraphic(theme = theme, modifier = Modifier.fillMaxWidth())
@@ -582,7 +537,7 @@ fun CanonicalFormulaCard(
                         Spacer(modifier = Modifier.width(10.dp))
                         Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
                             Text(
-                                text = "💡 Mnemotecnia / Regla Nemotécnica:",
+                                text = "Mnemotecnia",
                                 fontSize = 11.5.sp,
                                 fontWeight = FontWeight.Black,
                                 color = Color(0xFF92400E)
@@ -631,19 +586,9 @@ fun CanonicalFormulaCard(
                                     color = theme.accent
                                 )
                                 formula.despejes.forEach { desp ->
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.SpaceBetween,
-                                        verticalAlignment = Alignment.CenterVertically
-                                    ) {
+                                    Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
                                         Text(text = desp.name, fontSize = 11.sp, color = theme.textPrimary)
-                                        Text(
-                                            text = scientificNotation(desp.mathExpression),
-                                            fontSize = 11.5.sp,
-                                            fontWeight = FontWeight.Black,
-                                            color = theme.accent,
-                                            fontFamily = FontFamily.Serif
-                                        )
+                                        ScientificMath(listOf(ScientificMathSource.normalize(desp.mathExpression)), theme.textPrimary, fontSize = 17f)
                                     }
                                 }
                             }
@@ -687,39 +632,8 @@ fun CanonicalFormulaCard(
                         }
                     }
 
-                    // Dato Clave / Fija UNSA
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(RoundedCornerShape(12.dp))
-                            .background(Color(0xFFFEF3C7))
-                            .border(1.2.dp, Color(0xFFF59E0B), RoundedCornerShape(12.dp))
-                            .padding(10.dp)
-                    ) {
-                        Row(verticalAlignment = Alignment.Top) {
-                            Icon(
-                                imageVector = Icons.Rounded.Lightbulb,
-                                contentDescription = null,
-                                tint = Color(0xFFD97706),
-                                modifier = Modifier.size(18.dp)
-                            )
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Column {
-                                Text(
-                                    text = "Dato Clave UNSA:",
-                                    fontSize = 11.sp,
-                                    fontWeight = FontWeight.Black,
-                                    color = Color(0xFF92400E)
-                                )
-                                Text(
-                                    text = formula.datoClave,
-                                    fontSize = 11.sp,
-                                    color = Color(0xFF78350F),
-                                    lineHeight = 15.sp
-                                )
-                            }
-                        }
-                    }
+                    AcademicImportantCard(formula.datoClave)
+
                 }
             }
 

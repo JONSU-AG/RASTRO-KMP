@@ -1,1 +1,200 @@
-[{"concept":"8.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t08_s02_c01","options":["4\\sqrt{7}\\text{ km}","8\\text{ km}","2\\sqrt{19}\\text{ km}","14\\text{ km}"],"pedagogicalTier":"concepto","semana":8,"statement":"**Enunciado:** Desde un faro costero F, un vigía observa dos lanchas patrulleras A y B. La distancia del faro a la lancha A es de 6\\text{ km} y la distancia a la lancha B es de 10\\text{ km}. Si el ángulo visual formado por las dos líneas de mira desde el faro es de 60^\\circ, determine la distancia en kilómetros que separa a ambas lanchas patrulleras.","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.2","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t08_s02_c02","options":["120^\\circ","45^\\circ","30^\\circ","60^\\circ"],"pedagogicalTier":"concepto","semana":8,"statement":"**Enunciado:** En un triángulo ABC cuyos lados cumplen la relación algebraica a^3 + b^3 + c^3 = c^2(a + b + c), determine la medida del ángulo interior C.","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t08_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t08_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t08_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t08_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t08_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t08_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t08_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"8.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t08_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "trig_t08_s02_c01",
+    "concept": "8.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 8,
+    "statement": "Un triángulo tiene lados 7, 8 y 9 cm. ¿Cuánto vale su semiperímetro?",
+    "options": [
+      "$12\\,\\mathrm{cm}$",
+      "$24\\,\\mathrm{cm}$",
+      "$6\\,\\mathrm{cm}$",
+      "$36\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El semiperímetro es la mitad de la suma de lados.\n2. Aplicamos la relación: $s=(7+8+9)/2$.\n3. El valor pedido es $12\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t08_s02_c02",
+    "concept": "8.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 8,
+    "statement": "Un triángulo tiene lados 3, 4 y 5 cm. ¿Qué área da la fórmula de Herón?",
+    "options": [
+      "$12\\,\\mathrm{cm^2}$",
+      "$3\\,\\mathrm{cm^2}$",
+      "$18\\,\\mathrm{cm^2}$",
+      "$6\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La fórmula usa los lados y su semiperímetro.\n2. Aplicamos la relación: $s=6;\\quad S=\\sqrt{6(6-3)(6-4)(6-5)}$.\n3. El valor pedido es $6\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t08_s02_c03",
+    "concept": "8.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 8,
+    "statement": "Un triángulo tiene $a=5\\,\\mathrm{cm}$, $A=30^\\circ$ y $b=8\\,\\mathrm{cm}$, con lados opuestos a sus ángulos. ¿Cuántos triángulos distintos admiten esos datos?",
+    "options": [
+      "$1$",
+      "$6$",
+      "$2$",
+      "$4$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La ley de senos puede dar dos ángulos B y ambos deben dejar C positivo.\n2. Aplicamos la relación: $\\sin B=8\\sin30^\\circ/5=0.8;\\quad B,\\pi-B<150^\\circ$.\n3. El valor pedido es $2$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t08_s02_c04",
+    "concept": "8.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 8,
+    "statement": "Un triángulo tiene $a=3\\,\\mathrm{cm}$, $A=30^\\circ$ y $b=8\\,\\mathrm{cm}$. ¿Cuántos triángulos admiten esos datos?",
+    "options": [
+      "$3$",
+      "$0$",
+      "$1$",
+      "$2$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El seno de un ángulo real no puede superar uno.\n2. Aplicamos la relación: $\\sin B=8\\sin30^\\circ/3=4/3>1$.\n3. El valor pedido es $0$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t08_s02_c05",
+    "concept": "8.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 8,
+    "statement": "Dos lados de un triángulo miden 4 y 7 cm. ¿Cuál es el mayor valor entero posible del tercer lado en cm?",
+    "options": [
+      "$10\\,\\mathrm{cm}$",
+      "$20\\,\\mathrm{cm}$",
+      "$5\\,\\mathrm{cm}$",
+      "$30\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La desigualdad triangular es estricta.\n2. Aplicamos la relación: $|7-4|<c<7+4\\Rightarrow3<c<11$.\n3. El valor pedido es $10\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t08_s02_c06",
+    "concept": "8.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 8,
+    "statement": "Un triángulo de lados 5, 5 y 6 cm tiene área 12 cm². ¿Cuál es su inradio?",
+    "options": [
+      "$3\\,\\mathrm{cm}$",
+      "$0.75\\,\\mathrm{cm}$",
+      "$4.5\\,\\mathrm{cm}$",
+      "$1.5\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El área equivale a semiperímetro por inradio.\n2. Aplicamos la relación: $s=8;\\quad r=S/s=12/8$.\n3. El valor pedido es $1.5\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t08_s02_c07",
+    "concept": "8.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 8,
+    "statement": "Un triángulo tiene lados 3, 4, 5 cm y área 6 cm². Calcula su circunradio.",
+    "options": [
+      "$1.25\\,\\mathrm{cm}$",
+      "$7.5\\,\\mathrm{cm}$",
+      "$2.5\\,\\mathrm{cm}$",
+      "$5\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Relacionamos área, tres lados y circunradio.\n2. Aplicamos la relación: $R=abc/(4S)=3(4)(5)/(4\\cdot6)$.\n3. El valor pedido es $2.5\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t08_s02_c08",
+    "concept": "8.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 8,
+    "statement": "Dos lados de 6 cm y 10 cm forman 60°. ¿Cuál es la proyección del lado de 6 cm sobre la dirección del de 10 cm?",
+    "options": [
+      "$9\\,\\mathrm{cm}$",
+      "$3\\,\\mathrm{cm}$",
+      "$6\\,\\mathrm{cm}$",
+      "$1.5\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Una proyección dirigida usa el coseno del ángulo entre lados.\n2. Aplicamos la relación: $p=6\\cos60^\\circ$.\n3. El valor pedido es $3\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t08_s02_c09",
+    "concept": "8.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 8,
+    "statement": "Un triángulo tiene lados de 4 y 7 cm y ángulo comprendido de 90°. ¿Cuál es su área?",
+    "options": [
+      "$14\\,\\mathrm{cm^2}$",
+      "$28\\,\\mathrm{cm^2}$",
+      "$7\\,\\mathrm{cm^2}$",
+      "$42\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El seno del ángulo comprendido vale uno.\n2. Aplicamos la relación: $S=4(7)\\sin90^\\circ/2$.\n3. El valor pedido es $14\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t08_s02_c10",
+    "concept": "8.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 8,
+    "statement": "Conocer dos lados y un ángulo opuesto a uno de ellos…",
+    "options": [
+      "Siempre determina un único triángulo.",
+      "Puede dar cero, uno o dos triángulos y exige comprobar el caso.",
+      "Nunca permite ningún triángulo.",
+      "Obliga a que el triángulo sea equilátero."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La ley de senos puede dar dos valores suplementarios de un ángulo.\n2. Cada candidato debe tener suma angular menor que 180° con el ángulo conocido.\n3. Según los datos pueden quedar cero, uno o dos triángulos.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t08_s02_c11",
+    "concept": "8.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 8,
+    "statement": "Si el mayor lado de un triángulo cumple c²>a²+b², el ángulo opuesto a c es…",
+    "options": [
+      "Agudo.",
+      "Recto.",
+      "Obtuso.",
+      "Nulo."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La ley de cosenos da cos(C)=(a²+b²−c²)/(2ab).\n2. El numerador es negativo y el denominador positivo.\n3. Cos(C)<0 implica un ángulo interior obtuso.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

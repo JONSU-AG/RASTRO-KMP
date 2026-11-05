@@ -15,7 +15,7 @@ data class ProPlayProduct(
 
 /** Real Google Play identifiers. Prices always come from the store. */
 object PlayBillingConfig {
-    const val checkoutEnabled = true
+    val checkoutEnabled get() = !com.jonsuapps.rastro.monetization.PresentationMode.enabled
     // Android public SDK key, not the service-account JSON or a secret RevenueCat API key.
     const val revenueCatApiKey = "goog_gdXpvnmwMkNbUxVKiTdaPiILGud"
     const val entitlementId = "rastro_preuniversitario_pro"

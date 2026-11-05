@@ -13,29 +13,45 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                              SISTEMAS DISPERSOS
-                                      │
-         ┌────────────────────────────┼────────────────────────────┐
-         ▼                            ▼                            ▼
-   SUSPENSIONES                   COLOIDES                    SOLUCIONES
-(Diámetro > 1000 nm,          (1 nm a 1000 nm,            (Diámetro < 1 nm,
- sedimentan, opacas)          Efecto Tyndall, Browniano)   monofásica, homogénea)
-                                                                   │
-         ┌─────────────────────────────────────────────────────────┴────────────────────────┐
-         ▼                                                                                  ▼
-UNIDADES FÍSICAS DE CONCENTRACIÓN                                  UNIDADES QUÍMICAS DE CONCENTRACIÓN
-• Porcentaje en masa: \%m/m = \frac{m_{\text{sto}}}{m_{\text{sol}}} \times 100     • Molaridad: M = \frac{n_{\text{sto}}}{V_{\text{sol(L)}}} = \frac{m_{\text{sto}}}{\overline{M} \cdot V}
-• Porcentaje en volumen: \%v/v = \frac{V_{\text{sto}}}{V_{\text{sol}}} \times 100 • Normalidad: N = \frac{\#Eq\text{-}g}{V_{\text{sol(L)}}} = M \cdot \theta
-• Porcentaje masa-volumen: \%m/v = \frac{m_{\text{sto}}}{V_{\text{sol}}} \times 100 • Molalidad: m = \frac{n_{\text{sto}}}{m_{\text{ste(kg)}}}
-• Partes por millón: ppm = \frac{mg_{\text{sto}}}{kg_{\text{sol}}} = \frac{mg_{\text{sto}}}{L_{\text{sol}}} • Fracción Molar: x_{\text{sto}} = \frac{n_{\text{sto}}}{n_{\text{total}}}
-                                                                                            │
-         ┌──────────────────────────────────────────────────────────────────────────────────┘
-         ▼
-OPERACIONES CON SOLUCIONES
-• Dilución:  C_1 \cdot V_1 = C_2 \cdot V_2  (M_1 V_1 = M_2 V_2)
-• Mezcla de Soluciones del mismo soluto:  C_1 V_1 + C_2 V_2 = C_F V_F
-• Neutralización Estequiométrica:  \#Eq\text{-}g(\text{Ácido}) = \#Eq\text{-}g(\text{Base}) \implies N_A \cdot V_A = N_B \cdot V_B
+```mermaid
+graph TD
+ ROOT["Dispersiones, concentración y dilución"]
+ B1["Tipos de dispersión"]
+ B1N1["Solución: mezcla homogénea a escala molecular o iónica."]
+ B1N2["Coloide: partículas dispersas de tamaño intermedio; puede presentar efecto Tyndall y movimiento browniano."]
+ B1N3["Suspensión: partículas mayores que pueden sedimentar; los límites de tamaño son una clasificación aproximada."]
+ B2["Concentraciones físicas"]
+ B2N1["Porcentaje m/m: gramos de soluto por 100 gramos de solución."]
+ B2N2["Porcentaje v/v: volumen de soluto por 100 unidades del volumen final de solución."]
+ B2N3["Porcentaje m/v: gramos de soluto por 100 mL de solución."]
+ B2N4["ppm en masa equivale a mg/kg; mg/L solo aproxima ese valor si la densidad de la solución es cercana a 1 kg/L."]
+ B3["Concentraciones químicas"]
+ B3N1["Molaridad: moles de soluto por litro de solución."]
+ B3N2["Molalidad: moles de soluto por kilogramo de disolvente."]
+ B3N3["Fracción molar: $x_i=n_i/n_{\mathrm{total}}$."]
+ B3N4["Normalidad: equivalentes por litro; el factor de equivalencia depende de la reacción especificada."]
+ B4["Operaciones y conservación"]
+ B4N1["Dilución sin reacción ni pérdida de soluto: $M_1V_1=M_2V_2$."]
+ B4N2["Mezcla del mismo soluto sin reacción: $M_fV_f=M_1V_1+M_2V_2$; usar el volumen final real."]
+ B4N3["En equivalencia ácido-base coinciden equivalentes reactivos; no necesariamente moles de ácido y base."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---
@@ -95,3 +111,17 @@ M = \frac{n_{\text{sto}}}{V_{\text{sol}}(\text{L})} = \frac{m_{\text{sto}}(\text
 - **Sólido:** cristalinos (red ordenada: NaCl, diamante) frente a amorfos (desordenados: vidrio, plásticos).
 - **Disolución:** el soluto se rodea de solvente (solvatación/hidratación); depende de temperatura, agitación y superficie de contacto. "Lo semejante disuelve lo semejante": polar con polar.
 - Trampa: disolver NO es fundir ni reaccionar; la sal en agua se disocia, no se derrite.
+
+
+### No confundir solución con disolvente
+
+| Concentración | Numerador | Denominador |
+|---|---|---|
+| Molaridad | Moles de soluto | Litros de solución |
+| Molalidad | Moles de soluto | Kilogramos de disolvente |
+| % m/m | Masa de soluto multiplicada por 100 | Masa de solución |
+| ppm en masa | Miligramos de soluto | Kilogramos de solución |
+
+**Ejemplo de dilución:** se toman 25 mL de una solución 0,40 mol/L y se lleva a un volumen final de 100 mL. Sin reacción ni pérdida de soluto, $M_f=0{,}40\times25/100=0{,}10\ \mathrm{mol/L}$. Se completa hasta 100 mL; no se añaden 100 mL de agua.
+
+> **Importante:** para sumar volúmenes o sustituir mg/kg por mg/L hace falta una justificación física. La etiqueta «solución acuosa» por sí sola no garantiza esas igualdades exactas.

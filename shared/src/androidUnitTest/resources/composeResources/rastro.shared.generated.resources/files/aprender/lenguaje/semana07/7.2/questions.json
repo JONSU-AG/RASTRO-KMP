@@ -10,7 +10,7 @@
       "Coma hiperbática"
     ],
     "correctIndex": 1,
-    "explanation": "'Estimados postulantes' es el vocativo al que se dirige el emisor; la coma que lo aísla se denomina coma vocativa.",
+    "explanation": "Criterio: El vocativo apela al interlocutor y se delimita con coma. Aplicación: Estimados postulantes llama a los destinatarios de la indicación, no enuncia un sujeto seguido de su verbo. Respuesta: Coma vocativa.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.2.1",
@@ -28,7 +28,7 @@
       "Coma criminal"
     ],
     "correctIndex": 0,
-    "explanation": "La coma elíptica reemplaza al verbo 'postuló' para evitar su reiteración innecesaria en la segunda proposición.",
+    "explanation": "Criterio: La coma elíptica señala una omisión verbal recuperable. Aplicación: En el segundo miembro se recupera postuló: Luis postuló a Ingeniería Electrónica. Respuesta: Coma elíptica.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.2.1",
@@ -38,7 +38,7 @@
   {
     "id": "leng_t07_s02_c03",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿Cuál de las siguientes oraciones incurre en el grave error ortográfico conocido como 'coma criminal' o censurada?",
+    "statement": "¿Qué alternativa separa indebidamente el sujeto de su verbo sin que exista un inciso que justifique la coma?",
     "options": [
       "Arequipa, la Ciudad Blanca, celebra su aniversario.",
       "Por las mañanas, ellos estudian con ahínco.",
@@ -46,7 +46,7 @@
       "Los jóvenes más disciplinados de la academia, obtuvieron altos puntajes."
     ],
     "correctIndex": 3,
-    "explanation": "La RAE prohíbe taxativamente colocar coma entre el sujeto ('Los jóvenes más disciplinados de la academia') y el verbo principal ('obtuvieron').",
+    "explanation": "Criterio: No se separa sujeto y verbo únicamente por la longitud del sujeto. Aplicación: La coma de la alternativa señalada corta el sujeto Los jóvenes más disciplinados de la academia y su predicado, sin delimitar ningún inciso. Respuesta: Los jóvenes más disciplinados de la academia, obtuvieron altos puntajes..",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.2.2",
@@ -56,7 +56,7 @@
   {
     "id": "leng_t07_s02_c04",
     "type": "MULTIPLE_CHOICE",
-    "statement": "En la oración 'Desde las primeras horas de la madrugada, los ciudadanos acudieron a sufragar', la coma utilizada es:",
+    "statement": "En la denominación escolar, la coma que delimita el complemento temporal antepuesto en «Desde las primeras horas de la madrugada, los ciudadanos acudieron a sufragar» se llama:",
     "options": [
       "Coma vocativa",
       "Coma elíptica",
@@ -64,7 +64,7 @@
       "Coma conjuntiva"
     ],
     "correctIndex": 2,
-    "explanation": "Es coma hiperbática porque señala la alteración del orden sintáctico habitual al anteponerse un Complemento Circunstancial de tiempo.",
+    "explanation": "Criterio: La denominación escolar hiperbática se usa para este complemento adelantado. Aplicación: Desde las primeras horas de la madrugada es un complemento temporal antepuesto. El ejemplo no demuestra que todo complemento breve inicial deba llevar coma. Respuesta: Coma hiperbática.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.2.1",
@@ -74,7 +74,7 @@
   {
     "id": "leng_t07_s02_c05",
     "type": "MULTIPLE_CHOICE",
-    "statement": "El signo de puntuación adecuado para separar proposiciones yuxtapuestas que ya contienen comas en su interior es:",
+    "statement": "¿Qué signo resulta útil para mantener en un mismo enunciado dos miembros relacionados que ya contienen comas internas, diferenciando esos bloques?",
     "options": [
       "Los puntos suspensivos",
       "El punto y coma",
@@ -82,7 +82,7 @@
       "La coma simple"
     ],
     "correctIndex": 1,
-    "explanation": "El punto y coma se emplea por norma para separar proposiciones complejas que ya presentan comas internas.",
+    "explanation": "Criterio: El punto y coma distingue miembros relacionados con organización interna compleja. Aplicación: Se quieren mantener los dos bloques en un enunciado y diferenciarlos de sus comas interiores; el punto y coma sirve a esa organización. Respuesta: El punto y coma.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.2.3",
@@ -97,10 +97,10 @@
       "Reemplaza a un vocativo inicial",
       "Encierra una aposición especificativa",
       "Es una cita textual directa",
-      "Antecede a una locución conectiva adversativa extensa en una oración de cierta longitud"
+      "Separa dos miembros relacionados; el segundo comienza con el conector sin embargo"
     ],
     "correctIndex": 3,
-    "explanation": "Se escribe punto y coma antes de conectores como 'sin embargo', 'por consiguiente' o 'no obstante' cuando la proposición previa tiene cierta extensión.",
+    "explanation": "Criterio: El conector y la separación entre los miembros se analizan de manera conjunta. Aplicación: El punto y coma distingue los bloques, mientras la coma posterior delimita sin embargo. También podría organizarse el fragmento con punto y seguido. Respuesta: Separa dos miembros relacionados; el segundo comienza con el conector sin embargo.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.2.3",
@@ -110,15 +110,15 @@
   {
     "id": "leng_t07_s02_c07",
     "type": "MULTIPLE_CHOICE",
-    "statement": "¿En cuál de los siguientes casos es preceptivo el uso de los dos puntos (:)?",
+    "statement": "¿Qué alternativa usa correctamente los dos puntos para introducir palabras en estilo directo tras una expresión de habla?",
     "options": [
-      "Para separar elementos de una enumeración simple sin anunciador",
-      "Precediendo a la reproducción de una cita textual literal",
-      "Tras un sujeto extenso antes del verbo",
-      "Entre el verbo copulativo y su atributo"
+      "Compré: lápices y reglas.",
+      "La tutora indicó: «Revisen las fechas».",
+      "La palabra: «archivo» figura en el título.",
+      "El resultado fue: favorable."
     ],
     "correctIndex": 1,
-    "explanation": "Los dos puntos se escriben preceptivamente antes de citas textuales encomilladas ('Sócrates sentenció: «Solo sé que nada sé»').",
+    "explanation": "Criterio: La cita en estilo directo puede introducirse mediante dos puntos tras una expresión de habla. Aplicación: La expresión La tutora indicó anuncia las palabras que se reproducen en estilo directo. No se exige ese signo ante cualquier palabra entrecomillada. Respuesta: La tutora indicó: «Revisen las fechas»..",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.2.4",
@@ -136,7 +136,7 @@
       "Comas elípticas"
     ],
     "correctIndex": 1,
-    "explanation": "Encierran una aposición explicativa que aclara quién es César y que puede suprimirse sin romper la estructura de la oración.",
+    "explanation": "Criterio: Una aposición explicativa intercalada se delimita por ambos lados. Aplicación: El profesor de física aclara quién es César y queda como un inciso entre dos comas. Respuesta: Comas explicativas o apositivas.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.2.2",
@@ -146,15 +146,15 @@
   {
     "id": "leng_t07_s02_c09",
     "type": "MULTIPLE_CHOICE",
-    "statement": "La oración 'Compró: lápices, borradores y reglas' contiene un uso incorrecto de los dos puntos porque:",
+    "statement": "En una oración seguida, «Compré: lápices, borradores y reglas» está mal puntuada porque:",
     "options": [
       "La enumeración tiene menos de diez elementos",
       "Debió utilizarse punto y coma",
       "Los sustantivos son concretos",
-      "No deben usarse antes de una enumeración si no hay un elemento anticipador o anunciador expreso"
+      "Los dos puntos separan el verbo de su complemento sin un anuncio que lo justifique"
     ],
     "correctIndex": 3,
-    "explanation": "La RAE indica que los dos puntos no deben intercalarse entre el verbo y su complemento directo en una enumeración no anunciada.",
+    "explanation": "Criterio: En una enumeración corrida no se rompe sin justificación la unión entre verbo y complemento. Aplicación: Tras Compré se introduce directamente su complemento en una oración seguida. No es el caso de una lista vertical introducida por una fórmula. Respuesta: Los dos puntos separan el verbo de su complemento sin un anuncio que lo justifique.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.2.4",
@@ -172,7 +172,7 @@
       "Duda o vacilación"
     ],
     "correctIndex": 2,
-    "explanation": "Los dos puntos conectan dos proposiciones en relación de causa a efecto o conclusión sin necesidad de conector explícito.",
+    "explanation": "Criterio: Los dos puntos pueden presentar una consecuencia del primer hecho. Aplicación: La necesidad de postular de nuevo se presenta como consecuencia de no alcanzar el puntaje; el signo no expresa vacilación. Respuesta: Causa - efecto o deducción consecuente.",
     "subject": "lenguaje",
     "semana": 7,
     "concept": "7.2.4",

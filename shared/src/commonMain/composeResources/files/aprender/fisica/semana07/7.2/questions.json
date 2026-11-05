@@ -1,1 +1,200 @@
-[{"concept":"7.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"7.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t07_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":7,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t07_s02_c01",
+    "concept": "7.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Una barra de 2 m tiene $\\alpha=10^{-5}\\,\\mathrm{K^{-1}}$ y se calienta 50 K. Con dilatación lineal, ¿cuánto aumenta su longitud en milímetros?",
+    "options": [
+      "$1\\,\\mathrm{mm}$",
+      "$2\\,\\mathrm{mm}$",
+      "$0.5\\,\\mathrm{mm}$",
+      "$3\\,\\mathrm{mm}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Aplicamos el modelo lineal de dilatación.\n2. Sustituimos los datos: $\\Delta L=\\alpha L_0\\Delta T=10^{-5}(2)(50)=0.001\\,m$.\n3. El resultado pedido es $1\\,\\mathrm{mm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s02_c02",
+    "concept": "7.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Una pieza de 1 m se alarga 0.002 m. ¿Cuál es su longitud final?",
+    "options": [
+      "$2.004\\,\\mathrm{m}$",
+      "$0.501\\,\\mathrm{m}$",
+      "$3.006\\,\\mathrm{m}$",
+      "$1.002\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La longitud final suma la variación a la inicial.\n2. Sustituimos los datos: $L_f=L_0+\\Delta L=1+0.002$.\n3. El resultado pedido es $1.002\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s02_c03",
+    "concept": "7.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Se funden 0.5 kg de una sustancia ya en su punto de fusión. Usa Lf=200000 J/kg. ¿Qué calor se necesita?",
+    "options": [
+      "$50000\\,\\mathrm{J}$",
+      "$300000\\,\\mathrm{J}$",
+      "$100000\\,\\mathrm{J}$",
+      "$200000\\,\\mathrm{J}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Durante el cambio de fase se usa calor latente.\n2. Sustituimos los datos: $Q=mL_f=0.5(200000)$.\n3. El resultado pedido es $100000\\,\\mathrm{J}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s02_c04",
+    "concept": "7.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Una masa de 0.2 kg se vaporiza a su temperatura de ebullición. Usa Lv=1000000 J/kg. ¿Qué calor recibe?",
+    "options": [
+      "$600000\\,\\mathrm{J}$",
+      "$200000\\,\\mathrm{J}$",
+      "$400000\\,\\mathrm{J}$",
+      "$100000\\,\\mathrm{J}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La energía del cambio de fase es proporcional a la masa.\n2. Sustituimos los datos: $Q=mL_v=0.2(1000000)$.\n3. El resultado pedido es $200000\\,\\mathrm{J}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s02_c05",
+    "concept": "7.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Dos masas iguales de la misma sustancia, a 20 °C y 60 °C, se mezclan sin pérdidas ni cambio de fase. ¿Cuál es la temperatura final?",
+    "options": [
+      "$40\\,\\mathrm{^\\circ C}$",
+      "$80\\,\\mathrm{^\\circ C}$",
+      "$20\\,\\mathrm{^\\circ C}$",
+      "$120\\,\\mathrm{^\\circ C}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Con iguales capacidades caloríficas, los cambios opuestos tienen igual módulo.\n2. Sustituimos los datos: $mc(T_f-20)=mc(60-T_f)\\Rightarrow 2T_f=80$.\n3. El resultado pedido es $40\\,\\mathrm{^\\circ C}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s02_c06",
+    "concept": "7.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Una placa de área 2 m² tiene coeficiente superficial $\\beta=2\\times10^{-5}\\,\\mathrm{K^{-1}}$. Se calienta 50 K. En el modelo lineal, ¿cuánto aumenta su área?",
+    "options": [
+      "$0.004\\,\\mathrm{m^2}$",
+      "$0.001\\,\\mathrm{m^2}$",
+      "$0.006\\,\\mathrm{m^2}$",
+      "$0.002\\,\\mathrm{m^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La dilatación superficial usa el área inicial.\n2. Sustituimos los datos: $\\Delta A=A_0\\beta\\Delta T=2(2\\cdot10^{-5})(50)$.\n3. El resultado pedido es $0.002\\,\\mathrm{m^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s02_c07",
+    "concept": "7.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Un sólido isotrópico tiene $\\alpha=10^{-5}\\,\\mathrm{K^{-1}}$. En la aproximación $\\gamma=3\\alpha$, ¿cuál es su coeficiente de dilatación volumétrica?",
+    "options": [
+      "$1.5\\times10^{-5}\\,\\mathrm{K^{-1}}$",
+      "$9\\times10^{-5}\\,\\mathrm{K^{-1}}$",
+      "$3\\times10^{-5}\\,\\mathrm{K^{-1}}$",
+      "$6\\times10^{-5}\\,\\mathrm{K^{-1}}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La relación aproximada combina las tres direcciones espaciales.\n2. Sustituimos los datos: $\\gamma\\approx3\\alpha=3\\cdot10^{-5}$.\n3. El resultado pedido es $3\\times10^{-5}\\,\\mathrm{K^{-1}}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s02_c08",
+    "concept": "7.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Una sustancia libera 800 J al solidificarse. Si su calor latente es 4000 J/kg, ¿qué masa cambia de fase?",
+    "options": [
+      "$0.6\\,\\mathrm{kg}$",
+      "$0.2\\,\\mathrm{kg}$",
+      "$0.4\\,\\mathrm{kg}$",
+      "$0.1\\,\\mathrm{kg}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Usamos el módulo del calor latente liberado.\n2. Sustituimos los datos: $m=|Q|/L_f=800/4000$.\n3. El resultado pedido es $0.2\\,\\mathrm{kg}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s02_c09",
+    "concept": "7.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Dos cuerpos de capacidades caloríficas constantes 100 J/K y 200 J/K están a 20 °C y 50 °C. Se ponen en contacto sin pérdidas ni cambio de fase. ¿Qué temperatura final alcanzan?",
+    "options": [
+      "$40\\,\\mathrm{^\\circ C}$",
+      "$80\\,\\mathrm{^\\circ C}$",
+      "$20\\,\\mathrm{^\\circ C}$",
+      "$120\\,\\mathrm{^\\circ C}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Igualamos el calor ganado y el perdido.\n2. Sustituimos los datos: $100(T_f-20)=200(50-T_f)\\Rightarrow T_f=12000/300$.\n3. El resultado pedido es $40\\,\\mathrm{^\\circ C}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s02_c10",
+    "concept": "7.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Mientras una sustancia pura se funde a presión fija en equilibrio…",
+    "options": [
+      "Su temperatura aumenta necesariamente todo el tiempo.",
+      "El calor puede cambiar la fase sin elevar la temperatura.",
+      "No absorbe energía.",
+      "El calor específico se vuelve cero."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. En la coexistencia de fases la temperatura se mantiene bajo esas condiciones.\n2. La energía se emplea en el cambio de fase.\n3. Se calcula con calor latente, no con un incremento de temperatura.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t07_s02_c11",
+    "concept": "7.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 7,
+    "statement": "Una placa homogénea e isotrópica con un agujero se calienta uniformemente y tiene coeficiente de dilatación positivo. El agujero…",
+    "options": [
+      "Se reduce siempre.",
+      "Se dilata como si estuviera ocupado por el mismo material.",
+      "Conserva exactamente su tamaño para toda temperatura.",
+      "Desaparece al dilatarse la placa."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La dilatación uniforme escala las distancias de toda la placa.\n2. El borde del agujero se desplaza con el material que lo rodea.\n3. El agujero aumenta sus dimensiones bajo las condiciones indicadas.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

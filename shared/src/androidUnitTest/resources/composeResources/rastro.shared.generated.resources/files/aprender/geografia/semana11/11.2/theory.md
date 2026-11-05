@@ -42,36 +42,71 @@ graph TD
 
 
 
-### 3.3. Estructura Poblacional: Pirámides de Edades y Bono Demográfico
+### 3.3. Estructura poblacional: pirámides de edades y bono demográfico
 
-Las **pirámides poblacionales** son histogramas dobles horizontales que grafican la composición por edad (eje vertical) y sexo (eje horizontal: varones a la izquierda, mujeres a la derecha):
+Una pirámide representa la distribución por edad y sexo de una población en una fecha. Se lee como un gráfico de barras enfrentadas, no como una silueta que diagnostica automáticamente al país.
 
+```mermaid
+graph TD
+ ROOT["Leer una pirámide de población"]
+ B1["Leer la fuente"]
+ B1N1["Identificar población, territorio y año; una forma sin fecha no describe el presente."]
+ B1N2["El eje vertical agrupa edades; cada lado representa la distribución por sexo indicada en la fuente."]
+ B1N3["Comprobar si las barras usan personas o porcentajes antes de comparar dos gráficos."]
+ B2["Interpretar la forma"]
+ B2N1["Una base relativamente ancha muestra mayor peso de cohortes jóvenes en esa población."]
+ B2N2["Entrantes y salientes pueden reflejar nacimientos, supervivencia y migraciones de distintas cohortes."]
+ B2N3["La silueta no permite calcular por sí sola una tasa exacta de natalidad ni esperanza de vida."]
+ B3["Comparar modelos"]
+ B3N1["Expansiva, estacionaria y constrictiva son descripciones generales, no etiquetas permanentes de países."]
+ B3N2["La forma nacional puede diferir de la de una ciudad o región del mismo año."]
+ B3N3["Una base estrecha no demuestra por sí sola que el total ya esté disminuyendo."]
+ B4["Relacionar sin confundir indicadores"]
+ B4N1["Los grupos de edad de una razón demográfica deben definirse antes de calcularla."]
+ B4N2["No identificar automáticamente el tramo demográfico 15–64 con la PET de las estadísticas laborales peruanas."]
+ B4N3["Una estructura favorable de edades ofrece posibilidades; el empleo y el bienestar no aparecen automáticamente."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
-       EXPANSIVA (Triangular)                ESTACIONARIA (Campana)                 REGRESIVA (Urna)
-         Países Subdesarrollados                En Transición (Perú)                Países Envejecidos
-                  /\                                    /\                                 /--\
-                 /  \                                  /  \                               /    \
-                /    \                                |    |                              |    |
-               /      \                               |    |                              |    |
-              /        \                              |    |                              \    /
-             /__________\                             \____/                               \__/
-         Base ancha: Alta natalidad             Base moderada: Caída TBN             Base estrecha: Muy baja TBN
-        Cúspide estrecha: Baja esp. vida       Cúspide ensanchándose: Bono          Cúspide ancha: Envejecimiento
-```
 
-1. **Tipos de Pirámides:**
-   * **Pirámide Progresiva o Expansiva (Forma Triangular):** Base muy ancha y cúspide estrecha. Indica altísima natalidad y elevada mortalidad; población eminentemente joven infantil (África subsahariana; Perú en los años 1960).
-   * **Pirámide Estacionaria o de Transición (Forma de Campana):** La base comienza a estrecharse por reducción de la natalidad y se ensancha el cuerpo central. **Estructura actual del Perú**.
-   * **Pirámide Regresiva o Constrictiva (Forma de Urna):** Base más angosta que el centro y cúspide ensanchada. Indica bajísima natalidad y envejecimiento poblacional pronunciado (Japón, Italia, España, Alemania).
-2. **El Bono Demográfico en el Perú:**
-   * Fenómeno demográfico temporal en el cual **el porcentaje de población en edad de trabajar (PET: 15 a 64 años) es significativamente mayor que la población dependiente** (niños menores de 15 años y adultos mayores de 65 años).
-   * La relación de dependencia disminuye. Constituye una ventana histórica de oportunidad para elevar el ahorro, la inversión educativa, la industrialización y la productividad antes de que la sociedad envejezca irreversiblemente (hacia el 2045-2050).
-3. **Estructura Socioeconómica de la Población (PET y PEA):**
-   * **Población en Edad de Trabajar (PET):** Personas de 14\text{ años y más} (según estándar oficial OIT/INEI en el Perú).
-   * **PEA (Población Económicamente Activa):** Quienes están trabajando o buscando activamente empleo:
-     * *PEA Ocupada:* Subdividida en **empleo adecuado** (remuneración por encima del mínimo legal y jornada laboral formal con beneficios) y **subempleo** (por horas o por ingresos insuficientes). En el Perú, la informalidad laboral alcanza al **72\% - 75\% de la PEA**.
-     * *PEA Desocupada (Desempleo abierto).*
-   * **PEI (Población Económicamente Inactiva / No PEA):** Estudiantes que no trabajan, amas de casa dedicadas exclusivamente al hogar, jubilados, pensionistas y personas con discapacidad permanente para el trabajo.
+### Comparar formas sin convertirlas en diagnósticos
+
+| Modelo general | Qué suele observarse | Qué no prueba por sí solo |
+|---|---|---|
+| Expansivo | Base relativamente ancha y mayor peso de edades jóvenes | Una tasa exacta o el nivel económico de un país |
+| Estacionario | Perfil relativamente equilibrado entre varios grupos | Crecimiento exactamente cero o ausencia de migración |
+| Constrictivo o regresivo | Base más estrecha que grupos intermedios | Que el total ya disminuya o que todas las localidades envejezcan igual |
+
+**Importante:** los modelos ayudan a describir. Una pirámide real necesita cifras, escala, año y fuente. No se asigna al Perú una forma «actual» a partir de un dibujo sin datos.
+
+### Bono demográfico: oportunidad condicionada
+
+La relación entre grupos de edad puede reducir la proporción de dependientes demográficos respecto del grupo usado como referencia. Para calcularla, declara primero los intervalos de edad; por ejemplo, algunos análisis comparan menores de 15 y personas de 65 o más con el grupo de 15–64. Esa convención no afirma que toda persona de un grupo trabaje o dependa económicamente de otra.
+
+Una estructura favorable puede facilitar mejoras de ahorro, educación o productividad si existen condiciones para aprovecharla. **No garantiza empleo ni un aumento automático del bienestar.** La duración de esa oportunidad requiere datos y proyecciones con fecha, no una fecha de término universal.
+
+### Edad, participación laboral y empleo
+
+- **PET:** es una definición estadística de población en edad de trabajar. En las estadísticas laborales peruanas citadas por el INEI se considera a quienes tienen **14 años o más**; no confundirla con el tramo demográfico 15–64 ni con una autorización individual para trabajar.
+- **PEA:** reúne población ocupada y desocupada conforme a los criterios de la encuesta y su periodo de referencia.
+- **Ocupación y desocupación:** no basta preguntar si alguien tiene ingresos. Deben aplicarse los criterios de trabajo, búsqueda y disponibilidad de la fuente.
+- **No PEA:** no se decide solo por ser estudiante, persona jubilada o por una condición de discapacidad. Una persona de esas categorías puede participar en el mercado laboral; hay que comprobar su situación según la encuesta.
+
+**Importante:** empleo adecuado, subempleo e informalidad son conceptos distintos. Una cifra requiere periodo, ámbito y definición; no se deduce de la forma de la pirámide.
 
 ---
 

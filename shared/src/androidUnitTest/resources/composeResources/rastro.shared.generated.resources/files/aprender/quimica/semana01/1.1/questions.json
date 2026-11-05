@@ -1,1 +1,200 @@
-[{"concept":"1.1.1","correctIndex":0,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t01_s01_c01","options":["Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":1,"statement":"Frente al distractor frecuente de examen: \"Trampa 1: \"El agua potable o destilada es lo mismo\". FALSO. El agua destilada es una sustancia pura compuesta (H_2O), mientras que el agua potable o mineral es una mezcla homogén\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.2","correctIndex":1,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t01_s01_c02","options":["Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":1,"statement":"Frente al distractor frecuente de examen: \"Trampa 2: \"Los alótropos son compuestos químicos\". FALSO. Los alótropos son sustancias simples (elementos) formadas por el mismo átomo pero diferente estructura geométrica o atomic\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t01_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t01_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t01_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t01_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t01_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t01_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t01_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"1.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t01_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "1.1.1",
+    "correctIndex": 0,
+    "explanation": "1. Una sustancia simple contiene átomos de un único elemento.\n2. O₂ contiene solo oxígeno, aunque cada molécula tenga dos átomos.\n3. Las otras opciones combinan elementos distintos y son compuestos.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "quim_t01_s01_c01",
+    "options": [
+      "Oxígeno molecular, O₂",
+      "Agua pura, H₂O",
+      "Cloruro de sodio, NaCl",
+      "Dióxido de carbono, CO₂"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Cuál es una sustancia simple formada por un solo elemento químico?",
+    "subject": "quimica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.2",
+    "correctIndex": 1,
+    "explanation": "1. Un compuesto tiene elementos unidos químicamente en proporciones definidas.\n2. El agua pura contiene hidrógeno y oxígeno en la proporción H₂O.\n3. Las otras alternativas son mezclas de sustancias.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "quim_t01_s01_c02",
+    "options": [
+      "Aire filtrado",
+      "Agua pura",
+      "Agua con arena",
+      "Latón"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Cuál de los siguientes materiales es un compuesto químico puro?",
+    "subject": "quimica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.3",
+    "correctIndex": 2,
+    "explanation": "1. La muestra contiene dos sustancias: agua y sal.\n2. La sal está distribuida uniformemente y hay una fase.\n3. Es una mezcla homogénea o solución; disolver no crea un compuesto nuevo de fórmula fija.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "quim_t01_s01_c03",
+    "options": [
+      "Elemento",
+      "Compuesto nuevo de sal y agua",
+      "Mezcla homogénea",
+      "Mezcla de dos fases visibles"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Una muestra de agua contiene sal completamente disuelta, sin material sedimentado. A simple vista presenta una sola fase. ¿Cómo se clasifica?",
+    "subject": "quimica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.4",
+    "correctIndex": 3,
+    "explanation": "1. La arena no se distribuye molecularmente en el agua.\n2. Se distinguen componentes y fases en la muestra.\n3. Por eso se trata de una mezcla heterogénea.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "quim_t01_s01_c04",
+    "options": [
+      "Sustancia simple",
+      "Compuesto puro",
+      "Solución homogénea",
+      "Mezcla heterogénea"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Se mezclan agua y arena insoluble, y la arena se deposita en el fondo. ¿Qué tipo de sistema resulta?",
+    "subject": "quimica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.5",
+    "correctIndex": 0,
+    "explanation": "1. Los granos de arena son sólidos insolubles.\n2. Un filtro adecuado retiene el sólido mientras el agua atraviesa sus poros.\n3. El procedimiento es la filtración, un método físico de separación.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "quim_t01_s01_c05",
+    "options": [
+      "Filtración",
+      "Electrólisis",
+      "Combustión",
+      "Fusión nuclear"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Qué método permite separar arena insoluble del agua usando un papel poroso adecuado?",
+    "subject": "quimica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.6",
+    "correctIndex": 1,
+    "explanation": "1. El aire contiene varias sustancias químicas.\n2. En las condiciones descritas forman una fase gaseosa uniforme.\n3. Es una mezcla homogénea, no un compuesto de fórmula fija.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "quim_t01_s01_c06",
+    "options": [
+      "Compuesto de proporción fija",
+      "Mezcla homogénea gaseosa",
+      "Elemento gaseoso",
+      "Mezcla con fases sólidas visibles"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "El aire seco y filtrado contiene nitrógeno, oxígeno y otros gases distribuidos uniformemente. ¿Cómo se clasifica?",
+    "subject": "quimica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.7",
+    "correctIndex": 2,
+    "explanation": "1. Los componentes de una mezcla se asocian físicamente.\n2. Su proporción puede cambiar sin crear necesariamente una sustancia nueva.\n3. Un compuesto puro tiene una composición definida.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "quim_t01_s01_c07",
+    "options": [
+      "La mezcla siempre es sólida",
+      "El compuesto puede tener cualquier proporción de elementos",
+      "La mezcla puede tener proporciones variables de sus componentes",
+      "Toda mezcla tiene una fórmula química fija"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Qué característica distingue una mezcla de un compuesto puro?",
+    "subject": "quimica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.8",
+    "correctIndex": 3,
+    "explanation": "1. En ambas fórmulas solo aparece el elemento oxígeno.\n2. Las moléculas contienen dos y tres átomos, respectivamente.\n3. Son formas alotrópicas del oxígeno, no compuestos de elementos distintos.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "quim_t01_s01_c08",
+    "options": [
+      "Son mezclas de distintos elementos",
+      "O₃ es un compuesto de oxígeno e hidrógeno",
+      "Tienen moléculas idénticas",
+      "Son formas diferentes del mismo elemento oxígeno"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Qué afirmación sobre O₂ y O₃ es correcta?",
+    "subject": "quimica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.9",
+    "correctIndex": 0,
+    "explanation": "1. El agua es un compuesto y sus elementos están unidos químicamente.\n2. Filtrar o decantar no rompe esos enlaces.\n3. La electrólisis aporta energía para producir hidrógeno y oxígeno.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "quim_t01_s01_c09",
+    "options": [
+      "Mediante electrólisis en condiciones apropiadas",
+      "Solo filtrándola con papel",
+      "Solo decantándola",
+      "Solo separándola con un imán"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "¿Cómo puede descomponerse químicamente el agua pura en sustancias más simples?",
+    "subject": "quimica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.10",
+    "correctIndex": 1,
+    "explanation": "1. La aleación reúne más de una sustancia o elemento en proporciones variables.\n2. No se describe mediante una fórmula fija como la de un compuesto puro.\n3. Se clasifica como mezcla sólida; su uniformidad detallada puede depender de composición y temperatura.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "quim_t01_s01_c10",
+    "options": [
+      "Elemento",
+      "Mezcla sólida",
+      "Compuesto de fórmula fija",
+      "Sustancia simple de zinc"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "El latón es una aleación de cobre y zinc con proporciones que pueden variar. ¿Qué clasificación corresponde en el tratamiento escolar habitual?",
+    "subject": "quimica",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "1.1.11",
+    "correctIndex": 2,
+    "explanation": "1. Tanto el hielo como el líquido son H₂O: hay un solo componente químico.\n2. Sus estados sólido y líquido constituyen fases diferentes.\n3. La muestra tiene un componente y dos fases; número de fases no significa número de sustancias.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_03.md",
+    "id": "quim_t01_s01_c11",
+    "options": [
+      "Dos componentes y una fase",
+      "Dos componentes y dos fases",
+      "Un componente y dos fases",
+      "Un componente y una fase"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 1,
+    "statement": "Una muestra contiene agua líquida y hielo, ambos puros. ¿Cuántos componentes químicos y fases hay?",
+    "subject": "quimica",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

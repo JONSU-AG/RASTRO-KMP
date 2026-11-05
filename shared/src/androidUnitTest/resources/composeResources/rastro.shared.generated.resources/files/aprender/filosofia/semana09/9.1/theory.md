@@ -6,25 +6,41 @@
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE LA ESTÉTICA
 
-```
-                               ESTÉTICA Y TEORÍA DEL ARTE
-                                           │
-         ┌──────────────────┬──────────────┴──────────────┬──────────────────┐
-         ▼                  ▼                             ▼                  ▼
-    EXPERIENCIA Y      CATEGORÍAS                    CONCEPCIONES        EL ARTE EN LA
-    JUICIO ESTÉTICO    ESTÉTICAS                     HISTÓRICAS DEL ARTE  ERA INDUSTRIAL
-         │                  │                             │                  │
-• Actitud estética   • Lo Bello: Armonía           • Mímesis:          • Walter Benjamin:
-  (Contemplación       y proporción                  - Platón (Copia     - Reproducibilidad
-  desinteresada:     • Lo Sublime: Inconmen-           de copias)          técnica
-  Kant)                surable y sobrecogedor        - Aristóteles       - Pérdida del "Aura"
-• Juicio de gusto:   • Lo Trágico: Conflicto           (Catarsis)      • Theodor Adorno:
-  Universalidad sin    y catarsis                  • Desinterés:         - Industria cultural
-  concepto           • Lo Cómico / Ridículo:         Kant              • Arthur Danto:
-• Objeto estético vs.  Ruptura de expectativa      • Manifestación de    - Fin del arte
-  utilitario         • Lo Feo y lo Grotesco          la Idea: Hegel        (Transfiguración
-                                                   • Desocultamiento:      del lugar común)
-                                                     Heidegger
+```mermaid
+graph TD
+ ROOT["Estética, experiencia y arte"]
+ B1["Experiencia y juicio"]
+ B1N1["Distinguir experiencia estética, juicio sobre una obra y uso práctico de un objeto."]
+ B1N2["En Kant, el desinterés no significa apatía ni ausencia de placer."]
+ B1N3["La pretensión de universalidad del juicio de gusto no equivale a una encuesta donde todos coinciden."]
+ B2["Categorías estéticas"]
+ B2N1["Bello y sublime reciben interpretaciones distintas según el autor; no reducir toda belleza a una sola proporción."]
+ B2N2["Lo trágico, lo cómico, lo feo y lo grotesco permiten describir experiencias y formas diferentes."]
+ B2N3["Reconocer una categoría exige examinar la obra y el contexto, no solo una reacción agradable o desagradable."]
+ B3["Concepciones del arte"]
+ B3N1["Platón y Aristóteles no atribuyen exactamente el mismo sentido y valoración a la mímesis."]
+ B3N2["Kant, Hegel y Heidegger plantean problemas diferentes; no convertir sus conceptos en una definición única."]
+ B3N3["Una teoría del arte debe distinguirse de una preferencia individual por una obra."]
+ B4["Arte y transformaciones históricas"]
+ B4N1["Benjamin: analizar cómo la reproducción técnica modifica condiciones de experiencia y recepción."]
+ B4N2["Adorno: examinar la crítica de la industria cultural sin reducirla a que toda obra popular carece de valor."]
+ B4N3["Danto: el fin del arte no significa que dejen de producirse obras; se refiere a una determinada narrativa histórica."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---
@@ -269,3 +285,15 @@ E) Confirman el principio platónico de que el arte es la máxima manifestación
    - La reproducción técnica masiva (imprenta, fotografía, cine digital) **destruye el aura**, no la potencia. Si una opción dice *"La fotografía aumentó el aura de la Mona Lisa"*, es un error teórico garrafal.
 
 ---
+
+
+### Identificar qué se está afirmando sobre el arte
+
+| Referencia | Idea orientativa | Interpretación que debe evitarse |
+|---|---|---|
+| Kant | Desinterés y juicio de gusto | Desinterés como indiferencia o ausencia de placer |
+| Benjamin | Reproducción técnica y experiencia | Toda reproducción carece automáticamente de interés artístico |
+| Adorno | Crítica de la industria cultural | Un criterio mecánico para despreciar cualquier gusto popular |
+| Danto | Transformación de una narrativa histórica del arte | Después de cierta fecha ya no se producen obras |
+
+Los conceptos se estudian dentro de la propuesta de cada autor; la tabla no ofrece una definición universal de arte.

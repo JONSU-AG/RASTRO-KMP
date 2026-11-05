@@ -1,300 +1,164 @@
-# TEMA I: Relaciones Semánticas Básicas
+# Distinguir relaciones semánticas
 
----
+Para clasificar un par de palabras, primero identifica qué se está comparando: sentidos de una palabra, formas escritas, pronunciaciones, clases o partes de un objeto. Dos términos pueden estar relacionados de varias maneras, pero la pregunta debe delimitar el aspecto que evalúa.
 
+Esta lección utiliza definiciones y ejemplos comprobados, junto con casos ficticios que fijan sus propias categorías. No se pide inventar etimologías ni juzgar una pronunciación regional como inferior. La explicación debe mostrar el criterio que permite distinguir las opciones.
 
+## Mapa de conceptos
 
-## 2. MAPA TAXONÓMICO Y ONTOLOGÍA
-
+```mermaid
+graph TD
+ ROOT["Relaciones semánticas en contexto"]
+ B1["Semejanza y oposición"]
+ B1N1["Sinonimia contextual: comprobar que la sustitución conserve el sentido y encaje en la oración."]
+ B1N2["Antonimia: identificar la dimensión de contraste; una oposición gradual no equivale a exclusión absoluta."]
+ B1N3["El registro y las connotaciones pueden impedir una sustitución aunque dos palabras sean próximas."]
+ B2["Pluralidad de significados"]
+ B2N1["Polisemia: distintos sentidos relacionados de una unidad léxica."]
+ B2N2["Homonimia: coincidencia formal de unidades distintas; consultar el diccionario y la historia cuando sea necesario."]
+ B2N3["Homófonos: coinciden en pronunciación; homógrafos: coinciden en escritura."]
+ B3["Inclusión y precisión"]
+ B3N1["Un hiperónimo expresa una categoría más amplia; un hipónimo designa una clase más específica."]
+ B3N2["No confundir pertenencia a una categoría con ser una parte de un objeto."]
+ B3N3["Hacer, tener y decir no son palabras prohibidas; sustituirlas cuando el contexto exija mayor precisión."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
 ```
-                          RELACIONES SEMÁNTICAS
-                                    │
-          ┌─────────────────────────┼─────────────────────────┐
-          ▼                         ▼                         ▼
-   IDENTIDAD / OPOSICIÓN       PLURALIDAD DE SENTIDO       JERARQUÍA Y PRECISIÓN
-          │                         │                         │
-    ┌─────┴─────┐             ┌─────┴─────┐             ┌─────┴─────┐
-    ▼           ▼             ▼           ▼             ▼           ▼
-Sinonimia    Antonimia     Polisemia   Homonimia    Hiperonimia/  Precisión
-Contextual   Contextual    (Misma      (Etimologías  Hiponimia    Léxica
-(Semejanza   (Oposición    raíz, semas  distintas:   (Género/     (Cero verbos
-de semas)    incompat.)    comunes)    homófonos/    Especie)     comodín)
-                                       homógrafos)
-```
 
+## 1. Polisemia y homonimia
 
+La polisemia se refiere a varios sentidos de una unidad léxica. La homonimia considera unidades distintas que coinciden formalmente. Para decidir entre ambas, pueden ser útiles las acepciones, las entradas del diccionario y la información histórica; una coincidencia de letras no basta por sí sola.
 
-### Ontología del Signo Lingüístico (Saussure / Coseriu)
-- **Significante:** Imagen acústica o representación gráfica de la palabra (ejemplo: `/k-á-s-a/`).
-- **Significado:** Concepto o imagen mental abstracta conformada por un haz de rasgos distintivos mínimos llamados **semas**.
-- **Semema:** Conjunto de semas constitutivos de un lexema.
-- **Sema Denotativo:** Rasgo semántico objetivo, universal, estable y socializado (definición de la RAE).
-- **Sema Connotativo:** Rasgo semántico subjetivo, figurado, contextual o valorativo (añadido cultural o emocional).
-- **Campo Semántico:** Red de palabras de la misma categoría gramatical que comparten un sema genérico común (archisemema).
+| Aspecto que se revisa | Pregunta útil |
+|---|---|
+| Sentidos | ¿Se analizan acepciones de una unidad o unidades distintas? |
+| Forma escrita | ¿Las palabras se escriben igual o solo se parecen? |
+| Pronunciación | ¿Suenan igual en la variedad que se considera? |
+| Información histórica | ¿El origen está documentado o se está suponiendo? |
 
----
+No se debe definir la homonimia únicamente como una diferencia obligatoria de origen en todos los enfoques. Tampoco se afirma que cualquier par con significados alejados tenga necesariamente raíces distintas. Las clasificaciones requieren explicar qué análisis se está usando y qué datos aporta el caso.
 
+La organización de un diccionario es evidencia útil, pero no reemplaza todo el razonamiento. Algunas decisiones lexicográficas pueden variar entre obras. En un ejercicio escolar se puede indicar expresamente la información de la entrada para que el estudiante no dependa de memorizar una etimología poco conocida.
 
+## 2. Varios sentidos de copa
 
-## 3. DESARROLLO TEÓRICO FORMAL
+El DLE reúne bajo copa el vaso con pie y la parte superior formada por ramas y hojas de un árbol. En la actividad de este nivel se consideran sentidos distintos de esa unidad: un ejemplo de polisemia.
 
+**Ejemplo resuelto:** «Dejó la copa sobre la mesa» y «La cometa se enganchó en la copa del árbol» no usan copa con el mismo sentido. La primera oración orienta hacia el recipiente; la segunda explicita el árbol. Reconocer la pluralidad de sentidos no equivale a afirmar que el recipiente sea una rama ni que las palabras sean antónimas.
 
+No hace falta suponer que la parte superior de todo árbol tiene una forma cóncava idéntica a la de un recipiente. Una explicación de polisemia debe evitar rasgos físicos inventados que la definición no requiere.
 
-### 3.2 La Antonimia Contextual y sus Clases
-La antonimia no es un mero contraste mecánico; requiere compartir el mismo campo semántico pero ubicarse en extremos opuestos del rasgo dimensional:
-1. **Antonimia Gradual:** Entre los dos polos existen términos intermedios:
-   - *Gélido / Frío / Tibio / Cálido / Tórrido*.
-2. **Antonimia Complementaria (Excluyente):** La afirmación de un término implica necesariamente la negación del otro; no hay término medio:
-   - *Vivo / Muerto*, *Soltero / Casado*, *Legal / Ilegal*.
-3. **Antonimia Recíproca (Inversa):** La existencia de un concepto exige la existencia simultánea del opuesto desde otra perspectiva:
-   - *Comprar / Vender*, *Profesor / Alumno*, *Pagar / Cobrar*.
+Si el contexto fuera «Ganó la copa del torneo», aparecería otro uso que habría que identificar. La respuesta cambia con las pistas del enunciado: no se elige automáticamente la primera acepción del diccionario ni se ignora la consulta por estudiar significado contextual.
 
+## 3. Comprobar el ejemplo de gato
 
+El animal y el aparato para levantar pesos figuran entre los sentidos de gato en la entrada correspondiente del DLE. No es correcto atribuirles orígenes distintos y entradas separadas sin que la fuente lo establezca. En este nivel se retira ese ejemplo como prueba de una supuesta homonimia de distinto origen.
 
-### 3.3 Polisemia vs. Homonimia (Distinción Rigurosa)
+Esto no significa que todo empleo de gato tenga que analizarse de la misma manera en cualquier obra. La observación se refiere al par animal y herramienta y a la información comprobada. Si aparece otra entrada numerada para otro uso, hay que leer qué designa, en vez de asumir que corresponde al par que interesa.
 
-| Criterio Distintivo | Polisemia | Homonimia |
-| :--- | :--- | :--- |
-| **Origen Etimológico** | **Único** (Una sola raíz histórica que se diversificó). | **Múltiple** (Dos raíces históricas distintas que convergieron fonéticamente por evolución casual). |
-| **Vínculo Semántico** | Existe al menos un **sema común** (metáfora o metonimia). | **Cero relación semántica** (coincidencia formal pura). |
-| **Entrada en Diccionario** | Una **única entrada** lexicográfica con múltiples acepciones numeradas (1, 2, 3\dots). | **Múltiples entradas** independientes señaladas con superíndice (banco^1, banco^2). |
-| **Ejemplo** | *Pico* (de ave, de montaña, herramienta: forma puntiaguda). | *Vela* (vela^1: tela de barco, del latín *vela*; vela^2: cilindro de cera, del latín *vigilare*). |
+**Procedimiento de consulta:** localiza la entrada, identifica las acepciones del ejemplo y comprueba a qué unidad pertenecen. No uses solo el hecho de que la página muestre varios resultados o superíndices. Esa revisión evita justificar una clasificación con datos que pertenecen a otra acepción.
 
-#### Tipos de Homonimia
-- **Homófonas:** Igual pronunciación, diferente escritura y significado (*tuvo* del verbo tener / *tubo* cilindro hueco).
-- **Homógrafas:** Idéntica pronunciación y grafía, pero significado y etimología totalmente disjuntos (*lima* fruta cítrica / *lima* herramienta de acero).
+## 4. Homografía con información comprobada
 
+La homografía se refiere a coincidencia de escritura. Para practicarla aquí se utilizan las dos unidades hoz que el DLE distingue: el instrumento para segar y la angostura de un valle. La fuente registra para ellas orígenes latinos distintos.
 
+**Ejemplo resuelto:** «Afiló la hoz para segar» y «El camino atraviesa una hoz del valle». La forma escrita coincide. La diferencia de unidades y la información histórica están dadas y comprobadas; por eso se reconoce homografía en el caso.
 
-### 3.4 Precisión Léxica y Erradicación de Proformas
-La **precisión léxica** evalúa la capacidad del estudiante para desterrar términos baúl o hiperónimos comodines, sustituyéndolos por verbos y sustantivos que posean el semema exacto de la acción:
+El instrumento no es una clase de valle ni la angostura es un tipo de herramienta. No se trata de hiponimia. Tampoco son sinónimos porque la misma forma aparezca dos veces: sus usos en esas oraciones son distintos.
 
-| Expresión Vulgar o Comodín | Corrección con Precisión Léxica Universitaria | Justificación Semántica del Semema |
-| :--- | :--- | :--- |
-| *Hacer* una carta / un informe | **Redactar** una carta / un informe | Operación de poner por escrito pensamientos ordenados. |
-| *Hacer* una estatua / escultura | **Esculpir** / **Cincelar** una escultura | Labrado de material sólido mediante cincel o molde. |
-| *Tener* una enfermedad | **Padecer** / **Afligirse de** una enfermedad | Experiencia pasiva y dolorosa de un estado patológico. |
-| *Poner* dinero en el banco | **Depositar** / **Consignar** fondos | Operación financiera reglada de custodia monetaria. |
-| *Decir* un poema | **Recitar** / **Declamar** un poema | Emisión vocal modulada con arte e impostación poética. |
-| La *cosa* que se descubrió | El **hallazgo** / El **vestigio** | Sustantivo exacto para restos arqueológicos o científicos. |
+No se inventa una transcripción de pronunciación para demostrar coincidencia gráfica. Si el ejercicio pregunta solo por escritura, basta mostrar las formas. El nombre de la relación debe responder al aspecto que la consigna pide comparar.
 
----
+## 5. Homofonía y variedad de pronunciación
 
+La homofonía es coincidencia de pronunciación. Si un ejemplo depende de un rasgo regional, la consigna debe indicarlo. En una pronunciación yeísta, ll e y no se distinguen; por eso baya y valla pueden sonar igual aunque se escriban de modo distinto.
 
+**Ejemplo resuelto:** La consigna especifica pronunciación yeísta y compara baya y valla. La respuesta es homofonía: se evalúa el sonido. No es homografía porque las letras no coinciden. Tampoco hay sinonimia: la coincidencia sonora no iguala los significados.
 
-## 4. FORMULARIO MAESTRO Y MATRIZ DE RELACIONES SEMÁNTICAS
+En variedades que distinguen ll e y, la misma conclusión no se aplica de esa manera. Decir que la igualdad se da en una única pronunciación estándar de todo el español borra esa diferencia. La norma admite el yeísmo; el análisis no necesita tratar una variedad como una deficiencia.
 
-| Relación Semántica | Fórmula de Componentes | Criterio de Resolución en Examen |
-| :--- | :--- | :--- |
-| **Sinonimia Contextual** | S_1 \approx S_2 \iff \text{Semas}(S_1) \cap \text{Contexto} = \text{Semas}(S_2) | Verificar que conserve la categoría gramatical y el registro formal. |
-| **Antonimia Contextual** | A_1 \leftrightarrow \neg A_2 \iff \text{Eje Semántico Idéntico} \land \text{Polaridad Inversa} | Detectar si la oposición es absoluta o gradual según la oración. |
-| **Hiperonimia** | H_{iper} \supset H_{ipo} | El hiperónimo nombra al género o clase mayor (*Cánido \supset Perro*). |
-| **Hiponimia** | H_{ipo} \subset H_{iper} | El hipónimo nombra a la especie o elemento particular (*Loro \subset Ave*). |
-| **Cohiponimia** | H_{ipo1} \sim H_{ipo2} \subset H_{iper} | Dos elementos hermanos que comparten el mismo género (*León y Tigre*). |
-| **Holonimia / Meronimia** | \text{Holo} \supset \text{Mero} (Todo/Parte) | El merónimo es una parte física constitutiva (*Rueda \subset Bicicleta*). |
+| Comparación | Criterio |
+|---|---|
+| Misma escritura | Homografía, si se comparan las unidades pertinentes |
+| Mismo sonido | Homofonía en la pronunciación considerada |
+| Forma parecida sin identidad requerida | Puede corresponder a paronimia |
+| Sentidos próximos en una oración | Se evalúa una relación de significado, no solo la forma |
 
----
+Sonido y escritura no deben confundirse. Un estudiante puede reconocer la grafía correcta sin pronunciar una distinción regional particular. La actividad debe indicar qué dimensión evalúa y no convertir la variación en un error de capacidad lingüística.
 
+## 6. Paronimia: semejanza que puede inducir confusión
 
+Los parónimos presentan semejanzas de forma o sonido que conviene distinguir en el uso. No se exige que difieran siempre en un único fonema, que tengan idéntico origen ni que sus significados estén totalmente alejados en todos los casos.
 
-### Mnemotecnia 2: "HI-PO va a la Especie, HI-PER abre el Universo"
-- **HI-PO** (Pequeño, específico): Hipónimo = la especie (*Girasol*).
-- **HI-PER** (Grande, amplio): Hiperónimo = el género abarcador (*Flor*).
+Actitud y aptitud sirven para practicar la diferencia. Actitud puede referirse a disposición o postura; aptitud, a capacidad o idoneidad. La semejanza de escritura no permite intercambiarlas cuando el texto señala uno de esos aspectos.
 
----
+**Ejemplo resuelto:** «La prueba evalúa la ___ para realizar la tarea, no la disposición de ánimo». Aptitud corresponde a la capacidad indicada. Actitud cambiaría la dimensión evaluada. Ninguna de las dos es por ello el antónimo de la otra: capacidad y disposición no son extremos de una misma escala.
 
+La explicación no necesita declarar conceptos radicalmente ajenos. Una persona puede tener aptitud para una actividad y mostrar una actitud desfavorable ante ella. Ambos aspectos pueden coexistir y se estudian como distintos, no como mutuamente excluyentes.
 
+## 7. Hiperonimia e hiponimia: clases incluidas
 
-### Hack 2: Rastreo del Rastro Semántico (Semántica Semiótica)
-En oraciones con ambigüedad léxica:
-- Busca en la oración las palabras "escolta" o "adjetivos satélites":
-  - *"El ministro presentó su renuncia irrevocable ante el **despacho** presidencial"*.
-  - Las palabras *ministro*, *renuncia* y *presidencial* fijan que *despacho* significa oficina de gobierno y no el acto comercial de enviar encomiendas.
+Un hiperónimo nombra una categoría más amplia; un hipónimo, una clase incluida en ella. En el sentido indicado por la actividad, ave es hiperónimo de paloma y paloma es hipónimo de ave.
 
----
+**Prueba de inclusión:** una paloma es un ave; no toda ave es una paloma. Esa relación es distinta de afirmar que una paloma sea una parte de un ave. La comparación se refiere a clases, no al despiece de un individuo.
 
+| Sentido fijado en la actividad | Relación |
+|---|---|
+| Ave respecto de paloma | Hiperonimia |
+| Paloma respecto de ave | Hiponimia |
+| Rueda respecto de bicicleta | Parte y todo, no inclusión de clases |
 
+Las palabras género y especie pueden usarse en explicaciones escolares de categorías, pero no deben hacer creer que todo hipónimo es una especie científica única. Paloma no necesita designar un solo taxón para ilustrar esta relación de significado. Cuando una actividad sí utiliza una clasificación científica, su nivel y sus nombres deben verificarse por separado.
 
-## 7. ZONA DE TRAMPAS Y DISTRACTORES ("¡PELIGRO EXAMEN!")
+Tampoco se debe tratar todo ejemplar concreto como si fuera una subclase. Una clase y una instancia particular plantean otra distinción. La pregunta de este nivel explicita que compara una clase general y otra incluida para no mezclar relaciones.
 
-> [!WARNING]
-> **Trampa 1: El Falso Amigo Etimológico o Parónimo Traicionero**
-> Distinguir rigurosamente vocablos de sonido o grafía semejante pero significado abismalmente dispar:
-> - *Afecto* (cariño) vs. *Efecto* (consecuencia).
-> - *Incipiente* (que recién empieza) vs. *Insipiente* (ignorante, falto de sabiduría).
-> - *Aptitud* (capacidad o destreza) vs. *Actitud* (disposición de ánimo o postura).
-> - *Flagrante* (evidente en el acto) vs. *Fragante* (oloroso, aromático).
+## 8. Cohiponimia: compartir una categoría
 
-> [!CAUTION]
-> **Trampa 2: La Metáfora Fosilizada tomada como Homonimia**
-> En preguntas de polisemia vs. homonimia, muchos postulantes marcan erróneamente que *pata de una mesa* y *pata de un perro* son homónimos. **¡FALSO!** Es un caso puro de **polisemia por catacresis** (metáfora estructural donde se extiende el nombre de la extremidad animal a un objeto inanimado por analogía de soporte).
+Los cohipónimos se comparan respecto de un hiperónimo común. En el ejemplo, cobre, plata y oro se toman en el sentido de sustancias metálicas y se agrupan bajo metal. Comparten esa categoría, pero no son sinónimos ni partes de una sola pieza.
 
----
+**Ejemplo resuelto:** Si la consigna presenta cobre, plata y oro bajo metal, se reconoce cohiponimia. El criterio no es que tengan el mismo color ni que deban usarse juntos. La relación se define por la clasificación aportada.
 
+Una palabra puede tener otros usos. Plata puede aparecer coloquialmente con sentido de dinero; eso no convierte el dinero en una sustancia metálica en toda frase. Antes de clasificar el par, fija la acepción que realmente se está usando.
 
+## 9. Oposición gradual y complementaria
 
-### Ejercicio 4 (Nivel Avanzado DECO: Polisemia vs. Homonimia y Discriminación Semántica)
-**Enunciado (Tipo San Marcos DECO / UNSA):** Analice los siguientes enunciados:
-I. *"El campesino afiló la **hoz** antes de iniciar la cosecha de trigo."*
-II. *"El caudaloso río atravesó una profunda **hoz** en la cordillera andina."*
-III. *"La cantante de ópera deslumbró con una **voz** potente y melodiosa."*
-Respecto a las palabras en negrita de los enunciados I y II, es correcto afirmar que:
-A) Son palabras polisémicas, pues ambas se refieren a objetos de corte.  
-B) Son homógrafas puras con etimologías completamente disjuntas.  
-C) Son términos cohipónimos de la categoría accidentes geográficos.  
-D) Son parónimas respecto a la palabra del enunciado III.  
-E) Constituyen un caso de antonimia complementaria.  
+Una oposición gradual admite valores intermedios en la dimensión considerada. Frío y caliente pueden contrastar sin que todo lo no frío sea caliente. El punto de referencia también importa: una temperatura puede describirse de manera distinta según lo que se compare.
 
-**Resolución Paso a Paso:**
-1. Analizamos el vocablo del enunciado I:
-   - *Hoz* (herramienta de labranza): Proviene del latín *falx, falcis* (instrumento curvo de hierro).
-2. Analizamos el vocablo del enunciado II:
-   - *Hoz* (accidente geográfico: garganta profunda o cañón estrecho producido por un río): Proviene del latín *fauces* (garganta, fauces).
-3. Ambos términos coinciden de manera idéntica en su grafía y fonología (`/o-z/`), pero provienen de dos raíces etimológicas latinas totalmente distintas (*falx* vs. *fauces*) y no comparten semas comunes originales.
-4. Por definición lingüística, se trata de un caso paradigmático de **homonimia homógrafa**.
-5. Por lo tanto, la proposición correcta es que son **homógrafas puras con etimologías completamente disjuntas**.
-**Respuesta:** B
+Para practicar complementariedad sin introducir situaciones biológicas o jurídicas dudosas, se define un sistema ficticio de archivos con exactamente dos estados: abierto y cerrado. La consigna establece que no hay otra etiqueta y que cada archivo tiene solo una en ese momento.
 
----
+**Resolución:** dentro de ese sistema, negar abierto lleva a cerrado y viceversa. Las categorías son excluyentes y cubren todos los estados permitidos por la regla. La conclusión no se extiende a puertas entreabiertas, procesos en transición ni otros usos de esas palabras.
 
+No basta afirmar que dos propiedades no pueden coexistir para que sean complementarias: también deben cubrir los casos del universo definido. Dos etiquetas podrían excluirse y aun dejar una tercera posibilidad. La consigna especifica ambas condiciones para que la respuesta quede justificada.
 
+## 10. Meronimia y holonimia: parte y todo
 
-## 10. GLOSARIO DE TÉRMINOS CLAVE
+En el sentido físico del ejemplo, una rueda forma parte de una bicicleta. Rueda funciona como merónimo respecto de bicicleta y bicicleta como holónimo respecto de rueda. Esa dirección debe conservarse al explicar la respuesta.
 
-1. **Semema:** Conjunto estructurado de semas que configura el significado total de una palabra en un estado de lengua.
-2. **Sema:** Unidad mínima de significado distintivo no divisible (átomo semántico).
-3. **Sinonimia Contextual:** Equivalencia semántica que solo se activa y valida dentro de un determinado marco discursivo.
-4. **Antonimia Excluyente:** Oposición binaria radical donde la afirmación de un término impone la negación categórica del otro.
-5. **Polisemia:** Propiedad de un signo lingüístico de poseer múltiples acepciones emanadas de una raíz etimológica común.
-6. **Homonimia:** Coincidencia fónica o gráfica accidental entre dos vocablos con orígenes históricos y significados totalmente ajenos.
-7. **Homofonía:** Identidad acústica entre palabras que presentan grafías diferenciadas (*echo / hecho*).
-8. **Homografía:** Identidad gráfica total entre palabras de significado y etimología distinta (*vino* sustantivo / *vino* verbo).
-9. **Hiperónimo:** Término genérico cuyo campo semántico engloba a otros términos más específicos (hipónimos).
-10. **Catacresis:** Metáfora incorporada al léxico común para designar una realidad que carece de nombre propio (*pie de lámpara*, *ojo de aguja*).
+**Contraste resuelto:** «Una paloma es un ave» expresa pertenencia a una clase; «una rueda es parte de una bicicleta» expresa una relación entre parte y objeto. Una rueda no es una especie de bicicleta. Compartir un esquema de inclusión dibujado no convierte ambas relaciones en idénticas.
 
----
+| Pregunta | Relación que ayuda a reconocer |
+|---|---|
+| ¿Es un tipo de la clase mencionada? | Hiponimia respecto de un hiperónimo |
+| ¿Forma parte del objeto mencionado? | Meronimia respecto de un holónimo |
+| ¿Comparo otras clases bajo una misma categoría? | Cohiponimia |
 
+No toda relación de parte y todo exige formular una afirmación universal sobre todos los objetos posibles. El ejercicio fija un sentido físico corriente y permite distinguirlo de clases. Otros sentidos, como partes conceptuales o componentes de actividades, necesitan su propio contexto.
 
+## 11. Importante
 
-## 11. BANCO DE FLASHCARDS (Q/A)
+> **Importante:** Fija el criterio antes de nombrar la relación. La misma escritura no prueba un origen distinto, la igualdad de sonido puede depender de la pronunciación y pertenecer a una clase no equivale a formar parte de un objeto. Consulta los datos que faltan; no inventes etimologías ni categorías para conservar una clave.
 
-- **Q: ¿Por qué en un examen de admisión nunca debes buscar la sinonimia en un diccionario aislado?**  
-  **A:** Porque las palabras se resignifican en el texto; el contexto determina qué semas específicos se activan y cuáles se suprimen.
-- **Q: ¿Cómo se demuestra formalmente que dos palabras son homógrafas y no polisémicas?**  
-  **A:** Revisando su etimología: si provienen de raíces distintas y tienen entradas independientes en el diccionario de la RAE, son homónimas.
-- **Q: ¿Qué relación semántica existe entre "cedro" y "caoba"?**  
-  **A:** Son cohipónimos, pues ambos son especies que comparten el mismo hiperónimo ("árbol" o "madera").
-- **Q: ¿Qué es una proforma o vocablo comodín?**  
-  **A:** Una palabra de significado genérico y vago (*cosa, hacer, tener*) cuyo uso excesivo empobrece la precisión léxica.
-- **Q: En la frase "comprar y vender", ¿qué tipo de antonimia se manifiesta?**  
-  **A:** Antonimia recíproca o inversa, pues un polo no puede existir sin la concurrencia simultánea del otro.
+## Revisión integrada
 
----
+Un ejercicio presenta copa como recipiente y como parte superior de un árbol, baya y valla en pronunciación yeísta, y rueda y bicicleta en sentido físico. Se comparan tres aspectos diferentes: varios sentidos, coincidencia de sonido y parte de un objeto.
 
-
-
-### Matriz de Indicadores de Logro Evaluados
-1. **Sinonimia Contextual:** Determinar el reemplazo léxico exacto de un término en función del campo semántico y el tono del discurso, superando la sinonimia de diccionario abstracto.
-2. **Antonimia Contextual:** Identificar la palabra o locución que expresa la polaridad semántica opuesta requerida por el contexto oracional.
-3. **Polisemia en Uso:** Discriminar los diferentes sememas actualizados de una misma unidad léxica según su entorno oracional.
-4. **Adecuación y Precisión Semántica:** Seleccionar el vocablo más exacto y riguroso, erradicando los "verbos comodín" (*hacer, poner, tener, decir*) y vocablos vagos (*cosa, algo*).
-5. **Detección de Ambigüedades Léxicas:** Identificar vacíos de significado provocados por homonimia no aclarada o doble sentido involuntario.
-
----
-
-
-
-### 3.1 La Sinonimia Contextual (Superación del Diccionario)
-En los exámenes de admisión de la UNSA y UNMSM, **la sinonimia absoluta no existe**; dos palabras casi nunca son intercambiables en el 100% de los contextos discursivos.
-- **Sinonimia Parcial o Contextual:** Fenómeno por el cual dos términos comparten semas denotativos fundamentales únicamente en determinados contextos específicos:
-  - *Contexto 1:* "El juez dictó una sentencia **severa**" \to Sinónimo contextual: **rigurosa / estricta**.
-  - *Contexto 2:* "El paciente sufre una infección **severa**" \to Sinónimo contextual: **grave / aguda**.
-  - *Contexto 3:* "El clima de la puna es **severo**" \to Sinónimo contextual: **inhóspito / crudo**.
-
-
-
-### Mnemotecnia 1: "El Filtro C-C-T" (Para Sinonimia Contextual)
-Antes de marcar tu clave en una pregunta de contexto:
-- **C**ategoría Gramatical: Si la palabra base es adjetivo, su sinónimo DEBE ser adjetivo; si es sustantivo, sustantivo; si es verboide, verboide.
-- **C**ampo Semántico: El término sustituto debe pertenecer a la misma disciplina o ámbito vivencial.
-- **T**ono o Registro: Si el texto es científico o formal, no marques un término coloquial aunque signifique lo mismo.
-
-
-
-## 8. APLICACIÓN AL MUNDO REAL Y CONTEXTO DECO
-
-En la redacción de contratos jurídicos internacionales, leyes constitucionales y patentes biomédicas, una imprecisión semántica o un vocablo anfibológico puede derivar en litigios millonarios o anulación de tratados de libre comercio. De igual manera, en los modelos de lenguaje masivo (LLM) y la inteligencia artificial (IA), los algoritmos de *Word Sense Disambiguation* (Desambiguación del Sentido de las Palabras) utilizan el análisis de relaciones semánticas contextuales y redes neuronales de grafos de conocimiento para saber si la palabra inglesa *apple* hace referencia a la fruta o a la corporación de Cupertino.
-
----
-
-
-
-### Ejercicio 1 (Nivel Básico: Precisión Léxica con Verbos Comodín)
-**Enunciado:** Elija la alternativa que sustituye con mayor precisión léxica a la palabra en mayúsculas:
-*"El fiscal provincial logró PONER evidencias contundentes en el expediente judicial para acusar formalmente al exalcalde."*
-A) Colocar  
-B) Incrustar  
-C) Consignar  
-D) Meter  
-E) Depositar  
-
-**Resolución Paso a Paso:**
-1. Analizamos el contexto oracional: Se trata de un procedimiento formal de derecho procesal penal en el ámbito de un expediente judicial.
-2. Evaluamos las alternativas:
-   - *Colocar* y *meter* son vocablos coloquiales e imprecisos.
-   - *Incrustar* denota fijación física de un cuerpo sólido dentro de otro.
-   - *Depositar* se orienta preferentemente a sumas de dinero o bienes muebles en custodia.
-   - *Consignar* es el término jurídico técnico y semánticamente preciso definido por la RAE como: "Hacer constar por escrito en un documento, auto o expediente judicial una mención o dato determinado".
-3. Por tanto, *consignar* otorga rigor universitario y adecuación contextual máxima.
-**Respuesta:** C
-
----
-
-
-
-### Ejercicio 5 (Nivel 5: Boss Challenge - Ambigüedad Estructural y Ambigüedad Léxica)
-**Enunciado (Nivel UNI / Excelencia Lingüística):** En el siguiente texto:
-*"El decano de la facultad observó el cuadro de la profesora en la sala de juntas."*
-Se produce una anfibología clásica que genera al menos tres interpretaciones lógicas distintas. ¿Cuáles son esas tres lecturas posibles del enunciado?
-A) 1. El cuadro pertenece a la profesora; 2. El cuadro retrata a la profesora; 3. El cuadro fue pintado por la profesora.  
-B) 1. La profesora está enferma; 2. El cuadro es una pintura; 3. La profesora es médica.  
-C) 1. El decano es profesor; 2. La profesora es decana; 3. La junta es docente.  
-D) 1. El cuadro es de madera; 2. El cuadro es una tabla de notas; 3. El decano renunció.  
-E) 1. La sala es de juntas; 2. La junta se reunió; 3. No hay decano.  
-
-**Resolución Paso a Paso:**
-1. Analizamos la estructura sintáctica y léxica:
-   - La frase nominal *"el cuadro de la profesora"* presenta el modificador indirecto encabezado por la preposición "de", la cual tiene múltiples valores semánticos en español:
-     - **Valor de pertenencia o posesión:** El cuadro es propiedad material de la profesora (ella lo compró o lo tiene).
-     - **Valor de paciente / representación temática:** El cuadro contiene el retrato o figura de la profesora (la profesora es la persona pintada en el lienzo).
-     - **Valor de agente / autoría:** El cuadro es una obra artística producida y pintada por la profesora (ella es la pintora).
-2. Adicionalmente, el circunstancial de lugar *"en la sala de juntas"* puede modificar tanto al verbo *observó* (el decano estaba en la sala cuando lo vio) como al sustantivo *profesora* (la profesora estaba en la sala).
-3. De entre las alternativas formuladas, la opción A desglosa de manera perfecta y rigurosa la triple ambigüedad semántico-sintáctica del sintagma "el cuadro de la profesora".
-**Respuesta:** A
-
----
-
-
-
-### Ejercicio 2 (Nivel Intermedio: Sinonimia Contextual)
-**Enunciado (Modelo Admisión UNSA):** En el siguiente fragmento:
-*"A pesar de las severas advertencias de los vulcanólogos del IGP sobre el incremento de la actividad sísmica del volcán Misti, la población mostró una actitud displicente frente a las medidas de evacuación."*
-El sinónimo contextual de **DISPLICENTE** es:
-A) Rebelde  
-B) Indolente  
-C) Temerosa  
-D) Beligerante  
-E) Ingenua  
-
-**Resolución Paso a Paso:**
-1. Desarmamos el contexto: Hay una amenaza real documentada (volcán Misti), pero la gente no actúa con la seriedad debida ante las advertencias.
-2. Definición semántica de *displicente*: Que denota falta de interés, desdén, desidia o apatía ante una situación.
-3. Analizamos las opciones:
-   - *Rebelde / Beligerante:* Implica oposición activa o confrontación armada/verbal (no apatía).
-   - *Temerosa:* Indica miedo (lo contrario a ignorar la alerta).
-   - *Ingenua:* Falta de malicia.
-   - *Indolente:* Que no se conmueve, flojo o desidioso, que no presta atención al peligro.
-4. El término *indolente* refleja con absoluta fidelidad los semas de desinterés y negligencia del contexto.
-**Respuesta:** B
-
----
+La solución no se obtiene aplicando una sola etiqueta a todos los pares. Primero se identifica el aspecto, después se explica la relación y finalmente se descartan alternativas con el mismo criterio. Si el ejercicio no aclara la pronunciación o mezcla clases con partes, hace falta precisar la consigna.

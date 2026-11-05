@@ -139,3 +139,6 @@ Ya implementadas en `BiologiaPart2.kt` (líneas 230+):
 ## Próximos Hitos (Checklist Global)
 
 Ver `docs/aprender/biologia/CHECKLIST.md` para estado granular por lección.
+## Revisión puntual del 02/11/2026
+
+Las marcas históricas de este documento no certifican toda la exactitud académica actual. Se repararon diez relaciones y una pregunta de fisiología; [detalle y límites](REVISION_RELACIONES_2026-11-02.md). Los recursos nuevos siguen sumando 296 preguntas.

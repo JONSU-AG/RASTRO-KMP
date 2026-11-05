@@ -1,97 +1,91 @@
-## 1. APPLIED GRAMMAR & ADVANCED STRUCTURES - PART II
-             /         \
-            /    ON     \ ON (Mediana escala: Días, fechas / Superficies, calles)
-           /─────────────\Time: on Monday, on May 15th, on my birthday.
-          /               \Place: on the table, on the floor, on San Jerónimo Street.
-         /       IN        \
-        /                   \ IN (Gran escala: Siglos, años, meses / Espacios cerrados, ciudades, países)
-       /─────────────────────\Time: in 2027, in July, in winter, in the morning.
-      Place: in the classroom, in Arequipa, in Peru, in Europe.
-```
+# Preposiciones y orden de la oración: aplicación
 
-#### B. Preposiciones de Movimiento y Dirección
-Indican desplazamiento o trayectoria hacia un destino:
-- **To:** Dirección general hacia un punto (*She walked to the faculty*).
-- **Into:** Movimiento hacia el **interior** de un espacio cerrado (*He ran into the laboratory*).
-- **Out of:** Movimiento hacia el **exterior** de un recinto (*They came out of the lecture hall*).
-- **Across:** Cruce de un lado a otro sobre una superficie o línea (*walking across the street*).
-- **Through:** Atravesar un volumen tridimensional (*walking through the tunnel / forest*).
-- **Towards:** Desplazamiento en dirección o rumbo a (*He is heading towards the library*).
+## Tiempo: leer la expresión completa
 
----
+No elijas una preposición solo por la última palabra. Compara **in the morning** con **on Monday morning**: la segunda expresión concreta un día.
 
-### 3.3. Sintaxis Canónica de la Oración Inglesa
-El idioma inglés es una lengua de ordenamiento sintáctico rígido donde la posición de los elementos determina su función gramatical.
+### Elegir una preposición de tiempo
 
-#### A. Orden Canónico Oracional: S-V-O-P-T
-\mathbf{Subject} + \mathbf{Verb} + \mathbf{Object} + (\mathbf{Manner}) + \mathbf{Place} + \mathbf{Time}
-- *Incorrecto en inglés:* \times *Yesterday bought John in Arequipa a new computer.*
-- *Correcto en inglés:* \checkmark *John **[S]** bought **[V]** a new computer **[O]** in Arequipa **[Place]** yesterday **[Time]**.*
+| Uso habitual | Forma | Ejemplo |
+|---|---|---|
+| Hora o momento puntual | at | at 8:30; at noon |
+| Día o fecha | on | on Monday; on 15 May |
+| Mes, año o estación | in | in July; in 2027; in winter |
+| Partes habituales del día | in the | in the morning; in the evening |
+| Noche, en sentido general | at | at night |
 
-#### B. Orden Canónico de los Adjetivos Antepuestos (Regla OSASCOMP)
-Cuando dos o más adjetivos calificativos modifican a un mismo sustantivo, deben anteponerse siguiendo un orden jerárquico riguroso:
+**Importante:** estas asociaciones son una guía, no una regla basada únicamente en el tamaño del intervalo. *On Monday morning* incluye un día concreto. Con *next Monday*, *last year* y *every morning* normalmente no añadimos at, on o in. *In the night* también existe cuando se habla de un momento durante una noche determinada.
 
-\mathbf{Opinion} \rightarrow \mathbf{Size} \rightarrow \mathbf{Age} \rightarrow \mathbf{Shape} \rightarrow \mathbf{Color} \rightarrow \mathbf{Origin} \rightarrow \mathbf{Material} \rightarrow \mathbf{Purpose} \rightarrow \mathbf{NOUN}
+## Lugar y movimiento
 
-- *Ejemplo canónico:* *A **beautiful** (opinion) **small** (size) **ancient** (age) **round** (shape) **brown** (color) **Peruvian** (origin) **wooden** (material) table.*
+| Forma | Relación que expresa | Ejemplo |
+|---|---|---|
+| at | Punto de encuentro o actividad | at the bus stop; at school |
+| on | Contacto con una superficie | on the table |
+| in | Interior o área | in the classroom; in Peru |
+| to | Destino | She walked to the library. |
+| towards | Dirección, sin asegurar llegada | She walked towards the library. |
+| into | Entrada | He went into the laboratory. |
+| out of | Salida | They came out of the lecture hall. |
+| across | Paso de un lado a otro | We walked across the street. |
+| through | Recorrido por el interior | We walked through the tunnel. |
 
----
+**Importante:** *at the library* puede presentar la biblioteca como lugar de una actividad; *in the library* destaca el interior. El significado y la expresión habitual importan más que una supuesta escala de tamaños.
 
+### Transportes: aprender combinaciones
 
-## 2. PRE-UNIVERSITY HACKS & MNEMOTECHNICS
-\text{Hora exacta / Momento preciso} & \mathbf{AT} & \textit{at 7:00 AM, at midday, at dawn, at sunset, at night} \\ \hline
-\text{Día de la semana / Fechas con día} & \mathbf{ON} & \textit{on Tuesday, on Friday afternoon, on July 28th} \\ \hline
-\text{Mes / Año / Estación / Década} & \mathbf{IN} & \textit{in December, in 2027, in spring, in the 21st century} \\ \hline
-\text{Partes del día (con artículo)} & \mathbf{IN} & \textit{in the morning, in the afternoon, in the evening} \\ \hline
-\end{array}
+Usamos habitualmente **on a bus**, **on a train**, **on a plane**, **on a ship**, **on a bicycle** y **on a motorcycle**; también **in a car**, **in a taxi** e **in a helicopter**. Al indicar el medio sin artículo, aparece **by bus**, **by train** o **by car**.
 
----
+Poder ponerse de pie no es una regla gramatical: una bicicleta ya muestra el límite de esa comparación. Aprende la combinación y distingue viajar en un transporte de describir físicamente su interior.
 
+## Orden de la oración
 
-## 6. PRE-UNIVERSITY HACKS Y MNEMOTÉCNIAS
+En una afirmación transitiva neutra, la base frecuente es **sujeto + verbo + objeto**. Los complementos de modo, lugar y tiempo amplían la información; no son obligatorios en toda oración.
 
-### 1. El Hack de las Preposiciones de Transporte Público
-- Si puedes **estar de pie o caminar adentro** del transporte \longrightarrow usa **ON**:
-  - *On the bus, on the train, on the plane, on the ship.* (También: *on a bicycle, on a motorcycle*).
-- Si tienes que **agacharte para entrar** y solo puedes sentarte \longrightarrow usa **IN**:
-  - *In a car, in a taxi, in a helicopter.*
+| Elemento | En el ejemplo | Función |
+|---|---|---|
+| Sujeto | John | Quién realiza la acción |
+| Verbo | bought | Acción expresada en pasado |
+| Objeto | a new computer | Qué compró |
+| Lugar | in Arequipa | Dónde |
+| Tiempo | yesterday | Cuándo |
 
-### 2. Mnemotécnia de la Pirámide: "IN - ON - AT"
-\mathbf{IN} \ (\text{Grande / Meses / Países}) \quad \longrightarrow \quad \mathbf{ON} \ (\text{Medio / Días / Calles}) \quad \longrightarrow \quad \mathbf{AT} \ (\text{Puntual / Horas / Direcciones exactas})
+**John bought a new computer in Arequipa yesterday.**
 
----
+También es correcto: **Yesterday, John bought a new computer in Arequipa.** Mover un complemento temporal al inicio no equivale a colocar el verbo antes del sujeto. En cambio, *Yesterday bought John a computer* no representa el orden neutro de este ejemplo.
 
+### Adjetivos: tendencia de orden y función
 
-## 3. COMMON PITFALLS & ADMISSION EXAM TRAPS
-## 7. ERRORES FRECUENTES Y TRAMPAS DE EXAMEN
+**A beautiful small wooden table** combina opinión, tamaño y material. **The table is beautiful** coloca un adjetivo después de un verbo copulativo. No son usos contradictorios: el primero modifica al sustantivo dentro de su grupo; el segundo atribuye una cualidad mediante el verbo.
 
-1. **Posponer el adjetivo por calco del español:**
-   - *Error:* \times *He is a student brilliant.*
-   - *Norma:* El adjetivo calificativo se antepone obligatoriamente al sustantivo que modifica: \checkmark *He is a **brilliant student***.
-2. **Confundir "at night" con "in the night":**
-   - La expresión canónica habitual en inglés es **at night** (*He studies at night*).
-   - En cambio, las demás partes del día llevan *in the*: *in the morning, in the afternoon, in the evening*.
-3. **Usar pronombre sujeto después de preposiciones:**
-   - *Error:* \times *She sat between John and I.*
-   - *Norma:* Tras una preposición (*between*), los pronombres deben adoptar la forma de **Object Pronoun**: \checkmark *She sat between John and **me***.
+| Pista de descripción | Ejemplo | Qué observar |
+|---|---|---|
+| Opinión y descripción | a lovely red dress | La opinión suele preceder a la descripción |
+| Tamaño y material | a small wooden table | No es necesario llenar todas las categorías |
+| Color y origen | a blue Peruvian bag | La combinación debe tener sentido |
+| Cualidad tras verbo copulativo | The student is brilliant. | El adjetivo no tiene que preceder siempre a un sustantivo |
 
----
+La mnemotecnia **OSASCOMP** recuerda opinión, tamaño, edad, forma, color, origen, material y propósito. Es una orientación para adjetivos antepuestos, no una obligación de usar todas las categorías ni una prohibición de otros órdenes justificados por el contexto.
 
+## Contrastes útiles
 
-## 4. REAL-WORLD CONTEXT & READING PASSAGES
-## 5. CASOS PRÁCTICOS Y MODELIZACIONES DEL MUNDO REAL
+1. **my / mine:** *my laboratory skills* lleva un posesivo dependiente del grupo nominal. *These skills are mine* usa uno independiente.
+2. **I / me tras una preposición:** en inglés estándar escrito, *She sat between John and me*. Quitar *John and* permite comprobar la forma: *between me*, no *between I*.
+3. **at night / in the night:** la primera expresión es general; la segunda puede situar algo durante una noche concreta.
+4. **last year / in the last year:** *Last year* nombra el año pasado. *In the last year* puede referirse al periodo de doce meses anterior al momento de referencia; no es incorrecto por sí mismo.
 
-### Caso 1: Detección y Corrección Forense de Errores Sintácticos (Error Analysis)
-En la redacción de una carta de postulación académica de un estudiante hispanohablante:
-> *"I write this letter for to explain you my situation. In the last year, I worked very hard with my professors for improve mine laboratory skills. Yesterday arrived the notification from the university."*
+## Resolver una corrección paso a paso
 
-- **Análisis de Incorrecciones Gramaticales:**
-  1. *for to explain you:* En inglés, la finalidad se expresa con *to-infinitive* (*to explain*); además, *explain* exige la preposición *to* para personas (*to explain my situation to you*).
-  2. *In the last year:* Las expresiones con *last* o *next* no llevan preposición (*Last year*, no *In the last year*).
-  3. *for improve:* Las preposiciones exigen gerundio o infinitivo de finalidad (*to improve*).
-  4. *mine laboratory skills:* *Mine* es pronombre posesivo y no puede llevar un sustantivo detrás; debe ser el adjetivo posesivo **my** (*my laboratory skills*).
-  5. *Yesterday arrived the notification:* Inversión sintáctica indebida calco del español. El orden canónico exige Sujeto + Verbo: *The notification arrived yesterday*.
-- **Versión Impecable Corregida:**
-  > *"I am writing this letter to explain my situation to you. Last year, I worked very hard with my professors to improve my laboratory skills. The notification arrived yesterday."*
+Texto de práctica ficticio:
 
----
+> I write this letter for to explain you my situation. In the last year, I worked very hard with my professors for improve mine laboratory skills. Yesterday arrived the notification from the university.
+
+1. Para expresar finalidad en este caso, usa **to explain**, no *for to explain*. La persona destinataria aparece con *to*: **explain my situation to you**.
+2. Si se quiere nombrar el año calendario anterior, usa **Last year**. No elimines *in* automáticamente cuando el significado sea un periodo de doce meses.
+3. Para la finalidad de trabajar, usa **to improve**. Tras una preposición que admite una forma verbal, suele usarse la terminación *-ing*; eso no convierte el infinitivo de finalidad en una preposición.
+4. Antes de *laboratory skills*, corresponde **my**, no *mine*.
+5. En esta afirmación neutra, escribe **The notification arrived yesterday**. El complemento temporal también puede ir primero: **Yesterday, the notification arrived**.
+
+Versión con el significado de año calendario anterior:
+
+> I am writing this letter to explain my situation to you. Last year, I worked very hard with my professors to improve my laboratory skills. The notification arrived yesterday.

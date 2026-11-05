@@ -1,1 +1,200 @@
-[{"concept":"5.1.1","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t05_s01_c01","options":["1","2","4","2\\sin x \\cos x"],"pedagogicalTier":"concepto","semana":5,"statement":"**Enunciado:** Simplifique la siguiente expresión trigonométrica:","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"5.1.2","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t05_s01_c02","options":["\\dfrac{5}{3}","\\dfrac{3}{5}","\\dfrac{4}{5}","\\dfrac{1}{3}"],"pedagogicalTier":"concepto","semana":5,"statement":"**Enunciado:** Si se cumple que \\sec(x) + \\tan(x) = 3, determine el valor de \\cos(x).","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"5.1.3","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t05_s01_c03","options":["\\dfrac{5}{6}","\\dfrac{13}{18}","\\dfrac{17}{18}","\\dfrac{7}{9}"],"pedagogicalTier":"concepto","semana":5,"statement":"**Enunciado:** Si \\sin(x) + \\cos(x) = \\sqrt{\\dfrac{4}{3}}, calcule el valor de:","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"5.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t05_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"5.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t05_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"5.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t05_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"5.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t05_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"5.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t05_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"5.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t05_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"5.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t05_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":5,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "trig_t05_s01_c01",
+    "concept": "5.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 5,
+    "statement": "Calcula $\\sin^2(20^\\circ)+\\cos^2(20^\\circ)$.",
+    "options": [
+      "$1$",
+      "$2$",
+      "$0.5$",
+      "$3$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La identidad pitagórica vale para todo ángulo real.\n2. Aplicamos la relación: $\\sin^2x+\\cos^2x=1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t05_s01_c02",
+    "concept": "5.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 5,
+    "statement": "α es agudo y $\\tan\\alpha=3/4$. Calcula sec²(α).",
+    "options": [
+      "$3.125$",
+      "$0.78125$",
+      "$4.6875$",
+      "$1.5625$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La identidad relaciona secante y tangente.\n2. Aplicamos la relación: $\\sec^2\\alpha=1+\\tan^2\\alpha=1+9/16$.\n3. El valor pedido es $1.5625$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t05_s01_c03",
+    "concept": "5.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 5,
+    "statement": "α es agudo y $\\cot\\alpha=2$. Calcula cosec²(α).",
+    "options": [
+      "$2.5$",
+      "$15$",
+      "$5$",
+      "$10$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La identidad relaciona cosecante y cotangente.\n2. Aplicamos la relación: $\\csc^2\\alpha=1+\\cot^2\\alpha=1+4$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t05_s01_c04",
+    "concept": "5.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 5,
+    "statement": "Si $\\sin x\\ne0$, calcula $(1-\\cos^2x)/\\sin^2x$.",
+    "options": [
+      "$3$",
+      "$1$",
+      "$2$",
+      "$0.5$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Sustituimos el numerador con la identidad pitagórica.\n2. Aplicamos la relación: $\\frac{1-\\cos^2x}{\\sin^2x}=\\frac{\\sin^2x}{\\sin^2x}=1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t05_s01_c05",
+    "concept": "5.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 5,
+    "statement": "Si $\\cos x\\ne0$, calcula $\\sin x/(\\cos x\\tan x)$ para valores donde también $\\sin x\\ne0$.",
+    "options": [
+      "$1$",
+      "$2$",
+      "$0.5$",
+      "$3$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Sustituimos tangente y respetamos el denominador original.\n2. Aplicamos la relación: $\\frac{\\sin x}{\\cos x(\\sin x/\\cos x)}=1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t05_s01_c06",
+    "concept": "5.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 5,
+    "statement": "α es agudo, $\\sin\\alpha=3/5$ y $\\cos\\alpha=4/5$. Calcula $\\tan(\\alpha )$+$\\cot(\\alpha )$.",
+    "options": [
+      "$\\frac{25}{6}$",
+      "$\\frac{25}{24}$",
+      "$6.25$",
+      "$\\frac{25}{12}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Sumamos el cociente y su recíproco.\n2. Aplicamos la relación: $3/4+4/3=25/12$.\n3. El valor pedido es $\\frac{25}{12}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t05_s01_c07",
+    "concept": "5.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 5,
+    "statement": "Si $\\sin x\\ne0$, calcula $\\sin x\\,\\csc x$.",
+    "options": [
+      "$0.5$",
+      "$3$",
+      "$1$",
+      "$2$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Seno y cosecante son recíprocos en su dominio.\n2. Aplicamos la relación: $\\sin x\\frac1{\\sin x}=1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t05_s01_c08",
+    "concept": "5.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 5,
+    "statement": "Si $\\cos x\\ne0$, calcula $\\cos x\\,\\sec x$.",
+    "options": [
+      "$3$",
+      "$1$",
+      "$2$",
+      "$0.5$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Coseno y secante son recíprocos en su dominio.\n2. Aplicamos la relación: $\\cos x\\frac1{\\cos x}=1$.\n3. El valor pedido es $1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t05_s01_c09",
+    "concept": "5.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 5,
+    "statement": "α es agudo y $\\sin\\alpha=1/2$. Calcula $1-\\cos^2\\alpha$.",
+    "options": [
+      "$0.25$",
+      "$0.5$",
+      "$0.125$",
+      "$0.75$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La identidad permite sustituir por seno al cuadrado.\n2. Aplicamos la relación: $1-\\cos^2\\alpha=\\sin^2\\alpha=(1/2)^2$.\n3. El valor pedido es $0.25$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t05_s01_c10",
+    "concept": "5.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 5,
+    "statement": "Una identidad trigonométrica es una igualdad que…",
+    "options": [
+      "Solo se cumple para un ángulo elegido.",
+      "Se cumple para todos los valores del dominio común de las expresiones.",
+      "Permite dividir por cualquier expresión, aunque sea cero.",
+      "Siempre cambia el dominio original."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La igualdad debe sostenerse en todos los valores admisibles.\n2. Si aparecen denominadores, sus ceros quedan excluidos.\n3. Una identidad no autoriza operaciones fuera de su dominio.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t05_s01_c11",
+    "concept": "5.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 5,
+    "statement": "Al simplificar $\\tan x\\cos x$ a $\\sin x$, se debe recordar que…",
+    "options": [
+      "La expresión original exige cos(x) distinto de cero.",
+      "La expresión original está definida para todo real.",
+      "La simplificación permite fijar cos(x)=0 en la expresión original.",
+      "Seno es siempre cero."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Tangente requiere coseno no nulo.\n2. La cancelación produce una fórmula que puede tener dominio mayor.\n3. Para equivalencia con el original se conserva su restricción.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

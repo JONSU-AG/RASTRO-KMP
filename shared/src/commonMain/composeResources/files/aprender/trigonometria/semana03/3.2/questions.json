@@ -1,1 +1,200 @@
-[{"concept":"3.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t03_s02_c01","options":["30.0\\text{ m}","25.6\\text{ m}","28.2\\text{ m}","26.4\\text{ m}"],"pedagogicalTier":"concepto","semana":3,"statement":"**Enunciado:** Un ingeniero diseña una rampa de acceso peatonal que asciende desde el nivel del suelo A hasta una plataforma B. Por restricciones topográficas, la rampa se divide en dos tramos consecutivos rectilíneos: el primer tramo AP tiene una longitud de 20\\text{ m} y una inclinación de 16^\\circ respecto a la horizontal; el segundo tramo PB asciende con una inclinación de 53^\\circ respecto a la horizontal logrando una altura adicional de 12\\text{ m}. Calcule la distancia horizontal total comprendida entre el inicio de la rampa A y la proyección del punto final B.","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.2","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"trig_t03_s02_c02","options":["\\dfrac{3}{2}","\\dfrac{2}{3}","\\dfrac{1}{3}","\\dfrac{1}{2}"],"pedagogicalTier":"concepto","semana":3,"statement":"**Enunciado:** En un triángulo rectángulo ABC recto en B, se traza la ceviana interior \\overline{AD} de modo que BD = 1\\text{ cm} y DC = 2\\text{ cm}. Si el ángulo \\angle BAD = \\alpha y el ángulo \\angle DAC = \\beta, y se sabe que \\angle C = 30^\\circ, calcule el valor de \\frac{\\tan(\\alpha)}{\\tan(\\beta)}.","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t03_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t03_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t03_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t03_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t03_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t03_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t03_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"},{"concept":"3.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"trig_t03_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":3,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"trigonometria","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "trig_t03_s02_c01",
+    "concept": "3.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 3,
+    "statement": "Una escalera de 10 m forma 30° con el suelo horizontal. ¿Qué altura alcanza en una pared vertical?",
+    "options": [
+      "$5\\,\\mathrm{m}$",
+      "$10\\,\\mathrm{m}$",
+      "$2.5\\,\\mathrm{m}$",
+      "$15\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La altura es el cateto opuesto al ángulo del suelo.\n2. Aplicamos la relación: $h=10\\sin30^\\circ$.\n3. El valor pedido es $5\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t03_s02_c02",
+    "concept": "3.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 3,
+    "statement": "Un triángulo rectángulo isósceles tiene hipotenusa 6 cm. ¿Cuánto mide cada cateto?",
+    "options": [
+      "$6 \\sqrt{2}\\,\\mathrm{cm}$",
+      "$\\frac{3 \\sqrt{2}}{2}\\,\\mathrm{cm}$",
+      "$9 \\sqrt{2}\\,\\mathrm{cm}$",
+      "$3 \\sqrt{2}\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. En 45°–45°–90°, el cateto es hipotenusa dividida entre raíz de dos.\n2. Aplicamos la relación: $c=6/\\sqrt2=3\\sqrt2$.\n3. El valor pedido es $3 \\sqrt{2}\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t03_s02_c03",
+    "concept": "3.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 3,
+    "statement": "Un triángulo 30°–60°–90° tiene cateto menor 4 cm. ¿Cuál es su hipotenusa?",
+    "options": [
+      "$4\\,\\mathrm{cm}$",
+      "$24\\,\\mathrm{cm}$",
+      "$8\\,\\mathrm{cm}$",
+      "$16\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El cateto opuesto a 30° es media hipotenusa.\n2. Aplicamos la relación: $h=2(4)$.\n3. El valor pedido es $8\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t03_s02_c04",
+    "concept": "3.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 3,
+    "statement": "Un triángulo 30°–60°–90° tiene cateto menor 3 cm. ¿Cuánto mide el cateto mayor?",
+    "options": [
+      "$9 \\sqrt{3}\\,\\mathrm{cm}$",
+      "$3 \\sqrt{3}\\,\\mathrm{cm}$",
+      "$6 \\sqrt{3}\\,\\mathrm{cm}$",
+      "$\\frac{3 \\sqrt{3}}{2}\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los lados guardan razón 1:√3:2.\n2. Aplicamos la relación: $c_{mayor}=3\\sqrt3$.\n3. El valor pedido es $3 \\sqrt{3}\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t03_s02_c05",
+    "concept": "3.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 3,
+    "statement": "α es agudo y $\\cos\\alpha=3/5$. Calcula $\\tan(\\alpha /2)$.",
+    "options": [
+      "$0.5$",
+      "$1$",
+      "$0.25$",
+      "$1.5$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Usamos la identidad de medio ángulo con seno positivo.\n2. Aplicamos la relación: $\\tan(\\alpha/2)=\\frac{\\sin\\alpha}{1+\\cos\\alpha}=\\frac{4/5}{1+3/5}$.\n3. El valor pedido es $0.5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t03_s02_c06",
+    "concept": "3.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 3,
+    "statement": "Dos lados de un triángulo miden 6 y 8 cm y forman 30°. ¿Qué área tiene?",
+    "options": [
+      "$24\\,\\mathrm{cm^2}$",
+      "$6\\,\\mathrm{cm^2}$",
+      "$36\\,\\mathrm{cm^2}$",
+      "$12\\,\\mathrm{cm^2}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El área es medio producto de lados por el seno del ángulo comprendido.\n2. Aplicamos la relación: $A=6(8)\\sin30^\\circ/2$.\n3. El valor pedido es $12\\,\\mathrm{cm^2}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t03_s02_c07",
+    "concept": "3.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 3,
+    "statement": "α es agudo y $\\cot\\alpha=2$. Calcula $\\tan(\\alpha )$.",
+    "options": [
+      "$0.25$",
+      "$1.5$",
+      "$0.5$",
+      "$1$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Cotangente y tangente son recíprocas en su dominio.\n2. Aplicamos la relación: $\\tan\\alpha=1/\\cot\\alpha=1/2$.\n3. El valor pedido es $0.5$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t03_s02_c08",
+    "concept": "3.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 3,
+    "statement": "Una rampa recta mide 8 m y forma 60° con la horizontal. ¿Qué proyección horizontal tiene?",
+    "options": [
+      "$12\\,\\mathrm{m}$",
+      "$4\\,\\mathrm{m}$",
+      "$8\\,\\mathrm{m}$",
+      "$2\\,\\mathrm{m}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La proyección horizontal usa el coseno.\n2. Aplicamos la relación: $d=8\\cos60^\\circ$.\n3. El valor pedido es $4\\,\\mathrm{m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t03_s02_c09",
+    "concept": "3.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 3,
+    "statement": "En un triángulo rectángulo, α es agudo y $\\tan\\alpha=1/\\sqrt3$. ¿Cuánto vale α en grados?",
+    "options": [
+      "$30\\,\\mathrm{^\\circ}$",
+      "$60\\,\\mathrm{^\\circ}$",
+      "$15\\,\\mathrm{^\\circ}$",
+      "$90\\,\\mathrm{^\\circ}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Identificamos la razón del triángulo 30°–60°–90°.\n2. Aplicamos la relación: $\\alpha=\\arctan(1/\\sqrt3)=30^\\circ$.\n3. El valor pedido es $30\\,\\mathrm{^\\circ}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t03_s02_c10",
+    "concept": "3.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 3,
+    "statement": "En la fórmula de área A=ab sin(C)/2, C es…",
+    "options": [
+      "Cualquier ángulo externo.",
+      "El ángulo comprendido entre los lados a y b.",
+      "El ángulo opuesto a a, obligatoriamente.",
+      "Siempre el ángulo recto."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La altura correspondiente se obtiene con el seno del ángulo entre los lados dados.\n2. Esa altura permite formar base por altura sobre dos.\n3. El ángulo debe ser el comprendido entre a y b.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "trig_t03_s02_c11",
+    "concept": "3.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "trigonometria",
+    "semana": 3,
+    "statement": "Afirmar $\\sin(37^\\circ)$=3/5 exactamente es…",
+    "options": [
+      "Siempre correcto en la trigonometría real.",
+      "Una aproximación escolar que debe declararse, no una igualdad exacta.",
+      "La definición de radián.",
+      "Una propiedad de todos los ángulos agudos."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La terna 3–4–5 determina un ángulo cuyo seno exacto es 3/5.\n2. Ese ángulo es cercano a 37°, pero no idéntico.\n3. Si se usa la aproximación, debe indicarse expresamente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/trigonometria/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

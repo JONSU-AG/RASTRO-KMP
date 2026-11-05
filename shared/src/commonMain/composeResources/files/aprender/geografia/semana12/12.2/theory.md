@@ -301,28 +301,57 @@ Aquellas que multiplican y crían los recursos biológicos mediante el trabajo p
 #### A. La Agricultura en el Perú
 Presenta tres realidades geográficas marcadamente divergentes:
 
-```
-                            AGRICULTURA EN EL PERÚ
-                                      |
-         +----------------------------+----------------------------+
-         |                                                         |
-  AGRICULTURA COSTERA                   AGRICULTURA ANDINA                AGRICULTURA AMAZÓNICA
-  - Intensiva y altamente tecnificada   - Tradicional y extensiva         - Selva Alta: Valles longitudinales
-  - Riego por goteo / aspersión         - Depende del secano (lluvias)    - Café, cacao, palma aceitera, frutas
-  - Agroexportación: Arándano, palta,   - Minifundista, baja inversión    - Selva Baja: Estacional en restingas
-    uva, espárrago, caña de azúcar      - Despensa: Papa, maíz, quinua    - Roza y quema migratoria
+```mermaid
+graph TD
+ ROOT["Agricultura: sistemas y criterios de comparación"]
+ B1["Costa"]
+ B1N1["En espacios áridos, el acceso y manejo del agua condicionan los cultivos."]
+ B1N2["Coexisten agricultura familiar y empresarial; no toda parcela usa riego tecnificado."]
+ B1N3["Uva, palta o espárrago son ejemplos de cultivos comerciales, no una lista exclusiva de la costa."]
+ B2["Andes"]
+ B2N1["Coexisten secano y riego; no toda la agricultura andina depende solo de las lluvias."]
+ B2N2["Papa, maíz y quinua permiten estudiar relaciones entre cultivo, clima y altitud."]
+ B2N3["Comparar manejo local y tecnologías concretas sin calificar toda una región como rudimentaria."]
+ B3["Amazonía"]
+ B3N1["Distinguir laderas, valles y llanuras con condiciones de suelo y drenaje diferentes."]
+ B3N2["Café, cacao, yuca y plátano son ejemplos; su cultivo exige condiciones que deben precisarse."]
+ B3N3["No describir toda la producción amazónica como roza y quema ni como monocultivo exportador."]
+ B4["Criterios para comparar"]
+ B4N1["Separar régimen de agua, tecnología, tamaño de unidad y destino de la producción."]
+ B4N2["Agricultura familiar no es sinónimo de autoconsumo ni de ausencia de tecnología."]
+ B4N3["La región por sí sola no prueba sostenibilidad, rentabilidad o impacto de una práctica."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
-1. **Agricultura Costera:**
-   * **Intensiva, tecnificada y empresarial:** Uso de fertilizantes químicos, semillas certificadas, maquinaria pesada y riego presurizado.
-   * Gran valor de **agroexportación**: El Perú se ha consolidado como el **1.° exportador mundial de arándanos frescos** y espárragos, y líder en uvas de mesa, paltas Hass y mangos.
-2. **Agricultura Andina:**
-   * Predominantemente **extensiva y tradicional**: Depende del régimen de lluvias estivales (**secano**); expuesta a heladas, granizadas y sequías.
-   * Minifundista, con escasa asistencia crediticia y tecnología rudimentaria (chakitaclla, tracción animal).
-   * **Rol Estratégico:** Constituye la despensa de seguridad alimentaria interna del país (tubérculos, cereales andinos, legumbres). Valles tecnificados: Valle del Mantaro (Junín), Valle de Urubamba (Cusco).
-3. **Agricultura Amazónica:**
-   * **Selva Alta:** Valles longitudinales fértiles especializados en cultivos industriales de exportación: **Café** (Chanchamayo, Quillabamba, Jaén), **Cacao**, palma aceitera, té y frutas tropicales.
-   * **Selva Baja:** Agricultura migratoria de roza y quema en laderas, y agricultura estacional en restingas y barrizales (yuca, plátano, arroz).
+### Comparar prácticas, no estereotipos regionales
+
+| Criterio | Qué debe identificarse | Precisión |
+|---|---|---|
+| Agua | Riego, secano, disponibilidad y manejo | Riego no significa necesariamente goteo |
+| Organización | Trabajo familiar, empresa, asociación y escala | Una unidad familiar puede vender su producción |
+| Producción y destino | Cultivo, mercado y uso local | Un ejemplo regional no es una exclusividad |
+
+**Importante:** una descripción regional resume tendencias; no caracteriza todas las unidades agropecuarias. Para usar porcentajes o rankings, consulta su fecha, población estudiada y fuente.
+
+
+1. **Agricultura costera:** en muchos valles el riego es decisivo por la aridez. Coexisten unidades familiares, asociaciones y empresas de distinta escala. Hay producción para el mercado interno y para exportación; goteo y aspersión son técnicas, no atributos de toda la costa. Uva, palta, espárrago y caña son ejemplos de cultivos comerciales.
+2. **Agricultura andina:** presenta sistemas bajo secano y riego, con prácticas y tecnologías diversas. Papa, maíz y quinua ilustran parte de su producción; también hay cadenas comerciales y valles con infraestructura. Heladas, granizo y sequía son riesgos que dependen de las condiciones del lugar y del cultivo.
+3. **Agricultura amazónica:** las condiciones varían entre laderas, valles y llanuras. Café, cacao, yuca y plátano permiten estudiar sistemas diferentes, sin asignar cada producto de forma exclusiva a una subregión. La producción de terrenos próximos a ríos debe considerar crecidas y drenaje. La roza y quema es una práctica que debe analizarse por sus efectos, no la definición de toda la agricultura amazónica.
 
 ---
 

@@ -7,11 +7,11 @@
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana05.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_05_Sintaxis_Categorias_y_Frases.md",
   "learningObjectives": [
-    "Definir la sintaxis como el estudio de la combinación jerárquica de sintagmas y oraciones",
-    "Distinguir categorías variables de invariables por la presencia de flexión de género, número, tiempo y persona",
-    "Diferenciar determinante que acompaña al sustantivo de pronombre que lo sustituye como núcleo",
-    "Reconocer verboides y perífrasis verbales frente a verbos plenos con subordinada sustantiva",
-    "Aplicar concordancia nominal y verbal culta en casos de proximidad y colectivos"
+    "Distinguir categoría gramatical y función en construcciones completas",
+    "Reconocer flexión y sus límites sin atribuir todas las variaciones a cada palabra de una categoría",
+    "Contrastar determinante demostrativo y pronombre personal en usos claros",
+    "Reconocer formas no personales y perífrasis sin aplicar sustituciones mecánicas",
+    "Justificar adverbios, preposiciones, conjunciones y concordancia en el contexto dado"
   ],
   "theory": {
     "id": "th_leng_t05_s01",
@@ -20,15 +20,16 @@
     "titulo": "La Sintaxis y las Categorías Gramaticales: Variables e Invariables",
     "resumen": "",
     "conceptosClave": [
-      "Sintaxis ordena palabras en sintagmas, proposiciones y oraciones con funciones como sujeto y predicado",
-      "Variables: sustantivo, adjetivo, determinante, pronombre y verbo; invariables: adverbio, preposición y conjunción",
-      "Adverbio modifica a verbo, a adjetivo y a otro adverbio; nunca tiene género ni número",
-      "Determinante más nombre frente a pronombre igual a núcleo: esos jóvenes frente a aquellos",
-      "Perífrasis = auxiliar más nexo más verboide; suele repasar es perífrasis, desea eso no lo es",
-      "Concordancia antepuesta por proximidad como extraordinaria rapidez y valor; pospuesta en masculino plural",
-      "Colectivo singular exige verbo singular: la jauría huyó, no huyeron"
+      "Categoría y función son planos distintos: un sustantivo no es siempre sujeto",
+      "Una categoría variable puede contener formas sin oposición de género o número",
+      "Esos en esos jóvenes es determinante; ellos es pronombre personal",
+      "Las formas no personales no expresan persona verbal; el participio puede concordar fuera de los tiempos con haber",
+      "Tener que + infinitivo expresa obligación; soler + infinitivo expresa habitualidad",
+      "Una sustitución con eso necesita conservar estructura y sentido y no es una prueba universal",
+      "Muy puede modificar clara o temprano; el adverbio admite otros alcances",
+      "La concordancia se justifica por la construcción, no por contar los seres designados"
     ],
-    "admissionTip": "Para perífrasis prueba con eso: si puedes decir desea eso o necesita eso es verbo pleno con OD, si no puedes decir suele eso es perífrasis; para adverbio verifica que modifica a verbo, adjetivo u otro adverbio.",
-    "admissionExplanation": "La confusión determinante frente a pronombre y verbo pleno frente a perífrasis decide la mitad de las preguntas: el determinante acompaña, el pronombre sustituye, y la perífrasis funciona como un solo núcleo del predicado."
+    "admissionTip": "Identifica la unidad, su categoría y su relación con otras palabras. No conviertas una terminación o una sustitución aislada en una regla universal.",
+    "admissionExplanation": "Los ejemplos distinguen participio concordado y participio con haber, usos nominales y pronominales y relaciones de auxiliar; la concordancia se explica en cada oración."
   }
 }

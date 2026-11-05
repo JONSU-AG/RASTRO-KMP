@@ -1,1 +1,200 @@
-[{"concept":"8.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t08_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t08_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t08_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t08_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t08_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t08_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t08_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t08_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t08_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"8.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t08_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":8,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t08_s02_c01",
+    "concept": "8.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 8,
+    "statement": "Una prensa hidráulica ideal tiene áreas 2 cm² y 20 cm². Se aplican 50 N al pistón pequeño. ¿Qué fuerza entrega el grande?",
+    "options": [
+      "$500\\,\\mathrm{N}$",
+      "$1000\\,\\mathrm{N}$",
+      "$250\\,\\mathrm{N}$",
+      "$1500\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El incremento de presión se transmite por el fluido.\n2. Sustituimos los datos: $F_2=F_1A_2/A_1=50(20)/2$.\n3. El resultado pedido es $500\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t08_s02_c02",
+    "concept": "8.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 8,
+    "statement": "Un cuerpo desplaza 0.003 m³ de agua de densidad 1000 kg/m³. Usa $g=10\\,\\mathrm{m/s^2}$. ¿Qué empuje recibe?",
+    "options": [
+      "$60\\,\\mathrm{N}$",
+      "$15\\,\\mathrm{N}$",
+      "$90\\,\\mathrm{N}$",
+      "$30\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El empuje iguala al peso del fluido desplazado.\n2. Sustituimos los datos: $E=\\rho gV=1000(10)(0.003)$.\n3. El resultado pedido es $30\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t08_s02_c03",
+    "concept": "8.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 8,
+    "statement": "Un cuerpo pesa 50 N en aire y recibe empuje de 20 N. ¿Qué peso aparente marca una balanza que lo sostiene en reposo dentro del líquido?",
+    "options": [
+      "$15\\,\\mathrm{N}$",
+      "$90\\,\\mathrm{N}$",
+      "$30\\,\\mathrm{N}$",
+      "$60\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El soporte aporta la diferencia entre peso y empuje.\n2. Sustituimos los datos: $T=P-E=50-20$.\n3. El resultado pedido es $30\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t08_s02_c04",
+    "concept": "8.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 8,
+    "statement": "Un cuerpo homogéneo de densidad 600 kg/m³ flota en agua de 1000 kg/m³. ¿Qué fracción de su volumen queda sumergida?",
+    "options": [
+      "$1.8$",
+      "$0.6$",
+      "$1.2$",
+      "$0.3$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. En flotación libre, el empuje iguala al peso.\n2. Sustituimos los datos: $V_s/V=\\rho_c/\\rho_l=600/1000$.\n3. El resultado pedido es $0.6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t08_s02_c05",
+    "concept": "8.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 8,
+    "statement": "Un depósito grande tiene un orificio 5 m bajo su superficie. Sin pérdidas y con igual presión exterior, usa $g=10\\,\\mathrm{m/s^2}$. ¿Qué rapidez de salida predice Torricelli?",
+    "options": [
+      "$10\\,\\mathrm{m/s}$",
+      "$20\\,\\mathrm{m/s}$",
+      "$5\\,\\mathrm{m/s}$",
+      "$30\\,\\mathrm{m/s}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La diferencia de altura se convierte en energía cinética.\n2. Sustituimos los datos: $v=\\sqrt{2gh}=\\sqrt{2(10)(5)}$.\n3. El resultado pedido es $10\\,\\mathrm{m/s}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t08_s02_c06",
+    "concept": "8.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 8,
+    "statement": "En un conducto horizontal ideal con agua de 1000 kg/m³, v pasa de 2 a 4 m/s. ¿Cuánto disminuye la presión?",
+    "options": [
+      "$12000\\,\\mathrm{Pa}$",
+      "$3000\\,\\mathrm{Pa}$",
+      "$18000\\,\\mathrm{Pa}$",
+      "$6000\\,\\mathrm{Pa}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. A igual altura, Bernoulli intercambia presión y término cinético.\n2. Sustituimos los datos: $p_1-p_2=\\rho(v_2^2-v_1^2)/2=1000(16-4)/2$.\n3. El resultado pedido es $6000\\,\\mathrm{Pa}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t08_s02_c07",
+    "concept": "8.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 8,
+    "statement": "Un cuerpo flota libremente en un líquido y pesa 24 N. ¿Cuánto vale el empuje?",
+    "options": [
+      "$12\\,\\mathrm{N}$",
+      "$72\\,\\mathrm{N}$",
+      "$24\\,\\mathrm{N}$",
+      "$48\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La flotación en reposo exige equilibrio vertical.\n2. Sustituimos los datos: $E-P=0\\Rightarrow E=24$.\n3. El resultado pedido es $24\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t08_s02_c08",
+    "concept": "8.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 8,
+    "statement": "En una prensa ideal, el pistón grande tiene diez veces el área del pequeño. Si el pequeño baja 20 cm, ¿cuánto sube el grande?",
+    "options": [
+      "$6\\,\\mathrm{cm}$",
+      "$2\\,\\mathrm{cm}$",
+      "$4\\,\\mathrm{cm}$",
+      "$1\\,\\mathrm{cm}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Se conserva el volumen de fluido desplazado.\n2. Sustituimos los datos: $A_1(20)=10A_1h_2\\Rightarrow h_2=2$.\n3. El resultado pedido es $2\\,\\mathrm{cm}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t08_s02_c09",
+    "concept": "8.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 8,
+    "statement": "Un objeto de volumen 0.002 m³ está totalmente sumergido en líquido de densidad 800 kg/m³. Usa $g=10\\,\\mathrm{m/s^2}$. ¿Qué empuje recibe?",
+    "options": [
+      "$16\\,\\mathrm{N}$",
+      "$32\\,\\mathrm{N}$",
+      "$8\\,\\mathrm{N}$",
+      "$48\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El volumen desplazado coincide con el volumen sumergido.\n2. Sustituimos los datos: $E=800(10)(0.002)$.\n3. El resultado pedido es $16\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t08_s02_c10",
+    "concept": "8.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 8,
+    "statement": "Si un cuerpo flota en reposo sin apoyo externo…",
+    "options": [
+      "El empuje es mayor que su peso.",
+      "El empuje es menor que su peso.",
+      "El empuje iguala a su peso.",
+      "El empuje es siempre cero."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Solo consideramos peso y empuje como fuerzas verticales.\n2. La aceleración vertical es cero.\n3. La resultante nula exige igualdad de módulos.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t08_s02_c11",
+    "concept": "8.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 8,
+    "statement": "El principio de Pascal se refiere a…",
+    "options": [
+      "La desaparición de la presión al aumentar el área.",
+      "La transmisión de un cambio de presión a un fluido confinado en equilibrio.",
+      "La conservación de velocidad en cualquier tubería.",
+      "La igualdad de densidades entre líquidos distintos."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Se aplica un incremento de presión al fluido confinado.\n2. Ese incremento se transmite por el fluido en equilibrio.\n3. No elimina la variación hidrostática debida a la altura.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

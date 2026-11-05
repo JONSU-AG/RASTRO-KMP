@@ -7,11 +7,11 @@
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/lenguaje/LenguajeSemana04.kt + CONTENIDO_PEDAGOGICO/06_COMUNICACION/LENGUAJE/TEMA_04_Morfologia_y_Formacion_de_Palabras.md",
   "learningObjectives": [
-    "Definir morfología y morfema y diferenciar el morfema del fonema por la presencia de significado",
-    "Identificar alomorfos del plural y del prefijo negativo en contextos morfofonológicos",
-    "Clasificar morfemas lexicales, flexivos simples y amalgama, y derivativos con prefijos, sufijos e infijos",
-    "Distinguir morfemas libres de ligados en el análisis de palabras del español",
-    "Segmentar palabras como gat-o-s, panaderías y alumnas en sus constituyentes mínimos"
+    "Distinguir análisis morfológico, fonológico, silábico y sintáctico mediante ejemplos",
+    "Reconocer raíz y base sin tratarlas como sinónimos en toda derivación",
+    "Comparar alomorfos y delimitar las generalizaciones sobre plural y negación",
+    "Diferenciar flexión, derivación, amalgama e interfijación según el análisis indicado",
+    "Justificar segmentaciones y funciones en alumnas, panaderías, escribí y desarmar"
   ],
   "theory": {
     "id": "th_leng_t04_s01",
@@ -20,15 +20,16 @@
     "titulo": "Morfología: Concepto, Morfema, Alomorfos y Clasificación",
     "resumen": "",
     "conceptosClave": [
-      "Morfema = unidad mínima con significado; fonema = solo distintivo sin significado",
-      "Alomorfos del plural -s, -es y morfo cero; del prefijo negativo in-, im-, i-",
-      "Lexema porta significado léxico; flexivo simple añade género o número; amalgama funde tiempo, modo, aspecto, persona y número en el verbo",
-      "Derivativos crean palabras nuevas: prefijos antepuestos, sufijos pospuestos, infijos eufónicos sin significado",
-      "Libres tienen autonomía como sol y pan; ligados exigen compañía como -ero, des- y -s",
-      "En gat-o-s hay tres morfemas: gat- lexical, -o género masculino, -s plural",
-      "El amalgama es exclusivo del verbo conjugado como cant-é o escrib-í"
+      "Morfología: estructura interna y variaciones de las palabras; morfema no equivale a sílaba",
+      "Raíz y base se reconocen en su función dentro del análisis",
+      "Flexión y derivación: el cambio de categoría no es obligatorio en un derivado",
+      "Amalgama: un segmento puede expresar varios rasgos sin acumular necesariamente cinco",
+      "Interfijo entre base y sufijo; infijo dentro de una base",
+      "Alomorfía: variantes de un mismo morfema, con factores fónicos o morfológicos",
+      "Autonomía y función son clasificaciones distintas: un afijo derivativo y uno flexivo pueden ser ligados",
+      "Des-arm-a-r distingue vocal temática y marca de infinitivo"
     ],
-    "admissionTip": "Si ves verbo conjugado con desinencia que acumula persona, número, tiempo y modo en un solo bloque como cant-é o escribíamos, marca flexivo amalgama; si ves in- im- i- con valor negativo, marca alomorfos.",
-    "admissionExplanation": "La trampa más castigada es confundir flexivo simple con amalgama y derivativo con flexivo: el flexivo no crea palabra nueva, el derivativo sí, y el amalgama solo aparece en el verbo conjugado."
+    "admissionTip": "Justifica cada corte comparando palabras relacionadas; las letras finales y el número de sílabas no determinan por sí solos los morfemas.",
+    "admissionExplanation": "El análisis debe indicar qué unidad se pide y con qué detalle. Una raíz, una base y una terminación verbal no se identifican mediante una regla mecánica común."
   }
 }

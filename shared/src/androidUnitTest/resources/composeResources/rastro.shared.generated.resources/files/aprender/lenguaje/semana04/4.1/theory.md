@@ -1,117 +1,158 @@
 # Morfología: Concepto, Morfema, Alomorfos y Clasificación
 
-## INTRODUCCIÓN
+## Introducción
 
-La morfología es la puerta de entrada al análisis interno de la palabra y una de las zonas más rentables del examen de admisión UNSA porque cada pregunta se responde segmentando con precisión. Cuando lees panaderías, desarmar, alumnas o escribí no ves bloques caprichosos sino piezas mínimas con significado que se combinan bajo reglas estrictas. Dominar esas piezas te permite distinguir en segundos lo que crea una palabra nueva de lo que solo añade un accidente gramatical.
+Comparar **alumno**, **alumna** y **alumnas** permite reconocer una parte compartida y unas terminaciones que cambian. Comparar **leal** con **desleal** muestra otro proceso: se forma una palabra con un significado diferente. La morfología estudia esa estructura interna y las relaciones entre las formas.
 
-En esta lección recorrerás el camino completo del análisis morfológico. Partirás de la definición de morfología como disciplina que estudia la estructura interna de la palabra, pasarás por la noción de morfema como unidad mínima con significado y por la de alomorfo como variante formal del mismo morfema, y llegarás a la doble clasificación de los morfemas por su función y por su autonomía. Verás por qué gat o s son tres morfemas, por qué in im e i son el mismo prefijo negativo y por qué la desinencia del verbo conjugado concentra cinco accidentes en un solo bloque.
+El análisis no consiste en cortar una palabra cada cierto número de letras. Cada segmento necesita una justificación: puede aportar contenido léxico, expresar información gramatical o participar en una formación. También hay variantes de una misma unidad. El contexto y la comparación con otras palabras ayudan a reconocerlas.
 
-Al final podrás desarmar cualquier caso de examen. Sabrás por qué sol es un morfema libre con autonomía plena, por qué pan es el lexema de panaderías, por qué a y s en alumnas son flexivos simples de género y número, por qué ec en panecito es un infijo eufónico sin significado y por qué des en desarmar es un prefijo derivativo de privación.
+## Mapa del tema
 
-## DESARROLLO DEL TEMA
+```mermaid
+graph TD
+ A[Análisis morfológico] --> B[Reconocer unidades]
+ A --> C[Comparar funciones]
+ A --> D[Examinar variantes]
+ B --> B1[Raíz: contenido léxico compartido]
+ B --> B2[Afijos: elementos unidos a una base]
+ B --> B3[Base: punto de partida de una formación]
+ C --> C1[Flexión: formas de una misma palabra]
+ C --> C2[Derivación: formación de otra palabra]
+ C --> C3[Autonomía: unidades libres o ligadas]
+ D --> D1[Alomorfos: variantes de un morfema]
+ D --> D2[Amalgama: varios rasgos en un segmento]
+ D --> D3[Interfijo: posición entre base y sufijo]
+```
 
-# 4.1.1 — La morfología y el morfema como unidad mínima con significado
+# 4.1.1 — Qué analiza la morfología
 
-**¿Qué es?** La morfología es la disciplina de la lingüística que estudia la estructura interna de las palabras, sus reglas de formación, los elementos que las constituyen y las variaciones flexivas que experimentan. Su unidad de análisis es el morfema, definido como la unidad mínima significativa de la lengua, es decir, el signo lingüístico elemental provisto de significante y significado. La morfología responde a la pregunta por los componentes significativos de la palabra, a diferencia de la fonología que estudia sonidos distintivos y a diferencia de la sintaxis que estudia combinaciones de palabras en sintagmas y oraciones.
+**Palabras, morfemas y sonidos**
 
-**¿Cómo funciona?** El análisis morfológico segmenta la palabra en sus constituyentes mínimos con significado y asigna a cada segmento una función. En la palabra gatos se identifican tres morfemas. El segmento gat porta el significado léxico de felino doméstico y funciona como morfema lexical. El segmento o porta el accidente de género masculino y funciona como morfema flexivo simple. El segmento s porta el accidente de número plural y funciona como morfema flexivo simple. El mismo procedimiento se aplica a panaderías, donde pan es el lexema base de la familia léxica de pan, panadero, panadería y panecillo, mientras que el resto de segmentos aporta información gramatical y derivativa. En alumnas, la segmentación muestra alumn como base lexical más a de femenino más s de plural.
+La **morfología** estudia cómo se constituyen las palabras y cómo varían sus formas. En un análisis escolar, un **morfema** es una unidad mínima a la que se atribuye contenido léxico o información gramatical. La definición orienta el análisis, pero no exige que a cada fragmento visible le corresponda siempre un significado aislable.
 
-**¿Por qué?** Porque la palabra no es un bloque indivisible sino una construcción regular. Sin morfología no podrías explicar por qué niño, niñera y aniñado comparten el núcleo niñ, ni por qué sol, solar y parasol comparten el núcleo sol, ni por qué canté concentra en una sola terminación información que en otras lenguas exigiría varias palabras. La morfología revela la economía de la lengua, que con un inventario limitado de raíces y afijos genera un léxico abierto y productivo.
+En **alumn-a-s**, la raíz alumn- se relaciona con el contenido léxico, -a marca el femenino en este paradigma y -s marca el plural. Si quitamos -s, obtenemos alumna; si contrastamos alumna con alumno, observamos la oposición de género. La comparación respalda los cortes y sus funciones.
 
-**¿Cómo se diferencia?** El morfema se diferencia del fonema porque el fonema es solo distintivo y carece de significado, mientras que el morfema sí posee significado conceptual o gramatical. El fonema p en pan distingue pan de tan, pero no significa nada por sí solo. El morfema pan significa alimento básico y sostiene toda una familia de palabras. La morfología se diferencia de la fonología porque analiza significado, se diferencia de la sintaxis porque analiza interior de palabra y no combinación de palabras, y se diferencia de la semiótica pura porque trabaja con unidades gramaticales del español y no con signos en general.
+Un **fonema**, en cambio, es una unidad sonora distintiva sin ese significado propio. En pan y tan, sustituir /p/ por /t/ distingue las palabras; no significa que el fonema /p/ aporte por sí mismo la idea de alimento. Una letra representa escritura y una sílaba organiza pronunciación: ninguno de esos criterios basta para contar morfemas.
 
-# 4.1.2 — El alomorfo y las variantes formales del mismo morfema
+| Pregunta de análisis | Unidad que interesa | Ejemplo de observación |
+| --- | --- | --- |
+| ¿Qué sonidos permiten distinguir palabras? | Fonema | /p/ y /t/ en pan y tan. |
+| ¿Cómo se organiza la pronunciación? | Sílaba | a-lum-nas tiene tres sílabas. |
+| ¿Qué unidades expresan contenido o rasgos gramaticales? | Morfema | alumn-a-s permite reconocer raíz, género y número. |
+| ¿Cómo se relacionan las palabras en un enunciado? | Construcción sintáctica | Las alumnas leen: el grupo nominal concuerda en plural. |
 
-**¿Qué es?** El alomorfo es la variante formal, fonética o gráfica que adopta un mismo morfema en diferentes contextos morfológicos sin alterar su significado. Es el mismo contenido funcional bajo significantes complementarios condicionados por el entorno. La noción incluye también el morfo cero, representado con el símbolo Ø, que marca un accidente gramatical sin añadir segmento fónico visible, como ocurre en el plural de crisis o tórax.
+### Raíz y base no son siempre lo mismo
 
-**¿Cómo funciona?** El morfema de plural del español se manifiesta como s en palabras terminadas en vocal y como es en palabras terminadas en consonante. Se dice casas con s porque casa termina en vocal, y se dice árboles con es porque árbol termina en consonante. En palabras como crisis o tórax el plural se marca con morfo cero, de modo que se contrasta el tórax en singular con los tórax más Ø en plural. El morfema derivativo de negación se manifiesta como in ante la mayoría de consonantes en intolerable e inútil, como im ante consonante bilabial p o b en imposible e improbable, y como i ante consonante líquida l o r en ilógico e ilegible y en irreal. Las tres formas in, im e i son alomorfos del mismo prefijo negativo.
+La **raíz** concentra el contenido léxico compartido por una familia. En pan, panadero y panadería se reconoce pan-. La **base** es la unidad sobre la que opera un proceso de formación y puede ser mayor que una raíz. Por eso una pregunta que pide la raíz no debe confundirse con otra que pide el paso inmediato de una derivación.
 
-**¿Por qué?** Porque la lengua adapta la forma al contexto fónico para facilitar la pronunciación y mantener la identidad del significado. El cambio de in a im ante p responde al punto articulatorio bilabial, y el cambio a i ante l responde a la asimilación con líquidas. Sin alomorfía tendríamos secuencias difíciles de articular y la regularidad gramatical se volvería opaca. La alomorfía demuestra la versatilidad del sistema para mantener una función estable bajo formas variables.
+Reconocer pan- en panaderías no obliga a resolver de una sola manera todos los segmentos restantes. El análisis de procesos sucesivos exige más información. Aquí se pide identificar el contenido compartido con la palabra pan, no asegurar que todo lo que queda tras la raíz sea un único sufijo.
 
-**¿Cómo se diferencia?** El alomorfo se diferencia del morfema porque el morfema es la unidad abstracta de significado y el alomorfo es su realización concreta en contexto. In, im e i no son tres prefijos distintos sino tres caras del mismo morfema negativo. El alomorfo se diferencia del alófono porque el alófono es variante de fonema sin significado, mientras que el alomorfo es variante de morfema con significado constante. El morfo cero se diferencia de la ausencia de morfema porque sí porta información gramatical aunque no tenga cuerpo fónico, como en los tórax donde el plural existe aunque no se añada s.
+### Cómo justificar una segmentación
 
-# 4.1.3 — Clasificación por significado y función gramatical
+Primero se identifica la palabra en una oración y se compara con formas relacionadas. Después se proponen segmentos y se indica qué contraste explica cada uno. Finalmente se comprueba si la misma función reaparece en otros ejemplos. Este procedimiento permite distinguir un corte morfológico de una separación por letras o sílabas.
 
-**¿Qué es?** Es la clasificación que ordena los morfemas según aporten significado léxico o información gramatical y según creen o no palabras nuevas. Distingue morfema lexical, morfemas flexivos y morfemas derivativos. El morfema lexical, llamado lexema, raíz o base, es el núcleo irreducible portador del significado conceptual, léxico o semántico fundamental y pertenece al inventario abierto. Los morfemas flexivos, llamados desinencias, expresan accidentes gramaticales obligatorios sin crear palabras nuevas. Los morfemas derivativos, llamados afijos, se unen al lexema para crear palabras derivadas y pueden cambiar la categoría gramatical de la base.
+En **mares**, la comparación con mar permite reconocer mar-es. No conviene separar ma-r-es: ni ma- ni -r aportan aquí las funciones que esa propuesta tendría que demostrar. En **desleal**, la comparación con leal permite reconocer des- como prefijo, sin exigir que el número de sílabas coincida con el de unidades morfológicas.
 
-**¿Cómo funciona?** El lexema sostiene la familia léxica. Niñ sostiene niño, niñera y aniñado. Sol sostiene sol, solar y parasol. Pan sostiene pan, panadero, panadería y panecillo. Los flexivos simples aportan un solo accidente de género o de número. En alumnas, a aporta género femenino y s aporta número plural. En gatos, o aporta masculino y s aporta plural. El flexivo amalgama es exclusivo del verbo conjugado y funde en una sola desinencia indivisible los accidentes de tiempo, modo, aspecto, número y persona. En canté, el segmento é expresa en bloque primera persona, singular, pretérito perfecto simple, modo indicativo y aspecto perfectivo. En escribí, el segmento í expresa la misma fusión amalgamada. En escribíamos, la desinencia aglutina primera persona, plural, pretérito imperfecto, indicativo e imperfectivo. Los derivativos crean léxico nuevo. Los prefijos se anteponen al lexema en deshacer, subsuelo, preuniversitario, rehacer, infiel y anormal. Los sufijos se posponen al lexema en librero, tranquilamente, panadería, librería, lealtad y cantante. Los infijos o interfijos son segmentos átonos sin significado propio que se insertan entre raíz y sufijo por eufonía en polvareda con ar, panecillo con ec y cafecito con ec.
+# 4.1.2 — Variantes de un mismo morfema
 
-**¿Por qué?** Porque sin esta clasificación no se puede decidir si un segmento crea palabra o solo flexiona. El flexivo mantiene la identidad léxica y la categoría, el derivativo funda una entrada nueva en el diccionario. Por eso alumnas sigue siendo el mismo sustantivo alumno flexionado, mientras que panadero ya es un sustantivo nuevo derivado de pan con valor de oficio. La distinción sostiene la diferencia entre accidentes obligatorios y creación productiva.
+**Qué es un alomorfo**
 
-**¿Cómo se diferencia?** El flexivo se diferencia del derivativo porque el flexivo no crea palabra nueva ni cambia la categoría, solo añade género, número o, en el verbo, tiempo, modo, aspecto, persona y número. El derivativo se diferencia porque sí crea palabra nueva y puede cambiar la categoría, como cuando leal adjetivo genera lealtad sustantivo, o cuando canta verbo genera cantante sustantivo. El flexivo simple se diferencia del amalgama porque el simple aporta un solo accidente como a de femenino o s de plural, mientras que el amalgama funde cinco accidentes en el verbo conjugado. El prefijo se diferencia del sufijo por la posición anterior o posterior al lexema, y el infijo se diferencia de ambos porque carece de significado y solo facilita la pronunciación.
+Los **alomorfos** son realizaciones distintas de un mismo morfema. La función o el contenido se relacionan, aunque cambie la forma. No toda semejanza escrita prueba alomorfía ni toda diferencia demuestra que haya un morfema nuevo: se necesita comparar usos y contextos.
 
-# 4.1.4 — Clasificación por dependencia y análisis integral de casos
+Un ejemplo de número es el contraste entre **casa/casas** y **árbol/árboles**. El plural aparece mediante -s en el primer caso y -es en el segundo. El ejemplo no establece que todas las palabras acabadas en vocal o consonante sigan únicamente esos dos modelos; se trata de observar dos realizaciones concretas del plural.
 
-**¿Qué es?** Es la clasificación que ordena los morfemas según puedan o no aparecer aislados en el discurso. Los morfemas libres o independientes pueden aparecer solos y constituyen por sí mismos una palabra completa autónoma. Los morfemas ligados o trabados no pueden aparecer solos y requieren unirse a otros morfemas para tener realización. Esta clasificación cruza con la anterior y permite el análisis integral de cualquier palabra.
+| Serie | Forma observada | Función compartida |
+| --- | --- | --- |
+| casa/casas | -s | Número plural. |
+| árbol/árboles | -es | Número plural. |
+| una crisis/varias crisis | Sin cambio segmental en crisis | La forma sirve para singular y plural; el entorno los distingue. |
+| inútil/imposible/ilegal/irreal | in-, im-, i- | Negación en estas formaciones. |
 
-**¿Cómo funciona?** Son libres palabras como sol, pan, mar, árbol y hoy, que tienen significado y autonomía léxica plena sin necesidad de prefijos ni sufijos. La palabra sol responde a la pregunta por la unidad constituida exclusivamente por un morfema libre. Son ligados segmentos como ero en panadero, des en desarmar, ción en creación y s en casas, que nunca aparecen solos con ese valor. El análisis integral combina ambas clasificaciones. En panaderías se reconoce pan como lexema libre en origen más segmentos ligados derivativos y flexivos. En alumnas se reconoce alumn como base más a flexivo simple de femenino más s flexivo simple de plural. En escribí se reconoce escrib como lexema verbal más í como flexivo amalgama. En desarmar se reconoce des como prefijo derivativo de oposición o privación más arm como lexema verbal más ar como vocal temática. En panecito se reconoce pan como lexema más ec como infijo eufónico sin significado más ito como sufijo apreciativo.
+La forma **crisis** no recibe una s adicional para formar el plural. En varios análisis se representa esa ausencia de cambio mediante un **morfo cero**, escrito Ø. El signo es una herramienta del análisis; no es una letra pronunciada ni significa que el sustantivo carezca de número. En otras descripciones se habla de forma invariable y se destaca el papel del contexto.
 
-**¿Por qué?** Porque la autonomía explica la distribución. Un morfema libre puede ser enunciado aislado como respuesta, mientras que un ligado necesita huésped. Esta propiedad permite detectar segmentaciones falsas, como tratar des como palabra o tratar ec como lexema, y orienta la identificación de raíces en el examen.
+### El prefijo negativo
 
-**¿Cómo se diferencia?** El libre se diferencia del ligado porque el libre tiene realización autónoma y el ligado exige compañía. Sol es libre, ero es ligado. Pan como palabra es libre, pan como raíz de panadero es lexema que admite ligados. El morfema trabado derivativo se diferencia del trabado flexivo porque el primero crea palabra nueva y el segundo solo flexiona, aunque ambos sean ligados. Como refuerzo memoriza la idea clave en negrita. **El amalgama es exclusivo del verbo conjugado y concentra persona, número, tiempo, modo y aspecto en una sola terminación.**
+En **inútil**, **imposible**, **ilegal** e **irreal** se reconoce el mismo prefijo negativo con variación formal. Im- es la variante gráfica ante p o b; i- aparece ante l o r. En irreal, la doble r responde además a la escritura del sonido entre vocales. No se deben contar dos prefijos negativos por ver dos letras r.
 
-## CONCEPTOS IMPORTANTES
+La distribución no equivale a una elección libre del hablante para cualquier palabra. Escribimos imposible, no una forma inventada con in- delante de posible. Tampoco todo comienzo in-, im- o i- permite aislar automáticamente un prefijo negativo: primero debe reconocerse una base y una relación de significado pertinente.
 
-- Morfología como disciplina que estudia la estructura interna de la palabra, sus reglas de formación y sus variaciones flexivas.
-- Morfema como unidad mínima con significado conceptual o gramatical, a diferencia del fonema que solo distingue sonidos.
-- Segmentación modelo en gat o s con gat lexical de felino, o de masculino y s de plural, extensible a alumn a s y a panaderías.
-- Lexema como núcleo irreducible de significado en niñ, sol, pan, libr, mar, alumn y escrib.
-- Flexivos simples de género con o masculino y a femenino, y de número con s y es, sin crear palabras nuevas.
-- Flexivo amalgama exclusivo del verbo conjugado que funde tiempo, modo, aspecto, número y persona en canté, escribí y escribíamos.
-- Derivativos que crean palabras nuevas con prefijos antepuestos como des, sub, pre, re, in, sufijos pospuestos como ero, ería, tad, nte, mente, e infijos eufónicos como ar y ec.
-- Libres con autonomía plena como sol, pan, mar, árbol y hoy frente a ligados sin autonomía como ero, des, ción y s.
-- Alomorfos como variantes del mismo morfema con significado constante, con s y es y morfo Ø para plural, y con in, im e i para negación.
-- Prefijo des con valor de oposición, privación y reversión en desarmar, deshacer y desleal.
+### Alomorfo y alófono
 
-## DIFERENCIAS QUE CONFUNDEN
+Un alomorfo corresponde al análisis morfológico: se mantiene una función o un contenido. Un alófono corresponde a la realización de un fonema en la pronunciación. Los términos no se intercambian por el hecho de que ambos describan variantes. En esta lección, -s y -es se comparan por el plural; el análisis de realizaciones sonoras requiere otro nivel de descripción.
 
-- Morfema frente a fonema. Morfema tiene significado como pan y gat, fonema solo distingue como p en pan frente a tan. Si aporta significado es morfema, si solo cambia sonido es fonema.
-- Flexivo frente a derivativo. Flexivo no crea palabra nueva y mantiene la categoría, como a y s en alumnas. Derivativo crea palabra nueva y puede cambiar la categoría, como ero en panadero y tad en lealtad. Pregunta si la palabra resultante ya existía con otro sentido o categoría.
-- Flexivo simple frente a amalgama. Simple aporta un accidente como o de masculino o s de plural. Amalgama funde cinco accidentes en el verbo como é en canté e í en escribí. Si es verbo conjugado y la desinencia acumula tiempo y persona, es amalgama.
-- Prefijo frente a sufijo frente a infijo. Prefijo va antes del lexema como des en desarmar. Sufijo va después como ero en librero. Infijo va entre raíz y sufijo sin significado como ec en panecito. Si no aporta significado y solo suaviza, es infijo.
-- Libre frente a ligado. Libre aparece solo como sol y pan. Ligado exige compañía como des y ero y s. Si puedes decirlo aislado con sentido pleno, es libre.
-- Alomorfo frente a morfema distinto. In, im e i no son tres negaciones distintas sino un solo morfema negativo con tres formas. S y es no son dos plurales distintos sino un solo morfema de número. Si el significado es el mismo y solo cambia la forma por contexto, es alomorfía.
-- Morfología frente a sintaxis frente a fonología. Morfología analiza interior de palabra, sintaxis combina palabras en frases y oraciones, fonología analiza sonidos. Gatos como tres morfemas es morfología, gatos como núcleo de frase nominal es sintaxis.
+La forma puede variar por el entorno fónico, pero también por factores morfológicos. Por eso no se define la alomorfía como un proceso que dependa exclusivamente de facilitar la pronunciación. Comparar varias palabras resulta más fiable que decidir a partir de una sola secuencia escrita.
 
-## DATOS IMPORTANTES
+# 4.1.3 — Función de raíces y afijos
 
-- Definición oficial. Morfología estudia estructura interna, reglas de formación, elementos constitutivos y variaciones flexivas de la palabra.
-- Ejemplo canónico de segmentación. Gat o s con tres morfemas, alumn a s con base más femenino más plural, pan con familia en panadero y panadería.
-- Alomorfos del plural. S tras vocal en casas, es tras consonante en árboles, morfo Ø sin segmento en crisis y tórax para el plural.
-- Alomorfos del prefijo negativo. In ante consonante general en intolerable, im ante p y b bilabiales en imposible e improbable, i ante l y r líquidas en ilógico e ilegible.
-- Lexemas modelo. Niñ en niño y niñera, sol en solar y parasol, pan en panadero, libr en librería, escrib en escribíamos.
-- Flexivo amalgama. Exclusivo del verbo conjugado, indivisible, con tiempo, modo, aspecto, número y persona en canté, escribí y escribíamos.
-- Derivativos modelo. Prefijos en deshacer, subsuelo, preuniversitario, rehacer, infiel. Sufijos en librero, tranquilamente, panadería, librería, lealtad, cantante. Infijos en polvareda, panecillo, cafecito.
-- Libres modelo. Sol, pan, mar, árbol, hoy con autonomía. Ligados modelo. Ero, des, ción, s sin autonomía.
-- Como refuerzo para no confundir flexivo con derivativo recuerda que el flexivo mantiene el diccionario y el derivativo lo amplía con entradas nuevas.
-- Como refuerzo para alomorfos recuerda que la forma cambia por el sonido vecino pero la función y el significado permanecen idénticos.
+**Flexión y derivación**
 
-## EJEMPLOS
+La **flexión** produce formas de una misma palabra léxica. En alumno, alumna y alumnas cambia información gramatical del paradigma. La **derivación** permite formar otra palabra: de leal se obtiene desleal; de leal también se forma lealtad. En el primer caso se mantiene la categoría adjetiva; en el segundo se obtiene un sustantivo.
 
-- La unidad mínima con significado. Ante la pregunta por la unidad mínima del análisis morfológico con significado conceptual o gramatical, la respuesta es morfema, porque el sintagma es unidad sintáctica mayor, el fonema carece de significado y el grafema es unidad de escritura.
-- Variantes in, im e i. Ante la pregunta por las variantes formales del mismo morfema de negación según contexto, la respuesta es alomorfos, porque monema libre no describe variación, infijo flexivo mezcla categorías y alófono es variante de fonema.
-- Escribí con í amalgama. En la forma verbal escribí, la desinencia í es flexivo amalgama porque expresa en bloque tiempo, modo, aspecto, persona y número del verbo conjugado, a diferencia del derivativo prefijal, del flexivo simple de número y del infijo eufónico.
-- Pan en panaderías. En panaderías el morfema lexical es pan, notado pan-, que porta el significado básico de la familia de panadero y panadería, mientras que ería y s aportan información derivativa y flexiva y panad no es raíz.
-- Ec eufónico. El elemento entre raíz y sufijo que solo facilita la pronunciación sin aportar significado es el infijo o interfijo, como ec en panecito, a diferencia del flexivo simple, del morfema libre y del prefijo.
-- Sol como libre. Entre perrito, desleal, mares y sol, la única constituida exclusivamente por un morfema libre es sol, porque perrito lleva sufijo, desleal lleva prefijo y mares lleva flexivo de plural.
-- Derivativos crean palabras. Los morfemas que adheridos a la raíz generan una palabra derivada o cambian la categoría son los derivativos o afijos, a diferencia de los flexivos que solo flexionan, de los libres que ya son palabras y de los alomorfos amalgama que son variantes y desinencias.
-- Alumnas con a y s. En alumnas, a indica género femenino y s indica número plural, ambos flexivos simples, a diferencia de la derivación apreciativa, del tiempo y aspecto verbal y de la idea de trabados derivativos.
-- Des en desarmar. Entre rehacer, subdirector, desarmar y anteponer, la que contiene prefijo de oposición o privación es desarmar con des de reversión, mientras que re es repetición, sub es posición inferior y ante es anterioridad.
-- Morfología como disciplina. La disciplina que estudia la estructura interna y los componentes significativos de la palabra es la morfología, a diferencia de la fonología de sonidos, la sintaxis de oraciones y la semiótica pura general.
-- Caso escribíamos. En escribíamos el morfema desinencial que aglutina primera persona, plural, pretérito imperfecto, indicativo e imperfectivo es el flexivo amalgama, porque concentra cinco accidentes en terminación indivisible del verbo conjugado.
-- Caso intolerante, improbable, ilegible. La serie que muestra los alomorfos complementarios del prefijo negativo es intolerante con in, improbable con im ante p bilabial e ilegible con i ante l líquida, porque deshacer repite el mismo prefijo des, pre repite el mismo prefijo pre, re repite el mismo prefijo re y sub repite el mismo prefijo sub.
+No es necesario que un derivado cambie de categoría para considerarlo derivado. Tampoco basta con buscar una entrada separada en un diccionario: la cobertura de un diccionario no decide por sí sola la estructura de la lengua. Se compara el procedimiento de formación y el significado de las unidades.
 
-## IDEA CLAVE
+| Elemento o proceso | Qué permite reconocer | Ejemplo |
+| --- | --- | --- |
+| Raíz | Contenido léxico básico compartido. | pan- en panadero y panadería. |
+| Afijo flexivo | Rasgos de las formas de un paradigma. | -s en alumnas. |
+| Prefijo derivativo | Formación mediante un elemento anterior a la base. | des- en desleal. |
+| Sufijo derivativo | Formación mediante un elemento posterior a la base. | -ero en librero. |
 
-La palabra es un ensamblaje de piezas mínimas con significado donde el lexema aporta la idea base, los flexivos añaden accidentes obligatorios con el amalgama verbal como fusión total, los derivativos fundan palabras nuevas con prefijos y sufijos, los infijos solo suavizan la pronunciación y los alomorfos muestran la misma función bajo formas distintas según el contexto.
+En **alumnas**, -a y -s permiten reconocer femenino y plural en el análisis mostrado. Esto no autoriza a afirmar que toda palabra acabada en a sea femenina o que toda o final sea un morfema masculino. La letra final se interpreta dentro del paradigma: las funciones gramaticales no se leen mediante una correspondencia automática entre letra y género.
 
-## CLAVE DE ADMISIÓN
+### Más de un rasgo en un segmento
 
-Piensa en bloques con función fija. Si es verbo conjugado y la terminación acumula persona, número, tiempo, modo y aspecto, marca amalgama como en canté y escribí. Si ves in, im e i con valor negativo, marca alomorfos con im ante p y b e i ante l y r. Si el segmento crea palabra nueva, marca derivativo como des en desarmar y ero en panadero. Si solo añade género o número, marca flexivo simple como a y s en alumnas. Si va entre raíz y sufijo sin significado, marca infijo como ec en panecito. Si aparece solo con sentido pleno como sol, marca libre. **El canal de la duda se cierra preguntando si la palabra intermedia existe y si el segmento crea o solo flexiona.**
+Se habla de **amalgama** cuando un segmento reúne varias informaciones gramaticales. En **escribí**, la terminación -í permite reconocer una forma de primera persona singular del pretérito perfecto simple de indicativo. No se puede asignar una letra diferente a cada uno de esos valores.
 
-## RESUMEN
+No toda terminación verbal constituye un bloque que exprese obligatoriamente todos los rasgos a la vez. En **cant-á-ba-mos**, un análisis distingue raíz, vocal temática, -ba- y -mos. El segmento -ba- reúne tiempo, aspecto y modo; -mos reúne persona y número. La amalgama consiste en acumular información, no en exigir siempre cinco valores ni en declarar indivisible cualquier final verbal.
 
-Morfología como estudio del interior de la palabra con el morfema como unidad mínima con significado. Alomorfos con s, es y Ø para plural y con in, im e i para negación según contexto fónico. Lexema con significado base en pan, sol, niñ y gat. Flexivos simples de género y número sin crear palabras y flexivo amalgama exclusivo del verbo con cinco accidentes en canté y escribí. Derivativos con prefijos, sufijos e infijos eufónicos que sí crean palabras como desarmar, panadero y panecito. Libres autónomos como sol frente a ligados dependientes como ero y des. Segmentaciones modelo en gatos, alumnas y panaderías que sostienen las diez preguntas de la lección.
+Este contraste también impide confundir la conjugación con la creación de una palabra léxica. Cantaba y cantábamos son formas del mismo verbo; cantante pertenece a un proceso de formación. Reconocer una terminación no basta: hay que indicar qué rasgos expresa y en qué unidad se está trabajando.
+
+### Prefijo, sufijo e interfijo
+
+En **rehacer**, re- precede a la base; en **librero**, -ero aparece después de la raíz. Esa posición ayuda a distinguir prefijos y sufijos, aunque no sustituye el análisis de su función.
+
+Un **interfijo** se sitúa entre una base y un sufijo. En el análisis **cancion-c-ita**, -c- ocupa esa posición. No debe llamarse automáticamente infijo: este se inserta dentro de una base, como -it- en Carl-it-os. La segmentación de ciertos derivados puede variar entre modelos; no se presenta como una partición universal ni se explica todo interfijo únicamente como un adorno para pronunciar mejor.
+
+### Interpretar des-
+
+En **desarmar**, des- expresa reversión o privación respecto de armar. En **desleal**, aporta negación a leal. Es un prefijo derivativo en estos ejemplos. No conviene concluir que todos los prefijos signifiquen oposición: re- en rehacer expresa repetición y sub- en subdirector expresa una relación de subordinación.
+
+Si se analiza el infinitivo con mayor detalle, **des-arm-a-r** permite separar el prefijo, la raíz, la vocal temática -a- y la marca -r de infinitivo. Por tanto, llamar vocal temática a todo el segmento -ar sería una segmentación imprecisa. El grado de detalle debe declararse antes de contar los segmentos.
+
+# 4.1.4 — Autonomía y análisis de casos
+
+**Unidades libres y ligadas**
+
+Un morfema **libre** puede constituir una palabra; uno **ligado** necesita unirse a otro elemento para aparecer con la función analizada. Sol es una palabra simple que permite observar la primera situación. El prefijo des- no puede funcionar aisladamente como palabra con el valor de negación que tiene en desleal.
+
+Esta clasificación no sustituye a la de función. Un sufijo derivativo y una terminación flexiva pueden ser ligados, aunque no aporten la misma clase de información. En librero, -ero participa en la derivación; en mares, -es expresa plural. Decir que ambos son ligados no significa que ambos formen palabras nuevas.
+
+| Palabra | Segmentación o comparación utilizada | Qué se puede concluir |
+| --- | --- | --- |
+| sol | sol | Palabra simple y unidad libre en este análisis. |
+| mares | mar-es frente a mar | -es marca plural. |
+| alumnas | alumn-a-s frente a alumna/alumno | -a y -s expresan género y número en este paradigma. |
+| desleal | des-leal frente a leal | des- es un prefijo derivativo. |
+| escribí | escrib-í frente a otras formas de escribir | La terminación acumula información de la conjugación. |
+| panaderías | pan- compartido con pan y panadero | Se reconoce la raíz; identificarla no equivale a segmentar todo el resto. |
+
+### Casos desarrollados
+
+**Identificar una unidad mínima.** En una pregunta que contrapone morfema, fonema, grafema y sintagma, hay que reconocer el nivel solicitado. Si se pide la unidad del análisis de la estructura interna con contenido o función gramatical, corresponde morfema. No se elige fonema solo por ser una unidad pequeña.
+
+**Reconocer variantes.** En inútil e imposible cambia la realización del prefijo negativo. La relación no convierte cada forma en un significado de negación diferente. Para justificar alomorfía se indican las formas comparadas, su contenido y el contexto, sin afirmar que cualquier parecido visual es suficiente.
+
+**Distinguir forma y palabra derivada.** Al pasar de mar a mares se expresa plural; al pasar de leal a desleal se forma otro adjetivo. La derivación puede mantener la categoría, mientras la flexión organiza las formas de una misma unidad léxica. El contraste debe explicarse con ejemplos completos.
+
+**Reconocer una raíz.** Pan- se relaciona con el contenido compartido por pan, panadero y panadería. No se elige -s, que marca plural, ni se confunde la raíz con una base de derivación más extensa. La pregunta debe precisar qué unidad solicita.
+
+**Analizar una terminación verbal.** En escribí, -í no es un prefijo ni un morfema que indique únicamente plural. La forma expresa primera persona singular y pasado, entre otros rasgos. El nombre flexivo amalgama describe la acumulación; no enseña que toda conjugación se segmente igual.
+
+## Importante
+
+Una segmentación necesita **comparación y función**. Las letras que coinciden, el número de sílabas o la posibilidad de pronunciar una parte no demuestran por sí solos que haya un morfema. Hay que indicar el modelo y el detalle del análisis, especialmente en los derivados y las formas verbales.
+
+No se extiende una conclusión local a todas las palabras: -a expresa femenino en alumnas, pero esa observación no clasifica automáticamente cualquier palabra terminada en a. De igual manera, un prefijo puede cambiar significado sin cambiar categoría.
 
 ## Flexión y formación de palabras
 

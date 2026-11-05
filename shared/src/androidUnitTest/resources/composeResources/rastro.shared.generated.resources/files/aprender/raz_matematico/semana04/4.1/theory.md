@@ -20,23 +20,45 @@
 
 ## 2. 🗺️ MAPA TAXONÓMICO Y ONTOLOGÍA DEL TEMA
 
-```text
-                               ┌─ Método de Traslación de Regiones Sombreadas
-        ┌─ 1. Cálculo de ──────┼─ Método de Diferencia de Áreas (Área Total - Área No Sombreada)
-        │      Áreas           ├─ Relaciones de Áreas en Triángulos (Medianas y Baricentro)
-        │                      └─ Propiedades en Paralelogramos y Trapecios
-        │
-RAZONAMIENTO                   ┌─ Definición Rigurosa de Perímetro (Contorno exterior continuo)
-GEOMÉTRICO ─────┼─ 2. Perímetros ──────┼─ Perímetros de Curvas y Semicircunferencias Compuestas
-        │      y Contornos     └─ Principio de Conservación de Perímetro por Proyección Ortogonal
-        │
-        │                      ┌─ Conteo por Inducción: Fórmulas n(n+1)/2 (Segmentos, Ángulos)
-        ├─ 3. Conteo de ───────┼─ Conteo de Triángulos y Cuadriláteros en Redes
-        │      Figuras         └─ Conteo de Cubos y Bloques en Sólidos 3D
-        │
-        └─ 4. Visualización ───┌─ Simetría Axial (Reflexión respecto a una recta) y Central
-               Espacial y      ├─ Doblado, Desdoblado y Perforación de Papel
-               Simetría        └─ Vistas Principales (Frontal, Horizontal, Perfil)
+```mermaid
+graph TD
+ ROOT["Razonamiento geométrico"]
+ B1["Áreas"]
+ B1N1["Trasladar o descomponer regiones sin deformarlas conserva el área."]
+ B1N2["Diferencia de áreas: identificar la región total y la que se retira."]
+ B1N3["Triángulos: usar bases y alturas correspondientes; revisar medianas y baricentro."]
+ B1N4["Paralelogramos y trapecios: distinguir altura perpendicular y lado oblicuo."]
+ B2["Perímetros y fronteras"]
+ B2N1["Sumar las longitudes de la frontera solicitada, incluidos huecos si el enunciado los cuenta."]
+ B2N2["Arcos: usar el ángulo correspondiente y sumar también los segmentos rectos que pertenecen al borde."]
+ B2N3["Una proyección no conserva cualquier longitud; justificar las condiciones de un atajo rectilíneo."]
+ B3["Conteo de figuras"]
+ B3N1["Segmentos sobre una recta: elegir sus dos extremos entre puntos distintos."]
+ B3N2["Triángulos y cuadriláteros: clasificar tamaños y evitar contar la misma figura dos veces."]
+ B3N3["Bloques: distinguir volumen total, cubos visibles y caras expuestas."]
+ B4["Visualización espacial"]
+ B4N1["Simetría axial: reflexión respecto de una recta."]
+ B4N2["Simetría central: correspondencia respecto de un punto."]
+ B4N3["Doblado y perforación: reflejar cada pliegue en orden inverso."]
+ B4N4["Vistas: frontal, superior y perfil, con orientación indicada."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ B4 --> B4N4
 ```
 
 ---
@@ -69,7 +91,7 @@ A_{\text{sombreada}} = A_{\text{figura total}} - \sum A_{\text{regiones no sombr
 
 ### 3.2 Perímetros: Definición y Propiedades de Proyección
 
-* **Definición Rigurosa:** El perímetro (2p) de una región es la **longitud total de su frontera o contorno exterior**.
+* **Definición Rigurosa:** El perímetro (2p) de una región es la **longitud de la frontera solicitada**; si se pide toda la frontera de una región con huecos, también se cuentan sus bordes interiores.
 
 ## 3. FORMULARIO FUNDAMENTAL Y LEYES BASE
 ### 4. 📐 FORMULARIO MAESTRO DE REGIONES SOMBREADAS CLÁSICAS

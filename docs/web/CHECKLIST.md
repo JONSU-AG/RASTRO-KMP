@@ -1,0 +1,21 @@
+# Estado real — web
+
+- [x] Proyecto separado, sin incorporación al build Android.
+- [x] Lectura directa de temas/modelos/catálogo original: sin duplicar o modificar esos archivos.
+- [x] Inicio preliminar, teoría y selección de la primera lección de Filosofía implementados.
+- [x] Resultado de aciertos animado y botones con profundidad/spring implementados.
+- [x] Animación de estrellas original de LearningRewards.kt reutilizada directamente; cálculo de estrellas según regla actual, sin guardar progreso ni entregar premios.
+- [x] JavaScript de plataforma/service worker validado con node --check; manifest JSON válido.
+- [x] Git confirma que Android/shared/configuración Gradle original permanecen intactos.
+- [x] Manifest y service worker PWA implementados; aviso Android opcional con cierre por siete días.
+- [ ] Compilación Wasm y distribución correctas.
+- [ ] Revisión visual en navegador.
+- [ ] Instalación/fluidez en iPhone/Safari y PC; navegación por teclado/lector de pantalla.
+- [ ] Modo de compatibilidad Kotlin/JS para navegadores sin WasmGC; primer piloto Wasm requiere Safari moderno.
+- [ ] Funcionamiento offline después de descarga completa y actualización de caché.
+- [ ] Pantallas y animaciones completas de la APK adaptadas.
+- [ ] Preguntas de relaciones y rellenar, persistencia local y progresión real.
+- [ ] Autenticación/Firebase/Drive y sincronización compatibles con web.
+- [ ] Pro existente y diferencias de compras/anuncios en web definidas sin duplicar sistemas.
+- [ ] Todas las materias, Simulador, Cursos, Biblioteca, Perfil, Pizarra y Admin.
+- [ ] Revisión legal y publicación web sin afectar el sitio existente.

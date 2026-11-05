@@ -1,1 +1,200 @@
-[{"concept":"4.1.1","correctIndex":0,"explanation":"**Resolución:** 1. Realizamos el DCL en el nudo de unión de los cables: - Tensión \\vec{T}_1 formando 37^\\circ con la horizontal (hacia arriba y a la izquierda). - Tensión \\vec{T}_2 formando 53^\\circ con la horizontal (hacia arriba y a la derecha). - Peso vertical hacia abajo: P = 120\\text{ N}. 2. Dado que el ángulo entre ambos cables es 37^\\circ + 53^\\circ = 90^\\circ, las tres fuerzas forman un triángulo rectángulo cerrado: - La hipotenusa es el peso P = 120\\text{ N} vertical. - El cateto opuesto a 37^\\circ es T_1: T_1 = P \\cos 53^\\circ = P \\sin 37^\\circ = (120\\text{ N})(0.6) = 72\\text{ N} - El cateto opuesto a 53^\\circ es T_2: T_2 = P \\cos 37^\\circ = P \\sin 53^\\circ = (120\\text{ N})(0.8) = 96\\text{ N} - Las tensiones son T_1 = 72\\text{ N} y T_2 = 96\\text{ N}. **Respuesta:** A ---","fuente":"temario","id":"fis_t04_s01_c01","options":["T_1 = 72\\text{ N}; T_2 = 96\\text{ N}","T_1 = 60\\text{ N}; T_2 = 80\\text{ N}","T_1 = 96\\text{ N}; T_2 = 72\\text{ N}","T_1 = 80\\text{ N}; T_2 = 100\\text{ N}"],"pedagogicalTier":"concepto","semana":4,"statement":"**Enunciado:** Un semáforo de 120\\text{ N} de peso cuelga del punto de unión de dos cables ligeros e inextensibles fijados al techo. El cable 1 forma un ángulo de 37^\\circ con la horizontal y el cable 2 forma un ángulo de 53^\\circ con la horizontal. Determine las tensiones T_1 y T_2 en dichos cables para mantener el sistema en equilibrio estático. (\\sin 37^\\circ = 0.6, \\cos 37^\\circ = 0.8).","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.1.2","correctIndex":1,"explanation":"**Resolución:** 1. Realizamos el DCL de la esfera en equilibrio: - Peso \\vec{P} = 40\\text{ N} vertical hacia abajo. - Reacción de la pared vertical lisa \\vec{R}_1: horizontal hacia la derecha (\\theta = 0^\\circ). - Reacción del plano inclinado liso \\vec{R}_2: perpendicular al plano inclinado (forma un ángulo de 30^\\circ con la horizontal, apuntando hacia arriba y hacia la izquierda). 2. Analizamos los ángulos comprendidos entre las líneas de acción de las tres fuerzas: - Entre \\vec{R}_1 (horizontal derecha) y \\vec{P} (vertical abajo): ángulo de 90^\\circ. - Entre \\vec{R}_1 y \\vec{R}_2: como \\vec{R}_2 tiene elevación de 30^\\circ hacia la izquierda, el ángulo entre \\vec{R}_1 y \\vec{R}_2 es 180^\\circ - 30^\\circ = 150^\\circ. - Entre \\vec{P} y \\vec{R}_2: ángulo de 90^\\circ + 30^\\circ = 120^\\circ. 3. Aplicamos el Teorema de Lamy: \\frac{P}{\\sin 150^\\circ} = \\frac{R_2}{\\sin 90^\\circ} Sabiendo que \\sin 150^\\circ = \\sin(180^\\circ - 30^\\circ) = \\sin 30^\\circ = \\frac{1}{2} y \\sin 90^\\circ = 1: \\frac{40}{1/2} = \\frac{R_2}{1} \\implies R_2 = 40 \\times 2 = 80\\text{ N} **Respuesta:** D ---","fuente":"temario","id":"fis_t04_s01_c02","options":["80\\text{ N}","40\\text{ N}","20\\sqrt{3}\\text{ N}","\\frac{80\\sqrt{3}}{3}\\text{ N}"],"pedagogicalTier":"concepto","semana":4,"statement":"**Enunciado:** Una esfera lisa y homogénea de peso P = 40\\text{ N} descansa apoyada entre una pared vertical lisa y un plano inclinado liso que forma un ángulo de 30^\\circ con la vertical. Determine el módulo de la fuerza de reacción que ejerce el plano inclinado sobre la esfera.","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.1.3","correctIndex":2,"explanation":"**Resolución:** 1. Identificamos las fuerzas que actúan sobre la viga: - Peso propio de la viga homogénea: P_{\\text{viga}} = Mg = (20)(10) = 200\\text{ N}, aplicado en su punto medio (d_1 = 3\\text{ m} desde A). - Peso de la carga colgada: P_{\\text{carga}} = mg = (10)(10) = 100\\text{ N}, aplicado a d_2 = 4\\text{ m} desde A. - Tensión \\vec{T} en el extremo B (d_3 = 6\\text{ m} desde A), formando un ángulo de 30^\\circ con la viga. - Reacción en la articulación A (\\vec{R}_A), cuyas componentes no conocemos. 2. Aplicamos la Segunda Condición de Equilibrio tomando centro de momentos en la articulación A (\\sum \\tau_A = 0): \\sum \\tau_{(\\text{antihorarios})} = \\sum \\tau_{(\\text{horarios})} - El momento antihorario es producido por la componente vertical de la tensión: \\tau_T = T \\sin(30^\\circ) \\times L = T (0.5) \\times (6\\text{ m}) = 3T - Los momentos horarios son producidos por los dos pesos verticales hacia abajo: \\tau_{\\text{pesos}} = P_{\\text{viga}} \\times (3\\text{ m}) + P_{\\text{carga}} \\times (4\\text{ m}) \\tau_{\\text{pesos}} = (200\\text{ N})(3\\text{ m}) + (100\\text{ N})(4\\text{ m}) = 600 + 400 = 1000\\text{ N}\\cdot\\text{m} 3. Igualamos ambos torques: 3T = 1000 \\implies T = \\frac{1000}{3}\\text{ N} \\approx 333.3\\text{ N} **Respuesta:** C ---","fuente":"temario","id":"fis_t04_s01_c03","options":["\\frac{1000}{3}\\text{ N}","400\\text{ N}","200\\text{ N}","300\\text{ N}"],"pedagogicalTier":"concepto","semana":4,"statement":"**Enunciado:** Una viga homogénea y uniforme de masa M = 20\\text{ kg} y longitud L = 6\\text{ m} está articulada en su extremo izquierdo A a una pared vertical. La viga se mantiene en posición horizontal mediante un cable tensor fijado a su extremo derecho B, el cual forma un ángulo de 30^\\circ con la viga. Si a una distancia de 4\\text{ m} del punto A se cuelga una carga puntual de masa m = 10\\text{ kg}, determine la tensión en el cable tensor. (g = 10\\text{ m/s}^2).","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: 1.ª Condición (Equilibrio de traslación): \\sum \\vec{F} = \\vec{0}; 2.ª Condición (Equilibrio de rotación): \\sum \\vec{\\tau} = \\vec{0}.","fuente":"temario","id":"fis_t04_s01_c04","options":["Newton-metro (\\text{N}\\cdot\\text{m}), ¡nunca Joules!","Que el módulo de cada fuerza es directamente proporcional al seno del ángulo opuesto: \\frac{F_1}{\\sin\\alpha} = \\frac{F_2}{\\sin\\beta} = \\frac{F_3}{\\sin\\gamma}.","Cero (\\tau = 0), porque el brazo de palanca es nulo (d = 0).","1.ª Condición (Equilibrio de traslación): \\sum \\vec{F} = \\vec{0}; 2.ª Condición (Equilibrio de rotación): \\sum \\vec{\\tau} = \\vec{0}."],"pedagogicalTier":"concepto","semana":4,"statement":"¿Cuáles son las dos condiciones necesarias y suficientes para el equilibrio mecánico de un cuerpo rígido?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Newton-metro (\\text{N}\\cdot\\text{m}), ¡nunca Joules!","fuente":"temario","id":"fis_t04_s01_c05","options":["Newton-metro (\\text{N}\\cdot\\text{m}), ¡nunca Joules!","1.ª Condición (Equilibrio de traslación): \\sum \\vec{F} = \\vec{0}; 2.ª Condición (Equilibrio de rotación): \\sum \\vec{\\tau} = \\vec{0}.","Que el módulo de cada fuerza es directamente proporcional al seno del ángulo opuesto: \\frac{F_1}{\\sin\\alpha} = \\frac{F_2}{\\sin\\beta} = \\frac{F_3}{\\sin\\gamma}.","Cero (\\tau = 0), porque el brazo de palanca es nulo (d = 0)."],"pedagogicalTier":"concepto","semana":4,"statement":"¿Qué unidad tiene el torque o momento de una fuerza en el Sistema Internacional?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Que el módulo de cada fuerza es directamente proporcional al seno del ángulo opuesto: \\frac{F_1}{\\sin\\alpha} = \\frac{F_2}{\\sin\\beta} = \\frac{F_3}{\\sin\\gamma}.","fuente":"temario","id":"fis_t04_s01_c06","options":["1.ª Condición (Equilibrio de traslación): \\sum \\vec{F} = \\vec{0}; 2.ª Condición (Equilibrio de rotación): \\sum \\vec{\\tau} = \\vec{0}.","Que el módulo de cada fuerza es directamente proporcional al seno del ángulo opuesto: \\frac{F_1}{\\sin\\alpha} = \\frac{F_2}{\\sin\\beta} = \\frac{F_3}{\\sin\\gamma}.","Newton-metro (\\text{N}\\cdot\\text{m}), ¡nunca Joules!","Cero (\\tau = 0), porque el brazo de palanca es nulo (d = 0)."],"pedagogicalTier":"concepto","semana":4,"statement":"¿Qué establece el Teorema de Lamy para tres fuerzas concurrentes en equilibrio?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.1.7","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: Cero (\\tau = 0), porque el brazo de palanca es nulo (d = 0).","fuente":"temario","id":"fis_t04_s01_c07","options":["1.ª Condición (Equilibrio de traslación): \\sum \\vec{F} = \\vec{0}; 2.ª Condición (Equilibrio de rotación): \\sum \\vec{\\tau} = \\vec{0}.","Newton-metro (\\text{N}\\cdot\\text{m}), ¡nunca Joules!","Cero (\\tau = 0), porque el brazo de palanca es nulo (d = 0).","Que el módulo de cada fuerza es directamente proporcional al seno del ángulo opuesto: \\frac{F_1}{\\sin\\alpha} = \\frac{F_2}{\\sin\\beta} = \\frac{F_3}{\\sin\\gamma}."],"pedagogicalTier":"concepto","semana":4,"statement":"¿Cuánto vale el momento de una fuerza cuya línea de acción pasa exactamente por el centro de momentos?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.1.8","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Rotación pura sin traslación (la fuerza resultante es cero, pero el torque neto no es nulo).","fuente":"temario","id":"fis_t04_s01_c08","options":["1.ª Condición (Equilibrio de traslación): \\sum \\vec{F} = \\vec{0}; 2.ª Condición (Equilibrio de rotación): \\sum \\vec{\\tau} = \\vec{0}.","Newton-metro (\\text{N}\\cdot\\text{m}), ¡nunca Joules!","Que el módulo de cada fuerza es directamente proporcional al seno del ángulo opuesto: \\frac{F_1}{\\sin\\alpha} = \\frac{F_2}{\\sin\\beta} = \\frac{F_3}{\\sin\\gamma}.","Rotación pura sin traslación (la fuerza resultante es cero, pero el torque neto no es nulo)."],"pedagogicalTier":"concepto","semana":4,"statement":"¿Qué movimiento produce un par de fuerzas (cupla) sobre un cuerpo rígido libre?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t04_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"4.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t04_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t04_s01_c01",
+    "concept": "4.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Dos fuerzas horizontales de 10 N y 6 N apuntan a la derecha. ¿Qué módulo debe tener una tercera hacia la izquierda para el equilibrio?",
+    "options": [
+      "$16\\,\\mathrm{N}$",
+      "$32\\,\\mathrm{N}$",
+      "$8\\,\\mathrm{N}$",
+      "$48\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La suma de fuerzas debe ser cero.\n2. Sustituimos los datos: $F=10+6$.\n3. El resultado pedido es $16\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s01_c02",
+    "concept": "4.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Una fuerza de 20 N actúa perpendicular a una llave a 0.3 m del eje. ¿Qué módulo tiene su momento?",
+    "options": [
+      "$12\\,\\mathrm{N\\,m}$",
+      "$3\\,\\mathrm{N\\,m}$",
+      "$18\\,\\mathrm{N\\,m}$",
+      "$6\\,\\mathrm{N\\,m}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El brazo es la distancia perpendicular al eje.\n2. Sustituimos los datos: $\\tau=Fd=20(0.3)$.\n3. El resultado pedido es $6\\,\\mathrm{N\\,m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s01_c03",
+    "concept": "4.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Una fuerza de 30 N tiene línea de acción que pasa por el eje de giro. ¿Qué momento produce respecto de ese eje?",
+    "options": [
+      "$2\\,\\mathrm{N\\,m}$",
+      "$3\\,\\mathrm{N\\,m}$",
+      "$0\\,\\mathrm{N\\,m}$",
+      "$1\\,\\mathrm{N\\,m}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Si el brazo perpendicular es cero, el momento es cero.\n2. Sustituimos los datos: $\\tau=30(0)$.\n3. El resultado pedido es $0\\,\\mathrm{N\\,m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s01_c04",
+    "concept": "4.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Una barra ligera tiene cargas de 40 N a 0.5 m a la izquierda y F a 0.2 m a la derecha del apoyo. ¿Qué F la equilibra?",
+    "options": [
+      "$300\\,\\mathrm{N}$",
+      "$100\\,\\mathrm{N}$",
+      "$200\\,\\mathrm{N}$",
+      "$50\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los momentos opuestos deben tener igual módulo.\n2. Sustituimos los datos: $40(0.5)=F(0.2)\\Rightarrow F=100$.\n3. El resultado pedido es $100\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s01_c05",
+    "concept": "4.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Una barra uniforme de 4 m pesa 60 N y está articulada en un extremo. ¿Qué momento produce su peso cuando la barra está horizontal?",
+    "options": [
+      "$120\\,\\mathrm{N\\,m}$",
+      "$240\\,\\mathrm{N\\,m}$",
+      "$60\\,\\mathrm{N\\,m}$",
+      "$360\\,\\mathrm{N\\,m}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El peso actúa en el centro de una barra uniforme.\n2. Sustituimos los datos: $|\\tau|=60(4/2)$.\n3. El resultado pedido es $120\\,\\mathrm{N\\,m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s01_c06",
+    "concept": "4.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Una viga uniforme de 6 m y peso 100 N se apoya simétricamente en ambos extremos. ¿Qué reacción vertical ejerce cada apoyo?",
+    "options": [
+      "$100\\,\\mathrm{N}$",
+      "$25\\,\\mathrm{N}$",
+      "$150\\,\\mathrm{N}$",
+      "$50\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La simetría y el equilibrio reparten la carga.\n2. Sustituimos los datos: $R_1=R_2;\\quad R_1+R_2=100$.\n3. El resultado pedido es $50\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s01_c07",
+    "concept": "4.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Una masa de 8 kg cuelga de una cuerda vertical ideal y está en reposo. Usa $g=10\\,\\mathrm{m/s^2}$. ¿Cuál es la tensión?",
+    "options": [
+      "$40\\,\\mathrm{N}$",
+      "$240\\,\\mathrm{N}$",
+      "$80\\,\\mathrm{N}$",
+      "$160\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El equilibrio vertical iguala tensión y peso.\n2. Sustituimos los datos: $T=mg=8(10)$.\n3. El resultado pedido es $80\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s01_c08",
+    "concept": "4.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Una fuerza horizontal de 15 N actúa 2 m por encima de un eje. ¿Qué módulo tiene su momento respecto del eje perpendicular al plano?",
+    "options": [
+      "$90\\,\\mathrm{N\\,m}$",
+      "$30\\,\\mathrm{N\\,m}$",
+      "$60\\,\\mathrm{N\\,m}$",
+      "$15\\,\\mathrm{N\\,m}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La distancia perpendicular es 2 m.\n2. Sustituimos los datos: $|\\tau|=15(2)$.\n3. El resultado pedido es $30\\,\\mathrm{N\\,m}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s01_c09",
+    "concept": "4.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Una carga de 90 N cuelga de dos cuerdas verticales idénticas y simétricas. ¿Cuál es la tensión en cada una?",
+    "options": [
+      "$45\\,\\mathrm{N}$",
+      "$90\\,\\mathrm{N}$",
+      "$22.5\\,\\mathrm{N}$",
+      "$135\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Las dos tensiones verticales equilibran la carga.\n2. Sustituimos los datos: $2T=90$.\n3. El resultado pedido es $45\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s01_c10",
+    "concept": "4.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "Para equilibrio estático de un cuerpo rígido en un plano se exige…",
+    "options": [
+      "Solo suma de fuerzas igual a cero.",
+      "Solo suma de momentos igual a cero.",
+      "Suma de fuerzas y suma de momentos iguales a cero.",
+      "Que todas las fuerzas pasen por el centro de masa."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. No trasladarse requiere resultante de fuerzas cero.\n2. No adquirir aceleración angular requiere momento neto cero.\n3. Deben cumplirse ambas condiciones.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t04_s01_c11",
+    "concept": "4.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 4,
+    "statement": "La normal de una superficie lisa sobre un cuerpo apunta…",
+    "options": [
+      "Siempre hacia arriba.",
+      "Perpendicular a la superficie.",
+      "Siempre paralela al peso.",
+      "Tangente a la superficie."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La fuerza normal es una fuerza de contacto.\n2. Su dirección es perpendicular a la superficie local.\n3. Solo en ciertas geometrías coincide con la vertical.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

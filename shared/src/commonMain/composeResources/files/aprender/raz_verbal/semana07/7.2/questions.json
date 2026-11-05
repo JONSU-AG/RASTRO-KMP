@@ -1,1 +1,182 @@
-[{"concept":"7.2.1","correctIndex":1,"explanation":"La concordancia gramatical es la correspondencia formal de morfemas flexivos entre palabras vinculadas sintácticamente (sustantivo-adjetivo; sujeto-verbo).","fuente":"temario","id":"rv_t07_s02_c01","options":["Tipo de letra en un procesador de textos.","Género y número en el sintagma nominal, o de número y persona entre el núcleo del sujeto y el verbo principal.","Número de versos y estrofas en una composición poética.","Longitud de los párrafos en un artículo de opinión."],"pedagogicalTier":"concepto","semana":7,"statement":"La 'Discordancia Gramatical' es un error morfosintáctico que atenta contra el sentido claro del texto al violar las reglas de coincidencia obligatoria de:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.2.2","correctIndex":0,"explanation":"Cuando el verbo 'haber' funciona como impersonal indicando existencia, carece de sujeto y solo se conjuga en tercera persona del singular: lo correcto es 'Había demasiadas personas', no 'habían'.","fuente":"temario","id":"rv_t07_s02_c02","options":["Habían demasiadas personas esperando en la fila de ingreso al concierto.","Hubo graves disturbios en los alrededores del estadio municipal.","Ha habido múltiples quejas sobre el servicio de transporte.","Habrá una conferencia de prensa al mediodía."],"pedagogicalTier":"concepto","semana":7,"statement":"Identifique la oración que presenta un error flagrante de discordancia con el verbo impersonal 'haber':","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.2.3","correctIndex":2,"explanation":"La RAE admite la concordancia en singular (concordancia gramatical con 'el grupo') o en plural (concordancia ad sensum con 'manifestantes'), recomendándose el singular en la prosa académica formal.","fuente":"temario","id":"rv_t07_s02_c03","options":["La eliminación del verbo en favor de un adjetivo.","Únicamente el verbo en tiempo futuro compuesto.","Tanto el verbo en singular concordando con el núcleo colectivo ('protestó') como en plural por concordancia de sentido o ad sensum ('protestaron'), siendo preferible el singular en la norma culta estricta.","Un verbo en modo imperativo plural de segunda persona."],"pedagogicalTier":"concepto","semana":7,"statement":"En la oración: 'El grupo de manifestantes _______ enérgicamente ante las cámaras de televisión', la concordancia de sujeto colectivo singular con complemento plural admite formalmente:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.2.4","correctIndex":0,"explanation":"El adjetivo pospuesto a dos sustantivos coordinados debe concordar en plural: lo correcto es 'argumentos contundentes', no 'contundente'.","fuente":"temario","id":"rv_t07_s02_c04","options":["El fiscal presentó pruebas y argumentos contundente durante el alegato.","Compró camisas y pantalones importados de excelente calidad.","La delegación peruana obtuvo medallas de oro y plata en el torneo.","Los antiguos edificios coloniales fueron restaurados por el municipio."],"pedagogicalTier":"concepto","semana":7,"statement":"Identifique la oración que incurre en error de discordancia nominal de género y número:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.2.5","correctIndex":2,"explanation":"En la oración pasiva refleja con 'se', el sustantivo que sigue es el sujeto paciente gramatical y exige concordancia con el verbo: 'Se alquilan habitaciones'.","fuente":"temario","id":"rv_t07_s02_c05","options":["El uso de la preposición 'para'.","El empleo de adjetivos en género femenino.","Discordancia de número en la pasiva refleja con 'se': como el sujeto paciente es plural ('habitaciones amobladas'), el verbo debe concordar obligatoriamente en plural ('Se alquilan habitaciones').","La posición del verbo al inicio de la oración."],"pedagogicalTier":"concepto","semana":7,"statement":"En la frase: 'Se alquila habitaciones amobladas para señoritas estudiantes', el error sintáctico radica en:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.2.6","correctIndex":0,"explanation":"Los adverbios de lugar ('detrás', 'cerca', 'delante') no admiten posesivos ('detrás mío' es incorrección vulgar o solecismo); exigen complementos con preposición y pronombre personal tónico: 'detrás de mí'.","fuente":"temario","id":"rv_t07_s02_c06","options":["Detrás de mí venía corriendo el oficial de policía.","Detrás mío venía corriendo el oficial de policía.","Delante suyo estaban las autoridades del colegio.","Cerca tuyo se encuentra la biblioteca central."],"pedagogicalTier":"concepto","semana":7,"statement":"Identifique la oración redactada con rigurosa corrección gramatical:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.2.7","correctIndex":1,"explanation":"El dequeísmo es la inserción espuria de la preposición 'de' ante 'que' cuando el verbo no rige dicha preposición (el objeto directo nunca lleva preposición 'de': 'me dijo que', no 'me dijo de que').","fuente":"temario","id":"rv_t07_s02_c07","options":["Repetir la palabra 'que' diez veces en el mismo párrafo.","El uso indebido de la preposición 'de' antes de la conjunción 'que' en oraciones subordinadas sustantivas que funcionan como objeto directo (ej. 'Pienso de que vendrá' en lugar de 'Pienso que vendrá').","Omitir la preposición 'de' cuando es obligatoria por el régimen verbal.","Sustituir el pronombre 'quien' por 'cuyo'."],"pedagogicalTier":"concepto","semana":7,"statement":"El error sintáctico denominado 'Dequeísmo' consiste en:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.2.8","correctIndex":3,"explanation":"El queísmo suprime indebidamente la preposición obligatoria por el régimen del adjetivo o verbo ('estar seguro de algo', 'darse cuenta de algo').","fuente":"temario","id":"rv_t07_s02_c08","options":["El uso abusivo de adjetivos explicativos.","Escribir oraciones interrogativas directas.","Utilizar el pronombre 'que' con tilde diacrítica en oraciones enunciativas.","La omisión incorrecta de la preposición 'de' (u otra requerida) antes de la conjunción 'que' cuando el verbo o sustantivo la exige por régimen preposicional (ej. 'Estoy seguro que vendrá' en vez de 'Estoy seguro de que vendrá')."],"pedagogicalTier":"concepto","semana":7,"statement":"Por el contrario, el 'Queísmo' consiste en:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.2.9","correctIndex":2,"explanation":"El verbo 'afirmar' es transitivo y rige objeto directo sin preposición ('afirmó que...', no 'afirmó de que...'), cometiéndose dequeísmo.","fuente":"temario","id":"rv_t07_s02_c09","options":["Me alegro de que hayas obtenido la beca universitaria.","Se percató de que había olvidado sus documentos de identidad.","El presidente afirmó de que la economía crecerá el próximo trimestre.","Estaba convencido de que la investigación arrojaría resultados positivos."],"pedagogicalTier":"concepto","semana":7,"statement":"Identifique la oración que presenta un caso censurable de 'Dequeísmo':","subject":"raz_verbal","type":"MULTIPLE_CHOICE"},{"concept":"7.2.10","correctIndex":2,"explanation":"La coordinación copulativa de dos sintagmas nominales singulares pospuestos al verbo conforma un sujeto plural que exige concordancia verbal en plural ('agotaron').","fuente":"temario","id":"rv_t07_s02_c10","options":["Tercera persona del singular obligatoriamente.","Primera persona del plural del modo subjuntivo.","Tercera persona del plural obligatoriamente ('agotaron'), pues la coordinación de dos sustantivos singulares forma un sujeto plural compuesto.","Forma no personal de gerundio simple."],"pedagogicalTier":"concepto","semana":7,"statement":"En la oración: 'El calor y la humedad sofocante _______ a los deportistas durante el entrenamiento', el verbo en posición pospuesta a dos sujetos coordinados singulares debe concordar en:","subject":"raz_verbal","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "7.2.1",
+    "correctIndex": 1,
+    "explanation": "Criterio: Identifica qué palabras están vinculadas y qué rasgos deben compartir.\nAplicación: En «las carpetas nuevas», se revisan género y número; en «ellas estudian», número y persona.\nRespuesta: La concordancia depende de la relación gramatical, no de la extensión ni de la rima.",
+    "fuente": "temario",
+    "id": "rv_t07_s02_c01",
+    "options": [
+      "La igualdad de longitud entre todos los párrafos.",
+      "La correspondencia de género y número en ciertas relaciones nominales, o de número y persona entre sujeto y verbo.",
+      "La repetición de sonidos al final de cada frase.",
+      "La cantidad de ideas nuevas en el texto."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "¿Qué relación se revisa al comprobar la concordancia gramatical de una oración?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.2",
+    "correctIndex": 0,
+    "explanation": "Criterio: Distingue el haber de existencia del auxiliar de un tiempo compuesto.\nAplicación: La primera oración informa de la existencia de personas; la cuarta combina «habían» con «llegado» y tiene sujeto plural.\nRespuesta: Se corrige «Había demasiadas personas». No debe cambiarse «Los asistentes habían llegado» a singular.",
+    "fuente": "temario",
+    "id": "rv_t07_s02_c02",
+    "options": [
+      "Habían demasiadas personas esperando en la fila.",
+      "Hubo varias consultas sobre el horario.",
+      "Ha habido cambios en la programación.",
+      "Los asistentes habían llegado temprano."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "En un informe escrito en el estándar formal general, ¿qué oración debe corregirse por pluralizar «haber» con sentido de existencia?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.3",
+    "correctIndex": 2,
+    "explanation": "Criterio: Examina la construcción completa: una expresión cuantificadora con complemento plural.\nAplicación: El verbo puede relacionarse con la mayoría como conjunto o con los participantes considerados individualmente.\nRespuesta: Ambas formas son admisibles aquí. No se impone una preferencia universal por el singular ni se extiende esta alternancia a todos los sujetos colectivos.",
+    "fuente": "temario",
+    "id": "rv_t07_s02_c03",
+    "options": [
+      "Solo se admite el gerundio «llegando».",
+      "El complemento plural obliga a eliminar «la mayoría».",
+      "Pueden emplearse «llegó» y «llegaron», atendiendo al conjunto o a sus integrantes.",
+      "Solo se admite el imperativo «lleguen»."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "En «La mayoría de los participantes ___ a tiempo», ¿qué descripción reconoce las posibilidades de concordancia de esta construcción?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.4",
+    "correctIndex": 0,
+    "explanation": "Criterio: Localiza el sustantivo y el adjetivo que lo describe.\nAplicación: «Argumentos» está en plural y «convincente» aparece en singular.\nRespuesta: La primera oración requiere «argumentos convincentes». No hace falta suponer a qué sustantivos se aplica un adjetivo compartido.",
+    "fuente": "temario",
+    "id": "rv_t07_s02_c04",
+    "options": [
+      "El informe reúne argumentos convincente.",
+      "El informe reúne argumentos convincentes.",
+      "La propuesta incluye medidas claras.",
+      "Los anexos contienen datos recientes."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "¿Qué oración contiene una discordancia entre un sustantivo plural y el adjetivo que lo modifica?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.5",
+    "correctIndex": 2,
+    "explanation": "Criterio: En una pasiva refleja, el verbo concuerda con el sujeto paciente.\nAplicación: Las habitaciones son lo que se ofrece en alquiler y forman un grupo plural.\nRespuesta: Se escribe «Se alquilan habitaciones amobladas». Esta pauta no significa que todo nombre plural situado después de «se» sea sujeto.",
+    "fuente": "temario",
+    "id": "rv_t07_s02_c05",
+    "options": [
+      "Cambiar «amobladas» por «amoblado».",
+      "Añadir «a» antes de «habitaciones».",
+      "Escribir «Se alquilan habitaciones amobladas», con el verbo en plural.",
+      "Eliminar «se» y mantener el resto sin cambios."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Un aviso dice «Se alquila habitaciones amobladas». En la lectura de pasiva refleja del estándar formal, ¿qué corrección corresponde?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.6",
+    "correctIndex": 0,
+    "explanation": "Criterio: Respeta la relación espacial y la referencia a quien habla.\nAplicación: La consigna pide «detrás de» y el pronombre de primera persona «mí».\nRespuesta: La primera opción cumple ambas condiciones. La pregunta no exige descalificar variedades regionales ni afirmar que todos los adverbios rechazan posesivos.",
+    "fuente": "temario",
+    "id": "rv_t07_s02_c06",
+    "options": [
+      "Detrás de mí caminaba la guía.",
+      "Detrás mío caminaba la guía.",
+      "Delante de ella caminaba la guía.",
+      "Cerca de ti caminaba la guía."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "¿Qué opción localiza a alguien detrás del hablante mediante «detrás de» y el pronombre personal correspondiente?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.7",
+    "correctIndex": 1,
+    "explanation": "Criterio: Comprueba cómo se construye el verbo con el sentido usado.\nAplicación: Aquí se afirma un pensamiento: «Pienso eso», «Pienso que abrirá». La oración no utiliza la construcción «pensar en».\nRespuesta: Sobra «de» en este enunciado. No se concluye que cualquier secuencia «de que» sea incorrecta.",
+    "fuente": "temario",
+    "id": "rv_t07_s02_c07",
+    "options": [
+      "En repetir la idea de futuro.",
+      "En añadir «de» a una construcción que aquí requiere «pienso que».",
+      "En omitir una preposición exigida por «pensar».",
+      "En escribir «biblioteca» como sustantivo."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "En «Pienso de que la biblioteca abrirá mañana», ¿en qué consiste el dequeísmo?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.8",
+    "correctIndex": 3,
+    "explanation": "Criterio: Comprueba la construcción «darse cuenta de algo».\nAplicación: Al sustituir la información por «eso», se mantiene «de»: «Me di cuenta de eso».\nRespuesta: Se restituye la preposición. El queísmo también puede afectar a otras preposiciones requeridas; no se limita a «de».",
+    "fuente": "temario",
+    "id": "rv_t07_s02_c08",
+    "options": [
+      "La repetición del verbo principal.",
+      "El uso de un sustantivo en singular.",
+      "La adición indebida de una preposición.",
+      "La omisión de «de»: se escribe «Me di cuenta de que faltaba una página»."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "En «Me di cuenta que faltaba una página», ¿qué describe el queísmo y su corrección en el estándar formal?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.9",
+    "correctIndex": 2,
+    "explanation": "Criterio: Distingue construcciones que requieren preposición de otras que no la llevan con ese sentido.\nAplicación: En este uso se dice «afirmó eso» y «afirmó que». Las demás opciones mantienen la preposición de sus respectivas construcciones.\nRespuesta: La tercera oración se corrige «La coordinadora afirmó que el taller comenzaría el lunes».",
+    "fuente": "temario",
+    "id": "rv_t07_s02_c09",
+    "options": [
+      "Me alegro de que hayas recibido la noticia.",
+      "Se percató de que faltaba una firma.",
+      "La coordinadora afirmó de que el taller comenzaría el lunes.",
+      "Estaba convencida de que la propuesta era viable."
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "¿En qué oración se ha añadido indebidamente «de» antes de «que»?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "7.2.10",
+    "correctIndex": 2,
+    "explanation": "Criterio: La coordinación une dos referentes distintos y constituye aquí un sujeto plural antepuesto al verbo.\nAplicación: La carpeta y el cuaderno son los objetos de los que se indica la ubicación.\nRespuesta: Corresponde «están». La regla aplicada a este caso no implica que toda coordinación, con cualquier sentido y orden, exija siempre la misma concordancia.",
+    "fuente": "temario",
+    "id": "rv_t07_s02_c10",
+    "options": [
+      "está",
+      "estamos",
+      "están",
+      "estar"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 7,
+    "statement": "Completa «La carpeta y el cuaderno ___ sobre la mesa», refiriéndote a dos objetos distintos. ¿Qué forma corresponde?",
+    "subject": "raz_verbal",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

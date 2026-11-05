@@ -1,1 +1,200 @@
-[{"concept":"2.2.1","correctIndex":2,"explanation":"**Resolución Paso a Paso:** 1. Como x > 0, ambos términos a = 4x y b = \\frac{9}{x} son números reales estrictamente positivos. 2. Aplicamos la **Desigualdad de las Medias (MA \\ge MG)**: \\frac{a + b}{2} \\ge \\sqrt{a \\cdot b} \\frac{4x + \\frac{9}{x}}{2} \\ge \\sqrt{4x \\cdot \\frac{9}{x}} 3. Notamos que la variable x se cancela exactamente en el producto del radicando: \\frac{4x + \\frac{9}{x}}{2} \\ge \\sqrt{36} = 6 4. Multiplicamos por 2 a ambos miembros: 4x + \\frac{9}{x} \\ge 12 5. El valor mínimo se alcanza cuando a = b: 4x = \\frac{9}{x} \\implies 4x^2 = 9 \\implies x^2 = \\frac{9}{4} \\implies x = \\frac{3}{2} = 1.5 > 0 Por ende, el mínimo valor real de la expresión es exactamente **12**. **Respuesta Correcta:** **C) 12** ---","fuente":"temario","id":"alg_t02_s02_c01","options":["12","14","6","10"],"pedagogicalTier":"concepto","semana":2,"statement":"**Enunciado:** Si x es un número real estrictamente positivo (x > 0), determine el menor valor posible que puede adoptar la expresión algebraica:","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.2.2","correctIndex":3,"explanation":"2. **Resolución de la segunda inecuación: |2x - 5| > 3** Por propiedad de separación: 2x - 5 > 3 \\quad \\lor \\quad 2x - 5 < -3 2x > 8 \\implies x > 4 \\quad \\lor \\quad 2x < 2 \\implies x < 1 S_2 = \\langle -\\infty, 1 \\rangle \\cup \\langle 4, +\\infty \\rangle 3. **Intersección del sistema (S = S_1 \\cap S_2):** S = [-5, 4] \\cap (\\langle -\\infty, 1 \\rangle \\cup \\langle 4, +\\infty \\rangle) S = [-5, 1\\rangle \\cup \\emptyset = [-5, 1\\rangle *(En x = 4, S_1 lo contiene pero S_2 es abierto, por lo que su intersección es vacía)*. 4. **Cálculo de la longitud del intervalo solución:** L = \\text{Extremo superior} - \\text{Extremo inferior} = 1 - (-5) = 1 + 5 = 6 **Respuesta Correcta:** **C) 6** ---","fuente":"temario","id":"alg_t02_s02_c02","options":["5","6","7","4"],"pedagogicalTier":"concepto","semana":2,"statement":"**Enunciado:** Determine la longitud del intervalo solución que satisface simultáneamente el siguiente sistema de inecuaciones con valor absoluto:","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: Elevando al cuadrado y factorizando por diferencia de cuadrados: (A - B)(A + B) \\le 0.","fuente":"temario","id":"alg_t02_s02_c03","options":["Que se cumple una y solo una de tres condiciones: a > 0, a = 0 o a < 0.","El valor mínimo es exactamente 2 (ocurre cuando x = 1).","Elevando al cuadrado y factorizando por diferencia de cuadrados: (A - B)(A + B) \\le 0.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":2,"statement":"¿Cómo se resuelve de forma directa la inecuación |A| \\le |B| sin abrir zonas críticas?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Que se cumple una y solo una de tres condiciones: a > 0, a = 0 o a < 0.","fuente":"temario","id":"alg_t02_s02_c04","options":["Elevando al cuadrado y factorizando por diferencia de cuadrados: (A - B)(A + B) \\le 0.","El valor mínimo es exactamente 2 (ocurre cuando x = 1).","Valor o condición no aplicable al caso planteado","Que se cumple una y solo una de tres condiciones: a > 0, a = 0 o a < 0."],"pedagogicalTier":"concepto","semana":2,"statement":"¿Qué establece el axioma de tricotomía para cualquier número real a?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.2.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: El valor mínimo es exactamente 2 (ocurre cuando x = 1).","fuente":"temario","id":"alg_t02_s02_c05","options":["El valor mínimo es exactamente 2 (ocurre cuando x = 1).","Elevando al cuadrado y factorizando por diferencia de cuadrados: (A - B)(A + B) \\le 0.","Que se cumple una y solo una de tres condiciones: a > 0, a = 0 o a < 0.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":2,"statement":"Para cualquier x > 0, ¿cuál es el valor mínimo de la suma x + \\frac{1}{x}?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t02_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t02_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t02_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t02_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"},{"concept":"2.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"alg_t02_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":2,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"algebra","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "concept": "2.2.1",
+    "correctIndex": 0,
+    "explanation": "1. Una distancia positiva produce dos posibilidades.\n2. Sustituimos y operamos: $x-4=\\pm 5;\\quad x=-1\\;o\\;9$.\n3. El valor pedido es $9$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s02_c01",
+    "options": [
+      "$9$",
+      "$10$",
+      "$8$",
+      "$18$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "¿Cuál es la mayor solución real de |x − 4| = 5?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.2",
+    "correctIndex": 3,
+    "explanation": "1. La desigualdad estricta encierra x entre dos extremos.\n2. Sustituimos y operamos: $-1<x<9;\\quad 0,\\ldots,8$.\n3. El valor pedido es $9$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s02_c02",
+    "options": [
+      "$10$",
+      "$8$",
+      "$18$",
+      "$9$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "¿Cuántos enteros cumplen |x − 4| < 5?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.3",
+    "correctIndex": 2,
+    "explanation": "1. La raíz principal de x² es |x|, no siempre x.\n2. Sustituimos y operamos: $\\sqrt{(-4)^2}=|-4|$.\n3. El valor pedido es $4$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s02_c03",
+    "options": [
+      "$3$",
+      "$8$",
+      "$4$",
+      "$5$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "Si x = −4, calcula $\\sqrt{x^2}$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.4",
+    "correctIndex": 1,
+    "explanation": "1. Un valor absoluto es no negativo y vale cero en su centro.\n2. Sustituimos y operamos: $|x-4|\\ge 0;\\quad x=4\\Rightarrow 0+5$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s02_c04",
+    "options": [
+      "$10$",
+      "$5$",
+      "$6$",
+      "$4$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "¿Cuál es el mínimo de |x − 4| + 5, para x real?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.5",
+    "correctIndex": 0,
+    "explanation": "1. Restar una cantidad no negativa no aumenta el término constante.\n2. Sustituimos y operamos: $5-|x-4|\\le 5;\\quad x=4$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s02_c05",
+    "options": [
+      "$5$",
+      "$6$",
+      "$4$",
+      "$10$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "¿Cuál es el máximo de 5 − |x − 4|, para x real?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.6",
+    "correctIndex": 3,
+    "explanation": "1. Una distancia positiva produce dos posibilidades.\n2. Sustituimos y operamos: $x-5=\\pm 6;\\quad x=-1\\;o\\;11$.\n3. El valor pedido es $11$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s02_c06",
+    "options": [
+      "$12$",
+      "$10$",
+      "$22$",
+      "$11$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "¿Cuál es la mayor solución real de |x − 5| = 6?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.7",
+    "correctIndex": 2,
+    "explanation": "1. La desigualdad estricta encierra x entre dos extremos.\n2. Sustituimos y operamos: $-1<x<11;\\quad 0,\\ldots,10$.\n3. El valor pedido es $11$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s02_c07",
+    "options": [
+      "$10$",
+      "$22$",
+      "$11$",
+      "$12$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "¿Cuántos enteros cumplen |x − 5| < 6?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.8",
+    "correctIndex": 1,
+    "explanation": "1. La raíz principal de x² es |x|, no siempre x.\n2. Sustituimos y operamos: $\\sqrt{(-5)^2}=|-5|$.\n3. El valor pedido es $5$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s02_c08",
+    "options": [
+      "$10$",
+      "$5$",
+      "$6$",
+      "$4$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "Si x = −5, calcula $\\sqrt{x^2}$.",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.9",
+    "correctIndex": 0,
+    "explanation": "1. Un valor absoluto es no negativo y vale cero en su centro.\n2. Sustituimos y operamos: $|x-5|\\ge 0;\\quad x=5\\Rightarrow 0+6$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s02_c09",
+    "options": [
+      "$6$",
+      "$7$",
+      "$5$",
+      "$12$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "¿Cuál es el mínimo de |x − 5| + 6, para x real?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.10",
+    "correctIndex": 3,
+    "explanation": "1. Restar una cantidad no negativa no aumenta el término constante.\n2. Sustituimos y operamos: $6-|x-5|\\le 6;\\quad x=5$.\n3. El valor pedido es $6$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s02_c10",
+    "options": [
+      "$7$",
+      "$5$",
+      "$12$",
+      "$6$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "¿Cuál es el máximo de 6 − |x − 5|, para x real?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "2.2.11",
+    "correctIndex": 2,
+    "explanation": "1. Una distancia positiva produce dos posibilidades.\n2. Sustituimos y operamos: $x-6=\\pm 7;\\quad x=-1\\;o\\;13$.\n3. El valor pedido es $13$.",
+    "fuente": "Ejercicio original RASTRO; modelos y verificación en docs/aprender/algebra/REVISION_PRACTICA_02_A_16.md",
+    "id": "alg_t02_s02_c11",
+    "options": [
+      "$12$",
+      "$26$",
+      "$13$",
+      "$14$"
+    ],
+    "pedagogicalTier": "aplicación",
+    "semana": 2,
+    "statement": "¿Cuál es la mayor solución real de |x − 6| = 7?",
+    "subject": "algebra",
+    "type": "MULTIPLE_CHOICE"
+  }
+]

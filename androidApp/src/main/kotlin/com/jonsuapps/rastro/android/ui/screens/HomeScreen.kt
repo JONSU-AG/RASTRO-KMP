@@ -91,12 +91,12 @@ fun HomeScreen(
     onNavigateToProfile: (String) -> Unit = {},
     onNavigateToPublication: (authorUid: String, publicationId: String) -> Unit = { uid, pubId ->
         onNavigate(RastroScreen.UsuarioDetail.createRoute(uid, pubId))
-    }
+    },
+    allowStudyGoalPrompt: Boolean = true
 ) {
     val currentUser by UserManager.currentUser.collectAsState()
     val streakState by GamificationManager.streakState.collectAsState()
     val progress by GamificationManager.state.collectAsState()
-    val minutesRemaining = (GamificationManager.remainingStudySecondsToday() + 59) / 60
 
     // Carrusel Destacados: observa en tiempo real las publicaciones marcadas por el admin
     var featuredUploads by remember { mutableStateOf<List<UserUpload>>(emptyList()) }
@@ -107,515 +107,52 @@ fun HomeScreen(
         onDispose { reg?.remove() }
     }
 
-    val mottoPhrases = remember {
-        listOf(
-            "Futuro Cachimbo",
-            "Tu Vacante Directa",
-            "Tu Ingreso Universitario",
-            "Máximo Puntaje",
-            "Tu Carrera Soñada"
-        )
-    }
-
-    var mottoIndex by remember { mutableIntStateOf(0) }
-    LaunchedEffect(Unit) {
-        while (true) {
-            delay(2600)
-            mottoIndex = (mottoIndex + 1) % mottoPhrases.size
+    val resume by produceState<Pair<String, String>?>(null, currentUser.uid, progress.completedLessons) {
+        value = null
+        val latest = progress.completedLessons.filterValues { !it.skipped }.maxByOrNull { it.value.completedAt }?.key
+        if (latest != null) {
+            try {
+                value = withContext(Dispatchers.IO) {
+                    val lesson = com.jonsuapps.rastro.data.AprenderRepository.getLessonById(latest)
+                    val subject = lesson?.let { com.jonsuapps.rastro.data.AprenderRepository.getSubjectById(it.subjectId) }
+                    subject?.let { it.id to it.name }
+                }
+            } catch (cancelled: kotlinx.coroutines.CancellationException) { throw cancelled }
+            catch (_: Exception) { value = null }
         }
     }
-
     RastroAdaptiveViewport(Modifier.fillMaxSize().rastroAcademicBackground(colors, paintBase = false)) { layout ->
-        LazyVerticalGrid(
-            columns = GridCells.Fixed(layout.columns),
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(horizontal = 16.dp),
-            horizontalArrangement = Arrangement.spacedBy(16.dp),
-            verticalArrangement = Arrangement.spacedBy(14.dp),
-            contentPadding = PaddingValues(top = 10.dp, bottom = 100.dp)
-        ) {
-            // 1. Cabecera Oficial RASTRO (Chips y Saludo)
+        LazyVerticalGrid(columns = GridCells.Fixed(layout.columns), modifier = Modifier.fillMaxSize().padding(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp),
+            contentPadding = PaddingValues(top = 10.dp, bottom = 100.dp)) {
             item(span = { GridItemSpan(maxLineSpan) }) {
                 RastroBoundedBlock {
-                Column(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    // Chip Superior: ESPECIAL PARA UNIVERSIDADES NACIONALES
-                    Box(
-                        modifier = Modifier
-                            .clip(RastroShapes.CircularPill)
-                            .background(colors.surfaceAccent)
-                            .border(1.5.dp, colors.strokeBorder, RastroShapes.CircularPill)
-                    ) {
-                        Text(
-                            text = "ESPECIAL PARA UNIVERSIDADES NACIONALES",
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Black,
-                            color = colors.accentText,
-                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
-                            letterSpacing = 0.5.sp
-                        )
-                    }
-
-                    // Fila META: [ Tu Futuro Cachimbo ]
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(6.dp)
-                    ) {
-                        Text(
-                            text = "META:",
-                            fontSize = 12.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = colors.textSecondary
-                        )
-
-                        AnimatedContent(
-                            targetState = mottoPhrases[mottoIndex],
-                            label = "mottoAnimation"
-                        ) { phrase ->
-                            Box(
-                                modifier = Modifier
-                                    .clip(RastroShapes.CircularPill)
-                                    .background(colors.surfaceAccent)
-                                    .border(1.5.dp, colors.strokeBorder, RastroShapes.CircularPill)
-                            ) {
-                                Text(
-                                    text = phrase,
-                                    fontSize = 12.sp,
-                                    fontWeight = FontWeight.ExtraBold,
-                                    color = colors.textPrimary,
-                                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp)
-                                )
-                            }
-                        }
-                    }
-
-                    Spacer(modifier = Modifier.height(2.dp))
-
-                    // Hero Banner oficial con saludo dinámico (nombre real del usuario)
-                    HomeHeroBanner(
-                        colors = colors,
-                        displayName = currentUser.displayName,
+                    HomeHeroBanner(colors, currentUser.displayName,
                         profileCover = currentUser.coverUrl.takeIf { currentUser.homeUseProfileCover },
-                        useProfileCover = currentUser.homeUseProfileCover,
-                        coverGradient = currentUser.coverGradient,
+                        useProfileCover = currentUser.homeUseProfileCover, coverGradient = currentUser.coverGradient,
                         placement = com.jonsuapps.rastro.android.ui.components.CoverPlacement(currentUser.coverZoom, currentUser.coverX, currentUser.coverY),
-                        modifier = Modifier.align(Alignment.CenterHorizontally).widthIn(max = LocalRastroLayout.current.heroWidth.dp).fillMaxWidth()
-                    )
-                }
-
+                        modifier = Modifier.widthIn(max = LocalRastroLayout.current.heroWidth.dp).fillMaxWidth())
                 }
             }
-
-            // 1. Tarjeta Racha & Perseverancia Semanal (Compacta y visual)
             item(span = { GridItemSpan(maxLineSpan) }) {
                 RastroBoundedBlock {
-                val calendar = remember { Calendar.getInstance() }
-                val dayOfWeek = remember { calendar.get(Calendar.DAY_OF_WEEK) }
-                val currentDayIndex = remember(dayOfWeek) {
-                    when (dayOfWeek) {
-                        Calendar.MONDAY -> 0
-                        Calendar.TUESDAY -> 1
-                        Calendar.WEDNESDAY -> 2
-                        Calendar.THURSDAY -> 3
-                        Calendar.FRIDAY -> 4
-                        Calendar.SATURDAY -> 5
-                        Calendar.SUNDAY -> 6
-                        else -> 0
+                    HomeStudyAction(colors, resume?.second) {
+                        onNavigate(resume?.let { RastroScreen.AprenderSubject.createRoute(it.first) } ?: RastroScreen.Aprender.route)
                     }
                 }
-                val weekDayLabels = listOf("L", "M", "M", "J", "V", "S", "D")
-
-                Sticker3dCard(
-                    modifier = Modifier.fillMaxWidth(),
-                    containerColor = colors.surface,
-                    strokeColor = colors.strokeBorder,
-                    bevelColor = colors.cardBevel,
-                    bevelHeight = 3.dp,
-                    shape = RoundedCornerShape(22.dp),
-                    onClick = { onNavigate(RastroScreen.DiasDeRacha.route) }
-                ) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(14.dp),
-                        verticalArrangement = Arrangement.spacedBy(10.dp)
-                    ) {
-                        // Fila Superior: Llama + Días activos + Botón flecha
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.SpaceBetween
-                        ) {
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(8.dp)
-                            ) {
-                                Box(
-                                    modifier = Modifier
-                                        .size(34.dp)
-                                        .clip(CircleShape)
-                                        .background(colors.surfaceAccent)
-                                        .border(1.5.dp, colors.strokeBorder, CircleShape),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    com.jonsuapps.rastro.android.ui.components.PreparedAnimation(
-                                        "R-MEDIO", Modifier.size(30.dp), loop = true)
-                                }
-                                Text(
-                                    text = if (streakState.currentStreak == 1) "1 día activo" else "${streakState.currentStreak} días activos",
-                                    fontSize = 17.sp,
-                                    fontWeight = FontWeight.Black,
-                                    color = colors.accentText,
-                                    letterSpacing = (-0.3).sp
-                                )
-                            }
-
-                            // Botón flecha derecha
-                            Box(
-                                modifier = Modifier
-                                    .size(28.dp)
-                                    .clip(CircleShape)
-                                    .background(colors.surface)
-                                    .border(1.5.dp, colors.strokeBorder, CircleShape),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Icon(
-                                    imageVector = Icons.AutoMirrored.Filled.ArrowForward,
-                                    contentDescription = "Ver días de racha",
-                                    tint = colors.textPrimary,
-                                    modifier = Modifier.size(13.dp)
-                                )
-                            }
-                        }
-
-                        // Fila Inferior: Días de la semana (L M M J V S D) + META box
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.spacedBy(10.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            // Contenedor días L M M J V S D
-                            Box(
-                                modifier = Modifier
-                                    .weight(1.5f)
-                                    .clip(RoundedCornerShape(16.dp))
-                                    .background(colors.surfaceAccent)
-                                    .border(1.5.dp, colors.strokeBorder, RoundedCornerShape(16.dp))
-                                    .padding(horizontal = 8.dp, vertical = 7.dp)
-                            ) {
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceBetween,
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    weekDayLabels.forEachIndexed { index, dayLetter ->
-                                        val date = (calendar.clone() as Calendar).apply {
-                                            add(Calendar.DAY_OF_MONTH, index - currentDayIndex)
-                                        }
-                                        val dateString = "%04d-%02d-%02d".format(date.get(Calendar.YEAR),
-                                            date.get(Calendar.MONTH) + 1, date.get(Calendar.DAY_OF_MONTH))
-                                        val isDayActive = dateString in streakState.activityDates
-                                        Column(
-                                            modifier = Modifier.weight(1f),
-                                            horizontalAlignment = Alignment.CenterHorizontally,
-                                            verticalArrangement = Arrangement.spacedBy(4.dp)
-                                        ) {
-                                            Text(
-                                                text = dayLetter,
-                                                fontSize = 10.sp,
-                                                fontWeight = FontWeight.Black,
-                                                color = if (index == currentDayIndex) colors.accentText else colors.textSecondary
-                                            )
-                                            Box(Modifier.size(36.dp), contentAlignment = Alignment.Center) {
-                                                DoodleDayCheckCircle(isDayActive, colors.strokeBorder, isPast = index < currentDayIndex, isToday = index == currentDayIndex, inactiveColor = colors.surface, labelColor = colors.textSecondary)
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            // Contenedor META
-                            Box(
-                                modifier = Modifier
-                                    .weight(1f)
-                                    .clip(RoundedCornerShape(16.dp))
-                                    .background(colors.surfaceAccent)
-                                    .border(1.5.dp, colors.strokeBorder, RoundedCornerShape(16.dp))
-                                    .padding(horizontal = 8.dp, vertical = 7.dp)
-                            ) {
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.SpaceBetween
-                                ) {
-                                    Column(modifier = Modifier.weight(1f)) {
-                                        Text(
-                                            text = "META:",
-                                            fontSize = 8.5.sp,
-                                            fontWeight = FontWeight.Black,
-                                            color = colors.textSecondary,
-                                            letterSpacing = 0.5.sp
-                                        )
-                                        Text(
-                                            text = "Futuro\nCachimbo",
-                                            fontSize = 10.5.sp,
-                                            fontWeight = FontWeight.Black,
-                                            color = colors.textPrimary,
-                                            maxLines = 2,
-                                            lineHeight = 12.sp
-                                        )
-                                    }
-                                    Spacer(Modifier.width(4.dp))
-                                    DoodleGraduationCap(
-                                        modifier = Modifier.size(32.dp, 28.dp),
-                                        capColor = colors.accent,
-                                        strokeColor = colors.strokeBorder
-                                    )
-                                }
-                            }
-                        }
-                    }
-                }
-                }
             }
-
-            item(span = { GridItemSpan(maxLineSpan) }) {
-                RastroBoundedBlock { com.jonsuapps.rastro.android.ui.components.HomeExamCountdown(colors) }
-            }
-            // 2. Tarjeta: Ruta de Preparación Activa
             item(span = { GridItemSpan(maxLineSpan) }) {
                 RastroBoundedBlock {
-                Sticker3dCard(
-                    modifier = Modifier.fillMaxWidth(),
-                    containerColor = colors.surface,
-                    strokeColor = colors.strokeBorder,
-                    bevelColor = colors.cardBevel,
-                    bevelHeight = 3.dp,
-                    shape = RoundedCornerShape(22.dp),
-                    onClick = { onNavigate(RastroScreen.Aprender.route) }
-                ) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(14.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        // Fila 1: Ícono azul diana + Título + Subtítulo + Ilustración mapa con bandera
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(10.dp)
-                        ) {
-                            Image(painterResource(R.drawable.league_cachimbo), null, Modifier.size(42.dp))
-
-                            Column(modifier = Modifier.weight(1f)) {
-                                Text(
-                                    text = "Ruta de Preparación Activa",
-                                    fontSize = 14.5.sp,
-                                    fontWeight = FontWeight.Black,
-                                    color = colors.textPrimary,
-                                    letterSpacing = (-0.3).sp,
-                                    lineHeight = 17.sp
-                                )
-                                Spacer(modifier = Modifier.height(2.dp))
-                                Text(
-                                    text = "Temarios oficiales, banco de preguntas y plan de estudio personalizado.",
-                                    fontSize = 11.sp,
-                                    color = colors.textSecondary,
-                                    lineHeight = 14.sp
-                                )
-                            }
-
-                            // Ilustración mapa con banderita
-                            DoodleMapWithFlag(
-                                modifier = Modifier.size(50.dp, 38.dp),
-                                strokeColor = colors.strokeBorder
-                            )
-                        }
-
-                        // Fila 2: Camino de estrellas punteado + Botón "Estudiar ahora →"
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.SpaceBetween
-                        ) {
-                            DoodleTrailWithStars(
-                                modifier = Modifier.weight(1f).height(40.dp).padding(end = 10.dp),
-                                strokeColor = colors.strokeBorder
-                            )
-
-                            // Botón naranja "Estudiar ahora →"
-                            Sticker3dButton(
-                                onClick = { onNavigate(RastroScreen.Aprender.route) },
-                                containerColor = Color(0xFFEA580C),
-                                bottomBevelColor = Color(0xFF9A3412),
-                                strokeColor = colors.strokeBorder,
-                                shape = RastroShapes.CircularPill,
-                                contentPadding = PaddingValues(horizontal = 14.dp, vertical = 7.dp)
-                            ) {
-                                Row(
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.spacedBy(4.dp)
-                                ) {
-                                    Text(
-                                        text = "Estudiar ahora",
-                                        fontWeight = FontWeight.Black,
-                                        fontSize = 12.5.sp,
-                                        color = Color.White
-                                    )
-                                    Icon(
-                                        imageVector = Icons.AutoMirrored.Filled.ArrowForward,
-                                        contentDescription = null,
-                                        tint = Color.White,
-                                        modifier = Modifier.size(13.dp)
-                                    )
-                                }
-                            }
-                        }
+                    com.jonsuapps.rastro.android.ui.components.StudyGoalEntry(currentUser, allowStudyGoalPrompt) {
+                        com.jonsuapps.rastro.android.ui.components.HomeExamCountdown(colors, embedded = true)
                     }
                 }
-                }
             }
-
-            // 3. Carrusel Destacados (solo visible si hay publicaciones marcadas)
-            if (featuredUploads.isNotEmpty()) {
-                item(span = { GridItemSpan(maxLineSpan) }) {
-                RastroBoundedBlock {
-                    DestacadosCarousel(
-                        items = featuredUploads,
-                        colors = colors,
-                        onNavigateToBiblioteca = { onNavigate(RastroScreen.Biblioteca.route) },
-                        onNavigateToProfile = onNavigateToProfile,
-                        onNavigateToPublication = onNavigateToPublication
-                    )
-
-                }
-            }
-            }
-
-            // 4. Canal de WhatsApp Oficial (Franja Horizontal Compacta)
-            run {
             item(span = { GridItemSpan(maxLineSpan) }) {
-                RastroBoundedBlock {
-                val context = LocalContext.current
-                Sticker3dCard(
-                    modifier = Modifier.fillMaxWidth(),
-                    containerColor = colors.surface,
-                    strokeColor = colors.strokeBorder,
-                    bevelColor = colors.cardBevel,
-                    bevelHeight = 3.dp,
-                    shape = RoundedCornerShape(20.dp),
-                    onClick = {
-                        val waChannel = "https://whatsapp.com/channel/0029VbDFAEu7YScyVZBNul0X"
-                        val waUrl = if (waChannel.startsWith("http://") || waChannel.startsWith("https://")) waChannel
-                            else "https://whatsapp.com/channel/$waChannel"
-                        runCatching {
-                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(waUrl))
-                            context.startActivity(intent)
-                        }
-                    }
-                ) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 12.dp, vertical = 10.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(10.dp)
-                    ) {
-                        // Squircle WhatsApp verde (compacto)
-                        Box(
-                            modifier = Modifier
-                                .size(40.dp)
-                                .clip(RoundedCornerShape(12.dp))
-                                .background(Color(0xFF22C55E))
-                                .border(1.6.dp, colors.strokeBorder, RoundedCornerShape(12.dp)),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Icon(
-                                painter = painterResource(id = R.drawable.ic_whatsapp),
-                                contentDescription = "WhatsApp Oficial",
-                                tint = Color.White,
-                                modifier = Modifier.size(22.dp)
-                            )
-                        }
-
-                        // Título + Badge Oficial + Subtítulo
-                        Column(modifier = Modifier.weight(1f)) {
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(6.dp)
-                            ) {
-                                Text(
-                                    text = "Comunidad RASTRO",
-                                    fontSize = 13.sp,
-                                    fontWeight = FontWeight.Black,
-                                    color = colors.textPrimary,
-                                    maxLines = 1,
-                                    overflow = TextOverflow.Ellipsis
-                                )
-                                Box(
-                                    modifier = Modifier
-                                        .clip(RastroShapes.CircularPill)
-                                        .background(Color(0xFFDCFCE7))
-                                        .border(1.2.dp, Color(0xFF15803D), RastroShapes.CircularPill)
-                                        .padding(horizontal = 5.dp, vertical = 1.dp)
-                                ) {
-                                    Text(
-                                        text = "OFICIAL",
-                                        fontSize = 8.sp,
-                                        fontWeight = FontWeight.Black,
-                                        color = Color(0xFF15803D)
-                                    )
-                                }
-                            }
-                            Spacer(modifier = Modifier.height(1.dp))
-                            Text(
-                                text = "Nuestro canal oficial de WhatsApp",
-                                fontSize = 10.5.sp,
-                                color = colors.textSecondary,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
-                            )
-                        }
-
-                        // Botón Entrar compacto a la derecha
-                        Box(
-                            modifier = Modifier
-                                .clip(RastroShapes.CircularPill)
-                                .background(Color(0xFF22C55E))
-                                .border(1.4.dp, colors.strokeBorder, RastroShapes.CircularPill)
-                                .padding(horizontal = 11.dp, vertical = 6.dp),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(3.dp)
-                            ) {
-                                Text(
-                                    text = "Entrar",
-                                    fontWeight = FontWeight.Black,
-                                    fontSize = 11.5.sp,
-                                    color = Color.White
-                                )
-                                Icon(
-                                    imageVector = Icons.AutoMirrored.Filled.ArrowForward,
-                                    contentDescription = null,
-                                    tint = Color.White,
-                                    modifier = Modifier.size(11.dp)
-                                )
-                            }
-                        }
-                    }
-                }
-
-                }
+                RastroBoundedBlock { HomeCompactStreak(colors, streakState.currentStreak, streakState.activityDates) {
+                    onNavigate(RastroScreen.DiasDeRacha.route)
+                } }
             }
-
-            }
-
             // 5. Explora RASTRO / Herramientas (Grid 2 columnas compacto)
             item(span = { GridItemSpan(maxLineSpan) }) {
                 RastroBoundedBlock {
@@ -780,15 +317,138 @@ fun HomeScreen(
                 }
             }
 
+            // 4. Canal de WhatsApp Oficial (Franja Horizontal Compacta)
+            run {
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
+                val context = LocalContext.current
+                Sticker3dCard(
+                    modifier = Modifier.fillMaxWidth(),
+                    containerColor = colors.surface,
+                    strokeColor = colors.strokeBorder,
+                    bevelColor = colors.cardBevel,
+                    bevelHeight = 3.dp,
+                    shape = RoundedCornerShape(20.dp),
+                    onClick = {
+                        val waChannel = "https://whatsapp.com/channel/0029VbDFAEu7YScyVZBNul0X"
+                        val waUrl = if (waChannel.startsWith("http://") || waChannel.startsWith("https://")) waChannel
+                            else "https://whatsapp.com/channel/$waChannel"
+                        runCatching {
+                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(waUrl))
+                            context.startActivity(intent)
+                        }
+                    }
+                ) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 12.dp, vertical = 10.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    ) {
+                        // Squircle WhatsApp verde (compacto)
+                        Box(
+                            modifier = Modifier
+                                .size(40.dp)
+                                .clip(RoundedCornerShape(12.dp))
+                                .background(Color(0xFF22C55E))
+                                .border(1.6.dp, colors.strokeBorder, RoundedCornerShape(12.dp)),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.ic_whatsapp),
+                                contentDescription = "WhatsApp Oficial",
+                                tint = Color.White,
+                                modifier = Modifier.size(22.dp)
+                            )
+                        }
+
+                        // Título + Badge Oficial + Subtítulo
+                        Column(modifier = Modifier.weight(1f)) {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(6.dp)
+                            ) {
+                                Text(
+                                    text = "Comunidad RASTRO",
+                                    fontSize = 13.sp,
+                                    fontWeight = FontWeight.Black,
+                                    color = colors.textPrimary,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
+                                )
+                                Box(
+                                    modifier = Modifier
+                                        .clip(RastroShapes.CircularPill)
+                                        .background(Color(0xFFDCFCE7))
+                                        .border(1.2.dp, Color(0xFF15803D), RastroShapes.CircularPill)
+                                        .padding(horizontal = 5.dp, vertical = 1.dp)
+                                ) {
+                                    Text(
+                                        text = "OFICIAL",
+                                        fontSize = 8.sp,
+                                        fontWeight = FontWeight.Black,
+                                        color = Color(0xFF15803D)
+                                    )
+                                }
+                            }
+                            Spacer(modifier = Modifier.height(1.dp))
+                            Text(
+                                text = "Nuestro canal oficial de WhatsApp",
+                                fontSize = 10.5.sp,
+                                color = colors.textSecondary,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                        }
+
+                        // Botón Entrar compacto a la derecha
+                        Box(
+                            modifier = Modifier
+                                .clip(RastroShapes.CircularPill)
+                                .background(Color(0xFF22C55E))
+                                .border(1.4.dp, colors.strokeBorder, RastroShapes.CircularPill)
+                                .padding(horizontal = 11.dp, vertical = 6.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(3.dp)
+                            ) {
+                                Text(
+                                    text = "Entrar",
+                                    fontWeight = FontWeight.Black,
+                                    fontSize = 11.5.sp,
+                                    color = Color.White
+                                )
+                                Icon(
+                                    imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                                    contentDescription = null,
+                                    tint = Color.White,
+                                    modifier = Modifier.size(11.dp)
+                                )
+                            }
+                        }
+                    }
+                }
+
+                }
+            }
+
+            }
+
+            if (featuredUploads.isNotEmpty()) item(span = { GridItemSpan(maxLineSpan) }) {
+                RastroBoundedBlock {
+                    DestacadosCarousel(featuredUploads, colors, { onNavigate(RastroScreen.Biblioteca.route) }, onNavigateToProfile, onNavigateToPublication)
+                }
+            }
             item(span = { GridItemSpan(maxLineSpan) }) {
                 RastroBoundedBlock { com.jonsuapps.rastro.android.ui.components.AppFeedbackCard() }
             }
-
             item(span = { GridItemSpan(maxLineSpan) }) {
-                RastroBoundedBlock { com.jonsuapps.rastro.android.ui.components.MainPageEnd()
-                }
+                RastroBoundedBlock { com.jonsuapps.rastro.android.ui.components.MainPageEnd() }
             }
-}
+        }
     }
 }
 
@@ -1159,6 +819,7 @@ private fun HomeToolCard(
                 "Simulador" -> R.drawable.ic_home_exam_sticker
                 "Pizarra Doodle" -> R.drawable.ic_pizarra
                 "Tabla periódica" -> R.drawable.ic_course_quimica
+                "Ligas" -> R.drawable.ic_trophy_sticker
                 else -> R.drawable.league_cachimbo
             }
             Image(painterResource(stickerResource), null, Modifier.size(34.dp))
@@ -1231,7 +892,7 @@ private fun HomeSquareCard(
 // ─────────────────────────────────────────────────────────────────
 
 @Composable
-private fun DoodleDayCheckCircle(
+internal fun DoodleDayCheckCircle(
     isActive: Boolean,
     strokeColor: Color,
     modifier: Modifier = Modifier,
@@ -1281,6 +942,10 @@ private fun HomeHeroBanner(
     placement: com.jonsuapps.rastro.android.ui.components.CoverPlacement = com.jonsuapps.rastro.android.ui.components.CoverPlacement(),
     modifier: Modifier = Modifier
 ) {
+    if (!useProfileCover) {
+        com.jonsuapps.rastro.android.ui.components.WelcomeHero(modifier, name = displayName)
+        return
+    }
     // Hero con el banner oficial: saludo dinámico superpuesto a la izquierda
     // sobre velo lateral para legibilidad; la ilustración nunca se estira.
     val name = displayName.trim()
@@ -1568,10 +1233,11 @@ private fun DoodleMapWithFlag(
 }
 
 @Composable
-private fun DoodleTrailWithStars(
+internal fun DoodleTrailWithStars(
     modifier: Modifier = Modifier,
     trailColor: Color = Color(0xFF94A3B8),
-    strokeColor: Color = Color(0xFF1E293B)
+    strokeColor: Color = Color(0xFF1E293B),
+    starRadius: androidx.compose.ui.unit.Dp = 7.dp
 ) {
     Canvas(modifier = modifier) {
         val w = size.width
@@ -1590,7 +1256,7 @@ private fun DoodleTrailWithStars(
             val star = Path().apply {
                 for (i in 0..9) {
                     val angle = -kotlin.math.PI / 2 + i * kotlin.math.PI / 5
-                    val radius = if (i % 2 == 0) 7.dp.toPx() else 3.5.dp.toPx()
+                    val radius = if (i % 2 == 0) starRadius.toPx() else starRadius.toPx() * 0.5f
                     val x = center.x + kotlin.math.cos(angle).toFloat() * radius
                     val y = center.y + kotlin.math.sin(angle).toFloat() * radius
                     if (i == 0) moveTo(x, y) else lineTo(x, y)

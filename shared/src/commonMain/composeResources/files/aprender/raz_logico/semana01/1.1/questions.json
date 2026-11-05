@@ -1,1 +1,200 @@
-[{"concept":"1.1.1","correctIndex":1,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t01_s01_c01","options":["2 y 3","1 y 4","1 y 5","1, 2 y 5"],"pedagogicalTier":"concepto","semana":1,"statement":"De los siguientes enunciados:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.2","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t01_s01_c02","options":["Lima y Callao son ciudades limítrofes.","Arequipa es una ciudad volcánica o colonial.","Mario Vargas Llosa nació en la ciudad de Arequipa.","13 y 17 son números primos coprimos entre sí."],"pedagogicalTier":"concepto","semana":1,"statement":"Identifique cuál de las siguientes proposiciones es clasificada como **compuesta**:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.3","correctIndex":3,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t01_s01_c03","options":["V, V, F, F","F, V, V, F","V, F, V, F","V, F, F, V"],"pedagogicalTier":"concepto","semana":1,"statement":"Se sabe que la proposición molecular:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Cuando el antecedente es Verdadero y el consecuente es Falso (V \\to F = F).","fuente":"temario","id":"rl_t01_s01_c04","options":["Porque es una oración imperativa/ruego y carece de valor de verdad objetivo (no se puede calificar como verdadera o falsa).","Es una **proposición simple relacional** (no se puede desdoblar en dos oraciones independientes sin perder el sentido geográfico).","Valor o condición no aplicable al caso planteado","Cuando el antecedente es Verdadero y el consecuente es Falso (V \\to F = F)."],"pedagogicalTier":"concepto","semana":1,"statement":"¿Cuál es la única combinación de valores que hace FALSA a una proposición condicional (p \\to q)?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.5","correctIndex":0,"explanation":"Conforme a la fundamentación teórica de la lección: Porque es una oración imperativa/ruego y carece de valor de verdad objetivo (no se puede calificar como verdadera o falsa).","fuente":"temario","id":"rl_t01_s01_c05","options":["Porque es una oración imperativa/ruego y carece de valor de verdad objetivo (no se puede calificar como verdadera o falsa).","Cuando el antecedente es Verdadero y el consecuente es Falso (V \\to F = F).","Es una **proposición simple relacional** (no se puede desdoblar en dos oraciones independientes sin perder el sentido geográfico).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":1,"statement":"¿Por qué la frase \"¡Por favor, estudia para ingresar a la UNSA!\" NO es una proposición lógica?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.6","correctIndex":1,"explanation":"Conforme a la fundamentación teórica de la lección: Es una **proposición simple relacional** (no se puede desdoblar en dos oraciones independientes sin perder el sentido geográfico).","fuente":"temario","id":"rl_t01_s01_c06","options":["Cuando el antecedente es Verdadero y el consecuente es Falso (V \\to F = F).","Es una **proposición simple relacional** (no se puede desdoblar en dos oraciones independientes sin perder el sentido geográfico).","Porque es una oración imperativa/ruego y carece de valor de verdad objetivo (no se puede calificar como verdadera o falsa).","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":1,"statement":"¿Qué tipo de proposición simple es \"Arequipa y Moquegua son departamentos vecinos\"?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.7","correctIndex":2,"explanation":"El condicional es Falso solo con V -> F. Luego (p y ~q) = V => p=V, q=F. Y (r o ~s) = F => r=F, s=V. Resultado: V, F, F, V.","fuente":"temario","id":"rl_t01_s01_c07","options":["F, V, V, F","V, F, V, F","V, F, F, V","V, V, F, F"],"pedagogicalTier":"concepto","semana":1,"statement":"Si (p y ~q) -> (r o ~s) es estrictamente FALSA, ¿cuál es el valor de verdad ordenado de (p, q, r, s)?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t01_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t01_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"1.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t01_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":1,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rl_t01_s01_c01",
+    "concept": "1.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "¿Cuál es una proposición declarativa con valor de verdad definido?",
+    "options": [
+      "El número 8 es par.",
+      "Cierra la puerta.",
+      "¿Qué hora es?",
+      "Ojalá llueva."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Una proposición afirma algo que puede ser verdadero o falso.\n2. La primera frase afirma una propiedad de un número.\n3. Las otras son una orden, una pregunta y un deseo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s01_c02",
+    "concept": "1.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "¿Por qué «Abre el libro» no es una proposición en lógica declarativa?",
+    "options": [
+      "Porque contiene un verbo.",
+      "Porque es una oración corta.",
+      "Porque toda frase sobre libros es falsa.",
+      "Es una orden y no una afirmación evaluable como V o F."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Identificamos la función de la oración.\n2. No afirma que un hecho se cumpla.\n3. Da una instrucción; por eso no tiene el valor de verdad requerido.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s01_c03",
+    "concept": "1.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "La afirmación «9 es primo» es…",
+    "options": [
+      "Una orden.",
+      "Una proposición verdadera.",
+      "Una proposición falsa.",
+      "Una pregunta sin respuesta."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Afirma una propiedad definida del número 9.\n2. 9 tiene el divisor 3 además de 1 y 9.\n3. Es una proposición, aunque su valor sea F.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s01_c04",
+    "concept": "1.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "Si x no tiene valor asignado ni se cuantifica, «x es mayor que 3» es…",
+    "options": [
+      "Una orden.",
+      "Un enunciado abierto.",
+      "Una tautología demostrada.",
+      "Una contradicción obligatoria."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El valor depende de x.\n2. Por ejemplo, x=4 lo satisface y x=2 no.\n3. Sin asignación ni cuantificador no queda una proposición cerrada.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s01_c05",
+    "concept": "1.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "¿Qué forma representa «Estudio y practico», con p: estudio y q: practico?",
+    "options": [
+      "$p\\land q$",
+      "$p\\lor q$",
+      "$p\\to q$",
+      "$\\neg p$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Se afirman las dos acciones.\n2. El conectivo «y» exige ambas verdaderas.\n3. Se representa por la conjunción.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s01_c06",
+    "concept": "1.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "En «Si estudio, entonces practico», el antecedente es…",
+    "options": [
+      "Practico.",
+      "Ambas frases a la vez.",
+      "La palabra entonces.",
+      "Estudio."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El antecedente sigue al «si».\n2. El consecuente se introduce con «entonces».\n3. La condición inicial es estudiar.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s01_c07",
+    "concept": "1.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "Si p significa «El foco está encendido», su negación es…",
+    "options": [
+      "El foco está encendido o apagado.",
+      "Si el foco está encendido, estudio.",
+      "El foco no está encendido.",
+      "El foco está muy encendido."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La negación cambia V por F y F por V.\n2. No añade una nueva condición ni una intensidad.\n3. Niega exactamente la afirmación original.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s01_c08",
+    "concept": "1.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "Con p=V, q=F, ¿qué valor tiene $p \\wedge q$?",
+    "options": [
+      "La fórmula carece de sintaxis lógica.",
+      "Verdadera.",
+      "Falsa.",
+      "No puede determinarse con esos valores."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Sustituimos los valores dados de todas las variables.\n2. Aplicamos los conectores de la fórmula $p \\wedge q$.\n3. Con la asignación p=V, q=F, la fórmula resulta falsa.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s01_c09",
+    "concept": "1.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "Con p=F, q=V, ¿qué valor tiene $p \\vee q$?",
+    "options": [
+      "Verdadera.",
+      "Falsa.",
+      "No puede determinarse con esos valores.",
+      "La fórmula carece de sintaxis lógica."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Sustituimos los valores dados de todas las variables.\n2. Aplicamos los conectores de la fórmula $p \\vee q$.\n3. Con la asignación p=F, q=V, la fórmula resulta verdadera.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s01_c10",
+    "concept": "1.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "Con p=F, ¿qué valor tiene $\\neg p$?",
+    "options": [
+      "Falsa.",
+      "No puede determinarse con esos valores.",
+      "La fórmula carece de sintaxis lógica.",
+      "Verdadera."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Sustituimos los valores dados de todas las variables.\n2. Aplicamos los conectores de la fórmula $\\neg p$.\n3. Con la asignación p=F, la fórmula resulta verdadera.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t01_s01_c11",
+    "concept": "1.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 1,
+    "statement": "En lógica proposicional clásica bivalente, una proposición cerrada recibe…",
+    "options": [
+      "Siempre F si es compuesta.",
+      "Un valor de intensidad emocional.",
+      "Uno de dos valores: V o F.",
+      "Siempre V, por ser proposición."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La bivalencia establece dos valores posibles.\n2. Una proposición concreta no recibe ambos a la vez en una asignación.\n3. Ser verdadera no es requisito para ser proposición.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

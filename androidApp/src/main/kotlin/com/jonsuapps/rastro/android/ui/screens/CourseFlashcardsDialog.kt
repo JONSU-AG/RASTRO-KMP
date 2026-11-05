@@ -98,7 +98,7 @@ fun CourseFlashcardsDialog(
                 val theory = lesson.theory
                 val formulaSource = theory.formulaLatex?.takeIf(String::isNotBlank)
                     ?: theory.formulas.firstOrNull()?.takeIf(String::isNotBlank)
-                val formula = formulaSource?.let(::readableFormula)
+                val formula = formulaSource
                 if (formula != null) {
                     val question = "¿Cuál es la fórmula o teorema clave de ${theory.formulaName?.takeIf(String::isNotBlank) ?: theory.titulo}?"
                     val source = FlashcardItem(
@@ -112,15 +112,15 @@ fun CourseFlashcardsDialog(
                 }
                 val tip = theory.admissionTip?.takeIf(String::isNotBlank)
                 if (tip != null) {
-                    val question = "Dato Fijo de Admisión: ${lesson.title}"
+                    val question = "Importante: ${lesson.title}"
                     val source = FlashcardItem(
                         id = "theory_tip_${lesson.id}", q = question, a = tip,
-                        subject = subject.name, authorName = "Claves de Admisión",
+                        subject = subject.name, authorName = "Teoría de la lección",
                         semana = lesson.semana, subtemaCode = lesson.subtema, subtemaTitle = lesson.title
                     )
                     add(CourseStudyCard(source.id, question, tip,
                         theory.admissionExplanation.orEmpty(), lesson.semana, lesson.id,
-                        lesson.title, "Claves de Admisión", "Clave", source, source.imageUrl))
+                        lesson.title, "Teoría de la lección", "Importante", source, source.imageUrl))
                 }
             }
         }
@@ -263,7 +263,7 @@ fun CourseFlashcardsDialog(
                             verticalArrangement = Arrangement.spacedBy(10.dp)
                         ) {
                             Text(if (isFlipped) "RESPUESTA" else "PREGUNTA", color = theme.textSecondary, fontSize = 10.sp, fontWeight = FontWeight.Black)
-                            Text(
+                            com.jonsuapps.rastro.android.ui.components.AcademicText(
                                 text = if (isFlipped) currentCard.answer else currentCard.question,
                                 modifier = Modifier.fillMaxWidth().heightIn(max = 320.dp).verticalScroll(rememberScrollState()),
                                 color = theme.textPrimary,
@@ -284,7 +284,7 @@ fun CourseFlashcardsDialog(
                                 )
                             }
                             if (isFlipped && currentCard.explanation.isNotBlank()) {
-                                Text(
+                                com.jonsuapps.rastro.android.ui.components.AcademicText(
                                     currentCard.explanation,
                                     modifier = Modifier.heightIn(max = 90.dp).verticalScroll(rememberScrollState()),
                                     color = theme.textSecondary,

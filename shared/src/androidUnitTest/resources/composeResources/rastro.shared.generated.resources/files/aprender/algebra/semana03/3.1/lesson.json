@@ -6,13 +6,24 @@
   "title": "Potenciación, Radicación, Radicales Dobles y Racionalización - Fundamentos y Leyes Principales",
   "depth": "NORMAL",
   "source": "curso-prueba/SALIDA_KOTLIN/algebra/AlgebraSemana03.kt",
-  "learningObjectives": [],
+  "learningObjectives": [
+    "Aplicar leyes de exponentes enteros bajo sus condiciones",
+    "Distinguir base negativa, signo externo y agrupación de exponentes",
+    "Diferenciar raíz principal y soluciones de una ecuación",
+    "Analizar potencias racionales con bases positivas o negativas"
+  ],
   "theory": {
     "id": "th_alg_t03_s01",
     "asignatura": "Álgebra",
     "semana": 3,
     "titulo": "Potenciación, Radicación, Radicales Dobles y Racionalización - Fundamentos y Leyes Principales",
     "resumen": "",
-    "conceptosClave": []
+    "conceptosClave": [
+      "Exponente negativo significa recíproco y exige base no nula",
+      "La raíz principal de un cuadrado es el valor absoluto de la base",
+      "Las raíces reales de índice par necesitan radicando no negativo",
+      "Las leyes generales para exponentes reales se aplican con base positiva",
+      "Para base negativa y exponente racional se revisa la fracción reducida"
+    ]
   }
 }

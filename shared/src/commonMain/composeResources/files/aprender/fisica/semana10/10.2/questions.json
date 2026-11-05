@@ -1,1 +1,200 @@
-[{"concept":"10.2.1","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s02_c01","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"fis_t10_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"fisica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "fis_t10_s02_c01",
+    "concept": "10.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Un alambre de 0.5 m conduce 4 A perpendicularmente a B=2 T. ¿Qué módulo de fuerza recibe?",
+    "options": [
+      "$4\\,\\mathrm{N}$",
+      "$8\\,\\mathrm{N}$",
+      "$2\\,\\mathrm{N}$",
+      "$12\\,\\mathrm{N}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La fuerza sobre el tramo recto usa I, longitud y campo.\n2. Sustituimos los datos: $F=ILB\\sin90^\\circ=4(0.5)(2)$.\n3. El resultado pedido es $4\\,\\mathrm{N}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s02_c02",
+    "concept": "10.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Un campo uniforme de 3 T es perpendicular a una superficie plana de 2 m². ¿Qué flujo la atraviesa?",
+    "options": [
+      "$12\\,\\mathrm{Wb}$",
+      "$3\\,\\mathrm{Wb}$",
+      "$18\\,\\mathrm{Wb}$",
+      "$6\\,\\mathrm{Wb}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El ángulo se mide entre el campo y la normal de la superficie.\n2. Sustituimos los datos: $\\Phi=BA\\cos0^\\circ=3(2)$.\n3. El resultado pedido es $6\\,\\mathrm{Wb}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s02_c03",
+    "concept": "10.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Un campo de 4 T forma 60° con la normal de una superficie de 3 m². ¿Qué flujo la atraviesa?",
+    "options": [
+      "$3\\,\\mathrm{Wb}$",
+      "$18\\,\\mathrm{Wb}$",
+      "$6\\,\\mathrm{Wb}$",
+      "$12\\,\\mathrm{Wb}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Usamos el coseno del ángulo con la normal.\n2. Sustituimos los datos: $\\Phi=4(3)\\cos60^\\circ$.\n3. El resultado pedido es $6\\,\\mathrm{Wb}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s02_c04",
+    "concept": "10.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "El flujo por vuelta cambia de 0.2 Wb a 0.8 Wb en 0.3 s en una espira. ¿Qué módulo de fem media se induce?",
+    "options": [
+      "$6\\,\\mathrm{V}$",
+      "$2\\,\\mathrm{V}$",
+      "$4\\,\\mathrm{V}$",
+      "$1\\,\\mathrm{V}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La ley de Faraday usa el cambio de flujo por tiempo.\n2. Sustituimos los datos: $|\\mathcal E|=|0.8-0.2|/0.3$.\n3. El resultado pedido es $2\\,\\mathrm{V}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s02_c05",
+    "concept": "10.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Una bobina de 10 vueltas tiene cambio de flujo por vuelta de 0.04 Wb en 0.2 s. ¿Qué módulo de fem media se induce?",
+    "options": [
+      "$2\\,\\mathrm{V}$",
+      "$4\\,\\mathrm{V}$",
+      "$1\\,\\mathrm{V}$",
+      "$6\\,\\mathrm{V}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Cada vuelta aporta la misma variación de flujo.\n2. Sustituimos los datos: $|\\mathcal E|=N|\\Delta\\Phi|/\\Delta t=10(0.04)/0.2$.\n3. El resultado pedido es $2\\,\\mathrm{V}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s02_c06",
+    "concept": "10.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Una barra de 0.5 m se mueve a 4 m/s sobre rieles dentro de B=3 T. Barra, velocidad y campo son perpendiculares entre sí. ¿Qué fem motriz se produce?",
+    "options": [
+      "$12\\,\\mathrm{V}$",
+      "$3\\,\\mathrm{V}$",
+      "$18\\,\\mathrm{V}$",
+      "$6\\,\\mathrm{V}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Para la geometría indicada se usa BLv.\n2. Sustituimos los datos: $\\mathcal E=BLv=3(0.5)(4)$.\n3. El resultado pedido es $6\\,\\mathrm{V}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s02_c07",
+    "concept": "10.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Un transformador ideal tiene 100 vueltas primarias y 50 secundarias. Recibe 20 V alternos eficaces. ¿Qué voltaje eficaz entrega?",
+    "options": [
+      "$5\\,\\mathrm{V}$",
+      "$30\\,\\mathrm{V}$",
+      "$10\\,\\mathrm{V}$",
+      "$20\\,\\mathrm{V}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. La razón de voltajes sigue la razón de vueltas.\n2. Sustituimos los datos: $V_s=V_p\\frac{N_s}{N_p}=20\\frac{50}{100}$.\n3. El resultado pedido es $10\\,\\mathrm{V}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s02_c08",
+    "concept": "10.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Una fem inducida de 12 V alimenta una resistencia total de 3 Ω. ¿Qué corriente circula en el modelo resistivo?",
+    "options": [
+      "$12\\,\\mathrm{A}$",
+      "$4\\,\\mathrm{A}$",
+      "$8\\,\\mathrm{A}$",
+      "$2\\,\\mathrm{A}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Aplicamos Ohm a la fem y la resistencia total.\n2. Sustituimos los datos: $I=12/3$.\n3. El resultado pedido es $4\\,\\mathrm{A}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s02_c09",
+    "concept": "10.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Una bobina rígida permanece inmóvil en un campo uniforme y constante. Su orientación no cambia. ¿Qué fem se induce por variación de flujo?",
+    "options": [
+      "$0\\,\\mathrm{V}$",
+      "$1\\,\\mathrm{V}$",
+      "$2\\,\\mathrm{V}$",
+      "$3\\,\\mathrm{V}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La fem de Faraday requiere flujo variable.\n2. Sustituimos los datos: $\\Delta\\Phi=0\\Rightarrow\\mathcal E=0$.\n3. El resultado pedido es $0\\,\\mathrm{V}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s02_c10",
+    "concept": "10.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "La ley de Lenz establece que la corriente inducida…",
+    "options": [
+      "Refuerza siempre el aumento del flujo que la produce.",
+      "Se opone al cambio de flujo que la origina.",
+      "Tiene siempre sentido horario.",
+      "Existe únicamente si la bobina gira."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El sentido de la inducción se determina por el cambio de flujo.\n2. La respuesta magnética se opone a ese cambio.\n3. No hay un sentido horario universal: depende de la geometría y de la variación.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "fis_t10_s02_c11",
+    "concept": "10.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "fisica",
+    "semana": 10,
+    "statement": "Para calcular Φ=BA cos(θ), el ángulo θ se mide entre…",
+    "options": [
+      "El campo y el plano de la superficie.",
+      "La corriente y el eje de giro.",
+      "El campo y la normal a la superficie.",
+      "Dos líneas cualesquiera del campo."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El flujo cuenta la componente de B perpendicular al área.\n2. Esa componente es B cos(θ) si θ se mide desde la normal.\n3. Usar el ángulo con el plano requiere cambiar a seno.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/fisica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

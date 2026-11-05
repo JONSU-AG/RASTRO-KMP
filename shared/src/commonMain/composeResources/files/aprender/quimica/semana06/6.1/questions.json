@@ -1,1 +1,200 @@
-[{"concept":"6.1.1","correctIndex":0,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t06_s01_c01","options":["Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":6,"statement":"Frente al distractor frecuente de examen: \"Trampa 1: Confundir Ácido Fosforoso con Ácido Fosfórico. El fósforo (P) tiene E.O. +1, +3, +5. El ácido fosforoso usa +3: H_3PO_{\\frac{3+3}{2}} = H_3PO_3. El ácido fosfóric\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.2","correctIndex":1,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t06_s01_c02","options":["Aplicar de forma mecánica la fórmula sin verificar el dominio de validez.","Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente."],"pedagogicalTier":"concepto","semana":6,"statement":"Frente al distractor frecuente de examen: \"Trampa 2: Nombrar HCl_{(g)} como ácido clorhídrico. FALSO. En fase gaseosa se nombra según IUPAC como cloruro de hidrógeno. Solo adquiere el nombre de ácido clorhídrico cuando se\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t06_s01_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t06_s01_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t06_s01_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t06_s01_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t06_s01_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t06_s01_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t06_s01_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"6.1.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t06_s01_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":6,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "quim_t06_s01_c01",
+    "concept": "6.1.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 6,
+    "statement": "En $\\mathrm{H_2SO_4}$ neutro, usa $H=+1$ y $O=-2$. ¿Qué estado de oxidación tiene S?",
+    "options": [
+      "$-2$",
+      "$2$",
+      "$4$",
+      "$6$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. La suma ponderada de estados de oxidación es cero.\n2. Aplicamos los datos y conservamos las unidades: $2(+1)+x+4(-2)=0\\Rightarrow x=+6$.\n3. El resultado es $6$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t06_s01_c02",
+    "concept": "6.1.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 6,
+    "statement": "En $\\mathrm{KMnO_4}$ neutro, usa $K=+1$ y $O=-2$. ¿Qué estado de oxidación tiene Mn?",
+    "options": [
+      "$4$",
+      "$6$",
+      "$7$",
+      "$2$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Sumamos los aportes de los átomos.\n2. Aplicamos los datos y conservamos las unidades: $1+x+4(-2)=0\\Rightarrow x=+7$.\n3. El resultado es $7$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t06_s01_c03",
+    "concept": "6.1.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 6,
+    "statement": "En $\\mathrm{Fe_2O_3}$, usa $O=-2$. ¿Qué estado de oxidación tiene Fe?",
+    "options": [
+      "$3$",
+      "$6$",
+      "$0$",
+      "$2$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Los dos hierros compensan los tres oxígenos.\n2. Aplicamos los datos y conservamos las unidades: $2x+3(-2)=0\\Rightarrow x=+3$.\n3. El resultado es $3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t06_s01_c04",
+    "concept": "6.1.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 6,
+    "statement": "En el ion $\\mathrm{NH_4^+}$, usa $H=+1$. ¿Qué estado de oxidación tiene N?",
+    "options": [
+      "$5$",
+      "$-3$",
+      "$-1$",
+      "$3$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. La suma equivale a la carga del ion.\n2. Aplicamos los datos y conservamos las unidades: $x+4(+1)=+1\\Rightarrow x=-3$.\n3. El resultado es $-3$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t06_s01_c05",
+    "concept": "6.1.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 6,
+    "statement": "En $\\mathrm{H_2O_2}$, usa $H=+1$. ¿Qué estado de oxidación medio tiene O?",
+    "options": [
+      "$-2$",
+      "$-1$",
+      "$0$",
+      "$1$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El peróxido es una excepción al estado usual −2 del oxígeno.\n2. Aplicamos los datos y conservamos las unidades: $2(+1)+2x=0\\Rightarrow x=-1$.\n3. El resultado es $-1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t06_s01_c06",
+    "concept": "6.1.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 6,
+    "statement": "En $\\mathrm{NaH}$, usa Na=+1. ¿Qué estado de oxidación tiene H?",
+    "options": [
+      "$0$",
+      "$1$",
+      "$2$",
+      "$-1$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El hidrógeno actúa como hidruro en este compuesto.\n2. Aplicamos los datos y conservamos las unidades: $1+x=0\\Rightarrow x=-1$.\n3. El resultado es $-1$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t06_s01_c07",
+    "concept": "6.1.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 6,
+    "statement": "El estado de oxidación de un elemento en su forma elemental, como O2, es…",
+    "options": [
+      "Cero.",
+      "Igual a su masa molar.",
+      "−2 siempre.",
+      "+2 siempre."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. El estado elemental es la referencia de la asignación formal.\n2. No se asigna transferencia de electrones entre átomos idénticos.\n3. El estado de oxidación es cero.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t06_s01_c08",
+    "concept": "6.1.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 6,
+    "statement": "La suma de estados de oxidación, ponderados por la cantidad de átomos de un ion, es…",
+    "options": [
+      "Siempre positiva.",
+      "Siempre cero.",
+      "Igual a la carga del ion.",
+      "Igual al número de neutrones."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Cada átomo aporta su estado formal tantas veces como aparece.\n2. La suma debe reproducir la carga total de la especie.\n3. Solo en una especie neutra esa carga es cero.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t06_s01_c09",
+    "concept": "6.1.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 6,
+    "statement": "En nomenclatura Stock, el número romano indica…",
+    "options": [
+      "El número másico del elemento.",
+      "Su estado de oxidación en el compuesto nombrado.",
+      "La temperatura del compuesto.",
+      "El número de moléculas del recipiente."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. El nombre distingue estados de oxidación posibles.\n2. El número romano se refiere al elemento correspondiente.\n3. No cuenta neutrones ni moléculas.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t06_s01_c10",
+    "concept": "6.1.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 6,
+    "statement": "En la mayoría de los compuestos comunes, el oxígeno tiene estado −2, pero…",
+    "options": [
+      "En peróxidos como H2O2 tiene estado −1.",
+      "En O2 elemental tiene −2.",
+      "Siempre vale +2 en óxidos metálicos.",
+      "No tiene ninguna excepción."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La regla de −2 es frecuente, no absoluta.\n2. En el peróxido la asignación da −1 por oxígeno.\n3. En el elemento O2, el estado es cero.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t06_s01_c11",
+    "concept": "6.1.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 6,
+    "statement": "El fluor en sus compuestos tiene usualmente estado…",
+    "options": [
+      "+3.",
+      "Cero en todos sus compuestos.",
+      "−1.",
+      "+7."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. El flúor es el elemento más electronegativo en la asignación usual.\n2. En sus compuestos se le asigna −1.\n3. F2 elemental se trata aparte y tiene estado cero.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

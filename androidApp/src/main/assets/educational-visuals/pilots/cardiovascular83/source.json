@@ -1,0 +1,12 @@
+{
+  "source": "human-heart.svg",
+  "sourceSha256": "73316375eb78f57cde7f06d237988cb76efdbec51e0a7b3d8b8d63b91618d906",
+  "poster": "heart-poster.png",
+  "posterSha256": "08149ba4d0edcf63dc8ba6b9bfa254931b4966bdfd91b43868d3b8a116a679f5",
+  "bytes": 349385,
+  "width": 1380,
+  "height": 936,
+  "license": "CC0-1.0",
+  "attribution": "Mariana Ruiz Villareal (LadyofHats) / Bioicons",
+  "changes": "Rasterización fiel del SVG original sobre blanco; sin redibujar ni generar contenido anatómico."
+}

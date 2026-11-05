@@ -348,90 +348,27 @@ fun TermsAndPrivacyDialog(
 
 @Composable
 private fun PrivacyTabContent(colors: RastroPalette) {
-    LegalCardSection(
-        icon = Icons.Rounded.Lock,
-        title = "1. Recopilación Mínima de Datos",
-        description = "Para las funciones con cuenta, RASTRO trata correo, identificador, nombre y datos de inicio de sesión mediante correo o Google. La foto, portada y enlaces de redes son opcionales. Puede registrar progreso, actividad aproximada, contenido compartido y reportes según las funciones utilizadas. El estudio como invitado guarda el avance localmente sin crear un perfil en Firebase.",
-        colors = colors
-    )
-
-    LegalCardSection(
-        icon = Icons.Rounded.CloudSync,
-        title = "2. Almacenamiento Seguro (Firebase & Google Cloud)",
-        description = "El estudio se guarda en el dispositivo. Con una cuenta puedes respaldar y recuperar progreso y errores; el respaldo automático es opcional y se intenta al abrir la app cuando han pasado tres días desde el último respaldo correcto. Las funciones sociales, perfiles y operaciones de publicación utilizan Firebase independientemente de ese respaldo. Tu nombre, foto, portada y contenido publicado pueden ser visibles para otros usuarios.",
-        colors = colors
-    )
-
-    LegalCardSection(
-        icon = Icons.Rounded.Block,
-        title = "3. Cero Venta de Información Personal",
-        description = "RASTRO no vende tus datos personales. Firebase y servicios de Google tratan la información necesaria para sus funciones. Firebase Analytics y AdMob pueden tratar datos técnicos, de interacción e identificadores según su configuración y los consentimientos aplicables. La actividad aproximada de las cuentas puede consultarse por administradores autorizados; el historial sin duración suficiente no se convierte en minutos inventados.",
-        colors = colors
-    )
-
-    LegalCardSection(
-        icon = Icons.Rounded.PlayCircle,
-        title = "4. Videos de YouTube y servicios de terceros",
-        description = "Los videos pueden reproducirse mediante el reproductor de YouTube o abrirse en su aplicación o navegador. Sus datos, cookies e inicio de sesión se rigen por las políticas de Google y YouTube. RASTRO no recibe tu contraseña de YouTube. Las imágenes de perfil pueden almacenarse en Firebase Storage; las funciones de Drive utilizan los permisos y archivos de tu cuenta cuando corresponda.",
-        colors = colors
-    )
-    LegalCardSection(icon = Icons.Rounded.CloudSync, title = "5. Errores, portadas y conservación", description = "Mis errores comienza pausado para instalaciones nuevas y conserva tu preferencia existente. Al habilitarlo, los errores caducan en la copia local a los quince días; esto no equivale a una eliminación inmediata de cualquier copia remota. La portada y su encuadre se guardan al confirmar cambios; usarla en Inicio es opcional. Para consultas de conservación o eliminación, escribe a aguilar.jonsu@gmail.com.", colors = colors)
-
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "1. Contacto", description = "RASTRO es una herramienta independiente de preparación preuniversitaria. Contacto: aguilar.jonsu@gmail.com.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "2. Cuenta e información", description = "El estudio como invitado guarda el avance en el dispositivo sin crear un perfil en Firebase. Para las funciones con cuenta tratamos correo, identificador, nombre y datos de autenticación mediante correo o Google. La foto, portada y enlaces de redes son opcionales. Según las funciones utilizadas se tratan progreso, actividad aproximada, solicitudes de amistad, mensajes, contenido publicado y reportes. El nombre, foto, portada y publicaciones pueden ser visibles para otros usuarios.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "3. Respaldo y actividad", description = "El respaldo de estudio en la nube es opcional: puede solicitarse manualmente y, si se habilita el respaldo automático, se intenta al abrir la app cuando han pasado tres días desde el último respaldo correcto. Las funciones sociales, de perfil y de publicación utilizan Firebase independientemente de ese respaldo. Administradores autorizados pueden consultar actividad aproximada para gestionar el servicio. No convertimos registros históricos insuficientes en minutos inventados.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "4. Mis errores", description = "Mis errores empieza pausado en instalaciones nuevas y conserva la preferencia existente. Al habilitarlo, los errores caducan localmente a los quince días; esto no garantiza la eliminación inmediata de todas sus copias remotas. Puedes limpiar tus errores desde la app.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "5. Proveedores y contenido", description = "RASTRO no vende tus datos personales. Utiliza Firebase y servicios de Google para autenticación, almacenamiento, analítica y funciones comunitarias. Los videos utilizan YouTube y están sujetos a las políticas de Google; RASTRO no recibe tu contraseña de YouTube. Drive utiliza permisos limitados a archivos que compartes o gestionas con la app. Los originales de tu Drive personal permanecen bajo tu control.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "6. Publicidad", description = "Google AdMob puede tratar dirección IP, identificadores del dispositivo o publicitarios, interacciones y diagnósticos para entregar y medir publicidad y prevenir fraude. La configuración solicita anuncios no personalizados; esto no elimina toda recopilación. Cuando corresponda se solicitará consentimiento y estarán disponibles opciones para revisarlo. Consulta https://policies.google.com/privacy.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "7. Compras y RevenueCat", description = "RevenueCat trata el identificador de usuario y datos de productos, transacciones y vigencia para validar compras y conceder RASTRO Pro. Los pagos se procesan mediante Google Play: RASTRO no recibe los datos completos de tu tarjeta. Consulta https://www.revenuecat.com/privacy.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "8. Eliminar cuenta", description = "Puedes iniciar la eliminación desde la app, con conexión y autenticación reciente, o solicitarla en https://rumbo-jonsu.web.app/eliminar-cuenta y aguilar.jonsu@gmail.com. El flujo actual limpia perfil, progreso y contenido asociado bajo control de RASTRO antes de eliminar el acceso; si se interrumpe puede requerir reautenticación y reintento. Las imágenes generadas por RASTRO en Drive que el flujo identifica como propias se envían a la papelera. Los originales personales y archivos antiguos no identificados permanecen bajo tu control; solicita ayuda si necesitas su revisión.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "9. Conservación y soporte", description = "Para impedir que escrituras pendientes recrean una cuenta eliminada, se conserva un marcador privado con el identificador de cuenta y fecha de solicitud, sin nombre, correo ni imagen. Las compras, recibos y registros de proveedores pueden conservarse conforme a sus obligaciones y políticas; eliminar RASTRO no cancela una suscripción de Google Play. Para acceso, corrección, conservación o eliminación escribe al contacto indicado. No envíes contraseñas.", colors = colors)
 }
 
 @Composable
 private fun TermsUgcTabContent(colors: RastroPalette) {
-    LegalCardSection(
-        icon = Icons.Rounded.VerifiedUser,
-        title = "1. Uso Ético y Académico",
-        description = "El usuario se compromete a utilizar la plataforma con fines formativos y de superación preuniversitaria. Queda terminantemente prohibido el uso de lenguaje soez, suplantación de identidad o ataques hacia otros postulantes en el muro y los chats comunitarios.",
-        colors = colors
-    )
-
-    LegalCardSection(
-        icon = Icons.Rounded.Report,
-        title = "2. Moderación de Contenido de la Comunidad (UGC)",
-        description = "No se permite acoso, suplantación, spam, contenido sexual prohibido ni infracciones de derechos de terceros. Usa las opciones de reportar y bloquear disponibles. Los administradores revisan reportes y pueden retirar contenido o restringir cuentas según la infracción; no se promete un plazo automático de revisión.",
-        colors = colors
-    )
-
-    LegalCardSection(
-        icon = Icons.Rounded.School,
-        title = "3. Exclusión de Garantía de Ingreso",
-        description = "RASTRO es una herramienta independiente de apoyo preuniversitario. No garantiza ingreso, notas ni resultados oficiales. Los ejercicios y simulacros no sustituyen las evaluaciones ni instrucciones de cada universidad.",
-        colors = colors
-    )
-
-    LegalCardSection(
-        icon = Icons.Rounded.CloudUpload,
-        title = "4. Almacenamiento Descentralizado en Google Drive",
-        description = "RASTRO utiliza almacenamiento local, Firebase y enlaces o archivos de Google Drive según la función. Los archivos en tu Drive personal permanecen bajo tu control y pueden seguir existiendo después de eliminar una cuenta de RASTRO. Comparte únicamente materiales propios, autorizados o con licencia compatible.",
-        colors = colors
-    )
-
-    LegalCardSection(
-        icon = Icons.Rounded.Copyright,
-        title = "5. Declaración de Propiedad o Permiso de Material Compartido",
-        description = "Al compartir cualquier enlace, guía o recurso didáctico en la biblioteca o foros, el usuario declara formalmente que dicho material es de su autoría o que cuenta con la debida autorización de su autor para su difusión académica comunitaria sin fines de lucro. Queda prohibido compartir material con derechos reservados sin autorización.",
-        colors = colors
-    )
-
-    LegalCardSection(
-        icon = Icons.Rounded.Psychology,
-        title = "6. Uso y Transparencia de Inteligencia Artificial (IA)",
-        description = "Parte del material puede prepararse con apoyo de inteligencia artificial. Puede contener errores y debe contrastarse con fuentes académicas; no constituye una respuesta oficial. Esto no implica que exista un tutor de IA activo ni generación de respuestas en tiempo real en todas las funciones.",
-        colors = colors
-    )
-
-    LegalCardSection(
-        icon = Icons.Rounded.PlayCircle,
-        title = "7. Referencias de YouTube",
-        description = "RASTRO organiza enlaces a videos públicos como apoyo académico. No aloja, modifica ni controla esos videos: pertenecen a sus creadores y su disponibilidad depende de YouTube y de cada titular.",
-        colors = colors
-    )
-    LegalCardSection(icon = Icons.Rounded.Paid, title = "8. Monedas, publicidad y RASTRO Pro", description = "Las monedas no son dinero ni se canjean por efectivo. Los anuncios recompensados son voluntarios; su duración y disponibilidad dependen del proveedor y la recompensa exige completarlos. Los anuncios automáticos se reservan a pausas naturales, nunca durante preguntas. Pro puede otorgarse por administración; las compras no están habilitadas actualmente. Cuando se habiliten, Google Play mostrará el precio y condiciones reales antes de confirmar. Pro ofrece vidas ilimitadas, XP y monedas de estudio multiplicados por dos, ausencia de anuncios automáticos y tres intentos Pro de simulacro; no modifica estrellas, notas, ranking académico ni protege la racha. Los anuncios recompensados siguen siendo voluntarios para Pro.", colors = colors)
-    LegalCardSection(icon = Icons.Rounded.School, title = "9. Rachas y acceso", description = "El día de racha se obtiene al completar una lección o acumular quince minutos de uso en primer plano. La migración conserva días anteriores cuando existen registros suficientes, sin inventarlos. Las funciones de comunidad y respaldo requieren una cuenta. RASTRO está orientado a personas de diecisiete años en adelante; los menores requieren la autorización que corresponda según su legislación.", colors = colors)
-
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "1. Uso de RASTRO", description = "RASTRO está orientado a personas de diecisiete años en adelante. Los menores requieren la autorización que corresponda según su legislación. Es una herramienta de apoyo: no garantiza ingreso, notas ni resultados oficiales y no representa a universidades ni a sus centros de preparación.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "2. Comunidad y materiales", description = "Comparte solo material propio, autorizado o con licencia compatible. No se permite acoso, suplantación, spam, contenido sexual prohibido ni vulneración de derechos. Puedes reportar contenido y bloquear usuarios; la administración puede retirar publicaciones o restringir cuentas según la infracción, sin prometer un plazo automático de revisión.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "3. Contenido académico", description = "Parte del material puede prepararse con apoyo de inteligencia artificial y contener errores. Debe contrastarse con fuentes académicas y no constituye una respuesta oficial. Los videos enlazados pertenecen a sus creadores; su disponibilidad depende de YouTube y de sus titulares.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "4. Monedas y anuncios", description = "Las monedas son unidades virtuales: no son dinero ni pueden canjearse por efectivo. Los anuncios recompensados son voluntarios; la recompensa requiere completar el anuncio y recibir la confirmación del proveedor. Su duración y disponibilidad dependen de este. Los anuncios automáticos aparecen en pausas naturales, nunca durante las preguntas.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "5. RASTRO Pro", description = "RASTRO Pro puede obtenerse por concesión gratuita de administración o mediante Google Play. Sus planes mensual, seis meses, anual y permanente comparten beneficios: vidas ilimitadas, doble XP y monedas obtenidas estudiando, ausencia de anuncios automáticos y tres intentos Pro de simulacro. Pro no modifica estrellas, notas ni protege artificialmente la racha. Los anuncios recompensados siguen siendo voluntarios y, después de gastar los intentos disponibles, pueden adquirirse intentos con monedas según las condiciones mostradas en la app.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "6. Compras, cancelación y reembolsos", description = "Google Play muestra el precio localizado, impuestos, duración y condiciones antes de confirmar. Las suscripciones pueden renovarse automáticamente según lo indicado en la compra; permanente es una compra única sin renovación. Administra o cancela suscripciones desde Google Play. Cancelar detiene futuras renovaciones y no equivale a pedir un reembolso. Los reembolsos se gestionan conforme a las políticas de Google Play y la legislación aplicable: https://support.google.com/googleplay/answer/2479637. La revocación retira el acceso de esa compra; una concesión gratuita independiente puede seguir vigente.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "7. Racha y eliminación", description = "La racha se obtiene al completar una lección o acumular quince minutos de uso en primer plano. La recuperación de días anteriores depende de registros suficientes. Las funciones de comunidad y respaldo requieren cuenta. Eliminarla no cancela por sí mismo una suscripción ni elimina originales de tu Drive personal.", colors = colors)
+    LegalCardSection(icon = Icons.Rounded.VerifiedUser, title = "8. Contacto", description = "Contacto para soporte, privacidad y reclamaciones: aguilar.jonsu@gmail.com.", colors = colors)
 }
 
 @Composable
@@ -471,7 +408,7 @@ private fun AccountDeletionTabContent(
                 )
             }
             Text(
-                text = "El acceso se elimina mediante Firebase Authentication. La solicitud de limpieza abarca el perfil, progreso y datos personales asociados bajo control de RASTRO. No envíes contraseñas por correo. Los archivos en tu Drive se administran desde Google.",
+                text = "Con conexión y autenticación reciente, RASTRO limpia tu perfil, progreso y contenido asociado antes de eliminar el acceso. Si se interrumpe, vuelve a autenticarte y reintenta. Se conserva un marcador privado con identificador y fecha para impedir recrear la cuenta por escrituras pendientes. Los originales de Drive siguen bajo tu control. Eliminar la cuenta no cancela una suscripción de Google Play. No envíes contraseñas por correo.",
                 fontSize = 11.5.sp,
                 color = colors.textPrimary,
                 lineHeight = 17.sp

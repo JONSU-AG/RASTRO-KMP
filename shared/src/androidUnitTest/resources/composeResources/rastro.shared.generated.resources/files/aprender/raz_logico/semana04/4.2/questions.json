@@ -1,1 +1,200 @@
-[{"concept":"4.2.1","correctIndex":2,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t04_s02_c01","options":["s","\\sim p \\land \\sim r","p \\land r","\\sim s"],"pedagogicalTier":"concepto","semana":4,"statement":"Dadas las premisas formales:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.2","correctIndex":0,"explanation":"Resolución conforme a las leyes y métodos expuestos en la teoría de la lección.","fuente":"temario","id":"rl_t04_s02_c02","options":["Se concluye q \\lor r válidamente","Se concluye \\sim q de forma consistente","El conjunto de premisas es formalmente inconsistente (conduce a una contradicción r \\land \\sim r)","Se deduce que p debe ser falso"],"pedagogicalTier":"concepto","semana":4,"statement":"Se propone demostrar la validez del siguiente argumento con tres premisas:","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.3","correctIndex":2,"explanation":"Conforme a la fundamentación teórica de la lección: La verdad compara la proposición con la realidad fáctica; la validez es una propiedad formal de la estructura del razonamiento.","fuente":"temario","id":"rl_t04_s02_c03","options":["Se concluye necesariamente q.","Valor o condición no aplicable al caso planteado","La verdad compara la proposición con la realidad fáctica; la validez es una propiedad formal de la estructura del razonamiento.","Valor o condición no aplicable al caso planteado"],"pedagogicalTier":"concepto","semana":4,"statement":"¿Cuál es la diferencia entre la verdad de una proposición y la validez de una inferencia?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.4","correctIndex":3,"explanation":"Conforme a la fundamentación teórica de la lección: Se concluye necesariamente q.","fuente":"temario","id":"rl_t04_s02_c04","options":["La verdad compara la proposición con la realidad fáctica; la validez es una propiedad formal de la estructura del razonamiento.","Valor o condición no aplicable al caso planteado","Valor o condición no aplicable al caso planteado","Se concluye necesariamente q."],"pedagogicalTier":"concepto","semana":4,"statement":"Si tienes p \\lor q y se confirma que ocurre \\sim p, ¿qué concluyes por Silogismo Disyuntivo?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.5","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t04_s02_c05","options":["Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t04_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t04_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t04_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t04_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"},{"concept":"4.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"rl_t04_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":4,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"raz_logico","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "rl_t04_s02_c01",
+    "concept": "4.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 4,
+    "statement": "Suponiendo verdaderas $p \\Rightarrow q$, $p \\vee r$, $\\neg q$, ¿qué conclusión está garantizada?",
+    "options": [
+      "$r$",
+      "$p$",
+      "$q$",
+      "$\\neg r$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Solo conservamos las asignaciones que satisfacen simultáneamente las premisas.\n2. Las asignaciones compatibles son: p=F, q=F, r=V.\n3. En todas las compatibles se cumple $r$; cada alternativa restante tiene un contraejemplo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t04_s02_c02",
+    "concept": "4.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 4,
+    "statement": "Suponiendo verdaderas $p \\Rightarrow r$, $q \\Rightarrow r$, $p \\vee q$, ¿qué conclusión está garantizada?",
+    "options": [
+      "$\\neg r$",
+      "$p \\wedge q$",
+      "$\\neg \\left(p \\vee q\\right)$",
+      "$r$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Solo conservamos las asignaciones que satisfacen simultáneamente las premisas.\n2. Las asignaciones compatibles son: p=V, q=V, r=V; p=V, q=F, r=V; p=F, q=V, r=V.\n3. En todas las compatibles se cumple $r$; cada alternativa restante tiene un contraejemplo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "concept": "4.2.3",
+    "correctIndex": 2,
+    "explanation": "1. Las proposiciones reciben valores de verdad.\n2. La validez evalúa si la conclusión se sigue de las premisas.\n3. Un argumento válido no puede tener premisas verdaderas y conclusión falsa, aunque sus premisas concretas podrían ser falsas.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "rl_t04_s02_c03",
+    "options": [
+      "La validez es una propiedad de una proposición aislada",
+      "Todo argumento con una conclusión verdadera es válido",
+      "La verdad se atribuye a proposiciones y la validez a inferencias",
+      "Un argumento válido debe tener todas sus premisas verdaderas"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "¿Cuál distingue correctamente verdad y validez lógica?",
+    "subject": "raz_logico",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "concept": "4.2.4",
+    "correctIndex": 3,
+    "explanation": "1. La primera premisa asegura que al menos una de p o q es verdadera.\n2. La segunda descarta p.\n3. Para satisfacer la disyunción debe ser verdadera q.",
+    "fuente": "Ejercicio RASTRO revisado: docs/aprender/REVISION_ACADEMICA_BLOQUE_02.md",
+    "id": "rl_t04_s02_c04",
+    "options": [
+      "$p$",
+      "$\\neg q$",
+      "$p\\land q$",
+      "$q$"
+    ],
+    "pedagogicalTier": "concepto",
+    "semana": 4,
+    "statement": "Se sabe $p\\lor q$ y también $\\neg p$. ¿Qué se concluye por silogismo disyuntivo?",
+    "subject": "raz_logico",
+    "type": "MULTIPLE_CHOICE"
+  },
+  {
+    "id": "rl_t04_s02_c05",
+    "concept": "4.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 4,
+    "statement": "Suponiendo verdaderas $p \\Rightarrow q$, $r \\Rightarrow \\neg q$, $p$, ¿qué conclusión está garantizada?",
+    "options": [
+      "$\\neg r$",
+      "$r$",
+      "$\\neg q$",
+      "$\\neg p$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Solo conservamos las asignaciones que satisfacen simultáneamente las premisas.\n2. Las asignaciones compatibles son: p=V, q=V, r=F.\n3. En todas las compatibles se cumple $\\neg r$; cada alternativa restante tiene un contraejemplo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t04_s02_c06",
+    "concept": "4.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 4,
+    "statement": "Suponiendo verdaderas $p \\Rightarrow \\left(q \\wedge r\\right)$, $p$, ¿qué conclusión está garantizada?",
+    "options": [
+      "$\\neg q$",
+      "$\\neg r$",
+      "$\\neg p$",
+      "$q \\wedge r$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Solo conservamos las asignaciones que satisfacen simultáneamente las premisas.\n2. Las asignaciones compatibles son: p=V, q=V, r=V.\n3. En todas las compatibles se cumple $q \\wedge r$; cada alternativa restante tiene un contraejemplo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t04_s02_c07",
+    "concept": "4.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 4,
+    "statement": "Suponiendo verdaderas $\\left(p \\vee q\\right) \\Rightarrow r$, $q$, ¿qué conclusión está garantizada?",
+    "options": [
+      "$\\neg q$",
+      "$p \\wedge \\neg r$",
+      "$r$",
+      "$\\neg r$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Solo conservamos las asignaciones que satisfacen simultáneamente las premisas.\n2. Las asignaciones compatibles son: p=V, q=V, r=V; p=F, q=V, r=V.\n3. En todas las compatibles se cumple $r$; cada alternativa restante tiene un contraejemplo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t04_s02_c08",
+    "concept": "4.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 4,
+    "statement": "Suponiendo verdaderas $p \\Leftrightarrow q$, $\\neg p$, ¿qué conclusión está garantizada?",
+    "options": [
+      "$p \\veebar q$",
+      "$\\neg q$",
+      "$q$",
+      "$p$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Solo conservamos las asignaciones que satisfacen simultáneamente las premisas.\n2. Las asignaciones compatibles son: p=F, q=F.\n3. En todas las compatibles se cumple $\\neg q$; cada alternativa restante tiene un contraejemplo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t04_s02_c09",
+    "concept": "4.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 4,
+    "statement": "Suponiendo verdaderas $p \\Rightarrow q$, $q \\Rightarrow r$, $\\neg r$, ¿qué conclusión está garantizada?",
+    "options": [
+      "$\\neg p$",
+      "$p$",
+      "$q$",
+      "$r$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Solo conservamos las asignaciones que satisfacen simultáneamente las premisas.\n2. Las asignaciones compatibles son: p=F, q=F, r=F.\n3. En todas las compatibles se cumple $\\neg p$; cada alternativa restante tiene un contraejemplo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t04_s02_c10",
+    "concept": "4.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 4,
+    "statement": "Suponiendo verdaderas $p \\vee q$, $p \\Rightarrow r$, $\\neg r$, ¿qué conclusión está garantizada?",
+    "options": [
+      "$p$",
+      "$r$",
+      "$\\neg q$",
+      "$q$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Solo conservamos las asignaciones que satisfacen simultáneamente las premisas.\n2. Las asignaciones compatibles son: p=F, q=V, r=F.\n3. En todas las compatibles se cumple $q$; cada alternativa restante tiene un contraejemplo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "rl_t04_s02_c11",
+    "concept": "4.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "raz_logico",
+    "semana": 4,
+    "statement": "Suponiendo verdaderas $p \\Rightarrow q$, $q \\Rightarrow r$, $r \\Rightarrow t$, $p$, ¿qué conclusión está garantizada?",
+    "options": [
+      "$\\neg r$",
+      "$\\neg q$",
+      "$t$",
+      "$\\neg t$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Solo conservamos las asignaciones que satisfacen simultáneamente las premisas.\n2. Las asignaciones compatibles son: p=V, q=V, r=V, t=V.\n3. En todas las compatibles se cumple $t$; cada alternativa restante tiene un contraejemplo.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/raz_logico/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

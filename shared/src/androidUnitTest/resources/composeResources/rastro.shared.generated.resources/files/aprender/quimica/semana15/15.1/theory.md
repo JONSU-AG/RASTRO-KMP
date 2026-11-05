@@ -13,27 +13,47 @@
 
 
 ## 2. MAPA CONCEPTUAL Y ÁRBOL DE CONTENIDOS
-```
-                         FUNCIONES ORGÁNICAS OXIGENADAS Y NITROGENADAS
-                                               │
-         ┌─────────────────────────────────────┴─────────────────────────────────────┐
-         ▼                                                                           ▼
-FUNCIONES OXIGENADAS                                                        FUNCIONES NITROGENADAS
-• Alcoholes (-OH, sufijo -ol)                                             • Aminas (-NH_2, -NH-, -N<, básicas)
-• Éteres (-O-, alcoxi- o éter)                                            • Amidas (-CONH_2, enlace peptídico)
-• Aldehídos (-CHO, carbonilo terminal, -al)                               • Nitrilos (-C \equiv N)
-• Cetonas (-CO-, carbonilo intermedio, -ona)                              • Nitroderivados (-NO_2)
-• Ácidos Carboxílicos (-COOH, carboxilo, ácido ...-oico)                           │
-• Ésteres (-COO-, carboxilato de alquilo, aroma frutal)                            ▼
-                                                                            BIOMOLÉCULAS Y POLÍMEROS
-         ┌──────────────────────────────────────────────────────────────────┤
-         ▼                                                                  ▼
-REACCIONES FUNDAMENTALES                                            • Glúcidos (Monosacáridos: glucosa)
-• Oxidación de Alcoholes:                                           • Lípidos (Triglicéridos, saponificación)
-  - 1^\circ \xrightarrow{[O]} \text{Aldehído} \xrightarrow{[O]} \text{Ácido Carboxílico}  • Aminoácidos y Proteínas
-  - 2^\circ \xrightarrow{[O]} \text{Cetona}                       • Polímeros de Adición y Condensación
-  - 3^\circ \xrightarrow{[O]} \text{No reacciona}
-• Esterificación de Fischer: Ácido + Alcohol \rightleftharpoons Éster + H_2O
+```mermaid
+graph TD
+ ROOT["Funciones orgánicas y transformaciones"]
+ B1["Grupos con oxígeno"]
+ B1N1["Alcohol: grupo OH unido a carbono saturado; distinguirlo del fenol."]
+ B1N2["Éter: oxígeno enlazado a dos grupos carbonados."]
+ B1N3["Aldehído: carbonilo unido al menos a un hidrógeno; cetona: carbonilo unido a dos carbonos."]
+ B1N4["Ácido carboxílico y éster: reconocer todo el grupo, no solo el carbonilo."]
+ B2["Grupos con nitrógeno"]
+ B2N1["Amina: derivado orgánico del amoníaco; su basicidad depende de estructura y medio."]
+ B2N2["Amida: nitrógeno unido al carbono de un carbonilo; no confundir con una amina."]
+ B2N3["Nitrilo: grupo carbono-nitrógeno con triple enlace. Nitroderivado: grupo nitro."]
+ B3["Reacciones y condiciones"]
+ B3N1["Alcohol primario: puede oxidarse a aldehído y después a ácido, según reactivo y condiciones."]
+ B3N2["Alcohol secundario: oxidación usual a cetona."]
+ B3N3["Alcohol terciario: resiste oxidantes suaves habituales; no afirmar que nunca reacciona con ningún oxidante."]
+ B3N4["Esterificación de Fischer: ácido carboxílico y alcohol en equilibrio con éster y agua, bajo catálisis ácida."]
+ B4["Biomoléculas y polímeros"]
+ B4N1["Glúcidos: incluyen monosacáridos como glucosa."]
+ B4N2["Lípidos: los triglicéridos contienen enlaces éster susceptibles de saponificación."]
+ B4N3["Proteínas: aminoácidos unidos por enlaces peptídicos, de tipo amida."]
+ B4N4["Polímeros: distinguir mecanismos de adición y condensación; no todo polímero procede de la misma reacción."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ B1 --> B1N3
+ B1 --> B1N4
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
+ B4 --> B4N4
 ```
 
 ---
@@ -99,3 +119,17 @@ El enlace doble C=O es fuertemente polarizado (C^{\delta+} = O^{\delta-}), con h
 ### 4. ENSAYOS Y REACTIVOS ANALÍTICOS ESPECÍFICOS
 * **Reactivo de Tollens ([Ag(NH_3)_2]^+ en medio básico):** Oxida aldehídos produciendo un espejo de plata brillante en las paredes del tubo de ensayo. Las cetonas no reaccionan.
 * **Reactivo de Fehling (Cu^{2+} complejado con tartrato):** Reduce el cobre formando un precipitado rojo ladrillo de óxido cuproso (Cu_2O) con aldehídos y azúcares reductores.
+
+
+### Reconocer el grupo completo
+
+| Familia | Grupo representativo | Ejemplo |
+|---|---|---|
+| Alcohol | $\mathrm{R{-}OH}$ | Etanol: $\mathrm{CH_3CH_2OH}$ |
+| Aldehído | $\mathrm{R{-}CHO}$ | Etanal: $\mathrm{CH_3CHO}$ |
+| Cetona | $\mathrm{R{-}CO{-}R'}$ | Propanona: $\mathrm{CH_3COCH_3}$ |
+| Ácido carboxílico | $\mathrm{R{-}COOH}$ | Ácido etanoico: $\mathrm{CH_3COOH}$ |
+| Éster | $\mathrm{R{-}COO{-}R'}$ | Etanoato de metilo: $\mathrm{CH_3COOCH_3}$ |
+| Amida | $\mathrm{R{-}CONH_2}$ | Etanamida: $\mathrm{CH_3CONH_2}$ |
+
+R y R' representan grupos orgánicos en estos ejemplos; para clasificar se revisa la estructura completa. El grupo OH de un ácido carboxílico no convierte ese grupo en un alcohol.

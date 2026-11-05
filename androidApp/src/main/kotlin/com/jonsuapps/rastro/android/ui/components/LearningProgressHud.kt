@@ -65,7 +65,7 @@ fun LearningProgressHud(onStreak: () -> Unit, onTricks: () -> Unit, onTarget: (O
     Box(Modifier.fillMaxWidth().background(theme.background), contentAlignment = Alignment.Center) {
         BoxWithConstraints(Modifier.widthIn(max = 720.dp).fillMaxWidth().padding(horizontal = 10.dp, vertical = 5.dp)) {
             val availableWidth = maxWidth
-            val labels = listOf("${progress.streak}d", "Nv.${progress.level}", if(proActive) "∞" else "$hearts", "${progress.coins}")
+            val labels = listOf("${progress.streak}d", "Nv.${progress.level}", if(proActive && !com.jonsuapps.rastro.monetization.PresentationMode.enabled) "∞" else "$hearts", "${progress.coins}")
             val subtitles = listOf("Racha", "${progress.xp} XP", "Vidas", "Monedas")
             fun textWidth(text: String) = with(density) {
                 measurer.measure(text, TextStyle(fontSize = 11.sp, fontWeight = FontWeight.Black), softWrap = false).size.width.toDp()
@@ -106,7 +106,7 @@ fun LearningProgressHud(onStreak: () -> Unit, onTricks: () -> Unit, onTarget: (O
     }
     if (showCoins) CoinAndLivesDialog { showCoins = false }
     if (showLives) {
-        if(proActive) RastroProDialog { showLives = false }
+        if(proActive && !com.jonsuapps.rastro.monetization.PresentationMode.enabled) RastroProDialog { showLives = false }
         else CoinAndLivesDialog { showLives = false }
     }
     if (showLeagues) Dialog(onDismissRequest = { showLeagues = false }) {

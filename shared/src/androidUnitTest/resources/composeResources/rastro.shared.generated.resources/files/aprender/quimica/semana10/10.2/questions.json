@@ -1,1 +1,200 @@
-[{"concept":"10.2.1","correctIndex":2,"explanation":"La zona de trampas de la teoría advierte este error típico y fundamenta la resolución correcta.","fuente":"temario","id":"quim_t10_s02_c01","options":["Suponer que las operaciones siempre conmutan sin considerar casos excepcionales.","Ignorar las condiciones de contorno e igualar variables arbitrariamente.","Identificar la restricción teórica formal y evitar asumir propiedades no universales.","Aplicar de forma mecánica la fórmula sin verificar el dominio de validez."],"pedagogicalTier":"concepto","semana":10,"statement":"Frente al distractor frecuente de examen: \"Trampa 3: Usar Molaridad en lugar de Normalidad en la neutralización. En M_A V_A = M_B V_B, esta fórmula solo es válida si \\theta_A = \\theta_B = 1 (ej. HCl y NaOH). Si usas\", el procedimiento analítico riguroso exige:","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.2","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s02_c02","options":["Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.3","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s02_c03","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.4","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s02_c04","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.5","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s02_c05","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.6","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s02_c06","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.7","correctIndex":2,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s02_c07","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.8","correctIndex":3,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s02_c08","options":["Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual","Principio formal deducido a partir de las leyes y definiciones de la presente lección."],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.9","correctIndex":0,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s02_c09","options":["Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Suposición que contradice las definiciones de la lección","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"},{"concept":"10.2.10","correctIndex":1,"explanation":"Se deduce directamente del desarrollo teórico formal y los axiomas de la lección.","fuente":"temario","id":"quim_t10_s02_c10","options":["Suposición que contradice las definiciones de la lección","Principio formal deducido a partir de las leyes y definiciones de la presente lección.","Fórmula con signos invertidos o exponentes incompatibles","Relación empírica sin sustento en el marco conceptual"],"pedagogicalTier":"concepto","semana":10,"statement":"En relación con el marco conceptual desarrollado en esta lección, ¿cuál es la proposición analíticamente válida?","subject":"quimica","type":"MULTIPLE_CHOICE"}]
+[
+  {
+    "id": "quim_t10_s02_c01",
+    "concept": "10.2.1",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Se diluyen 100 mL de solución 2 mol/L hasta volumen final 500 mL, sin perder soluto. ¿Cuál es la molaridad final?",
+    "options": [
+      "$0.4\\,\\mathrm{mol/L}$",
+      "$0.8\\,\\mathrm{mol/L}$",
+      "$0.2\\,\\mathrm{mol/L}$",
+      "$1.2\\,\\mathrm{mol/L}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La cantidad de soluto se conserva.\n2. Aplicamos los datos y conservamos las unidades: $M_2=M_1V_1/V_2=2(100)/500$.\n3. El resultado es $0.4\\,\\mathrm{mol/L}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s02_c02",
+    "concept": "10.2.2",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "¿Cuántos mL de una solución 2 mol/L se necesitan para preparar volumen final 200 mL a 0.5 mol/L, sin reacción?",
+    "options": [
+      "$100\\,\\mathrm{mL}$",
+      "$25\\,\\mathrm{mL}$",
+      "$150\\,\\mathrm{mL}$",
+      "$50\\,\\mathrm{mL}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Igualamos moles antes y después.\n2. Aplicamos los datos y conservamos las unidades: $V_1=M_2V_2/M_1=0.5(200)/2$.\n3. El resultado es $50\\,\\mathrm{mL}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s02_c03",
+    "concept": "10.2.3",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Se mezclan sin reacción soluciones del mismo soluto: 1 L a 1 mol/L y 1 L a 3 mol/L. Se da volumen final 2 L. ¿Cuál es la molaridad?",
+    "options": [
+      "$1\\,\\mathrm{mol/L}$",
+      "$6\\,\\mathrm{mol/L}$",
+      "$2\\,\\mathrm{mol/L}$",
+      "$4\\,\\mathrm{mol/L}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Sumamos moles y usamos el volumen final declarado.\n2. Aplicamos los datos y conservamos las unidades: $M=(1\\cdot1+1\\cdot3)/2$.\n3. El resultado es $2\\,\\mathrm{mol/L}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s02_c04",
+    "concept": "10.2.4",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Una solución contiene 0.3 mol de soluto no volátil y su volumen baja de 1 L a 0.5 L por evaporación del disolvente, sin pérdida de soluto. ¿Qué molaridad final tiene?",
+    "options": [
+      "$1.8\\,\\mathrm{mol/L}$",
+      "$0.6\\,\\mathrm{mol/L}$",
+      "$1.2\\,\\mathrm{mol/L}$",
+      "$0.3\\,\\mathrm{mol/L}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Los moles se mantienen y cambia el volumen final.\n2. Aplicamos los datos y conservamos las unidades: $M=0.3/0.5$.\n3. El resultado es $0.6\\,\\mathrm{mol/L}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s02_c05",
+    "concept": "10.2.5",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Se agregan 10 g de soluto a una solución que ya contiene 5 g del mismo soluto, sin reacción ni pérdida. ¿Qué masa total de soluto hay?",
+    "options": [
+      "$15\\,\\mathrm{g}$",
+      "$30\\,\\mathrm{g}$",
+      "$7.5\\,\\mathrm{g}$",
+      "$45\\,\\mathrm{g}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "1. Sumamos la masa del mismo componente.\n2. Aplicamos los datos y conservamos las unidades: $m_s=5+10$.\n3. El resultado es $15\\,\\mathrm{g}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s02_c06",
+    "concept": "10.2.6",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Una solución contiene 0.4 mol en 0.2 L de volumen final. ¿Qué volumen final tendría al diluirla a 1 mol/L conservando soluto?",
+    "options": [
+      "$0.8\\,\\mathrm{L}$",
+      "$0.2\\,\\mathrm{L}$",
+      "$1.2\\,\\mathrm{L}$",
+      "$0.4\\,\\mathrm{L}$"
+    ],
+    "correctIndex": 3,
+    "explanation": "1. Despejamos volumen a partir de moles.\n2. Aplicamos los datos y conservamos las unidades: $V=n/M=0.4/1$.\n3. El resultado es $0.4\\,\\mathrm{L}$.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s02_c07",
+    "concept": "10.2.7",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Diluir una solución sin reacción ni pérdidas de soluto…",
+    "options": [
+      "Mantiene siempre la misma molaridad.",
+      "Exige que el volumen final sea el del soluto puro.",
+      "Conserva los moles de soluto y aumenta el volumen final.",
+      "Crea más moles de soluto."
+    ],
+    "correctIndex": 2,
+    "explanation": "1. Se añade disolvente.\n2. El soluto permanece en la misma cantidad.\n3. Al crecer el volumen final, disminuye su molaridad.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s02_c08",
+    "concept": "10.2.8",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "La igualdad M1V1=M2V2 se aplica directamente en una dilución si…",
+    "options": [
+      "Los volúmenes se usan siempre con unidades diferentes sin convertir.",
+      "El soluto se conserva y no reacciona.",
+      "Se elimina parte del soluto sin medirla.",
+      "Se cambia de soluto por otro."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Cada producto MV representa cantidad de sustancia.\n2. La igualdad expresa su conservación.\n3. Las unidades y las condiciones de ausencia de reacción deben ser coherentes.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s02_c09",
+    "concept": "10.2.9",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Al mezclar líquidos, el volumen final…",
+    "options": [
+      "Siempre es exactamente la suma de volúmenes iniciales.",
+      "Puede no ser aditivo; debe conocerse o declararse la aproximación usada.",
+      "Siempre es cero.",
+      "Siempre es el mayor volumen inicial."
+    ],
+    "correctIndex": 1,
+    "explanation": "1. Las interacciones entre componentes pueden cambiar el volumen.\n2. La conservación de masa no implica aditividad exacta de volúmenes.\n3. Por eso los problemas aquí declaran el volumen final cuando se necesita.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s02_c10",
+    "concept": "10.2.10",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "Si un soluto reacciona durante la mezcla…",
+    "options": [
+      "Se debe considerar la estequiometría antes de calcular su concentración final.",
+      "La concentración final es siempre cero para todo componente.",
+      "La masa de los átomos deja de conservarse.",
+      "Puede usarse siempre la suma inicial de moles como moles finales de ese soluto."
+    ],
+    "correctIndex": 0,
+    "explanation": "1. La reacción puede consumir o formar la especie.\n2. Se resuelve primero qué cantidad queda.\n3. Después se divide por el volumen final correspondiente.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  },
+  {
+    "id": "quim_t10_s02_c11",
+    "concept": "10.2.11",
+    "type": "MULTIPLE_CHOICE",
+    "subject": "quimica",
+    "semana": 10,
+    "statement": "El porcentaje en masa y la molaridad…",
+    "options": [
+      "Siempre tienen el mismo número.",
+      "No se relacionan con soluto.",
+      "Son unidades idénticas y se intercambian sin datos.",
+      "Usan bases diferentes y su conversión puede requerir densidad y masa molar."
+    ],
+    "correctIndex": 3,
+    "explanation": "1. El porcentaje usa masa de soluto respecto de masa de solución.\n2. La molaridad usa moles respecto de volumen de solución.\n3. Se requieren conversiones de masa y volumen para relacionarlas.",
+    "fuente": "Ejercicio original RASTRO; contraste en docs/aprender/quimica/REVISION_PRACTICA_PENDIENTE.md",
+    "pedagogicalTier": "aplicación"
+  }
+]

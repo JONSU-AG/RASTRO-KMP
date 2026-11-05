@@ -19,25 +19,49 @@
 
 ## 2. 🗺️ MAPA TAXONÓMICO Y ONTOLOGÍA DEL TEMA
 
-```text
-                               ┌─ Conector Monádico (Afecta a una sola variable: Negación ~)
-        ┌─ 1. Tipología de ────┴─ Conectores Diádicos (Enlazan dos variables proposicionales)
-        │      Conectores
-        │
-CONECTORES                     ┌─ Conjunción (p ^ q): Nexo copulativo
-LÓGICOS Y ──────┼─ 2. Los Seis ────────┼─ Disyunción Débil (p v q) y Disyunción Fuerte (p Delta q)
-TABLAS          │      Operadores      ├─ Condicional Directo (p -> q) e Inverso (q <- p)
-DE VERDAD       │      Canónicos       ├─ Bicondicional (p <-> q)
-        │                      └─ Barra de Sheffer (~(p ^ q)) y Flecha de Peirce (~(p v q))
-        │
-        │                      ┌─ Matriz Principal y Número de Filas: 2^n
-        ├─ 3. Evaluación de ───┼─ Tautología (Todo Verdadero)
-        │      Esquemas        ├─ Contradicción (Todo Falso)
-        │                      └─ Contingencia o Consistencia (Valores mixtos V y F)
-        │
-        └─ 4. Leyes del ───────┌─ Leyes de De Morgan: ~(p ^ q) = ~p v ~q
-               Álgebra         ├─ Ley del Condicional: p -> q = ~p v q
-               Proposicional   └─ Leyes de Absorción (Claves para simplificación rápida)
+```mermaid
+graph TD
+ ROOT["Conectores y tablas de verdad"]
+ B1["Número de componentes"]
+ B1N1["Negación: opera sobre una proposición o bloque."]
+ B1N2["Conectores binarios: combinan dos proposiciones o bloques."]
+ B2["Conectores frecuentes"]
+ B2N1["Conjunción: $p\land q$."]
+ B2N2["Disyunción inclusiva: $p\lor q$."]
+ B2N3["Disyunción exclusiva: $(p\lor q)\land\neg(p\land q)$."]
+ B2N4["Condicional: $p\to q$, también escrito $q\leftarrow p$."]
+ B2N5["Bicondicional: $p\leftrightarrow q$."]
+ B2N6["NAND o Sheffer: $\neg(p\land q)$."]
+ B2N7["NOR o Peirce: $\neg(p\lor q)$."]
+ B3["Evaluación de fórmulas"]
+ B3N1["Con n variables distintas: $2^n$ asignaciones."]
+ B3N2["Tautología: todas las asignaciones dan V."]
+ B3N3["Contradicción: todas las asignaciones dan F."]
+ B3N4["Contingencia: hay al menos una asignación V y otra F."]
+ B4["Equivalencias para simplificar"]
+ B4N1["De Morgan: $\neg(p\land q)\equiv\neg p\lor\neg q$."]
+ B4N2["Condicional: $p\to q\equiv\neg p\lor q$."]
+ B4N3["Absorción: $p\land(p\lor q)\equiv p$."]
+ ROOT --> B1
+ B1 --> B1N1
+ B1 --> B1N2
+ ROOT --> B2
+ B2 --> B2N1
+ B2 --> B2N2
+ B2 --> B2N3
+ B2 --> B2N4
+ B2 --> B2N5
+ B2 --> B2N6
+ B2 --> B2N7
+ ROOT --> B3
+ B3 --> B3N1
+ B3 --> B3N2
+ B3 --> B3N3
+ B3 --> B3N4
+ ROOT --> B4
+ B4 --> B4N1
+ B4 --> B4N2
+ B4 --> B4N3
 ```
 
 ---
@@ -73,7 +97,7 @@ Afecta a una sola proposición o a un bloque agrupado entre signos de colección
    * **Traducciones verbales:** "o bien p o bien q", "ya bien... ya bien...", "o solo p o solo q".
 
 4. **El Condicional Directo (\to):**
-   * **Semántica:** Estructura de Causa-Efecto, Antecedente \implies Consecuente.
+   * **Semántica:** Relación veritativa entre antecedente y consecuente; no demuestra una causa física.
    * **Regla estricta:** Es **FALSA** únicamente cuando el **antecedente es Verdadero y el consecuente es Falso** (V \to F = F). En todos los demás casos es V.
    * **Traducciones verbales (Antecedente \to Consecuente):**  
      "si p, entonces q", "p por lo tanto q", "p en consecuencia q", "p luego q", "p de ahí que q", "dado que p, q".
